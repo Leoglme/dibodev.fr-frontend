@@ -1,0 +1,46 @@
+<template>
+  <a
+    v-if="props.externalLink"
+    class="text-primary-light inline-flex cursor-pointer items-center gap-x-1.5 font-medium decoration-2 underline-offset-4 hover:underline"
+    :href="href"
+  >
+    <slot />
+  </a>
+  <nuxt-link
+    v-else
+    :to="props.link"
+    class="text-primary-light inline-flex cursor-pointer items-center gap-x-1.5 font-medium decoration-2 underline-offset-4 hover:underline"
+  >
+    <slot />
+  </nuxt-link>
+</template>
+
+<script lang="ts" setup>
+import type { DibodevLinkProps } from '~/core/types/DibodevLink'
+import { defineProps } from '@vue/runtime-core'
+import { computed, type ComputedRef } from 'vue'
+
+/**
+ * Type definitions for the DibodevLink component props
+ * @type {DibodevLinkProps}
+ * @property {boolean} externalLink - Whether the link is external or internal
+ * @property {string} link - The link to navigate to
+ */
+const props: DibodevLinkProps = defineProps({
+  externalLink: {
+    type: Boolean,
+    default: false,
+  },
+  link: {
+    type: String,
+    required: true,
+  },
+})
+
+const href: ComputedRef<string | undefined> = computed(() => {
+  if (props.externalLink) {
+    return String(props.link)
+  }
+  return undefined
+})
+</script>

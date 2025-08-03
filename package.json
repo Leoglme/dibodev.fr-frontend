@@ -16,9 +16,12 @@
     "prepare": "husky && nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/robots": "^5.4.0",
     "@nuxtjs/sitemap": "^7.4.3",
+    "@tailwindcss/vite": "^4.1.11",
     "nuxt": "^4.0.1",
+    "tailwindcss": "^4.1.11",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
   },
