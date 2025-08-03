@@ -1,6 +1,18 @@
 import tailwindcss from '@tailwindcss/vite'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: 'Dibodev - Développeur Web Freelance à Rennes',
+      script: [
+        {
+          src: 'https://umami.dibodev.fr/script.js',
+          defer: true,
+          'data-website-id': 'c1e02f13-f416-4059-b69c-e29da1acbcff',
+        },
+      ],
+    },
+  },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   ssr: true,
