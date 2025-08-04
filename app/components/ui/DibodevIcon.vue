@@ -28,6 +28,7 @@ import ChevronDown from '~/components/icons/ChevronDown.vue'
 import ChevronLeft from '~/components/icons/ChevronLeft.vue'
 import ChevronRight from '~/components/icons/ChevronRight.vue'
 import ChevronUp from '~/components/icons/ChevronUp.vue'
+import DoubleChevronsDown from '~/components/icons/DoubleChevronsDown.vue'
 import Github from '~/components/icons/Github.vue'
 import Linkedin from '~/components/icons/Linkedin.vue'
 import Mail from '~/components/icons/Mail.vue'
@@ -76,6 +77,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   ChevronLeft,
   ChevronRight,
   ChevronUp,
+  DoubleChevronsDown,
   Github,
   Linkedin,
   Mail,
