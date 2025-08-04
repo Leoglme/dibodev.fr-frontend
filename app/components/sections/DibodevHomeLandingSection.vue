@@ -1,5 +1,5 @@
 <template>
-  <section class="flex h-[calc(100dvh-70px)] w-screen max-w-screen items-center justify-center p-8 sm:h-screen">
+  <section class="flex h-screen w-screen max-w-screen items-center justify-center p-8 sm:h-screen">
     <div class="z-1 mx-auto grid max-w-xl gap-8">
       <div class="grid gap-6">
         <h1 class="text-[32px] font-semibold text-gray-100 sm:text-[54px]">
