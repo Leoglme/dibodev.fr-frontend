@@ -1,5 +1,5 @@
 <template>
-  <footer class="border-t border-t-gray-400 bg-gray-800 p-8">
+  <footer class="grid gap-8 border-t border-t-gray-400 bg-gray-800 p-8">
     <div class="grid grid-cols-2 gap-8">
       <div class="grid grid-cols-2 gap-6">
         <div class="grid gap-8">
@@ -27,18 +27,38 @@
         </div>
       </div>
       <div class="grid gap-8">
-        <DibodevButton icon="Mail" class="w-full"> Me contacter </DibodevButton>
+        <DibodevButton icon="Mail" class="w-full">Me contacter</DibodevButton>
 
-        <div class="flex flex-wrap items-center gap-40">
-          <div class="flex flex-wrap items-center gap-4">
+        <div class="flex flex-wrap items-center justify-between">
+          <div class="flex items-center gap-4">
+            <div class="justify-left flex items-center gap-1">
+              <DibodevIcon name="Moon" mode="stroke" :width="20" :height="20" />
+              <span class="text-base font-normal"> Thème sombre </span>
+            </div>
             <DibodevSwitch v-model="isChecked" />
-            <DibodevSwitch v-model="isChecked" disabled />
           </div>
 
-          <div></div>
+          <div class="w-fit">
+            <DibodevSelect id="language-select" :options="languages" v-model="selectedLanguage" />
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="justify-left flex w-full flex-wrap items-center gap-2">
+      <DibodevBadge v-if="tags.length > 0" v-for="tag in tags" :key="tag" backgroundColor="#35424D" textColor="#F5F4FB">
+        {{ tag }}
+      </DibodevBadge>
+    </div>
+
+    <DibodevDivider />
+
+    <span class="text-base font-normal">
+      © 2025
+      <DibodevLink :externalLink="true" link="https://dibodev.fr"> dibodev.fr </DibodevLink>
+
+      — Tous droits réservés.
+    </span>
   </footer>
 </template>
 <script setup lang="ts">
@@ -48,6 +68,11 @@ import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevSwitch from '~/components/buttons/DibodevSwitch.vue'
+import DibodevSelect from '~/components/core/DibodevSelect.vue'
+import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
+import type { Ref } from 'vue'
+import DibodevBadge from '~/components/ui/DibodevBadge.vue'
+import DibodevDivider from '~/components/decorators/DibodevDivider.vue'
 
 type Socials = {
   name: string
@@ -94,6 +119,22 @@ const footerLinks: FooterLink[] = [
   },
 ]
 
+const languages: DibodevSelectOption[] = [
+  { label: 'Français', value: 'fr' },
+  { label: 'English', value: 'en' },
+  { label: 'Español', value: 'es' },
+]
+
+const tags: string[] = [
+  'Développeur web',
+  'Mobile',
+  'Logiciels',
+  'Intelligence artificielle',
+  'Rennes, Bretagne, France',
+  'Freelance',
+]
+
 /* REFS */
-const isChecked = ref(false)
+const isChecked: Ref<boolean> = ref(false)
+const selectedLanguage: Ref<DibodevSelectOption> = ref({ label: 'Français', value: 'fr' })
 </script>

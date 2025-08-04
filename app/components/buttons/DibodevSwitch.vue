@@ -1,28 +1,29 @@
 <template>
   <button
     :class="[
-      'flex h-8 w-14 items-center rounded-full p-1 transition-colors duration-300',
-      disabled
-        ? value
-          ? 'cursor-not-allowed bg-purple-300'
-          : 'cursor-not-allowed bg-gray-400'
-        : value
+      'flex h-6 w-12 items-center rounded-full p-0.5 transition-colors duration-300',
+      props.disabled ? 'cursor-not-allowed' : 'cursor-pointer',
+      props.disabled
+        ? props.modelValue
+          ? 'bg-primary-light opacity-80'
+          : 'bg-gray-200'
+        : props.modelValue
           ? isHovered
-            ? 'bg-purple-600'
-            : 'bg-purple-500'
+            ? 'bg-primary'
+            : 'bg-primary-dark'
           : isHovered
             ? 'bg-gray-600'
-            : 'bg-gray-700',
+            : 'bg-gray-400',
     ]"
-    :disabled="disabled"
+    :disabled="props.disabled"
     @click="toggle"
     @mouseenter="isHovered = true"
     @mouseleave="isHovered = false"
   >
-    <div
+    <span
       :class="[
-        'h-6 w-6 rounded-full bg-white transition-transform duration-300',
-        value ? 'translate-x-6' : 'translate-x-0',
+        'h-5 w-5 rounded-full bg-gray-100 transition-transform duration-300',
+        props.modelValue ? 'translate-x-6' : 'translate-x-0',
       ]"
     />
   </button>
@@ -30,8 +31,10 @@
 
 <script lang="ts" setup>
 import { ref, defineProps, defineEmits, watch } from 'vue'
+import type { Ref } from 'vue'
+import type { DibodevSwitchProps } from '~/core/types/DibodevSwitch'
 
-const props = defineProps<{
+const props: DibodevSwitchProps = defineProps<{
   modelValue: boolean
   disabled?: boolean
 }>()
@@ -40,20 +43,23 @@ const emit = defineEmits<{
   (e: 'update:modelValue', value: boolean): void
 }>()
 
-const isHovered = ref(false)
-
-const value = ref(props.modelValue)
+const isHovered: Ref<boolean> = ref(false)
+const isChecked: Ref<boolean> = ref(props.modelValue)
 
 watch(
   () => props.modelValue,
   (newVal) => {
-    value.value = newVal
+    isChecked.value = newVal
   },
 )
-
-const toggle = () => {
+/**
+ * Toggles the switch state and emits the updated value.
+ * If the switch is disabled, it does nothing.
+ * @returns {void}
+ */
+const toggle: () => void = (): void => {
   if (props.disabled) return
-  value.value = !value.value
-  emit('update:modelValue', value.value)
+  isChecked.value = !isChecked.value
+  emit('update:modelValue', isChecked.value)
 }
 </script>

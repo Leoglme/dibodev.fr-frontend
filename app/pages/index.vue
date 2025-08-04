@@ -1,9 +1,9 @@
 <template>
-  <DibodevHomeLandingSection />
-  <DibodevServicesSection />
-  <DibodevStatsSection />
-  <DibodevFavoriteProjectSection />
-  <DibodevPricingSection />
+  <!--  <DibodevHomeLandingSection />-->
+  <!--  <DibodevServicesSection />-->
+  <!--  <DibodevStatsSection />-->
+  <!--  <DibodevFavoriteProjectSection />-->
+  <!--  <DibodevPricingSection />-->
 </template>
 <script setup lang="ts">
 import DibodevHomeLandingSection from '~/components/sections/DibodevHomeLandingSection.vue'

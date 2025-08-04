@@ -12,11 +12,11 @@
     }"
   >
     <span class="flex items-center justify-center">
-      <span v-if="props.icon && props.iconPosition === 'left' && !isIconOnly" class="mr-2">
+      <span v-if="props.icon && props.iconPosition === 'left' && !isIconOnly" class="mr-2 h-6">
         <DibodevIcon :name="props.icon" class="button-icon" mode="stroke" />
       </span>
       <slot v-if="!isIconOnly" />
-      <span v-if="props.icon && props.iconPosition === 'right' && !isIconOnly" class="ml-2">
+      <span v-if="props.icon && props.iconPosition === 'right' && !isIconOnly" class="ml-2 h-6">
         <DibodevIcon :name="props.icon" class="button-icon" mode="stroke" />
       </span>
       <DibodevIcon v-if="isIconOnly && props.icon" class="button-icon" :name="props.icon" mode="stroke" />
@@ -83,7 +83,7 @@ const computedClass: ComputedRef<string> = computed(
   font-medium text-white select-none
   border border-transparent leading-6 rounded-md
   focus:outline-none focus:shadow-outline transition duration-150 ease-in-out
-  ${props.disabled ? 'opacity-70 cursor-not-allowed' : ''}
+  ${props.disabled ? 'opacity-70 cursor-not-allowed' : 'cursor-pointer'}
   ${isIconOnly.value ? 'p-2 w-fit' : buttonSizes[props.size]}
 `,
 )

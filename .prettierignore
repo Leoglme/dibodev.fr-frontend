@@ -47,3 +47,5 @@ cypress/downloads
 # Android / iOS
 android/
 ios/
+
+assets/fonts/assets/css/google-fonts.css

@@ -24,11 +24,14 @@ import { computed } from 'vue'
 import type { PropType, ComputedRef } from 'vue'
 
 import ArrowRight from '~/components/icons/ArrowRight.vue'
+import ChevronDown from '~/components/icons/ChevronDown.vue'
 import ChevronLeft from '~/components/icons/ChevronLeft.vue'
 import ChevronRight from '~/components/icons/ChevronRight.vue'
+import ChevronUp from '~/components/icons/ChevronUp.vue'
 import Github from '~/components/icons/Github.vue'
 import Linkedin from '~/components/icons/Linkedin.vue'
 import Mail from '~/components/icons/Mail.vue'
+import Moon from '~/components/icons/Moon.vue'
 import type { DibodevIconMode, DibodevIconProps, IconComponent } from '~/core/types/DibodevIcon'
 import { iconsList } from '~/core/types/DibodevIcon'
 
@@ -69,11 +72,14 @@ const props: DibodevIconProps = defineProps({
  */
 const iconsDictionary: Record<string, IconComponent> = {
   ArrowRight,
+  ChevronDown,
   ChevronLeft,
   ChevronRight,
+  ChevronUp,
   Github,
   Linkedin,
   Mail,
+  Moon,
 }
 
 /**
