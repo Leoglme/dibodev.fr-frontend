@@ -1,21 +1,32 @@
 <template>
-  <section class="flex h-full min-h-screen w-screen max-w-screen items-center justify-center p-8 sm:h-screen">
-    <div class="grid gap-12">
-      <div class="flex items-center justify-center gap-4">
-        <h2 class="text-center text-[32px] font-semibold">Mes projets favoris</h2>
-        <svg width="34" height="30" viewBox="0 0 34 30" fill="none" class="heartbeat">
+  <section
+    class="flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-20 sm:h-screen sm:px-8 sm:py-8"
+  >
+    <div class="grid gap-14 sm:gap-12">
+      <div class="justify-left flex items-center gap-4 sm:justify-center">
+        <h2 class="text-left text-2xl font-semibold sm:text-center sm:text-[32px]">Mes projets favoris</h2>
+        <svg
+          class="heartbeat h-[24px] w-[26px] sm:h-[30px] sm:w-[34px]"
+          width="34"
+          height="30"
+          viewBox="0 0 34 30"
+          fill="none"
+        >
           <path
             d="M24.5 0C21.35 0 18.575 1.75 17 4.5C15.425 1.75 12.65 0 9.5 0C4.55 0 0.5 4.5 0.5 10C0.5 19.9167 17 30 17 30C17 30 33.5 20 33.5 10C33.5 4.5 29.45 0 24.5 0Z"
             fill="#F44336"
           />
         </svg>
       </div>
-      <div class="grid w-full max-w-7xl gap-8">
+      <div class="flex w-full max-w-7xl flex-col-reverse gap-10 sm:grid sm:gap-8">
         <div class="flex w-full items-center justify-end">
-          <DibodevLink link="/projects" />
+          <DibodevLink link="/projects">
+            <span>Voir tous les projets</span>
+            <DibodevIcon name="ArrowRight" mode="stroke" :width="20" :height="20" />
+          </DibodevLink>
         </div>
 
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
           <DibodevProjectCard
             v-for="favoriteProject in favoriteProjects"
             :key="favoriteProject.name"
@@ -36,6 +47,7 @@
 import type { DibodevProjectCardProps } from '~/core/types/DibodevProjectCard'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
+import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 
 const favoriteProjects: DibodevProjectCardProps[] = [
   {

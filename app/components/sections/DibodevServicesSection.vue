@@ -1,17 +1,17 @@
 <template>
   <section
-    class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center p-8 sm:h-screen"
+    class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-10 sm:h-screen sm:px-8 sm:py-8"
   >
-    <div class="grid w-full max-w-7xl gap-20">
-      <div class="grid justify-center gap-8">
-        <h2 class="text-center text-[32px] font-semibold">Mes services</h2>
-        <p class="max-w-2xl text-center text-base leading-7 text-gray-200">
+    <div class="grid w-full max-w-7xl gap-16 sm:gap-20">
+      <div class="grid justify-center gap-4 sm:gap-8">
+        <h2 class="text-left text-2xl font-semibold sm:text-center sm:text-[32px]">Mes services</h2>
+        <p class="text-left text-sm leading-7 text-gray-200 sm:max-w-2xl sm:text-center sm:text-base">
           Platform independant business solutions for maximum availability Platform independant business solutions for
           maximum availability
         </p>
       </div>
 
-      <div class="grid gap-6 pt-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div class="grid gap-20 pt-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
         <DibodevServiceItem
           v-for="(service, index) in services"
           :key="service.title"

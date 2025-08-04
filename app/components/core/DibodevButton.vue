@@ -8,7 +8,7 @@
     :class="computedClass"
     :style="{
       '--background-color': backgroundColor,
-      '--background-hover-color': backgroundHoverColor,
+      '--background-hover-color': backgroundHoverColorComputed,
     }"
   >
     <span class="flex items-center justify-center">
@@ -31,6 +31,7 @@ import type { SetupContext } from '@vue/runtime-core'
 import { defineProps, useSlots } from '@vue/runtime-core'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import type { DibodevButtonProps, DibodevButtonSize } from '~/core/types/DibodevButton'
+import { ColorUtils } from '~/core/utils/ColorUtils'
 
 const props: DibodevButtonProps = defineProps({
   to: {
@@ -61,6 +62,14 @@ const props: DibodevButtonProps = defineProps({
     type: String as PropType<DibodevButtonSize>,
     default: 'md',
   },
+})
+
+const backgroundHoverColorComputed: ComputedRef<string> = computed(() => {
+  if (props.backgroundColor === '#8472F3') {
+    return props.backgroundHoverColor
+  }
+
+  return ColorUtils.hslToHex(ColorUtils.adjustLightness(ColorUtils.hexToHSL(props.backgroundColor), 10))
 })
 
 const isLink: ComputedRef<boolean> = computed(() => props.to !== null && props.to !== '')

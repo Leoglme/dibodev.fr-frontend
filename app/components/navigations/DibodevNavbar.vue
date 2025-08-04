@@ -112,6 +112,10 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', updateScroll)
 })
+
+watch(mobileMenuOpen, (open: boolean) => {
+  document.body.style.overflow = open ? 'hidden' : ''
+})
 </script>
 
 <style scoped>

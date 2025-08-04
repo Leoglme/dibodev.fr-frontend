@@ -1,9 +1,9 @@
 <template>
-  <div class="grid gap-3 text-gray-100">
-    <h5 class="text-center text-[56px] font-medium">
+  <div class="grid gap-2 text-gray-100 sm:gap-3">
+    <h5 class="text-center text-[40px] font-medium sm:text-[56px]">
       {{ props.value }}
     </h5>
-    <p class="text-center text-base font-normal">
+    <p class="text-center text-sm font-normal sm:text-base">
       {{ props.label }}
     </p>
   </div>

@@ -1,8 +1,8 @@
 <template>
-  <footer class="grid gap-8 border-t border-t-gray-400 bg-gray-800 p-8">
-    <div class="grid grid-cols-2 gap-8">
-      <div class="grid grid-cols-2 gap-6">
-        <div class="grid gap-8">
+  <footer class="grid gap-10 border-t border-t-gray-400 bg-gray-800 p-8 px-4 py-8 sm:gap-x-8 sm:gap-y-8">
+    <div class="grid gap-8 sm:grid-cols-2">
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="grid gap-10 sm:gap-8">
           <DibodevLogo :large="true" :size="30" />
           <!--   SOCIALS       -->
           <div class="flex items-center gap-4">
@@ -39,7 +39,7 @@
             <DibodevSwitch v-model="isChecked" />
           </div>
 
-          <div class="w-fit">
+          <div class="my-6 w-fit sm:my-0">
             <DibodevSelect id="language-select" :options="languages" v-model="selectedLanguage" />
           </div>
         </div>

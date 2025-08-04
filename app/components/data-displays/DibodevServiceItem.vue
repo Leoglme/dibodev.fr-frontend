@@ -1,15 +1,15 @@
 <template>
-  <div class="flex flex-col items-center gap-6">
+  <div class="flex flex-row gap-6 sm:flex-col sm:items-center">
     <div class="flex h-20 w-20 items-center justify-center rounded-2xl p-6" :style="{ backgroundColor: props.color }">
       <slot name="icon" />
     </div>
 
     <div class="grid gap-4">
-      <h4 class="text-center text-base font-medium text-gray-100">
+      <h4 class="text-left text-base font-medium text-gray-100 sm:text-center">
         {{ props.title }}
       </h4>
 
-      <p class="text-center text-sm leading-7 font-normal text-gray-200">
+      <p class="text-left text-sm leading-7 font-normal text-gray-200 sm:text-center">
         {{ props.description }}
       </p>
     </div>
