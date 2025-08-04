@@ -26,6 +26,7 @@
           </DibodevLink>
         </div>
       </div>
+
       <div class="grid gap-8">
         <DibodevButton icon="Mail" class="w-full">Me contacter</DibodevButton>
 

@@ -1,6 +1,6 @@
 <template>
   <section class="flex h-screen w-screen max-w-screen items-center justify-center">
-    <div class="mx-auto grid max-w-xl gap-8">
+    <div class="z-1 mx-auto grid max-w-xl gap-8">
       <div class="grid gap-6">
         <h1 class="text-[54px] font-semibold text-gray-100">
           Lorem <span class="text-primary-light">Ipsum</span> Dolor
@@ -23,6 +23,22 @@
         </DibodevButton>
       </div>
     </div>
+
+    <img
+      src="/images/blur-vector.png"
+      alt="Blur vector background"
+      class="pointer-events-none absolute right-0 bottom-0 z-0 select-none"
+      width="1440"
+      height="810"
+    />
+
+    <!--    <img-->
+    <!--        src="/images/blur-vector.png"-->
+    <!--        alt="Blur vector background"-->
+    <!--        class="absolute bottom-0 right-0 z-0 pointer-events-none select-none w-full h-full object-cover"-->
+    <!--        width="1440"-->
+    <!--        height="810"-->
+    <!--    />-->
   </section>
 </template>
 <script lang="ts" setup>
