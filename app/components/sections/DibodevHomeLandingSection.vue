@@ -1,8 +1,8 @@
 <template>
-  <section class="flex h-screen w-screen max-w-screen items-center justify-center">
+  <section class="flex h-[calc(100dvh-70px)] w-screen max-w-screen items-center justify-center p-8 sm:h-screen">
     <div class="z-1 mx-auto grid max-w-xl gap-8">
       <div class="grid gap-6">
-        <h1 class="text-[54px] font-semibold text-gray-100">
+        <h1 class="text-[32px] font-semibold text-gray-100 sm:text-[54px]">
           Lorem <span class="text-primary-light">Ipsum</span> Dolor
         </h1>
         <p class="text-base leading-7 font-medium">
@@ -11,7 +11,7 @@
         </p>
       </div>
       <div class="justify-left flex items-center">
-        <DibodevButton class="w-full max-w-xs">
+        <DibodevButton class="w-full sm:max-w-xs">
           Découvrir
           <DibodevIcon
             name="DoubleChevronsDown"
