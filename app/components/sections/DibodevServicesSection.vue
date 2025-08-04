@@ -1,5 +1,7 @@
 <template>
-  <section class="relative z-2 flex h-screen w-screen max-w-screen items-center justify-center p-8">
+  <section
+    class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center p-8 sm:h-screen"
+  >
     <div class="grid w-full max-w-7xl gap-20">
       <div class="grid justify-center gap-8">
         <h2 class="text-center text-[32px] font-semibold">Mes services</h2>

@@ -1,5 +1,5 @@
 <template>
-  <section class="flex h-screen w-screen max-w-screen items-center justify-center p-8">
+  <section class="flex h-full min-h-screen w-screen max-w-screen items-center justify-center p-8 sm:h-screen">
     <DibodevPricingCard />
   </section>
 </template>

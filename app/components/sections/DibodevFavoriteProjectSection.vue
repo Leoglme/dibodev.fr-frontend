@@ -1,5 +1,5 @@
 <template>
-  <section class="flex h-screen w-screen max-w-screen items-center justify-center p-8">
+  <section class="flex h-full min-h-screen w-screen max-w-screen items-center justify-center p-8 sm:h-screen">
     <div class="grid gap-12">
       <div class="flex items-center justify-center gap-4">
         <h2 class="text-center text-[32px] font-semibold">Mes projets favoris</h2>
