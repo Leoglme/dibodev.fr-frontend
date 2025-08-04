@@ -8,12 +8,13 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "npm run lint:prettier && npm run lint:eslint && npm run lint:ts",
     "lint:prettier": "prettier --check .",
+    "lint:prettier:fix": "prettier --write .",
     "lint:eslint": "eslint .",
+    "lint:eslint:fix": "eslint . --fix",
     "lint:ts": "vue-tsc --noEmit",
-    "lint:fix": "prettier --write --list-different . && npm run lint:prettier --fix && npm run lint:eslint --fix",
-    "prepare": "husky && nuxt prepare"
+    "lint": "npm run lint:prettier && npm run lint:eslint && npm run lint:ts",
+    "lint:fix": "npm run lint:prettier:fix && npm run lint:eslint:fix"
   },
   "dependencies": {
     "@nuxtjs/google-fonts": "^3.2.0",

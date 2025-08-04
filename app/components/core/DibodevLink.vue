@@ -1,15 +1,17 @@
 <template>
   <a
     v-if="props.externalLink"
-    class="text-primary-light inline-flex cursor-pointer items-center gap-x-1.5 font-medium decoration-2 underline-offset-4 hover:underline"
+    class="inline-flex cursor-pointer items-center gap-x-1.5 font-medium decoration-2 underline-offset-4 hover:underline"
     :href="href"
+    :style="{ color: props.color }"
   >
     <slot />
   </a>
   <nuxt-link
     v-else
     :to="props.link"
-    class="text-primary-light inline-flex cursor-pointer items-center gap-x-1.5 font-medium decoration-2 underline-offset-4 hover:underline"
+    class="inline-flex cursor-pointer items-center gap-x-1.5 font-medium decoration-2 underline-offset-4 hover:underline"
+    :style="{ color: props.color }"
   >
     <slot />
   </nuxt-link>
@@ -34,6 +36,10 @@ const props: DibodevLinkProps = defineProps({
   link: {
     type: String,
     required: true,
+  },
+  color: {
+    type: String,
+    default: '#bdb3ff',
   },
 })
 
