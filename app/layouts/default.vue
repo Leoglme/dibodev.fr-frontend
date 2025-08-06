@@ -12,6 +12,8 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 
 onMounted(() => {
-  Aos.init()
+  Aos.init({
+    easing: 'ease-out-cubic',
+  })
 })
 </script>

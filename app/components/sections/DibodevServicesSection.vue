@@ -1,13 +1,17 @@
 <template>
   <section
-    class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-10 sm:h-screen sm:px-8 sm:py-8"
+    id="services"
+    data-aos="fade-up"
+    data-aos-duration="600"
+    class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-10 sm:px-8 sm:py-8"
   >
     <div class="grid w-full max-w-7xl gap-16 sm:gap-20">
       <div class="grid justify-center gap-4 sm:gap-8">
         <h2 class="text-left text-2xl font-semibold sm:text-center sm:text-[32px]">Mes services</h2>
-        <p class="text-left text-sm leading-7 text-gray-200 sm:max-w-2xl sm:text-center sm:text-base">
-          Platform independant business solutions for maximum availability Platform independant business solutions for
-          maximum availability
+        <p class="text-left text-sm leading-7 text-gray-200 sm:max-w-2xl sm:text-base">
+          Je vous accompagne dans la conception de solutions digitales sur mesure, qu’il s’agisse de simplifier vos
+          processus, d’optimiser votre présence en ligne, de créer une interface métier performante ou de connecter
+          intelligemment vos outils existants.
         </p>
       </div>
 
@@ -19,7 +23,7 @@
           :description="service.description"
           :color="service.color"
           data-aos="fade-right"
-          :data-aos-duration="(index + 1) * 600"
+          :data-aos-delay="index * 100"
         >
           <template #icon>
             <DibodevServiceIcon :serviceIconName="service.icon" />

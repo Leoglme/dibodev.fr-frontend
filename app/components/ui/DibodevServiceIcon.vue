@@ -154,6 +154,7 @@
 import type { DibodevServiceIconProps, DibodevServiceIconName } from '~/core/types/DibodevServiceIcon'
 import type { PropType } from 'vue'
 
+// https://www.flaticon.com/search?author_id=168&style_id=862&type=standard&word=business
 const props: DibodevServiceIconProps = defineProps({
   serviceIconName: {
     type: String as PropType<DibodevServiceIconName>,

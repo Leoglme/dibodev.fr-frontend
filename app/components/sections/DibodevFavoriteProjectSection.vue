@@ -1,6 +1,10 @@
 <template>
   <section
-    class="flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-20 sm:h-screen sm:px-8 sm:py-8"
+    id="favorite-projects"
+    data-aos="fade-up"
+    data-aos-duration="600"
+    data-aos-offset="300"
+    class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-10 sm:px-8 sm:pt-40 sm:pb-8"
   >
     <div class="grid gap-14 sm:gap-12">
       <div class="justify-left flex items-center gap-4 sm:justify-center">
@@ -28,7 +32,7 @@
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
           <DibodevProjectCard
-            v-for="favoriteProject in favoriteProjects"
+            v-for="(favoriteProject, index) in favoriteProjects"
             :key="favoriteProject.name"
             :name="favoriteProject.name"
             :description="favoriteProject.description"
@@ -36,6 +40,8 @@
             :logo="favoriteProject.logo"
             :primaryColor="favoriteProject.primaryColor"
             :secondaryColor="favoriteProject.secondaryColor"
+            data-aos="zoom-in"
+            :data-aos-delay="index * 100"
           />
         </div>
       </div>
@@ -48,6 +54,7 @@ import type { DibodevProjectCardProps } from '~/core/types/DibodevProjectCard'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
+import DibodevServiceItem from '~/components/data-displays/DibodevServiceItem.vue'
 
 const favoriteProjects: DibodevProjectCardProps[] = [
   {

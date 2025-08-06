@@ -1,17 +1,27 @@
 <template>
-  <section class="flex h-screen w-screen max-w-screen items-center justify-center p-8 sm:h-screen">
-    <div class="z-1 mx-auto grid max-w-xl gap-8">
+  <section
+    id="landing"
+    class="relative flex h-screen w-screen max-w-screen items-center justify-center overflow-hidden p-8"
+  >
+    <div class="z-10 mx-auto grid max-w-2xl gap-8">
       <div class="grid gap-6">
-        <h1 class="text-[32px] font-semibold text-gray-100 sm:text-[54px]">
-          Lorem <span class="text-primary-light">Ipsum</span> Dolor
+        <h1
+          class="text-[32px] font-semibold text-gray-100 sm:text-[54px]"
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="800"
+        >
+          Vous avez une <span class="text-primary-light">idée</span> ?
+          <br />
+          Réalisons-la <span class="text-primary-light">ensemble</span> !
         </h1>
-        <p class="text-base leading-7 font-medium">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a elementum nibh, eget pellentesque
-          metus. Morbi sed justo rutrum
+        <p class="text-base leading-7 font-medium" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+          Développeur freelance basé à Rennes, je vous accompagne dans la création de solutions web, mobiles,
+          logicielles ou IA sur mesure.
         </p>
       </div>
-      <div class="justify-left flex items-center">
-        <DibodevButton class="w-full sm:max-w-xs">
+      <div class="justify-left flex items-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+        <DibodevButton @click="scrollToServicesSection" class="w-full sm:max-w-xs">
           Découvrir
           <DibodevIcon
             name="DoubleChevronsDown"
@@ -27,21 +37,53 @@
     <img
       src="/images/blur-vector.png"
       alt="Blur vector background"
-      class="pointer-events-none absolute right-0 bottom-0 z-0 select-none"
+      class="pointer-events-none absolute right-0 bottom-0 z-0 h-[600px] transition-transform duration-300 ease-out select-none sm:h-[850px]"
       width="1440"
       height="810"
+      :style="{ transform: `translateY(${parallaxY}px)` }"
     />
-
-    <!--    <img-->
-    <!--        src="/images/blur-vector.png"-->
-    <!--        alt="Blur vector background"-->
-    <!--        class="absolute bottom-0 right-0 z-0 pointer-events-none select-none w-full h-full object-cover"-->
-    <!--        width="1440"-->
-    <!--        height="810"-->
-    <!--    />-->
   </section>
 </template>
-<script lang="ts" setup>
+
+<script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
+import type { Ref } from 'vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
+
+const parallaxY: Ref<number> = ref(0)
+
+/**
+ * Function to scroll to the services section.
+ * @returns {void}
+ */
+const scrollToServicesSection: () => void = (): void => {
+  const servicesSection: HTMLElement | null = document.querySelector('#services')
+  if (servicesSection) {
+    const offset: number = 170
+    const top: number = servicesSection.getBoundingClientRect().top + window.scrollY - offset
+    window.scrollTo({
+      top,
+      behavior: 'smooth',
+    })
+  } else {
+    console.warn('Services section not found.')
+  }
+}
+
+/**
+ * Function to update the parallax effect based on scroll position.
+ * @returns {void}
+ */
+const updateParallax: () => void = (): void => {
+  parallaxY.value = window.scrollY * 0.9
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', updateParallax)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', updateParallax)
+})
 </script>

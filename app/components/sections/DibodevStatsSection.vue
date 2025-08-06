@@ -1,7 +1,19 @@
 <template>
-  <section class="relative z-2 flex items-center justify-center bg-gray-800 px-6 py-20 sm:px-8 sm:py-8">
+  <section
+    id="stats"
+    data-aos="fade-up"
+    data-aos-duration="600"
+    class="relative z-2 flex items-center justify-center bg-gray-800 px-6 py-20 sm:px-8 sm:py-8"
+  >
     <div class="grid w-full max-w-7xl grid-cols-2 gap-x-8 gap-y-20 sm:gap-x-6 sm:gap-y-6 md:grid-cols-4">
-      <DibodevStat v-for="(stat, index) in stats" :key="index" :value="stat.value" :label="stat.label" />
+      <DibodevStat
+        v-for="(stat, index) in stats"
+        :key="index"
+        :value="stat.value"
+        :label="stat.label"
+        data-aos="zoom-in"
+        :data-aos-delay="index * 150"
+      />
     </div>
   </section>
 </template>

@@ -18,10 +18,7 @@
             {{ link.text }}
           </DibodevLink>
         </li>
-      </ol>
-
-      <ol class="hidden items-center justify-center gap-8 text-base font-normal sm:flex">
-        <li>
+        <li class="ml-6">
           <DibodevButton to="/contact" icon="Mail" size="sm"> Me contacter</DibodevButton>
         </li>
       </ol>
@@ -82,16 +79,12 @@ import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 /* DATAS */
 const links: DibodevNavbarLink[] = [
   {
-    text: 'Mes services',
-    to: '/services',
+    text: 'Accueil',
+    to: '/',
   },
   {
     text: 'Mes projets',
     to: '/projects',
-  },
-  {
-    text: 'Tarif',
-    to: '/pricing',
   },
 ]
 
