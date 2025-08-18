@@ -4,7 +4,7 @@
       <slot name="icon" />
     </div>
 
-    <div class="grid gap-3">
+    <div class="grid gap-3 self-baseline">
       <h4 class="text-left text-base font-medium text-gray-100">
         {{ props.title }}
       </h4>

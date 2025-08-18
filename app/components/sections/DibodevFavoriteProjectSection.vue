@@ -4,7 +4,7 @@
     data-aos="fade-up"
     data-aos-duration="600"
     data-aos-offset="300"
-    class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-10 sm:px-8 sm:pt-40 sm:pb-8"
+    class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-36 sm:px-8 sm:py-60"
   >
     <div class="grid gap-14 sm:gap-12">
       <div class="justify-left flex items-center gap-4 sm:justify-center">

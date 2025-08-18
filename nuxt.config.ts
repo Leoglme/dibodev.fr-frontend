@@ -13,6 +13,9 @@ export default defineNuxtConfig({
       ],
     },
   },
+  runtimeConfig: {
+    githubToken: process.env.GITHUB_TOKEN || '',
+  },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   ssr: true,
