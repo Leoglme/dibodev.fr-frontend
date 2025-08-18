@@ -9,18 +9,20 @@
     <div class="grid gap-14 sm:gap-12">
       <div class="justify-left flex items-center gap-4 sm:justify-center">
         <h2 class="text-left text-2xl font-semibold sm:text-center sm:text-[32px]">Mes projets favoris</h2>
-        <svg
-          class="heartbeat h-[24px] w-[26px] sm:h-[30px] sm:w-[34px]"
-          width="34"
-          height="30"
-          viewBox="0 0 34 30"
-          fill="none"
-        >
-          <path
-            d="M24.5 0C21.35 0 18.575 1.75 17 4.5C15.425 1.75 12.65 0 9.5 0C4.55 0 0.5 4.5 0.5 10C0.5 19.9167 17 30 17 30C17 30 33.5 20 33.5 10C33.5 4.5 29.45 0 24.5 0Z"
-            fill="#F44336"
-          />
-        </svg>
+        <div title="999 bpm">
+          <svg
+            class="heartbeat h-[24px] w-[26px] sm:h-[30px] sm:w-[34px]"
+            width="34"
+            height="30"
+            viewBox="0 0 34 30"
+            fill="none"
+          >
+            <path
+              d="M24.5 0C21.35 0 18.575 1.75 17 4.5C15.425 1.75 12.65 0 9.5 0C4.55 0 0.5 4.5 0.5 10C0.5 19.9167 17 30 17 30C17 30 33.5 20 33.5 10C33.5 4.5 29.45 0 24.5 0Z"
+              fill="#F44336"
+            />
+          </svg>
+        </div>
       </div>
       <div class="flex w-full max-w-7xl flex-col-reverse gap-10 sm:grid sm:gap-8">
         <div class="flex w-full items-center justify-end">

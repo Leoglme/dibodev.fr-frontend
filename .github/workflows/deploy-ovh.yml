@@ -25,6 +25,11 @@ jobs:
       - name: 📦 Install dependencies
         run: npm ci
 
+      - name: 📝 Setup environment file
+        run: |
+          cp .env.example .env
+          echo "GITHUB_TOKEN=${{ secrets.DIBODEV_STATS_GITHUB_TOKEN }}" >> .env
+
       - name: 🛠️ Generate Static Site
         run: npm run generate
         env:
