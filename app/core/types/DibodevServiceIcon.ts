@@ -1,4 +1,13 @@
-export const dibodevServiceIconNames: string[] = ['apps', 'mobile', 'seo', 'cloud-computing'] as const
+export const dibodevServiceIconNames = [
+  'ai',
+  'apps',
+  'cloud-computing',
+  'cloud-storage',
+  'mobile',
+  'seo',
+  'seo-tag',
+  'website-content',
+] as const
 
 /**
  * Type definitions for the dibodev service component icon
