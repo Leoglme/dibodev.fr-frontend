@@ -52,4 +52,5 @@ export default defineNuxtConfig({
     preload: true, // Preload the font CSS for faster rendering
     useStylesheet: false, // Use inline CSS (via base64) instead of external stylesheet
   },
+  plugins: ['~/plugins/VeeValidate'],
 })

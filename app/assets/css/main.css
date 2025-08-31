@@ -68,3 +68,8 @@
     }
   }
 }
+
+.error-message {
+  position: absolute;
+  bottom: -28px;
+}

@@ -32,8 +32,11 @@ import DoubleChevronsDown from '~/components/icons/DoubleChevronsDown.vue'
 import Github from '~/components/icons/Github.vue'
 import Linkedin from '~/components/icons/Linkedin.vue'
 import Mail from '~/components/icons/Mail.vue'
+import MapPin from '~/components/icons/MapPin.vue'
 import Menu from '~/components/icons/Menu.vue'
 import Moon from '~/components/icons/Moon.vue'
+import Phone from '~/components/icons/Phone.vue'
+import Send from '~/components/icons/Send.vue'
 import type { DibodevIconMode, DibodevIconProps, IconComponent } from '~/core/types/DibodevIcon'
 import { iconsList } from '~/core/types/DibodevIcon'
 
@@ -82,8 +85,11 @@ const iconsDictionary: Record<string, IconComponent> = {
   Github,
   Linkedin,
   Mail,
+  MapPin,
   Menu,
   Moon,
+  Phone,
+  Send,
 }
 
 /**

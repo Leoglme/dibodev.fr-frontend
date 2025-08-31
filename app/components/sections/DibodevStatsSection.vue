@@ -9,7 +9,7 @@
       <DibodevStat
         v-for="(stat, index) in stats"
         :key="index"
-        :value="stat.value"
+        :value="stat.value.toString()"
         :label="stat.label"
         data-aos="zoom-in"
         :data-aos-delay="index * 150"

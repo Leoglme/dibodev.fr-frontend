@@ -19,7 +19,7 @@
     </svg>
     <span
       v-if="props.large"
-      class="text-light-400 font-medium"
+      class="font-medium text-gray-100"
       :class="{
         'text-2xl': Number(props.size) >= 40,
         'text-lg': Number(props.size) < 40,

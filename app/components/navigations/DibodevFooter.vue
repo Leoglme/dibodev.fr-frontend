@@ -28,7 +28,7 @@
       </div>
 
       <div class="grid gap-8">
-        <DibodevButton icon="Mail" class="w-full">Me contacter</DibodevButton>
+        <DibodevButton v-if="currentRoute !== '/contact'" icon="Mail" class="w-full">Me contacter</DibodevButton>
 
         <div class="flex flex-wrap items-center justify-between">
           <div class="flex items-center gap-4">
@@ -74,6 +74,7 @@ import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
 import type { Ref } from 'vue'
 import DibodevBadge from '~/components/ui/DibodevBadge.vue'
 import DibodevDivider from '~/components/decorators/DibodevDivider.vue'
+import type { Router } from '#vue-router'
 
 type Socials = {
   name: string
@@ -88,6 +89,10 @@ type FooterLink = {
   to: string
 }
 
+/* ROUTE */
+const router: Router = useRouter()
+
+/* DATAS */
 const socials: Socials[] = [
   {
     name: 'GitHub',
@@ -138,4 +143,10 @@ const tags: string[] = [
 /* REFS */
 const isChecked: Ref<boolean> = ref(false)
 const selectedLanguage: Ref<DibodevSelectOption> = ref({ label: 'Français', value: 'fr' })
+const currentRoute: Ref<string> = ref(router.currentRoute.value.path)
+
+// Watch for route changes to update currentRoute
+router.afterEach((to) => {
+  currentRoute.value = to.path
+})
 </script>

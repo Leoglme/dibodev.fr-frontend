@@ -18,8 +18,8 @@
             {{ link.text }}
           </DibodevLink>
         </li>
-        <li class="ml-6">
-          <DibodevButton to="/contact" icon="Mail" size="sm"> Me contacter</DibodevButton>
+        <li v-if="currentRoute !== '/contact'" class="ml-6">
+          <DibodevButton to="/contact" icon="Mail" size="sm"> Me contacter </DibodevButton>
         </li>
       </ol>
 
@@ -56,7 +56,13 @@
                 >
                   {{ link.text }}
                 </DibodevLink>
-                <DibodevButton to="/contact" icon="Mail" size="sm" @click="mobileMenuOpen = false">
+                <DibodevButton
+                  v-if="currentRoute !== '/contact'"
+                  to="/contact"
+                  icon="Mail"
+                  size="sm"
+                  @click="mobileMenuOpen = false"
+                >
                   Me contacter
                 </DibodevButton>
               </div>
@@ -75,6 +81,10 @@ import type { Ref } from 'vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevSquareButton from '~/components/buttons/DibodevSquareButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
+import type { Router } from '#vue-router'
+
+/* ROUTE */
+const router: Router = useRouter()
 
 /* DATAS */
 const links: DibodevNavbarLink[] = [
@@ -90,6 +100,7 @@ const links: DibodevNavbarLink[] = [
 
 /* REFS */
 const mobileMenuOpen: Ref<boolean> = ref(false)
+const currentRoute: Ref<string> = ref(router.currentRoute.value.path)
 
 // Manage scroll position
 const scrollPosition: Ref<number> = ref(0)
@@ -108,6 +119,11 @@ onUnmounted(() => {
 
 watch(mobileMenuOpen, (open: boolean) => {
   document.body.style.overflow = open ? 'hidden' : ''
+})
+
+// Watch for route changes to update currentRoute
+router.afterEach((to) => {
+  currentRoute.value = to.path
 })
 </script>
 
