@@ -39,7 +39,7 @@
         :value="props.value"
         :min="props.min ? props.min.toString() : undefined"
         :step="props.step ? props.step.toString() : undefined"
-        class="focus:border-primary relative flex h-12 w-full items-center justify-center rounded border-2 bg-gray-600 pl-3 text-gray-100 outline-none placeholder:text-base placeholder:text-gray-300 focus:bg-gray-800"
+        class="focus:border-primary relative flex h-12 w-full appearance-none items-center justify-center rounded border-2 bg-gray-600 pl-3 text-gray-100 outline-none placeholder:text-base placeholder:text-gray-300 focus:bg-gray-800"
         :placeholder="props.placeholder || undefined"
         :class="{
           'pr-3': typeRef === 'number',

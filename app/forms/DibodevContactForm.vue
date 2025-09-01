@@ -26,7 +26,7 @@
         :min="0"
         :step="1"
         placeholder="0"
-        :value="budget"
+        :value="budget || undefined"
         rules="required|price_format|min_value:0|max_value:100000"
         @update:value="budget = toNumberLike($event.toString())"
       />
@@ -88,7 +88,7 @@ const pagesOptions: Option[] = ['1–3', '3–6', '6–10', '10+']
 /** REFS */
 const projectType: Ref<string | null> = ref('Site web')
 const pagesRange: Ref<string | null> = ref(null)
-const budget: Ref<number> = ref(0)
+const budget: Ref<number | null> = ref(null)
 const fullName: Ref<string> = ref('')
 const email: Ref<string> = ref('')
 const message: Ref<string> = ref('')
@@ -107,7 +107,7 @@ const onSubmit: () => void = (): void => {
   const payload = {
     projectType: projectType.value,
     pagesRange: pagesRange.value,
-    budget: Number(budget.value),
+    budget: Number(budget.value || 0),
     fullName: fullName.value.trim(),
     email: email.value.trim(),
     message: message.value.trim(),
