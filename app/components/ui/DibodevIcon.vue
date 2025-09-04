@@ -22,14 +22,16 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import type { PropType, ComputedRef } from 'vue'
-
+import AlertCircle from '~/components/icons/AlertCircle.vue'
 import ArrowRight from '~/components/icons/ArrowRight.vue'
+import CheckCircle from '~/components/icons/CheckCircle.vue'
 import ChevronDown from '~/components/icons/ChevronDown.vue'
 import ChevronLeft from '~/components/icons/ChevronLeft.vue'
 import ChevronRight from '~/components/icons/ChevronRight.vue'
 import ChevronUp from '~/components/icons/ChevronUp.vue'
 import DoubleChevronsDown from '~/components/icons/DoubleChevronsDown.vue'
 import Github from '~/components/icons/Github.vue'
+import Info from '~/components/icons/Info.vue'
 import Linkedin from '~/components/icons/Linkedin.vue'
 import Mail from '~/components/icons/Mail.vue'
 import MapPin from '~/components/icons/MapPin.vue'
@@ -37,6 +39,7 @@ import Menu from '~/components/icons/Menu.vue'
 import Moon from '~/components/icons/Moon.vue'
 import Phone from '~/components/icons/Phone.vue'
 import Send from '~/components/icons/Send.vue'
+import XCircle from '~/components/icons/XCircle.vue'
 import type { DibodevIconMode, DibodevIconProps, IconComponent } from '~/core/types/DibodevIcon'
 import { iconsList } from '~/core/types/DibodevIcon'
 
@@ -76,13 +79,16 @@ const props: DibodevIconProps = defineProps({
  * @constant {Record<string, IconComponent>}
  */
 const iconsDictionary: Record<string, IconComponent> = {
+  AlertCircle,
   ArrowRight,
+  CheckCircle,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
   ChevronUp,
   DoubleChevronsDown,
   Github,
+  Info,
   Linkedin,
   Mail,
   MapPin,
@@ -90,6 +96,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   Moon,
   Phone,
   Send,
+  XCircle,
 }
 
 /**

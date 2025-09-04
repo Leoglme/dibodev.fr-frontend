@@ -15,6 +15,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN || '',
+    mailjetApiKey: process.env.MAILJET_API_KEY || '',
+    mailjetApiSecret: process.env.MAILJET_API_SECRET || '',
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -25,6 +27,12 @@ export default defineNuxtConfig({
   },
   nitro: {
     preset: 'static',
+    serverAssets: [
+      {
+        baseName: 'mjml-templates',
+        dir: './server/services/mail/mjml/templates',
+      },
+    ],
   },
   modules: ['@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxtjs/google-fonts'],
   site: {

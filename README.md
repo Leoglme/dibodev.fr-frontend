@@ -73,3 +73,10 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+#TODO
+
+- Custom +/- : https://chatgpt.com/c/68b4c712-9884-8324-beb2-9c9de985732e
+- Mailjet + mjml: inspi planning
+- page projects
+- page project detail

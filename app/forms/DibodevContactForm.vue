@@ -1,5 +1,5 @@
 <template>
-  <Form v-slot="{ meta }" class="flex flex-col gap-10 sm:gap-8" @submit="onSubmit">
+  <Form v-slot="{ meta }" ref="contactForm" class="flex flex-col gap-10 sm:gap-8" @submit="onSubmit">
     <div class="flex flex-col gap-4">
       <DibodevLabel id="projectType">Comment puis-je vous aider ?</DibodevLabel>
 
@@ -48,6 +48,7 @@
         :value="email"
         rules="required|email"
         @update:value="email = $event.toString()"
+        @blur="onEmailBlur"
       />
     </div>
 
@@ -63,9 +64,18 @@
       />
     </div>
 
+    <DibodevAlert v-if="errorMessage" :message="errorMessage" variant="error" dismissible @hide="errorMessage = null" />
+    <DibodevAlert
+      v-if="successMessage"
+      :message="successMessage"
+      variant="success"
+      dismissible
+      @hide="successMessage = null"
+    />
+
     <div class="flex justify-end">
-      <DibodevButton type="submit" icon="Send" class="w-full lg:w-auto" :disabled="!meta.valid">
-        Envoyer mon message
+      <DibodevButton type="submit" icon="Send" class="w-full lg:w-auto" :disabled="!meta.valid || isSubmitting">
+        {{ isSubmitting ? 'Envoi en cours...' : 'Envoyer mon message' }}
       </DibodevButton>
     </div>
   </Form>
@@ -75,23 +85,37 @@
 import { ref } from 'vue'
 import type { Ref } from 'vue'
 import { Form, Field, ErrorMessage } from 'vee-validate'
+import type { FormContext } from 'vee-validate'
 import DibodevLabel from '~/components/core/DibodevLabel.vue'
 import DibodevInput from '~/components/core/DibodevInput.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevTogglePillGroup from '~/components/ui/DibodevTogglePillGroup.vue'
+import DibodevAlert from '~/components/feedback/DibodevAlert.vue'
 import type { Option } from '~/components/ui/DibodevTogglePillGroup.vue'
+import { debounce } from 'lodash-es'
+import type { ContactFormPayload, ProjectType, PagesRange } from '~~/server/types/mail/contact'
 
 /** DATAS */
 const projectTypeOptions: Option[] = ['Site web', 'Application mobile', 'Autre']
 const pagesOptions: Option[] = ['1–3', '3–6', '6–10', '10+']
 
 /** REFS */
-const projectType: Ref<string | null> = ref('Site web')
-const pagesRange: Ref<string | null> = ref(null)
-const budget: Ref<number | null> = ref(null)
-const fullName: Ref<string> = ref('')
-const email: Ref<string> = ref('')
-const message: Ref<string> = ref('')
+const projectType: Ref<ProjectType | null> = ref('Site web')
+// const pagesRange: Ref<PagesRange | null> = ref(null)
+// const budget: Ref<number | null> = ref(null)
+// const fullName: Ref<string> = ref('')
+// const email: Ref<string> = ref('')
+// const message: Ref<string> = ref('')
+const pagesRange: Ref<PagesRange | null> = ref('3–6')
+const budget: Ref<number | null> = ref(2000)
+const fullName: Ref<string> = ref('leo guillaume')
+const email: Ref<string> = ref('toto@gmail.com')
+const message: Ref<string> = ref('mon message')
+const isSubmitting: Ref<boolean> = ref(false)
+const errorMessage: Ref<string | null> = ref(null)
+const successMessage: Ref<string | null> = ref(null)
+const lastSentEmail: Ref<string | null> = ref(null)
+const contactForm: Ref<FormContext | null> = ref(null)
 
 /** METHODS */
 function toNumberLike(value: string | number): number {
@@ -101,20 +125,109 @@ function toNumberLike(value: string | number): number {
   return Number.isFinite(n) ? n : 0
 }
 
-/** Validation + Submit */
-const onSubmit: () => void = (): void => {
-  // Payload final
-  const payload = {
+/** Validates email format client-side */
+function isValidEmail(email: string): boolean {
+  const emailRegex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  return emailRegex.test(email.trim())
+}
+
+/** Reset form fields */
+function resetFormValues(): void {
+  projectType.value = 'Site web'
+  pagesRange.value = null
+  budget.value = null
+  fullName.value = ''
+  email.value = ''
+  message.value = ''
+  lastSentEmail.value = null
+  contactForm.value?.resetForm({
+    values: {
+      'type de projet': 'Site web',
+      'nombre de pages': null,
+      budget: null,
+      nom: '',
+      email: '',
+      message: '',
+    },
+  })
+}
+
+/** Debounced function to handle email blur */
+const debouncedOnEmailBlur = debounce(async () => {
+  if (!isValidEmail(email.value) || email.value === lastSentEmail.value) {
+    return
+  }
+
+  try {
+    const { data, error } = await useFetch<{ message: string }>('/api/mail/contact-intent', {
+      method: 'POST',
+      body: { email: email.value.trim() },
+    })
+
+    if (error.value) {
+      console.error('onEmailBlur: Failed to send contact intent:', error.value)
+      return
+    }
+
+    if (data.value) {
+      lastSentEmail.value = email.value.trim()
+      console.log('Contact intent notification sent:', data.value)
+    }
+  } catch (err) {
+    console.error('onEmailBlur: Unexpected error:', err)
+  }
+}, 500)
+
+/** Handles email input blur to send contact intent notification */
+async function onEmailBlur(): Promise<void> {
+  await debouncedOnEmailBlur()
+}
+
+/** Handles form submission */
+async function onSubmit(): Promise<void> {
+  errorMessage.value = null
+  successMessage.value = null
+  isSubmitting.value = true
+
+  const payload: ContactFormPayload = {
     projectType: projectType.value,
     pagesRange: pagesRange.value,
-    budget: Number(budget.value || 0),
+    budget: budget.value || 0,
     fullName: fullName.value.trim(),
     email: email.value.trim(),
     message: message.value.trim(),
   }
 
-  // emit('submit', payload)
-  console.log('Contact form payload:', payload)
-  alert('Formulaire valide ✅ — prêt à être envoyé.')
+  try {
+    const { data, error } = await useFetch<{ message: string }>('/api/mail/contact', {
+      method: 'POST',
+      body: payload,
+    })
+
+    if (error.value) {
+      const fallbackMessage: string =
+        error.value.status === 400
+          ? 'Le formulaire est invalide. Veuillez vérifier vos informations.'
+          : 'Erreur serveur. Veuillez réessayer plus tard.'
+      const errorResponseMessage: string =
+        error.value.statusMessage || error.value.data?.message || error.value.message || fallbackMessage
+
+      console.error('onSubmit: Failed to send contact form:', error.value)
+      errorMessage.value = errorResponseMessage
+      isSubmitting.value = false
+      return
+    }
+
+    if (data.value) {
+      successMessage.value =
+        'Votre message a été envoyé avec succès ! Un accusé de réception vous a été envoyé par email.'
+      resetFormValues()
+    }
+  } catch (err) {
+    console.error('onSubmit: Unexpected error:', err)
+    errorMessage.value = 'Erreur inattendue. Veuillez réessayer plus tard.'
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>

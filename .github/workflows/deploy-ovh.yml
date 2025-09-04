@@ -28,7 +28,10 @@ jobs:
       - name: 📝 Setup environment file
         run: |
           cp .env.example .env
+          echo "NODE_ENV=production" >> .env
           echo "GITHUB_TOKEN=${{ secrets.DIBODEV_STATS_GITHUB_TOKEN }}" >> .env
+          echo "MAILJET_API_KEY=${{ secrets.MAILJET_API_KEY }}" >> .env
+          echo "MAILJET_API_SECRET=${{ secrets.MAILJET_API_SECRET }}" >> .env
 
       - name: 🛠️ Generate Static Site
         run: npm run generate

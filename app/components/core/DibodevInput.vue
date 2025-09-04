@@ -14,6 +14,7 @@
       :type="typeRef"
       :value="props.value"
       @input="emit('update:value', $event.target.value, $event)"
+      @blur="emit('blur')"
       :placeholder="props.placeholder || undefined"
     >
       <textarea
@@ -22,6 +23,7 @@
         v-bind="field"
         :id="props.id"
         :value="props.value"
+        @blur="emit('blur')"
         class="focus:border-primary relative flex w-full items-center justify-center rounded border-2 bg-gray-600 pt-3 pl-3 text-gray-100 outline-none placeholder:text-base placeholder:text-gray-300 focus:bg-gray-800"
         :placeholder="props.placeholder || undefined"
         :class="{
@@ -39,6 +41,7 @@
         :value="props.value"
         :min="props.min ? props.min.toString() : undefined"
         :step="props.step ? props.step.toString() : undefined"
+        @blur="emit('blur')"
         class="focus:border-primary relative flex h-12 w-full appearance-none items-center justify-center rounded border-2 bg-gray-600 pl-3 text-gray-100 outline-none placeholder:text-base placeholder:text-gray-300 focus:bg-gray-800"
         :placeholder="props.placeholder || undefined"
         :class="{
@@ -113,8 +116,12 @@ const props: DibodevInputProps = defineProps({
 })
 
 /*EMIT*/
-const emit: (event: 'update:value', value: string | number, inputEvent: InputEvent) => void = defineEmits<{
+const emit: {
   (event: 'update:value', value: string | number, inputEvent: InputEvent): void
+  (event: 'blur'): void
+} = defineEmits<{
+  (event: 'update:value', value: string | number, inputEvent: InputEvent): void
+  (event: 'blur'): void
 }>()
 
 /*REFS*/
