@@ -26,7 +26,14 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   nitro: {
-    preset: 'static',
+    preset: 'node-server',
+    output: {
+      publicDir: '.output/public',
+      serverDir: '.output/server',
+    },
+    prerender: {
+      crawlLinks: true,
+    },
     serverAssets: [
       {
         baseName: 'mjml-templates',
