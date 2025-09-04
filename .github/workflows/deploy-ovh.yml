@@ -79,6 +79,10 @@ jobs:
             fi
             # Install the dependencies of the server
             cd /var/www/dibodev.fr/server
+
+            # Import the package.json du Restitory in sever folder
+            cp /var/www/dibodev.fr/server/package.json package.json
+
             npm ci
             # Configure environmental variables
             echo "NODE_ENV=production" > .env
