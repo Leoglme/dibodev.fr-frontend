@@ -32,6 +32,14 @@ jobs:
           echo "GITHUB_TOKEN=${{ secrets.DIBODEV_STATS_GITHUB_TOKEN }}" >> .env
           echo "MAILJET_API_KEY=${{ secrets.MAILJET_API_KEY }}" >> .env
           echo "MAILJET_API_SECRET=${{ secrets.MAILJET_API_SECRET }}" >> .env
+          # Verify that .env exists
+          if [ -f ".env" ]; then
+            echo ".env file created successfully"
+            cat .env
+          else
+            echo "Error: .env file was not created"
+            exit 1
+          fi
 
       - name: 🛠️ Generate Static Site (Frontend)
         run: npm run generate
@@ -106,9 +114,10 @@ jobs:
             fi
             # Start Nitro server with PM2
             cd /var/www/dibodev.fr/server
-            pm2 stop dibodev-nuxt-api || true
+            pm2 describe dibodev-nuxt-api > /dev/null 2>&1 && pm2 stop dibodev-nuxt-api || true
             pm2 start index.mjs --name dibodev-nuxt-api
             pm2 save
+            pm2 list
             # Restart Nginx
             sudo nginx -t
             sudo systemctl restart nginx
