@@ -3,6 +3,8 @@ import fs from 'node:fs/promises'
 import mjml from 'mjml'
 import type { MJMLParseError } from 'mjml-core'
 import Handlebars from 'handlebars'
+import { websiteName } from '~~/server/services/mail/mail.config'
+import { DateTime } from 'luxon'
 
 /**
  * Result from MJML parsing.
@@ -86,13 +88,12 @@ export default class MjmlService {
    * @throws {Error} - If importing fails.
    */
   public static async getMjmlContent(viewPath: string): Promise<string> {
-   try {
-    const templatePath: string = path.resolve(process.cwd(), 'server/services/mail/mjml/templates', `${viewPath}.ts`)
-    const module = await import(templatePath)
-    return module.default // Récupère la chaîne exportée par le module
+    try {
+      const templatePath: string = path.resolve(process.cwd(), 'server/services/mail/mjml/templates', `${viewPath}.ts`)
+      return await fs.readFile(templatePath, 'utf-8')
     } catch (error) {
-    console.error(`MjmlService:getMjmlContent: Error importing MJML template: ${viewPath}`, error)
-    throw error
+      console.error(`MjmlService:getMjmlContent: Error reading MJML template: ${viewPath}`, error)
+      throw error
     }
   }
 
@@ -107,6 +108,12 @@ export default class MjmlService {
     if (!payload) {
       console.warn('MjmlService:replacePlaceholders:No payload provided for template rendering.')
       return template
+    }
+
+    payload = {
+      ...payload,
+      websiteName,
+      currentYear: DateTime.now().year,
     }
 
     try {

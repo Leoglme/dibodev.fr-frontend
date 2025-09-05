@@ -1,10 +1,8 @@
-import { websiteName } from '~~/server/services/mail/mail.config'
-
 export default `
 <mj-section background-color="#ffffff" padding="20px">
   <mj-column>
     <mj-text font-size="24px" font-weight="bold" align="center">
-        ${websiteName}
+        {{websiteName}}
     </mj-text>
   </mj-column>
 </mj-section>
