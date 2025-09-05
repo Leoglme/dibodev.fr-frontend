@@ -54,6 +54,12 @@ jobs:
         env:
           NITRO_PRESET: node-server
 
+      - name: 📂 Copy MJML templates to server output
+        run: |
+          mkdir -p .output/server/server/services/mail/mjml/templates
+          cp -r server/services/mail/mjml/templates/* .output/server/server/services/mail/mjml/templates/
+          ls -la .output/server/server/services/mail/mjml/templates
+
       - name: 📂 Restore static site output
         run: |
           if [ -d "tmp/public-static" ]; then
