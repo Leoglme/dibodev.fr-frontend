@@ -32,14 +32,6 @@ jobs:
           echo "GITHUB_TOKEN=${{ secrets.DIBODEV_STATS_GITHUB_TOKEN }}" >> .env
           echo "MAILJET_API_KEY=${{ secrets.MAILJET_API_KEY }}" >> .env
           echo "MAILJET_API_SECRET=${{ secrets.MAILJET_API_SECRET }}" >> .env
-          # Verify that .env exists
-          if [ -f ".env" ]; then
-            echo ".env file created successfully"
-            cat .env
-          else
-            echo "Error: .env file was not created"
-            exit 1
-          fi
 
       - name: 🛠️ Generate Static Site (Frontend)
         run: npm run generate
@@ -91,9 +83,20 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: '.output/server/*,.env'
+          source: '.output/server/*'
           target: '/var/www/dibodev.fr/server'
           strip_components: 2
+
+      - name: 📤 Deploy .env to VPS
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: '.env'
+          target: '/var/www/dibodev.fr/server'
+          strip_components: 0
 
       - name: 🛠️ Start Nitro server
         uses: appleboy/ssh-action@master
