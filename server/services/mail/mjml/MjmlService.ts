@@ -86,12 +86,13 @@ export default class MjmlService {
    * @throws {Error} - If importing fails.
    */
   public static async getMjmlContent(viewPath: string): Promise<string> {
-    try {
-      const templatePath: string = path.resolve(process.cwd(), 'server/services/mail/mjml/templates', `${viewPath}.ts`)
-      return await fs.readFile(templatePath, 'utf-8')
+   try {
+    const templatePath: string = path.resolve(process.cwd(), 'server/services/mail/mjml/templates', `${viewPath}.ts`)
+    const module = await import(templatePath)
+    return module.default // Récupère la chaîne exportée par le module
     } catch (error) {
-      console.error(`MjmlService:getMjmlContent: Error reading MJML template: ${viewPath}`, error)
-      throw error
+    console.error(`MjmlService:getMjmlContent: Error importing MJML template: ${viewPath}`, error)
+    throw error
     }
   }
 
