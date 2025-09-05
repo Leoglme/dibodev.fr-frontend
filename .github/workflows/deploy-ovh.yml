@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: ⚙️ Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22
 
@@ -33,10 +33,23 @@ jobs:
           echo "MAILJET_API_KEY=${{ secrets.MAILJET_API_KEY }}" >> .env
           echo "MAILJET_API_SECRET=${{ secrets.MAILJET_API_SECRET }}" >> .env
 
-      - name: 🛠️ Generate Static Site
+      - name: 🛠️ Generate Static Site (Frontend)
         run: npm run generate
         env:
           NITRO_PRESET: static
+
+      - name: 📂 Save static site output
+        run: mv .output/public .output/public-static
+
+      - name: 🛠️ Build Server (Nitro)
+        run: npm run build
+        env:
+          NITRO_PRESET: node-server
+
+      - name: 📂 Restore static site output
+        run: |
+          rm -rf .output/public
+          mv .output/public-static .output/public
 
       - name: 📤 Deploy static files to VPS
         uses: appleboy/scp-action@master
@@ -56,11 +69,11 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: '.output/server/*,package.json,package-lock.json'
+          source: '.output/server/*,.env'
           target: '/var/www/dibodev.fr/server'
           strip_components: 2
 
-      - name: 🛠️ Install dependencies and start Nitro server
+      - name: 🛠️ Start Nitro server
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -68,31 +81,20 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            # Install node.js if it has not already been done
+            # Install Node.js if not already installed
             if ! command -v node &> /dev/null; then
               curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
               sudo apt-get install -y nodejs
             fi
-            # Install PM2 if it has not already been done
+            # Install PM2 if not already installed
             if ! command -v pm2 &> /dev/null; then
               npm install -g pm2
             fi
-            # Install the dependencies of the server
+            # Start Nitro server with PM2
             cd /var/www/dibodev.fr/server
-
-            # Import the package.json du Restitory in sever folder
-            cp /var/www/dibodev.fr/server/package.json package.json
-
-            npm ci
-            # Configure environmental variables
-            echo "NODE_ENV=production" > .env
-            echo "GITHUB_TOKEN=${{ secrets.DIBODEV_STATS_GITHUB_TOKEN }}" >> .env
-            echo "MAILJET_API_KEY=${{ secrets.MAILJET_API_KEY }}" >> .env
-            echo "MAILJET_API_SECRET=${{ secrets.MAILJET_API_SECRET }}" >> .env
-            # Restart the nitro server with PM2
             pm2 stop dibodev-nuxt-api || true
             pm2 start index.mjs --name dibodev-nuxt-api
             pm2 save
-            # Redémarrer Nginx
+            # Restart Nginx
             sudo nginx -t
             sudo systemctl restart nginx

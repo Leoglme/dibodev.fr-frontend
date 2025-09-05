@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   nitro: {
-    preset: 'node-server',
+    preset: process.env.NITRO_PRESET || 'node-server',
     output: {
       publicDir: '.output/public',
       serverDir: '.output/server',
