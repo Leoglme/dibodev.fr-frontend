@@ -34,22 +34,41 @@ jobs:
           echo "MAILJET_API_SECRET=${{ secrets.MAILJET_API_SECRET }}" >> .env
 
       - name: 🛠️ Generate Static Site (Frontend)
-        run: npm run generate
+        run: |
+          npm run generate
+          ls -la .output
         env:
           NITRO_PRESET: static
 
       - name: 📂 Save static site output
-        run: mv .output/public .output/public-static
+        run: |
+          if [ -d ".output/public" ]; then
+            mv .output/public .output/public-static
+            echo "Static site output saved to .output/public-static"
+            ls -la .output
+          else
+            echo "Error: .output/public does not exist after npm run generate"
+            exit 1
+          fi
 
       - name: 🛠️ Build Server (Nitro)
-        run: npm run build
+        run: |
+          npm run build
+          ls -la .output
         env:
           NITRO_PRESET: node-server
 
       - name: 📂 Restore static site output
         run: |
-          rm -rf .output/public
-          mv .output/public-static .output/public
+          if [ -d ".output/public-static" ]; then
+            rm -rf .output/public
+            mv .output/public-static .output/public
+            echo "Static site output restored to .output/public"
+            ls -la .output
+          else
+            echo "Error: .output/public-static does not exist"
+            exit 1
+          fi
 
       - name: 📤 Deploy static files to VPS
         uses: appleboy/scp-action@master
