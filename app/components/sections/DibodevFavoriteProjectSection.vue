@@ -46,6 +46,21 @@
             :data-aos-delay="index * 100"
           />
         </div>
+
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
+          <DibodevProjectCard
+            v-for="(favoriteProject, index) in favoriteProjectsTwo"
+            :key="favoriteProject.name"
+            :name="favoriteProject.name"
+            :description="favoriteProject.shortDescription"
+            :createdAt="favoriteProject.date"
+            :logo="favoriteProject.logoUrl"
+            :primaryColor="favoriteProject.primaryColor"
+            :secondaryColor="favoriteProject.secondaryColor"
+            data-aos="zoom-in"
+            :data-aos-delay="index * 100"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -56,7 +71,18 @@ import type { DibodevProjectCardProps } from '~/core/types/DibodevProjectCard'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
-import DibodevServiceItem from '~/components/data-displays/DibodevServiceItem.vue'
+import { computed } from 'vue'
+import type { ComputedRef } from 'vue'
+import type { DibodevProject } from '~/core/types/DibodevProject'
+import projects from '~/assets/data/projects.json'
+
+/**
+ * Filter favorite projects from projects.json
+ * @returns {ComputedRef<DibodevProject[]>} favorite projects
+ */
+const favoriteProjectsTwo: ComputedRef<DibodevProject[]> = computed(() =>
+  (projects as DibodevProject[]).filter((p) => p.isFavorite),
+)
 
 const favoriteProjects: DibodevProjectCardProps[] = [
   {

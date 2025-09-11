@@ -1,7 +1,11 @@
 <template>
   <div class="grid gap-2 rounded-2xl border-2 bg-gray-400 p-3" :style="{ borderColor: props.primaryColor }">
-    <div class="flex items-center justify-center rounded-xl" :style="{ backgroundColor: props.secondaryColor }">
-      <img class="h-48 w-full rounded-xl object-none" :src="props.logo" :alt="`${props.name} logo`" />
+    <div class="flex h-50 items-center justify-center rounded-xl" :style="{ backgroundColor: props.secondaryColor }">
+      <img
+        class="h-48 max-h-[120px] w-full max-w-[200px] rounded-xl object-contain"
+        :src="props.logo"
+        :alt="`${props.name} logo`"
+      />
     </div>
 
     <h6 class="text-left text-xl font-medium">
@@ -16,7 +20,13 @@
       {{ props.description }}
     </p>
 
-    <DibodevButton icon="ArrowRight" iconPosition="right" :backgroundColor="props.primaryColor" class="mt-3 w-full">
+    <DibodevButton
+      icon="ArrowRight"
+      iconPosition="right"
+      :backgroundColor="props.primaryColor"
+      :to="`/project/${StringUtils.formatForRoute(props.name)}`"
+      class="mt-3 w-full"
+    >
       En savoir plus
     </DibodevButton>
   </div>
@@ -25,6 +35,7 @@
 <script lang="ts" setup>
 import type { DibodevProjectCardProps } from '~/core/types/DibodevProjectCard'
 import DibodevButton from '~/components/core/DibodevButton.vue'
+import { StringUtils } from '~/core/utils/StringUtils'
 
 const props: DibodevProjectCardProps = defineProps({
   name: {

@@ -77,6 +77,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 #TODO
 
 - Custom +/- : https://chatgpt.com/c/68b4c712-9884-8324-beb2-9c9de985732e
-- Mailjet + mjml: inspi planning
+- mail design
 - page projects
 - page project detail
+- linter / prettier

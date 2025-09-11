@@ -69,7 +69,7 @@ const backgroundHoverColorComputed: ComputedRef<string> = computed(() => {
     return props.backgroundHoverColor
   }
 
-  return ColorUtils.hslToHex(ColorUtils.adjustLightness(ColorUtils.hexToHSL(props.backgroundColor), 10))
+  return ColorUtils.hslToHex(ColorUtils.adjustLightness(ColorUtils.hexToHSL(props.backgroundColor), 6))
 })
 
 const isLink: ComputedRef<boolean> = computed(() => props.to !== null && props.to !== '')

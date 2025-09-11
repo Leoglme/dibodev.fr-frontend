@@ -11,9 +11,12 @@
           data-aos-delay="0"
           data-aos-duration="800"
         >
-          Vous avez une <span class="text-primary-light">idée</span> ?
-          <br />
-          Réalisons-la <span class="text-primary-light">ensemble</span> !
+          <span v-if="!props.title">
+            Vous avez une <span class="text-primary-light">idée</span> ?
+            <br />
+            Réalisons-la <span class="text-primary-light">ensemble</span> !
+          </span>
+          <span v-else>{{ props.title }}</span>
         </h1>
         <p class="text-base leading-7 font-medium" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
           {{ props.description }}
@@ -51,6 +54,10 @@ import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 /* PROPS */
 const props = defineProps({
+  title: {
+    type: String as PropType<string>,
+    default: null,
+  },
   description: {
     type: String as PropType<string>,
     required: true,
