@@ -1,15 +1,15 @@
 <template>
-  <div class="grid h-fit w-full max-w-md grid-cols-[1fr,auto] items-center">
+  <div class="grid h-fit w-full max-w-md grid-cols-[1fr_auto] items-center">
     <input
       ref="searchInput"
       type="search"
       @input="emitValue($event)"
       :value="props.value"
-      class="placeholder:text-light-300 hover:border-light-300 focus:border-primary-400 relative flex h-12 w-full items-center justify-center rounded-md rounded-r-none border-2 bg-gray-400 pl-3 text-white outline-none placeholder:text-base focus:bg-gray-500"
+      class="focus:border-primary relative flex h-12 w-full items-center justify-center rounded-md rounded-r-none border-2 border-transparent bg-gray-600 pl-3 text-gray-100 outline-none placeholder:text-base placeholder:text-gray-300 hover:border-gray-300 focus:bg-gray-700"
       :placeholder="props.placeholder"
     />
-    <div class="flex h-full items-center rounded-r-md bg-gray-200 p-2">
-      <DibodevIcon name="Search" mode="stroke" color="#F5F4FB" style="top: 0" />
+    <div class="flex h-full items-center rounded-r-md bg-gray-700 p-2">
+      <DibodevIcon :width="20" :height="20" name="Search" mode="stroke" color="#F5F4FB" style="top: 0" />
     </div>
   </div>
 </template>

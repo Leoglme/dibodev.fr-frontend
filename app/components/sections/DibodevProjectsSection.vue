@@ -4,20 +4,24 @@
     data-aos="fade-up"
     data-aos-duration="600"
     data-aos-offset="300"
-    class="relative z-2 grid h-full min-h-screen w-screen max-w-screen items-center justify-center gap-18 px-6 py-36 sm:px-8 sm:py-60"
+    class="relative z-2 grid h-full min-h-screen w-screen max-w-screen items-center justify-center gap-18 px-6 py-24 sm:px-8 sm:py-36"
   >
-    <div class="flex w-full flex-col items-center justify-center gap-6 sm:flex-row">
-      <DibodevSearchBar
-        title="Rechercher un projet"
-        placeholder="Rechercher un projet... (Ctrl + E)"
-        v-model:value="searchTerm"
-      />
+    <div class="flex w-full items-center justify-center">
+      <div class="flex w-full max-w-4xl flex-col-reverse items-center justify-center gap-6 md:flex-row">
+        <div class="flex w-full items-center justify-center gap-6">
+          <DibodevSelect id="language-select" :options="languages" v-model="selectedLanguage" />
+          <DibodevSelect id="category-select" :options="categories" v-model="selectedCategory" />
+        </div>
 
-      <DibodevSelect id="language-select" :options="languages" v-model="selectedLanguage" />
-      <DibodevSelect id="category-select" :options="categories" v-model="selectedCategory" />
+        <DibodevSearchBar
+          title="Rechercher un projet"
+          placeholder="Rechercher un projet... (Ctrl + E)"
+          v-model:value="searchTerm"
+        />
+      </div>
     </div>
 
-    <div class="grid max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
+    <div class="grid max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <DibodevProjectCard
         v-for="(favoriteProject, index) in favoriteProjects"
         :key="favoriteProject.name"

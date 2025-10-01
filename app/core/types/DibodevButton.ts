@@ -16,6 +16,7 @@ export type DibodevButtonSize = (typeof dibodevButtonSizes)[number]
  * @property {string | null} icon - The icon to display
  * @property {'left' | 'right' | null} iconPosition - The icon position
  * @property {DibodevButtonSize} size - The button size
+ * @property {boolean} outlined - Whether the button is outlined
  */
 export type DibodevButtonProps = {
   to?: string | null
@@ -25,4 +26,5 @@ export type DibodevButtonProps = {
   icon?: string | null
   iconPosition?: 'left' | 'right' | null
   size: DibodevButtonSize
+  outlined: boolean
 }

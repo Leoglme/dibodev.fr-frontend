@@ -30,6 +30,7 @@ import ChevronLeft from '~/components/icons/ChevronLeft.vue'
 import ChevronRight from '~/components/icons/ChevronRight.vue'
 import ChevronUp from '~/components/icons/ChevronUp.vue'
 import DoubleChevronsDown from '~/components/icons/DoubleChevronsDown.vue'
+import ExternalLink from '~/components/icons/ExternalLink.vue'
 import Github from '~/components/icons/Github.vue'
 import Info from '~/components/icons/Info.vue'
 import Linkedin from '~/components/icons/Linkedin.vue'
@@ -38,6 +39,7 @@ import MapPin from '~/components/icons/MapPin.vue'
 import Menu from '~/components/icons/Menu.vue'
 import Moon from '~/components/icons/Moon.vue'
 import Phone from '~/components/icons/Phone.vue'
+import Search from '~/components/icons/Search.vue'
 import Send from '~/components/icons/Send.vue'
 import XCircle from '~/components/icons/XCircle.vue'
 import type { DibodevIconMode, DibodevIconProps, IconComponent } from '~/core/types/DibodevIcon'
@@ -87,6 +89,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   ChevronRight,
   ChevronUp,
   DoubleChevronsDown,
+  ExternalLink,
   Github,
   Info,
   Linkedin,
@@ -96,6 +99,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   Moon,
   Phone,
   Send,
+  Search,
   XCircle,
 }
 

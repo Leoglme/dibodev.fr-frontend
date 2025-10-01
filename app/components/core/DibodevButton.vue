@@ -1,13 +1,14 @@
 <template>
   <component
     class="dibodev-button"
-    :is="isLink ? 'RouterLink' : 'button'"
+    :is="componentType"
     role="button"
     :to="isLink ? props.to : undefined"
+    :href="isExternalLink ? props.to : undefined"
     :disabled="props.disabled"
     :class="computedClass"
     :style="{
-      '--background-color': backgroundColor,
+      '--background-color': props.outlined ? 'transparent' : backgroundColor,
       '--background-hover-color': backgroundHoverColorComputed,
     }"
   >
@@ -62,17 +63,23 @@ const props: DibodevButtonProps = defineProps({
     type: String as PropType<DibodevButtonSize>,
     default: 'md',
   },
+  outlined: {
+    type: Boolean as PropType<boolean>,
+    default: false,
+  },
 })
 
 const backgroundHoverColorComputed: ComputedRef<string> = computed(() => {
+  if (props.outlined) {
+    return 'rgba(132, 114, 243, 0.1)'
+  }
+
   if (props.backgroundColor === '#8472F3') {
     return props.backgroundHoverColor
   }
 
   return ColorUtils.hslToHex(ColorUtils.adjustLightness(ColorUtils.hexToHSL(props.backgroundColor), 6))
 })
-
-const isLink: ComputedRef<boolean> = computed(() => props.to !== null && props.to !== '')
 
 const buttonSizes: Record<DibodevButtonSize, string> = {
   xs: 'px-2 py-1 text-xs',
@@ -90,12 +97,29 @@ const computedClass: ComputedRef<string> = computed(
   () => `
   inline-flex items-center justify-center
   font-medium text-white select-none
-  border border-transparent leading-6 rounded-md
+  border leading-6 rounded-md
   focus:outline-none focus:shadow-outline transition duration-150 ease-in-out
   ${props.disabled ? 'opacity-70 cursor-not-allowed' : 'cursor-pointer'}
   ${isIconOnly.value ? 'p-2 w-fit' : buttonSizes[props.size]}
+  ${props.outlined ? 'border-gray-100' : 'border-transparent'}
 `,
 )
+
+const isExternalLink: ComputedRef<boolean> = computed(() => {
+  if (!props.to) return false
+  return /^(http|https):\/\//.test(props.to)
+})
+
+const isLink: ComputedRef<boolean> = computed(() => {
+  if (!props.to) return false
+  return !isExternalLink.value
+})
+
+const componentType: ComputedRef<string> = computed(() => {
+  if (isExternalLink.value) return 'a'
+  if (isLink.value) return 'RouterLink'
+  return 'button'
+})
 </script>
 
 <style>

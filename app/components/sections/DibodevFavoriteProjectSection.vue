@@ -32,20 +32,20 @@
           </DibodevLink>
         </div>
 
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
-          <DibodevProjectCard
-            v-for="(favoriteProject, index) in favoriteProjects"
-            :key="favoriteProject.name"
-            :name="favoriteProject.name"
-            :description="favoriteProject.description"
-            :createdAt="favoriteProject.createdAt"
-            :logo="favoriteProject.logo"
-            :primaryColor="favoriteProject.primaryColor"
-            :secondaryColor="favoriteProject.secondaryColor"
-            data-aos="zoom-in"
-            :data-aos-delay="index * 100"
-          />
-        </div>
+        <!--        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">-->
+        <!--          <DibodevProjectCard-->
+        <!--            v-for="(favoriteProject, index) in favoriteProjects"-->
+        <!--            :key="favoriteProject.name"-->
+        <!--            :name="favoriteProject.name"-->
+        <!--            :description="favoriteProject.description"-->
+        <!--            :createdAt="favoriteProject.createdAt"-->
+        <!--            :logo="favoriteProject.logo"-->
+        <!--            :primaryColor="favoriteProject.primaryColor"-->
+        <!--            :secondaryColor="favoriteProject.secondaryColor"-->
+        <!--            data-aos="zoom-in"-->
+        <!--            :data-aos-delay="index * 100"-->
+        <!--          />-->
+        <!--        </div>-->
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
           <DibodevProjectCard
@@ -67,7 +67,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { DibodevProjectCardProps } from '~/core/types/DibodevProjectCard'
+// import type { DibodevProjectCardProps } from '~/core/types/DibodevProjectCard'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
@@ -84,42 +84,42 @@ const favoriteProjectsTwo: ComputedRef<DibodevProject[]> = computed(() =>
   (projects as DibodevProject[]).filter((p) => p.isFavorite),
 )
 
-const favoriteProjects: DibodevProjectCardProps[] = [
-  {
-    name: 'ApartEasy',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet pellentesque diam, sed viverra dui lobortis id. Donec dapibus arcu et diam interdum, et feugiat velit sagittis.',
-    createdAt: '25/04/1998',
-    logo: '/images/projects/aparteasy.png',
-    primaryColor: '#D30A5E',
-    secondaryColor: '#101623',
-  },
-  {
-    name: 'freeAds',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet pellentesque diam, sed viverra dui lobortis id. Donec dapibus arcu et diam interdum, et feugiat velit sagittis.',
-    createdAt: '25/04/1998',
-    logo: '/images/projects/freeAds.png',
-    primaryColor: '#FF6E14',
-    secondaryColor: '#FFFFFF',
-  },
-  {
-    name: 'Nextodo',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet pellentesque diam, sed viverra dui lobortis id. Donec dapibus arcu et diam interdum, et feugiat velit sagittis.',
-    createdAt: '25/04/1998',
-    logo: '/images/projects/nextodo.png',
-    primaryColor: '#F5A623',
-    secondaryColor: '#1F1F1F',
-  },
-  {
-    name: 'Spotify',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet pellentesque diam, sed viverra dui lobortis id. Donec dapibus arcu et diam interdum, et feugiat velit sagittis.',
-    createdAt: '25/04/1998',
-    logo: '/images/projects/spotify.png',
-    primaryColor: '#1ED760',
-    secondaryColor: '#FFFFFF',
-  },
-]
+// const favoriteProjects: DibodevProjectCardProps[] = [
+//   {
+//     name: 'ApartEasy',
+//     description:
+//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet pellentesque diam, sed viverra dui lobortis id. Donec dapibus arcu et diam interdum, et feugiat velit sagittis.',
+//     createdAt: '25/04/1998',
+//     logo: '/images/projects/aparteasy.png',
+//     primaryColor: '#D30A5E',
+//     secondaryColor: '#101623',
+//   },
+//   {
+//     name: 'freeAds',
+//     description:
+//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet pellentesque diam, sed viverra dui lobortis id. Donec dapibus arcu et diam interdum, et feugiat velit sagittis.',
+//     createdAt: '25/04/1998',
+//     logo: '/images/projects/freeAds.png',
+//     primaryColor: '#FF6E14',
+//     secondaryColor: '#FFFFFF',
+//   },
+//   {
+//     name: 'Nextodo',
+//     description:
+//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet pellentesque diam, sed viverra dui lobortis id. Donec dapibus arcu et diam interdum, et feugiat velit sagittis.',
+//     createdAt: '25/04/1998',
+//     logo: '/images/projects/nextodo.png',
+//     primaryColor: '#F5A623',
+//     secondaryColor: '#1F1F1F',
+//   },
+//   {
+//     name: 'Spotify',
+//     description:
+//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet pellentesque diam, sed viverra dui lobortis id. Donec dapibus arcu et diam interdum, et feugiat velit sagittis.',
+//     createdAt: '25/04/1998',
+//     logo: '/images/projects/spotify.png',
+//     primaryColor: '#1ED760',
+//     secondaryColor: '#FFFFFF',
+//   },
+// ]
 </script>
