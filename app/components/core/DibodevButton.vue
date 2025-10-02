@@ -2,15 +2,15 @@
   <component
     class="dibodev-button"
     :is="componentType"
-    role="button"
     :to="isLink ? props.to : undefined"
-    :href="isExternalLink ? props.to : undefined"
+    :href="isExternalLink || isLink ? props.to : undefined"
     :disabled="props.disabled"
     :class="computedClass"
     :style="{
       '--background-color': props.outlined ? 'transparent' : backgroundColor,
       '--background-hover-color': backgroundHoverColorComputed,
     }"
+    :target="isExternalLink ? '_blank' : undefined"
   >
     <span class="flex items-center justify-center">
       <span v-if="props.icon && props.iconPosition === 'left' && !isIconOnly" class="mr-2 h-6">

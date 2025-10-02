@@ -1,5 +1,5 @@
 <template>
-  <footer class="grid gap-10 border-t border-t-gray-400 bg-gray-800 p-8 px-4 py-8 sm:gap-x-8 sm:gap-y-8">
+  <footer class="grid gap-10 border-t border-t-gray-400 bg-gray-800 p-8 px-4 py-8 sm:gap-x-8 sm:gap-y-8 sm:px-6">
     <div class="grid gap-8 sm:grid-cols-2">
       <div class="grid gap-6 sm:grid-cols-2">
         <div class="grid gap-10 sm:gap-8">
@@ -27,26 +27,28 @@
         </div>
       </div>
 
-      <div class="grid gap-8">
-        <DibodevButton v-if="currentRoute !== '/contact'" icon="Mail" class="w-full">Me contacter</DibodevButton>
-
-        <div class="flex flex-wrap items-center justify-between">
-          <div class="flex items-center gap-4">
-            <div class="justify-left flex items-center gap-1">
-              <DibodevIcon name="Moon" mode="stroke" :width="20" :height="20" />
-              <span class="text-base font-normal"> Thème sombre </span>
-            </div>
-            <DibodevSwitch v-model="isChecked" />
-          </div>
-
-          <div class="my-6 w-fit sm:my-0">
-            <DibodevSelect id="language-select" :options="languages" v-model="selectedLanguage" />
-          </div>
+      <div class="flex flex-wrap items-center justify-end gap-8">
+        <div class="w-full sm:w-fit">
+          <DibodevButton v-if="currentRoute !== '/contact'" icon="Mail" class="w-full">Me contacter</DibodevButton>
         </div>
+
+        <div class="w-full sm:w-fit">
+          <DibodevSelect id="language-select" :options="languages" v-model="selectedLanguage" />
+        </div>
+
+        <!--        <div class="flex flex-wrap items-center justify-between">-->
+        <!--          <div class="flex items-center gap-4">-->
+        <!--            <div class="justify-left flex items-center gap-1">-->
+        <!--              <DibodevIcon name="Moon" mode="stroke" :width="20" :height="20" />-->
+        <!--              <span class="text-base font-normal"> Thème sombre </span>-->
+        <!--            </div>-->
+        <!--            <DibodevSwitch v-model="isChecked" />-->
+        <!--          </div>-->
+        <!--        </div>-->
       </div>
     </div>
 
-    <div class="justify-left flex w-full flex-wrap items-center gap-2">
+    <div class="justify-left flex w-full flex-wrap items-center gap-x-2 gap-y-3">
       <DibodevBadge v-if="tags.length > 0" v-for="tag in tags" :key="tag" backgroundColor="#35424D" textColor="#F5F4FB">
         {{ tag }}
       </DibodevBadge>
@@ -68,7 +70,6 @@ import DibodevSquareButton from '~/components/buttons/DibodevSquareButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
-import DibodevSwitch from '~/components/buttons/DibodevSwitch.vue'
 import DibodevSelect from '~/components/core/DibodevSelect.vue'
 import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
 import type { Ref } from 'vue'

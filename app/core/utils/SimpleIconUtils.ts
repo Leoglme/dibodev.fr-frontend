@@ -78,9 +78,6 @@ export class SimpleIconUtils {
 
     if (foundIcon.source === 'https://github.com') {
       foundIcon.source += `/${this.normalizeTitle(foundIcon.title)}`
-      console.log({
-        foundIconSource: foundIcon.source,
-      })
     } else {
       foundIcon.source = UrlUtils.getBaseUrl(foundIcon.source)
     }

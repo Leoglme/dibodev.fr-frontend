@@ -38,7 +38,12 @@
           {{ props.description }}
         </p>
       </div>
-      <div class="flex items-center justify-between" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+      <div
+        class="flex items-center justify-between gap-6"
+        data-aos="fade-up"
+        data-aos-delay="300"
+        data-aos-duration="800"
+      >
         <DibodevButton @click="scrollToTargetSection" class="w-full sm:max-w-xs" outlined>
           Découvrir
           <DibodevIcon

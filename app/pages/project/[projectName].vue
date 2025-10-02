@@ -11,6 +11,7 @@
     :siteUrl="currentProject.siteUrl"
   />
   <DibodevAboutProjectSection v-if="currentProject" :project="currentProject" />
+  <DibodevRecommendedProjectSection v-if="currentProject" :currentProject="currentProject" />
 </template>
 
 <script lang="ts" setup>
@@ -23,6 +24,7 @@ import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
 import DibodevProjectLandingSection from '~/components/sections/DibodevProjectLandingSection.vue'
 import DibodevAboutProjectSection from '~/components/sections/DibodevAboutProjectSection.vue'
+import DibodevRecommendedProjectSection from '~/components/sections/DibodevRecommendedProjectSection.vue'
 
 /* HOOKS */
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
