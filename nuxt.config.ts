@@ -1,4 +1,5 @@
 import tailwindcss from '@tailwindcss/vite'
+import mkcert from 'vite-plugin-mkcert'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
@@ -28,8 +29,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
   css: ['~/assets/css/main.css'],
+  devServer: {
+    https: true,
+  },
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [mkcert(), tailwindcss()],
   },
   nitro: {
     preset: process.env.NITRO_PRESET || 'node-server',
