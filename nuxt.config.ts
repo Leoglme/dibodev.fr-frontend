@@ -17,6 +17,12 @@ export default defineNuxtConfig({
     githubToken: process.env.GITHUB_TOKEN || '',
     mailjetApiKey: process.env.MAILJET_API_KEY || '',
     mailjetApiSecret: process.env.MAILJET_API_SECRET || '',
+    storyblokDeliveryApiToken: process.env.NUXT_STORYBLOK_DELIVERY_API_TOKEN || '',
+    public: {
+      storyblok: {
+        accessToken: process.env.NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN || '',
+      },
+    },
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -41,7 +47,21 @@ export default defineNuxtConfig({
       },
     ],
   },
-  modules: ['@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxtjs/google-fonts'],
+  modules: [
+    [
+      '@storyblok/nuxt',
+      {
+        accessToken: process.env.NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN,
+        apiOptions: {
+          region: 'eu',
+        },
+        usePlugin: true,
+      },
+    ],
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
+    '@nuxtjs/google-fonts',
+  ],
   site: {
     url: 'https://dibodev.fr',
     name: 'Dibodev',

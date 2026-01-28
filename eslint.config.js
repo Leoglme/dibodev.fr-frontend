@@ -170,6 +170,7 @@ const mainConfig = {
 const ignoreConfig = {
   ignores: [
     '.nuxt/**',
+    'a2m-orizon-solution/**',
     'tests/unit/test-reports/**',
     'tests/e2e/test-reports/**',
     '.output/**',
