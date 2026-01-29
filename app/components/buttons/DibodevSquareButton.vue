@@ -21,7 +21,6 @@
 import type { DibodevSquareButtonProps } from '~/core/types/DibodevSquareButton'
 import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
-import { defineProps } from 'vue'
 
 const props: DibodevSquareButtonProps = defineProps({
   backgroundColor: {

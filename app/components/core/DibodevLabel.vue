@@ -6,7 +6,6 @@
 
 <script lang="ts" setup>
 import type { DibodevLabelProps } from '~/core/types/DibodevLabel'
-import { defineProps } from '@vue/runtime-core'
 
 /**
  * Type definitions for the DibodevLabel component props

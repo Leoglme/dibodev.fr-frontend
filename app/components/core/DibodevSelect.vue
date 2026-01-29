@@ -27,7 +27,6 @@
 <script lang="ts" setup>
 import type { PropType, ComputedRef } from 'vue'
 import { computed } from 'vue'
-import { defineProps } from '@vue/runtime-core'
 import DibodevLabel from '~/components/core/DibodevLabel.vue'
 import type { DibodevSelectProps, DibodevSelectOption } from '~/core/types/DibodevSelect'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'

@@ -29,7 +29,7 @@
 import { computed } from 'vue'
 import type { ComputedRef, PropType } from 'vue'
 import type { SetupContext } from '@vue/runtime-core'
-import { defineProps, useSlots } from '@vue/runtime-core'
+import { useSlots } from '@vue/runtime-core'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import type { DibodevButtonProps, DibodevButtonSize } from '~/core/types/DibodevButton'
 import { ColorUtils } from '~/core/utils/ColorUtils'
