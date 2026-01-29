@@ -34,14 +34,14 @@
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
           <DibodevProjectCard
-            v-for="(favoriteProject, index) in favoriteProjects"
-            :key="favoriteProject.name"
-            :name="favoriteProject.name"
-            :description="favoriteProject.shortDescription"
-            :createdAt="favoriteProject.date"
-            :logo="favoriteProject.logoUrl"
-            :primaryColor="favoriteProject.primaryColor"
-            :secondaryColor="favoriteProject.secondaryColor"
+            v-for="(project, index) in favoriteProjects"
+            :key="project.route"
+            :name="project.name"
+            :description="project.shortDescription"
+            :createdAt="project.date"
+            :logo="project.logoUrl"
+            :primaryColor="project.primaryColor"
+            :secondaryColor="project.secondaryColor"
             data-aos="zoom-in"
             :data-aos-delay="index * 100"
           />
@@ -52,19 +52,39 @@
 </template>
 
 <script lang="ts" setup>
+import { computed } from 'vue'
+import type { ComputedRef } from 'vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
-import { computed } from 'vue'
-import type { ComputedRef } from 'vue'
 import type { DibodevProject } from '~/core/types/DibodevProject'
-import projects from '~/assets/data/projects.json'
+import type { StoryblokProjectContent } from '~/services/types/storyblokProject'
+import { StoryblokService } from '~/services/storyblokService'
+import { mapStoryblokProjectToDibodevProject } from '~/services/storyblokProjectMapper'
+import localProjectsJson from '~/assets/data/projects.json'
+
+const localProjects: DibodevProject[] = localProjectsJson as DibodevProject[]
+
+const { data: storyblokProjectsData } = await useAsyncData<DibodevProject[]>(
+  'projects-storyblok-list',
+  async (): Promise<DibodevProject[]> => {
+    try {
+      const response = await StoryblokService.getStories<StoryblokProjectContent>({
+        starts_with: 'project/',
+      })
+      return response.stories.map((story) => mapStoryblokProjectToDibodevProject(story))
+    } catch {
+      return []
+    }
+  },
+)
 
 /**
- * Filter favorite projects from projects.json
- * @returns {ComputedRef<DibodevProject[]>} favorite projects
+ * All projects (local + Storyblok), then filtered by isFavorite.
  */
-const favoriteProjects: ComputedRef<DibodevProject[]> = computed(() =>
-  (projects as DibodevProject[]).filter((p) => p.isFavorite),
-)
+const favoriteProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] => {
+  const fromStoryblok: DibodevProject[] = storyblokProjectsData.value ?? []
+  const all: DibodevProject[] = [...localProjects, ...fromStoryblok]
+  return all.filter((p: DibodevProject) => p.isFavorite)
+})
 </script>
