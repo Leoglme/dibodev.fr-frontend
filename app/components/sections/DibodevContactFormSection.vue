@@ -28,7 +28,9 @@
             </DibodevSquareButton>
           </DibodevLink>
 
-          <DibodevLink class="text-base font-normal" externalLink link="tel:+33642193812"> 06 42 19 38 12 </DibodevLink>
+          <DibodevLink class="text-base font-normal" externalLink link="tel:+33642193812">
+            {{ $t('contact.sidebar.phone') }}
+          </DibodevLink>
         </div>
 
         <div class="flex items-center justify-start gap-4">
@@ -36,7 +38,7 @@
             <DibodevIcon name="MapPin" :width="20" :height="20" mode="stroke" />
           </DibodevSquareButton>
 
-          <span class="text-base font-normal"> Rennes, France </span>
+          <span class="text-base font-normal">{{ $t('contact.sidebar.location') }}</span>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <Form v-slot="{ meta }" ref="contactForm" class="flex flex-col gap-10 sm:gap-8" @submit="onSubmit">
     <div class="flex flex-col gap-4">
-      <DibodevLabel id="projectType">Comment puis-je vous aider ?</DibodevLabel>
+      <DibodevLabel id="projectType">{{ $t('contact.form.projectTypeLabel') }}</DibodevLabel>
 
       <DibodevTogglePillGroup v-model:value="projectType" :options="projectTypeOptions" />
 
@@ -10,7 +10,7 @@
     </div>
 
     <div class="flex flex-col gap-4">
-      <DibodevLabel id="pagesRange">Combien de pages souhaitez-vous ?</DibodevLabel>
+      <DibodevLabel id="pagesRange">{{ $t('contact.form.pagesRangeLabel') }}</DibodevLabel>
 
       <DibodevTogglePillGroup v-model:value="pagesRange" :options="pagesOptions" />
 
@@ -21,11 +21,11 @@
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
       <DibodevInput
         id="budget"
-        label="Budget estimé"
+        :label="$t('contact.form.budgetLabel')"
         type="number"
         :min="0"
         :step="1"
-        placeholder="0"
+        :placeholder="$t('contact.form.budgetPlaceholder')"
         :value="budget || undefined"
         rules="required|price_format|min_value:0|max_value:100000"
         @update:value="budget = toNumberLike($event.toString())"
@@ -35,16 +35,16 @@
     <div class="grid grid-cols-1 gap-10 sm:gap-4 lg:grid-cols-2">
       <DibodevInput
         id="nom"
-        label="Nom"
-        placeholder="John Doe"
+        :label="$t('contact.form.nameLabel')"
+        :placeholder="$t('contact.form.namePlaceholder')"
         :value="fullName"
         rules="required"
         @update:value="fullName = $event.toString()"
       />
       <DibodevInput
         id="email"
-        label="Email"
-        placeholder="email@dibodev.com"
+        :label="$t('contact.form.emailLabel')"
+        :placeholder="$t('contact.form.emailPlaceholder')"
         :value="email"
         rules="required|email"
         @update:value="email = $event.toString()"
@@ -55,8 +55,8 @@
     <div>
       <DibodevInput
         id="message"
-        label="Parlez-moi de votre projet"
-        placeholder="Votre message..."
+        :label="$t('contact.form.messageLabel')"
+        :placeholder="$t('contact.form.messagePlaceholder')"
         :rows="6"
         :value="message"
         rules="required"
@@ -75,15 +75,15 @@
 
     <div class="flex justify-end">
       <DibodevButton type="submit" icon="Send" class="w-full lg:w-auto" :disabled="!meta.valid || isSubmitting">
-        {{ isSubmitting ? 'Envoi en cours...' : 'Envoyer mon message' }}
+        {{ isSubmitting ? $t('contact.form.submitting') : $t('contact.form.submit') }}
       </DibodevButton>
     </div>
   </Form>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import type { Ref } from 'vue'
+import { ref, computed } from 'vue'
+import type { Ref, ComputedRef } from 'vue'
 import { Form, Field, ErrorMessage } from 'vee-validate'
 import type { FormContext } from 'vee-validate'
 import DibodevLabel from '~/components/core/DibodevLabel.vue'
@@ -93,24 +93,41 @@ import DibodevTogglePillGroup from '~/components/ui/DibodevTogglePillGroup.vue'
 import DibodevAlert from '~/components/feedback/DibodevAlert.vue'
 import type { Option } from '~/components/ui/DibodevTogglePillGroup.vue'
 import { debounce } from 'lodash-es'
-import type { ContactFormPayload, ProjectType, PagesRange } from '~~/server/types/mail/contact'
+import type { ContactFormPayload } from '~~/server/types/mail/contact'
 
-/** DATAS */
-const projectTypeOptions: Option[] = ['Site web', 'Application mobile', 'Autre']
-const pagesOptions: Option[] = ['1–3', '3–6', '6–10', '10+']
+/** Project type and pages range keys (values sent to API are translated via $t). */
+const PROJECT_TYPE_KEYS = ['website', 'mobile', 'other'] as const
+const PAGES_RANGE_KEYS = ['1_3', '3_6', '6_10', '10_plus'] as const
+type ProjectTypeKey = (typeof PROJECT_TYPE_KEYS)[number]
+type PagesRangeKey = (typeof PAGES_RANGE_KEYS)[number]
+
+const { t } = useI18n()
+
+/** Options built from i18n (label = translated, value = key for stable binding across locale change). */
+const projectTypeOptions: ComputedRef<Option[]> = computed((): Option[] =>
+  PROJECT_TYPE_KEYS.map(
+    (key: ProjectTypeKey): Option => ({
+      label: t(`contact.form.projectType.${key}`),
+      value: key,
+    }),
+  ),
+)
+const pagesOptions: ComputedRef<Option[]> = computed((): Option[] =>
+  PAGES_RANGE_KEYS.map(
+    (key: PagesRangeKey): Option => ({
+      label: t(`contact.form.pagesRange.${key}`),
+      value: key,
+    }),
+  ),
+)
 
 /** REFS */
-const projectType: Ref<ProjectType | null> = ref('Site web')
-const pagesRange: Ref<PagesRange | null> = ref(null)
+const projectType: Ref<ProjectTypeKey | null> = ref<ProjectTypeKey>('website')
+const pagesRange: Ref<PagesRangeKey | null> = ref<PagesRangeKey | null>(null)
 const budget: Ref<number | null> = ref(null)
 const fullName: Ref<string> = ref('')
 const email: Ref<string> = ref('')
 const message: Ref<string> = ref('')
-// const pagesRange: Ref<PagesRange | null> = ref('3–6')
-// const budget: Ref<number | null> = ref(2000)
-// const fullName: Ref<string> = ref('leo guillaume')
-// const email: Ref<string> = ref('toto@gmail.com')
-// const message: Ref<string> = ref('mon message')
 const isSubmitting: Ref<boolean> = ref(false)
 const errorMessage: Ref<string | null> = ref(null)
 const successMessage: Ref<string | null> = ref(null)
@@ -131,9 +148,19 @@ function isValidEmail(email: string): boolean {
   return emailRegex.test(email.trim())
 }
 
+/** Map project type key to translated value for API. */
+function getProjectTypeDisplay(key: ProjectTypeKey | null): string | null {
+  return key ? t(`contact.form.projectType.${key}`) : null
+}
+
+/** Map pages range key to translated value for API. */
+function getPagesRangeDisplay(key: PagesRangeKey | null): string | null {
+  return key ? t(`contact.form.pagesRange.${key}`) : null
+}
+
 /** Reset form fields */
 function resetFormValues(): void {
-  projectType.value = 'Site web'
+  projectType.value = 'website'
   pagesRange.value = null
   budget.value = null
   fullName.value = ''
@@ -142,7 +169,7 @@ function resetFormValues(): void {
   lastSentEmail.value = null
   contactForm.value?.resetForm({
     values: {
-      'type de projet': 'Site web',
+      'type de projet': 'website',
       'nombre de pages': null,
       budget: null,
       nom: '',
@@ -190,8 +217,8 @@ async function onSubmit(): Promise<void> {
   isSubmitting.value = true
 
   const payload: ContactFormPayload = {
-    projectType: projectType.value,
-    pagesRange: pagesRange.value,
+    projectType: getProjectTypeDisplay(projectType.value),
+    pagesRange: getPagesRangeDisplay(pagesRange.value),
     budget: budget.value || 0,
     fullName: fullName.value.trim(),
     email: email.value.trim(),
@@ -206,9 +233,7 @@ async function onSubmit(): Promise<void> {
 
     if (error.value) {
       const fallbackMessage: string =
-        error.value.status === 400
-          ? 'Le formulaire est invalide. Veuillez vérifier vos informations.'
-          : 'Erreur serveur. Veuillez réessayer plus tard.'
+        error.value.status === 400 ? t('contact.form.errorInvalid') : t('contact.form.errorServer')
       const errorResponseMessage: string =
         error.value.statusMessage || error.value.data?.message || error.value.message || fallbackMessage
 
@@ -219,13 +244,12 @@ async function onSubmit(): Promise<void> {
     }
 
     if (data.value) {
-      successMessage.value =
-        'Votre message a été envoyé avec succès ! Un accusé de réception vous a été envoyé par email.'
+      successMessage.value = t('contact.form.successMessage')
       resetFormValues()
     }
   } catch (err) {
     console.error('onSubmit: Unexpected error:', err)
-    errorMessage.value = 'Erreur inattendue. Veuillez réessayer plus tard.'
+    errorMessage.value = t('contact.form.errorUnexpected')
   } finally {
     isSubmitting.value = false
   }

@@ -1,7 +1,15 @@
 {
   "meta": {
     "title": "Dibodev — Développeur Web Freelance à Rennes",
-    "description": "Développeur freelance à Rennes : sites web, applications mobiles, logiciels et IA sur mesure. Accompagnement de A à Z."
+    "description": "Développeur freelance à Rennes : sites web, applications mobiles, logiciels et IA sur mesure. Accompagnement de A à Z.",
+    "contact": {
+      "title": "Contact — Dibodev",
+      "description": "Contactez Léo Guillaume, développeur freelance à Rennes, pour votre projet web, mobile ou logiciel."
+    },
+    "projects": {
+      "title": "Mes projets — Dibodev",
+      "description": "Découvrez les projets web, applications mobiles et logiciels réalisés par Léo Guillaume, développeur freelance à Rennes."
+    }
   },
   "nav": {
     "home": "Accueil",
@@ -93,5 +101,153 @@
       "priceTTC": "350€ TTC",
       "priceHT": "Soit 291,67€ HT/Jour (TVA 20%)."
     }
+  },
+  "contact": {
+    "landing": {
+      "description": "Vous recherchez un développeur freelance pour sublimer votre projet ? Contactez-moi dès aujourd'hui pour en savoir plus.",
+      "cta": "Me contacter"
+    },
+    "form": {
+      "projectTypeLabel": "Comment puis-je vous aider ?",
+      "pagesRangeLabel": "Combien de pages souhaitez-vous ?",
+      "budgetLabel": "Budget estimé",
+      "budgetPlaceholder": "0",
+      "nameLabel": "Nom",
+      "namePlaceholder": "John Doe",
+      "emailLabel": "Email",
+      "emailPlaceholder": "email{'@'}dibodev.com",
+      "messageLabel": "Parlez-moi de votre projet",
+      "messagePlaceholder": "Votre message...",
+      "submit": "Envoyer mon message",
+      "submitting": "Envoi en cours...",
+      "projectType": {
+        "website": "Site web",
+        "mobile": "Application mobile",
+        "other": "Autre"
+      },
+      "pagesRange": {
+        "1_3": "1–3",
+        "3_6": "3–6",
+        "6_10": "6–10",
+        "10_plus": "10+"
+      },
+      "successMessage": "Votre message a été envoyé avec succès ! Un accusé de réception vous a été envoyé par email.",
+      "errorInvalid": "Le formulaire est invalide. Veuillez vérifier vos informations.",
+      "errorServer": "Erreur serveur. Veuillez réessayer plus tard.",
+      "errorUnexpected": "Erreur inattendue. Veuillez réessayer plus tard."
+    },
+    "sidebar": {
+      "phone": "06 42 19 38 12",
+      "location": "Rennes, France"
+    }
+  },
+  "projects": {
+    "landing": {
+      "title": "Mes projets",
+      "description": "Découvrez une variété de projets web, logiciels et applications mobiles conçus avec passion et expertise. Explorez mon travail pour trouver l'inspiration et envisager une collaboration sur votre prochain projet.",
+      "cta": "Découvrir les projets"
+    },
+    "section": {
+      "searchTitle": "Rechercher un projet",
+      "searchPlaceholder": "Rechercher un projet... (Ctrl + E)",
+      "allLanguages": "Tous les langages",
+      "allCategories": "Toutes les catégories",
+      "noResultsTitle": "Aucun projet trouvé",
+      "noResultsDescription": "Aucun projet ne correspond à vos critères de recherche. Essayez de modifier vos filtres."
+    }
+  },
+  "project": {
+    "landing": {
+      "discover": "Découvrir",
+      "viewSite": "Voir le site"
+    },
+    "gallery": {
+      "title": "Aperçu du projet",
+      "subtitle": "Découvrez l'interface et les fonctionnalités principales",
+      "preview": "Aperçu",
+      "close": "Fermer"
+    },
+    "about": {
+      "descriptionTitle": "Description du projet",
+      "devEnvironmentTitle": "Environnement de développement"
+    },
+    "recommended": {
+      "title": "Découvrir un autre projet",
+      "seeAllProjects": "Voir tous les projets"
+    }
+  },
+  "legal": {
+    "meta": {
+      "title": "Mentions légales — Dibodev",
+      "description": "Mentions légales du site Dibodev — Léo Guillaume, développeur freelance à Rennes."
+    },
+    "title": "Mentions légales",
+    "publisher": {
+      "title": "Éditeur du site",
+      "introBefore": "Le site ",
+      "introBold": "Dibodev",
+      "introAfter": " (dibodev.fr) est édité par :",
+      "name": "Léo Guillaume",
+      "legalForm": "Entrepreneur individuel (micro-entreprise)",
+      "addressLine1": "13 Rue Roger-Henri Guerrand",
+      "addressLine2": "35000 Rennes",
+      "addressLine3": "France",
+      "contact": "Contact :",
+      "siret": "SIRET : 988 307 906 00012"
+    },
+    "host": {
+      "title": "Hébergeur",
+      "intro": "Le site est hébergé par :",
+      "name": "OVH SAS",
+      "addressLine1": "2 rue Kellermann",
+      "addressLine2": "59100 Roubaix",
+      "addressLine3": "France"
+    },
+    "activity": {
+      "title": "Activité",
+      "description": "Développeur full-stack web, IA et mobile en freelance."
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Politique de confidentialité — Dibodev",
+      "description": "Politique de confidentialité du site Dibodev — Données personnelles, formulaire de contact, Umami, RGPD."
+    },
+    "title": "Politique de confidentialité",
+    "intro": "Cette politique décrit comment je collecte et traite vos données personnelles sur le site Dibodev (dibodev.fr). Je cible principalement la France ; le site pourra être proposé en d'autres langues à l'avenir.",
+    "dataController": {
+      "title": "Responsable du traitement",
+      "content": "Léo Guillaume — 13 Rue Roger-Henri Guerrand, 35000 Rennes, France. Contact :"
+    },
+    "contactFormData": {
+      "title": "Données collectées via le formulaire de contact",
+      "paragraph1": "Lorsque vous m'écrivez via le formulaire, je reçois : type de projet, fourchette de pages, budget, nom et prénom, adresse email et message. Ces informations sont utilisées uniquement pour traiter votre demande et vous répondre.",
+      "paragraph2": "Je ne stocke pas ces données dans une base de données. Elles sont transmises par email (via le prestataire Mailjet) et figurent dans ma messagerie le temps de notre échange. Je m'engage à supprimer les données personnelles contenues dans ces échanges dans un délai de 2 ans après le dernier contact, sauf obligation légale de conservation."
+    },
+    "subcontractor": {
+      "title": "Sous-traitant pour l'envoi d'emails",
+      "contentBefore": "J'utilise ",
+      "contentBold": "Mailjet",
+      "contentAfter": " (13bis rue de l'Aubrac, 75012 Paris, France) pour l'envoi des emails (notification de contact et accusé de réception). Mailjet agit en tant que sous-traitant pour la transmission des messages."
+    },
+    "umami": {
+      "title": "Mesure d'audience (Umami)",
+      "contentBefore": "Le site utilise ",
+      "contentBold": "Umami",
+      "contentAfter": ", hébergé sur umami.dibodev.fr, pour mesurer l'audience (nombre de visites, pages vues). Umami est configuré sans cookies. Aucune revente de données, aucun cookie publicitaire. Les données servent uniquement à comprendre l'usage du site de manière agrégée."
+    },
+    "rights": {
+      "title": "Vos droits",
+      "content": "Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation du traitement, de portabilité et d'opposition concernant vos données personnelles. Pour les exercer, contactez-moi à",
+      "complaint": "Vous pouvez également introduire une réclamation auprès de la",
+      "cnil": "CNIL"
+    },
+    "applicableLaw": {
+      "title": "Droit applicable",
+      "content": "Le traitement des données est soumis au droit français et au Règlement général sur la protection des données (RGPD)."
+    }
+  },
+  "cms": {
+    "loading": "Chargement du contenu CMS…"
   }
 }

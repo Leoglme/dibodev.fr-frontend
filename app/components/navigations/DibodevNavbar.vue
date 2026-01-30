@@ -6,7 +6,7 @@
     <div class="mx-auto flex w-full max-w-7xl items-center justify-between">
       <ol>
         <li>
-          <NuxtLink to="/">
+          <NuxtLink :to="localePath('/')">
             <DibodevLogo :size="30" :large="true" />
           </NuxtLink>
         </li>
@@ -19,7 +19,7 @@
           </DibodevLink>
         </li>
         <li v-if="!isContactPage" class="ml-6">
-          <DibodevButton to="/contact" icon="Mail" size="sm">{{ $t('nav.contactMe') }}</DibodevButton>
+          <DibodevButton :to="localePath('/contact')" icon="Mail" size="sm">{{ $t('nav.contactMe') }}</DibodevButton>
         </li>
       </ol>
 
@@ -46,7 +46,7 @@
           <div v-if="mobileMenuOpen" class="absolute right-0 bottom-0 left-0 z-[9999] m-auto h-[calc(100dvh-70px)]">
             <section class="relative h-full w-full overflow-auto bg-gray-900 outline-none" @click.stop>
               <div class="flex flex-col gap-8 p-8">
-                <DibodevLink link="/" color="#f5f4fb" @click="mobileMenuOpen = false">
+                <DibodevLink :link="localePath('/')" color="#f5f4fb" @click="mobileMenuOpen = false">
                   {{ $t('nav.home') }}
                 </DibodevLink>
                 <DibodevLink
@@ -60,7 +60,7 @@
                 </DibodevLink>
                 <DibodevButton
                   v-if="!isContactPage"
-                  to="/contact"
+                  :to="localePath('/contact')"
                   icon="Mail"
                   size="sm"
                   @click="mobileMenuOpen = false"
@@ -88,11 +88,12 @@ const route = useRoute()
 
 /* I18N */
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 /* DATAS */
 const links: ComputedRef<DibodevNavbarLink[]> = computed((): DibodevNavbarLink[] => [
-  { text: t('nav.home'), to: '/' },
-  { text: t('nav.myProjects'), to: '/projects' },
+  { text: t('nav.home'), to: localePath('/') },
+  { text: t('nav.myProjects'), to: localePath('/projects') },
 ])
 
 /* REFS */

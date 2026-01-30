@@ -14,8 +14,8 @@
         </div>
 
         <DibodevSearchBar
-          title="Rechercher un projet"
-          placeholder="Rechercher un projet... (Ctrl + E)"
+          :title="$t('projects.section.searchTitle')"
+          :placeholder="$t('projects.section.searchPlaceholder')"
           v-model:value="searchTerm"
         />
       </div>
@@ -49,9 +49,9 @@
         </svg>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <h3 class="text-2xl font-semibold text-gray-100">Aucun projet trouvé</h3>
+        <h3 class="text-2xl font-semibold text-gray-100">{{ $t('projects.section.noResultsTitle') }}</h3>
         <p class="text-center text-base text-gray-300">
-          Aucun projet ne correspond à vos critères de recherche. Essayez de modifier vos filtres.
+          {{ $t('projects.section.noResultsDescription') }}
         </p>
       </div>
     </div>
@@ -59,7 +59,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import type { Ref, ComputedRef } from 'vue'
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
 import DibodevSearchBar from '~/components/inputs/DibodevSearchBar.vue'
@@ -91,13 +91,24 @@ const { data: storyblokProjectsData } = await useAsyncData<DibodevProject[]>(
 
 /* REFS */
 const searchTerm: Ref<string> = ref<string>('')
+const { t, locale } = useI18n()
+
 const selectedLanguage: Ref<DibodevSelectOption> = ref<DibodevSelectOption>({
-  label: 'Tous les langages',
+  label: t('projects.section.allLanguages'),
   value: 'all',
 })
 const selectedCategory: Ref<DibodevSelectOption> = ref<DibodevSelectOption>({
-  label: 'Toutes les catégories',
+  label: t('projects.section.allCategories'),
   value: 'all',
+})
+
+watch(locale, () => {
+  if (selectedLanguage.value.value === 'all') {
+    selectedLanguage.value = { label: t('projects.section.allLanguages'), value: 'all' }
+  }
+  if (selectedCategory.value.value === 'all') {
+    selectedCategory.value = { label: t('projects.section.allCategories'), value: 'all' }
+  }
 })
 
 /**
@@ -122,7 +133,7 @@ const languageOptions: ComputedRef<DibodevSelectOption[]> = computed((): Dibodev
     }
   }
   const sorted: string[] = [...set].sort((a: string, b: string) => a.localeCompare(b, 'fr'))
-  const options: DibodevSelectOption[] = [{ label: 'Tous les langages', value: 'all' }]
+  const options: DibodevSelectOption[] = [{ label: t('projects.section.allLanguages'), value: 'all' }]
   for (const value of sorted) {
     options.push({ label: value, value })
   }
@@ -144,7 +155,7 @@ const categoryOptions: ComputedRef<DibodevSelectOption[]> = computed((): Dibodev
     }
   }
   const sorted: string[] = [...set].sort((a: string, b: string) => a.localeCompare(b, 'fr'))
-  const options: DibodevSelectOption[] = [{ label: 'Toutes les catégories', value: 'all' }]
+  const options: DibodevSelectOption[] = [{ label: t('projects.section.allCategories'), value: 'all' }]
   for (const value of sorted) {
     options.push({ label: value, value })
   }

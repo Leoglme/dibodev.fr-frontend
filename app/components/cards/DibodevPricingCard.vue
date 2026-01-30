@@ -12,7 +12,7 @@
         </p>
       </div>
 
-      <DibodevButton to="/contact" icon="Mail" class="hidden! w-full sm:block!">{{
+      <DibodevButton :to="localePath('/contact')" icon="Mail" class="hidden! w-full sm:block!">{{
         $t('home.pricing.requestQuote')
       }}</DibodevButton>
     </div>
@@ -25,11 +25,13 @@
       <p class="w-full text-left text-base font-normal sm:text-center">{{ $t('home.pricing.priceHT') }}</p>
     </div>
 
-    <DibodevButton to="/contact" icon="Mail" class="w-full sm:hidden">{{
+    <DibodevButton :to="localePath('/contact')" icon="Mail" class="w-full sm:hidden">{{
       $t('home.pricing.requestQuote')
     }}</DibodevButton>
   </div>
 </template>
 <script setup lang="ts">
 import DibodevButton from '~/components/core/DibodevButton.vue'
+
+const localePath = useLocalePath()
 </script>

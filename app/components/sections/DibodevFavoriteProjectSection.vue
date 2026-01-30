@@ -28,7 +28,7 @@
       </div>
       <div class="flex w-full max-w-7xl flex-col-reverse gap-10 sm:grid sm:gap-8">
         <div class="flex w-full items-center justify-end">
-          <DibodevLink link="/projects">
+          <DibodevLink :link="localePath('/projects')">
             <span>{{ $t('home.favoriteProjects.seeAllProjects') }}</span>
             <DibodevIcon name="ArrowRight" mode="stroke" :width="20" :height="20" />
           </DibodevLink>
@@ -58,6 +58,8 @@
 import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
+
+const localePath = useLocalePath()
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import type { DibodevProject } from '~/core/types/DibodevProject'

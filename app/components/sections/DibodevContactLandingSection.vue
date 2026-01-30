@@ -1,7 +1,7 @@
 <template>
   <DibodevLandingSection
-    description="Vous recherchez un développeur freelance pour sublimer votre projet ? Contactez-moi dès aujourd'hui pour en savoir plus."
-    ctaText="Me contacter"
+    :description="$t('contact.landing.description')"
+    :ctaText="$t('contact.landing.cta')"
     ctaTarget="#contact-form"
   />
 </template>

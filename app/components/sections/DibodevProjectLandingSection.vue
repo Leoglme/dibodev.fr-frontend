@@ -45,7 +45,7 @@
         data-aos-duration="800"
       >
         <DibodevButton @click="scrollToTargetSection" class="w-full sm:max-w-xs" outlined>
-          Découvrir
+          {{ $t('project.landing.discover') }}
           <DibodevIcon
             name="DoubleChevronsDown"
             mode="stroke"
@@ -56,7 +56,7 @@
         </DibodevButton>
 
         <DibodevButton :to="props.siteUrl" :backgroundColor="props.primaryColor" class="w-full sm:max-w-xs">
-          Voir le site
+          {{ $t('project.landing.viewSite') }}
           <DibodevIcon name="ExternalLink" mode="stroke" :width="24" :height="24" class="ml-2" />
         </DibodevButton>
       </div>

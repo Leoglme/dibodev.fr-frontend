@@ -19,7 +19,7 @@
             </NuxtLink>
           </div>
           <div class="w-full sm:hidden">
-            <DibodevButton v-if="!isContactPage" to="/contact" icon="Mail" class="w-full">
+            <DibodevButton v-if="!isContactPage" :to="localePath('/contact')" icon="Mail" class="w-full">
               {{ $t('footer.contactMe') }}
             </DibodevButton>
           </div>
@@ -33,7 +33,7 @@
 
       <div class="flex flex-wrap items-center justify-end gap-8">
         <div class="hidden w-full sm:block sm:w-fit">
-          <DibodevButton v-if="!isContactPage" to="/contact" icon="Mail" class="w-full">
+          <DibodevButton v-if="!isContactPage" :to="localePath('/contact')" icon="Mail" class="w-full">
             {{ $t('footer.contactMe') }}
           </DibodevButton>
         </div>
@@ -91,6 +91,7 @@ type FooterLink = {
 
 /* I18N */
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 /* DATAS */
 const socials: Socials[] = [
@@ -117,14 +118,14 @@ const languages: DibodevSelectOption[] = [
 ]
 
 const footerLinks: ComputedRef<FooterLink[]> = computed((): FooterLink[] => [
-  { title: t('footer.home'), to: '/' },
-  { title: t('footer.myProjects'), to: '/projects' },
-  { title: t('footer.contactPage'), to: '/contact' },
+  { title: t('footer.home'), to: localePath('/') },
+  { title: t('footer.myProjects'), to: localePath('/projects') },
+  { title: t('footer.contactPage'), to: localePath('/contact') },
 ])
 
 const legalLinks: ComputedRef<FooterLink[]> = computed((): FooterLink[] => [
-  { title: t('footer.legal'), to: '/legal' },
-  { title: t('footer.privacy'), to: '/privacy' },
+  { title: t('footer.legal'), to: localePath('/legal') },
+  { title: t('footer.privacy'), to: localePath('/privacy') },
 ])
 
 const tags: ComputedRef<string[]> = computed((): string[] => [

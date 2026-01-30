@@ -9,9 +9,11 @@
     <div class="grid w-full max-w-5xl gap-12">
       <!-- Section Title -->
       <div class="flex flex-col items-center justify-center gap-4">
-        <h2 class="text-center text-3xl font-semibold text-gray-100 sm:text-[40px]">Aperçu du projet</h2>
+        <h2 class="text-center text-3xl font-semibold text-gray-100 sm:text-[40px]">
+          {{ $t('project.gallery.title') }}
+        </h2>
         <p class="text-center text-base leading-7 font-normal text-gray-200">
-          Découvrez l'interface et les fonctionnalités principales
+          {{ $t('project.gallery.subtitle') }}
         </p>
       </div>
 
@@ -24,13 +26,13 @@
           data-aos="fade-up"
           data-aos-delay="100"
           data-aos-duration="800"
-          @click="openModal(props.media1, `${props.projectName} - Aperçu 1`)"
+          @click="openModal(props.media1, `${props.projectName} - ${$t('project.gallery.preview')} 1`)"
         >
           <div class="relative w-full overflow-hidden" :style="{ aspectRatio: media1Ratio }">
             <div v-show="!media1Loaded" class="absolute inset-0 animate-pulse bg-gray-700" aria-hidden="true" />
             <img
               :src="props.media1"
-              :alt="`${props.projectName} - Aperçu 1`"
+              :alt="`${props.projectName} - ${$t('project.gallery.preview')} 1`"
               :class="[
                 media1IsPortrait ? 'object-contain' : 'object-cover',
                 media1Loaded ? 'opacity-100' : 'opacity-0',
@@ -71,13 +73,13 @@
           data-aos="fade-up"
           data-aos-delay="200"
           data-aos-duration="800"
-          @click="openModal(props.media2, `${props.projectName} - Aperçu 2`)"
+          @click="openModal(props.media2, `${props.projectName} - ${$t('project.gallery.preview')} 2`)"
         >
           <div class="relative w-full overflow-hidden" :style="{ aspectRatio: media2Ratio }">
             <div v-show="!media2Loaded" class="absolute inset-0 animate-pulse bg-gray-700" aria-hidden="true" />
             <img
               :src="props.media2"
-              :alt="`${props.projectName} - Aperçu 2`"
+              :alt="`${props.projectName} - ${$t('project.gallery.preview')} 2`"
               :class="[
                 media2IsPortrait ? 'object-contain' : 'object-cover',
                 media2Loaded ? 'opacity-100' : 'opacity-0',
@@ -120,13 +122,13 @@
           data-aos="zoom-in"
           data-aos-delay="100"
           data-aos-duration="800"
-          @click="openModal(singleMedia, `${props.projectName} - Aperçu`)"
+          @click="openModal(singleMedia, `${props.projectName} - ${$t('project.gallery.preview')}`)"
         >
           <div class="relative w-full overflow-hidden" :style="{ aspectRatio: singleMediaRatio }">
             <div v-show="!singleMediaLoaded" class="absolute inset-0 animate-pulse bg-gray-700" aria-hidden="true" />
             <img
               :src="singleMedia"
-              :alt="`${props.projectName} - Aperçu`"
+              :alt="`${props.projectName} - ${$t('project.gallery.preview')}`"
               :class="[
                 singleMediaIsPortrait ? 'object-contain' : 'object-cover',
                 singleMediaLoaded ? 'opacity-100' : 'opacity-0',
@@ -173,7 +175,7 @@
           <button
             class="absolute top-4 right-4 z-10 cursor-pointer rounded-full bg-white/10 p-3 text-white transition-all duration-300 hover:rotate-90 hover:bg-white/20"
             @click="closeModal"
-            aria-label="Fermer"
+            :aria-label="$t('project.gallery.close')"
           >
             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />

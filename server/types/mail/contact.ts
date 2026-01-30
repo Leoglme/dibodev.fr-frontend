@@ -1,9 +1,10 @@
-export type ProjectType = 'Site web' | 'Application mobile' | 'Autre'
-export type PagesRange = '1–3' | '3–6' | '6–10' | '10+'
-
+/**
+ * Project type and pages range are sent as translated display values from the frontend (i18n).
+ * The API accepts any string so emails reflect the user's language.
+ */
 export type ContactFormPayload = {
-  projectType: ProjectType | null
-  pagesRange: PagesRange | null
+  projectType: string | null
+  pagesRange: string | null
   budget: number
   fullName: string
   email: string

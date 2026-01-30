@@ -7,11 +7,13 @@
     class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-36 pb-60 sm:px-8 sm:py-60 sm:pb-96"
   >
     <div class="grid gap-14 sm:gap-12">
-      <h2 class="text-left text-2xl font-semibold sm:text-center sm:text-[32px]">Découvrir un autre projet</h2>
+      <h2 class="text-left text-2xl font-semibold sm:text-center sm:text-[32px]">
+        {{ $t('project.recommended.title') }}
+      </h2>
       <div class="flex w-full max-w-7xl flex-col-reverse gap-10 sm:grid sm:gap-8">
         <div class="flex w-full items-center justify-end">
-          <DibodevLink link="/projects">
-            <span>Voir tous les projets</span>
+          <DibodevLink :link="localePath('/projects')">
+            <span>{{ $t('project.recommended.seeAllProjects') }}</span>
             <DibodevIcon name="ArrowRight" mode="stroke" :width="20" :height="20" />
           </DibodevLink>
         </div>
@@ -38,6 +40,8 @@
 
 <script lang="ts" setup>
 import DibodevLink from '~/components/core/DibodevLink.vue'
+
+const localePath = useLocalePath()
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { computed, type PropType } from 'vue'

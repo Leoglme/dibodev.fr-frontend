@@ -34,6 +34,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
+import type { ComputedRef } from 'vue'
 import type { DibodevProjectCardProps } from '~/core/types/DibodevProjectCard'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import { StringUtils } from '~/core/utils/StringUtils'
@@ -69,11 +70,16 @@ const props: DibodevProjectCardProps = defineProps({
   },
 })
 
-/** Canonical project URL: Storyblok route when provided, otherwise derived from name. */
-const projectLink: string = computed((): string => {
-  if (props.route != null && props.route.trim() !== '') {
-    return props.route.startsWith('/') ? props.route : `/${props.route}`
-  }
-  return `/project/${StringUtils.formatForRoute(props.name)}`
+const localePath = useLocalePath()
+
+/** Canonical project URL with current locale prefix (Storyblok route when provided, otherwise derived from name). */
+const projectLink: ComputedRef<string> = computed((): string => {
+  const path: string =
+    props.route != null && props.route.trim() !== ''
+      ? props.route.startsWith('/')
+        ? props.route
+        : `/${props.route}`
+      : `/project/${StringUtils.formatForRoute(props.name)}`
+  return localePath(path)
 })
 </script>

@@ -66,6 +66,6 @@ useSeoMeta({
 <template>
   <StoryblokComponent v-if="story" :blok="story.content" />
   <div v-else class="mx-auto max-w-5xl px-6 py-16">
-    <p class="text-sm text-neutral-600">Chargement du contenu CMS…</p>
+    <p class="text-sm text-neutral-600">{{ $t('cms.loading') }}</p>
   </div>
 </template>

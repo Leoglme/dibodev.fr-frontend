@@ -4,53 +4,55 @@
     data-aos="fade-up"
     data-aos-duration="600"
   >
-    <h1 class="text-left text-3xl font-semibold sm:text-4xl">Mentions légales</h1>
+    <h1 class="text-left text-3xl font-semibold sm:text-4xl">{{ $t('legal.title') }}</h1>
 
     <div class="flex flex-col gap-12 text-left text-base leading-relaxed">
       <section class="flex flex-col gap-4">
-        <h2 class="text-xl font-semibold text-gray-100">Éditeur du site</h2>
-        <p class="text-gray-200">Le site <strong>Dibodev</strong> (dibodev.fr) est édité par :</p>
+        <h2 class="text-xl font-semibold text-gray-100">{{ $t('legal.publisher.title') }}</h2>
+        <p class="text-gray-200" v-html="$t('legal.publisher.intro')" />
         <p class="text-gray-200">
-          <strong>Léo Guillaume</strong><br />
-          Entrepreneur individuel (micro-entreprise)<br />
-          13 Rue Roger-Henri Guerrand<br />
-          35000 Rennes<br />
-          France
+          <strong>{{ $t('legal.publisher.name') }}</strong
+          ><br />
+          {{ $t('legal.publisher.legalForm') }}<br />
+          <span v-html="$t('legal.publisher.address')" />
         </p>
         <p class="text-gray-200">
-          Contact :
+          {{ $t('legal.publisher.contact') }}
           <a href="mailto:contact@dibodev.fr" class="font-medium text-[#bdb3ff] underline">contact@dibodev.fr</a>
         </p>
-        <p class="text-gray-200">SIRET : 988 307 906 00012</p>
+        <p class="text-gray-200">{{ $t('legal.publisher.siret') }}</p>
       </section>
 
       <section class="flex flex-col gap-4">
-        <h2 class="text-xl font-semibold text-gray-100">Hébergeur</h2>
-        <p class="text-gray-200">Le site est hébergé par :</p>
+        <h2 class="text-xl font-semibold text-gray-100">{{ $t('legal.host.title') }}</h2>
+        <p class="text-gray-200">{{ $t('legal.host.intro') }}</p>
         <p class="text-gray-200">
-          <strong>OVH SAS</strong><br />
-          2 rue Kellermann<br />
-          59100 Roubaix<br />
-          France
+          <strong>{{ $t('legal.host.name') }}</strong
+          ><br />
+          {{ $t('legal.host.addressLine1') }}<br />
+          {{ $t('legal.host.addressLine2') }}<br />
+          {{ $t('legal.host.addressLine3') }}
         </p>
       </section>
 
       <section class="flex flex-col gap-4">
-        <h2 class="text-xl font-semibold text-gray-100">Activité</h2>
-        <p class="text-gray-200">Développeur full-stack web, IA et mobile en freelance.</p>
+        <h2 class="text-xl font-semibold text-gray-100">{{ $t('legal.activity.title') }}</h2>
+        <p class="text-gray-200">{{ $t('legal.activity.description') }}</p>
       </section>
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
-useHead({
-  title: 'Mentions légales — Dibodev',
+const { t } = useI18n()
+
+useHead(() => ({
+  title: t('legal.meta.title'),
   meta: [
     {
       name: 'description',
-      content: 'Mentions légales du site Dibodev — Léo Guillaume, développeur freelance à Rennes.',
+      content: t('legal.meta.description'),
     },
   ],
-})
+}))
 </script>
