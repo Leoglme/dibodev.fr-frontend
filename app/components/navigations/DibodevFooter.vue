@@ -124,6 +124,14 @@ const footerLinks: FooterLink[] = [
     title: 'Page de contact',
     to: '/contact',
   },
+  {
+    title: 'Mentions légales',
+    to: '/legal',
+  },
+  {
+    title: 'Politique de confidentialité',
+    to: '/privacy',
+  },
 ]
 
 const languages: DibodevSelectOption[] = [
