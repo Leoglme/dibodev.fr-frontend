@@ -4,7 +4,6 @@
       <div class="grid gap-6 sm:grid-cols-2">
         <div class="grid gap-10 sm:gap-8">
           <DibodevLogo :large="true" :size="30" />
-          <!--   SOCIALS       -->
           <div class="flex items-center gap-4">
             <NuxtLink
               v-for="social in socials"
@@ -19,6 +18,16 @@
               </DibodevSquareButton>
             </NuxtLink>
           </div>
+          <div class="w-full sm:hidden">
+            <DibodevButton
+              v-if="currentRoute !== '/contact'"
+              to="/contact"
+              icon="Mail"
+              class="w-full"
+            >
+              Me contacter
+            </DibodevButton>
+          </div>
         </div>
         <div class="grid gap-4">
           <DibodevLink v-for="link in footerLinks" :key="link.title" :link="link.to">
@@ -28,40 +37,42 @@
       </div>
 
       <div class="flex flex-wrap items-center justify-end gap-8">
-        <div class="w-full sm:w-fit">
-          <DibodevButton v-if="currentRoute !== '/contact'" icon="Mail" class="w-full">Me contacter</DibodevButton>
+        <div class="hidden w-full sm:block sm:w-fit">
+          <DibodevButton
+            v-if="currentRoute !== '/contact'"
+            to="/contact"
+            icon="Mail"
+            class="w-full"
+          >
+            Me contacter
+          </DibodevButton>
         </div>
-
         <div class="w-full sm:w-fit">
           <DibodevSelect id="language-select" :options="languages" v-model="selectedLanguage" />
         </div>
-
-        <!--        <div class="flex flex-wrap items-center justify-between">-->
-        <!--          <div class="flex items-center gap-4">-->
-        <!--            <div class="justify-left flex items-center gap-1">-->
-        <!--              <DibodevIcon name="Moon" mode="stroke" :width="20" :height="20" />-->
-        <!--              <span class="text-base font-normal"> Thème sombre </span>-->
-        <!--            </div>-->
-        <!--            <DibodevSwitch v-model="isChecked" />-->
-        <!--          </div>-->
-        <!--        </div>-->
       </div>
     </div>
 
-    <div class="justify-left flex w-full flex-wrap items-center gap-x-2 gap-y-3">
-      <DibodevBadge v-if="tags.length > 0" v-for="tag in tags" :key="tag" backgroundColor="#35424D" textColor="#F5F4FB">
+    <div class="flex w-full flex-wrap items-center justify-start gap-x-2 gap-y-3">
+      <DibodevBadge v-for="tag in tags" :key="tag" backgroundColor="#35424D" textColor="#F5F4FB">
         {{ tag }}
       </DibodevBadge>
     </div>
 
     <DibodevDivider />
 
-    <span class="text-base font-normal">
-      © 2025
-      <DibodevLink :externalLink="true" link="https://dibodev.fr"> dibodev.fr </DibodevLink>
-
-      — Tous droits réservés.
-    </span>
+    <div class="flex w-full flex-wrap items-center justify-between gap-10">
+      <span class="text-base font-normal text-gray-200">
+        © 2025
+        <DibodevLink :externalLink="true" link="https://dibodev.fr" color="#e5e7eb"> dibodev.fr </DibodevLink>
+        — Tous droits réservés.
+      </span>
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <DibodevLink v-for="legal in legalLinks" :key="legal.title" :link="legal.to">
+          {{ legal.title }}
+        </DibodevLink>
+      </div>
+    </div>
   </footer>
 </template>
 <script setup lang="ts">
@@ -112,46 +123,33 @@ const socials: Socials[] = [
 ]
 
 const footerLinks: FooterLink[] = [
-  {
-    title: 'Accueil',
-    to: '/',
-  },
-  {
-    title: 'Mes projets',
-    to: '/projects',
-  },
-  {
-    title: 'Page de contact',
-    to: '/contact',
-  },
-  {
-    title: 'Mentions légales',
-    to: '/legal',
-  },
-  {
-    title: 'Politique de confidentialité',
-    to: '/privacy',
-  },
+  { title: 'Accueil', to: '/' },
+  { title: 'Mes projets', to: '/projects' },
+  { title: 'Page de contact', to: '/contact' },
+]
+
+const legalLinks: FooterLink[] = [
+  { title: 'Mentions légales', to: '/legal' },
+  { title: 'Politique de confidentialité', to: '/privacy' },
 ]
 
 const languages: DibodevSelectOption[] = [
-  { label: 'Français', value: 'fr' },
-  { label: 'English', value: 'en' },
-  { label: 'Español', value: 'es' },
+  { label: 'FR', value: 'fr' },
+  { label: 'EN', value: 'en' },
+  { label: 'ES', value: 'es' },
 ]
 
 const tags: string[] = [
-  'Développeur web',
+  'Développeur Web',
   'Mobile',
   'Logiciels',
   'Intelligence artificielle',
-  'Rennes, Bretagne, France',
+  'Rennes, France',
   'Freelance',
 ]
 
 /* REFS */
-const isChecked: Ref<boolean> = ref(false)
-const selectedLanguage: Ref<DibodevSelectOption> = ref({ label: 'Français', value: 'fr' })
+const selectedLanguage: Ref<DibodevSelectOption> = ref({ label: 'FR', value: 'fr' })
 const currentRoute: Ref<string> = ref(router.currentRoute.value.path)
 
 // Watch for route changes to update currentRoute
