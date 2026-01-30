@@ -9,8 +9,8 @@
     <div class="flex w-full max-w-7xl items-center justify-center">
       <div class="flex w-full max-w-4xl flex-col-reverse items-center justify-center gap-6 md:flex-row">
         <div class="flex w-full items-center justify-center gap-6">
-          <DibodevSelect id="language-select" :options="languages" v-model:modelValue="selectedLanguage" />
-          <DibodevSelect id="category-select" :options="categories" v-model:modelValue="selectedCategory" />
+          <DibodevSelect id="language-select" :options="languageOptions" v-model:modelValue="selectedLanguage" />
+          <DibodevSelect id="category-select" :options="categoryOptions" v-model:modelValue="selectedCategory" />
         </div>
 
         <DibodevSearchBar
@@ -69,33 +69,6 @@ import type { StoryblokProjectContent } from '~/services/types/storyblokProject'
 import { StoryblokService } from '~/services/storyblokService'
 import { mapStoryblokProjectToDibodevProject } from '~/services/storyblokProjectMapper'
 
-/* DATAS */
-const languages: DibodevSelectOption[] = [
-  { label: 'Tous les langages', value: 'all' },
-  { label: 'TypeScript', value: 'typescript' },
-  { label: 'JavaScript', value: 'javascript' },
-  { label: 'Python', value: 'python' },
-  { label: 'Ruby', value: 'ruby' },
-  { label: 'Java', value: 'java' },
-  { label: 'C#', value: 'c#' },
-  { label: 'PHP', value: 'php' },
-  { label: 'Go', value: 'go' },
-  { label: 'Rust', value: 'rust' },
-  { label: 'Swift', value: 'swift' },
-  { label: 'Kotlin', value: 'kotlin' },
-]
-
-const categories: DibodevSelectOption[] = [
-  { label: 'Toutes les catégories', value: 'all' },
-  { label: 'Site web', value: 'site web' },
-  { label: 'Application mobile', value: 'application mobile' },
-  { label: 'Application métier', value: 'application métier' },
-  { label: 'Logiciel', value: 'logiciel' },
-  { label: 'IA', value: 'ia' },
-  { label: 'Gaming', value: 'gaming' },
-  { label: 'Jeu', value: 'jeu' },
-]
-
 const { data: storyblokProjectsData } = await useAsyncData<DibodevProject[]>(
   'projects-storyblok-list',
   async (): Promise<DibodevProject[]> => {
@@ -131,6 +104,50 @@ const selectedCategory: Ref<DibodevSelectOption> = ref<DibodevSelectOption>({
  */
 const allProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] => {
   return storyblokProjectsData.value ?? []
+})
+
+/**
+ * Unique stack values from all projects, sorted (for "langages" filter).
+ * Options are derived from Storyblok data so new stack entries appear automatically.
+ */
+const languageOptions: ComputedRef<DibodevSelectOption[]> = computed((): DibodevSelectOption[] => {
+  const all: DibodevProject[] = allProjects.value
+  const set = new Set<string>()
+  for (const project of all) {
+    for (const tech of project.stack) {
+      if (tech != null && String(tech).trim() !== '') {
+        set.add(String(tech).trim())
+      }
+    }
+  }
+  const sorted: string[] = [...set].sort((a: string, b: string) => a.localeCompare(b, 'fr'))
+  const options: DibodevSelectOption[] = [{ label: 'Tous les langages', value: 'all' }]
+  for (const value of sorted) {
+    options.push({ label: value, value })
+  }
+  return options
+})
+
+/**
+ * Unique categories from all projects, sorted.
+ * Options are derived from Storyblok data so new categories appear automatically.
+ */
+const categoryOptions: ComputedRef<DibodevSelectOption[]> = computed((): DibodevSelectOption[] => {
+  const all: DibodevProject[] = allProjects.value
+  const set = new Set<string>()
+  for (const project of all) {
+    for (const cat of project.categories) {
+      if (cat != null && String(cat).trim() !== '') {
+        set.add(String(cat).trim())
+      }
+    }
+  }
+  const sorted: string[] = [...set].sort((a: string, b: string) => a.localeCompare(b, 'fr'))
+  const options: DibodevSelectOption[] = [{ label: 'Toutes les catégories', value: 'all' }]
+  for (const value of sorted) {
+    options.push({ label: value, value })
+  }
+  return options
 })
 
 /* METHODS */
