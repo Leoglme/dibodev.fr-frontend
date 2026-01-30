@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, defineProps, defineEmits, watch } from 'vue'
+import { ref, watch } from 'vue'
 import type { Ref } from 'vue'
 import type { DibodevSwitchProps } from '~/core/types/DibodevSwitch'
 

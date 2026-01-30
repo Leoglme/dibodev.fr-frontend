@@ -5,7 +5,7 @@
     id="project-about"
     class="relative z-2 flex h-full min-h-screen w-screen max-w-screen flex-col items-center justify-start gap-32"
   >
-    <div class="grid w-full gap-16 px-3 py-24 sm:max-w-4xl sm:gap-20">
+    <div class="grid w-full gap-16 px-3 py-36 sm:max-w-4xl sm:gap-20 sm:py-48">
       <div class="flex flex-col items-center justify-center gap-4 sm:gap-6">
         <h2 class="w-full text-left text-2xl font-semibold text-gray-100 sm:text-[32px]">Description du projet</h2>
         <p class="text-left text-base leading-7 font-normal text-gray-100 sm:text-base">

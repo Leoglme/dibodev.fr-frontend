@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, ref, defineEmits, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import type { Ref } from 'vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import type { DibodevSearchBarProps } from '~/core/types/DibodevSearchBar'

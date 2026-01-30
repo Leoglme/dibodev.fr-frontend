@@ -4,7 +4,7 @@
     data-aos="fade-up"
     data-aos-duration="600"
     data-aos-offset="300"
-    class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-36 sm:px-8 sm:py-60"
+    class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-36 pb-60 sm:px-8 sm:py-60 sm:pb-96"
   >
     <div class="grid gap-14 sm:gap-12">
       <h2 class="text-left text-2xl font-semibold sm:text-center sm:text-[32px]">Découvrir un autre projet</h2>
@@ -42,7 +42,9 @@ import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { computed, type PropType } from 'vue'
 import type { ComputedRef } from 'vue'
 import type { DibodevProject } from '~/core/types/DibodevProject'
-import projects from '~/assets/data/projects.json'
+import type { StoryblokProjectContent } from '~/services/types/storyblokProject'
+import { StoryblokService } from '~/services/storyblokService'
+import { mapStoryblokProjectToDibodevProject } from '~/services/storyblokProjectMapper'
 import type { DibodevRecommendedProjectSectionProps } from '~/core/types/DibodevRecommendedProjectSection'
 
 /* TYPES */
@@ -60,12 +62,27 @@ const props: DibodevRecommendedProjectSectionProps = defineProps({
   },
 })
 
-/* METHODS */
+const { data: storyblokProjectsData } = await useAsyncData<DibodevProject[]>(
+  'projects-storyblok-list',
+  async (): Promise<DibodevProject[]> => {
+    try {
+      const response = await StoryblokService.getStories<StoryblokProjectContent>({
+        starts_with: 'project/',
+      })
+      const projects: DibodevProject[] = response.stories.map((story) => mapStoryblokProjectToDibodevProject(story))
+      return projects.sort((a: DibodevProject, b: DibodevProject): number => {
+        const timeA: number = new Date(a.date).getTime() || 0
+        const timeB: number = new Date(b.date).getTime() || 0
+        return timeB - timeA
+      })
+    } catch {
+      return []
+    }
+  },
+)
+
 /**
- * Utilitarian function to calculate the similarity score between two projects
- * @param {DibodevProject} projectOne - First project
- * @param {DibodevProject} projectTwo - Second project
- * @returns {number} Similarity score (higher = more similar)
+ * Similarity score between two projects (higher = more similar).
  */
 const calculateSimilarityScore: (projectOne: DibodevProject, projectTwo: DibodevProject) => number = (
   projectOne: DibodevProject,
@@ -73,45 +90,41 @@ const calculateSimilarityScore: (projectOne: DibodevProject, projectTwo: Dibodev
 ): number => {
   let score = 0
 
-  // Similarity categories (weight 1)
-  const commonCategories = projectOne.categories.filter((cat: string) => projectTwo.categories.includes(cat))
+  const commonCategories: string[] = projectOne.categories.filter((cat: string) => projectTwo.categories.includes(cat))
   score += commonCategories.length
 
-  // Similarity Stack (weight 1)
-  const commonStack = projectOne.stack.filter((tech: string) => projectTwo.stack.includes(tech))
+  const commonStack: string[] = projectOne.stack.filter((tech: string) => projectTwo.stack.includes(tech))
   score += commonStack.length
 
-  // Similarity tags (weight 0.5)
-  const commonTags = projectOne.tags.filter((tag: string) => projectTwo.tags.includes(tag))
+  const commonTags: string[] = projectOne.tags.filter((tag: string) => projectTwo.tags.includes(tag))
   score += commonTags.length * 0.5
 
   return score
 }
 
 /**
- * Calculate the recommended projects similar to the current project
- * @returns {ComputedRef<DibodevProject[]>} Recommended projects
+ * Recommended projects (similar to current, from Storyblok).
  */
-const recommendedProjects: ComputedRef<DibodevProject[]> = computed(() => {
+const recommendedProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] => {
   if (!props.currentProject) return []
 
-  const allProjects: DibodevProject[] = projects as DibodevProject[]
+  const allProjects: DibodevProject[] = storyblokProjectsData.value ?? []
   const currentName: string = props.currentProject.name
 
   const projectsWithScores: ProjectWithScore[] = allProjects
-    .filter((p: DibodevProject) => p.name !== currentName) // Exclude the current project
+    .filter((p: DibodevProject) => p.name !== currentName)
     .map((project: DibodevProject) => ({
       project,
       score: calculateSimilarityScore(props.currentProject, project),
-      date: new Date(project.date).getTime(), // For secondary sorting by date
+      date: new Date(project.date).getTime(),
     }))
     .sort((a: ProjectWithScore, b: ProjectWithScore) => {
-      // Main sorting by decreasing score, then by recent date
       if (b.score !== a.score) {
         return b.score - a.score
       }
       return b.date - a.date
     })
+
   return projectsWithScores.slice(0, 3).map((item: ProjectWithScore) => item.project)
 })
 </script>

@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -14,12 +14,15 @@
     "lint:eslint:fix": "eslint . --fix",
     "lint:ts": "vue-tsc --noEmit",
     "lint": "npm run lint:prettier && npm run lint:eslint && npm run lint:ts",
-    "lint:fix": "npm run lint:prettier:fix && npm run lint:eslint:fix"
+    "lint:fix": "npm run lint:prettier:fix && npm run lint:eslint:fix",
+    "update:browserslist": "npx update-browserslist-db@latest"
   },
   "dependencies": {
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/robots": "^5.4.0",
     "@nuxtjs/sitemap": "^7.4.3",
+    "@storyblok/nuxt": "^9.0.0",
+    "@storyblok/richtext": "^3.8.2",
     "@tailwindcss/vite": "^4.1.11",
     "@vee-validate/i18n": "^4.15.1",
     "@vee-validate/rules": "^4.15.1",
@@ -51,6 +54,7 @@
     "@types/node": "^24.3.0",
     "@typescript-eslint/eslint-plugin": "^8.38.0",
     "@typescript-eslint/parser": "^8.38.0",
+    "cross-env": "^10.1.0",
     "eslint": "^9.32.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",
@@ -61,6 +65,7 @@
     "husky": "^9.1.7",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
+    "vite-plugin-mkcert": "^1.17.9",
     "vue-eslint-parser": "^10.2.0",
     "vue-tsc": "^3.0.5"
   }

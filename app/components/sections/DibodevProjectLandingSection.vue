@@ -123,10 +123,10 @@ const parallaxY: Ref<number> = ref(0)
  * @returns {void}
  */
 const scrollToTargetSection: () => void = (): void => {
-  const ctaTarget: string = '#project-about'
+  const ctaTarget: string = '#project-gallery'
   const targetSection: HTMLElement | null = document.querySelector(ctaTarget)
   if (targetSection) {
-    const offset: number = 170
+    const offset: number = 100
     const top: number = targetSection.getBoundingClientRect().top + window.scrollY - offset
     window.scrollTo({
       top,

@@ -1,11 +1,6 @@
-import path from 'node:path'
 import Mailjet from 'node-mailjet'
 import type { SendEmailV3_1 } from 'node-mailjet'
-import * as dotenv from 'dotenv'
 import { useRuntimeConfig } from '#imports'
-
-const envPath: string = path.resolve(process.cwd(), '.env')
-dotenv.config({ path: envPath })
 
 const config = useRuntimeConfig()
 

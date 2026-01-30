@@ -19,7 +19,6 @@
 
 <script lang="ts" setup>
 import type { DibodevLinkProps } from '~/core/types/DibodevLink'
-import { defineProps } from '@vue/runtime-core'
 import { computed, type ComputedRef } from 'vue'
 
 /**
