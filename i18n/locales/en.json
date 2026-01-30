@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "Dibodev — Freelance Web Developer in Rennes",
+    "description": "Freelance developer in Rennes: custom web, mobile, software and AI solutions. End-to-end support."
+  },
+  "nav": {
+    "home": "Home",
+    "myProjects": "My projects",
+    "contactMe": "Contact me"
+  },
+  "footer": {
+    "contactMe": "Contact me",
+    "home": "Home",
+    "myProjects": "My projects",
+    "contactPage": "Contact page",
+    "legal": "Legal notice",
+    "privacy": "Privacy policy",
+    "allRightsReserved": "All rights reserved.",
+    "tags": {
+      "webDeveloper": "Web Developer",
+      "mobile": "Mobile",
+      "software": "Software",
+      "ai": "Artificial intelligence",
+      "rennesFrance": "Rennes, France",
+      "freelance": "Freelance"
+    }
+  },
+  "home": {
+    "hero": {
+      "titleBefore": "Have an ",
+      "titleHighlight": "idea",
+      "titleAfter": "?",
+      "subtitleBefore": "Let's make it happen ",
+      "subtitleHighlight": "together",
+      "subtitleAfter": "!",
+      "description": "Freelance developer based in Rennes, I help you build custom web, mobile, software or AI solutions.",
+      "cta": "Discover"
+    },
+    "services": {
+      "title": "My services",
+      "intro": "I help you design custom digital solutions—streamlining your processes, boosting your online presence, building efficient business interfaces, or connecting your existing tools intelligently.",
+      "items": {
+        "projectLaunch": {
+          "title": "Project launch",
+          "description": "Full support to turn your idea into a concrete digital project."
+        },
+        "website": {
+          "title": "Website",
+          "description": "Modern, fast, responsive showcase or professional sites for all devices."
+        },
+        "mobileApps": {
+          "title": "Mobile applications",
+          "description": "Custom iOS and Android apps to reach your users everywhere."
+        },
+        "businessInterfaces": {
+          "title": "Business interfaces",
+          "description": "Simple, effective internal tools to improve your daily work."
+        },
+        "apiConnectors": {
+          "title": "API & connectors",
+          "description": "Connect your tools to automate workflows and save time."
+        },
+        "seo": {
+          "title": "SEO",
+          "description": "Improve your visibility on Google and attract more qualified visitors."
+        },
+        "cloudDevOps": {
+          "title": "Cloud & DevOps",
+          "description": "Hosting, automated deployment and stability for your online projects."
+        },
+        "ai": {
+          "title": "Artificial intelligence",
+          "description": "Leverage your data and automate tasks with custom AI solutions."
+        }
+      }
+    },
+    "stats": {
+      "yearsExperience": "Years of experience",
+      "yearsInCompany": "Years in company",
+      "projectsDone": "Projects completed",
+      "passion": "Passion & commitment"
+    },
+    "favoriteProjects": {
+      "title": "My favorite projects",
+      "seeAllProjects": "See all projects"
+    },
+    "pricing": {
+      "title": "My freelance developer rate",
+      "intro": "This rate is based on an average daily rate (TJM). A working day equals",
+      "hours": "7H",
+      "requestQuote": "Request a quote",
+      "pricePerDay": "/day.",
+      "priceTTC": "€350 incl. VAT",
+      "priceHT": "i.e. €291.67 excl. VAT/day (20% VAT)."
+    }
+  }
+}

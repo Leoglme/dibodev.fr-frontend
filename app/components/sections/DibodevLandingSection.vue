@@ -12,9 +12,12 @@
           data-aos-duration="800"
         >
           <span v-if="!props.title">
-            Vous avez une <span class="text-primary-light">idée</span> ?
+            {{ $t('home.hero.titleBefore') }}<span class="text-primary-light">{{ $t('home.hero.titleHighlight') }}</span
+            >{{ $t('home.hero.titleAfter') }}
             <br />
-            Réalisons-la <span class="text-primary-light">ensemble</span> !
+            {{ $t('home.hero.subtitleBefore')
+            }}<span class="text-primary-light">{{ $t('home.hero.subtitleHighlight') }}</span
+            >{{ $t('home.hero.subtitleAfter') }}
           </span>
           <span v-else>{{ props.title }}</span>
         </h1>

@@ -8,7 +8,9 @@
   >
     <div class="grid gap-14 sm:gap-12">
       <div class="justify-left flex items-center gap-4 sm:justify-center">
-        <h2 class="text-left text-2xl font-semibold sm:text-center sm:text-[32px]">Mes projets favoris</h2>
+        <h2 class="text-left text-2xl font-semibold sm:text-center sm:text-[32px]">
+          {{ $t('home.favoriteProjects.title') }}
+        </h2>
         <div title="999 bpm">
           <svg
             class="heartbeat h-[24px] w-[26px] sm:h-[30px] sm:w-[34px]"
@@ -27,7 +29,7 @@
       <div class="flex w-full max-w-7xl flex-col-reverse gap-10 sm:grid sm:gap-8">
         <div class="flex w-full items-center justify-end">
           <DibodevLink link="/projects">
-            <span>Voir tous les projets</span>
+            <span>{{ $t('home.favoriteProjects.seeAllProjects') }}</span>
             <DibodevIcon name="ArrowRight" mode="stroke" :width="20" :height="20" />
           </DibodevLink>
         </div>

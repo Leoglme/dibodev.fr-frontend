@@ -18,8 +18,8 @@
             {{ link.text }}
           </DibodevLink>
         </li>
-        <li v-if="currentRoute !== '/contact'" class="ml-6">
-          <DibodevButton to="/contact" icon="Mail" size="sm"> Me contacter </DibodevButton>
+        <li v-if="!isContactPage" class="ml-6">
+          <DibodevButton to="/contact" icon="Mail" size="sm">{{ $t('nav.contactMe') }}</DibodevButton>
         </li>
       </ol>
 
@@ -46,7 +46,9 @@
           <div v-if="mobileMenuOpen" class="absolute right-0 bottom-0 left-0 z-[9999] m-auto h-[calc(100dvh-70px)]">
             <section class="relative h-full w-full overflow-auto bg-gray-900 outline-none" @click.stop>
               <div class="flex flex-col gap-8 p-8">
-                <DibodevLink link="/" color="#f5f4fb" @click="mobileMenuOpen = false"> Accueil </DibodevLink>
+                <DibodevLink link="/" color="#f5f4fb" @click="mobileMenuOpen = false">
+                  {{ $t('nav.home') }}
+                </DibodevLink>
                 <DibodevLink
                   v-for="link in links"
                   :key="link.to"
@@ -57,13 +59,13 @@
                   {{ link.text }}
                 </DibodevLink>
                 <DibodevButton
-                  v-if="currentRoute !== '/contact'"
+                  v-if="!isContactPage"
                   to="/contact"
                   icon="Mail"
                   size="sm"
                   @click="mobileMenuOpen = false"
                 >
-                  Me contacter
+                  {{ $t('nav.contactMe') }}
                 </DibodevButton>
               </div>
             </section>
@@ -77,30 +79,27 @@
 import DibodevLogo from '~/components/branding/DibodevLogo.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import type { DibodevNavbarLink } from '~/core/types/DibodevNavbar'
-import type { Ref } from 'vue'
+import type { Ref, ComputedRef } from 'vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevSquareButton from '~/components/buttons/DibodevSquareButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
-import type { Router } from '#vue-router'
-
 /* ROUTE */
-const router: Router = useRouter()
+const route = useRoute()
+
+/* I18N */
+const { t } = useI18n()
 
 /* DATAS */
-const links: DibodevNavbarLink[] = [
-  {
-    text: 'Accueil',
-    to: '/',
-  },
-  {
-    text: 'Mes projets',
-    to: '/projects',
-  },
-]
+const links: ComputedRef<DibodevNavbarLink[]> = computed((): DibodevNavbarLink[] => [
+  { text: t('nav.home'), to: '/' },
+  { text: t('nav.myProjects'), to: '/projects' },
+])
 
 /* REFS */
 const mobileMenuOpen: Ref<boolean> = ref(false)
-const currentRoute: Ref<string> = ref(router.currentRoute.value.path)
+const isContactPage: ComputedRef<boolean> = computed(
+  (): boolean => route.path === '/contact' || route.path.endsWith('/contact'),
+)
 
 // Manage scroll position
 const scrollPosition: Ref<number> = ref(0)
@@ -119,11 +118,6 @@ onUnmounted(() => {
 
 watch(mobileMenuOpen, (open: boolean) => {
   document.body.style.overflow = open ? 'hidden' : ''
-})
-
-// Watch for route changes to update currentRoute
-router.afterEach((to) => {
-  currentRoute.value = to.path
 })
 </script>
 

@@ -4,7 +4,6 @@ import mkcert from 'vite-plugin-mkcert'
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Dibodev - Développeur Web Freelance à Rennes',
       script: [
         {
           src: 'https://umami.dibodev.fr/script.js',
@@ -62,10 +61,23 @@ export default defineNuxtConfig({
         usePlugin: true,
       },
     ],
+    '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
     '@nuxtjs/google-fonts',
   ],
+  i18n: {
+    locales: [
+      { code: 'fr', language: 'fr-FR', file: 'fr.json', iso: 'fr-FR' },
+      { code: 'en', language: 'en-US', file: 'en.json', iso: 'en-US' },
+      { code: 'es', language: 'es-ES', file: 'es.json', iso: 'es-ES' },
+    ],
+    defaultLocale: 'fr',
+    langDir: 'locales',
+    lazy: true,
+    strategy: 'prefix_except_default',
+  },
+  /** Utilisé par @nuxtjs/sitemap. Avec i18n strategy !== no_prefix, le sitemap inclut automatiquement les URLs par locale (fr, en, es) et les balises hreflang. */
   site: {
     url: 'https://dibodev.fr',
     name: 'Dibodev',

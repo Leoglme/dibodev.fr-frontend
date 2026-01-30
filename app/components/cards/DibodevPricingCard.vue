@@ -4,24 +4,30 @@
   >
     <div class="grid gap-8">
       <div class="grid gap-3 sm:gap-4">
-        <h4 class="text-2xl font-medium sm:text-3xl">Mon tarif de développeur freelance</h4>
+        <h4 class="text-2xl font-medium sm:text-3xl">{{ $t('home.pricing.title') }}</h4>
         <p class="text-sm font-normal">
-          Ce prix est essentiellement établi grâce à un taux journalier moyen (TJM). Une journée de travail est égale à
-          <span class="text-primary-light">7H</span>.
+          {{ $t('home.pricing.intro') }}
+          <span class="text-primary-light">{{ $t('home.pricing.hours') }}</span
+          >.
         </p>
       </div>
 
-      <DibodevButton to="/contact" icon="Mail" class="hidden! w-full sm:block!">Demander un devis</DibodevButton>
+      <DibodevButton to="/contact" icon="Mail" class="hidden! w-full sm:block!">{{
+        $t('home.pricing.requestQuote')
+      }}</DibodevButton>
     </div>
 
     <div class="justify-left flex flex-col items-center gap-3 sm:justify-center">
       <h5 class="w-full text-left text-[32px] font-medium sm:text-center sm:text-5xl">
-        <span class="text-primary-light">350€ TTC</span>/Jour.
+        <span class="text-primary-light">{{ $t('home.pricing.priceTTC') }}</span
+        >{{ $t('home.pricing.pricePerDay') }}
       </h5>
-      <p class="w-full text-left text-base font-normal sm:text-center">Soit 291,67€ HT/Jour (TVA 20%).</p>
+      <p class="w-full text-left text-base font-normal sm:text-center">{{ $t('home.pricing.priceHT') }}</p>
     </div>
 
-    <DibodevButton to="/contact" icon="Mail" class="w-full sm:hidden">Demander un devis</DibodevButton>
+    <DibodevButton to="/contact" icon="Mail" class="w-full sm:hidden">{{
+      $t('home.pricing.requestQuote')
+    }}</DibodevButton>
   </div>
 </template>
 <script setup lang="ts">

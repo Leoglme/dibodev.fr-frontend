@@ -38,23 +38,26 @@ const numberOfRepos: ComputedRef<number> = computed(() => {
   return numberOfPrivateRepos + numberOfPublicRepos + numberOfOrganizationRepos
 })
 
+/* I18N */
+const { t } = useI18n()
+
 /* DATAS */
-const stats: DibodevStatItemProps[] = [
+const stats: ComputedRef<DibodevStatItemProps[]> = computed((): DibodevStatItemProps[] => [
   {
     value: yearExperience.value,
-    label: "Années d'expérience",
+    label: t('home.stats.yearsExperience'),
   },
   {
     value: '4',
-    label: 'Années en entreprise',
+    label: t('home.stats.yearsInCompany'),
   },
   {
     value: numberOfRepos.value,
-    label: 'Projets réalisés',
+    label: t('home.stats.projectsDone'),
   },
   {
     value: '100%',
-    label: 'Passion & implication',
+    label: t('home.stats.passion'),
   },
-]
+])
 </script>

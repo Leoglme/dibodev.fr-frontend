@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "Dibodev — Desarrollador Web Freelance en Rennes",
+    "description": "Desarrollador freelance en Rennes: sitios web, aplicaciones móviles, software e IA a medida. Acompañamiento de principio a fin."
+  },
+  "nav": {
+    "home": "Inicio",
+    "myProjects": "Mis proyectos",
+    "contactMe": "Contactarme"
+  },
+  "footer": {
+    "contactMe": "Contactarme",
+    "home": "Inicio",
+    "myProjects": "Mis proyectos",
+    "contactPage": "Página de contacto",
+    "legal": "Aviso legal",
+    "privacy": "Política de privacidad",
+    "allRightsReserved": "Todos los derechos reservados.",
+    "tags": {
+      "webDeveloper": "Desarrollador Web",
+      "mobile": "Móvil",
+      "software": "Software",
+      "ai": "Inteligencia artificial",
+      "rennesFrance": "Rennes, Francia",
+      "freelance": "Freelance"
+    }
+  },
+  "home": {
+    "hero": {
+      "titleBefore": "¿Tienes una ",
+      "titleHighlight": "idea",
+      "titleAfter": "?",
+      "subtitleBefore": "¡Hagámosla realidad ",
+      "subtitleHighlight": "juntos",
+      "subtitleAfter": "!",
+      "description": "Desarrollador freelance en Rennes, te acompaño en la creación de soluciones web, móviles, software o IA a medida.",
+      "cta": "Descubrir"
+    },
+    "services": {
+      "title": "Mis servicios",
+      "intro": "Te acompaño en el diseño de soluciones digitales a medida: simplificar procesos, optimizar tu presencia en línea, crear interfaces de negocio eficaces o conectar tus herramientas de forma inteligente.",
+      "items": {
+        "projectLaunch": {
+          "title": "Lanzamiento de proyecto",
+          "description": "Acompañamiento completo para transformar tu idea en un proyecto digital concreto."
+        },
+        "website": {
+          "title": "Sitio web",
+          "description": "Creación de sitios corporativos o profesionales, modernos, rápidos y adaptados a todos los dispositivos."
+        },
+        "mobileApps": {
+          "title": "Aplicaciones móviles",
+          "description": "Desarrollo de aplicaciones iOS y Android a medida para llegar a tus usuarios en cualquier lugar."
+        },
+        "businessInterfaces": {
+          "title": "Interfaces de negocio",
+          "description": "Diseño de herramientas internas sencillas y eficaces para mejorar tu día a día profesional."
+        },
+        "apiConnectors": {
+          "title": "API y conectores",
+          "description": "Conexión de tus herramientas para automatizar intercambios y ahorrar tiempo."
+        },
+        "seo": {
+          "title": "SEO",
+          "description": "Mejora tu visibilidad en Google para atraer más visitantes cualificados."
+        },
+        "cloudDevOps": {
+          "title": "Cloud y DevOps",
+          "description": "Alojamiento, despliegue automatizado y estabilidad para tus proyectos en línea."
+        },
+        "ai": {
+          "title": "Inteligencia artificial",
+          "description": "Aprovecha tus datos y automatiza acciones con soluciones de IA a medida."
+        }
+      }
+    },
+    "stats": {
+      "yearsExperience": "Años de experiencia",
+      "yearsInCompany": "Años en empresa",
+      "projectsDone": "Proyectos realizados",
+      "passion": "Pasión e implicación"
+    },
+    "favoriteProjects": {
+      "title": "Mis proyectos favoritos",
+      "seeAllProjects": "Ver todos los proyectos"
+    },
+    "pricing": {
+      "title": "Mi tarifa de desarrollador freelance",
+      "intro": "Este precio se establece a partir de un tipo de jornada medio (TJM). Un día de trabajo equivale a",
+      "hours": "7H",
+      "requestQuote": "Solicitar presupuesto",
+      "pricePerDay": "/día.",
+      "priceTTC": "350€ IVA incl.",
+      "priceHT": "Es decir, 291,67€ HT/día (IVA 20%)."
+    }
+  }
+}

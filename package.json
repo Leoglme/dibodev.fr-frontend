@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/i18n": "^10.2.1",
     "@nuxtjs/robots": "^5.4.0",
     "@nuxtjs/sitemap": "^7.4.3",
     "@storyblok/nuxt": "^9.0.0",

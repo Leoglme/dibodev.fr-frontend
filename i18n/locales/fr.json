@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "Dibodev — Développeur Web Freelance à Rennes",
+    "description": "Développeur freelance à Rennes : sites web, applications mobiles, logiciels et IA sur mesure. Accompagnement de A à Z."
+  },
+  "nav": {
+    "home": "Accueil",
+    "myProjects": "Mes projets",
+    "contactMe": "Me contacter"
+  },
+  "footer": {
+    "contactMe": "Me contacter",
+    "home": "Accueil",
+    "myProjects": "Mes projets",
+    "contactPage": "Page de contact",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "allRightsReserved": "Tous droits réservés.",
+    "tags": {
+      "webDeveloper": "Développeur Web",
+      "mobile": "Mobile",
+      "software": "Logiciels",
+      "ai": "Intelligence artificielle",
+      "rennesFrance": "Rennes, France",
+      "freelance": "Freelance"
+    }
+  },
+  "home": {
+    "hero": {
+      "titleBefore": "Vous avez une ",
+      "titleHighlight": "idée",
+      "titleAfter": " ?",
+      "subtitleBefore": "Réalisons-la ",
+      "subtitleHighlight": "ensemble",
+      "subtitleAfter": " !",
+      "description": "Développeur freelance basé à Rennes, je vous accompagne dans la création de solutions web, mobiles, logicielles ou IA sur mesure.",
+      "cta": "Découvrir"
+    },
+    "services": {
+      "title": "Mes services",
+      "intro": "Je vous accompagne dans la conception de solutions digitales sur mesure, qu'il s'agisse de simplifier vos processus, d'optimiser votre présence en ligne, de créer une interface métier performante ou de connecter intelligemment vos outils existants.",
+      "items": {
+        "projectLaunch": {
+          "title": "Lancement de projet",
+          "description": "Un accompagnement complet pour transformer votre idée en projet digital concret."
+        },
+        "website": {
+          "title": "Site internet",
+          "description": "Création de sites vitrines ou professionnels, modernes, performants et adaptés à tous les écrans."
+        },
+        "mobileApps": {
+          "title": "Applications mobiles",
+          "description": "Développement d'applications iOS et Android sur mesure pour toucher vos utilisateurs partout."
+        },
+        "businessInterfaces": {
+          "title": "Interfaces métier",
+          "description": "Conception d'outils internes simples et efficaces pour améliorer votre quotidien professionnel."
+        },
+        "apiConnectors": {
+          "title": "API & connecteurs",
+          "description": "Connexion de vos outils entre eux pour automatiser les échanges et gagner du temps."
+        },
+        "seo": {
+          "title": "Référencement SEO",
+          "description": "Améliorez votre visibilité sur Google pour attirer plus de visiteurs qualifiés."
+        },
+        "cloudDevOps": {
+          "title": "Cloud & DevOps",
+          "description": "Hébergement, déploiement automatisé et stabilité assurée pour vos projets en ligne."
+        },
+        "ai": {
+          "title": "Intelligence artificielle",
+          "description": "Exploitez vos données et automatisez des actions grâce à des solutions IA sur mesure."
+        }
+      }
+    },
+    "stats": {
+      "yearsExperience": "Années d'expérience",
+      "yearsInCompany": "Années en entreprise",
+      "projectsDone": "Projets réalisés",
+      "passion": "Passion & implication"
+    },
+    "favoriteProjects": {
+      "title": "Mes projets favoris",
+      "seeAllProjects": "Voir tous les projets"
+    },
+    "pricing": {
+      "title": "Mon tarif de développeur freelance",
+      "intro": "Ce prix est essentiellement établi grâce à un taux journalier moyen (TJM). Une journée de travail est égale à",
+      "hours": "7H",
+      "requestQuote": "Demander un devis",
+      "pricePerDay": "/Jour.",
+      "priceTTC": "350€ TTC",
+      "priceHT": "Soit 291,67€ HT/Jour (TVA 20%)."
+    }
+  }
+}

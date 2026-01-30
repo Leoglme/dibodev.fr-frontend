@@ -19,18 +19,13 @@
             </NuxtLink>
           </div>
           <div class="w-full sm:hidden">
-            <DibodevButton
-              v-if="currentRoute !== '/contact'"
-              to="/contact"
-              icon="Mail"
-              class="w-full"
-            >
-              Me contacter
+            <DibodevButton v-if="!isContactPage" to="/contact" icon="Mail" class="w-full">
+              {{ $t('footer.contactMe') }}
             </DibodevButton>
           </div>
         </div>
         <div class="grid gap-4">
-          <DibodevLink v-for="link in footerLinks" :key="link.title" :link="link.to">
+          <DibodevLink v-for="link in footerLinks" :key="link.to" :link="link.to">
             {{ link.title }}
           </DibodevLink>
         </div>
@@ -38,13 +33,8 @@
 
       <div class="flex flex-wrap items-center justify-end gap-8">
         <div class="hidden w-full sm:block sm:w-fit">
-          <DibodevButton
-            v-if="currentRoute !== '/contact'"
-            to="/contact"
-            icon="Mail"
-            class="w-full"
-          >
-            Me contacter
+          <DibodevButton v-if="!isContactPage" to="/contact" icon="Mail" class="w-full">
+            {{ $t('footer.contactMe') }}
           </DibodevButton>
         </div>
         <div class="w-full sm:w-fit">
@@ -65,10 +55,10 @@
       <span class="text-base font-normal text-gray-200">
         © 2025
         <DibodevLink :externalLink="true" link="https://dibodev.fr" color="#e5e7eb"> dibodev.fr </DibodevLink>
-        — Tous droits réservés.
+        — {{ $t('footer.allRightsReserved') }}
       </span>
       <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-        <DibodevLink v-for="legal in legalLinks" :key="legal.title" :link="legal.to">
+        <DibodevLink v-for="legal in legalLinks" :key="legal.to" :link="legal.to">
           {{ legal.title }}
         </DibodevLink>
       </div>
@@ -83,11 +73,9 @@ import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevSelect from '~/components/core/DibodevSelect.vue'
 import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
-import type { Ref } from 'vue'
+import type { ComputedRef } from 'vue'
 import DibodevBadge from '~/components/ui/DibodevBadge.vue'
 import DibodevDivider from '~/components/decorators/DibodevDivider.vue'
-import type { Router } from '#vue-router'
-
 type Socials = {
   name: string
   icon: string
@@ -101,8 +89,9 @@ type FooterLink = {
   to: string
 }
 
-/* ROUTE */
-const router: Router = useRouter()
+/* I18N */
+const { locale, t } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 
 /* DATAS */
 const socials: Socials[] = [
@@ -122,38 +111,49 @@ const socials: Socials[] = [
   },
 ]
 
-const footerLinks: FooterLink[] = [
-  { title: 'Accueil', to: '/' },
-  { title: 'Mes projets', to: '/projects' },
-  { title: 'Page de contact', to: '/contact' },
-]
-
-const legalLinks: FooterLink[] = [
-  { title: 'Mentions légales', to: '/legal' },
-  { title: 'Politique de confidentialité', to: '/privacy' },
-]
-
 const languages: DibodevSelectOption[] = [
   { label: 'FR', value: 'fr' },
   { label: 'EN', value: 'en' },
   { label: 'ES', value: 'es' },
 ]
 
-const tags: string[] = [
-  'Développeur Web',
-  'Mobile',
-  'Logiciels',
-  'Intelligence artificielle',
-  'Rennes, France',
-  'Freelance',
-]
+const footerLinks: ComputedRef<FooterLink[]> = computed((): FooterLink[] => [
+  { title: t('footer.home'), to: '/' },
+  { title: t('footer.myProjects'), to: '/projects' },
+  { title: t('footer.contactPage'), to: '/contact' },
+])
+
+const legalLinks: ComputedRef<FooterLink[]> = computed((): FooterLink[] => [
+  { title: t('footer.legal'), to: '/legal' },
+  { title: t('footer.privacy'), to: '/privacy' },
+])
+
+const tags: ComputedRef<string[]> = computed((): string[] => [
+  t('footer.tags.webDeveloper'),
+  t('footer.tags.mobile'),
+  t('footer.tags.software'),
+  t('footer.tags.ai'),
+  t('footer.tags.rennesFrance'),
+  t('footer.tags.freelance'),
+])
 
 /* REFS */
-const selectedLanguage: Ref<DibodevSelectOption> = ref({ label: 'FR', value: 'fr' })
-const currentRoute: Ref<string> = ref(router.currentRoute.value.path)
+const route = useRoute()
 
-// Watch for route changes to update currentRoute
-router.afterEach((to) => {
-  currentRoute.value = to.path
+const isContactPage: ComputedRef<boolean> = computed(
+  (): boolean => route.path === '/contact' || route.path.endsWith('/contact'),
+)
+
+const selectedLanguage = computed({
+  get: (): DibodevSelectOption => {
+    const option: DibodevSelectOption | undefined = languages.find(
+      (opt: DibodevSelectOption) => opt.value === locale.value,
+    )
+    return option ?? { label: 'FR', value: 'fr' }
+  },
+  set: (option: DibodevSelectOption): void => {
+    const code: string = typeof option.value === 'string' ? option.value : String(option.value)
+    navigateTo(switchLocalePath(code))
+  },
 })
 </script>

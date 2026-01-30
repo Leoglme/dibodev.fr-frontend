@@ -1,7 +1,7 @@
 <template>
   <DibodevLandingSection
-    description="Développeur freelance basé à Rennes, je vous accompagne dans la création de solutions web, mobiles,
-          logicielles ou IA sur mesure."
+    :description="$t('home.hero.description')"
+    :ctaText="$t('home.hero.cta')"
     ctaTarget="#services"
   />
 </template>
