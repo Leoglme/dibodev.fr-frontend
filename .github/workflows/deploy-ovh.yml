@@ -32,6 +32,10 @@ jobs:
           sed -i "s/^GITHUB_TOKEN=.*/GITHUB_TOKEN=${{ secrets.DIBODEV_STATS_GITHUB_TOKEN }}/" .env || echo "GITHUB_TOKEN=${{ secrets.DIBODEV_STATS_GITHUB_TOKEN }}" >> .env
           sed -i "s/^MAILJET_API_KEY=.*/MAILJET_API_KEY=${{ secrets.MAILJET_API_KEY }}/" .env || echo "MAILJET_API_KEY=${{ secrets.MAILJET_API_KEY }}" >> .env
           sed -i "s/^MAILJET_API_SECRET=.*/MAILJET_API_SECRET=${{ secrets.MAILJET_API_SECRET }}/" .env || echo "MAILJET_API_SECRET=${{ secrets.MAILJET_API_SECRET }}" >> .env
+          sed -i "s/^NUXT_STORYBLOK_DELIVERY_API_TOKEN=.*/NUXT_STORYBLOK_DELIVERY_API_TOKEN=${{ secrets.NUXT_STORYBLOK_DELIVERY_API_TOKEN }}/" .env || echo "NUXT_STORYBLOK_DELIVERY_API_TOKEN=${{ secrets.NUXT_STORYBLOK_DELIVERY_API_TOKEN }}" >> .env
+          sed -i "s/^NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN=.*/NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN=${{ secrets.NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN }}/" .env || echo "NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN=${{ secrets.NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN }}" >> .env
+          sed -i "s/^NUXT_STORYBLOK_SPACE_ID=.*/NUXT_STORYBLOK_SPACE_ID=${{ secrets.NUXT_STORYBLOK_SPACE_ID }}/" .env || echo "NUXT_STORYBLOK_SPACE_ID=${{ secrets.NUXT_STORYBLOK_SPACE_ID }}" >> .env
+          sed -i "s/^NUXT_STORYBLOK_MANAGEMENT_TOKEN=.*/NUXT_STORYBLOK_MANAGEMENT_TOKEN=${{ secrets.NUXT_STORYBLOK_MANAGEMENT_TOKEN }}/" .env || echo "NUXT_STORYBLOK_MANAGEMENT_TOKEN=${{ secrets.NUXT_STORYBLOK_MANAGEMENT_TOKEN }}" >> .env
 
       - name: 🛠️ Generate Static Site (Frontend)
         run: npm run generate
