@@ -61,9 +61,6 @@ import type { DibodevProject } from '~/core/types/DibodevProject'
 import type { StoryblokProjectContent } from '~/services/types/storyblokProject'
 import { StoryblokService } from '~/services/storyblokService'
 import { mapStoryblokProjectToDibodevProject } from '~/services/storyblokProjectMapper'
-import localProjectsJson from '~/assets/data/projects.json'
-
-const localProjects: DibodevProject[] = localProjectsJson as DibodevProject[]
 
 const { data: storyblokProjectsData } = await useAsyncData<DibodevProject[]>(
   'projects-storyblok-list',
@@ -72,7 +69,12 @@ const { data: storyblokProjectsData } = await useAsyncData<DibodevProject[]>(
       const response = await StoryblokService.getStories<StoryblokProjectContent>({
         starts_with: 'project/',
       })
-      return response.stories.map((story) => mapStoryblokProjectToDibodevProject(story))
+      const projects: DibodevProject[] = response.stories.map((story) => mapStoryblokProjectToDibodevProject(story))
+      return projects.sort((a: DibodevProject, b: DibodevProject): number => {
+        const timeA: number = new Date(a.date).getTime() || 0
+        const timeB: number = new Date(b.date).getTime() || 0
+        return timeB - timeA
+      })
     } catch {
       return []
     }
@@ -80,11 +82,10 @@ const { data: storyblokProjectsData } = await useAsyncData<DibodevProject[]>(
 )
 
 /**
- * All projects (local + Storyblok), then filtered by isFavorite.
+ * Projects from Storyblok filtered by isFavorite.
  */
 const favoriteProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] => {
-  const fromStoryblok: DibodevProject[] = storyblokProjectsData.value ?? []
-  const all: DibodevProject[] = [...localProjects, ...fromStoryblok]
+  const all: DibodevProject[] = storyblokProjectsData.value ?? []
   return all.filter((p: DibodevProject) => p.isFavorite)
 })
 </script>

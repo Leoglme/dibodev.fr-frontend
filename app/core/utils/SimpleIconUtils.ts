@@ -34,6 +34,11 @@ export type SimpleIcon = {
  * Provides methods to retrieve and validate icon data.
  * @class SimpleIconUtils
  */
+/** Aliases: normalized input (e.g. from stack names) -> simple-icons slug. */
+const SLUG_ALIASES: Record<string, string> = {
+  nuxtdotjs: 'nuxt',
+}
+
 export class SimpleIconUtils {
   /**
    * Retrieves a Simple Icon by its slug using the simple-icons package.
@@ -42,7 +47,8 @@ export class SimpleIconUtils {
    * @throws {Error} If the slug is invalid or the icon is not found.
    */
   public static getIconBySlug(slug: string): SimpleIcon | null {
-    const normalizedSlug: string = this.normalizeSlug(slug)
+    let normalizedSlug: string = this.normalizeSlug(slug)
+    normalizedSlug = SLUG_ALIASES[normalizedSlug] ?? normalizedSlug
 
     if (!normalizedSlug) {
       console.warn('Invalid or missing icon slug.')
