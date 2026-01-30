@@ -38,7 +38,7 @@
           </DibodevButton>
         </div>
         <div class="w-full sm:w-fit">
-          <DibodevSelect id="language-select" :options="languages" v-model="selectedLanguage" />
+          <DibodevLanguageSwitcher id="language-switcher" :options="languages" />
         </div>
       </div>
     </div>
@@ -71,7 +71,7 @@ import DibodevSquareButton from '~/components/buttons/DibodevSquareButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
-import DibodevSelect from '~/components/core/DibodevSelect.vue'
+import DibodevLanguageSwitcher from '~/components/core/DibodevLanguageSwitcher.vue'
 import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
 import type { ComputedRef } from 'vue'
 import DibodevBadge from '~/components/ui/DibodevBadge.vue'
@@ -90,8 +90,7 @@ type FooterLink = {
 }
 
 /* I18N */
-const { locale, t } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
+const { t } = useI18n()
 
 /* DATAS */
 const socials: Socials[] = [
@@ -143,17 +142,4 @@ const route = useRoute()
 const isContactPage: ComputedRef<boolean> = computed(
   (): boolean => route.path === '/contact' || route.path.endsWith('/contact'),
 )
-
-const selectedLanguage = computed({
-  get: (): DibodevSelectOption => {
-    const option: DibodevSelectOption | undefined = languages.find(
-      (opt: DibodevSelectOption) => opt.value === locale.value,
-    )
-    return option ?? { label: 'FR', value: 'fr' }
-  },
-  set: (option: DibodevSelectOption): void => {
-    const code: string = typeof option.value === 'string' ? option.value : String(option.value)
-    navigateTo(switchLocalePath(code))
-  },
-})
 </script>
