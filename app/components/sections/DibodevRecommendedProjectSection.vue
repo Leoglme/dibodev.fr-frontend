@@ -19,13 +19,14 @@
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
           <DibodevProjectCard
             v-for="(recommendedProject, index) in recommendedProjects"
-            :key="recommendedProject.name"
+            :key="recommendedProject.route"
             :name="recommendedProject.name"
             :description="recommendedProject.shortDescription"
             :createdAt="recommendedProject.date"
             :logo="recommendedProject.logoUrl"
             :primaryColor="recommendedProject.primaryColor"
             :secondaryColor="recommendedProject.secondaryColor"
+            :route="recommendedProject.route"
             data-aos="zoom-in"
             :data-aos-delay="index * 100"
           />

@@ -24,7 +24,7 @@
       icon="ArrowRight"
       iconPosition="right"
       :backgroundColor="props.primaryColor"
-      :to="`/project/${StringUtils.formatForRoute(props.name)}`"
+      :to="projectLink"
       class="mt-3 w-full"
     >
       En savoir plus
@@ -33,6 +33,7 @@
 </template>
 
 <script lang="ts" setup>
+import { computed } from 'vue'
 import type { DibodevProjectCardProps } from '~/core/types/DibodevProjectCard'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import { StringUtils } from '~/core/utils/StringUtils'
@@ -62,5 +63,17 @@ const props: DibodevProjectCardProps = defineProps({
     type: String,
     default: '#101623',
   },
+  route: {
+    type: String,
+    default: undefined,
+  },
+})
+
+/** Canonical project URL: Storyblok route when provided, otherwise derived from name. */
+const projectLink: string = computed((): string => {
+  if (props.route != null && props.route.trim() !== '') {
+    return props.route.startsWith('/') ? props.route : `/${props.route}`
+  }
+  return `/project/${StringUtils.formatForRoute(props.name)}`
 })
 </script>

@@ -42,6 +42,7 @@
             :logo="project.logoUrl"
             :primaryColor="project.primaryColor"
             :secondaryColor="project.secondaryColor"
+            :route="project.route"
             data-aos="zoom-in"
             :data-aos-delay="index * 100"
           />
