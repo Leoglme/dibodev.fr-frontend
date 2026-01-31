@@ -65,13 +65,15 @@ export class StoryblokService {
    * @template TContent - Strongly typed Storyblok content object.
    * @param {string} slug - Example: "pages/home" or "blog/my-post".
    * @param {StoryblokVersion} [version='published'] - "published" or "draft".
+   * @param {string} [language] - Storyblok language code (e.g. "en-us") for field-level translation. Omit for default language.
    */
   public static async getStoryBySlug<TContent>(
     slug: string,
     version: StoryblokVersion = 'published',
+    language?: string,
   ): Promise<StoryblokStoryResponse<TContent>> {
     const baseUrl: string = `${STORYBLOK_CDN_BASE_URL}/stories/${encodeURIComponent(slug)}`
-    const url: string = await this.buildStoryUrl(baseUrl, version)
+    const url: string = await this.buildStoryUrl(baseUrl, version, language)
 
     const response: Response = await fetch(url)
     if (!response.ok) {
@@ -91,9 +93,11 @@ export class StoryblokService {
    *
    * @template TContent - Strongly typed story content object.
    * @param {Record<string, string | number>} [params={}] - Storyblok query params (e.g. folder, content_type, page).
+   * @param {string} [language] - Storyblok language code (e.g. "en-us") for field-level translation. Omit for default language.
    */
   public static async getStories<TContent>(
     params: Record<string, string | number> = {},
+    language?: string,
   ): Promise<StoryblokStoriesResponse<TContent>> {
     const space: StoryblokSpaceResponse = await this.getSpace()
     const cv: number = space.space.version
@@ -103,6 +107,7 @@ export class StoryblokService {
       version: 'published',
       cv: String(cv),
       ...Object.fromEntries(Object.entries(params).map(([key, value]) => [key, String(value)])),
+      ...(language ? { language } : {}),
     })
 
     const url: string = `${STORYBLOK_CDN_BASE_URL}/stories?${searchParams.toString()}`
@@ -119,15 +124,21 @@ export class StoryblokService {
   }
 
   /**
-   * Build a Storyblok story URL (adds token + version + optional cv cache buster).
+   * Build a Storyblok story URL (adds token + version + optional cv cache buster + optional language).
    */
-  private static async buildStoryUrl(baseUrl: string, version: StoryblokVersion): Promise<string> {
-    if (version === 'draft') {
-      return `${baseUrl}?token=${this.apiToken}&version=draft`
+  private static async buildStoryUrl(baseUrl: string, version: StoryblokVersion, language?: string): Promise<string> {
+    const params: Record<string, string> = {
+      token: this.apiToken,
+      version: version === 'draft' ? 'draft' : 'published',
     }
-
-    const space: StoryblokSpaceResponse = await this.getSpace()
-    const cv: number = space.space.version
-    return `${baseUrl}?token=${this.apiToken}&version=published&cv=${cv}`
+    if (version !== 'draft') {
+      const space: StoryblokSpaceResponse = await this.getSpace()
+      params.cv = String(space.space.version)
+    }
+    if (language) {
+      params.language = language
+    }
+    const query: string = new URLSearchParams(params).toString()
+    return `${baseUrl}?${query}`
   }
 }

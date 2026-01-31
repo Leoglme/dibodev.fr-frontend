@@ -38,6 +38,7 @@ import { mapStoryblokProjectToDibodevProject } from '~/services/storyblokProject
 
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
 const router: Router = useRouter()
+const storyblokLanguage: ComputedRef<string | undefined> = useStoryblokProjectLanguage()
 
 const projectName: string = String(route.params.projectName || '').trim()
 const isStoryblokEditor: boolean = typeof route.query._storyblok !== 'undefined'
@@ -57,6 +58,7 @@ if (projectName.length === 0) {
       await StoryblokService.getStoryBySlug<StoryblokProjectContent>(
         storyblokSlug,
         isStoryblokEditor ? 'draft' : 'published',
+        storyblokLanguage.value,
       )
 
     currentProject.value = mapStoryblokProjectToDibodevProject(storyResponse.story)

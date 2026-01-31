@@ -40,7 +40,9 @@ function normalizeStringList(value: StoryblokProjectContent['tags']): string[] {
 export function mapStoryblokProjectToDibodevProject(story: StoryblokStory<StoryblokProjectContent>): DibodevProject {
   const content: StoryblokProjectContent = story.content
 
-  const route: string = story.full_slug.startsWith('/') ? `/${story.full_slug}` : `/${story.full_slug}`
+  const fullSlug: string = story.full_slug.startsWith('/') ? story.full_slug : `/${story.full_slug}`
+  const projectIndex: number = fullSlug.indexOf('/project/')
+  const route: string = projectIndex >= 0 ? fullSlug.slice(projectIndex) : fullSlug
 
   return {
     name: content.name,

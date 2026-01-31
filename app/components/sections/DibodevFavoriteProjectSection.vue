@@ -67,13 +67,17 @@ import type { StoryblokProjectContent } from '~/services/types/storyblokProject'
 import { StoryblokService } from '~/services/storyblokService'
 import { mapStoryblokProjectToDibodevProject } from '~/services/storyblokProjectMapper'
 
+const { locale } = useI18n()
+const storyblokLanguage: ComputedRef<string | undefined> = useStoryblokProjectLanguage()
+
 const { data: storyblokProjectsData } = await useAsyncData<DibodevProject[]>(
-  'projects-storyblok-list',
+  () => `projects-storyblok-list-${locale.value}`,
   async (): Promise<DibodevProject[]> => {
     try {
-      const response = await StoryblokService.getStories<StoryblokProjectContent>({
-        starts_with: 'project/',
-      })
+      const response = await StoryblokService.getStories<StoryblokProjectContent>(
+        { starts_with: 'project/' },
+        storyblokLanguage.value,
+      )
       const projects: DibodevProject[] = response.stories.map((story) => mapStoryblokProjectToDibodevProject(story))
       return projects.sort((a: DibodevProject, b: DibodevProject): number => {
         const timeA: number = new Date(a.date).getTime() || 0
