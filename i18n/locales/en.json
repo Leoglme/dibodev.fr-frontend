@@ -2,6 +2,13 @@
   "meta": {
     "title": "Dibodev — Freelance Web Developer in Rennes",
     "description": "Freelance developer in Rennes: custom web, mobile, software and AI solutions. End-to-end support.",
+    "blog": {
+      "title": "Blog — Dibodev",
+      "description": "Articles and tips for craftsmen, SMEs and entrepreneurs: digital, websites, applications, AI. By Léo Guillaume, freelance developer in Rennes."
+    },
+    "blogArticle": {
+      "descriptionFallback": "Article by Léo Guillaume, freelance developer in Rennes."
+    },
     "contact": {
       "title": "Contact — Dibodev",
       "description": "Contact Léo Guillaume, freelance developer in Rennes, for your web, mobile or software project."
@@ -14,12 +21,34 @@
   "nav": {
     "home": "Home",
     "myProjects": "My projects",
+    "blog": "Blog",
     "contactMe": "Contact me"
+  },
+  "blog": {
+    "landing": {
+      "title": "Dibodev Blog",
+      "description": "Tips and experience sharing on digital, websites, applications and AI. Articles targeted at craftsmen, SMEs and entrepreneurs.",
+      "cta": "Discover my articles"
+    },
+    "cta": {
+      "title": "Have a project in mind?",
+      "description": "Looking for a freelance developer to bring your idea to life? Let's discuss your web, mobile or software project together.",
+      "ctaText": "Contact me"
+    },
+    "card": {
+      "readMore": "Read article",
+      "readingTime": "min read"
+    },
+    "list": {
+      "noArticles": "No articles yet.",
+      "loadMore": "Load more articles"
+    }
   },
   "footer": {
     "contactMe": "Contact me",
     "home": "Home",
     "myProjects": "My projects",
+    "blog": "Blog",
     "contactPage": "Contact page",
     "legal": "Legal notice",
     "privacy": "Privacy policy",

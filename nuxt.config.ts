@@ -74,7 +74,6 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'fr',
     langDir: 'locales',
-    lazy: true,
     strategy: 'prefix_except_default',
   },
   /** Utilisé par @nuxtjs/sitemap. Avec i18n strategy !== no_prefix, le sitemap inclut automatiquement les URLs par locale (fr, en, es) et les balises hreflang. */

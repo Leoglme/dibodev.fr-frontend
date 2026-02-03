@@ -2,6 +2,13 @@
   "meta": {
     "title": "Dibodev — Développeur Web Freelance à Rennes",
     "description": "Développeur freelance à Rennes : sites web, applications mobiles, logiciels et IA sur mesure. Accompagnement de A à Z.",
+    "blog": {
+      "title": "Blog — Dibodev",
+      "description": "Articles et conseils pour artisans, PME et entrepreneurs : digital, sites web, applications, IA. Par Léo Guillaume, développeur freelance à Rennes."
+    },
+    "blogArticle": {
+      "descriptionFallback": "Article par Léo Guillaume, développeur freelance à Rennes."
+    },
     "contact": {
       "title": "Contact — Dibodev",
       "description": "Contactez Léo Guillaume, développeur freelance à Rennes, pour votre projet web, mobile ou logiciel."
@@ -14,12 +21,34 @@
   "nav": {
     "home": "Accueil",
     "myProjects": "Mes projets",
+    "blog": "Blog",
     "contactMe": "Me contacter"
+  },
+  "blog": {
+    "landing": {
+      "title": "Blog Dibodev",
+      "description": "Conseils et retours d'expérience sur le digital, les sites web, applications et IA. Articles ciblés pour artisans, PME et entrepreneurs.",
+      "cta": "Découvrir mes articles"
+    },
+    "cta": {
+      "title": "Un projet en tête ?",
+      "description": "Tu cherches un développeur freelance pour concrétiser ton idée ? Discutons ensemble de ton projet web, mobile ou logiciel.",
+      "ctaText": "Me contacter"
+    },
+    "card": {
+      "readMore": "Lire l'article",
+      "readingTime": "min de lecture"
+    },
+    "list": {
+      "noArticles": "Aucun article pour le moment.",
+      "loadMore": "Charger plus d'articles"
+    }
   },
   "footer": {
     "contactMe": "Me contacter",
     "home": "Accueil",
     "myProjects": "Mes projets",
+    "blog": "Blog",
     "contactPage": "Page de contact",
     "legal": "Mentions légales",
     "privacy": "Politique de confidentialité",

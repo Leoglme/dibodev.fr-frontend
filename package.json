@@ -15,7 +15,10 @@
     "lint:ts": "vue-tsc --noEmit",
     "lint": "npm run lint:prettier && npm run lint:eslint && npm run lint:ts",
     "lint:fix": "npm run lint:prettier:fix && npm run lint:eslint:fix",
-    "update:browserslist": "npx update-browserslist-db@latest"
+    "update:browserslist": "npx update-browserslist-db@latest",
+    "storyblok:create-article-component": "node scripts/storyblok/create-article-component.mjs",
+    "storyblok:create-blog-content": "node scripts/storyblok/create-blog-content.mjs",
+    "storyblok:setup-blog": "node scripts/storyblok/create-blog-content.mjs"
   },
   "dependencies": {
     "@nuxtjs/google-fonts": "^3.2.0",

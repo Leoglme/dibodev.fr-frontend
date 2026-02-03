@@ -120,6 +120,7 @@ const languages: DibodevSelectOption[] = [
 const footerLinks: ComputedRef<FooterLink[]> = computed((): FooterLink[] => [
   { title: t('footer.home'), to: localePath('/') },
   { title: t('footer.myProjects'), to: localePath('/projects') },
+  { title: t('footer.blog'), to: localePath('/blog') },
   { title: t('footer.contactPage'), to: localePath('/contact') },
 ])
 
