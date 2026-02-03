@@ -18,6 +18,7 @@
     :primaryColor="currentProjectComputed.primaryColor"
   />
   <DibodevAboutProjectSection v-if="currentProjectComputed" :project="currentProjectComputed" />
+  <DibodevPricingSection />
   <DibodevRecommendedProjectSection v-if="currentProjectComputed" :currentProject="currentProjectComputed" />
 </template>
 
@@ -30,6 +31,7 @@ import type { DibodevProject } from '~/core/types/DibodevProject'
 import DibodevProjectLandingSection from '~/components/sections/DibodevProjectLandingSection.vue'
 import DibodevProjectGallerySection from '~/components/sections/DibodevProjectGallerySection.vue'
 import DibodevAboutProjectSection from '~/components/sections/DibodevAboutProjectSection.vue'
+import DibodevPricingSection from '~/components/sections/DibodevPricingSection.vue'
 import DibodevRecommendedProjectSection from '~/components/sections/DibodevRecommendedProjectSection.vue'
 import type { StoryblokProjectContent } from '~/services/types/storyblokProject'
 import type { StoryblokStoryResponse } from '~/services/types/storyblok'

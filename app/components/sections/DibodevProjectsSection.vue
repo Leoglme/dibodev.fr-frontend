@@ -7,17 +7,25 @@
     class="relative z-2 flex h-full min-h-screen w-screen max-w-screen flex-col items-center justify-center gap-18 px-6 py-24 sm:px-8 sm:py-36"
   >
     <div class="flex w-full max-w-7xl items-center justify-center">
-      <div class="flex w-full max-w-4xl flex-col-reverse items-center justify-center gap-6 md:flex-row">
-        <div class="flex w-full items-center justify-center gap-6">
-          <DibodevSelect id="language-select" :options="languageOptions" v-model:modelValue="selectedLanguage" />
-          <DibodevSelect id="category-select" :options="categoryOptions" v-model:modelValue="selectedCategory" />
+      <div
+        class="flex w-full max-w-4xl flex-col-reverse items-stretch gap-4 sm:gap-6 md:flex-row md:items-center md:justify-center"
+      >
+        <div class="flex min-w-0 flex-col gap-4 sm:flex-row sm:gap-6">
+          <div class="min-w-0 flex-1 sm:min-w-[180px] [&>*]:!min-w-0">
+            <DibodevSelect id="language-select" :options="languageOptions" v-model:modelValue="selectedLanguage" />
+          </div>
+          <div class="min-w-0 flex-1 sm:min-w-[180px] [&>*]:!min-w-0">
+            <DibodevSelect id="category-select" :options="categoryOptions" v-model:modelValue="selectedCategory" />
+          </div>
         </div>
 
-        <DibodevSearchBar
-          :title="$t('projects.section.searchTitle')"
-          :placeholder="$t('projects.section.searchPlaceholder')"
-          v-model:value="searchTerm"
-        />
+        <div class="min-w-0 flex-1 md:max-w-md">
+          <DibodevSearchBar
+            :title="$t('projects.section.searchTitle')"
+            :placeholder="$t('projects.section.searchPlaceholder')"
+            v-model:value="searchTerm"
+          />
+        </div>
       </div>
     </div>
 

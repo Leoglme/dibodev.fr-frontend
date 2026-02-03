@@ -24,7 +24,12 @@
           </h1>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" class="flex items-center gap-6">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="800"
+          class="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6"
+        >
           <p class="text-sm font-normal text-gray-200">
             {{ props.date }}
           </p>
@@ -39,7 +44,7 @@
         </p>
       </div>
       <div
-        class="flex items-center justify-between gap-6"
+        class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
         data-aos="fade-up"
         data-aos-delay="300"
         data-aos-duration="800"
