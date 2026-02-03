@@ -46,9 +46,6 @@
           <div v-if="mobileMenuOpen" class="absolute right-0 bottom-0 left-0 z-[9999] m-auto h-[calc(100dvh-70px)]">
             <section class="relative h-full w-full overflow-auto bg-gray-900 outline-none" @click.stop>
               <div class="flex flex-col gap-8 p-8">
-                <DibodevLink :link="localePath('/')" color="#f5f4fb" @click="mobileMenuOpen = false">
-                  {{ $t('nav.home') }}
-                </DibodevLink>
                 <DibodevLink
                   v-for="link in links"
                   :key="link.to"
@@ -67,6 +64,7 @@
                 >
                   {{ $t('nav.contactMe') }}
                 </DibodevButton>
+                <DibodevLanguageSwitcher id="language-switcher-mobile" :options="languages" />
               </div>
             </section>
           </div>
@@ -78,7 +76,9 @@
 <script setup lang="ts">
 import DibodevLogo from '~/components/branding/DibodevLogo.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
+import DibodevLanguageSwitcher from '~/components/core/DibodevLanguageSwitcher.vue'
 import type { DibodevNavbarLink } from '~/core/types/DibodevNavbar'
+import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
 import type { Ref, ComputedRef } from 'vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevSquareButton from '~/components/buttons/DibodevSquareButton.vue'
@@ -91,6 +91,12 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 
 /* DATAS */
+const languages: DibodevSelectOption[] = [
+  { label: 'FR', value: 'fr' },
+  { label: 'EN', value: 'en' },
+  { label: 'ES', value: 'es' },
+]
+
 const links: ComputedRef<DibodevNavbarLink[]> = computed((): DibodevNavbarLink[] => [
   { text: t('nav.home'), to: localePath('/') },
   { text: t('nav.myProjects'), to: localePath('/projects') },
