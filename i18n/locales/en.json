@@ -121,6 +121,10 @@
       "title": "My favorite projects",
       "seeAllProjects": "See all projects"
     },
+    "latestArticles": {
+      "title": "Latest articles",
+      "seeAllArticles": "See all articles"
+    },
     "pricing": {
       "title": "My freelance developer rate",
       "intro": "This rate is based on an average daily rate (TJM). A working day equals",

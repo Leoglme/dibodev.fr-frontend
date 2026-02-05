@@ -67,6 +67,10 @@ declare module 'vue-i18n' {
         title: string
         seeAllProjects: string
       }
+      latestArticles: {
+        title: string
+        seeAllArticles: string
+      }
       pricing: {
         title: string
         intro: string

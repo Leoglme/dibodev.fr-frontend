@@ -121,6 +121,10 @@
       "title": "Mes projets favoris",
       "seeAllProjects": "Voir tous les projets"
     },
+    "latestArticles": {
+      "title": "Derniers articles",
+      "seeAllArticles": "Voir tous les articles"
+    },
     "pricing": {
       "title": "Mon tarif de développeur freelance",
       "intro": "Ce prix est essentiellement établi grâce à un taux journalier moyen (TJM). Une journée de travail est égale à",
