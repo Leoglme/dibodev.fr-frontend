@@ -42,6 +42,7 @@ declare module 'vue-i18n' {
         subtitleAfter: string
         description: string
         cta: string
+        ctaSecondary: string
       }
       services: {
         title: string

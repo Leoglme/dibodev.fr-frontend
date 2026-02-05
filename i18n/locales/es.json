@@ -64,14 +64,15 @@
   },
   "home": {
     "hero": {
-      "titleBefore": "¿Tienes una ",
-      "titleHighlight": "idea",
+      "titleBefore": "¿Tienes un ",
+      "titleHighlight": "proyecto",
       "titleAfter": "?",
-      "subtitleBefore": "¡Hagámosla realidad ",
-      "subtitleHighlight": "juntos",
-      "subtitleAfter": "!",
-      "description": "Desarrollador freelance en Rennes, te acompaño en la creación de soluciones web, móviles, software o IA a medida.",
-      "cta": "Descubrir"
+      "subtitleBefore": "Lo desarrollo ",
+      "subtitleHighlight": "contigo",
+      "subtitleAfter": ".",
+      "description": "Sitios web, apps, SaaS, API o IA — desde el diseño hasta el lanzamiento.",
+      "cta": "Hablar de mi proyecto",
+      "ctaSecondary": "Descubrir"
     },
     "services": {
       "title": "Mis servicios",

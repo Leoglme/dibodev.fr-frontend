@@ -3,6 +3,11 @@
     :description="$t('home.hero.description')"
     :ctaText="$t('home.hero.cta')"
     ctaTarget="#services"
+    ctaPrimaryTo="/contact"
+    :secondaryCta="{
+      text: $t('home.hero.ctaSecondary'),
+      target: '#services',
+    }"
   />
 </template>
 

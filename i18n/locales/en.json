@@ -64,14 +64,15 @@
   },
   "home": {
     "hero": {
-      "titleBefore": "Have an ",
-      "titleHighlight": "idea",
+      "titleBefore": "Have a ",
+      "titleHighlight": "project",
       "titleAfter": "?",
-      "subtitleBefore": "Let's make it happen ",
-      "subtitleHighlight": "together",
-      "subtitleAfter": "!",
-      "description": "Freelance developer based in Rennes, I help you build custom web, mobile, software or AI solutions.",
-      "cta": "Discover"
+      "subtitleBefore": "I develop it ",
+      "subtitleHighlight": "with you",
+      "subtitleAfter": ".",
+      "description": "Websites, apps, SaaS, API or AI — from scoping to launch.",
+      "cta": "Discuss my project",
+      "ctaSecondary": "Discover"
     },
     "services": {
       "title": "My services",

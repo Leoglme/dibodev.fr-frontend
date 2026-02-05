@@ -25,9 +25,32 @@
           {{ props.description }}
         </p>
       </div>
-      <div class="justify-left flex items-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-        <DibodevButton @click="scrollToTargetSection" class="w-full sm:max-w-xs">
+      <div
+        class="justify-left flex flex-wrap items-center gap-4"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="800"
+      >
+        <DibodevButton v-if="props.ctaPrimaryTo" :to="props.ctaPrimaryTo" class="w-full sm:max-w-xs">
           {{ props.ctaText }}
+        </DibodevButton>
+        <DibodevButton v-else @click="scrollToTargetSection(props.ctaTarget)" class="w-full sm:max-w-xs">
+          {{ props.ctaText }}
+          <DibodevIcon
+            name="DoubleChevronsDown"
+            mode="stroke"
+            :width="24"
+            :height="24"
+            class="animate-bounce-pulse ml-2"
+          />
+        </DibodevButton>
+        <DibodevButton
+          v-if="props.secondaryCta"
+          :outlined="true"
+          @click="scrollToTargetSection(props.secondaryCta.target)"
+          class="w-full sm:max-w-xs"
+        >
+          {{ props.secondaryCta.text }}
           <DibodevIcon
             name="DoubleChevronsDown"
             mode="stroke"
@@ -55,6 +78,12 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import type { Ref, PropType } from 'vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
+/* TYPES */
+interface SecondaryCta {
+  text: string
+  target: string
+}
+
 /* PROPS */
 const props = defineProps({
   title: {
@@ -70,8 +99,16 @@ const props = defineProps({
     default: 'Découvrir',
   },
   ctaTarget: {
-    type: String as PropType<string>, // e.g., '#services'
+    type: String as PropType<string>,
     required: true,
+  },
+  ctaPrimaryTo: {
+    type: String as PropType<string | null>,
+    default: null,
+  },
+  secondaryCta: {
+    type: Object as PropType<SecondaryCta | null>,
+    default: null,
   },
 })
 /* REFS */
@@ -82,8 +119,8 @@ const parallaxY: Ref<number> = ref(0)
  * Function to scroll to the target section.
  * @returns {void}
  */
-const scrollToTargetSection: () => void = (): void => {
-  const targetSection: HTMLElement | null = document.querySelector(props.ctaTarget)
+const scrollToTargetSection = (target: string): void => {
+  const targetSection: HTMLElement | null = document.querySelector(target)
   if (targetSection) {
     const offset: number = 170
     const top: number = targetSection.getBoundingClientRect().top + window.scrollY - offset
@@ -92,7 +129,7 @@ const scrollToTargetSection: () => void = (): void => {
       behavior: 'smooth',
     })
   } else {
-    console.warn(`Target section ${props.ctaTarget} not found.`)
+    console.warn(`Target section ${target} not found.`)
   }
 }
 
