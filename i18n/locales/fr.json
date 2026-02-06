@@ -114,6 +114,30 @@
       "title": "Derniers articles",
       "seeAllArticles": "Voir tous les articles"
     },
+    "help": {
+      "title": "Comment je peux vous aider ?",
+      "subtitle": "Selon votre situation, voici comment je peux intervenir.",
+      "ctaIntro": "Si l'un de ces cas vous parle, discutons-en simplement.",
+      "cta": "Me contacter",
+      "blocks": {
+        "launch": {
+          "title": "Vous avez une idée mais ne savez pas par où commencer",
+          "text": "Je vous aide à cadrer, prioriser et transformer votre idée en produit concret."
+        },
+        "tool": {
+          "title": "Votre activité mérite un outil adapté, pas un Excel bricolé",
+          "text": "Je conçois l'outil qui s'adapte à vos processus et vous fait gagner du temps."
+        },
+        "automate": {
+          "title": "Vous perdez trop de temps sur des tâches répétitives",
+          "text": "Je vous aide à identifier et automatiser ce qui vous fait perdre du temps."
+        },
+        "ai": {
+          "title": "Aller plus loin avec l'IA",
+          "text": "Je vous aide à exploiter vos données et à automatiser des actions intelligentes."
+        }
+      }
+    },
     "pricing": {
       "title": "Mon tarif de développeur freelance",
       "intro": "Ce prix est essentiellement établi grâce à un taux journalier moyen (TJM). Une journée de travail est égale à",

@@ -69,6 +69,18 @@ declare module 'vue-i18n' {
         title: string
         seeAllArticles: string
       }
+      help: {
+        title: string
+        subtitle: string
+        ctaIntro: string
+        cta: string
+        blocks: {
+          launch: { title: string; text: string }
+          tool: { title: string; text: string }
+          automate: { title: string; text: string }
+          ai: { title: string; text: string }
+        }
+      }
       pricing: {
         title: string
         intro: string

@@ -114,6 +114,30 @@
       "title": "Latest articles",
       "seeAllArticles": "See all articles"
     },
+    "help": {
+      "title": "How can I help you?",
+      "subtitle": "Depending on your situation, here is how I can help.",
+      "ctaIntro": "If one of these resonates with you, let's talk about it.",
+      "cta": "Contact me",
+      "blocks": {
+        "launch": {
+          "title": "You have an idea but don't know where to start",
+          "text": "I help you scope, prioritize and turn your idea into a concrete product."
+        },
+        "tool": {
+          "title": "Your business deserves a proper tool, not a patched Excel",
+          "text": "I design the tool that fits your processes and saves you time."
+        },
+        "automate": {
+          "title": "You waste too much time on repetitive tasks",
+          "text": "I help you identify and automate what's costing you time."
+        },
+        "ai": {
+          "title": "Go further with AI",
+          "text": "I help you leverage your data and automate intelligent actions."
+        }
+      }
+    },
     "pricing": {
       "title": "My freelance developer rate",
       "intro": "This rate is based on an average daily rate (TJM). A working day equals",
