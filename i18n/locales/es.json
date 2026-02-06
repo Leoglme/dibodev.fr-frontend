@@ -76,39 +76,27 @@
     },
     "services": {
       "title": "Mis servicios",
-      "intro": "Te acompaño en el diseño de soluciones digitales a medida: simplificar procesos, optimizar tu presencia en línea, crear interfaces de negocio eficaces o conectar tus herramientas de forma inteligente.",
+      "intro": "Desarrollo soluciones a medida para lanzar un proyecto, automatizar una necesidad de negocio o mejorar tu presencia en línea.",
       "items": {
-        "projectLaunch": {
-          "title": "Lanzamiento de proyecto",
-          "description": "Acompañamiento completo para transformar tu idea en un proyecto digital concreto."
+        "websites": {
+          "title": "Sitios web",
+          "description": "Sitio vitrina, landing page, rediseño y SEO técnico."
         },
-        "website": {
-          "title": "Sitio web",
-          "description": "Creación de sitios corporativos o profesionales, modernos, rápidos y adaptados a todos los dispositivos."
+        "apps": {
+          "title": "Aplicaciones y software",
+          "description": "Apps web y móviles, back-office y API."
         },
-        "mobileApps": {
-          "title": "Aplicaciones móviles",
-          "description": "Desarrollo de aplicaciones iOS y Android a medida para llegar a tus usuarios en cualquier lugar."
+        "saas": {
+          "title": "SaaS y herramientas de negocio",
+          "description": "Creación de herramientas y automatización de tareas para simplificar tu actividad."
         },
-        "businessInterfaces": {
-          "title": "Interfaces de negocio",
-          "description": "Diseño de herramientas internas sencillas y eficaces para mejorar tu día a día profesional."
-        },
-        "apiConnectors": {
-          "title": "API y conectores",
-          "description": "Conexión de tus herramientas para automatizar intercambios y ahorrar tiempo."
+        "aiAutomation": {
+          "title": "IA y automatización",
+          "description": "Integración de IA, análisis de datos y automatización inteligente."
         },
         "seo": {
           "title": "SEO",
           "description": "Mejora tu visibilidad en Google para atraer más visitantes cualificados."
-        },
-        "cloudDevOps": {
-          "title": "Cloud y DevOps",
-          "description": "Alojamiento, despliegue automatizado y estabilidad para tus proyectos en línea."
-        },
-        "ai": {
-          "title": "Inteligencia artificial",
-          "description": "Aprovecha tus datos y automatiza acciones con soluciones de IA a medida."
         }
       }
     },

@@ -76,39 +76,27 @@
     },
     "services": {
       "title": "My services",
-      "intro": "I help you design custom digital solutions—streamlining your processes, boosting your online presence, building efficient business interfaces, or connecting your existing tools intelligently.",
+      "intro": "I develop custom solutions to launch a project, automate a business need or improve your online presence.",
       "items": {
-        "projectLaunch": {
-          "title": "Project launch",
-          "description": "Full support to turn your idea into a concrete digital project."
+        "websites": {
+          "title": "Websites",
+          "description": "Showcase site, landing page, redesign and technical SEO."
         },
-        "website": {
-          "title": "Website",
-          "description": "Modern, fast, responsive showcase or professional sites for all devices."
+        "apps": {
+          "title": "Applications & software",
+          "description": "Web & mobile apps, back-office and API."
         },
-        "mobileApps": {
-          "title": "Mobile applications",
-          "description": "Custom iOS and Android apps to reach your users everywhere."
+        "saas": {
+          "title": "SaaS & business tools",
+          "description": "Creation of tools and task automation to simplify your business."
         },
-        "businessInterfaces": {
-          "title": "Business interfaces",
-          "description": "Simple, effective internal tools to improve your daily work."
-        },
-        "apiConnectors": {
-          "title": "API & connectors",
-          "description": "Connect your tools to automate workflows and save time."
+        "aiAutomation": {
+          "title": "AI & automation",
+          "description": "AI integration, data analysis and intelligent automation."
         },
         "seo": {
           "title": "SEO",
-          "description": "Improve your visibility on Google and attract more qualified visitors."
-        },
-        "cloudDevOps": {
-          "title": "Cloud & DevOps",
-          "description": "Hosting, automated deployment and stability for your online projects."
-        },
-        "ai": {
-          "title": "Artificial intelligence",
-          "description": "Leverage your data and automate tasks with custom AI solutions."
+          "description": "Improve your visibility on Google to attract more qualified visitors."
         }
       }
     },

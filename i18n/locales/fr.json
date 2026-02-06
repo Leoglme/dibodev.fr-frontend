@@ -76,39 +76,27 @@
     },
     "services": {
       "title": "Mes services",
-      "intro": "Je vous accompagne dans la conception de solutions digitales sur mesure, qu'il s'agisse de simplifier vos processus, d'optimiser votre présence en ligne, de créer une interface métier performante ou de connecter intelligemment vos outils existants.",
+      "intro": "Je développe des solutions sur-mesure pour lancer un projet, automatiser un besoin métier ou améliorer votre présence en ligne.",
       "items": {
-        "projectLaunch": {
-          "title": "Lancement de projet",
-          "description": "Un accompagnement complet pour transformer votre idée en projet digital concret."
+        "websites": {
+          "title": "Sites web",
+          "description": "Site vitrine, landing page, refonte et SEO technique."
         },
-        "website": {
-          "title": "Site internet",
-          "description": "Création de sites vitrines ou professionnels, modernes, performants et adaptés à tous les écrans."
+        "apps": {
+          "title": "Applications & logiciels",
+          "description": "Applications web & mobile, back-office et API."
         },
-        "mobileApps": {
-          "title": "Applications mobiles",
-          "description": "Développement d'applications iOS et Android sur mesure pour toucher vos utilisateurs partout."
+        "saas": {
+          "title": "SaaS & outils métier",
+          "description": "Création d'outils et automatisation de tâches pour simplifier votre activité."
         },
-        "businessInterfaces": {
-          "title": "Interfaces métier",
-          "description": "Conception d'outils internes simples et efficaces pour améliorer votre quotidien professionnel."
-        },
-        "apiConnectors": {
-          "title": "API & connecteurs",
-          "description": "Connexion de vos outils entre eux pour automatiser les échanges et gagner du temps."
+        "aiAutomation": {
+          "title": "IA & automatisation",
+          "description": "Intégration d'IA, analyse de données et automatisation intelligente."
         },
         "seo": {
           "title": "Référencement SEO",
           "description": "Améliorez votre visibilité sur Google pour attirer plus de visiteurs qualifiés."
-        },
-        "cloudDevOps": {
-          "title": "Cloud & DevOps",
-          "description": "Hébergement, déploiement automatisé et stabilité assurée pour vos projets en ligne."
-        },
-        "ai": {
-          "title": "Intelligence artificielle",
-          "description": "Exploitez vos données et automatisez des actions grâce à des solutions IA sur mesure."
         }
       }
     },

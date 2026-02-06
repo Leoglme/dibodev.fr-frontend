@@ -48,14 +48,11 @@ declare module 'vue-i18n' {
         title: string
         intro: string
         items: {
-          projectLaunch: { title: string; description: string }
-          website: { title: string; description: string }
-          mobileApps: { title: string; description: string }
-          businessInterfaces: { title: string; description: string }
-          apiConnectors: { title: string; description: string }
+          websites: { title: string; description: string }
+          apps: { title: string; description: string }
+          saas: { title: string; description: string }
+          aiAutomation: { title: string; description: string }
           seo: { title: string; description: string }
-          cloudDevOps: { title: string; description: string }
-          ai: { title: string; description: string }
         }
       }
       stats: {
