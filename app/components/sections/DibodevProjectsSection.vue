@@ -40,6 +40,7 @@
         :primaryColor="project.primaryColor"
         :secondaryColor="project.secondaryColor"
         :route="project.route"
+        :categories="project.categories ?? []"
         data-aos="zoom-in"
         :data-aos-delay="index * 100"
       />

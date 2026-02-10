@@ -8,6 +8,14 @@
       />
     </div>
 
+    <div v-if="props.categories?.length" class="flex flex-wrap gap-1 py-1.5">
+      <DibodevCategoryBadge
+        v-for="category in props.categories"
+        :key="category"
+        :category="category"
+        size="sm"
+      />
+    </div>
     <h6 class="text-left text-xl font-medium">
       {{ props.name }}
     </h6>
@@ -34,9 +42,10 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import type { ComputedRef } from 'vue'
+import type { ComputedRef, PropType } from 'vue'
 import type { DibodevProjectCardProps } from '~/core/types/DibodevProjectCard'
 import DibodevButton from '~/components/core/DibodevButton.vue'
+import DibodevCategoryBadge from '~/components/ui/DibodevCategoryBadge.vue'
 import { StringUtils } from '~/core/utils/StringUtils'
 
 const props: DibodevProjectCardProps = defineProps({
@@ -67,6 +76,10 @@ const props: DibodevProjectCardProps = defineProps({
   route: {
     type: String,
     default: undefined,
+  },
+  categories: {
+    type: Array as PropType<string[]>,
+    default: () => [],
   },
 })
 

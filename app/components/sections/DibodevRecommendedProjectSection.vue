@@ -29,6 +29,7 @@
             :primaryColor="recommendedProject.primaryColor"
             :secondaryColor="recommendedProject.secondaryColor"
             :route="recommendedProject.route"
+            :categories="recommendedProject.categories ?? []"
             data-aos="zoom-in"
             :data-aos-delay="index * 100"
           />

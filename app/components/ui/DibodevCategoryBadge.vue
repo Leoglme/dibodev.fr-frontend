@@ -1,5 +1,9 @@
 <template>
-  <DibodevBadge :backgroundColor="categoryBackgroundColor" :textColor="categoryColor">
+  <DibodevBadge
+    :backgroundColor="categoryBackgroundColor"
+    :textColor="categoryColor"
+    :size="props.size"
+  >
     {{ props.category }}
   </DibodevBadge>
 </template>
@@ -7,15 +11,19 @@
 import DibodevBadge from '~/components/ui/DibodevBadge.vue'
 import { computed } from 'vue'
 import type { PropType, ComputedRef } from 'vue'
+import type { DibodevBadgeSize } from '~/core/types/DibodevBadge'
 import type { DibodevProjectCategory } from '~/core/types/DibodevProject'
 
 /* PROPS */
-const props = defineProps({
-  category: {
-    type: String as PropType<string>,
-    required: true,
+const props = withDefaults(
+  defineProps<{
+    category: string
+    size?: DibodevBadgeSize
+  }>(),
+  {
+    size: 'md',
   },
-})
+)
 
 /* DATAS */
 const categories: DibodevProjectCategory[] = [
@@ -63,6 +71,31 @@ const categories: DibodevProjectCategory[] = [
     name: 'Jeu',
     color: '#DAA520',
     backgroundColor: '#FFFACD',
+  },
+  {
+    name: 'SaaS',
+    color: '#6B21A8',
+    backgroundColor: '#E9D5FF',
+  },
+  {
+    name: 'Web app',
+    color: '#1E40AF',
+    backgroundColor: '#DBEAFE',
+  },
+  {
+    name: 'API',
+    color: '#0369A1',
+    backgroundColor: '#E0F2FE',
+  },
+  {
+    name: 'Back-office',
+    color: '#0D9488',
+    backgroundColor: '#CCFBF1',
+  },
+  {
+    name: 'Landing page',
+    color: '#C2410C',
+    backgroundColor: '#FFEDD5',
   },
 ]
 

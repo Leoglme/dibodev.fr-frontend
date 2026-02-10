@@ -8,6 +8,7 @@
  * @property {string} [primaryColor] - The primary color of the project card.
  * @property {string} [secondaryColor] - The secondary color of the project card.
  * @property {string} [route] - Canonical route from Storyblok (e.g. /project/stockpme). When provided, used for the link instead of deriving from name.
+ * @property {string[]} [categories] - Optional categories/tags (e.g. SaaS, IA, Web app) displayed on the card.
  */
 export type DibodevProjectCardProps = {
   name: string
@@ -17,4 +18,5 @@ export type DibodevProjectCardProps = {
   primaryColor?: string
   secondaryColor?: string
   route?: string
+  categories?: string[]
 }
