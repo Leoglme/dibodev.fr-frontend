@@ -16,7 +16,7 @@
       {{ props.createdAt }}
     </span>
 
-    <p class="text-left text-xs leading-4 font-normal">
+    <p class="text-left text-[14px] leading-[22px] font-normal">
       {{ props.description }}
     </p>
 
