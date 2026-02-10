@@ -81,6 +81,18 @@ declare module 'vue-i18n' {
           ai: { title: string; text: string }
         }
       }
+      whyWorkWithMe: {
+        title: string
+        subtitle: string
+        ctaIntro: string
+        cta: string
+        items: {
+          one: { label: string; title: string; description: string }
+          two: { label: string; title: string; description: string }
+          three: { label: string; title: string; description: string }
+          four: { label: string; title: string; description: string }
+        }
+      }
       pricing: {
         title: string
         intro: string

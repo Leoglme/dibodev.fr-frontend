@@ -138,6 +138,34 @@
         }
       }
     },
+    "whyWorkWithMe": {
+      "title": "Pourquoi travailler avec moi ?",
+      "subtitle": "Un accompagnement simple, sérieux et orienté résultat.",
+      "ctaIntro": "Vous avez un besoin clair (ou juste une idée) ?",
+      "cta": "Me contacter",
+      "items": {
+        "one": {
+          "label": "Accompagnement",
+          "title": "Un accompagnement de A à Z",
+          "description": "De la réflexion initiale jusqu'au produit final, je vous accompagne à chaque étape."
+        },
+        "two": {
+          "label": "Qualité",
+          "title": "Du code propre et maintenable",
+          "description": "Des bases solides, pensées pour durer et évoluer sans dette technique."
+        },
+        "three": {
+          "label": "Communication",
+          "title": "Un interlocuteur unique",
+          "description": "Vous échangez directement avec la personne qui conçoit et développe votre projet."
+        },
+        "four": {
+          "label": "Vision",
+          "title": "Une vision globale du produit",
+          "description": "Frontend, backend, API, automatisation et IA : je pense le produit dans son ensemble."
+        }
+      }
+    },
     "pricing": {
       "title": "Mon tarif de développeur freelance",
       "intro": "Ce prix est essentiellement établi grâce à un taux journalier moyen (TJM). Une journée de travail est égale à",

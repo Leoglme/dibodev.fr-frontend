@@ -3,7 +3,7 @@
     id="services"
     data-aos="fade-up"
     data-aos-duration="600"
-    class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-36 sm:px-8 sm:py-60"
+    class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-36 sm:px-8"
   >
     <div class="grid w-full max-w-7xl gap-16 sm:gap-20">
       <div class="grid justify-start gap-4 sm:gap-8">

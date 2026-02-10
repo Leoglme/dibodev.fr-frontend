@@ -138,6 +138,34 @@
         }
       }
     },
+    "whyWorkWithMe": {
+      "title": "Why work with me?",
+      "subtitle": "Simple, serious support focused on results.",
+      "ctaIntro": "Have a clear need (or just an idea)?",
+      "cta": "Contact me",
+      "items": {
+        "one": {
+          "label": "Support",
+          "title": "End-to-end support",
+          "description": "From initial thinking to the final product, I support you at every step."
+        },
+        "two": {
+          "label": "Quality",
+          "title": "Clean, maintainable code",
+          "description": "Solid foundations, built to last and evolve without technical debt."
+        },
+        "three": {
+          "label": "Communication",
+          "title": "A single point of contact",
+          "description": "You work directly with the person who designs and develops your project."
+        },
+        "four": {
+          "label": "Vision",
+          "title": "A holistic product vision",
+          "description": "Frontend, backend, API, automation and AI: I think about the product as a whole."
+        }
+      }
+    },
     "pricing": {
       "title": "My freelance developer rate",
       "intro": "This rate is based on an average daily rate (TJM). A working day equals",
