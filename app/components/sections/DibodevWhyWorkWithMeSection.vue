@@ -15,7 +15,7 @@
         </p>
       </div>
 
-      <div class="grid gap-x-20 gap-y-16 sm:grid-cols-2">
+      <div class="grid gap-x-20 gap-y-16 lg:grid-cols-2">
         <DibodevWhyWorkWithMeItem
           v-for="(item, index) in items"
           :key="item.number"

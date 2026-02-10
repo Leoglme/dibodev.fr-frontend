@@ -1,22 +1,29 @@
 <template>
   <div
-    class="flex flex-row gap-6"
+    class="flex flex-row overflow-hidden rounded-[16px] border bg-gray-800"
+    :style="{ borderColor: badgeBgColor }"
     data-aos="fade-up"
     :data-aos-delay="props.index * 80"
   >
     <div
-      class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-sm font-medium"
-      :style="{ backgroundColor: badgeBgColor, color: accentColor }"
+      class="flex min-h-full w-14 shrink-0 items-center justify-center text-sm font-medium"
+      :style="{
+        backgroundColor: badgeBgColor,
+        color: accentColor,
+        borderRadius: '16px 0 0 16px',
+      }"
     >
       {{ badgeText }}
     </div>
-    <div class="grid gap-2 self-baseline">
-      <span class="text-xs font-medium uppercase tracking-wide text-gray-200/70">
-        {{ props.label }}
-      </span>
-      <h3 class="text-left text-base font-medium text-gray-100 sm:text-lg">
-        {{ props.title }}
-      </h3>
+    <div class="flex flex-col gap-3 py-5 pr-6 pl-4">
+      <div class="grid grid-cols-1 gap-2">
+        <span class="text-xs font-medium uppercase tracking-wide text-gray-200/70">
+          {{ props.label }}
+        </span>
+        <h3 class="text-left text-base font-medium text-gray-100 sm:text-lg">
+          {{ props.title }}
+        </h3>
+      </div>
       <p class="text-left text-sm leading-7 font-normal text-gray-200">
         {{ props.description }}
       </p>
