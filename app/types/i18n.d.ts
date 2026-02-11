@@ -67,7 +67,9 @@ declare module 'vue-i18n' {
       }
       latestArticles: {
         title: string
+        intro: string
         seeAllArticles: string
+        readArticle: string
       }
       help: {
         title: string

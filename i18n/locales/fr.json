@@ -112,7 +112,9 @@
     },
     "latestArticles": {
       "title": "Derniers articles",
-      "seeAllArticles": "Voir tous les articles"
+      "intro": "Je partage ici mes retours d'expérience, mes choix techniques et ma vision produit.",
+      "seeAllArticles": "Voir tous les articles",
+      "readArticle": "Lire l'article"
     },
     "help": {
       "title": "Comment je peux vous aider ?",

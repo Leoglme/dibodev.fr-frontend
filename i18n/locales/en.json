@@ -112,7 +112,9 @@
     },
     "latestArticles": {
       "title": "Latest articles",
-      "seeAllArticles": "See all articles"
+      "intro": "I share here my experience, technical choices and product vision.",
+      "seeAllArticles": "See all articles",
+      "readArticle": "Read article"
     },
     "help": {
       "title": "How can I help you?",
