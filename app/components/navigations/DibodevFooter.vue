@@ -18,10 +18,13 @@
               </DibodevSquareButton>
             </NuxtLink>
           </div>
-          <div class="w-full sm:hidden">
-            <DibodevButton v-if="!isContactPage" :to="localePath('/contact')" icon="Mail" class="w-full">
-              {{ $t('footer.contactMe') }}
-            </DibodevButton>
+          <div class="flex flex-col gap-8">
+            <PhoneLink variant="navbar" />
+            <div class="w-full sm:hidden">
+              <DibodevButton v-if="!isContactPage" :to="localePath('/contact')" icon="Mail" class="w-full">
+                {{ $t('footer.contactMe') }}
+              </DibodevButton>
+            </div>
           </div>
         </div>
         <div class="grid gap-4">
@@ -70,6 +73,7 @@ import DibodevLogo from '~/components/branding/DibodevLogo.vue'
 import DibodevSquareButton from '~/components/buttons/DibodevSquareButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
+import PhoneLink from '~/components/core/PhoneLink.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevLanguageSwitcher from '~/components/core/DibodevLanguageSwitcher.vue'
 import type { DibodevSelectOption } from '~/core/types/DibodevSelect'

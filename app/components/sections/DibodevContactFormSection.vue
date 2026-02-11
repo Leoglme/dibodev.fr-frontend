@@ -22,14 +22,14 @@
         </div>
 
         <div class="flex items-center justify-start gap-4">
-          <DibodevLink externalLink link="tel:+33642193812">
+          <DibodevLink :externalLink="true" :link="`tel:${PHONE_E164}`">
             <DibodevSquareButton backgroundColor="#35424D" backgroundHoverColor="#35424D">
               <DibodevIcon name="Phone" :width="20" :height="20" mode="stroke" />
             </DibodevSquareButton>
           </DibodevLink>
 
-          <DibodevLink class="text-base font-normal" externalLink link="tel:+33642193812">
-            {{ $t('contact.sidebar.phone') }}
+          <DibodevLink class="text-base font-normal" externalLink :link="`tel:${PHONE_E164}`">
+            {{ PHONE_DISPLAY }}
           </DibodevLink>
         </div>
 
@@ -50,4 +50,5 @@ import DibodevContactForm from '~/forms/DibodevContactForm.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import DibodevSquareButton from '~/components/buttons/DibodevSquareButton.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
+import { PHONE_DISPLAY, PHONE_E164 } from '~/config/contact'
 </script>

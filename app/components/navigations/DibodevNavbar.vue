@@ -18,7 +18,8 @@
             {{ link.text }}
           </DibodevLink>
         </li>
-        <li v-if="!isContactPage" class="ml-6">
+        <li v-if="!isContactPage" class="ml-6 flex items-center gap-10">
+          <PhoneLink variant="navbar" />
           <DibodevButton :to="localePath('/contact')" icon="Mail" size="sm">{{ $t('nav.contactMe') }}</DibodevButton>
         </li>
       </ol>
@@ -55,6 +56,12 @@
                 >
                   {{ link.text }}
                 </DibodevLink>
+                <PhoneLink
+                  v-if="!isContactPage"
+                  variant="menu"
+                  class="mb-2 w-full justify-start"
+                  @click="mobileMenuOpen = false"
+                />
                 <DibodevButton
                   v-if="!isContactPage"
                   :to="localePath('/contact')"
@@ -81,6 +88,7 @@ import type { DibodevNavbarLink } from '~/core/types/DibodevNavbar'
 import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
 import type { Ref, ComputedRef } from 'vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
+import PhoneLink from '~/components/core/PhoneLink.vue'
 import DibodevSquareButton from '~/components/buttons/DibodevSquareButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 /* ROUTE */
