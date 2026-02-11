@@ -34,6 +34,8 @@ export type GeneratedArticleContent = {
   metaDescription: string
   tags: string[]
   content: string
+  /** Optional cover image URL (Unsplash, Lummi, etc.). Uploaded to Storyblok when creating the story. */
+  coverImageUrl?: string
 }
 
 export type GenerateArticleResponse = GeneratedArticleContent & {

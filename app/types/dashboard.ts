@@ -16,4 +16,5 @@ export type GeneratedArticleForPreview = {
     type: string
     content?: unknown[]
   }
+  coverImageUrl?: string
 }

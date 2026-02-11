@@ -21,6 +21,7 @@ export default defineNuxtConfig({
     storyblokSpaceId: process.env.NUXT_STORYBLOK_SPACE_ID || '',
     storyblokManagementToken: process.env.NUXT_STORYBLOK_MANAGEMENT_TOKEN || '',
     mistralApiKey: process.env.MISTRAL_API_KEY || '',
+    unsplashAccessKey: process.env.NUXT_UNSPLASH_ACCESS_KEY || '',
     public: {
       storyblok: {
         accessToken: process.env.NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN || '',

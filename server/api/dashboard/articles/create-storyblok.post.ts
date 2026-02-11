@@ -6,6 +6,7 @@ import type {
   GeneratedArticleContent,
 } from '~~/server/types/dashboard/articles'
 import { markdownToRichtext } from '~~/server/utils/markdownToRichtext'
+import { uploadImageToStoryblok } from '~~/server/utils/uploadImageToStoryblok'
 
 const STORYBLOK_MAPI_BASE = 'https://mapi.storyblok.com/v1/spaces'
 
@@ -41,22 +42,37 @@ async function createStory(
   const date = new Date().toISOString().slice(0, 10)
   const tagsValue = article.tags.length > 0 ? article.tags.join(', ') : ''
 
+  let coverAsset: { id: number; filename: string } | null = null
+  if (article.coverImageUrl?.trim()) {
+    try {
+      coverAsset = await uploadImageToStoryblok(spaceId, token, article.coverImageUrl.trim(), article.slug)
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : 'Upload failed'
+      throw new Error(`Cover image upload failed: ${msg}`)
+    }
+  }
+
+  const content: Record<string, unknown> = {
+    component: 'article',
+    slug: article.slug,
+    title: article.title,
+    excerpt: article.excerpt,
+    content: richtext,
+    date,
+    tags: tagsValue,
+    metaTitle: article.metaTitle,
+    metaDescription: article.metaDescription,
+  }
+  if (coverAsset) {
+    content.coverImage = { id: coverAsset.id, filename: coverAsset.filename }
+  }
+
   const body = {
     story: {
       name: article.title,
       slug: article.slug,
       parent_id: parentId,
-      content: {
-        component: 'article',
-        slug: article.slug,
-        title: article.title,
-        excerpt: article.excerpt,
-        content: richtext,
-        date,
-        tags: tagsValue,
-        metaTitle: article.metaTitle,
-        metaDescription: article.metaDescription,
-      },
+      content,
     },
     publish: 1,
   }
