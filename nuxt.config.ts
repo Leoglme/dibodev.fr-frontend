@@ -18,11 +18,29 @@ export default defineNuxtConfig({
     mailjetApiKey: process.env.MAILJET_API_KEY || '',
     mailjetApiSecret: process.env.MAILJET_API_SECRET || '',
     storyblokDeliveryApiToken: process.env.NUXT_STORYBLOK_DELIVERY_API_TOKEN || '',
+    storyblokSpaceId: process.env.NUXT_STORYBLOK_SPACE_ID || '',
+    storyblokManagementToken: process.env.NUXT_STORYBLOK_MANAGEMENT_TOKEN || '',
+    mistralApiKey: process.env.MISTRAL_API_KEY || '',
     public: {
       storyblok: {
         accessToken: process.env.NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN || '',
       },
     },
+  },
+  // Cast needed: 'robots' is provided by @nuxtjs/robots and not in core Nuxt routeRules typings
+  routeRules: {
+    '/dashboard': { robots: false },
+    '/dashboard/**': { robots: false },
+    '/en/dashboard': { robots: false },
+    '/en/dashboard/**': { robots: false },
+    '/es/dashboard': { robots: false },
+    '/es/dashboard/**': { robots: false },
+  } as Record<string, object>,
+  robots: {
+    disallow: ['/dashboard', '/en/dashboard', '/es/dashboard'],
+  },
+  sitemap: {
+    exclude: ['/dashboard', '/dashboard/**', '/en/dashboard', '/en/dashboard/**', '/es/dashboard', '/es/dashboard/**'],
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },

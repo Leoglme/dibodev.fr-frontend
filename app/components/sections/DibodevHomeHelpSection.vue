@@ -33,11 +33,7 @@
         </div>
       </div>
 
-      <div
-        class="flex flex-col items-center gap-6 pt-14 sm:pt-16"
-        data-aos="fade-up"
-        data-aos-delay="400"
-      >
+      <div class="flex flex-col items-center gap-6 pt-14 sm:pt-16" data-aos="fade-up" data-aos-delay="400">
         <p class="text-center text-base text-gray-100">
           {{ $t('home.help.ctaIntro') }}
         </p>
@@ -63,10 +59,10 @@ type HelpBlock = {
 }
 
 const BLOCK_BORDER_COLORS: readonly [string, string, string, string] = [
-  '#bdb3ff', /* primary-light */
-  '#7dd3fc', /* sky */
-  '#86efac', /* green */
-  '#f9a8d4', /* pink */
+  '#bdb3ff' /* primary-light */,
+  '#7dd3fc' /* sky */,
+  '#86efac' /* green */,
+  '#f9a8d4' /* pink */,
 ]
 
 const blocks: ComputedRef<HelpBlock[]> = computed((): HelpBlock[] => [

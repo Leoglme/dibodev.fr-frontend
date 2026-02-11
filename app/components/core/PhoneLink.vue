@@ -4,15 +4,9 @@
     :aria-label="ariaLabel"
     :class="linkClasses"
     :style="linkStyle"
-    class="inline-flex cursor-pointer items-center gap-3 font-medium decoration-2 underline-offset-4 transition-colors hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+    class="focus-visible:ring-primary inline-flex cursor-pointer items-center gap-3 font-medium decoration-2 underline-offset-4 transition-colors hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
   >
-    <DibodevIcon
-      name="Phone"
-      :width="iconSize"
-      :height="iconSize"
-      mode="stroke"
-      class="shrink-0"
-    />
+    <DibodevIcon name="Phone" :width="iconSize" :height="iconSize" mode="stroke" class="shrink-0" />
     <span>{{ PHONE_DISPLAY }}</span>
   </a>
 </template>

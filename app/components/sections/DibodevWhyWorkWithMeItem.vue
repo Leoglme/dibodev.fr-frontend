@@ -17,7 +17,7 @@
     </div>
     <div class="flex flex-col gap-3 py-5 pr-6 pl-4">
       <div class="grid grid-cols-1 gap-2">
-        <span class="text-xs font-medium uppercase tracking-wide text-gray-200/70">
+        <span class="text-xs font-medium tracking-wide text-gray-200/70 uppercase">
           {{ props.label }}
         </span>
         <h3 class="text-left text-base font-medium text-gray-100 sm:text-lg">
@@ -45,17 +45,17 @@ const props = defineProps<{
 }>()
 
 const ACCENT_COLORS: Record<WhyWorkWithMeNumber, string> = {
-  1: '#8472f3', /* primary */
-  2: '#22d3ee', /* cyan */
-  3: '#34d399', /* green */
-  4: '#f472b6', /* pink */
+  1: '#8472f3' /* primary */,
+  2: '#22d3ee' /* cyan */,
+  3: '#34d399' /* green */,
+  4: '#f472b6' /* pink */,
 } as const
 
 const BADGE_BG_COLORS: Record<WhyWorkWithMeNumber, string> = {
-  1: '#EFEAFF', /* primary light */
-  2: '#E2F3FF', /* cyan light */
-  3: '#ECFFDA', /* green light */
-  4: '#FFE7FB', /* pink light */
+  1: '#EFEAFF' /* primary light */,
+  2: '#E2F3FF' /* cyan light */,
+  3: '#ECFFDA' /* green light */,
+  4: '#FFE7FB' /* pink light */,
 } as const
 
 const accentColor = computed(() => ACCENT_COLORS[props.number])

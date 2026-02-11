@@ -1,8 +1,15 @@
 <template>
   <article class="hover:border-primary flex gap-3 rounded-xl border border-gray-600 bg-gray-900 p-3 transition-colors">
     <NuxtLink :to="localePath(props.route)" class="flex min-w-0 flex-1 gap-3">
-      <div v-if="props.coverImageUrl" class="h-16 w-24 shrink-0 overflow-hidden rounded-lg bg-gray-600">
-        <img :src="props.coverImageUrl" :alt="props.title" class="h-full w-full object-cover" loading="lazy" />
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-lg bg-gray-600">
+        <img
+          v-if="props.coverImageUrl"
+          :src="props.coverImageUrl"
+          :alt="props.title"
+          class="h-full w-full object-cover"
+          loading="lazy"
+        />
+        <div v-else class="h-full w-full bg-gray-600/80" aria-hidden="true" />
       </div>
       <div class="grid min-w-0 flex-1 gap-1">
         <h4 class="line-clamp-2 text-left text-sm font-medium text-gray-100">

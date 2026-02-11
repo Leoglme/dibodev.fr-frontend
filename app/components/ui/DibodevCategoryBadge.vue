@@ -1,9 +1,5 @@
 <template>
-  <DibodevBadge
-    :backgroundColor="categoryBackgroundColor"
-    :textColor="categoryColor"
-    :size="props.size"
-  >
+  <DibodevBadge :backgroundColor="categoryBackgroundColor" :textColor="categoryColor" :size="props.size">
     {{ props.category }}
   </DibodevBadge>
 </template>

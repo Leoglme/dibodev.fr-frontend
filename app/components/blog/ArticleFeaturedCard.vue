@@ -3,11 +3,19 @@
     class="hover:border-primary grid gap-4 rounded-2xl border-2 border-gray-600 bg-gray-900 p-4 transition-colors sm:p-5"
   >
     <NuxtLink :to="localePath(props.route)" class="grid gap-3">
-      <div
-        v-if="props.coverImageUrl"
-        class="relative aspect-video w-full overflow-hidden rounded-xl bg-gray-600 lg:aspect-[2/1]"
-      >
-        <img :src="props.coverImageUrl" :alt="props.title" class="h-full w-full object-cover" loading="eager" />
+      <div class="relative aspect-video w-full overflow-hidden rounded-xl bg-gray-600 lg:aspect-[2/1]">
+        <img
+          v-if="props.coverImageUrl"
+          :src="props.coverImageUrl"
+          :alt="props.title"
+          class="h-full w-full object-cover"
+          loading="eager"
+        />
+        <div v-else class="flex h-full w-full flex-col justify-center gap-2 p-4" aria-hidden="true">
+          <div class="h-3 w-full max-w-[85%] rounded bg-gray-600/80" />
+          <div class="h-3 w-full max-w-[70%] rounded bg-gray-600/60" />
+          <div class="h-3 w-full max-w-[90%] rounded bg-gray-600/50" />
+        </div>
       </div>
       <h3 class="text-left text-xl font-medium text-gray-100 sm:text-2xl">
         {{ props.title }}

@@ -9,12 +9,7 @@
     </div>
 
     <div v-if="props.categories?.length" class="flex flex-wrap gap-1 py-1.5">
-      <DibodevCategoryBadge
-        v-for="category in props.categories"
-        :key="category"
-        :category="category"
-        size="sm"
-      />
+      <DibodevCategoryBadge v-for="category in props.categories" :key="category" :category="category" size="sm" />
     </div>
     <h6 class="text-left text-xl font-medium">
       {{ props.name }}
