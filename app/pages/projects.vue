@@ -1,12 +1,12 @@
 <template>
   <DibodevProjectsLandingSection />
   <DibodevProjectsSection />
-  <DibodevPricingSection />
+  <!-- <DibodevPricingSection /> -->
 </template>
 <script setup lang="ts">
 import DibodevProjectsLandingSection from '~/components/sections/DibodevProjectsLandingSection.vue'
 import DibodevProjectsSection from '~/components/sections/DibodevProjectsSection.vue'
-import DibodevPricingSection from '~/components/sections/DibodevPricingSection.vue'
+// import DibodevPricingSection from '~/components/sections/DibodevPricingSection.vue'
 
 const { t } = useI18n()
 
