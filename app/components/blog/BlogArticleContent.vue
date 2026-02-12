@@ -74,6 +74,15 @@ const htmlContent: ComputedRef<string> = computed((): string => {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.blog-article-content__inner :deep(strong) {
+  font-weight: 600;
+  color: var(--color-gray-100, #f5f4fb);
+}
+
+.blog-article-content__inner :deep(em) {
+  font-style: italic;
+}
+
 .blog-article-content__inner :deep(ul) {
   margin-bottom: 1rem;
   margin-left: 1.5rem;

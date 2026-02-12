@@ -7,8 +7,8 @@
     class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-36 sm:px-8 sm:py-60"
   >
     <div class="grid gap-14 sm:gap-12">
-      <div class="justify-left flex items-center gap-4 sm:justify-center">
-        <h2 class="text-left text-2xl font-semibold sm:text-center sm:text-[32px]">
+      <div class="flex items-center justify-center gap-4">
+        <h2 class="text-center text-2xl font-semibold sm:text-[32px]">
           {{ $t('home.favoriteProjects.title') }}
         </h2>
         <div title="999 bpm">

@@ -5,6 +5,7 @@ import type {
   CreateInStoryblokResponse,
   GeneratedArticleContent,
 } from '~~/server/types/dashboard/articles'
+import type { StoryblokAssetRef } from '~~/server/utils/uploadImageToStoryblok'
 import { markdownToRichtext } from '~~/server/utils/markdownToRichtext'
 import { uploadImageToStoryblok } from '~~/server/utils/uploadImageToStoryblok'
 
@@ -42,7 +43,7 @@ async function createStory(
   const date = new Date().toISOString().slice(0, 10)
   const tagsValue = article.tags.length > 0 ? article.tags.join(', ') : ''
 
-  let coverAsset: { id: number; filename: string } | null = null
+  let coverAsset: StoryblokAssetRef | null = null
   if (article.coverImageUrl?.trim()) {
     try {
       coverAsset = await uploadImageToStoryblok(spaceId, token, article.coverImageUrl.trim(), article.slug)
@@ -64,7 +65,22 @@ async function createStory(
     metaDescription: article.metaDescription,
   }
   if (coverAsset) {
-    content.coverImage = { id: coverAsset.id, filename: coverAsset.filename }
+    const assetPayload = {
+      id: coverAsset.id,
+      filename: coverAsset.filename,
+      ...(coverAsset.short_filename != null && { short_filename: coverAsset.short_filename }),
+      ...(coverAsset.content_type != null && { content_type: coverAsset.content_type }),
+    }
+    content.coverImage = assetPayload
+    content.ogImage = assetPayload
+    content.cover_image = assetPayload
+    content.og_image = assetPayload
+    content.seo = {
+      metaTitle: article.metaTitle,
+      metaDescription: article.metaDescription,
+      ogImage: assetPayload,
+      og_image: assetPayload,
+    }
   }
 
   const body = {

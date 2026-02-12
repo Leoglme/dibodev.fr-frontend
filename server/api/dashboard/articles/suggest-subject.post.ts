@@ -4,18 +4,22 @@ import type { SuggestSubjectBody, SuggestSubjectResponse } from '~~/server/types
 import { mistralGenerate } from '~~/server/utils/mistral'
 
 const SYSTEM = `Tu es un rédacteur SEO pour un développeur freelance (Dibodev) qui cible artisans, PME, restaurants, commerces, etc.
-Tu dois proposer UN seul sujet d'article de blog pour attirer des clients de niche (ex: "Site web pour plombiers à Rennes", "Logiciel de réservation pour restaurants").
-Règles: ne propose jamais un sujet déjà dans la liste fournie ni un angle trop proche. Réponds UNIQUEMENT avec un objet JSON valide, sans texte avant ni après.`
+Tu dois proposer UN seul sujet d'article de blog pour attirer des clients de niche.
+RÈGLE IMPORTANTE: Si l'utilisateur fournit une "consigne" ou "idée" (métier, titre, angle), le sujet proposé DOIT impérativement en découler : même métier (ex: plombier → plombier, pas électricien), même angle et même question si un titre est indiqué. Ignorer cette consigne est une erreur.
+Autres règles: ne propose jamais un sujet déjà dans la liste fournie ni un angle trop proche. Réponds UNIQUEMENT avec un objet JSON valide, sans texte avant ni après.`
 
 function buildUserMessage(body: SuggestSubjectBody): string {
+  const optional = body.optionalSentence?.trim()
   const list =
     body.existingSubjects.length > 0
       ? `Sujets déjà traités (ne pas répéter):\n${body.existingSubjects.map((s) => `- ${s}`).join('\n')}`
       : 'Aucun article existant pour le moment.'
-  const optional = body.optionalSentence?.trim()
-    ? `\n\nIdée ou consigne du jour: ${body.optionalSentence}`
-    : "\n\nPas d'idée imposée: propose un nouveau sujet adapté à la cible (artisans, PME, métiers)."
-  return `${list}${optional}\n\nRéponds uniquement avec un objet JSON de la forme: {"suggestedTopic": "Ton sujet proposé ici"}.`
+
+  if (optional) {
+    return `CONSIGNE PRIORITAIRE (le sujet proposé doit en découler directement — même métier, même angle, même question si indiquée):\n\n${optional}\n\n---\n\n${list}\n\nRéponds uniquement avec un objet JSON: {"suggestedTopic": "Ton sujet proposé ici"} en respectant strictement la consigne ci-dessus.`
+  }
+
+  return `${list}\n\nPas d'idée imposée: propose un nouveau sujet adapté à la cible (artisans, PME, métiers).\n\nRéponds uniquement avec un objet JSON: {"suggestedTopic": "Ton sujet proposé ici"}.`
 }
 
 /**

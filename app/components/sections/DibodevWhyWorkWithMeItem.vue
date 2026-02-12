@@ -1,16 +1,15 @@
 <template>
   <div
-    class="flex flex-row overflow-hidden rounded-[16px] border bg-gray-800"
+    class="flex flex-col overflow-hidden rounded-[16px] border bg-gray-800 sm:flex-row"
     :style="{ borderColor: badgeBgColor }"
     data-aos="fade-up"
     :data-aos-delay="props.index * 80"
   >
     <div
-      class="flex min-h-full w-14 shrink-0 items-center justify-center text-sm font-medium"
+      class="flex h-14 min-h-14 w-full shrink-0 items-center justify-center rounded-t-[16px] text-sm font-medium sm:h-auto sm:min-h-full sm:w-14 sm:rounded-l-[16px] sm:rounded-t-none"
       :style="{
         backgroundColor: badgeBgColor,
         color: accentColor,
-        borderRadius: '16px 0 0 16px',
       }"
     >
       {{ badgeText }}

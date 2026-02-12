@@ -1,6 +1,6 @@
 <template>
   <span
-    :class="`flex w-fit max-w-full items-center justify-center gap-1.5 whitespace-break-spaces ${padding} ${props.close ? 'pr-1' : null} rounded ${fontSize} font-semibold`"
+    :class="`flex w-fit max-w-full items-center justify-center gap-1.5 whitespace-break-spaces ${padding} ${props.close ? 'pr-1' : null} rounded ${fontSize} ${fontWeight}`"
     :style="{
       backgroundColor: props.backgroundColor,
       color: computedTextColor,
@@ -68,6 +68,8 @@ const computedTextColor: ComputedRef<string> = computed((): string => {
  */
 const padding: ComputedRef<string> = computed((): string => {
   switch (props.size) {
+    case 'xs':
+      return 'py-0.5 px-1.5'
     case 'sm':
       return 'py-0.5 px-2'
     case 'md':
@@ -87,6 +89,8 @@ const padding: ComputedRef<string> = computed((): string => {
  */
 const fontSize: ComputedRef<string> = computed((): string => {
   switch (props.size) {
+    case 'xs':
+      return 'text-[11px]'
     case 'sm':
       return 'text-xs'
     case 'md':
@@ -98,5 +102,9 @@ const fontSize: ComputedRef<string> = computed((): string => {
     default:
       return 'text-xs'
   }
+})
+
+const fontWeight: ComputedRef<string> = computed((): string => {
+  return props.size === 'xs' ? 'font-medium' : 'font-semibold'
 })
 </script>

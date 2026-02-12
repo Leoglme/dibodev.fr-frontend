@@ -11,9 +11,11 @@ type SignedResponse = {
   filename?: string
 }
 
+/** Minimal asset shape for story content (Storyblok expects id + filename at least). */
 export type StoryblokAssetRef = {
   id: number
   filename: string
+  [key: string]: unknown
 }
 
 /**
@@ -92,6 +94,9 @@ export async function uploadImageToStoryblok(
     throw new Error(`Storyblok S3 upload failed: ${uploadRes.status} ${errText}`)
   }
 
+  let assetId: number = assetIdFromSigned as number
+  let assetFilename: string = signed.filename ?? filename
+
   if (typeof assetIdFromSigned === 'number') {
     const finishRes = await fetch(`${STORYBLOK_MAPI_BASE}/${spaceId}/assets/${assetIdFromSigned}/finish_upload`, {
       headers: { Authorization: token, Accept: 'application/json' },
@@ -100,27 +105,42 @@ export async function uploadImageToStoryblok(
       const finishData = (await finishRes.json()) as { asset?: { id: number; filename: string } }
       const asset = finishData.asset
       if (asset?.filename) {
-        return { id: asset.id, filename: asset.filename }
+        assetId = asset.id
+        assetFilename = asset.filename
       }
-      return { id: assetIdFromSigned, filename: signed.filename ?? filename }
     }
+  } else {
+    const listRes = await fetch(
+      `${STORYBLOK_MAPI_BASE}/${spaceId}/assets/?per_page=20&sort_by=created_at:desc`,
+      { headers: { Authorization: token, Accept: 'application/json' } },
+    )
+    if (!listRes.ok) {
+      throw new Error('Storyblok upload succeeded but could not retrieve asset id (list assets failed).')
+    }
+    const listData = (await listRes.json()) as {
+      assets?: Array<{ id: number; filename: string; short_filename?: string }>
+    }
+    const assets = listData.assets ?? []
+    const match = assets.find(
+      (a) =>
+        a.short_filename === filename || a.filename?.includes(filename) || a.filename?.endsWith(filename),
+    )
+    if (!match) {
+      throw new Error('Storyblok upload succeeded but could not find the new asset in the list.')
+    }
+    assetId = match.id
+    assetFilename = match.filename
   }
 
-  const listRes = await fetch(`${STORYBLOK_MAPI_BASE}/${spaceId}/assets/?per_page=20&sort_by=created_at:desc`, {
+  const getRes = await fetch(`${STORYBLOK_MAPI_BASE}/${spaceId}/assets/${assetId}`, {
     headers: { Authorization: token, Accept: 'application/json' },
   })
-  if (!listRes.ok) {
-    throw new Error('Storyblok upload succeeded but could not retrieve asset id (list assets failed).')
+  if (getRes.ok) {
+    const getData = (await getRes.json()) as { asset?: Record<string, unknown> }
+    const full = getData.asset
+    if (full && typeof full.id === 'number' && full.filename) {
+      return full as StoryblokAssetRef
+    }
   }
-  const listData = (await listRes.json()) as {
-    assets?: Array<{ id: number; filename: string; short_filename?: string }>
-  }
-  const assets = listData.assets ?? []
-  const match = assets.find(
-    (a) => a.short_filename === filename || a.filename?.includes(filename) || a.filename?.endsWith(filename),
-  )
-  if (match) {
-    return { id: match.id, filename: match.filename }
-  }
-  throw new Error('Storyblok upload succeeded but could not find the new asset in the list.')
+  return { id: assetId, filename: assetFilename }
 }

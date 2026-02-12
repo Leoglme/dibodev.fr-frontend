@@ -1,4 +1,4 @@
-export const dibodevBadgeSizes: string[] = ['sm', 'md', 'lg', 'xl']
+export const dibodevBadgeSizes: string[] = ['xs', 'sm', 'md', 'lg', 'xl']
 /**
  * Type definitions for the DibodevBadge component props
  * @type {DibodevBadgeSize}

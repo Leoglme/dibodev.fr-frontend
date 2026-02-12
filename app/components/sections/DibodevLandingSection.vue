@@ -6,7 +6,7 @@
     <div class="z-10 mx-auto grid max-w-2xl gap-8">
       <div class="grid gap-6">
         <h1
-          class="text-[32px] font-semibold text-gray-100 sm:text-[54px]"
+          class="text-[30px] font-semibold text-gray-100 sm:text-[54px]"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"

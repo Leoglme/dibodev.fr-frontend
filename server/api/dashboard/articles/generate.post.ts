@@ -11,6 +11,7 @@ import { markdownToRichtext } from '~~/server/utils/markdownToRichtext'
 const SYSTEM = `Tu es un rédacteur SEO pour un développeur freelance (Dibodev) basé à Rennes, qui cible artisans, PME, restaurants, commerces, etc.
 Tu rédiges des articles de blog en français pour attirer des clients de niche et les convertir (CTA vers site/app sur mesure).
 Règles: article en français, ton professionnel mais accessible, 800–1200 mots. Structure: intro, 2 à 4 sous-titres (##), paragraphes courts, CTA final invitant à contacter le développeur pour un projet.
+IMPORTANT: Rédige à la première personne du singulier ("je", "mon", "ma") pour Dibodev, pas à la première personne du pluriel ("nous", "notre").
 Réponds UNIQUEMENT avec un objet JSON valide, sans texte avant ni après.`
 
 function buildUserMessage(body: GenerateArticleBody): string {
@@ -29,7 +30,7 @@ Génère l'article complet. Réponds avec un seul objet JSON contenant exactemen
 - metaTitle: titre SEO (≈60 car.)
 - metaDescription: description SEO (≈155 car.)
 - tags: tableau de chaînes (ex: ["plombier", "site vitrine", "Rennes"])
-- content: corps de l'article en Markdown (sous-titres avec ##, paragraphes séparés par des lignes vides). Pas de titre H1 dans content.`
+- content: corps de l'article en Markdown (sous-titres avec ##, paragraphes séparés par des lignes vides, gras avec **texte**, retours à la ligne conservés). Pas de titre H1 dans content.`
 }
 
 /**

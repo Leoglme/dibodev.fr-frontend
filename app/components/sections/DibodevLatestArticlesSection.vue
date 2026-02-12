@@ -45,14 +45,16 @@
           data-aos="fade-up"
           data-aos-delay="0"
         />
-        <div class="grid gap-4">
+        <div class="grid grid-cols-1 gap-4">
           <ArticleCompactCard
             v-for="(article, index) in compactArticles"
             :key="article.slug"
             :title="article.title"
+            :excerpt="article.excerpt"
             :date="article.date"
             :cover-image-url="article.coverImageUrl"
             :tags="article.tags"
+            :reading-time-minutes="article.readingTimeMinutes"
             :route="article.route"
             data-aos="fade-up"
             :data-aos-delay="(index + 1) * 80"
@@ -79,8 +81,8 @@ import { mapStoryblokArticleToDibodevArticle } from '~/services/storyblokArticle
 const localePath = useLocalePath()
 const storyblokLanguage: ComputedRef<string | undefined> = useStoryblokProjectLanguage()
 
-const ARTICLES_LIMIT: number = 4
-const COMPACT_SLOTS: number = 3
+const ARTICLES_LIMIT: number = 3
+const COMPACT_SLOTS: number = 2
 
 const { data: storyblokArticlesData } = await useAsyncData<DibodevArticle[]>(
   () => `home-latest-articles-${storyblokLanguage.value}`,

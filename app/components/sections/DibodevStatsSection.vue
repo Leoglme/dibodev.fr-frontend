@@ -27,7 +27,7 @@ const { data: repoCounts } = await useFetch(`/api/github/repos`)
 
 /* COMPUTED */
 const yearExperience: ComputedRef<string> = computed(() => {
-  return new Date().getFullYear() - 2016 + ''
+  return new Date().getFullYear() - 2019 + ''
 })
 
 const numberOfRepos: ComputedRef<number> = computed(() => {

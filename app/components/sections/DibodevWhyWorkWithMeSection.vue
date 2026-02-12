@@ -7,7 +7,7 @@
   >
     <div class="grid w-full max-w-7xl gap-16 sm:gap-20">
       <div class="grid justify-start gap-4">
-        <h2 class="text-left text-2xl font-semibold sm:text-[32px]">
+        <h2 class="text-left text-[22px] font-semibold sm:text-[32px]">
           {{ $t('home.whyWorkWithMe.title') }}
         </h2>
         <p class="text-left text-sm leading-7 text-gray-200 sm:text-base">

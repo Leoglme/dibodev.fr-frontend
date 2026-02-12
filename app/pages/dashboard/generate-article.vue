@@ -341,6 +341,7 @@ function clearStorage(): void {
 
 function resetAll(): void {
   step.value = 'idle'
+  optionalSentence.value = ''
   suggestedTopic.value = ''
   article.value = null
   chosenCoverUrl.value = null
@@ -462,13 +463,41 @@ function useCustomUrl(): void {
   }
 }
 
+const COVER_STOP_WORDS = new Set([
+  'de', 'du', 'des', 'le', 'la', 'les', 'un', 'une', 'pour', 'en', 'et', 'ou', 'sur', 'au', 'aux',
+  'que', 'qui', 'dans', 'par', 'avec', 'sans', 'votre', 'vos', 'plus', 'tout', 'tous', 'autre',
+  'optimisez', 'attirer', 'booster', 'clients', 'locaux', 'site', 'web',
+])
+
+function buildCoverSearchQuery(title: string, tags: string[]): string {
+  if (tags.length >= 2) {
+    return `${tags[0]} ${tags[1]}`.trim()
+  }
+  if (tags.length === 1 && tags[0].length <= 25) {
+    return tags[0]
+  }
+  const normalized = title
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+  const words = normalized
+    .split(' ')
+    .filter((w) => w.length > 1 && !COVER_STOP_WORDS.has(w) && !/^\d+$/.test(w))
+  if (words.length >= 2) {
+    return `${words[0]} ${words[1]}`
+  }
+  if (words.length === 1) return words[0]
+  return title.slice(0, 30).trim() || 'blog'
+}
+
 async function suggestCover(): Promise<void> {
   if (!article.value) return
   loadingSuggest.value = true
   suggestedPhoto.value = null
   suggestCoverError.value = ''
   try {
-    const query = article.value.title || article.value.tags?.[0] || 'blog'
+    const query = buildCoverSearchQuery(article.value.title ?? '', article.value.tags ?? [])
     const data = await $fetch<{ url: string | null; attribution: string | null }>(
       `/api/dashboard/articles/suggest-cover?query=${encodeURIComponent(query)}`,
     )

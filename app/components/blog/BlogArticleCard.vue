@@ -1,9 +1,9 @@
 <template>
   <article
-    class="hover:border-primary grid gap-3 rounded-2xl border-2 border-gray-600 bg-gray-800 p-3 transition-colors"
+    class="hover:border-primary flex h-full flex-col gap-3 rounded-2xl border-2 border-gray-600 bg-gray-800 p-3 transition-colors"
   >
-    <NuxtLink :to="localePath(props.route)" class="block">
-      <div class="relative aspect-video w-full overflow-hidden rounded-xl bg-gray-600">
+    <NuxtLink :to="localePath(props.route)" class="flex min-h-0 flex-1 flex-col">
+      <div class="relative aspect-video w-full shrink-0 overflow-hidden rounded-xl bg-gray-600">
         <img
           v-if="props.coverImageUrl"
           :src="props.coverImageUrl"
@@ -17,13 +17,13 @@
           <div class="h-3 w-full max-w-[90%] rounded bg-gray-600/50" />
         </div>
       </div>
-      <h2 class="mt-2 text-left text-xl font-medium text-gray-100">
+      <h2 class="mt-2 shrink-0 text-left text-xl font-medium text-gray-100">
         {{ props.title }}
       </h2>
-      <p class="line-clamp-3 text-left text-sm leading-relaxed text-gray-200">
+      <p class="min-h-0 flex-1 text-left text-sm leading-relaxed text-gray-200 line-clamp-3">
         {{ props.excerpt }}
       </p>
-      <div class="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-300">
+      <div class="mt-2 shrink-0 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-300">
         <time :datetime="props.date">
           {{ formattedDate }}
         </time>
@@ -31,7 +31,7 @@
           >{{ props.readingTimeMinutes }} {{ $t('blog.card.readingTime') }}</span
         >
       </div>
-      <div v-if="props.tags.length > 0" class="mt-2 flex flex-wrap gap-1">
+      <div v-if="props.tags.length > 0" class="mt-2 shrink-0 flex flex-wrap gap-1">
         <DibodevBadge
           v-for="tag in props.tags.slice(0, 3)"
           :key="tag"
@@ -43,7 +43,12 @@
         </DibodevBadge>
       </div>
     </NuxtLink>
-    <DibodevButton icon="ArrowRight" iconPosition="right" :to="localePath(props.route)" class="mt-1 w-full">
+    <DibodevButton
+      icon="ArrowRight"
+      iconPosition="right"
+      :to="localePath(props.route)"
+      class="mt-2 shrink-0 w-full"
+    >
       {{ $t('blog.card.readMore') }}
     </DibodevButton>
   </article>

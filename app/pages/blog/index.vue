@@ -20,7 +20,7 @@
           </p>
         </div>
 
-        <div v-else class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div v-else class="grid auto-rows-fr gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <BlogArticleCard
             v-for="article in articles"
             :key="article.slug"

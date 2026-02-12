@@ -1,8 +1,8 @@
 <template>
   <article
-    class="hover:border-primary grid gap-4 rounded-2xl border-2 border-gray-600 bg-gray-900 p-4 transition-colors sm:p-5"
+    class="hover:border-primary flex min-h-0 flex-col gap-4 rounded-2xl border-2 border-gray-600 bg-gray-900 p-4 transition-colors sm:p-5"
   >
-    <NuxtLink :to="localePath(props.route)" class="grid gap-3">
+    <NuxtLink :to="localePath(props.route)" class="grid shrink-0 gap-3">
       <div class="relative aspect-video w-full overflow-hidden rounded-xl bg-gray-600 lg:aspect-[2/1]">
         <img
           v-if="props.coverImageUrl"
@@ -41,14 +41,17 @@
         </DibodevBadge>
       </div>
     </NuxtLink>
-    <DibodevButton
-      icon="ArrowRight"
-      iconPosition="right"
-      :to="localePath(props.route)"
-      class="w-full sm:max-w-xs sm:justify-self-end"
-    >
-      {{ $t('home.latestArticles.readArticle') }}
-    </DibodevButton>
+    <div class="flex min-h-0 flex-1 flex-col justify-end">
+      <DibodevButton
+        icon="ArrowRight"
+        iconPosition="right"
+        :to="localePath(props.route)"
+        size="sm"
+        class="w-full sm:max-w-xs sm:self-end"
+      >
+        {{ $t('home.latestArticles.readArticle') }}
+      </DibodevButton>
+    </div>
   </article>
 </template>
 
