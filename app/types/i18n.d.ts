@@ -184,6 +184,15 @@ declare module 'vue-i18n' {
       applicableLaw: { title: string; content: string }
     }
     cms: { loading: string }
+    dashboard: {
+      login: {
+        title: string
+        passwordPlaceholder: string
+        submit: string
+        errorInvalid: string
+      }
+      logout: string
+    }
   }
 }
 

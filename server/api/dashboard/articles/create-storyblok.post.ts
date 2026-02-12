@@ -5,6 +5,7 @@ import type {
   CreateInStoryblokResponse,
   GeneratedArticleContent,
 } from '~~/server/types/dashboard/articles'
+import { requireDashboardAuth } from '~~/server/utils/dashboardAuth'
 import type { StoryblokAssetRef } from '~~/server/utils/uploadImageToStoryblok'
 import { markdownToRichtext } from '~~/server/utils/markdownToRichtext'
 import { uploadImageToStoryblok } from '~~/server/utils/uploadImageToStoryblok'
@@ -123,6 +124,7 @@ async function createStory(
  * Creates the given article in Storyblok (blog folder) and publishes it.
  */
 export default defineEventHandler(async (event: H3Event): Promise<CreateInStoryblokResponse> => {
+  requireDashboardAuth(event)
   if (event.method !== 'POST') {
     throw createError({ statusCode: 405, statusMessage: 'Method Not Allowed' })
   }

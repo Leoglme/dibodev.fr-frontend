@@ -1,5 +1,6 @@
 import type { H3Event } from 'h3'
 import { createError } from 'h3'
+import { requireDashboardAuth } from '~~/server/utils/dashboardAuth'
 
 const STORYBLOK_CDN_BASE = 'https://api.storyblok.com/v2/cdn'
 const BLOG_FOLDER = 'blog/'
@@ -18,6 +19,7 @@ type StoriesResponse = {
  * Returns list of existing article titles (and slugs) for the blog, to avoid duplicates when suggesting subjects.
  */
 export default defineEventHandler(async (event: H3Event) => {
+  requireDashboardAuth(event)
   const config = useRuntimeConfig()
   const token = config.storyblokDeliveryApiToken as string
   if (!token) {

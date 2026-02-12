@@ -1,6 +1,7 @@
 import type { H3Event } from 'h3'
 import { createError } from 'h3'
 import type { SuggestSubjectBody, SuggestSubjectResponse } from '~~/server/types/dashboard/articles'
+import { requireDashboardAuth } from '~~/server/utils/dashboardAuth'
 import { mistralGenerate } from '~~/server/utils/mistral'
 
 const SYSTEM = `Tu es un rédacteur SEO pour un développeur freelance (Dibodev) qui cible artisans, PME, restaurants, commerces, etc.
@@ -27,6 +28,7 @@ function buildUserMessage(body: SuggestSubjectBody): string {
  * Suggests one article topic (optionally guided by optionalSentence), avoiding existing subjects.
  */
 export default defineEventHandler(async (event: H3Event): Promise<SuggestSubjectResponse> => {
+  requireDashboardAuth(event)
   if (event.method !== 'POST') {
     throw createError({ statusCode: 405, statusMessage: 'Method Not Allowed' })
   }

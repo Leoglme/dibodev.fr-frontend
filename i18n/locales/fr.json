@@ -325,5 +325,14 @@
   },
   "cms": {
     "loading": "Chargement du contenu CMS…"
+  },
+  "dashboard": {
+    "login": {
+      "title": "Connexion au back office",
+      "passwordPlaceholder": "Mot de passe",
+      "submit": "Se connecter",
+      "errorInvalid": "Mot de passe incorrect."
+    },
+    "logout": "Se déconnecter"
   }
 }

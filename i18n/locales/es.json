@@ -325,5 +325,14 @@
   },
   "cms": {
     "loading": "Cargando contenido del CMS…"
+  },
+  "dashboard": {
+    "login": {
+      "title": "Acceso al back office",
+      "passwordPlaceholder": "Contraseña",
+      "submit": "Entrar",
+      "errorInvalid": "Contraseña incorrecta."
+    },
+    "logout": "Cerrar sesión"
   }
 }

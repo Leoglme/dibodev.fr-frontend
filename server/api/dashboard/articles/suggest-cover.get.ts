@@ -1,5 +1,6 @@
 import type { H3Event } from 'h3'
 import { createError } from 'h3'
+import { requireDashboardAuth } from '~~/server/utils/dashboardAuth'
 
 const UNSPLASH_SEARCH = 'https://api.unsplash.com/search/photos'
 
@@ -68,6 +69,7 @@ async function searchUnsplash(accessKey: string, searchQuery: string): Promise<U
  * If the full query returns no results, tries a shorter fallback (e.g. "logiciel plombier", "plombier").
  */
 export default defineEventHandler(async (event: H3Event) => {
+  requireDashboardAuth(event)
   const query = getQuery(event).query
   const q = typeof query === 'string' ? query.trim() : ''
   if (!q) {

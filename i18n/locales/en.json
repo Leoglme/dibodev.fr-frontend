@@ -325,5 +325,14 @@
   },
   "cms": {
     "loading": "Loading CMS content…"
+  },
+  "dashboard": {
+    "login": {
+      "title": "Back office login",
+      "passwordPlaceholder": "Password",
+      "submit": "Log in",
+      "errorInvalid": "Invalid password."
+    },
+    "logout": "Log out"
   }
 }

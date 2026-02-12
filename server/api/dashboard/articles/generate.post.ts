@@ -5,6 +5,7 @@ import type {
   GeneratedArticleContent,
   GenerateArticleResponse,
 } from '~~/server/types/dashboard/articles'
+import { requireDashboardAuth } from '~~/server/utils/dashboardAuth'
 import { mistralGenerate } from '~~/server/utils/mistral'
 import { markdownToRichtext } from '~~/server/utils/markdownToRichtext'
 
@@ -39,6 +40,7 @@ Génère l'article complet. Réponds avec un seul objet JSON contenant exactemen
  * Also returns contentRichtext for preview in the dashboard.
  */
 export default defineEventHandler(async (event: H3Event): Promise<GenerateArticleResponse> => {
+  requireDashboardAuth(event)
   if (event.method !== 'POST') {
     throw createError({ statusCode: 405, statusMessage: 'Method Not Allowed' })
   }
