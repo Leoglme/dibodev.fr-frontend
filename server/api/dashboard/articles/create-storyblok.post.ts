@@ -69,8 +69,15 @@ async function createStory(
     const assetPayload = {
       id: coverAsset.id,
       filename: coverAsset.filename,
-      ...(coverAsset.short_filename != null && { short_filename: coverAsset.short_filename }),
-      ...(coverAsset.content_type != null && { content_type: coverAsset.content_type }),
+      alt: '',
+      name: '',
+      focus: '',
+      title: '',
+      source: '',
+      copyright: '',
+      fieldtype: 'asset',
+      meta_data: {},
+      is_external_url: false,
     }
     content.coverImage = assetPayload
     content.ogImage = assetPayload
