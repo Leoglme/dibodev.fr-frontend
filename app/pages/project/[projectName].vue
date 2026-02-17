@@ -70,4 +70,19 @@ if (projectName.length === 0) {
 }
 
 const currentProjectComputed: ComputedRef<DibodevProject | null> = computed(() => currentProject.value)
+
+useHead((): Record<string, unknown> => {
+  const p: DibodevProject | null = currentProject.value
+  if (!p) return {}
+  const title: string = p.metaTitle || p.name
+  const description: string = p.metaDescription || p.shortDescription
+  return {
+    title,
+    meta: [
+      { name: 'description', content: description },
+      { property: 'og:title', content: title },
+      { property: 'og:description', content: description },
+    ],
+  }
+})
 </script>
