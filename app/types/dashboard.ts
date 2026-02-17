@@ -17,4 +17,6 @@ export type GeneratedArticleForPreview = {
     content?: unknown[]
   }
   coverImageUrl?: string
+  /** Score de qualité 0-100 (indicateur interne). */
+  qualityScore?: number
 }

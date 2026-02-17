@@ -9,14 +9,32 @@ export type MistralGenerateParams = {
   apiKey: string
   systemInstruction?: string
   userMessage: string
+  maxTokens?: number
+  /** Température (défaut 0.7). 0.5 pour article (plus conforme aux contraintes). */
+  temperature?: number
+  top_p?: number
+}
+
+export type MistralGenerateResult = {
+  content: string
+  /** Raison de fin du stream (ex. "stop", "length") si fournie par l'API. */
+  finishReason?: string
 }
 
 /**
- * Call Mistral chat completion and return the assistant text content.
+ * Call Mistral chat completion and return the assistant text content + metadata.
  * The caller is responsible for interpreting the returned string (e.g. JSON.parse).
+ * Aucun stop_sequence pour éviter de couper les réponses longues.
  */
-export async function mistralGenerate(params: MistralGenerateParams): Promise<string> {
-  const { apiKey, systemInstruction, userMessage } = params
+export async function mistralGenerate(params: MistralGenerateParams): Promise<MistralGenerateResult> {
+  const {
+    apiKey,
+    systemInstruction,
+    userMessage,
+    maxTokens = 9000,
+    temperature = 0.7,
+    top_p = 0.9,
+  } = params
 
   const headers: HeadersInit = {
     Authorization: `Bearer ${apiKey}`,
@@ -34,8 +52,9 @@ export async function mistralGenerate(params: MistralGenerateParams): Promise<st
   const body: unknown = {
     model: MISTRAL_MODEL,
     messages,
-    temperature: 0.7,
-    max_tokens: 8192,
+    temperature,
+    top_p,
+    max_tokens: Math.min(Math.max(maxTokens, 1024), 32768),
     response_format: {
       type: 'json_object',
     },
@@ -65,35 +84,35 @@ export async function mistralGenerate(params: MistralGenerateParams): Promise<st
         content?: ChatMessageContentPart[]
       }
 
-  const data: {
-    choices?: Array<{
-      message?: ChatMessage
-    }>
-  } = (await response.json()) as {
-    choices?: Array<{
-      message?: ChatMessage
-    }>
+  type Choice = {
+    message?: ChatMessage
+    finish_reason?: string
   }
 
-  const message: ChatMessage | undefined = data.choices?.[0]?.message
+  const data: { choices?: Choice[] } = (await response.json()) as { choices?: Choice[] }
+
+  const choice: Choice | undefined = data.choices?.[0]
+  const message: ChatMessage | undefined = choice?.message
+  const finishReason: string | undefined = choice?.finish_reason
 
   if (!message || typeof message !== 'object') {
-    return ''
+    return { content: '', finishReason }
   }
+
+  let content = ''
 
   if (typeof (message as { content?: string }).content === 'string') {
-    const content: string | undefined = (message as { content?: string }).content
-    return content?.trim() ?? ''
+    const c: string | undefined = (message as { content?: string }).content
+    content = c?.trim() ?? ''
+  } else {
+    const parts: ChatMessageContentPart[] | undefined = (message as { content?: ChatMessageContentPart[] }).content
+    if (Array.isArray(parts)) {
+      const textParts: string[] = parts
+        .map((part: ChatMessageContentPart): string => part.text?.trim() ?? '')
+        .filter((value: string): boolean => value.length > 0)
+      content = textParts.join('\n').trim()
+    }
   }
 
-  const parts: ChatMessageContentPart[] | undefined = (message as { content?: ChatMessageContentPart[] }).content
-  if (Array.isArray(parts)) {
-    const textParts: string[] = parts
-      .map((part: ChatMessageContentPart): string => part.text?.trim() ?? '')
-      .filter((value: string): boolean => value.length > 0)
-
-    return textParts.join('\n').trim()
-  }
-
-  return ''
+  return { content, finishReason }
 }

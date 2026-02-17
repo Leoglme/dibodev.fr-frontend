@@ -38,8 +38,20 @@ export type GeneratedArticleContent = {
   coverImageUrl?: string
 }
 
+export type ArticleQualityBreakdown = {
+  concision: number
+  repetition: number
+  metierEnrichment: number
+  ctaConversion: number
+  cleanliness: number
+}
+
 export type GenerateArticleResponse = GeneratedArticleContent & {
   contentRichtext: RichtextDoc
+  /** Score de qualité 0-100 (indicateur interne, dashboard uniquement). */
+  qualityScore?: number
+  /** Détail du score (si ?debug=1). */
+  meta?: { qualityBreakdown: ArticleQualityBreakdown }
 }
 
 export type CreateInStoryblokBody = {

@@ -68,6 +68,24 @@
       <div class="rounded-lg border border-gray-600 bg-gray-800 p-6">
         <h2 class="text-lg font-semibold text-gray-100">Aperçu</h2>
         <p class="mt-1 text-sm text-gray-400">{{ article.title }} — {{ article.slug }}</p>
+        <div
+          v-if="article.qualityScore != null"
+          class="mt-3 flex items-center gap-2 rounded-lg border border-gray-600 bg-gray-700/50 px-3 py-2"
+        >
+          <span class="text-sm text-gray-400">Score qualité</span>
+          <span
+            class="rounded-full px-2.5 py-0.5 text-sm font-medium"
+            :class="
+              article.qualityScore >= 70
+                ? 'bg-emerald-500/20 text-emerald-400'
+                : article.qualityScore >= 50
+                  ? 'bg-amber-500/20 text-amber-400'
+                  : 'bg-red-500/20 text-red-400'
+            "
+          >
+            {{ article.qualityScore }}/100
+          </span>
+        </div>
         <div class="mt-4 flex flex-wrap gap-2">
           <DibodevBadge v-for="tag in article.tags" :key="tag" backgroundColor="#35424d" textColor="#f5f4fb" size="sm">
             {{ tag }}
@@ -469,26 +487,37 @@ const COVER_STOP_WORDS = new Set([
   'optimisez', 'attirer', 'booster', 'clients', 'locaux', 'site', 'web',
 ])
 
-function buildCoverSearchQuery(title: string, tags: string[]): string {
-  if (tags.length >= 2) {
-    return `${tags[0]} ${tags[1]}`.trim()
-  }
-  if (tags.length === 1 && tags[0].length <= 25) {
-    return tags[0]
-  }
-  const normalized = title
+function extractSearchWords(text: string): string[] {
+  const normalized = text
     .toLowerCase()
     .replace(/[^\p{L}\p{N}\s]/gu, ' ')
     .replace(/\s+/g, ' ')
     .trim()
-  const words = normalized
+  return normalized
     .split(' ')
     .filter((w) => w.length > 1 && !COVER_STOP_WORDS.has(w) && !/^\d+$/.test(w))
-  if (words.length >= 2) {
-    return `${words[0]} ${words[1]}`
-  }
-  if (words.length === 1) return words[0]
-  return title.slice(0, 30).trim() || 'blog'
+}
+
+/**
+ * Construit une requête Unsplash cohérente (métier / thème principal).
+ * Priorité : partie avant " : " du titre (ex. "Coach sportif"), puis premiers mots du titre, puis tags.
+ */
+function buildCoverSearchQuery(title: string, tags: string[]): string {
+  const cleanTitle = (title.split(/\s+[—–-]\s+/)[0] ?? title).trim()
+
+  const mainPart = cleanTitle.split(/[\s]*:\s*/)[0]?.trim() ?? cleanTitle
+  const mainWords = extractSearchWords(mainPart)
+  if (mainWords.length >= 2) return `${mainWords[0]} ${mainWords[1]}`
+  if (mainWords.length === 1) return mainWords[0]
+
+  const fullWords = extractSearchWords(cleanTitle)
+  if (fullWords.length >= 2) return `${fullWords[0]} ${fullWords[1]}`
+  if (fullWords.length === 1) return fullWords[0]
+
+  if (tags.length >= 2) return `${tags[0]} ${tags[1]}`.trim()
+  if (tags.length === 1 && tags[0].length <= 25) return tags[0]
+
+  return cleanTitle.slice(0, 30).trim() || 'blog'
 }
 
 async function suggestCover(): Promise<void> {
