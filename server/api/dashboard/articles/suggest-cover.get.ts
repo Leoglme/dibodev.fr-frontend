@@ -18,9 +18,45 @@ type UnsplashSearchResponse = {
 }
 
 const STOP_WORDS = new Set([
-  'de', 'du', 'des', 'le', 'la', 'les', 'un', 'une', 'pour', 'en', 'et', 'ou', 'sur', 'au', 'aux',
-  'que', 'qui', 'quoi', 'dans', 'par', 'avec', 'sans', 'sous', 'vers', 'chez', 'donc', 'or', 'ni',
-  'ne', 'pas', 'plus', 'moins', 'très', 'tout', 'tous', 'toute', 'toutes', 'autre', 'autres',
+  'de',
+  'du',
+  'des',
+  'le',
+  'la',
+  'les',
+  'un',
+  'une',
+  'pour',
+  'en',
+  'et',
+  'ou',
+  'sur',
+  'au',
+  'aux',
+  'que',
+  'qui',
+  'quoi',
+  'dans',
+  'par',
+  'avec',
+  'sans',
+  'sous',
+  'vers',
+  'chez',
+  'donc',
+  'or',
+  'ni',
+  'ne',
+  'pas',
+  'plus',
+  'moins',
+  'très',
+  'tout',
+  'tous',
+  'toute',
+  'toutes',
+  'autre',
+  'autres',
 ])
 
 /**
@@ -36,10 +72,35 @@ function buildFallbackQuery(fullQuery: string): string {
   const words = normalized.split(' ').filter((w) => w.length > 1 && !STOP_WORDS.has(w) && !/^\d+$/.test(w))
 
   const metier = words.find((w) =>
-    ['plombier', 'plombiers', 'electricien', 'electriciens', 'artisan', 'artisans', 'restaurant', 'restaurants', 'commerce', 'commerces', 'pme', 'chantier', 'construction'].includes(w),
+    [
+      'plombier',
+      'plombiers',
+      'electricien',
+      'electriciens',
+      'artisan',
+      'artisans',
+      'restaurant',
+      'restaurants',
+      'commerce',
+      'commerces',
+      'pme',
+      'chantier',
+      'construction',
+    ].includes(w),
   )
   const context = words.find((w) =>
-    ['logiciel', 'gestion', 'site', 'web', 'application', 'outil', 'devis', 'intervention', 'saas', 'logiciels'].includes(w),
+    [
+      'logiciel',
+      'gestion',
+      'site',
+      'web',
+      'application',
+      'outil',
+      'devis',
+      'intervention',
+      'saas',
+      'logiciels',
+    ].includes(w),
   )
 
   if (metier && context) {

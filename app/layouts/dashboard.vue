@@ -2,7 +2,7 @@
   <div class="flex min-h-screen bg-gray-900 text-gray-100">
     <!-- Mobile top bar -->
     <header
-      class="fixed top-0 left-0 right-0 z-40 flex h-[70px] items-center justify-between border-b border-gray-700 bg-gray-800 px-4 md:hidden"
+      class="fixed top-0 right-0 left-0 z-40 flex h-[70px] items-center justify-between border-b border-gray-700 bg-gray-800 px-4 md:hidden"
     >
       <NuxtLink :to="localePath('/dashboard')">
         <DibodevLogo :size="28" :large="true" />
@@ -18,9 +18,7 @@
     </header>
 
     <!-- Desktop sidebar -->
-    <aside
-      class="fixed top-0 left-0 z-40 hidden h-full w-64 flex-col border-r border-gray-700 bg-gray-800 md:flex"
-    >
+    <aside class="fixed top-0 left-0 z-40 hidden h-full w-64 flex-col border-r border-gray-700 bg-gray-800 md:flex">
       <div class="flex h-[70px] items-center border-b border-gray-700 px-4">
         <NuxtLink :to="localePath('/dashboard')">
           <DibodevLogo :size="28" :large="true" />
@@ -70,14 +68,8 @@
         @click.self="mobileMenuOpen = false"
       >
         <Transition name="slide-up-down">
-          <div
-            v-if="mobileMenuOpen"
-            class="absolute bottom-0 left-0 right-0 z-[9999] max-h-[calc(100dvh-70px)]"
-          >
-            <section
-              class="relative w-full overflow-auto bg-gray-800 outline-none"
-              @click.stop
-            >
+          <div v-if="mobileMenuOpen" class="absolute right-0 bottom-0 left-0 z-[9999] max-h-[calc(100dvh-70px)]">
+            <section class="relative w-full overflow-auto bg-gray-800 outline-none" @click.stop>
               <div class="flex flex-col gap-1 p-4">
                 <NuxtLink
                   :to="localePath('/dashboard/generate-article')"

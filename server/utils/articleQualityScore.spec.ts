@@ -31,10 +31,7 @@ function it(name: string, fn: () => void) {
 
 describe('jaccardSimilarity / getExcessiveRepetition', () => {
   it('détecte une similarité élevée', () => {
-    const sections = [
-      'annulation coach sportif dernière minute',
-      'annulation coach sportif dernière minute problème',
-    ]
+    const sections = ['annulation coach sportif dernière minute', 'annulation coach sportif dernière minute problème']
     const { excessive } = getExcessiveRepetition(sections)
     assert.strictEqual(excessive, true)
   })
@@ -67,7 +64,7 @@ describe('getSectionLengthViolation', () => {
 })
 
 describe('getExampleParagraphViolation', () => {
-  it('détecte plus d\'un paragraphe', () => {
+  it("détecte plus d'un paragraphe", () => {
     const content = 'Paragraphe un.\n\nParagraphe deux.'
     const { violated, paragraphCount } = getExampleParagraphViolation(content)
     assert.strictEqual(violated, true)

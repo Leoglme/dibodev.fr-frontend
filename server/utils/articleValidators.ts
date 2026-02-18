@@ -7,10 +7,55 @@ import { ARTICLE_RULES } from './articleRules'
 
 /** Stopwords FR pour tokenize (similarité inter-sections). */
 const STOPWORDS_FR = new Set([
-  'de', 'du', 'des', 'le', 'la', 'les', 'un', 'une', 'et', 'ou', 'mais', 'que', 'qui', 'quoi',
-  'pour', 'avec', 'sans', 'sur', 'dans', 'en', 'au', 'aux', 'a', 'par', 'ce', 'cette', 'cet', 'ces',
-  'son', 'sa', 'ses', 'mon', 'ma', 'mes', 'ton', 'ta', 'tes', 'notre', 'votre', 'leur', 'nos', 'vos',
-  'être', 'avoir', 'faire', 'est', 'sont', 'fait', 'font',
+  'de',
+  'du',
+  'des',
+  'le',
+  'la',
+  'les',
+  'un',
+  'une',
+  'et',
+  'ou',
+  'mais',
+  'que',
+  'qui',
+  'quoi',
+  'pour',
+  'avec',
+  'sans',
+  'sur',
+  'dans',
+  'en',
+  'au',
+  'aux',
+  'a',
+  'par',
+  'ce',
+  'cette',
+  'cet',
+  'ces',
+  'son',
+  'sa',
+  'ses',
+  'mon',
+  'ma',
+  'mes',
+  'ton',
+  'ta',
+  'tes',
+  'notre',
+  'votre',
+  'leur',
+  'nos',
+  'vos',
+  'être',
+  'avoir',
+  'faire',
+  'est',
+  'sont',
+  'fait',
+  'font',
 ])
 
 /** Normalise une chaîne pour comparaison (lowercase, accents, ponctuation). */
@@ -118,10 +163,7 @@ function prepareTextForCheck(text: string): string {
  * - Fourchettes avec tiret (7–14, 3-5)
  * - Nombres en lettres (deux, dix, cinquante, cent, mille...)
  */
-export function hasInvalidNumbers(
-  sectionContent: string,
-  _options?: { allowMinutesRange?: boolean },
-): boolean {
+export function hasInvalidNumbers(sectionContent: string, _options?: { allowMinutesRange?: boolean }): boolean {
   const text = prepareTextForCheck(sectionContent)
   if (/\d/.test(text)) return true
   if (RANGE_DASH.test(sectionContent)) return true
@@ -169,10 +211,7 @@ const GENERIC_WORDS = ['outil', 'solution', 'centraliser', 'optimiser', 'simplif
 /**
  * Vérifie si un mot générique apparaît plus de maxOccurrences fois.
  */
-export function hasGenericWordOveruse(
-  content: string,
-  maxOccurrences = 3,
-): boolean {
+export function hasGenericWordOveruse(content: string, maxOccurrences = 3): boolean {
   const lower = content.toLowerCase()
   for (const word of GENERIC_WORDS) {
     const re = new RegExp(`\\b${escapeRegex(word)}\\b`, 'gi')
@@ -205,7 +244,7 @@ const CTA_ACTION_WORDS = ['audit', 'diagnostic', 'appel', 'échange', 'discutons
 
 /** Livrables / next-step sans chiffres. */
 const CTA_DELIVERABLES = [
-  'plan d\'action',
+  "plan d'action",
   "plan d'action",
   'recommandations',
   'recommandation',
@@ -222,7 +261,7 @@ const CTA_DELIVERABLES = [
 ]
 
 /** CTA trop vagues (sans proposition ni livrable). */
-const CTA_VAGUE_PHRASES = ['on en parle', 'contactez-moi', 'n\'hésitez pas', 'à bientôt']
+const CTA_VAGUE_PHRASES = ['on en parle', 'contactez-moi', "n'hésitez pas", 'à bientôt']
 
 /**
  * CTA strict : doit contenir (1) proposition (audit/diagnostic/appel) + (2) livrable/next-step.
@@ -312,9 +351,7 @@ export function getSectionLengthViolation(
 /**
  * Exemple concret: 1 paragraphe max. Compte les sauts de ligne doubles.
  */
-export function getExampleParagraphViolation(
-  sectionContent: string,
-): { violated: boolean; paragraphCount: number } {
+export function getExampleParagraphViolation(sectionContent: string): { violated: boolean; paragraphCount: number } {
   const body = /^\s*##\s+/.test(sectionContent) ? stripH2Title(sectionContent) : sectionContent
   const doubleBreaks = (body.match(/\n\s*\n/g) ?? []).length
   const paragraphCount = doubleBreaks + 1
@@ -325,9 +362,10 @@ export function getExampleParagraphViolation(
 /**
  * Détecte une répétition excessive entre sections (Jaccard > seuil).
  */
-export function getExcessiveRepetition(
-  sections: string[],
-): { excessive: boolean; pairs: { a: number; b: number; sim: number }[] } {
+export function getExcessiveRepetition(sections: string[]): {
+  excessive: boolean
+  pairs: { a: number; b: number; sim: number }[]
+} {
   const tokens = sections.map(tokenizeForSimilarity)
   const pairs: { a: number; b: number; sim: number }[] = []
   for (const [a, b] of REPETITION_PAIRS) {
@@ -352,7 +390,10 @@ const REPETITION_BLACKLIST = [
 
 /** Vérifie si le contenu contient des patterns de répétition générique. */
 export function hasRepetitionBlacklist(content: string): boolean {
-  const lower = content.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '')
+  const lower = content
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
   return REPETITION_BLACKLIST.some((p) => {
     const normalized = p.normalize('NFD').replace(/\p{Diacritic}/gu, '')
     return lower.includes(normalized)

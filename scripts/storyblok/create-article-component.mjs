@@ -12,6 +12,10 @@ if (!SPACE_ID || !TOKEN) {
 const BASE_URL = `https://mapi.storyblok.com/v1/spaces/${SPACE_ID}/components/`
 const COMPONENT_NAME = 'article'
 
+/**
+ *
+ * @param response
+ */
 async function readJsonOrText(response) {
   const text = await response.text()
   try {
@@ -21,6 +25,10 @@ async function readJsonOrText(response) {
   }
 }
 
+/**
+ *
+ * @param url
+ */
 async function apiGet(url) {
   return fetch(url, {
     method: 'GET',
@@ -31,6 +39,11 @@ async function apiGet(url) {
   })
 }
 
+/**
+ *
+ * @param url
+ * @param body
+ */
 async function apiPost(url, body) {
   return fetch(url, {
     method: 'POST',
@@ -43,6 +56,11 @@ async function apiPost(url, body) {
   })
 }
 
+/**
+ *
+ * @param pos
+ * @param required
+ */
 function asset(pos, required = false) {
   return {
     type: 'asset',
@@ -71,6 +89,9 @@ const schema = {
   ogImage: asset(9, false),
 }
 
+/**
+ *
+ */
 async function main() {
   const listRes = await apiGet(BASE_URL)
   if (!listRes.ok) {

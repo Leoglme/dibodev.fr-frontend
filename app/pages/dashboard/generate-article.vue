@@ -482,9 +482,40 @@ function useCustomUrl(): void {
 }
 
 const COVER_STOP_WORDS = new Set([
-  'de', 'du', 'des', 'le', 'la', 'les', 'un', 'une', 'pour', 'en', 'et', 'ou', 'sur', 'au', 'aux',
-  'que', 'qui', 'dans', 'par', 'avec', 'sans', 'votre', 'vos', 'plus', 'tout', 'tous', 'autre',
-  'optimisez', 'attirer', 'booster', 'clients', 'locaux', 'site', 'web',
+  'de',
+  'du',
+  'des',
+  'le',
+  'la',
+  'les',
+  'un',
+  'une',
+  'pour',
+  'en',
+  'et',
+  'ou',
+  'sur',
+  'au',
+  'aux',
+  'que',
+  'qui',
+  'dans',
+  'par',
+  'avec',
+  'sans',
+  'votre',
+  'vos',
+  'plus',
+  'tout',
+  'tous',
+  'autre',
+  'optimisez',
+  'attirer',
+  'booster',
+  'clients',
+  'locaux',
+  'site',
+  'web',
 ])
 
 function extractSearchWords(text: string): string[] {
@@ -493,9 +524,7 @@ function extractSearchWords(text: string): string[] {
     .replace(/[^\p{L}\p{N}\s]/gu, ' ')
     .replace(/\s+/g, ' ')
     .trim()
-  return normalized
-    .split(' ')
-    .filter((w) => w.length > 1 && !COVER_STOP_WORDS.has(w) && !/^\d+$/.test(w))
+  return normalized.split(' ').filter((w) => w.length > 1 && !COVER_STOP_WORDS.has(w) && !/^\d+$/.test(w))
 }
 
 /**

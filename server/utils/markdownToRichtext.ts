@@ -5,9 +5,7 @@
 
 export type RichtextMark = { type: 'bold' } | { type: 'italic' }
 
-export type InlineNode =
-  | { type: 'text'; text: string; marks?: RichtextMark[] }
-  | { type: 'hard_break' }
+export type InlineNode = { type: 'text'; text: string; marks?: RichtextMark[] } | { type: 'hard_break' }
 
 export type RichtextNode = {
   type: string

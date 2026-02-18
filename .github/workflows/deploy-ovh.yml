@@ -128,7 +128,7 @@ jobs:
             # Start Nitro server with PM2
             cd /var/www/dibodev.fr/server
             pm2 describe dibodev-nuxt-api > /dev/null 2>&1 && pm2 stop dibodev-nuxt-api || true
-            pm2 start index.mjs --name dibodev-nuxt-api
+            PORT=3002 pm2 start index.mjs --name dibodev-nuxt-api
             pm2 save
             pm2 list
             # Restart Nginx

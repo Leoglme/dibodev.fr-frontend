@@ -20,10 +20,10 @@
       <h2 class="mt-2 shrink-0 text-left text-xl font-medium text-gray-100">
         {{ props.title }}
       </h2>
-      <p class="min-h-0 flex-1 text-left text-sm leading-relaxed text-gray-200 line-clamp-3">
+      <p class="line-clamp-3 min-h-0 flex-1 text-left text-sm leading-relaxed text-gray-200">
         {{ props.excerpt }}
       </p>
-      <div class="mt-2 shrink-0 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-300">
+      <div class="mt-2 flex shrink-0 flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-300">
         <time :datetime="props.date">
           {{ formattedDate }}
         </time>
@@ -31,7 +31,7 @@
           >{{ props.readingTimeMinutes }} {{ $t('blog.card.readingTime') }}</span
         >
       </div>
-      <div v-if="props.tags.length > 0" class="mt-2 shrink-0 flex flex-wrap gap-1">
+      <div v-if="props.tags.length > 0" class="mt-2 flex shrink-0 flex-wrap gap-1">
         <DibodevBadge
           v-for="tag in props.tags.slice(0, 3)"
           :key="tag"
@@ -43,12 +43,7 @@
         </DibodevBadge>
       </div>
     </NuxtLink>
-    <DibodevButton
-      icon="ArrowRight"
-      iconPosition="right"
-      :to="localePath(props.route)"
-      class="mt-2 shrink-0 w-full"
-    >
+    <DibodevButton icon="ArrowRight" iconPosition="right" :to="localePath(props.route)" class="mt-2 w-full shrink-0">
       {{ $t('blog.card.readMore') }}
     </DibodevButton>
   </article>

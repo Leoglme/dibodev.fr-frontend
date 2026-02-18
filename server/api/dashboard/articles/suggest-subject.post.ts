@@ -45,27 +45,119 @@ Interdiction d'année (2025, 2026…) sauf si l'utilisateur le demande explicite
 Anti-duplication: ne propose jamais un sujet déjà dans la liste ni trop proche (moins de 70% de mots en commun).`
 
 const MARKETING_VERBS = [
-  'boostez', 'transformez', 'découvrez', 'révolutionnez', 'optimisez',
-  'modernisez', 'améliorez', 'augmentez', 'maximisez', 'propulsez', 'accélérez',
-  'réinventez', 'innovez',
+  'boostez',
+  'transformez',
+  'découvrez',
+  'révolutionnez',
+  'optimisez',
+  'modernisez',
+  'améliorez',
+  'augmentez',
+  'maximisez',
+  'propulsez',
+  'accélérez',
+  'réinventez',
+  'innovez',
 ]
 const MARKETING_PHRASES = [
-  'sur mesure', 'révolutionner', 'comment un logiciel', 'comment une app',
-  'comment une application', 'découvrez comment', 'boostez votre', 'transformez votre',
+  'sur mesure',
+  'révolutionner',
+  'comment un logiciel',
+  'comment une app',
+  'comment une application',
+  'découvrez comment',
+  'boostez votre',
+  'transformez votre',
 ]
 
 const COMMON_VERBS = new Set([
-  'éviter', 'réduire', 'gérer', 'automatiser', 'suivre', 'planifier', 'facturer',
-  'encaisser', 'organiser', 'simplifier', 'limiter', 'éliminer', 'résoudre',
-  'centraliser', 'synchroniser', 'programmer', 'prendre',
+  'éviter',
+  'réduire',
+  'gérer',
+  'automatiser',
+  'suivre',
+  'planifier',
+  'facturer',
+  'encaisser',
+  'organiser',
+  'simplifier',
+  'limiter',
+  'éliminer',
+  'résoudre',
+  'centraliser',
+  'synchroniser',
+  'programmer',
+  'prendre',
 ])
 
 const STOPWORDS_FR = new Set([
-  'de', 'du', 'des', 'le', 'la', 'les', 'un', 'une', 'et', 'ou', 'mais', 'que', 'qui', 'quoi', 'dont',
-  'pour', 'avec', 'sans', 'sous', 'sur', 'dans', 'en', 'au', 'aux', 'a', 'par', 'ce', 'cette', 'cet', 'ces',
-  'son', 'sa', 'ses', 'mon', 'ma', 'mes', 'ton', 'ta', 'tes', 'notre', 'votre', 'leur', 'nos', 'vos', 'leurs',
-  'ne', 'pas', 'plus', 'moins', 'très', 'tout', 'tous', 'toute', 'toutes', 'autre', 'autres', 'même', 'mêmes',
-  'être', 'avoir', 'faire', 'peut', 'doit', 'est', 'sont', 'fait', 'font',
+  'de',
+  'du',
+  'des',
+  'le',
+  'la',
+  'les',
+  'un',
+  'une',
+  'et',
+  'ou',
+  'mais',
+  'que',
+  'qui',
+  'quoi',
+  'dont',
+  'pour',
+  'avec',
+  'sans',
+  'sous',
+  'sur',
+  'dans',
+  'en',
+  'au',
+  'aux',
+  'a',
+  'par',
+  'ce',
+  'cette',
+  'cet',
+  'ces',
+  'son',
+  'sa',
+  'ses',
+  'mon',
+  'ma',
+  'mes',
+  'ton',
+  'ta',
+  'tes',
+  'notre',
+  'votre',
+  'leur',
+  'nos',
+  'vos',
+  'leurs',
+  'ne',
+  'pas',
+  'plus',
+  'moins',
+  'très',
+  'tout',
+  'tous',
+  'toute',
+  'toutes',
+  'autre',
+  'autres',
+  'même',
+  'mêmes',
+  'être',
+  'avoir',
+  'faire',
+  'peut',
+  'doit',
+  'est',
+  'sont',
+  'fait',
+  'font',
 ])
 
 /** Normalise une chaîne: lowercase, suppression accents, ponctuation. */
@@ -150,10 +242,7 @@ function isLowQualityTopic(topic: string): { lowQuality: boolean; reasons: strin
 }
 
 /** Vérifie si le topic est invalide (année, verbes marketing). */
-function isInvalidTopic(
-  suggestedTopic: string,
-  body: SuggestSubjectBody,
-): { invalid: boolean; reasons: string[] } {
+function isInvalidTopic(suggestedTopic: string, body: SuggestSubjectBody): { invalid: boolean; reasons: string[] } {
   const reasons: string[] = []
   const lower = suggestedTopic.toLowerCase()
 
@@ -193,9 +282,7 @@ function doesNotRespectOptionalSentence(
   const matchCount = consigneStrong.filter((t) => topicStrong.has(t)).length
   const minRequired = consigneStrong.length >= 2 ? 2 : 1
   if (matchCount < minRequired) {
-    reasons.push(
-      `manque de mots-clés de la consigne (au moins ${minRequired} attendu(s), ${matchCount} trouvé(s))`,
-    )
+    reasons.push(`manque de mots-clés de la consigne (au moins ${minRequired} attendu(s), ${matchCount} trouvé(s))`)
   }
 
   return { invalid: reasons.length > 0, reasons }
@@ -226,10 +313,7 @@ function isTooCloseToExisting(
   return { tooClose: false }
 }
 
-function buildUserMessage(
-  body: SuggestSubjectBody,
-  previousRejection?: { topic: string; reasons: string[] },
-): string {
+function buildUserMessage(body: SuggestSubjectBody, previousRejection?: { topic: string; reasons: string[] }): string {
   const optional = body.optionalSentence?.trim()
   const list =
     body.existingSubjects.length > 0
@@ -317,8 +401,7 @@ export default defineEventHandler(async (event: H3Event): Promise<SuggestSubject
       })
     }
 
-    const suggestedTopic =
-      typeof parsed.suggestedTopic === 'string' ? parsed.suggestedTopic.trim() : ''
+    const suggestedTopic = typeof parsed.suggestedTopic === 'string' ? parsed.suggestedTopic.trim() : ''
     if (!suggestedTopic) {
       throw createError({
         statusCode: 502,

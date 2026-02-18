@@ -10,6 +10,10 @@ if (!SPACE_ID || !TOKEN) {
 
 const STORIES_URL = `https://mapi.storyblok.com/v1/spaces/${SPACE_ID}/stories/`
 
+/**
+ *
+ * @param response
+ */
 async function readJsonOrText(response) {
   const text = await response.text()
   try {
@@ -19,6 +23,10 @@ async function readJsonOrText(response) {
   }
 }
 
+/**
+ *
+ * @param url
+ */
 async function apiGet(url) {
   return fetch(url, {
     method: 'GET',
@@ -29,6 +37,11 @@ async function apiGet(url) {
   })
 }
 
+/**
+ *
+ * @param url
+ * @param body
+ */
 async function apiPost(url, body) {
   return fetch(url, {
     method: 'POST',
@@ -96,6 +109,9 @@ const FIRST_ARTICLE_RICHTEXT = {
   ],
 }
 
+/**
+ *
+ */
 async function getOrCreateBlogFolder() {
   const listRes = await apiGet(`${STORIES_URL}?per_page=100`)
   if (!listRes.ok) {
@@ -136,6 +152,10 @@ async function getOrCreateBlogFolder() {
   return folder.id
 }
 
+/**
+ *
+ * @param blogFolderId
+ */
 async function createFirstArticle(blogFolderId) {
   const listRes = await apiGet(`${STORIES_URL}?per_page=100`)
   if (listRes.ok) {
@@ -187,6 +207,9 @@ async function createFirstArticle(blogFolderId) {
   return article
 }
 
+/**
+ *
+ */
 async function createArticleComponentIfNeeded() {
   const BASE_URL = `https://mapi.storyblok.com/v1/spaces/${SPACE_ID}/components/`
   const listRes = await apiGet(BASE_URL)
@@ -197,6 +220,11 @@ async function createArticleComponentIfNeeded() {
     console.log('Article component already exists.')
     return
   }
+  /**
+   *
+   * @param pos
+   * @param required
+   */
   function asset(pos, required = false) {
     return { type: 'asset', pos, required, filetypes: ['images'], asset_folder_id: null, allow_external_url: true }
   }
@@ -229,6 +257,9 @@ async function createArticleComponentIfNeeded() {
   console.log('Created article component.')
 }
 
+/**
+ *
+ */
 async function main() {
   console.log('--- Step 1: Creating article component (if needed) ---')
   await createArticleComponentIfNeeded()

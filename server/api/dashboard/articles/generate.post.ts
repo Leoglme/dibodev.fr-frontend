@@ -1,9 +1,6 @@
 import type { H3Event } from 'h3'
 import { createError } from 'h3'
-import type {
-  GenerateArticleBody,
-  GenerateArticleResponse,
-} from '~~/server/types/dashboard/articles'
+import type { GenerateArticleBody, GenerateArticleResponse } from '~~/server/types/dashboard/articles'
 import { requireDashboardAuth } from '~~/server/utils/dashboardAuth'
 import { mistralGenerate } from '~~/server/utils/mistral'
 import { markdownToRichtext } from '~~/server/utils/markdownToRichtext'
@@ -30,10 +27,7 @@ const MAX_TAGS = 8
 const MAX_RETRIES_FICHE = 2
 
 /** maxTokens pour l'article complet (dérivé de maxCharsTotal). */
-const ARTICLE_MAX_TOKENS = Math.min(
-  5000,
-  Math.max(1200, Math.ceil(ARTICLE_RULES.maxCharsTotal / 3.6) + 150),
-)
+const ARTICLE_MAX_TOKENS = Math.min(5000, Math.max(1200, Math.ceil(ARTICLE_RULES.maxCharsTotal / 3.6) + 150))
 
 const REQUIRED_SECTIONS = [
   'Introduction',
@@ -121,14 +115,8 @@ export type BriefMetier = {
  */
 function normalizeObjectionReponse(content: string): string {
   return content
-    .replace(
-      /\*\*Objection\s*:\*\*\s*["«](.+?)["»]\s*\*\*R[eé]ponse\s*:\*\*/gis,
-      '**Objection :** $1\n\n**Réponse :**',
-    )
-    .replace(
-      /\*\*Objection\s*:\*\*\s*(.+?)\s*\*\*R[eé]ponse\s*:\*\*/gis,
-      '**Objection :** $1\n\n**Réponse :**',
-    )
+    .replace(/\*\*Objection\s*:\*\*\s*["«](.+?)["»]\s*\*\*R[eé]ponse\s*:\*\*/gis, '**Objection :** $1\n\n**Réponse :**')
+    .replace(/\*\*Objection\s*:\*\*\s*(.+?)\s*\*\*R[eé]ponse\s*:\*\*/gis, '**Objection :** $1\n\n**Réponse :**')
 }
 
 /**
@@ -140,7 +128,6 @@ function normalizeMarkdown(content: string): string {
     .replace(/\n{3,}/g, '\n\n')
     .trim()
 }
-
 
 /**
  * Sanitize content : H3/H4 → gras.
@@ -239,11 +226,7 @@ MÉTADONNÉES :
 - suggestedTopic : le sujet tel que reçu`
 }
 
-function buildArticleMessage(
-  body: GenerateArticleBody,
-  briefText: string,
-  fullArticleRejection?: string,
-): string {
+function buildArticleMessage(body: GenerateArticleBody, briefText: string, fullArticleRejection?: string): string {
   const list =
     body.existingSubjects.length > 0
       ? `Sujets déjà traités : ${body.existingSubjects.join(', ')}.`
@@ -270,8 +253,7 @@ function parseJson<T = Record<string, unknown>>(raw: string): T | null {
 function parseBriefMetier(obj: unknown): BriefMetier {
   if (!obj || typeof obj !== 'object') return {}
   const o = obj as Record<string, unknown>
-  const arr = (v: unknown): string[] =>
-    Array.isArray(v) ? v.map((x) => String(x).trim()).filter(Boolean) : []
+  const arr = (v: unknown): string[] => (Array.isArray(v) ? v.map((x) => String(x).trim()).filter(Boolean) : [])
   return {
     persona: typeof o.persona === 'string' ? o.persona.trim() : undefined,
     workflowActuel: arr(o.workflowActuel),
@@ -285,23 +267,87 @@ function parseBriefMetier(obj: unknown): BriefMetier {
 
 /** Stopwords FR à exclure des tags (inutiles pour SEO). */
 const TAG_STOPWORDS_FR = new Set([
-  'les', 'une', 'avec', 'de', 'du', 'des', 'le', 'la', 'et', 'pour', 'sur', 'dans', 'en', 'au', 'aux',
-  'par', 'que', 'qui', 'quoi', 'son', 'sa', 'ses', 'mon', 'ma', 'mes', 'nos', 'vos', 'leur', 'notre',
-  'votre', 'un', 'ce', 'cette', 'cet', 'ces', 'est', 'sont', 'fait', 'font', 'ou', 'mais', 'donc',
-  'quand', 'comme', 'sans', 'plus', 'moins', 'bien', 'très', 'tout', 'tous', 'toute', 'toutes', 'aussi',
-  'être', 'avoir', 'faire', 'peut', 'vers', 'chez', 'sous', 'entre',
+  'les',
+  'une',
+  'avec',
+  'de',
+  'du',
+  'des',
+  'le',
+  'la',
+  'et',
+  'pour',
+  'sur',
+  'dans',
+  'en',
+  'au',
+  'aux',
+  'par',
+  'que',
+  'qui',
+  'quoi',
+  'son',
+  'sa',
+  'ses',
+  'mon',
+  'ma',
+  'mes',
+  'nos',
+  'vos',
+  'leur',
+  'notre',
+  'votre',
+  'un',
+  'ce',
+  'cette',
+  'cet',
+  'ces',
+  'est',
+  'sont',
+  'fait',
+  'font',
+  'ou',
+  'mais',
+  'donc',
+  'quand',
+  'comme',
+  'sans',
+  'plus',
+  'moins',
+  'bien',
+  'très',
+  'tout',
+  'tous',
+  'toute',
+  'toutes',
+  'aussi',
+  'être',
+  'avoir',
+  'faire',
+  'peut',
+  'vers',
+  'chez',
+  'sous',
+  'entre',
 ])
 const TAG_MIN_LENGTH = 4
 /** Tags 100 % génériques interdits seuls (exact match). */
 const GENERIC_TAGS_FORBIDDEN = new Set([
-  'coach', 'sportif', 'application', 'logiciel', 'outil', 'solution', 'logiciels', 'applications',
+  'coach',
+  'sportif',
+  'application',
+  'logiciel',
+  'outil',
+  'solution',
+  'logiciels',
+  'applications',
 ])
 
 /** Tags SEO pertinents (ce que les gens cherchent). */
 const FALLBACK_TAGS = [
   'réservation en ligne',
   'gestion annulations',
-  'liste d\'attente',
+  "liste d'attente",
   'rappels',
   'no-show',
   'acompte',
@@ -387,21 +433,21 @@ export default defineEventHandler(async (event: H3Event): Promise<GenerateArticl
     })
 
     ficheParsed = parseJson<{
-    persona?: string
-    workflowActuel?: unknown[]
-    douleurs?: unknown[]
-    objections?: unknown[]
-    offres?: unknown[]
-    lexiqueMetier?: unknown[]
-    scenariosTerrain?: unknown[]
-    title?: string
-    slug?: string
-    excerpt?: string
-    metaTitle?: string
-    metaDescription?: string
-    tags?: unknown[]
-    suggestedTopic?: string
-  }>(ficheResult.content)
+      persona?: string
+      workflowActuel?: unknown[]
+      douleurs?: unknown[]
+      objections?: unknown[]
+      offres?: unknown[]
+      lexiqueMetier?: unknown[]
+      scenariosTerrain?: unknown[]
+      title?: string
+      slug?: string
+      excerpt?: string
+      metaTitle?: string
+      metaDescription?: string
+      tags?: unknown[]
+      suggestedTopic?: string
+    }>(ficheResult.content)
 
     if (!ficheParsed) continue
     const rawTitle = (typeof ficheParsed.title === 'string' ? ficheParsed.title.trim() : '') || ''
@@ -418,14 +464,10 @@ export default defineEventHandler(async (event: H3Event): Promise<GenerateArticl
   const brief = parseBriefMetier(ficheParsed)
   const briefText = briefMetierToString(brief)
 
-  let title =
-    (typeof ficheParsed?.title === 'string' ? ficheParsed.title.trim() : '') || body.suggestedTopic
+  let title = (typeof ficheParsed?.title === 'string' ? ficheParsed.title.trim() : '') || body.suggestedTopic
   title = removeBannedYears(title)
 
-  let slug =
-    typeof ficheParsed?.slug === 'string'
-      ? ficheParsed.slug.trim().replace(/\s+/g, '-').toLowerCase()
-      : ''
+  let slug = typeof ficheParsed?.slug === 'string' ? ficheParsed.slug.trim().replace(/\s+/g, '-').toLowerCase() : ''
   slug = slug
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
@@ -439,22 +481,18 @@ export default defineEventHandler(async (event: H3Event): Promise<GenerateArticl
     slug = slugFromTopic(body.suggestedTopic)
   }
 
-  let excerpt =
-    (typeof ficheParsed?.excerpt === 'string' ? ficheParsed.excerpt.trim() : '') || title
+  let excerpt = (typeof ficheParsed?.excerpt === 'string' ? ficheParsed.excerpt.trim() : '') || title
   excerpt = removeBannedYears(excerpt)
 
-  let metaTitle =
-    (typeof ficheParsed?.metaTitle === 'string' ? ficheParsed.metaTitle.trim() : '') || title
+  let metaTitle = (typeof ficheParsed?.metaTitle === 'string' ? ficheParsed.metaTitle.trim() : '') || title
   metaTitle = removeBannedYears(metaTitle)
 
   let metaDescription =
-    (typeof ficheParsed?.metaDescription === 'string' ? ficheParsed.metaDescription.trim() : '') ||
-    excerpt
+    (typeof ficheParsed?.metaDescription === 'string' ? ficheParsed.metaDescription.trim() : '') || excerpt
   metaDescription = removeBannedYears(metaDescription)
 
   const suggestedTopic =
-    (typeof ficheParsed?.suggestedTopic === 'string' ? ficheParsed.suggestedTopic.trim() : '') ||
-    body.suggestedTopic
+    (typeof ficheParsed?.suggestedTopic === 'string' ? ficheParsed.suggestedTopic.trim() : '') || body.suggestedTopic
 
   const rawTags: string[] = Array.isArray(ficheParsed?.tags)
     ? (ficheParsed.tags as unknown[])
@@ -480,8 +518,7 @@ export default defineEventHandler(async (event: H3Event): Promise<GenerateArticl
     })
 
     const articleParsed = parseJson<{ content?: string }>(articleResult.content)
-    const rawContent =
-      typeof articleParsed?.content === 'string' ? articleParsed.content.trim() : ''
+    const rawContent = typeof articleParsed?.content === 'string' ? articleParsed.content.trim() : ''
     content = sanitizeContent(rawContent)
     content = normalizeObjectionReponse(content)
     content = normalizeMarkdown(content)
@@ -542,7 +579,7 @@ export default defineEventHandler(async (event: H3Event): Promise<GenerateArticl
       reasons.push(`Total trop long: ${content.length} > max ${ARTICLE_RULES.maxCharsTotal} car.`)
     }
     if (hasGenericWordOveruse(content, 3)) {
-      reasons.push('Trop d\'occurrences de mots génériques (outil, solution, centraliser, optimiser, simplifier).')
+      reasons.push("Trop d'occurrences de mots génériques (outil, solution, centraliser, optimiser, simplifier).")
     }
 
     fullArticleRejection = reasons.length > 0 ? reasons.join(' ') : undefined

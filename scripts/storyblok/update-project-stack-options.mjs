@@ -26,6 +26,10 @@ if (!SPACE_ID || !MANAGEMENT_TOKEN || !DELIVERY_TOKEN) {
 
 const MAPI_COMPONENTS_URL = `https://mapi.storyblok.com/v1/spaces/${SPACE_ID}/components/`
 
+/**
+ *
+ * @param response
+ */
 async function readJsonOrText(response) {
   const text = await response.text()
   try {
@@ -35,6 +39,11 @@ async function readJsonOrText(response) {
   }
 }
 
+/**
+ *
+ * @param url
+ * @param token
+ */
 async function apiGet(url, token) {
   return fetch(url, {
     method: 'GET',
@@ -45,6 +54,11 @@ async function apiGet(url, token) {
   })
 }
 
+/**
+ *
+ * @param url
+ * @param body
+ */
 async function apiPut(url, body) {
   return fetch(url, {
     method: 'PUT',
@@ -85,6 +99,7 @@ async function fetchProjectStoriesFromCdn() {
 
 /**
  * Extract unique stack values from story contents (content.stack can be array or options value).
+ * @param contents
  */
 function getUniqueStackFromContents(contents) {
   const set = new Set()
@@ -103,6 +118,7 @@ function getUniqueStackFromContents(contents) {
 
 /**
  * Extract unique categories from story contents.
+ * @param contents
  */
 function getUniqueCategoriesFromContents(contents) {
   const set = new Set()
@@ -119,6 +135,10 @@ function getUniqueCategoriesFromContents(contents) {
   return [...set].sort((a, b) => a.localeCompare(b, 'fr'))
 }
 
+/**
+ *
+ * @param stackValues
+ */
 function buildStackFieldOptions(stackValues) {
   return {
     type: 'options',
@@ -133,6 +153,10 @@ function buildStackFieldOptions(stackValues) {
   }
 }
 
+/**
+ *
+ * @param categoriesValues
+ */
 function buildCategoriesFieldOptions(categoriesValues) {
   return {
     type: 'options',
@@ -147,6 +171,9 @@ function buildCategoriesFieldOptions(categoriesValues) {
   }
 }
 
+/**
+ *
+ */
 async function main() {
   const contents = await fetchProjectStoriesFromCdn()
   console.log('Project stories from CDN:', contents.length)

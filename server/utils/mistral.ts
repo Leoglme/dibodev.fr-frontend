@@ -27,14 +27,7 @@ export type MistralGenerateResult = {
  * Aucun stop_sequence pour éviter de couper les réponses longues.
  */
 export async function mistralGenerate(params: MistralGenerateParams): Promise<MistralGenerateResult> {
-  const {
-    apiKey,
-    systemInstruction,
-    userMessage,
-    maxTokens = 9000,
-    temperature = 0.7,
-    top_p = 0.9,
-  } = params
+  const { apiKey, systemInstruction, userMessage, maxTokens = 9000, temperature = 0.7, top_p = 0.9 } = params
 
   const headers: HeadersInit = {
     Authorization: `Bearer ${apiKey}`,

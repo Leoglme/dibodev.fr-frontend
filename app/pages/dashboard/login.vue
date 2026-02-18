@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="w-full max-w-md rounded-2xl border-2 border-gray-600 bg-gray-800 p-6 shadow-xl sm:p-8"
-    data-aos="fade-up"
-  >
+  <div class="w-full max-w-md rounded-2xl border-2 border-gray-600 bg-gray-800 p-6 shadow-xl sm:p-8" data-aos="fade-up">
     <div class="mb-8 flex justify-center">
       <DibodevLogo :size="40" :large="true" />
     </div>
@@ -26,11 +23,7 @@
         dismissible
         @hide="errorMessage = null"
       />
-      <DibodevButton
-        type="submit"
-        class="w-full"
-        :disabled="isSubmitting"
-      >
+      <DibodevButton type="submit" class="w-full" :disabled="isSubmitting">
         {{ isSubmitting ? '…' : $t('dashboard.login.submit') }}
       </DibodevButton>
     </Form>

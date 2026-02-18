@@ -6,7 +6,7 @@
     :data-aos-delay="props.index * 80"
   >
     <div
-      class="flex h-14 min-h-14 w-full shrink-0 items-center justify-center rounded-t-[16px] text-sm font-medium sm:h-auto sm:min-h-full sm:w-14 sm:rounded-l-[16px] sm:rounded-t-none"
+      class="flex h-14 min-h-14 w-full shrink-0 items-center justify-center rounded-t-[16px] text-sm font-medium sm:h-auto sm:min-h-full sm:w-14 sm:rounded-t-none sm:rounded-l-[16px]"
       :style="{
         backgroundColor: badgeBgColor,
         color: accentColor,

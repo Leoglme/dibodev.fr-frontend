@@ -1,7 +1,5 @@
 <template>
-  <article
-    class="hover:border-primary grid gap-2 rounded-xl border border-gray-600 bg-gray-900 p-3 transition-colors"
-  >
+  <article class="hover:border-primary grid gap-2 rounded-xl border border-gray-600 bg-gray-900 p-3 transition-colors">
     <NuxtLink :to="localePath(props.route)" class="grid gap-2">
       <div class="relative aspect-video w-full overflow-hidden rounded-lg bg-gray-600">
         <img
@@ -13,7 +11,7 @@
         />
         <div v-else class="h-full w-full bg-gray-600/80" aria-hidden="true" />
       </div>
-      <h4 class="line-clamp-2 text-left text-sm font-medium leading-snug text-gray-100">
+      <h4 class="line-clamp-2 text-left text-sm leading-snug font-medium text-gray-100">
         {{ props.title }}
       </h4>
       <p class="line-clamp-2 text-left text-xs leading-relaxed text-gray-200 sm:hidden">
@@ -37,13 +35,7 @@
         </DibodevBadge>
       </div>
     </NuxtLink>
-    <DibodevButton
-      icon="ArrowRight"
-      iconPosition="right"
-      :to="localePath(props.route)"
-      size="sm"
-      class="mt-2 w-full"
-    >
+    <DibodevButton icon="ArrowRight" iconPosition="right" :to="localePath(props.route)" size="sm" class="mt-2 w-full">
       {{ $t('home.latestArticles.readArticle') }}
     </DibodevButton>
   </article>
