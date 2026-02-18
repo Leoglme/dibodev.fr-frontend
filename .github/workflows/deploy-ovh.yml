@@ -36,6 +36,9 @@ jobs:
           sed -i "s/^NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN=.*/NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN=${{ secrets.NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN }}/" .env || echo "NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN=${{ secrets.NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN }}" >> .env
           sed -i "s/^NUXT_STORYBLOK_SPACE_ID=.*/NUXT_STORYBLOK_SPACE_ID=${{ secrets.NUXT_STORYBLOK_SPACE_ID }}/" .env || echo "NUXT_STORYBLOK_SPACE_ID=${{ secrets.NUXT_STORYBLOK_SPACE_ID }}" >> .env
           sed -i "s/^NUXT_STORYBLOK_MANAGEMENT_TOKEN=.*/NUXT_STORYBLOK_MANAGEMENT_TOKEN=${{ secrets.NUXT_STORYBLOK_MANAGEMENT_TOKEN }}/" .env || echo "NUXT_STORYBLOK_MANAGEMENT_TOKEN=${{ secrets.NUXT_STORYBLOK_MANAGEMENT_TOKEN }}" >> .env
+          sed -i "s/^MISTRAL_API_KEY=.*/MISTRAL_API_KEY=${{ secrets.MISTRAL_API_KEY }}/" .env || echo "MISTRAL_API_KEY=${{ secrets.MISTRAL_API_KEY }}" >> .env
+          sed -i "s/^NUXT_UNSPLASH_ACCESS_KEY=.*/NUXT_UNSPLASH_ACCESS_KEY=${{ secrets.NUXT_UNSPLASH_ACCESS_KEY }}/" .env || echo "NUXT_UNSPLASH_ACCESS_KEY=${{ secrets.NUXT_UNSPLASH_ACCESS_KEY }}" >> .env
+          sed -i "s/^DASHBOARD_PASSWORD=.*/DASHBOARD_PASSWORD=${{ secrets.DASHBOARD_PASSWORD }}/" .env || echo "DASHBOARD_PASSWORD=${{ secrets.DASHBOARD_PASSWORD }}" >> .env
 
       - name: 🛠️ Generate Static Site (Frontend)
         run: npm run generate
