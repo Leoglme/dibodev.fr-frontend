@@ -39,6 +39,7 @@ jobs:
           sed -i "s/^MISTRAL_API_KEY=.*/MISTRAL_API_KEY=${{ secrets.MISTRAL_API_KEY }}/" .env || echo "MISTRAL_API_KEY=${{ secrets.MISTRAL_API_KEY }}" >> .env
           sed -i "s/^NUXT_UNSPLASH_ACCESS_KEY=.*/NUXT_UNSPLASH_ACCESS_KEY=${{ secrets.NUXT_UNSPLASH_ACCESS_KEY }}/" .env || echo "NUXT_UNSPLASH_ACCESS_KEY=${{ secrets.NUXT_UNSPLASH_ACCESS_KEY }}" >> .env
           sed -i "s/^DASHBOARD_PASSWORD=.*/DASHBOARD_PASSWORD=${{ secrets.DASHBOARD_PASSWORD }}/" .env || echo "DASHBOARD_PASSWORD=${{ secrets.DASHBOARD_PASSWORD }}" >> .env
+          sed -i "s/^DASHBOARD_SESSION_TOKEN=.*/DASHBOARD_SESSION_TOKEN=${{ secrets.DASHBOARD_SESSION_TOKEN }}/" .env || echo "DASHBOARD_SESSION_TOKEN=${{ secrets.DASHBOARD_SESSION_TOKEN }}" >> .env
 
       - name: 🛠️ Generate Static Site (Frontend)
         run: npm run generate
