@@ -38,7 +38,7 @@ INTERDIT: "Boostez…", "Transformez…", "Découvrez…", "sur mesure", "révol
 
 Qualité SEO: le titre doit contenir (1) métier/niche, (2) douleur/problème concret, (3) type de solution (app, logiciel, outil, réservation, paiement, etc.).
 
-Règle PRIORITAIRE: si "optionalSentence" est fourni, respecte STRICTEMENT le métier et le problème. Reformule en titre lisible, sans changer le fond.
+Règle PRIORITAIRE: si une consigne utilisateur (optionalSentence) est fournie, respecte STRICTEMENT le métier, le problème et l'angle. Reprends dans le titre les termes distinctifs de la consigne : noms d'outils ou logiciels mentionnés (ex. tableur, CRM, outil précis), verbes d'action utilisés (structurer, éviter, remplacer…), et notions clés (sans X, avec Y). Reformule en une phrase lisible, sans généraliser ni perdre ces éléments.
 
 Interdiction d'année (2025, 2026…) sauf si l'utilisateur le demande explicitement.
 
@@ -69,26 +69,6 @@ const MARKETING_PHRASES = [
   'boostez votre',
   'transformez votre',
 ]
-
-const COMMON_VERBS = new Set([
-  'éviter',
-  'réduire',
-  'gérer',
-  'automatiser',
-  'suivre',
-  'planifier',
-  'facturer',
-  'encaisser',
-  'organiser',
-  'simplifier',
-  'limiter',
-  'éliminer',
-  'résoudre',
-  'centraliser',
-  'synchroniser',
-  'programmer',
-  'prendre',
-])
 
 const STOPWORDS_FR = new Set([
   'de',
@@ -228,12 +208,6 @@ function isLowQualityTopic(topic: string): { lowQuality: boolean; reasons: strin
     reasons.push('trop de mots vides, ressemble à une liste de mots-clés')
   }
 
-  const tokens = tokenize(topic)
-  const hasVerb = tokens.some((t) => COMMON_VERBS.has(t))
-  if (tokens.length >= 3 && !hasVerb) {
-    reasons.push('aucun verbe métier détecté (éviter, réduire, gérer, etc.)')
-  }
-
   if (lower.includes('comment éviter') && wordsLower.length <= 6) {
     reasons.push('"comment éviter" sans phrase complète')
   }
@@ -313,11 +287,15 @@ function isTooCloseToExisting(
   return { tooClose: false }
 }
 
-function buildUserMessage(body: SuggestSubjectBody, previousRejection?: { topic: string; reasons: string[] }): string {
+function buildUserMessage(
+  body: SuggestSubjectBody,
+  subjectsToAvoid: string[],
+  previousRejection?: { topic: string; reasons: string[] },
+): string {
   const optional = body.optionalSentence?.trim()
   const list =
-    body.existingSubjects.length > 0
-      ? `Sujets déjà traités (ne pas répéter):\n${body.existingSubjects.map((s) => `- ${s}`).join('\n')}`
+    subjectsToAvoid.length > 0
+      ? `Sujets déjà traités ou refusés (ne pas répéter, proposer un titre vraiment différent):\n${subjectsToAvoid.map((s) => `- ${s}`).join('\n')}`
       : 'Aucun article existant pour le moment.'
 
   const keywordHint = previousRejection?.reasons.some(
@@ -331,10 +309,10 @@ function buildUserMessage(body: SuggestSubjectBody, previousRejection?: { topic:
     : ''
 
   if (optional) {
-    const examples = `Exemples de reformulation (consigne → titre lisible):
+    const examples = `Exemples de reformulation (consigne → titre lisible, en gardant les termes importants):
 - "Comment éviter les annulations de dernière minute quand on est coach sportif" → "Coach sportif : comment éviter les annulations de dernière minute avec une appli"
-- "logiciel coiffeur rdv doublons" → "Coiffeur : gérer les doublons de rendez-vous avec un logiciel en ligne"`
-    return `CONSIGNE PRIORITAIRE: Reformule la consigne suivante en un titre d'article lisible (1 phrase, majuscule au début), sans changer le métier ni le problème. Même angle si indiqué.
+- "structurer ses chantiers sans Excel" → garder "structurer" et "sans Excel" (ou "sans tableur") dans le titre`
+    return `CONSIGNE PRIORITAIRE: Reformule la consigne suivante en un titre d'article lisible (1 phrase, majuscule au début). Conserve le métier, le problème et les termes distinctifs (outils cités, verbes précis, notions comme "sans X"). Ne généralise pas : si la consigne mentionne un outil ou une contrainte précise, intègre-la dans le titre.
 
 ${optional}
 
@@ -379,11 +357,13 @@ export default defineEventHandler(async (event: H3Event): Promise<SuggestSubject
       statusMessage: 'existingSubjects must be an array of strings.',
     })
   }
+  const rejected = Array.isArray(body.rejectedSubjects) ? body.rejectedSubjects : []
+  const subjectsToAvoid = [...body.existingSubjects, ...rejected]
 
   let lastRejection: { topic: string; reasons: string[] } | undefined
 
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
-    const userMessage = buildUserMessage(body, lastRejection)
+    const userMessage = buildUserMessage(body, subjectsToAvoid, lastRejection)
     const { content: raw } = await mistralGenerate({
       apiKey,
       systemInstruction: SYSTEM,
@@ -433,7 +413,7 @@ export default defineEventHandler(async (event: H3Event): Promise<SuggestSubject
       }
     }
 
-    const { tooClose, reason } = isTooCloseToExisting(suggestedTopic, body.existingSubjects)
+    const { tooClose, reason } = isTooCloseToExisting(suggestedTopic, subjectsToAvoid)
     if (tooClose) {
       lastRejection = { topic: suggestedTopic, reasons: [reason ?? 'trop proche'] }
       continue

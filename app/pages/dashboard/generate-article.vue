@@ -57,7 +57,7 @@
         <DibodevButton type="button" :disabled="loadingArticle" @click="generateArticle">
           {{ loadingArticle ? 'Génération…' : 'OK, générer l’article' }}
         </DibodevButton>
-        <DibodevButton type="button" outlined :disabled="loadingSubject" @click="suggestSubject">
+        <DibodevButton type="button" outlined :disabled="loadingSubject" @click="onRequestAnotherSubject">
           Non, un autre sujet
         </DibodevButton>
       </div>
@@ -279,6 +279,7 @@ type PersistedState = {
 
 const optionalSentence: Ref<string> = ref('')
 const existingSubjects: Ref<string[]> = ref([])
+const rejectedSubjects: Ref<string[]> = ref([])
 const step: Ref<Step> = ref('idle')
 const suggestedTopic: Ref<string> = ref('')
 const loadingSubject: Ref<boolean> = ref(false)
@@ -361,6 +362,7 @@ function resetAll(): void {
   step.value = 'idle'
   optionalSentence.value = ''
   suggestedTopic.value = ''
+  rejectedSubjects.value = []
   article.value = null
   chosenCoverUrl.value = null
   suggestedPhoto.value = null
@@ -387,6 +389,10 @@ watch(
   { deep: true },
 )
 
+watch(optionalSentence, () => {
+  rejectedSubjects.value = []
+})
+
 async function fetchSubjects(): Promise<void> {
   try {
     const data = await $fetch<{ existingSubjects: string[] }>('/api/dashboard/articles/subjects')
@@ -408,6 +414,7 @@ async function suggestSubject(): Promise<void> {
       body: {
         existingSubjects: existingSubjects.value,
         optionalSentence: optionalSentence.value.trim() || undefined,
+        rejectedSubjects: rejectedSubjects.value.length > 0 ? rejectedSubjects.value : undefined,
       },
     })
     suggestedTopic.value = data.suggestedTopic
@@ -418,6 +425,13 @@ async function suggestSubject(): Promise<void> {
   } finally {
     loadingSubject.value = false
   }
+}
+
+function onRequestAnotherSubject(): void {
+  if (suggestedTopic.value) {
+    rejectedSubjects.value = [...rejectedSubjects.value, suggestedTopic.value]
+  }
+  suggestSubject()
 }
 
 async function generateArticle(): Promise<void> {

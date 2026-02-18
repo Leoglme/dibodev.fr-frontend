@@ -5,6 +5,8 @@
 export type SuggestSubjectBody = {
   existingSubjects: string[]
   optionalSentence?: string
+  /** Sujets déjà proposés et refusés par l'utilisateur (éviter de les reproposer). */
+  rejectedSubjects?: string[]
 }
 
 export type SuggestSubjectResponse = {

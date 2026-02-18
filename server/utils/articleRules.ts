@@ -27,13 +27,13 @@ export const DEFAULT_BANNED_FILLER_PHRASES: string[] = [
 ]
 
 export const ARTICLE_RULES = {
-  maxCharsIntro: 600,
-  maxCharsCost: 675,
-  maxCharsExample: 500,
+  maxCharsIntro: 700,
+  maxCharsCost: 800,
+  maxCharsExample: 550,
   maxCharsCTA: 375,
-  maxCharsPerSectionDefault: 700,
-  maxCharsTotal: 9_000,
-  maxTotalCharsArticle: 9_000,
+  maxCharsPerSectionDefault: 800,
+  maxCharsTotal: 10_500,
+  maxTotalCharsArticle: 10_500,
   maxSectionSimilarity: 0.45,
   maxRetriesPerSection: 2,
   maxRetriesFullArticle: 2,

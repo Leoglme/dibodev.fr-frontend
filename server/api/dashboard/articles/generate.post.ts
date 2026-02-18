@@ -52,7 +52,15 @@ Règles : Pas d'année (2024, 2025, 2026...) dans title/slug/tags/meta. "Rennes"
 TITRE SEO STRATÉGIQUE (OBLIGATOIRE) :
 - INTERDIT : "Application pour [métier]" ou "Logiciel pour [métier]".
 - Forcer UN de ces angles : angle problème ("Pourquoi ..."), angle perte ("Ce que ..."), angle prise de conscience ("Comment ..."), angle transformation ("De ... à ..."), angle friction métier spécifique.
-- Si générique → régénération automatique.`
+- Si générique → régénération automatique.
+
+EXCERPT (OBLIGATOIRE, distinct du titre) :
+- 1 à 2 phrases qui RÉSUMENT l'article (accroche, bénéfice). Longueur : 100 à 180 caractères.
+- INTERDIT : recopier le titre. Formuler autrement (ex. "Passer d'Excel à un outil dédié pour suivre vos chantiers au quotidien.").
+
+META DESCRIPTION (OBLIGATOIRE, distincte du titre) :
+- 140 à 160 caractères exactement. Formulation orientée bénéfice / clic, pour la SERP Google.
+- INTERDIT : répéter le titre mot pour mot. Proposer une phrase qui complète ou reformule (problème + solution + action).`
 
 const MIN_ARTICLE_WORDS = 1200
 const MAX_ARTICLE_WORDS = 1800
@@ -77,7 +85,7 @@ LIMITES DE TAILLE (caractères, à respecter strictement) :
 - Exemple concret : max ${ARTICLE_RULES.maxCharsExample} car. UN SEUL paragraphe (zéro double saut de ligne).
 - On en parle ? : max ${ARTICLE_RULES.maxCharsCTA} car.
 - Autres sections : max ${ARTICLE_RULES.maxCharsPerSectionDefault} car chacune.
-- Total article : max ${ARTICLE_RULES.maxCharsTotal} car.
+- Total article : max ${ARTICLE_RULES.maxCharsTotal} car. Viser au moins 8 500 caractères pour un article riche.
 
 CHIFFRES : interdit d'écrire des chiffres (0-9) ou des quantités en lettres (deux, trois, dix, vingt, cent, etc.). Tu peux utiliser "un" et "une" (articles). Sinon : "plusieurs", "quelques", "une poignée", "une série de", etc.
 
@@ -87,7 +95,7 @@ Exemple concret : 1 paragraphe uniquement (pas de \\n\\n au milieu). Récit au p
 
 Section "Pourquoi les solutions classiques ne suffisent pas" : une ligne "**Objection :** ..." (texte sur la même ligne), une ligne vide, puis "**Réponse :**" suivi d'un paragraphe (obligatoire). Optionnel : max 4 puces "- " après la réponse.
 
-FAQ : 4 questions max. Réponses très courtes (1-2 phrases).
+FAQ : 4 questions max. Réponses très courtes (1-2 phrases). Pour les questions sur le délai ou la durée (ex. "Combien de temps ?"), donner des repères concrets SANS chiffres : ex. "premier livrable en quelques semaines", "de la simple automatisation au projet complet", "selon l'ampleur du besoin".
 
 CTA "On en parle ?" : doit contenir (1) une action (audit / diagnostic / appel / échange) ET (2) un livrable concret (plan d'action, recommandations, checklist personnalisée). Pas de phrase vague seule ("contactez-moi", "on en parle" sans livrable).
 
@@ -219,10 +227,10 @@ BRIEF MÉTIER (contexte interne) :
 MÉTADONNÉES :
 - title : titre SEO STRATÉGIQUE. Pas de "Application pour [métier]". Forcer UN angle : problème ("Pourquoi ..."), perte ("Ce que ..."), prise de conscience ("Comment ..."), transformation ("De ... à ...") ou friction métier spécifique. SANS année.
 - slug : slug longue traîne, minuscules, tirets, 25-80 caractères, SANS année
-- excerpt : résumé court
+- excerpt : 1 à 2 phrases de RÉSUMÉ (100-180 car.), JAMAIS une copie du titre. Reformuler le bénéfice ou l'accroche (ex. "Passer à un outil dédié pour centraliser devis, plannings et factures.").
 - metaTitle : 55-65 caractères, SANS année
-- metaDescription : 140-160 caractères, SANS année
-- tags : tableau de 5 à 8 tags SEO (ce que les gens tapent dans Google). Ex: "réservation en ligne", "gestion annulations", "liste d'attente", "no-show", "acompte". INTERDIT : stopwords (les, une, avec, de, du, pour...), mots seuls génériques (coach, sportif, application). Préférer des expressions ou mots-clés métier. ("Rennes" max 1 fois), SANS année
+- metaDescription : 140-160 caractères, formulation DIFFÉRENTE du titre, orientée clic (problème + solution ou promesse). Pas de répétition du titre.
+- tags : tableau de 5 à 8 tags SEO — expressions ou mots-clés que les gens tapent dans Google, LIÉS AU SUJET de l'article. Par thème : BTP/chantiers → "gestion de chantiers", "devis BTP", "planning chantier", "facturation artisan"; RDV/réservation → "réservation en ligne", "gestion annulations", "no-show"; général → "automatisation", "outil métier", "logiciel sur mesure". INTERDIT : mots seuls vagues (artisan, gerer, dedie), stopwords. Préférer des expressions (2+ mots). "Rennes" max 1 fois. SANS année.
 - suggestedTopic : le sujet tel que reçu`
 }
 
@@ -263,6 +271,22 @@ function parseBriefMetier(obj: unknown): BriefMetier {
     lexiqueMetier: arr(o.lexiqueMetier),
     scenariosTerrain: arr(o.scenariosTerrain),
   }
+}
+
+/** Vérifie si excerpt ou metaDescription sont invalides (copie du titre ou meta hors 140-160 car.). */
+function hasInvalidExcerptOrMeta(
+  fiche: { title?: string; excerpt?: string; metaDescription?: string } | null,
+): boolean {
+  if (!fiche) return true
+  const title = (typeof fiche.title === 'string' ? fiche.title.trim() : '').toLowerCase()
+  const excerpt = (typeof fiche.excerpt === 'string' ? fiche.excerpt.trim() : '').toLowerCase()
+  const meta = typeof fiche.metaDescription === 'string' ? fiche.metaDescription.trim() : ''
+  if (!title) return false
+  if (excerpt && excerpt === title) return true
+  if (excerpt.length > 0 && excerpt.length < 50) return true
+  if (meta && (meta.length < 140 || meta.length > 165)) return true
+  if (meta && meta.toLowerCase() === title) return true
+  return false
 }
 
 /** Stopwords FR à exclure des tags (inutiles pour SEO). */
@@ -341,19 +365,26 @@ const GENERIC_TAGS_FORBIDDEN = new Set([
   'solution',
   'logiciels',
   'applications',
+  'gerer',
+  'dedie',
+  'artisan',
 ])
 
-/** Tags SEO pertinents (ce que les gens cherchent). */
-const FALLBACK_TAGS = [
-  'réservation en ligne',
-  'gestion annulations',
-  "liste d'attente",
-  'rappels',
-  'no-show',
-  'acompte',
-  'automatisation',
-  'sur mesure',
-]
+/** Expressions dérivées du sujet (slug) pour compléter les tags sans utiliser de fallbacks hors-sujet. */
+function deriveTagsFromTopic(suggestedTopic: string): string[] {
+  const slug = slugFromTopic(suggestedTopic)
+  const words = slug.split('-').filter((w) => w.length >= 4 && !TAG_STOPWORDS_FR.has(w))
+  const derived: string[] = []
+  const seen = new Set<string>()
+  for (const w of words) {
+    if (GENERIC_TAGS_FORBIDDEN.has(w) || seen.has(w)) continue
+    seen.add(w)
+    derived.push(`gestion ${w}`)
+    derived.push(w)
+  }
+  derived.push('automatisation', 'outil métier', 'logiciel sur mesure')
+  return filterTags(derived.filter((t) => t.length >= TAG_MIN_LENGTH))
+}
 
 function filterTags(tags: string[]): string[] {
   return tags.filter((t) => {
@@ -370,7 +401,8 @@ function ensureTagsCount(tags: string[], suggestedTopic: string): string[] {
   if (tags.length > MAX_TAGS) return tags.slice(0, MAX_TAGS)
   const slugWords = slugFromTopic(suggestedTopic).split('-').filter(Boolean)
   const fromSlugFiltered = filterTags(slugWords)
-  const combined = [...new Set([...tags, ...fromSlugFiltered, ...FALLBACK_TAGS])]
+  const derivedFromTopic = deriveTagsFromTopic(suggestedTopic)
+  const combined = [...new Set([...tags, ...fromSlugFiltered, ...derivedFromTopic])]
   return combined.slice(0, Math.min(Math.max(combined.length, MIN_TAGS), MAX_TAGS))
 }
 
@@ -451,7 +483,8 @@ export default defineEventHandler(async (event: H3Event): Promise<GenerateArticl
 
     if (!ficheParsed) continue
     const rawTitle = (typeof ficheParsed.title === 'string' ? ficheParsed.title.trim() : '') || ''
-    if (!hasGenericTitle(rawTitle) || ficheAttempt > MAX_RETRIES_FICHE) break
+    const invalidMeta = hasInvalidExcerptOrMeta(ficheParsed)
+    if ((!hasGenericTitle(rawTitle) && !invalidMeta) || ficheAttempt > MAX_RETRIES_FICHE) break
   }
 
   if (!ficheParsed) {
@@ -483,6 +516,11 @@ export default defineEventHandler(async (event: H3Event): Promise<GenerateArticl
 
   let excerpt = (typeof ficheParsed?.excerpt === 'string' ? ficheParsed.excerpt.trim() : '') || title
   excerpt = removeBannedYears(excerpt)
+  if (excerpt.toLowerCase() === title.toLowerCase() || excerpt.length < 50) {
+    const metaRaw = typeof ficheParsed?.metaDescription === 'string' ? ficheParsed.metaDescription.trim() : ''
+    excerpt = metaRaw.length >= 100 && metaRaw.length <= 180 ? metaRaw : `${title} — conseils et mise en place.`
+    excerpt = removeBannedYears(excerpt)
+  }
 
   let metaTitle = (typeof ficheParsed?.metaTitle === 'string' ? ficheParsed.metaTitle.trim() : '') || title
   metaTitle = removeBannedYears(metaTitle)
@@ -490,6 +528,11 @@ export default defineEventHandler(async (event: H3Event): Promise<GenerateArticl
   let metaDescription =
     (typeof ficheParsed?.metaDescription === 'string' ? ficheParsed.metaDescription.trim() : '') || excerpt
   metaDescription = removeBannedYears(metaDescription)
+  if (metaDescription.length < 140 || metaDescription.length > 165) {
+    metaDescription =
+      excerpt.length >= 140 ? excerpt.slice(0, 160) : `${excerpt} Retrouvez conseils et accompagnement sur mesure.`
+    metaDescription = removeBannedYears(metaDescription).slice(0, 160)
+  }
 
   const suggestedTopic =
     (typeof ficheParsed?.suggestedTopic === 'string' ? ficheParsed.suggestedTopic.trim() : '') || body.suggestedTopic
