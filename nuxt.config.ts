@@ -5,11 +5,15 @@ export default defineNuxtConfig({
   app: {
     head: {
       script: [
-        {
-          src: 'https://umami.dibodev.fr/script.js',
-          defer: true,
-          'data-website-id': 'c1e02f13-f416-4059-b69c-e29da1acbcff',
-        },
+        ...(process.env.NODE_ENV === 'production'
+          ? [
+              {
+                src: 'https://umami.dibodev.fr/script.js',
+                defer: true,
+                'data-website-id': 'c1e02f13-f416-4059-b69c-e29da1acbcff',
+              },
+            ]
+          : []),
       ],
     },
   },
