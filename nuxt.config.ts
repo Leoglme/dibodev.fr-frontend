@@ -28,6 +28,9 @@ export default defineNuxtConfig({
     unsplashAccessKey: process.env.NUXT_UNSPLASH_ACCESS_KEY || '',
     dashboardPassword: process.env.DASHBOARD_PASSWORD || '',
     dashboardSessionToken: process.env.DASHBOARD_SESSION_TOKEN || '',
+    googleClientId: process.env.GOOGLE_CLIENT_ID || '',
+    googleClientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
+    gscRefreshToken: process.env.GSC_REFRESH_TOKEN || '',
     public: {
       storyblok: {
         accessToken: process.env.NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN || '',
