@@ -3,8 +3,8 @@
     <div class="min-w-0">
       <h1 class="text-2xl font-semibold text-gray-100">Indexation Google</h1>
       <p class="mt-1 text-gray-200">
-        Liste des pages du site (accueil, contact, blog, projets) et statut d’indexation dans Google (Search
-        Console). Les données sont lues depuis le cache ; utilise « Actualiser » pour mettre à jour.
+        Liste des pages du site (accueil, contact, blog, projets) et statut d’indexation dans Google (Search Console).
+        Les données sont lues depuis le cache ; utilise « Actualiser » pour mettre à jour.
       </p>
     </div>
 
@@ -12,8 +12,8 @@
 
     <div class="flex w-full flex-col gap-4">
       <div class="flex w-full flex-col gap-4 md:flex-row md:flex-wrap md:items-end md:justify-between">
-        <div class="flex flex-col w-full flex-wrap items-end gap-3 sm:flex-row sm:gap-4 md:min-w-0 md:flex-1">
-          <div class="min-w-0 w-full [&>*]:!min-w-0 md:max-w-[180px]">
+        <div class="flex w-full flex-col flex-wrap items-end gap-3 sm:flex-row sm:gap-4 md:min-w-0 md:flex-1">
+          <div class="w-full min-w-0 md:max-w-[180px] [&>*]:!min-w-0">
             <DibodevSelect
               id="filter-verdict"
               label="Verdict"
@@ -22,7 +22,7 @@
               @update:model-value="selectedVerdict = $event"
             />
           </div>
-          <div class="min-w-0 w-full [&>*]:!min-w-0 md:max-w-[180px]">
+          <div class="w-full min-w-0 md:max-w-[180px] [&>*]:!min-w-0">
             <DibodevSelect
               id="filter-type"
               label="Type"
@@ -33,19 +33,15 @@
           </div>
         </div>
         <div class="w-full min-w-0 flex-1 md:max-w-md">
-          <DibodevSearchBar
-            title="Recherche"
-            placeholder="Titre ou URL…"
-            v-model:value="searchText"
-          />
+          <DibodevSearchBar title="Recherche" placeholder="Titre ou URL…" v-model:value="searchText" />
         </div>
       </div>
       <div class="flex w-full justify-end sm:justify-start">
-        <DibodevButton
-          :disabled="loading || refreshStatus === 'running'"
-          @click="startRefresh"
-        >
-          <span v-if="refreshStatus === 'running'" class="mr-2 inline-block h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+        <DibodevButton :disabled="loading || refreshStatus === 'running'" @click="startRefresh">
+          <span
+            v-if="refreshStatus === 'running'"
+            class="mr-2 inline-block h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"
+          />
           {{ refreshStatus === 'running' ? 'Mise à jour…' : 'Actualiser' }}
         </DibodevButton>
       </div>
@@ -63,7 +59,7 @@
       {{ items.length === 0 ? 'Aucune page pour le moment.' : 'Aucun résultat pour les filtres choisis.' }}
     </div>
 
-    <div v-else class="min-w-0 w-full sm:max-w-[calc(100vw-310px)]">
+    <div v-else class="w-full min-w-0 sm:max-w-[calc(100vw-310px)]">
       <DibodevTable
         :fields="indexingTableFields"
         :card-fields="indexingCardFields"
@@ -79,8 +75,11 @@
           <template v-if="(item as IndexingItem).coverageState">
             {{ (item as IndexingItem).coverageState }}
             <span
-              v-if="(item as IndexingItem).googleCanonical && (item as IndexingItem).coverageState?.toLowerCase().includes('redirection')"
-              class="block mt-1 text-xs text-gray-500"
+              v-if="
+                (item as IndexingItem).googleCanonical &&
+                (item as IndexingItem).coverageState?.toLowerCase().includes('redirection')
+              "
+              class="mt-1 block text-xs text-gray-500"
             >
               Redirige vers {{ (item as IndexingItem).googleCanonical }}
             </span>
@@ -110,11 +109,7 @@
         </template>
         <template #url="{ item }">
           <div class="flex min-w-0 flex-wrap items-center justify-start gap-2 break-words sm:justify-end">
-            <DibodevLink
-              :link="(item as IndexingItem).url"
-              external-link
-              class="min-w-0 break-all"
-            >
+            <DibodevLink :link="(item as IndexingItem).url" external-link class="min-w-0 break-all">
               {{ (item as IndexingItem).url }}
             </DibodevLink>
             <DibodevButton size="xs" outlined class="shrink-0" @click="copyUrl((item as IndexingItem).url)">
@@ -136,7 +131,10 @@
               :disabled="refreshingUrl === (item as IndexingItem).url"
               @click="refreshUrl((item as IndexingItem).url)"
             >
-              <span v-if="refreshingUrl === (item as IndexingItem).url" class="mr-1.5 inline-block h-3.5 w-3.5 animate-spin rounded-full border-2 border-current border-t-transparent" />
+              <span
+                v-if="refreshingUrl === (item as IndexingItem).url"
+                class="mr-1.5 inline-block h-3.5 w-3.5 animate-spin rounded-full border-2 border-current border-t-transparent"
+              />
               {{ refreshingUrl === (item as IndexingItem).url ? 'Actualisation…' : 'Actualiser' }}
             </DibodevButton>
             <DibodevButton
@@ -148,7 +146,9 @@
             >
               Search Console
             </DibodevButton>
-            <span v-if="!gscConnected && !(item as IndexingItem).inspectionResultLink" class="text-sm text-gray-400">GSC non connecté</span>
+            <span v-if="!gscConnected && !(item as IndexingItem).inspectionResultLink" class="text-sm text-gray-400"
+              >GSC non connecté</span
+            >
           </div>
         </template>
       </DibodevTable>
@@ -156,7 +156,10 @@
 
     <div v-if="!gscConnected && !loading" class="rounded-lg border border-amber-600/50 bg-amber-500/10 p-4">
       <p class="text-sm text-amber-200">
-        Configure Google Search Console pour afficher le statut. Ajoute <code class="rounded bg-gray-800 px-1">GSC_SERVICE_ACCOUNT_JSON</code> dans ton fichier <code class="rounded bg-gray-800 px-1">.env</code> avec la clé JSON d'un Service Account, puis ajoute l'email du SA comme <strong>Owner</strong> dans Search Console.
+        Configure Google Search Console pour afficher le statut. Ajoute
+        <code class="rounded bg-gray-800 px-1">GSC_SERVICE_ACCOUNT_JSON</code> dans ton fichier
+        <code class="rounded bg-gray-800 px-1">.env</code> avec la clé JSON d'un Service Account, puis ajoute l'email du
+        SA comme <strong>Owner</strong> dans Search Console.
       </p>
     </div>
   </div>
@@ -261,11 +264,7 @@ const filteredItems = computed(() => {
   if (t) list = list.filter((row) => row.type === t)
   const q = searchText.value.trim().toLowerCase()
   if (q) {
-    list = list.filter(
-      (row) =>
-        row.title.toLowerCase().includes(q) ||
-        row.url.toLowerCase().includes(q),
-    )
+    list = list.filter((row) => row.title.toLowerCase().includes(q) || row.url.toLowerCase().includes(q))
   }
   return list
 })
@@ -274,7 +273,13 @@ function formatLastCrawl(iso?: string): string {
   if (!iso) return '—'
   try {
     const d = new Date(iso)
-    return d.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+    return d.toLocaleDateString('fr-FR', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+    })
   } catch {
     return iso
   }
@@ -291,7 +296,7 @@ function getSignalLabel(item: IndexingItem): string {
     item.lastCrawlTime &&
     Date.now() - new Date(item.lastCrawlTime).getTime() < ONE_DAY_MS
   ) {
-    return 'Crawl récent — en attente d\'indexation'
+    return "Crawl récent — en attente d'indexation"
   }
   return item.coverageState?.trim() || 'À vérifier'
 }
@@ -301,7 +306,7 @@ function getSignalBadgeClass(item: IndexingItem): string {
   if (label === 'Indexée') return 'bg-emerald-500/20 text-emerald-300'
   if (label === 'Crawl OK, indexation pas encore faite') return 'bg-amber-500/30 text-amber-200'
   if (label === 'Non découverte (pas crawlé)') return 'bg-red-500/20 text-red-300'
-  if (label === 'Crawl récent — en attente d\'indexation') return 'bg-blue-500/30 text-blue-200'
+  if (label === "Crawl récent — en attente d'indexation") return 'bg-blue-500/30 text-blue-200'
   return 'bg-purple-500/20 text-purple-200'
 }
 
@@ -330,7 +335,6 @@ async function fetchFromApi(force = false): Promise<void> {
     loading.value = false
   }
 }
-
 
 let pollIntervalId: ReturnType<typeof setInterval> | null = null
 
@@ -382,7 +386,7 @@ async function refreshUrl(url: string): Promise<void> {
     const cache = useState<IndexingApiResponse | null>(CACHE_KEY)
     if (cache.value) cache.value = { ...cache.value, items: [...items.value] }
   } catch (e) {
-    error.value = e instanceof Error ? e.message : 'Erreur lors de l\'actualisation de l\'URL.'
+    error.value = e instanceof Error ? e.message : "Erreur lors de l'actualisation de l'URL."
   } finally {
     refreshingUrl.value = null
   }

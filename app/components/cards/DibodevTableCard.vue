@@ -16,13 +16,11 @@
           <div class="text-base font-medium text-gray-100">
             {{ field.label }}
           </div>
-          <div class="flex flex-col justify-end gap-2 break-words text-right text-sm font-medium text-gray-200">
+          <div class="flex flex-col justify-end gap-2 text-right text-sm font-medium break-words text-gray-200">
             <slot v-if="hasSlot(field.key)" :name="field.key" :item="props.item" />
             <template v-else>
               {{
-                field.formatValue
-                  ? field.formatValue(getValue(props.item, field.key))
-                  : getValue(props.item, field.key)
+                field.formatValue ? field.formatValue(getValue(props.item, field.key)) : getValue(props.item, field.key)
               }}
             </template>
           </div>
@@ -41,11 +39,7 @@ import type { PropType, SetupContext } from 'vue'
 import { useSlots } from 'vue'
 import DibodevSpinner from '~/components/ui/DibodevSpinner.vue'
 import DibodevDivider from '~/components/decorators/DibodevDivider.vue'
-import type {
-  DibodevTableCardField,
-  DibodevTableCardItem,
-  DibodevTableCardProps,
-} from '~/core/types/DibodevTableCard'
+import type { DibodevTableCardField, DibodevTableCardItem, DibodevTableCardProps } from '~/core/types/DibodevTableCard'
 
 const props: DibodevTableCardProps = defineProps({
   fields: { type: Array as PropType<DibodevTableCardField[]>, required: true },

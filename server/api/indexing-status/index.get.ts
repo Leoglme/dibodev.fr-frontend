@@ -27,15 +27,8 @@ export default defineEventHandler(async (event: H3Event): Promise<IndexingStatus
     }
   }
 
-  const [sources, rows, refresh]: [
-    IndexingStatusRow[],
-    Record<string, IndexingStatusRow>,
-    IndexingRefreshState,
-  ] = await Promise.all([
-    getIndexingSources(deliveryToken),
-    getIndexingRows(),
-    getRefreshState(),
-  ])
+  const [sources, rows, refresh]: [IndexingStatusRow[], Record<string, IndexingStatusRow>, IndexingRefreshState] =
+    await Promise.all([getIndexingSources(deliveryToken), getIndexingRows(), getRefreshState()])
 
   const items: IndexingStatusRow[] = sources.map((source: IndexingStatusRow) => {
     const cached: IndexingStatusRow | undefined = rows[source.url]

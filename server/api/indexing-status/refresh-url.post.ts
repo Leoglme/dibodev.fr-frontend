@@ -15,9 +15,7 @@ import type { IndexingStatusRow } from '~~/server/types/indexing'
  */
 export default defineEventHandler(async (event: H3Event) => {
   requireDashboardAuth(event)
-  const body: { url?: string } = await readBody<{ url?: string }>(event).catch(
-    () => ({} as { url?: string }),
-  )
+  const body: { url?: string } = await readBody<{ url?: string }>(event).catch(() => ({}) as { url?: string })
   const url: string | undefined = body.url?.trim()
   if (!url) {
     throw createError({ statusCode: 400, statusMessage: 'Body must contain url.' })
@@ -60,11 +58,11 @@ export default defineEventHandler(async (event: H3Event) => {
   try {
     result = await inspectUrl(url, accessToken, quotaProjectId)
   } catch (e) {
-    const msg = e instanceof Error ? e.message : 'Erreur lors de l\'inspection de l\'URL.'
+    const msg = e instanceof Error ? e.message : "Erreur lors de l'inspection de l'URL."
     console.error('[refresh-url] Inspect error:', msg)
     throw createError({
       statusCode: 500,
-      statusMessage: 'Erreur lors de l\'inspection de l\'URL. Réessaie plus tard.',
+      statusMessage: "Erreur lors de l'inspection de l'URL. Réessaie plus tard.",
     })
   }
 

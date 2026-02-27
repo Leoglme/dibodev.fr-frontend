@@ -7,7 +7,7 @@
       <div class="grid gap-6">
         <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="800" class="flex items-center gap-6">
           <div
-            class="flex h-24 w-24 min-h-24 min-w-24 items-center justify-center rounded-2xl border-1 border-gray-200 p-3"
+            class="flex h-24 min-h-24 w-24 min-w-24 items-center justify-center rounded-2xl border-1 border-gray-200 p-3"
             :style="{ backgroundColor: props.secondaryColor }"
           >
             <img
@@ -60,7 +60,12 @@
           />
         </DibodevButton>
 
-        <DibodevButton v-if="props.siteUrl" :to="props.siteUrl" :backgroundColor="props.primaryColor" class="w-full sm:max-w-xs">
+        <DibodevButton
+          v-if="props.siteUrl"
+          :to="props.siteUrl"
+          :backgroundColor="props.primaryColor"
+          class="w-full sm:max-w-xs"
+        >
           {{ $t('project.landing.viewSite') }}
           <DibodevIcon name="ExternalLink" mode="stroke" :width="24" :height="24" class="ml-2" />
         </DibodevButton>

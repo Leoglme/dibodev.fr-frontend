@@ -87,11 +87,7 @@ export async function getGscAccessToken(config: GscAuthConfig): Promise<string> 
     return getAccessTokenFromServiceAccount(config.gscServiceAccountJson.trim())
   }
   if (config.gscRefreshToken && config.googleClientId && config.googleClientSecret) {
-    return getAccessTokenFromRefreshToken(
-      config.googleClientId,
-      config.googleClientSecret,
-      config.gscRefreshToken,
-    )
+    return getAccessTokenFromRefreshToken(config.googleClientId, config.googleClientSecret, config.gscRefreshToken)
   }
   throw new Error(
     'Configure either GSC_SERVICE_ACCOUNT_JSON (Service Account) or GSC_REFRESH_TOKEN + GOOGLE_CLIENT_ID + GOOGLE_CLIENT_SECRET',
