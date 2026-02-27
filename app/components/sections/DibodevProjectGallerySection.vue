@@ -42,6 +42,7 @@
               width="1200"
               height="675"
               @load="onMedia1Load"
+              @error="onMedia1Error"
             />
           </div>
           <div
@@ -89,6 +90,7 @@
               width="1200"
               height="675"
               @load="onMedia2Load"
+              @error="onMedia2Error"
             />
           </div>
           <div
@@ -138,6 +140,7 @@
               width="1200"
               height="675"
               @load="onSingleMediaLoad"
+              @error="onSingleMediaError"
             />
           </div>
           <div
@@ -169,7 +172,7 @@
       <Transition name="modal">
         <div
           v-if="isModalOpen"
-          class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
+          class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
           @click="closeModal"
         >
           <button
@@ -196,7 +199,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import type { ComputedRef, PropType, Ref } from 'vue'
 
 /* PROPS */
@@ -238,7 +241,7 @@ const modalImageAlt: Ref<string> = ref<string>('')
  */
 const onMedia1Load = (event: Event): void => {
   media1Loaded.value = true
-  const img = event.target as HTMLImageElement
+  const img: HTMLImageElement = event.target as HTMLImageElement
   if (img.naturalWidth && img.naturalHeight) {
     const ratio: number = img.naturalWidth / img.naturalHeight
     media1IsPortrait.value = ratio < 1
@@ -247,12 +250,20 @@ const onMedia1Load = (event: Event): void => {
 }
 
 /**
+ * Handle media1 image error
+ */
+const onMedia1Error = (): void => {
+  console.error('Failed to load media1 image')
+  media1Loaded.value = true
+}
+
+/**
  * Handle media2 image load to calculate its aspect ratio
  * @param event - The load event
  */
 const onMedia2Load = (event: Event): void => {
   media2Loaded.value = true
-  const img = event.target as HTMLImageElement
+  const img: HTMLImageElement = event.target as HTMLImageElement
   if (img.naturalWidth && img.naturalHeight) {
     const ratio: number = img.naturalWidth / img.naturalHeight
     media2IsPortrait.value = ratio < 1
@@ -261,12 +272,20 @@ const onMedia2Load = (event: Event): void => {
 }
 
 /**
+ * Handle media2 image error
+ */
+const onMedia2Error = (): void => {
+  console.error('Failed to load media2 image')
+  media2Loaded.value = true
+}
+
+/**
  * Handle single media image load to calculate its aspect ratio
  * @param event - The load event
  */
 const onSingleMediaLoad = (event: Event): void => {
   singleMediaLoaded.value = true
-  const img = event.target as HTMLImageElement
+  const img: HTMLImageElement = event.target as HTMLImageElement
   if (img.naturalWidth && img.naturalHeight) {
     const ratio: number = img.naturalWidth / img.naturalHeight
     if (props.media1) {
@@ -277,6 +296,14 @@ const onSingleMediaLoad = (event: Event): void => {
       media2Ratio.value = `${img.naturalWidth} / ${img.naturalHeight}`
     }
   }
+}
+
+/**
+ * Handle single media image error
+ */
+const onSingleMediaError = (): void => {
+  console.error('Failed to load single media image')
+  singleMediaLoaded.value = true
 }
 
 /**
@@ -335,6 +362,63 @@ const singleMediaRatio: ComputedRef<string> = computed<string>(() => {
  */
 const singleMediaIsPortrait: ComputedRef<boolean> = computed<boolean>(() => {
   return props.media1 ? media1IsPortrait.value : media2IsPortrait.value
+})
+
+/**
+ * Check if images are already loaded on mount (for cached images)
+ */
+onMounted((): void => {
+  if (hasBothMedia.value) {
+    const img1: HTMLImageElement | null = document.querySelector(`img[alt="${props.projectName} - preview 1"]`)
+    if (img1 && img1.complete && img1.naturalHeight !== 0) {
+      media1Loaded.value = true
+      if (img1.naturalWidth && img1.naturalHeight) {
+        const ratio: number = img1.naturalWidth / img1.naturalHeight
+        media1IsPortrait.value = ratio < 1
+        media1Ratio.value = `${img1.naturalWidth} / ${img1.naturalHeight}`
+      }
+    }
+
+    const img2: HTMLImageElement | null = document.querySelector(`img[alt="${props.projectName} - preview 2"]`)
+    if (img2 && img2.complete && img2.naturalHeight !== 0) {
+      media2Loaded.value = true
+      if (img2.naturalWidth && img2.naturalHeight) {
+        const ratio: number = img2.naturalWidth / img2.naturalHeight
+        media2IsPortrait.value = ratio < 1
+        media2Ratio.value = `${img2.naturalWidth} / ${img2.naturalHeight}`
+      }
+    }
+  } else if (singleMedia.value) {
+    const imgSingle: HTMLImageElement | null = document.querySelector(`img[alt="${props.projectName} - preview"]`)
+    if (imgSingle && imgSingle.complete && imgSingle.naturalHeight !== 0) {
+      singleMediaLoaded.value = true
+      if (imgSingle.naturalWidth && imgSingle.naturalHeight) {
+        const ratio: number = imgSingle.naturalWidth / imgSingle.naturalHeight
+        if (props.media1) {
+          media1IsPortrait.value = ratio < 1
+          media1Ratio.value = `${imgSingle.naturalWidth} / ${imgSingle.naturalHeight}`
+        } else {
+          media2IsPortrait.value = ratio < 1
+          media2Ratio.value = `${imgSingle.naturalWidth} / ${imgSingle.naturalHeight}`
+        }
+      }
+    }
+  }
+
+  setTimeout((): void => {
+    if (!media1Loaded.value && props.media1) {
+      console.warn('Media1 failed to trigger load event, forcing display')
+      media1Loaded.value = true
+    }
+    if (!media2Loaded.value && props.media2) {
+      console.warn('Media2 failed to trigger load event, forcing display')
+      media2Loaded.value = true
+    }
+    if (!singleMediaLoaded.value && singleMedia.value) {
+      console.warn('Single media failed to trigger load event, forcing display')
+      singleMediaLoaded.value = true
+    }
+  }, 3000)
 })
 </script>
 

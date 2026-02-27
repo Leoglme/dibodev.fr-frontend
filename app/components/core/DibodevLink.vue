@@ -3,6 +3,8 @@
     v-if="props.externalLink"
     class="inline-flex cursor-pointer items-center gap-x-1.5 font-medium decoration-2 underline-offset-4 hover:underline"
     :href="href"
+    target="_blank"
+    rel="noopener noreferrer"
     :style="{ color: props.color }"
   >
     <slot />

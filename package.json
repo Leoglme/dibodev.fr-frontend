@@ -33,6 +33,7 @@
     "aos": "^2.3.4",
     "axios": "^1.11.0",
     "dotenv": "^17.2.2",
+    "google-auth-library": "^10.6.1",
     "h3": "^1.15.4",
     "handlebars": "^4.7.8",
     "lodash-es": "^4.17.21",
