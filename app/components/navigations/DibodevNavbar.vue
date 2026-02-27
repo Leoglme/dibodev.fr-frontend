@@ -18,9 +18,11 @@
             {{ link.text }}
           </DibodevLink>
         </li>
-        <li v-if="!isContactPage" class="ml-6 flex items-center gap-10">
+        <li class="ml-6 flex items-center gap-10">
           <PhoneLink variant="navbar" />
-          <DibodevButton :to="localePath('/contact')" icon="Mail" size="sm">{{ $t('nav.contactMe') }}</DibodevButton>
+          <DibodevButton v-if="!isContactPage" :to="localePath('/contact')" icon="Mail" size="sm">{{
+            $t('nav.contactMe')
+          }}</DibodevButton>
         </li>
       </ol>
 
@@ -57,7 +59,6 @@
                   {{ link.text }}
                 </DibodevLink>
                 <PhoneLink
-                  v-if="!isContactPage"
                   variant="menu"
                   class="mb-2 w-full justify-start"
                   @click="mobileMenuOpen = false"
