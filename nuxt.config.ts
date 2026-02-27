@@ -28,6 +28,13 @@ export default defineNuxtConfig({
     unsplashAccessKey: process.env.NUXT_UNSPLASH_ACCESS_KEY || '',
     dashboardPassword: process.env.DASHBOARD_PASSWORD || '',
     dashboardSessionToken: process.env.DASHBOARD_SESSION_TOKEN || '',
+    googleClientId: process.env.GOOGLE_CLIENT_ID || '',
+    googleClientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
+    gscRefreshToken: process.env.GSC_REFRESH_TOKEN || '',
+    /** Optionnel : projet GCP pour quota (header x-goog-user-project). Ex: gen-lang-client-0567535137 */
+    gscQuotaProjectId: process.env.GSC_QUOTA_PROJECT_ID || '',
+    /** Optionnel : JSON du Service Account (string) pour auth server-to-server. Sinon on utilise GSC_REFRESH_TOKEN. */
+    gscServiceAccountJson: process.env.GSC_SERVICE_ACCOUNT_JSON || '',
     public: {
       storyblok: {
         accessToken: process.env.NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN || '',
@@ -64,6 +71,12 @@ export default defineNuxtConfig({
     output: {
       publicDir: '.output/public',
       serverDir: '.output/server',
+    },
+    storage: {
+      data: {
+        driver: 'fs',
+        base: './.data/kv',
+      },
     },
     prerender: {
       crawlLinks: true,

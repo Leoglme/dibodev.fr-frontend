@@ -1,7 +1,10 @@
 <template>
   <div
-    class="relative flex w-full items-center before:flex-1 before:border-t before:border-gray-300 before:content-[''] after:flex-1 after:border-t after:border-gray-300 after:content-['']"
-    :class="{ 'before:mr-4 after:ml-4': props.text, 'justify-center': !props.text }"
+    class="relative flex w-full items-center before:flex-1 before:border-t before:content-[''] after:flex-1 after:border-t after:content-['']"
+    :class="[
+      props.text ? 'before:mr-4 after:ml-4' : 'justify-center',
+      props.dark ? 'before:border-gray-600 after:border-gray-600' : 'before:border-gray-300 after:border-gray-300',
+    ]"
     aria-label="divider"
   >
     <span v-if="props.text" class="mx-4 font-semibold text-gray-100">
@@ -22,6 +25,10 @@ const props: DibodevDividerProps = defineProps({
   text: {
     type: String,
     default: null,
+  },
+  dark: {
+    type: Boolean,
+    default: false,
   },
 })
 </script>

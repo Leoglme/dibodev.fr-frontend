@@ -36,6 +36,17 @@
         >
           Générer un article
         </NuxtLink>
+        <NuxtLink
+          :to="localePath('/dashboard/indexing')"
+          class="rounded-md px-3 py-2 text-sm font-medium transition-colors"
+          :class="
+            $route.path.endsWith('/indexing')
+              ? 'bg-gray-700 text-gray-100'
+              : 'text-gray-100 hover:bg-gray-700 hover:text-gray-100'
+          "
+        >
+          Indexation Google
+        </NuxtLink>
         <div class="mt-auto space-y-1 border-t border-gray-700 pt-4">
           <button
             type="button"
@@ -77,6 +88,13 @@
                   @click="mobileMenuOpen = false"
                 >
                   Générer un article
+                </NuxtLink>
+                <NuxtLink
+                  :to="localePath('/dashboard/indexing')"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-100 hover:bg-gray-700"
+                  @click="mobileMenuOpen = false"
+                >
+                  Indexation Google
                 </NuxtLink>
                 <button
                   type="button"

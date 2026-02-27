@@ -40,6 +40,8 @@ jobs:
           sed -i "s/^NUXT_UNSPLASH_ACCESS_KEY=.*/NUXT_UNSPLASH_ACCESS_KEY=${{ secrets.NUXT_UNSPLASH_ACCESS_KEY }}/" .env || echo "NUXT_UNSPLASH_ACCESS_KEY=${{ secrets.NUXT_UNSPLASH_ACCESS_KEY }}" >> .env
           sed -i "s/^DASHBOARD_PASSWORD=.*/DASHBOARD_PASSWORD=${{ secrets.DASHBOARD_PASSWORD }}/" .env || echo "DASHBOARD_PASSWORD=${{ secrets.DASHBOARD_PASSWORD }}" >> .env
           sed -i "s/^DASHBOARD_SESSION_TOKEN=.*/DASHBOARD_SESSION_TOKEN=${{ secrets.DASHBOARD_SESSION_TOKEN }}/" .env || echo "DASHBOARD_SESSION_TOKEN=${{ secrets.DASHBOARD_SESSION_TOKEN }}" >> .env
+          sed -i "s|^GSC_SERVICE_ACCOUNT_JSON=.*|GSC_SERVICE_ACCOUNT_JSON=${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}|" .env || echo "GSC_SERVICE_ACCOUNT_JSON=${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}" >> .env
+          sed -i "s/^GSC_QUOTA_PROJECT_ID=.*/GSC_QUOTA_PROJECT_ID=${{ secrets.GSC_QUOTA_PROJECT_ID }}/" .env || echo "GSC_QUOTA_PROJECT_ID=${{ secrets.GSC_QUOTA_PROJECT_ID }}" >> .env
 
       - name: 🛠️ Generate Static Site (Frontend)
         run: npm run generate
