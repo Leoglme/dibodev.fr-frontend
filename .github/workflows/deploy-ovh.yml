@@ -26,6 +26,8 @@ jobs:
         run: npm ci
 
       - name: 📝 Setup environment file
+        env:
+          GSC_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
         run: |
           cp .env.example .env
           sed -i "s/^NODE_ENV=.*/NODE_ENV=production/" .env || echo "NODE_ENV=production" >> .env
@@ -40,7 +42,11 @@ jobs:
           sed -i "s/^NUXT_UNSPLASH_ACCESS_KEY=.*/NUXT_UNSPLASH_ACCESS_KEY=${{ secrets.NUXT_UNSPLASH_ACCESS_KEY }}/" .env || echo "NUXT_UNSPLASH_ACCESS_KEY=${{ secrets.NUXT_UNSPLASH_ACCESS_KEY }}" >> .env
           sed -i "s/^DASHBOARD_PASSWORD=.*/DASHBOARD_PASSWORD=${{ secrets.DASHBOARD_PASSWORD }}/" .env || echo "DASHBOARD_PASSWORD=${{ secrets.DASHBOARD_PASSWORD }}" >> .env
           sed -i "s/^DASHBOARD_SESSION_TOKEN=.*/DASHBOARD_SESSION_TOKEN=${{ secrets.DASHBOARD_SESSION_TOKEN }}/" .env || echo "DASHBOARD_SESSION_TOKEN=${{ secrets.DASHBOARD_SESSION_TOKEN }}" >> .env
-          sed -i "s/^GSC_SERVICE_ACCOUNT_JSON=.*/GSC_SERVICE_ACCOUNT_JSON=${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}/" .env || echo "GSC_SERVICE_ACCOUNT_JSON=${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}" >> .env
+          # GSC_SERVICE_ACCOUNT_JSON is multi-line JSON: write to file, minify to one line for .env
+          echo "$GSC_JSON" > /tmp/gsc.json
+          grep -v '^GSC_SERVICE_ACCOUNT_JSON=' .env > .env.tmp && mv .env.tmp .env
+          echo "GSC_SERVICE_ACCOUNT_JSON=$(jq -c . /tmp/gsc.json)" >> .env
+          rm -f /tmp/gsc.json
 
       - name: 🛠️ Generate Static Site (Frontend)
         run: npm run generate

@@ -3,8 +3,9 @@
  * Verifies the session cookie via /api/auth/me and redirects to dashboard login when unauthorized.
  * Uses (to, from) arguments instead of useRoute() to avoid misleading route in middleware.
  *
- * Uses useRequestFetch() instead of $fetch so that cookies are forwarded during SSR.
- * Direct $fetch does NOT forward cookies on internal API calls during SSR.
+ * Auth check runs only on the client so that prerendered dashboard pages are not 302 redirects.
+ * On refresh in prod, the client runs this and calls /me with the cookie; redirect only on 401.
+ * Uses useRequestFetch() so that cookies are sent on the client request.
  */
 export default defineNuxtRouteMiddleware(async (to): Promise<void> => {
   const localePath = useLocalePath()
@@ -16,10 +17,14 @@ export default defineNuxtRouteMiddleware(async (to): Promise<void> => {
     return
   }
 
+  if (import.meta.server) {
+    return
+  }
+
   const requestFetch = useRequestFetch()
   try {
     await requestFetch<{ ok: true }>('/api/auth/me', { method: 'GET' })
   } catch {
-    return navigateTo(localePath('/dashboard/login'))
+    await navigateTo(localePath('/dashboard/login'))
   }
 })
