@@ -108,7 +108,7 @@
           <span class="text-gray-200">{{ formatLastCrawl((item as IndexingItem).lastCrawlTime) }}</span>
         </template>
         <template #url="{ item }">
-          <div class="flex min-w-0 flex-wrap items-center justify-start gap-2 break-words sm:justify-end">
+          <div class="flex min-w-0 flex-wrap items-center justify-start gap-2 break-words">
             <DibodevLink :link="(item as IndexingItem).url" external-link class="min-w-0 break-all">
               {{ (item as IndexingItem).url }}
             </DibodevLink>

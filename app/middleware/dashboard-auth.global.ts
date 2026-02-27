@@ -7,7 +7,7 @@
  * On refresh in prod, the client runs this and calls /me with the cookie; redirect only on 401.
  * Uses useRequestFetch() so that cookies are sent on the client request.
  */
-export default defineNuxtRouteMiddleware(async (to): Promise<void> => {
+export default defineNuxtRouteMiddleware(async (to) => {
   const localePath = useLocalePath()
   const path: string = to.path
 
@@ -25,6 +25,6 @@ export default defineNuxtRouteMiddleware(async (to): Promise<void> => {
   try {
     await requestFetch<{ ok: true }>('/api/auth/me', { method: 'GET' })
   } catch {
-    await navigateTo(localePath('/dashboard/login'))
+    return navigateTo(localePath('/dashboard/login'))
   }
 })

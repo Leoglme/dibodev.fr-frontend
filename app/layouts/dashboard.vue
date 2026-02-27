@@ -50,7 +50,7 @@
         <div class="mt-auto space-y-1 border-t border-gray-700 pt-4">
           <button
             type="button"
-            class="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-gray-700 hover:text-gray-100"
+            class="flex w-full cursor-pointer items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-gray-700 hover:text-gray-100"
             @click="onLogout"
           >
             {{ $t('dashboard.logout') }}
@@ -98,7 +98,7 @@
                 </NuxtLink>
                 <button
                   type="button"
-                  class="rounded-md px-3 py-2 text-left text-sm font-medium text-gray-200 hover:bg-gray-700 hover:text-gray-100"
+                  class="cursor-pointer rounded-md px-3 py-2 text-left text-sm font-medium text-gray-200 hover:bg-gray-700 hover:text-gray-100"
                   @click="onLogoutThenClose"
                 >
                   {{ $t('dashboard.logout') }}
