@@ -60,6 +60,9 @@
     </div>
 
     <div v-else class="w-full min-w-0 sm:max-w-[calc(100vw-310px)]">
+      <p class="mb-3 text-sm font-medium text-gray-200">
+        {{ filteredItems.length === 1 ? '1 résultat' : `${filteredItems.length} résultats` }}
+      </p>
       <DibodevTable
         :fields="indexingTableFields"
         :card-fields="indexingCardFields"
@@ -128,14 +131,14 @@
               v-if="gscConnected"
               class="w-full"
               size="sm"
-              :disabled="refreshingUrl === (item as IndexingItem).url"
+              :disabled="isItemRefreshing((item as IndexingItem).url)"
               @click="refreshUrl((item as IndexingItem).url)"
             >
               <span
-                v-if="refreshingUrl === (item as IndexingItem).url"
+                v-if="isItemRefreshing((item as IndexingItem).url)"
                 class="mr-1.5 inline-block h-3.5 w-3.5 animate-spin rounded-full border-2 border-current border-t-transparent"
               />
-              {{ refreshingUrl === (item as IndexingItem).url ? 'Actualisation…' : 'Actualiser' }}
+              {{ isItemRefreshing((item as IndexingItem).url) ? 'Actualisation…' : 'Actualiser' }}
             </DibodevButton>
             <DibodevButton
               v-if="(item as IndexingItem).inspectionResultLink"
@@ -202,7 +205,13 @@ export type IndexingItem = {
 
 type IndexingApiResponse = {
   items: IndexingItem[]
-  refresh: { status: 'idle' | 'running'; startedAt?: string; finishedAt?: string }
+  refresh: {
+    status: 'idle' | 'running'
+    startedAt?: string
+    finishedAt?: string
+    /** URL en cours d’actualisation par le job « Actualiser » global. */
+    currentUrl?: string
+  }
   gscConnected: boolean
 }
 
@@ -214,8 +223,9 @@ const loading: Ref<boolean> = ref(true)
 const error: Ref<string> = ref('')
 const gscConnected: Ref<boolean> = ref(false)
 const refreshStatus: Ref<'idle' | 'running'> = ref('idle')
+const refreshAllCurrentUrl: Ref<string | null> = ref(null)
 const searchText: Ref<string> = ref('')
-const refreshingUrl: Ref<string | null> = ref(null)
+const refreshingUrls: Ref<string[]> = ref([])
 
 const verdictOptions: DibodevSelectOption[] = [
   { label: 'Tous les verdicts', value: '' },
@@ -269,6 +279,11 @@ const filteredItems = computed(() => {
   return list
 })
 
+/** True si l’item est en cours d’actualisation (bouton manuel ou job global). */
+function isItemRefreshing(url: string): boolean {
+  return refreshingUrls.value.includes(url) || (refreshStatus.value === 'running' && refreshAllCurrentUrl.value === url)
+}
+
 function formatLastCrawl(iso?: string): string {
   if (!iso) return '—'
   try {
@@ -316,6 +331,7 @@ async function fetchFromApi(force = false): Promise<void> {
     items.value = cache.value.items ?? []
     gscConnected.value = cache.value.gscConnected ?? false
     refreshStatus.value = cache.value.refresh?.status ?? 'idle'
+    refreshAllCurrentUrl.value = cache.value.refresh?.currentUrl ?? null
     loading.value = false
     return
   }
@@ -326,6 +342,7 @@ async function fetchFromApi(force = false): Promise<void> {
     items.value = data.items ?? []
     gscConnected.value = data.gscConnected ?? false
     refreshStatus.value = data.refresh?.status ?? 'idle'
+    refreshAllCurrentUrl.value = data.refresh?.currentUrl ?? null
     cache.value = data
   } catch (e) {
     const msg = e instanceof Error ? e.message : 'Erreur lors du chargement.'
@@ -346,9 +363,11 @@ async function startRefresh(): Promise<void> {
     pollIntervalId = setInterval(async () => {
       const data = await $fetch<IndexingApiResponse>('/api/indexing-status')
       refreshStatus.value = data.refresh?.status ?? 'idle'
+      refreshAllCurrentUrl.value = data.refresh?.currentUrl ?? null
       items.value = data.items ?? []
       useState(CACHE_KEY).value = data
       if (data.refresh?.status !== 'running') {
+        refreshAllCurrentUrl.value = null
         if (pollIntervalId) clearInterval(pollIntervalId)
         pollIntervalId = null
       }
@@ -359,6 +378,7 @@ async function startRefresh(): Promise<void> {
         pollIntervalId = null
       }
       refreshStatus.value = 'idle'
+      refreshAllCurrentUrl.value = null
     }, 600_000)
   } catch (e) {
     error.value = e instanceof Error ? e.message : 'Erreur lors de l’actualisation.'
@@ -374,7 +394,7 @@ async function copyUrl(url: string): Promise<void> {
 }
 
 async function refreshUrl(url: string): Promise<void> {
-  refreshingUrl.value = url
+  refreshingUrls.value = [...refreshingUrls.value, url]
   error.value = ''
   try {
     const data = await $fetch<{ ok: boolean; item: IndexingItem }>('/api/indexing-status/refresh-url', {
@@ -388,7 +408,7 @@ async function refreshUrl(url: string): Promise<void> {
   } catch (e) {
     error.value = e instanceof Error ? e.message : "Erreur lors de l'actualisation de l'URL."
   } finally {
-    refreshingUrl.value = null
+    refreshingUrls.value = refreshingUrls.value.filter((u) => u !== url)
   }
 }
 
@@ -398,6 +418,7 @@ onMounted(async () => {
     items.value = cache.value.items ?? []
     gscConnected.value = cache.value.gscConnected ?? false
     refreshStatus.value = cache.value.refresh?.status ?? 'idle'
+    refreshAllCurrentUrl.value = cache.value.refresh?.currentUrl ?? null
     loading.value = false
     return
   }

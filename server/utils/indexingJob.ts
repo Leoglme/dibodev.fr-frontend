@@ -1,7 +1,7 @@
 import type { IndexingStatusRow } from '~~/server/types/indexing'
 import { getGscAccessToken } from '~~/server/utils/gscAuth'
 import { inspectUrl } from '~~/server/utils/gscInspect'
-import { getIndexingRows, setIndexingRows, setRefreshState } from '~~/server/utils/indexingStorage'
+import { getIndexingRows, getRefreshState, setIndexingRows, setRefreshState } from '~~/server/utils/indexingStorage'
 import { getIndexingSources } from '~~/server/utils/indexingSources'
 
 const DELAY_BETWEEN_REQUESTS_MS = 1500
@@ -40,6 +40,13 @@ export async function runIndexingRefreshJob(): Promise<void> {
   const rows: Record<string, IndexingStatusRow> = await getIndexingRows()
 
   for (const [index, source] of sources.entries()) {
+    const refreshState = await getRefreshState()
+    await setRefreshState({
+      ...refreshState,
+      status: 'running',
+      currentUrl: source.url,
+    })
+
     const existing: IndexingStatusRow | undefined = rows[source.url]
     const row: IndexingStatusRow = {
       ...source,
@@ -71,5 +78,6 @@ export async function runIndexingRefreshJob(): Promise<void> {
   await setRefreshState({
     status: 'idle',
     finishedAt: new Date().toISOString(),
+    currentUrl: undefined,
   })
 }

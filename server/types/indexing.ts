@@ -31,4 +31,6 @@ export type IndexingRefreshState = {
   status: 'idle' | 'running'
   startedAt?: string
   finishedAt?: string
+  /** URL en cours d’actualisation par le job (pour afficher le loader sur la ligne). */
+  currentUrl?: string
 }
