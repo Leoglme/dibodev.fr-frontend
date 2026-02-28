@@ -23,11 +23,17 @@ export default defineEventHandler(async (event: H3Event) => {
 
   const body: ContactFormPayload = await readBody(event)
 
-  // Strict validation: all fields are required except nullables (projectType, pagesRange)
-  if (!body.fullName || !body.email || !body.message || !Number.isInteger(body.budget)) {
+  // Strict validation: fullName, email, message required; budget optional (string)
+  if (!body.fullName || !body.email || !body.message) {
     throw createError({
       statusCode: 400,
-      statusMessage: 'Invalid payload: fullName, email, message, and budget are required.',
+      statusMessage: 'Invalid payload: fullName, email and message are required.',
+    })
+  }
+  if (typeof body.budget !== 'string') {
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'Invalid payload: budget must be a string.',
     })
   }
 

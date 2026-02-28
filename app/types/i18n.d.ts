@@ -122,11 +122,13 @@ declare module 'vue-i18n' {
         submitting: string
         projectType: { website: string; mobile: string; other: string }
         pagesRange: { '1_3': string; '3_6': string; '6_10': string; '10_plus': string }
+        budgetRange: { under_1k: string; '1k_5k': string; '5k_10k': string; '10k_plus': string }
         successMessage: string
         errorInvalid: string
         errorServer: string
         errorUnexpected: string
       }
+      reassurance: { response24h: string; freeQuote: string; noCommitment: string }
       sidebar: { phone: string; location: string }
     }
     projects: {

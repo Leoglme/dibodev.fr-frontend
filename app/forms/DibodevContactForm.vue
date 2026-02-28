@@ -18,18 +18,10 @@
       <ErrorMessage name="nombre de pages" class="text-sm text-red-500" />
     </div>
 
-    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-      <DibodevInput
-        id="budget"
-        :label="$t('contact.form.budgetLabel')"
-        type="number"
-        :min="0"
-        :step="1"
-        :placeholder="$t('contact.form.budgetPlaceholder')"
-        :value="budget || undefined"
-        rules="required|price_format|min_value:0|max_value:100000"
-        @update:value="budget = toNumberLike($event.toString())"
-      />
+    <div class="flex flex-col gap-4">
+      <DibodevLabel id="budgetRange">{{ $t('contact.form.budgetLabel') }}</DibodevLabel>
+
+      <DibodevTogglePillGroup v-model:value="budgetRange" :options="budgetRangeOptions" :deselectable="true" />
     </div>
 
     <div class="grid grid-cols-1 gap-10 sm:gap-4 lg:grid-cols-2">
@@ -73,6 +65,24 @@
       @hide="successMessage = null"
     />
 
+    <ul
+      class="flex flex-col gap-y-4 text-base font-medium text-gray-200 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-4"
+      role="list"
+    >
+      <li class="flex w-full items-center gap-2 sm:w-auto">
+        <span class="text-primary-light" aria-hidden="true">✓</span>
+        <span>{{ $t('contact.reassurance.response24h') }}</span>
+      </li>
+      <li class="flex w-full items-center gap-2 sm:w-auto">
+        <span class="text-primary-light" aria-hidden="true">✓</span>
+        <span>{{ $t('contact.reassurance.freeQuote') }}</span>
+      </li>
+      <li class="flex w-full items-center gap-2 sm:w-auto">
+        <span class="text-primary-light" aria-hidden="true">✓</span>
+        <span>{{ $t('contact.reassurance.noCommitment') }}</span>
+      </li>
+    </ul>
+
     <div class="flex justify-end">
       <DibodevButton type="submit" icon="Send" class="w-full lg:w-auto" :disabled="!meta.valid || isSubmitting">
         {{ isSubmitting ? $t('contact.form.submitting') : $t('contact.form.submit') }}
@@ -95,11 +105,13 @@ import type { Option } from '~/components/ui/DibodevTogglePillGroup.vue'
 import { debounce } from 'lodash-es'
 import type { ContactFormPayload } from '~~/server/types/mail/contact'
 
-/** Project type and pages range keys (values sent to API are translated via $t). */
+/** Project type, pages range and budget range keys (values sent to API are translated via $t). */
 const PROJECT_TYPE_KEYS = ['website', 'mobile', 'other'] as const
 const PAGES_RANGE_KEYS = ['1_3', '3_6', '6_10', '10_plus'] as const
+const BUDGET_RANGE_KEYS = ['under_1k', '1k_5k', '5k_10k', '10k_plus'] as const
 type ProjectTypeKey = (typeof PROJECT_TYPE_KEYS)[number]
 type PagesRangeKey = (typeof PAGES_RANGE_KEYS)[number]
+type BudgetRangeKey = (typeof BUDGET_RANGE_KEYS)[number]
 
 const { t } = useI18n()
 
@@ -120,11 +132,19 @@ const pagesOptions: ComputedRef<Option[]> = computed((): Option[] =>
     }),
   ),
 )
+const budgetRangeOptions: ComputedRef<Option[]> = computed((): Option[] =>
+  BUDGET_RANGE_KEYS.map(
+    (key: BudgetRangeKey): Option => ({
+      label: t(`contact.form.budgetRange.${key}`),
+      value: key,
+    }),
+  ),
+)
 
 /** REFS */
 const projectType: Ref<ProjectTypeKey | null> = ref<ProjectTypeKey>('website')
 const pagesRange: Ref<PagesRangeKey | null> = ref<PagesRangeKey | null>(null)
-const budget: Ref<number | null> = ref(null)
+const budgetRange: Ref<BudgetRangeKey | null> = ref<BudgetRangeKey | null>(null)
 const fullName: Ref<string> = ref('')
 const email: Ref<string> = ref('')
 const message: Ref<string> = ref('')
@@ -135,13 +155,6 @@ const lastSentEmail: Ref<string | null> = ref(null)
 const contactForm: Ref<FormContext | null> = ref(null)
 
 /** METHODS */
-function toNumberLike(value: string | number): number {
-  if (typeof value === 'number') return value
-  const normalized: string = value.replace(',', '.')
-  const n: number = Number(normalized)
-  return Number.isFinite(n) ? n : 0
-}
-
 /** Validates email format client-side */
 function isValidEmail(email: string): boolean {
   const emailRegex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -158,11 +171,16 @@ function getPagesRangeDisplay(key: PagesRangeKey | null): string | null {
   return key ? t(`contact.form.pagesRange.${key}`) : null
 }
 
+/** Map budget range key to translated value for API. */
+function getBudgetRangeDisplay(key: BudgetRangeKey | null): string {
+  return key ? t(`contact.form.budgetRange.${key}`) : ''
+}
+
 /** Reset form fields */
 function resetFormValues(): void {
   projectType.value = 'website'
   pagesRange.value = null
-  budget.value = null
+  budgetRange.value = null
   fullName.value = ''
   email.value = ''
   message.value = ''
@@ -171,7 +189,6 @@ function resetFormValues(): void {
     values: {
       'type de projet': 'website',
       'nombre de pages': null,
-      budget: null,
       nom: '',
       email: '',
       message: '',
@@ -219,7 +236,7 @@ async function onSubmit(): Promise<void> {
   const payload: ContactFormPayload = {
     projectType: getProjectTypeDisplay(projectType.value),
     pagesRange: getPagesRangeDisplay(pagesRange.value),
-    budget: budget.value || 0,
+    budget: getBudgetRangeDisplay(budgetRange.value),
     fullName: fullName.value.trim(),
     email: email.value.trim(),
     message: message.value.trim(),

@@ -72,6 +72,8 @@ export function useSeoMetaFromI18n(): void {
       meta: [
         { name: 'description', content: t('meta.description') },
         { property: 'og:url', content: canonicalUrl },
+        { property: 'og:title', content: t('meta.title') },
+        { property: 'og:description', content: t('meta.description') },
         ...ogLocaleMeta,
       ],
       link: [{ rel: 'canonical', href: canonicalUrl }, ...alternateLinks],

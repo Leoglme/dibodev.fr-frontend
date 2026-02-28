@@ -58,11 +58,7 @@
                 >
                   {{ link.text }}
                 </DibodevLink>
-                <PhoneLink
-                  variant="menu"
-                  class="mb-2 w-full justify-start"
-                  @click="mobileMenuOpen = false"
-                />
+                <PhoneLink variant="menu" class="mb-2 w-full justify-start" @click="mobileMenuOpen = false" />
                 <DibodevButton
                   v-if="!isContactPage"
                   :to="localePath('/contact')"

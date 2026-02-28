@@ -22,7 +22,7 @@ export default `
     </mj-text>
 
     <mj-text padding="0" padding-left="0px" align="left" line-height="28px" padding-bottom="8px">
-      Budget: {{budget}} €
+      Budget: {{budget}}
     </mj-text>
 
     <mj-text padding="0" padding-left="0px" align="left" line-height="28px" padding-bottom="8px">

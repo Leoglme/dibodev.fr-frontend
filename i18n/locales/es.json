@@ -10,7 +10,7 @@
       "descriptionFallback": "Artículo por Léo Guillaume, desarrollador freelance en Rennes."
     },
     "contact": {
-      "title": "Contacto — Dibodev",
+      "title": "Contactarme — Dibodev",
       "description": "Contacta con Léo Guillaume, desarrollador freelance en Rennes, para tu proyecto web, móvil o de software."
     },
     "projects": {
@@ -180,7 +180,7 @@
   },
   "contact": {
     "landing": {
-      "description": "¿Buscas un desarrollador freelance para dar vida a tu proyecto? Contáctame hoy para saber más.",
+      "description": "Desarrollador freelance especializado en web, móvil e IA — transformo tu idea en un producto concreto. Respuesta en 24h, presupuesto gratuito.",
       "cta": "Contactarme"
     },
     "form": {
@@ -207,10 +207,21 @@
         "6_10": "6–10",
         "10_plus": "10+"
       },
+      "budgetRange": {
+        "under_1k": "< 1 000 €",
+        "1k_5k": "1 000–5 000 €",
+        "5k_10k": "5 000–10 000 €",
+        "10k_plus": "10 000 €+"
+      },
       "successMessage": "Tu mensaje se ha enviado correctamente. Se te ha enviado un correo de confirmación.",
       "errorInvalid": "El formulario no es válido. Por favor, verifica la información.",
       "errorServer": "Error del servidor. Por favor, inténtalo más tarde.",
       "errorUnexpected": "Error inesperado. Por favor, inténtalo más tarde."
+    },
+    "reassurance": {
+      "response24h": "Respuesta en 24h",
+      "freeQuote": "Presupuesto gratuito",
+      "noCommitment": "Sin compromiso"
     },
     "sidebar": {
       "phone": "06 42 19 38 12",
