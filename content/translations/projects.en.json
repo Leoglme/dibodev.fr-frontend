@@ -46,5 +46,32 @@
       "educational project",
       "Spotify clone"
     ]
+  },
+  "project/driving-school": {
+    "name": "Driving School",
+    "shortDescription": "Management of driving schools: students, instructors, schedules, appointments, and driving hours.",
+    "longDescription": "Business web application for driving schools: creation of students/instructors, management of availability, scheduling of driving hours, and tracking of appointments. It centralizes daily organization to save time and avoid double bookings.\n\nStack: Vue 3 + TypeScript + TailwindCSS on the front end and Python/Flask API on the server side. A clear, scalable project (notifications, billing, exports) and suitable for SMEs.",
+    "metaTitle": "Driving School – Driving School Management and Scheduling",
+    "metaDescription": "Business application for driving schools: management of students and instructors, scheduling of driving hours and appointments for simplified organization.",
+    "categories": [
+      "bdd7dccb-c6a7-4990-beac-32abb1ba6aa0",
+      "1331e6bb-4f12-45e2-b738-0e306fe9900a",
+      "18cd4f18-36d8-4320-b1e7-f351a2b3bb57"
+    ],
+    "stack": [
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Python",
+      "Flask"
+    ],
+    "tags": [
+      "driving school",
+      "schedule management",
+      "appointments",
+      "students and instructors",
+      "organization",
+      "business application"
+    ]
   }
 }
