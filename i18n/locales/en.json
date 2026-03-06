@@ -16,6 +16,10 @@
     "projects": {
       "title": "My projects — Dibodev",
       "description": "Discover web projects, mobile apps and software by Léo Guillaume, freelance developer in Rennes."
+    },
+    "projectsPage": {
+      "title": "Portfolio — Freelance Web & Mobile Developer in Rennes | Dibodev",
+      "description": "Discover web, mobile and AI projects by Léo Guillaume, freelance developer in Rennes. SaaS, business applications, AI and more."
     }
   },
   "nav": {
@@ -230,8 +234,13 @@
   },
   "projects": {
     "landing": {
-      "title": "My projects",
-      "description": "Discover a variety of web, software and mobile projects built with passion and expertise. Explore my work for inspiration and to consider a collaboration on your next project.",
+      "title": "My projects — Freelance Web, Mobile & AI Developer",
+      "titlePart1": "My ",
+      "titleHighlight1": "projects",
+      "titlePart2": " — ",
+      "titleHighlight2": "Freelance",
+      "titlePart3": " Web, Mobile & AI Developer",
+      "description": "Websites, mobile apps, business applications, SaaS and AI projects — from scoping to launch.",
       "cta": "Discover projects"
     },
     "section": {
@@ -239,8 +248,53 @@
       "searchPlaceholder": "Search for a project... (Ctrl + E)",
       "allLanguages": "All languages",
       "allCategories": "All categories",
+      "allSectors": "All sectors",
       "noResultsTitle": "No projects found",
       "noResultsDescription": "No projects match your search criteria. Try adjusting your filters."
+    },
+    "sectorPage": {
+      "title": "Projects {sector} — Freelance Web, Mobile & AI Developer",
+      "titlePart1": "Projects {sector} — ",
+      "titleHighlight1": "Freelance",
+      "titlePart2": " Web, Mobile & AI Developer",
+      "titlePart3": "",
+      "description": "Discover my work in the {sector} sector: websites, mobile apps, SaaS and AI projects.",
+      "introTitle": "About this sector"
+    },
+    "categoryPage": {
+      "title": "Projects {category} — Freelance Web, Mobile & AI Developer",
+      "titlePart1": "Projects {category} — ",
+      "titleHighlight1": "Freelance",
+      "titlePart2": " Web, Mobile & AI Developer",
+      "titleHighlight2": "",
+      "titlePart3": "",
+      "description": "Discover my work in the {category} category.",
+      "introTitle": "About this category"
+    },
+    "cta": {
+      "text": "Have a similar project? Let's talk",
+      "description": "Looking for a freelance developer to bring your idea to life? Let's discuss your web, mobile or software project together.",
+      "button": "Contact me"
+    },
+    "sectors": {
+      "sport-loisirs": "Sports & Leisure",
+      "immobilier": "Real estate",
+      "sante": "Health",
+      "voyage-transport": "Travel & Transport",
+      "productivite": "Productivity",
+      "logistique": "Logistics",
+      "b2b": "B2B",
+      "reseaux-sociaux": "Social networks",
+      "gaming": "Gaming",
+      "divertissement": "Entertainment"
+    },
+    "categories": {
+      "site-web": "Website",
+      "application-mobile": "Mobile app",
+      "saas": "SaaS",
+      "application-metier": "Business app",
+      "logiciel": "Software",
+      "ia": "AI"
     }
   },
   "project": {

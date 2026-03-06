@@ -5,14 +5,8 @@
     "longDescription": "Versión web del Cuatro en Raya en HTML/CSS/JavaScript: lógica de juego sólida, interfaz responsive y personalización (avatar, colores de las fichas). Jugable entre amigos, incluyendo en móvil. Perfecto para demostrar el dominio del DOM, eventos y patrones JS simples pero robustos.\n\nUn pequeño juego accesible, divertido y extensible (puntuaciones, multi-sesiones, guardados).",
     "metaTitle": "Cuatro en Raya – Juego web responsive y personalizable",
     "metaDescription": "Versión web del Cuatro en Raya: avatares y colores personalizables, jugable en móvil. Interfaz fluida y lógica de juego robusta para jugar entre amigos.",
-    "categories": [
-      "bdd7dccb-c6a7-4990-beac-32abb1ba6aa0"
-    ],
-    "stack": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
+    "categories": ["bdd7dccb-c6a7-4990-beac-32abb1ba6aa0"],
+    "stack": ["HTML", "CSS", "JavaScript"],
     "tags": [
       "juego web",
       "cuatro en raya en línea",

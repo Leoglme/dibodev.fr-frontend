@@ -37,9 +37,11 @@ import type { StoryblokProjectContent } from '~/services/types/storyblokProject'
 import type { StoryblokStoryResponse } from '~/services/types/storyblok'
 import { StoryblokService } from '~/services/storyblokService'
 import { mapStoryblokProjectToDibodevProject } from '~/services/storyblokProjectMapper'
+import { buildProjectSchemaJson } from '~/config/projectSchema'
 
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
 const router: Router = useRouter()
+const { locale } = useI18n()
 const storyblokLanguage: ComputedRef<string | undefined> = useStoryblokProjectLanguage()
 
 const projectName: string = String(route.params.projectName || '').trim()
@@ -76,6 +78,7 @@ useHead((): Record<string, unknown> => {
   if (!p) return {}
   const title: string = p.metaTitle || p.name
   const description: string = p.metaDescription || p.shortDescription
+  const schemaJson: string = buildProjectSchemaJson(p, locale.value as string)
   return {
     title,
     meta: [
@@ -83,6 +86,7 @@ useHead((): Record<string, unknown> => {
       { property: 'og:title', content: title },
       { property: 'og:description', content: description },
     ],
+    script: [{ type: 'application/ld+json', innerHTML: schemaJson }],
   }
 })
 </script>

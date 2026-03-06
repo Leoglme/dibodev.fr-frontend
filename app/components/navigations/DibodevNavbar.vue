@@ -104,7 +104,7 @@ const languages: DibodevSelectOption[] = [
 
 const links: ComputedRef<DibodevNavbarLink[]> = computed((): DibodevNavbarLink[] => [
   { text: t('nav.home'), to: localePath('/') },
-  { text: t('nav.myProjects'), to: localePath('/projects') },
+  { text: t('nav.myProjects'), to: localePath('projects') },
   { text: t('nav.blog'), to: localePath('/blog') },
 ])
 

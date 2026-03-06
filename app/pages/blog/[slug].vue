@@ -34,9 +34,7 @@
       </div>
     </article>
 
-    <div class="py-32 sm:py-40">
-      <BlogCta />
-    </div>
+    <DibodevContactCtaSection />
   </div>
 </template>
 
@@ -44,7 +42,7 @@
 import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
 import BlogArticleContent from '~/components/blog/BlogArticleContent.vue'
-import BlogCta from '~/components/blog/BlogCta.vue'
+import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import DibodevBadge from '~/components/ui/DibodevBadge.vue'
 import type { DibodevArticle } from '~/core/types/DibodevArticle'
 import { StoryblokArticleService } from '~/services/storyblokArticleService'

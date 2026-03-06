@@ -1,25 +1,27 @@
 <template>
-  <section
-    data-aos="fade-up"
-    data-aos-duration="600"
-    class="relative z-2 flex w-full max-w-screen items-center justify-center px-6 py-16 sm:px-8 sm:py-24"
-  >
-    <div
-      class="border-primary-light grid w-full max-w-2xl gap-6 rounded-2xl border-2 bg-gray-400 px-6 py-6 sm:gap-8 sm:px-8 sm:py-6"
+  <div class="py-32 sm:py-40">
+    <section
+      data-aos="fade-up"
+      data-aos-duration="600"
+      class="relative z-2 flex w-full max-w-screen items-center justify-center px-6 py-16 sm:px-8 sm:py-24"
     >
-      <div class="grid gap-3 sm:gap-4">
-        <h2 class="text-2xl font-medium text-gray-100 sm:text-3xl">
-          {{ displayTitle }}
-        </h2>
-        <p class="text-sm leading-7 font-normal text-gray-200">
-          {{ displayDescription }}
-        </p>
+      <div
+        class="border-primary-light grid w-full max-w-3xl gap-6 rounded-2xl border-2 bg-gray-400 px-6 py-6 sm:gap-8 sm:px-8 sm:py-6"
+      >
+        <div class="grid gap-3 sm:gap-4">
+          <h2 class="text-2xl font-medium text-gray-100 sm:text-3xl">
+            {{ displayTitle }}
+          </h2>
+          <p class="text-sm leading-7 font-normal text-gray-200">
+            {{ displayDescription }}
+          </p>
+        </div>
+        <DibodevButton icon="Mail" iconPosition="right" :to="localePath('/contact')" size="lg" class="w-full">
+          {{ displayCtaText }}
+        </DibodevButton>
       </div>
-      <DibodevButton icon="Mail" iconPosition="right" :to="localePath('/contact')" size="lg" class="w-full">
-        {{ displayCtaText }}
-      </DibodevButton>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script lang="ts" setup>

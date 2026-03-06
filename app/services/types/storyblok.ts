@@ -61,10 +61,16 @@ export type StoryblokStoryResponse<TContent> = {
 
 /**
  * Stories listing response returned by Storyblok CDN API.
+ * - resolve_links : l’API ajoute `links` (résolution par uuid).
+ * - resolve_relations : l’API ajoute `rels` (stories référencées, ex. secteurs).
  */
 export type StoryblokStoriesResponse<TContent> = {
   stories: Array<StoryblokStory<TContent>>
   cv: number
+  /** Liens résolus (uuid → slug, real_path) quand resolve_links est utilisé */
+  links?: Record<string, StoryblokLink>
+  /** Stories résolues (References) quand resolve_relations est utilisé */
+  rels?: Array<StoryblokStory<unknown>>
 }
 
 /**

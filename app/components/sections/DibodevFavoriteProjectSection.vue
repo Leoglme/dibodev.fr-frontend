@@ -28,7 +28,7 @@
       </div>
       <div class="flex w-full max-w-7xl flex-col-reverse gap-10 sm:grid sm:gap-8">
         <div class="flex w-full items-center justify-end">
-          <DibodevLink :link="localePath('/projects')">
+          <DibodevLink :link="localePath('projects')">
             <span>{{ $t('home.favoriteProjects.seeAllProjects') }}</span>
             <DibodevIcon name="ArrowRight" mode="stroke" :width="20" :height="20" />
           </DibodevLink>

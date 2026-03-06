@@ -36,8 +36,8 @@
       </div>
     </section>
 
-    <div id="blog-cta" class="bg-gray-700 py-32 sm:py-40">
-      <BlogCta />
+    <div id="blog-cta" class="bg-gray-700">
+      <DibodevContactCtaSection />
     </div>
   </div>
 </template>
@@ -47,7 +47,7 @@ import { ref } from 'vue'
 import type { Ref } from 'vue'
 import DibodevLandingSection from '~/components/sections/DibodevLandingSection.vue'
 import BlogArticleCard from '~/components/blog/BlogArticleCard.vue'
-import BlogCta from '~/components/blog/BlogCta.vue'
+import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import type { DibodevArticle } from '~/core/types/DibodevArticle'
 import { StoryblokArticleService } from '~/services/storyblokArticleService'
 import { mapStoryblokArticleToDibodevArticle } from '~/services/storyblokArticleMapper'

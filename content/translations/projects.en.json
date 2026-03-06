@@ -5,14 +5,8 @@
     "longDescription": "Web version of Connect Four in HTML/CSS/JavaScript: solid game logic, responsive interface and customization (avatar, pawn colors). Playable with friends, including on mobile. Perfect for demonstrating mastery of the DOM, events and simple but robust JS patterns.\n\nA small, accessible, fun and extensible game (scores, multi-sessions, saves).",
     "metaTitle": "Connect Four – Responsive and customizable web game",
     "metaDescription": "Web version of Connect Four: customizable avatars and colors, playable on mobile. Fluid interface and robust game logic to play with friends.",
-    "categories": [
-      "bdd7dccb-c6a7-4990-beac-32abb1ba6aa0"
-    ],
-    "stack": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
+    "categories": ["bdd7dccb-c6a7-4990-beac-32abb1ba6aa0"],
+    "stack": ["HTML", "CSS", "JavaScript"],
     "tags": [
       "web game",
       "online connect four",
