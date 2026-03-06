@@ -111,7 +111,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
   if (!githubToken || !githubRepo) {
     throw createError({
       statusCode: 500,
-      statusMessage: 'GITHUB_TOKEN and GITHUB_REPO must be set.',
+      statusMessage: 'REPO_ACCESS_TOKEN and REPO_SLUG must be set.',
     })
   }
   if (!storyblokToken) {

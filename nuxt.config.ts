@@ -25,9 +25,9 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
-    githubToken: process.env.GITHUB_TOKEN || '',
+    githubToken: process.env.REPO_ACCESS_TOKEN || '',
     /** Owner/repo for translations push (e.g. dibodev/dibodev.fr-frontend). */
-    githubRepo: process.env.GITHUB_REPO || '',
+    githubRepo: process.env.REPO_SLUG || '',
     mailjetApiKey: process.env.MAILJET_API_KEY || '',
     mailjetApiSecret: process.env.MAILJET_API_SECRET || '',
     storyblokDeliveryApiToken: process.env.NUXT_STORYBLOK_DELIVERY_API_TOKEN || '',

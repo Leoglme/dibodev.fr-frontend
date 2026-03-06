@@ -93,7 +93,7 @@ export default defineEventHandler(async (event: H3Event): Promise<ListTranslatab
   if (!githubToken || !githubRepo) {
     throw createError({
       statusCode: 500,
-      statusMessage: 'GITHUB_TOKEN and GITHUB_REPO must be set for translations.',
+      statusMessage: 'REPO_ACCESS_TOKEN and REPO_SLUG must be set for translations.',
     })
   }
 
