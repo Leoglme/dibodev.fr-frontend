@@ -46,5 +46,32 @@
       "proyecto pedagógico",
       "clone de Spotify"
     ]
+  },
+  "project/driving-school": {
+    "name": "Autoescuela",
+    "shortDescription": "Gestión de autoescuelas: alumnos, instructores, horarios, citas y horas de conducción.",
+    "longDescription": "Aplicación web profesional para autoescuelas: creación de alumnos/instructores, gestión de disponibilidades, planificación de horas de conducción y seguimiento de citas. Centraliza la organización diaria para ahorrar tiempo y evitar reservas duplicadas.\n\nStack: Vue 3 + TypeScript + TailwindCSS en el front y API Python/Flask en el servidor. Un proyecto claro, escalable (notificaciones, facturación, exportaciones) y adaptado a PYMES.",
+    "metaTitle": "Autoescuela – Gestión de autoescuelas y horarios",
+    "metaDescription": "Aplicación profesional para autoescuelas: gestión de alumnos e instructores, planificación de horas de conducción y citas para una organización simplificada.",
+    "categories": [
+      "bdd7dccb-c6a7-4990-beac-32abb1ba6aa0",
+      "1331e6bb-4f12-45e2-b738-0e306fe9900a",
+      "18cd4f18-36d8-4320-b1e7-f351a2b3bb57"
+    ],
+    "stack": [
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Python",
+      "Flask"
+    ],
+    "tags": [
+      "autoescuela",
+      "gestión de horarios",
+      "citas",
+      "alumnos e instructores",
+      "organización",
+      "aplicación profesional"
+    ]
   }
 }
