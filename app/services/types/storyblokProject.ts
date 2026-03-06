@@ -9,7 +9,9 @@
  * @property {string} primaryColor - Primary brand color in hex format
  * @property {string} [secondaryColor] - Optional secondary color in hex format
  * @property {string} logoUrl - Path/URL to the project logo
- * @property {string[]} categories - Functional categories (e.g. "Site web", "Application métier")
+ * @property {string[]} categories - Functional categories (e.g. "Site web", "SaaS", "IA")
+ * @property {string[] | string | StoryblokSectorLinkInput[]} [sectors] - Sectors: slugs (multi-option) or liens vers stories secteur (cached_url "sectors/xxx" ou story.full_slug).
+ * @property {string} [sector] - Deprecated: use sectors. Kept for backward compat.
  * @property {string} date - Project date in ISO format (e.g. "2025-07-01")
  * @property {string} shortDescription - Short marketing description
  * @property {string} longDescription - Long, detailed description
@@ -29,6 +31,8 @@ export type StoryblokProjectContent = {
   secondaryColor?: string
   logoUrl: StoryblokAssetInput
   categories: StoryblokStringListInput
+  sectors?: StoryblokStringListInput | StoryblokSectorLinkInput[]
+  sector?: string | null
   date: string
   shortDescription: string
   longDescription: string
@@ -57,6 +61,14 @@ export type StoryblokAsset = {
  * Some Storyblok setups can store either an asset object or a plain string URL.
  */
 export type StoryblokAssetInput = StoryblokAsset | string | null
+
+/** Lien Storyblok vers une story (secteur). CDN peut retourner story résolu avec full_slug. */
+export type StoryblokSectorLinkInput = {
+  id?: string
+  linktype?: string
+  cached_url?: string
+  story?: { full_slug?: string }
+}
 
 /**
  * Multi-value string input used by Storyblok fields.

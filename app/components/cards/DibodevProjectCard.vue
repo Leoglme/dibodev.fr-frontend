@@ -4,7 +4,7 @@
       <img
         class="h-48 max-h-[120px] w-full max-w-[200px] rounded-xl object-contain"
         :src="props.logo"
-        :alt="`${props.name} logo`"
+        :alt="props.name"
       />
     </div>
 

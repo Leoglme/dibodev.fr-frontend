@@ -8,7 +8,7 @@ const BLOG_FOLDER = 'blog/'
 const STATIC_PAGES: { path: string; title: string }[] = [
   { path: '/', title: 'Accueil' },
   { path: '/contact', title: 'Contact' },
-  { path: '/projects', title: 'Projets' },
+  { path: '/projets', title: 'Projets' },
   { path: '/blog', title: 'Blog' },
 ]
 

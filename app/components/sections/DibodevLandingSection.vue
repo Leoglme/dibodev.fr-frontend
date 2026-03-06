@@ -11,13 +11,19 @@
           data-aos-delay="0"
           data-aos-duration="800"
         >
-          <span v-if="!props.title">
+          <span v-if="!props.title && !props.titleHighlight1">
             {{ $t('home.hero.titleBefore') }}<span class="text-primary-light">{{ $t('home.hero.titleHighlight') }}</span
             >{{ $t('home.hero.titleAfter') }}
             <br />
             {{ $t('home.hero.subtitleBefore')
             }}<span class="text-primary-light">{{ $t('home.hero.subtitleHighlight') }}</span
             >{{ $t('home.hero.subtitleAfter') }}
+          </span>
+          <span v-else-if="props.titleHighlight1">
+            {{ props.titlePart1 }}<span class="text-primary-light">{{ props.titleHighlight1 }}</span
+            >{{ props.titlePart2
+            }}<span v-if="props.titleHighlight2" class="text-primary-light">{{ props.titleHighlight2 }}</span
+            >{{ props.titlePart3 }}
           </span>
           <span v-else>{{ props.title }}</span>
         </h1>
@@ -90,6 +96,12 @@ const props = defineProps({
     type: String as PropType<string>,
     default: null,
   },
+  /** Titre structuré avec mots en violet (ex. projets, Freelance) */
+  titlePart1: { type: String as PropType<string>, default: '' },
+  titleHighlight1: { type: String as PropType<string>, default: '' },
+  titlePart2: { type: String as PropType<string>, default: '' },
+  titleHighlight2: { type: String as PropType<string>, default: '' },
+  titlePart3: { type: String as PropType<string>, default: '' },
   description: {
     type: String as PropType<string>,
     required: true,

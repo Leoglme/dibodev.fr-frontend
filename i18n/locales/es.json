@@ -16,6 +16,10 @@
     "projects": {
       "title": "Mis proyectos — Dibodev",
       "description": "Descubre los proyectos web, aplicaciones móviles y software realizados por Léo Guillaume, desarrollador freelance en Rennes."
+    },
+    "projectsPage": {
+      "title": "Portfolio — Desarrollador Freelance Web y Móvil en Rennes | Dibodev",
+      "description": "Descubre los proyectos web, móvil e IA realizados por Léo Guillaume, desarrollador freelance en Rennes. SaaS, aplicaciones de negocio, IA y más."
     }
   },
   "nav": {
@@ -230,8 +234,13 @@
   },
   "projects": {
     "landing": {
-      "title": "Mis proyectos",
-      "description": "Descubre una variedad de proyectos web, software y aplicaciones móviles realizados con pasión y experiencia. Explora mi trabajo para inspirarte y considerar una colaboración en tu próximo proyecto.",
+      "title": "Mis proyectos — Desarrollador Freelance Web, Móvil e IA",
+      "titlePart1": "Mis ",
+      "titleHighlight1": "proyectos",
+      "titlePart2": " — Desarrollador ",
+      "titleHighlight2": "Freelance",
+      "titlePart3": " Web, Móvil e IA",
+      "description": "Sitios web, aplicaciones móviles, aplicaciones de negocio, SaaS y proyectos de IA — del diseño a la puesta en marcha.",
       "cta": "Descubrir los proyectos"
     },
     "section": {
@@ -239,8 +248,53 @@
       "searchPlaceholder": "Buscar un proyecto... (Ctrl + E)",
       "allLanguages": "Todos los lenguajes",
       "allCategories": "Todas las categorías",
+      "allSectors": "Todos los sectores",
       "noResultsTitle": "Ningún proyecto encontrado",
       "noResultsDescription": "Ningún proyecto coincide con tus criterios de búsqueda. Prueba a modificar los filtros."
+    },
+    "categoryPage": {
+      "title": "Proyectos {category} — Desarrollador Freelance Web, Móvil e IA",
+      "titlePart1": "Proyectos {category} — Desarrollador ",
+      "titleHighlight1": "Freelance",
+      "titlePart2": " Web, Móvil e IA",
+      "titleHighlight2": "",
+      "titlePart3": "",
+      "description": "Descubre mis realizaciones en la categoría {category}.",
+      "introTitle": "Sobre esta categoría"
+    },
+    "sectorPage": {
+      "title": "Proyectos {sector} — Desarrollador Freelance Web, Móvil e IA",
+      "titlePart1": "Proyectos {sector} — Desarrollador ",
+      "titleHighlight1": "Freelance",
+      "titlePart2": " Web, Móvil e IA",
+      "titlePart3": "",
+      "description": "Descubre mis realizaciones en el sector {sector}: sitios web, aplicaciones móviles, SaaS y proyectos de IA.",
+      "introTitle": "Sobre este sector"
+    },
+    "cta": {
+      "text": "¿Tienes un proyecto similar? Hablemos",
+      "description": "¿Buscas un desarrollador freelance para concretar tu idea? Hablemos de tu proyecto web, móvil o software.",
+      "button": "Contactarme"
+    },
+    "sectors": {
+      "sport-loisirs": "Deporte y ocio",
+      "immobilier": "Inmobiliaria",
+      "sante": "Salud",
+      "voyage-transport": "Viaje y transporte",
+      "productivite": "Productividad",
+      "logistique": "Logística",
+      "b2b": "B2B",
+      "reseaux-sociaux": "Redes sociales",
+      "gaming": "Gaming",
+      "divertissement": "Entretenimiento"
+    },
+    "categories": {
+      "site-web": "Sitio web",
+      "application-mobile": "Aplicación móvil",
+      "saas": "SaaS",
+      "application-metier": "Aplicación de negocio",
+      "logiciel": "Software",
+      "ia": "IA"
     }
   },
   "project": {

@@ -6,28 +6,14 @@
     data-aos-offset="300"
     class="relative z-2 flex h-full min-h-screen w-screen max-w-screen flex-col items-center justify-center gap-18 px-6 py-24 sm:px-8 sm:py-36"
   >
-    <div class="flex w-full max-w-7xl items-center justify-center">
-      <div
-        class="flex w-full max-w-4xl flex-col-reverse items-stretch gap-4 sm:gap-6 md:flex-row md:items-center md:justify-center"
-      >
-        <div class="flex min-w-0 flex-col gap-4 sm:flex-row sm:gap-6">
-          <div class="min-w-0 flex-1 sm:min-w-[180px] [&>*]:!min-w-0">
-            <DibodevSelect id="language-select" :options="languageOptions" v-model:modelValue="selectedLanguage" />
-          </div>
-          <div class="min-w-0 flex-1 sm:min-w-[180px] [&>*]:!min-w-0">
-            <DibodevSelect id="category-select" :options="categoryOptions" v-model:modelValue="selectedCategory" />
-          </div>
-        </div>
-
-        <div class="min-w-0 flex-1 md:max-w-md">
-          <DibodevSearchBar
-            :title="$t('projects.section.searchTitle')"
-            :placeholder="$t('projects.section.searchPlaceholder')"
-            v-model:value="searchTerm"
-          />
-        </div>
-      </div>
-    </div>
+    <DibodevProjectFilters
+      :all-projects="allProjects"
+      :search-title="t('projects.section.searchTitle')"
+      :search-placeholder="t('projects.section.searchPlaceholder')"
+      :all-languages-label="t('projects.section.allLanguages')"
+      v-model:search-term="searchTerm"
+      v-model:selected-language="selectedLanguage"
+    />
 
     <div v-if="projects.length > 0" class="grid w-full max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <DibodevProjectCard
@@ -64,114 +50,47 @@
         </p>
       </div>
     </div>
+
+    <DibodevContactCtaSection
+      :title="$t('projects.cta.text')"
+      :description="$t('projects.cta.description')"
+      :ctaText="$t('projects.cta.button')"
+    />
   </section>
 </template>
 
 <script lang="ts" setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed } from 'vue'
 import type { Ref, ComputedRef } from 'vue'
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
-import DibodevSearchBar from '~/components/inputs/DibodevSearchBar.vue'
-import DibodevSelect from '~/components/core/DibodevSelect.vue'
+import DibodevProjectFilters from '~/components/sections/DibodevProjectFilters.vue'
+import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import type { DibodevProject } from '~/core/types/DibodevProject'
 import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
-import type { StoryblokProjectContent } from '~/services/types/storyblokProject'
-import { StoryblokService } from '~/services/storyblokService'
-import { mapStoryblokProjectToDibodevProject } from '~/services/storyblokProjectMapper'
+import { useProjectsFromStoryblok } from '~/composables/useProjectsFromStoryblok'
 
-const { t, locale } = useI18n()
-const storyblokLanguage: ComputedRef<string | undefined> = useStoryblokProjectLanguage()
-
-const { data: storyblokProjectsData } = await useAsyncData<DibodevProject[]>(
-  () => `projects-storyblok-list-${locale.value}`,
-  async (): Promise<DibodevProject[]> => {
-    try {
-      const response = await StoryblokService.getStories<StoryblokProjectContent>(
-        { starts_with: 'project/' },
-        storyblokLanguage.value,
-      )
-      const projects: DibodevProject[] = response.stories.map((story) => mapStoryblokProjectToDibodevProject(story))
-      return projects.sort((a: DibodevProject, b: DibodevProject): number => {
-        const timeA: number = new Date(a.date).getTime() || 0
-        const timeB: number = new Date(b.date).getTime() || 0
-        return timeB - timeA
-      })
-    } catch {
-      return []
-    }
-  },
+const props = withDefaults(
+  defineProps<{
+    /** Liste préfiltrée (ex. page secteur / catégorie) ; si fournie, utilisée à la place du fetch. */
+    initialProjects?: DibodevProject[]
+  }>(),
+  { initialProjects: undefined },
 )
 
-/* REFS */
-const searchTerm: Ref<string> = ref<string>('')
+const { t } = useI18n()
+const { data: storyblokProjectsData } = await useProjectsFromStoryblok()
 
+const searchTerm: Ref<string> = ref<string>('')
 const selectedLanguage: Ref<DibodevSelectOption> = ref<DibodevSelectOption>({
   label: t('projects.section.allLanguages'),
   value: 'all',
 })
-const selectedCategory: Ref<DibodevSelectOption> = ref<DibodevSelectOption>({
-  label: t('projects.section.allCategories'),
-  value: 'all',
-})
 
-watch(locale, () => {
-  if (selectedLanguage.value.value === 'all') {
-    selectedLanguage.value = { label: t('projects.section.allLanguages'), value: 'all' }
-  }
-  if (selectedCategory.value.value === 'all') {
-    selectedCategory.value = { label: t('projects.section.allCategories'), value: 'all' }
-  }
-})
-
-/**
- * All projects from Storyblok (single source of truth).
- */
 const allProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] => {
+  if (props.initialProjects != null && Array.isArray(props.initialProjects)) {
+    return props.initialProjects
+  }
   return storyblokProjectsData.value ?? []
-})
-
-/**
- * Unique stack values from all projects, sorted (for "langages" filter).
- * Options are derived from Storyblok data so new stack entries appear automatically.
- */
-const languageOptions: ComputedRef<DibodevSelectOption[]> = computed((): DibodevSelectOption[] => {
-  const all: DibodevProject[] = allProjects.value
-  const set = new Set<string>()
-  for (const project of all) {
-    for (const tech of project.stack) {
-      if (tech != null && String(tech).trim() !== '') {
-        set.add(String(tech).trim())
-      }
-    }
-  }
-  const sorted: string[] = [...set].sort((a: string, b: string) => a.localeCompare(b, 'fr'))
-  const options: DibodevSelectOption[] = [{ label: t('projects.section.allLanguages'), value: 'all' }]
-  for (const value of sorted) {
-    options.push({ label: value, value })
-  }
-  return options
-})
-
-/**
- * Unique categories from all projects, sorted.
- * Options are derived from Storyblok data so new categories appear automatically.
- */
-const categoryOptions: ComputedRef<DibodevSelectOption[]> = computed((): DibodevSelectOption[] => {
-  const all: DibodevProject[] = allProjects.value
-  const set = new Set<string>()
-  for (const project of all) {
-    for (const cat of project.categories) {
-      if (cat != null && String(cat).trim() !== '') {
-        set.add(String(cat).trim())
-      }
-    }
-  }
-  const sorted: string[] = [...set].sort((a: string, b: string) => a.localeCompare(b, 'fr'))
-  const options: DibodevSelectOption[] = [{ label: t('projects.section.allCategories'), value: 'all' }]
-  for (const value of sorted) {
-    options.push({ label: value, value })
-  }
-  return options
 })
 
 /* METHODS */
@@ -229,15 +148,6 @@ const projects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] =>
     const languageFilter: string = selectedLanguage.value.value.toString()
     filtered = filtered.filter((project: DibodevProject): boolean => {
       return project.stack.some((tech: string): boolean => matchesLanguageFilter(tech, languageFilter))
-    })
-  }
-
-  // Filter by category
-  if (selectedCategory.value.value !== 'all') {
-    filtered = filtered.filter((project: DibodevProject): boolean => {
-      return project.categories.some(
-        (cat: string): boolean => cat.toLowerCase() === selectedCategory.value.value.toLowerCase(),
-      )
     })
   }
 

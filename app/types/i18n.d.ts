@@ -9,6 +9,7 @@ declare module 'vue-i18n' {
       description: string
       contact: { title: string; description: string }
       projects: { title: string; description: string }
+      projectsPage: { title: string; description: string }
     }
     nav: {
       home: string
