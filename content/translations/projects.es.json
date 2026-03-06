@@ -73,5 +73,29 @@
       "organización",
       "aplicación profesional"
     ]
+  },
+  "project/nextodo": {
+    "name": "Nextodo",
+    "shortDescription": "Lista de tareas estilo Trello: columnas, tareas, arrastrar y soltar y organización visual.",
+    "longDescription": "Nextodo es un gestor de tareas inspirado en Trello: creación de columnas, tarjetas, reorganización por arrastrar y soltar para priorizar y seguir el avance. Ideal para ilustrar UX, componentes reutilizables y patrones front-end modernos.\n\nTecnología: Next.js, React y CSS. Una base limpia para explorar la persistencia, la autenticación y vistas filtradas si se desea ampliar.",
+    "metaTitle": "Nextodo – Lista de tareas tipo Kanban con arrastrar y soltar",
+    "metaDescription": "Cree columnas y tareas, organice por arrastrar y soltar y siga su avance. Ideal para estructurar sus proyectos y ganar en productividad.",
+    "categories": [
+      "bdd7dccb-c6a7-4990-beac-32abb1ba6aa0"
+    ],
+    "stack": [
+      "Next.js",
+      "React",
+      "JavaScript",
+      "CSS"
+    ],
+    "tags": [
+      "lista de tareas",
+      "kanban",
+      "arrastrar y soltar",
+      "organización de tareas",
+      "productividad personal",
+      "gestión de proyectos"
+    ]
   }
 }
