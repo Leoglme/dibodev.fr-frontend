@@ -73,5 +73,29 @@
       "organization",
       "business application"
     ]
+  },
+  "project/nextodo": {
+    "name": "Nextodo",
+    "shortDescription": "Trello-style to-do list: columns, tasks, drag-and-drop, and visual organization.",
+    "longDescription": "Nextodo is a task manager inspired by Trello: create columns, cards, and reorganize with drag-and-drop to prioritize and track progress. Ideal for illustrating UX, reusable components, and modern front-end patterns.\n\nTech: Next.js, React, and CSS. A clean base to explore persistence, authentication, and filtered views if you want to extend it.",
+    "metaTitle": "Nextodo – Kanban-style to-do list with drag & drop",
+    "metaDescription": "Create columns and tasks, organize with drag-and-drop, and track your progress. Ideal for structuring your projects and boosting productivity.",
+    "categories": [
+      "bdd7dccb-c6a7-4990-beac-32abb1ba6aa0"
+    ],
+    "stack": [
+      "Next.js",
+      "React",
+      "JavaScript",
+      "CSS"
+    ],
+    "tags": [
+      "to-do list",
+      "kanban",
+      "drag-and-drop",
+      "task organization",
+      "personal productivity",
+      "project management"
+    ]
   }
 }
