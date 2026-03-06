@@ -52,6 +52,7 @@ jobs:
         run: npm run generate
         env:
           NITRO_PRESET: static
+          NUXT_BUILD_COMMIT: ${{ github.sha }}
 
       - name: 📂 Save static site output
         run: |
@@ -68,6 +69,7 @@ jobs:
         run: npm run build
         env:
           NITRO_PRESET: node-server
+          NUXT_BUILD_COMMIT: ${{ github.sha }}
 
       - name: 📂 Copy MJML templates to server output
         run: |

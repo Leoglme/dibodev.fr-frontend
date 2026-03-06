@@ -26,6 +26,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN || '',
+    /** Owner/repo for translations push (e.g. dibodev/dibodev.fr-frontend). */
+    githubRepo: process.env.GITHUB_REPO || '',
     mailjetApiKey: process.env.MAILJET_API_KEY || '',
     mailjetApiSecret: process.env.MAILJET_API_SECRET || '',
     storyblokDeliveryApiToken: process.env.NUXT_STORYBLOK_DELIVERY_API_TOKEN || '',
@@ -42,6 +44,8 @@ export default defineNuxtConfig({
     gscQuotaProjectId: process.env.GSC_QUOTA_PROJECT_ID || '',
     /** Optionnel : JSON du Service Account (string) pour auth server-to-server. Sinon on utilise GSC_REFRESH_TOKEN. */
     gscServiceAccountJson: process.env.GSC_SERVICE_ACCOUNT_JSON || '',
+    /** Commit SHA du build (injecté en CI, ex. NUXT_BUILD_COMMIT=${{ github.sha }}). Utilisé pour le statut « En ligne » des traductions. */
+    buildCommit: process.env.NUXT_BUILD_COMMIT || '',
     public: {
       storyblok: {
         accessToken: process.env.NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN || '',
