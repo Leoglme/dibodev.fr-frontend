@@ -31,7 +31,7 @@ jobs:
         run: |
           cp .env.example .env
           sed -i "s/^NODE_ENV=.*/NODE_ENV=production/" .env || echo "NODE_ENV=production" >> .env
-          sed -i "s/^REPO_ACCESS_TOKEN=.*/REPO_ACCESS_TOKEN=${{ secrets.DIBODEV_STATS_GITHUB_TOKEN }}/" .env || echo "REPO_ACCESS_TOKEN=${{ secrets.DIBODEV_STATS_GITHUB_TOKEN }}" >> .env
+          sed -i "s/^REPO_ACCESS_TOKEN=.*/REPO_ACCESS_TOKEN=${{ secrets.REPO_ACCESS_TOKEN }}/" .env || echo "REPO_ACCESS_TOKEN=${{ secrets.REPO_ACCESS_TOKEN }}" >> .env
           sed -i "s/^MAILJET_API_KEY=.*/MAILJET_API_KEY=${{ secrets.MAILJET_API_KEY }}/" .env || echo "MAILJET_API_KEY=${{ secrets.MAILJET_API_KEY }}" >> .env
           sed -i "s/^MAILJET_API_SECRET=.*/MAILJET_API_SECRET=${{ secrets.MAILJET_API_SECRET }}/" .env || echo "MAILJET_API_SECRET=${{ secrets.MAILJET_API_SECRET }}" >> .env
           sed -i "s/^NUXT_STORYBLOK_DELIVERY_API_TOKEN=.*/NUXT_STORYBLOK_DELIVERY_API_TOKEN=${{ secrets.NUXT_STORYBLOK_DELIVERY_API_TOKEN }}/" .env || echo "NUXT_STORYBLOK_DELIVERY_API_TOKEN=${{ secrets.NUXT_STORYBLOK_DELIVERY_API_TOKEN }}" >> .env
