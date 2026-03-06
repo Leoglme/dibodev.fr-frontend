@@ -5,8 +5,14 @@
     "longDescription": "Versión web del Cuatro en Raya en HTML/CSS/JavaScript: lógica de juego sólida, interfaz responsive y personalización (avatar, colores de las fichas). Jugable entre amigos, incluyendo en móvil. Perfecto para demostrar el dominio del DOM, eventos y patrones JS simples pero robustos.\n\nUn pequeño juego accesible, divertido y extensible (puntuaciones, multi-sesiones, guardados).",
     "metaTitle": "Cuatro en Raya – Juego web responsive y personalizable",
     "metaDescription": "Versión web del Cuatro en Raya: avatares y colores personalizables, jugable en móvil. Interfaz fluida y lógica de juego robusta para jugar entre amigos.",
-    "categories": ["bdd7dccb-c6a7-4990-beac-32abb1ba6aa0"],
-    "stack": ["HTML", "CSS", "JavaScript"],
+    "categories": [
+      "bdd7dccb-c6a7-4990-beac-32abb1ba6aa0"
+    ],
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "tags": [
       "juego web",
       "cuatro en raya en línea",
@@ -14,6 +20,31 @@
       "responsive móvil",
       "personalización",
       "divertimento"
+    ]
+  },
+  "project/spotify": {
+    "name": "Clone de Spotify",
+    "shortDescription": "Clone de Spotify en React + API PHP: biblioteca, categorías, reproductor, páginas de artistas.",
+    "longDescription": "Proyecto rush de 3 días: recrear una experiencia tipo Spotify con navegación por categorías, páginas de artistas y reproductor de audio funcional. Front en React con Redux Toolkit; backend en PHP para los endpoints y la gestión de los datos.\n\nDemuestra la capacidad de prototipar rápidamente una aplicación multimedia con un front moderno y una API dedicada, gestionando state management, routing y reproducción de audio.",
+    "metaTitle": "Clone de Spotify – Sitio de música con reproductor web",
+    "metaDescription": "Prototipo de sitio de música: biblioteca, categorías, páginas de artistas y reproductor de audio. Proyecto rápido que demuestra una experiencia cercana a un servicio de streaming.",
+    "categories": [
+      "bdd7dccb-c6a7-4990-beac-32abb1ba6aa0"
+    ],
+    "stack": [
+      "React",
+      "Redux Toolkit",
+      "JavaScript",
+      "CSS",
+      "PHP"
+    ],
+    "tags": [
+      "reproductor de audio web",
+      "biblioteca musical",
+      "streaming",
+      "interfaz musical",
+      "proyecto pedagógico",
+      "clone de Spotify"
     ]
   }
 }
