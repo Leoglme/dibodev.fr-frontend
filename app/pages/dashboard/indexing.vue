@@ -238,6 +238,8 @@ const typeOptions: DibodevSelectOption[] = [
   { label: 'Page', value: 'page' },
   { label: 'Blog', value: 'blog' },
   { label: 'Projet', value: 'project' },
+  { label: 'Catégorie', value: 'category' },
+  { label: 'Secteur', value: 'sector' },
 ]
 const selectedVerdict = ref<DibodevSelectOption>(verdictOptions[0]!)
 const selectedType = ref<DibodevSelectOption>(typeOptions[0]!)

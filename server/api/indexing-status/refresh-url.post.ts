@@ -25,12 +25,9 @@ export default defineEventHandler(async (event: H3Event) => {
   }
 
   const config = useRuntimeConfig()
-  const deliveryToken: string = String(config.storyblokDeliveryApiToken || '')
-  if (!deliveryToken) {
-    throw createError({ statusCode: 503, statusMessage: 'Storyblok not configured.' })
-  }
+  const siteBaseUrl: string = String(config.indexingSiteUrl || 'https://dibodev.fr').replace(/\/$/, '')
 
-  const sources: IndexingStatusRow[] = await getIndexingSources(deliveryToken)
+  const sources: IndexingStatusRow[] = await getIndexingSources(siteBaseUrl)
   const source = sources.find((s) => s.url === url)
   if (!source) {
     throw createError({ statusCode: 404, statusMessage: 'URL not in indexing sources.' })

@@ -18,17 +18,10 @@ type IndexingStatusResponse = {
 export default defineEventHandler(async (event: H3Event): Promise<IndexingStatusResponse> => {
   requireDashboardAuth(event)
   const config = useRuntimeConfig()
-  const deliveryToken: string = String(config.storyblokDeliveryApiToken || '')
-  if (!deliveryToken) {
-    return {
-      items: [] as IndexingStatusRow[],
-      refresh: { status: 'idle' },
-      gscConnected: false,
-    }
-  }
+  const siteBaseUrl: string = String(config.indexingSiteUrl || 'https://dibodev.fr').replace(/\/$/, '')
 
   const [sources, rows, refresh]: [IndexingStatusRow[], Record<string, IndexingStatusRow>, IndexingRefreshState] =
-    await Promise.all([getIndexingSources(deliveryToken), getIndexingRows(), getRefreshState()])
+    await Promise.all([getIndexingSources(siteBaseUrl), getIndexingRows(), getRefreshState()])
 
   const items: IndexingStatusRow[] = sources.map((source: IndexingStatusRow) => {
     const cached: IndexingStatusRow | undefined = rows[source.url]

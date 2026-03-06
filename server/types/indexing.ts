@@ -1,7 +1,7 @@
 /**
  * Type d’entrée (blog, page statique, projet Storyblok).
  */
-export type IndexingUrlType = 'blog' | 'page' | 'project'
+export type IndexingUrlType = 'blog' | 'page' | 'project' | 'category' | 'sector'
 
 /**
  * Une ligne de statut d’indexation (cache en DB/storage).

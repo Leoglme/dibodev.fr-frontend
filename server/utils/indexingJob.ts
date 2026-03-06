@@ -16,11 +16,7 @@ function sleep(ms: number): Promise<void> {
  */
 export async function runIndexingRefreshJob(): Promise<void> {
   const config = useRuntimeConfig()
-  const deliveryToken: string = String(config.storyblokDeliveryApiToken || '')
-  if (!deliveryToken) {
-    await setRefreshState({ status: 'idle' })
-    return
-  }
+  const siteBaseUrl: string = String(config.indexingSiteUrl || 'https://dibodev.fr').replace(/\/$/, '')
 
   let accessToken: string
   try {
@@ -36,7 +32,7 @@ export async function runIndexingRefreshJob(): Promise<void> {
   }
 
   const quotaProjectId: string = (config.gscQuotaProjectId as string | undefined)?.trim() ?? ''
-  const sources: IndexingStatusRow[] = await getIndexingSources(deliveryToken)
+  const sources: IndexingStatusRow[] = await getIndexingSources(siteBaseUrl)
   const rows: Record<string, IndexingStatusRow> = await getIndexingRows()
 
   for (const [index, source] of sources.entries()) {

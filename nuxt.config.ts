@@ -46,6 +46,8 @@ export default defineNuxtConfig({
     gscServiceAccountJson: process.env.GSC_SERVICE_ACCOUNT_JSON || '',
     /** Commit SHA du build (injecté en CI, ex. NUXT_BUILD_COMMIT=${{ github.sha }}). Utilisé pour le statut « En ligne » des traductions. */
     buildCommit: process.env.NUXT_BUILD_COMMIT || '',
+    /** URL du site pour récupérer le sitemap (dashboard indexation). */
+    indexingSiteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://dibodev.fr',
     public: {
       storyblok: {
         accessToken: process.env.NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN || '',

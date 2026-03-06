@@ -1,75 +1,104 @@
 import type { IndexingStatusRow, IndexingUrlType } from '~~/server/types/indexing'
 
-const SITE_URL = 'https://dibodev.fr'
-const STORYBLOK_CDN_BASE = 'https://api.storyblok.com/v2/cdn'
-const BLOG_FOLDER = 'blog/'
-
-/** Pages statiques du site (sans préfixe de locale pour l’URL canonique). */
-const STATIC_PAGES: { path: string; title: string }[] = [
-  { path: '/', title: 'Accueil' },
-  { path: '/contact', title: 'Contact' },
-  { path: '/projets', title: 'Projets' },
-  { path: '/blog', title: 'Blog' },
-]
-
-type StoryItem = {
-  content?: { title?: string; slug?: string; date?: string; name?: string }
-  full_slug?: string
-}
-
-type StoriesResponse = { stories?: StoryItem[] }
+const SITEMAP_INDEX_PATH: string = '/sitemap_index.xml'
 
 /**
- * Retourne les URLs à vérifier : pages statiques + articles blog + pages project (Storyblok).
+ * Récupère le type d'indexation à partir de l'URL.
+ * Ordre important : patterns spécifiques avant génériques.
  */
-export async function getIndexingSources(deliveryToken: string): Promise<IndexingStatusRow[]> {
+function inferTypeFromUrl(url: string): IndexingUrlType {
+  const pathname: string = new URL(url).pathname
+
+  if (/\/blog\/[^/]+$/.test(pathname)) return 'blog'
+  if (/\/project\/[^/]+$/.test(pathname)) return 'project'
+  if (/\/(?:categorie|category|categoria)\/[^/]+$/.test(pathname)) return 'category'
+  if (/\/(?:secteur|sector)\/[^/]+$/.test(pathname)) return 'sector'
+
+  return 'page'
+}
+
+/**
+ * Génère un titre lisible à partir du slug (dernier segment du path).
+ */
+function slugToTitle(slug: string): string {
+  const formatted: string = slug.replace(/-/g, ' ').replace(/\b\w/g, (c: string): string => c.toUpperCase())
+  return formatted.trim() || slug
+}
+
+/**
+ * Extrait le titre affichable pour une URL donnée.
+ */
+function urlToTitle(url: string): string {
+  const pathname: string = new URL(url).pathname
+  const segments: string[] = pathname.split('/').filter((s: string): boolean => s.length > 0)
+  const lastSegment: string | undefined = segments[segments.length - 1]
+  if (!lastSegment) return pathname || 'Accueil'
+  return slugToTitle(lastSegment)
+}
+
+/**
+ * Parse un sitemap XML et extrait les URLs <loc>.
+ */
+function parseSitemapUrls(xmlText: string): string[] {
+  const urls: string[] = []
+  const locRegex: RegExp = /<loc[^>]*>([^<]+)<\/loc>/gi
+  let match: RegExpExecArray | null = locRegex.exec(xmlText)
+  while (match !== null) {
+    const loc: string = match[1]?.trim() ?? ''
+    if (loc.length > 0) urls.push(loc)
+    match = locRegex.exec(xmlText)
+  }
+  return urls
+}
+
+/**
+ * Parse un sitemap index XML et extrait les URLs des sitemaps enfants.
+ */
+function parseSitemapIndex(xmlText: string): string[] {
+  return parseSitemapUrls(xmlText)
+}
+
+/**
+ * Récupère le contenu d'une URL en texte.
+ */
+async function fetchText(url: string): Promise<string> {
+  const res: Response = await fetch(url, {
+    headers: { Accept: 'application/xml, text/xml, */*' },
+  })
+  if (!res.ok) {
+    throw new Error(`HTTP ${res.status} for ${url}`)
+  }
+  return res.text()
+}
+
+/**
+ * Récupère toutes les URLs depuis le sitemap du site.
+ * Retourne les URLs à vérifier avec type et title déduits.
+ */
+export async function getIndexingSources(siteBaseUrl: string): Promise<IndexingStatusRow[]> {
   const rows: IndexingStatusRow[] = []
+  const indexUrl: string = `${siteBaseUrl.replace(/\/$/, '')}${SITEMAP_INDEX_PATH}`
 
-  for (const { path, title } of STATIC_PAGES) {
-    rows.push({
-      url: `${SITE_URL}${path}`,
-      title,
-      type: 'page',
-    })
-  }
+  try {
+    const indexText: string = await fetchText(indexUrl)
+    const sitemapUrls: string[] = parseSitemapIndex(indexText)
 
-  const spaceRes = await fetch(`${STORYBLOK_CDN_BASE}/spaces/me?token=${deliveryToken}`)
-  if (!spaceRes.ok) return rows
-  const spaceData = (await spaceRes.json()) as { space?: { version?: number } }
-  const cv = spaceData.space?.version ?? 0
+    for (const sitemapUrl of sitemapUrls) {
+      try {
+        const sitemapText: string = await fetchText(sitemapUrl)
+        const pageUrls: string[] = parseSitemapUrls(sitemapText)
 
-  const blogUrl = `${STORYBLOK_CDN_BASE}/stories?token=${deliveryToken}&starts_with=${encodeURIComponent(BLOG_FOLDER)}&per_page=100&sort_by=content.date:desc&cv=${cv}`
-  const blogRes = await fetch(blogUrl)
-  if (blogRes.ok) {
-    const data = (await blogRes.json()) as StoriesResponse
-    const stories = data.stories ?? []
-    for (const s of stories) {
-      const slug = (s.content?.slug ?? s.full_slug ?? '').replace(/^blog\/?/, '').trim() || 'article'
-      const fullSlug = s.full_slug ?? `blog/${slug}`
-      const canonicalPath = fullSlug.startsWith('blog/') ? fullSlug : `blog/${fullSlug}`
-      rows.push({
-        url: `${SITE_URL}/${canonicalPath}`,
-        title: s.content?.title ?? slug,
-        type: 'blog',
-      })
+        for (const url of pageUrls) {
+          const type: IndexingUrlType = inferTypeFromUrl(url)
+          const title: string = urlToTitle(url)
+          rows.push({ url, title, type })
+        }
+      } catch {
+        // Ignorer les sitemaps partiels en erreur, continuer avec les autres
+      }
     }
-  }
-
-  const projectUrl = `${STORYBLOK_CDN_BASE}/stories?token=${deliveryToken}&starts_with=project%2F&per_page=100&cv=${cv}`
-  const projectRes = await fetch(projectUrl)
-  if (projectRes.ok) {
-    const data = (await projectRes.json()) as StoriesResponse
-    const stories = data.stories ?? []
-    for (const s of stories) {
-      const fullSlug = (s.full_slug ?? '').trim()
-      if (!fullSlug) continue
-      const route = fullSlug.includes('/project/') ? fullSlug.slice(fullSlug.indexOf('/project/')) : `/${fullSlug}`
-      rows.push({
-        url: `${SITE_URL}${route}`,
-        title: (s.content?.name ?? s.content?.title ?? route).toString(),
-        type: 'project',
-      })
-    }
+  } catch {
+    return []
   }
 
   return rows
