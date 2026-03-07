@@ -1,7 +1,14 @@
 import type { H3Event } from 'h3'
 import { createError, readBody } from 'h3'
 import { requireDashboardAuth } from '~~/server/utils/dashboardAuth'
-import { getGitHubFile, putGitHubFile, type GetFileResult, type PutFileResult } from '~~/server/utils/githubContent'
+import {
+  getGitHubFile,
+  putGitHubFile,
+  putGitHubFiles,
+  type GetFileResult,
+  type PutFileResult,
+  type PutGitHubFilesItem,
+} from '~~/server/utils/githubContent'
 import { mistralGenerate } from '~~/server/utils/mistral'
 import { extractRichtextTexts, injectRichtextTranslations } from '~~/server/utils/translationsRichtext'
 import type {
@@ -128,17 +135,30 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
   }
 
   const body: unknown = await readBody(event)
-  const { entityType, slug: fullSlug, targetLocale }: TranslateBody = body as TranslateBody
+  const rawBody: TranslateBody = body as TranslateBody
+  const entityType: TranslatableEntityType | undefined = rawBody.entityType
+  const fullSlug: string | undefined = rawBody.slug
+  const targetLocaleSingle: TranslationTargetLocale | undefined = rawBody.targetLocale
+  const targetLocalesArray: TranslationTargetLocale[] | undefined = rawBody.targetLocales
+
+  const locales: TranslationTargetLocale[] =
+    Array.isArray(targetLocalesArray) && targetLocalesArray.length > 0
+      ? [...new Set(targetLocalesArray)].filter(
+          (l: TranslationTargetLocale): boolean => l === 'en' || l === 'es',
+        )
+      : targetLocaleSingle === 'en' || targetLocaleSingle === 'es'
+        ? [targetLocaleSingle]
+        : []
+
   if (
     !entityType ||
     !fullSlug ||
-    !targetLocale ||
-    (entityType !== 'project' && entityType !== 'article') ||
-    (targetLocale !== 'en' && targetLocale !== 'es')
+    locales.length === 0 ||
+    (entityType !== 'project' && entityType !== 'article')
   ) {
     throw createError({
       statusCode: 400,
-      statusMessage: 'Invalid body: entityType, slug and targetLocale (en|es) required.',
+      statusMessage: 'Invalid body: entityType, slug and targetLocale (en|es) or targetLocales required.',
     })
   }
 
@@ -154,7 +174,6 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
     const categories: string[] = normalizeStringList(effective.categories as string[] | string)
     const stack: string[] = normalizeStringList(effective.stack as string[] | string)
     const tags: string[] = normalizeStringList(effective.tags as string[] | string)
-
     const userMessage: string = JSON.stringify({
       name,
       shortDescription,
@@ -166,60 +185,73 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
       tags,
     })
 
-    const { content: raw }: { content: string } = await mistralGenerate({
-      apiKey: mistralApiKey,
-      systemInstruction: getProjectSystemInstruction(targetLocale),
-      userMessage,
-      temperature: 0.3,
-      maxTokens: 4000,
-    })
-
-    let translated: TranslatedProjectFields
-    try {
-      const parsed: Record<string, unknown> = JSON.parse(raw) as Record<string, unknown>
-      translated = {
-        name: String(parsed.name ?? ''),
-        shortDescription: String(parsed.shortDescription ?? ''),
-        longDescription: String(parsed.longDescription ?? ''),
-        metaTitle: String(parsed.metaTitle ?? ''),
-        metaDescription: String(parsed.metaDescription ?? ''),
-        categories: Array.isArray(parsed.categories) ? (parsed.categories as string[]).map(String) : [],
-        stack: Array.isArray(parsed.stack) ? (parsed.stack as string[]).map(String) : [],
-        tags: Array.isArray(parsed.tags) ? (parsed.tags as string[]).map(String) : [],
+    const filesToPush: PutGitHubFilesItem[] = []
+    for (const locale of locales) {
+      const { content: raw }: { content: string } = await mistralGenerate({
+        apiKey: mistralApiKey,
+        systemInstruction: getProjectSystemInstruction(locale),
+        userMessage,
+        temperature: 0.3,
+        maxTokens: 4000,
+      })
+      let translated: TranslatedProjectFields
+      try {
+        const parsed: Record<string, unknown> = JSON.parse(raw) as Record<string, unknown>
+        translated = {
+          name: String(parsed.name ?? ''),
+          shortDescription: String(parsed.shortDescription ?? ''),
+          longDescription: String(parsed.longDescription ?? ''),
+          metaTitle: String(parsed.metaTitle ?? ''),
+          metaDescription: String(parsed.metaDescription ?? ''),
+          categories: Array.isArray(parsed.categories) ? (parsed.categories as string[]).map(String) : [],
+          stack: Array.isArray(parsed.stack) ? (parsed.stack as string[]).map(String) : [],
+          tags: Array.isArray(parsed.tags) ? (parsed.tags as string[]).map(String) : [],
+        }
+      } catch {
+        throw createError({
+          statusCode: 502,
+          statusMessage: `Mistral returned invalid JSON for project translation (${locale}).`,
+        })
       }
-    } catch {
-      throw createError({
-        statusCode: 502,
-        statusMessage: 'Mistral returned invalid JSON for project translation.',
-      })
+      const filePath: string = `${TRANSLATIONS_PATH}/projects.${locale}.json`
+      const existing: GetFileResult = await getGitHubFile(githubToken, githubRepo, filePath)
+      const current: ProjectsTranslationFile = existing.ok
+        ? (JSON.parse(existing.content) as ProjectsTranslationFile)
+        : {}
+      const updated: ProjectsTranslationFile = { ...current, [fullSlug]: translated }
+      filesToPush.push({ path: filePath, content: JSON.stringify(updated, null, 2) })
     }
 
-    const filePath: string = `${TRANSLATIONS_PATH}/projects.${targetLocale}.json`
-    const existing: import('~~/server/utils/githubContent').GetFileResult = await getGitHubFile(
-      githubToken,
-      githubRepo,
-      filePath,
-    )
-    const current: ProjectsTranslationFile = existing.ok
-      ? (JSON.parse(existing.content) as ProjectsTranslationFile)
-      : {}
-    const updated: ProjectsTranslationFile = { ...current, [fullSlug]: translated }
-    const contentStr: string = JSON.stringify(updated, null, 2)
-    const putRes: PutFileResult = await putGitHubFile({
-      token: githubToken,
-      repo: githubRepo,
-      path: filePath,
-      content: contentStr,
-      message: `chore(translations): update project ${fullSlug} → ${targetLocale}`,
-      sha: existing.ok ? existing.sha : undefined,
-    })
-    if (!putRes.ok) {
-      throw createError({
-        statusCode: 502,
-        statusMessage: putRes.message || 'Failed to push to GitHub',
+    if (filesToPush.length === 1) {
+      const existing: GetFileResult = await getGitHubFile(
+        githubToken,
+        githubRepo,
+        filesToPush[0]!.path,
+      )
+      const putRes: PutFileResult = await putGitHubFile({
+        token: githubToken,
+        repo: githubRepo,
+        path: filesToPush[0]!.path,
+        content: filesToPush[0]!.content,
+        message: `chore(translations): update project ${fullSlug} → ${locales[0]}`,
+        sha: existing.ok ? existing.sha : undefined,
       })
+      if (!putRes.ok) {
+        throw createError({ statusCode: 502, statusMessage: putRes.message || 'Failed to push to GitHub' })
+      }
+    } else {
+      const putRes: Awaited<ReturnType<typeof putGitHubFiles>> = await putGitHubFiles({
+        token: githubToken,
+        repo: githubRepo,
+        message: `chore(translations): update project ${fullSlug} → EN + ES`,
+        files: filesToPush,
+      })
+      if (!putRes.ok) {
+        throw createError({ statusCode: 502, statusMessage: putRes.message || 'Failed to push to GitHub' })
+      }
     }
-    return { ok: true, message: `Projet ${fullSlug} traduit en ${targetLocale}.` }
+    const localeLabel: string = locales.length === 2 ? 'EN et ES' : locales[0] === 'en' ? 'EN' : 'ES'
+    return { ok: true, message: `Projet ${fullSlug} traduit en ${localeLabel}.` }
   }
 
   // entityType === 'article'
@@ -235,21 +267,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
     | { type: string; content?: StoryblokRichtextNode[] }
     | undefined
   const contentTexts: string[] = richtext ? extractRichtextTexts(richtext as StoryblokRichtextNode) : []
-
-  const metaUserMessage: string = JSON.stringify({
-    title,
-    excerpt,
-    metaTitle,
-    metaDescription,
-    tags,
-  })
-  const { content: metaRaw } = await mistralGenerate({
-    apiKey: mistralApiKey,
-    systemInstruction: getArticleMetaSystemInstruction(targetLocale),
-    userMessage: metaUserMessage,
-    temperature: 0.3,
-    maxTokens: 2000,
-  })
+  const metaUserMessage: string = JSON.stringify({ title, excerpt, metaTitle, metaDescription, tags })
 
   type TranslatedArticleMeta = {
     title: string
@@ -258,76 +276,101 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
     metaDescription: string
     tags: string[]
   }
-  let translatedMeta: TranslatedArticleMeta
-  try {
-    const parsed: Record<string, unknown> = JSON.parse(metaRaw) as Record<string, unknown>
-    translatedMeta = {
-      title: String(parsed.title ?? ''),
-      excerpt: String(parsed.excerpt ?? ''),
-      metaTitle: String(parsed.metaTitle ?? ''),
-      metaDescription: String(parsed.metaDescription ?? ''),
-      tags: Array.isArray(parsed.tags) ? (parsed.tags as string[]).map(String) : [],
-    }
-  } catch {
-    throw createError({
-      statusCode: 502,
-      statusMessage: 'Mistral returned invalid JSON for article metadata.',
-    })
-  }
 
-  let translatedContentTexts: string[] = []
-  if (contentTexts.length > 0) {
-    const contentUserMessage = JSON.stringify({ texts: contentTexts })
-    const { content: contentRaw } = await mistralGenerate({
+  const articleFilesToPush: PutGitHubFilesItem[] = []
+  for (const locale of locales) {
+    const { content: metaRaw }: { content: string } = await mistralGenerate({
       apiKey: mistralApiKey,
-      systemInstruction: getArticleContentSystemInstruction(targetLocale),
-      userMessage: contentUserMessage,
+      systemInstruction: getArticleMetaSystemInstruction(locale),
+      userMessage: metaUserMessage,
       temperature: 0.3,
-      maxTokens: 8000,
+      maxTokens: 2000,
     })
+    let translatedMeta: TranslatedArticleMeta
     try {
-      const parsed: { texts?: string[] } = JSON.parse(contentRaw) as { texts?: string[] }
-      translatedContentTexts = Array.isArray(parsed.texts) ? parsed.texts.map(String) : []
+      const parsed: Record<string, unknown> = JSON.parse(metaRaw) as Record<string, unknown>
+      translatedMeta = {
+        title: String(parsed.title ?? ''),
+        excerpt: String(parsed.excerpt ?? ''),
+        metaTitle: String(parsed.metaTitle ?? ''),
+        metaDescription: String(parsed.metaDescription ?? ''),
+        tags: Array.isArray(parsed.tags) ? (parsed.tags as string[]).map(String) : [],
+      }
     } catch {
       throw createError({
         statusCode: 502,
-        statusMessage: 'Mistral returned invalid JSON for article content.',
+        statusMessage: `Mistral returned invalid JSON for article metadata (${locale}).`,
       })
     }
+
+    let translatedContentTexts: string[] = []
+    if (contentTexts.length > 0) {
+      const contentUserMessage: string = JSON.stringify({ texts: contentTexts })
+      const { content: contentRaw }: { content: string } = await mistralGenerate({
+        apiKey: mistralApiKey,
+        systemInstruction: getArticleContentSystemInstruction(locale),
+        userMessage: contentUserMessage,
+        temperature: 0.3,
+        maxTokens: 8000,
+      })
+      try {
+        const parsed: { texts?: string[] } = JSON.parse(contentRaw) as { texts?: string[] }
+        translatedContentTexts = Array.isArray(parsed.texts) ? parsed.texts.map(String) : []
+      } catch {
+        throw createError({
+          statusCode: 502,
+          statusMessage: `Mistral returned invalid JSON for article content (${locale}).`,
+        })
+      }
+    }
+
+    let translatedRichtext: { type: string; content?: StoryblokRichtextNode[] }
+    if (richtext) {
+      const clone: StoryblokRichtextNode = JSON.parse(JSON.stringify(richtext)) as StoryblokRichtextNode
+      injectRichtextTranslations(clone, translatedContentTexts)
+      translatedRichtext = { type: clone.type, content: clone.content }
+    } else {
+      translatedRichtext = { type: 'doc', content: [] }
+    }
+
+    const translatedArticle: TranslatedArticleFields = { ...translatedMeta, content: translatedRichtext }
+    const filePath: string = `${TRANSLATIONS_PATH}/articles.${locale}.json`
+    const existing: GetFileResult = await getGitHubFile(githubToken, githubRepo, filePath)
+    const current: ArticlesTranslationFile = existing.ok
+      ? (JSON.parse(existing.content) as ArticlesTranslationFile)
+      : {}
+    const updated: ArticlesTranslationFile = { ...current, [fullSlug]: translatedArticle }
+    articleFilesToPush.push({ path: filePath, content: JSON.stringify(updated, null, 2) })
   }
 
-  let translatedRichtext: { type: string; content?: StoryblokRichtextNode[] }
-  if (richtext) {
-    const clone = JSON.parse(JSON.stringify(richtext)) as StoryblokRichtextNode
-    injectRichtextTranslations(clone, translatedContentTexts)
-    translatedRichtext = { type: clone.type, content: clone.content }
-  } else {
-    translatedRichtext = { type: 'doc', content: [] }
-  }
-
-  const translatedArticle: TranslatedArticleFields = {
-    ...translatedMeta,
-    content: translatedRichtext,
-  }
-
-  const filePath: string = `${TRANSLATIONS_PATH}/articles.${targetLocale}.json`
-  const existing: GetFileResult = await getGitHubFile(githubToken, githubRepo, filePath)
-  const current: ArticlesTranslationFile = existing.ok ? (JSON.parse(existing.content) as ArticlesTranslationFile) : {}
-  const updated: ArticlesTranslationFile = { ...current, [fullSlug]: translatedArticle }
-  const contentStr: string = JSON.stringify(updated, null, 2)
-  const putRes: PutFileResult = await putGitHubFile({
-    token: githubToken,
-    repo: githubRepo,
-    path: filePath,
-    content: contentStr,
-    message: `chore(translations): update article ${fullSlug} → ${targetLocale}`,
-    sha: existing.ok ? existing.sha : undefined,
-  })
-  if (!putRes.ok) {
-    throw createError({
-      statusCode: 502,
-      statusMessage: putRes.message || 'Failed to push to GitHub',
+  if (articleFilesToPush.length === 1) {
+    const existing: GetFileResult = await getGitHubFile(
+      githubToken,
+      githubRepo,
+      articleFilesToPush[0]!.path,
+    )
+    const putRes: PutFileResult = await putGitHubFile({
+      token: githubToken,
+      repo: githubRepo,
+      path: articleFilesToPush[0]!.path,
+      content: articleFilesToPush[0]!.content,
+      message: `chore(translations): update article ${fullSlug} → ${locales[0]}`,
+      sha: existing.ok ? existing.sha : undefined,
     })
+    if (!putRes.ok) {
+      throw createError({ statusCode: 502, statusMessage: putRes.message || 'Failed to push to GitHub' })
+    }
+  } else {
+    const putRes: Awaited<ReturnType<typeof putGitHubFiles>> = await putGitHubFiles({
+      token: githubToken,
+      repo: githubRepo,
+      message: `chore(translations): update article ${fullSlug} → EN + ES`,
+      files: articleFilesToPush,
+    })
+    if (!putRes.ok) {
+      throw createError({ statusCode: 502, statusMessage: putRes.message || 'Failed to push to GitHub' })
+    }
   }
-  return { ok: true, message: `Article ${fullSlug} traduit en ${targetLocale}.` }
+  const localeLabel: string = locales.length === 2 ? 'EN et ES' : locales[0] === 'en' ? 'EN' : 'ES'
+  return { ok: true, message: `Article ${fullSlug} traduit en ${localeLabel}.` }
 })

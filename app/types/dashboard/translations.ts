@@ -26,7 +26,8 @@ export type ListTranslatablesResponse = {
 export type TranslateBody = {
   entityType: TranslatableEntityType
   slug: string
-  targetLocale: TranslationTargetLocale
+  targetLocale?: TranslationTargetLocale
+  targetLocales?: TranslationTargetLocale[]
 }
 
 export type TranslateResponse = {

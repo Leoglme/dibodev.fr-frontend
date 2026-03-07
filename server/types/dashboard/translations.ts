@@ -25,11 +25,14 @@ export type ListTranslatablesResponse = {
   deploySynced: boolean
 }
 
-/** Payload for POST translate. */
+/** Payload for POST translate. Use targetLocales for EN+ES in one commit. */
 export type TranslateBody = {
   entityType: TranslatableEntityType
   slug: string
-  targetLocale: TranslationTargetLocale
+  /** Single locale (one commit). */
+  targetLocale?: TranslationTargetLocale
+  /** Multiple locales (one commit, one deployment). */
+  targetLocales?: TranslationTargetLocale[]
 }
 
 export type TranslateResponse = {

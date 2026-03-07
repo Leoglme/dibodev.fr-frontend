@@ -48,7 +48,7 @@ const projectName: string = String(route.params.projectName || '').trim()
 const isStoryblokEditor: boolean = typeof route.query._storyblok !== 'undefined'
 
 /**
- * Current project loaded from Storyblok (single source of truth).
+ * Project: Storyblok always FR. EN/ES from i18n JSON (dashboard translations) overlaid.
  */
 const currentProject: Ref<DibodevProject | null> = ref<DibodevProject | null>(null)
 
@@ -56,6 +56,7 @@ if (projectName.length === 0) {
   router.push({ path: '/' })
 } else {
   const storyblokSlug: string = `project/${projectName}`
+  const fullSlug: string = storyblokSlug
 
   try {
     const storyResponse: StoryblokStoryResponse<StoryblokProjectContent> =
@@ -65,7 +66,31 @@ if (projectName.length === 0) {
         storyblokLanguage.value,
       )
 
-    currentProject.value = mapStoryblokProjectToDibodevProject(storyResponse.story)
+    let project: DibodevProject = mapStoryblokProjectToDibodevProject(storyResponse.story)
+
+    const currentLocale: string = locale.value as string
+    if (currentLocale === 'en' || currentLocale === 'es') {
+      const translations: Record<string, { name: string; shortDescription: string; longDescription: string; metaTitle: string; metaDescription: string; categories: string[]; stack: string[]; tags: string[] }> =
+        await $fetch<Record<string, { name: string; shortDescription: string; longDescription: string; metaTitle: string; metaDescription: string; categories: string[]; stack: string[]; tags: string[] }>>(
+          `/api/translations/projects/${currentLocale}`,
+        ).catch(() => ({}))
+      const t = translations[fullSlug]
+      if (t) {
+        project = {
+          ...project,
+          name: t.name,
+          shortDescription: t.shortDescription,
+          longDescription: t.longDescription,
+          metaTitle: t.metaTitle,
+          metaDescription: t.metaDescription,
+          categories: t.categories as DibodevProject['categories'],
+          stack: t.stack,
+          tags: t.tags,
+        }
+      }
+    }
+
+    currentProject.value = project
   } catch {
     router.push({ path: '/' })
   }

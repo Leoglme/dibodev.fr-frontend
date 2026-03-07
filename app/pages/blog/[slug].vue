@@ -50,10 +50,14 @@ import { mapStoryblokArticleToDibodevArticle } from '~/services/storyblokArticle
 const route = useRoute()
 const router = useRouter()
 const storyblokLanguage = useStoryblokProjectLanguage()
+const { locale } = useI18n()
 
 const slug: string = String(route.params.slug ?? '').trim()
 const isStoryblokEditor: boolean = typeof route.query._storyblok !== 'undefined'
 
+/**
+ * Article: Storyblok always FR. EN/ES from i18n JSON (dashboard translations) overlaid.
+ */
 const article: Ref<DibodevArticle | null> = ref<DibodevArticle | null>(null)
 
 if (slug.length === 0) {
@@ -66,7 +70,37 @@ if (slug.length === 0) {
       storyblokLanguage.value,
     )
 
-    article.value = mapStoryblokArticleToDibodevArticle(storyResponse.story)
+    let mapped: DibodevArticle = mapStoryblokArticleToDibodevArticle(storyResponse.story)
+
+    const currentLocale: string = locale.value as string
+    if (currentLocale === 'en' || currentLocale === 'es') {
+      const fullSlug: string = `blog/${slug}`
+      type ArticleTranslation = {
+        title: string
+        excerpt: string
+        content: { type: string; content?: unknown[] }
+        metaTitle: string
+        metaDescription: string
+        tags: string[]
+      }
+      const translations: Record<string, ArticleTranslation> = await $fetch<Record<string, ArticleTranslation>>(
+        `/api/translations/articles/${currentLocale}`,
+      ).catch(() => ({}))
+      const t = translations[fullSlug]
+      if (t) {
+        mapped = {
+          ...mapped,
+          title: t.title,
+          excerpt: t.excerpt,
+          content: t.content,
+          metaTitle: t.metaTitle,
+          metaDescription: t.metaDescription,
+          tags: t.tags,
+        }
+      }
+    }
+
+    article.value = mapped
   } catch {
     throw createError({
       statusCode: 404,
@@ -91,7 +125,6 @@ const formattedDate: ComputedRef<string> = computed((): string => {
 })
 
 const siteUrl: string = 'https://dibodev.fr'
-const { locale } = useI18n()
 const localePath = useLocalePath()
 
 useHead((): Record<string, unknown> => {

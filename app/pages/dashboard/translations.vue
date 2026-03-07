@@ -312,26 +312,17 @@ async function translateItemAllLocales(item: TranslatableItem): Promise<void> {
   error.value = ''
   successMessage.value = ''
   try {
-    for (const locale of localesToRun) {
-      const entityType: TranslatableEntityType = item.type
-      const body: TranslateBody = { entityType, slug: item.fullSlug, targetLocale: locale }
-      const res: TranslateResponse = await $fetch<TranslateResponse>('/api/dashboard/translations/translate', {
-        method: 'POST',
-        body,
-      })
-      if (!res.ok) {
-        error.value = res.message || 'Erreur inconnue'
-        break
-      }
-    }
-    if (error.value === '') {
-      successMessage.value =
-        localesToRun.length === 2
-          ? 'Traduit en EN et ES.'
-          : localesToRun[0] === 'en'
-            ? 'Traduit en EN.'
-            : 'Traduit en ES.'
+    const entityType: TranslatableEntityType = item.type
+    const body: TranslateBody = { entityType, slug: item.fullSlug, targetLocales: localesToRun }
+    const res: TranslateResponse = await $fetch<TranslateResponse>('/api/dashboard/translations/translate', {
+      method: 'POST',
+      body,
+    })
+    if (res.ok) {
+      successMessage.value = res.message
       await fetchList(true)
+    } else {
+      error.value = res.message || 'Erreur inconnue'
     }
   } catch (e: unknown) {
     const msg: string = e instanceof Error ? e.message : 'Erreur lors de la traduction.'

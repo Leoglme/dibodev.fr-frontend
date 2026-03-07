@@ -2,13 +2,9 @@ import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
 
 /**
- * Returns the Storyblok language parameter for project content based on the current locale.
- * - fr: default (French) → undefined (Storyblok returns default language)
- * - en, es: → 'en-us' (English content; ES visitors see English for projects)
- *
- * Returns a ComputedRef so it stays reactive when locale changes (e.g. on refetch).
+ * Returns the Storyblok language parameter. Always undefined so Storyblok returns FR (default).
+ * EN/ES content is provided by i18n JSON files (dashboard translations), overlaid on the client.
  */
 export function useStoryblokProjectLanguage(): ComputedRef<string | undefined> {
-  const { locale } = useI18n()
-  return computed(() => (locale.value === 'fr' ? undefined : 'en-us'))
+  return computed((): undefined => undefined)
 }
