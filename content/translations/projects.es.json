@@ -226,5 +226,36 @@
       "gestión de favoritos",
       "inmobiliaria Francia"
     ]
+  },
+  "project/ai-pneumonia-detector": {
+    "name": "AI Pneumonia Detector",
+    "shortDescription": "Aplicación de IA que permite detectar neumonía a partir de radiografías pulmonares.",
+    "longDescription": "AI Pneumonia Detector compara dos enfoques de aprendizaje automático para la detección de neumonía a partir de imágenes radiográficas: CNN (TensorFlow/PyTorch) y KNN (Scikit-learn). El usuario puede probar radiografías (ejemplos proporcionados) y obtener una predicción instantánea, acompañada de métricas detalladas (precisión, recall, F1-score), matrices de confusión y curvas ROC para comprender el rendimiento de los modelos.\n\nEl front Vue.js/TailwindCSS garantiza una interfaz clara, mientras que el backend Python/FastAPI (Uvicorn) orquesta el preprocesamiento y la inferencia. El proyecto destaca la pedagogía en torno a la IA médica, la reproducibilidad (Jupyter, nbconvert/nbformat) y la optimización (Pandas/NumPy, gestión de memoria psutil/GPUtil). Una demostración concreta de ciencia de datos aplicada a la salud con tecnologías de código abierto.",
+    "metaTitle": "AI Pneumonia Detector – Detección de neumonía por IA en línea",
+    "metaDescription": "Aplicación web de salud para analizar radiografías pulmonares y detectar neumonía. Demo en línea con predicciones, matrices de confusión y curvas ROC para evaluar los modelos.",
+    "categories": [
+      "site-web",
+      "ia"
+    ],
+    "sectors": [
+      "sante"
+    ],
+    "stack": [
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Python",
+      "FastAPI"
+    ],
+    "tags": [
+      "detección de neumonía",
+      "imagen médica",
+      "radiografía torácica",
+      "inteligencia artificial en salud",
+      "diagnóstico asistido",
+      "clasificación de imágenes",
+      "proyecto de IA",
+      "demostración en línea"
+    ]
   }
 }

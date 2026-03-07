@@ -226,5 +226,36 @@
       "favorites management",
       "French real estate"
     ]
+  },
+  "project/ai-pneumonia-detector": {
+    "name": "AI Pneumonia Detector",
+    "shortDescription": "AI application for detecting pneumonia from chest X-rays.",
+    "longDescription": "AI Pneumonia Detector compares two machine learning approaches for pneumonia detection from radiographic images: CNN (TensorFlow/PyTorch) and KNN (Scikit-learn). The user can test X-rays (examples provided) and get an instant prediction, along with detailed metrics (precision, recall, F1-score), confusion matrices, and ROC curves to understand model performance.\n\nThe Vue.js/TailwindCSS front-end ensures a clear interface, while the Python/FastAPI (Uvicorn) back-end orchestrates pre-processing and inference. The project highlights medical AI pedagogy, reproducibility (Jupyter, nbconvert/nbformat), and optimization (Pandas/NumPy, memory management psutil/GPUtil). A concrete demonstration of data science applied to health with open-source technologies.",
+    "metaTitle": "AI Pneumonia Detector – Online AI-based pneumonia detection",
+    "metaDescription": "Health web application to analyze chest X-rays and detect pneumonia. Online demo with predictions, confusion matrices, and ROC curves to evaluate models.",
+    "categories": [
+      "site-web",
+      "ia"
+    ],
+    "sectors": [
+      "sante"
+    ],
+    "stack": [
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Python",
+      "FastAPI"
+    ],
+    "tags": [
+      "pneumonia detection",
+      "medical imaging",
+      "chest radiography",
+      "health AI",
+      "assisted diagnosis",
+      "image classification",
+      "AI project",
+      "online demo"
+    ]
   }
 }
