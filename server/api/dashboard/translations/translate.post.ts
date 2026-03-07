@@ -25,7 +25,29 @@ import type {
 const STORYBLOK_CDN_BASE: string = 'https://api.storyblok.com/v2/cdn'
 const TRANSLATIONS_PATH: string = 'content/translations'
 
-type StoryblokStoryResponse<T> = { story?: { content?: T; full_slug?: string } }
+type StoryblokStoryResponse<T> = {
+  story?: { content?: T; full_slug?: string }
+  rels?: Array<{ uuid?: string; full_slug?: string }>
+}
+
+function lastSegment(path: string): string | null {
+  const trimmed = String(path)
+    .replace(/^\/+|\/+$/g, '')
+    .trim()
+  if (!trimmed) return null
+  const parts = trimmed.split('/')
+  const last = parts[parts.length - 1]?.trim()
+  return last || null
+}
+
+function buildRelsSlugMap(rels: StoryblokStoryResponse<unknown>['rels']): Record<string, string> {
+  const map: Record<string, string> = {}
+  if (!Array.isArray(rels)) return map
+  for (const s of rels) {
+    if (s?.uuid && typeof s.full_slug === 'string') map[s.uuid] = s.full_slug
+  }
+  return map
+}
 
 function normalizeStringList(value: string[] | string | undefined): string[] {
   if (Array.isArray(value)) {
@@ -51,8 +73,15 @@ function getEffectiveProjectContent(content: Record<string, unknown>): Record<st
   return content
 }
 
-async function fetchStoryBySlug(token: string, fullSlug: string): Promise<Record<string, unknown>> {
-  const url: string = `${STORYBLOK_CDN_BASE}/stories/${encodeURIComponent(fullSlug)}?token=${token}&version=published`
+async function fetchStoryBySlug(
+  token: string,
+  fullSlug: string,
+  resolveRelations?: string,
+): Promise<{ content: Record<string, unknown>; relsSlugMap: Record<string, string> }> {
+  let url: string = `${STORYBLOK_CDN_BASE}/stories/${encodeURIComponent(fullSlug)}?token=${token}&version=published`
+  if (resolveRelations) {
+    url += `&resolve_relations=${encodeURIComponent(resolveRelations)}`
+  }
   const res: Response = await fetch(url)
   if (!res.ok) {
     throw createError({
@@ -70,16 +99,19 @@ async function fetchStoryBySlug(token: string, fullSlug: string): Promise<Record
       statusMessage: 'Invalid story content',
     })
   }
-  return content
+  const relsSlugMap: Record<string, string> = buildRelsSlugMap(data.rels)
+  return { content, relsSlugMap }
 }
 
 const PROJECT_SYSTEM_EN: string = `You are a professional translator. Translate the following French project fields to English. 
-Return ONLY a valid JSON object with these exact keys: name, shortDescription, longDescription, metaTitle, metaDescription, categories, stack, tags.
-Each of categories, stack, tags must be a JSON array of strings. Preserve tone and terminology (tech, marketing).`
+Return ONLY a valid JSON object with these exact keys: name, shortDescription, longDescription, metaTitle, metaDescription, categories, sectors, stack, tags.
+- categories and sectors must be JSON arrays of slug keys (e.g. site-web, logiciel, gaming). Keep the exact same keys as in the source; do not translate them.
+- stack and tags must be JSON arrays of translated strings. Preserve tone and terminology (tech, marketing).`
 
 const PROJECT_SYSTEM_ES: string = `You are a professional translator. Translate the following French project fields to Spanish. 
-Return ONLY a valid JSON object with these exact keys: name, shortDescription, longDescription, metaTitle, metaDescription, categories, stack, tags.
-Each of categories, stack, tags must be a JSON array of strings. Preserve tone and terminology (tech, marketing).`
+Return ONLY a valid JSON object with these exact keys: name, shortDescription, longDescription, metaTitle, metaDescription, categories, sectors, stack, tags.
+- categories and sectors must be JSON arrays of slug keys (e.g. site-web, logiciel, gaming). Keep the exact same keys as in the source; do not translate them.
+- stack and tags must be JSON arrays of translated strings. Preserve tone and terminology (tech, marketing).`
 
 const ARTICLE_META_SYSTEM_EN: string = `You are a professional translator. Translate the following French article metadata to English. 
 Return ONLY a valid JSON object with these exact keys: title, excerpt, metaTitle, metaDescription, tags.
@@ -143,35 +175,46 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
 
   const locales: TranslationTargetLocale[] =
     Array.isArray(targetLocalesArray) && targetLocalesArray.length > 0
-      ? [...new Set(targetLocalesArray)].filter(
-          (l: TranslationTargetLocale): boolean => l === 'en' || l === 'es',
-        )
+      ? [...new Set(targetLocalesArray)].filter((l: TranslationTargetLocale): boolean => l === 'en' || l === 'es')
       : targetLocaleSingle === 'en' || targetLocaleSingle === 'es'
         ? [targetLocaleSingle]
         : []
 
-  if (
-    !entityType ||
-    !fullSlug ||
-    locales.length === 0 ||
-    (entityType !== 'project' && entityType !== 'article')
-  ) {
+  if (!entityType || !fullSlug || locales.length === 0 || (entityType !== 'project' && entityType !== 'article')) {
     throw createError({
       statusCode: 400,
       statusMessage: 'Invalid body: entityType, slug and targetLocale (en|es) or targetLocales required.',
     })
   }
 
-  const content: Record<string, unknown> = await fetchStoryBySlug(storyblokToken, fullSlug)
-
   if (entityType === 'project') {
+    const { content, relsSlugMap } = await fetchStoryBySlug(
+      storyblokToken,
+      fullSlug,
+      'project.sectors,project.categories',
+    )
     const effective: Record<string, unknown> = getEffectiveProjectContent(content)
     const name: string = String(effective.name ?? '')
     const shortDescription: string = String(effective.shortDescription ?? '')
     const longDescription: string = String(effective.longDescription ?? '')
     const metaTitle: string = String(effective.metaTitle ?? '')
     const metaDescription: string = String(effective.metaDescription ?? '')
-    const categories: string[] = normalizeStringList(effective.categories as string[] | string)
+    const rawCategories: string[] = normalizeStringList(effective.categories as string[] | string)
+    const categories: string[] = rawCategories
+      .map((uuidOrKey: string) => {
+        const fullSlugFromRels = relsSlugMap[uuidOrKey]
+        if (fullSlugFromRels) return lastSegment(fullSlugFromRels) ?? uuidOrKey
+        return uuidOrKey
+      })
+      .filter(Boolean)
+    const rawSectors: string[] = normalizeStringList(effective.sectors as string[] | string)
+    const sectors: string[] = rawSectors
+      .map((uuidOrKey: string) => {
+        const fullSlugFromRels = relsSlugMap[uuidOrKey]
+        if (fullSlugFromRels) return lastSegment(fullSlugFromRels) ?? uuidOrKey
+        return uuidOrKey
+      })
+      .filter(Boolean)
     const stack: string[] = normalizeStringList(effective.stack as string[] | string)
     const tags: string[] = normalizeStringList(effective.tags as string[] | string)
     const userMessage: string = JSON.stringify({
@@ -181,6 +224,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
       metaTitle,
       metaDescription,
       categories,
+      sectors,
       stack,
       tags,
     })
@@ -204,6 +248,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
           metaTitle: String(parsed.metaTitle ?? ''),
           metaDescription: String(parsed.metaDescription ?? ''),
           categories: Array.isArray(parsed.categories) ? (parsed.categories as string[]).map(String) : [],
+          sectors: Array.isArray(parsed.sectors) ? (parsed.sectors as string[]).map(String) : [],
           stack: Array.isArray(parsed.stack) ? (parsed.stack as string[]).map(String) : [],
           tags: Array.isArray(parsed.tags) ? (parsed.tags as string[]).map(String) : [],
         }
@@ -223,11 +268,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
     }
 
     if (filesToPush.length === 1) {
-      const existing: GetFileResult = await getGitHubFile(
-        githubToken,
-        githubRepo,
-        filesToPush[0]!.path,
-      )
+      const existing: GetFileResult = await getGitHubFile(githubToken, githubRepo, filesToPush[0]!.path)
       const putRes: PutFileResult = await putGitHubFile({
         token: githubToken,
         repo: githubRepo,
@@ -255,6 +296,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
   }
 
   // entityType === 'article'
+  const { content } = await fetchStoryBySlug(storyblokToken, fullSlug)
   const seo: { metaTitle?: string; metaDescription?: string } | undefined = content.seo as
     | { metaTitle?: string; metaDescription?: string }
     | undefined
@@ -344,11 +386,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
   }
 
   if (articleFilesToPush.length === 1) {
-    const existing: GetFileResult = await getGitHubFile(
-      githubToken,
-      githubRepo,
-      articleFilesToPush[0]!.path,
-    )
+    const existing: GetFileResult = await getGitHubFile(githubToken, githubRepo, articleFilesToPush[0]!.path)
     const putRes: PutFileResult = await putGitHubFile({
       token: githubToken,
       repo: githubRepo,

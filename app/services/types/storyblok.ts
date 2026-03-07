@@ -54,9 +54,12 @@ export type StoryblokStory<TContent> = Omit<ISbStoryData, 'content'> & {
 
 /**
  * Story response returned by Storyblok CDN API.
+ * With resolve_relations, the API also returns rels (resolved relation stories).
  */
 export type StoryblokStoryResponse<TContent> = {
   story: StoryblokStory<TContent>
+  /** Resolved relation stories (uuid, full_slug) when resolve_relations is used */
+  rels?: Array<{ uuid?: string; full_slug?: string }>
 }
 
 /**

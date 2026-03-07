@@ -48,10 +48,8 @@ import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { computed, type PropType } from 'vue'
 import type { ComputedRef } from 'vue'
 import type { DibodevProject } from '~/core/types/DibodevProject'
-import type { StoryblokProjectContent } from '~/services/types/storyblokProject'
-import { StoryblokService } from '~/services/storyblokService'
-import { mapStoryblokProjectToDibodevProject } from '~/services/storyblokProjectMapper'
 import type { DibodevRecommendedProjectSectionProps } from '~/core/types/DibodevRecommendedProjectSection'
+import { useProjectsWithTranslations } from '~/composables/useProjectsWithTranslations'
 
 /* TYPES */
 type ProjectWithScore = {
@@ -68,28 +66,7 @@ const props: DibodevRecommendedProjectSectionProps = defineProps({
   },
 })
 
-const { locale } = useI18n()
-const storyblokLanguage: ComputedRef<string | undefined> = useStoryblokProjectLanguage()
-
-const { data: storyblokProjectsData } = await useAsyncData<DibodevProject[]>(
-  () => `projects-storyblok-list-${locale.value}`,
-  async (): Promise<DibodevProject[]> => {
-    try {
-      const response = await StoryblokService.getStories<StoryblokProjectContent>(
-        { starts_with: 'project/' },
-        storyblokLanguage.value,
-      )
-      const projects: DibodevProject[] = response.stories.map((story) => mapStoryblokProjectToDibodevProject(story))
-      return projects.sort((a: DibodevProject, b: DibodevProject): number => {
-        const timeA: number = new Date(a.date).getTime() || 0
-        const timeB: number = new Date(b.date).getTime() || 0
-        return timeB - timeA
-      })
-    } catch {
-      return []
-    }
-  },
-)
+const { data: storyblokProjectsData } = await useProjectsWithTranslations()
 
 /**
  * Similarity score between two projects (higher = more similar).

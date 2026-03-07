@@ -35,7 +35,16 @@
           </p>
 
           <div class="flex flex-wrap items-center gap-3">
-            <DibodevCategoryBadge v-for="category in props.categories" :key="category" :category="category" />
+            <DibodevCategoryBadge v-for="category in props.categories" :key="'cat-' + category" :category="category" />
+            <DibodevBadge
+              v-for="sector in props.sectors"
+              :key="'sec-' + sector"
+              backgroundColor="#374151"
+              textColor="#f3f4f6"
+              size="md"
+            >
+              {{ $t('projects.sectors.' + sector) }}
+            </DibodevBadge>
           </div>
         </div>
 
@@ -88,6 +97,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import type { Ref, PropType } from 'vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
+import DibodevBadge from '~/components/ui/DibodevBadge.vue'
 import DibodevCategoryBadge from '~/components/ui/DibodevCategoryBadge.vue'
 /* PROPS */
 const props = defineProps({
@@ -114,6 +124,10 @@ const props = defineProps({
   categories: {
     type: Array as PropType<string[]>,
     required: true,
+  },
+  sectors: {
+    type: Array as PropType<string[]>,
+    default: () => [],
   },
   date: {
     type: String as PropType<string>,

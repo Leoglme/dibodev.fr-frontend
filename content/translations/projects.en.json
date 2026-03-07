@@ -5,14 +5,8 @@
     "longDescription": "Web version of Connect Four in HTML/CSS/JavaScript: solid game logic, responsive interface and customization (avatar, pawn colors). Playable with friends, including on mobile. Perfect for demonstrating mastery of the DOM, events and simple but robust JS patterns.\n\nA small, accessible, fun and extensible game (scores, multi-sessions, saves).",
     "metaTitle": "Connect Four – Responsive and customizable web game",
     "metaDescription": "Web version of Connect Four: customizable avatars and colors, playable on mobile. Fluid interface and robust game logic to play with friends.",
-    "categories": [
-      "bdd7dccb-c6a7-4990-beac-32abb1ba6aa0"
-    ],
-    "stack": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
+    "categories": ["site-web"],
+    "stack": ["HTML", "CSS", "JavaScript"],
     "tags": [
       "web game",
       "online connect four",
@@ -28,16 +22,8 @@
     "longDescription": "3-day rush project: recreate a Spotify-like experience with category navigation, artist pages, and functional audio player. Frontend in React with Redux Toolkit; backend in PHP for endpoints and data management.\n\nDemonstrates the ability to quickly prototype a media app with a modern frontend and dedicated API, managing state, routing, and audio playback.",
     "metaTitle": "Spotify Clone – Music site with web player",
     "metaDescription": "Music site prototype: library, categories, artist pages, and audio player. Quick project demonstrating an experience close to a streaming service.",
-    "categories": [
-      "bdd7dccb-c6a7-4990-beac-32abb1ba6aa0"
-    ],
-    "stack": [
-      "React",
-      "Redux Toolkit",
-      "JavaScript",
-      "CSS",
-      "PHP"
-    ],
+    "categories": ["site-web"],
+    "stack": ["React", "Redux Toolkit", "JavaScript", "CSS", "PHP"],
     "tags": [
       "web audio player",
       "music library",
@@ -53,18 +39,8 @@
     "longDescription": "Business web application for driving schools: creation of students/instructors, management of availability, scheduling of driving hours, and tracking of appointments. It centralizes daily organization to save time and avoid double bookings.\n\nStack: Vue 3 + TypeScript + TailwindCSS on the front end and Python/Flask API on the server side. A clear, scalable project (notifications, billing, exports) and suitable for SMEs.",
     "metaTitle": "Driving School – Driving School Management and Scheduling",
     "metaDescription": "Business application for driving schools: management of students and instructors, scheduling of driving hours and appointments for simplified organization.",
-    "categories": [
-      "bdd7dccb-c6a7-4990-beac-32abb1ba6aa0",
-      "1331e6bb-4f12-45e2-b738-0e306fe9900a",
-      "18cd4f18-36d8-4320-b1e7-f351a2b3bb57"
-    ],
-    "stack": [
-      "Vue.js",
-      "TypeScript",
-      "TailwindCSS",
-      "Python",
-      "Flask"
-    ],
+    "categories": ["site-web", "application-metier", "logiciel"],
+    "stack": ["Vue.js", "TypeScript", "TailwindCSS", "Python", "Flask"],
     "tags": [
       "driving school",
       "schedule management",
@@ -80,15 +56,8 @@
     "longDescription": "Nextodo is a task manager inspired by Trello: create columns, cards, and reorganize with drag-and-drop to prioritize and track progress. Ideal for illustrating UX, reusable components, and modern front-end patterns.\n\nTech: Next.js, React, and CSS. A clean base to explore persistence, authentication, and filtered views if you want to extend it.",
     "metaTitle": "Nextodo – Kanban-style to-do list with drag & drop",
     "metaDescription": "Create columns and tasks, organize with drag-and-drop, and track your progress. Ideal for structuring your projects and boosting productivity.",
-    "categories": [
-      "bdd7dccb-c6a7-4990-beac-32abb1ba6aa0"
-    ],
-    "stack": [
-      "Next.js",
-      "React",
-      "JavaScript",
-      "CSS"
-    ],
+    "categories": ["site-web"],
+    "stack": ["Next.js", "React", "JavaScript", "CSS"],
     "tags": [
       "to-do list",
       "kanban",
@@ -104,20 +73,8 @@
     "longDescription": "Time management application for field teams and offices: quick entry (desktop/mobile), organization by task/project/site, management of breaks and travel. A weekly validation workflow simplifies the approval of hours and identifies anomalies (absences, inconsistencies) at a glance.\n\nStack: Nuxt.js, Vue.js, TypeScript for the front end; C# .NET backend with MongoDB/MSSQL for consolidated reports and precise analysis. Goal: reliability of time tracking, managerial visibility and smooth approval process.",
     "metaTitle": "Time Management Software – Weekly Entry & Validation",
     "metaDescription": "Time entry by task/project, weekly validation, anomaly detection and consolidated reporting for reliable and transparent time management.",
-    "categories": [
-      "bdd7dccb-c6a7-4990-beac-32abb1ba6aa0",
-      "1331e6bb-4f12-45e2-b738-0e306fe9900a",
-      "18cd4f18-36d8-4320-b1e7-f351a2b3bb57"
-    ],
-    "stack": [
-      "Nuxt.js",
-      "Vue.js",
-      "TypeScript",
-      "C#",
-      ".NET",
-      "MongoDB",
-      "Microsoft SQL Server (MSSQL)"
-    ],
+    "categories": ["site-web", "application-metier", "logiciel"],
+    "stack": ["Nuxt.js", "Vue.js", "TypeScript", "C#", ".NET", "MongoDB", "Microsoft SQL Server (MSSQL)"],
     "tags": [
       "time tracking",
       "timesheets",

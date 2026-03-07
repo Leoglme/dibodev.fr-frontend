@@ -53,7 +53,7 @@ import type { SectorKey } from '~/core/constants/projectEnums'
 import type { SupportedLocale } from '~/core/constants/sectorSlugs'
 import { parseSectorFromSlug, sectorLabelByLocale } from '~/core/constants/sectorSlugs'
 import { buildSectorSeo } from '~/composables/useSectorSeo'
-import { useProjectsFromStoryblok } from '~/composables/useProjectsFromStoryblok'
+import { useProjectsWithTranslations } from '~/composables/useProjectsWithTranslations'
 import type { StoryblokSectorContent } from '~/services/types/storyblokSector'
 import { SECTEURS_STORYBLOK_FOLDER, normalizeSectorContent } from '~/services/types/storyblokSector'
 import { StoryblokService } from '~/services/storyblokService'
@@ -109,7 +109,7 @@ const { data: sectorStoryData } = useLazyAsyncData<SectorPageData | null>(
   },
 )
 
-const { data: storyblokProjectsData } = useProjectsFromStoryblok()
+const { data: storyblokProjectsData } = useProjectsWithTranslations()
 
 const allProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] => {
   return storyblokProjectsData.value ?? []

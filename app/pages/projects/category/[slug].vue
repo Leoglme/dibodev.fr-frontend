@@ -50,7 +50,7 @@ import type { CategoryKey } from '~/core/constants/projectEnums'
 import type { SupportedLocale } from '~/core/constants/categorySlugs'
 import { parseCategoryFromSlug, categoryLabelByLocale } from '~/core/constants/categorySlugs'
 import { buildCategorySeo } from '~/composables/useCategorySeo'
-import { useProjectsFromStoryblok } from '~/composables/useProjectsFromStoryblok'
+import { useProjectsWithTranslations } from '~/composables/useProjectsWithTranslations'
 import type { StoryblokCategoryContent } from '~/services/types/storyblokCategory'
 import { CATEGORIES_STORYBLOK_FOLDER, normalizeCategoryContent } from '~/services/types/storyblokCategory'
 import { StoryblokService } from '~/services/storyblokService'
@@ -105,7 +105,7 @@ const { data: categoryStoryData } = useLazyAsyncData<CategoryPageData | null>(
   },
 )
 
-const { data: storyblokProjectsData } = useProjectsFromStoryblok()
+const { data: storyblokProjectsData } = useProjectsWithTranslations()
 
 const allProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] => {
   return storyblokProjectsData.value ?? []

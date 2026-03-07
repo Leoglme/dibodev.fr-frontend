@@ -66,14 +66,16 @@ export class StoryblokService {
    * @param {string} slug - Example: "pages/home" or "blog/my-post".
    * @param {StoryblokVersion} [version='published'] - "published" or "draft".
    * @param {string} [language] - Storyblok language code (e.g. "en-us") for field-level translation. Omit for default language.
+   * @param {{ resolve_relations?: string }} [options] - Optional resolve_relations (e.g. "project.sectors,project.categories") to get rels in response.
    */
   public static async getStoryBySlug<TContent>(
     slug: string,
     version: StoryblokVersion = 'published',
     language?: string,
+    options?: { resolve_relations?: string },
   ): Promise<StoryblokStoryResponse<TContent>> {
     const baseUrl: string = `${STORYBLOK_CDN_BASE_URL}/stories/${encodeURIComponent(slug)}`
-    const url: string = await this.buildStoryUrl(baseUrl, version, language)
+    const url: string = await this.buildStoryUrl(baseUrl, version, language, options)
 
     const response: Response = await fetch(url)
     if (!response.ok) {
@@ -124,9 +126,14 @@ export class StoryblokService {
   }
 
   /**
-   * Build a Storyblok story URL (adds token + version + optional cv cache buster + optional language).
+   * Build a Storyblok story URL (adds token + version + optional cv cache buster + optional language + optional resolve_relations).
    */
-  private static async buildStoryUrl(baseUrl: string, version: StoryblokVersion, language?: string): Promise<string> {
+  private static async buildStoryUrl(
+    baseUrl: string,
+    version: StoryblokVersion,
+    language?: string,
+    options?: { resolve_relations?: string },
+  ): Promise<string> {
     const params: Record<string, string> = {
       token: this.apiToken,
       version: version === 'draft' ? 'draft' : 'published',
@@ -137,6 +144,9 @@ export class StoryblokService {
     }
     if (language) {
       params.language = language
+    }
+    if (options?.resolve_relations) {
+      params.resolve_relations = options.resolve_relations
     }
     const query: string = new URLSearchParams(params).toString()
     return `${baseUrl}?${query}`

@@ -7,6 +7,7 @@
     :logoUrl="currentProjectComputed.logoUrl"
     :description="currentProjectComputed.shortDescription"
     :categories="currentProjectComputed.categories"
+    :sectors="currentProjectComputed.sectors"
     :date="currentProjectComputed.date"
     :siteUrl="currentProjectComputed.siteUrl"
   />
@@ -36,8 +37,13 @@ import DibodevRecommendedProjectSection from '~/components/sections/DibodevRecom
 import type { StoryblokProjectContent } from '~/services/types/storyblokProject'
 import type { StoryblokStoryResponse } from '~/services/types/storyblok'
 import { StoryblokService } from '~/services/storyblokService'
-import { mapStoryblokProjectToDibodevProject } from '~/services/storyblokProjectMapper'
+import { buildRelsSlugMap, mapStoryblokProjectToDibodevProject } from '~/services/storyblokProjectMapper'
 import { buildProjectSchemaJson } from '~/config/projectSchema'
+
+const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
+function hasUuid(arr: string[] | undefined): boolean {
+  return Array.isArray(arr) && arr.some((s) => typeof s === 'string' && UUID_REGEX.test(s.trim()))
+}
 
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
 const router: Router = useRouter()
@@ -64,18 +70,47 @@ if (projectName.length === 0) {
         storyblokSlug,
         isStoryblokEditor ? 'draft' : 'published',
         storyblokLanguage.value,
+        { resolve_relations: 'project.sectors,project.categories' },
       )
 
-    let project: DibodevProject = mapStoryblokProjectToDibodevProject(storyResponse.story)
+    const relsSlugMap: Record<string, string> = buildRelsSlugMap(storyResponse.rels)
+    let project: DibodevProject = mapStoryblokProjectToDibodevProject(storyResponse.story, undefined, relsSlugMap)
 
     const currentLocale: string = locale.value as string
     if (currentLocale === 'en' || currentLocale === 'es') {
-      const translations: Record<string, { name: string; shortDescription: string; longDescription: string; metaTitle: string; metaDescription: string; categories: string[]; stack: string[]; tags: string[] }> =
-        await $fetch<Record<string, { name: string; shortDescription: string; longDescription: string; metaTitle: string; metaDescription: string; categories: string[]; stack: string[]; tags: string[] }>>(
-          `/api/translations/projects/${currentLocale}`,
-        ).catch(() => ({}))
+      const translations: Record<
+        string,
+        {
+          name: string
+          shortDescription: string
+          longDescription: string
+          metaTitle: string
+          metaDescription: string
+          categories: string[]
+          sectors?: string[]
+          stack: string[]
+          tags: string[]
+        }
+      > = await $fetch<
+        Record<
+          string,
+          {
+            name: string
+            shortDescription: string
+            longDescription: string
+            metaTitle: string
+            metaDescription: string
+            categories: string[]
+            sectors?: string[]
+            stack: string[]
+            tags: string[]
+          }
+        >
+      >(`/api/translations/projects/${currentLocale}`).catch(() => ({}))
       const t = translations[fullSlug]
       if (t) {
+        const useTranslationCategories = !hasUuid(t.categories)
+        const useTranslationSectors = t.sectors != null && !hasUuid(t.sectors)
         project = {
           ...project,
           name: t.name,
@@ -83,7 +118,8 @@ if (projectName.length === 0) {
           longDescription: t.longDescription,
           metaTitle: t.metaTitle,
           metaDescription: t.metaDescription,
-          categories: t.categories as DibodevProject['categories'],
+          categories: useTranslationCategories ? (t.categories as DibodevProject['categories']) : project.categories,
+          sectors: useTranslationSectors ? (t.sectors as DibodevProject['sectors']) : project.sectors,
           stack: t.stack,
           tags: t.tags,
         }

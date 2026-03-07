@@ -75,30 +75,14 @@ import ArticleFeaturedCard from '~/components/blog/ArticleFeaturedCard.vue'
 import ArticleCompactCard from '~/components/blog/ArticleCompactCard.vue'
 import ArticlePlaceholderCard from '~/components/blog/ArticlePlaceholderCard.vue'
 import type { DibodevArticle } from '~/core/types/DibodevArticle'
-import { StoryblokArticleService } from '~/services/storyblokArticleService'
-import { mapStoryblokArticleToDibodevArticle } from '~/services/storyblokArticleMapper'
+import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 
 const localePath = useLocalePath()
-const storyblokLanguage: ComputedRef<string | undefined> = useStoryblokProjectLanguage()
 
 const ARTICLES_LIMIT: number = 3
 const COMPACT_SLOTS: number = 2
 
-const { data: storyblokArticlesData } = await useAsyncData<DibodevArticle[]>(
-  () => `home-latest-articles-${storyblokLanguage.value}`,
-  async (): Promise<DibodevArticle[]> => {
-    try {
-      const response = await StoryblokArticleService.getArticles({
-        page: 1,
-        perPage: ARTICLES_LIMIT,
-        language: storyblokLanguage.value,
-      })
-      return response.stories.map(mapStoryblokArticleToDibodevArticle)
-    } catch {
-      return []
-    }
-  },
-)
+const { data: storyblokArticlesData } = await useArticlesWithTranslations({ page: 1, perPage: ARTICLES_LIMIT })
 
 const articles: ComputedRef<DibodevArticle[]> = computed((): DibodevArticle[] => storyblokArticlesData.value ?? [])
 

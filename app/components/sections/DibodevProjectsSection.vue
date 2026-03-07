@@ -67,7 +67,7 @@ import DibodevProjectFilters from '~/components/sections/DibodevProjectFilters.v
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import type { DibodevProject } from '~/core/types/DibodevProject'
 import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
-import { useProjectsFromStoryblok } from '~/composables/useProjectsFromStoryblok'
+import { useProjectsWithTranslations } from '~/composables/useProjectsWithTranslations'
 
 const props = withDefaults(
   defineProps<{
@@ -78,7 +78,7 @@ const props = withDefaults(
 )
 
 const { t } = useI18n()
-const { data: storyblokProjectsData } = await useProjectsFromStoryblok()
+const { data: storyblokProjectsData } = await useProjectsWithTranslations()
 
 const searchTerm: Ref<string> = ref<string>('')
 const selectedLanguage: Ref<DibodevSelectOption> = ref<DibodevSelectOption>({

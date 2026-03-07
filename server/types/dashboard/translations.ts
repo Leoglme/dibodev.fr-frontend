@@ -48,6 +48,7 @@ export type TranslatedProjectFields = {
   metaTitle: string
   metaDescription: string
   categories: string[]
+  sectors?: string[]
   stack: string[]
   tags: string[]
 }

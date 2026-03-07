@@ -43,37 +43,17 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import type { Ref } from 'vue'
+import { computed } from 'vue'
 import DibodevLandingSection from '~/components/sections/DibodevLandingSection.vue'
 import BlogArticleCard from '~/components/blog/BlogArticleCard.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import type { DibodevArticle } from '~/core/types/DibodevArticle'
-import { StoryblokArticleService } from '~/services/storyblokArticleService'
-import { mapStoryblokArticleToDibodevArticle } from '~/services/storyblokArticleMapper'
+import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 
 const PER_PAGE: number = 12
 
-const articles: Ref<DibodevArticle[]> = ref([])
-
-const storyblokLanguage = useStoryblokProjectLanguage()
-
-async function fetchPage(page: number): Promise<DibodevArticle[]> {
-  const response = await StoryblokArticleService.getArticles({
-    page,
-    perPage: PER_PAGE,
-    language: storyblokLanguage.value,
-  })
-
-  return response.stories.map(mapStoryblokArticleToDibodevArticle)
-}
-
-const { data: initialData } = await useAsyncData<DibodevArticle[]>(
-  () => `blog-list-page-1-${storyblokLanguage.value}`,
-  async (): Promise<DibodevArticle[]> => fetchPage(1),
-)
-
-articles.value = initialData.value ?? []
+const { data: articlesData } = await useArticlesWithTranslations({ page: 1, perPage: PER_PAGE })
+const articles = computed((): DibodevArticle[] => articlesData.value ?? [])
 
 const { t } = useI18n()
 
