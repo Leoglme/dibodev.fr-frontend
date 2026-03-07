@@ -5,8 +5,14 @@
     "longDescription": "Versión web del Cuatro en Raya en HTML/CSS/JavaScript: lógica de juego sólida, interfaz responsive y personalización (avatar, colores de las fichas). Jugable entre amigos, incluyendo en móvil. Perfecto para demostrar el dominio del DOM, eventos y patrones JS simples pero robustos.\n\nUn pequeño juego accesible, divertido y extensible (puntuaciones, multi-sesiones, guardados).",
     "metaTitle": "Cuatro en Raya – Juego web responsive y personalizable",
     "metaDescription": "Versión web del Cuatro en Raya: avatares y colores personalizables, jugable en móvil. Interfaz fluida y lógica de juego robusta para jugar entre amigos.",
-    "categories": ["site-web"],
-    "stack": ["HTML", "CSS", "JavaScript"],
+    "categories": [
+      "site-web"
+    ],
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "tags": [
       "juego web",
       "cuatro en raya en línea",
@@ -22,8 +28,16 @@
     "longDescription": "Proyecto rush de 3 días: recrear una experiencia tipo Spotify con navegación por categorías, páginas de artistas y reproductor de audio funcional. Front en React con Redux Toolkit; backend en PHP para los endpoints y la gestión de los datos.\n\nDemuestra la capacidad de prototipar rápidamente una aplicación multimedia con un front moderno y una API dedicada, gestionando state management, routing y reproducción de audio.",
     "metaTitle": "Clone de Spotify – Sitio de música con reproductor web",
     "metaDescription": "Prototipo de sitio de música: biblioteca, categorías, páginas de artistas y reproductor de audio. Proyecto rápido que demuestra una experiencia cercana a un servicio de streaming.",
-    "categories": ["site-web"],
-    "stack": ["React", "Redux Toolkit", "JavaScript", "CSS", "PHP"],
+    "categories": [
+      "site-web"
+    ],
+    "stack": [
+      "React",
+      "Redux Toolkit",
+      "JavaScript",
+      "CSS",
+      "PHP"
+    ],
     "tags": [
       "reproductor de audio web",
       "biblioteca musical",
@@ -39,8 +53,18 @@
     "longDescription": "Aplicación web profesional para autoescuelas: creación de alumnos/instructores, gestión de disponibilidades, planificación de horas de conducción y seguimiento de citas. Centraliza la organización diaria para ahorrar tiempo y evitar reservas duplicadas.\n\nStack: Vue 3 + TypeScript + TailwindCSS en el front y API Python/Flask en el servidor. Un proyecto claro, escalable (notificaciones, facturación, exportaciones) y adaptado a PYMES.",
     "metaTitle": "Autoescuela – Gestión de autoescuelas y horarios",
     "metaDescription": "Aplicación profesional para autoescuelas: gestión de alumnos e instructores, planificación de horas de conducción y citas para una organización simplificada.",
-    "categories": ["site-web", "1331e6bb-4f12-45e2-b738-0e306fe9900a", "logiciel"],
-    "stack": ["Vue.js", "TypeScript", "TailwindCSS", "Python", "Flask"],
+    "categories": [
+      "site-web",
+      "1331e6bb-4f12-45e2-b738-0e306fe9900a",
+      "logiciel"
+    ],
+    "stack": [
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Python",
+      "Flask"
+    ],
     "tags": [
       "autoescuela",
       "gestión de horarios",
@@ -56,8 +80,15 @@
     "longDescription": "Nextodo es un gestor de tareas inspirado en Trello: creación de columnas, tarjetas, reorganización por arrastrar y soltar para priorizar y seguir el avance. Ideal para ilustrar UX, componentes reutilizables y patrones front-end modernos.\n\nTecnología: Next.js, React y CSS. Una base limpia para explorar la persistencia, la autenticación y vistas filtradas si se desea ampliar.",
     "metaTitle": "Nextodo – Lista de tareas tipo Kanban con arrastrar y soltar",
     "metaDescription": "Cree columnas y tareas, organice por arrastrar y soltar y siga su avance. Ideal para estructurar sus proyectos y ganar en productividad.",
-    "categories": ["site-web"],
-    "stack": ["Next.js", "React", "JavaScript", "CSS"],
+    "categories": [
+      "site-web"
+    ],
+    "stack": [
+      "Next.js",
+      "React",
+      "JavaScript",
+      "CSS"
+    ],
     "tags": [
       "lista de tareas",
       "kanban",
@@ -73,8 +104,20 @@
     "longDescription": "Aplicación de gestión de tiempo para equipos de campo y oficinas: entrada rápida (desktop/móvil), organización por tarea/proyecto/obra, gestión de pausas y desplazamientos. Un flujo de trabajo de validación semanal simplifica la aprobación de horas y detecta anomalías (ausencias, incoherencias) de un vistazo.\n\nStack: Nuxt.js, Vue.js, TypeScript para el front; backend C# .NET con MongoDB/MSSQL para informes consolidados y análisis precisos. Objetivo: fiabilidad de los registros, visibilidad gerencial y proceso de aprobación fluido.",
     "metaTitle": "Software de gestión de tiempo – Entrada y validación semanal",
     "metaDescription": "Entrada de horas por tarea/proyecto, validación semanal, detección de anomalías y reporting consolidado para una gestión de tiempo fiable y transparente.",
-    "categories": ["site-web", "1331e6bb-4f12-45e2-b738-0e306fe9900a", "logiciel"],
-    "stack": ["Nuxt.js", "Vue.js", "TypeScript", "C#", ".NET", "MongoDB", "Microsoft SQL Server (MSSQL)"],
+    "categories": [
+      "site-web",
+      "1331e6bb-4f12-45e2-b738-0e306fe9900a",
+      "logiciel"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "C#",
+      ".NET",
+      "MongoDB",
+      "Microsoft SQL Server (MSSQL)"
+    ],
     "tags": [
       "seguimiento del tiempo",
       "hojas de tiempo",
@@ -84,6 +127,42 @@
       "gestión de obras",
       "timesheet",
       "control de horas"
+    ]
+  },
+  "project/izidoor": {
+    "name": "Izidoor",
+    "shortDescription": "Plataforma SaaS de gestión de reservas para estructuras deportivas y de ocio.",
+    "longDescription": "Izidoor es una plataforma SaaS de reserva y back-office dedicada a clubes deportivos y estructuras de ocio (vela, esquí, kayak, etc.). Unifica la reserva en línea y la gestión operativa: planificación, catálogo de productos, gestión de empleados, facturación y un módulo de caja para el cobro en el lugar. El objetivo es digitalizar procesos a menudo fragmentados, aumentar la tasa de conversión y reducir la carga administrativa.\n\nTécnicamente, Izidoor se basa en Nuxt.js, Vue.js y TypeScript en el front-end, GraphQL para una API-first clara, PostgreSQL para la fiabilidad de los datos y TailwindCSS para una UI rápida y accesible. Pensada para picos estacionales, la arquitectura prioriza el rendimiento, la escalabilidad y la seguridad. Resultado: una experiencia fluida para los usuarios finales y una herramienta robusta para los equipos de campo.",
+    "metaTitle": "Izidoor – Plataforma de reserva deportiva y de ocio | SaaS",
+    "metaDescription": "Plataforma de reserva y back-office para estructuras deportivas y de ocio: planificación, caja, facturación, gestión de equipos y productos. Solución SaaS fiable y escalable.",
+    "categories": [
+      "site-web",
+      "saas",
+      "application-metier"
+    ],
+    "sectors": [
+      "sport-loisirs",
+      "b2b"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "GraphQL",
+      "PostgreSQL",
+      "TailwindCSS"
+    ],
+    "tags": [
+      "plataforma de reserva",
+      "gestión de reservas",
+      "deporte y ocio",
+      "back-office",
+      "facturación",
+      "planificación",
+      "caja",
+      "SaaS",
+      "empresas",
+      "Francia"
     ]
   }
 }
