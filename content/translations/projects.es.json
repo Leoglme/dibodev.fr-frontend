@@ -291,5 +291,34 @@
       "PYMES",
       "logística"
     ]
+  },
+  "project/primea-rp": {
+    "name": "Primea RP",
+    "shortDescription": "Sitio para un servidor de GTA 5 RP francés: onboarding, reglas, guías y recursos.",
+    "longDescription": "Sitio comunitario para Primea RP (GTA 5 RolePlay). Centraliza presentación, reglamento, controles, procedimientos para unirse al servidor y recursos útiles. El onboarding ha sido diseñado para reducir la fricción de entrada y enmarcar las buenas prácticas RP.\n\nTech: Nuxt.js, Vue.js, TypeScript, SCSS. Arquitectura clara, fácilmente mantenible por el equipo de administradores. Un ejemplo de herramienta web dedicada a una comunidad de juegos, enfocada en accesibilidad, claridad y coherencia visual.",
+    "metaTitle": "Primea RP – Sitio del servidor GTA 5 RolePlay",
+    "metaDescription": "Sitio comunitario para un servidor de GTA 5 RP: presentación, reglas, guías y acceso. Onboarding claro para unirse a la comunidad roleplay.",
+    "categories": [
+      "site-web"
+    ],
+    "sectors": [
+      "gaming"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "SCSS"
+    ],
+    "tags": [
+      "GTA 5 RP",
+      "servidor roleplay",
+      "comunidad",
+      "reglamento",
+      "onboarding",
+      "juego de video",
+      "recursos jugadores",
+      "Francia"
+    ]
   }
 }
