@@ -195,5 +195,36 @@
       "user experience",
       "content navigation"
     ]
+  },
+  "project/aparteasy": {
+    "name": "ApartEasy",
+    "shortDescription": "Collaborative application to centralize, rate, and share real estate listings.",
+    "longDescription": "ApartEasy simplifies real estate search by centralizing favorite listings and facilitating collaboration (friends, roommates, couples). Each listing can be rated, assigned a status (called, visited, available), and viewed on an interactive map with estimated travel times. The goal: decide faster, with a shared view and objective criteria.\n\nStack: AdonisJS (API), MariaDB (data), Docker (orchestration), Vue.js + TypeScript (front-end), and TailwindCSS (UI). The project focuses on UX (simplicity, accessibility) and productivity (sorting, search, group collaboration), while remaining extensible (authentication, notifications, roles).",
+    "metaTitle": "ApartEasy – Centralize and share your real estate listings",
+    "metaDescription": "Collaborative application to centralize, rate, and share listings. Interactive map, statuses, teamwork to speed up housing search.",
+    "categories": [
+      "site-web"
+    ],
+    "sectors": [
+      "immobilier"
+    ],
+    "stack": [
+      "AdonisJS",
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Docker",
+      "MariaDB"
+    ],
+    "tags": [
+      "apartment search",
+      "real estate listings",
+      "collaboration",
+      "roommate",
+      "interactive map",
+      "listing ratings",
+      "favorites management",
+      "French real estate"
+    ]
   }
 }

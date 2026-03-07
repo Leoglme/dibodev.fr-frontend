@@ -195,5 +195,36 @@
       "experiencia de usuario",
       "navegación de contenido"
     ]
+  },
+  "project/aparteasy": {
+    "name": "ApartEasy",
+    "shortDescription": "Aplicación colaborativa para centralizar, calificar y compartir anuncios inmobiliarios.",
+    "longDescription": "ApartEasy simplifica la búsqueda inmobiliaria centralizando los anuncios favoritos y facilitando la colaboración (amigos, compañeros de piso, pareja). Cada anuncio puede ser calificado, recibir un estado (llamado, visitado, disponible) y visualizarse en un mapa interactivo con estimación de tiempos de desplazamiento. El objetivo: decidir más rápido, con una vista compartida y criterios objetivos.\n\nStack: AdonisJS (API), MariaDB (datos), Docker (orquestación), Vue.js + TypeScript (front) y TailwindCSS (UI). El proyecto se centra en la UX (simplicidad, accesibilidad) y la productividad (ordenación, búsqueda, colaboración en grupo), manteniéndose extensible (autenticación, notificaciones, roles).",
+    "metaTitle": "ApartEasy – Centralice y comparta sus anuncios inmobiliarios",
+    "metaDescription": "Aplicación colaborativa para centralizar, calificar y compartir anuncios. Mapa interactivo, estados, trabajo en equipo para acelerar la búsqueda de vivienda.",
+    "categories": [
+      "site-web"
+    ],
+    "sectors": [
+      "immobilier"
+    ],
+    "stack": [
+      "AdonisJS",
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Docker",
+      "MariaDB"
+    ],
+    "tags": [
+      "búsqueda de apartamento",
+      "anuncios inmobiliarios",
+      "colaboración",
+      "compartir piso",
+      "mapa interactivo",
+      "calificación de anuncios",
+      "gestión de favoritos",
+      "inmobiliaria Francia"
+    ]
   }
 }
