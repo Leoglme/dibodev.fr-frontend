@@ -335,5 +335,332 @@
         }
       ]
     }
+  },
+  "blog/coach-sportif-limiter-les-annulations-avec-un-outil-de-reservation-en-ligne": {
+    "title": "Entrenador deportivo: limitar las cancelaciones con una herramienta de reserva en línea",
+    "excerpt": "Entrenador deportivo: limitar las cancelaciones con una herramienta de reserva en línea",
+    "metaTitle": "Entrenador deportivo: limitar las cancelaciones con una herramienta de reserva en línea",
+    "metaDescription": "Entrenador deportivo: limitar las cancelaciones con una herramienta de reserva en línea",
+    "tags": [
+      "limitar",
+      "cancelaciones",
+      "reserva",
+      "en línea",
+      "reserva en línea",
+      "gestión de cancelaciones",
+      "lista de espera",
+      "recordatorios"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Introducción",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tu agenda está saturado, pero las cancelaciones de última hora te hacen perder un tiempo valioso. Los clientes olvidan, cambian de opinión o no ven el interés de avisar. Resultado: tu planificación es un rompecabezas para gestionar. ¿Y si existiera una solución sencilla para asegurar tus horarios y mejorar tu imagen?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que te cuesta",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las cancelaciones intempestivas te hacen perder más que un simple horario. Perturban tu organización, tu tesorería y la experiencia del cliente. Tus clientes regulares, por su parte, se impacientan ante disponibilidades fluctuantes. Sin hablar de herramientas como WhatsApp o Excel, que ya no son suficientes para gestionar tu actividad en crecimiento. Pronto, ya no podrás gestionarlo todo solo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Por qué las soluciones clásicas no son suficientes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Objección:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Ya gestiono mis reservas con una agenda en papel o Excel, me basta.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Respuesta:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Estas herramientas no están diseñadas para tu profesión. No permiten bloquear automáticamente los horarios cancelados, ni enviar recordatorios a los clientes. Resultado: pasas un tiempo enorme gestionando los imprevistos, y tu imagen profesional se resiente. Tus clientes merecen una experiencia más fluida.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- No hay recordatorios automáticos",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- No hay sincronización con las herramientas habituales",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- No hay gestión de las cancelaciones en tiempo real",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "La solución adaptada a tu profesión",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una herramienta de reserva en línea, diseñada para los entrenadores deportivos, puede ayudarte a asegurar tus horarios y a mejorar tu imagen. Ya no necesitas gestionar las cancelaciones manualmente: el sistema bloquea automáticamente los horarios cancelados y envía recordatorios a los clientes. Tus clientes apreciarán la reactividad y el profesionalismo de tu servicio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Ejemplo concreto (caso realista detallado)",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Uno de tus clientes habituales, acostumbrado a cancelar en el último momento, recibe un recordatorio automático la víspera de su sesión. Se da cuenta de que ha olvidado su cita y cancela a tiempo, liberando el horario para otro cliente. Tú, ganas un tiempo valioso y evitas los huecos en tu agenda.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que pongo en marcha",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Desarrollo para ti una herramienta de reserva en línea, integrada en tu sitio web. Permite gestionar las reservas, las cancelaciones y los recordatorios automáticos. Me aseguro de que la herramienta sea fácil de usar, tanto para ti como para tus clientes. Así podrás concentrarte en lo que realmente importa: tu pasión por el deporte y tus clientes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "FAQ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cómo funciona?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La herramienta de reserva en línea está integrada en tu sitio web. Tus clientes pueden reservar, cancelar o modificar sus sesiones en unos pocos clics.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Va a llevarme mucho tiempo gestionarlo?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No, la herramienta está diseñada para ser sencilla e intuitiva. No necesitarás pasar horas configurándola o gestionándola.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Mis clientes la adoptarán fácilmente?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, la interfaz está diseñada para ser intuitiva y fácil de usar. Tus clientes no tendrán ningún problema en acostumbrarse.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Va a mejorar mi imagen profesional?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Absolutamente. Una herramienta de reserva en línea muestra a tus clientes que eres profesional y organizado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Hablemos de ello",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un audit de tus necesidades y un plan de acción personalizado para limitar las cancelaciones y optimizar tu agenda. Contacta conmigo para hablar de ello y encontrar la solución que te conviene.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
