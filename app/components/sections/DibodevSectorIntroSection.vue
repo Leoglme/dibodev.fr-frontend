@@ -7,7 +7,7 @@
     data-aos-offset="300"
     class="relative z-2 flex h-full w-screen max-w-screen flex-col items-center justify-start bg-gray-800"
   >
-    <div class="grid w-full gap-16 px-3 py-36 sm:max-w-4xl sm:gap-20 sm:px-6 sm:py-48">
+    <div class="grid w-full gap-16 px-3 py-36 sm:max-w-3xl sm:gap-20 sm:px-6 sm:py-48">
       <div class="flex flex-col items-center justify-center gap-4 sm:gap-6">
         <h2 v-if="title" class="w-full text-left text-2xl font-semibold text-gray-100 sm:text-[32px]">
           {{ title }}

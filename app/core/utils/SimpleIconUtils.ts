@@ -37,6 +37,11 @@ export type SimpleIcon = {
 /** Aliases: normalized input (e.g. from stack names) -> simple-icons slug. */
 const SLUG_ALIASES: Record<string, string> = {
   nuxtdotjs: 'nuxt',
+  scss: 'sass',
+  'c#': 'c',
+  'microsoft sql server (mssql)': 'mysql',
+  html: 'html5',
+  'redux toolkit': 'redux',
 }
 
 export class SimpleIconUtils {

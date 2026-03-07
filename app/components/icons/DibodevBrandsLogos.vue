@@ -1,6 +1,13 @@
 <template>
-  <div class="flex w-full flex-wrap items-center justify-center gap-8">
-    <DibodevBrandLogo v-for="name in props.names" :key="name" :name="name" />
+  <div class="grid w-full grid-cols-2 place-items-center gap-10 sm:flex sm:flex-wrap sm:justify-center sm:gap-16">
+    <template v-for="techName in props.names" :key="techName">
+      <div class="flex flex-col items-center justify-center gap-2">
+        <DibodevBrandLogo :name="techName" />
+        <span v-if="props.showLabels" class="text-center text-sm font-medium text-gray-200">
+          {{ techName }}
+        </span>
+      </div>
+    </template>
   </div>
 </template>
 
@@ -14,6 +21,10 @@ const props: DibodevBrandsLogosProps = defineProps({
   names: {
     type: Array as PropType<string[]>,
     required: true,
+  },
+  showLabels: {
+    type: Boolean as PropType<boolean>,
+    default: false,
   },
 })
 </script>

@@ -8,7 +8,7 @@
     :description="currentProjectComputed.shortDescription"
     :categories="currentProjectComputed.categories"
     :sectors="currentProjectComputed.sectors"
-    :date="currentProjectComputed.date"
+    :date="projectDisplayDate"
     :siteUrl="currentProjectComputed.siteUrl"
   />
   <DibodevProjectGallerySection
@@ -19,7 +19,12 @@
     :primaryColor="currentProjectComputed.primaryColor"
   />
   <DibodevAboutProjectSection v-if="currentProjectComputed" :project="currentProjectComputed" />
-  <DibodevPricingSection />
+  <DibodevContactCtaSection
+    :title="$t('projects.cta.text')"
+    :description="$t('projects.cta.description')"
+    :ctaText="$t('projects.cta.button')"
+    class="pb-0!"
+  />
   <DibodevRecommendedProjectSection v-if="currentProjectComputed" :currentProject="currentProjectComputed" />
 </template>
 
@@ -32,13 +37,14 @@ import type { DibodevProject } from '~/core/types/DibodevProject'
 import DibodevProjectLandingSection from '~/components/sections/DibodevProjectLandingSection.vue'
 import DibodevProjectGallerySection from '~/components/sections/DibodevProjectGallerySection.vue'
 import DibodevAboutProjectSection from '~/components/sections/DibodevAboutProjectSection.vue'
-import DibodevPricingSection from '~/components/sections/DibodevPricingSection.vue'
+import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import DibodevRecommendedProjectSection from '~/components/sections/DibodevRecommendedProjectSection.vue'
 import type { StoryblokProjectContent } from '~/services/types/storyblokProject'
 import type { StoryblokStoryResponse } from '~/services/types/storyblok'
 import { StoryblokService } from '~/services/storyblokService'
 import { buildRelsSlugMap, mapStoryblokProjectToDibodevProject } from '~/services/storyblokProjectMapper'
 import { buildProjectSchemaJson } from '~/config/projectSchema'
+import { formatProjectDate } from '~/core/utils/formatProjectDate'
 
 const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 function hasUuid(arr: string[] | undefined): boolean {
@@ -133,6 +139,13 @@ if (projectName.length === 0) {
 }
 
 const currentProjectComputed: ComputedRef<DibodevProject | null> = computed(() => currentProject.value)
+
+const projectDisplayDate: ComputedRef<string> = computed((): string => {
+  const p: DibodevProject | null = currentProject.value
+  const loc: string = locale.value as string
+  if (!p) return ''
+  return formatProjectDate(p.date, loc)
+})
 
 useHead((): Record<string, unknown> => {
   const p: DibodevProject | null = currentProject.value

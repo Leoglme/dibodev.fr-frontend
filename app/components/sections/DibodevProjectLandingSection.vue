@@ -3,9 +3,9 @@
     id="project-landing"
     class="relative flex h-screen w-screen max-w-screen items-center justify-center overflow-hidden p-8"
   >
-    <div class="z-10 mx-auto grid max-w-2xl gap-8">
+    <div class="z-10 mx-auto grid max-w-3xl gap-8">
       <div class="grid gap-6">
-        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="800" class="flex items-center gap-6">
+        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="800" class="mb-3 flex items-center gap-6">
           <div
             class="flex h-24 min-h-24 w-24 min-w-24 items-center justify-center rounded-2xl border-1 border-gray-200 p-3"
             :style="{ backgroundColor: props.secondaryColor }"
@@ -19,7 +19,7 @@
             />
           </div>
 
-          <h1 class="text-[32px] font-semibold text-gray-100 sm:text-[48px]">
+          <h1 class="text-[28px] font-semibold text-gray-100 sm:text-[32px] md:text-[36px]">
             <span>{{ props.title }}</span>
           </h1>
         </div>
@@ -28,7 +28,7 @@
           data-aos="fade-up"
           data-aos-delay="100"
           data-aos-duration="800"
-          class="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6"
+          class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6"
         >
           <p class="text-sm font-normal text-gray-200">
             {{ props.date }}
@@ -53,12 +53,12 @@
         </p>
       </div>
       <div
-        class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
+        class="flex flex-col justify-start gap-4 sm:flex-row sm:items-center sm:justify-start sm:gap-6"
         data-aos="fade-up"
         data-aos-delay="300"
         data-aos-duration="800"
       >
-        <DibodevButton @click="scrollToTargetSection" class="w-full sm:max-w-xs" outlined>
+        <DibodevButton @click="scrollToTargetSection" class="w-full" outlined>
           {{ $t('project.landing.discover') }}
           <DibodevIcon
             name="DoubleChevronsDown"
@@ -69,12 +69,7 @@
           />
         </DibodevButton>
 
-        <DibodevButton
-          v-if="props.siteUrl"
-          :to="props.siteUrl"
-          :backgroundColor="props.primaryColor"
-          class="w-full sm:max-w-xs"
-        >
+        <DibodevButton v-if="props.siteUrl" :to="props.siteUrl" :backgroundColor="props.primaryColor" class="w-full">
           {{ $t('project.landing.viewSite') }}
           <DibodevIcon name="ExternalLink" mode="stroke" :width="24" :height="24" class="ml-2" />
         </DibodevButton>

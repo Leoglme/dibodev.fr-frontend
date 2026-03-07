@@ -3,10 +3,11 @@
     id="landing"
     class="relative flex h-screen w-screen max-w-screen items-center justify-center overflow-hidden p-8"
   >
-    <div class="z-10 mx-auto grid max-w-2xl gap-8">
+    <div class="z-10 mx-auto grid max-w-3xl gap-8">
       <div class="grid gap-6">
         <h1
-          class="text-[30px] font-semibold text-gray-100 sm:text-[54px]"
+          class="font-semibold text-gray-100"
+          :class="props.compactTitle ? 'text-[28px] sm:text-[32px] md:text-[36px]' : 'text-[30px] sm:text-[54px]'"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
@@ -121,6 +122,11 @@ const props = defineProps({
   secondaryCta: {
     type: Object as PropType<SecondaryCta | null>,
     default: null,
+  },
+  /** Si true, titre plus compact (28px mobile, 32px tablette, 36px desktop) — utilisé pour la page projets uniquement. */
+  compactTitle: {
+    type: Boolean as PropType<boolean>,
+    default: false,
   },
 })
 /* REFS */

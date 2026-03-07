@@ -238,6 +238,11 @@ export function mapStoryblokProjectToDibodevProject(
   const sectors: SectorKey[] = normalizeSectorsFromStoryblok(effective, resolvedLinks, relsSlugMap)
   const categories: CategoryKey[] = normalizeCategoriesFromStoryblok(effective, resolvedLinks, relsSlugMap)
 
+  const rawLongDescription: StoryblokProjectContent['longDescription'] =
+    effective.longDescription ?? content.longDescription
+  const longDescription: DibodevProject['longDescription'] =
+    typeof rawLongDescription === 'string' ? rawLongDescription : rawLongDescription
+
   return {
     name: effective.name ?? content.name,
     primaryColor: effective.primaryColor ?? content.primaryColor,
@@ -247,7 +252,7 @@ export function mapStoryblokProjectToDibodevProject(
     sectors,
     date: effective.date ?? content.date,
     shortDescription: effective.shortDescription ?? content.shortDescription,
-    longDescription: effective.longDescription ?? content.longDescription,
+    longDescription,
     siteUrl: effective.siteUrl ?? content.siteUrl,
     stack: normalizeStringList((effective.stack ?? content.stack) as StoryblokProjectContent['tags']),
     repoUrl: effective.repoUrl ?? content.repoUrl,

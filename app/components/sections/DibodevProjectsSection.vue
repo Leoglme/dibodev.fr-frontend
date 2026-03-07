@@ -66,6 +66,7 @@ import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
 import DibodevProjectFilters from '~/components/sections/DibodevProjectFilters.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import type { DibodevProject } from '~/core/types/DibodevProject'
+import { getProjectDescriptionForSchema } from '~/core/utils/projectDescriptionForSchema'
 import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
 import { useProjectsWithTranslations } from '~/composables/useProjectsWithTranslations'
 
@@ -154,11 +155,12 @@ const projects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] =>
   // Filter by search term
   if (searchTerm.value.trim() !== '') {
     const searchLower: string = searchTerm.value.toLowerCase().trim()
+    const longDescText: (p: DibodevProject) => string = getProjectDescriptionForSchema
     filtered = filtered.filter((project: DibodevProject): boolean => {
       return (
         project.name.toLowerCase().includes(searchLower) ||
         project.shortDescription.toLowerCase().includes(searchLower) ||
-        project.longDescription.toLowerCase().includes(searchLower) ||
+        longDescText(project).toLowerCase().includes(searchLower) ||
         project.tags.some((tag: string): boolean => tag.toLowerCase().includes(searchLower)) ||
         project.stack.some((tech: string): boolean => tech.toLowerCase().includes(searchLower))
       )

@@ -3,7 +3,7 @@ import type { SectorKey, CategoryKey } from '~/core/constants/projectEnums'
 /**
  * Type definitions for DibodevProject
  * @type {DibodevProject}
- * @property {string} name - The name of the project
+ * @property {string} name - Nom du projet, affiché en H1 (descriptif et SEO-friendly)
  * @property {string} primaryColor - The primaryColor associated with the project
  * @property {string} [secondaryColor] - The secondaryColor associated with the project (optional)
  * @property {string} logoUrl - The URL of the project's logo
@@ -11,7 +11,7 @@ import type { SectorKey, CategoryKey } from '~/core/constants/projectEnums'
  * @property {SectorKey[]} [sectors] - Sector keys (e.g. ["sport-loisirs", "b2b"])
  * @property {string} date - The date of the project in ISO format (e.g., "2025-07-01")
  * @property {string} shortDescription - A short description of the project
- * @property {string} longDescription - A detailed description of the project
+ * @property {DibodevProjectLongDescription} longDescription - Detailed description: plain text or RichText document
  * @property {string} siteUrl - The URL of the project's website
  * @property {string[]} stack - The technology stack used in the project
  * @property {string} [repoUrl] - The URL of the project's repository (if available)
@@ -23,6 +23,14 @@ import type { SectorKey, CategoryKey } from '~/core/constants/projectEnums'
  * @property {string} metaDescription - The meta description for SEO purposes
  * @property {boolean} isFavorite - Indicates if the project is marked as a favorite
  */
+/** Document Richtext Storyblok (forme minimale pour projet longDescription). */
+export type DibodevProjectLongDescription =
+  | string
+  | {
+      type: string
+      content?: Array<{ type: string; content?: unknown[]; attrs?: Record<string, unknown>; text?: string }>
+    }
+
 export type DibodevProject = {
   name: string
   primaryColor: string
@@ -32,7 +40,7 @@ export type DibodevProject = {
   sectors?: SectorKey[]
   date: string // format ISO ex: "2025-07-01"
   shortDescription: string
-  longDescription: string
+  longDescription: DibodevProjectLongDescription
   siteUrl?: string
   stack: string[]
   repoUrl?: string

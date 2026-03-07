@@ -1,11 +1,24 @@
 /**
+ * Document Richtext Storyblok (ProseMirror-like) pour longDescription.
+ */
+export type StoryblokRichtextDocument = {
+  type: string
+  content?: Array<{
+    type: string
+    content?: unknown[]
+    attrs?: Record<string, unknown>
+    text?: string
+  }>
+}
+
+/**
  * Type definitions for Storyblok project content.
  *
  * This mirrors the structure of DibodevProject so that
  * Storyblok projects can be mapped 1:1 to DibodevProject.
  *
  * @type {StoryblokProjectContent}
- * @property {string} name - Human-readable project name (e.g. "AI Pneumonia Detector")
+ * @property {string} name - Nom du projet, affiché en H1 (descriptif et SEO-friendly)
  * @property {string} primaryColor - Primary brand color in hex format
  * @property {string} [secondaryColor] - Optional secondary color in hex format
  * @property {string} logoUrl - Path/URL to the project logo
@@ -14,7 +27,7 @@
  * @property {string} [sector] - Deprecated: use sectors. Kept for backward compat.
  * @property {string} date - Project date in ISO format (e.g. "2025-07-01")
  * @property {string} shortDescription - Short marketing description
- * @property {string} longDescription - Long, detailed description
+ * @property {string | StoryblokRichtextDocument} longDescription - Long description: plain text or RichText
  * @property {string} [siteUrl] - Public URL of the project, if any
  * @property {string[]} stack - Technology stack labels
  * @property {string} [repoUrl] - Optional Git repository URL
@@ -35,7 +48,7 @@ export type StoryblokProjectContent = {
   sector?: string | null
   date: string
   shortDescription: string
-  longDescription: string
+  longDescription: string | StoryblokRichtextDocument
   siteUrl?: string
   stack: StoryblokStringListInput
   repoUrl?: string

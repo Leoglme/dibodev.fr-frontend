@@ -5,7 +5,6 @@
     :href="icon.source"
     class="inline-flex items-center justify-center transition-transform hover:scale-105"
     :aria-label="icon.title ? `Lien vers le site officiel de ${icon.title}` : undefined"
-    :title="icon.title"
     rel="noopener noreferrer"
     target="_blank"
   >

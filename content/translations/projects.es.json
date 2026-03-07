@@ -1,8 +1,8 @@
 {
   "project/puissance4": {
-    "name": "Cuatro en Raya",
+    "name": "Cuatro en Raya — Juego web responsive y personalizable",
     "shortDescription": "Cuatro en Raya jugable en web/móvil con avatares y colores personalizables.",
-    "longDescription": "Versión web del Cuatro en Raya en HTML/CSS/JavaScript: lógica de juego sólida, interfaz responsive y personalización (avatar, colores de las fichas). Jugable entre amigos, incluyendo en móvil. Perfecto para demostrar el dominio del DOM, eventos y patrones JS simples pero robustos.\n\nUn pequeño juego accesible, divertido y extensible (puntuaciones, multi-sesiones, guardados).",
+    "longDescription": "Contexte\n\nVersión web del Cuatro en Raya en HTML/CSS/JavaScript: lógica de juego sólida, interfaz responsive y personalización (avatar, colores de las fichas). Jugable entre amigos, incluyendo en móvil. Perfecto para demostrar el dominio del DOM, eventos y patrones JS simples pero robustos.\n\nProblème\n\nOfrecer un juego clásico accesible en línea sin fricción.\n\nSolution\n\nUna aplicación web ligera, personalizable y jugable en cualquier lugar.\n\nFonctionnalités principales\n\nPersonalización de avatar y colores, partidas a dos, interfaz táctil, guardado de puntuaciones y sesiones.\n\nRésultats\n\nUn pequeño juego accesible, divertido y extensible (puntuaciones, multi-sesiones, guardados).",
     "metaTitle": "Cuatro en Raya – Juego web responsive y personalizable",
     "metaDescription": "Versión web del Cuatro en Raya: avatares y colores personalizables, jugable en móvil. Interfaz fluida y lógica de juego robusta para jugar entre amigos.",
     "categories": ["site-web"],
@@ -17,9 +17,9 @@
     ]
   },
   "project/spotify": {
-    "name": "Clone de Spotify",
+    "name": "Clone de Spotify — Sitio de música con reproductor web y biblioteca",
     "shortDescription": "Clone de Spotify en React + API PHP: biblioteca, categorías, reproductor, páginas de artistas.",
-    "longDescription": "Proyecto rush de 3 días: recrear una experiencia tipo Spotify con navegación por categorías, páginas de artistas y reproductor de audio funcional. Front en React con Redux Toolkit; backend en PHP para los endpoints y la gestión de los datos.\n\nDemuestra la capacidad de prototipar rápidamente una aplicación multimedia con un front moderno y una API dedicada, gestionando state management, routing y reproducción de audio.",
+    "longDescription": "Contexte\n\nProyecto rush de 3 días: recrear una experiencia tipo Spotify con navegación por categorías, páginas de artistas y reproductor de audio funcional.\n\nProblème\n\nPrototipar rápidamente una aplicación musical moderna con una API dedicada.\n\nSolution\n\nFront en React con Redux Toolkit; backend en PHP para los endpoints y la gestión de los datos.\n\nFonctionnalités principales\n\nNavegación por categorías, páginas de artistas, reproductor de audio, gestión del state y del routing.\n\nRésultats\n\nDemuestra la capacidad de prototipar rápidamente una aplicación multimedia con un front moderno y una API dedicada, gestionando state management, routing y reproducción de audio.",
     "metaTitle": "Clone de Spotify – Sitio de música con reproductor web",
     "metaDescription": "Prototipo de sitio de música: biblioteca, categorías, páginas de artistas y reproductor de audio. Proyecto rápido que demuestra una experiencia cercana a un servicio de streaming.",
     "categories": ["site-web"],
@@ -34,9 +34,9 @@
     ]
   },
   "project/driving-school": {
-    "name": "Autoescuela",
+    "name": "Autoescuela — Gestión y planificación para autoescuelas",
     "shortDescription": "Gestión de autoescuelas: alumnos, instructores, horarios, citas y horas de conducción.",
-    "longDescription": "Aplicación web profesional para autoescuelas: creación de alumnos/instructores, gestión de disponibilidades, planificación de horas de conducción y seguimiento de citas. Centraliza la organización diaria para ahorrar tiempo y evitar reservas duplicadas.\n\nStack: Vue 3 + TypeScript + TailwindCSS en el front y API Python/Flask en el servidor. Un proyecto claro, escalable (notificaciones, facturación, exportaciones) y adaptado a PYMES.",
+    "longDescription": "Contexte\n\nAplicación web profesional para autoescuelas: creación de alumnos/instructores, gestión de disponibilidades, planificación de horas de conducción y seguimiento de citas.\n\nProblème\n\nCentralizar la organización diaria para ahorrar tiempo y evitar reservas duplicadas.\n\nSolution\n\nStack: Vue 3 + TypeScript + TailwindCSS en el front y API Python/Flask en el servidor.\n\nFonctionnalités principales\n\nGestión de alumnos e instructores, planificación de franjas, seguimiento de citas, panel de control.\n\nRésultats\n\nUn proyecto claro, escalable (notificaciones, facturación, exportaciones) y adaptado a PYMES.",
     "metaTitle": "Autoescuela – Gestión de autoescuelas y horarios",
     "metaDescription": "Aplicación profesional para autoescuelas: gestión de alumnos e instructores, planificación de horas de conducción y citas para una organización simplificada.",
     "categories": ["site-web", "1331e6bb-4f12-45e2-b738-0e306fe9900a", "logiciel"],
@@ -51,9 +51,9 @@
     ]
   },
   "project/nextodo": {
-    "name": "Nextodo",
+    "name": "Nextodo — Lista de tareas tipo Kanban con arrastrar y soltar",
     "shortDescription": "Lista de tareas estilo Trello: columnas, tareas, arrastrar y soltar y organización visual.",
-    "longDescription": "Nextodo es un gestor de tareas inspirado en Trello: creación de columnas, tarjetas, reorganización por arrastrar y soltar para priorizar y seguir el avance. Ideal para ilustrar UX, componentes reutilizables y patrones front-end modernos.\n\nTecnología: Next.js, React y CSS. Una base limpia para explorar la persistencia, la autenticación y vistas filtradas si se desea ampliar.",
+    "longDescription": "Contexte\n\nNextodo es un gestor de tareas inspirado en Trello: creación de columnas, tarjetas y reorganización por arrastrar y soltar para priorizar y seguir el avance.\n\nProblème\n\nIlustrar UX, componentes reutilizables y patrones front-end modernos.\n\nSolution\n\nTecnología: Next.js, React y CSS. Una base limpia para explorar persistencia, autenticación y vistas filtradas.\n\nFonctionnalités principales\n\nColumnas y tarjetas, arrastrar y soltar, priorización visual.\n\nRésultats\n\nIdeal para estructurar sus proyectos y ganar en productividad.",
     "metaTitle": "Nextodo – Lista de tareas tipo Kanban con arrastrar y soltar",
     "metaDescription": "Cree columnas y tareas, organice por arrastrar y soltar y siga su avance. Ideal para estructurar sus proyectos y ganar en productividad.",
     "categories": ["site-web"],
@@ -68,9 +68,9 @@
     ]
   },
   "project/gestion-temps": {
-    "name": "Software de gestión de tiempo (Kodeva)",
+    "name": "Software de gestión de tiempo (Kodeva) — Entrada y validación semanal",
     "shortDescription": "Seguimiento de tiempo por tarea/proyecto, validación semanal y reporting de RRHH/finanzas.",
-    "longDescription": "Aplicación de gestión de tiempo para equipos de campo y oficinas: entrada rápida (desktop/móvil), organización por tarea/proyecto/obra, gestión de pausas y desplazamientos. Un flujo de trabajo de validación semanal simplifica la aprobación de horas y detecta anomalías (ausencias, incoherencias) de un vistazo.\n\nStack: Nuxt.js, Vue.js, TypeScript para el front; backend C# .NET con MongoDB/MSSQL para informes consolidados y análisis precisos. Objetivo: fiabilidad de los registros, visibilidad gerencial y proceso de aprobación fluido.",
+    "longDescription": "Contexte\n\nAplicación de gestión de tiempo para equipos de campo y oficinas: entrada rápida (desktop/móvil), organización por tarea/proyecto/obra, gestión de pausas y desplazamientos.\n\nProblème\n\nSimplificar la aprobación de horas y detectar anomalías (ausencias, incoherencias) de un vistazo.\n\nSolution\n\nStack: Nuxt.js, Vue.js, TypeScript para el front; backend C# .NET con MongoDB/MSSQL para informes consolidados y análisis precisos.\n\nFonctionnalités principales\n\nEntrada por tarea/proyecto/obra, flujo de validación semanal, reporting RRHH y finanzas.\n\nRésultats\n\nObjetivo: fiabilidad de los registros, visibilidad gerencial y proceso de aprobación fluido.",
     "metaTitle": "Software de gestión de tiempo – Entrada y validación semanal",
     "metaDescription": "Entrada de horas por tarea/proyecto, validación semanal, detección de anomalías y reporting consolidado para una gestión de tiempo fiable y transparente.",
     "categories": ["site-web", "1331e6bb-4f12-45e2-b738-0e306fe9900a", "logiciel"],
@@ -87,9 +87,9 @@
     ]
   },
   "project/izidoor": {
-    "name": "Izidoor",
+    "name": "Izidoor — Plataforma de reserva deportiva y de ocio | SaaS",
     "shortDescription": "Plataforma SaaS de gestión de reservas para estructuras deportivas y de ocio.",
-    "longDescription": "Izidoor es una plataforma SaaS de reserva y back-office dedicada a clubes deportivos y estructuras de ocio (vela, esquí, kayak, etc.). Unifica la reserva en línea y la gestión operativa: planificación, catálogo de productos, gestión de empleados, facturación y un módulo de caja para el cobro en el lugar. El objetivo es digitalizar procesos a menudo fragmentados, aumentar la tasa de conversión y reducir la carga administrativa.\n\nTécnicamente, Izidoor se basa en Nuxt.js, Vue.js y TypeScript en el front-end, GraphQL para una API-first clara, PostgreSQL para la fiabilidad de los datos y TailwindCSS para una UI rápida y accesible. Pensada para picos estacionales, la arquitectura prioriza el rendimiento, la escalabilidad y la seguridad. Resultado: una experiencia fluida para los usuarios finales y una herramienta robusta para los equipos de campo.",
+    "longDescription": "Contexte\n\nIzidoor es una plataforma SaaS de reserva y back-office dedicada a clubes deportivos y estructuras de ocio (vela, esquí, kayak, etc.). Unifica la reserva en línea y la gestión operativa: planificación, catálogo de productos, gestión de empleados, facturación y un módulo de caja para el cobro en el lugar.\n\nProblème\n\nDigitalizar procesos a menudo fragmentados, aumentar la tasa de conversión y reducir la carga administrativa.\n\nSolution\n\nTécnicamente, Izidoor se basa en Nuxt.js, Vue.js y TypeScript en el front-end, GraphQL para una API-first clara, PostgreSQL para la fiabilidad de los datos y TailwindCSS para una UI rápida y accesible.\n\nFonctionnalités principales\n\nReserva en línea, planificación, catálogo, gestión de equipos, facturación, caja. Pensada para picos estacionales.\n\nRésultats\n\nUna experiencia fluida para los usuarios finales y una herramienta robusta para los equipos de campo.",
     "metaTitle": "Izidoor – Plataforma de reserva deportiva y de ocio | SaaS",
     "metaDescription": "Plataforma de reserva y back-office para estructuras deportivas y de ocio: planificación, caja, facturación, gestión de equipos y productos. Solución SaaS fiable y escalable.",
     "categories": ["site-web", "saas", "application-metier"],
@@ -109,9 +109,9 @@
     ]
   },
   "project/reddit-tauri-app": {
-    "name": "Aplicación Reddit Tauri",
+    "name": "Aplicación Reddit Tauri — Cliente de Reddit para escritorio y móvil",
     "shortDescription": "Cliente de Reddit multiplataforma (escritorio/móvil) con Tauri, Vue y Rust.",
-    "longDescription": "Aplicación de Reddit multiplataforma: navegación de publicaciones, subreddits y comentarios, OAuth, integración de API REST y GraphQL oficiales. Tauri permite un ejecutable de escritorio ligero y potente, mientras que Capacitor abre las puertas a lo móvil. La interfaz moderna de Vue ofrece una experiencia fluida y reactiva.\n\nEste proyecto ilustra la sinergia Rust/JavaScript, la integración de APIs públicas complejas y la creación de aplicaciones híbridas seguras. Un buen terreno de experimentación para la autenticación, la gestión de estado, el caché y los patrones de arquitectura multiplataforma.",
+    "longDescription": "Contexte\n\nAplicación de Reddit multiplataforma: navegación de publicaciones, subreddits y comentarios, OAuth, integración de API REST y GraphQL oficiales. Tauri permite un ejecutable de escritorio ligero y potente, mientras que Capacitor abre las puertas a lo móvil.\n\nProblème\n\nOfrecer una experiencia Reddit fluida en escritorio y móvil con una sola base de código.\n\nSolution\n\nLa interfaz moderna de Vue ofrece una experiencia fluida y reactiva. Este proyecto ilustra la sinergia Rust/JavaScript y la creación de aplicaciones híbridas seguras.\n\nFonctionnalités principales\n\nNavegación de publicaciones/subreddits/comentarios, OAuth, API REST y GraphQL, escritorio (Tauri) y móvil (Capacitor).\n\nRésultats\n\nUn buen terreno de experimentación para la autenticación, la gestión de estado, el caché y los patrones de arquitectura multiplataforma.",
     "metaTitle": "Aplicación Reddit Tauri – Cliente de Reddit para escritorio y móvil",
     "metaDescription": "Cliente de Reddit moderno y ligero: autenticación OAuth, navegación de publicaciones, subreddits y comentarios. Experiencia fluida en escritorio y móvil.",
     "categories": ["application-mobile", "logiciel"],
@@ -128,9 +128,9 @@
     ]
   },
   "project/aparteasy": {
-    "name": "ApartEasy",
+    "name": "ApartEasy — Centralice y comparta sus anuncios inmobiliarios",
     "shortDescription": "Aplicación colaborativa para centralizar, calificar y compartir anuncios inmobiliarios.",
-    "longDescription": "ApartEasy simplifica la búsqueda inmobiliaria centralizando los anuncios favoritos y facilitando la colaboración (amigos, compañeros de piso, pareja). Cada anuncio puede ser calificado, recibir un estado (llamado, visitado, disponible) y visualizarse en un mapa interactivo con estimación de tiempos de desplazamiento. El objetivo: decidir más rápido, con una vista compartida y criterios objetivos.\n\nStack: AdonisJS (API), MariaDB (datos), Docker (orquestación), Vue.js + TypeScript (front) y TailwindCSS (UI). El proyecto se centra en la UX (simplicidad, accesibilidad) y la productividad (ordenación, búsqueda, colaboración en grupo), manteniéndose extensible (autenticación, notificaciones, roles).",
+    "longDescription": "Contexte\n\nApartEasy simplifica la búsqueda inmobiliaria centralizando los anuncios favoritos y facilitando la colaboración (amigos, compañeros de piso, pareja). Cada anuncio puede ser calificado, recibir un estado (llamado, visitado, disponible) y visualizarse en un mapa interactivo con estimación de tiempos de desplazamiento.\n\nProblème\n\nDecidir más rápido, con una vista compartida y criterios objetivos.\n\nSolution\n\nStack: AdonisJS (API), MariaDB (datos), Docker (orquestación), Vue.js + TypeScript (front) y TailwindCSS (UI). El proyecto se centra en la UX (simplicidad, accesibilidad) y la productividad (ordenación, búsqueda, colaboración en grupo).\n\nFonctionnalités principales\n\nCentralización de favoritos, calificación y estados, mapa interactivo, colaboración, tiempos de desplazamiento.\n\nRésultats\n\nManteniéndose extensible (autenticación, notificaciones, roles).",
     "metaTitle": "ApartEasy – Centralice y comparta sus anuncios inmobiliarios",
     "metaDescription": "Aplicación colaborativa para centralizar, calificar y compartir anuncios. Mapa interactivo, estados, trabajo en equipo para acelerar la búsqueda de vivienda.",
     "categories": ["site-web"],
@@ -148,9 +148,9 @@
     ]
   },
   "project/ai-pneumonia-detector": {
-    "name": "AI Pneumonia Detector",
+    "name": "AI Pneumonia Detector — Detección de neumonía por IA en línea",
     "shortDescription": "Aplicación de IA que permite detectar neumonía a partir de radiografías pulmonares.",
-    "longDescription": "AI Pneumonia Detector compara dos enfoques de aprendizaje automático para la detección de neumonía a partir de imágenes radiográficas: CNN (TensorFlow/PyTorch) y KNN (Scikit-learn). El usuario puede probar radiografías (ejemplos proporcionados) y obtener una predicción instantánea, acompañada de métricas detalladas (precisión, recall, F1-score), matrices de confusión y curvas ROC para comprender el rendimiento de los modelos.\n\nEl front Vue.js/TailwindCSS garantiza una interfaz clara, mientras que el backend Python/FastAPI (Uvicorn) orquesta el preprocesamiento y la inferencia. El proyecto destaca la pedagogía en torno a la IA médica, la reproducibilidad (Jupyter, nbconvert/nbformat) y la optimización (Pandas/NumPy, gestión de memoria psutil/GPUtil). Una demostración concreta de ciencia de datos aplicada a la salud con tecnologías de código abierto.",
+    "longDescription": "Contexte\n\nAI Pneumonia Detector compara dos enfoques de aprendizaje automático para la detección de neumonía a partir de imágenes radiográficas: CNN (TensorFlow/PyTorch) y KNN (Scikit-learn). El usuario puede probar radiografías (ejemplos proporcionados) y obtener una predicción instantánea, acompañada de métricas detalladas (precisión, recall, F1-score), matrices de confusión y curvas ROC para comprender el rendimiento de los modelos.\n\nProblème\n\nComprender el rendimiento de los modelos y demostrar la IA médica de forma pedagógica.\n\nSolution\n\nEl front Vue.js/TailwindCSS garantiza una interfaz clara, mientras que el backend Python/FastAPI (Uvicorn) orquesta el preprocesamiento y la inferencia. El proyecto destaca la pedagogía de la IA médica, la reproducibilidad (Jupyter, nbconvert/nbformat) y la optimización (Pandas/NumPy, gestión de memoria psutil/GPUtil).\n\nFonctionnalités principales\n\nPrueba de radiografías, predicción instantánea, métricas (precisión, recall, F1), matrices de confusión, curvas ROC.\n\nRésultats\n\nUna demostración concreta de ciencia de datos aplicada a la salud con tecnologías de código abierto.",
     "metaTitle": "AI Pneumonia Detector – Detección de neumonía por IA en línea",
     "metaDescription": "Aplicación web de salud para analizar radiografías pulmonares y detectar neumonía. Demo en línea con predicciones, matrices de confusión y curvas ROC para evaluar los modelos.",
     "categories": ["site-web", "ia"],
@@ -168,9 +168,9 @@
     ]
   },
   "project/stockpme": {
-    "name": "Stockpme (Kodeva)",
+    "name": "Stockpme — Software de gestión de inventario para PYMES",
     "shortDescription": "Gestión de inventario para PYMES: productos, almacenes, movimientos, transferencias, correcciones, etiquetas QR.",
-    "longDescription": "Stockpme moderniza la gestión de inventario en PYMES: creación de fichas de productos detalladas, referencias, seguimiento de niveles en tiempo real, transferencias entre ubicaciones, correcciones de inventario y reporting. El módulo de etiquetas profesionales con códigos QR mejora la trazabilidad y acelera las operaciones de campo.\n\nStack híbrido: Nuxt.js/Vue.js/TypeScript en el front-end, back-end C# .NET con almacenamiento MongoDB y MSSQL para combinar flexibilidad y consultas analíticas. El objetivo: reducir las rupturas de stock, limitar los excedentes y garantizar la fiabilidad de la cadena logística.",
+    "longDescription": "Contexte\n\nStockpme moderniza la gestión de inventario en PYMES: creación de fichas de productos detalladas, referencias, seguimiento de niveles en tiempo real, transferencias entre ubicaciones, correcciones de inventario y reporting. El módulo de etiquetas profesionales con códigos QR mejora la trazabilidad y acelera las operaciones de campo.\n\nProblème\n\nReducir las rupturas de stock, limitar los excedentes y garantizar la fiabilidad de la cadena logística.\n\nSolution\n\nStack híbrido: Nuxt.js/Vue.js/TypeScript en el front-end, back-end C# .NET con almacenamiento MongoDB y MSSQL para combinar flexibilidad y consultas analíticas.\n\nFonctionnalités principales\n\nFichas de productos, referencias, niveles en tiempo real, transferencias, correcciones, reporting, etiquetas QR.\n\nRésultats\n\nObjetivo: fiabilidad de la cadena logística y eficiencia operativa.",
     "metaTitle": "Stockpme – Software de gestión de inventario para PYMES",
     "metaDescription": "Seguimiento de productos, transferencias, correcciones, inventarios y etiquetas QR para una trazabilidad completa. Diseñado para mejorar la eficiencia logística de las PYMES.",
     "categories": ["site-web", "saas", "application-metier"],
@@ -188,9 +188,9 @@
     ]
   },
   "project/primea-rp": {
-    "name": "Primea RP",
+    "name": "Primea RP — Sitio del servidor GTA 5 RolePlay",
     "shortDescription": "Sitio para un servidor de GTA 5 RP francés: onboarding, reglas, guías y recursos.",
-    "longDescription": "Sitio comunitario para Primea RP (GTA 5 RolePlay). Centraliza presentación, reglamento, controles, procedimientos para unirse al servidor y recursos útiles. El onboarding ha sido diseñado para reducir la fricción de entrada y enmarcar las buenas prácticas RP.\n\nTech: Nuxt.js, Vue.js, TypeScript, SCSS. Arquitectura clara, fácilmente mantenible por el equipo de administradores. Un ejemplo de herramienta web dedicada a una comunidad de juegos, enfocada en accesibilidad, claridad y coherencia visual.",
+    "longDescription": "Contexte\n\nSitio comunitario para Primea RP (GTA 5 RolePlay). Centraliza presentación, reglamento, controles, procedimientos para unirse al servidor y recursos útiles.\n\nProblème\n\nReducir la fricción de entrada y enmarcar las buenas prácticas RP.\n\nSolution\n\nTech: Nuxt.js, Vue.js, TypeScript, SCSS. Arquitectura clara, fácilmente mantenible por el equipo de administradores.\n\nFonctionnalités principales\n\nPresentación, reglamento, controles, procedimientos de inscripción, recursos, onboarding.\n\nRésultats\n\nUn ejemplo de herramienta web dedicada a una comunidad de juegos, centrada en accesibilidad, claridad y coherencia visual.",
     "metaTitle": "Primea RP – Sitio del servidor GTA 5 RolePlay",
     "metaDescription": "Sitio comunitario para un servidor de GTA 5 RP: presentación, reglas, guías y acceso. Onboarding claro para unirse a la comunidad roleplay.",
     "categories": ["site-web"],
@@ -208,9 +208,9 @@
     ]
   },
   "project/epitrip": {
-    "name": "EpiTrip",
+    "name": "EpiTrip — Planificador de viajes en lenguaje natural",
     "shortDescription": "Planificador de viajes en lenguaje natural (NLP) con rutas de SNCF y mapa interactivo.",
-    "longDescription": "EpiTrip comprende frases libres (« Salgo de Rennes para ir a Biarritz »), valida la intención del viaje, extrae las ciudades (salida/llegada) mediante NER (CamemBERT, DistilBERT, FastText), y luego calcula una ruta óptima basándose en los datos de SNCF y un algoritmo de grafos tipo Dijkstra. Los resultados se muestran en un mapa interactivo con etapas, duraciones y un resumen claro.\n\nFront: Nuxt 3, Vue 3, TypeScript, TailwindCSS. Backend de negocio: AdonisJS. Backend de IA: Python/FastAPI (Transformers, PyTorch, scikit-learn, Pandas, Matplotlib) con reconocimiento de voz opcional (SpeechRecognition). El proyecto muestra una aplicación concreta del NLP y la IA al viaje, accesible y pedagógica.",
+    "longDescription": "Contexte\n\nEpiTrip comprende frases libres (« Salgo de Rennes para ir a Biarritz »), valida la intención del viaje, extrae las ciudades (salida/llegada) mediante NER (CamemBERT, DistilBERT, FastText), y luego calcula una ruta óptima basándose en los datos de SNCF y un algoritmo de grafos tipo Dijkstra. Los resultados se muestran en un mapa interactivo con etapas, duraciones y un resumen claro.\n\nProblème\n\nHacer la planificación de viajes accesible en lenguaje natural (y opcionalmente por voz).\n\nSolution\n\nFront: Nuxt 3, Vue 3, TypeScript, TailwindCSS. Backend de negocio: AdonisJS. Backend de IA: Python/FastAPI (Transformers, PyTorch, scikit-learn, Pandas, Matplotlib) con reconocimiento de voz opcional (SpeechRecognition).\n\nFonctionnalités principales\n\nEntrada en lenguaje natural, NER para ciudades, cálculo de ruta SNCF, mapa interactivo, reconocimiento de voz opcional.\n\nRésultats\n\nEl proyecto muestra una aplicación concreta del NLP y la IA al viaje, accesible y pedagógica.",
     "metaTitle": "EpiTrip – Planificador de viajes en lenguaje natural",
     "metaDescription": "Escriba o diga su ruta, la IA entiende su solicitud, extrae la salida/llegada y calcula la ruta óptima con visualización en un mapa interactivo.",
     "categories": ["site-web", "ia"],
