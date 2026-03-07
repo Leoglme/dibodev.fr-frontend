@@ -1,1 +1,339 @@
-{}
+{
+  "blog/artisan-btp-gerer-ses-chantiers-sans-excel-avec-un-outil-dedie": {
+    "title": "Artisano de la construcción: gestionar sus obras sin Excel con una herramienta dedicada",
+    "excerpt": "Artisano de la construcción: gestionar sus obras sin Excel con una herramienta dedicada — consejos e implementación.",
+    "metaTitle": "Artisano de la construcción: gestionar sus obras sin Excel con una herramienta dedicada",
+    "metaDescription": "Artisano de la construcción: gestionar sus obras sin Excel con una herramienta dedicada — consejos e implementación. Encuentre consejos y acompañamiento a medida.",
+    "tags": [
+      "obras",
+      "excel",
+      "gestión de obras",
+      "gestión de excel",
+      "automatización",
+      "herramienta profesional",
+      "software a medida"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Introducción",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gestionar varios proyectos en paralelo es el día a día de los artesanos de la construcción. Entre los presupuestos, los horarios y las facturas, Excel se convierte rápidamente en una herramienta inadecuada. Pierdes un tiempo valioso saltando entre las hojas de cálculo, los correos electrónicos y las llamadas telefónicas. ¿Y si pasas a una herramienta dedicada para ganar en eficacia y serenidad?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Veamos juntos cómo una herramienta adecuada puede transformar la gestión de tu proyecto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que te cuesta",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Usar Excel para gestionar tus proyectos es como intentar construir una casa con una taladradora manual. Puede funcionar para un pequeño proyecto, pero en cuanto la carga de trabajo aumenta, aparecen los problemas. Pasas varias horas a la semana actualizando tablas, enviando correos electrónicos para confirmar citas y buscando información perdida en archivos mal organizados. Sin mencionar los errores de entrada que pueden costar caro en tiempo y dinero. A esto se añade el estrés de no tener una visión clara del avance de tus proyectos, lo que puede perjudicar tu relación con tus clientes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Por qué las soluciones clásicas no son suficientes?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Objección:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Siempre he utilizado Excel, funciona muy bien para mí.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Respuesta:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Excel es una herramienta versátil, pero no está diseñada para gestionar proyectos complejos como los de construcción. Le faltan funciones específicas para seguir el avance de las obras, gestionar los equipos y los materiales, y comunicarse eficazmente con los clientes. Además, es difícil colaborar en tiempo real con tus empleados y subcontratistas, lo que puede provocar retrasos y malentendidos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- Dificultad para seguir el avance de los proyectos en tiempo real",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Riesgo de errores de entrada y pérdida de datos",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Falta de colaboración en tiempo real",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Dificultad para generar informes y facturas",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "La solución adaptada a tu profesión",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una herramienta dedicada a la gestión de proyectos te permite centralizar toda la información en un solo lugar. Puedes seguir el avance de las obras, gestionar los equipos y los materiales, y comunicarte fácilmente con tus clientes. Además, puedes automatizar ciertas tareas, como la generación de presupuestos y facturas, lo que te ahorra un tiempo valioso. Una herramienta adecuada también te permite delegar más fácilmente ciertas tareas a tus empleados, lo que te permite concentrarte en lo realmente importante: la calidad de tus proyectos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Ejemplo concreto (caso realista detallado)",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Estás en un proyecto de renovación de varios pisos, con varios equipos y subcontratistas. Utilizas una herramienta dedicada para gestionar los horarios, las tareas y los materiales. Puedes ver de un vistazo el avance de las obras, los posibles retrasos y los problemas a resolver. Te comunicas fácilmente con tus equipos a través de la herramienta, lo que evita malentendidos y retrasos. Generas automáticamente los presupuestos y las facturas, lo que te ahorra un tiempo valioso. Tus clientes están informados en tiempo real del avance de las obras, lo que refuerza su confianza en ti.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que pongo en marcha",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Empiezo analizando tus necesidades específicas y tus procesos de trabajo actuales. Luego, te propongo una solución a medida, adaptada a tu profesión y a tu forma de trabajar. Te acompaño en la puesta en marcha de la herramienta, la formación de tus equipos y el seguimiento del avance de los proyectos. Me aseguro de que la herramienta cumpla con tus expectativas y de que estés satisfecho con el resultado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "FAQ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cómo elegir la herramienta adecuada a mis necesidades?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Te ayudo a identificar tus necesidades específicas y a elegir la herramienta que mejor se adapte a tu profesión y a tu forma de trabajar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cómo formar a mis equipos en el uso de la herramienta?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Te propongo formaciones adaptadas a tus equipos para que puedan utilizar la herramienta de manera eficaz y autónoma.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cómo migrar mis datos de Excel a la herramienta dedicada?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Te acompaño en la migración de tus datos para que puedas seguir trabajando sin interrupción.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cómo garantizar la seguridad de mis datos?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Me aseguro de que la herramienta elegida cumpla con las normas de seguridad vigentes y de que tus datos estén protegidos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Hablemos",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un audit de tus procesos actuales y un plan de acción personalizado para ayudarte a elegir y poner en marcha la herramienta adecuada a tus necesidades. Contacta conmigo para saber más y empezar a transformar la gestión de tus proyectos.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
