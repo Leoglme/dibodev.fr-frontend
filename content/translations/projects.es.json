@@ -320,5 +320,38 @@
       "recursos jugadores",
       "Francia"
     ]
+  },
+  "project/epitrip": {
+    "name": "EpiTrip",
+    "shortDescription": "Planificador de viajes en lenguaje natural (NLP) con rutas de SNCF y mapa interactivo.",
+    "longDescription": "EpiTrip comprende frases libres (« Salgo de Rennes para ir a Biarritz »), valida la intención del viaje, extrae las ciudades (salida/llegada) mediante NER (CamemBERT, DistilBERT, FastText), y luego calcula una ruta óptima basándose en los datos de SNCF y un algoritmo de grafos tipo Dijkstra. Los resultados se muestran en un mapa interactivo con etapas, duraciones y un resumen claro.\n\nFront: Nuxt 3, Vue 3, TypeScript, TailwindCSS. Backend de negocio: AdonisJS. Backend de IA: Python/FastAPI (Transformers, PyTorch, scikit-learn, Pandas, Matplotlib) con reconocimiento de voz opcional (SpeechRecognition). El proyecto muestra una aplicación concreta del NLP y la IA al viaje, accesible y pedagógica.",
+    "metaTitle": "EpiTrip – Planificador de viajes en lenguaje natural",
+    "metaDescription": "Escriba o diga su ruta, la IA entiende su solicitud, extrae la salida/llegada y calcula la ruta óptima con visualización en un mapa interactivo.",
+    "categories": [
+      "site-web",
+      "ia"
+    ],
+    "sectors": [
+      "voyage-transport"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "AdonisJS",
+      "Python",
+      "FastAPI"
+    ],
+    "tags": [
+      "planificador de viajes",
+      "rutas de SNCF",
+      "lenguaje natural",
+      "reconocimiento de voz",
+      "mapa interactivo",
+      "roadtrip",
+      "búsqueda de rutas",
+      "turismo Francia"
+    ]
   }
 }
