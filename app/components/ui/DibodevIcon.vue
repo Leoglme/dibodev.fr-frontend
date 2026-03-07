@@ -23,24 +23,30 @@
 import { computed } from 'vue'
 import type { PropType, ComputedRef } from 'vue'
 import AlertCircle from '~/components/icons/AlertCircle.vue'
+import ArrowLeft from '~/components/icons/ArrowLeft.vue'
 import ArrowRight from '~/components/icons/ArrowRight.vue'
+import Check from '~/components/icons/Check.vue'
 import CheckCircle from '~/components/icons/CheckCircle.vue'
 import ChevronDown from '~/components/icons/ChevronDown.vue'
 import ChevronLeft from '~/components/icons/ChevronLeft.vue'
 import ChevronRight from '~/components/icons/ChevronRight.vue'
 import ChevronUp from '~/components/icons/ChevronUp.vue'
+import Copy from '~/components/icons/Copy.vue'
 import DoubleChevronsDown from '~/components/icons/DoubleChevronsDown.vue'
 import ExternalLink from '~/components/icons/ExternalLink.vue'
 import Github from '~/components/icons/Github.vue'
 import Info from '~/components/icons/Info.vue'
 import Linkedin from '~/components/icons/Linkedin.vue'
+import LogOut from '~/components/icons/LogOut.vue'
 import Mail from '~/components/icons/Mail.vue'
 import MapPin from '~/components/icons/MapPin.vue'
 import Menu from '~/components/icons/Menu.vue'
+import Monitor from '~/components/icons/Monitor.vue'
 import Moon from '~/components/icons/Moon.vue'
 import Phone from '~/components/icons/Phone.vue'
 import Search from '~/components/icons/Search.vue'
 import Send from '~/components/icons/Send.vue'
+import Smartphone from '~/components/icons/Smartphone.vue'
 import XCircle from '~/components/icons/XCircle.vue'
 import type { DibodevIconMode, DibodevIconProps, IconComponent } from '~/core/types/DibodevIcon'
 import { iconsList } from '~/core/types/DibodevIcon'
@@ -82,24 +88,30 @@ const props: DibodevIconProps = defineProps({
  */
 const iconsDictionary: Record<string, IconComponent> = {
   AlertCircle,
+  ArrowLeft,
   ArrowRight,
+  Check,
   CheckCircle,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
   ChevronUp,
+  Copy,
   DoubleChevronsDown,
   ExternalLink,
   Github,
   Info,
   Linkedin,
+  LogOut,
   Mail,
   MapPin,
   Menu,
+  Monitor,
   Moon,
   Phone,
-  Send,
   Search,
+  Send,
+  Smartphone,
   XCircle,
 }
 

@@ -58,18 +58,31 @@
         >
           Traductions
         </NuxtLink>
+        <NuxtLink
+          :to="localePath('/dashboard/audit')"
+          class="rounded-md px-3 py-2 text-sm font-medium transition-colors"
+          :class="
+            $route.path.endsWith('/audit')
+              ? 'bg-gray-700 text-gray-100'
+              : 'text-gray-100 hover:bg-gray-700 hover:text-gray-100'
+          "
+        >
+          Audit SEO
+        </NuxtLink>
         <div class="mt-auto space-y-1 border-t border-gray-700 pt-4">
           <button
             type="button"
-            class="flex w-full cursor-pointer items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-gray-700 hover:text-gray-100"
+            class="flex w-full cursor-pointer items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-gray-700 hover:text-gray-100"
             @click="onLogout"
           >
+            <DibodevIcon name="LogOut" class="h-4 w-4 shrink-0" mode="stroke" />
             {{ $t('dashboard.logout') }}
           </button>
           <DibodevLink
             :link="localePath('/')"
-            class="flex w-full items-center rounded-md bg-gray-700 px-3 py-2 text-sm font-medium text-gray-200 hover:bg-gray-600 hover:text-gray-100"
+            class="flex w-full items-center gap-2 rounded-md bg-gray-700 px-3 py-2 text-sm font-medium text-gray-200 hover:bg-gray-600 hover:text-gray-100"
           >
+            <DibodevIcon name="ArrowLeft" class="h-4 w-4 shrink-0" mode="stroke" />
             Retour au site
           </DibodevLink>
         </div>
@@ -114,18 +127,27 @@
                 >
                   Traductions
                 </NuxtLink>
+                <NuxtLink
+                  :to="localePath('/dashboard/audit')"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-100 hover:bg-gray-700"
+                  @click="mobileMenuOpen = false"
+                >
+                  Audit SEO
+                </NuxtLink>
                 <button
                   type="button"
-                  class="cursor-pointer rounded-md px-3 py-2 text-left text-sm font-medium text-gray-200 hover:bg-gray-700 hover:text-gray-100"
+                  class="flex cursor-pointer items-center gap-2 rounded-md px-3 py-2 text-left text-sm font-medium text-gray-200 hover:bg-gray-700 hover:text-gray-100"
                   @click="onLogoutThenClose"
                 >
+                  <DibodevIcon name="LogOut" class="h-4 w-4 shrink-0" mode="stroke" />
                   {{ $t('dashboard.logout') }}
                 </button>
                 <DibodevLink
                   :link="localePath('/')"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-gray-600 hover:text-gray-100"
+                  class="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-gray-600 hover:text-gray-100"
                   @click="mobileMenuOpen = false"
                 >
+                  <DibodevIcon name="ArrowLeft" class="h-4 w-4 shrink-0" mode="stroke" />
                   Retour au site
                 </DibodevLink>
               </div>

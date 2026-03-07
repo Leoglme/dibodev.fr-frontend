@@ -2,6 +2,7 @@ import type { H3Event } from 'h3'
 import { requireDashboardAuth } from '~~/server/utils/dashboardAuth'
 import { getRefreshState, setRefreshState } from '~~/server/utils/indexingStorage'
 import { runIndexingRefreshJob } from '~~/server/utils/indexingJob'
+import type { IndexingRefreshState } from '~~/server/types/indexing'
 
 /**
  * POST /api/indexing-status/refresh
@@ -9,7 +10,7 @@ import { runIndexingRefreshJob } from '~~/server/utils/indexingJob'
  */
 export default defineEventHandler(async (event: H3Event) => {
   requireDashboardAuth(event)
-  const current = await getRefreshState()
+  const current: IndexingRefreshState = await getRefreshState()
   if (current.status === 'running') {
     return { ok: true, status: 'running', message: 'Refresh déjà en cours.' }
   }
@@ -17,6 +18,7 @@ export default defineEventHandler(async (event: H3Event) => {
   await setRefreshState({
     status: 'running',
     startedAt: new Date().toISOString(),
+    cancelled: undefined,
   })
 
   runIndexingRefreshJob().catch((err) => {

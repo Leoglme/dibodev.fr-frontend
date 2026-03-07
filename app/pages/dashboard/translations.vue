@@ -104,12 +104,10 @@
           </template>
           <template #url="{ item }">
             <div class="flex min-w-0 flex-wrap items-center justify-start gap-2 break-words">
+              <DibodevCopyButton :value="getItemUrl(item as TranslatableItem)" />
               <DibodevLink :link="getItemUrl(item as TranslatableItem)" external-link class="min-w-0 break-all">
                 {{ getItemUrl(item as TranslatableItem) }}
               </DibodevLink>
-              <DibodevButton size="xs" outlined class="shrink-0" @click="copyUrl(getItemUrl(item as TranslatableItem))">
-                Copier
-              </DibodevButton>
             </div>
           </template>
           <template #status="{ item }">
@@ -161,6 +159,7 @@ import { ref, computed, onMounted } from 'vue'
 import type { Ref, ComputedRef } from 'vue'
 import DibodevAlert from '~/components/feedback/DibodevAlert.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
+import DibodevCopyButton from '~/components/DibodevCopyButton.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevTable from '~/components/core/DibodevTable.vue'
 import DibodevSearchBar from '~/components/inputs/DibodevSearchBar.vue'
@@ -219,14 +218,6 @@ const cardFields: DibodevTableCardField[] = [
 
 function getItemUrl(item: TranslatableItem): string {
   return `${SITE_URL}/${item.fullSlug}`
-}
-
-async function copyUrl(url: string): Promise<void> {
-  try {
-    await navigator.clipboard.writeText(url)
-  } catch {
-    error.value = 'Copie impossible'
-  }
 }
 
 const currentItems: ComputedRef<TranslatableItem[]> = computed((): TranslatableItem[] => {

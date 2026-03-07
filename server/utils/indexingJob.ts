@@ -1,4 +1,4 @@
-import type { IndexingStatusRow } from '~~/server/types/indexing'
+import type { IndexingRefreshState, IndexingStatusRow } from '~~/server/types/indexing'
 import { getGscAccessToken } from '~~/server/utils/gscAuth'
 import { inspectUrl } from '~~/server/utils/gscInspect'
 import { getIndexingRows, getRefreshState, setIndexingRows, setRefreshState } from '~~/server/utils/indexingStorage'
@@ -35,12 +35,26 @@ export async function runIndexingRefreshJob(): Promise<void> {
   const sources: IndexingStatusRow[] = await getIndexingSources(siteBaseUrl)
   const rows: Record<string, IndexingStatusRow> = await getIndexingRows()
 
+  const totalCount: number = sources.length
   for (const [index, source] of sources.entries()) {
-    const refreshState = await getRefreshState()
+    const refreshState: IndexingRefreshState = await getRefreshState()
+    if (refreshState.cancelled) {
+      await setRefreshState({
+        status: 'idle',
+        finishedAt: new Date().toISOString(),
+        currentUrl: undefined,
+        currentIndex: undefined,
+        totalCount: undefined,
+        cancelled: undefined,
+      })
+      return
+    }
     await setRefreshState({
       ...refreshState,
       status: 'running',
       currentUrl: source.url,
+      currentIndex: index + 1,
+      totalCount,
     })
 
     const existing: IndexingStatusRow | undefined = rows[source.url]
@@ -75,5 +89,8 @@ export async function runIndexingRefreshJob(): Promise<void> {
     status: 'idle',
     finishedAt: new Date().toISOString(),
     currentUrl: undefined,
+    currentIndex: undefined,
+    totalCount: undefined,
+    cancelled: undefined,
   })
 }

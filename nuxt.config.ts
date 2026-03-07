@@ -48,6 +48,8 @@ export default defineNuxtConfig({
     buildCommit: process.env.NUXT_BUILD_COMMIT || '',
     /** URL du site pour récupérer le sitemap (dashboard indexation). */
     indexingSiteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://dibodev.fr',
+    /** Optionnel : clé API Google PageSpeed Insights (quota plus élevé). */
+    psiApiKey: process.env.PSI_API_KEY || '',
     public: {
       storyblok: {
         accessToken: process.env.NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN || '',

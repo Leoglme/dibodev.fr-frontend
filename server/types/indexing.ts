@@ -33,4 +33,10 @@ export type IndexingRefreshState = {
   finishedAt?: string
   /** URL en cours d’actualisation par le job (pour afficher le loader sur la ligne). */
   currentUrl?: string
+  /** Index 1-based de la page en cours (pour afficher "Mise à jour 5/135"). */
+  currentIndex?: number
+  /** Nombre total de pages à actualiser. */
+  totalCount?: number
+  /** Demande d’annulation par l’utilisateur (le job sort à la prochaine itération). */
+  cancelled?: boolean
 }

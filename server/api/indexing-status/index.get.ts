@@ -55,6 +55,8 @@ export default defineEventHandler(async (event: H3Event): Promise<IndexingStatus
       startedAt: refresh.startedAt,
       finishedAt: refresh.finishedAt,
       currentUrl: refresh.currentUrl,
+      currentIndex: refresh.currentIndex,
+      totalCount: refresh.totalCount,
     },
     gscConnected,
   }

@@ -36,13 +36,22 @@
           <DibodevSearchBar title="Recherche" placeholder="Titre ou URL…" v-model:value="searchText" />
         </div>
       </div>
-      <div class="flex w-full justify-end sm:justify-start">
+      <div class="flex w-full flex-wrap items-center justify-end gap-3 sm:justify-start">
         <DibodevButton :disabled="loading || refreshStatus === 'running'" @click="startRefresh">
           <span
             v-if="refreshStatus === 'running'"
             class="mr-2 inline-block h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"
           />
-          {{ refreshStatus === 'running' ? 'Mise à jour…' : 'Actualiser' }}
+          {{
+            refreshStatus === 'running' && refreshCurrentIndex != null && refreshTotalCount != null
+              ? `Mise à jour ${refreshCurrentIndex}/${refreshTotalCount}`
+              : refreshStatus === 'running'
+                ? 'Mise à jour…'
+                : 'Actualiser'
+          }}
+        </DibodevButton>
+        <DibodevButton v-if="refreshStatus === 'running'" outlined @click="cancelRefresh">
+          Annuler l’actualisation
         </DibodevButton>
       </div>
     </div>
@@ -112,12 +121,10 @@
         </template>
         <template #url="{ item }">
           <div class="flex min-w-0 flex-wrap items-center justify-start gap-2 break-words">
+            <DibodevCopyButton :value="(item as IndexingItem).url" />
             <DibodevLink :link="(item as IndexingItem).url" external-link class="min-w-0 break-all">
               {{ (item as IndexingItem).url }}
             </DibodevLink>
-            <DibodevButton size="xs" outlined class="shrink-0" @click="copyUrl((item as IndexingItem).url)">
-              Copier
-            </DibodevButton>
           </div>
         </template>
         <template #signal="{ item }">
@@ -173,6 +180,7 @@ import { ref, computed, onMounted } from 'vue'
 import type { Ref } from 'vue'
 import DibodevAlert from '~/components/feedback/DibodevAlert.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
+import DibodevCopyButton from '~/components/DibodevCopyButton.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevTable from '~/components/core/DibodevTable.vue'
 import DibodevSearchBar from '~/components/inputs/DibodevSearchBar.vue'
@@ -211,12 +219,14 @@ type IndexingApiResponse = {
     finishedAt?: string
     /** URL en cours d’actualisation par le job « Actualiser » global. */
     currentUrl?: string
+    currentIndex?: number
+    totalCount?: number
   }
   gscConnected: boolean
 }
 
-const CACHE_KEY = 'dashboard-indexing-cache'
-const POLL_INTERVAL_MS = 3000
+const CACHE_KEY: string = 'dashboard-indexing-cache'
+const POLL_INTERVAL_MS: number = 3000
 
 const items: Ref<IndexingItem[]> = ref([])
 const loading: Ref<boolean> = ref(true)
@@ -224,6 +234,8 @@ const error: Ref<string> = ref('')
 const gscConnected: Ref<boolean> = ref(false)
 const refreshStatus: Ref<'idle' | 'running'> = ref('idle')
 const refreshAllCurrentUrl: Ref<string | null> = ref(null)
+const refreshCurrentIndex: Ref<number | null> = ref(null)
+const refreshTotalCount: Ref<number | null> = ref(null)
 const searchText: Ref<string> = ref('')
 const refreshingUrls: Ref<string[]> = ref([])
 
@@ -268,15 +280,17 @@ function gscConsoleUrl(link: string): string {
   return link.replace(/search\.google\.com\/(?!u\/1)/, 'search.google.com/u/1/')
 }
 
-const filteredItems = computed(() => {
-  let list = items.value
-  const v = selectedVerdict.value?.value
-  if (v) list = list.filter((row) => row.verdict === v)
-  const t = selectedType.value?.value
-  if (t) list = list.filter((row) => row.type === t)
-  const q = searchText.value.trim().toLowerCase()
+const filteredItems = computed((): IndexingItem[] => {
+  let list: IndexingItem[] = items.value
+  const v: string | undefined = selectedVerdict.value?.value
+  if (v) list = list.filter((row: IndexingItem) => row.verdict === v)
+  const t: string | undefined = selectedType.value?.value
+  if (t) list = list.filter((row: IndexingItem) => row.type === t)
+  const q: string = searchText.value.trim().toLowerCase()
   if (q) {
-    list = list.filter((row) => row.title.toLowerCase().includes(q) || row.url.toLowerCase().includes(q))
+    list = list.filter(
+      (row: IndexingItem): boolean => row.title.toLowerCase().includes(q) || row.url.toLowerCase().includes(q),
+    )
   }
   return list
 })
@@ -289,7 +303,7 @@ function isItemRefreshing(url: string): boolean {
 function formatLastCrawl(iso?: string): string {
   if (!iso) return '—'
   try {
-    const d = new Date(iso)
+    const d: Date = new Date(iso)
     return d.toLocaleDateString('fr-FR', {
       day: '2-digit',
       month: '2-digit',
@@ -327,27 +341,31 @@ function getSignalBadgeClass(item: IndexingItem): string {
   return 'bg-purple-500/20 text-purple-200'
 }
 
-async function fetchFromApi(force = false): Promise<void> {
-  const cache = useState<IndexingApiResponse | null>(CACHE_KEY)
+async function fetchFromApi(force: boolean = false): Promise<void> {
+  const cache: Ref<IndexingApiResponse | null> = useState<IndexingApiResponse | null>(CACHE_KEY)
   if (!force && cache.value) {
     items.value = cache.value.items ?? []
     gscConnected.value = cache.value.gscConnected ?? false
     refreshStatus.value = cache.value.refresh?.status ?? 'idle'
     refreshAllCurrentUrl.value = cache.value.refresh?.currentUrl ?? null
+    refreshCurrentIndex.value = cache.value.refresh?.currentIndex ?? null
+    refreshTotalCount.value = cache.value.refresh?.totalCount ?? null
     loading.value = false
     return
   }
   loading.value = true
   error.value = ''
   try {
-    const data = await $fetch<IndexingApiResponse>('/api/indexing-status')
+    const data: IndexingApiResponse = await $fetch<IndexingApiResponse>('/api/indexing-status')
     items.value = data.items ?? []
     gscConnected.value = data.gscConnected ?? false
     refreshStatus.value = data.refresh?.status ?? 'idle'
     refreshAllCurrentUrl.value = data.refresh?.currentUrl ?? null
+    refreshCurrentIndex.value = data.refresh?.currentIndex ?? null
+    refreshTotalCount.value = data.refresh?.totalCount ?? null
     cache.value = data
-  } catch (e) {
-    const msg = e instanceof Error ? e.message : 'Erreur lors du chargement.'
+  } catch (e: unknown) {
+    const msg: string = e instanceof Error ? e.message : 'Erreur lors du chargement.'
     error.value = msg
     items.value = []
   } finally {
@@ -362,14 +380,18 @@ async function startRefresh(): Promise<void> {
     await $fetch('/api/indexing-status/refresh', { method: 'POST' })
     refreshStatus.value = 'running'
     if (pollIntervalId) clearInterval(pollIntervalId)
-    pollIntervalId = setInterval(async () => {
-      const data = await $fetch<IndexingApiResponse>('/api/indexing-status')
+    pollIntervalId = setInterval(async (): Promise<void> => {
+      const data: IndexingApiResponse = await $fetch<IndexingApiResponse>('/api/indexing-status')
       refreshStatus.value = data.refresh?.status ?? 'idle'
       refreshAllCurrentUrl.value = data.refresh?.currentUrl ?? null
+      refreshCurrentIndex.value = data.refresh?.currentIndex ?? null
+      refreshTotalCount.value = data.refresh?.totalCount ?? null
       items.value = data.items ?? []
       useState(CACHE_KEY).value = data
       if (data.refresh?.status !== 'running') {
         refreshAllCurrentUrl.value = null
+        refreshCurrentIndex.value = null
+        refreshTotalCount.value = null
         if (pollIntervalId) clearInterval(pollIntervalId)
         pollIntervalId = null
       }
@@ -381,17 +403,20 @@ async function startRefresh(): Promise<void> {
       }
       refreshStatus.value = 'idle'
       refreshAllCurrentUrl.value = null
+      refreshCurrentIndex.value = null
+      refreshTotalCount.value = null
     }, 600_000)
-  } catch (e) {
+  } catch (e: unknown) {
     error.value = e instanceof Error ? e.message : 'Erreur lors de l’actualisation.'
   }
 }
 
-async function copyUrl(url: string): Promise<void> {
+async function cancelRefresh(): Promise<void> {
   try {
-    await navigator.clipboard.writeText(url)
-  } catch {
-    error.value = 'Copie impossible'
+    await $fetch('/api/indexing-status/refresh-cancel', { method: 'POST' })
+    // Le polling mettra à jour l’état quand le job aura quitté
+  } catch (e: unknown) {
+    error.value = e instanceof Error ? e.message : 'Impossible d’annuler l’actualisation.'
   }
 }
 
@@ -399,28 +424,33 @@ async function refreshUrl(url: string): Promise<void> {
   refreshingUrls.value = [...refreshingUrls.value, url]
   error.value = ''
   try {
-    const data = await $fetch<{ ok: boolean; item: IndexingItem }>('/api/indexing-status/refresh-url', {
-      method: 'POST',
-      body: { url },
-    })
-    const idx = items.value.findIndex((r) => r.url === url)
+    const data: { ok: boolean; item: IndexingItem } = await $fetch<{ ok: boolean; item: IndexingItem }>(
+      '/api/indexing-status/refresh-url',
+      {
+        method: 'POST',
+        body: { url },
+      },
+    )
+    const idx: number = items.value.findIndex((r: IndexingItem) => r.url === url)
     if (idx !== -1 && data.item) items.value[idx] = data.item
-    const cache = useState<IndexingApiResponse | null>(CACHE_KEY)
+    const cache: Ref<IndexingApiResponse | null> = useState<IndexingApiResponse | null>(CACHE_KEY)
     if (cache.value) cache.value = { ...cache.value, items: [...items.value] }
-  } catch (e) {
+  } catch (e: unknown) {
     error.value = e instanceof Error ? e.message : "Erreur lors de l'actualisation de l'URL."
   } finally {
-    refreshingUrls.value = refreshingUrls.value.filter((u) => u !== url)
+    refreshingUrls.value = refreshingUrls.value.filter((u: string) => u !== url)
   }
 }
 
-onMounted(async () => {
-  const cache = useState<IndexingApiResponse | null>(CACHE_KEY)
+onMounted(async (): Promise<void> => {
+  const cache: Ref<IndexingApiResponse | null> = useState<IndexingApiResponse | null>(CACHE_KEY)
   if (cache.value) {
     items.value = cache.value.items ?? []
     gscConnected.value = cache.value.gscConnected ?? false
     refreshStatus.value = cache.value.refresh?.status ?? 'idle'
     refreshAllCurrentUrl.value = cache.value.refresh?.currentUrl ?? null
+    refreshCurrentIndex.value = cache.value.refresh?.currentIndex ?? null
+    refreshTotalCount.value = cache.value.refresh?.totalCount ?? null
     loading.value = false
     return
   }
