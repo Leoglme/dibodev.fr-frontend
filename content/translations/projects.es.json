@@ -257,5 +257,39 @@
       "proyecto de IA",
       "demostración en línea"
     ]
+  },
+  "project/stockpme": {
+    "name": "Stockpme (Kodeva)",
+    "shortDescription": "Gestión de inventario para PYMES: productos, almacenes, movimientos, transferencias, correcciones, etiquetas QR.",
+    "longDescription": "Stockpme moderniza la gestión de inventario en PYMES: creación de fichas de productos detalladas, referencias, seguimiento de niveles en tiempo real, transferencias entre ubicaciones, correcciones de inventario y reporting. El módulo de etiquetas profesionales con códigos QR mejora la trazabilidad y acelera las operaciones de campo.\n\nStack híbrido: Nuxt.js/Vue.js/TypeScript en el front-end, back-end C# .NET con almacenamiento MongoDB y MSSQL para combinar flexibilidad y consultas analíticas. El objetivo: reducir las rupturas de stock, limitar los excedentes y garantizar la fiabilidad de la cadena logística.",
+    "metaTitle": "Stockpme – Software de gestión de inventario para PYMES",
+    "metaDescription": "Seguimiento de productos, transferencias, correcciones, inventarios y etiquetas QR para una trazabilidad completa. Diseñado para mejorar la eficiencia logística de las PYMES.",
+    "categories": [
+      "site-web",
+      "saas",
+      "application-metier"
+    ],
+    "sectors": [
+      "logistique",
+      "b2b"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "C#",
+      ".NET",
+      "MongoDB"
+    ],
+    "tags": [
+      "gestión de inventario",
+      "inventario",
+      "trazabilidad",
+      "códigos QR",
+      "almacenes",
+      "movimientos de inventario",
+      "PYMES",
+      "logística"
+    ]
   }
 }
