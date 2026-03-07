@@ -165,33 +165,35 @@
       "France"
     ]
   },
-  "project/primea-rp": {
-    "name": "Primea RP",
-    "shortDescription": "Website for a French GTA 5 RP server: onboarding, rules, guides, and resources.",
-    "longDescription": "Community website for Primea RP (GTA 5 RolePlay). It centralizes presentation, rules, controls, procedures to join the server, and useful resources. The onboarding was designed to reduce friction upon entry and to promote good RP practices.\n\nTech: Nuxt.js, Vue.js, TypeScript, SCSS. Clear architecture, easily maintainable by the admin team. An example of a web tool dedicated to a gaming community, focused on accessibility, clarity, and visual consistency.",
-    "metaTitle": "Primea RP – GTA 5 RolePlay Server Website",
-    "metaDescription": "Community website for a GTA 5 RP server: presentation, rules, guides, and access. Clear onboarding to join the roleplay community.",
+  "project/reddit-tauri-app": {
+    "name": "Reddit Tauri App",
+    "shortDescription": "Multi-platform Reddit client (desktop/mobile) with Tauri, Vue, and Rust.",
+    "longDescription": "Cross-platform Reddit application: navigation through posts, subreddits, comments, OAuth, integration with official REST and GraphQL APIs. Tauri enables a lightweight and performant desktop executable, while Capacitor opens the door to mobile. The modern Vue interface offers a smooth and reactive experience.\n\nThis project illustrates the synergy between Rust and JavaScript, the integration of complex public APIs, and the creation of secure hybrid applications. A great playground for authentication, state management, caching, and multi-platform architecture patterns.",
+    "metaTitle": "Reddit Tauri App – Desktop & Mobile Reddit Client",
+    "metaDescription": "Modern and lightweight Reddit client: OAuth authentication, post, subreddit, and comment navigation. Smooth experience on desktop and mobile.",
     "categories": [
-      "site-web"
+      "application-mobile",
+      "logiciel"
     ],
     "sectors": [
-      "gaming"
+      "reseaux-sociaux"
     ],
     "stack": [
-      "Nuxt.js",
+      "Tauri",
+      "Rust",
       "Vue.js",
-      "TypeScript",
-      "SCSS"
+      "SCSS",
+      "Capacitor",
+      "GraphQL"
     ],
     "tags": [
-      "GTA 5 RP",
-      "roleplay server",
-      "community",
-      "rules",
-      "onboarding",
-      "video game",
-      "player resources",
-      "France"
+      "Reddit application",
+      "unofficial client",
+      "multi-platform",
+      "desktop and mobile",
+      "OAuth authentication",
+      "user experience",
+      "content navigation"
     ]
   }
 }

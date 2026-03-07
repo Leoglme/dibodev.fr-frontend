@@ -165,33 +165,35 @@
       "Francia"
     ]
   },
-  "project/primea-rp": {
-    "name": "Primea RP",
-    "shortDescription": "Sitio para un servidor GTA 5 RP francés: onboarding, reglas, guías y recursos.",
-    "longDescription": "Sitio comunitario para Primea RP (GTA 5 RolePlay). Centraliza presentación, reglamento, controles, procedimientos para unirse al servidor y recursos útiles. El onboarding ha sido diseñado para reducir la fricción de entrada y enmarcar las buenas prácticas RP.\n\nTecnología: Nuxt.js, Vue.js, TypeScript, SCSS. Arquitectura clara, fácilmente mantenible por el equipo de administradores. Un ejemplo de herramienta web dedicada a una comunidad de juegos, enfocada en accesibilidad, claridad y coherencia visual.",
-    "metaTitle": "Primea RP – Sitio del servidor GTA 5 RolePlay",
-    "metaDescription": "Sitio comunitario para un servidor GTA 5 RP: presentación, reglas, guías y acceso. Onboarding claro para unirse a la comunidad roleplay.",
+  "project/reddit-tauri-app": {
+    "name": "Aplicación Reddit Tauri",
+    "shortDescription": "Cliente de Reddit multiplataforma (escritorio/móvil) con Tauri, Vue y Rust.",
+    "longDescription": "Aplicación de Reddit multiplataforma: navegación de publicaciones, subreddits y comentarios, OAuth, integración de API REST y GraphQL oficiales. Tauri permite un ejecutable de escritorio ligero y potente, mientras que Capacitor abre las puertas a lo móvil. La interfaz moderna de Vue ofrece una experiencia fluida y reactiva.\n\nEste proyecto ilustra la sinergia Rust/JavaScript, la integración de APIs públicas complejas y la creación de aplicaciones híbridas seguras. Un buen terreno de experimentación para la autenticación, la gestión de estado, el caché y los patrones de arquitectura multiplataforma.",
+    "metaTitle": "Aplicación Reddit Tauri – Cliente de Reddit para escritorio y móvil",
+    "metaDescription": "Cliente de Reddit moderno y ligero: autenticación OAuth, navegación de publicaciones, subreddits y comentarios. Experiencia fluida en escritorio y móvil.",
     "categories": [
-      "site-web"
+      "application-mobile",
+      "logiciel"
     ],
     "sectors": [
-      "gaming"
+      "reseaux-sociaux"
     ],
     "stack": [
-      "Nuxt.js",
+      "Tauri",
+      "Rust",
       "Vue.js",
-      "TypeScript",
-      "SCSS"
+      "SCSS",
+      "Capacitor",
+      "GraphQL"
     ],
     "tags": [
-      "GTA 5 RP",
-      "servidor roleplay",
-      "comunidad",
-      "reglamento",
-      "onboarding",
-      "juego de video",
-      "recursos jugadores",
-      "Francia"
+      "aplicación Reddit",
+      "cliente no oficial",
+      "multiplataforma",
+      "escritorio y móvil",
+      "autenticación OAuth",
+      "experiencia de usuario",
+      "navegación de contenido"
     ]
   }
 }
