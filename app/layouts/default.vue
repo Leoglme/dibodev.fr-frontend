@@ -11,9 +11,6 @@
 import DibodevNavbar from '~/components/navigations/DibodevNavbar.vue'
 import DibodevFooter from '~/components/navigations/DibodevFooter.vue'
 import { personSchemaJson } from '~/config/schema'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
-
 useHead({
   script: [
     {
@@ -24,9 +21,8 @@ useHead({
   ],
 })
 
-onMounted(() => {
-  Aos.init({
-    easing: 'ease-out-cubic',
-  })
+onMounted(async () => {
+  const [{ default: Aos }, _] = await Promise.all([import('aos'), import('aos/dist/aos.css')])
+  Aos.init({ easing: 'ease-out-cubic' })
 })
 </script>
