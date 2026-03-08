@@ -5,7 +5,7 @@
       props.text ? 'before:mr-4 after:ml-4' : 'justify-center',
       props.dark ? 'before:border-gray-600 after:border-gray-600' : 'before:border-gray-300 after:border-gray-300',
     ]"
-    aria-label="divider"
+    role="separator"
   >
     <span v-if="props.text" class="mx-4 font-semibold text-gray-100">
       {{ props.text }}

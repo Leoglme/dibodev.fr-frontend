@@ -9,6 +9,7 @@
       <template v-if="!useLinks">
         <select
           :id="id"
+          :aria-label="props.label || selectedItem?.label"
           class="h-12 w-full cursor-pointer appearance-none rounded-md border-2 bg-gray-600 pr-10 pl-3 text-base text-gray-100 placeholder:text-gray-200 focus:border-gray-300"
           :class="selectBorderClass"
           :value="selectedItem?.value"
@@ -32,7 +33,7 @@
           :class="selectBorderClass"
           :aria-expanded="isOpen"
           :aria-haspopup="true"
-          aria-label="Choisir un secteur"
+          :aria-label="props.label || selectedItem?.label"
           @click="toggleOpen"
         >
           {{ selectedItem?.label ?? '' }}

@@ -7,7 +7,7 @@
         class="flex h-12 w-full cursor-pointer items-center justify-between rounded-md border-2 border-transparent bg-gray-600 pr-10 pl-3 text-left text-base text-gray-100 transition-colors hover:border-gray-300"
         :aria-expanded="isOpen"
         :aria-haspopup="true"
-        aria-label="Choisir la langue"
+        :aria-label="`${currentLocaleLabel} — ${$t('accessibility.chooseLanguage')}`"
         @click="isOpen = !isOpen"
       >
         <span>{{ currentLocaleLabel }}</span>

@@ -44,7 +44,7 @@
         </svg>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <h3 class="text-2xl font-semibold text-gray-100">{{ $t('projects.section.noResultsTitle') }}</h3>
+        <h2 class="text-2xl font-semibold text-gray-100">{{ $t('projects.section.noResultsTitle') }}</h2>
         <p class="text-center text-base text-gray-300">
           {{ $t('projects.section.noResultsDescription') }}
         </p>

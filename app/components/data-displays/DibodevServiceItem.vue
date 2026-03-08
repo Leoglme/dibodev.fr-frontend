@@ -5,9 +5,9 @@
     </div>
 
     <div class="grid gap-3 self-baseline">
-      <h4 class="text-left text-base font-medium text-gray-100">
+      <h3 class="text-left text-base font-medium text-gray-100">
         {{ props.title }}
-      </h4>
+      </h3>
 
       <p class="text-left text-sm leading-7 font-normal text-gray-200">
         {{ props.description }}

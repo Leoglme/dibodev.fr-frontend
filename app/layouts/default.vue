@@ -1,7 +1,9 @@
 <template>
   <div class="bg-gray-900 text-gray-100">
     <DibodevNavbar />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <DibodevFooter />
   </div>
 </template>

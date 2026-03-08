@@ -6,6 +6,7 @@
     target="_blank"
     rel="noopener noreferrer"
     :style="{ color: props.color }"
+    :aria-label="props.ariaLabel || undefined"
   >
     <slot />
   </a>
@@ -41,6 +42,10 @@ const props: DibodevLinkProps = defineProps({
   color: {
     type: String,
     default: '#bdb3ff',
+  },
+  ariaLabel: {
+    type: String,
+    default: null,
   },
 })
 
