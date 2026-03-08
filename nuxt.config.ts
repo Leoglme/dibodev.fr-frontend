@@ -151,7 +151,7 @@ export default defineNuxtConfig({
     outputDir: 'assets/fonts',
     stylePath: 'assets/css/google-fonts.css',
     fontsDir: 'fonts',
-    fontsPath: '../fonts',
+    fontsPath: '../../fonts',
     prefetch: true,
     preconnect: false,
     preload: true,
