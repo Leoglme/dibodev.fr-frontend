@@ -1,5 +1,9 @@
 <template>
-  <div class="grid gap-2 rounded-2xl border-2 bg-gray-400 p-3" :style="{ borderColor: props.primaryColor }">
+  <div
+    class="grid cursor-pointer gap-2 rounded-2xl border-2 bg-gray-400 p-3 transition-opacity hover:opacity-90"
+    :style="{ borderColor: props.primaryColor }"
+    @click="navigateTo(projectLink)"
+  >
     <div class="flex h-50 items-center justify-center rounded-xl" :style="{ backgroundColor: props.secondaryColor }">
       <img
         class="h-48 max-h-[120px] w-full max-w-[200px] rounded-xl object-contain"
