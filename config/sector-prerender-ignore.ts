@@ -16,7 +16,6 @@ type SectorKey =
   | 'b2b'
   | 'reseaux-sociaux'
   | 'gaming'
-  | 'divertissement'
 
 const SECTOR_SLUGS: Record<SupportedLocale, Record<SectorKey, string>> = {
   fr: {
@@ -29,7 +28,6 @@ const SECTOR_SLUGS: Record<SupportedLocale, Record<SectorKey, string>> = {
     b2b: 'b2b',
     'reseaux-sociaux': 'reseaux-sociaux',
     gaming: 'gaming',
-    divertissement: 'divertissement',
   },
   en: {
     'sport-loisirs': 'sports-leisure',
@@ -41,7 +39,6 @@ const SECTOR_SLUGS: Record<SupportedLocale, Record<SectorKey, string>> = {
     b2b: 'b2b',
     'reseaux-sociaux': 'social-networks',
     gaming: 'gaming',
-    divertissement: 'entertainment',
   },
   es: {
     'sport-loisirs': 'deporte-ocio',
@@ -53,7 +50,6 @@ const SECTOR_SLUGS: Record<SupportedLocale, Record<SectorKey, string>> = {
     b2b: 'b2b',
     'reseaux-sociaux': 'redes-sociales',
     gaming: 'gaming',
-    divertissement: 'entretenimiento',
   },
 }
 

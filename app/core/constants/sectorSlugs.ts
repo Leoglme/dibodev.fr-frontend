@@ -1,7 +1,7 @@
 /**
  * Mapping Secteur <=> slug par locale (SEO routes).
- * 10 secteurs : sport-loisirs, immobilier, sante, voyage-transport, productivite,
- * logistique, b2b, reseaux-sociaux, gaming, divertissement
+ * 9 secteurs : sport-loisirs, immobilier, sante, voyage-transport, productivite,
+ * logistique, b2b, reseaux-sociaux, gaming
  */
 
 import type { SectorKey } from '~/core/constants/projectEnums'
@@ -21,7 +21,6 @@ export const SECTOR_SLUGS: Record<SupportedLocale, Record<SectorKey, string>> = 
     b2b: 'b2b',
     'reseaux-sociaux': 'reseaux-sociaux',
     gaming: 'gaming',
-    divertissement: 'divertissement',
   },
   en: {
     'sport-loisirs': 'sports-leisure',
@@ -33,7 +32,6 @@ export const SECTOR_SLUGS: Record<SupportedLocale, Record<SectorKey, string>> = 
     b2b: 'b2b',
     'reseaux-sociaux': 'social-networks',
     gaming: 'gaming',
-    divertissement: 'entertainment',
   },
   es: {
     'sport-loisirs': 'deporte-ocio',
@@ -45,7 +43,6 @@ export const SECTOR_SLUGS: Record<SupportedLocale, Record<SectorKey, string>> = 
     b2b: 'b2b',
     'reseaux-sociaux': 'redes-sociales',
     gaming: 'gaming',
-    divertissement: 'entretenimiento',
   },
 }
 
@@ -94,7 +91,6 @@ export function sectorLabelByLocale(
     b2b: 'B2B',
     'reseaux-sociaux': 'Réseaux sociaux',
     gaming: 'Gaming',
-    divertissement: 'Divertissement',
   }
   const labelsEn: Record<SectorKey, string> = {
     'sport-loisirs': 'Sports & Leisure',
@@ -106,7 +102,6 @@ export function sectorLabelByLocale(
     b2b: 'B2B',
     'reseaux-sociaux': 'Social networks',
     gaming: 'Gaming',
-    divertissement: 'Entertainment',
   }
   const labelsEs: Record<SectorKey, string> = {
     'sport-loisirs': 'Deporte y ocio',
@@ -118,7 +113,6 @@ export function sectorLabelByLocale(
     b2b: 'B2B',
     'reseaux-sociaux': 'Redes sociales',
     gaming: 'Gaming',
-    divertissement: 'Entretenimiento',
   }
   const map: Record<SupportedLocale, Record<SectorKey, string>> = {
     fr: labelsFr,

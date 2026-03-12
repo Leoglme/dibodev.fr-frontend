@@ -121,4 +121,15 @@ const descriptionHtml: ComputedRef<string> = computed((): string => {
   margin-bottom: 0;
   display: inline;
 }
+.project-long-description :deep(blockquote) {
+  padding: 16px;
+  margin: 1rem 0;
+  font-style: italic;
+  background-color: var(--color-gray-700);
+  border-left: 4px solid var(--color-primary-light);
+  color: var(--color-gray-200);
+}
+.project-long-description :deep(blockquote p) {
+  margin-bottom: 0;
+}
 </style>

@@ -18,6 +18,25 @@ function escapeHtml(str: string): string {
   return str.replace(/[&<>"']/g, (ch: string): string => HTML_ENTITIES[ch] ?? ch)
 }
 
+/**
+ * Convertit le texte en HTML en transformant **gras** en <strong>.
+ * Utilisé pour les descriptions EN/ES (string) où le bold n'est pas géré par le Rich text.
+ */
+function textToHtmlWithBold(str: string): string {
+  if (!str) return ''
+  const parts = str.split(/\*\*(.+?)\*\*/g)
+  let out = ''
+  for (let i = 0; i < parts.length; i++) {
+    const segment = parts[i] ?? ''
+    if (i % 2 === 1) {
+      out += '<strong>' + escapeHtml(segment) + '</strong>'
+    } else if (segment.length > 0) {
+      out += escapeHtml(segment)
+    }
+  }
+  return out
+}
+
 /** Titres de sections (FR) pour la description projet. */
 export const PROJECT_DESCRIPTION_SECTION_TITLES: readonly string[] = [
   'Contexte',
@@ -50,6 +69,14 @@ function isListLine(line: string): boolean {
   return /^[-*]\s*/.test(line.trim())
 }
 
+function isOrderedListLine(line: string): boolean {
+  return /^\d+\.\s+/.test(line.trim())
+}
+
+function isBlockquoteLine(line: string): boolean {
+  return line.trim().startsWith('> ')
+}
+
 function isListBlock(block: string): boolean {
   const lines = block
     .split('\n')
@@ -59,6 +86,15 @@ function isListBlock(block: string): boolean {
   return lines.every((line) => isListLine(line))
 }
 
+function isOrderedListBlock(block: string): boolean {
+  const lines = block
+    .split('\n')
+    .map((l) => l.trim())
+    .filter(Boolean)
+  if (lines.length === 0) return false
+  return lines.every((line) => isOrderedListLine(line))
+}
+
 function listBlockToHtml(block: string): string {
   const lines = block
     .split('\n')
@@ -66,7 +102,17 @@ function listBlockToHtml(block: string): string {
     .filter(Boolean)
   const items = lines.map((line) => line.replace(/^[-*]\s*/, '').trim()).filter(Boolean)
   if (items.length === 0) return ''
-  return `<ul>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`
+  return `<ul>${items.map((item) => `<li>${textToHtmlWithBold(item)}</li>`).join('')}</ul>`
+}
+
+function orderedListBlockToHtml(block: string): string {
+  const lines = block
+    .split('\n')
+    .map((l) => l.trim())
+    .filter(Boolean)
+  const items = lines.map((line) => line.replace(/^\d+\.\s*/, '').trim()).filter(Boolean)
+  if (items.length === 0) return ''
+  return `<ol>${items.map((item) => `<li>${textToHtmlWithBold(item)}</li>`).join('')}</ol>`
 }
 
 /**
@@ -82,7 +128,7 @@ function renderMixedBlock(block: string): string {
   function flushParagraph(): void {
     if (paragraphLines.length > 0) {
       const text = paragraphLines.join(' ').trim()
-      if (text) out.push(`<p class="mb-4 last:mb-0">${escapeHtml(text)}</p>`)
+      if (text) out.push(`<p class="mb-4 last:mb-0">${textToHtmlWithBold(text)}</p>`)
       paragraphLines = []
     }
   }
@@ -92,24 +138,61 @@ function renderMixedBlock(block: string): string {
       listLines = []
     }
   }
+  const quoteLines: string[] = []
+  function flushBlockquote(): void {
+    if (quoteLines.length > 0) {
+      const text = quoteLines.map((l) => l.replace(/^>\s*/, '').trim()).join(' ')
+      if (text) {
+        out.push(`<blockquote>`)
+        out.push(`<p class="mb-0">${textToHtmlWithBold(text)}</p>`)
+        out.push('</blockquote>')
+      }
+      quoteLines.length = 0
+    }
+  }
+  const orderedListLines: string[] = []
+  function flushOrderedList(): void {
+    if (orderedListLines.length > 0) {
+      out.push(orderedListBlockToHtml(orderedListLines.join('\n')))
+      orderedListLines.length = 0
+    }
+  }
 
   for (const line of lines) {
     const trimmed = line.trim()
     if (!trimmed) {
       flushParagraph()
       flushList()
+      flushBlockquote()
+      flushOrderedList()
       continue
     }
-    if (isListLine(trimmed)) {
+    if (isBlockquoteLine(trimmed)) {
       flushParagraph()
+      flushList()
+      flushOrderedList()
+      quoteLines.push(trimmed)
+    } else if (isOrderedListLine(trimmed)) {
+      flushParagraph()
+      flushList()
+      flushBlockquote()
+      orderedListLines.push(trimmed)
+    } else if (isListLine(trimmed)) {
+      flushParagraph()
+      flushBlockquote()
+      flushOrderedList()
       listLines.push(trimmed)
     } else {
       flushList()
+      flushBlockquote()
+      flushOrderedList()
       paragraphLines.push(trimmed)
     }
   }
   flushParagraph()
   flushList()
+  flushBlockquote()
+  flushOrderedList()
   return out.join('')
 }
 
@@ -138,14 +221,18 @@ export function stringToDescriptionHtml(text: string, sectionTitles: readonly st
     const rest = p.includes('\n') ? p.slice(p.indexOf('\n') + 1).trim() : ''
 
     if (sectionTitles.includes(firstLine)) {
-      out.push(`<h2>${escapeHtml(firstLine)}</h2>`)
+      out.push(`<h2>${textToHtmlWithBold(firstLine)}</h2>`)
       if (rest && isListBlock(rest)) {
         out.push(listBlockToHtml(rest))
+      } else if (rest && isOrderedListBlock(rest)) {
+        out.push(orderedListBlockToHtml(rest))
       } else if (rest) {
         out.push(renderMixedBlock(rest))
       }
     } else if (isListBlock(p)) {
       out.push(listBlockToHtml(p))
+    } else if (isOrderedListBlock(p)) {
+      out.push(orderedListBlockToHtml(p))
     } else {
       out.push(renderMixedBlock(p))
     }

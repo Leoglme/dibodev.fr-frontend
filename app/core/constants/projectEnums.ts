@@ -3,7 +3,7 @@
  * Évite les strings magiques et centralise les valeurs attendues (Storyblok + filtres).
  *
  * Secteurs (FR labels): Sport & Loisirs, Immobilier, Santé, Voyage & Transport, Productivité,
- * Logistique, B2B, Réseaux sociaux, Gaming, Divertissement
+ * Logistique, B2B, Réseaux sociaux, Gaming
  * Catégorie (FR labels): Site web, Application mobile, SaaS, Logiciel, IA
  */
 
@@ -18,7 +18,6 @@ export const SECTOR_KEYS = [
   'b2b',
   'reseaux-sociaux',
   'gaming',
-  'divertissement',
 ] as const
 
 export type SectorKey = (typeof SECTOR_KEYS)[number]
@@ -34,7 +33,6 @@ export const SECTOR_LABELS_FR: Record<SectorKey, string> = {
   b2b: 'B2B',
   'reseaux-sociaux': 'Réseaux sociaux',
   gaming: 'Gaming',
-  divertissement: 'Divertissement',
 }
 
 /** Clés catégorie (usage interne). */
