@@ -15,9 +15,9 @@
     <div v-if="props.categories?.length" class="flex flex-wrap gap-1 py-1.5">
       <DibodevCategoryBadge v-for="category in props.categories" :key="category" :category="category" size="sm" />
     </div>
-    <h6 class="text-left text-[18px] font-medium">
+    <h3 class="text-left text-[18px] font-medium">
       {{ props.name }}
-    </h6>
+    </h3>
 
     <span v-if="props.createdAt" class="text-left text-xs font-normal text-gray-200">
       {{ props.createdAt }}

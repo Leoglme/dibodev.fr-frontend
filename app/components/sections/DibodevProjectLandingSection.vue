@@ -77,8 +77,11 @@
     </div>
 
     <img
-      src="/images/blur-vector.png"
-      alt="Blur vector background"
+      src="/images/blur-vector.webp"
+      alt=""
+      role="presentation"
+      loading="lazy"
+      decoding="async"
       class="pointer-events-none absolute right-0 bottom-0 z-0 h-[600px] transition-transform duration-300 ease-out select-none sm:h-[850px]"
       width="1440"
       height="810"

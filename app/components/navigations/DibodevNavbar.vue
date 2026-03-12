@@ -31,6 +31,7 @@
         backgroundColor="#1b232d"
         backgroundHoverColor="#141a20"
         class="sm:hidden"
+        :aria-label="mobileMenuOpen ? $t('nav.closeMenu') : $t('nav.openMenu')"
         @click="mobileMenuOpen = !mobileMenuOpen"
       >
         <DibodevIcon name="Menu" />

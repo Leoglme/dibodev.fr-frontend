@@ -139,23 +139,23 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       Rubik: {
-        wght: [400, 500, 600, 700], // Use only the weights you need (e.g., Regular, Medium, Bold)
+        wght: [400, 500, 600, 700],
       },
     },
-    display: 'swap', // Ensures text is visible during font loading
-    subsets: ['latin'], // Use 'latin-ext' if you need extended Latin characters
-    download: true, // Download fonts locally
-    base64: true, // Encode fonts in Base64 to avoid external requests
-    inject: true, // Inject the generated CSS into the project
-    overwriting: true, // Overwrite existing font files to avoid duplicates
-    outputDir: 'assets/fonts', // Store downloaded fonts in assets/fonts
-    stylePath: 'assets/css/google-fonts.css', // Path for the generated CSS
-    fontsDir: 'fonts', // Relative to outputDir
-    fontsPath: '../fonts', // Path used in the CSS file
-    prefetch: false, // Disable prefetch for SSG (not needed with local fonts)
-    preconnect: false, // Disable preconnect for SSG (not needed with local fonts)
-    preload: true, // Preload the font CSS for faster rendering
-    useStylesheet: false, // Use inline CSS (via base64) instead of external stylesheet
+    display: 'swap',
+    subsets: ['latin'],
+    download: true,
+    base64: false,
+    inject: true,
+    overwriting: true,
+    outputDir: 'assets/fonts',
+    stylePath: 'assets/css/google-fonts.css',
+    fontsDir: 'fonts',
+    fontsPath: '../../fonts',
+    prefetch: true,
+    preconnect: false,
+    preload: true,
+    useStylesheet: false,
   },
   plugins: ['~/plugins/VeeValidate'],
 })

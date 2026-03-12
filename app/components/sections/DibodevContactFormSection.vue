@@ -10,8 +10,12 @@
 
       <div class="grid gap-6 py-6 sm:gap-8 sm:pl-8">
         <div class="flex items-center justify-start gap-4">
-          <DibodevLink externalLink link="mailto:contact@dibodev.fr">
-            <DibodevSquareButton backgroundColor="#35424D" backgroundHoverColor="#35424D">
+          <DibodevLink externalLink link="mailto:contact@dibodev.fr" :aria-label="$t('contact.sidebar.emailLabel')">
+            <DibodevSquareButton
+              backgroundColor="#35424D"
+              backgroundHoverColor="#35424D"
+              :aria-label="$t('contact.sidebar.emailLabel')"
+            >
               <DibodevIcon name="Mail" :width="20" :height="20" mode="stroke" />
             </DibodevSquareButton>
           </DibodevLink>
@@ -22,8 +26,12 @@
         </div>
 
         <div class="flex items-center justify-start gap-4">
-          <DibodevLink :externalLink="true" :link="`tel:${PHONE_E164}`">
-            <DibodevSquareButton backgroundColor="#35424D" backgroundHoverColor="#35424D">
+          <DibodevLink :externalLink="true" :link="`tel:${PHONE_E164}`" :aria-label="$t('contact.sidebar.phoneLabel')">
+            <DibodevSquareButton
+              backgroundColor="#35424D"
+              backgroundHoverColor="#35424D"
+              :aria-label="$t('contact.sidebar.phoneLabel')"
+            >
               <DibodevIcon name="Phone" :width="20" :height="20" mode="stroke" />
             </DibodevSquareButton>
           </DibodevLink>
@@ -34,7 +42,12 @@
         </div>
 
         <div class="flex items-center justify-start gap-4">
-          <DibodevSquareButton class="pointer-events-none" backgroundColor="#35424D" backgroundHoverColor="#35424D">
+          <DibodevSquareButton
+            class="pointer-events-none"
+            backgroundColor="#35424D"
+            backgroundHoverColor="#35424D"
+            :aria-label="$t('contact.sidebar.locationLabel')"
+          >
             <DibodevIcon name="MapPin" :width="20" :height="20" mode="stroke" />
           </DibodevSquareButton>
 

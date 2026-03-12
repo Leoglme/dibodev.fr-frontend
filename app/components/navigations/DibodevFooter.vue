@@ -13,7 +13,12 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <DibodevSquareButton :size="40" :backgroundColor="social.color" :backgroundHoverColor="social.hoverColor">
+              <DibodevSquareButton
+                :size="40"
+                :backgroundColor="social.color"
+                :backgroundHoverColor="social.hoverColor"
+                :aria-label="social.name"
+              >
                 <DibodevIcon :name="social.icon" :width="20" :height="20" mode="stroke" />
               </DibodevSquareButton>
             </NuxtLink>
@@ -21,7 +26,13 @@
           <div class="flex flex-col gap-8">
             <PhoneLink variant="navbar" />
             <div class="w-full sm:hidden">
-              <DibodevButton v-if="!isContactPage" :to="localePath('/contact')" icon="Mail" class="w-full">
+              <DibodevButton
+                v-if="!isContactPage"
+                :to="localePath('/contact')"
+                icon="Mail"
+                backgroundColor="#6B59D9"
+                class="w-full"
+              >
                 {{ $t('footer.contactMe') }}
               </DibodevButton>
             </div>
@@ -36,7 +47,13 @@
 
       <div class="flex flex-wrap items-center justify-end gap-8">
         <div class="hidden w-full sm:block sm:w-fit">
-          <DibodevButton v-if="!isContactPage" :to="localePath('/contact')" icon="Mail" class="w-full">
+          <DibodevButton
+            v-if="!isContactPage"
+            :to="localePath('/contact')"
+            icon="Mail"
+            backgroundColor="#6B59D9"
+            class="w-full"
+          >
             {{ $t('footer.contactMe') }}
           </DibodevButton>
         </div>
