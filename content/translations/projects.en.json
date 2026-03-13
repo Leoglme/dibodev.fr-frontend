@@ -5,8 +5,14 @@
     "longDescription": "Context\n\nConnect Four is a web adaptation of the classic board game that lets two players compete directly in the browser.\n\nThe project was carried out as part of an academic exercise aimed at developing an interactive game in **pure JavaScript**, with a responsive interface and complete client-side game logic.\n\nThe goal was to design a simple, accessible web application playable on different devices while implementing the game's core mechanics.\n\nProblem\n\nRecreating a classic board game in a web application requires managing several elements:\n\n* the state of the game board\n* player actions\n* checking win conditions\n* user interface interaction.\n\nThe challenge is to implement reliable logic that correctly detects winning alignments while keeping the interface smooth and intuitive.\n\nSolution\n\nThe application is built on a JavaScript implementation of the game logic, with an algorithm that checks horizontal, vertical and diagonal alignments after each move.\n\nPlayers can customise their avatar and piece colour before starting a game.\n\nThe game board is fully interactive: clicking a column triggers an animated drop of the piece to the available position.\n\nThe interface is responsive so the game can be played on computer, mobile or tablet.\n\nKey features\n\n* Connect Four playable directly in the browser\n* two-player mode on the same device\n* avatar and piece colour customization\n* automatic win detection (horizontal, vertical, diagonal)\n* piece drop animation\n* responsive interface compatible with mobile and tablet\n* multiple rounds between players.\n\nResults\n\nThis project demonstrates the implementation of **complete game logic in JavaScript**, as well as the creation of an interactive, responsive interface.\n\nIt highlights client-side game state management, DOM manipulation and the implementation of simple algorithms to detect win conditions.",
     "metaTitle": "Connect Four — Connect Four game playable online on mobile and desktop",
     "metaDescription": "Connect Four playable directly in the browser: responsive interface, piece animation and complete win logic in JavaScript.",
-    "categories": ["site-web"],
-    "stack": ["HTML", "CSS", "JavaScript"],
+    "categories": [
+      "site-web"
+    ],
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "tags": [
       "web game",
       "online connect four",
@@ -22,8 +28,16 @@
     "longDescription": "Contexte\n\n3-day rush project: recreate a Spotify-like experience with category navigation, artist pages, and functional audio player.\n\nProblème\n\nQuickly prototype a modern music application with a dedicated API.\n\nSolution\n\nFrontend in React with Redux Toolkit; backend in PHP for endpoints and data management.\n\nFonctionnalités principales\n\nCategory navigation, artist pages, audio player, state management and routing.\n\nRésultats\n\nDemonstrates the ability to quickly prototype a media app with a modern frontend and dedicated API, managing state, routing, and audio playback.",
     "metaTitle": "Spotify Clone – Music site with web player",
     "metaDescription": "Music site prototype: library, categories, artist pages, and audio player. Quick project demonstrating an experience close to a streaming service.",
-    "categories": ["site-web"],
-    "stack": ["React", "Redux Toolkit", "JavaScript", "CSS", "PHP"],
+    "categories": [
+      "site-web"
+    ],
+    "stack": [
+      "React",
+      "Redux Toolkit",
+      "JavaScript",
+      "CSS",
+      "PHP"
+    ],
     "tags": [
       "web audio player",
       "music library",
@@ -39,8 +53,18 @@
     "longDescription": "Context\n\nDriving School is a web-based management application for driving schools, designed to organise driving lessons, manage students and centralise appointment scheduling.\n\nThe project was carried out as part of an academic project aimed at designing a **complete business application with user management, scheduling and business logic**.\n\nThe goal was to create a tool capable of replacing manual schedule organisation and providing a clear view of available driving hours for each student.\n\nProblem\n\nDriving schools have to manage on a daily basis:\n\n* enrolled students\n* available instructors\n* remaining driving hours\n* appointment scheduling.\n\nWhen this information is managed manually or across several tools, it can lead to:\n\n* scheduling errors\n* timetable conflicts\n* difficulty tracking remaining driving hours.\n\nAdministrative teams need a centralised system to organise lessons effectively and track student progress.\n\nSolution\n\nDriving School offers a web application that allows driving school staff to schedule and manage driving lessons from a central calendar.\n\nSlots are created by staff (administrators, secretaries or instructors) by linking a student, an instructor and a time slot.\n\nThe system automatically checks that the student still has enough driving hours available before allowing a slot to be created.\n\nEach appointment automatically updates the count of driving hours completed.\n\nThe application also includes an authentication system with different user roles to restrict access to features according to profile.\n\nKey features\n\n* user account management with roles (admin, secretary, instructor, student)\n* creation and management of students and staff\n* lesson scheduling via an interactive calendar\n* linking appointments to student and instructor\n* automatic checking of remaining driving hours\n* tracking of hours completed and remaining per student\n* editing and moving slots by drag-and-drop\n* user account and profile management\n* automatic emails (account creation and password reset).\n\nStudents have access to view their schedule and remaining driving hours.\n\nResults\n\nThis project demonstrates the design of a **complete business application with user management, scheduling and sector-specific business logic**.\n\nIt illustrates the implementation of:\n\n* an authentication system with roles\n* business logic for scheduling\n* a clear management interface for administrative teams.",
     "metaTitle": "Driving School — Driving school management and lesson scheduling software",
     "metaDescription": "Web application for driving school management: students and instructors, driving lesson scheduling and tracking of remaining hours.",
-    "categories": ["site-web", "application-metier", "logiciel"],
-    "stack": ["Vue.js", "TypeScript", "TailwindCSS", "Python", "Flask"],
+    "categories": [
+      "site-web",
+      "application-metier",
+      "logiciel"
+    ],
+    "stack": [
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Python",
+      "Flask"
+    ],
     "tags": [
       "driving school",
       "schedule management",
@@ -56,8 +80,15 @@
     "longDescription": "Context\n\nNextodo is a web-based task management application inspired by Kanban interfaces such as Trello.\n\nThe project was carried out as part of a technical exercise aimed at exploring modern front-end development best practices with **React and Next.js**, as well as setting up unit and end-to-end tests.\n\nThe goal was to design a fluid interface for visually organising tasks and manipulating elements via **drag-and-drop**.\n\nProblem\n\nTask management quickly becomes difficult when projects are not organised visually.\n\nKanban-style tools help structure tasks into columns and quickly identify:\n\n* tasks to do\n* tasks in progress\n* completed tasks.\n\nThe project aimed to replicate this logic while putting modern front-end development concepts into practice.\n\nSolution\n\nNextodo offers a simple interface for creating columns and organising tasks as cards within them.\n\nUsers can reorganise elements using a **drag-and-drop** system, making it easier to prioritise and track progress.\n\nThe application is built on **Next.js and React**, with state management via Redux and the **react-beautiful-dnd** library for smooth movement of cards and columns.\n\nKey features\n\n* creation and deletion of Kanban columns\n* creation, editing and deletion of tasks\n* task organisation by drag-and-drop\n* moving cards between columns\n* task status management (to do / done)\n* task display filters\n* quick deletion of completed tasks.\n\nEach column also has filters to show only certain tasks by status.\n\nResults\n\nNextodo is a practical demonstration of building a modern Kanban interface with React.\n\nThe project highlights:\n\n* front-end application state management\n* manipulating dynamic elements via drag-and-drop\n* designing interactive, modular interfaces.",
     "metaTitle": "Nextodo — Trello-style Kanban application with React and Next.js",
     "metaDescription": "Trello-inspired Kanban app: columns, cards and drag-and-drop to organise your tasks. React project built with Next.js and Redux.",
-    "categories": ["site-web"],
-    "stack": ["Next.js", "React", "JavaScript", "CSS"],
+    "categories": [
+      "site-web"
+    ],
+    "stack": [
+      "Next.js",
+      "React",
+      "JavaScript",
+      "CSS"
+    ],
     "tags": [
       "to-do list",
       "kanban",
@@ -73,8 +104,20 @@
     "longDescription": "Context\n\nGest-Time is a work time management SaaS application developed within **Kodeva**, in collaboration with the company Breizhtic, which handled distribution of the solution to small businesses and SMEs.\n\nThe project was designed to replace paper timesheets and scattered Excel files with a centralised platform for tracking team working hours.\n\nThe application is used by companies to record hours worked, track project progress and simplify timesheet validation.\n\nIt was designed to be easy to use on **tablets and computers**, including by field teams with limited familiarity with IT tools.\n\nProblem\n\nMany companies still track hours using poorly suited systems: paper sheets, spreadsheets or non-specialist tools.\n\nThese methods make it difficult to:\n\n* capture working hours reliably\n* track time spent on projects\n* validate timesheets\n* analyse data for team management.\n\nManagers need a simple tool to centralise information and quickly spot anomalies.\n\nSolution\n\nGest-Time offers a web application that lets employees **enter their working hours by project, task or site**, directly from a clear interface suited to tablets.\n\nEmployees record their hours day by day, then submit their weekly timesheet for validation.\n\nManagers have a **centralised weekly view** to validate, correct or reject timesheets as needed.\n\nThe system also includes automatic alerts to flag anomalies such as missing hours or overruns.\n\nKey features\n\n* time entry by day, project, task or site\n* interface optimised for tablet and field use\n* absence management (leave, RTT, etc.)\n* weekly timesheet validation workflow\n* alerts on hour anomalies\n* user and role management\n* project, site and task management\n* detailed reporting by project, task or employee\n* export to Excel or PDF\n* statistics and reports for activity tracking.\n\nThe software also allows certain advanced features to be enabled according to business needs, such as travel management, business mileage or hourly cost tracking.\n\nResults\n\nGest-Time enables companies to centralise work time tracking, improve timesheet reliability and simplify hour validation by managers.\n\nThe software provides better visibility on team activity and makes it easier to analyse data for project tracking.",
     "metaTitle": "Gest-Time — Work time management software for businesses",
     "metaDescription": "SaaS work time tracking software: hours entry by project, weekly validation, anomaly alerts and reporting to manage team activity.",
-    "categories": ["site-web", "application-metier", "logiciel"],
-    "stack": ["Nuxt.js", "Vue.js", "TypeScript", "C#", ".NET", "MongoDB", "Microsoft SQL Server (MSSQL)"],
+    "categories": [
+      "site-web",
+      "application-metier",
+      "logiciel"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "C#",
+      ".NET",
+      "MongoDB",
+      "Microsoft SQL Server (MSSQL)"
+    ],
     "tags": [
       "time tracking",
       "timesheets",
@@ -92,9 +135,23 @@
     "longDescription": "Context\n\nIzidoor is a SaaS booking and management platform for structures offering supervised activities: surf schools, water sports centres, ski schools, kayaking, fishing, or bike hire. The solution centralises online booking and day-to-day operations in one tool: session planning, activity and product catalogue, team and instructor management, invoicing, and on-site payment.\n\nEach structure has a booking module integrated directly into its website, so customers can book and pay for activities online themselves.\n\nProblem\n\nMany leisure facilities still manage bookings with separate tools: phone, spreadsheets, manual payments, and a separate schedule.\n\nThis fragmented setup leads to:\n\n* a heavy administrative load\n* booking errors\n* difficulty tracking real-time availability\n* lost bookings when customers cannot reach the structure\n\nFor seasonal activities like surf, ski, or kayak, these limits quickly become a drag on daily organisation.\n\nSolution\n\nIzidoor centralises everything in one platform.\n\nStructures can offer online booking directly from their site, manage their activities via an interactive schedule, and track orders, payments, and participants from the back-office.\n\nThe system supports:\n\n* online booking with Stripe payment\n* full or deposit payment\n* order and participant management\n* on-site payment via an integrated till\n* availability and activity period management\n\nThe platform is designed to work for surf schools, water sports centres, or independent instructors alike.\n\nKey features\n\n* online booking integrated into the website\n* interactive session and activity schedule\n* product and activity management\n* instructor and team management\n* participant and customer management\n* automatic invoicing\n* till for on-site payments\n* availability and seasonal period management\n\nIzidoor acts as a full management solution for sports and leisure facilities.\n\nResults\n\nIzidoor is now used by sports and leisure facilities in France to digitise booking management and simplify how they run their activities.",
     "metaTitle": "Izidoor – Sports & Leisure Booking SaaS Platform",
     "metaDescription": "SaaS booking and back-office platform for sports and leisure facilities: scheduling, payments, invoicing, and team management. Reliable and scalable solution.",
-    "categories": ["site-web", "saas", "application-metier"],
-    "sectors": ["sport-loisirs", "b2b"],
-    "stack": ["Nuxt.js", "Vue.js", "TypeScript", "GraphQL", "PostgreSQL", "TailwindCSS"],
+    "categories": [
+      "site-web",
+      "saas",
+      "application-metier"
+    ],
+    "sectors": [
+      "sport-loisirs",
+      "b2b"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "GraphQL",
+      "PostgreSQL",
+      "TailwindCSS"
+    ],
     "tags": [
       "booking platform",
       "booking management",
@@ -114,9 +171,21 @@
     "longDescription": "Context\n\nReddit is a very popular community platform for browsing, sharing and commenting on content across thousands of communities called subreddits. The aim of this project was to develop a full Reddit client capable of replicating the official app experience while exploring modern cross-platform application architectures.\n\nThis project was carried out as part of the computer engineering curriculum at Epitech. It involves building a functional Reddit client based on the official Reddit API that can run on multiple platforms from a single codebase.\n\nProblem\n\nDeveloping applications for multiple platforms (desktop, mobile, web) often requires separate codebases, which increases development and maintenance complexity.\n\nTraditional frameworks like Electron make it possible to build desktop apps with web technologies, but often produce heavy, poorly optimized executables.\n\nThe challenge of this project was therefore to design a performant Reddit client that could run on multiple platforms while remaining lightweight and secure.\n\nSolution\n\nThe application uses **Tauri** to create a lightweight Rust-based desktop executable while keeping a user interface built with Vue.js.\n\nTauri makes it possible to build performant cross-platform applications with much lighter executables than those produced by solutions like Electron.\n\nThe user interface faithfully replicates the Reddit browsing experience and relies on Reddit's official APIs (REST and GraphQL) to fetch data and interact with the platform.\n\nTo extend the application to mobile, the project also uses **Capacitor**, allowing the same codebase to be reused.\n\nKey features\n\n* authentication via Reddit OAuth\n* feed and subreddit navigation\n* comment browsing\n* post creation\n* voting (upvote / downvote)\n* content and community search\n* user profile management\n* interface matching the official Reddit experience.\n\nThe application runs on desktop (Windows, macOS) and can also be adapted for mobile thanks to the hybrid architecture.\n\nResults\n\nThis project demonstrates the possibility of developing a full cross-platform application from a single codebase by combining:\n\n* Rust and Tauri for performant desktop applications\n* Vue.js for the user interface\n* Capacitor for extending to mobile.\n\nIt provides an interesting testing ground for OAuth authentication, external API integration and modern hybrid application architecture.",
     "metaTitle": "Cross-platform Reddit client — Tauri, Rust and Vue",
     "metaDescription": "Cross-platform Reddit client prototype built with Tauri, Rust and Vue.js. OAuth authentication, subreddit navigation, comments and post creation from a single codebase.",
-    "categories": ["application-mobile", "logiciel"],
-    "sectors": ["reseaux-sociaux"],
-    "stack": ["Tauri", "Rust", "Vue.js", "SCSS", "Capacitor", "GraphQL"],
+    "categories": [
+      "application-mobile",
+      "logiciel"
+    ],
+    "sectors": [
+      "reseaux-sociaux"
+    ],
+    "stack": [
+      "Tauri",
+      "Rust",
+      "Vue.js",
+      "SCSS",
+      "Capacitor",
+      "GraphQL"
+    ],
     "tags": [
       "Reddit application",
       "unofficial client",
@@ -133,9 +202,20 @@
     "longDescription": "Context\n\nWhen searching for housing, listings are often scattered across multiple platforms: Leboncoin, SeLoger, estate agencies or social networks. Favorites are spread across different sites and it quickly becomes difficult to track interesting listings, compare properties or share finds with others.\n\nApartEasy is a web application designed to simplify this step by centralizing all real estate listings in a single workspace. The tool helps organize a housing search alone or in a group, for example as a couple or with roommates.\n\nEach search takes place in a dedicated space called a **space**, containing a name and a reference location used to calculate distances and travel times.\n\nProblem\n\nWhen searching for an apartment, several difficulties quickly arise:\n\n* listings are scattered across multiple sites\n* interesting links are hard to find again\n* comparing several properties efficiently is complicated\n* coordination with others (roommate, partner, friends) becomes confusing.\n\nCommunication often happens via messages or screenshots, making it hard to track listings clearly and efficiently.\n\nSolution\n\nApartEasy offers a simple interface to centralize all real estate listings in a single collaborative space.\n\nUsers can create a search, invite others to join and manually add listings found on different sites by simply pasting the URL and key details.\n\nEach listing can then be enriched with information such as price, utilities, floor area, number of rooms or availability date.\n\nAn interactive map shows the property location and estimates travel times to the search reference location using the Google Maps API.\n\nKey features\n\n* centralization of real estate listings via URL\n* creation of collaborative search spaces\n* user invitations for group work\n* 5-star property ratings by each user\n* average rating calculation to compare properties\n* listing status management (called, visited, available)\n* interactive map with travel time estimates\n* filters and sorting (price, city, name).\n\nThe aim is to make decision-making easier by allowing easy comparison of properties and tracking search progress.\n\nResults\n\nApartEasy was developed to address a real need during a shared apartment search. The application makes it possible to centralize all listings, track their status and collaborate effectively with other users when searching for a home.\n\nThe tool demonstrates how a collaborative web application can simplify organization and decision-making during a property search.",
     "metaTitle": "ApartEasy — Centralize and share your real estate listings",
     "metaDescription": "Collaborative web application to centralize and organize real estate listings. Compare properties, share your favorites and estimate travel times with an interactive map.",
-    "categories": ["site-web"],
-    "sectors": ["immobilier"],
-    "stack": ["AdonisJS", "Vue.js", "TypeScript", "TailwindCSS", "Docker", "MariaDB"],
+    "categories": [
+      "site-web"
+    ],
+    "sectors": [
+      "immobilier"
+    ],
+    "stack": [
+      "AdonisJS",
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Docker",
+      "MariaDB"
+    ],
     "tags": [
       "apartment search",
       "real estate listings",
@@ -153,9 +233,20 @@
     "longDescription": "Context\n\nPneumonia is a lung infection that can be detected from chest X-rays. Analysing these images usually requires the expertise of a healthcare professional, but machine learning techniques can now automate part of this detection.\n\nAI Pneumonia Detector is a medical AI application prototype that analyses chest X-rays to identify possible pneumonia. The project uses a dataset of 5856 real X-rays provided as part of the AI/Data engineering curriculum at Epitech.\n\nThe project aims to compare different machine learning approaches for medical image classification and explore their effectiveness in detecting lung pathologies.\n\nProblem\n\nMedical X-ray analysis generally relies on human expertise. However, in some contexts, decision-support tools based on artificial intelligence can:\n\n* speed up medical image analysis\n* assist healthcare professionals\n* identify visual anomalies in X-rays.\n\nThe challenge is to train a model capable of correctly distinguishing normal chest X-rays from those showing signs of pneumonia, while assessing the reliability of predictions.\n\nSolution\n\nThe application implements two machine learning approaches for X-ray classification:\n\nA CNN (Convolutional Neural Network) model specialised in image analysis.\n\nA KNN (K-Nearest Neighbors) model used as a baseline for comparison with a simpler machine learning approach.\n\nX-rays are preprocessed into grayscale images and resized before being used for model training.\n\nThe CNN model uses a convolutional neural network architecture to automatically extract relevant visual features from the images.\n\nA web interface then allows testing the models in real time.\n\nUsers can:\n\n* select sample X-rays\n* upload their own images\n* get an instant prediction (NORMAL or PNEUMONIA)\n* view the probabilities associated with each class.\n\nKey features\n\n* AI analysis of chest X-rays\n* comparison of two machine learning approaches (CNN vs KNN)\n* interactive web interface to test the models\n* custom image upload for analysis\n* display of classification probabilities\n* visualisation of performance metrics.\n\nResults\n\nBoth models were evaluated on an independent test set.\n\nThe CNN model achieves the best performance with:\n\n* accuracy of around 95%\n* an ROC curve with AUC close to 0.99\n\nThe KNN model reaches an accuracy of around 93%, showing that a simpler approach can already produce correct results, but remains less effective than a convolutional neural network for medical image analysis.\n\nThese results confirm the effectiveness of deep learning models for chest X-ray image classification.",
     "metaTitle": "AI Pneumonia Detector — Chest X-ray analysis with AI",
     "metaDescription": "AI web application to analyze chest X-rays and detect pneumonia. Interactive demo with CNN and KNN model comparison and metrics visualization.",
-    "categories": ["site-web", "ia"],
-    "sectors": ["sante"],
-    "stack": ["Vue.js", "TypeScript", "TailwindCSS", "Python", "FastAPI"],
+    "categories": [
+      "site-web",
+      "ia"
+    ],
+    "sectors": [
+      "sante"
+    ],
+    "stack": [
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Python",
+      "FastAPI"
+    ],
     "tags": [
       "pneumonia detection",
       "medical imaging",
@@ -173,9 +264,23 @@
     "longDescription": "Context\n\nStockpme is a SaaS application designed to help **small businesses and SMEs manage their stock and inventories** in a simple, reliable way.\n\nThe project was developed within **Kodeva**, in collaboration with the company Breizhtic, which handled distribution of the software and associated equipment to client companies.\n\nThe aim of the solution is to centralise product, stock movement and warehouse management in a single interface, while simplifying field operations through a professional label system with **QR codes**.\n\nThe software is now used by companies to manage their inventory and track their products.\n\nProblem\n\nMany SMEs still manage their stock with poorly suited tools: spreadsheets, manual systems or overly complex software.\n\nThis setup can lead to:\n\n* inventory errors\n* difficulty tracking stock movements\n* stockouts or excess stock\n* limited traceability of logistics operations.\n\nTeams need a simple tool to manage products and their movements while keeping a clear view of inventory.\n\nSolution\n\nStockpme offers a **browser-based stock management web application** that centralises all inventory-related operations.\n\nCompanies can create product sheets, track stock movements and manage their warehouses from a simple interface.\n\nThe software also includes a **professional label generation system with QR codes**, enabling quick product identification and access to associated information.\n\nThe QR code improves traceability and helps identify products during stock management operations.\n\nKey features\n\n* creation and management of product sheets\n* stock and inventory level management\n* stock movements (in, out, corrections, inventories)\n* transfers between locations or warehouses\n* generation of professional labels with QR codes\n* product tracking and movement history\n* stock evolution statistics and charts\n* after-sales service intervention management.\n\nThe platform is designed to simplify day-to-day logistics operations and improve inventory reliability.\n\nResults\n\nStockpme is used by companies to manage their products and inventories.\n\nThe software helps centralise stock-related information, improve product traceability and simplify management operations for teams.",
     "metaTitle": "Stockpme — Stock management software for SMEs",
     "metaDescription": "SaaS stock management software for SMEs: product tracking, inventory movements, QR labels and statistics to improve traceability and logistics management.",
-    "categories": ["site-web", "saas", "application-metier"],
-    "sectors": ["logistique", "b2b"],
-    "stack": ["Nuxt.js", "Vue.js", "TypeScript", "C#", ".NET", "MongoDB"],
+    "categories": [
+      "site-web",
+      "saas",
+      "application-metier"
+    ],
+    "sectors": [
+      "logistique",
+      "b2b"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "C#",
+      ".NET",
+      "MongoDB"
+    ],
     "tags": [
       "inventory management",
       "inventory",
@@ -193,9 +298,18 @@
     "longDescription": "Context\n\nPrimea RP is a **FiveM-based GTA 5 RolePlay server**, bringing together a French-speaking community around an immersive roleplay experience.\n\nTo welcome new players and structure the community, the server needed a website that centralised all essential information: server presentation, rules, guides and procedures for joining the community.\n\nThe aim of the site was to create a clear, accessible entry point for new players while strengthening the server's visibility on listing platforms such as **Top-Serveurs**.\n\nProblem\n\nGTA RP servers regularly attract new players, but the lack of structured information can make integration difficult.\n\nNew members often have to search for:\n\n* server rules\n* procedures for joining the community\n* specific keybindings and commands\n* useful resources to get started.\n\nWithout a central information hub, these elements are scattered across Discord, forums or messages, which can create confusion for new players.\n\nSolution\n\nThe Primea RP site was designed as an **onboarding platform for the server**, enabling players to quickly discover the server's universe and understand how to take part.\n\nThe site centralises all the information needed to join the community and start playing under good conditions.\n\nIt includes in particular:\n\n* a presentation of the server and its universe\n* roleplay rules\n* procedures for joining the server\n* game keybindings and commands\n* useful resources for new players\n* links to community platforms such as Discord.\n\nThe site architecture was designed to provide simple, intuitive navigation and easy access to the information that matters most to new members.\n\nKey features\n\n* server and universe presentation\n* full RP server rules\n* guides and resources for players\n* explanation of specific commands and keybindings\n* procedure for joining the server\n* direct access to the community Discord.\n\nThe site also serves as a communication channel for the community and helps centralise important server information.\n\nResults\n\nThe Primea RP server has built an active community with around **200 players** and up to **80 players connected at the same time**.\n\nThe site has helped structure the welcome for new players, explain server rules and simplify the process of joining the community.\n\nThis project demonstrates the importance of a clear, effective website in supporting the growth of a gaming community.",
     "metaTitle": "Primea RP — Official French GTA RP FiveM server website",
     "metaDescription": "Official website for the French GTA 5 RolePlay FiveM server Primea RP: server presentation, rules, guides and Discord access to join the roleplay experience.",
-    "categories": ["site-web"],
-    "sectors": ["gaming"],
-    "stack": ["Nuxt.js", "Vue.js", "TypeScript", "SCSS"],
+    "categories": [
+      "site-web"
+    ],
+    "sectors": [
+      "gaming"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "SCSS"
+    ],
     "tags": [
       "GTA 5 RP",
       "roleplay server",
@@ -213,9 +327,22 @@
     "longDescription": "Context\n\nPlanning a train journey usually means switching between several interfaces and manually entering departure and arrival cities. Yet users naturally express their needs in sentences such as: \"I'm leaving from Rennes to go to Biarritz\".\n\nEpiTrip is a travel planning assistant that can interpret such natural language phrases and automatically turn the request into a usable itinerary.\n\nThe project combines **natural language processing (NLP)** and route optimisation to understand the user's request and compute the best journey from SNCF transport data.\n\nProblem\n\nClassic journey planners rely on structured forms where the user has to manually select each piece of information.\n\nThis approach does not always match the natural way users express their needs. Moreover, understanding free-form text raises several technical challenges:\n\n* detecting whether the sentence is actually a travel request\n* identifying departure and arrival cities\n* correctly handling language variations\n* then computing an optimal route from the rail network data.\n\nSolution\n\nEpiTrip implements a full pipeline combining artificial intelligence and graph algorithms to process travel requests.\n\nThe system works in several steps:\n\n1. **Language detection** to check that the sentence is in French using FastText.\n2. **Intent classification** with a fine-tuned DistilBERT model to identify journey requests.\n3. **City extraction** via a named entity recognition model based on CamemBERT.\n4. **Optimal route computation** using Dijkstra's algorithm applied to SNCF data (GTFS).\n\nThe rail data includes stations, routes and timetables, making it possible to compute a realistic itinerary between two cities.\n\nA web interface then displays the result on an **interactive map**, with journey stages and a route summary.\n\nKey features\n\n* natural language journey request input\n* automatic extraction of departure and arrival cities\n* intent classification based on an NLP model\n* optimal route computation with Dijkstra's algorithm\n* use of SNCF transport data\n* journey display on an interactive map\n* voice recognition to dictate a journey request.\n\nThe user can for example say or type:\n\n> \"I want to go from Rennes to Biarritz\"\n\nand the application automatically identifies the cities, computes the best route and displays the result on the map.\n\nResults\n\nEpiTrip shows how a pipeline combining **NLP, entity extraction and route optimisation** can turn a natural language request into a usable journey.\n\nThe project highlights the practical use of transformer models in an application context and how AI techniques can simplify the interaction between users and transport systems.",
     "metaTitle": "EpiTrip — Natural language travel planning with AI",
     "metaDescription": "Travel planning assistant using NLP to understand natural language requests, extract cities and compute the optimal route from SNCF data with display on an interactive map.",
-    "categories": ["site-web", "ia"],
-    "sectors": ["voyage-transport"],
-    "stack": ["Nuxt.js", "Vue.js", "TypeScript", "TailwindCSS", "AdonisJS", "Python", "FastAPI"],
+    "categories": [
+      "site-web",
+      "ia"
+    ],
+    "sectors": [
+      "voyage-transport"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "AdonisJS",
+      "Python",
+      "FastAPI"
+    ],
     "tags": [
       "travel planner",
       "SNCF routes",
@@ -225,6 +352,40 @@
       "roadtrip",
       "route search",
       "France tourism"
+    ]
+  },
+  "project/epitalk": {
+    "name": "Epitalk — Real-time IRC Chat Application with Mercure and SSE",
+    "shortDescription": "Real-time chat application inspired by the IRC protocol, allowing users to chat in public or private rooms directly from the browser, with instant updates via Mercure and Server-Sent Events.",
+    "longDescription": "[object Object]",
+    "metaTitle": "Epitalk — Real-time IRC Chat Application with Mercure and SSE",
+    "metaDescription": "Real-time chat application inspired by IRC developed with Vue.js and AdonisJS. Instant messaging, public rooms, private messages, and real-time synchronization via Mercure and Server-Sent Events.",
+    "categories": [
+      "site-web"
+    ],
+    "sectors": [
+      "reseaux-sociaux"
+    ],
+    "stack": [
+      "Vue.js",
+      "TypeScript",
+      "Pinia",
+      "SCSS",
+      "AdonisJS",
+      "MariaDB",
+      "Docker"
+    ],
+    "tags": [
+      "real-time chat",
+      "irc",
+      "mercure",
+      "server sent events",
+      "web messaging",
+      "vuejs",
+      "adonisjs",
+      "sse",
+      "chat application",
+      "real-time messaging"
     ]
   }
 }
