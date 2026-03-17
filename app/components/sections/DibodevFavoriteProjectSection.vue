@@ -39,7 +39,7 @@
             v-for="(project, index) in favoriteProjects"
             :key="project.route"
             :name="project.name"
-            :description="project.shortDescription"
+            :description="project.metaDescription"
             :createdAt="project.date"
             :logo="project.logoUrl"
             :primaryColor="project.primaryColor"

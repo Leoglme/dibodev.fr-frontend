@@ -1,31 +1,35 @@
 <template>
   <div
-    class="grid cursor-pointer gap-2 rounded-2xl border-2 bg-gray-400 p-3 transition-opacity hover:opacity-90"
+    class="flex h-full cursor-pointer flex-col justify-between gap-2 rounded-2xl border-2 bg-gray-400 p-3 transition-opacity hover:opacity-90"
     :style="{ borderColor: props.primaryColor }"
     @click="navigateTo(projectLink)"
   >
-    <div class="flex h-50 items-center justify-center rounded-xl" :style="{ backgroundColor: props.secondaryColor }">
-      <img
-        class="h-48 max-h-[120px] w-full max-w-[200px] rounded-xl object-contain"
-        :src="props.logo"
-        :alt="props.name"
-      />
+    <div class="grid gap-2">
+      <div class="flex h-50 items-center justify-center rounded-xl" :style="{ backgroundColor: props.secondaryColor }">
+        <img
+          class="h-48 max-h-[120px] w-full max-w-[200px] rounded-xl object-contain"
+          :src="props.logo"
+          :alt="props.name"
+        />
+      </div>
+
+      <div v-if="props.categories?.length" class="flex flex-wrap gap-1 py-1.5">
+        <DibodevCategoryBadge v-for="category in props.categories" :key="category" :category="category" size="sm" />
+      </div>
+      <h3 class="text-left text-[18px] font-medium">
+        {{ props.name }}
+      </h3>
+
+      <span v-if="props.createdAt" class="text-left text-xs font-normal text-gray-200">
+        {{ props.createdAt }}
+      </span>
+
+      <DibodevDivider class="mt-4 mb-2" :dark="false" />
+
+      <p class="text-left text-[14px] leading-[22px] font-normal">
+        {{ props.description }}
+      </p>
     </div>
-
-    <div v-if="props.categories?.length" class="flex flex-wrap gap-1 py-1.5">
-      <DibodevCategoryBadge v-for="category in props.categories" :key="category" :category="category" size="sm" />
-    </div>
-    <h3 class="text-left text-[18px] font-medium">
-      {{ props.name }}
-    </h3>
-
-    <span v-if="props.createdAt" class="text-left text-xs font-normal text-gray-200">
-      {{ props.createdAt }}
-    </span>
-
-    <p class="text-left text-[14px] leading-[22px] font-normal">
-      {{ props.description }}
-    </p>
 
     <DibodevButton
       icon="ArrowRight"
@@ -45,6 +49,7 @@ import type { ComputedRef, PropType } from 'vue'
 import type { DibodevProjectCardProps } from '~/core/types/DibodevProjectCard'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevCategoryBadge from '~/components/ui/DibodevCategoryBadge.vue'
+import DibodevDivider from '~/components/decorators/DibodevDivider.vue'
 import { StringUtils } from '~/core/utils/StringUtils'
 
 const props: DibodevProjectCardProps = defineProps({

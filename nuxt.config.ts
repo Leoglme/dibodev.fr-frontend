@@ -157,5 +157,5 @@ export default defineNuxtConfig({
     preload: true,
     useStylesheet: false,
   },
-  plugins: ['~/plugins/VeeValidate'],
+  plugins: ['~/plugins/VeeValidate', '~/plugins/AgentationVue.client'],
 })

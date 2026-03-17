@@ -5,7 +5,12 @@
   >
     <div class="z-10 mx-auto grid max-w-3xl gap-8">
       <div class="grid gap-6">
-        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="800" class="mb-3 flex items-center gap-6">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="800"
+          class="mb-3 flex flex-col gap-4 pt-10 sm:flex-row sm:items-center sm:gap-6 sm:pt-0"
+        >
           <div
             class="flex h-24 min-h-24 w-24 min-w-24 items-center justify-center rounded-2xl border-1 border-gray-200 p-3"
             :style="{ backgroundColor: props.secondaryColor }"
@@ -28,7 +33,7 @@
           data-aos="fade-up"
           data-aos-delay="100"
           data-aos-duration="800"
-          class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6"
+          class="mb-4 flex flex-col gap-4 sm:mb-6 sm:flex-row sm:items-center sm:gap-6"
         >
           <p class="text-sm font-normal text-gray-200">
             {{ props.date }}

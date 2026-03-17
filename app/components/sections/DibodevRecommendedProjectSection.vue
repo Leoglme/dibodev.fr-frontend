@@ -23,7 +23,7 @@
             v-for="(recommendedProject, index) in recommendedProjects"
             :key="recommendedProject.route"
             :name="recommendedProject.name"
-            :description="recommendedProject.shortDescription"
+            :description="recommendedProject.metaDescription"
             :createdAt="recommendedProject.date"
             :logo="recommendedProject.logoUrl"
             :primaryColor="recommendedProject.primaryColor"
