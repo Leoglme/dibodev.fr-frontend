@@ -176,7 +176,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import type { Ref } from 'vue'
 import DibodevAlert from '~/components/feedback/DibodevAlert.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
@@ -374,38 +374,53 @@ async function fetchFromApi(force: boolean = false): Promise<void> {
 }
 
 let pollIntervalId: ReturnType<typeof setInterval> | null = null
+let pollTimeoutId: ReturnType<typeof setTimeout> | null = null
+
+function stopPolling(): void {
+  if (pollIntervalId) {
+    clearInterval(pollIntervalId)
+    pollIntervalId = null
+  }
+  if (pollTimeoutId) {
+    clearTimeout(pollTimeoutId)
+    pollTimeoutId = null
+  }
+}
+
+function startPolling(): void {
+  stopPolling()
+
+  pollIntervalId = setInterval(async (): Promise<void> => {
+    const data: IndexingApiResponse = await $fetch<IndexingApiResponse>('/api/indexing-status')
+    refreshStatus.value = data.refresh?.status ?? 'idle'
+    refreshAllCurrentUrl.value = data.refresh?.currentUrl ?? null
+    refreshCurrentIndex.value = data.refresh?.currentIndex ?? null
+    refreshTotalCount.value = data.refresh?.totalCount ?? null
+    items.value = data.items ?? []
+    useState(CACHE_KEY).value = data
+
+    if (data.refresh?.status !== 'running') {
+      refreshAllCurrentUrl.value = null
+      refreshCurrentIndex.value = null
+      refreshTotalCount.value = null
+      stopPolling()
+    }
+  }, POLL_INTERVAL_MS)
+
+  pollTimeoutId = setTimeout(() => {
+    stopPolling()
+    refreshStatus.value = 'idle'
+    refreshAllCurrentUrl.value = null
+    refreshCurrentIndex.value = null
+    refreshTotalCount.value = null
+  }, 600_000)
+}
 
 async function startRefresh(): Promise<void> {
   try {
     await $fetch('/api/indexing-status/refresh', { method: 'POST' })
     refreshStatus.value = 'running'
-    if (pollIntervalId) clearInterval(pollIntervalId)
-    pollIntervalId = setInterval(async (): Promise<void> => {
-      const data: IndexingApiResponse = await $fetch<IndexingApiResponse>('/api/indexing-status')
-      refreshStatus.value = data.refresh?.status ?? 'idle'
-      refreshAllCurrentUrl.value = data.refresh?.currentUrl ?? null
-      refreshCurrentIndex.value = data.refresh?.currentIndex ?? null
-      refreshTotalCount.value = data.refresh?.totalCount ?? null
-      items.value = data.items ?? []
-      useState(CACHE_KEY).value = data
-      if (data.refresh?.status !== 'running') {
-        refreshAllCurrentUrl.value = null
-        refreshCurrentIndex.value = null
-        refreshTotalCount.value = null
-        if (pollIntervalId) clearInterval(pollIntervalId)
-        pollIntervalId = null
-      }
-    }, POLL_INTERVAL_MS)
-    setTimeout(() => {
-      if (pollIntervalId) {
-        clearInterval(pollIntervalId)
-        pollIntervalId = null
-      }
-      refreshStatus.value = 'idle'
-      refreshAllCurrentUrl.value = null
-      refreshCurrentIndex.value = null
-      refreshTotalCount.value = null
-    }, 600_000)
+    startPolling()
   } catch (e: unknown) {
     error.value = e instanceof Error ? e.message : 'Erreur lors de l’actualisation.'
   }
@@ -414,7 +429,23 @@ async function startRefresh(): Promise<void> {
 async function cancelRefresh(): Promise<void> {
   try {
     await $fetch('/api/indexing-status/refresh-cancel', { method: 'POST' })
-    // Le polling mettra à jour l’état quand le job aura quitté
+    // UX: on débloque l’UI immédiatement (le job serveur sortira à la prochaine URL).
+    stopPolling()
+    refreshStatus.value = 'idle'
+    refreshAllCurrentUrl.value = null
+    refreshCurrentIndex.value = null
+    refreshTotalCount.value = null
+    const cache: Ref<IndexingApiResponse | null> = useState<IndexingApiResponse | null>(CACHE_KEY)
+    if (cache.value) {
+      cache.value = {
+        ...cache.value,
+        refresh: {
+          status: 'idle',
+          startedAt: cache.value.refresh?.startedAt,
+          finishedAt: new Date().toISOString(),
+        },
+      }
+    }
   } catch (e: unknown) {
     error.value = e instanceof Error ? e.message : 'Impossible d’annuler l’actualisation.'
   }
@@ -452,8 +483,36 @@ onMounted(async (): Promise<void> => {
     refreshCurrentIndex.value = cache.value.refresh?.currentIndex ?? null
     refreshTotalCount.value = cache.value.refresh?.totalCount ?? null
     loading.value = false
+
+    // Si un refresh est en cours côté serveur, on se resynchronise et on relance le polling
+    // (le cache Nuxt peut être figé si l’utilisateur a quitté la page).
+    if (cache.value.refresh?.status === 'running') {
+      try {
+        const data: IndexingApiResponse = await $fetch<IndexingApiResponse>('/api/indexing-status')
+        items.value = data.items ?? []
+        gscConnected.value = data.gscConnected ?? false
+        refreshStatus.value = data.refresh?.status ?? 'idle'
+        refreshAllCurrentUrl.value = data.refresh?.currentUrl ?? null
+        refreshCurrentIndex.value = data.refresh?.currentIndex ?? null
+        refreshTotalCount.value = data.refresh?.totalCount ?? null
+        cache.value = data
+
+        if (data.refresh?.status === 'running') {
+          startPolling()
+        }
+      } catch {
+        // en cas d’erreur, on garde les données du cache
+      }
+    }
     return
   }
   await fetchFromApi(false)
+  if (refreshStatus.value === 'running') {
+    startPolling()
+  }
+})
+
+onBeforeUnmount(() => {
+  stopPolling()
 })
 </script>
