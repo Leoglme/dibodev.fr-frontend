@@ -131,10 +131,7 @@
             <span v-else class="rounded-full bg-red-500/20 px-2 py-0.5 text-xs font-medium text-red-400"> Non </span>
           </template>
           <template #actions="{ item }">
-            <template v-if="(item as TranslatableItem).hasEn && (item as TranslatableItem).hasEs">
-              <span class="text-gray-500">—</span>
-            </template>
-            <div v-else class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2">
               <DibodevButton
                 size="sm"
                 :disabled="isTranslating((item as TranslatableItem).fullSlug)"
@@ -295,10 +292,7 @@ async function translateItem(item: TranslatableItem, locale: TranslationTargetLo
 
 async function translateItemAllLocales(item: TranslatableItem): Promise<void> {
   const key: string = item.fullSlug
-  const localesToRun: TranslationTargetLocale[] = TARGET_LOCALES.filter(
-    (locale: TranslationTargetLocale): boolean => (locale === 'en' && !item.hasEn) || (locale === 'es' && !item.hasEs),
-  )
-  if (localesToRun.length === 0) return
+  const localesToRun: TranslationTargetLocale[] = TARGET_LOCALES
   translatingKeys.value = [...translatingKeys.value, key]
   error.value = ''
   successMessage.value = ''

@@ -11,7 +11,9 @@ import {
 } from '~~/server/utils/githubContent'
 import { mistralGenerate } from '~~/server/utils/mistral'
 import { extractRichtextTexts, injectRichtextTranslations } from '~~/server/utils/translationsRichtext'
+import { richtextToMarkdown } from '~~/server/utils/richtextToMarkdown'
 import type {
+  TranslatableEntityType,
   TranslateBody,
   TranslateResponse,
   TranslationTargetLocale,
@@ -105,11 +107,15 @@ async function fetchStoryBySlug(
 
 const PROJECT_SYSTEM_EN: string = `You are a professional translator. Translate the following French project fields to English. 
 Return ONLY a valid JSON object with these exact keys: name, shortDescription, longDescription, metaTitle, metaDescription, categories, sectors, stack, tags.
+- longDescription is a Markdown-like formatted string: keep headings as plain lines, preserve blank lines, keep bullet list markers (* ), ordered list markers (1. 2. 3.), and blockquote markers (> ).
+- Do NOT wrap longDescription in JSON or additional quotes; keep it as a plain string value.
 - categories and sectors must be JSON arrays of slug keys (e.g. site-web, logiciel, gaming). Keep the exact same keys as in the source; do not translate them.
 - stack and tags must be JSON arrays of translated strings. Preserve tone and terminology (tech, marketing).`
 
 const PROJECT_SYSTEM_ES: string = `You are a professional translator. Translate the following French project fields to Spanish. 
 Return ONLY a valid JSON object with these exact keys: name, shortDescription, longDescription, metaTitle, metaDescription, categories, sectors, stack, tags.
+- longDescription is a Markdown-like formatted string: keep headings as plain lines, preserve blank lines, keep bullet list markers (* ), ordered list markers (1. 2. 3.), and blockquote markers (> ).
+- Do NOT wrap longDescription in JSON or additional quotes; keep it as a plain string value.
 - categories and sectors must be JSON arrays of slug keys (e.g. site-web, logiciel, gaming). Keep the exact same keys as in the source; do not translate them.
 - stack and tags must be JSON arrays of translated strings. Preserve tone and terminology (tech, marketing).`
 
@@ -196,7 +202,18 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
     const effective: Record<string, unknown> = getEffectiveProjectContent(content)
     const name: string = String(effective.name ?? '')
     const shortDescription: string = String(effective.shortDescription ?? '')
-    const longDescription: string = String(effective.longDescription ?? '')
+
+    const rawLongDescription: unknown = effective.longDescription
+    let longDescription: string
+    if (
+      rawLongDescription &&
+      typeof rawLongDescription === 'object' &&
+      'type' in (rawLongDescription as Record<string, unknown>)
+    ) {
+      longDescription = richtextToMarkdown(rawLongDescription as StoryblokRichtextNode)
+    } else {
+      longDescription = String(rawLongDescription ?? '')
+    }
     const metaTitle: string = String(effective.metaTitle ?? '')
     const metaDescription: string = String(effective.metaDescription ?? '')
     const rawCategories: string[] = normalizeStringList(effective.categories as string[] | string)
