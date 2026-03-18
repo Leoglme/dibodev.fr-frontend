@@ -1,1 +1,22 @@
-{}
+{
+  "sectors/gaming": {
+    "title": "Gaming Projects — Web Games & Community Platforms",
+    "description": "Development of web games and websites dedicated to gaming communities and interactive experiences.",
+    "metaTitle": "Gaming Projects — Web Games & Interactive Platforms | Dibodev",
+    "metaDescription": "Web games and gaming applications developed by Léo Guillaume, freelance developer in Rennes: online games, community sites, and interactive experiences.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I develop games and community platforms with a strong focus on UX, performance, and user engagement. Fun, accessible experiences built with solid technical foundations.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
