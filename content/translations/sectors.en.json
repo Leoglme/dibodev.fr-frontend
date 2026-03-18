@@ -38,5 +38,25 @@
         }
       ]
     }
+  },
+  "sectors/b2b": {
+    "title": "B2B Projects — Management Tools & Professional Solutions",
+    "description": "SaaS applications and software designed to meet the business needs of SMEs and VSEs.",
+    "metaTitle": "B2B Projects — SaaS Development & Business Tools | Dibodev",
+    "metaDescription": "B2B SaaS solutions and business applications developed by Léo Guillaume, freelance developer in Rennes for SMEs and VSEs.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I develop customized B2B solutions: internal management, planning, billing, and collaborative tools. Applications designed for performance, scalability, and the real constraints faced by corporate teams.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

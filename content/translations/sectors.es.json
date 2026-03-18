@@ -38,5 +38,25 @@
         }
       ]
     }
+  },
+  "sectors/b2b": {
+    "title": "Proyectos B2B — Herramientas de gestión y soluciones profesionales",
+    "description": "Aplicaciones SaaS y software diseñados para satisfacer las necesidades empresariales de empresas TPE y PYMES.",
+    "metaTitle": "Proyectos B2B — Desarrollo SaaS y herramientas profesionales | Dibodev",
+    "metaDescription": "Soluciones SaaS y aplicaciones profesionales B2B desarrolladas por Léo Guillaume, desarrollador freelance en Rennes para TPE y PYMES.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Desarrollo soluciones B2B a medida: gestión interna, planificación, facturación y herramientas colaborativas. Aplicaciones diseñadas para el rendimiento, la escalabilidad y las restricciones reales de los equipos en la empresa.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
