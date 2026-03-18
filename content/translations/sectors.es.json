@@ -58,5 +58,25 @@
         }
       ]
     }
+  },
+  "sectors/logistique": {
+    "title": "Proyectos Logísticos — Gestión de inventario y trazabilidad",
+    "description": "Soluciones digitales para el seguimiento de inventarios, stocks y flujos de productos en empresas.",
+    "metaTitle": "Proyectos Logísticos — Software de gestión de inventario | Dibodev",
+    "metaDescription": "Aplicaciones de gestión de inventario y trazabilidad desarrolladas por Léo Guillaume, desarrollador freelance en Rennes para PYMES y estructuras profesionales.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Diseño software que permite garantizar la gestión de inventario, reducir errores y mejorar la visibilidad de los movimientos logísticos. Herramientas robustas adaptadas a las realidades del terreno de las PYMES.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

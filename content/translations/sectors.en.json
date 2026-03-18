@@ -58,5 +58,25 @@
         }
       ]
     }
+  },
+  "sectors/logistique": {
+    "title": "Logistics Projects — Inventory Management & Traceability",
+    "description": "Digital solutions for stock tracking, inventories, and product flows in businesses.",
+    "metaTitle": "Logistics Projects — Inventory Management Software | Dibodev",
+    "metaDescription": "Stock management and traceability applications developed by Léo Guillaume, freelance developer in Rennes for SMEs and professional organizations.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I design software solutions to streamline inventory management, reduce errors, and enhance visibility into logistics movements. Robust tools tailored to the on-the-ground realities of SMEs.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
