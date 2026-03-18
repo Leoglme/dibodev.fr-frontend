@@ -98,5 +98,25 @@
         }
       ]
     }
+  },
+  "sectors/voyage-transport": {
+    "title": "Proyectos de Viaje y Transporte — Aplicaciones de movilidad",
+    "description": "Soluciones digitales para la planificación de rutas, la movilidad y la experiencia del viajero.",
+    "metaTitle": "Proyectos de Viaje y Transporte — Aplicaciones de movilidad | Dibodev",
+    "metaDescription": "Aplicaciones de planificación de itinerarios y movilidad desarrolladas por Léo Guillaume, desarrollador freelance en Rennes.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Diseño aplicaciones que facilitan la búsqueda de rutas, la visualización cartográfica y la optimización de desplazamientos. Herramientas pensadas para simplificar la movilidad y mejorar la experiencia de los usuarios en movimiento.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

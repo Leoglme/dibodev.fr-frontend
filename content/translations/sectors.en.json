@@ -98,5 +98,25 @@
         }
       ]
     }
+  },
+  "sectors/voyage-transport": {
+    "title": "Travel & Transport Projects — Mobility Applications",
+    "description": "Digital solutions for route planning, mobility, and traveler experience.",
+    "metaTitle": "Travel & Transport Projects — Mobility Applications | Dibodev",
+    "metaDescription": "Route planning and mobility applications developed by Léo Guillaume, freelance developer based in Rennes.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I design applications that facilitate route finding, map visualization, and travel optimization. Tools designed to simplify mobility and enhance the user experience for travelers.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
