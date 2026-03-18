@@ -78,5 +78,25 @@
         }
       ]
     }
+  },
+  "categories/application-mobile": {
+    "title": "Proyectos de Aplicaciones Móviles — Experiencias multiplataforma",
+    "description": "Aplicaciones móviles e híbridas desarrolladas para ofrecer una experiencia fluida en todos los dispositivos.",
+    "metaTitle": "Proyectos de Aplicaciones Móviles — Desarrollo móvil | Dibodev",
+    "metaDescription": "Descubre mis proyectos de aplicaciones móviles desarrollados por Léo Guillaume, desarrollador freelance en Rennes: soluciones performantes, multiplataforma y pensadas para el usuario.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Desarrollo aplicaciones móviles performantes e intuitivas, ya sea en formato nativo o híbrido. El objetivo: ofrecer una experiencia de usuario coherente y optimizada tanto en dispositivos móviles como en escritorio.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

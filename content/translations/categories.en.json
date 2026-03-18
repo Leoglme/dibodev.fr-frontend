@@ -78,5 +78,25 @@
         }
       ]
     }
+  },
+  "categories/application-mobile": {
+    "title": "Mobile App Projects — Cross-Platform Experiences",
+    "description": "Mobile and hybrid applications designed to deliver a seamless experience across all devices.",
+    "metaTitle": "Mobile App Projects — Mobile Development | Dibodev",
+    "metaDescription": "Explore my mobile app projects developed by Léo Guillaume, freelance developer in Rennes: high-performance, cross-platform solutions tailored for the user.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I develop high-performance, intuitive mobile applications, whether native or hybrid. The goal: to offer a consistent and optimized user experience on both mobile and desktop.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
