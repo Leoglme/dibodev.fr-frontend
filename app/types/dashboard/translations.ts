@@ -3,7 +3,7 @@
  * Mirrors server types for type-safe API calls.
  */
 
-export type TranslatableEntityType = 'project' | 'article'
+export type TranslatableEntityType = 'project' | 'article' | 'sector' | 'category'
 
 export type TranslationTargetLocale = 'en' | 'es'
 
@@ -19,6 +19,8 @@ export type TranslatableItem = {
 export type ListTranslatablesResponse = {
   projects: TranslatableItem[]
   articles: TranslatableItem[]
+  sectors: TranslatableItem[]
+  categories: TranslatableItem[]
   /** True si le site déployé est à jour avec le dépôt (même commit). */
   deploySynced: boolean
 }

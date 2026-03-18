@@ -3,8 +3,8 @@
     <div class="min-w-0">
       <h1 class="text-2xl font-semibold text-gray-100">Traductions</h1>
       <p class="mt-1 text-gray-200">
-        Traduire le contenu des projets et des articles du français vers l’anglais (EN) et l’espagnol (ES). Les
-        traductions sont poussées sur le dépôt GitHub. Utilisez « Actualiser » pour mettre à jour la liste.
+        Traduire le contenu des projets, articles, secteurs et catégories du français vers l’anglais (EN) et l’espagnol
+        (ES). Les traductions sont poussées sur le dépôt GitHub. Utilisez « Actualiser » pour mettre à jour la liste.
       </p>
     </div>
 
@@ -45,7 +45,7 @@
       <nav class="flex w-full min-w-0 rounded-lg border border-gray-600 bg-gray-800 p-1" aria-label="Onglets">
         <button
           type="button"
-          class="min-w-0 flex-1 cursor-pointer rounded-md px-4 py-2 text-sm font-medium transition-colors"
+          class="min-w-0 flex-1 cursor-pointer rounded-md px-2 py-2 text-sm font-medium transition-colors"
           :class="
             activeTab === 'projects'
               ? 'bg-primary text-gray-100'
@@ -57,7 +57,7 @@
         </button>
         <button
           type="button"
-          class="min-w-0 flex-1 cursor-pointer rounded-md px-4 py-2 text-sm font-medium transition-colors"
+          class="min-w-0 flex-1 cursor-pointer rounded-md px-2 py-2 text-sm font-medium transition-colors"
           :class="
             activeTab === 'articles'
               ? 'bg-primary text-gray-100'
@@ -66,6 +66,28 @@
           @click="activeTab = 'articles'"
         >
           Articles
+        </button>
+        <button
+          type="button"
+          class="min-w-0 flex-1 cursor-pointer rounded-md px-2 py-2 text-sm font-medium transition-colors"
+          :class="
+            activeTab === 'sectors' ? 'bg-primary text-gray-100' : 'text-gray-300 hover:bg-gray-700 hover:text-gray-100'
+          "
+          @click="activeTab = 'sectors'"
+        >
+          Secteurs
+        </button>
+        <button
+          type="button"
+          class="min-w-0 flex-1 cursor-pointer rounded-md px-2 py-2 text-sm font-medium transition-colors"
+          :class="
+            activeTab === 'categories'
+              ? 'bg-primary text-gray-100'
+              : 'text-gray-300 hover:bg-gray-700 hover:text-gray-100'
+          "
+          @click="activeTab = 'categories'"
+        >
+          Catégories
         </button>
       </nav>
 
@@ -82,7 +104,13 @@
           currentItems.length === 0
             ? activeTab === 'projects'
               ? 'Aucun projet.'
-              : 'Aucun article.'
+              : activeTab === 'articles'
+                ? 'Aucun article.'
+                : activeTab === 'sectors'
+                  ? 'Aucun secteur.'
+                  : activeTab === 'categories'
+                    ? 'Aucune catégorie.'
+                    : 'Aucun élément.'
             : 'Aucun résultat pour la recherche.'
         }}
       </div>
@@ -183,10 +211,12 @@ useHead({
 
 const projects: Ref<TranslatableItem[]> = ref([])
 const articles: Ref<TranslatableItem[]> = ref([])
+const sectors: Ref<TranslatableItem[]> = ref([])
+const categories: Ref<TranslatableItem[]> = ref([])
 const loading: Ref<boolean> = ref(true)
 const error: Ref<string> = ref('')
 const successMessage: Ref<string> = ref('')
-const activeTab: Ref<'projects' | 'articles'> = ref('projects')
+const activeTab: Ref<'projects' | 'articles' | 'sectors' | 'categories'> = ref('projects')
 const searchText: Ref<string> = ref('')
 const translatingKeys: Ref<string[]> = ref([])
 const translatingLocale: Ref<TranslationTargetLocale | null> = ref(null)
@@ -214,11 +244,27 @@ const cardFields: DibodevTableCardField[] = [
 ]
 
 function getItemUrl(item: TranslatableItem): string {
+  if (item.type === 'project') {
+    return `${SITE_URL}/projets/${item.slug}`
+  }
+  if (item.type === 'article') {
+    return `${SITE_URL}/blog/${item.slug}`
+  }
+  if (item.type === 'sector') {
+    return `${SITE_URL}/projets/secteur/${item.slug}`
+  }
+  if (item.type === 'category') {
+    return `${SITE_URL}/projets/categorie/${item.slug}`
+  }
   return `${SITE_URL}/${item.fullSlug}`
 }
 
 const currentItems: ComputedRef<TranslatableItem[]> = computed((): TranslatableItem[] => {
-  return activeTab.value === 'projects' ? projects.value : articles.value
+  if (activeTab.value === 'projects') return projects.value
+  if (activeTab.value === 'articles') return articles.value
+  if (activeTab.value === 'sectors') return sectors.value
+  if (activeTab.value === 'categories') return categories.value
+  return []
 })
 
 const filteredItems: ComputedRef<TranslatableItem[]> = computed((): TranslatableItem[] => {
@@ -248,12 +294,16 @@ async function fetchList(force: boolean = false): Promise<void> {
     const data: ListTranslatablesResponse = await $fetch<ListTranslatablesResponse>('/api/dashboard/translations/list')
     projects.value = data.projects ?? []
     articles.value = data.articles ?? []
+    sectors.value = data.sectors ?? []
+    categories.value = data.categories ?? []
     deploySynced.value = data.deploySynced ?? false
   } catch (e: unknown) {
     const msg: string = e instanceof Error ? e.message : 'Erreur lors du chargement.'
     error.value = msg
     projects.value = []
     articles.value = []
+    sectors.value = []
+    categories.value = []
     deploySynced.value = false
   } finally {
     loading.value = false

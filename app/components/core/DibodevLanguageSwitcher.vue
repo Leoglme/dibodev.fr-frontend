@@ -67,7 +67,7 @@ const props = defineProps({
 })
 
 const { locale } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
+const switchLocalePathWithSlug = useSwitchLocalePathWithSlug()
 
 const isOpen = ref(false)
 const rootRef = ref<HTMLElement | null>(null)
@@ -79,7 +79,7 @@ const currentLocaleLabel = computed((): string => {
 
 const localePathFor = (value: string | number): string => {
   const code = typeof value === 'string' ? value : String(value)
-  return switchLocalePath(code)
+  return switchLocalePathWithSlug(code)
 }
 
 const isCurrentLocale = (value: string | number): boolean => {

@@ -77,6 +77,25 @@ const sectorStorySlug: string = `${SECTEURS_STORYBLOK_FOLDER}/${sectorKey}`
 
 const sectorDataKey: string = `sector-page-${currentLocale}-${sectorKey}`
 
+type SectorTranslation = {
+  title: string
+  description: string
+  intro?: { type: string; content?: unknown[] }
+  metaTitle: string
+  metaDescription: string
+}
+
+const { data: sectorTranslationsMap } = useLazyAsyncData<Record<string, SectorTranslation>>(
+  () => `sector-translations-${locale.value}-${sectorKey}`,
+  async (): Promise<Record<string, SectorTranslation>> => {
+    const loc = locale.value as string
+    if (loc !== 'en' && loc !== 'es') return {}
+    return $fetch<Record<string, SectorTranslation>>(`/api/translations/sectors/${loc}`).catch(() => ({}))
+  },
+)
+
+const sectorTranslation = computed((): SectorTranslation | undefined => sectorTranslationsMap.value?.[sectorStorySlug])
+
 type SectorPageData = {
   normalized: StoryblokSectorContent | null
   rawContent: Record<string, unknown> | null
@@ -146,25 +165,51 @@ watch(
   { immediate: true },
 )
 
-/** H1 : CMS si présent, sinon i18n */
+/** Intro issue des traductions (richtext) → HTML, remplie de façon asynchrone */
+const sectorIntroFromTranslation: Ref<string> = ref<string>('')
+watch(
+  sectorTranslation,
+  async (t: SectorTranslation | undefined): Promise<void> => {
+    sectorIntroFromTranslation.value = ''
+    const intro = t?.intro
+    if (intro == null || typeof intro !== 'object' || !('type' in intro)) return
+    try {
+      const { richTextResolver } = await import('@storyblok/richtext')
+      const html = richTextResolver().render(intro as Parameters<ReturnType<typeof richTextResolver>['render']>[0])
+      sectorIntroFromTranslation.value = typeof html === 'string' && html.trim() !== '' ? html.trim() : ''
+    } catch {
+      sectorIntroFromTranslation.value = ''
+    }
+  },
+  { immediate: true },
+)
+
+/** H1 : traduction EN/ES si présente, sinon CMS, sinon i18n */
 const sectorPageTitle: ComputedRef<string> = computed((): string => {
+  const fromTranslation = sectorTranslation.value?.title?.trim()
+  if (fromTranslation) return fromTranslation
   const fromCms = sectorPageContent.value?.title?.trim()
   return fromCms ?? t('projects.sectorPage.title', { sector: sectorLabel })
 })
 
-/** Titre fourni par le CMS (sinon on utilise le titre structuré i18n avec highlights) */
+/** Titre fourni par le CMS ou une traduction (sinon on utilise le titre structuré i18n avec highlights) */
 const sectorTitleFromCms: ComputedRef<boolean> = computed(
-  (): boolean => (sectorPageContent.value?.title?.trim()?.length ?? 0) > 0,
+  (): boolean =>
+    (sectorPageContent.value?.title?.trim()?.length ?? 0) > 0 ||
+    (sectorTranslation.value?.title?.trim()?.length ?? 0) > 0,
 )
 
-/** Description : CMS si présent, sinon i18n */
+/** Description : traduction EN/ES si présente, sinon CMS, sinon i18n */
 const sectorPageDescription: ComputedRef<string> = computed((): string => {
+  const fromTranslation = sectorTranslation.value?.description?.trim()
+  if (fromTranslation) return fromTranslation
   const fromCms = sectorPageContent.value?.description?.trim()
   return fromCms ?? t('projects.sectorPage.description', { sector: sectorLabel })
 })
 
-/** Intro riche (HTML) : contenu normalisé (string), ou string brut, ou HTML issu du watch sur le richtext */
+/** Intro riche (HTML) : traduction, ou contenu normalisé, ou string brut, ou HTML issu du watch sur le richtext */
 const sectorIntroHtml: ComputedRef<string> = computed((): string => {
+  if (sectorIntroFromTranslation.value) return sectorIntroFromTranslation.value
   const fromNormalized = sectorPageContent.value?.intro
   if (fromNormalized != null && String(fromNormalized).trim() !== '') return String(fromNormalized).trim()
   const rawIntro = sectorRawContent.value?.intro
@@ -172,14 +217,18 @@ const sectorIntroHtml: ComputedRef<string> = computed((): string => {
   return sectorIntroFromRichText.value
 })
 
-/** Meta title pour useHead : CMS si présent, sinon titre de page */
+/** Meta title pour useHead : traduction, CMS si présent, sinon titre de page */
 const sectorMetaTitle: ComputedRef<string> = computed((): string => {
+  const fromTranslation = sectorTranslation.value?.metaTitle?.trim()
+  if (fromTranslation) return fromTranslation
   const fromCms = sectorPageContent.value?.metaTitle?.trim()
   return fromCms ?? sectorPageTitle.value
 })
 
-/** Meta description pour useHead : CMS si présent, sinon description de page */
+/** Meta description pour useHead : traduction, CMS si présent, sinon description de page */
 const sectorMetaDescription: ComputedRef<string> = computed((): string => {
+  const fromTranslation = sectorTranslation.value?.metaDescription?.trim()
+  if (fromTranslation) return fromTranslation
   const fromCms = sectorPageContent.value?.metaDescription?.trim()
   return fromCms ?? sectorPageDescription.value
 })

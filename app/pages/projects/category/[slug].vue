@@ -73,6 +73,27 @@ const categoryStorySlug: string = `${CATEGORIES_STORYBLOK_FOLDER}/${categoryKey}
 
 const categoryDataKey: string = `category-page-${currentLocale}-${categoryKey}`
 
+type CategoryTranslation = {
+  title: string
+  description: string
+  intro?: { type: string; content?: unknown[] }
+  metaTitle: string
+  metaDescription: string
+}
+
+const { data: categoryTranslationsMap } = useLazyAsyncData<Record<string, CategoryTranslation>>(
+  () => `category-translations-${locale.value}-${categoryKey}`,
+  async (): Promise<Record<string, CategoryTranslation>> => {
+    const loc = locale.value as string
+    if (loc !== 'en' && loc !== 'es') return {}
+    return $fetch<Record<string, CategoryTranslation>>(`/api/translations/categories/${loc}`).catch(() => ({}))
+  },
+)
+
+const categoryTranslation = computed(
+  (): CategoryTranslation | undefined => categoryTranslationsMap.value?.[categoryStorySlug],
+)
+
 type CategoryPageData = {
   normalized: StoryblokCategoryContent | null
   rawContent: Record<string, unknown> | null
@@ -143,21 +164,50 @@ watch(
   { immediate: true },
 )
 
+/** Intro issue des traductions (richtext) → HTML */
+const categoryIntroFromTranslation: Ref<string> = ref<string>('')
+watch(
+  categoryTranslation,
+  async (t: CategoryTranslation | undefined): Promise<void> => {
+    categoryIntroFromTranslation.value = ''
+    const intro = t?.intro
+    if (intro == null || typeof intro !== 'object' || !('type' in intro)) return
+    try {
+      const { richTextResolver } = await import('@storyblok/richtext')
+      const html = richTextResolver().render(intro as Parameters<ReturnType<typeof richTextResolver>['render']>[0])
+      categoryIntroFromTranslation.value = typeof html === 'string' && html.trim() !== '' ? html.trim() : ''
+    } catch {
+      categoryIntroFromTranslation.value = ''
+    }
+  },
+  { immediate: true },
+)
+
+/** H1 : traduction EN/ES si présente, sinon CMS, sinon i18n */
 const categoryPageTitle: ComputedRef<string> = computed((): string => {
+  const fromTranslation = categoryTranslation.value?.title?.trim()
+  if (fromTranslation) return fromTranslation
   const fromCms = categoryPageContent.value?.title?.trim()
   return fromCms ?? t('projects.categoryPage.title', { category: categoryLabel })
 })
 
 const categoryTitleFromCms: ComputedRef<boolean> = computed(
-  (): boolean => (categoryPageContent.value?.title?.trim()?.length ?? 0) > 0,
+  (): boolean =>
+    (categoryPageContent.value?.title?.trim()?.length ?? 0) > 0 ||
+    (categoryTranslation.value?.title?.trim()?.length ?? 0) > 0,
 )
 
+/** Description : traduction EN/ES si présente, sinon CMS, sinon i18n */
 const categoryPageDescription: ComputedRef<string> = computed((): string => {
+  const fromTranslation = categoryTranslation.value?.description?.trim()
+  if (fromTranslation) return fromTranslation
   const fromCms = categoryPageContent.value?.description?.trim()
   return fromCms ?? t('projects.categoryPage.description', { category: categoryLabel })
 })
 
+/** Intro riche (HTML) : traduction, ou contenu normalisé, ou string brut, ou HTML issu du watch */
 const categoryIntroHtml: ComputedRef<string> = computed((): string => {
+  if (categoryIntroFromTranslation.value) return categoryIntroFromTranslation.value
   const fromNormalized = categoryPageContent.value?.intro
   if (fromNormalized != null && String(fromNormalized).trim() !== '') return String(fromNormalized).trim()
   const rawIntro = categoryRawContent.value?.intro
@@ -165,12 +215,18 @@ const categoryIntroHtml: ComputedRef<string> = computed((): string => {
   return categoryIntroFromRichText.value
 })
 
+/** Meta title : traduction, CMS si présent, sinon titre de page */
 const categoryMetaTitle: ComputedRef<string> = computed((): string => {
+  const fromTranslation = categoryTranslation.value?.metaTitle?.trim()
+  if (fromTranslation) return fromTranslation
   const fromCms = categoryPageContent.value?.metaTitle?.trim()
   return fromCms ?? categoryPageTitle.value
 })
 
+/** Meta description : traduction, CMS si présent, sinon description de page */
 const categoryMetaDescription: ComputedRef<string> = computed((): string => {
+  const fromTranslation = categoryTranslation.value?.metaDescription?.trim()
+  if (fromTranslation) return fromTranslation
   const fromCms = categoryPageContent.value?.metaDescription?.trim()
   return fromCms ?? categoryPageDescription.value
 })

@@ -2,17 +2,17 @@
  * Types for dashboard translations (Storyblok FR → EN/ES via Mistral, push to GitHub).
  */
 
-export type TranslatableEntityType = 'project' | 'article'
+export type TranslatableEntityType = 'project' | 'article' | 'sector' | 'category'
 
 export type TranslationTargetLocale = 'en' | 'es'
 
-/** One translatable item in the list (project or article). */
+/** One translatable item in the list (project, article, sector or category). */
 export type TranslatableItem = {
   type: TranslatableEntityType
   slug: string
   /** Display name (project name or article title). */
   name: string
-  /** Full slug in Storyblok (e.g. project/foo, blog/bar). */
+  /** Full slug in Storyblok (e.g. project/foo, sectors/immobilier). */
   fullSlug: string
   hasEn: boolean
   hasEs: boolean
@@ -21,6 +21,8 @@ export type TranslatableItem = {
 export type ListTranslatablesResponse = {
   projects: TranslatableItem[]
   articles: TranslatableItem[]
+  sectors: TranslatableItem[]
+  categories: TranslatableItem[]
   /** True si le site déployé est à jour avec le dépôt (même commit). */
   deploySynced: boolean
 }
@@ -78,3 +80,33 @@ export type TranslatedArticleFields = {
 }
 
 export type ArticlesTranslationFile = Record<string, TranslatedArticleFields>
+
+/** Shape of sectors.en.json / sectors.es.json: fullSlug → translated fields. */
+export type TranslatedSectorFields = {
+  title: string
+  description: string
+  /** Richtext document (doc with content array); same structure as Storyblok intro. */
+  intro?: {
+    type: string
+    content?: StoryblokRichtextNode[]
+  }
+  metaTitle: string
+  metaDescription: string
+}
+
+export type SectorsTranslationFile = Record<string, TranslatedSectorFields>
+
+/** Shape of categories.en.json / categories.es.json: fullSlug → translated fields. */
+export type TranslatedCategoryFields = {
+  title: string
+  description: string
+  /** Richtext document (doc with content array); same structure as Storyblok intro. */
+  intro?: {
+    type: string
+    content?: StoryblokRichtextNode[]
+  }
+  metaTitle: string
+  metaDescription: string
+}
+
+export type CategoriesTranslationFile = Record<string, TranslatedCategoryFields>

@@ -7,11 +7,15 @@ import type {
   ListTranslatablesResponse,
   ProjectsTranslationFile,
   ArticlesTranslationFile,
+  SectorsTranslationFile,
+  CategoriesTranslationFile,
 } from '~~/server/types/dashboard/translations'
 
 const STORYBLOK_CDN_BASE: string = 'https://api.storyblok.com/v2/cdn'
 const BLOG_FOLDER: string = 'blog/'
 const PROJECT_PREFIX: string = 'project/'
+const SECTORS_PREFIX: string = 'sectors/'
+const CATEGORIES_PREFIX: string = 'categories/'
 const TRANSLATIONS_PATH: string = 'content/translations'
 
 type StoryblokStoryListItem = {
@@ -98,16 +102,36 @@ export default defineEventHandler(async (event: H3Event): Promise<ListTranslatab
   }
 
   const cv: number = await fetchStoryblokSpaceVersion(token)
-  const [projectStories, articleStories]: [StoryblokStoryListItem[], StoryblokStoryListItem[]] = await Promise.all([
+  const [projectStories, articleStories, sectorStories, categoryStories]: [
+    StoryblokStoryListItem[],
+    StoryblokStoryListItem[],
+    StoryblokStoryListItem[],
+    StoryblokStoryListItem[],
+  ] = await Promise.all([
     fetchStoryblokStories(token, PROJECT_PREFIX, cv),
     fetchStoryblokStories(token, BLOG_FOLDER, cv),
+    fetchStoryblokStories(token, SECTORS_PREFIX, cv),
+    fetchStoryblokStories(token, CATEGORIES_PREFIX, cv),
   ])
 
-  const [projectsEnRes, projectsEsRes, articlesEnRes, articlesEsRes]: GetFileResult[] = await Promise.all([
+  const [
+    projectsEnRes,
+    projectsEsRes,
+    articlesEnRes,
+    articlesEsRes,
+    sectorsEnRes,
+    sectorsEsRes,
+    categoriesEnRes,
+    categoriesEsRes,
+  ]: GetFileResult[] = await Promise.all([
     getGitHubFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/projects.en.json`),
     getGitHubFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/projects.es.json`),
     getGitHubFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/articles.en.json`),
     getGitHubFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/articles.es.json`),
+    getGitHubFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/sectors.en.json`),
+    getGitHubFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/sectors.es.json`),
+    getGitHubFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/categories.en.json`),
+    getGitHubFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/categories.es.json`),
   ])
 
   const projectsEn: ProjectsTranslationFile = projectsEnRes.ok
@@ -121,6 +145,18 @@ export default defineEventHandler(async (event: H3Event): Promise<ListTranslatab
     : {}
   const articlesEs: ArticlesTranslationFile = articlesEsRes.ok
     ? parseJsonFile<ArticlesTranslationFile>(articlesEsRes.content)
+    : {}
+  const sectorsEn: SectorsTranslationFile = sectorsEnRes.ok
+    ? parseJsonFile<SectorsTranslationFile>(sectorsEnRes.content)
+    : {}
+  const sectorsEs: SectorsTranslationFile = sectorsEsRes.ok
+    ? parseJsonFile<SectorsTranslationFile>(sectorsEsRes.content)
+    : {}
+  const categoriesEn: CategoriesTranslationFile = categoriesEnRes.ok
+    ? parseJsonFile<CategoriesTranslationFile>(categoriesEnRes.content)
+    : {}
+  const categoriesEs: CategoriesTranslationFile = categoriesEsRes.ok
+    ? parseJsonFile<CategoriesTranslationFile>(categoriesEsRes.content)
     : {}
 
   const normalizeFullSlug = (raw: string): string => raw.trim().replace(/^\/+/, '')
@@ -156,9 +192,41 @@ export default defineEventHandler(async (event: H3Event): Promise<ListTranslatab
       }
     })
 
+  const sectors: TranslatableItem[] = sectorStories
+    .filter((s): s is StoryblokStoryListItem & { full_slug: string } => Boolean(s.full_slug?.trim()))
+    .map((s): TranslatableItem => {
+      const fullSlug: string = normalizeFullSlug(s.full_slug ?? '')
+      const slug: string = fullSlug.replace(/^sectors\/?/, '') || 'sector'
+      const name: string = (s.content?.title ?? s.content?.name ?? slug).toString()
+      return {
+        type: 'sector',
+        slug,
+        name,
+        fullSlug,
+        hasEn: fullSlug in sectorsEn,
+        hasEs: fullSlug in sectorsEs,
+      }
+    })
+
+  const categories: TranslatableItem[] = categoryStories
+    .filter((s): s is StoryblokStoryListItem & { full_slug: string } => Boolean(s.full_slug?.trim()))
+    .map((s): TranslatableItem => {
+      const fullSlug: string = normalizeFullSlug(s.full_slug ?? '')
+      const slug: string = fullSlug.replace(/^categories\/?/, '') || 'category'
+      const name: string = (s.content?.title ?? s.content?.name ?? slug).toString()
+      return {
+        type: 'category',
+        slug,
+        name,
+        fullSlug,
+        hasEn: fullSlug in categoriesEn,
+        hasEs: fullSlug in categoriesEs,
+      }
+    })
+
   const buildCommit: string = (config.buildCommit as string) ?? ''
   const headCommit: string | null = await fetchGitHubHeadCommit(githubToken, githubRepo)
   const deploySynced: boolean = Boolean(buildCommit) && Boolean(headCommit) && buildCommit.trim() === headCommit.trim()
 
-  return { projects, articles, deploySynced }
+  return { projects, articles, sectors, categories, deploySynced }
 })
