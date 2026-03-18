@@ -118,5 +118,25 @@
         }
       ]
     }
+  },
+  "sectors/sante": {
+    "title": "Proyectos de Salud — Aplicaciones y soluciones digitales médicas",
+    "description": "Soluciones digitales y proyectos de inteligencia artificial aplicados al ámbito de la salud.",
+    "metaTitle": "Proyectos de Salud — Desarrollador de aplicaciones médicas | Dibodev",
+    "metaDescription": "Aplicaciones de salud y proyectos de IA médica desarrollados por Léo Guillaume, desarrollador freelance en Rennes: análisis de imágenes, ciencia de datos e interfaces web de alto rendimiento.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Diseño aplicaciones orientadas a la salud con un enfoque en la fiabilidad, la claridad de los resultados y el rendimiento de los modelos. Herramientas pensadas para hacer que la tecnología sea útil y accesible en un sector exigente.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

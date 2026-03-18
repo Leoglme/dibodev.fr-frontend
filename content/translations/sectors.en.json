@@ -118,5 +118,25 @@
         }
       ]
     }
+  },
+  "sectors/sante": {
+    "title": "Health Projects — Medical Digital Applications & Solutions",
+    "description": "Digital solutions and artificial intelligence projects applied to the healthcare sector.",
+    "metaTitle": "Health Projects — Medical Application Developer | Dibodev",
+    "metaDescription": "Health applications and medical AI projects developed by Léo Guillaume, freelance developer in Rennes: image analysis, data science, and high-performance web interfaces.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I design health-focused applications with a focus on reliability, clarity of results, and model performance. Tools designed to make technology useful and accessible in a demanding sector.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
