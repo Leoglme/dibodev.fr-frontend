@@ -668,7 +668,12 @@
     "excerpt": "Discover how a custom website can boost your bike repair shop in 2026. Attract more customers and optimize your management.",
     "metaTitle": "Website for Bike Repair Shop in 2026",
     "metaDescription": "Transform your bike repair shop with a professional website. Attract more customers and optimize your management in 2026.",
-    "tags": ["bike repair shop", "professional website", "Rennes", "2026"],
+    "tags": [
+      "bike repair shop",
+      "professional website",
+      "Rennes",
+      "2026"
+    ],
     "content": {
       "type": "doc",
       "content": [
@@ -785,7 +790,13 @@
     "excerpt": "Discover how a custom website can boost your artisan bakery in 2026. Attract more customers and optimize your sales with tailored tools.",
     "metaTitle": "Custom website for artisan bakery in 2026",
     "metaDescription": "Transform your artisan bakery in 2026 with a custom website. Attract more customers and optimize your sales with tailored tools.",
-    "tags": ["bakery", "artisan", "custom website", "2026", "Rennes"],
+    "tags": [
+      "bakery",
+      "artisan",
+      "custom website",
+      "2026",
+      "Rennes"
+    ],
     "content": {
       "type": "doc",
       "content": [
@@ -1088,6 +1099,265 @@
           "content": [
             {
               "text": "Contact me today to discuss your project and discover how I can help you transform your artisan bakery in 2026.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "blog/site-web-sur-mesure-menuiserie-2026": {
+    "title": "Transform Your Carpentry Business in 2026 with a Custom Website",
+    "excerpt": "Discover how a custom website can revolutionize your carpentry business and attract more clients in 2026.",
+    "metaTitle": "Custom Website for Carpentry in 2026 | Dibodev",
+    "metaDescription": "Boost your carpentry business with a custom website. Attract more clients and increase sales in 2026 with Dibodev.",
+    "tags": [
+      "carpentry",
+      "custom website",
+      "Rennes",
+      "craftsman",
+      "digital transformation"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Why a custom website for your carpentry business?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As a carpenter, you know that the quality of your work is essential. But did you know that a custom website can become your best marketing tool? By 2026, an online presence will be even more crucial for attracting new clients and retaining those you already have.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A custom website allows you to showcase your work, demonstrate your expertise, and stand out from the competition. It can also help you generate leads and increase your sales.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The benefits of a custom website for carpentry businesses",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "1. Better online visibility",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "With a custom website, you can optimize your natural search engine optimization (SEO) to rank at the top of search results. This means potential clients in your area will be able to find you easily.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "2. A professional and modern image",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A well-designed website enhances your credibility and professionalism. It shows your clients that you are serious and that you invest in your business.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "3. An improved user experience",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A custom website is designed to provide an optimal user experience. This means your visitors will be able to easily navigate your site, find the information they are looking for, and contact you.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "4. A powerful marketing tool",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "With a custom website, you can integrate marketing features such as contact forms, newsletters, and advertising campaigns. This will allow you to reach a larger number of potential clients and increase your sales.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How can I help you transform your carpentry business with a custom website?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As a freelance developer based in Rennes, I specialize in creating custom websites for craftsmen and SMEs. I work closely with my clients to understand their needs and goals, and I build websites that meet those needs.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I can help you:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- Create a custom website that showcases your work and expertise.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Optimize your website for natural search engine optimization (SEO) to attract more local clients.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Integrate marketing features to increase your sales.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Ensure the maintenance and updates of your website.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Contact me to transform your carpentry business in 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you're ready to transform your carpentry business with a custom website, I'm here to help. Contact me today to discuss your project and get a personalized quote.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Together, let's make 2026 a year of growth and success for your carpentry business!",
               "type": "text",
               "marks": [
                 {

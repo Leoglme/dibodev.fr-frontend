@@ -668,7 +668,12 @@
     "excerpt": "Descubra cómo un sitio web a medida puede impulsar su taller de reparación de bicicletas en 2026. Atraiga más clientes y optimice su gestión.",
     "metaTitle": "Sitio Web para Taller de Reparación de Bicicletas en 2026",
     "metaDescription": "Transforme su taller de reparación de bicicletas con un sitio web profesional. Atraiga más clientes y optimice su gestión en 2026.",
-    "tags": ["taller de reparación de bicicletas", "sitio web profesional", "Rennes", "2026"],
+    "tags": [
+      "taller de reparación de bicicletas",
+      "sitio web profesional",
+      "Rennes",
+      "2026"
+    ],
     "content": {
       "type": "doc",
       "content": [
@@ -785,7 +790,13 @@
     "excerpt": "Descubra cómo un sitio web a medida puede impulsar su panadería artesanal en 2026. Atraiga más clientes y optimice sus ventas con herramientas adaptadas.",
     "metaTitle": "Sitio web a medida para panadería artesanal en 2026",
     "metaDescription": "Transforme su panadería artesanal en 2026 con un sitio web a medida. Atraiga más clientes y optimice sus ventas con herramientas adaptadas.",
-    "tags": ["panadería", "artesanía", "sitio web a medida", "2026", "Rennes"],
+    "tags": [
+      "panadería",
+      "artesanía",
+      "sitio web a medida",
+      "2026",
+      "Rennes"
+    ],
     "content": {
       "type": "doc",
       "content": [
@@ -1088,6 +1099,265 @@
           "content": [
             {
               "text": "Póngase en contacto conmigo hoy mismo para hablar de su proyecto y descubrir cómo puedo ayudarle a transformar su panadería artesanal en 2026.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "blog/site-web-sur-mesure-menuiserie-2026": {
+    "title": "Transforme Tu Carpintería en 2026 con un Sitio Web a Medida",
+    "excerpt": "Descubre cómo un sitio web a medida puede revolucionar tu empresa de carpintería y atraer más clientes en 2026.",
+    "metaTitle": "Sitio Web a Medida para Carpintería en 2026 | Dibodev",
+    "metaDescription": "Potencia tu carpintería con un sitio web a medida. Atrae más clientes y aumenta tus ventas en 2026 con Dibodev.",
+    "tags": [
+      "carpintería",
+      "sitio web a medida",
+      "Rennes",
+      "artesano",
+      "transformación digital"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Por qué un sitio web personalizado para su carpintería?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Como carpintero, usted sabe que la calidad de su trabajo es esencial. Pero, ¿sabía que un sitio web personalizado puede convertirse en su mejor herramienta de marketing? En 2026, la presencia en línea será aún más crucial para atraer a nuevos clientes y fidelizar a los que ya tiene.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un sitio web personalizado le permite mostrar sus trabajos, demostrar su experiencia y diferenciarse de la competencia. Además, puede ayudarle a generar clientes potenciales y aumentar sus ventas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Las ventajas de un sitio web personalizado para carpinterías",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "1. Mayor visibilidad en línea",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Con un sitio web personalizado, puede optimizar su posicionamiento en buscadores (SEO) para aparecer en los primeros resultados de búsqueda. Esto significa que los clientes potenciales de su zona podrán encontrarlo fácilmente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "2. Una imagen profesional y moderna",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un sitio web bien diseñado refuerza su credibilidad y profesionalismo. Le muestra a sus clientes que es serio y que invierte en su empresa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "3. Una mejor experiencia de usuario",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un sitio web personalizado está diseñado para ofrecer una experiencia de usuario óptima. Esto significa que sus visitantes podrán navegar fácilmente por su sitio, encontrar la información que buscan y ponerse en contacto con usted.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "4. Una poderosa herramienta de marketing",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Con un sitio web personalizado, puede integrar funciones de marketing como formularios de contacto, boletines informativos y campañas publicitarias. Esto le permitirá llegar a un mayor número de clientes potenciales y aumentar sus ventas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cómo puedo ayudarle a transformar su carpintería con un sitio web personalizado?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Como desarrollador freelance con sede en Rennes, me especializo en la creación de sitios web personalizados para artesanos y PYMES. Trabajo en estrecha colaboración con mis clientes para entender sus necesidades y objetivos, y creo sitios web que responden a esas necesidades.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Puedo ayudarle a:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- Crear un sitio web personalizado que muestre sus trabajos y su experiencia.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Optimizar su sitio para el posicionamiento en buscadores (SEO) y atraer más clientes locales.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Integrar funciones de marketing para aumentar sus ventas.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Garantizar el mantenimiento y las actualizaciones de su sitio web.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Contácteme para transformar su carpintería en 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si está listo para transformar su carpintería con un sitio web personalizado, estoy aquí para ayudarle. Contácteme hoy mismo para hablar de su proyecto y obtener un presupuesto personalizado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¡Juntos, hagamos de 2026 un año de crecimiento y éxito para su empresa de carpintería!",
               "type": "text",
               "marks": [
                 {
