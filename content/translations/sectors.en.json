@@ -138,5 +138,25 @@
         }
       ]
     }
+  },
+  "sectors/immobilier": {
+    "title": "Real Estate Projects — Collaborative Applications & Platforms",
+    "description": "Digital tools to simplify property search, management, and collaboration around real estate assets.",
+    "metaTitle": "Real Estate Projects — Custom Web Applications | Dibodev",
+    "metaDescription": "Collaborative real estate applications developed by Léo Guillaume, freelance developer in Rennes: ad management, interactive maps, and decision-making tools.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I develop platforms that streamline ad management, collaboration, and decision-making. The goal: centralize information and enhance user productivity in their real estate search.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

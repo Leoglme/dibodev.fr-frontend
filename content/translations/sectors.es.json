@@ -138,5 +138,25 @@
         }
       ]
     }
+  },
+  "sectors/immobilier": {
+    "title": "Proyectos Inmobiliarios — Aplicaciones y plataformas colaborativas",
+    "description": "Herramientas digitales para simplificar la búsqueda, gestión y colaboración en torno a bienes inmuebles.",
+    "metaTitle": "Proyectos Inmobiliarios — Aplicaciones web a medida | Dibodev",
+    "metaDescription": "Aplicaciones inmobiliarias colaborativas desarrolladas por Léo Guillaume, desarrollador freelance en Rennes: gestión de anuncios, mapas interactivos y herramientas de ayuda a la decisión.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Desarrollo plataformas que facilitan la gestión de anuncios, la colaboración y la toma de decisiones. El objetivo: centralizar la información y mejorar la productividad de los usuarios en su búsqueda de propiedades.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
