@@ -38,5 +38,25 @@
         }
       ]
     }
+  },
+  "categories/application-metier": {
+    "title": "Proyectos de Aplicaciones Empresariales — Herramientas profesionales a medida",
+    "description": "Aplicaciones diseñadas para satisfacer necesidades empresariales específicas en empresas.",
+    "metaTitle": "Proyectos de Aplicaciones Empresariales — Soluciones profesionales | Dibodev",
+    "metaDescription": "Descubre mis proyectos de aplicaciones empresariales desarrollados por Léo Guillaume, desarrollador freelance en Rennes: herramientas profesionales a medida para PYMES y autónomos.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Desarrollo aplicaciones empresariales adaptadas a las necesidades reales de las empresas: gestión, planificación, seguimiento de datos y optimización de procesos internos.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

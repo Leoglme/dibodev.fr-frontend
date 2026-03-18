@@ -38,5 +38,25 @@
         }
       ]
     }
+  },
+  "categories/application-metier": {
+    "title": "Business Application Projects — Custom Professional Tools",
+    "description": "Applications designed to meet specific business needs in companies.",
+    "metaTitle": "Business Application Projects — Professional Solutions | Dibodev",
+    "metaDescription": "Discover my business application projects developed by Léo Guillaume, freelance developer in Rennes: custom professional tools for SMEs and VSEs.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I develop business applications tailored to the real constraints of companies: management, scheduling, data tracking, and optimization of internal processes.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
