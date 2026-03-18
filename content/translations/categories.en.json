@@ -98,5 +98,25 @@
         }
       ]
     }
+  },
+  "categories/site-web": {
+    "title": "Website Projects — Custom Creation & Development",
+    "description": "Modern, high-performance websites tailored to the specific needs of each project.",
+    "metaTitle": "Website Projects — Custom Development | Dibodev",
+    "metaDescription": "Explore my custom web development projects by Léo Guillaume, freelance developer in Rennes: modern interfaces, optimized performance, and user experience.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I design fast, responsive, and user-experience-optimized websites. From simple showcases to more complex projects, every creation is crafted to be maintainable, scalable, and performance-driven.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

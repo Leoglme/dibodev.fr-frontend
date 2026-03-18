@@ -98,5 +98,25 @@
         }
       ]
     }
+  },
+  "categories/site-web": {
+    "title": "Proyectos Web — Creación y desarrollo a medida",
+    "description": "Sitios web modernos, performantes y adaptados a las necesidades específicas de cada proyecto.",
+    "metaTitle": "Proyectos Web — Desarrollo a medida | Dibodev",
+    "metaDescription": "Descubre mis proyectos de sitios web desarrollados a medida por Léo Guillaume, desarrollador freelance en Rennes: interfaces modernas, rendimiento y experiencia de usuario optimizada.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Diseño sitios web rápidos, responsivos y optimizados para la experiencia de usuario. Desde una página de presentación hasta proyectos más complejos, cada desarrollo está pensado para ser mantenible, escalable y orientado al rendimiento.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
