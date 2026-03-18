@@ -78,5 +78,25 @@
         }
       ]
     }
+  },
+  "sectors/productivite": {
+    "title": "Proyectos de Productividad — Herramientas profesionales y gestión de tareas",
+    "description": "Aplicaciones especializadas en organización, gestión del tiempo y optimización de flujos de trabajo.",
+    "metaTitle": "Proyectos de Productividad — Aplicaciones profesionales a medida | Dibodev",
+    "metaDescription": "Herramientas de gestión del tiempo y productividad desarrolladas por Léo Guillaume, desarrollador freelance en Rennes: organización, flujos de trabajo y aplicaciones profesionales.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Desarrollo herramientas que permiten a los equipos y profesionales independientes estructurar su trabajo: gestión de tareas, seguimiento del tiempo y centralización de datos. Soluciones diseñadas para ganar en eficiencia día a día.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

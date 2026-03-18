@@ -78,5 +78,25 @@
         }
       ]
     }
+  },
+  "sectors/productivite": {
+    "title": "Productivity Projects — Business Tools & Task Management",
+    "description": "Dedicated applications for organization, time management, and workflow optimization.",
+    "metaTitle": "Productivity Projects — Custom Business Applications | Dibodev",
+    "metaDescription": "Time management and productivity tools developed by Léo Guillaume, freelance developer in Rennes: organization, workflows, and business applications.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I develop tools that help teams and freelancers structure their work: task management, time tracking, and centralized data. Solutions designed to boost daily efficiency.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
