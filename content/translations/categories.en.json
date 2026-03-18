@@ -1,1 +1,22 @@
-{}
+{
+  "categories/ia": {
+    "title": "AI Projects — Artificial Intelligence & Data",
+    "description": "Applications leveraging machine learning, NLP, and data analysis.",
+    "metaTitle": "AI Projects — Machine Learning & NLP | Dibodev",
+    "metaDescription": "Explore my AI projects, freelance developer in Rennes: machine learning, NLP, and data analysis integrated into high-performance web solutions.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I develop AI-powered solutions to analyze data, understand natural language, or classify images. Projects that combine algorithmic performance with clear, accessible interfaces.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

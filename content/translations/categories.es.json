@@ -1,1 +1,22 @@
-{}
+{
+  "categories/ia": {
+    "title": "Proyectos de IA — Inteligencia Artificial y Datos",
+    "description": "Aplicaciones que aprovechan el aprendizaje automático, el procesamiento de lenguaje natural (NLP) y el análisis de datos.",
+    "metaTitle": "Proyectos de IA — Machine Learning & NLP | Dibodev",
+    "metaDescription": "Descubre mis proyectos en inteligencia artificial, desarrollador freelance en Rennes: machine learning, NLP y análisis de datos integrados en soluciones web de alto rendimiento.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Desarrollo soluciones que integran inteligencia artificial para analizar datos, comprender el lenguaje natural o clasificar imágenes. Proyectos que combinan rendimiento algorítmico con interfaces claras y accesibles.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
