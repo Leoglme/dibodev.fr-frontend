@@ -58,5 +58,25 @@
         }
       ]
     }
+  },
+  "categories/saas": {
+    "title": "Proyectos SaaS — Plataformas y herramientas en línea",
+    "description": "Aplicaciones SaaS diseñadas para digitalizar procesos y mejorar la gestión empresarial.",
+    "metaTitle": "Proyectos SaaS — Desarrollo de plataformas web | Dibodev",
+    "metaDescription": "Descubre mis proyectos SaaS desarrollados por Léo Guillaume, desarrollador freelance en Rennes: plataformas escalables, gestión, reservas y herramientas profesionales de alto rendimiento.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Diseño plataformas SaaS robustas y escalables: gestión interna, reservas, facturación o colaboración. Soluciones pensadas para el rendimiento, la escalabilidad y la simplicidad de uso.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

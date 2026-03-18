@@ -58,5 +58,25 @@
         }
       ]
     }
+  },
+  "categories/saas": {
+    "title": "SaaS Projects — Online Platforms and Tools",
+    "description": "SaaS applications designed to digitalize processes and enhance business management.",
+    "metaTitle": "SaaS Projects — Web Platform Development | Dibodev",
+    "metaDescription": "Explore my SaaS projects developed by Léo Guillaume, freelance developer in Rennes: scalable platforms, management, booking, and high-performance business tools.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I design robust and scalable SaaS platforms: internal management, booking, billing, or collaboration. Solutions designed for performance, scalability, and ease of use.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
