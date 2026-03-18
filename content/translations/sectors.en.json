@@ -18,5 +18,25 @@
         }
       ]
     }
+  },
+  "sectors/reseaux-sociaux": {
+    "title": "Social Network Projects — Community Applications",
+    "description": "Development of social, community, and interactive multi-platform applications.",
+    "metaTitle": "Social Network Projects — Social Applications | Dibodev",
+    "metaDescription": "Community and social applications developed by Léo Guillaume, freelance developer in Rennes: web, mobile, and multi-platform solutions.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I design modern social and community applications: content navigation, user interactions, and integration of complex third-party APIs. Smooth, cross-platform experiences designed for engagement.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

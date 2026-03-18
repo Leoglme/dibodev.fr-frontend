@@ -18,5 +18,25 @@
         }
       ]
     }
+  },
+  "sectors/reseaux-sociaux": {
+    "title": "Proyectos de Redes Sociales — Aplicaciones Comunitarias",
+    "description": "Desarrollo de aplicaciones sociales, comunitarias e interactivas multiplataforma.",
+    "metaTitle": "Proyectos de Redes Sociales — Aplicaciones Sociales | Dibodev",
+    "metaDescription": "Aplicaciones comunitarias y sociales desarrolladas por Léo Guillaume, desarrollador freelance en Rennes: web, móvil y multiplataforma.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Diseño aplicaciones sociales y comunitarias modernas: navegación de contenido, interacciones entre usuarios e integración de APIs de terceros complejas. Experiencias fluidas, multiplataforma y pensadas para el compromiso.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
