@@ -18,5 +18,25 @@
         }
       ]
     }
+  },
+  "categories/logiciel": {
+    "title": "Proyectos de Software — Aplicaciones de escritorio y soluciones técnicas",
+    "description": "Software y aplicaciones técnicas desarrolladas para satisfacer necesidades específicas.",
+    "metaTitle": "Proyectos de Software — Desarrollo desktop e híbrido | Dibodev",
+    "metaDescription": "Descubre mis proyectos de software desarrollados por Léo Guillaume, desarrollador freelance en Rennes: aplicaciones de escritorio, multiplataforma y soluciones técnicas robustas.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Diseño software performante y mantenible, ya sea orientado a escritorio o multiplataforma. Cada proyecto prioriza robustez, seguridad y claridad en la arquitectura.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

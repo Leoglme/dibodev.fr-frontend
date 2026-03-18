@@ -18,5 +18,25 @@
         }
       ]
     }
+  },
+  "categories/logiciel": {
+    "title": "Software Projects — Desktop Applications & Technical Solutions",
+    "description": "Software and technical applications developed to meet specific needs.",
+    "metaTitle": "Software Projects — Desktop & Hybrid Development | Dibodev",
+    "metaDescription": "Explore my software projects developed by Léo Guillaume, freelance developer based in Rennes: desktop applications, cross-platform solutions, and robust technical solutions.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I design high-performance, maintainable software, whether it's desktop or multi-platform oriented. Each project prioritizes robustness, security, and architectural clarity.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
