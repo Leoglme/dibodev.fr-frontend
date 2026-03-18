@@ -158,5 +158,25 @@
         }
       ]
     }
+  },
+  "sectors/sport-loisirs": {
+    "title": "Proyectos de Deporte y Ocio — Soluciones digitales a medida",
+    "description": "Plataformas de reserva, herramientas de gestión y aplicaciones dedicadas a estructuras deportivas y de ocio.",
+    "metaTitle": "Proyectos de Deporte y Ocio — Desarrollador Web & SaaS | Dibodev",
+    "metaDescription": "Descubre mis proyectos digitales para el deporte y el ocio: plataformas de reserva, gestión interna y herramientas SaaS desarrolladas por Léo Guillaume, freelance en Rennes.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Diseño soluciones digitales para clubes y estructuras deportivas: reserva en línea, gestión de equipos, planificación y back-office profesional. El objetivo es optimizar la organización interna al tiempo que mejora la experiencia de los usuarios finales.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

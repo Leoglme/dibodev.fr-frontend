@@ -158,5 +158,25 @@
         }
       ]
     }
+  },
+  "sectors/sport-loisirs": {
+    "title": "Sports & Leisure Projects — Custom Digital Solutions",
+    "description": "Booking platforms, management tools, and dedicated applications for sports and leisure facilities.",
+    "metaTitle": "Sports & Leisure Projects — Web Developer & SaaS | Dibodev",
+    "metaDescription": "Explore my digital projects for sports and leisure: booking platforms, internal management, and SaaS tools developed by Léo Guillaume, freelance based in Rennes.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I design digital solutions for clubs and sports facilities: online booking, team management, scheduling, and business back-office tools. The goal is to optimize internal organization while enhancing the end-user experience.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
