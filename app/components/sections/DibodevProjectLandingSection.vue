@@ -40,16 +40,25 @@
           </p>
 
           <div class="flex flex-wrap items-center gap-3">
-            <DibodevCategoryBadge v-for="category in props.categories" :key="'cat-' + category" :category="category" />
-            <DibodevBadge
+            <NuxtLink
+              v-for="category in props.categories"
+              :key="'cat-' + category"
+              :to="getCategoryHref(category)"
+              class="inline-flex no-underline"
+            >
+              <DibodevCategoryBadge :category="category" />
+            </NuxtLink>
+
+            <NuxtLink
               v-for="sector in props.sectors"
               :key="'sec-' + sector"
-              backgroundColor="#374151"
-              textColor="#f3f4f6"
-              size="md"
+              :to="getSectorHref(sector)"
+              class="inline-flex no-underline"
             >
-              {{ $t('projects.sectors.' + sector) }}
-            </DibodevBadge>
+              <DibodevBadge backgroundColor="#374151" textColor="#f3f4f6" size="md">
+                {{ $t('projects.sectors.' + sector) }}
+              </DibodevBadge>
+            </NuxtLink>
           </div>
         </div>
 
@@ -102,6 +111,9 @@ import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import DibodevBadge from '~/components/ui/DibodevBadge.vue'
 import DibodevCategoryBadge from '~/components/ui/DibodevCategoryBadge.vue'
+import type { CategoryKey, SectorKey } from '~/core/constants/projectEnums'
+import { categoryToSlug } from '~/core/constants/categorySlugs'
+import { sectorToSlug } from '~/core/constants/sectorSlugs'
 /* PROPS */
 const props = defineProps({
   title: {
@@ -125,11 +137,11 @@ const props = defineProps({
     required: true,
   },
   categories: {
-    type: Array as PropType<string[]>,
+    type: Array as PropType<CategoryKey[]>,
     required: true,
   },
   sectors: {
-    type: Array as PropType<string[]>,
+    type: Array as PropType<SectorKey[]>,
     default: () => [],
   },
   date: {
@@ -143,6 +155,24 @@ const props = defineProps({
 })
 /* REFS */
 const parallaxY: Ref<number> = ref(0)
+
+const { locale } = useI18n()
+const localePath = useLocalePath()
+
+function getCurrentLocaleCode(): 'fr' | 'en' | 'es' {
+  if (locale.value === 'en' || locale.value === 'es' || locale.value === 'fr') return locale.value
+  return 'fr'
+}
+
+function getSectorHref(sector: SectorKey): string {
+  const loc = getCurrentLocaleCode()
+  return localePath({ name: 'projects-sector-slug', params: { slug: sectorToSlug(loc, sector) } })
+}
+
+function getCategoryHref(category: CategoryKey): string {
+  const loc = getCurrentLocaleCode()
+  return localePath({ name: 'projects-category-slug', params: { slug: categoryToSlug(loc, category) } })
+}
 
 /* METHODS */
 /**
