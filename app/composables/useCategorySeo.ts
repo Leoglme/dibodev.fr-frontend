@@ -9,6 +9,7 @@ import { categoryToSlug } from '~/core/constants/categorySlugs'
 import { normalizeUrlPath } from '~/composables/useSeoMetaFromI18n'
 
 const CANONICAL_ORIGIN = 'https://dibodev.fr'
+const DEFAULT_OG_IMAGE_URL = `${CANONICAL_ORIGIN}/android-chrome-512x512.png`
 
 const SEO_LOCALES: Array<{ code: SupportedLocale; hreflang: 'fr-FR' | 'en-US' | 'es-ES' }> = [
   { code: 'fr', hreflang: 'fr-FR' },
@@ -77,6 +78,8 @@ export function buildCategorySeo(
     { property: 'og:url', content: canonical },
     { property: 'og:title', content: title },
     { property: 'og:description', content: description },
+    { property: 'og:image', content: DEFAULT_OG_IMAGE_URL },
+    { property: 'og:type', content: 'website' },
   ]
 
   return {

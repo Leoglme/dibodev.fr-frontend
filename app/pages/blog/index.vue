@@ -50,6 +50,9 @@ import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSec
 import type { DibodevArticle } from '~/core/types/DibodevArticle'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 
+const SITE_URL: string = 'https://dibodev.fr'
+const DEFAULT_OG_IMAGE_URL: string = `${SITE_URL}/android-chrome-512x512.png`
+
 const PER_PAGE: number = 12
 
 const { data: articlesData } = await useArticlesWithTranslations({ page: 1, perPage: PER_PAGE })
@@ -64,7 +67,10 @@ useHead(
       { name: 'description', content: t('meta.blog.description') },
       { property: 'og:title', content: t('meta.blog.title') },
       { property: 'og:description', content: t('meta.blog.description') },
+      { property: 'og:image', content: DEFAULT_OG_IMAGE_URL },
       { property: 'og:type', content: 'website' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:image', content: DEFAULT_OG_IMAGE_URL },
     ],
   }),
 )

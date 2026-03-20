@@ -46,9 +46,21 @@ import { buildRelsSlugMap, mapStoryblokProjectToDibodevProject } from '~/service
 import { buildProjectSchemaJson } from '~/config/projectSchema'
 import { formatProjectDate } from '~/core/utils/formatProjectDate'
 
+const SITE_URL: string = 'https://dibodev.fr'
+const DEFAULT_OG_IMAGE_URL: string = `${SITE_URL}/android-chrome-512x512.png`
+
 const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 function hasUuid(arr: string[] | undefined): boolean {
   return Array.isArray(arr) && arr.some((s) => typeof s === 'string' && UUID_REGEX.test(s.trim()))
+}
+
+function toAbsoluteImageUrl(maybeUrl: string | undefined | null): string {
+  const url: string = String(maybeUrl ?? '').trim()
+  if (!url) return ''
+  if (url.startsWith('http://') || url.startsWith('https://')) return url
+  if (url.startsWith('//')) return `https:${url}`
+  if (url.startsWith('/')) return `${SITE_URL}${url}`
+  return url
 }
 
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
@@ -153,12 +165,25 @@ useHead((): Record<string, unknown> => {
   const title: string = p.metaTitle || p.name
   const description: string = p.metaDescription || p.shortDescription
   const schemaJson: string = buildProjectSchemaJson(p, locale.value as string)
+
+  const ogImageUrl: string =
+    toAbsoluteImageUrl(p.media1) ||
+    toAbsoluteImageUrl(p.media2) ||
+    toAbsoluteImageUrl(p.logoUrl) ||
+    DEFAULT_OG_IMAGE_URL
+
   return {
     title,
     meta: [
       { name: 'description', content: description },
       { property: 'og:title', content: title },
       { property: 'og:description', content: description },
+      { property: 'og:image', content: ogImageUrl },
+      { property: 'og:type', content: 'website' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: title },
+      { name: 'twitter:description', content: description },
+      { name: 'twitter:image', content: ogImageUrl },
     ],
     script: [{ type: 'application/ld+json', innerHTML: schemaJson }],
   }

@@ -37,6 +37,7 @@ import DibodevProjectsSection from '~/components/sections/DibodevProjectsSection
 // import DibodevPricingSection from '~/components/sections/DibodevPricingSection.vue'
 
 const CANONICAL_ORIGIN = 'https://dibodev.fr'
+const DEFAULT_OG_IMAGE_URL = `${CANONICAL_ORIGIN}/android-chrome-512x512.png`
 const SEO_LOCALES = [
   { code: 'fr', hreflang: 'fr-FR' as const },
   { code: 'en', hreflang: 'en-US' as const },
@@ -76,6 +77,10 @@ useHead(() => {
       { name: 'description', content: description },
       { property: 'og:title', content: title },
       { property: 'og:description', content: description },
+      { property: 'og:image', content: DEFAULT_OG_IMAGE_URL },
+      { property: 'og:type', content: 'website' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:image', content: DEFAULT_OG_IMAGE_URL },
       { property: 'og:url', content: canonicalUrl },
     ],
     link: [{ rel: 'canonical', href: canonicalUrl }, ...alternateLinks],

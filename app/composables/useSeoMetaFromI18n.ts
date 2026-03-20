@@ -96,6 +96,8 @@ export function useSeoMetaFromI18n(): void {
     }
     // Si locale.value inconnue : on n’ajoute que og:url (pas og:locale ni alternates)
 
+    const ogImageUrl: string = `${CANONICAL_ORIGIN}/android-chrome-512x512.png`
+
     const head: {
       title: string
       meta: Array<{ name?: string; property?: string; content: string }>
@@ -108,7 +110,11 @@ export function useSeoMetaFromI18n(): void {
         { property: 'og:url', content: canonicalUrl },
         { property: 'og:title', content: t('meta.title') },
         { property: 'og:description', content: t('meta.description') },
+        { property: 'og:image', content: ogImageUrl },
+        { property: 'og:type', content: 'website' },
         ...ogLocaleMeta,
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:image', content: ogImageUrl },
       ],
       htmlAttrs: {
         lang: locale.value,
