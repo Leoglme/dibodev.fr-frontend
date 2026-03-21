@@ -5,8 +5,14 @@
     "longDescription": "Contexto\n\nConecta 4 es una adaptación web del célebre juego de mesa que permite a dos jugadores enfrentarse directamente desde el navegador.\n\nEl proyecto se realizó en el marco de un ejercicio académico destinado a desarrollar un juego interactivo en **JavaScript puro**, con una interfaz responsive y una lógica de juego completa en el cliente.\n\nEl objetivo era concebir una aplicación web sencilla, accesible y jugable en distintos dispositivos, implementando al mismo tiempo los mecanismos fundamentales del juego.\n\nProblema\n\nReproducir un juego de mesa clásico en una aplicación web exige gestionar varios elementos:\n\n* el estado del tablero\n* las acciones de los jugadores\n* la comprobación de las condiciones de victoria\n* la interacción con la interfaz de usuario.\n\nLa dificultad consiste en implementar una lógica fiable que detecte correctamente los alineamientos ganadores manteniendo una interfaz fluida e intuitiva.\n\nSolución\n\nLa aplicación se apoya en una implementación en JavaScript de la lógica del juego, con un algoritmo que comprueba los alineamientos horizontales, verticales y diagonales tras cada jugada.\n\nLos jugadores pueden personalizar su avatar y el color de sus fichas antes de empezar la partida.\n\nEl tablero es totalmente interactivo: un clic en una columna desencadena la caída animada de la ficha hasta la posición disponible.\n\nLa interfaz es responsive para poder jugar tanto en ordenador como en móvil o tableta.\n\nFuncionalidades principales\n\n* Conecta 4 jugable directamente en el navegador\n* modo dos jugadores en el mismo dispositivo\n* personalización de avatares y colores de fichas\n* detección automática de victorias (horizontal, vertical, diagonal)\n* animación de caída de las fichas\n* interfaz responsive compatible con móvil y tableta\n* sucesión de partidas entre jugadores.\n\nResultados\n\nEste proyecto demuestra la puesta en práctica de una **lógica de juego completa en JavaScript**, así como la creación de una interfaz interactiva y responsive.\n\nPone de relieve la gestión del estado de un juego en el cliente, la manipulación del DOM y la implementación de algoritmos sencillos para detectar las condiciones de victoria.",
     "metaTitle": "Conecta 4 — Juego Conecta 4 en línea jugable en móvil y escritorio",
     "metaDescription": "Juego Conecta 4 jugable directamente en el navegador: interfaz responsive, animación de fichas y lógica de victoria completa en JavaScript.",
-    "categories": ["site-web"],
-    "stack": ["HTML", "CSS", "JavaScript"],
+    "categories": [
+      "site-web"
+    ],
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "tags": [
       "juego web",
       "cuatro en raya en línea",
@@ -22,8 +28,16 @@
     "longDescription": "Contexte\n\nProyecto rush de 3 días: recrear una experiencia tipo Spotify con navegación por categorías, páginas de artistas y reproductor de audio funcional.\n\nProblème\n\nPrototipar rápidamente una aplicación musical moderna con una API dedicada.\n\nSolution\n\nFront en React con Redux Toolkit; backend en PHP para los endpoints y la gestión de los datos.\n\nFonctionnalités principales\n\nNavegación por categorías, páginas de artistas, reproductor de audio, gestión del state y del routing.\n\nRésultats\n\nDemuestra la capacidad de prototipar rápidamente una aplicación multimedia con un front moderno y una API dedicada, gestionando state management, routing y reproducción de audio.",
     "metaTitle": "Clone de Spotify – Sitio de música con reproductor web",
     "metaDescription": "Prototipo de sitio de música: biblioteca, categorías, páginas de artistas y reproductor de audio. Proyecto rápido que demuestra una experiencia cercana a un servicio de streaming.",
-    "categories": ["site-web"],
-    "stack": ["React", "Redux Toolkit", "JavaScript", "CSS", "PHP"],
+    "categories": [
+      "site-web"
+    ],
+    "stack": [
+      "React",
+      "Redux Toolkit",
+      "JavaScript",
+      "CSS",
+      "PHP"
+    ],
     "tags": [
       "reproductor de audio web",
       "biblioteca musical",
@@ -39,8 +53,18 @@
     "longDescription": "Contexto\n\nDriving School es una aplicación web de gestión destinada a las autoescuelas, que permite organizar las clases de conducción, gestionar a los alumnos y centralizar la planificación de las citas.\n\nEl proyecto se realizó en el marco de un proyecto académico destinado a concebir una **aplicación métier completa con gestión de usuarios, planificación y lógica de negocio**.\n\nEl objetivo era crear una herramienta capaz de sustituir la organización manual de los horarios y aportar una visión clara de las horas de conducción disponibles para cada alumno.\n\nProblema\n\nLas autoescuelas deben gestionar a diario:\n\n* los alumnos inscritos\n* los monitores disponibles\n* las horas de conducción restantes\n* la planificación de las citas.\n\nCuando esta información se gestiona manualmente o con varias herramientas, puede provocar:\n\n* errores de planificación\n* conflictos de horarios\n* un seguimiento difícil de las horas de conducción restantes.\n\nLos equipos administrativos necesitan un sistema centralizado para organizar eficazmente las clases y seguir la evolución de los alumnos.\n\nSolución\n\nDriving School propone una aplicación web que permite al personal de la autoescuela planificar y gestionar las clases de conducción desde un calendario central.\n\nLos huecos son creados por el personal (administradores, secretarios o monitores) asociando un alumno, un instructor y una franja horaria.\n\nEl sistema comprueba automáticamente que el alumno dispone aún de suficientes horas de conducción disponibles antes de autorizar la creación de un hueco.\n\nCada cita actualiza automáticamente el contador de horas de conducción realizadas.\n\nLa aplicación incluye también un sistema de autenticación con distintos roles de usuario para limitar el acceso a las funcionalidades según el perfil.\n\nFuncionalidades principales\n\n* gestión de cuentas de usuario con roles (admin, secretario, monitor, alumno)\n* creación y gestión de alumnos y del personal\n* planificación de las clases mediante un calendario interactivo\n* asociación de las citas con alumno y monitor\n* verificación automática de las horas de conducción restantes\n* seguimiento de las horas realizadas y restantes por alumno\n* modificación y desplazamiento de los huecos por arrastrar y soltar\n* gestión de cuentas de usuario y perfiles\n* correos automáticos (creación de cuenta y restablecimiento de contraseña).\n\nLos alumnos disponen de un acceso que les permite consultar su horario y sus horas de conducción restantes.\n\nResultados\n\nEste proyecto demuestra la concepción de una **aplicación métier completa con gestión de usuarios, planificación y lógica de negocio específica de un sector de actividad**.\n\nIlustra la puesta en marcha de:\n\n* un sistema de autenticación con roles\n* una lógica de negocio ligada a la planificación\n* una interfaz de gestión clara para los equipos administrativos.",
     "metaTitle": "Driving School — Software de gestión de autoescuela y planificación de clases",
     "metaDescription": "Aplicación web de gestión de autoescuela: gestión de alumnos y monitores, planificación de clases de conducción y seguimiento de las horas restantes.",
-    "categories": ["site-web", "application-metier", "logiciel"],
-    "stack": ["Vue.js", "TypeScript", "TailwindCSS", "Python", "Flask"],
+    "categories": [
+      "site-web",
+      "application-metier",
+      "logiciel"
+    ],
+    "stack": [
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Python",
+      "Flask"
+    ],
     "tags": [
       "autoescuela",
       "gestión de horarios",
@@ -56,8 +80,15 @@
     "longDescription": "Contexto\n\nNextodo es una aplicación web de gestión de tareas inspirada en interfaces Kanban como Trello.\n\nEl proyecto se realizó en el marco de un ejercicio técnico destinado a explorar las buenas prácticas del desarrollo front-end moderno con **React y Next.js**, así como la puesta en marcha de tests unitarios y end-to-end.\n\nEl objetivo era concebir una interfaz fluida que permitiera organizar visualmente las tareas y manipular los elementos mediante **arrastrar y soltar**.\n\nProblema\n\nLa gestión de tareas se vuelve rápidamente difícil cuando los proyectos no están organizados visualmente.\n\nLas herramientas tipo Kanban permiten estructurar las tareas en columnas e identificar rápidamente:\n\n* las tareas por hacer\n* las tareas en curso\n* las tareas terminadas.\n\nEl proyecto pretendía reproducir esta lógica poniendo en práctica los conceptos modernos del desarrollo front-end.\n\nSolución\n\nNextodo ofrece una interfaz sencilla para crear columnas y organizar en ellas las tareas en forma de tarjetas.\n\nLos usuarios pueden reorganizar los elementos gracias a un sistema de **arrastrar y soltar**, que facilita la priorización y el seguimiento del avance.\n\nLa aplicación se apoya en **Next.js y React**, con gestión del estado mediante Redux y el uso de la biblioteca **react-beautiful-dnd** para el desplazamiento fluido de las tarjetas y columnas.\n\nFuncionalidades principales\n\n* creación y supresión de columnas Kanban\n* creación, modificación y supresión de tareas\n* organización de tareas por arrastrar y soltar\n* desplazamiento de tarjetas entre columnas\n* gestión del estado de las tareas (por hacer / terminadas)\n* filtros de visualización de tareas\n* supresión rápida de las tareas terminadas.\n\nCada columna dispone además de filtros para mostrar solo determinadas tareas según su estado.\n\nResultados\n\nNextodo constituye una demostración práctica de la creación de una interfaz Kanban moderna con React.\n\nEl proyecto pone de relieve:\n\n* la gestión del estado de una aplicación front-end\n* la manipulación de elementos dinámicos mediante arrastrar y soltar\n* el diseño de interfaces interactivas y modulares.",
     "metaTitle": "Nextodo — Aplicación Kanban tipo Trello con React y Next.js",
     "metaDescription": "Aplicación Kanban inspirada en Trello: columnas, tarjetas y arrastrar y soltar para organizar sus tareas. Proyecto React desarrollado con Next.js y Redux.",
-    "categories": ["site-web"],
-    "stack": ["Next.js", "React", "JavaScript", "CSS"],
+    "categories": [
+      "site-web"
+    ],
+    "stack": [
+      "Next.js",
+      "React",
+      "JavaScript",
+      "CSS"
+    ],
     "tags": [
       "lista de tareas",
       "kanban",
@@ -73,8 +104,20 @@
     "longDescription": "Contexto\n\nGest-Time es un software SaaS de gestión del tiempo de trabajo desarrollado en **Kodeva**, en colaboración con la empresa Breizhtic, que se encargaba de la distribución de la solución entre microempresas y PYMES.\n\nEl proyecto se concibió para sustituir las hojas de tiempo en papel y los archivos Excel dispersos por una plataforma centralizada que permita seguir las horas de trabajo de los equipos.\n\nLa aplicación es utilizada por empresas para registrar las horas trabajadas, seguir el avance de los proyectos y simplificar la validación de las hojas de tiempo.\n\nSe pensó para ser fácil de usar en **tabletas y ordenadores**, en particular por equipos de campo poco familiarizados con las herramientas informáticas.\n\nProblema\n\nMuchas empresas siguen gestionando el seguimiento de horas con sistemas poco adaptados: hojas de papel, hojas de cálculo o herramientas no especializadas.\n\nEstos métodos dificultan:\n\n* la introducción fiable de las horas de trabajo\n* el seguimiento del tiempo dedicado a los proyectos\n* la validación de las hojas de tiempo\n* el análisis de los datos para la gestión de los equipos.\n\nLos responsables necesitan una herramienta sencilla que permita centralizar la información y detectar rápidamente las anomalías.\n\nSolución\n\nGest-Time propone una aplicación web que permite a los empleados **introducir sus horas de trabajo por proyecto, tarea u obra**, directamente desde una interfaz clara y adaptada a las tabletas.\n\nLos empleados registran sus horas día a día y luego envían su hoja de tiempo semanal para validación.\n\nLos responsables disponen de una **vista semanal centralizada** que les permite validar, corregir o rechazar las hojas de tiempo si es necesario.\n\nEl sistema integra también alertas automáticas para identificar anomalías, como horas faltantes o excesos.\n\nFuncionalidades principales\n\n* introducción de horas por día, proyecto, tarea u obra\n* interfaz optimizada para tableta y uso en el terreno\n* gestión de ausencias (vacaciones, RTT, etc.)\n* flujo de validación semanal de las hojas de tiempo\n* alertas sobre anomalías de horas\n* gestión de usuarios y roles\n* gestión de proyectos, obras y tareas\n* reporting detallado por proyecto, tarea o empleado\n* exportación de datos a Excel o PDF\n* estadísticas e informes para el seguimiento de la actividad.\n\nEl software permite además activar determinadas funcionalidades avanzadas según las necesidades de la empresa, como la gestión de desplazamientos, kilómetros profesionales o costes horarios.\n\nResultados\n\nGest-Time permite a las empresas centralizar el seguimiento del tiempo de trabajo, mejorar la fiabilidad de las hojas de tiempo y simplificar la validación de las horas por parte de los responsables.\n\nEl software aporta una mejor visibilidad sobre la actividad de los equipos y facilita el análisis de los datos para el seguimiento de los proyectos.",
     "metaTitle": "Gest-Time — Software de gestión del tiempo de trabajo para empresas",
     "metaDescription": "Software SaaS de seguimiento del tiempo de trabajo: introducción de horas por proyecto, validación semanal, alertas de anomalías y reporting para pilotar la actividad de los equipos.",
-    "categories": ["site-web", "application-metier", "logiciel"],
-    "stack": ["Nuxt.js", "Vue.js", "TypeScript", "C#", ".NET", "MongoDB", "Microsoft SQL Server (MSSQL)"],
+    "categories": [
+      "site-web",
+      "application-metier",
+      "logiciel"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "C#",
+      ".NET",
+      "MongoDB",
+      "Microsoft SQL Server (MSSQL)"
+    ],
     "tags": [
       "seguimiento del tiempo",
       "hojas de tiempo",
@@ -92,9 +135,23 @@
     "longDescription": "Contexto\n\nIzidoor es una plataforma SaaS de reserva y gestión para estructuras que ofrecen actividades encuadradas: escuelas de surf, centros náuticos, escuelas de esquí, kayak, pesca o alquiler de bicicletas. La solución centraliza en una sola herramienta la reserva en línea y la gestión operativa: planificación de sesiones, catálogo de actividades y productos, gestión de equipos y monitores, facturación y cobro en el lugar.\n\nCada estructura dispone de un módulo de reserva integrado directamente en su web, para que los clientes puedan reservar y pagar sus actividades en línea de forma autónoma.\n\nProblema\n\nMuchas estructuras de ocio siguen gestionando las reservas con varias herramientas: teléfono, hojas de cálculo, pagos manuales y planning separado.\n\nEsta organización fragmentada genera:\n\n* una carga administrativa importante\n* riesgos de errores en las reservas\n* dificultades para seguir la disponibilidad en tiempo real\n* pérdida de reservas cuando los clientes no pueden contactar con la estructura\n\nPara actividades estacionales como surf, esquí o kayak, estos límites se convierten rápidamente en un freno para la organización diaria.\n\nSolución\n\nIzidoor centraliza toda la gestión en una sola plataforma.\n\nLas estructuras pueden ofrecer la reserva en línea directamente desde su web, gestionar sus actividades desde un planning interactivo y seguir pedidos, pagos y participantes desde el back-office.\n\nEl sistema permite:\n\n* reserva en línea con pago Stripe\n* pago total o por depósito\n* gestión de pedidos y participantes\n* cobro en el lugar mediante caja integrada\n* gestión de disponibilidades y periodos de actividad\n\nLa plataforma está concebida para escuelas de surf, centros náuticos o monitores independientes.\n\nFuncionalidades principales\n\n* reserva en línea integrada en la web\n* planning interactivo de sesiones y actividades\n* gestión de productos y actividades\n* gestión de monitores y equipos\n* gestión de participantes y clientes\n* facturación automática\n* caja para pagos en el lugar\n* gestión de disponibilidades y periodos estacionales\n\nIzidoor actúa como un verdadero software de gestión para estructuras deportivas y actividades de ocio.\n\nResultados\n\nIzidoor es utilizado hoy por estructuras deportivas y de ocio en Francia para digitalizar la gestión de reservas y simplificar la organización de sus actividades.",
     "metaTitle": "Izidoor – Plataforma SaaS de reserva deportiva y de ocio",
     "metaDescription": "Plataforma SaaS de reserva y back-office para estructuras deportivas y de ocio: planificación, pagos, facturación y gestión de equipos. Solución fiable y escalable.",
-    "categories": ["site-web", "saas", "application-metier"],
-    "sectors": ["sport-loisirs", "b2b"],
-    "stack": ["Nuxt.js", "Vue.js", "TypeScript", "GraphQL", "PostgreSQL", "TailwindCSS"],
+    "categories": [
+      "site-web",
+      "saas",
+      "application-metier"
+    ],
+    "sectors": [
+      "sport-loisirs",
+      "b2b"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "GraphQL",
+      "PostgreSQL",
+      "TailwindCSS"
+    ],
     "tags": [
       "plataforma de reserva",
       "gestión de reservas",
@@ -114,9 +171,21 @@
     "longDescription": "Contexto\n\nReddit es una plataforma comunitaria muy popular para consultar, compartir y comentar contenido en miles de comunidades llamadas subreddits. El objetivo de este proyecto era desarrollar un cliente Reddit completo capaz de reproducir la experiencia de la aplicación oficial mientras se exploran las arquitecturas modernas de aplicaciones multiplataforma.\n\nEste proyecto se realizó en el marco del cursillo de ingeniería informática en Epitech. Consiste en crear un cliente Reddit funcional basado en la API oficial de Reddit y capaz de funcionar en varias plataformas con una sola base de código.\n\nProblema\n\nDesarrollar aplicaciones para varias plataformas (escritorio, móvil, web) suele requerir bases de código distintas, lo que aumenta la complejidad del desarrollo y del mantenimiento.\n\nLos frameworks tradicionales como Electron permiten crear aplicaciones de escritorio con tecnologías web, pero suelen producir ejecutables pesados y poco optimizados.\n\nEl reto de este proyecto consistía en concebir un cliente Reddit performante, capaz de funcionar en varias plataformas manteniéndose ligero y seguro.\n\nSolución\n\nLa aplicación utiliza **Tauri** para crear un ejecutable de escritorio ligero basado en Rust, manteniendo una interfaz de usuario desarrollada con Vue.js.\n\nTauri permite construir aplicaciones multiplataforma performantes con ejecutables mucho más ligeros que los generados por soluciones como Electron.\n\nLa interfaz de usuario reproduce fielmente la experiencia de navegación de Reddit y se apoya en las API oficiales de Reddit (REST y GraphQL) para recuperar los datos e interactuar con la plataforma.\n\nPara extender la aplicación al móvil, el proyecto utiliza también **Capacitor**, permitiendo reutilizar la misma base de código.\n\nFuncionalidades principales\n\n* autenticación mediante OAuth de Reddit\n* navegación en el feed y los subreddits\n* consulta de comentarios\n* creación de publicaciones\n* votación (upvote / downvote)\n* búsqueda de contenidos y comunidades\n* gestión del perfil de usuario\n* interfaz idéntica a la experiencia oficial de Reddit.\n\nLa aplicación funciona en escritorio (Windows, macOS) y puede adaptarse también al móvil gracias a la arquitectura híbrida.\n\nResultados\n\nEste proyecto demuestra la posibilidad de desarrollar una aplicación multiplataforma completa a partir de una sola base de código combinando:\n\n* Rust y Tauri para aplicaciones de escritorio performantes\n* Vue.js para la interfaz de usuario\n* Capacitor para la extensión al móvil.\n\nConstituye un terreno de experimentación interesante para la autenticación OAuth, la integración de API externas y la arquitectura de aplicaciones híbridas modernas.",
     "metaTitle": "Cliente Reddit multiplataforma — Tauri, Rust y Vue",
     "metaDescription": "Prototipo de cliente Reddit multiplataforma desarrollado con Tauri, Rust y Vue.js. Autenticación OAuth, navegación por subreddits, comentarios y creación de publicaciones con una sola base de código.",
-    "categories": ["application-mobile", "logiciel"],
-    "sectors": ["reseaux-sociaux"],
-    "stack": ["Tauri", "Rust", "Vue.js", "SCSS", "Capacitor", "GraphQL"],
+    "categories": [
+      "application-mobile",
+      "logiciel"
+    ],
+    "sectors": [
+      "reseaux-sociaux"
+    ],
+    "stack": [
+      "Tauri",
+      "Rust",
+      "Vue.js",
+      "SCSS",
+      "Capacitor",
+      "GraphQL"
+    ],
     "tags": [
       "aplicación Reddit",
       "cliente no oficial",
@@ -133,9 +202,20 @@
     "longDescription": "Contexto\n\nDurante una búsqueda de vivienda, los anuncios suelen estar dispersos en varias plataformas: Leboncoin, SeLoger, agencias inmobiliarias o redes sociales. Los favoritos se reparten entre distintos sitios y resulta difícil seguir los anuncios interesantes, comparar viviendas o compartir hallazgos con otras personas.\n\nApartEasy es una aplicación web concebida para simplificar esta etapa centralizando todos los anuncios inmobiliarios en un único espacio de trabajo. La herramienta permite organizar una búsqueda de vivienda en solitario o en grupo, por ejemplo en pareja o en piso compartido.\n\nCada búsqueda se realiza en un espacio dedicado llamado **space**, con un nombre y una localización de referencia utilizada para calcular distancias y tiempos de desplazamiento.\n\nProblema\n\nAl buscar un piso, surgen rápidamente varias dificultades:\n\n* los anuncios están dispersos en varios sitios\n* los enlaces interesantes cuesta encontrarlos de nuevo\n* comparar varios bienes con eficacia es complicado\n* la coordinación con otras personas (compañero de piso, pareja, amigos) se vuelve confusa.\n\nLos intercambios suelen hacerse por mensajes o capturas de pantalla, lo que dificulta el seguimiento de los anuncios de forma clara y eficaz.\n\nSolución\n\nApartEasy ofrece una interfaz sencilla para centralizar todos los anuncios inmobiliarios en un único espacio colaborativo.\n\nLos usuarios pueden crear una búsqueda, invitar a otras personas a participar y añadir manualmente los anuncios encontrados en distintos sitios pegando la URL y la información principal.\n\nCada anuncio puede enriquecerse con datos como el precio, los gastos, la superficie, el número de habitaciones o la fecha de disponibilidad.\n\nUn mapa interactivo permite visualizar la ubicación del inmueble y estimar los tiempos de desplazamiento hasta el lugar de referencia de la búsqueda gracias a la API de Google Maps.\n\nFuncionalidades principales\n\n* centralización de anuncios inmobiliarios mediante URL\n* creación de espacios de búsqueda colaborativos\n* invitación de usuarios para trabajar en grupo\n* valoración de viviendas sobre 5 estrellas por cada usuario\n* cálculo de una nota media para comparar los bienes\n* gestión del estado de los anuncios (llamado, visitado, disponible)\n* mapa interactivo con estimación de tiempos de desplazamiento\n* filtros y ordenación de anuncios (precio, ciudad, nombre).\n\nEl objetivo es facilitar la toma de decisiones permitiendo comparar fácilmente las viviendas y seguir el avance de la búsqueda.\n\nResultados\n\nApartEasy se desarrolló para responder a una necesidad real durante una búsqueda de piso en colocation. La aplicación permite centralizar todos los anuncios, seguir su estado y colaborar eficazmente con otros usuarios en la búsqueda de vivienda.\n\nLa herramienta demuestra cómo una aplicación web colaborativa puede simplificar la organización y la toma de decisiones en una búsqueda inmobiliaria.",
     "metaTitle": "ApartEasy — Centralice y comparta sus anuncios inmobiliarios",
     "metaDescription": "Aplicación web colaborativa para centralizar y organizar anuncios inmobiliarios. Compare viviendas, comparta sus favoritos y estime los tiempos de desplazamiento con un mapa interactivo.",
-    "categories": ["site-web"],
-    "sectors": ["immobilier"],
-    "stack": ["AdonisJS", "Vue.js", "TypeScript", "TailwindCSS", "Docker", "MariaDB"],
+    "categories": [
+      "site-web"
+    ],
+    "sectors": [
+      "immobilier"
+    ],
+    "stack": [
+      "AdonisJS",
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Docker",
+      "MariaDB"
+    ],
     "tags": [
       "búsqueda de apartamento",
       "anuncios inmobiliarios",
@@ -153,9 +233,20 @@
     "longDescription": "Contexto\n\nLa neumonía es una infección pulmonar que puede detectarse a partir de radiografías torácicas. El análisis de estas imágenes suele requerir la experiencia de un profesional sanitario, pero las técnicas de machine learning permiten hoy automatizar parte de esta detección.\n\nAI Pneumonia Detector es un prototipo de aplicación de IA médica que permite analizar radiografías pulmonares para identificar la posible presencia de neumonía. El proyecto se apoya en un dataset de 5856 radiografías reales proporcionadas en el marco del cursillo de ingeniería IA/Data en Epitech.\n\nEl objetivo del proyecto es comparar diferentes enfoques de aprendizaje automático para la clasificación de imágenes médicas y explorar su eficacia en la detección de patologías pulmonares.\n\nProblema\n\nEl análisis de radiografías médicas se apoya generalmente en la experiencia humana. Sin embargo, en ciertos contextos, el uso de herramientas de ayuda a la decisión basadas en inteligencia artificial puede permitir:\n\n* acelerar el análisis de imágenes médicas\n* asistir a los profesionales de la salud\n* identificar anomalías visuales en las radiografías.\n\nEl reto consiste en entrenar un modelo capaz de distinguir correctamente radiografías pulmonares normales de aquellas con signos de neumonía, evaluando al mismo tiempo la fiabilidad de las predicciones.\n\nSolución\n\nLa aplicación implementa dos enfoques de machine learning para la clasificación de radiografías:\n\nUn modelo CNN (Convolutional Neural Network) especializado en el análisis de imágenes.\n\nUn modelo KNN (K-Nearest Neighbors) que sirve de base de comparación con un enfoque de machine learning más simple.\n\nLas radiografías se preprocesan en imágenes en escala de grises y se redimensionan antes de usarse para el entrenamiento de los modelos.\n\nEl modelo CNN utiliza una arquitectura de redes neuronales convolucionales para extraer automáticamente características visuales relevantes de las imágenes.\n\nUna interfaz web permite luego probar los modelos en tiempo real.\n\nLos usuarios pueden:\n\n* seleccionar radiografías de ejemplo\n* importar sus propias imágenes\n* obtener una predicción instantánea (NORMAL o PNEUMONIA)\n* consultar las probabilidades asociadas a cada clase.\n\nFuncionalidades principales\n\n* análisis de radiografías pulmonares por IA\n* comparación de dos enfoques de machine learning (CNN vs KNN)\n* interfaz web interactiva para probar los modelos\n* importación de imágenes personalizadas para el análisis\n* visualización de las probabilidades de clasificación\n* visualización de las métricas de rendimiento.\n\nResultados\n\nLos dos modelos fueron evaluados sobre un juego de test independiente.\n\nEl modelo CNN obtiene los mejores resultados con:\n\n* una precisión de aproximadamente 95%\n* una curva ROC con un AUC cercano a 0,99\n\nEl modelo KNN alcanza una precisión de aproximadamente 93%, demostrando que un enfoque más simple puede ya producir resultados correctos, pero sigue siendo menos eficaz que una red neuronal convolutiva para el análisis de imágenes médicas.\n\nEstos resultados confirman la eficacia de los modelos de deep learning para la clasificación de imágenes radiográficas.",
     "metaTitle": "AI Pneumonia Detector — Análisis de radiografías pulmonares por IA",
     "metaDescription": "Aplicación web de IA para analizar radiografías pulmonares y detectar neumonía. Demo interactiva con comparación de modelos CNN y KNN y visualización de métricas.",
-    "categories": ["site-web", "ia"],
-    "sectors": ["sante"],
-    "stack": ["Vue.js", "TypeScript", "TailwindCSS", "Python", "FastAPI"],
+    "categories": [
+      "site-web",
+      "ia"
+    ],
+    "sectors": [
+      "sante"
+    ],
+    "stack": [
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Python",
+      "FastAPI"
+    ],
     "tags": [
       "detección de neumonía",
       "imagen médica",
@@ -173,9 +264,23 @@
     "longDescription": "Contexto\n\nStockpme es un software SaaS concebido para ayudar a las **microempresas y PYMES a gestionar sus stocks e inventarios** de forma sencilla y fiable.\n\nEl proyecto se desarrolló en **Kodeva**, en colaboración con la empresa Breizhtic, que se encargaba de la distribución del software y del material asociado entre las empresas clientes.\n\nEl objetivo de la solución es centralizar la gestión de productos, movimientos de stock y almacenes en una única interfaz, facilitando al mismo tiempo las operaciones de campo gracias a un sistema de etiquetas profesionales con **códigos QR**.\n\nEl software es utilizado hoy por empresas para gestionar su inventario y seguir sus productos.\n\nProblema\n\nMuchas PYMES siguen gestionando sus stocks con herramientas poco adaptadas: hojas de cálculo, sistemas manuales o software demasiado complejo.\n\nEsta organización puede provocar:\n\n* errores de inventario\n* dificultades para seguir los movimientos de stock\n* rupturas o excedentes de productos\n* una trazabilidad limitada de las operaciones logísticas.\n\nLos equipos necesitan una herramienta sencilla que permita gestionar los productos y sus movimientos manteniendo una visión clara del inventario.\n\nSolución\n\nStockpme propone una **aplicación web de gestión de stock accesible desde el navegador**, que permite centralizar todas las operaciones relacionadas con el inventario.\n\nLas empresas pueden crear sus fichas de productos, seguir los movimientos de stock y gestionar sus almacenes desde una interfaz sencilla.\n\nEl software incluye también un sistema de **generación de etiquetas profesionales con códigos QR**, que permite identificar rápidamente los productos y acceder a la información asociada.\n\nEl código QR facilita la trazabilidad y permite identificar los productos durante las operaciones de gestión de stock.\n\nFuncionalidades principales\n\n* creación y gestión de fichas de productos\n* gestión de stocks y niveles de inventario\n* movimientos de stock (entrada, salida, correcciones, inventarios)\n* transferencias entre ubicaciones o almacenes\n* generación de etiquetas profesionales con códigos QR\n* seguimiento de productos e historial de movimientos\n* estadísticas y gráficos de evolución de stocks\n* gestión de intervenciones de posventa.\n\nLa plataforma está concebida para simplificar las operaciones logísticas diarias y mejorar la fiabilidad de los inventarios.\n\nResultados\n\nStockpme es utilizado por empresas para gestionar sus productos e inventarios.\n\nEl software permite centralizar la información relacionada con el stock, mejorar la trazabilidad de los productos y simplificar las operaciones de gestión para los equipos.",
     "metaTitle": "Stockpme — Software de gestión de stock para PYMES",
     "metaDescription": "Software SaaS de gestión de stock para PYMES: seguimiento de productos, movimientos de inventario, etiquetas QR y estadísticas para mejorar la trazabilidad y la gestión logística.",
-    "categories": ["site-web", "saas", "application-metier"],
-    "sectors": ["logistique", "b2b"],
-    "stack": ["Nuxt.js", "Vue.js", "TypeScript", "C#", ".NET", "MongoDB"],
+    "categories": [
+      "site-web",
+      "saas",
+      "application-metier"
+    ],
+    "sectors": [
+      "logistique",
+      "b2b"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "C#",
+      ".NET",
+      "MongoDB"
+    ],
     "tags": [
       "gestión de inventario",
       "inventario",
@@ -193,9 +298,18 @@
     "longDescription": "Contexto\n\nPrimea RP es un servidor de **GTA 5 RolePlay basado en FiveM** que reúne a una comunidad de jugadores francófonos en torno a una experiencia inmersiva de juego de rol.\n\nPara acoger a nuevos jugadores y estructurar la comunidad, el servidor necesitaba un sitio web que centralizara toda la información esencial: presentación del servidor, reglamento, guías y procedimientos para unirse a la comunidad.\n\nEl objetivo del sitio era crear una puerta de entrada clara y accesible para los nuevos jugadores, reforzando al mismo tiempo la visibilidad del servidor en plataformas de listado como **Top-Serveurs**.\n\nProblema\n\nLos servidores de GTA RP atraen regularmente a nuevos jugadores, pero la ausencia de información estructurada puede dificultar la integración.\n\nLos nuevos miembros suelen tener que buscar:\n\n* las reglas del servidor\n* los procedimientos para unirse a la comunidad\n* las teclas y comandos específicos\n* los recursos útiles para empezar bien.\n\nSin un punto central de información, estos elementos se dispersan entre Discord, foros o mensajes, lo que puede crear confusión para los nuevos jugadores.\n\nSolución\n\nEl sitio Primea RP se concibió como **plataforma de onboarding del servidor**, permitiendo a los jugadores descubrir rápidamente el universo del servidor y entender cómo participar.\n\nEl sitio centraliza toda la información necesaria para unirse a la comunidad y empezar a jugar en buenas condiciones.\n\nIncluye en particular:\n\n* una presentación del servidor y su universo\n* las reglas de roleplay\n* los procedimientos para unirse al servidor\n* las teclas y comandos del juego\n* recursos útiles para los nuevos jugadores\n* enlaces a las plataformas comunitarias como Discord.\n\nLa arquitectura del sitio se pensó para ofrecer una navegación sencilla e intuitiva y facilitar el acceso a la información importante para los nuevos miembros.\n\nFuncionalidades principales\n\n* presentación del servidor y su universo\n* reglamento completo del servidor RP\n* guías y recursos para los jugadores\n* explicación de los comandos y teclas específicas\n* procedimiento para unirse al servidor\n* acceso directo al Discord de la comunidad.\n\nEl sitio sirve también de soporte de comunicación para la comunidad y permite centralizar la información importante del servidor.\n\nResultados\n\nEl servidor Primea RP ha acogido una comunidad activa con aproximadamente **200 jugadores** y hasta **80 jugadores conectados simultáneamente**.\n\nEl sitio ha permitido estructurar la acogida de los nuevos jugadores, explicar las reglas del servidor y simplificar el proceso de integración en la comunidad.\n\nEste proyecto demuestra la importancia de un sitio web claro y eficaz para acompañar el desarrollo de una comunidad gaming.",
     "metaTitle": "Primea RP — Sitio oficial del servidor GTA RP FiveM francés",
     "metaDescription": "Sitio oficial del servidor FR GTA 5 RolePlay FiveM Primea RP: presentación del servidor, reglamento, guías y acceso a la comunidad Discord para unirse a la experiencia roleplay.",
-    "categories": ["site-web"],
-    "sectors": ["gaming"],
-    "stack": ["Nuxt.js", "Vue.js", "TypeScript", "SCSS"],
+    "categories": [
+      "site-web"
+    ],
+    "sectors": [
+      "gaming"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "SCSS"
+    ],
     "tags": [
       "GTA 5 RP",
       "servidor roleplay",
@@ -213,9 +327,22 @@
     "longDescription": "Contexto\n\nPlanificar un trayecto en tren suele requerir navegar por varias interfaces e indicar manualmente las ciudades de salida y llegada. Sin embargo, los usuarios expresan sus necesidades de forma natural con frases como: « Salgo de Rennes para ir a Biarritz ».\n\nEpiTrip es un asistente de planificación de viajes capaz de interpretar estas frases en lenguaje natural y transformar automáticamente la solicitud en un itinerario utilizable.\n\nEl proyecto combina técnicas de **procesamiento del lenguaje natural (NLP)** y de optimización de itinerarios para comprender la solicitud del usuario y calcular el trayecto óptimo a partir de los datos de transporte de la SNCF.\n\nProblema\n\nLas interfaces clásicas de planificación de trayectos se basan en formularios estructurados en los que el usuario debe seleccionar manualmente cada dato.\n\nEste enfoque no siempre coincide con la forma natural en que los usuarios expresan sus necesidades. Además, comprender una frase libre plantea varios retos técnicos:\n\n* detectar si la frase corresponde realmente a una solicitud de viaje\n* identificar las ciudades de salida y llegada\n* interpretar correctamente las variaciones lingüísticas\n* calcular a continuación un itinerario óptimo a partir de los datos de la red ferroviaria.\n\nSolución\n\nEpiTrip implementa un pipeline completo que combina inteligencia artificial y algoritmos de grafos para procesar las solicitudes de viaje.\n\nEl sistema funciona en varias etapas:\n\n1. **Detección del idioma** para comprobar que la frase está en francés gracias a FastText.\n2. **Clasificación de la intención** mediante un modelo DistilBERT fine-tunado para identificar las solicitudes de trayecto.\n3. **Extracción de las ciudades** mediante un modelo de reconocimiento de entidades nombradas basado en CamemBERT.\n4. **Cálculo del itinerario óptimo** gracias al algoritmo de Dijkstra aplicado a los datos de la SNCF (GTFS).\n\nLos datos ferroviarios incluyen estaciones, trayectos y horarios, lo que permite calcular un itinerario realista entre dos ciudades.\n\nUna interfaz web permite luego mostrar el resultado en un **mapa interactivo**, con las etapas del trayecto y un resumen del recorrido.\n\nFuncionalidades principales\n\n* introducción de una solicitud de trayecto en lenguaje natural\n* extracción automática de las ciudades de salida y llegada\n* clasificación de la intención basada en un modelo NLP\n* cálculo del itinerario óptimo con el algoritmo de Dijkstra\n* utilización de los datos de transporte de la SNCF\n* visualización de los trayectos en un mapa interactivo\n* reconocimiento de voz para dictar una solicitud de trayecto.\n\nEl usuario puede por ejemplo decir o escribir:\n\n> « Quiero ir de Rennes a Biarritz »\n\ny la aplicación identifica automáticamente las ciudades, calcula el mejor itinerario y muestra el resultado en el mapa.\n\nResultados\n\nEpiTrip demuestra cómo un pipeline que combina **NLP, extracción de entidades y optimización de itinerarios** puede transformar una solicitud expresada en lenguaje natural en un trayecto utilizable.\n\nEl proyecto pone de relieve el uso concreto de los modelos transformers en un contexto aplicativo y muestra cómo las técnicas de inteligencia artificial pueden simplificar la interacción entre los usuarios y los sistemas de transporte.",
     "metaTitle": "EpiTrip — Planificación de viajes en lenguaje natural con IA",
     "metaDescription": "Asistente de planificación de viajes que utiliza el NLP para comprender una solicitud en lenguaje natural, extraer las ciudades y calcular el itinerario óptimo a partir de los datos de la SNCF con visualización en mapa interactivo.",
-    "categories": ["site-web", "ia"],
-    "sectors": ["voyage-transport"],
-    "stack": ["Nuxt.js", "Vue.js", "TypeScript", "TailwindCSS", "AdonisJS", "Python", "FastAPI"],
+    "categories": [
+      "site-web",
+      "ia"
+    ],
+    "sectors": [
+      "voyage-transport"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "AdonisJS",
+      "Python",
+      "FastAPI"
+    ],
     "tags": [
       "planificador de viajes",
       "rutas de SNCF",
@@ -233,9 +360,21 @@
     "longDescription": "Contexto\n\nEpitalk es una aplicación de chat inspirada en el funcionamiento de los servidores IRC clásicos, que permite a los usuarios comunicarse en tiempo real en salones públicos o mediante mensajes privados.\n\nEl proyecto fue desarrollado como parte de un trabajo académico en Epitech, con el objetivo de diseñar una aplicación de mensajería en tiempo real completa y accesible directamente desde un navegador.\n\nEn lugar de utilizar WebSockets, como en la mayoría de las aplicaciones de chat modernas, la aplicación emplea **Mercure** y **Server-Sent Events (SSE)** para explorar otro enfoque en la gestión de comunicaciones en tiempo real entre el servidor y los clientes.\n\nLa aplicación está completamente funcional y es accesible públicamente: los usuarios solo deben elegir un seudónimo para unirse al chat de inmediato.\n\nProblema\n\nCrear una aplicación de mensajería en tiempo real implica varios desafíos técnicos:\n\n* Sincronizar los mensajes entre múltiples usuarios y dispositivos\n* Gestionar la creación y administración de salones de discusión\n* Mantener el estado de los usuarios conectados\n* Transmitir eventos sin recargar la página\n\nLas soluciones clásicas suelen utilizar WebSockets, pero existen otras arquitecturas para gestionar flujos en tiempo real.\n\nEl objetivo del proyecto era, por tanto, diseñar una aplicación de chat moderna mientras se experimentaba con una arquitectura basada en **Mercure** y **Server-Sent Events**.\n\nSolución\n\nEpitalk se basa en una arquitectura en tiempo real que combina un backend en AdonisJS y el protocolo Mercure para difundir eventos hacia los clientes.\n\nLos clientes se conectan a un flujo SSE que permite recibir actualizaciones instantáneas del servidor: nuevos mensajes, llegada de usuarios, creación de salones o cambios de estado.\n\nLa interfaz frontend está desarrollada con **Vue 3 y TypeScript**, con gestión de estado mediante **Pinia**, lo que permite ofrecer una interfaz fluida similar a las aplicaciones de chat modernas.\n\nEl usuario solo debe introducir un seudónimo para unirse al servidor e iniciar la conversación al instante.\n\nFuncionalidades principales\n\n* Conexión instantánea al chat mediante seudónimo\n* Salones de discusión públicos (channels)\n* Mensajería privada entre usuarios\n* Creación y eliminación de channels\n* Lista de usuarios conectados en un salón\n* Comandos IRC clásicos (/join, /list, /users, /nick, /create, /delete, /msg, /leave)\n* Bot integrado para responder comandos\n* Actualización en tiempo real de mensajes y eventos\n* Detección de usuarios en línea\n* Interfaz responsive compatible con móviles y escritorio\n\nResultados\n\nEpitalk demuestra la implementación de una aplicación de chat en tiempo real completa utilizando una arquitectura basada en **Mercure y Server-Sent Events**.\n\nEl proyecto destaca:\n\n* La gestión de eventos en tiempo real en el lado del cliente y el servidor\n* La sincronización instantánea de datos entre múltiples usuarios\n* El diseño de una interfaz de chat moderna con Vue.js\n\nAdemás, constituye una demostración de una arquitectura alternativa a los WebSockets para aplicaciones que requieren actualizaciones en tiempo real.",
     "metaTitle": "Epitalk — Aplicación de chat IRC en tiempo real con Mercure y SSE",
     "metaDescription": "Aplicación de chat en tiempo real inspirada en IRC desarrollada con Vue.js y AdonisJS. Mensajería instantánea, salones públicos, mensajes privados y sincronización en tiempo real mediante Mercure y Server-Sent Events (SSE).",
-    "categories": ["site-web"],
-    "sectors": ["redes-sociales"],
-    "stack": ["Vue.js", "TypeScript", "Pinia", "SCSS", "AdonisJS", "MariaDB", "Docker"],
+    "categories": [
+      "site-web"
+    ],
+    "sectors": [
+      "redes-sociales"
+    ],
+    "stack": [
+      "Vue.js",
+      "TypeScript",
+      "Pinia",
+      "SCSS",
+      "AdonisJS",
+      "MariaDB",
+      "Docker"
+    ],
     "tags": [
       "chat en tiempo real",
       "IRC",
@@ -247,6 +386,37 @@
       "SSE",
       "aplicación de chat",
       "mensajería en tiempo real"
+    ]
+  },
+  "project/a2m-orizon-solution": {
+    "name": "A2M Ôrizon Solution — Sitio web corporativo con CMS para empresa de servicios sociales",
+    "shortDescription": "Sitio web corporativo profesional con CMS headless que permite a una empresa de servicios sociales presentar sus actividades, publicar artículos y gestionar fácilmente su contenido.",
+    "longDescription": "Contexto\n\nA2M ÔRIZON SOLUTION es una empresa especializada en el acompañamiento social externalizado para estructuras médico-sociales, empresas y particulares.\n\nLa cliente necesitaba un sitio web profesional que le permitiera presentar sus servicios, mejorar su visibilidad en línea y publicar contenido informativo para sus visitantes.\n\nEl proyecto se desarrolló en modalidad freelance, desde la fase de diseño hasta la puesta en producción. El objetivo era crear un sitio moderno, rápido y fácilmente administrable por la cliente.\n\nProblema\n\nAntes de este proyecto, la empresa no disponía de un sitio web estructurado para presentar su actividad y generar contactos.\n\nLos principales retos eran:\n\n* contar con un sitio profesional y creíble\n* facilitar la gestión del contenido sin conocimientos técnicos\n* mejorar el posicionamiento natural en buscadores\n* permitir la publicación regular de artículos y recursos.\n\nEra necesario, por tanto, diseñar una solución sencilla de usar para la cliente, manteniendo al mismo tiempo un buen rendimiento técnico y SEO.\n\nSolución\n\nEl sitio se desarrolló con **Nuxt 4 y Vue 3**, utilizando un **CMS headless Storyblok** para permitir a la cliente gestionar todo el contenido.\n\nEsta arquitectura permite separar completamente la gestión del contenido de la interfaz de usuario, lo que ofrece una gran flexibilidad para crear o modificar las páginas del sitio.\n\nTambién se implementó un sistema de despliegue continuo para que cada modificación del código se construya y despliegue automáticamente.\n\nTodo el sitio fue diseñado para ser performante, responsive y optimizado para el posicionamiento en buscadores.\n\nFuncionalidades principales\n\n* sitio corporativo que presenta la actividad y los servicios de la empresa\n* CMS headless que permite editar todo el contenido (páginas, blog, FAQ, imágenes)\n* editor de artículos y blog directamente en el CMS\n* creación y modificación de páginas dinámicas\n* optimización SEO completa (meta dinámicas, sitemap, Open Graph)\n* estructura de contenido optimizada para el posicionamiento\n* análisis respetuosos con la privacidad con Umami\n* interfaz responsive adaptada a móvil, tablet y escritorio\n* despliegue continuo automático mediante GitHub Actions.\n\nResultados\n\nEl sitio permite ahora a la empresa presentar claramente su actividad y publicar contenido informativo para sus visitantes.\n\nLa cliente puede modificar fácilmente los textos, imágenes y artículos a través del CMS sin necesidad de intervención técnica.\n\nEl proyecto también demuestra la capacidad de diseñar y entregar un proyecto freelance completo, desde el diseño y la maqueta hasta la puesta en producción y la configuración de la infraestructura.",
+    "metaTitle": "A2M Ôrizon Solution — Sitio web corporativo con Nuxt y CMS Storyblok",
+    "metaDescription": "Sitio web corporativo profesional desarrollado con Nuxt y Storyblok para una empresa de servicios sociales. CMS editable, blog integrado y optimización SEO completa.",
+    "categories": [
+      "site-web"
+    ],
+    "sectors": [
+      "sante"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "tags": [
+      "sitio corporativo",
+      "nuxt",
+      "cms headless",
+      "storyblok",
+      "seo",
+      "sitio profesional",
+      "blog cms",
+      "vuejs",
+      "freelance",
+      "sitio empresa"
     ]
   }
 }
