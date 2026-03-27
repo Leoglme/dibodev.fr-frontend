@@ -668,7 +668,12 @@
     "excerpt": "Descubra cómo un sitio web a medida puede impulsar su taller de reparación de bicicletas en 2026. Atraiga más clientes y optimice su gestión.",
     "metaTitle": "Sitio Web para Taller de Reparación de Bicicletas en 2026",
     "metaDescription": "Transforme su taller de reparación de bicicletas con un sitio web profesional. Atraiga más clientes y optimice su gestión en 2026.",
-    "tags": ["taller de reparación de bicicletas", "sitio web profesional", "Rennes", "2026"],
+    "tags": [
+      "taller de reparación de bicicletas",
+      "sitio web profesional",
+      "Rennes",
+      "2026"
+    ],
     "content": {
       "type": "doc",
       "content": [
@@ -785,7 +790,13 @@
     "excerpt": "Descubra cómo un sitio web a medida puede impulsar su panadería artesanal en 2026. Atraiga más clientes y optimice sus ventas con herramientas adaptadas.",
     "metaTitle": "Sitio web a medida para panadería artesanal en 2026",
     "metaDescription": "Transforme su panadería artesanal en 2026 con un sitio web a medida. Atraiga más clientes y optimice sus ventas con herramientas adaptadas.",
-    "tags": ["panadería", "artesanía", "sitio web a medida", "2026", "Rennes"],
+    "tags": [
+      "panadería",
+      "artesanía",
+      "sitio web a medida",
+      "2026",
+      "Rennes"
+    ],
     "content": {
       "type": "doc",
       "content": [
@@ -1105,7 +1116,13 @@
     "excerpt": "Descubre cómo un sitio web a medida puede revolucionar tu empresa de carpintería y atraer más clientes en 2026.",
     "metaTitle": "Sitio Web a Medida para Carpintería en 2026 | Dibodev",
     "metaDescription": "Potencia tu carpintería con un sitio web a medida. Atrae más clientes y aumenta tus ventas en 2026 con Dibodev.",
-    "tags": ["carpintería", "sitio web a medida", "Rennes", "artesano", "transformación digital"],
+    "tags": [
+      "carpintería",
+      "sitio web a medida",
+      "Rennes",
+      "artesano",
+      "transformación digital"
+    ],
     "content": {
       "type": "doc",
       "content": [
@@ -1358,7 +1375,15 @@
     "excerpt": "Descubre cómo elegir entre un software SaaS y una solución a medida para optimizar la gestión de tu empresa de fontanería.",
     "metaTitle": "Software de gestión para fontaneros: SaaS o a medida",
     "metaDescription": "Comparativa de los software de gestión para fontaneros en 2026. ¿Cómo elegir entre SaaS y solución a medida para optimizar tu actividad?",
-    "tags": ["fontanero", "gestión", "software", "SaaS", "a medida", "PYME", "artesano"],
+    "tags": [
+      "fontanero",
+      "gestión",
+      "software",
+      "SaaS",
+      "a medida",
+      "PYME",
+      "artesano"
+    ],
     "content": {
       "type": "doc",
       "content": [
@@ -1813,6 +1838,247 @@
           "content": [
             {
               "text": "¿Tienes un proyecto de software a medida para tu empresa de fontanería? ¡Contáctame hoy mismo para hablar del tema!",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "blog/site-web-boutique-fleurs-rennes": {
+    "title": "Haga Florecer Su Tienda de Flores con un Sitio Web a Medida",
+    "excerpt": "Descubra cómo un sitio web a medida puede transformar su tienda de flores en una tienda en línea próspera y atraer a más clientes.",
+    "metaTitle": "Sitio Web para Tienda de Flores en Rennes - Dibodev",
+    "metaDescription": "Transforme su tienda de flores en una tienda en línea próspera con un sitio web a medida. Atraiga más clientes y aumente sus ventas.",
+    "tags": [
+      "tienda de flores",
+      "e-commerce",
+      "Rennes",
+      "comercio local"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Por qué un sitio web es esencial para tu floristería",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Como florista, sabes que la belleza y la frescura de tus ramos son tus mayores activos. Pero, ¿sabías que un sitio web bien diseñado puede convertirse en tu mejor aliado para atraer nuevos clientes y fidelizar a los que ya tienes?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Soy Dibodev, desarrollador freelance con base en Rennes, y te explico cómo un sitio web a medida puede transformar tu floristería en una tienda en línea próspera.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Un sitio web para ampliar tu alcance",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Con un sitio web, ya no estás limitado a tu tienda física. Puedes llegar a un público mucho más amplio, incluyendo clientes que buscan flores para ocasiones especiales o regalos a distancia.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gracias a una tienda en línea integrada, tus clientes pueden pedir ramos directamente desde la web, incluso fuera de tus horarios de atención. También puedes ofrecer servicios de entrega a domicilio o en empresas, lo que añade un valor adicional a tu servicio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Destaca tus creaciones florales",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un sitio web bien diseñado te permite presentar tus ramos y arreglos florales de manera profesional y atractiva. Puedes crear galerías de imágenes, descripciones detalladas e incluso videos para mostrar la belleza de tus creaciones.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Puedo ayudarte a crear un sitio web que destaque tus productos de forma estética e intuitiva, con funciones como filtros de búsqueda, sugerencias de productos y opiniones de clientes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Optimiza tu posicionamiento para atraer más clientes locales",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Como florista, quieres atraer a clientes locales que buscan flores frescas y arreglos de calidad. Un sitio web optimizado para el posicionamiento local puede ayudarte a aparecer en los primeros resultados de búsqueda para consultas como \"floristería en Rennes\" o \"entrega de flores en Rennes\".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Puedo ayudarte a optimizar tu sitio web para el posicionamiento local, utilizando palabras clave relevantes, creando fichas de Google My Business y consiguiendo opiniones positivas de tus clientes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Fideliza a tus clientes con un programa de fidelización en línea",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un sitio web también te permite fidelizar a tus clientes ofreciéndoles ventajas exclusivas. Puedes crear un programa de fidelización en línea, con puntos acumulables, descuentos especiales y ofertas personalizadas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Puedo ayudarte a integrar un programa de fidelización en tu sitio web, utilizando herramientas como ventanas emergentes de bienvenida, correos de seguimiento y notificaciones push.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Aumenta tus ventas con promociones y eventos especiales",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un sitio web te permite promocionar tus productos y servicios de manera efectiva y dirigida. Puedes crear páginas de promoción para eventos especiales, rebajas u ofertas limitadas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Puedo ayudarte a crear páginas de promoción atractivas y efectivas, con contadores de tiempo, banners personalizados y botones de llamada a la acción.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Contáctame para transformar tu floristería en una tienda en línea próspera",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si estás listo para transformar tu floristería en una tienda en línea próspera, estoy aquí para ayudarte. Como desarrollador freelance con base en Rennes, ofrezco soluciones a medida para artesanos, pymes y comercios locales.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Contáctame hoy mismo para hablar de tu proyecto y obtener un presupuesto personalizado. Juntos, podemos crear un sitio web que refleje la belleza y la calidad de tus creaciones florales, y que te ayude a atraer más clientes y aumentar tus ventas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Estás listo para hacer florecer tu floristería en línea? ¡Contáctame ahora!",
               "type": "text",
               "marks": [
                 {

@@ -668,7 +668,12 @@
     "excerpt": "Discover how a custom website can boost your bike repair shop in 2026. Attract more customers and optimize your management.",
     "metaTitle": "Website for Bike Repair Shop in 2026",
     "metaDescription": "Transform your bike repair shop with a professional website. Attract more customers and optimize your management in 2026.",
-    "tags": ["bike repair shop", "professional website", "Rennes", "2026"],
+    "tags": [
+      "bike repair shop",
+      "professional website",
+      "Rennes",
+      "2026"
+    ],
     "content": {
       "type": "doc",
       "content": [
@@ -785,7 +790,13 @@
     "excerpt": "Discover how a custom website can boost your artisan bakery in 2026. Attract more customers and optimize your sales with tailored tools.",
     "metaTitle": "Custom website for artisan bakery in 2026",
     "metaDescription": "Transform your artisan bakery in 2026 with a custom website. Attract more customers and optimize your sales with tailored tools.",
-    "tags": ["bakery", "artisan", "custom website", "2026", "Rennes"],
+    "tags": [
+      "bakery",
+      "artisan",
+      "custom website",
+      "2026",
+      "Rennes"
+    ],
     "content": {
       "type": "doc",
       "content": [
@@ -1105,7 +1116,13 @@
     "excerpt": "Discover how a custom website can revolutionize your carpentry business and attract more clients in 2026.",
     "metaTitle": "Custom Website for Carpentry in 2026 | Dibodev",
     "metaDescription": "Boost your carpentry business with a custom website. Attract more clients and increase sales in 2026 with Dibodev.",
-    "tags": ["carpentry", "custom website", "Rennes", "craftsman", "digital transformation"],
+    "tags": [
+      "carpentry",
+      "custom website",
+      "Rennes",
+      "craftsman",
+      "digital transformation"
+    ],
     "content": {
       "type": "doc",
       "content": [
@@ -1358,7 +1375,15 @@
     "excerpt": "Discover how to choose between a SaaS software and a custom-built solution to optimize the management of your plumbing business.",
     "metaTitle": "Plumbing management software: SaaS or custom-built?",
     "metaDescription": "Comparison of plumbing management software in 2026. How to choose between SaaS and custom-built solutions to optimize your business.",
-    "tags": ["plumber", "management", "software", "SaaS", "custom-built", "SME", "craftsman"],
+    "tags": [
+      "plumber",
+      "management",
+      "software",
+      "SaaS",
+      "custom-built",
+      "SME",
+      "craftsman"
+    ],
     "content": {
       "type": "doc",
       "content": [
@@ -1813,6 +1838,247 @@
           "content": [
             {
               "text": "Do you have a project for a custom software for your plumbing business? Contact me today to discuss it!",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "blog/site-web-boutique-fleurs-rennes": {
+    "title": "Unlock the Potential of Your Flower Shop with a Custom Website",
+    "excerpt": "Discover how a custom website can transform your flower shop into a thriving online store and attract more customers.",
+    "metaTitle": "Custom Website for Flower Shops in Rennes - Dibodev",
+    "metaDescription": "Turn your flower shop into a flourishing online store with a custom website. Attract more customers and boost your sales.",
+    "tags": [
+      "flower shop",
+      "e-commerce website",
+      "Rennes",
+      "local business"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Why a website is essential for your flower shop",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As a florist, you know that the beauty and freshness of your bouquets are your greatest assets. But did you know that a well-designed website can become your best ally in attracting new customers and retaining your existing clientele?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’m Dibodev, a freelance developer based in Rennes, and I’ll explain how a custom website can turn your flower shop into a thriving online store.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "A website to expand your reach",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "With a website, you’re no longer limited to your physical store. You can reach a much wider audience, including customers looking for flowers for special occasions or gifts to send remotely.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Thanks to an integrated e-commerce site, your customers can order bouquets directly online, even outside your business hours. You can also offer home or business deliveries, adding extra value to your service.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Showcase your floral creations",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A well-designed website allows you to present your bouquets and floral arrangements professionally and attractively. You can create image galleries, detailed descriptions, and even videos to highlight the beauty of your creations.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I can help you create a website that showcases your products in an aesthetic and intuitive way, with features like search filters, product suggestions, and customer reviews.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Optimize your SEO to attract more local customers",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As a florist, you want to attract local customers looking for fresh flowers and high-quality arrangements. A locally optimized website can help you rank at the top of search results for queries like \"flower shop in Rennes\" or \"flower delivery in Rennes\".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I can help you optimize your website for local SEO by using relevant keywords, creating Google My Business listings, and earning positive reviews from your customers.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Retain customers with an online loyalty program",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A website also allows you to retain customers by offering them exclusive benefits. You can create an online loyalty program with cumulative points, special discounts, and personalized offers.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I can help you integrate a loyalty program into your website using tools like welcome pop-ups, follow-up emails, and push notifications.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Boost your sales with promotions and special events",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A website allows you to promote your products and services effectively and targetedly. You can create promotion pages for special events, sales, or limited-time offers.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I can help you create attractive and effective promotion pages with countdown timers, custom banners, and call-to-action buttons.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Contact me to turn your flower shop into a thriving online store",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you’re ready to transform your flower shop into a thriving online store, I’m here to help. As a freelance developer based in Rennes, I offer custom solutions for artisans, SMEs, and local businesses.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Contact me today to discuss your project and get a personalized quote. Together, we can create a website that reflects the beauty and quality of your floral creations and helps you attract more customers and boost your sales.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ready to launch your flower shop online? Contact me now!",
               "type": "text",
               "marks": [
                 {
