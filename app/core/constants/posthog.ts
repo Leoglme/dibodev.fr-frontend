@@ -20,7 +20,8 @@ export const POSTHOG_CLIENT_CONFIG: DibodevPostHogClientConfig = {
   ui_host: POSTHOG_EU_UI_HOST,
   persistence: 'memory',
   person_profiles: 'identified_only',
-  capture_pageview: true,
+  // Pageviews are captured manually (see posthog-pageview.client.ts) — the module does not emit them.
+  capture_pageview: false,
   capture_pageleave: true,
   autocapture: true,
   disable_session_recording: true,

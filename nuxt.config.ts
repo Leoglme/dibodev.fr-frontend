@@ -165,5 +165,10 @@ export default defineNuxtConfig({
     preload: true,
     useStylesheet: false,
   },
-  plugins: ['~/plugins/VeeValidate', '~/plugins/AgentationVue.client', '~/plugins/00.posthog-config.client'],
+  plugins: [
+    '~/plugins/VeeValidate',
+    '~/plugins/AgentationVue.client',
+    '~/plugins/00.posthog-config.client',
+    '~/plugins/posthog-pageview.client',
+  ],
 })
