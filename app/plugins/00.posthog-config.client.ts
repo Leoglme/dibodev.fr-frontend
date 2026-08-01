@@ -20,5 +20,10 @@ export default defineNuxtPlugin({
       ...existing,
       ...POSTHOG_CLIENT_CONFIG,
     }
+
+    // Blank the client key in dev so posthog-js no-ops (the server keeps the real key so the module's nitro plugin does not crash on an empty key).
+    if (import.meta.dev && config.public.posthog) {
+      config.public.posthog.publicKey = ''
+    }
   },
 })

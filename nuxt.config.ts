@@ -57,9 +57,10 @@ export default defineNuxtConfig({
       },
     },
   },
-  // PostHog (@posthog/nuxt): cookieless, direct ingestion (a first-party proxy is a planned follow-up); publicKey injected in production only.
+  // PostHog (@posthog/nuxt): cookieless, direct ingestion. publicKey comes from env in all envs (the module's server plugin throws on an empty key);
+  // the client key is blanked in dev by ~/plugins/00.posthog-config.client so dev traffic stays out of analytics.
   posthogConfig: {
-    publicKey: process.env.NODE_ENV === 'production' ? process.env.NUXT_PUBLIC_POSTHOG_KEY || '' : '',
+    publicKey: process.env.NUXT_PUBLIC_POSTHOG_KEY || '',
     host: POSTHOG_EU_API_HOST,
     clientConfig: POSTHOG_CLIENT_CONFIG,
   },
@@ -90,6 +91,14 @@ export default defineNuxtConfig({
   },
   nitro: {
     preset: process.env.NITRO_PRESET || 'node-server',
+    // Enable nitro tasks so the drip queue can auto-publish scheduled articles (node-server runtime only).
+    experimental: {
+      tasks: true,
+    },
+    scheduledTasks: {
+      // Drip queue: publish scheduled articles whose time has come (hourly, at minute 5).
+      '5 * * * *': ['articles:process-queue'],
+    },
     output: {
       publicDir: '.output/public',
       serverDir: '.output/server',

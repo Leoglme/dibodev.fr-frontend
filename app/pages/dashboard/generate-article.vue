@@ -1,144 +1,110 @@
 <template>
-  <div class="flex flex-col gap-10 px-6 py-12 sm:gap-8 sm:px-8">
-    <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-      <div>
-        <h1 class="text-2xl font-semibold text-gray-100">Générer un article</h1>
-        <p class="mt-1 text-gray-400">
-          Proposition de sujet (avec liste des sujets déjà traités), puis génération et création dans Storyblok.
-        </p>
-      </div>
-      <DibodevButton
-        v-if="step !== 'idle' || suggestedTopic || article"
-        type="button"
-        outlined
-        size="sm"
-        @click="resetAll"
-      >
-        Remettre à zéro
-      </DibodevButton>
-    </div>
-
-    <DibodevAlert
-      v-if="createSuccess"
-      :message="createSuccess"
-      variant="success"
-      dismissible
-      class="mt-2"
-      @hide="createSuccess = ''"
-    />
-
-    <div class="flex flex-col gap-4">
-      <DibodevLabel id="optional-sentence"> Idée optionnelle (une phrase pour orienter le sujet) </DibodevLabel>
-      <textarea
-        id="optional-sentence"
-        v-model="optionalSentence"
-        rows="3"
-        placeholder="Ex: un article pour les plombiers qui cherchent un site vitrine"
-        class="w-full rounded border-2 border-transparent bg-gray-600 px-3 py-2 text-gray-100 placeholder:text-base placeholder:text-gray-300 hover:border-gray-300 focus:border-[#8472F3] focus:bg-gray-800 focus:outline-none"
-      />
-    </div>
-
-    <div v-if="step === 'idle'" class="flex flex-col gap-4">
-      <DibodevButton type="button" :disabled="loadingSubject" @click="suggestSubject">
-        {{ loadingSubject ? 'Proposition…' : 'Proposer un sujet' }}
-      </DibodevButton>
-      <DibodevAlert v-if="errorSubject" :message="errorSubject" variant="error" dismissible @hide="errorSubject = ''" />
-    </div>
-
-    <div
-      v-if="step === 'subject' && suggestedTopic"
-      class="flex flex-col gap-4 rounded-lg border border-gray-600 bg-gray-800 p-6"
+  <div class="flex min-h-full flex-col">
+    <!-- Sticky action bar -->
+    <header
+      class="sticky top-[70px] z-30 flex flex-wrap items-center justify-between gap-3 border-b border-gray-700 bg-gray-900/85 px-4 py-3 backdrop-blur sm:px-6 md:top-0"
     >
-      <p class="text-sm text-gray-400">Sujet proposé</p>
-      <p class="text-lg font-medium text-gray-100">
-        {{ suggestedTopic }}
-      </p>
-      <div class="flex flex-wrap gap-3">
-        <DibodevButton type="button" :disabled="loadingArticle" @click="generateArticle">
-          {{ loadingArticle ? 'Génération…' : 'OK, générer l’article' }}
+      <div class="flex items-center gap-3">
+        <NuxtLink
+          :to="localePath('/dashboard/articles')"
+          class="inline-flex items-center gap-1.5 text-sm text-gray-300 transition-colors hover:text-gray-100"
+        >
+          <DibodevIcon name="ChevronLeft" class="h-4 w-4" mode="stroke" />
+          Brouillons &amp; file
+        </NuxtLink>
+        <DibodevBadge
+          v-if="currentStatusBadge"
+          :backgroundColor="currentStatusBadge.backgroundColor"
+          :textColor="currentStatusBadge.textColor"
+          size="sm"
+        >
+          {{ currentStatusBadge.label }}
+        </DibodevBadge>
+      </div>
+      <div class="flex items-center gap-2">
+        <DibodevButton v-if="hasContent" type="button" outlined size="sm" @click="resetAll"
+          >Nouvel article</DibodevButton
+        >
+        <DibodevButton type="button" outlined size="sm" :disabled="saving || !title.trim()" @click="saveDraft">
+          {{ saving ? 'Enregistrement…' : 'Enregistrer' }}
         </DibodevButton>
-        <DibodevButton type="button" outlined :disabled="loadingSubject" @click="onRequestAnotherSubject">
-          Non, un autre sujet
+        <DibodevButton type="button" size="sm" :disabled="publishing || !canPublish" @click="goToPublish">
+          {{ publishing ? 'Ouverture…' : 'Publier' }}
         </DibodevButton>
       </div>
-      <DibodevAlert v-if="errorArticle" :message="errorArticle" variant="error" dismissible @hide="errorArticle = ''" />
+    </header>
+
+    <div v-if="successMessage || errorMessage" class="px-4 pt-4 sm:px-6">
+      <DibodevAlert
+        v-if="successMessage"
+        :message="successMessage"
+        variant="success"
+        dismissible
+        @hide="successMessage = ''"
+      />
+      <DibodevAlert v-if="errorMessage" :message="errorMessage" variant="error" dismissible @hide="errorMessage = ''" />
     </div>
 
-    <div v-if="step === 'preview' && article" class="flex flex-col gap-6">
-      <div class="rounded-lg border border-gray-600 bg-gray-800 p-6">
-        <h2 class="text-lg font-semibold text-gray-100">Aperçu</h2>
-        <p class="mt-1 text-sm text-gray-400">{{ article.title }} — {{ article.slug }}</p>
-        <div
-          v-if="article.qualityScore != null"
-          class="mt-3 flex items-center gap-2 rounded-lg border border-gray-600 bg-gray-700/50 px-3 py-2"
-        >
-          <span class="text-sm text-gray-400">Score qualité</span>
-          <span
-            class="rounded-full px-2.5 py-0.5 text-sm font-medium"
-            :class="
-              article.qualityScore >= 70
-                ? 'bg-emerald-500/20 text-emerald-400'
-                : article.qualityScore >= 50
-                  ? 'bg-amber-500/20 text-amber-400'
-                  : 'bg-red-500/20 text-red-400'
-            "
+    <!-- Two-pane editor : config left, article sticky right -->
+    <div class="grid flex-1 gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[360px_minmax(0,1fr)]">
+      <!-- Config column (left) -->
+      <aside class="flex flex-col gap-4 lg:order-1">
+        <!-- Cover image -->
+        <section class="overflow-hidden rounded-xl border border-gray-600 bg-gray-800">
+          <button
+            type="button"
+            class="flex w-full cursor-pointer items-center justify-between px-4 py-3 text-sm font-semibold text-gray-100"
+            :aria-expanded="coverOpen"
+            @click="coverOpen = !coverOpen"
           >
-            {{ article.qualityScore }}/100
-          </span>
-        </div>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <DibodevBadge v-for="tag in article.tags" :key="tag" backgroundColor="#35424d" textColor="#f5f4fb" size="sm">
-            {{ tag }}
-          </DibodevBadge>
-        </div>
-
-        <div class="mt-6 rounded-lg border border-gray-600 bg-gray-900 p-4">
-          <h3 class="text-sm font-medium text-gray-300">Image de couverture</h3>
-          <p class="mt-1 text-xs text-gray-400">
-            Suggérer une photo Unsplash ou coller l’URL d’une image (ex. Lummi). Optionnel.
-          </p>
-          <div v-if="chosenCoverUrl" class="mt-4 flex flex-col gap-3">
-            <button
-              type="button"
-              class="group relative w-full cursor-pointer overflow-hidden rounded-xl border border-gray-600 transition hover:border-gray-500"
-              @click="openCoverModal(chosenCoverUrl, 'Couverture choisie')"
-            >
-              <div class="aspect-video w-full overflow-hidden bg-gray-700">
-                <img
-                  :src="chosenCoverUrl"
-                  alt="Couverture choisie"
-                  class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                />
-              </div>
-              <div
-                class="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition duration-200 group-hover:bg-black/40 group-hover:opacity-100"
+            <span class="flex items-center gap-2">
+              Image de couverture
+              <span v-if="coverUrl" class="h-1.5 w-1.5 rounded-full bg-emerald-400" aria-hidden="true" />
+            </span>
+            <DibodevIcon
+              name="ChevronRight"
+              class="h-4 w-4 text-gray-300 transition-transform"
+              :class="{ 'rotate-90': coverOpen }"
+              mode="stroke"
+            />
+          </button>
+          <div v-show="coverOpen" class="border-t border-gray-700 px-4 py-4">
+            <div v-if="coverUrl" class="flex flex-col gap-3">
+              <button
+                type="button"
+                class="group relative w-full cursor-pointer overflow-hidden rounded-lg border border-gray-600 transition hover:border-gray-500"
+                aria-label="Agrandir la couverture"
+                @click="openCoverModal(coverUrl, 'Couverture choisie')"
               >
-                <span class="rounded-full bg-white/20 p-2 backdrop-blur-sm">
-                  <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                    />
-                  </svg>
-                </span>
-              </div>
-            </button>
-            <DibodevButton type="button" outlined size="sm" @click="clearCover"> Changer d’image </DibodevButton>
-          </div>
-          <template v-else>
-            <div class="mt-4 flex flex-wrap items-center gap-3">
-              <DibodevButton type="button" :disabled="loadingSuggest" outlined @click="suggestCover">
+                <div class="aspect-video w-full overflow-hidden bg-gray-700">
+                  <img
+                    :src="coverUrl"
+                    alt="Couverture choisie"
+                    class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                  />
+                </div>
+              </button>
+              <DibodevButton type="button" outlined size="sm" class="w-full" @click="clearCover">
+                Changer d’image
+              </DibodevButton>
+            </div>
+            <template v-else>
+              <DibodevButton
+                type="button"
+                outlined
+                size="sm"
+                class="w-full"
+                :disabled="loadingSuggest || !title.trim()"
+                @click="suggestCover"
+              >
                 {{ loadingSuggest ? 'Recherche…' : 'Suggérer une photo (Unsplash)' }}
               </DibodevButton>
-              <span class="text-xs text-gray-400">ou</span>
-              <div class="flex min-w-0 flex-1 flex-wrap items-center gap-2 sm:flex-nowrap">
+              <div class="mt-3 flex items-center gap-2">
                 <input
                   v-model="customUrlInput"
                   type="url"
-                  placeholder="URL d’une image (ex. Lummi)"
-                  class="min-w-0 flex-1 rounded border border-gray-600 bg-gray-700 px-3 py-2 text-sm text-gray-100 placeholder:text-gray-400 focus:border-[#8472F3] focus:outline-none"
+                  placeholder="ou colle une URL d’image"
+                  class="min-w-0 flex-1 rounded-lg border border-gray-600 bg-gray-900/50 px-3 py-2 text-sm text-gray-100 placeholder:text-gray-500 focus:border-[#8472F3] focus:outline-none"
                   @keydown.enter.prevent="useCustomUrl"
                 />
                 <DibodevButton
@@ -148,71 +114,250 @@
                   :disabled="!customUrlInput.trim()"
                   @click="useCustomUrl"
                 >
-                  Utiliser ce lien
+                  OK
                 </DibodevButton>
               </div>
-            </div>
-            <p v-if="suggestCoverError" class="mt-2 text-sm text-amber-500">{{ suggestCoverError }}</p>
-            <div v-if="suggestedPhoto" class="mt-4 flex flex-col gap-3">
-              <button
-                type="button"
-                class="group relative w-full cursor-pointer overflow-hidden rounded-xl border border-gray-600 transition hover:border-gray-500"
-                @click="openCoverModal(suggestedPhoto.url, 'Suggestion Unsplash')"
-              >
-                <div class="aspect-video w-full overflow-hidden bg-gray-700">
-                  <img
-                    :src="suggestedPhoto.url"
-                    alt="Suggestion Unsplash"
-                    class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div
-                  class="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition duration-200 group-hover:bg-black/40 group-hover:opacity-100"
+              <p v-if="suggestCoverError" class="mt-2 text-xs text-amber-500">{{ suggestCoverError }}</p>
+              <div v-if="suggestedPhoto" class="mt-3 flex flex-col gap-2">
+                <button
+                  type="button"
+                  class="group relative w-full cursor-pointer overflow-hidden rounded-lg border border-gray-600 transition hover:border-gray-500"
+                  aria-label="Agrandir la suggestion"
+                  @click="openCoverModal(suggestedPhoto.url, 'Suggestion Unsplash')"
                 >
-                  <span class="rounded-full bg-white/20 p-2 backdrop-blur-sm">
-                    <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                      />
-                    </svg>
-                  </span>
+                  <div class="aspect-video w-full overflow-hidden bg-gray-700">
+                    <img
+                      :src="suggestedPhoto.url"
+                      alt="Suggestion Unsplash"
+                      class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                </button>
+                <p class="text-xs text-gray-300">{{ suggestedPhoto.attribution }}</p>
+                <div class="flex gap-2">
+                  <DibodevButton type="button" size="sm" class="flex-1" @click="useSuggestedPhoto"
+                    >Utiliser</DibodevButton
+                  >
+                  <DibodevButton type="button" outlined size="sm" :disabled="loadingSuggest" @click="suggestCover">
+                    Une autre
+                  </DibodevButton>
                 </div>
-              </button>
-              <p class="text-xs text-gray-400">{{ suggestedPhoto.attribution }}</p>
-              <div class="flex flex-wrap gap-2">
-                <DibodevButton type="button" size="sm" @click="useSuggestedPhoto"> Utiliser cette photo </DibodevButton>
-                <DibodevButton type="button" outlined size="sm" :disabled="loadingSuggest" @click="suggestCover">
-                  Une autre photo
-                </DibodevButton>
+              </div>
+            </template>
+          </div>
+        </section>
+
+        <!-- SEO & metadata -->
+        <section class="overflow-hidden rounded-xl border border-gray-600 bg-gray-800">
+          <button
+            type="button"
+            class="flex w-full cursor-pointer items-center justify-between px-4 py-3 text-sm font-semibold text-gray-100"
+            :aria-expanded="seoOpen"
+            @click="seoOpen = !seoOpen"
+          >
+            SEO &amp; métadonnées
+            <DibodevIcon
+              name="ChevronRight"
+              class="h-4 w-4 text-gray-300 transition-transform"
+              :class="{ 'rotate-90': seoOpen }"
+              mode="stroke"
+            />
+          </button>
+          <div v-show="seoOpen" class="flex flex-col gap-4 border-t border-gray-700 px-4 py-4">
+            <div class="flex flex-col gap-1.5">
+              <label for="field-slug" class="text-sm font-medium text-gray-200">Slug</label>
+              <input
+                id="field-slug"
+                v-model="slug"
+                type="text"
+                placeholder="genere-depuis-le-titre-si-vide"
+                :class="INPUT_CLASS"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label for="field-excerpt" class="text-sm font-medium text-gray-200">Extrait (100-180 car.)</label>
+              <textarea
+                id="field-excerpt"
+                v-model="excerpt"
+                rows="3"
+                placeholder="1 à 2 phrases qui résument l’article."
+                :class="TEXTAREA_CLASS"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <div class="flex items-center justify-between">
+                <label for="field-meta-title" class="text-sm font-medium text-gray-200">Meta title</label>
+                <span
+                  class="text-xs tabular-nums"
+                  :class="metaTitle.length >= 55 && metaTitle.length <= 65 ? 'text-emerald-400' : 'text-gray-400'"
+                  >{{ metaTitle.length }}/65</span
+                >
+              </div>
+              <input
+                id="field-meta-title"
+                v-model="metaTitle"
+                type="text"
+                placeholder="55-65 caractères"
+                :class="INPUT_CLASS"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <div class="flex items-center justify-between">
+                <label for="field-meta-description" class="text-sm font-medium text-gray-200">Meta description</label>
+                <span
+                  class="text-xs tabular-nums"
+                  :class="
+                    metaDescription.length >= 140 && metaDescription.length <= 160
+                      ? 'text-emerald-400'
+                      : 'text-gray-400'
+                  "
+                  >{{ metaDescription.length }}/160</span
+                >
+              </div>
+              <textarea
+                id="field-meta-description"
+                v-model="metaDescription"
+                rows="3"
+                placeholder="140-160 caractères, orientée clic."
+                :class="TEXTAREA_CLASS"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label for="field-tags" class="text-sm font-medium text-gray-200">Tags (séparés par des virgules)</label>
+              <input
+                id="field-tags"
+                v-model="tagsInput"
+                type="text"
+                placeholder="gestion de chantiers, devis BTP"
+                :class="INPUT_CLASS"
+              />
+              <div v-if="tags.length > 0" class="mt-1 flex flex-wrap gap-1.5">
+                <DibodevBadge v-for="tag in tags" :key="tag" backgroundColor="#35424d" textColor="#f5f4fb" size="sm">
+                  {{ tag }}
+                </DibodevBadge>
               </div>
             </div>
-          </template>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Article column (right, sticky) -->
+      <div class="flex min-w-0 flex-col gap-5 lg:sticky lg:top-[86px] lg:order-2 lg:self-start">
+        <!-- Mode -->
+        <div class="flex flex-wrap items-center gap-3">
+          <div class="inline-flex rounded-lg border border-gray-600 bg-gray-800 p-1">
+            <button
+              v-for="option in MODE_OPTIONS"
+              :key="option.value"
+              type="button"
+              class="cursor-pointer rounded-md px-4 py-1.5 text-sm font-medium transition-colors"
+              :class="mode === option.value ? 'bg-primary text-white' : 'text-gray-300 hover:text-gray-100'"
+              :aria-pressed="mode === option.value"
+              @click="mode = option.value"
+            >
+              {{ option.label }}
+            </button>
+          </div>
+          <p class="text-xs text-gray-400">
+            {{ mode === 'ai' ? 'L’IA rédige un premier jet, tu édites tout ensuite.' : 'Tu écris l’article toi-même.' }}
+          </p>
         </div>
 
-        <div class="mt-6 max-h-[60vh] overflow-y-auto rounded border border-gray-600 bg-gray-900 p-6">
-          <BlogArticleContent :content="article.contentRichtext" />
-        </div>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <DibodevButton type="button" :disabled="creating" @click="createInStoryblok">
-            {{ creating ? 'Création…' : 'Valider et créer dans Storyblok' }}
+        <!-- AI assistant -->
+        <div v-if="mode === 'ai'" class="flex flex-col gap-3 rounded-xl border border-gray-600 bg-gray-800 p-4">
+          <label for="optional-sentence" class="text-sm font-medium text-gray-200">
+            Idée optionnelle (oriente le sujet)
+          </label>
+          <textarea
+            id="optional-sentence"
+            v-model="optionalSentence"
+            rows="2"
+            placeholder="Ex : un article pour les plombiers qui cherchent un site vitrine"
+            :class="TEXTAREA_CLASS"
+          />
+          <div class="flex flex-wrap items-center gap-3">
+            <DibodevButton type="button" outlined size="sm" :disabled="loadingSubject" @click="suggestSubject">
+              {{ loadingSubject ? 'Proposition…' : 'Proposer un sujet' }}
+            </DibodevButton>
+            <template v-if="suggestedTopic">
+              <span class="min-w-0 flex-1 truncate text-sm text-gray-100">{{ suggestedTopic }}</span>
+              <button
+                type="button"
+                class="cursor-pointer text-xs text-gray-300 underline-offset-2 hover:text-gray-100 hover:underline"
+                :disabled="loadingSubject"
+                @click="onRequestAnotherSubject"
+              >
+                un autre
+              </button>
+            </template>
+          </div>
+          <DibodevButton type="button" :disabled="loadingArticle || !canGenerate" @click="generateArticle">
+            {{ loadingArticle ? 'Génération…' : 'Générer dans l’éditeur' }}
           </DibodevButton>
-          <DibodevButton type="button" outlined @click="step = 'subject'"> Revenir au sujet </DibodevButton>
         </div>
-        <DibodevAlert
-          v-if="errorCreate"
-          :message="errorCreate"
-          variant="error"
-          dismissible
-          class="mt-4"
-          @hide="errorCreate = ''"
-        />
+
+        <!-- Title -->
+        <div class="rounded-xl border border-gray-600 bg-gray-800 px-5 py-4">
+          <input
+            id="field-title"
+            v-model="title"
+            type="text"
+            placeholder="Titre de l’article"
+            aria-label="Titre de l’article"
+            class="w-full bg-transparent text-2xl font-semibold text-gray-100 placeholder:text-gray-500 focus:outline-none"
+          />
+          <p class="mt-1 truncate text-xs text-gray-400">/{{ slug || 'slug-genere-depuis-le-titre' }}</p>
+        </div>
+
+        <!-- Content editor -->
+        <div class="flex min-h-[480px] flex-col overflow-hidden rounded-xl border border-gray-600 bg-gray-800">
+          <div class="flex items-center justify-between gap-3 border-b border-gray-700 px-4 py-2.5">
+            <div class="inline-flex rounded-lg bg-gray-900 p-1">
+              <button
+                type="button"
+                class="cursor-pointer rounded-md px-3 py-1 text-xs font-medium transition-colors"
+                :class="contentView === 'write' ? 'bg-gray-700 text-gray-100' : 'text-gray-300 hover:text-gray-100'"
+                :aria-pressed="contentView === 'write'"
+                @click="setContentView('write')"
+              >
+                Écrire
+              </button>
+              <button
+                type="button"
+                class="cursor-pointer rounded-md px-3 py-1 text-xs font-medium transition-colors"
+                :class="contentView === 'preview' ? 'bg-gray-700 text-gray-100' : 'text-gray-300 hover:text-gray-100'"
+                :aria-pressed="contentView === 'preview'"
+                :disabled="loadingPreview"
+                @click="setContentView('preview')"
+              >
+                {{ loadingPreview ? 'Aperçu…' : 'Aperçu' }}
+              </button>
+            </div>
+            <div class="flex items-center gap-3 text-xs text-gray-400">
+              <span v-if="qualityScore != null" class="rounded-full px-2 py-0.5 font-medium" :class="qualityScoreClass">
+                Score {{ qualityScore }}/100
+              </span>
+              <span class="tabular-nums">{{ contentWordCount }} mots</span>
+            </div>
+          </div>
+          <div class="flex-1 p-4">
+            <textarea
+              v-show="contentView === 'write'"
+              id="field-content"
+              v-model="content"
+              placeholder="## Introduction&#10;&#10;Écris ton article en Markdown : ## pour les titres, **gras**, *italique*, listes."
+              class="h-full min-h-[400px] w-full resize-none bg-transparent font-mono text-sm leading-relaxed text-gray-100 placeholder:text-gray-500 focus:outline-none"
+            />
+            <div v-show="contentView === 'preview'" class="h-full min-h-[400px] overflow-y-auto">
+              <BlogArticleContent v-if="content.trim()" :content="previewRichtext" />
+              <p v-else class="text-sm text-gray-400">Rien à prévisualiser — écris d’abord du contenu.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Modal image de couverture (comme page projet) -->
+    <!-- Cover lightbox -->
     <Teleport to="body">
       <Transition name="cover-modal">
         <div
@@ -244,112 +389,221 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { ref, watch, onMounted } from 'vue'
-import type { Ref } from 'vue'
+<script lang="ts" setup>
+import { ref, computed, watch, onMounted } from 'vue'
+import type { Ref, ComputedRef } from 'vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
-import DibodevLabel from '~/components/core/DibodevLabel.vue'
 import DibodevAlert from '~/components/feedback/DibodevAlert.vue'
 import DibodevBadge from '~/components/ui/DibodevBadge.vue'
+import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import BlogArticleContent from '~/components/blog/BlogArticleContent.vue'
-import type { GeneratedArticleForPreview } from '~/types/dashboard'
+import { ARTICLE_STATUS_BADGES } from '~/core/constants/articleStatus'
+import type {
+  ArticleEditorMode,
+  ArticleRecord,
+  ArticleRecordStatus,
+  ArticleStatusBadge,
+  GeneratedArticleForPreview,
+} from '~/types/dashboard'
 
 definePageMeta({
   layout: 'dashboard',
 })
 
 useHead({
-  title: 'Générer un article — Dashboard',
+  title: 'Éditeur d’article — Dashboard',
   meta: [{ name: 'robots', content: 'noindex, nofollow' }],
 })
 
-const STORAGE_KEY = 'dibodev-dashboard-generate-article'
-
-type Step = 'idle' | 'subject' | 'preview'
-
-type PersistedState = {
-  step: Step
-  suggestedTopic: string
-  article: GeneratedArticleForPreview | null
-  chosenCoverUrl: string | null
-  suggestedPhoto: { url: string; attribution: string } | null
-  optionalSentence: string
-  customUrlInput: string
+type ContentView = 'write' | 'preview'
+type PreviewRichtext = { type: string; content?: unknown[] }
+type EditorBuffer = {
+  mode: ArticleEditorMode
+  currentId: string | null
+  title: string
+  slug: string
+  excerpt: string
+  metaTitle: string
+  metaDescription: string
+  tagsInput: string
+  content: string
+  coverUrl: string | null
+  qualityScore: number | null
 }
+
+const localePath = useLocalePath()
+const route = useRoute()
+
+const STORAGE_KEY = 'dibodev-dashboard-article-editor'
+const INPUT_CLASS =
+  'h-11 w-full rounded-lg border border-gray-600 bg-gray-900/50 px-3 text-sm text-gray-100 placeholder:text-gray-500 focus:border-[#8472F3] focus:bg-gray-900 focus:outline-none'
+const TEXTAREA_CLASS =
+  'w-full rounded-lg border border-gray-600 bg-gray-900/50 px-3 py-2 text-sm text-gray-100 placeholder:text-gray-500 focus:border-[#8472F3] focus:bg-gray-900 focus:outline-none'
+
+const MODE_OPTIONS: Array<{ label: string; value: ArticleEditorMode }> = [
+  { label: 'Manuel', value: 'manual' },
+  { label: 'Assisté par IA', value: 'ai' },
+]
+
+const mode: Ref<ArticleEditorMode> = ref('manual')
+const currentId: Ref<string | null> = ref(null)
+const savedStatus: Ref<ArticleRecordStatus | null> = ref(null)
+
+const title: Ref<string> = ref('')
+const slug: Ref<string> = ref('')
+const excerpt: Ref<string> = ref('')
+const metaTitle: Ref<string> = ref('')
+const metaDescription: Ref<string> = ref('')
+const tagsInput: Ref<string> = ref('')
+const content: Ref<string> = ref('')
+const coverUrl: Ref<string | null> = ref(null)
+const qualityScore: Ref<number | null> = ref(null)
 
 const optionalSentence: Ref<string> = ref('')
 const existingSubjects: Ref<string[]> = ref([])
 const rejectedSubjects: Ref<string[]> = ref([])
-const step: Ref<Step> = ref('idle')
 const suggestedTopic: Ref<string> = ref('')
+
 const loadingSubject: Ref<boolean> = ref(false)
-const errorSubject: Ref<string> = ref('')
 const loadingArticle: Ref<boolean> = ref(false)
-const errorArticle: Ref<string> = ref('')
-const article: Ref<GeneratedArticleForPreview | null> = ref<GeneratedArticleForPreview | null>(null)
-const creating: Ref<boolean> = ref(false)
-const errorCreate: Ref<string> = ref('')
-const createSuccess: Ref<string> = ref('')
+const saving: Ref<boolean> = ref(false)
+const publishing: Ref<boolean> = ref(false)
+const loadingPreview: Ref<boolean> = ref(false)
+
+const contentView: Ref<ContentView> = ref('write')
+const previewRichtext: Ref<PreviewRichtext> = ref({ type: 'doc', content: [] })
+const seoOpen: Ref<boolean> = ref(true)
+const coverOpen: Ref<boolean> = ref(false)
 
 const suggestedPhoto: Ref<{ url: string; attribution: string } | null> = ref(null)
 const loadingSuggest: Ref<boolean> = ref(false)
 const suggestCoverError: Ref<string> = ref('')
-const chosenCoverUrl: Ref<string | null> = ref(null)
 const customUrlInput: Ref<string> = ref('')
 
 const coverModalOpen: Ref<boolean> = ref(false)
 const coverModalSrc: Ref<string> = ref('')
 const coverModalAlt: Ref<string> = ref('')
 
-function getPersistedState(): PersistedState {
+const successMessage: Ref<string> = ref('')
+const errorMessage: Ref<string> = ref('')
+
+const tags: ComputedRef<string[]> = computed((): string[] =>
+  tagsInput.value
+    .split(',')
+    .map((t: string): string => t.trim())
+    .filter((t: string): boolean => t.length > 0),
+)
+
+const hasContent: ComputedRef<boolean> = computed(
+  (): boolean => title.value.trim().length > 0 || content.value.trim().length > 0 || currentId.value != null,
+)
+
+const canGenerate: ComputedRef<boolean> = computed((): boolean => suggestedTopic.value.trim().length > 0)
+
+const canPublish: ComputedRef<boolean> = computed(
+  (): boolean => title.value.trim().length > 0 && slug.value.trim().length > 0 && content.value.trim().length > 0,
+)
+
+const contentWordCount: ComputedRef<number> = computed((): number => {
+  const trimmed = content.value.trim()
+  return trimmed ? trimmed.split(/\s+/).length : 0
+})
+
+const currentStatusBadge: ComputedRef<ArticleStatusBadge | null> = computed((): ArticleStatusBadge | null =>
+  savedStatus.value ? ARTICLE_STATUS_BADGES[savedStatus.value] : null,
+)
+
+const qualityScoreClass: ComputedRef<string> = computed((): string => {
+  const score = qualityScore.value ?? 0
+  if (score >= 70) return 'bg-emerald-500/20 text-emerald-400'
+  if (score >= 50) return 'bg-amber-500/20 text-amber-400'
+  return 'bg-red-500/20 text-red-400'
+})
+
+/**
+ * Builds the draft payload (content + SEO + cover) from the current editor state.
+ * Publication options (date, translation, rebuild) are set on the publish page.
+ *
+ * @returns The editable fields for the draft upsert.
+ */
+function buildPayload(): Record<string, unknown> {
   return {
-    step: step.value,
-    suggestedTopic: suggestedTopic.value,
-    article: article.value,
-    chosenCoverUrl: chosenCoverUrl.value,
-    suggestedPhoto: suggestedPhoto.value,
-    optionalSentence: optionalSentence.value,
-    customUrlInput: customUrlInput.value,
+    id: currentId.value ?? undefined,
+    origin: mode.value,
+    title: title.value.trim(),
+    slug: slug.value.trim(),
+    excerpt: excerpt.value.trim(),
+    metaTitle: metaTitle.value.trim(),
+    metaDescription: metaDescription.value.trim(),
+    tags: tags.value,
+    content: content.value,
+    coverImageUrl: coverUrl.value ?? undefined,
+    qualityScore: qualityScore.value ?? undefined,
   }
 }
 
-function saveToStorage(): void {
+/**
+ * Serializes the editor state to localStorage for crash recovery.
+ *
+ * @returns Nothing.
+ */
+function saveBuffer(): void {
   if (typeof window === 'undefined') return
-  const state = getPersistedState()
+  const buffer: EditorBuffer = {
+    mode: mode.value,
+    currentId: currentId.value,
+    title: title.value,
+    slug: slug.value,
+    excerpt: excerpt.value,
+    metaTitle: metaTitle.value,
+    metaDescription: metaDescription.value,
+    tagsInput: tagsInput.value,
+    content: content.value,
+    coverUrl: coverUrl.value,
+    qualityScore: qualityScore.value,
+  }
   try {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(buffer))
   } catch {
-    // quota or disabled
+    // quota or disabled — ignore
   }
 }
 
-function loadFromStorage(): boolean {
+/**
+ * Restores the editor state from localStorage when present.
+ *
+ * @returns True when a buffer was loaded.
+ */
+function loadBuffer(): boolean {
   if (typeof window === 'undefined') return false
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY)
     if (!raw) return false
-    const state = JSON.parse(raw) as PersistedState
-    if (!state || typeof state.step !== 'string') return false
-    step.value = state.step as Step
-    suggestedTopic.value = typeof state.suggestedTopic === 'string' ? state.suggestedTopic : ''
-    article.value = state.article && typeof state.article.title === 'string' ? state.article : null
-    chosenCoverUrl.value =
-      typeof state.chosenCoverUrl === 'string' && state.chosenCoverUrl ? state.chosenCoverUrl : null
-    suggestedPhoto.value =
-      state.suggestedPhoto &&
-      typeof state.suggestedPhoto.url === 'string' &&
-      typeof state.suggestedPhoto.attribution === 'string'
-        ? state.suggestedPhoto
-        : null
-    optionalSentence.value = typeof state.optionalSentence === 'string' ? state.optionalSentence : ''
-    customUrlInput.value = typeof state.customUrlInput === 'string' ? state.customUrlInput : ''
+    const buffer = JSON.parse(raw) as Partial<EditorBuffer>
+    if (typeof buffer.title !== 'string') return false
+    mode.value = buffer.mode === 'ai' ? 'ai' : 'manual'
+    currentId.value = buffer.currentId ?? null
+    title.value = buffer.title ?? ''
+    slug.value = buffer.slug ?? ''
+    excerpt.value = buffer.excerpt ?? ''
+    metaTitle.value = buffer.metaTitle ?? ''
+    metaDescription.value = buffer.metaDescription ?? ''
+    tagsInput.value = buffer.tagsInput ?? ''
+    content.value = buffer.content ?? ''
+    coverUrl.value = buffer.coverUrl ?? null
+    qualityScore.value = typeof buffer.qualityScore === 'number' ? buffer.qualityScore : null
     return true
   } catch {
     return false
   }
 }
 
-function clearStorage(): void {
+/**
+ * Clears the localStorage buffer.
+ *
+ * @returns Nothing.
+ */
+function clearBuffer(): void {
   if (typeof window === 'undefined') return
   try {
     window.localStorage.removeItem(STORAGE_KEY)
@@ -358,41 +612,65 @@ function clearStorage(): void {
   }
 }
 
+/**
+ * Fills the editor fields from a stored article record (edit flow).
+ *
+ * @param record - The record to load.
+ * @returns Nothing.
+ */
+function loadRecord(record: ArticleRecord): void {
+  currentId.value = record.id
+  savedStatus.value = record.status
+  mode.value = record.origin
+  title.value = record.title
+  slug.value = record.slug
+  excerpt.value = record.excerpt
+  metaTitle.value = record.metaTitle
+  metaDescription.value = record.metaDescription
+  tagsInput.value = record.tags.join(', ')
+  content.value = record.content
+  coverUrl.value = record.coverImageUrl ?? null
+  qualityScore.value = record.qualityScore ?? null
+  contentView.value = 'write'
+}
+
+/**
+ * Resets the editor to a blank new article.
+ *
+ * @returns Nothing.
+ */
 function resetAll(): void {
-  step.value = 'idle'
+  mode.value = 'manual'
+  currentId.value = null
+  savedStatus.value = null
+  title.value = ''
+  slug.value = ''
+  excerpt.value = ''
+  metaTitle.value = ''
+  metaDescription.value = ''
+  tagsInput.value = ''
+  content.value = ''
+  coverUrl.value = null
+  qualityScore.value = null
   optionalSentence.value = ''
   suggestedTopic.value = ''
   rejectedSubjects.value = []
-  article.value = null
-  chosenCoverUrl.value = null
   suggestedPhoto.value = null
   customUrlInput.value = ''
-  errorSubject.value = ''
-  errorArticle.value = ''
-  errorCreate.value = ''
-  createSuccess.value = ''
+  contentView.value = 'write'
+  seoOpen.value = true
+  coverOpen.value = false
+  successMessage.value = ''
+  errorMessage.value = ''
   suggestCoverError.value = ''
-  clearStorage()
+  clearBuffer()
 }
 
-watch(
-  () => [
-    step.value,
-    suggestedTopic.value,
-    article.value,
-    chosenCoverUrl.value,
-    suggestedPhoto.value,
-    optionalSentence.value,
-    customUrlInput.value,
-  ],
-  () => saveToStorage(),
-  { deep: true },
-)
-
-watch(optionalSentence, () => {
-  rejectedSubjects.value = []
-})
-
+/**
+ * Loads existing blog subjects to avoid duplicate AI suggestions.
+ *
+ * @returns Nothing.
+ */
 async function fetchSubjects(): Promise<void> {
   try {
     const data = await $fetch<{ existingSubjects: string[] }>('/api/dashboard/articles/subjects')
@@ -402,12 +680,14 @@ async function fetchSubjects(): Promise<void> {
   }
 }
 
+/**
+ * Asks the AI for a subject suggestion.
+ *
+ * @returns Nothing.
+ */
 async function suggestSubject(): Promise<void> {
   loadingSubject.value = true
-  errorSubject.value = ''
-  errorArticle.value = ''
-  errorCreate.value = ''
-  createSuccess.value = ''
+  errorMessage.value = ''
   try {
     const data = await $fetch<{ suggestedTopic: string }>('/api/dashboard/articles/suggest-subject', {
       method: 'POST',
@@ -418,15 +698,18 @@ async function suggestSubject(): Promise<void> {
       },
     })
     suggestedTopic.value = data.suggestedTopic
-    step.value = 'subject'
   } catch (e) {
-    const msg = e instanceof Error ? e.message : 'Erreur lors de la proposition du sujet.'
-    errorSubject.value = msg
+    errorMessage.value = e instanceof Error ? e.message : 'Erreur lors de la proposition du sujet.'
   } finally {
     loadingSubject.value = false
   }
 }
 
+/**
+ * Rejects the current subject and asks for another one.
+ *
+ * @returns Nothing.
+ */
 function onRequestAnotherSubject(): void {
   if (suggestedTopic.value) {
     rejectedSubjects.value = [...rejectedSubjects.value, suggestedTopic.value]
@@ -434,33 +717,197 @@ function onRequestAnotherSubject(): void {
   suggestSubject()
 }
 
+/**
+ * Generates a full article with the AI and fills the editor fields.
+ *
+ * @returns Nothing.
+ */
 async function generateArticle(): Promise<void> {
   if (!suggestedTopic.value) return
   loadingArticle.value = true
-  errorArticle.value = ''
-  errorCreate.value = ''
-  createSuccess.value = ''
+  errorMessage.value = ''
   try {
     const data = await $fetch<GeneratedArticleForPreview>('/api/dashboard/articles/generate', {
       method: 'POST',
-      body: {
-        suggestedTopic: suggestedTopic.value,
-        existingSubjects: existingSubjects.value,
-      },
+      body: { suggestedTopic: suggestedTopic.value, existingSubjects: existingSubjects.value },
     })
-    article.value = data
-    step.value = 'preview'
-    suggestedPhoto.value = null
-    chosenCoverUrl.value = null
-    customUrlInput.value = ''
+    title.value = data.title
+    slug.value = data.slug
+    excerpt.value = data.excerpt
+    metaTitle.value = data.metaTitle
+    metaDescription.value = data.metaDescription
+    tagsInput.value = data.tags.join(', ')
+    content.value = data.content
+    qualityScore.value = data.qualityScore ?? null
+    previewRichtext.value = data.contentRichtext
+    contentView.value = 'write'
+    successMessage.value = 'Article généré — tu peux tout éditer avant de publier.'
   } catch (e) {
-    const msg = e instanceof Error ? e.message : 'Erreur lors de la génération.'
-    errorArticle.value = msg
+    errorMessage.value = e instanceof Error ? e.message : 'Erreur lors de la génération.'
   } finally {
     loadingArticle.value = false
   }
 }
 
+/**
+ * Switches the content pane, refreshing the richtext preview from the markdown when shown.
+ *
+ * @param view - The pane to display (write or preview).
+ * @returns Nothing.
+ */
+async function setContentView(view: ContentView): Promise<void> {
+  if (view === 'write') {
+    contentView.value = 'write'
+    return
+  }
+  loadingPreview.value = true
+  errorMessage.value = ''
+  try {
+    const data = await $fetch<{ contentRichtext: PreviewRichtext }>('/api/dashboard/articles/preview', {
+      method: 'POST',
+      body: { content: content.value },
+    })
+    previewRichtext.value = data.contentRichtext
+    contentView.value = 'preview'
+  } catch (e) {
+    errorMessage.value = e instanceof Error ? e.message : 'Erreur lors de l’aperçu.'
+  } finally {
+    loadingPreview.value = false
+  }
+}
+
+/**
+ * Saves the current editor state as a draft (creates or updates the record).
+ *
+ * @returns The saved record id, or null on failure.
+ */
+async function saveDraft(): Promise<string | null> {
+  saving.value = true
+  errorMessage.value = ''
+  try {
+    const data = await $fetch<{ record: ArticleRecord }>('/api/dashboard/articles/drafts', {
+      method: 'POST',
+      body: { ...buildPayload(), status: 'draft' },
+    })
+    currentId.value = data.record.id
+    slug.value = data.record.slug
+    savedStatus.value = data.record.status
+    successMessage.value = 'Brouillon enregistré.'
+    return data.record.id
+  } catch (e) {
+    errorMessage.value = e instanceof Error ? e.message : 'Erreur lors de l’enregistrement.'
+    return null
+  } finally {
+    saving.value = false
+  }
+}
+
+/**
+ * Saves the draft, then opens the dedicated publication page to set date, translation and rebuild.
+ *
+ * @returns Nothing.
+ */
+async function goToPublish(): Promise<void> {
+  publishing.value = true
+  errorMessage.value = ''
+  try {
+    const savedId = await saveDraft()
+    if (!savedId) return
+    await navigateTo(localePath({ path: '/dashboard/publish-article', query: { draft: savedId } }))
+  } finally {
+    publishing.value = false
+  }
+}
+
+/**
+ * Builds a coherent Unsplash search query from the article title and tags.
+ *
+ * @returns A short search query.
+ */
+function buildCoverSearchQuery(): string {
+  const base = (title.value.split(/\s+[—–-]\s+/)[0] ?? title.value).trim()
+  const main = base.split(/[\s]*:\s*/)[0]?.trim() ?? base
+  const words = main
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
+    .split(/\s+/)
+    .filter((w: string): boolean => w.length > 2)
+  if (words.length >= 2) return `${words[0]} ${words[1]}`
+  if (words.length === 1) return words[0]!
+  if (tags.value.length > 0) return tags.value[0]!
+  return base.slice(0, 30) || 'blog'
+}
+
+/**
+ * Asks the server for a matching Unsplash cover photo.
+ *
+ * @returns Nothing.
+ */
+async function suggestCover(): Promise<void> {
+  loadingSuggest.value = true
+  suggestedPhoto.value = null
+  suggestCoverError.value = ''
+  try {
+    const query = buildCoverSearchQuery()
+    const data = await $fetch<{ url: string | null; attribution: string | null }>(
+      `/api/dashboard/articles/suggest-cover?query=${encodeURIComponent(query)}`,
+    )
+    if (data.url) {
+      suggestedPhoto.value = { url: data.url, attribution: data.attribution ?? 'Unsplash' }
+    } else {
+      suggestCoverError.value = 'Aucune photo trouvée pour ce sujet.'
+    }
+  } catch {
+    suggestCoverError.value = 'Impossible de contacter Unsplash.'
+  } finally {
+    loadingSuggest.value = false
+  }
+}
+
+/**
+ * Selects the suggested Unsplash photo as the cover.
+ *
+ * @returns Nothing.
+ */
+function useSuggestedPhoto(): void {
+  if (suggestedPhoto.value?.url) {
+    coverUrl.value = suggestedPhoto.value.url
+    suggestedPhoto.value = null
+  }
+}
+
+/**
+ * Uses the pasted custom URL as the cover image.
+ *
+ * @returns Nothing.
+ */
+function useCustomUrl(): void {
+  const url = customUrlInput.value.trim()
+  if (url) {
+    coverUrl.value = url
+    customUrlInput.value = ''
+    suggestedPhoto.value = null
+  }
+}
+
+/**
+ * Clears the chosen cover image.
+ *
+ * @returns Nothing.
+ */
+function clearCover(): void {
+  coverUrl.value = null
+  suggestedPhoto.value = null
+  customUrlInput.value = ''
+}
+
+/**
+ * Opens the cover image lightbox.
+ *
+ * @param src - The image source URL.
+ * @param alt - The image alt text.
+ * @returns Nothing.
+ */
 function openCoverModal(src: string, alt: string): void {
   coverModalSrc.value = src
   coverModalAlt.value = alt
@@ -468,159 +915,38 @@ function openCoverModal(src: string, alt: string): void {
   document.body.style.overflow = 'hidden'
 }
 
+/**
+ * Closes the cover image lightbox.
+ *
+ * @returns Nothing.
+ */
 function closeCoverModal(): void {
   coverModalOpen.value = false
   document.body.style.overflow = ''
 }
 
-function clearCover(): void {
-  chosenCoverUrl.value = null
-  suggestedPhoto.value = null
-  customUrlInput.value = ''
-}
+watch(
+  [mode, currentId, title, slug, excerpt, metaTitle, metaDescription, tagsInput, content, coverUrl, qualityScore],
+  (): void => saveBuffer(),
+)
 
-function useSuggestedPhoto(): void {
-  if (suggestedPhoto.value?.url) {
-    chosenCoverUrl.value = suggestedPhoto.value.url
-    suggestedPhoto.value = null
-  }
-}
+watch(optionalSentence, (): void => {
+  rejectedSubjects.value = []
+})
 
-function useCustomUrl(): void {
-  const url = customUrlInput.value.trim()
-  if (url) {
-    chosenCoverUrl.value = url
-    customUrlInput.value = ''
-    suggestedPhoto.value = null
-  }
-}
-
-const COVER_STOP_WORDS = new Set([
-  'de',
-  'du',
-  'des',
-  'le',
-  'la',
-  'les',
-  'un',
-  'une',
-  'pour',
-  'en',
-  'et',
-  'ou',
-  'sur',
-  'au',
-  'aux',
-  'que',
-  'qui',
-  'dans',
-  'par',
-  'avec',
-  'sans',
-  'votre',
-  'vos',
-  'plus',
-  'tout',
-  'tous',
-  'autre',
-  'optimisez',
-  'attirer',
-  'booster',
-  'clients',
-  'locaux',
-  'site',
-  'web',
-])
-
-function extractSearchWords(text: string): string[] {
-  const normalized = text
-    .toLowerCase()
-    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-  return normalized.split(' ').filter((w) => w.length > 1 && !COVER_STOP_WORDS.has(w) && !/^\d+$/.test(w))
-}
-
-/**
- * Construit une requête Unsplash cohérente (métier / thème principal).
- * Priorité : partie avant " : " du titre (ex. "Coach sportif"), puis premiers mots du titre, puis tags.
- */
-function buildCoverSearchQuery(title: string, tags: string[]): string {
-  const cleanTitle = (title.split(/\s+[—–-]\s+/)[0] ?? title).trim()
-
-  const mainPart = cleanTitle.split(/[\s]*:\s*/)[0]?.trim() ?? cleanTitle
-  const mainWords = extractSearchWords(mainPart)
-  if (mainWords.length >= 2) return `${mainWords[0]} ${mainWords[1]}`
-  if (mainWords.length === 1) return mainWords[0]
-
-  const fullWords = extractSearchWords(cleanTitle)
-  if (fullWords.length >= 2) return `${fullWords[0]} ${fullWords[1]}`
-  if (fullWords.length === 1) return fullWords[0]
-
-  if (tags.length >= 2) return `${tags[0]} ${tags[1]}`.trim()
-  if (tags.length === 1 && tags[0].length <= 25) return tags[0]
-
-  return cleanTitle.slice(0, 30).trim() || 'blog'
-}
-
-async function suggestCover(): Promise<void> {
-  if (!article.value) return
-  loadingSuggest.value = true
-  suggestedPhoto.value = null
-  suggestCoverError.value = ''
-  try {
-    const query = buildCoverSearchQuery(article.value.title ?? '', article.value.tags ?? [])
-    const data = await $fetch<{ url: string | null; attribution: string | null }>(
-      `/api/dashboard/articles/suggest-cover?query=${encodeURIComponent(query)}`,
-    )
-    if (data.url) {
-      suggestedPhoto.value = {
-        url: data.url,
-        attribution: data.attribution ?? 'Unsplash',
-      }
-    } else {
-      suggestCoverError.value = 'Aucune photo trouvée pour ce sujet.'
-    }
-  } catch {
-    suggestedPhoto.value = null
-    suggestCoverError.value = 'Impossible de contacter Unsplash.'
-  } finally {
-    loadingSuggest.value = false
-  }
-}
-
-async function createInStoryblok(): Promise<void> {
-  if (!article.value) return
-  creating.value = true
-  errorCreate.value = ''
-  createSuccess.value = ''
-  try {
-    const payload = {
-      ...article.value,
-      coverImageUrl: chosenCoverUrl.value || undefined,
-    }
-    const data = await $fetch<{ storyId: number; fullSlug: string; message: string }>(
-      '/api/dashboard/articles/create-storyblok',
-      {
-        method: 'POST',
-        body: { article: payload },
-      },
-    )
-    const successMessage = `${data.message} (${data.fullSlug})`
-    existingSubjects.value = [...existingSubjects.value, article.value.title]
-    resetAll()
-    createSuccess.value = successMessage
-  } catch (e) {
-    const msg = e instanceof Error ? e.message : 'Erreur lors de la création Storyblok.'
-    errorCreate.value = msg
-  } finally {
-    creating.value = false
-  }
-}
-
-onMounted(() => {
-  loadFromStorage()
+onMounted(async (): Promise<void> => {
   fetchSubjects()
+  const draftId = typeof route.query.draft === 'string' ? route.query.draft : ''
+  if (draftId) {
+    try {
+      const data = await $fetch<{ record: ArticleRecord }>(`/api/dashboard/articles/drafts/${draftId}`)
+      loadRecord(data.record)
+      return
+    } catch {
+      errorMessage.value = 'Brouillon introuvable.'
+    }
+  }
+  loadBuffer()
 })
 </script>
 

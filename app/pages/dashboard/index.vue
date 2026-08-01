@@ -13,10 +13,23 @@
         :to="localePath('/dashboard/generate-article')"
         class="group hover:border-primary flex flex-col rounded-xl border border-gray-600 bg-gray-800 p-6 transition-colors hover:bg-gray-700"
       >
-        <h2 class="group-hover:text-primary text-lg font-semibold text-gray-100">Générer un article</h2>
+        <h2 class="group-hover:text-primary text-lg font-semibold text-gray-100">Éditeur d’article</h2>
         <p class="mt-2 flex-1 text-sm text-gray-300">
-          Créer un article de blog à partir d’une fiche (sujet, persona, angle). Génération du contenu et des
-          métadonnées SEO.
+          Écrire à la main, générer avec l’IA ou les deux. Éditer tout le contenu et les métadonnées SEO, puis publier.
+        </p>
+        <span class="text-primary mt-4 inline-flex items-center text-sm font-medium">
+          Ouvrir
+          <DibodevIcon name="ChevronRight" class="ml-1 h-4 w-4" mode="stroke" />
+        </span>
+      </NuxtLink>
+
+      <NuxtLink
+        :to="localePath('/dashboard/articles')"
+        class="group hover:border-primary flex flex-col rounded-xl border border-gray-600 bg-gray-800 p-6 transition-colors hover:bg-gray-700"
+      >
+        <h2 class="group-hover:text-primary text-lg font-semibold text-gray-100">Brouillons & file d’attente</h2>
+        <p class="mt-2 flex-1 text-sm text-gray-300">
+          Retrouver les brouillons, les articles planifiés et publiés. Éditer, planifier la mise en ligne ou publier.
         </p>
         <span class="text-primary mt-4 inline-flex items-center text-sm font-medium">
           Ouvrir
