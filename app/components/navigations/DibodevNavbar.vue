@@ -20,9 +20,14 @@
         </li>
         <li class="ml-6 flex items-center gap-10">
           <PhoneLink variant="navbar" />
-          <DibodevButton v-if="!isContactPage" :to="localePath('/contact')" icon="Mail" size="sm">{{
-            $t('nav.contactMe')
-          }}</DibodevButton>
+          <DibodevButton
+            v-if="!isContactPage"
+            :to="localePath('/contact')"
+            icon="Mail"
+            size="sm"
+            @click="trackContactCta('navbar')"
+            >{{ $t('nav.contactMe') }}</DibodevButton
+          >
         </li>
       </ol>
 
@@ -65,7 +70,7 @@
                   :to="localePath('/contact')"
                   icon="Mail"
                   size="sm"
-                  @click="mobileMenuOpen = false"
+                  @click="trackContactCta('navbar_mobile', true)"
                 >
                   {{ $t('nav.contactMe') }}
                 </DibodevButton>
@@ -89,12 +94,15 @@ import DibodevLink from '~/components/core/DibodevLink.vue'
 import PhoneLink from '~/components/core/PhoneLink.vue'
 import DibodevSquareButton from '~/components/buttons/DibodevSquareButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
+import { useTracking } from '~/composables/useTracking'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 /* ROUTE */
 const route = useRoute()
 
 /* I18N */
 const { t } = useI18n()
 const localePath = useLocalePath()
+const { track } = useTracking()
 
 /* DATAS */
 const languages: DibodevSelectOption[] = [
@@ -120,6 +128,19 @@ const scrollPosition: Ref<number> = ref(0)
 
 const updateScroll = () => {
   scrollPosition.value = window.scrollY
+}
+
+/**
+ * Track the contact CTA event, and close the mobile menu when requested.
+ * @param {string} location - CTA location (navbar / navbar_mobile).
+ * @param {boolean} [closeMobileMenu] - Close the mobile menu after the click.
+ * @returns {void}
+ */
+function trackContactCta(location: string, closeMobileMenu = false): void {
+  if (closeMobileMenu) {
+    mobileMenuOpen.value = false
+  }
+  track(TRACKING_EVENTS.ctaProjectDiscussion, { location })
 }
 
 onMounted(() => {

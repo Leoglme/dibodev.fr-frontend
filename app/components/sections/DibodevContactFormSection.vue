@@ -10,7 +10,12 @@
 
       <div class="grid gap-6 py-6 sm:gap-8 sm:pl-8">
         <div class="flex items-center justify-start gap-4">
-          <DibodevLink externalLink link="mailto:contact@dibodev.fr" :aria-label="$t('contact.sidebar.emailLabel')">
+          <DibodevLink
+            externalLink
+            link="mailto:contact@dibodev.fr"
+            :aria-label="$t('contact.sidebar.emailLabel')"
+            @click="track(TRACKING_EVENTS.contactEmail, { location: 'contact_sidebar' })"
+          >
             <DibodevSquareButton
               backgroundColor="#35424D"
               backgroundHoverColor="#35424D"
@@ -20,13 +25,23 @@
             </DibodevSquareButton>
           </DibodevLink>
 
-          <DibodevLink class="text-base font-normal" externalLink link="mailto:contact@dibodev.fr">
+          <DibodevLink
+            class="text-base font-normal"
+            externalLink
+            link="mailto:contact@dibodev.fr"
+            @click="track(TRACKING_EVENTS.contactEmail, { location: 'contact_sidebar' })"
+          >
             contact@dibodev.fr
           </DibodevLink>
         </div>
 
         <div class="flex items-center justify-start gap-4">
-          <DibodevLink :externalLink="true" :link="`tel:${PHONE_E164}`" :aria-label="$t('contact.sidebar.phoneLabel')">
+          <DibodevLink
+            :externalLink="true"
+            :link="`tel:${PHONE_E164}`"
+            :aria-label="$t('contact.sidebar.phoneLabel')"
+            @click="track(TRACKING_EVENTS.contactPhone, { location: 'contact_sidebar' })"
+          >
             <DibodevSquareButton
               backgroundColor="#35424D"
               backgroundHoverColor="#35424D"
@@ -36,7 +51,12 @@
             </DibodevSquareButton>
           </DibodevLink>
 
-          <DibodevLink class="text-base font-normal" externalLink :link="`tel:${PHONE_E164}`">
+          <DibodevLink
+            class="text-base font-normal"
+            externalLink
+            :link="`tel:${PHONE_E164}`"
+            @click="track(TRACKING_EVENTS.contactPhone, { location: 'contact_sidebar' })"
+          >
             {{ PHONE_DISPLAY }}
           </DibodevLink>
         </div>
@@ -64,4 +84,8 @@ import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import DibodevSquareButton from '~/components/buttons/DibodevSquareButton.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import { PHONE_DISPLAY, PHONE_E164 } from '~/config/contact'
+import { useTracking } from '~/composables/useTracking'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
+
+const { track } = useTracking()
 </script>

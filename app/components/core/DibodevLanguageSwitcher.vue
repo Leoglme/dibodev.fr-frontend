@@ -33,7 +33,7 @@
               :to="localePathFor(opt.value)"
               role="menuitem"
               class="block px-3 py-2 text-base text-gray-100 hover:bg-gray-500"
-              @click="isOpen = false"
+              @click="onSelectLocale(opt.value)"
             >
               {{ opt.label }}
             </NuxtLink>
@@ -57,6 +57,8 @@ import type { PropType } from 'vue'
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
+import { useTracking } from '~/composables/useTracking'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 const props = defineProps({
   options: {
@@ -68,6 +70,7 @@ const props = defineProps({
 
 const { locale } = useI18n()
 const switchLocalePathWithSlug = useSwitchLocalePathWithSlug()
+const { track } = useTracking()
 
 const isOpen = ref(false)
 const rootRef = ref<HTMLElement | null>(null)
@@ -85,6 +88,17 @@ const localePathFor = (value: string | number): string => {
 const isCurrentLocale = (value: string | number): boolean => {
   const code = typeof value === 'string' ? value : String(value)
   return locale.value === code
+}
+
+/**
+ * Track the locale change, then close the menu.
+ * @param {string | number} value - The target locale.
+ * @returns {void}
+ */
+function onSelectLocale(value: string | number): void {
+  const to: string = typeof value === 'string' ? value : String(value)
+  track(TRACKING_EVENTS.localeSwitched, { from: locale.value, to })
+  isOpen.value = false
 }
 
 const closeOnClickOutside = (event: MouseEvent): void => {

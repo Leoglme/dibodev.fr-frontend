@@ -104,6 +104,8 @@ import DibodevAlert from '~/components/feedback/DibodevAlert.vue'
 import type { Option } from '~/components/ui/DibodevTogglePillGroup.vue'
 import { debounce } from 'lodash-es'
 import type { ContactFormPayload } from '~~/server/types/mail/contact'
+import { useTracking } from '~/composables/useTracking'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 /** Project type, pages range and budget range keys (values sent to API are translated via $t). */
 const PROJECT_TYPE_KEYS = ['website', 'mobile', 'other'] as const
@@ -114,6 +116,7 @@ type PagesRangeKey = (typeof PAGES_RANGE_KEYS)[number]
 type BudgetRangeKey = (typeof BUDGET_RANGE_KEYS)[number]
 
 const { t } = useI18n()
+const { track } = useTracking()
 
 /** Options built from i18n (label = translated, value = key for stable binding across locale change). */
 const projectTypeOptions: ComputedRef<Option[]> = computed((): Option[] =>
@@ -215,6 +218,7 @@ const debouncedOnEmailBlur = debounce(async () => {
 
     if (data.value) {
       lastSentEmail.value = email.value.trim()
+      track(TRACKING_EVENTS.contactIntentSubmitted)
       console.log('Contact intent notification sent:', data.value)
     }
   } catch (err) {
@@ -255,12 +259,19 @@ async function onSubmit(): Promise<void> {
         error.value.statusMessage || error.value.data?.message || error.value.message || fallbackMessage
 
       console.error('onSubmit: Failed to send contact form:', error.value)
+      track(TRACKING_EVENTS.contactFormSubmitted, { status: 'error', errorStatus: error.value.status ?? null })
       errorMessage.value = errorResponseMessage
       isSubmitting.value = false
       return
     }
 
     if (data.value) {
+      track(TRACKING_EVENTS.contactFormSubmitted, {
+        status: 'success',
+        projectType: payload.projectType,
+        pagesRange: payload.pagesRange,
+        budget: payload.budget,
+      })
       successMessage.value = t('contact.form.successMessage')
       resetFormValues()
     }

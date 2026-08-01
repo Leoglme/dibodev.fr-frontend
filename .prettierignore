@@ -49,3 +49,6 @@ android/
 ios/
 
 assets/fonts/assets/css/google-fonts.css
+
+# Generated translation files (committed via the GitHub API, not formatted locally by prettier)
+content/translations/

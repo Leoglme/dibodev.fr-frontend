@@ -83,7 +83,13 @@
           />
         </DibodevButton>
 
-        <DibodevButton v-if="props.siteUrl" :to="props.siteUrl" :backgroundColor="props.primaryColor" class="w-full">
+        <DibodevButton
+          v-if="props.siteUrl"
+          :to="props.siteUrl"
+          :backgroundColor="props.primaryColor"
+          class="w-full"
+          @click="track(TRACKING_EVENTS.projectSiteVisited, { project: props.title, siteUrl: props.siteUrl })"
+        >
           {{ $t('project.landing.viewSite') }}
           <DibodevIcon name="ExternalLink" mode="stroke" :width="24" :height="24" class="ml-2" />
         </DibodevButton>
@@ -114,6 +120,8 @@ import DibodevCategoryBadge from '~/components/ui/DibodevCategoryBadge.vue'
 import type { CategoryKey, SectorKey } from '~/core/constants/projectEnums'
 import { categoryToSlug } from '~/core/constants/categorySlugs'
 import { sectorToSlug } from '~/core/constants/sectorSlugs'
+import { useTracking } from '~/composables/useTracking'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 /* PROPS */
 const props = defineProps({
   title: {
@@ -158,6 +166,7 @@ const parallaxY: Ref<number> = ref(0)
 
 const { locale } = useI18n()
 const localePath = useLocalePath()
+const { track } = useTracking()
 
 function getCurrentLocaleCode(): 'fr' | 'en' | 'es' {
   if (locale.value === 'en' || locale.value === 'es' || locale.value === 'fr') return locale.value

@@ -38,7 +38,12 @@
         data-aos-delay="200"
         data-aos-duration="800"
       >
-        <DibodevButton v-if="props.ctaPrimaryTo" :to="props.ctaPrimaryTo" class="w-full sm:max-w-xs">
+        <DibodevButton
+          v-if="props.ctaPrimaryTo"
+          :to="props.ctaPrimaryTo"
+          class="w-full sm:max-w-xs"
+          @click="onPrimaryCtaClick"
+        >
           {{ props.ctaText }}
         </DibodevButton>
         <DibodevButton v-else @click="scrollToTargetSection(props.ctaTarget)" class="w-full sm:max-w-xs">
@@ -88,6 +93,8 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import type { Ref, PropType } from 'vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
+import { useTracking } from '~/composables/useTracking'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 /* TYPES */
 interface SecondaryCta {
   text: string
@@ -132,10 +139,22 @@ const props = defineProps({
     default: false,
   },
 })
+const { track } = useTracking()
+
 /* REFS */
 const parallaxY: Ref<number> = ref(0)
 
 /* METHODS */
+/**
+ * Track the contact CTA event when the primary CTA points to the contact page.
+ * @returns {void}
+ */
+function onPrimaryCtaClick(): void {
+  if (props.ctaPrimaryTo && props.ctaPrimaryTo.includes('/contact')) {
+    track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'hero' })
+  }
+}
+
 /**
  * Function to scroll to the target section.
  * @returns {void}

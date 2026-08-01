@@ -22,6 +22,7 @@
     "@nuxtjs/i18n": "^10.2.1",
     "@nuxtjs/robots": "^5.4.0",
     "@nuxtjs/sitemap": "^7.4.3",
+    "@posthog/nuxt": "^1.4.35",
     "@storyblok/nuxt": "^9.0.0",
     "@storyblok/richtext": "^3.8.2",
     "@tailwindcss/vite": "^4.1.11",

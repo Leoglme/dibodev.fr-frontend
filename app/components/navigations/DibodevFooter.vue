@@ -32,6 +32,7 @@
                 icon="Mail"
                 backgroundColor="#6B59D9"
                 class="w-full"
+                @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'footer' })"
               >
                 {{ $t('footer.contactMe') }}
               </DibodevButton>
@@ -53,6 +54,7 @@
             icon="Mail"
             backgroundColor="#6B59D9"
             class="w-full"
+            @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'footer' })"
           >
             {{ $t('footer.contactMe') }}
           </DibodevButton>
@@ -97,6 +99,8 @@ import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
 import type { ComputedRef } from 'vue'
 import DibodevBadge from '~/components/ui/DibodevBadge.vue'
 import DibodevDivider from '~/components/decorators/DibodevDivider.vue'
+import { useTracking } from '~/composables/useTracking'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 type Socials = {
   name: string
   icon: string
@@ -113,6 +117,7 @@ type FooterLink = {
 /* I18N */
 const { t } = useI18n()
 const localePath = useLocalePath()
+const { track } = useTracking()
 
 /* DATAS */
 const socials: Socials[] = [

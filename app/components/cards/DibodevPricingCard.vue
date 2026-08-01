@@ -12,9 +12,13 @@
         </p>
       </div>
 
-      <DibodevButton :to="localePath('/contact')" icon="Mail" class="hidden! w-full sm:block!">{{
-        $t('home.pricing.requestQuote')
-      }}</DibodevButton>
+      <DibodevButton
+        :to="localePath('/contact')"
+        icon="Mail"
+        class="hidden! w-full sm:block!"
+        @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'pricing' })"
+        >{{ $t('home.pricing.requestQuote') }}</DibodevButton
+      >
     </div>
 
     <div class="justify-left flex flex-col items-center gap-3 sm:justify-center">
@@ -25,13 +29,20 @@
       <p class="w-full text-left text-base font-normal sm:text-center">{{ $t('home.pricing.priceHT') }}</p>
     </div>
 
-    <DibodevButton :to="localePath('/contact')" icon="Mail" class="w-full sm:hidden">{{
-      $t('home.pricing.requestQuote')
-    }}</DibodevButton>
+    <DibodevButton
+      :to="localePath('/contact')"
+      icon="Mail"
+      class="w-full sm:hidden"
+      @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'pricing' })"
+      >{{ $t('home.pricing.requestQuote') }}</DibodevButton
+    >
   </div>
 </template>
 <script setup lang="ts">
 import DibodevButton from '~/components/core/DibodevButton.vue'
+import { useTracking } from '~/composables/useTracking'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 const localePath = useLocalePath()
+const { track } = useTracking()
 </script>

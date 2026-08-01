@@ -2,7 +2,7 @@
   <div
     class="flex h-full cursor-pointer flex-col justify-between gap-2 rounded-2xl border-2 bg-gray-400 p-3 transition-opacity hover:opacity-90"
     :style="{ borderColor: props.primaryColor }"
-    @click="navigateTo(projectLink)"
+    @click="onCardClick"
   >
     <div class="grid gap-2">
       <div class="flex h-50 items-center justify-center rounded-xl" :style="{ backgroundColor: props.secondaryColor }">
@@ -51,6 +51,8 @@ import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevCategoryBadge from '~/components/ui/DibodevCategoryBadge.vue'
 import DibodevDivider from '~/components/decorators/DibodevDivider.vue'
 import { StringUtils } from '~/core/utils/StringUtils'
+import { useTracking } from '~/composables/useTracking'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 const props: DibodevProjectCardProps = defineProps({
   name: {
@@ -88,6 +90,7 @@ const props: DibodevProjectCardProps = defineProps({
 })
 
 const localePath = useLocalePath()
+const { track } = useTracking()
 
 /** Canonical project URL with current locale prefix (Storyblok route when provided, otherwise derived from name). */
 const projectLink: ComputedRef<string> = computed((): string => {
@@ -99,4 +102,13 @@ const projectLink: ComputedRef<string> = computed((): string => {
       : `/project/${StringUtils.formatForRoute(props.name)}`
   return localePath(path)
 })
+
+/**
+ * Track the analytics event, then navigate to the project detail page.
+ * @returns {void}
+ */
+function onCardClick(): void {
+  track(TRACKING_EVENTS.projectCardClicked, { project: props.name, route: props.route ?? null })
+  navigateTo(projectLink.value)
+}
 </script>

@@ -37,7 +37,12 @@
         <p class="text-center text-base text-gray-100">
           {{ $t('home.help.ctaIntro') }}
         </p>
-        <DibodevButton :to="localePath('/contact')" icon="Mail" class="w-full sm:max-w-xs">
+        <DibodevButton
+          :to="localePath('/contact')"
+          icon="Mail"
+          class="w-full sm:max-w-xs"
+          @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'home_help' })"
+        >
           {{ $t('home.help.cta') }}
         </DibodevButton>
       </div>
@@ -48,9 +53,12 @@
 <script setup lang="ts">
 import type { ComputedRef } from 'vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
+import { useTracking } from '~/composables/useTracking'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 const localePath = useLocalePath()
 const { t } = useI18n()
+const { track } = useTracking()
 
 type HelpBlock = {
   title: string

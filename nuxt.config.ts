@@ -2,6 +2,7 @@ import tailwindcss from '@tailwindcss/vite'
 import mkcert from 'vite-plugin-mkcert'
 import { getPrerenderSectorIgnoreUrls } from './config/sector-prerender-ignore'
 import { getPrerenderCategoryIgnoreUrls } from './config/category-prerender-ignore'
+import { POSTHOG_CLIENT_CONFIG, POSTHOG_EU_API_HOST } from './app/core/constants/posthog'
 
 // Prerender : ignorer les URLs secteur/catégorie "croisées" (slug d'une langue sur le path d'une autre) pour éviter 404.
 const prerenderSectorIgnore = getPrerenderSectorIgnoreUrls()
@@ -55,6 +56,12 @@ export default defineNuxtConfig({
         accessToken: process.env.NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN || '',
       },
     },
+  },
+  // PostHog (@posthog/nuxt): cookieless, first-party proxy /dibodev/events; publicKey injected in production only.
+  posthogConfig: {
+    publicKey: process.env.NODE_ENV === 'production' ? process.env.NUXT_PUBLIC_POSTHOG_KEY || '' : '',
+    host: POSTHOG_EU_API_HOST,
+    clientConfig: POSTHOG_CLIENT_CONFIG,
   },
   // Cast needed: 'robots' is provided by @nuxtjs/robots and not in core Nuxt routeRules typings
   routeRules: {
@@ -119,6 +126,7 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
     '@nuxtjs/google-fonts',
+    '@posthog/nuxt',
   ],
   i18n: {
     locales: [
@@ -157,5 +165,5 @@ export default defineNuxtConfig({
     preload: true,
     useStylesheet: false,
   },
-  plugins: ['~/plugins/VeeValidate', '~/plugins/AgentationVue.client'],
+  plugins: ['~/plugins/VeeValidate', '~/plugins/AgentationVue.client', '~/plugins/00.posthog-proxy.client'],
 })

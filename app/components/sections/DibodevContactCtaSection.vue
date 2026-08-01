@@ -16,7 +16,14 @@
             {{ displayDescription }}
           </p>
         </div>
-        <DibodevButton icon="Mail" iconPosition="right" :to="localePath('/contact')" size="lg" class="w-full">
+        <DibodevButton
+          icon="Mail"
+          iconPosition="right"
+          :to="localePath('/contact')"
+          size="lg"
+          class="w-full"
+          @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'contact_cta_section' })"
+        >
           {{ displayCtaText }}
         </DibodevButton>
       </div>
@@ -28,6 +35,8 @@
 import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
+import { useTracking } from '~/composables/useTracking'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 const props = withDefaults(
   defineProps<{
@@ -44,6 +53,7 @@ const props = withDefaults(
 
 const { t } = useI18n()
 const localePath = useLocalePath()
+const { track } = useTracking()
 
 const displayTitle: ComputedRef<string> = computed((): string =>
   props.title?.trim() ? props.title : t('blog.cta.title'),

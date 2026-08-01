@@ -1,5 +1,8 @@
 <template>
-  <article class="hover:border-primary grid gap-2 rounded-xl border border-gray-600 bg-gray-900 p-3 transition-colors">
+  <article
+    class="hover:border-primary grid gap-2 rounded-xl border border-gray-600 bg-gray-900 p-3 transition-colors"
+    @click="track(TRACKING_EVENTS.articleCardClicked, { article: props.route })"
+  >
     <NuxtLink :to="localePath(props.route)" class="grid gap-2">
       <div class="relative aspect-video w-full overflow-hidden rounded-lg bg-gray-600">
         <img
@@ -47,6 +50,8 @@ import type { ComputedRef } from 'vue'
 import type { PropType } from 'vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevBadge from '~/components/ui/DibodevBadge.vue'
+import { useTracking } from '~/composables/useTracking'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 const props = defineProps({
   title: { type: String, required: true },
@@ -59,6 +64,7 @@ const props = defineProps({
 })
 
 const localePath = useLocalePath()
+const { track } = useTracking()
 
 const formattedDate: ComputedRef<string> = computed((): string => {
   try {
