@@ -57,7 +57,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  // PostHog (@posthog/nuxt): cookieless, first-party proxy /dibodev/events; publicKey injected in production only.
+  // PostHog (@posthog/nuxt): cookieless, direct ingestion (a first-party proxy is a planned follow-up); publicKey injected in production only.
   posthogConfig: {
     publicKey: process.env.NODE_ENV === 'production' ? process.env.NUXT_PUBLIC_POSTHOG_KEY || '' : '',
     host: POSTHOG_EU_API_HOST,
@@ -165,5 +165,5 @@ export default defineNuxtConfig({
     preload: true,
     useStylesheet: false,
   },
-  plugins: ['~/plugins/VeeValidate', '~/plugins/AgentationVue.client', '~/plugins/00.posthog-proxy.client'],
+  plugins: ['~/plugins/VeeValidate', '~/plugins/AgentationVue.client', '~/plugins/00.posthog-config.client'],
 })

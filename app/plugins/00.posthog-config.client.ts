@@ -1,15 +1,14 @@
 import { POSTHOG_CLIENT_CONFIG, type DibodevPostHogClientConfig } from '~/core/constants/posthog'
 
 /**
- * The `@posthog/nuxt` module inits posthog-js with `api_host: host` then spreads `posthogClientConfig`,
- * which is not always serialized to the client. This plugin (enforce: pre) guarantees the first-party
- * proxy path is set before the SDK inits.
+ * Ensures the cookieless client config (memory persistence, autocapture, no session recording) reaches
+ * the SDK before init — `@posthog/nuxt` does not always serialize `posthogClientConfig` to the client.
  */
 export default defineNuxtPlugin({
-  name: 'posthog-proxy-config',
+  name: 'posthog-config',
   enforce: 'pre',
   /**
-   * Force the first-party proxy path into the PostHog client config before the SDK inits.
+   * Force the PostHog client config into the public runtime config before the SDK inits.
    * @returns {void}
    */
   setup(): void {

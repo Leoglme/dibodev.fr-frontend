@@ -55,7 +55,7 @@
 | i18n        | `@nuxtjs/i18n` (FR / EN / ES)                                                      |
 | Forms       | vee-validate                                                                       |
 | Email       | MJML + Mailjet                                                                     |
-| Analytics   | PostHog (`@posthog/nuxt`, cookieless + first-party proxy) &amp; Umami              |
+| Analytics   | PostHog (`@posthog/nuxt`, cookieless) &amp; Umami                                  |
 | SEO tooling | Google Search Console API, PageSpeed Insights, `@nuxtjs/sitemap`, `@nuxtjs/robots` |
 | AI          | Mistral (article generation)                                                       |
 | Hosting     | OVH VPS (PM2) via GitHub Actions                                                   |
@@ -103,7 +103,7 @@ npm run preview    # preview a production build
 Two complementary tools, both privacy-conscious:
 
 - **Umami** — lightweight, cookieless page analytics (production only).
-- **PostHog** (`@posthog/nuxt`) — product analytics for the conversion funnel, configured **cookieless** (`persistence: 'memory'`, no consent banner) and served through a **first-party reverse proxy** (`/api/dibodev/events`, Nitro route) to stay resilient to ad blockers. Conversion events live in a single typed catalog (`app/core/constants/trackingEvents.ts`) and are emitted via the `useTracking` composable.
+- **PostHog** (`@posthog/nuxt`) — product analytics for the conversion funnel, configured **cookieless** (`persistence: 'memory'`, no consent banner). A first-party reverse proxy (anti-adblock) is a planned follow-up. Conversion events live in a single typed catalog (`app/core/constants/trackingEvents.ts`) and are emitted via the `useTracking` composable.
 
 ## Deployment
 
@@ -116,7 +116,7 @@ app/            Nuxt app — pages, components, composables, layouts, plugins
   components/   UI by type (core, sections, cards, blog, navigations, ui, icons…)
   core/         types, constants and utils
   pages/        public pages + /dashboard admin
-server/         Nitro API routes, services (mail, GitHub, GSC) and the PostHog proxy
+server/         Nitro API routes and services (mail, GitHub, GSC)
 content/        committed translation files (projects & articles, EN / ES)
 i18n/locales/   UI translation keys (fr / en / es)
 ```
