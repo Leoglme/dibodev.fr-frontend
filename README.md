@@ -103,7 +103,7 @@ npm run preview    # preview a production build
 Two complementary tools, both privacy-conscious:
 
 - **Umami** — lightweight, cookieless page analytics (production only).
-- **PostHog** (`@posthog/nuxt`) — product analytics for the conversion funnel, configured **cookieless** (`persistence: 'memory'`, no consent banner) and served through a **first-party reverse proxy** (`/dibodev/events`, Nitro route) to stay resilient to ad blockers. Conversion events live in a single typed catalog (`app/core/constants/trackingEvents.ts`) and are emitted via the `useTracking` composable.
+- **PostHog** (`@posthog/nuxt`) — product analytics for the conversion funnel, configured **cookieless** (`persistence: 'memory'`, no consent banner) and served through a **first-party reverse proxy** (`/api/dibodev/events`, Nitro route) to stay resilient to ad blockers. Conversion events live in a single typed catalog (`app/core/constants/trackingEvents.ts`) and are emitted via the `useTracking` composable.
 
 ## Deployment
 

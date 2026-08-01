@@ -5,10 +5,10 @@ export const POSTHOG_EU_API_HOST: string = 'https://eu.i.posthog.com'
 export const POSTHOG_EU_UI_HOST: string = 'https://eu.posthog.com'
 
 /**
- * First-party PostHog proxy path (anti-adblock). Nitro route: `server/routes/dibodev/events/[...path].ts`.
- * Avoid `/ingest`, `/analytics`, `/posthog` (uBlock / EasyPrivacy lists).
+ * First-party PostHog proxy path (anti-adblock). Nitro route: `server/api/dibodev/events/[...path].ts`.
+ * Under `/api/` so Nginx routes it to the Nitro server. Avoid `/ingest`, `/analytics`, `/posthog` (uBlock / EasyPrivacy lists).
  */
-export const POSTHOG_PROXY_PATH: string = '/dibodev/events'
+export const POSTHOG_PROXY_PATH: string = '/api/dibodev/events'
 
 /** Typed subset of the posthog-js options used on the browser. */
 export type DibodevPostHogClientConfig = {

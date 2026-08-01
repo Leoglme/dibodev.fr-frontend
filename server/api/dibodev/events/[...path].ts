@@ -14,7 +14,8 @@ const EXCLUDED_REQUEST_HEADERS: string[] = [
 const EXCLUDED_RESPONSE_HEADERS: string[] = ['content-encoding', 'content-length', 'transfer-encoding']
 
 /**
- * First-party reverse proxy to PostHog EU, served from `/dibodev/events/*` to dodge adblock domain lists.
+ * First-party reverse proxy to PostHog EU, served from `/api/dibodev/events/*` to dodge adblock domain lists.
+ * Mounted under `/api/` so Nginx routes it to the Nitro server (the SPA static fallback owns other paths).
  * @see https://posthog.com/docs/advanced/proxy/nuxt
  */
 export default defineEventHandler(async (event: H3Event) => {
