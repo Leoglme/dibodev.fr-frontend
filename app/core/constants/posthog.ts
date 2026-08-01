@@ -20,6 +20,7 @@ export type DibodevPostHogClientConfig = {
   capture_pageleave: boolean
   autocapture: boolean
   disable_session_recording: boolean
+  disable_compression: boolean
 }
 
 /** Browser posthog-js options: cookieless (memory), first-party proxy, no session recording. */
@@ -32,4 +33,6 @@ export const POSTHOG_CLIENT_CONFIG: DibodevPostHogClientConfig = {
   capture_pageleave: true,
   autocapture: true,
   disable_session_recording: true,
+  // Send events uncompressed (plain text) so they survive the Nginx → Nitro proxy path; gzip binary bodies were dropped.
+  disable_compression: true,
 }
