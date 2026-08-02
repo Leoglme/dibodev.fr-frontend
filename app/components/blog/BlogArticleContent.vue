@@ -136,6 +136,13 @@ const blokResolvers: StoryblokRichTextResolvers<VNode> = {
   color: #8472f3;
 }
 
+/* Embedded CTA button blocks own their styling — keep the button label white and undecorated. */
+.blog-article-content__inner :deep(a.dibodev-button),
+.blog-article-content__inner :deep(a.dibodev-button:hover) {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 .blog-article-content__inner :deep(blockquote) {
   margin-bottom: 1rem;
   padding-left: 1rem;
