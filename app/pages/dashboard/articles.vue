@@ -10,7 +10,7 @@
           {{ processingQueue ? 'Traitement…' : 'Traiter la file' }}
         </DibodevButton>
         <NuxtLink
-          :to="localePath('/dashboard/generate-article')"
+          :to="localePath({ path: '/dashboard/generate-article', query: { new: '1' } })"
           class="bg-primary inline-flex items-center rounded px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
         >
           Nouvel article
@@ -34,7 +34,7 @@
     <div v-else-if="records.length === 0" class="rounded-lg border border-gray-600 bg-gray-800 p-10 text-center">
       <p class="text-gray-300">Aucun article pour l’instant.</p>
       <NuxtLink
-        :to="localePath('/dashboard/generate-article')"
+        :to="localePath({ path: '/dashboard/generate-article', query: { new: '1' } })"
         class="text-primary mt-3 inline-block text-sm font-medium"
       >
         Créer un premier article

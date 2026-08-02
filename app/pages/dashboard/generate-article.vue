@@ -1000,6 +1000,15 @@ onMounted(async (): Promise<void> => {
       errorMessage.value = 'Brouillon introuvable.'
     }
   }
+  // An explicit "new article" navigation (?new) starts blank; strip the flag afterwards so a
+  // later reload restores the in-progress buffer instead of wiping the work again.
+  if (route.query.new) {
+    resetAll()
+    if (typeof window !== 'undefined') {
+      window.history.replaceState(window.history.state, '', window.location.pathname)
+    }
+    return
+  }
   loadBuffer()
 })
 </script>
