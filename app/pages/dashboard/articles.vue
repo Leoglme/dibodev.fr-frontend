@@ -70,15 +70,13 @@
           >
             Éditer
           </NuxtLink>
-          <DibodevButton
+          <NuxtLink
             v-if="record.status !== 'published' && record.status !== 'publishing'"
-            type="button"
-            size="sm"
-            :disabled="busyId === record.id"
-            @click="publishRecord(record)"
+            :to="localePath({ path: '/dashboard/publish-article', query: { draft: record.id } })"
+            class="bg-primary inline-flex items-center rounded px-3 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
           >
-            {{ busyId === record.id ? 'Publication…' : 'Publier' }}
-          </DibodevButton>
+            Publier
+          </NuxtLink>
           <a
             v-if="record.status === 'published' && record.fullSlug"
             :href="`https://dibodev.fr/${record.fullSlug}`"
@@ -123,7 +121,6 @@ useHead({
 })
 
 const localePath = useLocalePath()
-const { publishArticleById } = useArticlePublisher()
 
 const records: Ref<ArticleRecord[]> = ref([])
 const loading: Ref<boolean> = ref(true)
@@ -184,33 +181,6 @@ async function loadRecords(): Promise<void> {
     errorMessage.value = e instanceof Error ? e.message : 'Erreur lors du chargement.'
   } finally {
     loading.value = false
-  }
-}
-
-/**
- * Publishes a record now (mirrors the editor: publish, then optional translation).
- *
- * @param record - The record to publish.
- * @returns Nothing.
- */
-async function publishRecord(record: ArticleRecord): Promise<void> {
-  busyId.value = record.id
-  errorMessage.value = ''
-  successMessage.value = ''
-  try {
-    const result = await publishArticleById(record.id, { autoTranslate: record.autoTranslate })
-    let message = result.message
-    if (record.autoTranslate) {
-      message += result.translated
-        ? ' Traductions EN + ES poussées (rebuild en cours).'
-        : ' ⚠️ Publié, mais la traduction a échoué — relance-la depuis Traductions.'
-    }
-    successMessage.value = message
-    await loadRecords()
-  } catch (e) {
-    errorMessage.value = e instanceof Error ? e.message : 'Erreur lors de la publication.'
-  } finally {
-    busyId.value = null
   }
 }
 
