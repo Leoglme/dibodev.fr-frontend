@@ -18,6 +18,8 @@ export const TRACKING_EVENTS = {
   projectRepoVisited: 'project_repo_visited',
   /** Click on a blog article card. */
   articleCardClicked: 'article_card_clicked',
+  /** Click on an in-article CTA block (button or link) toward contact. */
+  articleCtaClicked: 'article_cta_clicked',
   /** Language change via the switcher. */
   localeSwitched: 'locale_switched',
 } as const

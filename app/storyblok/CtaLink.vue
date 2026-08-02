@@ -1,6 +1,12 @@
 <template>
   <p v-editable="blok" class="my-4">
-    <DibodevLink :link="href" :externalLink="isExternal">{{ blok.label }}</DibodevLink>
+    <DibodevLink
+      :link="href"
+      :externalLink="isExternal"
+      @click="track(TRACKING_EVENTS.articleCtaClicked, { label: blok.label ?? '', href, variant: 'link' })"
+    >
+      {{ blok.label }}
+    </DibodevLink>
   </p>
 </template>
 
@@ -10,6 +16,8 @@ import type { ComputedRef } from 'vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import { StoryblokLinkUtils } from '~/core/utils/StoryblokLinkUtils'
 import type { StoryblokLinkField } from '~/core/utils/StoryblokLinkUtils'
+import { useTracking } from '~/composables/useTracking'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 type CtaLinkBlok = {
   _uid: string
@@ -22,6 +30,8 @@ type CtaLinkBlok = {
 const props = defineProps<{
   blok: CtaLinkBlok
 }>()
+
+const { track } = useTracking()
 
 const href: ComputedRef<string> = computed((): string => StoryblokLinkUtils.resolveHref(props.blok.link))
 const isExternal: ComputedRef<boolean> = computed((): boolean => StoryblokLinkUtils.isExternal(href.value))
