@@ -8,14 +8,22 @@ import type {
   TriggerRebuildResult,
 } from '~~/server/types/dashboard/articles'
 import type { StoryblokAssetRef } from '~~/server/utils/uploadImageToStoryblok'
+import type { RichtextNode } from '~~/server/utils/markdownToRichtext'
 import { markdownToRichtext } from '~~/server/utils/markdownToRichtext'
 import { uploadImageToStoryblok } from '~~/server/utils/uploadImageToStoryblok'
+import { randomUUID } from 'node:crypto'
 
 const STORYBLOK_MAPI_BASE = 'https://mapi.storyblok.com/v1/spaces'
 const GITHUB_API_BASE = 'https://api.github.com'
 const DEPLOY_WORKFLOW_FILE = 'deploy-ovh.yml'
 const RECORDS_KEY = 'articles:items'
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/
+const DEFAULT_CTA_LABEL = 'Discuter de mon projet'
+const DEFAULT_CTA_HREF = '/contact'
+/** Matches a markdown link pointing at the "/contact" page (any locale prefix), e.g. [Label](/contact). */
+const CTA_LINK_PATTERN = /\[([^\]]+)\]\((\/(?:[a-z]{2}\/)?contact\/?)\)/i
+/** Minimum leftover length (after removing the CTA link) to keep the line as a reassurance paragraph rather than drop it. */
+const MIN_KEPT_REASSURANCE_LENGTH = 20
 
 /**
  * Article domain service: local draft/queue persistence, Storyblok publication,
@@ -141,6 +149,68 @@ export class ArticleService {
   }
 
   /**
+   * Extracts the trailing /contact CTA from the article markdown so it can be rendered as a centered button block.
+   *
+   * @param {string} markdown - The article body in markdown.
+   * @returns {{ body: string; label: string; href: string }} The body without the CTA link, plus the button label and href.
+   */
+  private static extractTrailingCta(markdown: string): { body: string; label: string; href: string } {
+    const lines = markdown.replace(/\r\n/g, '\n').split('\n')
+    for (let i = lines.length - 1; i >= 0; i--) {
+      const match = CTA_LINK_PATTERN.exec(lines[i] ?? '')
+      if (!match) continue
+      const label = (match[1] ?? '').replace(/^[\p{Extended_Pictographic}\s]+/u, '').trim() || DEFAULT_CTA_LABEL
+      const href = match[2] ?? DEFAULT_CTA_HREF
+      const remainder = (lines[i] ?? '')
+        .replace(match[0], '')
+        .replace(/\p{Extended_Pictographic}/gu, '')
+        .replace(/\*\*/g, '')
+        .replace(/^\s*[—–-]\s*/, '')
+        .replace(/\s{2,}/g, ' ')
+        .trim()
+      if (remainder.length >= MIN_KEPT_REASSURANCE_LENGTH) {
+        lines[i] = remainder
+      } else {
+        lines.splice(i, 1)
+      }
+      return {
+        body: lines
+          .join('\n')
+          .replace(/\n{3,}/g, '\n\n')
+          .trimEnd(),
+        label,
+        href,
+      }
+    }
+    return { body: markdown, label: DEFAULT_CTA_LABEL, href: DEFAULT_CTA_HREF }
+  }
+
+  /**
+   * Builds a Storyblok richtext embedded-block node holding a single centered CTA button.
+   *
+   * @param {string} label - The button label.
+   * @param {string} href - The button destination.
+   * @returns {RichtextNode} The "blok" node to append to the article richtext.
+   */
+  private static ctaButtonNode(label: string, href: string): RichtextNode {
+    return {
+      type: 'blok',
+      attrs: {
+        id: randomUUID(),
+        body: [
+          {
+            _uid: `i-${randomUUID()}`,
+            component: 'cta_button',
+            label,
+            link: { id: '', url: href, linktype: 'url', fieldtype: 'multilink', cached_url: href },
+            style: 'primary',
+          },
+        ],
+      },
+    }
+  }
+
+  /**
    * Creates (and optionally publishes) a blog article story in Storyblok.
    *
    * @param spaceId - The Storyblok space id.
@@ -158,7 +228,9 @@ export class ArticleService {
     article: StoryblokArticleInput,
     options: CreateArticleStoryOptions = {},
   ): Promise<{ id: number; full_slug: string }> {
-    const richtext = markdownToRichtext(article.content)
+    const { body, label, href } = this.extractTrailingCta(article.content)
+    const richtext = markdownToRichtext(body)
+    richtext.content.push(this.ctaButtonNode(label, href))
     const date = this.resolveStoryDate(options.date)
     const shouldPublish = options.publish === false ? 0 : 1
     const tagsValue = article.tags.length > 0 ? article.tags.join(', ') : ''

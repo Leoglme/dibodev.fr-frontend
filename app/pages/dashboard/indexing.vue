@@ -280,6 +280,18 @@ function gscConsoleUrl(link: string): string {
   return link.replace(/search\.google\.com\/(?!u\/1)/, 'search.google.com/u/1/')
 }
 
+/**
+ * Ranks a page by indexation status so freshly published (not-yet-indexed) pages surface first.
+ *
+ * @param {IndexingItem} item - The indexing row.
+ * @returns {number} A rank where a lower value sorts higher in the list.
+ */
+function indexingPriority(item: IndexingItem): number {
+  if (!item.checkedAt && !item.verdict) return 0
+  if (item.verdict !== 'PASS') return 1
+  return 2
+}
+
 const filteredItems = computed((): IndexingItem[] => {
   let list: IndexingItem[] = items.value
   const v: string | undefined = selectedVerdict.value?.value
@@ -292,7 +304,12 @@ const filteredItems = computed((): IndexingItem[] => {
       (row: IndexingItem): boolean => row.title.toLowerCase().includes(q) || row.url.toLowerCase().includes(q),
     )
   }
-  return list
+  return [...list].sort((a: IndexingItem, b: IndexingItem): number => {
+    const rankA: number = indexingPriority(a)
+    const rankB: number = indexingPriority(b)
+    if (rankA !== rankB) return rankA - rankB
+    return a.title.localeCompare(b.title, 'fr')
+  })
 })
 
 /** True si l’item est en cours d’actualisation (bouton manuel ou job global). */
