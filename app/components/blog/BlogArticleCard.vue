@@ -1,7 +1,7 @@
 <template>
   <article
     class="hover:border-primary flex h-full flex-col gap-3 rounded-2xl border-2 border-gray-600 bg-gray-800 p-3 transition-colors"
-    @click="track(TRACKING_EVENTS.articleCardClicked, { article: props.route })"
+    @click="track(TRACKING_EVENTS.articleCardClicked, { article: props.route, source: props.source })"
   >
     <NuxtLink :to="localePath(props.route)" class="flex min-h-0 flex-1 flex-col">
       <div class="relative aspect-video w-full shrink-0 overflow-hidden rounded-xl bg-gray-600">
@@ -86,6 +86,10 @@ const props = defineProps({
   route: {
     type: String,
     required: true,
+  },
+  source: {
+    type: String,
+    default: 'list',
   },
 })
 

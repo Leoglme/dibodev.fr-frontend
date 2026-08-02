@@ -34,6 +34,8 @@
       </div>
     </article>
 
+    <BlogRelatedArticles :articles="relatedArticles" />
+
     <DibodevContactCtaSection />
   </div>
 </template>
@@ -42,11 +44,45 @@
 import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
 import BlogArticleContent from '~/components/blog/BlogArticleContent.vue'
+import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import DibodevBadge from '~/components/ui/DibodevBadge.vue'
 import type { DibodevArticle } from '~/core/types/DibodevArticle'
 import { StoryblokArticleService } from '~/services/storyblokArticleService'
 import { mapStoryblokArticleToDibodevArticle } from '~/services/storyblokArticleMapper'
+import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+
+const RELATED_ARTICLES_COUNT: number = 3
+const RELATED_ARTICLES_POOL_SIZE: number = 24
+
+/**
+ * Selects up to `limit` related articles ranked by shared tags then recency, excluding the current one.
+ *
+ * @param {DibodevArticle[]} all - All fetched articles.
+ * @param {string} currentSlug - Slug of the current article, excluded from the result.
+ * @param {string[]} currentTags - Tags of the current article, used to score relevance.
+ * @param {number} limit - Maximum number of related articles to return.
+ * @returns {DibodevArticle[]} The related articles, most relevant first.
+ */
+function selectRelatedArticles(
+  all: DibodevArticle[],
+  currentSlug: string,
+  currentTags: string[],
+  limit: number,
+): DibodevArticle[] {
+  const currentTagSet: Set<string> = new Set(currentTags)
+  const sharedTagCount = (candidate: DibodevArticle): number =>
+    candidate.tags.filter((tag: string): boolean => currentTagSet.has(tag)).length
+  return all
+    .filter((candidate: DibodevArticle): boolean => candidate.slug !== currentSlug)
+    .sort(
+      (first: DibodevArticle, second: DibodevArticle): number =>
+        sharedTagCount(second) - sharedTagCount(first) ||
+        new Date(second.date).getTime() - new Date(first.date).getTime(),
+    )
+    .slice(0, limit)
+}
+
 const route = useRoute()
 const router = useRouter()
 const storyblokLanguage = useStoryblokProjectLanguage()
@@ -109,6 +145,14 @@ if (slug.length === 0) {
     })
   }
 }
+
+const { data: articlesPool } = await useArticlesWithTranslations({ perPage: RELATED_ARTICLES_POOL_SIZE })
+
+const relatedArticles: ComputedRef<DibodevArticle[]> = computed((): DibodevArticle[] =>
+  article.value
+    ? selectRelatedArticles(articlesPool.value ?? [], slug, article.value.tags, RELATED_ARTICLES_COUNT)
+    : [],
+)
 
 const formattedDate: ComputedRef<string> = computed((): string => {
   if (!article.value) return ''

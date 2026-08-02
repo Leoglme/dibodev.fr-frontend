@@ -45,6 +45,9 @@
       "readMore": "Read article",
       "readingTime": "min read"
     },
+    "related": {
+      "title": "Related articles"
+    },
     "list": {
       "noArticles": "No articles yet.",
       "loadMore": "Load more articles"

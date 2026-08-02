@@ -19,7 +19,7 @@ export type TrackingEventPayloads = {
   [TRACKING_EVENTS.projectCardClicked]: { project: string; route: string | null }
   [TRACKING_EVENTS.projectSiteVisited]: { project: string; siteUrl: string }
   [TRACKING_EVENTS.projectRepoVisited]: { repoUrl: string }
-  [TRACKING_EVENTS.articleCardClicked]: { article: string }
+  [TRACKING_EVENTS.articleCardClicked]: { article: string; source: string }
   [TRACKING_EVENTS.articleCtaClicked]: { label: string; href: string; variant: 'button' | 'link' }
   [TRACKING_EVENTS.localeSwitched]: { from: string; to: string }
 }

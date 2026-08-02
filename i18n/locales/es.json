@@ -45,6 +45,9 @@
       "readMore": "Leer el artículo",
       "readingTime": "min de lectura"
     },
+    "related": {
+      "title": "Artículos similares"
+    },
     "list": {
       "noArticles": "Ningún artículo por el momento.",
       "loadMore": "Cargar más artículos"
