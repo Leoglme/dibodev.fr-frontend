@@ -3,7 +3,10 @@
  * Supports: paragraphs, headings (##, ###), **bold**, *italic*, and line breaks within paragraphs.
  */
 
-export type RichtextMark = { type: 'bold' } | { type: 'italic' }
+export type RichtextMark =
+  | { type: 'bold' }
+  | { type: 'italic' }
+  | { type: 'link'; attrs: { href: string; target: string; linktype: string } }
 
 export type InlineNode = { type: 'text'; text: string; marks?: RichtextMark[] } | { type: 'hard_break' }
 
@@ -28,7 +31,18 @@ function textNode(text: string, marks?: RichtextMark[]): InlineNode {
 const hardBreakNode: InlineNode = { type: 'hard_break' }
 
 /**
- * Parse inline markdown (**bold**, *italic*) and return an array of text/hard_break nodes.
+ * Builds a link mark for a markdown URL, opening external links in a new tab.
+ *
+ * @param {string} url - The link destination.
+ * @returns {RichtextMark} The link mark.
+ */
+function linkMarkFor(url: string): RichtextMark {
+  const isExternal = /^https?:\/\//i.test(url)
+  return { type: 'link', attrs: { href: url, target: isExternal ? '_blank' : '_self', linktype: 'url' } }
+}
+
+/**
+ * Parse inline markdown (**bold**, *italic*, [text](url) links) and return an array of text/hard_break nodes.
  */
 function parseInline(line: string): InlineNode[] {
   if (line.length === 0) {
@@ -51,6 +65,19 @@ function parseInline(line: string): InlineNode[] {
   }
 
   while (i < line.length) {
+    if (line[i] === '[') {
+      const linkMatch = /^\[([^\]]+)\]\(([^)]+)\)/.exec(line.slice(i))
+      if (linkMatch) {
+        flush()
+        const marks: RichtextMark[] = []
+        if (bold) marks.push({ type: 'bold' })
+        if (italic) marks.push({ type: 'italic' })
+        marks.push(linkMarkFor((linkMatch[2] ?? '').trim()))
+        result.push(textNode(linkMatch[1] ?? '', marks))
+        i += linkMatch[0].length
+        continue
+      }
+    }
     if (line.slice(i, i + 2) === '**') {
       flush()
       bold = !bold

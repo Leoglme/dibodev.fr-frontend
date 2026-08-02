@@ -1,12 +1,18 @@
 <template>
-  <div v-if="htmlContent" class="blog-article-content max-w-none py-6" :class="proseClass">
-    <div v-html="htmlContent" class="blog-article-content__inner" />
+  <div v-if="hasContent" class="blog-article-content max-w-none py-6" :class="proseClass">
+    <div class="blog-article-content__inner">
+      <StoryblokRichText :doc="richtextDoc" :resolvers="blokResolvers" />
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
-import type { ComputedRef } from 'vue'
+import { computed, h, Fragment } from 'vue'
+import type { Component, ComputedRef, VNode } from 'vue'
+import { BlockTypes } from '@storyblok/richtext'
+import type { StoryblokRichTextDocumentNode, StoryblokRichTextResolvers } from '@storyblok/richtext'
+import CtaButton from '~/storyblok/CtaButton.vue'
+import CtaLink from '~/storyblok/CtaLink.vue'
 
 const props = withDefaults(
   defineProps<{
@@ -18,18 +24,38 @@ const props = withDefaults(
   },
 )
 
-const htmlContent: ComputedRef<string> = computed((): string => {
-  if (!props.content || typeof props.content !== 'object') {
-    return ''
-  }
+type EmbeddedBlok = { _uid: string; component: string }
 
-  try {
-    const result = renderRichText(props.content as { type: string; content?: unknown[] })
-    return typeof result === 'string' ? result : ''
-  } catch {
-    return ''
-  }
-})
+const richtextDoc: ComputedRef<StoryblokRichTextDocumentNode> = computed(
+  (): StoryblokRichTextDocumentNode =>
+    props.content && typeof props.content === 'object'
+      ? (props.content as StoryblokRichTextDocumentNode)
+      : ({ type: 'doc', content: [] } as unknown as StoryblokRichTextDocumentNode),
+)
+
+const hasContent: ComputedRef<boolean> = computed(
+  (): boolean => Array.isArray(richtextDoc.value.content) && richtextDoc.value.content.length > 0,
+)
+
+/** Maps the Universal Block components allowed in the article richtext to their Vue renderers. */
+const BLOK_COMPONENTS: Record<string, Component> = {
+  cta_button: CtaButton,
+  cta_link: CtaLink,
+}
+
+/** Renders embedded Storyblok component blocks inside the article richtext as real Vue components. */
+const blokResolvers: StoryblokRichTextResolvers<VNode> = {
+  [BlockTypes.COMPONENT]: (node): VNode => {
+    const bloks = ((node as { attrs?: { body?: EmbeddedBlok[] } }).attrs?.body ?? []) as EmbeddedBlok[]
+    return h(
+      Fragment,
+      bloks.map((blok: EmbeddedBlok): VNode | null => {
+        const component = BLOK_COMPONENTS[blok.component]
+        return component ? h(component, { blok, key: blok._uid }) : null
+      }),
+    )
+  },
+}
 </script>
 
 <style scoped>
