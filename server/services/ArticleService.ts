@@ -228,8 +228,8 @@ export class ArticleService {
     article: StoryblokArticleInput,
     options: CreateArticleStoryOptions = {},
   ): Promise<{ id: number; full_slug: string }> {
-    const { body, label, href } = this.extractTrailingCta(article.content)
-    const richtext = markdownToRichtext(body)
+    const { body: bodyMarkdown, label, href } = this.extractTrailingCta(article.content)
+    const richtext = markdownToRichtext(bodyMarkdown)
     richtext.content.push(this.ctaButtonNode(label, href))
     const date = this.resolveStoryDate(options.date)
     const shouldPublish = options.publish === false ? 0 : 1
