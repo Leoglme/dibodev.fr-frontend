@@ -2090,5 +2090,426 @@
         }
       ]
     }
+  },
+  "blog/paysagiste-outil-metier-devis-chantiers-plannings": {
+    "title": "Paisajista: pasar de Excel a una herramienta personalizada para gestionar presupuestos, obras y planificaciones",
+    "excerpt": "Presupuestos en un archivo, obras en otro, planificación en la cabeza: lo que cambia realmente una herramienta profesional personalizada para un paisajista.",
+    "metaTitle": "Paisajista: pasar de Excel a una herramienta profesional personalizada",
+    "metaDescription": "Presupuestos copiados, planificación alterada por el clima, horas perdidas en el terreno: lo que cambia una herramienta personalizada para un paisajista, sin tecnicismos.",
+    "tags": [
+      "herramienta profesional paisajista",
+      "software paisajista",
+      "gestión de obra",
+      "presupuesto paisajista",
+      "planificación paisajista",
+      "aplicación personalizada",
+      "artesano paisajista"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No podo los setos ni he puesto nunca un bordillo en mi vida. Mi trabajo es construir herramientas para artesanos, y para eso paso mucho tiempo observando a la gente trabajar. En el sector de la jardinería, hay un objeto que encuentro casi siempre: un archivo de Excel. Uno grande. Abierto por la noche, sobre la mesa de la cocina, después de un día fuera. Un archivo que empezó siendo sencillo y que, con el paso de las estaciones, se ha convertido en un monstruo que ya nadie se atreve a tocar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Este artículo es para ti si te sientes identificado. No es para venderte sueños, sino para mostrarte, de forma concreta, qué se puede hacer mejor.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Excel te ha servido… hasta el día en que te frena",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hay que ser honestos: al principio, Excel es genial. Es casi gratis, casi todos saben usarlo más o menos, y cumple su función cuando trabajas solo con unos pocos proyectos. El problema no es Excel. El problema es lo que acabas pidiéndole que haga.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Le pides que registre tus presupuestos, tu planificación, el seguimiento de tus horas, tu lista de proveedores, tus contratos de mantenimiento, a veces incluso tus fotos antes/después pegadas en una celda. Pero una hoja de cálculo no está diseñada para eso. Así que improvisas. Duplicas la pestaña « modelo », renombras el archivo « presupuesto_MartinV2_final_de_verdad.xlsx », encuentras varias versiones distintas del mismo plan, y un día una fórmula se rompe sin que sepas por qué y un total sale mal.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La verdadera señal de alarma no es la complejidad. Es el momento en que el archivo vive en el ordenador de la oficina mientras tú estás en la obra, con las botas en la tierra, y no puedes consultar nada hasta la noche.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Los presupuestos de un jardinero: donde se gana o se pierde el dinero",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Vamos a centrarnos en el presupuesto, porque suele ser el punto más doloroso.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un cliente te llama, vas a su casa, tomas las medidas, anotas en un cuaderno. Por la noche, abres el presupuesto antiguo de un proyecto similar, copias, modificas las líneas, recalculas. Buscas el precio actual de las plantas —el de tu último pedido al vivero, no el de otra temporada—. Ajustas el tiempo de mano de obra a ojo. Y cruzas los dedos para no haber dejado una línea antigua que no debería estar ahí.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una vez enviado, surge otro problema: ¿en qué estado está ese presupuesto? ¿Aceptado? ¿Rechazado? ¿Lleva semanas esperando una respuesta? En Excel, esa información no existe de forma fiable. La guardas en tu cabeza, y tu cabeza ya está llena.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una herramienta a medida cambia esto sin magia. Partes de una biblioteca de servicios que es **tuya**: el corte de césped, la poda de setos por metro, la creación de macizos, la plantación, con tus tiempos y tarifas actualizados. Creas un presupuesto ensamblando piezas que conoces, desde el teléfono, incluso desde el jardín del cliente si quieres. Y cada presupuesto tiene un estado claro: enviado, recordado, aceptado. Ves de un vistazo qué proyectos están estancados y merecen una llamada. ¿El seguimiento de obras: ese proyecto te ha reportado beneficios?",
+              "type": "text"
+            },
+            {
+              "text": "Esta es una pregunta sencilla a la que muchos jardineros no saben responder con precisión: en el último proyecto grande, ¿ganaste dinero? Habías estimado un número determinado de jornadas. En realidad, llovió, la entrega de tierra se retrasó, hubo que volver un sábado. ¿Dónde están las horas reales? En el cuaderno, en los mensajes del equipo, en tu memoria. En ningún sitio de forma centralizada. Así que nunca comparas realmente lo previsto con lo realizado. Y sin esa comparación, vuelves a hacer presupuestos demasiado ajustados, temporada tras temporada.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "text": "Lo que aporta aquí una herramienta bien pensada no es vigilancia. Es memoria. En cada obra, tus empleados registran sus horas con dos gestos desde la furgoneta. Las fotos antes/después se vinculan al cliente correcto, no se pierden en la galería del teléfono. Los materiales pedidos están listados. Al final, ves si la obra cumplió sus promesas. No para flagelarte —para presupuestar el próximo proyecto con cifras reales, las tuyas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Y esa misma información te sirve más allá de la obra: cuando el contable pide sus documentos, cuando un cliente cuestiona una factura, cuando quieres mostrar un proyecto exitoso a un futuro cliente. Todo está ahí, ordenado y accesible.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La planificación: cuando el tiempo decide por ti",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La planificación de un jardinero es algo vivo. Llueve varios días y todo se retrasa. Una obra de creación se alarga y se come las rutas de mantenimiento de la semana. Un cliente te avisa para adelantar la poda. En una tabla de Excel, cada cambio implica mover celdas manualmente, con el riesgo de olvidarte de avisar a la persona adecuada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Y está esa particularidad de tu oficio que las herramientas genéricas ignoran: el mantenimiento recurrente. Los contratos de corte de césped y poda que vuelven a intervalos regulares, tanto en viviendas particulares como en comunidades de vecinos. En Excel, los apuntas a mano una y otra vez, y a veces se salta un pase sin que nadie se dé cuenta… hasta que el cliente, sí, se da cuenta.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una herramienta hecha para ti conoce la diferencia entre una obra puntual y un mantenimiento que debe volver solo a la planificación. Sabe que la próxima semana le toca a tal comunidad. Te muestra dónde están tus equipos, qué obra puede posponerse si llueve, y qué no debe caer en saco roto. Tú tomas la decisión. La herramienta solo guarda todo lo que ya no puedes retener en la cabeza.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "« A medida », concretamente, ¿qué cambia?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Quizá pienses que ya existen programas hechos para la construcción. Es cierto. A veces funcionan muy bien, y en ese caso te lo diré con franqueza en lugar de venderte otra cosa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Pero «a medida» no es un lujo. Significa una herramienta que habla **tu** idioma. Que cuenta en metros lineales de seto y en metros cuadrados de césped, no en referencias abstractas. Que conoce tus servicios, tus proveedores, tu forma de dividir una temporada. Que no te obliga a marcar quince casillas inútiles pensadas para un fontanero o un alicatador. Una herramienta que se parece a tu oficio, no al del vecino.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Y sobre todo: una herramienta que retoma lo que ya funciona en tu organización, sin romperlo todo. El objetivo no es convertirte en informático. Es devolverte tus tardes y hacer que presupuestes con más precisión.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Tus preguntas antes de lanzarte",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Hay que dejar Excel de un día para otro?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No. Partimos de lo que ya tienes y avanzamos por etapas —empezando por lo que hoy te hace perder más tiempo. Nada se rompe de golpe.",
+              "type": "text"
+            },
+            {
+              "text": "¿Me va a llevar mucho tiempo aprender a usarlo?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "text": "El objetivo es justo lo contrario: una herramienta sencilla, pensada para tu forma de trabajar, no para un informático. Si hace falta un manual grueso para usarla, es que nos hemos equivocado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Y si mi actividad cambia —un nuevo empleado, un servicio adicional, un sector nuevo?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Está hecho para evolucionar contigo. Una herramienta a medida se prolonga; no se tira a la primera novedad.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Mis datos se quedan en mi empresa, seguros?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí. Es un punto que definimos desde el principio, incluso antes de escribir la primera línea.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Podemos revisar juntos tu organización?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Si este artículo te ha resonado, te propongo esto, sin compromiso. Reservamos un momento —por teléfono o tomando un café si estás por Rennes— y me muestras cómo trabajas hoy: tu famoso archivo de Excel, tu forma de hacer presupuestos, de seguir las obras, de gestionar la planificación. A partir de ahí, te devuelvo un plan de acción claro y por escrito: qué falla realmente, qué merece la pena automatizar primero, qué podemos dejar como está, y por dónde empezar para que te alivie rápido. No un ladrillo técnico —un documento que entiendas y del que sigas siendo dueño, incluso si luego decides hacerlo con otra persona o no hacerlo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Conoces tu oficio mejor que nadie. Mi trabajo es que tu herramienta deje de frenarte y empiece a trabajar para ti.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "👉 [Hablar de mi proyecto](/contact) — cuéntame tu organización, te responderé rápido.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Mes données restent-elles chez moi, en sécurité ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Oui. C'est un point qu'on cadre dès le départ, avant même d'écrire la première ligne.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "On regarde votre organisation ensemble ?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si cet article vous a parlé, voici ce que je vous propose, sans engagement. On prend un moment — au téléphone ou autour d'un café si vous êtes du côté de Rennes — et vous me montrez comment vous travaillez aujourd'hui : votre fameux fichier Excel, votre façon de faire les devis, de suivre les chantiers, de tenir le planning.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "À partir de là, je vous rends un plan d'action clair et écrit : ce qui coince vraiment, ce qui vaut le coup d'être outillé en premier, ce qu'on peut laisser tel quel, et par quoi commencer pour que ça vous soulage vite. Pas un pavé technique — un document que vous comprenez et dont vous restez maître, même si vous décidez ensuite de faire ça avec quelqu'un d'autre, ou pas du tout.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Vous connaissez votre métier mieux que personne. Mon boulot, c'est de faire en sorte que votre outil arrête de vous freiner et commence à travailler pour vous.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "👉 [Discuter de mon projet](/contact) — racontez-moi votre organisation, je vous réponds vite.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

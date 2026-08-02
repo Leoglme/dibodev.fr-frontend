@@ -2090,5 +2090,426 @@
         }
       ]
     }
+  },
+  "blog/paysagiste-outil-metier-devis-chantiers-plannings": {
+    "title": "Landscaper: Moving from Excel to a Custom Tool for Managing Quotes, Sites, and Schedules",
+    "excerpt": "Quotes in one file, sites in another, schedules in your head: what a custom business tool truly changes for a landscaper.",
+    "metaTitle": "Landscaper: Moving from Excel to a Custom Business Tool",
+    "metaDescription": "Recopied quotes, schedules disrupted by weather, wasted hours in the field: what a custom tool changes for a landscaper, without jargon.",
+    "tags": [
+      "landscape contractor software",
+      "landscape management software",
+      "site management",
+      "landscape quotes",
+      "landscape scheduling",
+      "custom application",
+      "landscape contractor"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I don’t trim hedges, and I’ve never laid a single border in my life. My job is to build tools for craftspeople, and to do that, I spend a lot of time watching people work. Among landscapers, there’s one object I see almost every time: an Excel spreadsheet. A big one. Opened in the evening, on the kitchen table, after a day outside. A spreadsheet that started simple and, over the seasons, has grown into a monster no one dares touch anymore.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This article is for you if you recognize yourself in this. Not to sell you a dream, but to show you, concretely, what you can do better.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Excel has served you well — until the day it starts holding you back",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Let’s be honest: at first, Excel is great. It’s free or nearly free, almost everyone knows how to use it, and it does the job when you’re working alone with a few projects. The problem isn’t Excel. The problem is what you end up asking it to do.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You ask it to track your quotes, your schedule, your hours worked, your supplier list, your maintenance contracts, sometimes even your before-and-after photos pasted into a cell. But a spreadsheet wasn’t designed for that. So you improvise. You duplicate the “template” tab, rename the file “quote_MartinV2_final_really.xlsx,” end up with multiple versions of the same schedule, and one day a formula breaks without you knowing why, and a total comes out wrong.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The real warning sign isn’t complexity. It’s the moment when the spreadsheet lives on your office computer while you’re out on the job site, boots in the dirt, and you can’t check anything until tonight.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "A landscaper’s quotes: where money is won or lost",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Let’s look at the quote, because that’s often the most painful point.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A client calls, you go out, take measurements, jot them down in a notebook. In the evening, you open the quote from a past project that was similar, copy it, replace the lines, recalculate. You look up the current price of plants — the one from your last order at the nursery, not from another season. You adjust labor time based on gut feeling. And you cross your fingers you didn’t leave an old line that doesn’t belong there.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Once it’s sent, another problem arises: where is this quote? Accepted? Rejected? Waiting for a response for weeks? In Excel, this information doesn’t exist anywhere reliable. You keep it in your head, and your head is already full.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A custom tool changes that without magic. You start with a library of services that is yours: mowing, hedge trimming by the meter, creating flower beds, planting, with your up-to-date times and rates. You build a quote by assembling the blocks you know, on your phone, from the client’s garden if you want. And every quote has a clear status: sent, followed up, accepted. You can see at a glance what’s stalled and deserves a call.",
+              "type": "text"
+            },
+            {
+              "text": "Tracking jobs: did that one actually make you money?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "text": "Here’s a simple question many landscapers can’t answer precisely: on your last big job, did you make a profit? You estimated a certain number of days. In reality, it rained, the soil delivery was delayed, you had to come back on a Saturday. Where are the actual hours? In the notebook, in team text messages, in your memory. Nowhere in the same place. So you never really compare what was planned to what was done. And without that comparison, you keep recreating quotes that are a little too tight, season after season.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What a well-designed tool brings here isn’t surveillance. It’s memory. On each job, your crew logs their hours in two taps from the truck. Before-and-after photos are linked to the right client, not buried in your phone’s gallery. Ordered materials are listed. At the end, you see if the job lived up to its promises. Not to beat yourself up — to quote the next one with real numbers, your own numbers.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "And those same details serve you beyond the field: when the accountant asks for receipts, when a client disputes an invoice, when you want to show off a successful project to a potential client. Everything is there, clean and retrievable.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The schedule: when the weather decides for you",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A landscaper’s schedule is a living thing. It rains for days, and everything shifts. A creation job falls behind, and it eats into this week’s maintenance rounds. A client calls to move up their hedge trimming. On an Excel sheet, every change means manually moving cells, with the risk of forgetting to notify the right person.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "And there’s this quirk of your trade that generic tools ignore: recurring maintenance. Mowing and hedge-trimming contracts that come back at regular intervals, for private clients and condos alike. In Excel, you manually carry them over, again and again, and a visit sometimes gets skipped without anyone noticing — until the client does.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "A tool made for you knows the difference between a one-off job and maintenance that should automatically return to the schedule. It knows that next week, it’s time for a certain condo. It shows you where your teams are, which job can slide when the rain starts, and what absolutely must not slip through the cracks. You keep the decision. The tool just keeps track of everything you can no longer remember.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "“Custom,” concretely, what does that change?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You might think there are already off-the-shelf software solutions for construction. That’s true. Sometimes they work perfectly, and in that case, I’ll tell you straight rather than trying to sell you something else.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "But “custom” isn’t a luxury gimmick. It means a tool that speaks your language. That counts in linear meters of hedge and square meters of lawn, not in abstract references. That knows your services, your suppliers, your way of breaking down a season. That doesn’t force you to tick fifteen useless boxes designed for a plumber or a tiler. A tool that looks like your trade, not your neighbor’s.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "And above all: a tool that builds on what already works in your organization, without breaking everything. The goal isn’t to turn you into an IT specialist. It’s to give you back your evenings and help you quote more accurately.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Your questions before getting started",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Do I need to stop using Excel overnight?",
+              "type": "text"
+            },
+            {
+              "text": "No. We start from what you already have and move forward step by step — we begin with what’s costing you the most time today. Nothing breaks all at once.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "text": "Will it take me a long time to learn?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The goal is exactly the opposite: a simple tool, designed for your way of working, not for an IT specialist. If you need a thick manual to use it, we’ve made a mistake.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What if my business changes — a new hire, a new service, an expanded territory?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It’s designed to evolve with you. A custom tool grows with you; it’s not thrown away at the first change.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Are my data kept safe with me?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes. This is something we clarify from the start, even before writing the first line.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Can we look at your organization together?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If this article resonated with you, here’s what I propose, with no obligation. We take a moment — over the phone or around a coffee if you’re near Rennes — and you show me how you work today: your famous Excel file, your way of creating quotes, tracking jobs, and managing the schedule. From there, I’ll give you a clear, written action plan: what’s really holding you back, what’s worth automating first, what can stay as is, and where to start to get relief quickly. Not a technical tome — a document you understand and remain in control of, even if you later decide to do this with someone else, or not at all.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "You know your trade better than anyone. My job is to make sure your tool stops holding you back and starts working for you.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "👉 [Discuss my project](/contact) — tell me about your organization, and I’ll get back to you quickly.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Oui. C'est un point qu'on cadre dès le départ, avant même d'écrire la première ligne.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "On regarde votre organisation ensemble ?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si cet article vous a parlé, voici ce que je vous propose, sans engagement. On prend un moment — au téléphone ou autour d'un café si vous êtes du côté de Rennes — et vous me montrez comment vous travaillez aujourd'hui : votre fameux fichier Excel, votre façon de faire les devis, de suivre les chantiers, de tenir le planning.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "À partir de là, je vous rends un plan d'action clair et écrit : ce qui coince vraiment, ce qui vaut le coup d'être outillé en premier, ce qu'on peut laisser tel quel, et par quoi commencer pour que ça vous soulage vite. Pas un pavé technique — un document que vous comprenez et dont vous restez maître, même si vous décidez ensuite de faire ça avec quelqu'un d'autre, ou pas du tout.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Vous connaissez votre métier mieux que personne. Mon boulot, c'est de faire en sorte que votre outil arrête de vous freiner et commence à travailler pour vous.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "👉 [Discuter de mon projet](/contact) — racontez-moi votre organisation, je vous réponds vite.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
