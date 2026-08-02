@@ -2511,5 +2511,545 @@
         }
       ]
     }
+  },
+  "blog/electricien-outil-sur-mesure-devis-interventions-factures": {
+    "title": "Electrician: A Custom Tool for Your Quotes, Interventions, and Invoices",
+    "excerpt": "Between two jobs, quotes get delayed and hours of work go unbilled. Here’s how a tool tailored to your workflow brings order back to your schedule.",
+    "metaTitle": "Electrician: Custom Software for Quotes and Interventions",
+    "metaDescription": "Late quotes, forgotten interventions at invoicing: a tool designed for your electrician trade brings order to your rounds. Let’s talk about it?",
+    "tags": [
+      "electrician management software",
+      "custom artisan tool",
+      "intervention management",
+      "electrician quotes",
+      "artisan invoicing",
+      "construction industry business app",
+      "digitalizing an electrical business"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I don’t pull cables, and I’ve never opened an electrical panel in my life. But I’ve spent evenings sitting next to electricians who, once their last job was done, would sit down with a notebook and a phone full of site photos trying to remember what they had billed — and especially what they had forgotten.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you’re a self-employed electrician or work with two or three guys, you know exactly what I’m talking about. During the day, you’re running around: a repair job in the morning, a renovation in the afternoon, a client calling at 7 p.m. because 'the circuit breaker tripped again.' And the paperwork? It waits until the evening. Or the weekend. Or never.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "An electrician’s quote is almost always a race against time.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A private client calls you to redo their electrical panel. You go over, take measurements in your head, jot down a few things on a scrap of paper. Then you have to price it: materials, hours, compliance with regulations. Except you’re doing the quote in the evening, exhausted, between other tasks.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The result? It’s two days late. Sometimes three. And in the meantime, the client has called two other electricians. The one who answers first, neatly and with a clear quote, is often the one who lands the job — even if they’re not the cheapest.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The problem isn’t that you’re mispricing. It’s that putting together a quote drains all your energy when it should take ten minutes. Revisiting your rates, your usual material references, your presentation style — you’re doing it all from scratch every time.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The interventions you forget to bill",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "That’s where it really hurts. On a large, well-organized site, everything gets billed, no problem. The black hole is the small jobs: the one-hour repair, the extra socket 'while I’m at it,' the trip to a client’s neighbor.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You actually do those hours. But between the moment you close the panel and when you’re supposed to bill for them, a week passes, three other sites come up, and a good chunk of it vanishes. No one writes it down. No one claims it.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ask yourself the real question: over the last month, how many hours did you actually work, and how many did you bill? If you can’t answer in three seconds, you’re probably losing several hundred euros a month — not because you’re doing bad work, but because nothing links 'I did the job' to 'I billed for it.'",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Why 'all-in-one' management software ends up in the closet",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "So someone has probably already sold you a management software for tradespeople. You might even have paid for it. And it’s gathering dust somewhere because it takes twenty minutes of data entry for a one-hour repair, asks for fields that are irrelevant to your trade, and was never designed for an electrician working out of their van.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A tool that slows you down is one you won’t use. It’s that simple. And a tool you don’t use is worthless, even if it ticks every box on the brochure.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "That’s the whole difference between generic software and a ",
+              "type": "text"
+            },
+            {
+              "text": "custom tool",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": the first forces you to adapt to its logic, the second fits yours. Your types of jobs, your usual materials, your way of billing travel time, your regular clients. Nothing more, nothing less.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "A concrete example",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Take Julien, an independent electrician with a van, sometimes an apprentice. Before, his management fit on a notebook, a spreadsheet, and his memory.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Now, he opens his phone on site. He creates the job in three clicks: the client, the address, what he did, the hours. The photo of the panel goes straight onto it. In the evening, there’s nothing left to 're-enter': everything he did that day is already there. All he has to do is turn each job into an invoice with a single gesture.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "His recurring quotes — compliance checks, panels, light points — he pulls them from a template in two minutes, with his up-to-date rates. And once a week, he looks at one thing only: the jobs done but not yet billed. The list is short, and it no longer contains forgotten invoices worth €300.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Julien didn’t become an accountant. He just stopped leaving money on the table.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What does a custom tool for electricians look like, in practice?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Not a bloated system. A tool that does three or four things well — the ones that matter to you:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Enter a job in thirty seconds",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", from the site, with photos.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "See at a glance what hasn’t been billed yet",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " — the number one money leak.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Generate a clean quote in minutes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", based on your usual services and rates.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Access a client’s history",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", when they call back six months later.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Everything else — accounting, stock, team scheduling — is added only if you really need it. We start from your daily reality, not a list of features.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "In short",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- A quote that’s sent quickly and neatly lands more jobs than a cheaper one that arrives late.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- The hours that slip away are the small jobs that go unbilled: that’s where the lost money is.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Generic software that slows you down will end up in the closet; a tool tailored to your trade is one you’ll actually use.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Don’t digitalize for the sake of digitalizing: first fix the pain point.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "FAQ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is a custom tool for electricians only for big companies?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No, it’s the opposite. A large company has a team for management. The solo electrician or a duo? They have no one — it’s precisely those for whom saving two hours a week changes everything.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I already have management software. Why change?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "If you actually use it and it suits you, don’t change anything. If you paid for it but it’s gathering dust because it’s too cumbersome, the issue isn’t finding another one of the same kind — it’s having a tool you’ll actually open.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How much does a custom tool cost?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "It depends on what you need, and honestly, sometimes an existing tool is enough — if that’s the case, I’ll tell you. The goal isn’t to sell you software; it’s to save you time and stop forgotten invoices.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How long does it take to set up?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "We always start small: tackle the most painful point first (often unbilled jobs), get it up and running quickly, then add the rest as needed. No six-month mega-project.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Shall we talk?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you recognized yourself in even one of these situations, we can take thirty minutes together. I’ll look at how you currently manage quotes, jobs, and invoices, and I’ll give you a ",
+              "type": "text"
+            },
+            {
+              "text": "review of your organization",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " with a ",
+              "type": "text"
+            },
+            {
+              "text": "written action plan",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " — the point where you’re losing the most money first, and a rough budget estimate.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "And if an existing tool already does the job, I’ll tell you honestly. ",
+              "type": "text"
+            },
+            {
+              "text": "Let’s discuss your project",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/contact",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

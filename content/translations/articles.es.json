@@ -2511,5 +2511,545 @@
         }
       ]
     }
+  },
+  "blog/electricien-outil-sur-mesure-devis-interventions-factures": {
+    "title": "Electricista: una herramienta a medida para tus presupuestos, intervenciones y facturas",
+    "excerpt": "Entre dos intervenciones, los presupuestos se retrasan y horas de trabajo se pierden sin llegar a facturarse. Así es como una herramienta diseñada para tu forma de trabajar pone orden en el caos.",
+    "metaTitle": "Electricista: un software a medida para presupuestos e intervenciones",
+    "metaDescription": "Presupuestos retrasados, intervenciones olvidadas en la facturación: una herramienta pensada para tu oficio de electricista pone orden en la ruta. ¿Hablamos de ello?",
+    "tags": [
+      "software de gestión para electricistas",
+      "herramienta a medida para artesanos",
+      "gestión de intervenciones",
+      "presupuestos para electricistas",
+      "facturación para artesanos",
+      "aplicación profesional para construcción",
+      "digitalizar una empresa de electricidad"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No tiro cables ni he abierto un cuadro eléctrico en mi vida. Pero he pasado noches junto a electricistas que, una vez terminada su última intervención, se sentaban frente a un cuaderno y un teléfono lleno de fotos de obras para intentar recordar lo que habían facturado —y sobre todo, lo que habían olvidado—.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si eres electricista autónomo o trabajas con dos o tres compañeros, seguro que sabes de qué hablo. Durante el día, corres: una reparación por la mañana, una reforma por la tarde, un cliente que te vuelve a llamar a las 19:00 porque «se ha vuelto a saltar el diferencial». Y la papeleo, espera a la noche. O al fin de semana. O nunca.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "El presupuesto de un electricista casi siempre va contra reloj.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un particular te pide reformar un cuadro eléctrico. Vas, tomas las medidas mentalmente, anotas tres cosas en un papel. Y luego hay que calcular: el material, las horas, la adaptación a normativas. Pero el presupuesto lo haces por la noche, cansado, entre otras tareas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El resultado: llega con dos días de retraso. A veces tres. Mientras tanto, el cliente ha llamado a otros dos electricistas. El que responde primero, de forma ordenada y con un presupuesto claro, suele ser el que se lleva el trabajo —aunque no sea el más barato—.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El problema no es que calcules mal. Es que elaborar el presupuesto te cuesta una energía tremenda, cuando debería llevarte diez minutos. Revisar tus tarifas, las referencias habituales de material, la forma de presentarlo… Todo eso lo haces a mano cada vez.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Las intervenciones que olvidamos facturar",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ahí es donde duele de verdad. En una obra grande y bien organizada, todo se factura sin problema. El agujero negro son las pequeñas intervenciones: la reparación de una hora, el añadido de un enchufe «mientras estoy», el desplazamiento para un vecino del cliente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Esas horas sí las trabajas de verdad. Pero entre el momento en que cierras el cuadro y el momento en que deberías facturarlo, pasa una semana, tres obras más y gran parte desaparece. Nadie las anota. Nadie las reclama.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hazte la pregunta real: el mes pasado, ¿cuántas horas trabajaste realmente y cuántas facturaste? Si no tienes la respuesta en tres segundos, probablemente estés perdiendo varios cientos de euros al mes —no porque trabajes mal, sino porque nada conecta «he hecho la intervención» con «la he facturado».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Por qué los programas de gestión «todo en uno» acaban en el armario?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Seguro que te han vendido un programa de gestión para autónomos. Quizá incluso lo hayas pagado. Y ahora está en algún sitio, porque requiere veinte minutos de introducción de datos para una reparación de una hora, pide campos que no sirven para nada en tu trabajo y nunca fue pensado para un electricista que trabaja desde su furgoneta.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una herramienta que te ralentiza no la usarás. Es así de simple. Y una herramienta que no se usa no sirve para nada, aunque cumpla todos los requisitos en el folleto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ahí está la diferencia entre un programa genérico y una herramienta a medida: el primero te pide que te adaptes a su lógica; la segunda se adapta a la tuya. Tus tipos de intervenciones, el material que usas habitualmente, la forma de facturar un desplazamiento, tus clientes recurrentes. Ni más ni menos.",
+              "type": "text"
+            },
+            {
+              "text": "Un ejemplo concreto",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Tomemos a Julien, electricista autónomo, con una furgoneta y a veces un aprendiz. Antes, su gestión cabía en un cuaderno, una hoja de cálculo y su memoria.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Hoy abre su teléfono en la obra. Crea la intervención en tres clics: el cliente, la dirección, lo que ha hecho, las horas. La foto del cuadro se sube directamente. Por la noche, ya no tiene que «reintroducir» nada: todo lo que ha hecho durante el día está ahí, solo tiene que convertir cada intervención en factura con un gesto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sus presupuestos recurrentes —adaptación a normativas, cuadro eléctrico, puntos de luz— los saca de un modelo en dos minutos, con sus tarifas actualizadas. Y una vez por semana, revisa una sola cosa: las intervenciones realizadas pero no facturadas. La lista es corta y ya no contiene olvidos de 300 euros.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Julien no se ha convertido en un gestor. Solo ha dejado de dejar dinero en el suelo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una herramienta a medida para electricistas, concretamente, ¿qué ofrece?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No es una máquina de vapor. Es una herramienta que hace tres o cuatro cosas, las que importan para ti:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "- Registrar una intervención en treinta segundos, desde la obra, con fotos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- Ver de un vistazo lo que no está facturado aún —la principal fuga de dinero—.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- Sacar un presupuesto limpio en unos minutos, a partir de tus prestaciones y tarifas habituales.",
+              "type": "text"
+            },
+            {
+              "text": "- Consultar el historial de un cliente cuando te vuelve a llamar seis meses después.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "El resto —contabilidad, stock, planificación de equipo— solo se añade si realmente lo necesitas. Partimos de tu día a día, no de una lista de funciones.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "En resumen",
+              "type": "text"
+            },
+            {
+              "text": "- Un presupuesto que llega rápido y de forma ordenada consigue más obras que uno más barato que llega tarde.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "- Las horas que se escapan son las pequeñas intervenciones no facturadas: ahí está el dinero perdido.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Un programa genérico que te ralentiza acabará en el armario; una herramienta hecha para tu oficio, la usarás.",
+              "type": "text"
+            },
+            {
+              "text": "- No digitalizamos por digitalizar: primero resolvemos el punto que más duele.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "¿Una herramienta a medida para electricistas no es solo para grandes empresas?",
+              "type": "text"
+            },
+            {
+              "text": "No, al contrario. Una gran estructura tiene un equipo para la gestión. El electricista solo o en pareja no tiene a nadie: es precisamente para él para quien ganar dos horas a la semana cambia la vida.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Ya tengo un programa de gestión, ¿por qué cambiar?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si lo usas realmente y te funciona, no cambies nada. Si lo has pagado pero está en el armario porque es demasiado pesado, el problema no es cambiar por otro igual: es tener una herramienta que realmente abras.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cuánto cuesta una herramienta a medida?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Depende de lo que necesites, y sinceramente, a veces un programa existente es suficiente —si es así, te lo diré—. El objetivo no es venderte software, es que ganes tiempo y dejes de olvidar facturas.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "¿Cuánto tiempo lleva ponerlo en marcha?",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Siempre empezamos por lo más urgente: el punto que más te duele (normalmente, las intervenciones no facturadas), que ponemos en marcha rápido, y luego añadimos el resto poco a poco. Nada de proyectos de seis meses.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "¿Hablamos?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Si te has sentido identificado con alguna de estas situaciones, podemos dedicar treinta minutos. Analizo cómo gestionas hoy tus presupuestos, intervenciones y facturas, y te hago un «diagnóstico de tu organización» con un «plan de acción escrito» —el punto que te hace perder más dinero en primer lugar y una estimación honesta de presupuesto—.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Y si un programa existente ya hace el trabajo, te lo diré con sinceridad.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Hablemos de tu proyecto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "J'ai déjà un logiciel de gestion, pourquoi en changer ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Si vous l'utilisez vraiment et qu'il vous convient, ne changez rien. Si vous l'avez payé mais qu'il dort parce qu'il est trop lourd, le sujet n'est pas d'en reprendre un autre du même genre — c'est d'avoir un outil que vous ouvrirez réellement.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ça coûte combien, un outil sur mesure ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Ça dépend de ce dont vous avez besoin, et honnêtement, parfois un outil existant suffit — si c'est le cas, je vous le dirai. Le but, ce n'est pas de vous vendre du logiciel, c'est de vous faire gagner du temps et d'arrêter les factures oubliées.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Combien de temps pour mettre ça en place ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "On commence toujours petit : le point le plus douloureux d'abord (souvent les interventions non facturées), qu'on met en service vite, puis on ajoute le reste au fur et à mesure. Pas de grand chantier de six mois.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "On en parle ?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si vous vous êtes reconnu dans une seule de ces situations, on peut prendre trente minutes ensemble. Je regarde comment vous gérez aujourd'hui vos devis, vos interventions et vos factures, et je vous fais ",
+              "type": "text"
+            },
+            {
+              "text": "un audit de votre organisation",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " avec ",
+              "type": "text"
+            },
+            {
+              "text": "un plan d'action écrit",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " — le point qui vous fait perdre le plus d'argent en premier, et un ordre de grandeur de budget honnête.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Et si un outil existant fait déjà le travail, je vous le dirai franchement. ",
+              "type": "text"
+            },
+            {
+              "text": "Discutons de votre projet",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/contact",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
