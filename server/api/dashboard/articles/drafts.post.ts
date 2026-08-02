@@ -71,7 +71,10 @@ export default defineEventHandler(async (event: H3Event): Promise<SaveArticleDra
   }
 
   const now = new Date().toISOString()
-  const slug = (typeof body.slug === 'string' && body.slug.trim() ? slugify(body.slug) : '') || slugify(body.title)
+  // Keep an explicit slug; otherwise preserve the existing one and only derive from the title
+  // for a brand-new draft, so a partial update that omits the slug never overwrites a custom one.
+  const slug =
+    typeof body.slug === 'string' && body.slug.trim() ? slugify(body.slug) : (existing?.slug ?? slugify(body.title))
 
   const status: ArticleRecordStatus =
     body.status === 'scheduled' ? 'scheduled' : body.status === 'draft' ? 'draft' : (existing?.status ?? 'draft')

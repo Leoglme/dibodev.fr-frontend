@@ -820,22 +820,76 @@ async function goToPublish(): Promise<void> {
 }
 
 /**
- * Builds a coherent Unsplash search query from the article title and tags.
+ * Maps French artisan métiers to English Unsplash search terms: Unsplash is English-biased,
+ * so a raw French keyword returns irrelevant photos while the mapped term stays on-topic.
+ */
+const METIER_TO_UNSPLASH_EN: Record<string, string> = {
+  paysagiste: 'landscape gardener',
+  jardinier: 'gardener',
+  plombier: 'plumber',
+  electricien: 'electrician',
+  menuisier: 'carpenter workshop',
+  charpentier: 'carpenter',
+  couvreur: 'roofer',
+  macon: 'bricklayer construction',
+  carreleur: 'tiler',
+  peintre: 'painter decorator',
+  platrier: 'plasterer',
+  chauffagiste: 'heating engineer',
+  serrurier: 'locksmith',
+  boulanger: 'bakery',
+  boulangerie: 'bakery',
+  patissier: 'pastry chef',
+  fleuriste: 'florist',
+  coiffeur: 'hair salon',
+  garagiste: 'car mechanic',
+  mecanicien: 'car mechanic',
+  restaurateur: 'restaurant kitchen',
+  restaurant: 'restaurant kitchen',
+  traiteur: 'catering food',
+  artisan: 'craftsman workshop',
+  batiment: 'construction site',
+  btp: 'construction site',
+  coach: 'personal trainer',
+}
+
+/**
+ * Strips accents and lowercases a word so it can be matched against the métier map.
  *
- * @returns A short search query.
+ * @param {string} word - The raw word.
+ * @returns {string} The accent-free, lowercase word.
+ */
+function normalizeMetierWord(word: string): string {
+  return word
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[^a-z0-9]/g, '')
+}
+
+/**
+ * Builds a coherent Unsplash search query from the article tags and title, preferring a mapped métier term.
+ *
+ * @returns {string} A short search query.
  */
 function buildCoverSearchQuery(): string {
-  const base = (title.value.split(/\s+[—–-]\s+/)[0] ?? title.value).trim()
-  const main = base.split(/[\s]*:\s*/)[0]?.trim() ?? base
-  const words = main
-    .toLowerCase()
+  const words = [...tags.value, title.value]
+    .join(' ')
     .replace(/[^\p{L}\p{N}\s]/gu, ' ')
     .split(/\s+/)
+    .map(normalizeMetierWord)
     .filter((w: string): boolean => w.length > 2)
+
+  for (const word of words) {
+    const singular = word.replace(/s$/, '')
+    const mapped = METIER_TO_UNSPLASH_EN[word] ?? METIER_TO_UNSPLASH_EN[singular]
+    if (mapped) return mapped
+  }
+
+  const firstTag = tags.value[0]?.trim()
+  if (firstTag) return firstTag
   if (words.length >= 2) return `${words[0]} ${words[1]}`
   if (words.length === 1) return words[0]!
-  if (tags.value.length > 0) return tags.value[0]!
-  return base.slice(0, 30) || 'blog'
+  return 'small business'
 }
 
 /**
