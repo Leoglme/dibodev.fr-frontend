@@ -7,20 +7,20 @@
           Ce que les gens tapent pour te trouver, ce qui marche et ce qui reste à convertir. Données Search Console.
         </p>
       </div>
-      <div class="flex flex-wrap items-center gap-2">
-        <div class="inline-flex rounded-lg border border-gray-600 bg-gray-800 p-1">
+      <div class="flex w-full flex-col gap-2 sm:flex-row sm:items-center lg:w-auto">
+        <div class="flex w-full rounded-lg border border-gray-600 bg-gray-800 p-1 sm:w-auto">
           <button
             v-for="option in PERIOD_OPTIONS"
             :key="option.value"
             type="button"
-            class="cursor-pointer rounded-md px-3 py-1.5 text-sm font-medium transition-colors"
+            class="flex-1 cursor-pointer rounded-md px-3 py-2 text-center text-sm font-medium transition-colors sm:flex-none sm:py-1.5"
             :class="period === option.value ? 'bg-primary text-white' : 'text-gray-300 hover:text-gray-100'"
             @click="period = option.value"
           >
             {{ option.label }}
           </button>
         </div>
-        <DibodevButton :disabled="loading" @click="load(true)">
+        <DibodevButton class="w-full sm:w-auto" :disabled="loading" @click="load(true)">
           <span
             v-if="loading"
             class="mr-2 inline-block h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"

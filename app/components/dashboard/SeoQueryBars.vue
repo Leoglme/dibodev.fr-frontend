@@ -4,17 +4,19 @@
       Pas encore de requêtes sur la période.
     </div>
     <ul v-else class="flex flex-col gap-2.5">
-      <li v-for="row in rows" :key="row.key" class="flex items-center gap-3">
-        <div class="w-32 shrink-0 truncate text-sm text-gray-100 sm:w-52" :title="row.key">{{ row.key }}</div>
+      <li v-for="row in rows" :key="row.key" class="flex items-center gap-2 sm:gap-3">
+        <div class="w-24 shrink-0 truncate text-xs text-gray-100 sm:w-52 sm:text-sm" :title="row.key">
+          {{ row.key }}
+        </div>
         <div class="relative h-6 min-w-0 flex-1 overflow-hidden rounded bg-gray-700/40">
           <div
             class="h-full rounded transition-all"
             :style="{ width: barWidth(row.impressions), backgroundColor: SeoDisplayUtils.ctrColor(row.ctr) }"
           />
         </div>
-        <div class="w-36 shrink-0 text-right text-xs text-gray-300 tabular-nums sm:w-44">
-          <span class="font-medium text-gray-100">{{ SeoDisplayUtils.formatInteger(row.impressions) }}</span> impr · pos
-          {{ row.position.toFixed(1) }}
+        <div class="w-14 shrink-0 text-right text-xs text-gray-300 tabular-nums sm:w-44">
+          <span class="font-medium text-gray-100">{{ SeoDisplayUtils.formatInteger(row.impressions) }}</span>
+          <span class="hidden sm:inline"> impr · pos {{ row.position.toFixed(1) }}</span>
         </div>
       </li>
     </ul>

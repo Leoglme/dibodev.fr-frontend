@@ -5,7 +5,7 @@
     <div class="mt-1 text-sm">
       <span v-if="delta !== null" :class="deltaClass" class="font-medium tabular-nums">{{ deltaText }}</span>
       <span v-else class="text-gray-400">pas de comparaison</span>
-      <span v-if="delta !== null" class="ml-1 text-gray-300">vs période précédente</span>
+      <span v-if="delta !== null" class="ml-1 hidden text-gray-300 sm:inline">vs période précédente</span>
     </div>
   </div>
 </template>
