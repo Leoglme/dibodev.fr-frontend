@@ -27,6 +27,9 @@
           />
           {{ loading ? 'Chargement…' : 'Actualiser' }}
         </DibodevButton>
+        <DibodevButton class="w-full sm:w-auto" outlined :disabled="!data || !data.gscConnected" @click="exportJson">
+          Exporter JSON
+        </DibodevButton>
       </div>
     </div>
 
@@ -83,7 +86,7 @@
           </p>
         </div>
 
-        <div class="grid gap-4 md:grid-cols-3">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
           <SeoOpportunityCard
             v-for="group in opportunityGroups"
             :key="group.key"
@@ -106,24 +109,24 @@
       </section>
 
       <!-- Queries + pages side by side, each scrollable -->
-      <div class="grid gap-4 lg:grid-cols-2">
-        <section class="rounded-2xl border border-gray-600 bg-gray-800 p-4 sm:p-6">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <section class="min-w-0 rounded-2xl border border-gray-600 bg-gray-800 p-4 sm:p-6">
           <h2 class="mb-4 text-lg font-semibold text-gray-100">Toutes les requêtes</h2>
-          <SeoEntryTable :entries="data.queries" key-label="Requête" :limit="200" searchable max-height="460px" />
+          <SeoEntryTable :entries="data.queries" key-label="Requête" :limit="200" searchable cap-height />
         </section>
-        <section class="rounded-2xl border border-gray-600 bg-gray-800 p-4 sm:p-6">
+        <section class="min-w-0 rounded-2xl border border-gray-600 bg-gray-800 p-4 sm:p-6">
           <h2 class="mb-4 text-lg font-semibold text-gray-100">Pages les plus vues</h2>
-          <SeoEntryTable :entries="data.pages" key-label="Page" key-kind="url" :limit="100" max-height="460px" />
+          <SeoEntryTable :entries="data.pages" key-label="Page" key-kind="url" :limit="100" cap-height />
         </section>
       </div>
 
       <!-- Countries + devices -->
-      <div class="grid gap-4 lg:grid-cols-2">
-        <section class="rounded-2xl border border-gray-600 bg-gray-800 p-4 sm:p-6">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <section class="min-w-0 rounded-2xl border border-gray-600 bg-gray-800 p-4 sm:p-6">
           <h2 class="mb-4 text-lg font-semibold text-gray-100">Pays</h2>
           <SeoEntryTable :entries="data.countries" key-label="Pays" key-kind="country" :limit="15" />
         </section>
-        <section class="rounded-2xl border border-gray-600 bg-gray-800 p-4 sm:p-6">
+        <section class="min-w-0 rounded-2xl border border-gray-600 bg-gray-800 p-4 sm:p-6">
           <h2 class="mb-4 text-lg font-semibold text-gray-100">Appareils</h2>
           <SeoEntryTable :entries="data.devices" key-label="Appareil" key-kind="device" :limit="10" />
         </section>
@@ -326,6 +329,22 @@ async function load(force: boolean = false): Promise<void> {
   } finally {
     loading.value = false
   }
+}
+
+/**
+ * Downloads the current period's Search Console payload as a JSON file, for the weekly review.
+ *
+ * @returns {void}
+ */
+function exportJson(): void {
+  if (!data.value) return
+  const blob: Blob = new Blob([JSON.stringify(data.value, null, 2)], { type: 'application/json' })
+  const url: string = URL.createObjectURL(blob)
+  const link: HTMLAnchorElement = document.createElement('a')
+  link.href = url
+  link.download = `dibodev-gsc-${period.value}-${data.value.range.endDate}.json`
+  link.click()
+  URL.revokeObjectURL(url)
 }
 
 watch(period, (): void => {

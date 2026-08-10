@@ -16,15 +16,15 @@
       Aucune donnée.
     </div>
 
-    <div v-else class="overflow-auto" :style="maxHeight ? { maxHeight, overflowY: 'auto' } : undefined">
-      <table class="w-full min-w-[520px] border-collapse text-sm">
+    <div v-else class="overflow-x-auto" :class="capHeight ? 'sm:max-h-[460px] sm:overflow-y-auto' : ''">
+      <table class="w-full min-w-[300px] table-fixed border-collapse text-sm">
         <thead class="sticky top-0 z-10 bg-gray-800">
           <tr class="border-b border-gray-600 text-left text-xs tracking-wide text-gray-300 uppercase">
-            <th class="py-2 pr-3 font-medium">{{ keyLabel }}</th>
-            <th class="px-3 py-2 text-right font-medium">Clics</th>
-            <th class="px-3 py-2 text-right font-medium">Impr.</th>
-            <th class="px-3 py-2 text-right font-medium">CTR</th>
-            <th class="py-2 pl-3 text-right font-medium">Pos.</th>
+            <th class="py-2 pr-2 font-medium">{{ keyLabel }}</th>
+            <th class="w-12 px-2 py-2 text-right font-medium">Clics</th>
+            <th class="w-16 px-2 py-2 text-right font-medium">Impr.</th>
+            <th class="w-16 px-2 py-2 text-right font-medium">CTR</th>
+            <th class="w-14 py-2 pl-2 text-right font-medium">Pos.</th>
           </tr>
         </thead>
         <tbody>
@@ -33,7 +33,7 @@
             :key="row.key"
             class="border-b border-gray-700/60 transition-colors hover:bg-gray-700/40"
           >
-            <td class="max-w-[320px] py-2 pr-3">
+            <td class="py-2 pr-2">
               <a
                 v-if="keyKind === 'url'"
                 :href="row.key"
@@ -53,12 +53,14 @@
               }}</span>
               <span v-else class="block truncate text-gray-100" :title="row.key">{{ row.key }}</span>
             </td>
-            <td class="px-3 py-2 text-right font-medium text-gray-100 tabular-nums">{{ row.clicks }}</td>
-            <td class="px-3 py-2 text-right text-gray-200 tabular-nums">
+            <td class="px-2 py-2 text-right font-medium text-gray-100 tabular-nums">{{ row.clicks }}</td>
+            <td class="px-2 py-2 text-right whitespace-nowrap text-gray-200 tabular-nums">
               {{ SeoDisplayUtils.formatInteger(row.impressions) }}
             </td>
-            <td class="px-3 py-2 text-right text-gray-200 tabular-nums">{{ (row.ctr * 100).toFixed(1) }} %</td>
-            <td class="py-2 pl-3 text-right">
+            <td class="px-2 py-2 text-right whitespace-nowrap text-gray-200 tabular-nums">
+              {{ (row.ctr * 100).toFixed(1) }} %
+            </td>
+            <td class="py-2 pl-2 text-right">
               <span
                 class="rounded px-1.5 py-0.5 text-xs font-medium tabular-nums"
                 :class="SeoDisplayUtils.positionBadgeClass(row.position)"
@@ -100,9 +102,9 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  maxHeight: {
-    type: String,
-    default: '',
+  capHeight: {
+    type: Boolean,
+    default: false,
   },
 })
 
