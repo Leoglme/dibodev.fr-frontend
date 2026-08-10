@@ -64,7 +64,8 @@ export function useSeoMetaFromI18n(): void {
     const canonicalUrl = buildCanonicalUrl(path)
 
     // Alternates hreflang (fallback si switchLocalePath renvoie null). À ne pas ajouter pour les pages dont le slug varie par locale (ex. secteur), la page fournit ses propres liens.
-    const alternateLinks: Array<{ rel: string; hreflang: string; href: string }> = skipLinkAlternates
+    // La `key` par hreflang est partagée avec les composables SEO de page (useSectorSeo/useCategorySeo) : sur ces routes, switchLocalePath ne traduit pas le slug et produirait un hreflang en 404 ; la version émise par la page (enregistrée après app.vue) écrase donc la nôtre via cette dédup.
+    const alternateLinks: Array<{ rel: string; hreflang: string; href: string; key: string }> = skipLinkAlternates
       ? []
       : SEO_LOCALES.map(({ code, hreflang }) => {
           const pathForLocale = switchLocalePath(code) || path
@@ -72,6 +73,7 @@ export function useSeoMetaFromI18n(): void {
             rel: 'alternate',
             hreflang,
             href: buildCanonicalUrl(pathForLocale),
+            key: `i18n-alternate-${hreflang}`,
           }
         })
 
@@ -81,6 +83,7 @@ export function useSeoMetaFromI18n(): void {
         rel: 'alternate',
         hreflang: 'x-default',
         href: buildCanonicalUrl(defaultPath),
+        key: 'i18n-alternate-x-default',
       })
     }
 
@@ -102,7 +105,7 @@ export function useSeoMetaFromI18n(): void {
       title: string
       meta: Array<{ name?: string; property?: string; content: string }>
       htmlAttrs: { lang: string }
-      link?: Array<{ rel: string; hreflang?: string; href: string }>
+      link?: Array<{ rel: string; hreflang?: string; href: string; key?: string }>
     } = {
       title: t('meta.title'),
       meta: [

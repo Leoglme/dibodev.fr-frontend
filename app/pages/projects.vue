@@ -56,17 +56,24 @@ function buildCanonicalUrl(path: string): string {
 useHead(() => {
   const path = (route.path && String(route.path)) || '/projets'
   const canonicalUrl = buildCanonicalUrl(path)
-  const alternateLinks: Array<{ rel: string; hreflang: string; href: string }> = []
+  // `key` alignée sur useSeoMetaFromI18n : dédup Unhead (évite un double jeu d'alternates sur /projets).
+  const alternateLinks: Array<{ rel: string; hreflang: string; href: string; key: string }> = []
   for (const { code, hreflang } of SEO_LOCALES) {
     const p = switchLocalePath(code)
     const targetPath = typeof p === 'string' && p.trim() ? p : path
-    alternateLinks.push({ rel: 'alternate', hreflang, href: buildCanonicalUrl(targetPath) })
+    alternateLinks.push({
+      rel: 'alternate',
+      hreflang,
+      href: buildCanonicalUrl(targetPath),
+      key: `i18n-alternate-${hreflang}`,
+    })
   }
   const defaultPath = switchLocalePath('fr')
   alternateLinks.push({
     rel: 'alternate',
     hreflang: 'x-default',
     href: buildCanonicalUrl(typeof defaultPath === 'string' && defaultPath.trim() ? defaultPath : path),
+    key: 'i18n-alternate-x-default',
   })
 
   const title = t('meta.projectsPage.title')

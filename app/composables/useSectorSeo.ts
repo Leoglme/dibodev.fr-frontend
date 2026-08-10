@@ -43,7 +43,7 @@ export interface SectorSeoResult {
   title: string
   description: string
   canonical: string
-  link: Array<{ rel: string; hreflang: string; href: string }>
+  link: Array<{ rel: string; hreflang: string; href: string; key: string }>
   meta: Array<{ property?: string; name?: string; content: string }>
 }
 
@@ -60,18 +60,21 @@ export function buildSectorSeo(
   const currentPath = getSectorPagePath(locale, sectorKey)
   const canonical = buildCanonicalUrl(currentPath)
 
+  // `key` alignée sur useSeoMetaFromI18n : via la dédup Unhead, ces alternates (slugs traduits) écrasent le fallback global.
   const link: SectorSeoResult['link'] = SEO_LOCALES.map(({ code, hreflang }) => {
     const path = getSectorPagePath(code, sectorKey)
     return {
       rel: 'alternate',
       hreflang,
       href: buildCanonicalUrl(path),
+      key: `i18n-alternate-${hreflang}`,
     }
   })
   link.push({
     rel: 'alternate',
     hreflang: 'x-default',
     href: buildCanonicalUrl(getSectorPagePath('fr', sectorKey)),
+    key: 'i18n-alternate-x-default',
   })
 
   const meta: SectorSeoResult['meta'] = [
