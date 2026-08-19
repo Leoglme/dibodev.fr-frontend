@@ -3051,5 +3051,323 @@
         }
       ]
     }
+  },
+  "blog/chauffagiste-contrats-entretien-outil-sur-mesure": {
+    "title": "Heating Engineer: Never Forget a Maintenance Visit Again",
+    "excerpt": "Maintenance contracts stuck in a spreadsheet or just in your head mean lost revenue. Discover how a custom tool helps a heating engineer send reminders at the right time.",
+    "metaTitle": "Heating Engineer: Managing Maintenance Contracts Without Missing a Thing",
+    "metaDescription": "Annual visit reminders, boiler history, contract renewals: how a custom tool helps a heating engineer stay on top of everything.",
+    "tags": [
+      "heating engineer",
+      "boiler maintenance contract",
+      "heating engineer software",
+      "annual maintenance reminder",
+      "custom tool for tradespeople",
+      "maintenance contract management"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’m not a heating engineer. I’ve never bled a radiator or replaced a heat exchanger. But after building tools for tradespeople, I’ve seen the same scene play out time and again: a binder of maintenance contracts, a paper diary, and a spreadsheet where someone has scribbled 'Martin’s boiler — check in October.' Except it’s February, and no one’s called Martin.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Annual boiler servicing is the lifeblood of a heating engineer’s business: mandatory for the customer, recurring, and reliable revenue… as long as you don’t forget about it. And that’s exactly what happens when you try to manage it in your head or on the back of a spreadsheet.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The real problem for a heating engineer: recurrence, not the service itself",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A heating engineer knows how to do their job. What trips them up isn’t the service call itself—it’s remembering—for 200, 300, or 400 clients—which ones are under contract, which boiler was installed when, and when the next visit is due.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "When you do it by hand, two things always happen: either you follow up too late, and the customer has already gone to a competitor; or you forget entirely, and a missed visit means a contract that doesn’t get renewed. In both cases, it’s money slipping away without a sound.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What a custom tool changes in practice",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The idea isn’t some bloated, all-singing, all-dancing software package. It’s a tool that answers three simple questions: who’s under contract, which visits are due, and have I followed up?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- Each customer has a profile with their boilers: brand, installation date, last service.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- The system automatically calculates upcoming visits and generates the month’s list.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- A reminder is sent automatically—via SMS or email—a few weeks before the due date.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nothing flashy. Just the end of 'I must have forgotten someone.'",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "A concrete example",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Take a heating engineer with 300 maintenance contracts. Every Monday morning, they open their tool: '14 visits to schedule this month, 3 customers not yet contacted.' They no longer open any spreadsheets. The relevant customers received an automatic reminder the previous week; all they have to do is schedule the appointments. By the end of the year, they can see at a glance how many contracts are up for renewal and which ones are at risk of lapsing. The time spent 'trying to remember who to call' drops to zero.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Boiler history: the detail that builds trust",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Another game-changer: each boiler keeps its own history. When you return to a customer three years later, you know what’s been done, which parts were replaced, and you don’t have to rediscover the installation every time.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For the customer, it’s a pro who 'knows' their boiler. For the heating engineer, it means faster diagnostics, fewer surprises, and a rock-solid renewal argument.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frequently asked questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Does this replace my quotation and invoicing software?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Not necessarily. The tool can focus on what you’re missing—the contract tracking and follow-ups—and coexist with what you already use for billing. If an existing tool already does this well, I’ll tell you.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "I have 400 customers in a spreadsheet—do I have to start from scratch?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No. We can import your spreadsheet to get the database started: you don’t have to re-enter 400 lines by hand.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Aren’t automatic reminders spam?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A service reminder—often mandatory and expected by the customer—isn’t spam. It’s a service they appreciate.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "How long does it take to set up?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A first useful tool—customer profiles, upcoming visits, reminders—can be built in a few weeks, not six months.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Want to talk about it?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "If your maintenance contracts live in a spreadsheet and in your head, we can start simply: an audit of your current setup and a written action plan. I always start with the pain point, give a rough budget estimate, and if an existing tool works for you, I’ll tell you.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si vos contrats d'entretien vivent dans un tableur et dans votre tête, on peut commencer simplement : un audit de votre organisation actuelle et un plan d'action écrit. Je commence toujours par le point qui fait le plus mal, je donne un ordre de grandeur de budget honnête, et si un outil existant vous suffit, je vous le dis.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "3a94d99f-a0d5-4768-be23-d82f4030b634",
+            "body": [
+              {
+                "_uid": "i-bfad1864-0dcf-4f27-ad1e-48d3e875586b",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuter de mon projet",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

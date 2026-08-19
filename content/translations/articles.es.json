@@ -3051,5 +3051,323 @@
         }
       ]
     }
+  },
+  "blog/chauffagiste-contrats-entretien-outil-sur-mesure": {
+    "title": "Fontanero: nunca más olvidar una visita de mantenimiento",
+    "excerpt": "Los contratos de mantenimiento que viven en una hoja de cálculo y en la cabeza son ingresos que se escapan. Cómo una herramienta a medida ayuda a un fontanero a recordar en el momento adecuado.",
+    "metaTitle": "Fontanero: gestionar sus contratos de mantenimiento sin olvidar nada",
+    "metaDescription": "Recordatorios de visitas anuales, historial por caldera, contratos que se renuevan: cómo una herramienta a medida ayuda a un fontanero a no olvidar nada.",
+    "tags": [
+      "fontanero",
+      "contrato de mantenimiento de caldera",
+      "software para fontaneros",
+      "recordatorio de mantenimiento anual",
+      "herramienta a medida para artesanos",
+      "gestión de contratos de mantenimiento"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No soy instalador de calefacción. Nunca he purgado un radiador ni reemplazado un cuerpo de calefacción. Pero tras construir herramientas para artesanos, he visto repetirse la misma escena una y otra vez: un archivador con contratos de mantenimiento, una agenda de papel y una hoja de cálculo donde se anota « Caldera Martín — revisar en octubre ». Excepto que estamos en febrero y nadie ha llamado a Martín.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El mantenimiento anual de las calderas es la clave del negocio de un instalador de calefacción: obligatorio para el cliente, recurrente y genera ingresos recurrentes… siempre que no se olvide. Sin embargo, esto es exactamente lo que se pierde cuando se gestiona de memoria o en un rincón de la hoja de cálculo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "El verdadero problema de un instalador de calefacción: la recurrencia, no la intervención",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un instalador de calefacción sabe hacer su trabajo. Lo que falla no es la intervención, sino acordarse —para 200, 300 o 400 clientes— de quién tiene contrato, qué caldera se instaló y cuándo toca la próxima visita.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A mano, siempre acaban pasando dos cosas: o se contacta demasiado tarde, y el cliente ya se ha ido con la competencia; o se olvida por completo, y una visita no realizada significa un contrato que no se renueva. En ambos casos, es dinero que se va sin hacer ruido.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que cambia concretamente una herramienta a medida",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La idea no es un gran software complicado. Es una herramienta que responde a tres preguntas sencillas: ¿quién tiene contrato?, ¿qué visita está pendiente? y ¿he contactado ya a ese cliente?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- Cada cliente tiene una ficha con sus calderas: marca, fecha de instalación y última visita.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- El sistema calcula automáticamente las visitas pendientes y genera la lista del mes.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Un recordatorio automático —SMS o correo electrónico— se envía unas semanas antes del vencimiento.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nada espectacular. Solo el fin de los «seguro que me he olvidado de alguien».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Un ejemplo concreto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Imaginemos a un instalador con 300 contratos de mantenimiento. Cada lunes por la mañana abre su herramienta: «14 visitas para planificar este mes, 3 clientes aún no contactados». Ya no abre ninguna hoja de cálculo. Los clientes afectados recibieron un recordatorio automático la semana anterior; solo tiene que agendar las citas. A final de año, ve de un vistazo cuántos contratos están a punto de renovarse y cuáles corren riesgo de irse. El tiempo dedicado a «buscar a quién llamar» se reduce a cero.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El historial por caldera: el detalle que tranquiliza",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Otra cosa que cambia la vida: cada caldera conserva su historial. Cuando vuelves a casa de un cliente tres años después, sabes qué se hizo, qué pieza se cambió y no tienes que redescubrir la instalación cada vez.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para el cliente, es un profesional que «conoce» su caldera. Para el instalador, es un diagnóstico más rápido, menos sorpresas desagradables y un argumento sólido para la renovación del contrato.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Reemplaza mi software de presupuestos y facturación?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No necesariamente. La herramienta puede centrarse en lo que te falta —el seguimiento de contratos y los recordatorios— y convivir con lo que ya usas para facturar. Si una herramienta existente ya hace todo esto bien, te lo diré.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Tengo 400 clientes en una hoja de cálculo, ¿empezamos desde cero?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No. Recuperamos tu hoja de cálculo para iniciar la base de datos: no tendrás que reescribir 400 líneas a mano.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "¿Los recordatorios automáticos no son spam?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un recordatorio de mantenimiento, que suele ser obligatorio y esperado por el cliente, no tiene nada de spam. Es incluso un servicio que el cliente valora.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "¿Cuánto tiempo se tarda en implementarlo?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una primera herramienta útil —fichas de clientes, visitas pendientes, recordatorios— se construye en semanas, no en seis meses.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "¿Hablamos?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Si tus contratos de mantenimiento viven en una hoja de cálculo y en tu cabeza, podemos empezar de forma sencilla: un análisis de tu organización actual y un plan de acción por escrito. Siempre empiezo por el punto que más duele, doy una estimación de presupuesto honesta y, si una herramienta existente te sirve, te lo digo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hablar de mi proyecto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "3a94d99f-a0d5-4768-be23-d82f4030b634",
+            "body": [
+              {
+                "_uid": "i-bfad1864-0dcf-4f27-ad1e-48d3e875586b",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuter de mon projet",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
