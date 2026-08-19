@@ -3369,5 +3369,370 @@
         }
       ]
     }
+  },
+  "blog/serrurier-rennes-depannage-outil-sur-mesure": {
+    "title": "Cerrajero en Rennes: no perder más una reparación entre dos intervenciones",
+    "excerpt": "En reparaciones urgentes, una llamada perdida es una intervención perdida. Cómo una herramienta a medida ayuda a un cerrajero en Rennes a no dejar escapar nada entre dos intervenciones.",
+    "metaTitle": "Cerrajero en Rennes: no perder más una llamada de reparación",
+    "metaDescription": "Llamadas perdidas, asignación de intervenciones, presupuestos pendientes: cómo una herramienta a medida ayuda a un cerrajero en Rennes a no dejar escapar una urgencia.",
+    "tags": [
+      "cerrajero Rennes",
+      "reparación cerrajero",
+      "software para cerrajeros",
+      "gestión de intervenciones",
+      "herramienta a medida artesano",
+      "cerrajero urgencia"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No soy cerrajero. Nunca he forzado una puerta ni instalado un cilindro. Pero después de trabajar con artesanos, he visto lo que pasa cuando un cerrajero ya está en una intervención y el teléfono suena: o descuelga y abandona lo que está haciendo, o deja sonar… y el siguiente cliente, el que está encerrado fuera en Rennes un domingo por la noche, llama a la competencia.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para un cerrajero, sobre todo en servicios de urgencia, el verdadero capital no es el taller. Es ",
+              "type": "text"
+            },
+            {
+              "text": "no perderse ninguna llamada",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", y saber en todo momento quién está dónde y quién está disponible. Y eso, una libreta y un contestador ya no bastan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "El nervio del oficio: la urgencia, no el presupuesto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un cerrajero ejerce dos oficios en uno: la instalación planificada (puertas, cajas fuertes, control de acceso) y el ",
+              "type": "text"
+            },
+            {
+              "text": "servicio de urgencia",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (apertura, allanamiento, cilindro roto). El segundo es impredecible, muy competitivo y se decide al minuto —sobre todo en una ciudad como Rennes, donde el primero que responde y llega rápido se lleva la intervención.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El problema no es saber hacerlo. Es la orquestación: quién atiende la llamada, quién está más cerca, quién está libre y si se ha vuelto a llamar al cliente de esta mañana que quedó sin respuesta.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que cambia una herramienta a medida",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La idea no es un software de gestión gigante. Es una herramienta que responde a la urgencia: ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Cada llamada queda registrada",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " —incluso la que no se pudo atender— para volver a contactar al cliente de inmediato en lugar de olvidarlo.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Las intervenciones del día",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " son visibles de un vistazo: quién, dónde, a qué hora.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Los presupuestos de instalación",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " se envían y se relanzan automáticamente para no dejar dormir las solicitudes que no son urgentes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El objetivo: que ninguna llamada, ningún presupuesto se escape.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Un ejemplo concreto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un cerrajero en Rennes y su periferia, con dos personas en la calle. Llega una llamada durante una intervención: en lugar de perderla, se registra en dos segundos y el otro técnico ve al instante «apertura de puerta, Cesson-Sévigné, en 20 minutos». Por la noche, la lista de solicitudes sin atender está vacía —no por suerte, sino porque nada se ha olvidado. Y los presupuestos de instalación enviados la semana pasada se han relanzado solos: dos se convierten en obras.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo local importa",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En servicios de urgencia, la proximidad lo es todo. Una herramienta que sabe dónde está cada intervención permite enviar al técnico adecuado al lugar correcto —y decirle al cliente «estamos ahí en 20 minutos» con total seguridad. En Rennes, entre el centro, la circunvalación y los municipios de alrededor, suele ser eso lo que hace ganar la intervención.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Trabajo solo, ¿vale la pena?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí, quizá aún más: cuando se trabaja solo, cada llamada perdida es una intervención perdida. Una herramienta que registre las solicitudes y relance los presupuestos es dinero que no se deja escapar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ya tengo un software de facturación.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No necesariamente hay que reemplazarlo. La herramienta puede centrarse en lo que falta —el seguimiento de llamadas e intervenciones— y convivir con el resto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Funciona en el teléfono y en el terreno?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Es incluso el punto de partida: un cerrajero pasa el día fuera. La herramienta debe ser usable con una mano, en la furgoneta, no solo en la oficina.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Empezamos desde cero?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. Recuperamos lo que ya tienes —clientes, presupuestos— para no tener que volver a introducir todo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Hablamos?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si tus llamadas y presupuestos viven en una libreta y en tu memoria, podemos empezar de forma sencilla: una auditoría de tu organización y un plan de acción por escrito. Comienzo por el punto que más duele, te doy un presupuesto honesto, y si una herramienta existente te sirve, te lo digo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "2f43697e-269a-43c0-9120-278b2bcfa31b",
+            "body": [
+              {
+                "_uid": "i-3ade4375-2d32-401d-89d5-0f9ff01be28a",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuter de mon projet",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
