@@ -337,11 +337,11 @@
       "introAfter": " (dibodev.fr) está editado por:",
       "name": "Léo Guillaume",
       "legalForm": "Empresario individual (microempresa)",
-      "addressLine1": "13 Rue Roger-Henri Guerrand",
-      "addressLine2": "35000 Rennes",
+      "addressLine1": "6 Rue Simone Morand, APT A13",
+      "addressLine2": "35230 Saint-Erblon",
       "addressLine3": "Francia",
       "contact": "Contacto:",
-      "siret": "SIRET: 988 307 906 00012"
+      "siret": "SIRET: 988 307 906 00020"
     },
     "host": {
       "title": "Alojamiento",
@@ -365,7 +365,7 @@
     "intro": "Esta política describe cómo recopilo y trato tus datos personales en el sitio Dibodev (dibodev.fr). El sitio está dirigido principalmente a Francia; podrá ofrecerse en otros idiomas en el futuro.",
     "dataController": {
       "title": "Responsable del tratamiento",
-      "content": "Léo Guillaume — 13 Rue Roger-Henri Guerrand, 35000 Rennes, Francia. Contacto:"
+      "content": "Léo Guillaume — 6 Rue Simone Morand, APT A13, 35230 Saint-Erblon, Francia. Contacto:"
     },
     "contactFormData": {
       "title": "Datos recogidos mediante el formulario de contacto",

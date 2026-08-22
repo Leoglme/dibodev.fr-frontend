@@ -10,13 +10,13 @@
 <script setup lang="ts">
 import DibodevNavbar from '~/components/navigations/DibodevNavbar.vue'
 import DibodevFooter from '~/components/navigations/DibodevFooter.vue'
-import { personSchemaJson } from '~/config/schema'
+import { siteEntityGraphJson } from '~/config/schema'
 useHead({
   script: [
     {
-      key: 'schema-person',
+      key: 'schema-entities',
       type: 'application/ld+json',
-      innerHTML: personSchemaJson,
+      innerHTML: siteEntityGraphJson,
     },
   ],
 })
