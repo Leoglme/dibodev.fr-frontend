@@ -14,7 +14,9 @@
           <strong>{{ $t('legal.publisher.name') }}</strong
           ><br />
           {{ $t('legal.publisher.legalForm') }}<br />
-          <span v-html="$t('legal.publisher.address')" />
+          {{ $t('legal.publisher.addressLine1') }}<br />
+          {{ $t('legal.publisher.addressLine2') }}<br />
+          {{ $t('legal.publisher.addressLine3') }}
         </p>
         <p class="text-gray-200">
           {{ $t('legal.publisher.contact') }}
