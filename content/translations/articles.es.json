@@ -4564,5 +4564,349 @@
         }
       ]
     }
+  },
+  "blog/freelance-ou-agence-rennes-outil-metier-sur-mesure": {
+    "title": "Freelance o agencia en Rennes: ¿quién elegir para su herramienta profesional?",
+    "excerpt": "¿Freelance o agencia en Rennes para su software a medida? Un desarrollador local compara con honestidad ambas opciones y explica en qué casos cada una tiene razón.",
+    "metaTitle": "Freelance o agencia en Rennes para su herramienta profesional | Dibodev",
+    "metaDescription": "¿Freelance o agencia web en Rennes para desarrollar una herramienta profesional a medida? Los criterios reales de elección para una PYME, sin rodeos.",
+    "tags": [
+      "freelance desarrollador Rennes",
+      "agencia desarrollo Rennes",
+      "herramienta profesional a medida",
+      "desarrollador freelance Bretaña",
+      "software a medida PYME"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "« Nos pidieron presupuestos a tres proveedores, y las cotizaciones van de una a cuatro veces el precio. » Es una frase que escucho con frecuencia cuando una empresa de Rennes me contacta para desarrollar una herramienta a medida. Entre la agencia web del centro de la ciudad, el proveedor parisino que responde por correo y el autónomo que le recomendaron, es difícil saber quién hace qué —y sobre todo, quién se adapta mejor a sus necesidades.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Antes que nada, sepan que yo soy desarrollador autónomo cerca de Rennes, así que no soy neutral. Pero voy a ser honesto: en algunos casos, una agencia es realmente la mejor opción. Esto es lo que pienso cuando una PYME duda entre contratar a una agencia o a un autónomo para su software profesional.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que realmente pagas en una agencia",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una agencia es un equipo: un jefe de proyecto, uno o dos desarrolladores, a veces un diseñador, un comercial. Esta estructura tiene una ventaja real: varias personas trabajando en tu proyecto, continuidad si alguien se va, capacidad para manejar grandes volúmenes. Pero tiene un costo, y ese costo lo pagas tanto si lo necesitas como si no.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En concreto, en una herramienta profesional para PYMES, parte de la factura de la agencia se destina a reuniones internas de coordinación, capas de intermediarios y un margen estructural. No es un robo: es el precio de una organización. La pregunta clave es sencilla: ¿tu proyecto necesita realmente esta organización o estás pagando por una máquina sobredimensionada para una necesidad que cabe en tres pantallas?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que cambia un autónomo —para bien y para mal",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Con un autónomo, hablas directamente con la persona que va a programar. No hay intermediarios, ni el teléfono descompuesto entre tu necesidad y el resultado. Explicas una vez, a alguien que ejecutará, no a un jefe de proyecto que «hará llegar» tu mensaje. En una herramienta profesional donde el diablo está en los detalles, esto suele marcar la diferencia entre una herramienta precisa y una que no cumple.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El precio suele ser más bajo, porque no hay que financiar una estructura. Y la reactividad es mejor: una sola persona, un solo interlocutor, una sola lista de tareas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Pero seamos honestos con sus limitaciones. Un autónomo es una sola persona: si se enferma o está saturado, no hay un equipo que pueda tomar el relevo al instante. Por eso hay que elegir a alguien fiable, establecer un buen marco de trabajo y asegurarse de que el código te pertenezca y sea mantenible si algún día cambias de proveedor. Un buen autónomo te hablará de esto por su cuenta; desconfía de quien evite el tema.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "El criterio real: la naturaleza de tu proyecto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Olvídate por un momento de la pregunta «¿autónomo o agencia?» y hazte la verdadera: ¿de qué necesita realmente mi proyecto?",
+              "type": "text"
+            },
+            {
+              "text": "Una agencia suele ser la mejor opción si lanzas una gran plataforma con varios servicios, si necesitas una garantía de soporte 24/7 contractualizada o si el proyecto va a requerir varios desarrolladores trabajando en paralelo durante meses.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un autónomo suele ser la mejor opción para una herramienta profesional específica: automatizar un proceso concreto, reemplazar un archivo de Excel que se ha vuelto inmanejable, conectar dos softwares que no se comunican o digitalizar un seguimiento que te está costando horas. Es decir… la gran mayoría de las necesidades de una PYME.",
+              "type": "text"
+            },
+            {
+              "text": "Si aún dudas, un buen indicador es este: ¿puedes describir tu necesidad en una sola frase clara? Si la respuesta es sí, un autónomo probablemente será más rápido y más económico. Si tu necesidad es vaga y compleja, una fase de planificación —que yo también ofrezco— vale más que lanzarte directamente con el más grande.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "En Rennes, concretamente",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La ventaja de un proveedor local, ya sea agencia o autónomo, es que puedes verte en persona. Y para una herramienta profesional, esto cambia mucho: voy a sentarme en tus oficinas, observo cómo trabajas realmente, veo el archivo que desborda. Un pliego de condiciones de diez páginas nunca reemplazará una hora a tu lado.",
+              "type": "text"
+            },
+            {
+              "text": "Rennes tiene un ecosistema tecnológico denso, con buenos autónomos y buenas agencias. Tienes opciones: aprovecha para conocer a ambos perfiles antes de decidir. Un simple café te dará más información sobre la persona que construirá tu herramienta que tres presupuestos en PDF.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Contratar a un autónomo es arriesgado si dependo de una sola persona?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Es un punto importante. Se gestiona estableciendo un buen marco: código documentado, alojamiento a tu nombre, garantía de propiedad del código. El objetivo es que nunca dependas de tu proveedor, ya sea autónomo o agencia.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿No es una agencia más «seria»?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No necesariamente. La seriedad viene del método y de la relación, no del tamaño. Muchas PYMES de Rennes trabajan muy bien con autónomos desde hace años.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cuál es la diferencia de precio, aproximadamente?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Depende del proyecto, pero en una herramienta profesional para PYMES, la diferencia entre un autónomo y una agencia suele ser significativa, a igualdad de calidad —precisamente porque no hay que financiar una estructura.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "¿Puedo trabajar con mi agencia actual?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, ocurre: intervenir como refuerzo en un punto concreto o retomar un proyecto de forma limpia. Vemos juntos qué tiene sentido para ti.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Si dudas con tu propio proyecto, lo más sencillo es hablarlo. Yo siempre empiezo con un análisis de tus necesidades y un plan de acción por escrito —y si creo que una agencia sería más adecuada para tu caso, te lo diré con franqueza.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hablar de mi proyecto",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Ça dépend des projets, mais sur un outil métier de PME, l'écart entre un freelance et une agence est souvent significatif, à qualité comparable — précisément parce qu'il n'y a pas de structure à financer.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Vous pouvez travailler avec mon agence actuelle ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Oui, ça arrive : intervenir en renfort sur un point précis, ou reprendre proprement un projet. On regarde ensemble ce qui a du sens pour vous.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si vous hésitez pour votre propre projet, le plus simple est d'en parler. Je commence toujours par un audit de votre besoin et un plan d'action écrit — et si je pense qu'une agence serait plus adaptée à votre cas, je vous le dirai franchement.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "f0885c67-c822-45e3-a10b-94c04deaa22f",
+            "body": [
+              {
+                "_uid": "i-449f497b-85ab-4b06-99c3-36273c994914",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuter de mon projet",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
