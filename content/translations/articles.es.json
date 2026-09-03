@@ -4170,5 +4170,399 @@
         }
       ]
     }
+  },
+  "blog/logiciel-metier-b2b-quitter-excel-signes": {
+    "title": "Software de negocio B2B: 5 señales de que es hora de dejar Excel",
+    "excerpt": "Cuando los archivos compartidos de Excel se convierten en un riesgo más que en una herramienta: 5 señales concretas de que una pyme B2B debe pasar a un software de negocio personalizado.",
+    "metaTitle": "Desarrollar un software de negocio B2B: dejar Excel | Dibodev",
+    "metaDescription": "Archivos de Excel que se multiplican, errores, datos dispersos: 5 señales de que una pyme B2B necesita un software de negocio personalizado, y cómo dar el paso.",
+    "tags": [
+      "software de negocio b2b",
+      "desarrollo de software b2b",
+      "aplicación b2b personalizada",
+      "dejar Excel en la empresa",
+      "software personalizado para pymes"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En casi todas las PYMES B2B donde pongo un pie, hay un archivo. Solo uno. Se llama algo como `seguimiento_clientes_2024_V3_FINAL(de_verdad).xlsx`, pesa quince pestañas y solo una persona sabe realmente cómo funciona. El día que esa persona está de vacaciones, todo el departamento contienen la respiración.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Excel es genial. Incluso suele ser la mejor opción para empezar: gratuito, flexible, todo el mundo sabe usarlo. El problema no es Excel, sino el momento en que vuestra actividad lo ha superado sin que nadie se diera cuenta. Estos son los cinco signos que, cuando los escucho en una reunión, significan lo mismo: es hora de pasar a un verdadero software especializado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "1. Varias personas deben modificar el mismo archivo al mismo tiempo",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Este es el clásico. Dos comerciales abren el archivo de seguimiento, cada uno por su lado, y por la noche hay que «fusionar» —o sea, alguien copia a mano las líneas del otro, con la esperanza de no olvidar nada. O el archivo está en un drive compartido y aparecen copias como `- Copia`, `- modificado por Julia`, `- no usar`.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un archivo de Excel nunca fue diseñado para ser una base de datos multiusuario. Tan pronto como varias personas escriben en él, ya no trabajan con datos: trabajan con versiones. Un software especializado, en cambio, parte de la premisa de que diez personas pueden escribir al mismo tiempo y que los datos siguen siendo únicos e integrados.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "2. Pasáis más tiempo corrigiendo que produciendo",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un cliente facturado dos veces. Un pedido perdido porque estaba en la pestaña equivocada. Un total que no cuadra y nadie sabe por qué. Si vuestro equipo pasa los viernes por la tarde «verificando que todo está bien», no es un problema de rigor: es un problema de estructura.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Excel os permite escribir cualquier cosa, incluso tonterías. Una herramienta a medida pone barreras donde importa: no se puede validar un pedido sin cliente, no se puede facturar dos veces la misma intervención, un estado no puede ser «pagado» y «pendiente» al mismo tiempo. Son estas pequeñas restricciones invisibles las que eliminan los errores de raíz.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "3. «¿Eso? Está en el archivo de Marcos»",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Cuando pregunto dónde está cierta información y me responden «Ah, eso lo lleva Marcos, está en su archivo», sé que la empresa funciona en silos. El seguimiento comercial aquí, la producción allá, la facturación en otro libro, y entre los tres, copiar y pegar y correos con archivos adjuntos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El coste de estos silos es invisible pero real: nadie tiene una visión global, los mismos datos se introducen tres veces, y cuando Marcos se va, se lleva parte de la memoria de la empresa. Un software especializado reúne estos fragmentos en un solo lugar, donde cada uno ve lo que le concierne sin tener que pedirlo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "4. Hay una fórmula que nadie se atreve a tocar",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En cada archivo grande de Excel hay «la» celda. Una fórmula laberíntica, escrita hace tres años por alguien que quizá ya no está, de la que depende todo lo demás. Nadie la entiende del todo, así que nadie la toca —se construye encima, cruzando los dedos.",
+              "type": "text"
+            },
+            {
+              "text": "Es deuda técnica, exactamente como en un software, pero oculta en una hoja de cálculo. El día que falla, todo se viene abajo. Cuando una empresa llega a este punto, es la señal más clara de que su herramienta se ha vuelto más frágil de lo que su actividad puede permitirse.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "5. No podéis responder a una pregunta sencilla en diez segundos",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "«¿Cuánto le hemos facturado a este cliente desde enero?» «¿Qué pedidos están retrasados?» «¿Qué comercial cerró qué este trimestre?» Si la respuesta a estas preguntas es «Déjame una hora, te hago un cuadro dinámico», no tenéis una herramienta de gestión: tenéis un archivo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Un software especializado B2B es, ante todo, esto: poder hacer una pregunta sobre vuestra actividad y obtener la respuesta al instante. No una vez al mes cuando alguien tenga tiempo de compilarla, sino bajo demanda, actualizada y para todos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Superar el umbral sin romperlo",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La buena noticia es que no hay que reemplazar diez años de Excel en un fin de semana, y sobre todo, no es necesario. Mi método es sencillo: empezamos por «el archivo que más duele», el que sostiene el resto, y lo reemplazamos por una herramienta que hace exactamente lo que hacía… pero mejor, más seguro y multiusuario. El resto sigue, por etapas, una vez instalada la confianza.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Siempre doy un «orden de magnitud de presupuesto honesto» desde el primer intercambio, y una regla que cumplo: «Si vuestro Excel aún hace el trabajo, os lo digo». Pasar a un software especializado debe ahorraros tiempo y tranquilidad, no venderos un proyecto que no necesitáis.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            },
+            {
+              "text": "¿Un software a medida no es solo para grandes empresas?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "No. Las PYMES B2B son a menudo las que más sufren las limitaciones de Excel, porque han crecido más rápido que sus herramientas. Dimensionamos el software según la necesidad real, no según el tamaño de la empresa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cuánto tiempo se tarda en reemplazar nuestro archivo principal?",
+              "type": "text"
+            },
+            {
+              "text": "Una primera versión que retoma el rol del archivo más crítico puede estar operativa en unas semanas. Luego avanzamos por pequeños incrementos, sin interrumpir nunca la actividad.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "¿Perdemos nuestros datos de Excel al migrar?",
+              "type": "text"
+            },
+            {
+              "text": "No, al contrario: partimos de vuestros archivos existentes para inicializar el software. Vuestra historia se recupera, no se tira.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "¿Y si solo queremos organizar mejor nuestros archivos, sin un software?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Es una opción válida, y os lo diré si es vuestro caso. A veces, unas pocas automatizaciones bastan antes de plantearse un desarrollo real.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si uno o dos de estos signos os han hecho sonreír con amargura, es el momento de hablar. Siempre empiezo con una auditoría de vuestra organización y un plan de acción por escrito —os vais con una visión clara, incluso si luego decidís prescindir de mí.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Hablar de mi proyecto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Combien de temps pour remplacer notre fichier principal ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Une première version qui reprend le rôle du fichier le plus critique peut être en service en quelques semaines. On avance ensuite par petits incréments, sans jamais couper l'activité.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On perd nos données Excel en migrant ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Non, au contraire : on part de vos fichiers existants pour initialiser le logiciel. Votre historique est récupéré, pas jeté.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Et si on veut juste mieux organiser nos fichiers, pas un logiciel ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "C'est une option valable, et je vous le dirai si c'est votre cas. Parfois, quelques automatisations suffisent avant d'envisager un vrai développement.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si un ou deux de ces signes vous ont fait sourire jaune, c'est le bon moment pour en parler. Je commence toujours par un audit de votre organisation et un plan d'action écrit — vous repartez avec une vision claire, même si vous décidez ensuite de faire sans moi.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "ca60da85-a3d3-47c2-8c9e-eb5299a862f3",
+            "body": [
+              {
+                "_uid": "i-19d08ad6-1175-4468-8a54-b31d8ce4d5c6",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuter de mon projet",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

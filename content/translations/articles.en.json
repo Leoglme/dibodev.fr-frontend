@@ -4170,5 +4170,399 @@
         }
       ]
     }
+  },
+  "blog/logiciel-metier-b2b-quitter-excel-signes": {
+    "title": "B2B Business Software: 5 Signs It's Time to Move Beyond Excel",
+    "excerpt": "When shared Excel files become more of a risk than a tool: 5 concrete signs that a B2B SME should transition to a custom business software solution.",
+    "metaTitle": "Developing B2B Business Software: Moving Beyond Excel | Dibodev",
+    "metaDescription": "Spreadsheets multiplying, errors, scattered data: 5 signs that a B2B SME needs custom business software, and how to make the switch.",
+    "tags": [
+      "B2B business software",
+      "B2B software development",
+      "custom B2B application",
+      "moving beyond Excel in business",
+      "custom software for SMEs"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In almost every B2B SME I step into, there’s a single file. One file. It’s called something like `client_tracking_2024_V3_FINAL(really).xlsx`, it weighs fifteen tabs, and only one person truly knows how it works. The day she’s on vacation, the entire department holds its breath.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Excel is great. It’s often the right choice to start with: free, flexible, and everyone knows how to use it. The problem isn’t Excel—it’s the moment when your business has outgrown it without anyone noticing. Here are five signs I hear in meetings that all mean the same thing: it’s time to switch to a real business software.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "1. Multiple people need to edit the same file at the same time",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is the classic scenario. Two salespeople open the tracking file, each on their own end, and by evening, someone has to 'merge' it—meaning one person manually copies the other’s entries, hoping nothing is missed. Or the file is on a shared drive, and you start seeing copies labeled `- Copy`, `- Julie’s edits`, `- do not use`.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "An Excel file was never meant to serve as a multi-user database. The moment multiple hands are writing in it, you’re no longer working with data—you’re managing versions. A business software, on the other hand, assumes ten people can write simultaneously, and the data remains single and unified.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "2. You spend more time correcting than producing",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A client billed twice. An order processed incorrectly because it was on the wrong tab. A total that doesn’t add up, and no one knows why. If your team spends Friday afternoons 'making sure everything is correct,' it’s not a matter of rigor—it’s a structural issue.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Excel lets you write anything, even nonsense. A tailored tool puts safeguards where they matter: you can’t validate an order without a client, you can’t bill the same service twice, a status can’t be both 'paid' and 'pending.' These small, invisible constraints eliminate errors at the source.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "3. 'That? It’s in Marc’s file.'",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "When I ask where a specific piece of information is, and the answer is 'Oh, that’s Marc’s responsibility—it’s in his file,' I know the company operates in silos. Sales tracking here, production there, invoicing in a third spreadsheet, with copy-pasting and emails with attachments bridging the gaps.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The cost of these silos is invisible but real: no one has a full picture, the same data is entered three times, and when Marc leaves, part of the company’s memory walks out with him. A business software brings these pieces together in one place, where everyone sees what concerns them without having to ask.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "4. There’s a formula no one dares touch",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In every large Excel file, there’s ",
+              "type": "text"
+            },
+            {
+              "text": "the",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " cell. A sprawling formula written three years ago by someone who may no longer be there, on which everything else depends. No one truly understands it, so no one touches it—people build on top of it, crossing their fingers.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is technical debt, just like in software, except it’s hidden in a spreadsheet. When it breaks, it breaks everything. When a company reaches this point, it’s the clearest sign that its tool has become more fragile than its business can afford.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "5. You can’t answer a simple question in ten seconds",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "'How much have we billed this client since January?' 'Which orders are overdue?' 'What did each salesperson close this quarter?' If the answer to these questions is 'Give me an hour—I’ll make a pivot table,' you don’t have a management tool—you have an archive.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A B2B business software is first and foremost this: being able to ask a question about your business and get the answer immediately. Not once a month when someone has time to compile it, but on demand, up to date, for everyone.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Making the leap without breaking everything",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The good news is you don’t need to replace ten years of Excel in a weekend—and you don’t have to. My approach is simple: start with ",
+              "type": "text"
+            },
+            {
+              "text": "the file that hurts the most",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", the one everything else depends on, and replace it with a tool that does exactly what it did—only better, safer, and multi-user. The rest follows in stages, once trust is established.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I always give an ",
+              "type": "text"
+            },
+            {
+              "text": "honest ballpark budget estimate",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " from the very first conversation, and I stick to one rule: ",
+              "type": "text"
+            },
+            {
+              "text": "if your Excel still does the job, I’ll tell you so.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Switching to a business software should save you time and peace of mind—not saddle you with a project you don’t need.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "FAQ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Does a custom software solution only suit large companies?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No. B2B SMEs are often the ones suffering the most from Excel’s limitations because they’ve grown faster than their tools. We size the software to your real needs, not your company’s size.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "How long does it take to replace our main file?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A first version that takes over the role of your most critical file can be up and running in a few weeks. We then move forward in small increments, never disrupting operations.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Will we lose our Excel data during migration?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No—quite the opposite. We start from your existing files to initialize the software. Your history is preserved, not discarded.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "What if we just want to better organize our files, not switch to a software?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "That’s a valid option, and I’ll tell you if that’s the case. Sometimes, a few automations are enough before considering a full development.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "ca60da85-a3d3-47c2-8c9e-eb5299a862f3",
+            "body": [
+              {
+                "_uid": "i-19d08ad6-1175-4468-8a54-b31d8ce4d5c6",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "If one or two of these signs made you wince, it’s the right time to talk about it. I always start with an audit of your organization and a written action plan—you leave with a clear vision, even if you later decide to proceed without me.",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
