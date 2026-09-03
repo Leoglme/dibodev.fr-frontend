@@ -31,6 +31,15 @@
               @update:model-value="selectedType = $event"
             />
           </div>
+          <div class="w-full min-w-0 md:max-w-[180px] [&>*]:!min-w-0">
+            <DibodevSelect
+              id="filter-lang"
+              label="Langue"
+              :options="langOptions"
+              :model-value="selectedLang"
+              @update:model-value="selectedLang = $event"
+            />
+          </div>
         </div>
         <div class="w-full min-w-0 flex-1 md:max-w-md">
           <DibodevSearchBar title="Recherche" placeholder="Titre ou URL…" v-model:value="searchText" />
@@ -253,8 +262,15 @@ const typeOptions: DibodevSelectOption[] = [
   { label: 'Catégorie', value: 'category' },
   { label: 'Secteur', value: 'sector' },
 ]
+const langOptions: DibodevSelectOption[] = [
+  { label: 'Toutes les langues', value: '' },
+  { label: 'Français', value: 'fr' },
+  { label: 'Anglais', value: 'en' },
+  { label: 'Espagnol', value: 'es' },
+]
 const selectedVerdict = ref<DibodevSelectOption>(verdictOptions[0]!)
 const selectedType = ref<DibodevSelectOption>(typeOptions[0]!)
+const selectedLang: Ref<DibodevSelectOption> = ref(langOptions[0]!)
 
 const indexingTableFields: DibodevTableField[] = [
   { key: 'url', label: 'URL', cellsClasses: '!whitespace-normal min-w-[300px] max-w-[320px] break-words' },
@@ -292,12 +308,33 @@ function indexingPriority(item: IndexingItem): number {
   return 2
 }
 
+type UrlLocale = 'fr' | 'en' | 'es'
+
+/**
+ * Resolves the site locale of a page from its URL prefix (/en/ or /es/; French otherwise).
+ * @param {string} url - The absolute page URL.
+ * @returns {UrlLocale} The resolved locale ('fr', 'en' or 'es').
+ */
+function getUrlLocale(url: string): UrlLocale {
+  let pathname: string
+  try {
+    pathname = new URL(url).pathname
+  } catch {
+    pathname = url
+  }
+  if (pathname === '/en' || pathname.startsWith('/en/')) return 'en'
+  if (pathname === '/es' || pathname.startsWith('/es/')) return 'es'
+  return 'fr'
+}
+
 const filteredItems = computed((): IndexingItem[] => {
   let list: IndexingItem[] = items.value
   const v: string | undefined = selectedVerdict.value?.value
   if (v) list = list.filter((row: IndexingItem) => row.verdict === v)
   const t: string | undefined = selectedType.value?.value
   if (t) list = list.filter((row: IndexingItem) => row.type === t)
+  const lang: string | undefined = selectedLang.value?.value
+  if (lang) list = list.filter((row: IndexingItem): boolean => getUrlLocale(row.url) === lang)
   const q: string = searchText.value.trim().toLowerCase()
   if (q) {
     list = list.filter(
