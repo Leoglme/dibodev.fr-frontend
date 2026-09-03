@@ -3734,5 +3734,441 @@
         }
       ]
     }
+  },
+  "blog/developpeur-application-metier-rennes-freelance-local": {
+    "title": "Business application developer in Rennes: why proximity makes all the difference",
+    "excerpt": "Entrusting your custom business tool to a freelance developer near Rennes: what proximity really changes, with a concrete case and an honest budget.",
+    "metaTitle": "Custom business application developer in Rennes | Dibodev",
+    "metaDescription": "A custom business tool developed by a freelance developer near Rennes: what proximity changes for a small or medium-sized business, with a concrete example and a clear budget.",
+    "tags": [
+      "business application Rennes",
+      "freelance developer Rennes",
+      "custom business tool",
+      "custom software SME",
+      "freelance developer Brittany"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Three weeks ago, I stopped by to see the manager of a small maintenance company, about twenty minutes from Rennes. Eight employees, a full order book, and on his desk: two screens on… and a spiral-bound notebook placed between them. The week’s interventions were written in the notebook in pen. 'The software doesn’t do it the way I want,' he told me, shrugging. So he doubles everything: once in the SaaS they sold him, once in the notebook 'to be sure.'",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This manager doesn’t have a motivation problem. He has a tool problem. And that’s exactly where a business application developer can change his week—especially when they’re just around the corner.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "A business tool isn’t just another piece of software",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "When I talk about custom business applications, people often imagine a big, expensive project reserved for large companies. In reality, it’s the opposite. It’s a tool tailored to your way of working: yours. Not thirty features you only use three of, but the three that waste two hours of your day—done right.",
+              "type": "text"
+            },
+            {
+              "text": "For this maintenance manager, the real issue wasn’t 'I need software.' It was: 'I want to see, every Monday morning, who’s going where during the week, and know at a glance what hasn’t been invoiced.' No generic SaaS checked those boxes without forcing him to twist his workflow to fit their mold. A custom tool, on the other hand, starts with his notebook—not a template designed for a business that isn’t his.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Why 'near Rennes' makes a difference",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You might think a developer can be managed remotely from anywhere. That’s true on paper. But a business tool isn’t built by reading a requirements document: it’s built by watching someone work.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Being on-site around Rennes means I can sit in your office for an hour, watch that infamous Excel file open for real, and hear the 'oh yeah, but we never do it like that.' Those little details are what make the difference between a tool people adopt and one they abandon after a month.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Proximity, in concrete terms, gives three things:",
+              "type": "text"
+            },
+            {
+              "text": "- We meet in person.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A kickoff meeting at your table is worth ten video calls. You show me, I understand the ground reality, and we don’t waste three weeks on misunderstandings.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- Responsiveness.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": " A bug on Tuesday morning, a 'hey, we should add this'—I’m in the same time zone, the same week, reachable—no offshore hotline with ticket number 4712.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- No black box.",
+              "type": "text"
+            },
+            {
+              "text": " You know who’s coding your tool; you can make me coffee while showing me the problem. It might seem trivial, but it’s what makes a project succeed.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "The Rennes metropolitan area is a fabric of SMEs and micro-enterprises running on jury-rigged tools because custom solutions have long seemed out of reach. A local freelancer is precisely the way to get one without the cost or bureaucracy of an agency.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "A concrete example: Monday morning the week before",
+              "type": "text"
+            },
+            {
+              "text": "Let’s go back to the maintenance company. Today, their Monday morning looks like this: they open their schedule in a software, copy the interventions into the notebook, call two technicians to confirm, and realize on Thursday that three interventions from the previous week were never invoiced. Multiply that by a year: that’s thousands of euros slipping through the cracks—not out of malice, just friction.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "A custom tool here could fit on three screens: the week’s schedule showing who’s going where, an intervention sheet a technician fills out from their phone after leaving the site, and an 'unbilled' list that updates automatically as soon as an intervention is marked complete. Nothing flashy. Just the end of the notebook—and the end of forgotten invoices.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "This isn’t science fiction or a six-month project. It’s the kind of tool you scope in one meeting and deliver in small pieces, starting with what hurts the most.",
+              "type": "text"
+            },
+            {
+              "text": "‘How much does it cost?’—the real question",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Let’s be direct, because it’s the question everyone asks without daring to: yes, developing a custom tool represents a budget. But the right comparison isn’t 'custom vs. free.' It’s 'the cost of the tool vs. the cost of your current workflow'—the hours spent copying, the forgotten invoices, the errors you have to fix.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My approach boils down to three points. We start with the problem that hurts the most, not a bloated system. I give you a honest ballpark estimate from the first conversation, not a vague quote. And if, after listening to you, I realize an existing software would work just as well for much less, I’ll tell you—I’d rather have a client who comes back than a forced sale.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "FAQ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Do you need to be a large company for a custom tool?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No, quite the opposite. SMEs and micro-enterprises are the ones who benefit the most from automating the two or three tasks eating up their days. We size the tool to the need, not the other way around.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How long before I have something usable?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "We deliver in stages. A first version that solves the most painful problem can be up and running in a few weeks, then we expand based on real-world feedback.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’m in Vitré, Bruz, Cesson… does it still work?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes. I work with companies across the entire Rennes metropolitan area and Brittany. Proximity is a plus, not a boundary—we always find the right balance between on-site meetings and remote follow-up.",
+              "type": "text"
+            },
+            {
+              "text": "What if I already have software I don’t like?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "We first look at whether we can improve it or connect it to a small complementary tool before starting from scratch. Starting over is never the first option I propose.",
+              "type": "text"
+            },
+            {
+              "text": "If you recognize yourself in the manager with the spiral notebook, the simplest thing is to talk about it. I always start with an audit of your workflow and a written action plan—you leave with something useful, even if we don’t end up working together.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Discuss my project",
+              "type": "text"
+            },
+            {
+              "text": "je vous le dis",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " — je préfère un client qui revient qu'une vente forcée.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "FAQ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Faut-il être une grosse entreprise pour un outil sur mesure ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Non, au contraire. Les TPE et PME sont celles qui gagnent le plus à automatiser les deux ou trois tâches qui grignotent leurs journées. On dimensionne l'outil au besoin, pas l'inverse.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Combien de temps avant d'avoir quelque chose d'utilisable ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "On livre par étapes. Une première version qui règle le problème le plus douloureux peut être en service en quelques semaines, puis on enrichit selon les retours du terrain.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Je suis à Vitré, Bruz, Cesson… ça marche aussi ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Oui. Je travaille avec des entreprises de tout le bassin rennais et de Bretagne. La proximité est un plus, pas une frontière — on trouve toujours le bon mélange entre rendez-vous sur place et suivi à distance.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Et si j'ai déjà un logiciel que je n'aime pas ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "On regarde d'abord si on peut l'améliorer ou le connecter à un petit outil complémentaire avant de tout refaire. Repartir de zéro n'est jamais la première option que je propose.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si vous vous reconnaissez dans le gérant au cahier à spirales, le plus simple est d'en parler. Je commence toujours par un audit de votre organisation et un plan d'action écrit — vous repartez avec quelque chose d'utile, même si on ne travaille pas ensemble ensuite.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "6574f120-4303-4284-91bf-dfda745f0115",
+            "body": [
+              {
+                "_uid": "i-dd6a815a-69fc-4b6e-8d08-3ce44fead1a4",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuter de mon projet",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
