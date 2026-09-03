@@ -4908,5 +4908,287 @@
         }
       ]
     }
+  },
+  "blog/logiciel-gestion-auto-ecole-planning-eleves-heures": {
+    "title": "Software de gestión para autoescuela: decir adiós al planning mural",
+    "excerpt": "Planning, seguimiento de alumnos, horas y pagos: cómo un software a medida saca a una autoescuela del planning mural y los archivadores, con un caso concreto.",
+    "metaTitle": "Software de gestión a medida para autoescuela | Dibodev",
+    "metaDescription": "Planning de los monitores, seguimiento de alumnos, horas y pagos: por qué un software a medida cambia la vida de una autoescuela. Con un ejemplo concreto.",
+    "tags": [
+      "software autoescuela",
+      "software gestión autoescuela",
+      "planning autoescuela",
+      "software a medida autoescuela",
+      "gestión alumnos autoescuela"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La primera vez que miré por dentro el funcionamiento de una autoescuela, lo que más me impactó no fue la conducción, sino el mural. Un gran planning borrable, los monitores en columnas, los horarios en filas y tachones por todas partes: un alumno se retrasó, un monitor está enfermo, un coche está en el taller. Justo al lado, una carpeta por alumno y un cuaderno para las horas. Todo cabía en la cabeza de la gerente, y el día que se tomaba una tarde libre, nadie sabía con quién debía ir cada uno.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una autoescuela no es una empresa complicada, pero sí una empresa con muchos movimientos pequeños: decenas de alumnos, varios monitores, horas por descontar, pagos fraccionados... y son exactamente esos pequeños movimientos los que un software a medida sabe absorber sin esfuerzo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "El planning: el verdadero rompecabezas",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El planning de una autoescuela cambia constantemente. Un alumno cancela el día anterior, un horario se libera, un monitor encadena teórica y práctica, un coche debe pasar la revisión. En un planning mural o una hoja de cálculo compartida, cada cambio desencadena otros tres, y basta con un olvido para que un alumno llegue a una puerta cerrada o dos alumnos sean asignados al mismo coche.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una herramienta pensada para una autoescuela parte de esta realidad: con un vistazo se ve quién va a conducir, con qué monitor, en qué coche y un horario que se libera se vuelve a proponer automáticamente. El planning deja de ser una fuente de angustia para convertirse en un simple reflejo del día.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "El seguimiento de los alumnos: ¿en qué punto está cada uno?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "«¿Cuántas horas le quedan a este?» En muchas autoescuelas, la respuesta está en una carpeta o en la memoria del monitor que lo sigue. Mientras todo va bien, no hay problema. El problema surge cuando hay que decidir quién se presenta al examen, recordar a un alumno que va retrasado o justificar un saldo de horas a un padre que pregunta.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un software especializado guarda para cada alumno su paquete de horas, las horas realizadas, su progreso y sus documentos en un mismo lugar. Cualquiera en la autoescuela puede responder en diez segundos, sin buscar. Y el alumno, por su parte, se siente acompañado, algo que importa más de lo que parece para el boca a boca.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Las horas y los pagos: donde el dinero se pierde",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Este es el punto más sensible y el más silencioso. Horas realizadas pero nunca facturadas. Un paquete pagado en tres veces del que se pierde el rastro. Un alumno que «ya había pagado», y nadie lo recuerda. En un año, no son unos pocos euros: es una parte real de la facturación que se evapora sin que nadie haya hecho nada malo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una herramienta a medida vincula las horas, los paquetes y los pagos: en cuanto se imparte una clase, se descuenta; en cuanto hay un saldo pendiente, es visible. Se acaba de buscar y, sobre todo, se acaba de perder dinero.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Una herramienta hecha a medida para una autoescuela, no un agenda genérico",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Existen agendas y software genéricos. Algunos funcionan muy bien al principio, y si uno de ellos es suficiente para tu autoescuela, te lo diré con sinceridad. Pero muchos gerentes terminan forzándolos para encajar en sus procesos: un campo mal usado aquí, una hoja de cálculo paralela allá, y vuelves al doble trabajo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lo personalizado hace lo contrario: parte de tu forma de trabajar —tus paquetes, tus normas, tu organización— y se adapta exactamente a ella. No treinta funciones inútiles, solo las tuyas, bien hechas. Y se construye por etapas, empezando por lo que hoy te quita más tiempo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Vale la pena para una pequeña autoescuela?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí, a menudo incluso más. Son las estructuras pequeñas las que más sufren las tareas repetitivas, porque la gerente lo hace todo. Automatizar el planning y el seguimiento de horas libera un tiempo valioso.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cuánto tiempo se tarda en tener una herramienta usable?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Empezamos por el punto más doloroso —normalmente el planning o el seguimiento de horas— y una primera versión puede estar operativa en pocas semanas, para luego ir enriqueciéndola.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Recuperamos nuestros datos actuales?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí. Partimos de tus archivos y carpetas existentes para inicializar la herramienta: nada se pierde, todo se retoma.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Y la parte de teórica online?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Podemos conectarnos a ella o dejarla como está. La idea no es reemplazarlo todo, sino hacer desaparecer el trabajo manual alrededor.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si te identificas con ese planning mural lleno de tachones, lo más sencillo es hablarlo. Siempre empiezo con una auditoría de tu organización y un plan de acción por escrito: te vas con algo útil, incluso si luego no trabajamos juntos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "ca89f433-7dc4-435d-8fbc-8e2601447165",
+            "body": [
+              {
+                "_uid": "i-4e708b4e-9015-4a84-a325-809d0fe73e24",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

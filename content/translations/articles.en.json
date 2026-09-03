@@ -4908,5 +4908,287 @@
         }
       ]
     }
+  },
+  "blog/logiciel-gestion-auto-ecole-planning-eleves-heures": {
+    "title": "Driving school management software: ending the era of the wall planner",
+    "excerpt": "Scheduling, student tracking, hours, payments: how custom software helps a driving school move beyond the wall planner and binders, with a real-world case study.",
+    "metaTitle": "Custom driving school management software | Dibodev",
+    "metaDescription": "Instructor scheduling, student tracking, hours, and payments: why custom software transforms the operations of a driving school. With a real-world example.",
+    "tags": [
+      "driving school software",
+      "driving school management software",
+      "driving school scheduling",
+      "custom driving school software",
+      "student management driving school"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The first time I looked inside a driving school from the inside, what struck me wasn’t the driving—it was the wall. A large erasable schedule, instructors in columns, time slots in rows, and scribbles everywhere: a student shifted, an instructor is sick, a car is in the garage. Next to it, a binder per student and a notebook for hours. Everything fit in the manager’s head, and the day she took an afternoon off, no one knew who was supposed to drive with whom.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A driving school isn’t a complicated business. But it is a business with a lot of small, moving parts—dozens of students, several instructors, hours to track, payments spread out—and it’s exactly these small, moving parts that a custom software effortlessly absorbs.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The schedule: the real headache",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A driving school’s schedule is in constant flux. A student cancels the day before, a time slot opens up, an instructor combines theory and driving lessons, a car needs to go in for inspection. On a wall schedule or a shared spreadsheet, every change triggers three more, and one oversight is enough for a student to show up at a closed door or two students to be assigned to the same car.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A tool designed for a driving school starts from this reality: at a glance, you see who is driving, with which instructor, in which car, and a freed-up time slot is automatically reproposed. The schedule stops being a source of anxiety and becomes a simple reflection of the day.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Tracking students: where is everyone at?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "‘How many hours does he have left?’ In many driving schools, the answer is in a binder or in the memory of the instructor who follows him. As long as everything goes well, it’s fine. The problem arises when you need to decide who to present for the exam, follow up with a student who is falling behind, or justify a remaining balance to a parent who asks questions.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A specialized software keeps each student’s package, hours completed, progress, and documents in one place. Anyone in the driving school can answer in ten seconds without digging. And the student, for his part, feels supported—which matters more than you’d think for word-of-mouth referrals.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Hours and payments: where money gets lost",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is the most sensitive—and quietest—point. Hours completed but never invoiced. A package paid in three installments that gets lost in the shuffle. A student who ‘already paid,’ and no one remembers. Over a year, it’s not just a few euros: it’s a real share of the turnover that evaporates, without anyone having done anything wrong.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A custom tool links hours, packages, and payments: as soon as a lesson is completed, it’s deducted; as soon as a balance is due, it’s visible. You stop searching, and above all, you stop losing money.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "A tool tailored for a driving school, not a generic calendar",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "There are calendars and off-the-shelf software. Some work perfectly well at first—and if one of them is enough for your driving school, I’ll tell you so honestly. But many managers end up twisting them to fit their needs: a field repurposed here, a spreadsheet alongside there, and you’re back to double the work.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Custom software does the opposite: it starts from your way of working—your packages, your rules, your organization—and fits it exactly. No thirty useless features, just yours, done right. And it’s built in stages, starting with what’s costing you the most time today.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "FAQ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is it worth it for a small driving school?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Yes, often even more so. Small businesses suffer the most from repetitive tasks because the manager does everything. Automating the schedule and tracking hours frees up precious time.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How long before the tool is usable?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "We start with the most painful point—often the schedule or tracking hours—and a first version can be up and running in a few weeks, then we build on it.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can we import our current data?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Yes. We start from your existing files and binders to initialize the tool: nothing is lost, everything is carried over.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What about the online theory test part?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "We can either connect to it or leave it as is. The idea isn’t to replace everything, but to make the manual work around it disappear.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you recognize yourself in the wall schedule full of scribbles, the simplest thing is to talk about it. I always start with an audit of your organization and a written action plan—you leave with something useful, even if we don’t work together afterward.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "ca89f433-7dc4-435d-8fbc-8e2601447165",
+            "body": [
+              {
+                "_uid": "i-4e708b4e-9015-4a84-a325-809d0fe73e24",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
