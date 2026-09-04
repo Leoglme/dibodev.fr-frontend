@@ -5190,5 +5190,767 @@
         }
       ]
     }
+  },
+  "blog/application-metier-sur-mesure-guide-tpe-pme": {
+    "title": "Custom business applications: the complete guide for SMEs and VSEs",
+    "excerpt": "Overflowing Excel sheets, software that never quite fits your workflow: the full rundown on custom business applications, no jargon included.",
+    "metaTitle": "Custom business applications: the guide for SMEs and VSEs",
+    "metaDescription": "What’s the purpose of a custom business application? How to tell if your business needs one, what it costs, and how a project unfolds. The clear guide.",
+    "tags": [
+      "custom business application",
+      "custom software",
+      "business tool",
+      "SME digitalization",
+      "management application",
+      "freelance developer",
+      "custom development"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I don’t run a garage, I’ve never drawn up a roofing quote, nor supervised three masonry sites in the same week. But after years of building tools for tradespeople and small businesses, I’ve seen the same scene play out time and again. A Sunday night Excel file, titled something like `client_tracking_v4_final_ok.xlsx`, that no one dares touch anymore for fear of breaking it. And scattered around it, two or three software packages that do “sort of” the job, but none that actually fit how the business works.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "That’s usually when someone mentions a “custom business app” — often without being sure it’s really what they need. This guide is here to clear things up: what it is, when it’s worth it, what it actually changes, and how much time and money it requires.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "So, what exactly is a custom business app?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It’s software built around",
+              "type": "text"
+            },
+            {
+              "text": "a specific trade and a specific way of working",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " — yours. Not a spreadsheet repurposed beyond its limits, not a generic tool you shoehorn your workflow into while only using one-fifth of its features.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In practice, it looks like the tool that tracks quotes, sites, and schedules for a ",
+              "type": "text"
+            },
+            {
+              "text": "landscaper",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/paysagiste-outil-metier-devis-chantiers-plannings",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", the one that manages appointments, quotes, and vehicle tracking for a ",
+              "type": "text"
+            },
+            {
+              "text": "garage",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/garagiste-outil-sur-mesure-rendez-vous-devis-suivi-vehicules",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", or the module that links jobs, quotes, and invoices for an ",
+              "type": "text"
+            },
+            {
+              "text": "electrician",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/electricien-outil-sur-mesure-devis-interventions-factures",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". The common thread isn’t the technology: it’s that ",
+              "type": "text"
+            },
+            {
+              "text": "the tool fits the trade",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", instead of forcing the trade to fit the tool.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The signs your business needs one",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You don’t need an audit to spot them — they almost always come up:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- You ",
+              "type": "text"
+            },
+            {
+              "text": "enter the same information",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " multiple times — the client in one place, the quote in another, the invoice in a third.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Your Excel file has become a multi-layered mess ",
+              "type": "text"
+            },
+            {
+              "text": "only you know how to navigate",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", and it breaks the moment a colleague touches a cell.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- The information you need ",
+              "type": "text"
+            },
+            {
+              "text": "in the field",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " is ",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "stuck at the office",
+              "type": "text"
+            },
+            {
+              "text": " — the schedule, the latest quote, a client’s history.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "- You spend your ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "evenings and Sundays",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": " on admin instead of having it sorted out during the day.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The real question is this: over the last busy month, how many hours did you spend copying data from one tool to another, or hunting for a document you knew was “somewhere”? That’s the time a custom business app gives back to you.",
+              "type": "text"
+            },
+            {
+              "text": "What a custom app really changes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "The first change isn’t flashy; it’s quiet: ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "a single source of truth",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": ". A client, a quote, a site exists in one place, up to date, accessible from your phone or your desk. No more three versions of the same file.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Then come the pleasant side effects. Quotes go out the same day because they generate in two clicks. Follow-ups don’t get forgotten because the tool flags them. Copy-paste errors vanish because there’s no more copying. And you present your clients with a sharper image — in many trades, that matters as much as the price.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nothing magical here: we take your real workflow and strip away the friction, one by one.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A real-world example",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Take a plumber-heating engineer with two employees. Before, each job lived across a notebook, a text message, and a corner of a spreadsheet: the appointment scribbled in haste, the quote typed up at night, the invoice sometimes forgotten for three weeks. The result? Cash flow that’s stuck and follow-ups you’re too embarrassed to make because you’re not sure who owes what.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "With a tool tailored to him, the same day unfolds differently. He creates the job from his phone between sites, the quote turns into an invoice with one click once the work is approved, and his dashboard shows him overdue invoices in black and white on Monday morning. He hasn’t changed his trade — he’s just stopped losing it in scattered files.",
+              "type": "text"
+            },
+            {
+              "text": "Off-the-shelf or custom: the right reflex",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Let’s be honest: ",
+              "type": "text"
+            },
+            {
+              "text": "custom isn’t always the answer.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "text": " If an existing tool already does 90% of the job without twisting your arm, go for it — it’ll be cheaper and faster. Custom makes sense when your way of working ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "is exactly what sets you apart",
+              "type": "text"
+            },
+            {
+              "text": " or when you’re already juggling several tools that don’t talk to each other.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/site-vitrine-ou-outil-metier-sur-mesure-que-choisir",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "If you’re still torn between a simple website, an off-the-shelf tool, and a dedicated app, I’ve broken it down in a ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "separate comparison",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": ". The principle stays the same: choose the lightest option that actually solves the problem.",
+              "type": "text"
+            },
+            {
+              "text": "How much does it cost, how long does it take",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "It’s the question everyone dreads, so let’s tackle it head-on. A ",
+              "type": "text"
+            },
+            {
+              "text": "first useful tool",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " — not an over-engineered monster, but the piece that fixes your biggest pain point — usually costs ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "a few thousand euros and a few weeks",
+              "type": "text"
+            },
+            {
+              "text": ", not tens of thousands or years.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Here’s why: we don’t build everything at once. We start with what hurts most (often quotes or site tracking), get it in your hands ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "fast",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": ", and add the rest later, once the tool is already saving you time. You fund the next steps with the hours the first version frees up, not with a blank check upfront.",
+              "type": "text"
+            },
+            {
+              "text": "How a project actually works",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "In practice, it boils down to four steps. First, we ",
+              "type": "text"
+            },
+            {
+              "text": "review your current setup",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " — your files, your tools, your pain points. Then, we ",
+              "type": "text"
+            },
+            {
+              "text": "define",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " the scope of the first version: the bare minimum to make it useful from day one. I ",
+              "type": "text"
+            },
+            {
+              "text": "develop",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", you ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "test in the field",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": " quickly, and we ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "adjust",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": " based on your real feedback — because a trade tool is judged in the mud, not on a mock-up.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’m a freelance developer based in Rennes, working with tradespeople and small businesses across France. I’m your single point of contact from start to finish: no opaque subcontracting, no customer service halfway around the world.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Frequently asked questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Do I need to digitize everything at once?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No, especially not. We start with the biggest pain point, and the rest comes later if the need is there.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Will I be \"locked in\" with the provider?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "The code and your data are yours. The goal isn’t to make you dependent; it’s to make you self-sufficient.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Does it work on my phone, on the job site?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes. The field is often where the tool is most useful — so it’s designed for mobile from the start.",
+              "type": "text"
+            },
+            {
+              "text": "What if an existing tool is enough?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "I’ll tell you. Selling you something you don’t need is the fastest way to never work together again.",
+              "type": "text"
+            },
+            {
+              "text": "Ready to talk?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "The right first step isn’t a quote; it’s an ",
+              "type": "text"
+            },
+            {
+              "text": "assessment",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". I’ll review your setup, pinpoint what’s costing you the most time, and send you a ",
+              "type": "text"
+            },
+            {
+              "text": "written action plan",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/projets/categorie/application-metier",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " with a ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "aed8f59f-5674-4a4e-acdb-647abc6337c6",
+            "body": [
+              {
+                "_uid": "i-475be0c7-3005-4342-917e-6db760150672",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "realistic budget estimate",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

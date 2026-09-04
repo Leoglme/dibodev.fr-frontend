@@ -5190,5 +5190,767 @@
         }
       ]
     }
+  },
+  "blog/application-metier-sur-mesure-guide-tpe-pme": {
+    "title": "Aplicación profesional a medida: la guía completa para una pyme o una pyme",
+    "excerpt": "Excel que se desborda, software que nunca termina de adaptarse a tu forma de trabajar: el análisis completo sobre la aplicación profesional a medida, sin tecnicismos.",
+    "metaTitle": "Aplicación profesional a medida: la guía para pymes y autónomos",
+    "metaDescription": "¿Para qué sirve una aplicación profesional a medida, cómo saber si tu actividad la necesita, cuánto cuesta y cómo se desarrolla un proyecto. La guía clara.",
+    "tags": [
+      "aplicación profesional a medida",
+      "software a medida",
+      "herramienta profesional",
+      "digitalización pymes",
+      "aplicación de gestión",
+      "desarrollador freelance",
+      "desarrollo a medida"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No tengo un taller, nunca he hecho un presupuesto de construcción ni he seguido tres obras de albañilería en una misma semana. Pero después de desarrollar herramientas para artesanos y pequeñas empresas, he visto repetirse la misma escena una y otra vez. Un archivo de Excel abierto el domingo por la noche, llamado algo como `seguimiento_clientes_v4_final_ok.xlsx`, que ya nadie se atreve a modificar por miedo a romperlo todo. Y alrededor, dos o tres programas que hacen «más o menos» el trabajo, pero ninguno que se ajuste realmente a la forma en que funciona la empresa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Es ahí cuando suelen hablarme de «aplicación personalizada para el sector» —a menudo sin estar seguros de que sea realmente lo que necesitan. Esta guía está aquí para aclarar las cosas: qué es, cuándo vale la pena, qué cambia en la práctica y cuánto tiempo y dinero requiere.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Qué es exactamente una aplicación personalizada para el sector?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Es un software construido en torno a",
+              "type": "text"
+            },
+            {
+              "text": "un oficio concreto y una forma de trabajar concreta",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " —la suya. No una hoja de cálculo mal adaptada, ni un programa genérico en el que se introducen los datos a la fuerza usando solo una quinta parte de sus funciones.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En la práctica, se trata de la herramienta que gestiona los presupuestos, las obras y los calendarios de un ",
+              "type": "text"
+            },
+            {
+              "text": "jardinero paisajista",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/paysagiste-outil-metier-devis-chantiers-plannings",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", de la que organiza las citas, los presupuestos y el seguimiento de los vehículos en un ",
+              "type": "text"
+            },
+            {
+              "text": "taller mecánico",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/garagiste-outil-sur-mesure-rendez-vous-devis-suivi-vehicules",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", o del módulo que conecta intervenciones, presupuestos y facturas para un ",
+              "type": "text"
+            },
+            {
+              "text": "electricista",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/electricien-outil-sur-mesure-devis-interventions-factures",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". Lo que tienen en común no es la tecnología, sino que ",
+              "type": "text"
+            },
+            {
+              "text": "la herramienta se adapta al oficio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", en lugar de obligar al oficio a adaptarse a la herramienta.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Los signos de que su actividad lo necesita",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No necesita un estudio para reconocerlos: casi siempre aparecen los mismos:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- Vuelve a introducir la misma información ",
+              "type": "text"
+            },
+            {
+              "text": "varias veces",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " —el cliente en un sitio, el presupuesto en otro, la factura en un tercero.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Su Excel se ha convertido en un pastel de milhojas que ",
+              "type": "text"
+            },
+            {
+              "text": "solo usted sabe manejar",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", y se rompe en cuanto un empleado toca una celda.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- La información que necesita en el terreno ",
+              "type": "text"
+            },
+            {
+              "text": "se queda en la oficina",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " —el calendario, el último presupuesto, el historial de un cliente.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Pasa sus ",
+              "type": "text"
+            },
+            {
+              "text": "tardes y domingos",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " haciendo tareas administrativas en lugar de haberlas resuelto durante el día.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La verdadera pregunta es esta: en el último mes intenso, ¿cuántas horas ha pasado copiando información de una herramienta a otra o buscando un documento que sabía que estaba «en algún sitio»? Ese tiempo es el que una aplicación para su sector le devuelve.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que realmente cambia una aplicación personalizada",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El primer cambio no es espectacular, sino tranquilo: ",
+              "type": "text"
+            },
+            {
+              "text": "una única fuente de verdad",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Un cliente, un presupuesto, una obra existen en un solo lugar, actualizados, accesibles desde el teléfono o la oficina. Se acabaron las tres versiones del mismo archivo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Luego vienen los efectos secundarios agradables. Los presupuestos se envían el mismo día porque se generan en dos clics. Las recordatorios ya no se olvidan porque la herramienta los muestra. Los errores de copia desaparecen porque ya no hay copias. Y usted transmite a sus clientes una imagen más pulcra, algo que, en muchos oficios, marca la diferencia tanto como el precio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No hay magia en esto: se toma su organización real y se eliminan las fricciones, una por una.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Un ejemplo para hacerlo concreto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tome a un fontanero-calefactor con dos empleados. Antes, cada intervención vivía en una libreta, un mensaje y un rincón de la hoja de cálculo: la cita anotada a toda prisa, el presupuesto escrito por la noche, la factura a veces olvidada tres semanas. El resultado: dinero parado en la tesorería y recordatorios que ya no se atreven a hacer porque no saben muy bien quién debe qué.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Con una herramienta hecha a su medida, ese mismo día transcurre de otra forma. Crea la intervención desde su teléfono entre dos obras, el presupuesto se convierte en factura con un clic una vez validado el trabajo, y la pantalla de inicio le muestra claramente las facturas pendientes el lunes por la mañana. No ha cambiado su oficio —solo ha dejado de perderlo entre archivos dispersos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Listo para usar o personalizado: la decisión correcta",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Seamos honestos: ",
+              "type": "text"
+            },
+            {
+              "text": "lo personalizado no siempre es la mejor respuesta.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Si un programa existente ya cubre el 90 % del trabajo sin obligarle a torcer el brazo, adelante, será más barato y rápido. Lo personalizado se justifica cuando su forma de trabajar es ",
+              "type": "text"
+            },
+            {
+              "text": "justamente",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "text": " lo que lo diferencia, o cuando ya usa varias herramientas que no se comunican entre sí.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si aún duda entre un simple sitio web, una herramienta comercial o una aplicación dedicada, he detallado la decisión en una ",
+              "type": "text"
+            },
+            {
+              "text": "comparativa aparte",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/site-vitrine-ou-outil-metier-sur-mesure-que-choisir",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". La idea sigue siendo la misma: elegir la opción más ligera que resuelva realmente el problema.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cuánto cuesta, cuánto tiempo?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Es la pregunta que molesta, así que vamos a responderla con franqueza. Una ",
+              "type": "text"
+            },
+            {
+              "text": "primera herramienta útil",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " —no un monstruo, sino el bloque que resuelve el punto más doloroso— suele costar ",
+              "type": "text"
+            },
+            {
+              "text": "unos pocos miles de euros y unas semanas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", no decenas de miles ni años.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La razón: no se construye todo de golpe. Se empieza por lo que más le duele (a menudo el presupuesto o el seguimiento de obras), se pone en sus manos ",
+              "type": "text"
+            },
+            {
+              "text": "rápido",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", y luego se añade el resto una vez que la herramienta ya le está ahorrando tiempo. Financia el resto con el tiempo que le ha devuelto la primera versión, no con un cheque en blanco al inicio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cómo transcurre un proyecto en la práctica?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En la práctica, se resume en cuatro etapas. Empezamos por ",
+              "type": "text"
+            },
+            {
+              "text": "analizar su organización",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " tal como es: sus archivos, sus herramientas, sus puntos de fricción. Luego ",
+              "type": "text"
+            },
+            {
+              "text": "definimos",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " el alcance de la primera versión: lo estrictamente necesario para que sea útil desde el primer día. Yo desarrollo, usted ",
+              "type": "text"
+            },
+            {
+              "text": "prueba sobre el terreno",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " rápidamente, y ",
+              "type": "text"
+            },
+            {
+              "text": "ajustamos",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " con sus comentarios reales —porque una herramienta para un oficio se juzga con las botas en el barro, no en un prototipo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Soy desarrollador freelance en Rennes, trabajo con artesanos y pequeñas empresas de toda Francia, y soy el único interlocutor desde el principio hasta el final: sin subcontratación opaca, sin servicio de atención al cliente al otro lado del mundo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Hay que informatizarlo todo de golpe?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No, sobre todo no. Empezamos por el punto más doloroso, y lo demás viene después si es necesario.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Me quedaré «atrapado» con el proveedor?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "El código y los datos son suyos. La idea no es hacerle dependiente, sino darle autonomía.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Funciona en el teléfono, en la obra?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí. El terreno es a menudo donde la herramienta es más útil —por eso está pensada para móviles desde el principio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Y si un programa existente es suficiente?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Se lo diré. Hacerle gastar en algo que no necesita es la mejor forma de que nunca volvamos a trabajar juntos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Hablamos?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El primer paso correcto no es un presupuesto, sino un ",
+              "type": "text"
+            },
+            {
+              "text": "diagnóstico",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Analizo su organización, identifico el punto que más tiempo le cuesta, y le envío un ",
+              "type": "text"
+            },
+            {
+              "text": "plan de acción escrito",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " con un ",
+              "type": "text"
+            },
+            {
+              "text": "orden de magnitud de presupuesto honesto",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " —y si una herramienta existente ya hace el trabajo, se lo digo claramente. Puede ver un adelanto de ",
+              "type": "text"
+            },
+            {
+              "text": "mis aplicaciones para oficios",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/projets/categorie/application-metier",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " para hacerse una idea de cómo queda.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "aed8f59f-5674-4a4e-acdb-647abc6337c6",
+            "body": [
+              {
+                "_uid": "i-475be0c7-3005-4342-917e-6db760150672",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablemos de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
