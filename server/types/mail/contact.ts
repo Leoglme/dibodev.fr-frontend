@@ -13,3 +13,11 @@ export type ContactFormPayload = {
   phone: string | null
   message: string
 }
+
+/**
+ * Contact intent captured when a user starts filling the form without submitting: email and/or phone, at least one present.
+ */
+export type ContactIntentPayload = {
+  email: string | null
+  phone: string | null
+}

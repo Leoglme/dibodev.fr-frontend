@@ -6,12 +6,20 @@ export default `
     </mj-text>
 
     <mj-text padding="0" padding-left="0px" align="left" line-height="28px" padding-bottom="8px">
-      Un utilisateur a commencé à remplir le formulaire de contact avec l'email suivant :
+      Un utilisateur a commencé à remplir le formulaire de contact :
     </mj-text>
 
+    {{#if email}}
     <mj-text padding="0" padding-left="0px" align="left" line-height="28px" padding-bottom="8px">
       Email: {{email}}
     </mj-text>
+    {{/if}}
+
+    {{#if phone}}
+    <mj-text padding="0" padding-left="0px" align="left" line-height="28px" padding-bottom="8px">
+      Téléphone: {{phone}}
+    </mj-text>
+    {{/if}}
   </mj-column>
 </mj-section>
 `

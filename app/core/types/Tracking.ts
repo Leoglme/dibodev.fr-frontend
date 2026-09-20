@@ -13,9 +13,10 @@ export type TrackingEventPayloads = {
     projectType?: string | null
     pagesRange?: string | null
     budget?: string
+    hasPhone?: boolean
     errorStatus?: number | null
   }
-  [TRACKING_EVENTS.contactIntentSubmitted]: undefined
+  [TRACKING_EVENTS.contactIntentSubmitted]: { hasEmail: boolean; hasPhone: boolean }
   [TRACKING_EVENTS.projectCardClicked]: { project: string; route: string | null }
   [TRACKING_EVENTS.projectSiteVisited]: { project: string; siteUrl: string }
   [TRACKING_EVENTS.projectRepoVisited]: { repoUrl: string }

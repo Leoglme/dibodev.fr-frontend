@@ -33,15 +33,6 @@
         rules="required"
         @update:value="fullName = $event.toString()"
       />
-      <DibodevInput
-        id="email"
-        :label="$t('contact.form.emailLabel')"
-        :placeholder="$t('contact.form.emailPlaceholder')"
-        :value="email"
-        rules="required|email"
-        @update:value="email = $event.toString()"
-        @blur="onEmailBlur"
-      />
 
       <div class="flex flex-col gap-2">
         <DibodevInput
@@ -51,9 +42,22 @@
           :placeholder="$t('contact.form.phonePlaceholder')"
           :value="phone"
           @update:value="phone = $event.toString()"
+          @blur="onPhoneBlur"
         />
         <p class="text-sm text-gray-200">{{ $t('contact.form.phoneHelper') }}</p>
       </div>
+    </div>
+
+    <div>
+      <DibodevInput
+        id="email"
+        :label="$t('contact.form.emailLabel')"
+        :placeholder="$t('contact.form.emailPlaceholder')"
+        :value="email"
+        rules="required|email"
+        @update:value="email = $event.toString()"
+        @blur="onEmailBlur"
+      />
     </div>
 
     <div>
@@ -167,7 +171,7 @@ const message: Ref<string> = ref('')
 const isSubmitting: Ref<boolean> = ref(false)
 const errorMessage: Ref<string | null> = ref(null)
 const successMessage: Ref<string | null> = ref(null)
-const lastSentEmail: Ref<string | null> = ref(null)
+const lastSentIntentKey: Ref<string | null> = ref(null)
 const contactForm: Ref<FormContext | null> = ref(null)
 
 /** METHODS */
@@ -201,7 +205,7 @@ function resetFormValues(): void {
   email.value = ''
   phone.value = ''
   message.value = ''
-  lastSentEmail.value = null
+  lastSentIntentKey.value = null
   contactForm.value?.resetForm({
     values: {
       'type de projet': 'website',
@@ -214,36 +218,63 @@ function resetFormValues(): void {
   })
 }
 
-/** Debounced function to handle email blur */
-const debouncedOnEmailBlur = debounce(async () => {
-  if (!isValidEmail(email.value) || email.value === lastSentEmail.value) {
+/**
+ * Sends a contact intent notification with the contact info filled so far (a valid email and/or a phone), deduplicated on the pair.
+ * @returns {Promise<void>} Resolves once the intent request settles.
+ */
+async function sendContactIntent(): Promise<void> {
+  const currentEmail: string | null = isValidEmail(email.value) ? email.value.trim() : null
+  const currentPhone: string | null = phone.value.trim() || null
+
+  if (!currentEmail && !currentPhone) {
+    return
+  }
+
+  const intentKey: string = `${currentEmail ?? ''}|${currentPhone ?? ''}`
+  if (intentKey === lastSentIntentKey.value) {
     return
   }
 
   try {
     const { data, error } = await useFetch<{ message: string }>('/api/mail/contact-intent', {
       method: 'POST',
-      body: { email: email.value.trim() },
+      body: { email: currentEmail, phone: currentPhone },
     })
 
     if (error.value) {
-      console.error('onEmailBlur: Failed to send contact intent:', error.value)
+      console.error('sendContactIntent: Failed to send contact intent:', error.value)
       return
     }
 
     if (data.value) {
-      lastSentEmail.value = email.value.trim()
-      track(TRACKING_EVENTS.contactIntentSubmitted)
-      console.log('Contact intent notification sent:', data.value)
+      lastSentIntentKey.value = intentKey
+      track(TRACKING_EVENTS.contactIntentSubmitted, {
+        hasEmail: currentEmail !== null,
+        hasPhone: currentPhone !== null,
+      })
     }
   } catch (err) {
-    console.error('onEmailBlur: Unexpected error:', err)
+    console.error('sendContactIntent: Unexpected error:', err)
   }
-}, 500)
+}
 
-/** Handles email input blur to send contact intent notification */
+/** Debounced contact intent sender shared by the email and phone blur handlers. */
+const debouncedSendContactIntent = debounce(sendContactIntent, 500)
+
+/**
+ * Handles email input blur to send a contact intent notification.
+ * @returns {Promise<void>} Resolves once the debounced intent is triggered.
+ */
 async function onEmailBlur(): Promise<void> {
-  await debouncedOnEmailBlur()
+  await debouncedSendContactIntent()
+}
+
+/**
+ * Handles phone input blur to send a contact intent notification.
+ * @returns {Promise<void>} Resolves once the debounced intent is triggered.
+ */
+async function onPhoneBlur(): Promise<void> {
+  await debouncedSendContactIntent()
 }
 
 /** Handles form submission */
