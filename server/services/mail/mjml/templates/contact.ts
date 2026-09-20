@@ -13,6 +13,12 @@ export default `
       Email: {{email}}
     </mj-text>
 
+    {{#if phone}}
+    <mj-text padding="0" padding-left="0px" align="left" line-height="28px" padding-bottom="8px">
+      Téléphone: {{phone}}
+    </mj-text>
+    {{/if}}
+
     <mj-text padding="0" padding-left="0px" align="left" line-height="28px" padding-bottom="8px">
       Type de projet: {{projectType}}
     </mj-text>

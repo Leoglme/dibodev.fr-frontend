@@ -42,6 +42,18 @@
         @update:value="email = $event.toString()"
         @blur="onEmailBlur"
       />
+
+      <div class="flex flex-col gap-2">
+        <DibodevInput
+          id="telephone"
+          type="tel"
+          :label="$t('contact.form.phoneLabel')"
+          :placeholder="$t('contact.form.phonePlaceholder')"
+          :value="phone"
+          @update:value="phone = $event.toString()"
+        />
+        <p class="text-sm text-gray-200">{{ $t('contact.form.phoneHelper') }}</p>
+      </div>
     </div>
 
     <div>
@@ -150,6 +162,7 @@ const pagesRange: Ref<PagesRangeKey | null> = ref<PagesRangeKey | null>(null)
 const budgetRange: Ref<BudgetRangeKey | null> = ref<BudgetRangeKey | null>(null)
 const fullName: Ref<string> = ref('')
 const email: Ref<string> = ref('')
+const phone: Ref<string> = ref('')
 const message: Ref<string> = ref('')
 const isSubmitting: Ref<boolean> = ref(false)
 const errorMessage: Ref<string | null> = ref(null)
@@ -186,6 +199,7 @@ function resetFormValues(): void {
   budgetRange.value = null
   fullName.value = ''
   email.value = ''
+  phone.value = ''
   message.value = ''
   lastSentEmail.value = null
   contactForm.value?.resetForm({
@@ -194,6 +208,7 @@ function resetFormValues(): void {
       'nombre de pages': null,
       nom: '',
       email: '',
+      telephone: '',
       message: '',
     },
   })
@@ -243,6 +258,7 @@ async function onSubmit(): Promise<void> {
     budget: getBudgetRangeDisplay(budgetRange.value),
     fullName: fullName.value.trim(),
     email: email.value.trim(),
+    phone: phone.value.trim() || null,
     message: message.value.trim(),
   }
 
@@ -271,6 +287,7 @@ async function onSubmit(): Promise<void> {
         projectType: payload.projectType,
         pagesRange: payload.pagesRange,
         budget: payload.budget,
+        hasPhone: payload.phone !== null,
       })
       successMessage.value = t('contact.form.successMessage')
       resetFormValues()
