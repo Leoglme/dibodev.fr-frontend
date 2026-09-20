@@ -101,7 +101,7 @@ type SectorPageData = {
   rawContent: Record<string, unknown> | null
 }
 
-const { data: sectorStoryData } = useLazyAsyncData<SectorPageData | null>(
+const { data: sectorStoryData } = useAsyncData<SectorPageData | null>(
   sectorDataKey,
   async (): Promise<SectorPageData | null> => {
     const lang = storyblokLanguage.value
