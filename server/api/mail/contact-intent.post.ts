@@ -40,7 +40,11 @@ export default defineEventHandler(async (event: H3Event) => {
   }
 
   try {
-    await sendContactIntentNotificationMail({ email: body.email ?? null, phone: body.phone ?? null })
+    await sendContactIntentNotificationMail({
+      email: body.email ?? null,
+      phone: body.phone ?? null,
+      source: body.source ?? null,
+    })
     return { message: 'Contact intent notification sent successfully.' }
   } catch (error) {
     console.error('contact-intent.post: Error sending contact intent notification:', error)

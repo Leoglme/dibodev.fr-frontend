@@ -3,6 +3,7 @@ import { sendMail } from '~~/server/services/mail/sendMail'
 import { ownerEmail, websiteName } from '~~/server/services/mail/mail.config'
 import { registerHandlebarsHelpers } from '~~/server/helpers/HandlebarsHelpers'
 import type { ContactIntentPayload } from '~~/server/types/mail/contact'
+import { formatAcquisitionSource } from '~~/server/services/mail/formatLeadSource'
 
 /**
  * Sends a contact intent notification email to the owner.
@@ -22,6 +23,8 @@ export async function sendContactIntentNotificationMail(contact: ContactIntentPa
     payload: {
       email: contact.email,
       phone: contact.phone,
+      acquisitionSource: formatAcquisitionSource(contact.source),
+      landingPage: contact.source?.landingPage ?? null,
     },
     partialsNames: ['header', 'footer'],
   })

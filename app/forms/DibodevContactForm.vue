@@ -121,6 +121,7 @@ import type { Option } from '~/components/ui/DibodevTogglePillGroup.vue'
 import { debounce } from 'lodash-es'
 import type { ContactFormPayload } from '~~/server/types/mail/contact'
 import { useTracking } from '~/composables/useTracking'
+import { useLeadSource } from '~/composables/useLeadSource'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 /** Project type, pages range and budget range keys (values sent to API are translated via $t). */
@@ -133,6 +134,7 @@ type BudgetRangeKey = (typeof BUDGET_RANGE_KEYS)[number]
 
 const { t } = useI18n()
 const { track } = useTracking()
+const { getLeadSource } = useLeadSource()
 
 /** Options built from i18n (label = translated, value = key for stable binding across locale change). */
 const projectTypeOptions: ComputedRef<Option[]> = computed((): Option[] =>
@@ -238,7 +240,7 @@ async function sendContactIntent(): Promise<void> {
   try {
     const { data, error } = await useFetch<{ message: string }>('/api/mail/contact-intent', {
       method: 'POST',
-      body: { email: currentEmail, phone: currentPhone },
+      body: { email: currentEmail, phone: currentPhone, source: getLeadSource() },
     })
 
     if (error.value) {
@@ -291,6 +293,7 @@ async function onSubmit(): Promise<void> {
     email: email.value.trim(),
     phone: phone.value.trim() || null,
     message: message.value.trim(),
+    source: getLeadSource(),
   }
 
   try {

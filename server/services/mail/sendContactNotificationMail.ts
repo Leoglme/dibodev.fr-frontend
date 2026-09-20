@@ -3,6 +3,7 @@ import { sendMail } from '~~/server/services/mail/sendMail'
 import type { ContactFormPayload } from '~~/server/types/mail/contact'
 import { ownerEmail, websiteName } from '~~/server/services/mail/mail.config'
 import { registerHandlebarsHelpers } from '~~/server/helpers/HandlebarsHelpers'
+import { formatAcquisitionSource } from '~~/server/services/mail/formatLeadSource'
 
 /**
  * Sends a contact notification email to the site owner.
@@ -23,6 +24,8 @@ export async function sendContactNotificationMail(payload: ContactFormPayload): 
       ...payload,
       projectType: payload.projectType ?? 'Non spécifié',
       pagesRange: payload.pagesRange ?? 'Non spécifié',
+      acquisitionSource: formatAcquisitionSource(payload.source),
+      landingPage: payload.source?.landingPage ?? null,
     },
     partialsNames: ['header', 'footer'],
   })

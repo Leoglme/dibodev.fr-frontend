@@ -34,6 +34,18 @@ export default `
     <mj-text padding="0" padding-left="0px" align="left" line-height="28px" padding-bottom="8px">
       Message: {{message}}
     </mj-text>
+
+    {{#if acquisitionSource}}
+    <mj-text padding="0" padding-left="0px" align="left" line-height="28px" padding-bottom="8px">
+      Source d'acquisition: {{acquisitionSource}}
+    </mj-text>
+    {{/if}}
+
+    {{#if landingPage}}
+    <mj-text padding="0" padding-left="0px" align="left" line-height="28px" padding-bottom="8px">
+      Page d'entrée: {{landingPage}}
+    </mj-text>
+    {{/if}}
   </mj-column>
 </mj-section>
 `
