@@ -22,6 +22,7 @@
         :rows="rows"
         v-bind="field"
         :id="props.id"
+        :autocomplete="props.autocomplete || undefined"
         :value="props.value"
         @blur="emit('blur')"
         class="focus:border-primary relative flex w-full items-center justify-center rounded border-2 bg-gray-600 pt-3 pl-3 text-gray-100 outline-none placeholder:text-base placeholder:text-gray-300 focus:bg-gray-800"
@@ -38,6 +39,7 @@
         v-bind="field"
         :type="typeRef"
         :id="props.id"
+        :autocomplete="props.autocomplete || undefined"
         :value="props.value"
         :min="props.min ? props.min.toString() : undefined"
         :step="props.step ? props.step.toString() : undefined"
@@ -98,6 +100,7 @@ import type { DibodevInputProps } from '~/core/types/DibodevInput'
  * @property {number | null} rows - The input rows
  * @property {string} id - The input id
  * @property {string} type - The input type
+ * @property {string | null} autocomplete - The input autocomplete hint (e.g. "tel", "name", "email")
  * @property {string | null} rules - The input rules
  * @property {string | null} label - The input label
  * @property {number | null} min - The input min value
@@ -109,6 +112,7 @@ const props: DibodevInputProps = defineProps({
   rows: { type: Number, default: null },
   id: { type: String, default: 'field' },
   type: { type: String as PropType<InputTypeHTMLAttribute>, default: 'text' },
+  autocomplete: { type: String, default: null },
   rules: { type: String, default: null },
   label: { type: String, default: null },
   min: { type: Number, default: null },

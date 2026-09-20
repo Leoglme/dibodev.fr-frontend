@@ -6,6 +6,7 @@
  * @property {number | null} rows - The input rows
  * @property {string} id - The input id
  * @property {string} type - The input type
+ * @property {string | null} autocomplete - The input autocomplete hint (e.g. "tel", "name", "email")
  * @property {string | null} rules - The input rules
  * @property {string | null} label - The input label
  * @property {number | null} min - The input min value
@@ -17,6 +18,7 @@ export type DibodevInputProps = {
   rows: number | null
   id: string
   type: string
+  autocomplete: string | null
   rules: string | null
   label: string | null
   min: number | null

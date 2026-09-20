@@ -27,6 +27,7 @@
     <div class="grid grid-cols-1 gap-10 sm:gap-4 lg:grid-cols-2">
       <DibodevInput
         id="nom"
+        autocomplete="name"
         :label="$t('contact.form.nameLabel')"
         :placeholder="$t('contact.form.namePlaceholder')"
         :value="fullName"
@@ -38,6 +39,7 @@
         <DibodevInput
           id="telephone"
           type="tel"
+          autocomplete="tel"
           :label="$t('contact.form.phoneLabel')"
           :placeholder="$t('contact.form.phonePlaceholder')"
           :value="phone"
@@ -51,6 +53,7 @@
     <div>
       <DibodevInput
         id="email"
+        autocomplete="email"
         :label="$t('contact.form.emailLabel')"
         :placeholder="$t('contact.form.emailPlaceholder')"
         :value="email"
