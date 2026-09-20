@@ -30,8 +30,8 @@ import type {
 
 const STORYBLOK_CDN_BASE: string = 'https://api.storyblok.com/v2/cdn'
 const TRANSLATIONS_PATH: string = 'content/translations'
-/** Model for translations: reliable JSON output with a free-tier rate limit far above mistral-small's 20k tokens/minute. */
-const TRANSLATION_MODEL: string = 'mistral-large-latest'
+/** Reliable free-tier model for translations; a modest content max_tokens keeps each call under the 20k tokens/minute limit. */
+const TRANSLATION_MODEL: string = 'mistral-small-latest'
 
 type StoryblokStoryResponse<T> = {
   story?: { content?: T; full_slug?: string }
@@ -416,7 +416,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
           systemInstruction: getArticleContentSystemInstruction(locale),
           userMessage: contentUserMessage,
           temperature: 0.3,
-          maxTokens: 8000,
+          maxTokens: 4000,
         })
         try {
           const parsed: { texts?: string[] } = JSON.parse(contentRaw) as { texts?: string[] }
