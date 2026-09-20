@@ -30,8 +30,8 @@ import type {
 
 const STORYBLOK_CDN_BASE: string = 'https://api.storyblok.com/v2/cdn'
 const TRANSLATIONS_PATH: string = 'content/translations'
-/** High-throughput model for translations (its free-tier rate limits are far above mistral-small's 20k tokens/minute). */
-const TRANSLATION_MODEL: string = 'ministral-8b-latest'
+/** Model for translations: reliable JSON output with a free-tier rate limit far above mistral-small's 20k tokens/minute. */
+const TRANSLATION_MODEL: string = 'mistral-large-latest'
 
 type StoryblokStoryResponse<T> = {
   story?: { content?: T; full_slug?: string }
