@@ -30,6 +30,8 @@ import type {
 
 const STORYBLOK_CDN_BASE: string = 'https://api.storyblok.com/v2/cdn'
 const TRANSLATIONS_PATH: string = 'content/translations'
+/** High-throughput model for translations (its free-tier rate limits are far above mistral-small's 20k tokens/minute). */
+const TRANSLATION_MODEL: string = 'ministral-8b-latest'
 
 type StoryblokStoryResponse<T> = {
   story?: { content?: T; full_slug?: string }
@@ -291,6 +293,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
     for (const locale of locales) {
       const { content: raw }: { content: string } = await mistralGenerate({
         apiKey: mistralApiKey,
+        model: TRANSLATION_MODEL,
         systemInstruction: getProjectSystemInstruction(locale),
         userMessage,
         temperature: 0.3,
@@ -381,6 +384,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
     for (const locale of locales) {
       const { content: metaRaw }: { content: string } = await mistralGenerate({
         apiKey: mistralApiKey,
+        model: TRANSLATION_MODEL,
         systemInstruction: getArticleMetaSystemInstruction(locale),
         userMessage: metaUserMessage,
         temperature: 0.3,
@@ -408,6 +412,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
         const contentUserMessage: string = JSON.stringify({ texts: contentTexts })
         const { content: contentRaw }: { content: string } = await mistralGenerate({
           apiKey: mistralApiKey,
+          model: TRANSLATION_MODEL,
           systemInstruction: getArticleContentSystemInstruction(locale),
           userMessage: contentUserMessage,
           temperature: 0.3,
@@ -493,6 +498,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
     for (const locale of locales) {
       const { content: metaRaw }: { content: string } = await mistralGenerate({
         apiKey: mistralApiKey,
+        model: TRANSLATION_MODEL,
         systemInstruction: getSectorPageSystemInstruction(locale),
         userMessage: metaUserMessage,
         temperature: 0.3,
@@ -519,6 +525,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
         const contentUserMessage: string = JSON.stringify({ texts: introTexts })
         const { content: contentRaw }: { content: string } = await mistralGenerate({
           apiKey: mistralApiKey,
+          model: TRANSLATION_MODEL,
           systemInstruction: getArticleContentSystemInstruction(locale),
           userMessage: contentUserMessage,
           temperature: 0.3,
@@ -597,6 +604,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
     for (const locale of locales) {
       const { content: metaRaw }: { content: string } = await mistralGenerate({
         apiKey: mistralApiKey,
+        model: TRANSLATION_MODEL,
         systemInstruction: getCategoryPageSystemInstruction(locale),
         userMessage: metaUserMessage,
         temperature: 0.3,
@@ -623,6 +631,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
         const contentUserMessage: string = JSON.stringify({ texts: introTexts })
         const { content: contentRaw }: { content: string } = await mistralGenerate({
           apiKey: mistralApiKey,
+          model: TRANSLATION_MODEL,
           systemInstruction: getArticleContentSystemInstruction(locale),
           userMessage: contentUserMessage,
           temperature: 0.3,

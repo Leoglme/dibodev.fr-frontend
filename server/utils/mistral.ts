@@ -19,6 +19,7 @@ export type MistralGenerateParams = {
   apiKey: string
   systemInstruction?: string
   userMessage: string
+  model?: string
   maxTokens?: number
   /** Température (défaut 0.7). 0.5 pour article (plus conforme aux contraintes). */
   temperature?: number
@@ -61,7 +62,15 @@ async function throttleMistralCall(): Promise<void> {
  * @throws {Error} When Mistral keeps failing after the retries (rate limit or upstream error).
  */
 export async function mistralGenerate(params: MistralGenerateParams): Promise<MistralGenerateResult> {
-  const { apiKey, systemInstruction, userMessage, maxTokens = 9000, temperature = 0.7, top_p = 0.9 } = params
+  const {
+    apiKey,
+    systemInstruction,
+    userMessage,
+    model = MISTRAL_MODEL,
+    maxTokens = 9000,
+    temperature = 0.7,
+    top_p = 0.9,
+  } = params
 
   const headers: HeadersInit = {
     Authorization: `Bearer ${apiKey}`,
@@ -77,7 +86,7 @@ export async function mistralGenerate(params: MistralGenerateParams): Promise<Mi
   messages.push({ role: 'user', content: userMessage })
 
   const body: unknown = {
-    model: MISTRAL_MODEL,
+    model,
     messages,
     temperature,
     top_p,
