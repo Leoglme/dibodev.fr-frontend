@@ -6295,5 +6295,339 @@
         }
       ]
     }
+  },
+  "blog/logiciel-rdv-auto-ecole-reservation-en-ligne": {
+    "title": "Reserva de citas en línea para autoescuelas: ¡adiós al teléfono que no para de sonar!",
+    "excerpt": "Sus alumnos reservan sus horas de conducción en línea, visualizan los horarios disponibles y cancelan según sus normas. El teléfono deja de sonar, el calendario se llena.",
+    "metaTitle": "Software de citas en línea para autoescuelas: alumnos autónomos",
+    "metaDescription": "¿Y si sus alumnos reservaran sus horas de conducción en línea, sin necesidad de llamarle? Horarios visibles, recordatorios y cancelaciones reguladas: la guía definitiva para autoescuelas.",
+    "tags": [
+      "software citas autoescuela",
+      "reserva horas conducción",
+      "gestión citas autoescuela",
+      "calendario autoescuela en línea",
+      "reserva en línea autoescuela",
+      "software autoescuela personalizado"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un alumno que quiere reservar una hora de conducción hoy suele enfrentarse a esto: llama a las 14:00, nadie responde porque la secretaria está en el mostrador con un candidato. Vuelve a llamar a las 17:00, está ocupado. Termina enviando un mensaje de texto al instructor, quien lo lee entre dos turnos y se olvida de anotarlo. Tres días después, se presenta para una hora que no existe, o dos alumnos aparecen para el mismo coche.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No soy instructor y nunca he dado un examen de conducir. Pero cuando observo cómo funciona una autoescuela, lo que más me llama la atención es el tiempo que se pasa al teléfono haciendo de telefonista. Tomar una cita, moverla, volver a llamar, posponerla: son decenas de pequeños intercambios por semana, y cada uno puede perderse.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "La reserva siempre pasa por usted",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En la mayoría de las autoescuelas que conozco, solo hay un camino para reservar una hora: pasar por un humano. El alumno no ve los horarios libres, así que pregunta. Usted mira el planning, responde y anota. Multiplicado por cien alumnos, eso genera una carga enorme, concentrada en las horas de apertura, justo cuando ya tiene a alguien frente a usted.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El resultado no es solo pérdida de tiempo. También hay huecos en el planning: horarios libres que nadie reserva porque nadie los ve. Son olvidos. Y alumnos un poco frustrados que encuentran «complicado» reservar una hora.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cómo sería tomar una cita en línea?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una herramienta de reserva diseñada para una autoescuela es sencilla de describir desde el punto de vista del alumno: se conecta, ve los horarios realmente disponibles (el instructor correcto, el coche adecuado, la duración correcta), elige y queda reservado. Recibe una confirmación, un recordatorio el día anterior, y si debe cancelar, lo hace él mismo siguiendo las reglas que usted haya establecido, por ejemplo, sin cancelaciones con menos de 48 horas de antelación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Por su parte, usted ya no tiene que anotar nada. El horario reservado aparece en el planning, descontado del paquete del alumno. Usted mantiene el control: abre o cierra franjas horarias, bloquea a un instructor en formación, gestiona las excepciones. Pero el flujo normal, que antes ocupaba sus días, funciona solo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Un ejemplo concreto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tomen una autoescuela con cuatro instructores y ciento veinte alumnos activos. Hoy, la secretaria pasa buena parte de su mañana al teléfono ajustando horarios. Cada instructor tiene su cuaderno, y los lunes, todo se copia en el planning mural.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Con una reserva en línea, el alumno abre la app desde su teléfono por la noche, ve que el martes a las 18:00 está libre con su instructor habitual y reserva. La secretaria no descubre la cita al día siguiente: la veía llenarse en tiempo real. El martes por la mañana, un alumno cancela por enfermedad, el horario se libera automáticamente y otro alumno en espera recibe una notificación y lo toma. Nadie llamó por teléfono.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No es magia, es solo la herramienta adecuada que absorbe los movimientos que antes hacía a mano.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "«Mis alumnos no están todos cómodos con una app»",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Es la primera objeción, y es legítima. La reserva en línea no reemplaza al teléfono, lo vacía. Los alumnos autónomos, generalmente los más jóvenes, se manejan solos y ya no lo llaman. Aquellos que prefieren llamar siguen llamando, pero ahora usted puede atenderlos, porque la línea ya no está saturada por quienes podrían haber reservado por sí mismos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Reservar, sí, pero conectado con el resto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una toma de cita aislada no tiene mucho interés. Lo importante es que esté conectada con el resto de su gestión: el paquete del alumno (una hora reservada, una hora descontada), el seguimiento de su progreso, sus pagos, el planning de los instructores, del que hablo en detalle en ",
+              "type": "text"
+            },
+            {
+              "text": "este artículo sobre el planning de una autoescuela",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-gestion-auto-ecole-planning-eleves-heures",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". Es ahí donde una herramienta pensada para su profesión, en lugar de un agenda genérico de reservas, marca la diferencia: habla su lenguaje (candidatos, paquetes, horas de conducción, exámenes) y no el de una peluquería.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Funciona para una pequeña autoescuela?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí, y es donde el beneficio suele ser mayor: cuando una sola persona maneja el teléfono, el planning y la recepción, externalizar las reservas cambia realmente las jornadas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Los alumnos pueden reservar en cualquier momento?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No, usted establece las reglas: franjas horarias abiertas, plazo mínimo, número de horas por semana, cancelaciones reguladas. La herramienta aplica sus reglas, no las inventa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Hay que cambiar todo de golpe?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. Se puede empezar solo con la reserva en línea, dejarla funcionar unas semanas y luego conectarla con el seguimiento de los alumnos y los pagos cuando esté listo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Y si un software del mercado ya hace eso?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Entonces se lo diré. Si una solución existente cubre sus necesidades con un presupuesto razonable, no hay necesidad de desarrollar algo a medida. Lo personalizado solo se justifica cuando su organización tiene reglas que las herramientas estándar no pueden seguir.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Hablemos de su proyecto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si el teléfono que suena mientras tiene un alumno en el mostrador le habla, podemos analizarlo juntos. Empiezo con un análisis de su organización actual: cómo se reservan las horas, dónde se atasca, qué le toma más tiempo. Le doy un plan de acción escrito y un presupuesto estimado honesto. Y si una herramienta existente es suficiente, se lo diré con franqueza.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "13316311-c218-4c00-b481-e3dfadb590c4",
+            "body": [
+              {
+                "_uid": "i-7d32d2f9-13e2-4262-81a1-e894253b7e0c",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablemos de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
