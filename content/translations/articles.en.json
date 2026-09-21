@@ -6629,5 +6629,507 @@
         }
       ]
     }
+  },
+  "blog/developpement-logiciel-b2b-sur-mesure-prix": {
+    "title": "Custom B2B Software Development: What Does It Really Cost?",
+    "excerpt": "How much does a custom B2B business software solution cost? The real pricing factors, concrete ranges, and the pitfalls that drive up the bill.",
+    "metaTitle": "Custom B2B Business Software: What Does It Really Cost?",
+    "metaDescription": "The cost of a custom B2B business software solution depends on 5 key factors. Realistic pricing ranges, what drives costs up, and how to pay the right price.",
+    "tags": [
+      "custom b2b software development",
+      "tailored business software",
+      "custom software pricing",
+      "b2b application",
+      "enterprise software"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Since I’ve been developing custom business tools for companies, the first question I almost always get is the same: *“How much does a custom software solution cost?”* The honest answer—the one no one likes to give—is: *it depends.* But *“it depends”* doesn’t help anyone. So here are the real factors that determine the price, concrete ranges, and the pitfalls that can inflate the bill.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Why There’s No Fixed Price",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A custom B2B software solution, by definition, fits *your* way of working: your processes, your rules, your terminology. Two companies in the same industry almost never use the same tool—and that’s exactly what makes it valuable. It’s also what makes every quote unique—just look at the variety of ",
+              "type": "text"
+            },
+            {
+              "text": "custom business applications",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/projets/categorie/application-metier",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " and you’ll see that none of them are alike.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What you’re buying isn’t lines of code. It’s time: understanding your business, designing, developing, testing, fixing, and deploying. The price is that time multiplied by a daily rate.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The 5 Factors That Determine the Price",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1. **Functional Scope.**",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "A tool that handles just one thing (a schedule, a case tracker) costs far less than a platform that connects quotes, invoicing, inventory, and customers. Every *“and also…”* adds days.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "2. **Users and Roles.**",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "A tool for just you is simple. As soon as there are multiple roles (admin, employee, client), permissions, and several people using it at once, complexity jumps up a notch.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "3. **Integrations.**",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Connecting to your accounting software, a payment tool, or an external API: each link is a project in itself, especially if the other system is finicky.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "4. **Existing Data.**",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Taking your current data—often a pile of Excel files—and cleaning it up for the new tool takes time, and it’s rarely factored into the first quote.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "5. **Level of Polish.**",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "An internal tool used by three people can tolerate a few rough edges. A tool your clients will see must be polished, fast, and flawless on mobile. *“Done”* costs extra.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Concrete Price Ranges",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ballpark figures—not a quote:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "A simple, focused tool",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (one business function, one user type, no heavy integrations): a few thousand euros.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "A full business tool",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (multiple roles, a few integrations, dashboards): tens of thousands of euros.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "A B2B platform",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (multi-user, customer portal, integrations, scalability): beyond that, and it’s broken into phases.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What matters isn’t the absolute number—it’s the return. A tool that saves five hours a week for three people pays for itself quickly.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Pitfalls That Blow Up the Bill",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Scope creep.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "The *“quick extra feature”* is the first budget-buster. A good provider sets clear boundaries and pushes the rest to Phase 2.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Vague requirements upfront.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "The less clear the need is at the start, the more back-and-forth—and cost—you’ll pay. A short scoping phase saves big.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Custom when off-the-shelf would suffice.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Sometimes an existing tool does 80% of the job. Coding those 80% from scratch is wasteful: only build custom what truly differentiates you.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to Pay the Right Price",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Break it down. A first useful, deliverable phase is better than a perfect project that never finishes. Release a first version that solves the core problem, use it in real life, then add what truly matters—not just what you imagined initially.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "FAQ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Isn’t a SaaS subscription cheaper?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Often, at first. But if the tool doesn’t fit your workflow, you’re paying a lifetime subscription for software you’ll end up bypassing. Custom is an investment you own.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How long does a first tool take?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "A focused tool often delivers in weeks to a few months, depending on scope. Breaking it into phases lets you get something useful quickly.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Do I need to define everything before starting?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. Define the first phase precisely and keep the rest flexible. Trying to lock everything in upfront costs more—not less.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What about maintenance?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Software evolves: fixes, updates, enhancements. Budget a small annual amount. It’s the cost of keeping your tool reliable long-term.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "In Summary",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The price of a custom B2B tool depends mostly on scope, users, integrations, and polish. The real question isn’t *“How much does it cost?”* but *“How much does it save me?”* And the best approach? Start small, useful, then build from there.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "6527f1c7-b2e0-4134-9dbe-7e945132baaf",
+            "body": [
+              {
+                "_uid": "i-af903619-6227-426f-88bd-5ad8d7f997ab",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Let’s discuss your project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

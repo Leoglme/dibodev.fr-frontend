@@ -6629,5 +6629,507 @@
         }
       ]
     }
+  },
+  "blog/developpement-logiciel-b2b-sur-mesure-prix": {
+    "title": "Desarrollo de software B2B a medida: ¿cuánto cuesta realmente?",
+    "excerpt": "¿Cuánto cuesta un software empresarial B2B a medida? Los verdaderos factores de precio, rangos concretos y las trampas que disparan la factura.",
+    "metaTitle": "Software empresarial B2B a medida: ¿cuánto cuesta realmente?",
+    "metaDescription": "El precio de un software empresarial B2B a medida depende de 5 factores clave. Rangos realistas, qué eleva el costo y cómo pagar el precio justo.",
+    "tags": [
+      "desarrollo de software b2b",
+      "software empresarial a medida",
+      "precio de software personalizado",
+      "aplicación b2b",
+      "software para empresas"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Desde que desarrollo herramientas empresariales para empresas, la primera pregunta que siempre surge es casi la misma: « ¿cuánto cuesta un software a medida? ». La respuesta honesta, aquella que a nadie le gusta dar, es: depende. Pero « depende » no ayuda a nadie. Por eso aquí están los factores reales que determinan el precio, rangos concretos y las trampas que inflan la factura.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Por qué no hay un precio fijo?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un software B2B a medida, por definición, se adapta a SU forma de trabajar: sus pasos, sus reglas, su vocabulario. Dos empresas del mismo sector casi nunca tienen la misma herramienta, y eso es justo lo que le da valor. También es lo que hace que cada presupuesto sea único — observe la variedad de \"aplicaciones empresariales a medida\" y verá que ninguna se parece a otra.",
+              "type": "text"
+            },
+            {
+              "text": "Lo que usted compra no es código. Es tiempo: entender su negocio, diseñar, desarrollar, probar, corregir y desplegar. El precio es ese tiempo multiplicado por una tarifa diaria.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/projets/categorie/application-metier",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Los 5 factores que determinan el precio",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1. El alcance funcional.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Una herramienta que gestiona una sola cosa (un calendario, un seguimiento de expedientes) cuesta mucho menos que una plataforma que conecta presupuestos, facturación, inventario y clientes. Cada « y también... » añade días.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "2. Los usuarios y los roles.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Una herramienta solo para usted es simple. Tan pronto como hay varios roles (administrador, empleado, cliente), permisos y varias personas al mismo tiempo, la complejidad aumenta un nivel.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "3. Las integraciones.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Conectarse a su software de contabilidad, a una herramienta de pago o a una API externa: cada conexión es un proyecto en sí mismo, especialmente si el otro sistema es caprichoso.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "4. Los datos existentes.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Reutilizar sus datos actuales — a menudo una pila de archivos Excel — y organizarlos correctamente en la nueva herramienta lleva tiempo, y rara vez se incluye en el primer presupuesto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "5. El nivel de acabado.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Una herramienta interna utilizada por tres personas tolera algunas imperfecciones. Una herramienta que sus clientes verán debe ser pulida, rápida e impecable en dispositivos móviles. El « acabado » tiene su costo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Rangos concretos",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Ordenes de magnitud, no un presupuesto:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "- Una herramienta simple y enfocada (un solo oficio, un tipo de usuario, sin integraciones complejas): algunos miles de euros.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- Una herramienta empresarial completa (varios roles, algunas integraciones, tablero de control): desde decenas hasta algunas decenas de miles de euros.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- Una plataforma B2B (multi-usuario, espacio para clientes, integraciones, escalabilidad): más allá, y se divide en lotes.",
+              "type": "text"
+            },
+            {
+              "text": "Lo que importa no es la cifra absoluta, sino el retorno. Una herramienta que ahorra cinco horas por semana a tres personas se paga rápidamente.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Las trampas que disparan la factura",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- El alcance que se expande en el camino.",
+              "type": "text"
+            },
+            {
+              "text": "La funcionalidad «rápida y adicional» es el primer punto de sobrecosto. Un buen proveedor delimita el alcance y pospone el resto para la fase 2.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "- La ambigüedad inicial.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Cuanto menos claro esté el requisito al inicio, más se paga en idas y vueltas. Una breve fase de definición ahorra mucho dinero.",
+              "type": "text"
+            },
+            {
+              "text": "- El exceso de personalización donde bastaría un producto estándar.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "A veces una herramienta existente cubre el 80% del trabajo. Desarrollar ese 80% es un desperdicio: solo se programa a medida lo que realmente los diferencia.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Cómo pagar el precio justo",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Divídalo. Un primer lote útil y entregable vale más que un proyecto perfecto que nunca termina. Se lanza una primera versión que resuelve el problema principal, la usan en la práctica y luego se añade lo que realmente importa — no lo que imaginaron al principio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            },
+            {
+              "text": "¿No es más barato un SaaS por suscripción?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "A menudo, al principio. Pero si la herramienta no se adapta a su negocio, paga una suscripción de por vida por un software que contorneará. La personalización es una inversión que es suya.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "¿Cuánto tiempo toma desarrollar una primera herramienta?",
+              "type": "text"
+            },
+            {
+              "text": "Una herramienta enfocada suele entregarse en algunas semanas a unos meses, dependiendo del alcance. Dividirlo en lotes permite tener algo útil rápidamente.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "¿Hay que definir todo antes de empezar?",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. Hay que definir claramente el primer lote y mantener el resto flexible. Querer definir todo de antemano cuesta más, no menos.",
+              "type": "text"
+            },
+            {
+              "text": "¿Y el mantenimiento?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Un software evoluciona: correcciones, actualizaciones, mejoras. Prevea un pequeño presupuesto anual. Es el costo de mantener una herramienta confiable en el tiempo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "En resumen",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El precio de un software B2B a medida depende principalmente del alcance, los usuarios, las integraciones y el nivel de acabado. La verdadera pregunta no es « ¿cuánto cuesta? », sino « ¿cuánto me ahorra o mejora? ». Y el buen hábito es empezar pequeño, con algo útil, y luego construir sobre eso.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Hablemos de su proyecto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un abonnement SaaS n'est-il pas moins cher ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Souvent, au début. Mais si l'outil ne colle pas à votre métier, vous payez un abonnement à vie pour un logiciel que vous contournez. Le sur-mesure est un investissement qui vous appartient.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Combien de temps pour un premier outil ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Un outil ciblé se livre souvent en quelques semaines à quelques mois selon le périmètre. Le découpage en lots permet d'avoir quelque chose d'utile rapidement.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Faut-il tout définir avant de commencer ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Non. Il faut définir le premier lot précisément et garder le reste souple. Vouloir tout figer à l'avance coûte plus cher, pas moins.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Et la maintenance ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Un logiciel vit : corrections, évolutions, mises à jour. Prévoyez une petite enveloppe annuelle. C'est le prix d'un outil qui reste fiable dans le temps.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "En résumé",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Le prix d'un logiciel B2B sur mesure dépend surtout du périmètre, des utilisateurs, des intégrations et du niveau de finition. La vraie question n'est pas « combien ça coûte ? » mais « combien ça me fait gagner ? ». Et le bon réflexe, c'est de commencer petit, utile, puis de construire à partir de là.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "6527f1c7-b2e0-4134-9dbe-7e945132baaf",
+            "body": [
+              {
+                "_uid": "i-af903619-6227-426f-88bd-5ad8d7f997ab",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuter de mon projet",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
