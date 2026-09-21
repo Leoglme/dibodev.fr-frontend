@@ -7131,5 +7131,560 @@
         }
       ]
     }
+  },
+  "blog/logiciel-metier-saas-etagere-ou-sur-mesure": {
+    "title": "Software empresarial: SaaS listo para usar o desarrollo a medida?",
+    "excerpt": "¿SaaS del mercado o software a medida? Un comparativo honesto para decidir, con los casos en los que el listo para usar gana y aquellos donde el desarrollo personalizado es imprescindible.",
+    "metaTitle": "Software empresarial: ¿SaaS listo para usar o a medida? Comparativa real",
+    "metaDescription": "¿SaaS listo para usar o desarrollo a medida para su software empresarial? Los criterios reales de elección, los casos donde cada opción triunfa, sin rodeos.",
+    "tags": [
+      "software empresarial",
+      "saas o desarrollo a medida",
+      "software personalizado",
+      "aplicación b2b",
+      "herramienta empresarial"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "\"¿Compramos un software del mercado o desarrollamos el nuestro?\" Es una de las primeras decisiones cuando falta una herramienta. Y es una decisión real, no una evidencia: lo personalizado no siempre es la mejor respuesta, ni tampoco la solución estándar. Aquí está cómo la resuelvo con mis clientes, sin vender desarrollo a toda costa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que cada uno quiere decir",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un ",
+              "type": "text"
+            },
+            {
+              "text": "SaaS estándar",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", es un software ya construido, alquilado por suscripción, compartido por miles de empresas: un CRM conocido, una herramienta de facturación, un software de gestión de proyectos. Lo adaptas un poco, tú te adaptas mucho.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un ",
+              "type": "text"
+            },
+            {
+              "text": "desarrollo personalizado",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", es una herramienta construida para ti, según tus reglas, tu vocabulario, tus etapas. Hace exactamente lo que necesitas —ni más, ni menos— y es tuyo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Entre ambos extremos hay docenas de matices (herramienta del mercado muy parametrizable, módulo personalizado añadido a un SaaS…). Pero el arbitraje fundamental sigue siendo el mismo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cuando gana la solución estándar (y hay que asumirlo)",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Se lo digo con franqueza a mis clientes: en muchos casos, una herramienta del mercado es suficiente, y desarrollar sería un desperdicio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Tu necesidad es estándar.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Facturar, enviar newsletters, gestionar un calendario compartido: miles de empresas lo hacen igual, la herramienta existe, está madura y es económica.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Estás empezando.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Mientras el proceso no esté estabilizado, un SaaS flexible te permite probar sin comprometerte con un presupuesto de desarrollo.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "El plazo es prioritario.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Un SaaS está listo para usar mañana. Un desarrollo personalizado requiere semanas. Si tienes prisa por una necesidad básica, la solución estándar gana.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Pagar una suscripción en estos casos es la mejor opción.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cuando el desarrollo personalizado es imprescindible",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El desarrollo personalizado cobra todo su sentido cuando la solución estándar te obliga a adaptar TU negocio para encajar en SU molde.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Tu proceso es tu valor.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Si tu forma de trabajar te diferencia, una herramienta estándar te hace común. El desarrollo personalizado la protege y la acelera.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Ya estás contorneando la herramienta.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Exportaciones de Excel en todas direcciones, campos mal utilizados, tres programas que no se comunican: señal de que la solución estándar ya no sirve.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Tus datos son sensibles.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " No quieres confiarlos a un servicio externo alojado en un lugar desconocido: una herramienta en tu infraestructura responde a esa necesidad.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "La suma de las suscripciones se dispara.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Con varias decenas de usuarios, una suscripción por cabeza termina costando más que una herramienta que posees.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sobre el presupuesto exacto, hablo en detalle en ",
+              "type": "text"
+            },
+            {
+              "text": "cuánto cuesta un software B2B personalizado",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " — la verdadera pregunta siempre siendo «¿cuánto me hace ganar?».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "La trampa de los dos extremos",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El desarrollo personalizado total, donde se recrea lo que ya existe muy bien (un editor de texto, un calendario), es un desperdicio. La solución estándar forzada, donde se retuerce el negocio para encajar en una herramienta que no fue diseñada para ello, desgasta a los equipos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La mejor respuesta suele estar en el medio: un SaaS para necesidades básicas y desarrollo personalizado solo en lo que te diferencia — el módulo de negocio que nadie más tiene. Es ahí donde me centro en desarrollar ",
+              "type": "text"
+            },
+            {
+              "text": "aplicaciones de negocio personalizadas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/projets/categorie/application-metier",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Mi criterio en una sola pregunta",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Antes de decidir, hago una sola pregunta: ",
+              "type": "text"
+            },
+            {
+              "text": "¿este proceso forma parte de lo que te hace mejor que tus competidores?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- Si no (facturar, contar, planificar como todo el mundo) → solución estándar.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Si sí (tu método, tu relación con el cliente, tu cadena de producción) → desarrollo personalizado en esa parte.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El resto es ajuste.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Se puede empezar con una solución estándar y luego pasar a personalizada?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí, y suele ser inteligente. Validamos la necesidad con un SaaS y luego desarrollamos cuando sabemos exactamente qué falta. Pagamos el desarrollo solo cuando la necesidad es clara.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿El desarrollo personalizado es solo para grandes empresas?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. Una pequeña empresa con un proceso único suele tener más que ganar que una gran corporación con necesidades estándar. Es cuestión de especificidad, no de tamaño.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Una herramienta personalizada no envejecerá?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Como cualquier software. La diferencia es que tú decides cuándo y cómo evoluciona, en lugar de depender de la hoja de ruta de un editor.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Y si me equivoco de elección?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Por eso empiezo con un análisis breve y honesto. A veces recomiendo la solución estándar y no vendo nada — es mejor que un desarrollo que no servirá.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "En resumen",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La solución estándar gana en necesidades estándar, urgentes o aún no estabilizadas. El desarrollo personalizado gana cuando el proceso es tu valor, cuando ya estás contorneando la herramienta o cuando tus datos lo exigen. Y la mejor opción suele ser híbrida: del mercado para lo básico, personalizado para lo que te distingue.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "e37f1bfe-8273-45e7-ad17-12f6b7a38a24",
+            "body": [
+              {
+                "_uid": "i-3eaceeea-e9e6-40d8-898d-00b421ffd57a",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablemos de tu proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
