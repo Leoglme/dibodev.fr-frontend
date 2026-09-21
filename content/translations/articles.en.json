@@ -7686,5 +7686,481 @@
         }
       ]
     }
+  },
+  "blog/logiciel-gestion-des-temps-feuilles-heures-excel": {
+    "title": "Time Tracking Software: Putting an End to Excel Timesheets",
+    "excerpt": "Excel timesheets are costing you more than you realize. Discover the real, tangible benefits a dedicated time tracking software brings to a small business or SME.",
+    "metaTitle": "Time Tracking Software: End the Excel Hours Hassle",
+    "metaDescription": "Excel timesheets: errors, wasted time, forgotten entries. Learn how a SaaS-based time tracking solution truly transforms operations for SMEs—without unnecessary complexity.",
+    "tags": [
+      "time tracking saas",
+      "time management software",
+      "hour tracking",
+      "excel timesheets",
+      "work time tracking software"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How many hours did your teams spend on such and such client, site, or project last month? If the answer lies in a manually filled Excel file at the end of the month, from memory, you're losing money without even realizing it. Excel timesheets are everywhere in SMEs, and it’s almost always a false economy. Here’s why, and what a real time-tracking software changes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The True Cost of Excel Timesheets",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Using a spreadsheet to track hours seems free. In reality, it costs you:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Lost Time.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Each employee fills out their own table, someone consolidates the data, fixes broken formulas, and follows up with latecomers. Hours each month are wasted just counting hours.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Errors.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Data entered from memory at the end of the month, overwritten cells, wrong tabs. The numbers are approximate—and you invoice or pay based on that approximation.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Zero Real-Time Visibility.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "You only discover a project’s budget overrun when it’s too late to react.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Nothing Actionable.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "It’s impossible to quickly determine which client is profitable, which project is off track, or who is overloaded.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This isn’t an Excel problem—it’s a tool not designed for the job.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What a Time-Tracking Software Changes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A dedicated tool—often a SaaS—turns this chore into a habit. Specifically:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Entry Takes Seconds.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "You start a timer or log your hours from your phone throughout the day, not from memory three weeks later.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Everything Is Automatically Categorized",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "by client, project, or task. The total is calculated automatically, without needing to fix formulas.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "You See It in Real Time",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "where time is being spent: which projects consume too much, who is overwhelmed, what is billable and what isn’t.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Exports Are Ready",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "for invoicing and payroll in one click, with no manual copying.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The gain isn’t just comfort. It’s billable time you no longer lose, projects you can correct before they hurt your margins.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "A Concrete Example",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Take a ten-person agency that bills by time spent. With Excel, everyone vaguely fills out their table at the end of the month; the manager spends half a day consolidating everything and discovers that two projects have far exceeded the budget—too late.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "With a time-tracking tool: everyone logs their hours in just a few seconds per day, the manager sees overruns developing along the way, follows up with the right client on time, and generates invoices with one click. Result: fewer ‘forgotten’ hours (and thus unbilled time), and projects managed instead of endured.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is exactly the kind of need for which I design ",
+              "type": "text"
+            },
+            {
+              "text": "custom business applications",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/projets/categorie/application-metier",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": a tool tailored to how you track time, not a repurposed spreadsheet.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Off-the-Shelf SaaS or Custom Tool?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Let’s be honest: for a standard time-tracking need, an off-the-shelf SaaS does the job very well, and I often recommend it. Customization makes sense when your way of tracking is unique (specific billing rules, integration with other tools, or data you want to keep in-house), or when you want time tracking to integrate with a broader business tool you already own.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In that case, a custom time-tracking module tailored to your workflow, connected to your projects and clients, avoids yet another disconnected subscription.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "FAQ",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Will my employees accept time tracking?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "If they already filled out an Excel sheet, yes—they’ll find it faster and less painful. The key is a simple tool: just a few seconds per day, from their phone, without unnecessary complexity.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is it only for invoicing?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. Even if you don’t bill by time, knowing where your team’s time goes reveals costly tasks, unprofitable projects, and workload imbalances. It’s a management tool.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How long does it take to set up?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "An off-the-shelf SaaS can be up and running in a few days. A custom module takes longer but fits your rules exactly. We choose based on your situation.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What if I already have other tools?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "A good time-tracking system integrates with what you already have (projects, clients, invoicing) instead of adding another isolated tool. This is often the real argument for customization.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "In Summary",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Excel timesheets cost time, errors, and visibility. A time-tracking software turns a monthly chore into a daily habit and gives you control over your business. For standard needs, a SaaS is enough; for unique tracking methods, a custom tool takes over.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "33a449cb-8f20-462c-96fd-236449a5be6f",
+            "body": [
+              {
+                "_uid": "i-ba04b974-c40d-46c2-bcae-49a5415c02d3",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Let’s discuss your project.",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

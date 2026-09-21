@@ -7686,5 +7686,481 @@
         }
       ]
     }
+  },
+  "blog/logiciel-gestion-des-temps-feuilles-heures-excel": {
+    "title": "Software de gestión de tiempos: ¡adiós a las hojas de horas de Excel",
+    "excerpt": "Las hojas de horas de Excel le cuestan más de lo que imagina. Lo que un verdadero software de gestión de tiempos cambia, en la práctica, para una PYME. Sin complicaciones innecesarias.",
+    "metaTitle": "Software de gestión de tiempos: acabar con las horas en Excel",
+    "metaDescription": "Hojas de horas en Excel: errores, tiempo perdido, olvidos. Lo que un software de gestión de tiempos en SaaS transforma realmente para una PYME, sin sistemas engorrosos.",
+    "tags": [
+      "gestión de tiempos saas",
+      "software gestión de tiempos",
+      "seguimiento de horas",
+      "hoja de horas excel",
+      "software tiempo de trabajo"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cuántas horas han dedicado sus equipos a tal cliente, tal obra, tal proyecto el mes pasado? Si la respuesta está en un archivo de Excel rellenado a mano al final del mes, de memoria, está perdiendo dinero sin darse cuenta. Las hojas de horas de Excel están en todas partes en las PYMES, y casi siempre es una falsa economía. Aquí está el porqué, y lo que un verdadero software de gestión de tiempos cambia.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "El verdadero costo de las hojas de horas de Excel",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Usar una hoja de cálculo para registrar las horas parece gratis. En realidad, cuesta:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Tiempo perdido.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Cada empleado rellena su tabla, alguien consolida los datos, corrige fórmulas rotas y recuerda a los rezagados. Horas cada mes, solo para contar horas.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Errores.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Registro de memoria al final del mes, celdas sobrescritas, pestaña equivocada. Los números son aproximados — y factura o paga en base a esa aproximación.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Cero visibilidad en tiempo real.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Descubre el sobrepaso de un proyecto cuando ya es demasiado tarde para reaccionar.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Nada aprovechable.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Es imposible saber rápidamente qué cliente es rentable, qué proyecto se desvía o quién está sobrecargado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No es un problema de Excel: es un problema de herramienta no diseñada para eso.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que un software de gestión de tiempos cambia",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una herramienta dedicada — a menudo un SaaS — reemplaza la tarea tediosa por un hábito. Concretamente:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "El registro toma solo unos segundos.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Se inicia un cronómetro o se anotan las horas desde el teléfono, a lo largo del día, no de memoria tres semanas después.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Todo se distribuye automáticamente",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "por cliente, proyecto y tarea. El total se calcula solo, sin fórmulas que reparar.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Ve en tiempo real",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "dónde se va el tiempo: qué proyecto consume demasiado, quién está sobrecargado, qué es facturable y qué no lo es.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Los informes están listos",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "para la facturación y la nómina, con un clic, sin necesidad de copiar datos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La ganancia no es solo comodidad. Es tiempo facturable que ya no se pierde, proyectos que se enderezan antes de afectar la margen.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Un ejemplo concreto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tomen una agencia de diez personas que factura por horas trabajadas. Con Excel, cada uno rellena su tabla vagamente al final del mes; la gerente pasa medio día consolidando todo, y descubre que dos proyectos han superado ampliamente el presupuesto — demasiado tarde.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Con una herramienta de seguimiento de tiempos: cada uno registra sus horas en unos segundos al día, la gerente ve los sobrepasos desarrollarse en el camino, contacta al cliente correcto a tiempo, y genera la factura con un clic. Resultado: menos horas «olvidadas» (por lo tanto, no facturadas), y proyectos gestionados en lugar de sufrirlos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Es exactamente el tipo de necesidad para la que diseño ",
+              "type": "text"
+            },
+            {
+              "text": "aplicaciones empresariales personalizadas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/projets/categorie/application-metier",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": una herramienta adaptada a su forma de contar, no una hoja de cálculo mal utilizada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿SaaS del mercado o herramienta personalizada?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Seamos honestos: para una necesidad clásica de seguimiento de tiempos, un SaaS del mercado hace el trabajo muy bien, y a menudo lo recomiendo. La personalización se justifica cuando su forma de contar es particular (reglas de facturación específicas, integración con otras herramientas, datos que desea mantener en sus sistemas), o cuando desea que el seguimiento de tiempos se integre a una herramienta empresarial más amplia que ya posee.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En ese caso, un módulo de gestión de tiempos diseñado específicamente para usted, conectado a sus proyectos y clientes, evita otro suscripción desconectada del resto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Aceptarán mis empleados registrar sus horas?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Si ya llenaban un Excel, sí — es más rápido y menos molesto. La clave es una herramienta sencilla: unos segundos al día, desde el teléfono, sin complicaciones.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Solo sirve para facturar?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. Incluso sin facturar por horas, saber cómo se distribuye el tiempo de sus equipos revela las tareas costosas, los proyectos no rentables y las sobrecargas. Es una herramienta de gestión.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cuánto tiempo toma implementarlo?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Un SaaS del mercado se pone en marcha en unos días. Un módulo personalizado requiere más tiempo, pero se ajusta exactamente a sus reglas. Se elige según su situación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Y si ya tengo otras herramientas?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Un buen seguimiento de tiempos se integra con lo que ya tiene (proyectos, clientes, facturación) en lugar de añadir otra isla desconectada. Es a menudo el verdadero argumento para la personalización.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "En resumen",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las hojas de horas de Excel cuestan tiempo, errores y falta de visibilidad. Un software de gestión de tiempos transforma una tarea mensual tediosa en un hábito diario, y le devuelve el control sobre su actividad. Para una necesidad estándar, un SaaS es suficiente; para una forma de contar única, una herramienta personalizada toma el relevo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "33a449cb-8f20-462c-96fd-236449a5be6f",
+            "body": [
+              {
+                "_uid": "i-ba04b974-c40d-46c2-bcae-49a5415c02d3",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablemos de su proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
