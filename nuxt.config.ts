@@ -20,6 +20,12 @@ export default defineNuxtConfig({
                 defer: true,
                 'data-website-id': 'c1e02f13-f416-4059-b69c-e29da1acbcff',
               },
+              // The DevLeadHunter receptionist (Sofia), as a client of the module would install it.
+              {
+                src: 'https://demo.dibodev.fr/ai-assistant.js',
+                defer: true,
+                'data-slug': 'dibodev',
+              },
             ]
           : []),
       ],
