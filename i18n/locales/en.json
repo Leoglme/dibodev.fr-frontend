@@ -18,8 +18,12 @@
       "description": "Discover web projects, mobile apps and software by Léo Guillaume, freelance developer in Rennes."
     },
     "projectsPage": {
-      "title": "Portfolio — Freelance Web & Mobile Developer in Rennes | Dibodev",
+      "title": "Portfolio — Freelance Web & Mobile Developer in Rennes {'|'} Dibodev",
       "description": "Discover web, mobile and AI projects by Léo Guillaume, freelance developer in Rennes. SaaS, business applications, AI and more."
+    },
+    "businessSoftwarePage": {
+      "title": "Custom Business Software in Rennes — Freelance Developer {'|'} Dibodev",
+      "description": "Freelance developer near Rennes, France: custom business apps and management software for small businesses. Fixed price, from €5,000 to €15,000 per project."
     }
   },
   "nav": {
@@ -69,7 +73,8 @@
       "ai": "Artificial intelligence",
       "rennesFrance": "Rennes, France",
       "freelance": "Freelance"
-    }
+    },
+    "businessSoftware": "Custom business software"
   },
   "home": {
     "hero": {
@@ -413,5 +418,118 @@
   "accessibility": {
     "chooseLanguage": "Choose language",
     "blurBackground": ""
+  },
+  "businessSoftwarePage": {
+    "hero": {
+      "title": "Custom business software developer in Rennes",
+      "description": "I build management software for small and medium businesses in Rennes and Brittany that replaces Excel files, paperwork and repetitive tasks: scheduling, inventory, quotes, time tracking, bookings.",
+      "cta": "Discuss my project"
+    },
+    "tools": {
+      "title": "The tools I build",
+      "intro": "Each tool is designed around the way you work and the people who use it every day. It then grows with your business.",
+      "planning": {
+        "title": "Scheduling and field work",
+        "description": "Organise jobs, rounds or appointments, with an up-to-date schedule for the whole team."
+      },
+      "stock": {
+        "title": "Stock and inventory",
+        "description": "Track incoming and outgoing items and stock counts, with QR labels if needed."
+      },
+      "quotes": {
+        "title": "Quotes, invoices and customer follow-up",
+        "description": "Prepare quotes faster, track invoices and find each customer's history."
+      },
+      "time": {
+        "title": "Time tracking",
+        "description": "Replace timesheets with simple entry, per job if needed, and ready-to-use reports."
+      },
+      "booking": {
+        "title": "Online booking",
+        "description": "Let your customers book on their own, without back-and-forth emails or missed calls."
+      },
+      "ai": {
+        "title": "Automation and AI",
+        "description": "Sort incoming requests, extract data from your documents or answer your customers' frequent questions."
+      }
+    },
+    "steps": {
+      "title": "How I work",
+      "subtitle": "One point of contact, from the first call to maintenance.",
+      "discovery": {
+        "label": "Call",
+        "title": "A free first call",
+        "description": "We look together at how you work and what wastes your time. If existing software is enough, I will tell you."
+      },
+      "quote": {
+        "label": "Quote",
+        "title": "A clear fixed-price quote",
+        "description": "Scope, price and milestones are set before we start: no bad surprises along the way."
+      },
+      "build": {
+        "label": "Development",
+        "title": "Delivery in stages",
+        "description": "You test the tool as the project progresses and your feedback is taken into account before launch."
+      },
+      "support": {
+        "label": "Support",
+        "title": "Launch and follow-up",
+        "description": "I import your existing data, train your team and take care of maintenance and improvements."
+      }
+    },
+    "pricing": {
+      "title": "How much does custom business software cost?",
+      "project": {
+        "title": "Business app at a fixed price",
+        "price": "€5,000 to €15,000",
+        "description": "The price depends on the number of screens, users and connections to your existing software. Most small business tools fall within this range; a more complete platform can cost more. The price is set in the quote, before we start."
+      },
+      "maintenance": {
+        "title": "Maintenance and improvements",
+        "price": "€100 to €300 per month",
+        "description": "Hosting, backups, updates and fixes, depending on the tool. Larger improvements are quoted separately."
+      },
+      "note": "The first call and the quote are free.",
+      "vatNote": "Net prices: VAT not applicable (article 293 B of the French General Tax Code)."
+    },
+    "projects": {
+      "title": "Business apps already in production",
+      "seeAll": "See all business app projects"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "price": {
+        "question": "How much does custom business software cost?",
+        "answer": "At a fixed price, between €5,000 and €15,000 for most small business tools (scheduling, inventory, quotes, time tracking). The price depends on the number of screens, users and connections to your software; a more complete platform can cost more. It is set in the quote before we start, and maintenance then costs €100 to €300 per month depending on the tool."
+      },
+      "delay": {
+        "question": "How long does it take to build the tool?",
+        "answer": "The timeline is set in the quote depending on the scope. I deliver in stages: you use a first version quickly, then the tool grows with your feedback."
+      },
+      "freelance": {
+        "question": "Why a freelancer rather than an agency?",
+        "answer": "You talk directly to the person who designs and builds your tool, from the first call to maintenance. Fewer intermediaries, faster decisions and a price without agency overheads."
+      },
+      "area": {
+        "question": "Do you only work in Rennes?",
+        "answer": "I am based near Rennes and travel within Rennes, Ille-et-Vilaine and Brittany when useful. I also work remotely with businesses across France."
+      },
+      "excel": {
+        "question": "Can you take over our Excel files?",
+        "answer": "Yes. I import the data from your existing files into the new tool, so your team does not start from scratch."
+      },
+      "existing": {
+        "question": "What if existing software is enough?",
+        "answer": "I will tell you on the first call. Custom software only makes sense when off-the-shelf tools do not fit the way you work."
+      }
+    },
+    "articles": {
+      "title": "Further reading"
+    },
+    "cta": {
+      "title": "An Excel file getting out of hand? Let's talk about your tool.",
+      "description": "Describe your need in a few lines: I will reply within 24 hours with a first idea of the solution and budget.",
+      "button": "Discuss my project"
+    }
   }
 }

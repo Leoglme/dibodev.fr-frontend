@@ -5,7 +5,7 @@
   >
     <div class="mx-auto max-w-7xl">
       <h2 class="mb-8 text-2xl font-semibold text-gray-100 sm:text-3xl">
-        {{ $t('blog.related.title') }}
+        {{ title }}
       </h2>
       <div class="grid auto-rows-fr gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <BlogArticleCard
@@ -31,6 +31,10 @@ import type { DibodevArticle } from '~/core/types/DibodevArticle'
 import BlogArticleCard from '~/components/blog/BlogArticleCard.vue'
 
 defineProps({
+  title: {
+    type: String as PropType<string>,
+    required: true,
+  },
   articles: {
     type: Array as PropType<DibodevArticle[]>,
     default: (): DibodevArticle[] => [],

@@ -34,7 +34,7 @@
       </div>
     </article>
 
-    <BlogRelatedArticles :articles="relatedArticles" />
+    <BlogRelatedArticles :title="$t('blog.related.title')" :articles="relatedArticles" />
 
     <DibodevContactCtaSection />
   </div>

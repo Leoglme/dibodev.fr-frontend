@@ -18,8 +18,12 @@
       "description": "Descubre los proyectos web, aplicaciones móviles y software realizados por Léo Guillaume, desarrollador freelance en Rennes."
     },
     "projectsPage": {
-      "title": "Portfolio — Desarrollador Freelance Web y Móvil en Rennes | Dibodev",
+      "title": "Portfolio — Desarrollador Freelance Web y Móvil en Rennes {'|'} Dibodev",
       "description": "Descubre los proyectos web, móvil e IA realizados por Léo Guillaume, desarrollador freelance en Rennes. SaaS, aplicaciones de negocio, IA y más."
+    },
+    "businessSoftwarePage": {
+      "title": "Software de gestión a medida en Rennes — Desarrollador freelance {'|'} Dibodev",
+      "description": "Desarrollador freelance cerca de Rennes (Francia): aplicaciones de gestión a medida para pymes. Precio cerrado, de 5.000 a 15.000 € según el proyecto."
     }
   },
   "nav": {
@@ -69,7 +73,8 @@
       "ai": "Inteligencia artificial",
       "rennesFrance": "Rennes, Francia",
       "freelance": "Freelance"
-    }
+    },
+    "businessSoftware": "Software de gestión a medida"
   },
   "home": {
     "hero": {
@@ -413,5 +418,118 @@
   "accessibility": {
     "chooseLanguage": "Elegir idioma",
     "blurBackground": ""
+  },
+  "businessSoftwarePage": {
+    "hero": {
+      "title": "Desarrollador de software de gestión a medida en Rennes",
+      "description": "Creo para pequeñas y medianas empresas de Rennes y Bretaña programas de gestión que sustituyen los archivos Excel, el papeleo y las tareas repetitivas: planificación, stock, presupuestos, control horario, reservas.",
+      "cta": "Hablar de mi proyecto"
+    },
+    "tools": {
+      "title": "Las herramientas que desarrollo",
+      "intro": "Cada herramienta se diseña según tu forma de trabajar y para las personas que la usan a diario. Después evoluciona con tu actividad.",
+      "planning": {
+        "title": "Planificación e intervenciones",
+        "description": "Organizar obras, rutas o citas, con una planificación actualizada para todo el equipo."
+      },
+      "stock": {
+        "title": "Stock e inventario",
+        "description": "Controlar entradas, salidas e inventarios, con etiquetas QR si hace falta."
+      },
+      "quotes": {
+        "title": "Presupuestos, facturas y seguimiento de clientes",
+        "description": "Preparar presupuestos más rápido, seguir las facturas y consultar el historial de cada cliente."
+      },
+      "time": {
+        "title": "Control del tiempo de trabajo",
+        "description": "Sustituir las hojas de horas por un registro sencillo, por obra si hace falta, e informes listos para usar."
+      },
+      "booking": {
+        "title": "Reservas en línea",
+        "description": "Que tus clientes reserven solos, sin intercambios de correos ni llamadas perdidas."
+      },
+      "ai": {
+        "title": "Automatizaciones e IA",
+        "description": "Clasificar solicitudes, extraer datos de tus documentos o responder a las preguntas frecuentes de tus clientes."
+      }
+    },
+    "steps": {
+      "title": "Cómo trabajo",
+      "subtitle": "Un único interlocutor, desde la primera conversación hasta el mantenimiento.",
+      "discovery": {
+        "label": "Conversación",
+        "title": "Una primera conversación gratuita",
+        "description": "Vemos juntos cómo trabajas y qué te hace perder tiempo. Si un programa existente basta, te lo digo."
+      },
+      "quote": {
+        "label": "Presupuesto",
+        "title": "Un presupuesto claro y cerrado",
+        "description": "El alcance, el precio y las etapas se fijan antes de empezar: sin sorpresas por el camino."
+      },
+      "build": {
+        "label": "Desarrollo",
+        "title": "Entregas por etapas",
+        "description": "Pruebas la herramienta a medida que avanza el proyecto y tus comentarios se tienen en cuenta antes del lanzamiento."
+      },
+      "support": {
+        "label": "Seguimiento",
+        "title": "Lanzamiento y acompañamiento",
+        "description": "Importo tus datos existentes, formo a tu equipo y me encargo del mantenimiento y las mejoras."
+      }
+    },
+    "pricing": {
+      "title": "¿Cuánto cuesta un software de gestión a medida?",
+      "project": {
+        "title": "Aplicación de gestión a precio cerrado",
+        "price": "De 5.000 a 15.000 €",
+        "description": "El precio depende del número de pantallas, de usuarios y de conexiones con tus programas actuales. La mayoría de las herramientas de pymes están en este rango; una plataforma más completa puede costar más. El precio se fija en el presupuesto, antes de empezar."
+      },
+      "maintenance": {
+        "title": "Mantenimiento y mejoras",
+        "price": "De 100 a 300 € al mes",
+        "description": "Alojamiento, copias de seguridad, actualizaciones y correcciones, según la herramienta. Las mejoras más importantes se presupuestan aparte."
+      },
+      "note": "La primera conversación y el presupuesto son gratuitos.",
+      "vatNote": "Precios netos: IVA no aplicable (artículo 293 B del Código General de Impuestos francés)."
+    },
+    "projects": {
+      "title": "Aplicaciones de gestión ya en producción",
+      "seeAll": "Ver todos los proyectos de aplicaciones de gestión"
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "price": {
+        "question": "¿Cuánto cuesta un software de gestión a medida?",
+        "answer": "A precio cerrado, entre 5.000 y 15.000 € para la mayoría de las herramientas de pymes (planificación, stock, presupuestos, control horario). El precio depende del número de pantallas, de usuarios y de conexiones con tus programas; una plataforma más completa puede costar más. Se fija en el presupuesto antes de empezar, y el mantenimiento cuesta después de 100 a 300 € al mes según la herramienta."
+      },
+      "delay": {
+        "question": "¿Cuánto tiempo hace falta para crear la herramienta?",
+        "answer": "El plazo se fija en el presupuesto según el alcance. Entrego por etapas: usas una primera versión rápidamente y la herramienta se completa con tus comentarios."
+      },
+      "freelance": {
+        "question": "¿Por qué un freelance en lugar de una agencia?",
+        "answer": "Hablas directamente con la persona que diseña y desarrolla tu herramienta, desde la primera conversación hasta el mantenimiento. Menos intermediarios, decisiones más rápidas y un precio sin costes de estructura."
+      },
+      "area": {
+        "question": "¿Trabajas solo en Rennes?",
+        "answer": "Estoy cerca de Rennes y me desplazo por Rennes, Ille-et-Vilaine y Bretaña cuando es útil. También trabajo a distancia con empresas de toda Francia."
+      },
+      "excel": {
+        "question": "¿Puedes recuperar nuestros archivos Excel?",
+        "answer": "Sí. Importo los datos de tus archivos actuales en la nueva herramienta, para que tu equipo no empiece de cero."
+      },
+      "existing": {
+        "question": "¿Y si un programa existente es suficiente?",
+        "answer": "Te lo digo en la primera conversación. Un software a medida solo tiene sentido si los programas del mercado no se adaptan a tu forma de trabajar."
+      }
+    },
+    "articles": {
+      "title": "Para saber más"
+    },
+    "cta": {
+      "title": "¿Un Excel que se desborda? Hablemos de tu herramienta.",
+      "description": "Descríbeme tu necesidad en unas líneas: te respondo en 24 horas con una primera idea de solución y de presupuesto.",
+      "button": "Hablar de mi proyecto"
+    }
   }
 }

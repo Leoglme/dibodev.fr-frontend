@@ -1,0 +1,21 @@
+# Dibodev
+
+> Dibodev est l'activité de Léo Guillaume, développeur freelance full-stack basé près de Rennes (Saint-Erblon, Bretagne, France). Il crée des applications métier, des logiciels de gestion, des sites web et des automatisations avec l'IA pour les TPE et PME, à Rennes, en Ille-et-Vilaine, en Bretagne et à distance partout en France.
+
+## Services
+
+- [Application métier sur mesure à Rennes](https://dibodev.fr/application-metier-sur-mesure-rennes) : logiciels de gestion qui remplacent les fichiers Excel (planning, stocks, devis et factures, suivi du temps, réservation en ligne, automatisations IA). Au forfait, de 5 000 à 15 000 € pour la plupart des outils de TPE et PME (davantage pour une plateforme complète), maintenance de 100 à 300 € par mois. Prix nets, TVA non applicable (article 293 B du CGI).
+- [Projets réalisés](https://dibodev.fr/projets) : Izidoor (plateforme SaaS de réservation pour le sport et les loisirs), Gest-Time (suivi du temps de travail), Stockpme (gestion de stock et d'inventaire), A2M Ôrizon Solution (site vitrine avec CMS), GoupixDex, NightForge et d'autres.
+- [Blog](https://dibodev.fr/blog) : articles pour artisans, TPE et PME sur les outils métier, les sites web et l'intelligence artificielle.
+
+## Contact
+
+- [Formulaire de contact](https://dibodev.fr/contact) : réponse sous 24 h, premier échange et devis gratuits.
+- Téléphone : 06 42 19 38 12
+- E-mail : contact@dibodev.fr
+
+## À propos
+
+- Entreprise individuelle Dibodev (EI Guillaume Léo), SIRET 988 307 906 00020, créée le 20 juin 2025.
+- Stack : Nuxt, Vue.js, TypeScript, Node.js, Python, .NET, intelligence artificielle.
+- Autres langues : [English](https://dibodev.fr/en/custom-business-software-rennes), [Español](https://dibodev.fr/es/software-de-gestion-a-medida-rennes).

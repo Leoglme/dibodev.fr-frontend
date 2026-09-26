@@ -18,8 +18,12 @@
       "description": "Découvrez les projets web, applications mobiles et logiciels réalisés par Léo Guillaume, développeur freelance à Rennes."
     },
     "projectsPage": {
-      "title": "Portfolio — Développeur Freelance Web & Mobile à Rennes | Dibodev",
+      "title": "Portfolio — Développeur Freelance Web & Mobile à Rennes {'|'} Dibodev",
       "description": "Découvrez les projets web, mobile et IA réalisés par Léo Guillaume, développeur freelance à Rennes. SaaS, applications métier, IA et plus."
+    },
+    "businessSoftwarePage": {
+      "title": "Application métier sur mesure à Rennes — Développeur freelance {'|'} Dibodev",
+      "description": "Développeur freelance près de Rennes : applications métier et logiciels de gestion sur mesure pour TPE et PME. Au forfait, de 5 000 à 15 000 € selon le projet."
     }
   },
   "nav": {
@@ -69,7 +73,8 @@
       "ai": "Intelligence artificielle",
       "rennesFrance": "Rennes, France",
       "freelance": "Freelance"
-    }
+    },
+    "businessSoftware": "Application métier sur mesure"
   },
   "home": {
     "hero": {
@@ -413,5 +418,118 @@
   "accessibility": {
     "chooseLanguage": "Choisir la langue",
     "blurBackground": ""
+  },
+  "businessSoftwarePage": {
+    "hero": {
+      "title": "Développeur d'application métier sur mesure à Rennes",
+      "description": "Je crée pour les TPE et PME de Rennes et de Bretagne des logiciels de gestion qui remplacent les fichiers Excel, les papiers et les tâches répétitives : planning, stocks, devis, suivi du temps, réservations.",
+      "cta": "Discuter de mon projet"
+    },
+    "tools": {
+      "title": "Les outils que je développe",
+      "intro": "Chaque outil est pensé pour votre façon de travailler et pour les personnes qui l'utilisent tous les jours. Il évolue ensuite avec votre activité.",
+      "planning": {
+        "title": "Planning et interventions",
+        "description": "Organiser les chantiers, les tournées ou les rendez-vous, avec un planning à jour pour toute l'équipe."
+      },
+      "stock": {
+        "title": "Stocks et inventaire",
+        "description": "Suivre les entrées, les sorties et les inventaires, avec des étiquettes QR si besoin."
+      },
+      "quotes": {
+        "title": "Devis, factures et suivi client",
+        "description": "Préparer vos devis plus vite, suivre les factures et retrouver l'historique de chaque client."
+      },
+      "time": {
+        "title": "Suivi du temps de travail",
+        "description": "Remplacer les feuilles d'heures par une saisie simple, par chantier si besoin, et des rapports prêts à l'emploi."
+      },
+      "booking": {
+        "title": "Réservation en ligne",
+        "description": "Laisser vos clients réserver seuls, sans échanges d'e-mails ni appels à rappeler."
+      },
+      "ai": {
+        "title": "Automatisations et IA",
+        "description": "Trier les demandes, extraire les données de vos documents ou répondre aux questions fréquentes de vos clients."
+      }
+    },
+    "steps": {
+      "title": "Comment je travaille",
+      "subtitle": "Un seul interlocuteur, du premier échange à la maintenance.",
+      "discovery": {
+        "label": "Échange",
+        "title": "Un premier échange gratuit",
+        "description": "On regarde ensemble comment vous travaillez et ce qui vous fait perdre du temps. Si un logiciel existant suffit, je vous le dis."
+      },
+      "quote": {
+        "label": "Devis",
+        "title": "Un devis clair, au forfait",
+        "description": "Le périmètre, le prix et les étapes sont fixés avant de commencer : pas de mauvaise surprise en cours de route."
+      },
+      "build": {
+        "label": "Développement",
+        "title": "Des livraisons par étapes",
+        "description": "Vous testez l'outil au fil du projet et vos retours sont pris en compte avant la mise en ligne."
+      },
+      "support": {
+        "label": "Suivi",
+        "title": "Mise en ligne et accompagnement",
+        "description": "Je reprends vos données existantes, je forme vos équipes et j'assure la maintenance et les évolutions."
+      }
+    },
+    "pricing": {
+      "title": "Combien coûte une application métier ?",
+      "project": {
+        "title": "Application métier au forfait",
+        "price": "De 5 000 à 15 000 €",
+        "description": "Le prix dépend du nombre d'écrans, d'utilisateurs et de connexions à vos logiciels existants. La plupart des outils de TPE et PME se situent dans cette fourchette. Une plateforme plus complète peut coûter davantage. Le prix est fixé dans le devis, avant de commencer."
+      },
+      "maintenance": {
+        "title": "Maintenance et évolutions",
+        "price": "De 100 à 300 € par mois",
+        "description": "Hébergement, sauvegardes, mises à jour et corrections, selon l'outil. Les évolutions plus importantes sont chiffrées à part."
+      },
+      "note": "Le premier échange et le devis sont gratuits.",
+      "vatNote": "Prix nets : TVA non applicable (article 293 B du CGI)."
+    },
+    "projects": {
+      "title": "Des applications métier déjà en production",
+      "seeAll": "Voir tous les projets d'applications métier"
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "price": {
+        "question": "Combien coûte une application métier sur mesure ?",
+        "answer": "Au forfait, entre 5 000 et 15 000 € pour la plupart des outils de TPE et PME (planning, stocks, devis, suivi du temps). Une plateforme plus complète peut coûter davantage. Le prix dépend du nombre d'écrans, d'utilisateurs et de connexions à vos logiciels, et il est fixé dans le devis avant de commencer. La maintenance coûte ensuite de 100 à 300 € par mois selon l'outil."
+      },
+      "delay": {
+        "question": "Combien de temps faut-il pour créer l'outil ?",
+        "answer": "Le délai est fixé dans le devis selon le périmètre. Je livre par étapes : vous utilisez une première version rapidement, puis l'outil s'enrichit au fil de vos retours."
+      },
+      "freelance": {
+        "question": "Pourquoi un freelance plutôt qu'une agence ?",
+        "answer": "Vous parlez directement à la personne qui conçoit et développe votre outil, du premier échange à la maintenance. Moins d'intermédiaires, des décisions plus rapides et un prix sans frais de structure."
+      },
+      "area": {
+        "question": "Travaillez-vous seulement à Rennes ?",
+        "answer": "Je suis basé près de Rennes et je me déplace à Rennes, en Ille-et-Vilaine et en Bretagne quand c'est utile. Je travaille aussi à distance avec des entreprises partout en France."
+      },
+      "excel": {
+        "question": "Pouvez-vous reprendre nos fichiers Excel ?",
+        "answer": "Oui. Je reprends vos fichiers existants pour importer vos données dans le nouvel outil, afin que vos équipes ne repartent pas de zéro."
+      },
+      "existing": {
+        "question": "Et si un logiciel existant suffit ?",
+        "answer": "Je vous le dis dès le premier échange. Un outil sur mesure n'a de sens que si les logiciels du marché ne collent pas à votre façon de travailler."
+      }
+    },
+    "articles": {
+      "title": "Pour aller plus loin"
+    },
+    "cta": {
+      "title": "Un fichier Excel qui déborde ? Parlons de votre outil.",
+      "description": "Décrivez-moi votre besoin en quelques lignes : je vous réponds sous 24 h avec une première idée de solution et de budget.",
+      "button": "Discuter de mon projet"
+    }
   }
 }

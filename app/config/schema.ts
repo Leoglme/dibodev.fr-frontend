@@ -74,7 +74,6 @@ export type SchemaOrganization = {
   address: SchemaPostalAddress
   vatID: string
   identifier: SchemaPropertyValue
-  priceRange: string
   hasOfferCatalog: SchemaOfferCatalog
 }
 
@@ -105,7 +104,6 @@ const ORGANIZATION_FOUNDING_DATE: string = '2025-06-20'
 const ORGANIZATION_LOGO: string = `${SITE_URL}/android-chrome-512x512.png`
 const ORGANIZATION_VAT_ID: string = 'FR02988307906'
 const ORGANIZATION_SIRET: string = '98830790600020'
-const ORGANIZATION_PRICE_RANGE: string = '350 € TTC / jour'
 
 const AREA_SERVED: string[] = ['Rennes', 'Ille-et-Vilaine', 'Bretagne', 'France']
 
@@ -196,7 +194,6 @@ export const organizationSchema: SchemaOrganization = {
     propertyID: 'SIRET',
     value: ORGANIZATION_SIRET,
   },
-  priceRange: ORGANIZATION_PRICE_RANGE,
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Services de Dibodev',
