@@ -48,8 +48,8 @@ import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import DibodevBadge from '~/components/ui/DibodevBadge.vue'
 import type { DibodevArticle } from '~/core/types/DibodevArticle'
+import type { StoryblokVersion } from '~/services/types/storyblok'
 import { StoryblokArticleService } from '~/services/storyblokArticleService'
-import { mapStoryblokArticleToDibodevArticle } from '~/services/storyblokArticleMapper'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 
 const RELATED_ARTICLES_COUNT: number = 3
@@ -90,60 +90,32 @@ const { locale } = useI18n()
 
 const slug: string = String(route.params.slug ?? '').trim()
 const isStoryblokEditor: boolean = typeof route.query._storyblok !== 'undefined'
-
-/**
- * Article: Storyblok always FR. EN/ES from i18n JSON (dashboard translations) overlaid.
- */
-const article: Ref<DibodevArticle | null> = ref<DibodevArticle | null>(null)
+const storyblokVersion: StoryblokVersion = isStoryblokEditor ? 'draft' : 'published'
 
 if (slug.length === 0) {
   await navigateTo({ path: '/blog', replace: true })
-} else {
-  try {
-    const storyResponse = await StoryblokArticleService.getArticleBySlug(
-      slug,
-      isStoryblokEditor ? 'draft' : 'published',
-      storyblokLanguage.value,
-    )
+}
 
-    let mapped: DibodevArticle = mapStoryblokArticleToDibodevArticle(storyResponse.story)
+// Keep this in useAsyncData: a browser-side Storyblok refetch can fail and replace the article with a 404 page.
+const { data: article } = await useAsyncData<DibodevArticle | null>(
+  `blog-article-${locale.value}-${storyblokVersion}-${slug}`,
+  (): Promise<DibodevArticle | null> =>
+    slug.length === 0
+      ? Promise.resolve(null)
+      : StoryblokArticleService.getLocalizedArticle(
+          slug,
+          storyblokVersion,
+          locale.value as string,
+          storyblokLanguage.value,
+        ),
+)
 
-    const currentLocale: string = locale.value as string
-    if (currentLocale === 'en' || currentLocale === 'es') {
-      const fullSlug: string = `blog/${slug}`
-      type ArticleTranslation = {
-        title: string
-        excerpt: string
-        content: { type: string; content?: unknown[] }
-        metaTitle: string
-        metaDescription: string
-        tags: string[]
-      }
-      const translations: Record<string, ArticleTranslation> = await $fetch<Record<string, ArticleTranslation>>(
-        `/api/translations/articles/${currentLocale}`,
-      ).catch(() => ({}))
-      const t = translations[fullSlug]
-      if (t) {
-        mapped = {
-          ...mapped,
-          title: t.title,
-          excerpt: t.excerpt,
-          content: t.content,
-          metaTitle: t.metaTitle,
-          metaDescription: t.metaDescription,
-          tags: t.tags,
-        }
-      }
-    }
-
-    article.value = mapped
-  } catch {
-    throw createError({
-      statusCode: 404,
-      statusMessage: 'Article non trouvé',
-      fatal: true,
-    })
-  }
+if (slug.length > 0 && !article.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Article non trouvé',
+    fatal: true,
+  })
 }
 
 const { data: articlesPool } = await useArticlesWithTranslations({ perPage: RELATED_ARTICLES_POOL_SIZE })

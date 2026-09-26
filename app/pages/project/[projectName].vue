@@ -31,28 +31,21 @@
 <script lang="ts" setup>
 import { useRoute, useRouter } from 'vue-router'
 import type { RouteLocationNormalizedLoadedGeneric, Router } from 'vue-router'
-import { computed, ref } from 'vue'
-import type { ComputedRef, Ref } from 'vue'
+import { computed } from 'vue'
+import type { ComputedRef } from 'vue'
 import type { DibodevProject } from '~/core/types/DibodevProject'
 import DibodevProjectLandingSection from '~/components/sections/DibodevProjectLandingSection.vue'
 import DibodevProjectGallerySection from '~/components/sections/DibodevProjectGallerySection.vue'
 import DibodevAboutProjectSection from '~/components/sections/DibodevAboutProjectSection.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import DibodevRecommendedProjectSection from '~/components/sections/DibodevRecommendedProjectSection.vue'
-import type { StoryblokProjectContent } from '~/services/types/storyblokProject'
-import type { StoryblokStoryResponse } from '~/services/types/storyblok'
-import { StoryblokService } from '~/services/storyblokService'
-import { buildRelsSlugMap, mapStoryblokProjectToDibodevProject } from '~/services/storyblokProjectMapper'
+import type { StoryblokVersion } from '~/services/types/storyblok'
+import { StoryblokProjectService } from '~/services/storyblokProjectService'
 import { buildProjectSchemaJson } from '~/config/projectSchema'
 import { formatProjectDate } from '~/core/utils/formatProjectDate'
 
 const SITE_URL: string = 'https://dibodev.fr'
 const DEFAULT_OG_IMAGE_URL: string = `${SITE_URL}/android-chrome-512x512.png`
-
-const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
-function hasUuid(arr: string[] | undefined): boolean {
-  return Array.isArray(arr) && arr.some((s) => typeof s === 'string' && UUID_REGEX.test(s.trim()))
-}
 
 function toAbsoluteImageUrl(maybeUrl: string | undefined | null): string {
   const url: string = String(maybeUrl ?? '').trim()
@@ -70,97 +63,39 @@ const storyblokLanguage: ComputedRef<string | undefined> = useStoryblokProjectLa
 
 const projectName: string = String(route.params.projectName || '').trim()
 const isStoryblokEditor: boolean = typeof route.query._storyblok !== 'undefined'
+const storyblokVersion: StoryblokVersion = isStoryblokEditor ? 'draft' : 'published'
 
-/**
- * Project: Storyblok always FR. EN/ES from i18n JSON (dashboard translations) overlaid.
- */
-const currentProject: Ref<DibodevProject | null> = ref<DibodevProject | null>(null)
+// Keep this in useAsyncData: a browser-side Storyblok refetch can fail and redirect the visitor to the home page.
+const { data: currentProject } = await useAsyncData<DibodevProject | null>(
+  `project-page-${locale.value}-${storyblokVersion}-${projectName}`,
+  (): Promise<DibodevProject | null> =>
+    projectName.length === 0
+      ? Promise.resolve(null)
+      : StoryblokProjectService.getLocalizedProject(
+          projectName,
+          storyblokVersion,
+          locale.value as string,
+          storyblokLanguage.value,
+        ),
+)
 
-if (projectName.length === 0) {
+if (!currentProject.value) {
   router.push({ path: '/' })
-} else {
-  const storyblokSlug: string = `project/${projectName}`
-  const fullSlug: string = storyblokSlug
-
-  try {
-    const storyResponse: StoryblokStoryResponse<StoryblokProjectContent> =
-      await StoryblokService.getStoryBySlug<StoryblokProjectContent>(
-        storyblokSlug,
-        isStoryblokEditor ? 'draft' : 'published',
-        storyblokLanguage.value,
-        { resolve_relations: 'project.sectors,project.categories' },
-      )
-
-    const relsSlugMap: Record<string, string> = buildRelsSlugMap(storyResponse.rels)
-    let project: DibodevProject = mapStoryblokProjectToDibodevProject(storyResponse.story, undefined, relsSlugMap)
-
-    const currentLocale: string = locale.value as string
-    if (currentLocale === 'en' || currentLocale === 'es') {
-      const translations: Record<
-        string,
-        {
-          name: string
-          shortDescription: string
-          longDescription: string
-          metaTitle: string
-          metaDescription: string
-          categories: string[]
-          sectors?: string[]
-          stack: string[]
-          tags: string[]
-        }
-      > = await $fetch<
-        Record<
-          string,
-          {
-            name: string
-            shortDescription: string
-            longDescription: string
-            metaTitle: string
-            metaDescription: string
-            categories: string[]
-            sectors?: string[]
-            stack: string[]
-            tags: string[]
-          }
-        >
-      >(`/api/translations/projects/${currentLocale}`).catch(() => ({}))
-      const t = translations[fullSlug]
-      if (t) {
-        const useTranslationCategories = !hasUuid(t.categories)
-        const useTranslationSectors = t.sectors != null && !hasUuid(t.sectors)
-        project = {
-          ...project,
-          name: t.name,
-          shortDescription: t.shortDescription,
-          longDescription: t.longDescription,
-          metaTitle: t.metaTitle,
-          metaDescription: t.metaDescription,
-          categories: useTranslationCategories ? (t.categories as DibodevProject['categories']) : project.categories,
-          sectors: useTranslationSectors ? (t.sectors as DibodevProject['sectors']) : project.sectors,
-          stack: t.stack,
-          tags: t.tags,
-        }
-      }
-    }
-
-    currentProject.value = project
-  } catch {
-    router.push({ path: '/' })
-  }
 }
 
-const currentProjectComputed: ComputedRef<DibodevProject | null> = computed(() => currentProject.value)
+const currentProjectComputed: ComputedRef<DibodevProject | null> = computed(
+  (): DibodevProject | null => currentProject.value ?? null,
+)
 
 const projectDisplayDate: ComputedRef<string> = computed((): string => {
-  const p: DibodevProject | null = currentProject.value
+  const p: DibodevProject | null = currentProjectComputed.value
   const loc: string = locale.value as string
   if (!p) return ''
   return formatProjectDate(p.date, loc)
 })
 
 useHead((): Record<string, unknown> => {
-  const p: DibodevProject | null = currentProject.value
+  const p: DibodevProject | null = currentProjectComputed.value
   if (!p) return {}
   const title: string = p.metaTitle || p.name
   const description: string = p.metaDescription || p.shortDescription

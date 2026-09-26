@@ -18,11 +18,27 @@ function articleKey(article: DibodevArticle): string {
   return article.route.replace(/^\//, '').trim() || article.route
 }
 
+/**
+ * Removes the richtext body from an article list item.
+ *
+ * @param {DibodevArticle} article - Mapped article.
+ * @returns {DibodevArticle} The same article with its content set to null.
+ */
+function withoutContent(article: DibodevArticle): DibodevArticle {
+  return { ...article, content: null }
+}
+
 export type UseArticlesWithTranslationsParams = {
   page?: number
   perPage?: number
 }
 
+/**
+ * Loads a page of blog articles for cards, with EN/ES metadata overlaid and without the article bodies.
+ *
+ * @param {UseArticlesWithTranslationsParams} params - Page number and page size.
+ * @returns {AsyncData<DibodevArticle[] | undefined, NuxtError | undefined>} Async data holding the articles.
+ */
 export function useArticlesWithTranslations(params: UseArticlesWithTranslationsParams = {}) {
   const { page = 1, perPage = 12 } = params
   const { locale } = useI18n()
@@ -37,7 +53,7 @@ export function useArticlesWithTranslations(params: UseArticlesWithTranslationsP
           perPage,
           language: storyblokLanguage.value,
         })
-        let articles: DibodevArticle[] = response.stories.map(mapStoryblokArticleToDibodevArticle)
+        let articles: DibodevArticle[] = response.stories.map(mapStoryblokArticleToDibodevArticle).map(withoutContent)
 
         const currentLocale: string = locale.value as string
         if (currentLocale === 'en' || currentLocale === 'es') {

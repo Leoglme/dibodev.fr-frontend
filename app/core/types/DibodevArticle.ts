@@ -17,3 +17,12 @@ export type DibodevArticle = {
   ogImageUrl: string
   route: string
 }
+
+export type DibodevArticleTranslation = {
+  title: string
+  excerpt: string
+  content: { type: string; content?: unknown[] }
+  metaTitle: string
+  metaDescription: string
+  tags: string[]
+}

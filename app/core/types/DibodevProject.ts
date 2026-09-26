@@ -53,6 +53,18 @@ export type DibodevProject = {
   isFavorite: boolean
 }
 
+export type DibodevProjectTranslation = {
+  name: string
+  shortDescription: string
+  longDescription: DibodevProjectLongDescription
+  metaTitle: string
+  metaDescription: string
+  categories: string[]
+  sectors?: string[]
+  stack: string[]
+  tags: string[]
+}
+
 /**
  * Type definitions for DibodevProjectCategory
  * @type {DibodevProjectCategory}
