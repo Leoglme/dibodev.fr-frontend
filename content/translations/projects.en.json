@@ -453,5 +453,40 @@
       "website generation",
       "website sales"
     ]
+  },
+  "project/signdex": {
+    "name": "SignDex — HTML Email Signature & Brand Asset Generator",
+    "shortDescription": "Dibodev's internal tool that generates clickable HTML email signatures compatible with Gmail, Outlook, and Apple Mail—along with ready-to-deliver flyers, banners, business cards, and loyalty cards—based on a single brand profile.",
+    "longDescription": "Context\n\nSignDex is Dibodev’s internal production tool. It stores a brand profile per client (coordinates, colors, logo, photos) and generates communication assets from templates: email signatures, flyers, social media banners, business cards, and loyalty cards.\n\nInitially used for freelance signature orders, it later expanded to multi-office enterprises.\n\nProblem\n\nA good email signature seems simple. In practice:\n\n* HTML must render correctly across Gmail, Outlook, and Apple Mail, each with their own limitations\n* Image-only signatures aren’t clickable (phone, website, social links)\n* Variants, formats, and team members multiply the workload\n* Every hire, move, or office relocation requires full rework.\n\nSolution\n\nSignDex starts with a single brand profile. HTML templates pull client data and selected options (inverted colors, displayed visuals, portrait/logo, masked address) with live previews. A headless browser generates image versions, and the tool converts signatures to Apple Mail format.\n\nDelivery is one-click: a ZIP archive with HTML, images, Apple Mail file, in-context previews in a mock email, and installation guides per provider.\n\nFor multi-site companies, SignDex manages **organizations** (offices and employees) and generates team-wide signatures at once. A **white-label client portal** also lets clients manage their own collaborators.\n\nKey Features\n\n* Brand profile: coordinates, social links, colors, logo, and photos\n* 8 clickable HTML signature templates with live previews\n* Variants: color schemes, visuals, toggled elements\n* ZIP export: HTML, PNG, JPG, Apple Mail format, and installation guides\n* A4 flyers, LinkedIn/YouTube/X/Facebook banners, business cards, and front/back loyalty cards ready to print\n* Team-wide signatures in one click\n* White-label client portal\n* Windows desktop app with delivery history tracking.\n\nResults\n\nSignDex delivers signature packs to freelancers and enterprises alike, including a global law firm’s multi-office team signatures.\n\nOne tool, one brand profile, and all assets stay aligned—streamlining delivery and simplifying updates.",
+    "metaTitle": "SignDex — Clickable HTML Email Signature Generator",
+    "metaDescription": "Tool to generate clickable HTML email signatures for Gmail, Outlook, and Apple Mail—individual or team-wide—plus flyers, business cards, and more.",
+    "categories": [
+      "logiciel",
+      "application-metier"
+    ],
+    "sectors": [
+      "b2b"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Tauri",
+      "Python",
+      "FastAPI",
+      "MariaDB"
+    ],
+    "tags": [
+      "HTML email signature",
+      "Outlook signature",
+      "Gmail signature",
+      "team signatures",
+      "business cards",
+      "loyalty cards",
+      "flyers",
+      "brand identity",
+      "visual asset generation"
+    ]
   }
 }

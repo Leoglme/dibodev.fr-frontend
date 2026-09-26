@@ -458,5 +458,40 @@
       "herramientas de ventas B2B",
       "integración de IA en negocios"
     ]
+  },
+  "project/signdex": {
+    "name": "SignDex — Generador de firmas de correo electrónico HTML y soportes de marca",
+    "shortDescription": "Herramienta interna de Dibodev que genera, a partir de una ficha de marca, firmas de correo electrónico HTML clickeables compatibles con Gmail, Outlook y Apple Mail, así como flyers, banners, tarjetas de visita y tarjetas de fidelidad listas para entrega.",
+    "longDescription": "Contexto\n\nSignDex es la herramienta de producción interna de Dibodev. Guarda una ficha de marca por cliente (coordenadas, colores, logo, fotos) y produce, a partir de plantillas, los soportes que una empresa necesita para comunicarse: firmas de correo, flyers, banners para redes sociales, tarjetas de visita y tarjetas de fidelidad.\n\nInicialmente, sirvió para pedidos de firmas realizados en plataformas de freelance, pero luego se expandió a empresas con múltiples oficinas.\n\nProblema\n\nUna buena firma de correo parece sencilla. En la práctica:\n\n* el HTML debe mostrar correctamente en Gmail, Outlook y Apple Mail, cada uno con sus propias limitaciones\n* una firma en formato imagen simple no es clickeable (teléfono, sitio web, redes sociales)\n* cada variante, formato y colaborador multiplican el trabajo\n* al incorporar, despedir o cambiar de oficina a un empleado, todo debe hacerse de nuevo.\n\nSolución\n\nSignDex parte de una única ficha de marca. Las plantillas HTML reciben los datos del cliente y las opciones seleccionadas (colores invertidos, visualización de imágenes, retrato o logo, dirección oculta), con una vista previa en tiempo real. Un navegador sin interfaz genera luego las versiones en imagen, y la herramienta convierte la firma al formato de Apple Mail.\n\nEl entregable se envía con un clic: un archivo ZIP con el HTML, las imágenes, el archivo de Apple Mail, vistas previas «en contexto» en un correo falso y las instrucciones de instalación para cada cliente de correo.\n\nPara empresas con múltiples sedes, SignDex gestiona **organizaciones** (oficinas y colaboradores) y genera las firmas de todo el equipo de una sola vez. Un **portal de cliente en marca blanca** también permite al cliente gestionar sus colaboradores por sí mismo.\n\nFuncionalidades principales\n\n* ficha de marca: coordenadas, redes sociales, colores, logo y fotos\n* 8 plantillas de firmas HTML clickeables, con vista previa en tiempo real\n* variantes: colores, visuales, elementos mostrados u ocultos\n* exportación ZIP: HTML, PNG, JPG, formato Apple Mail e instrucciones de instalación\n* flyers A4, banners para LinkedIn, YouTube, X y Facebook, tarjetas de visita y tarjetas de fidelidad recto/verso listas para imprimir\n* firmas para todo un equipo en un clic\n* portal de cliente en marca blanca\n* aplicación de escritorio para Windows con historial de entregables.\n\nResultados\n\nSignDex se utiliza para entregar paquetes de firmas a freelancers y empresas. Ha permitido, por ejemplo, generar las firmas de todo el equipo de un bufete de abogados internacional distribuido en varias oficinas.\n\nUna sola herramienta, una sola ficha de marca, y todos los soportes mantienen coherencia: es lo que hace que la entrega sea rápida y las actualizaciones sencillas.",
+    "metaTitle": "SignDex — Generador de firmas de correo electrónico HTML clickeables",
+    "metaDescription": "Herramienta que genera firmas de correo electrónico HTML clickeables para Gmail, Outlook y Apple Mail, para una persona o un equipo, además de flyers y tarjetas de visita.",
+    "categories": [
+      "logiciel",
+      "application-metier"
+    ],
+    "sectors": [
+      "b2b"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Tauri",
+      "Python",
+      "FastAPI",
+      "MariaDB"
+    ],
+    "tags": [
+      "firma de correo HTML",
+      "firma para Outlook",
+      "firma para Gmail",
+      "firmas de equipo",
+      "tarjetas de visita",
+      "tarjetas de fidelidad",
+      "flyers",
+      "identidad de marca",
+      "generación de visuales"
+    ]
   }
 }
