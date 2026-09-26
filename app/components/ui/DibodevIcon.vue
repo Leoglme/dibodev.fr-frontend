@@ -47,6 +47,7 @@ import Phone from '~/components/icons/Phone.vue'
 import Search from '~/components/icons/Search.vue'
 import Send from '~/components/icons/Send.vue'
 import Smartphone from '~/components/icons/Smartphone.vue'
+import Star from '~/components/icons/Star.vue'
 import XCircle from '~/components/icons/XCircle.vue'
 import type { DibodevIconMode, DibodevIconProps, IconComponent } from '~/core/types/DibodevIcon'
 import { iconsList } from '~/core/types/DibodevIcon'
@@ -112,6 +113,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   Search,
   Send,
   Smartphone,
+  Star,
   XCircle,
 }
 

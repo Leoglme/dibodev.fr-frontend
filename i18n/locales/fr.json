@@ -27,7 +27,7 @@
     },
     "aboutPage": {
       "title": "À propos — Léo Guillaume, développeur freelance à Rennes {'|'} Dibodev",
-      "description": "Léo Guillaume, fondateur de Dibodev : développeur freelance full-stack près de Rennes. Parcours, compétences, zone d'intervention et profils en ligne."
+      "description": "Léo Guillaume, fondateur de Dibodev : développeur freelance full-stack et IA près de Rennes. Parcours (Kodeva, Izidoor, PrePeers), compétences et avis client."
     }
   },
   "nav": {
@@ -566,14 +566,21 @@
   },
   "aboutPage": {
     "hero": {
-      "title": "Léo Guillaume, développeur freelance full-stack près de Rennes",
+      "titlePart1": "Léo Guillaume, ",
+      "titleHighlight": "développeur freelance",
+      "titlePart2": " full-stack et IA près de Rennes",
       "description": "Je suis le fondateur de Dibodev. Je crée des applications métier, des logiciels de gestion, des sites web et des automatisations avec l'IA pour les TPE et PME de Rennes, de Bretagne et de toute la France.",
-      "cta": "Discuter de mon projet"
+      "cta": "Discuter de mon projet",
+      "ctaSecondary": "Découvrir mon parcours",
+      "portraitAlt": "Portrait de Léo Guillaume, développeur freelance full-stack et IA près de Rennes",
+      "portraitCaption": "Fondateur de Dibodev, près de Rennes"
     },
     "story": {
       "title": "Qui suis-je ?",
-      "background": "Je m'appelle Léo Guillaume et je développe des applications web depuis 7 ans. Après une formation à Epitech Rennes, j'ai passé quatre ans en entreprise à construire des outils utilisés chaque jour : trois applications métier chez Kodeva, puis la plateforme de réservation d'Izidoor pour le sport et les loisirs.",
+      "background": "Je m'appelle Léo Guillaume. Avant d'écrire du code, j'ai été cuisinier pendant cinq ans. En 2020, j'ai fait du développement mon métier en entrant à la Web{'@'}cadémie d'Epitech Rennes, en alternance, puis j'ai poursuivi jusqu'au master en IA et data.",
+      "career": "Depuis, j'ai construit des outils utilisés chaque jour : trois applications métier chez Kodeva, toujours en production dans des TPE et PME, puis la plateforme de réservation d'Izidoor, adoptée par une trentaine de structures de sport et de loisirs.",
       "dibodev": "En 2025, j'ai créé Dibodev pour travailler directement avec les TPE et PME. Mon objectif : remplacer les fichiers Excel, les papiers et les tâches répétitives par des outils simples, pensés pour les personnes qui les utilisent.",
+      "ai": "Depuis avril 2026, je suis aussi en mission chez PrePeers, une startup EdTech qui aide les 15-25 ans à choisir leur orientation grâce à l'intelligence artificielle. J'y développe la plateforme et les chats IA qui conseillent les étudiants, jusque sur les sites des écoles partenaires.",
       "workingStyle": "Je travaille seul, en lien direct avec vous, du premier échange à la maintenance. Chaque projet est chiffré au forfait, avec un devis clair, et livré par étapes pour que vous puissiez tester l'outil au fil du projet."
     },
     "facts": {
@@ -581,6 +588,10 @@
       "company": {
         "label": "Entreprise",
         "value": "Dibodev, entreprise individuelle créée le 20 juin 2025"
+      },
+      "currentMission": {
+        "label": "En ce moment",
+        "value": "Mission full-stack et IA chez PrePeers, startup EdTech, depuis avril 2026"
       },
       "location": {
         "label": "Basé à",
@@ -592,47 +603,129 @@
       },
       "experience": {
         "label": "Expérience",
-        "value": "7 ans de développement, dont 4 ans en entreprise"
+        "value": "6 ans d'expérience professionnelle : alternance chez Kodeva et Izidoor, puis freelance"
       },
       "education": {
         "label": "Formation",
         "value": "Master Ingénieur Architecte (IA et data), Epitech Rennes"
       },
-      "stack": {
-        "label": "Technologies",
-        "value": "Nuxt, Vue.js, TypeScript, Node.js, Python, .NET"
+      "languages": {
+        "label": "Langues",
+        "value": "Français (langue maternelle) et anglais professionnel"
       }
     },
     "profiles": {
       "title": "Me retrouver ailleurs"
     },
+    "testimonial": {
+      "title": "Le mot d'un client",
+      "quote": "Nous avons demandé de l'aide à Léo sur un projet Nuxt. Je le recommande car il a très vite compris notre besoin, et a travaillé rapidement et avec efficacité. J'ai particulièrement apprécié la facilité d'intégration et de communication.",
+      "authorName": "Gilles",
+      "authorRole": "CTO de PrePeers",
+      "sourceNote": "Avis client publié sur Malt en mai 2026",
+      "sourceLink": "Voir l'avis sur Malt",
+      "ratingLabel": "Note : 5 sur 5"
+    },
     "path": {
       "title": "Mon parcours",
-      "webAcademy": {
-        "period": "2020 – 2022",
-        "title": "Web{'@'}cadémie, Epitech Rennes",
-        "description": "Formation intensive au développement web : JavaScript, Node.js, API et bases de données, avec des projets mis en production."
-      },
-      "kodeva": {
-        "period": "2021 – 2022",
-        "title": "Développeur full-stack chez Kodeva",
-        "description": "Trois applications métier développées de zéro et utilisées au quotidien : gestion de stock, gestion du temps et suivi des interventions."
-      },
-      "izidoor": {
-        "period": "2023 – 2025",
-        "title": "Ingénieur full-stack chez Izidoor",
-        "description": "Un back-office métier complet (planning, paiements, statistiques) et un module de réservation en ligne utilisé par des structures de sport et de loisirs."
-      },
-      "master": {
-        "period": "2023 – 2025",
-        "title": "Master Ingénieur Architecte (IA et data), Epitech",
-        "description": "Architecture logicielle, intelligence artificielle et data, en parallèle de mon poste chez Izidoor."
+      "subtitle": "Six ans à construire des outils utilisés au quotidien, de l'alternance jusqu'à mes propres clients.",
+      "experiencesTitle": "Expériences",
+      "educationTitle": "Formation",
+      "currentStep": "En cours",
+      "prepeers": {
+        "period": "Depuis avril 2026",
+        "title": "Développeur full-stack et IA",
+        "organization": "PrePeers",
+        "context": "Mission freelance, startup EdTech près de Lyon",
+        "description": "PrePeers aide les 15-25 ans à trouver leur voie grâce à une IA conversationnelle, puis les met en relation avec les écoles qui leur correspondent. J'y suis le développeur principal des interfaces de la plateforme.",
+        "highlights": {
+          "platform": "Parcours étudiant de bout en bout : inscription, profil et conversation avec Lola, l'IA d'orientation",
+          "schools": "Lily, un chat IA intégré aux sites des écoles partenaires, et l'espace de gestion des écoles",
+          "data": "Intégration CRM côté API .NET et suivi analytique complet du parcours, avec environ 82 % d'inscriptions finalisées"
+        }
       },
       "dibodev": {
         "period": "Depuis 2025",
-        "title": "Fondateur de Dibodev",
-        "description": "Applications métier, logiciels de gestion, sites web et automatisations avec l'IA pour les TPE et PME, au forfait."
+        "title": "Fondateur et développeur freelance",
+        "organization": "Dibodev",
+        "context": "Entreprise individuelle, près de Rennes",
+        "description": "Je conçois et développe au forfait des applications métier, des logiciels de gestion, des sites web et des automatisations avec l'IA pour les TPE et PME.",
+        "highlights": {
+          "website": "A2M Ôrizon Solution : site vitrine avec CMS créé de zéro, 4 000 visites depuis son lancement",
+          "nightforge": "NightForge : un orchestrateur qui fait travailler des agents de code IA en autonomie, piloté depuis une application mobile",
+          "goupixdex": "GoupixDex : reconnaissance de cartes Pokémon par IA et mise en vente automatique sur Vinted et eBay"
+        }
+      },
+      "izidoor": {
+        "period": "Janvier 2023 à juillet 2025",
+        "title": "Ingénieur full-stack",
+        "organization": "Izidoor",
+        "context": "Alternance, SaaS de réservation",
+        "description": "Une plateforme de réservation et de gestion pour les écoles de sports outdoor : voile, ski, kayak ou surf.",
+        "highlights": {
+          "backOffice": "Back-office métier complet : réservations, plannings, paiements Stripe, caisse et statistiques",
+          "adoption": "Un produit instable repris et fiabilisé, adopté par une trentaine de structures qui gèrent des milliers de réservations par saison",
+          "shareholder": "Une contribution reconnue par une entrée au capital : je suis aujourd'hui actionnaire d'Izidoor"
+        }
+      },
+      "kodeva": {
+        "period": "Octobre 2020 à août 2022",
+        "title": "Ingénieur full-stack",
+        "organization": "Kodeva",
+        "context": "Alternance, logiciels pour TPE et PME",
+        "description": "Trois applications métier SaaS développées de zéro en équipe agile, puis distribuées aux entreprises par Breizhtic.",
+        "highlights": {
+          "stockpme": "Stockpme : gestion de stock et d'inventaire avec étiquettes QR",
+          "gestTime": "Gest-Time : temps de travail, feuilles de temps et validation pour les équipes terrain",
+          "production": "Toujours en production dans des entreprises de 20 à 200 salariés, à la place du papier et d'Excel"
+        }
+      },
+      "master": {
+        "period": "2023 à 2025",
+        "title": "Master Ingénieur Architecte (IA et data)",
+        "organization": "Epitech Rennes",
+        "context": "MSc Pro, bac+5, en alternance",
+        "description": "Architecture logicielle, intelligence artificielle et data. Projets d'IA menés à Epitech : détection de pneumonie sur radiographies avec des réseaux de neurones et planification de voyage en langage naturel."
+      },
+      "webAcademy": {
+        "period": "2020 à 2022",
+        "title": "Web{'@'}cadémie",
+        "organization": "Epitech Rennes",
+        "context": "Bac+2, en alternance",
+        "description": "Formation intensive au développement web : JavaScript, Node.js, API et bases de données, avec des projets mis en production."
+      },
+      "cooking": {
+        "period": "2013 à 2016",
+        "title": "Bac pro cuisine",
+        "organization": "Lycée hôtelier Notre-Dame",
+        "context": "Avant la reconversion",
+        "description": "Cinq ans comme cuisinier avant de me reconvertir dans le développement en 2020."
       }
+    },
+    "skills": {
+      "title": "Ce que je sais faire",
+      "subtitle": "Des compétences construites sur des projets en production, du premier écran à la mise en ligne.",
+      "webApps": {
+        "title": "Applications web et SaaS",
+        "description": "Back-offices métier, espaces clients, tableaux de bord et applications de bureau, rapides et agréables à utiliser."
+      },
+      "ai": {
+        "title": "Intelligence artificielle",
+        "description": "Chats IA et assistants conversationnels, agents IA, extraction de données dans vos documents et modèles de machine learning."
+      },
+      "backend": {
+        "title": "API, données et paiement",
+        "description": "API fiables, bases de données bien structurées, paiement en ligne et connexion à vos outils : CRM, e-mails, SMS."
+      },
+      "delivery": {
+        "title": "Mise en ligne et suivi",
+        "description": "Déploiement automatisé, mesure d'audience et référencement, pour un outil qui continue de vivre après la livraison."
+      }
+    },
+    "projects": {
+      "title": "Quelques réalisations en images",
+      "description": "Des outils métier pour des entreprises, des plateformes et des projets d'IA, de l'idée jusqu'à la mise en production.",
+      "seeAll": "Voir tous mes projets"
     },
     "cta": {
       "title": "Un projet d'outil ou de site ?",

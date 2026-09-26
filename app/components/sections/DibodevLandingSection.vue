@@ -1,76 +1,91 @@
 <template>
   <section
     id="landing"
-    class="relative flex h-screen w-screen max-w-screen items-center justify-center overflow-hidden p-8"
+    class="relative flex w-screen max-w-screen items-center justify-center overflow-hidden"
+    :class="$slots.aside ? 'min-h-svh px-6 pt-[102px] pb-16 sm:px-8 lg:pb-8' : 'h-screen p-8'"
   >
-    <div class="z-10 mx-auto grid max-w-3xl gap-8">
-      <div class="grid gap-6">
-        <h1
-          class="font-semibold text-gray-100"
-          :class="props.compactTitle ? 'text-[28px] sm:text-[32px] md:text-[36px]' : 'text-[30px] sm:text-[54px]'"
+    <div
+      class="z-10 mx-auto grid gap-10"
+      :class="
+        $slots.aside
+          ? 'w-full max-w-7xl items-center lg:grid-cols-[minmax(0,1fr)_minmax(0,20rem)] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] xl:gap-16'
+          : 'max-w-3xl'
+      "
+    >
+      <div class="grid gap-8">
+        <div class="grid gap-6">
+          <h1
+            class="font-semibold text-gray-100"
+            :class="props.compactTitle ? 'text-[28px] sm:text-[32px] md:text-[36px]' : 'text-[30px] sm:text-[54px]'"
+            data-aos="fade-up"
+            data-aos-delay="0"
+            data-aos-duration="800"
+          >
+            <span v-if="!props.title && !props.titleHighlight1">
+              {{ $t('home.hero.titleBefore')
+              }}<span class="text-primary-light">{{ $t('home.hero.titleHighlight') }}</span
+              >{{ $t('home.hero.titleAfter') }}
+              <br />
+              {{ $t('home.hero.subtitleBefore')
+              }}<span class="text-primary-light">{{ $t('home.hero.subtitleHighlight') }}</span
+              >{{ $t('home.hero.subtitleAfter') }}
+            </span>
+            <span v-else-if="props.titleHighlight1">
+              {{ props.titlePart1 }}<span class="text-primary-light">{{ props.titleHighlight1 }}</span
+              >{{ props.titlePart2
+              }}<span v-if="props.titleHighlight2" class="text-primary-light">{{ props.titleHighlight2 }}</span
+              >{{ props.titlePart3 }}
+            </span>
+            <span v-else>{{ props.title }}</span>
+          </h1>
+          <p class="text-base leading-7 font-medium" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+            {{ props.description }}
+          </p>
+        </div>
+        <div
+          class="justify-left flex flex-wrap items-center gap-4"
           data-aos="fade-up"
-          data-aos-delay="0"
+          data-aos-delay="200"
           data-aos-duration="800"
         >
-          <span v-if="!props.title && !props.titleHighlight1">
-            {{ $t('home.hero.titleBefore') }}<span class="text-primary-light">{{ $t('home.hero.titleHighlight') }}</span
-            >{{ $t('home.hero.titleAfter') }}
-            <br />
-            {{ $t('home.hero.subtitleBefore')
-            }}<span class="text-primary-light">{{ $t('home.hero.subtitleHighlight') }}</span
-            >{{ $t('home.hero.subtitleAfter') }}
-          </span>
-          <span v-else-if="props.titleHighlight1">
-            {{ props.titlePart1 }}<span class="text-primary-light">{{ props.titleHighlight1 }}</span
-            >{{ props.titlePart2
-            }}<span v-if="props.titleHighlight2" class="text-primary-light">{{ props.titleHighlight2 }}</span
-            >{{ props.titlePart3 }}
-          </span>
-          <span v-else>{{ props.title }}</span>
-        </h1>
-        <p class="text-base leading-7 font-medium" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
-          {{ props.description }}
-        </p>
+          <DibodevButton
+            v-if="props.ctaPrimaryTo"
+            :to="props.ctaPrimaryTo"
+            class="w-full sm:max-w-xs"
+            @click="onPrimaryCtaClick"
+          >
+            {{ props.ctaText }}
+          </DibodevButton>
+          <DibodevButton v-else @click="scrollToTargetSection(props.ctaTarget)" class="w-full sm:max-w-xs">
+            {{ props.ctaText }}
+            <DibodevIcon
+              name="DoubleChevronsDown"
+              mode="stroke"
+              :width="24"
+              :height="24"
+              class="animate-bounce-pulse ml-2"
+            />
+          </DibodevButton>
+          <DibodevButton
+            v-if="props.secondaryCta"
+            :outlined="true"
+            @click="scrollToTargetSection(props.secondaryCta.target)"
+            class="w-full sm:max-w-xs"
+          >
+            {{ props.secondaryCta.text }}
+            <DibodevIcon
+              name="DoubleChevronsDown"
+              mode="stroke"
+              :width="24"
+              :height="24"
+              class="animate-bounce-pulse ml-2"
+            />
+          </DibodevButton>
+        </div>
       </div>
-      <div
-        class="justify-left flex flex-wrap items-center gap-4"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="800"
-      >
-        <DibodevButton
-          v-if="props.ctaPrimaryTo"
-          :to="props.ctaPrimaryTo"
-          class="w-full sm:max-w-xs"
-          @click="onPrimaryCtaClick"
-        >
-          {{ props.ctaText }}
-        </DibodevButton>
-        <DibodevButton v-else @click="scrollToTargetSection(props.ctaTarget)" class="w-full sm:max-w-xs">
-          {{ props.ctaText }}
-          <DibodevIcon
-            name="DoubleChevronsDown"
-            mode="stroke"
-            :width="24"
-            :height="24"
-            class="animate-bounce-pulse ml-2"
-          />
-        </DibodevButton>
-        <DibodevButton
-          v-if="props.secondaryCta"
-          :outlined="true"
-          @click="scrollToTargetSection(props.secondaryCta.target)"
-          class="w-full sm:max-w-xs"
-        >
-          {{ props.secondaryCta.text }}
-          <DibodevIcon
-            name="DoubleChevronsDown"
-            mode="stroke"
-            :width="24"
-            :height="24"
-            class="animate-bounce-pulse ml-2"
-          />
-        </DibodevButton>
+
+      <div v-if="$slots.aside" class="order-first lg:order-none">
+        <slot name="aside" />
       </div>
     </div>
 

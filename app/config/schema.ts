@@ -40,6 +40,7 @@ export type SchemaPerson = {
   email: string
   telephone: string
   url: string
+  image: string
   sameAs: string[]
   address: SchemaPostalAddress
   worksFor: SchemaEntityReference
@@ -94,8 +95,9 @@ const SITE_URL: string = 'https://dibodev.fr'
 export const PERSON_ID: string = 'https://dibodev.fr/#person'
 export const ORGANIZATION_ID: string = 'https://dibodev.fr/#organization'
 
-const PERSON_NAME: string = 'Léo Guillaume'
+export const PERSON_NAME: string = 'Léo Guillaume'
 const JOB_TITLE: string = 'Développeur web & mobile freelance'
+const PERSON_IMAGE: string = `${SITE_URL}/images/about/leo-guillaume-portrait-800.webp`
 const EMAIL: string = 'contact@dibodev.fr'
 const TELEPHONE: string = '+33642193812'
 
@@ -132,6 +134,7 @@ const PERSON_KNOWS_ABOUT: string[] = [
   'Node.js',
   'Python',
   'Intelligence artificielle',
+  'IA conversationnelle',
 ]
 
 const ORGANIZATION_SERVICES: SchemaService[] = [
@@ -194,6 +197,7 @@ export const personSchema: SchemaPerson = {
   email: EMAIL,
   telephone: TELEPHONE,
   url: SITE_URL,
+  image: PERSON_IMAGE,
   sameAs: PERSON_SAME_AS,
   address: schemaAddress,
   worksFor: { '@id': ORGANIZATION_ID },

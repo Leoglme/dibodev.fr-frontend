@@ -1,15 +1,38 @@
+import type { DibodevCareerStep } from '~/core/types/DibodevCareerStepCard'
+import type { DibodevServiceIconName } from '~/core/types/DibodevServiceIcon'
+
 export type DibodevAboutFact = {
   label: string
   value: string
 }
 
-export type DibodevAboutPathStep = {
-  period: string
-  title: string
-  description: string
-}
-
 export type DibodevAboutProfileLink = {
   label: string
   href: string
+}
+
+export type DibodevAboutCareerStepConfig = {
+  key: string
+  monogram: string
+  highlightKeys: string[]
+  technologies: string[]
+  isCurrent: boolean
+}
+
+export type DibodevAboutTimeline = {
+  title: string
+  steps: DibodevCareerStep[]
+}
+
+export type DibodevAboutSkillGroupConfig = {
+  key: string
+  serviceIconName: DibodevServiceIconName
+  iconBackgroundColor: string
+  technologies: string[]
+  isHighlighted: boolean
+}
+
+export type DibodevAboutSkillGroup = DibodevAboutSkillGroupConfig & {
+  title: string
+  description: string
 }

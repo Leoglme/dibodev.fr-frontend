@@ -27,7 +27,7 @@
     },
     "aboutPage": {
       "title": "About — Léo Guillaume, Freelance Developer in Rennes {'|'} Dibodev",
-      "description": "Léo Guillaume, founder of Dibodev: freelance full-stack developer near Rennes, France. Background, skills, service area and online profiles."
+      "description": "Léo Guillaume, founder of Dibodev: full-stack and AI freelance developer near Rennes, France. Background (Kodeva, Izidoor, PrePeers), skills and client review."
     }
   },
   "nav": {
@@ -566,14 +566,21 @@
   },
   "aboutPage": {
     "hero": {
-      "title": "Léo Guillaume, freelance full-stack developer near Rennes",
+      "titlePart1": "Léo Guillaume, full-stack and AI ",
+      "titleHighlight": "freelance developer",
+      "titlePart2": " near Rennes",
       "description": "I am the founder of Dibodev. I build custom business apps, management software, websites and AI automations for small and medium businesses in Rennes, Brittany and across France.",
-      "cta": "Discuss my project"
+      "cta": "Discuss my project",
+      "ctaSecondary": "See my background",
+      "portraitAlt": "Portrait of Léo Guillaume, full-stack and AI freelance developer near Rennes",
+      "portraitCaption": "Founder of Dibodev, near Rennes"
     },
     "story": {
       "title": "Who am I?",
-      "background": "My name is Léo Guillaume and I have been building web applications for 7 years. After training at Epitech Rennes, I spent four years in companies building tools used every day: three business apps at Kodeva, then the booking platform of Izidoor for sports and leisure.",
+      "background": "My name is Léo Guillaume. Before writing code, I worked as a cook for five years. In 2020, I turned software development into my job by joining the Web{'@'}cadémie at Epitech Rennes as a work-study student, then went on to earn a master's degree in AI and data.",
+      "career": "Since then, I have built tools people use every day: three business apps at Kodeva, still running in small and medium businesses, then the Izidoor booking platform, now used by around thirty sports and leisure organizations.",
       "dibodev": "In 2025, I founded Dibodev to work directly with small and medium businesses. My goal: replace spreadsheets, paperwork and repetitive tasks with simple tools designed for the people who use them.",
+      "ai": "Since April 2026, I have also been on a mission for PrePeers, an EdTech startup that uses artificial intelligence to help 15 to 25-year-olds choose their path. I build the platform and the AI chats that guide students, all the way to partner schools' websites.",
       "workingStyle": "I work alone, in direct contact with you, from the first call to maintenance. Every project has a fixed price with a clear quote, and is delivered in stages so you can test the tool as the project moves forward."
     },
     "facts": {
@@ -581,6 +588,10 @@
       "company": {
         "label": "Company",
         "value": "Dibodev, sole proprietorship founded on June 20, 2025"
+      },
+      "currentMission": {
+        "label": "Currently",
+        "value": "Full-stack and AI mission at PrePeers, an EdTech startup, since April 2026"
       },
       "location": {
         "label": "Based in",
@@ -592,47 +603,129 @@
       },
       "experience": {
         "label": "Experience",
-        "value": "7 years of development, including 4 years in companies"
+        "value": "6 years of professional experience: work-study at Kodeva and Izidoor, then freelance"
       },
       "education": {
         "label": "Education",
         "value": "Master's degree in software architecture (AI and data), Epitech Rennes"
       },
-      "stack": {
-        "label": "Technologies",
-        "value": "Nuxt, Vue.js, TypeScript, Node.js, Python, .NET"
+      "languages": {
+        "label": "Languages",
+        "value": "French (native) and professional English"
       }
     },
     "profiles": {
       "title": "Find me elsewhere"
     },
+    "testimonial": {
+      "title": "A word from a client",
+      "quote": "We asked Léo for help on a Nuxt project. I recommend him because he understood our needs very quickly and worked fast and efficiently. I particularly appreciated how easy he was to onboard and to communicate with.",
+      "authorName": "Gilles",
+      "authorRole": "CTO of PrePeers",
+      "sourceNote": "Client review published on Malt in May 2026, translated from French",
+      "sourceLink": "See the review on Malt",
+      "ratingLabel": "Rating: 5 out of 5"
+    },
     "path": {
       "title": "My background",
-      "webAcademy": {
-        "period": "2020 – 2022",
-        "title": "Web{'@'}cadémie, Epitech Rennes",
-        "description": "Intensive web development training: JavaScript, Node.js, APIs and databases, with projects deployed to production."
-      },
-      "kodeva": {
-        "period": "2021 – 2022",
-        "title": "Full-stack developer at Kodeva",
-        "description": "Three business apps built from scratch and used every day: inventory management, time tracking and field service tracking."
-      },
-      "izidoor": {
-        "period": "2023 – 2025",
-        "title": "Full-stack engineer at Izidoor",
-        "description": "A complete business back office (scheduling, payments, statistics) and an online booking module used by sports and leisure organizations."
-      },
-      "master": {
-        "period": "2023 – 2025",
-        "title": "Master's degree in software architecture (AI and data), Epitech",
-        "description": "Software architecture, artificial intelligence and data, alongside my position at Izidoor."
+      "subtitle": "Six years building tools people use every day, from work-study positions to my own clients.",
+      "experiencesTitle": "Experience",
+      "educationTitle": "Education",
+      "currentStep": "Current",
+      "prepeers": {
+        "period": "Since April 2026",
+        "title": "Full-stack and AI developer",
+        "organization": "PrePeers",
+        "context": "Freelance mission, EdTech startup near Lyon",
+        "description": "PrePeers helps 15 to 25-year-olds find their path with a conversational AI, then connects them with the schools that suit them. I am the lead developer of the platform's interfaces.",
+        "highlights": {
+          "platform": "End-to-end student journey: sign-up, profile and conversation with Lola, the guidance AI",
+          "schools": "Lily, an AI chat embedded on partner schools' websites, and the schools' management area",
+          "data": "CRM integration in the .NET API and full analytics tracking of the journey, with about 82% of sign-ups completed"
+        }
       },
       "dibodev": {
         "period": "Since 2025",
-        "title": "Founder of Dibodev",
-        "description": "Custom business apps, management software, websites and AI automations for small and medium businesses, at a fixed price."
+        "title": "Founder and freelance developer",
+        "organization": "Dibodev",
+        "context": "Sole proprietorship, near Rennes",
+        "description": "I design and build custom business apps, management software, websites and AI automations for small and medium businesses, at a fixed price.",
+        "highlights": {
+          "website": "A2M Ôrizon Solution: a website with a CMS built from scratch, 4,000 visits since launch",
+          "nightforge": "NightForge: an orchestrator that runs AI coding agents autonomously, controlled from a mobile app",
+          "goupixdex": "GoupixDex: AI recognition of Pokémon cards and automatic listing on Vinted and eBay"
+        }
+      },
+      "izidoor": {
+        "period": "January 2023 to July 2025",
+        "title": "Full-stack engineer",
+        "organization": "Izidoor",
+        "context": "Work-study, booking SaaS",
+        "description": "A booking and management platform for outdoor sports schools: sailing, skiing, kayaking or surfing.",
+        "highlights": {
+          "backOffice": "Complete business back office: bookings, schedules, Stripe payments, point of sale and statistics",
+          "adoption": "An unstable product taken over and made reliable, now used by around thirty organizations handling thousands of bookings per season",
+          "shareholder": "A contribution rewarded with equity: I am now a shareholder of Izidoor"
+        }
+      },
+      "kodeva": {
+        "period": "October 2020 to August 2022",
+        "title": "Full-stack engineer",
+        "organization": "Kodeva",
+        "context": "Work-study, software for small businesses",
+        "description": "Three business SaaS apps built from scratch in an agile team, then distributed to companies by Breizhtic.",
+        "highlights": {
+          "stockpme": "Stockpme: stock and inventory management with QR labels",
+          "gestTime": "Gest-Time: working time, timesheets and approval for field teams",
+          "production": "Still running in companies of 20 to 200 employees, replacing paper and Excel"
+        }
+      },
+      "master": {
+        "period": "2023 to 2025",
+        "title": "Master's degree in software architecture (AI and data)",
+        "organization": "Epitech Rennes",
+        "context": "MSc Pro, work-study",
+        "description": "Software architecture, artificial intelligence and data. AI projects at Epitech: pneumonia detection on X-rays with neural networks and natural language travel planning."
+      },
+      "webAcademy": {
+        "period": "2020 to 2022",
+        "title": "Web{'@'}cadémie",
+        "organization": "Epitech Rennes",
+        "context": "Two-year program, work-study",
+        "description": "Intensive web development training: JavaScript, Node.js, APIs and databases, with projects deployed to production."
+      },
+      "cooking": {
+        "period": "2013 to 2016",
+        "title": "Vocational diploma in cooking",
+        "organization": "Notre-Dame hospitality high school",
+        "context": "Before my career change",
+        "description": "Five years as a cook before switching to software development in 2020."
       }
+    },
+    "skills": {
+      "title": "What I can do",
+      "subtitle": "Skills built on projects running in production, from the first screen to the launch.",
+      "webApps": {
+        "title": "Web apps and SaaS",
+        "description": "Business back offices, customer portals, dashboards and desktop apps that are fast and pleasant to use."
+      },
+      "ai": {
+        "title": "Artificial intelligence",
+        "description": "AI chats and conversational assistants, AI agents, data extraction from your documents and machine learning models."
+      },
+      "backend": {
+        "title": "APIs, data and payments",
+        "description": "Reliable APIs, well-structured databases, online payments and connections to your tools: CRM, emails, text messages."
+      },
+      "delivery": {
+        "title": "Launch and monitoring",
+        "description": "Automated deployment, audience analytics and SEO, so the tool keeps living after delivery."
+      }
+    },
+    "projects": {
+      "title": "A few projects in pictures",
+      "description": "Business tools for companies, platforms and AI projects, from the idea to production.",
+      "seeAll": "See all my projects"
     },
     "cta": {
       "title": "A software or website project?",

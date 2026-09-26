@@ -16,6 +16,8 @@ export const TRACKING_EVENTS = {
   projectSiteVisited: 'project_site_visited',
   /** Click on a project GitHub repository. */
   projectRepoVisited: 'project_repo_visited',
+  /** Click on one of Léo's external profiles (Malt, LinkedIn, GitHub…). */
+  externalProfileClicked: 'external_profile_clicked',
   /** Click on a blog article card. */
   articleCardClicked: 'article_card_clicked',
   /** Click on an in-article CTA block (button or link) toward contact. */

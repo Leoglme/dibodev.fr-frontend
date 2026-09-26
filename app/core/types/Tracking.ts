@@ -17,9 +17,10 @@ export type TrackingEventPayloads = {
     errorStatus?: number | null
   }
   [TRACKING_EVENTS.contactIntentSubmitted]: { hasEmail: boolean; hasPhone: boolean }
-  [TRACKING_EVENTS.projectCardClicked]: { project: string; route: string | null }
+  [TRACKING_EVENTS.projectCardClicked]: { project: string; route: string | null; source?: string }
   [TRACKING_EVENTS.projectSiteVisited]: { project: string; siteUrl: string }
   [TRACKING_EVENTS.projectRepoVisited]: { repoUrl: string }
+  [TRACKING_EVENTS.externalProfileClicked]: { platform: string; location: string }
   [TRACKING_EVENTS.articleCardClicked]: { article: string; source: string }
   [TRACKING_EVENTS.articleCtaClicked]: { label: string; href: string; variant: 'button' | 'link' }
   [TRACKING_EVENTS.localeSwitched]: { from: string; to: string }
