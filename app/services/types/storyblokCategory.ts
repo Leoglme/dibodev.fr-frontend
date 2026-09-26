@@ -1,3 +1,5 @@
+import { StoryblokRichtextUtils } from '~/core/utils/StoryblokRichtextUtils'
+
 /**
  * Type definitions for Storyblok "catégorie" content (page catégorie).
  *
@@ -34,26 +36,6 @@ type StoryblokCategoryContentRaw = Record<string, unknown> & {
   body?: Array<{ title?: string; description?: string; intro?: string; meta_title?: string; meta_description?: string }>
 }
 
-import { richTextResolver } from '@storyblok/richtext'
-
-/** Nœud ProseMirror/Storyblok richtext pour richTextResolver().render() */
-type StoryblokRichTextNode = Parameters<ReturnType<typeof richTextResolver>['render']>[0]
-
-/** Convertit un champ richtext Storyblok (objet ProseMirror) en HTML. */
-function introToHtml(value: unknown): string | null {
-  if (value == null) return null
-  if (typeof value === 'string' && value.trim() !== '') return value.trim()
-  if (typeof value === 'object' && value !== null && 'type' in value) {
-    try {
-      const html = richTextResolver().render(value as StoryblokRichTextNode)
-      return typeof html === 'string' && html.trim() !== '' ? html : null
-    } catch {
-      return null
-    }
-  }
-  return null
-}
-
 /**
  * Normalise le contenu catégorie renvoyé par Storyblok (camelCase, snake_case ou premier bloc body).
  * L'intro peut être une string ou un doc ProseMirror (richtext) → converti en HTML.
@@ -74,12 +56,12 @@ export function normalizeCategoryContent(raw: unknown): StoryblokCategoryContent
     metaDescription = str(block.meta_description ?? block.metaDescription ?? metaDescription)
   }
   if (!title && !description) return null
-  const introRaw = (Array.isArray(o.body) && o.body[0] && (o.body[0] as Record<string, unknown>).intro) ?? o.intro
-  const intro = introToHtml(introRaw)
+  const introRaw: unknown = (Array.isArray(o.body) ? o.body[0]?.intro : undefined) ?? o.intro
+  const intro: string = StoryblokRichtextUtils.toHtml(introRaw)
   return {
     title: title || 'Catégorie',
     description: description || '',
-    intro: intro ?? null,
+    intro: intro || null,
     metaTitle: metaTitle || null,
     metaDescription: metaDescription || null,
   }

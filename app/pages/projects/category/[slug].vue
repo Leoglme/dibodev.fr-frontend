@@ -40,8 +40,8 @@ definePageMeta({
   },
 })
 
-import { computed, ref, watch } from 'vue'
-import type { ComputedRef, Ref } from 'vue'
+import { computed } from 'vue'
+import type { ComputedRef } from 'vue'
 import DibodevLandingSection from '~/components/sections/DibodevLandingSection.vue'
 import DibodevSectorIntroSection from '~/components/sections/DibodevSectorIntroSection.vue'
 import DibodevProjectsSection from '~/components/sections/DibodevProjectsSection.vue'
@@ -54,6 +54,7 @@ import { useProjectsWithTranslations } from '~/composables/useProjectsWithTransl
 import type { StoryblokCategoryContent } from '~/services/types/storyblokCategory'
 import { CATEGORIES_STORYBLOK_FOLDER, normalizeCategoryContent } from '~/services/types/storyblokCategory'
 import { StoryblokService } from '~/services/storyblokService'
+import { StoryblokRichtextUtils } from '~/core/utils/StoryblokRichtextUtils'
 import type { RouteLocationNormalizedLoadedGeneric } from '#vue-router'
 
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
@@ -146,43 +147,6 @@ const categoryRawContent: ComputedRef<Record<string, unknown> | null> = computed
   (): Record<string, unknown> | null => categoryStoryData.value?.rawContent ?? null,
 )
 
-const categoryIntroFromRichText: Ref<string> = ref<string>('')
-watch(
-  categoryRawContent,
-  async (raw: Record<string, unknown> | null): Promise<void> => {
-    categoryIntroFromRichText.value = ''
-    const intro: unknown = raw?.intro
-    if (intro == null || typeof intro !== 'object' || !('type' in intro)) return
-    try {
-      const { richTextResolver } = await import('@storyblok/richtext')
-      const html = richTextResolver().render(intro as Parameters<ReturnType<typeof richTextResolver>['render']>[0])
-      categoryIntroFromRichText.value = typeof html === 'string' && html.trim() !== '' ? html.trim() : ''
-    } catch {
-      categoryIntroFromRichText.value = ''
-    }
-  },
-  { immediate: true },
-)
-
-/** Intro issue des traductions (richtext) → HTML */
-const categoryIntroFromTranslation: Ref<string> = ref<string>('')
-watch(
-  categoryTranslation,
-  async (t: CategoryTranslation | undefined): Promise<void> => {
-    categoryIntroFromTranslation.value = ''
-    const intro = t?.intro
-    if (intro == null || typeof intro !== 'object' || !('type' in intro)) return
-    try {
-      const { richTextResolver } = await import('@storyblok/richtext')
-      const html = richTextResolver().render(intro as Parameters<ReturnType<typeof richTextResolver>['render']>[0])
-      categoryIntroFromTranslation.value = typeof html === 'string' && html.trim() !== '' ? html.trim() : ''
-    } catch {
-      categoryIntroFromTranslation.value = ''
-    }
-  },
-  { immediate: true },
-)
-
 /** H1 : traduction EN/ES si présente, sinon CMS, sinon i18n */
 const categoryPageTitle: ComputedRef<string> = computed((): string => {
   const fromTranslation = categoryTranslation.value?.title?.trim()
@@ -205,14 +169,13 @@ const categoryPageDescription: ComputedRef<string> = computed((): string => {
   return fromCms ?? t('projects.categoryPage.description', { category: categoryLabel })
 })
 
-/** Intro riche (HTML) : traduction, ou contenu normalisé, ou string brut, ou HTML issu du watch */
+/** Intro HTML: EN/ES translation first, then the Storyblok content. */
 const categoryIntroHtml: ComputedRef<string> = computed((): string => {
-  if (categoryIntroFromTranslation.value) return categoryIntroFromTranslation.value
-  const fromNormalized = categoryPageContent.value?.intro
-  if (fromNormalized != null && String(fromNormalized).trim() !== '') return String(fromNormalized).trim()
-  const rawIntro = categoryRawContent.value?.intro
-  if (typeof rawIntro === 'string' && rawIntro.trim() !== '') return rawIntro.trim()
-  return categoryIntroFromRichText.value
+  const introFromTranslation: string = StoryblokRichtextUtils.toHtml(categoryTranslation.value?.intro)
+  if (introFromTranslation) return introFromTranslation
+  const introFromCms: string = categoryPageContent.value?.intro?.trim() ?? ''
+  if (introFromCms) return introFromCms
+  return StoryblokRichtextUtils.toHtml(categoryRawContent.value?.intro)
 })
 
 /** Meta title : traduction, CMS si présent, sinon titre de page */

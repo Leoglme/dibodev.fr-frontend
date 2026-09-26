@@ -198,3 +198,18 @@ jobs:
               rm -f -- "$file"
               rmdir -p --ignore-fail-on-non-empty -- "$(dirname -- "$file")" 2>/dev/null || true
             done < /tmp/dibodev-stale-pages.txt
+
+      # Tells Bing and the other IndexNow engines to recrawl the pages listed in the live sitemaps.
+      - name: 📣 Notify search engines (IndexNow)
+        if: github.event_name != 'pull_request'
+        continue-on-error: true
+        run: |
+          key=$(tr -d '[:space:]' < public/indexnow-key.txt)
+          for locale in fr-FR en-US es-ES; do
+            curl -fsS "https://dibodev.fr/__sitemap__/$locale.xml"
+          done | grep -o '<loc>https://dibodev.fr[^<]*</loc>' | sed -e 's|<loc>||' -e 's|</loc>||' | LC_ALL=C sort -u > indexnow-urls.txt
+          echo "URLs submitted: $(wc -l < indexnow-urls.txt)"
+          jq -n --arg key "$key" --rawfile urls indexnow-urls.txt \
+            '{host: "dibodev.fr", key: $key, keyLocation: "https://dibodev.fr/indexnow-key.txt", urlList: ($urls | split("\n") | map(select(length > 0)))}' > indexnow.json
+          curl -sS -o /dev/null -w "IndexNow HTTP %{http_code}\n" -X POST 'https://api.indexnow.org/indexnow' \
+            -H 'Content-Type: application/json; charset=utf-8' --data @indexnow.json

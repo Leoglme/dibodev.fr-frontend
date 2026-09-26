@@ -4,8 +4,8 @@
  * catalog) linked in a single @graph (Person.worksFor ↔ Organization.founder),
  * injected globally from the default layout via useHead.
  *
- * The @id values must stay stable: app/config/projectSchema.ts references
- * PERSON_ID as the `author` of every project page.
+ * The @id values must stay stable: project and article pages reference
+ * PERSON_ID as their author and ORGANIZATION_ID as their publisher.
  */
 
 export type SchemaPostalAddress = {
@@ -84,8 +84,8 @@ export type SchemaGraph = {
 }
 
 const SITE_URL: string = 'https://dibodev.fr'
-const PERSON_ID: string = 'https://dibodev.fr/#person'
-const ORGANIZATION_ID: string = 'https://dibodev.fr/#organization'
+export const PERSON_ID: string = 'https://dibodev.fr/#person'
+export const ORGANIZATION_ID: string = 'https://dibodev.fr/#organization'
 
 const PERSON_NAME: string = 'Léo Guillaume'
 const JOB_TITLE: string = 'Développeur web & mobile freelance'

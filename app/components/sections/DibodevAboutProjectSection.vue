@@ -30,13 +30,14 @@
   </section>
 </template>
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
-import type { Ref, ComputedRef } from 'vue'
+import { computed } from 'vue'
+import type { ComputedRef } from 'vue'
 import type { PropType } from 'vue'
 import type { DibodevProject } from '~/core/types/DibodevProject'
 import DibodevBrandsLogos from '~/components/icons/DibodevBrandsLogos.vue'
 import DibodevGitHubButton from '~/components/buttons/DibodevGitHubButton.vue'
-import { stringToDescriptionHtml, isRichtextDocument } from '~/core/utils/projectLongDescriptionHtml'
+import { stringToDescriptionHtml } from '~/core/utils/projectLongDescriptionHtml'
+import { StoryblokRichtextUtils } from '~/core/utils/StoryblokRichtextUtils'
 
 /* PROPS */
 const props = defineProps({
@@ -46,31 +47,12 @@ const props = defineProps({
   },
 })
 
-const richtextHtml: Ref<string> = ref<string>('')
-
-watch(
-  () => props.project.longDescription,
-  async (value: DibodevProject['longDescription']): Promise<void> => {
-    richtextHtml.value = ''
-    if (value == null || !isRichtextDocument(value)) return
-    try {
-      const { richTextResolver } = await import('@storyblok/richtext')
-      type RichTextNode = Parameters<ReturnType<typeof richTextResolver>['render']>[0]
-      const html: string = richTextResolver().render(value as RichTextNode)
-      richtextHtml.value = typeof html === 'string' && html.trim() !== '' ? html.trim() : ''
-    } catch {
-      richtextHtml.value = ''
-    }
-  },
-  { immediate: true },
-)
-
 const descriptionHtml: ComputedRef<string> = computed((): string => {
   const long: DibodevProject['longDescription'] = props.project.longDescription
   if (typeof long === 'string') {
     return stringToDescriptionHtml(long)
   }
-  return richtextHtml.value
+  return StoryblokRichtextUtils.toHtml(long)
 })
 </script>
 

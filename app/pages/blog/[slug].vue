@@ -51,6 +51,7 @@ import type { DibodevArticle } from '~/core/types/DibodevArticle'
 import type { StoryblokVersion } from '~/services/types/storyblok'
 import { StoryblokArticleService } from '~/services/storyblokArticleService'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { buildArticleSchemaJson } from '~/config/articleSchema'
 
 const RELATED_ARTICLES_COUNT: number = 3
 const RELATED_ARTICLES_POOL_SIZE: number = 24
@@ -167,6 +168,12 @@ useHead((): Record<string, unknown> => {
       { name: 'twitter:image', content: ogImageUrl },
     ],
     link: [{ rel: 'canonical', href: canonicalUrl }],
+    script: [
+      {
+        type: 'application/ld+json',
+        innerHTML: buildArticleSchemaJson(article.value, canonicalUrl, ogImageUrl, locale.value),
+      },
+    ],
   }
 })
 </script>

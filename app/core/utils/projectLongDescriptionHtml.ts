@@ -1,10 +1,6 @@
 /**
- * Conversion de longDescription (string ou RichText) en HTML pour affichage.
- * - string : paragraphes (séparés par \n\n), texte échappé
- * - RichText : rendu via @storyblok/richtext (côté client)
+ * Converts a plain-text project long description (EN/ES translations) into HTML.
  */
-
-import type { DibodevProjectLongDescription } from '~/core/types/DibodevProject'
 
 const HTML_ENTITIES: Record<string, string> = {
   '&': '&amp;',
@@ -266,18 +262,4 @@ export function stringToDescriptionHtml(text: string, sectionTitles: readonly st
     }
   }
   return out.join('')
-}
-
-/**
- * Indique si la valeur est un document RichText (objet avec type et content).
- */
-export function isRichtextDocument(
-  value: DibodevProjectLongDescription,
-): value is { type: string; content?: unknown[] } {
-  return (
-    value != null &&
-    typeof value === 'object' &&
-    'type' in value &&
-    typeof (value as { type: unknown }).type === 'string'
-  )
 }

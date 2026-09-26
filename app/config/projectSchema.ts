@@ -8,9 +8,9 @@
 import type { DibodevProject } from '~/core/types/DibodevProject'
 import type { CategoryKey } from '~/core/constants/projectEnums'
 import { getProjectDescriptionForSchema } from '~/core/utils/projectDescriptionForSchema'
+import { PERSON_ID } from '~/config/schema'
 
 const SITE_URL: string = 'https://dibodev.fr'
-const PERSON_ID: string = 'https://dibodev.fr/#person'
 
 /** Valeurs standard schema.org pour applicationCategory (SoftwareApplication). */
 export const SCHEMA_APPLICATION_CATEGORY = [

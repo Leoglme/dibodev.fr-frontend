@@ -43,8 +43,8 @@ definePageMeta({
   },
 })
 
-import { computed, ref, watch } from 'vue'
-import type { ComputedRef, Ref } from 'vue'
+import { computed } from 'vue'
+import type { ComputedRef } from 'vue'
 import DibodevLandingSection from '~/components/sections/DibodevLandingSection.vue'
 import DibodevSectorIntroSection from '~/components/sections/DibodevSectorIntroSection.vue'
 import DibodevProjectsSection from '~/components/sections/DibodevProjectsSection.vue'
@@ -57,6 +57,7 @@ import { useProjectsWithTranslations } from '~/composables/useProjectsWithTransl
 import type { StoryblokSectorContent } from '~/services/types/storyblokSector'
 import { SECTEURS_STORYBLOK_FOLDER, normalizeSectorContent } from '~/services/types/storyblokSector'
 import { StoryblokService } from '~/services/storyblokService'
+import { StoryblokRichtextUtils } from '~/core/utils/StoryblokRichtextUtils'
 import type { RouteLocationNormalizedLoadedGeneric } from '#vue-router'
 
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
@@ -146,44 +147,6 @@ const sectorRawContent: ComputedRef<Record<string, unknown> | null> = computed(
   (): Record<string, unknown> | null => sectorStoryData.value?.rawContent ?? null,
 )
 
-/** Intro rendue depuis le richtext brut (ProseMirror), remplie de façon asynchrone */
-const sectorIntroFromRichText: Ref<string> = ref<string>('')
-watch(
-  sectorRawContent,
-  async (raw: Record<string, unknown> | null): Promise<void> => {
-    sectorIntroFromRichText.value = ''
-    const intro: unknown = raw?.intro
-    if (intro == null || typeof intro !== 'object' || !('type' in intro)) return
-    try {
-      const { richTextResolver } = await import('@storyblok/richtext')
-      const html = richTextResolver().render(intro as Parameters<ReturnType<typeof richTextResolver>['render']>[0])
-      sectorIntroFromRichText.value = typeof html === 'string' && html.trim() !== '' ? html.trim() : ''
-    } catch {
-      sectorIntroFromRichText.value = ''
-    }
-  },
-  { immediate: true },
-)
-
-/** Intro issue des traductions (richtext) → HTML, remplie de façon asynchrone */
-const sectorIntroFromTranslation: Ref<string> = ref<string>('')
-watch(
-  sectorTranslation,
-  async (t: SectorTranslation | undefined): Promise<void> => {
-    sectorIntroFromTranslation.value = ''
-    const intro = t?.intro
-    if (intro == null || typeof intro !== 'object' || !('type' in intro)) return
-    try {
-      const { richTextResolver } = await import('@storyblok/richtext')
-      const html = richTextResolver().render(intro as Parameters<ReturnType<typeof richTextResolver>['render']>[0])
-      sectorIntroFromTranslation.value = typeof html === 'string' && html.trim() !== '' ? html.trim() : ''
-    } catch {
-      sectorIntroFromTranslation.value = ''
-    }
-  },
-  { immediate: true },
-)
-
 /** H1 : traduction EN/ES si présente, sinon CMS, sinon i18n */
 const sectorPageTitle: ComputedRef<string> = computed((): string => {
   const fromTranslation = sectorTranslation.value?.title?.trim()
@@ -207,14 +170,13 @@ const sectorPageDescription: ComputedRef<string> = computed((): string => {
   return fromCms ?? t('projects.sectorPage.description', { sector: sectorLabel })
 })
 
-/** Intro riche (HTML) : traduction, ou contenu normalisé, ou string brut, ou HTML issu du watch sur le richtext */
+/** Intro HTML: EN/ES translation first, then the Storyblok content. */
 const sectorIntroHtml: ComputedRef<string> = computed((): string => {
-  if (sectorIntroFromTranslation.value) return sectorIntroFromTranslation.value
-  const fromNormalized = sectorPageContent.value?.intro
-  if (fromNormalized != null && String(fromNormalized).trim() !== '') return String(fromNormalized).trim()
-  const rawIntro = sectorRawContent.value?.intro
-  if (typeof rawIntro === 'string' && rawIntro.trim() !== '') return rawIntro.trim()
-  return sectorIntroFromRichText.value
+  const introFromTranslation: string = StoryblokRichtextUtils.toHtml(sectorTranslation.value?.intro)
+  if (introFromTranslation) return introFromTranslation
+  const introFromCms: string = sectorPageContent.value?.intro?.trim() ?? ''
+  if (introFromCms) return introFromCms
+  return StoryblokRichtextUtils.toHtml(sectorRawContent.value?.intro)
 })
 
 /** Meta title pour useHead : traduction, CMS si présent, sinon titre de page */
