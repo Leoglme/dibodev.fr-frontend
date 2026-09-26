@@ -8162,5 +8162,659 @@
         }
       ]
     }
+  },
+  "blog/developpeur-nuxt-freelance-rennes": {
+    "title": "Desarrollador Nuxt freelance en Rennes: lo que hago concretamente en tus proyectos",
+    "excerpt": "Migración de Nuxt 2, renderizado del lado del servidor, SEO, visibilidad en las IA, aplicaciones empresariales: lo que hace realmente un desarrollador Nuxt freelance cerca de Rennes.",
+    "metaTitle": "Desarrollador Nuxt freelance en Rennes: misiones y metodología",
+    "metaDescription": "Migración de Nuxt 2 a Nuxt 4, SEO, visibilidad en las IA, aplicaciones empresariales: lo que hace concretamente un desarrollador Nuxt freelance cerca de Rennes.",
+    "tags": [
+      "desarrollador nuxt freelance",
+      "freelance nuxt rennes",
+      "migración nuxt 2 a nuxt 4",
+      "desarrollador vue.js rennes",
+      "nuxt seo",
+      "aplicación empresarial nuxt"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Cuando una empresa busca un desarrollador freelance de Nuxt en Rennes, casi nunca es para un proyecto nuevo y tranquilo. Es un sitio de Nuxt 2 que se niega a actualizarse. Una aplicación que va a trompicones desde la última actualización. O una agencia que construyó la herramienta hace tres años y que ya no responde al teléfono.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Trabajo con Nuxt y Vue.js todos los días desde hace varios años: un back-office utilizado a diario en Izidoor, sitios web corporativos, aplicaciones empresariales y mi propio sitio. Aquí está lo que hago concretamente cuando me llaman para un proyecto con Nuxt.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Por qué Nuxt para un sitio web o una aplicación empresarial?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nuxt es Vue.js con todo lo necesario para poner un proyecto en línea de manera adecuada: páginas generadas del lado del servidor, enrutamiento, SEO, traducciones.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para una empresa, esto se traduce simplemente en:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- páginas rápidas, que se muestran antes de que el JavaScript termine de cargarse;",
+              "type": "text"
+            },
+            {
+              "text": "- un buen posicionamiento en buscadores, porque Google (y las IA) reciben un contenido real, no una página en blanco que completar;",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "- una sola base de código para el sitio web corporativo, el blog y el espacio conectado, en lugar de tres herramientas que no se comunican bien entre sí.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Y para un pequeño equipo, Vue.js sigue siendo más sencillo de retomar y mantener que muchas alternativas. Es un punto que a menudo olvidamos al momento de elegir una tecnología y que lamentamos dos años después.",
+              "type": "text"
+            },
+            {
+              "text": "Migración de Nuxt 2 a Nuxt 4 sin romper nada",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Es la solicitud que más recibo. Nuxt 2 ya no se mantiene desde el 30 de junio de 2024, y Vue 2 desde finales de 2023. En concreto, ya no hay correcciones de seguridad y las dependencias dejan de funcionar una por una.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Una migración no es un botón 'actualizar'. Así es como lo manejo:",
+              "type": "text"
+            },
+            {
+              "text": "1. Un análisis del proyecto: qué módulos ya no son compatibles, qué páginas son críticas y qué puede simplificarse en el proceso.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "2. Una migración por etapas: el almacén Vuex pasa a Pinia, los componentes cambian progresivamente a la Composition API, y cada etapa se prueba antes de la siguiente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "3. Una puesta en línea sin sorpresas: misma URL, mismo posicionamiento y posibilidad de retroceder si algo falla.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo más costoso es esperar: cada mes de retraso añade una dependencia más que reemplazar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "SEO y visibilidad en las IA: donde un proyecto Nuxt marca la diferencia",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un proyecto Nuxt bien configurado es excelente para el posicionamiento. Mal configurado, puede ocultar parte de su contenido sin que nadie se dé cuenta.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Dos ejemplos tomados de mi propio sitio, dibodev.fr, construido con Nuxt 4:",
+              "type": "text"
+            },
+            {
+              "text": "- Textos invisibles para los robots de las IA.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Algunas descripciones de proyectos se añadían mediante JavaScript después de cargar la página. Google lo manejaba muy bien. Pero los robots de ChatGPT o Perplexity solo leen el HTML: para ellos, esos textos simplemente no existían. Fue suficiente generarlos durante la construcción para que aparecieran en todas partes.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- Una redirección de idioma demasiado estricta.",
+              "type": "text"
+            },
+            {
+              "text": "Una opción activada por defecto en el módulo de traducción redirigía a cualquier navegador configurado en inglés a la versión en inglés del sitio. El robot de renderizado de Google formaba parte de esto: veía mi página de inicio en inglés. Una línea de configuración resolvió el problema.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Son detalles que no se ven al probar su sitio desde su propio navegador. Los verifico sistemáticamente: lo que reciben Google, Bing y los robots de las IA, página por página.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Un ejemplo concreto: un back-office empresarial en Nuxt",
+              "type": "text"
+            },
+            {
+              "text": "En Izidoor, durante casi tres años, desarrollé con Nuxt un back-office utilizado cada día por clubes deportivos y de ocio: la programación de actividades, los pagos en línea con Stripe, las estadísticas y el módulo de reserva que sus clientes usan para inscribirse.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Este tipo de herramienta no tiene nada de espectacular visto desde fuera. Pero un calendario que tarda tres segundos en cargarse, multiplicado por decenas de usos al día, es un equipo que pierde la paciencia. Una gran parte del trabajo consiste en hacer que la herramienta sea rápida y evidente de usar: cargar solo los datos útiles, mantener los formularios simples y evitar pantallas donde no se sabe qué hacer.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Es el mismo enfoque que aplico hoy a las aplicaciones empresariales personalizadas que desarrollo para PYMES.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cómo trabajo en un proyecto Nuxt",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- En Rennes o a distancia: puedo visitarles para definir el proyecto y luego trabajar a distancia a diario.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- A precio fijo para un proyecto bien definido (una migración, una nueva aplicación), con un presupuesto claro: alcance, precio y etapas definidos antes de empezar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- Código que pueden reutilizar: TypeScript, componentes legibles y documentación breve pero útil. Nunca estarán atrapados con su proveedor, ni yo tampoco.",
+              "type": "text"
+            },
+            {
+              "text": "- Franqueza: si Nuxt no es la mejor opción para sus necesidades o si una herramienta existente ya hace el trabajo, se lo diré.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Mi trayectoria completa está en la página sobre mí, y mis realizaciones en la página proyectos.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            },
+            {
+              "text": "Mi sitio Nuxt 2 sigue funcionando, ¿por qué migrar?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Porque ya no recibe correcciones de seguridad desde junio de 2024, y sus dependencias seguirán fallando una por una. Cuanto más se espere, más cara será la migración.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cuánto tiempo toma una migración de Nuxt 2 a Nuxt 4?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Depende principalmente del número de páginas y módulos. Para un sitio web corporativo, es cuestión de días. Para una aplicación empresarial completa, más bien semanas. Siempre empiezo con un análisis para darles una estimación precisa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿También trabajas con Vue.js sin Nuxt?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí. Para un back-office o una aplicación que no necesita SEO, una aplicación Vue.js sola puede ser suficiente, y se lo propondré.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Puedes retomar un proyecto Nuxt desarrollado por otra persona?",
+              "type": "text"
+            },
+            {
+              "text": "Sí, es incluso frecuente. Empiezo leyendo el código y listando lo que está sólido y lo que presenta problemas, antes de proponerles un plan.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "¿Hablamos?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Si tiene un proyecto Nuxt para iniciar, un sitio Nuxt 2 que migrar o una aplicación que merece una renovación, lo más sencillo es hablarlo. Empiezo revisando su proyecto y le propongo un plan de acción escrito, con una estimación honesta del presupuesto. Y si una herramienta existente es suficiente, se lo diré.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hablemos de su proyecto",
+              "type": "text"
+            },
+            {
+              "text": "À Rennes ou à distance",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " : je peux venir vous voir pour cadrer le projet, puis travailler à distance au quotidien.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Au forfait",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " pour un projet bien défini (une migration, une nouvelle application), avec un devis clair : périmètre, prix et étapes fixés avant de commencer.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Du code que vous pouvez reprendre",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " : TypeScript, des composants lisibles, une documentation courte mais utile. Vous n'êtes jamais prisonnier de votre prestataire, moi compris.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "De la franchise",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " : si Nuxt n'est pas le bon choix pour votre besoin, ou si un outil existant fait déjà le travail, je vous le dis.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Mon parcours complet est sur la page ",
+              "type": "text"
+            },
+            {
+              "text": "à propos",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/a-propos",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", et mes réalisations sur la page ",
+              "type": "text"
+            },
+            {
+              "text": "projets",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/projets",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Questions fréquentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Mon site Nuxt 2 fonctionne encore, pourquoi migrer ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Parce qu'il ne reçoit plus aucune correction de sécurité depuis juin 2024, et que ses dépendances vont continuer à casser une par une. Plus on attend, plus la migration coûte cher.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Combien de temps prend une migration de Nuxt 2 vers Nuxt 4 ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Cela dépend surtout du nombre de pages et de modules. Pour un site vitrine, c'est une question de jours. Pour une application métier complète, plutôt de semaines. Je commence toujours par un audit pour vous donner une estimation précise.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Travaillez-vous aussi avec Vue.js sans Nuxt ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Oui. Pour un back-office ou une application qui n'a pas besoin de référencement, une application Vue.js seule peut suffire, et je vous le proposerai.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Pouvez-vous reprendre un projet Nuxt développé par quelqu'un d'autre ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Oui, c'est même fréquent. Je commence par lire le code et lister ce qui est solide et ce qui pose problème, avant de vous proposer un plan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "On en parle ?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si vous avez un projet Nuxt à lancer, un site Nuxt 2 à migrer ou une application qui mérite un coup de neuf, le plus simple est d'en discuter. Je commence par regarder votre projet et je vous propose un plan d'action écrit, avec un ordre de grandeur de budget honnête. Et si un outil existant suffit, je vous le dirai.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "045e54b8-5720-43a8-8ee6-b8fac2098db8",
+            "body": [
+              {
+                "_uid": "i-2e199401-3706-4c73-8264-a6c65d4dd9b2",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuter de mon projet",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
