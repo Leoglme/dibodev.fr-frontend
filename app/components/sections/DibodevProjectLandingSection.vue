@@ -1,7 +1,7 @@
 <template>
   <section
     id="project-landing"
-    class="relative flex h-screen w-screen max-w-screen items-center justify-center overflow-hidden p-8"
+    class="relative flex min-h-svh w-screen max-w-screen items-center justify-center overflow-hidden px-8 pt-[102px] pb-8"
   >
     <div class="z-10 mx-auto grid max-w-3xl gap-8">
       <div class="grid gap-6">
@@ -9,7 +9,7 @@
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
-          class="mb-3 flex flex-col gap-4 pt-10 sm:flex-row sm:items-center sm:gap-6 sm:pt-0"
+          class="mb-3 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6"
         >
           <div
             class="flex h-24 min-h-24 w-24 min-w-24 items-center justify-center rounded-2xl border-1 border-gray-200 p-3"
