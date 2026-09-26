@@ -16,6 +16,7 @@
 
 ## À propos
 
+- [Qui est Léo Guillaume ?](https://dibodev.fr/a-propos) : parcours, faits clés et profils (Malt, Codeur, LinkedIn, GitHub, fiche Google, Pages Jaunes, dev.to).
 - Entreprise individuelle Dibodev (EI Guillaume Léo), SIRET 988 307 906 00020, créée le 20 juin 2025.
 - Stack : Nuxt, Vue.js, TypeScript, Node.js, Python, .NET, intelligence artificielle.
 - Autres langues : [English](https://dibodev.fr/en/custom-business-software-rennes), [Español](https://dibodev.fr/es/software-de-gestion-a-medida-rennes).

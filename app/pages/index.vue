@@ -6,6 +6,7 @@
   <DibodevStatsSection />
   <DibodevFavoriteProjectSection />
   <DibodevLatestArticlesSection />
+  <DibodevHomeFaqSection />
   <!-- <DibodevPricingSection /> -->
 </template>
 <script setup lang="ts">
@@ -16,5 +17,6 @@ import DibodevFavoriteProjectSection from '~/components/sections/DibodevFavorite
 import DibodevLatestArticlesSection from '~/components/sections/DibodevLatestArticlesSection.vue'
 import DibodevHomeHelpSection from '~/components/sections/DibodevHomeHelpSection.vue'
 import DibodevWhyWorkWithMeSection from '~/components/sections/DibodevWhyWorkWithMeSection.vue'
+import DibodevHomeFaqSection from '~/components/sections/DibodevHomeFaqSection.vue'
 // import DibodevPricingSection from '~/components/sections/DibodevPricingSection.vue'
 </script>

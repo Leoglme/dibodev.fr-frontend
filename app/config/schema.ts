@@ -26,6 +26,12 @@ export type SchemaPropertyValue = {
   value: string
 }
 
+export type SchemaEducationalOrganization = {
+  '@type': 'CollegeOrUniversity'
+  name: string
+  url: string
+}
+
 export type SchemaPerson = {
   '@type': 'Person'
   '@id': string
@@ -37,6 +43,8 @@ export type SchemaPerson = {
   sameAs: string[]
   address: SchemaPostalAddress
   worksFor: SchemaEntityReference
+  alumniOf: SchemaEducationalOrganization
+  knowsAbout: string[]
 }
 
 export type SchemaService = {
@@ -107,6 +115,25 @@ const ORGANIZATION_SIRET: string = '98830790600020'
 
 const AREA_SERVED: string[] = ['Rennes', 'Ille-et-Vilaine', 'Bretagne', 'France']
 
+const PERSON_ALUMNI_OF: SchemaEducationalOrganization = {
+  '@type': 'CollegeOrUniversity',
+  name: 'Epitech',
+  url: 'https://www.epitech.eu',
+}
+
+const PERSON_KNOWS_ABOUT: string[] = [
+  'Applications métier sur mesure',
+  'Logiciels de gestion',
+  'SaaS',
+  'Développement web',
+  'Nuxt',
+  'Vue.js',
+  'TypeScript',
+  'Node.js',
+  'Python',
+  'Intelligence artificielle',
+]
+
 const ORGANIZATION_SERVICES: SchemaService[] = [
   {
     '@type': 'Service',
@@ -170,6 +197,8 @@ export const personSchema: SchemaPerson = {
   sameAs: PERSON_SAME_AS,
   address: schemaAddress,
   worksFor: { '@id': ORGANIZATION_ID },
+  alumniOf: PERSON_ALUMNI_OF,
+  knowsAbout: PERSON_KNOWS_ABOUT,
 }
 
 export const organizationSchema: SchemaOrganization = {

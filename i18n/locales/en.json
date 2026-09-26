@@ -24,6 +24,10 @@
     "businessSoftwarePage": {
       "title": "Custom Business Software in Rennes — Freelance Developer {'|'} Dibodev",
       "description": "Freelance developer near Rennes, France: custom business apps and management software for small businesses. Fixed price, from €5,000 to €15,000 per project."
+    },
+    "aboutPage": {
+      "title": "About — Léo Guillaume, Freelance Developer in Rennes {'|'} Dibodev",
+      "description": "Léo Guillaume, founder of Dibodev: freelance full-stack developer near Rennes, France. Background, skills, service area and online profiles."
     }
   },
   "nav": {
@@ -74,7 +78,8 @@
       "rennesFrance": "Rennes, France",
       "freelance": "Freelance"
     },
-    "businessSoftware": "Custom business software"
+    "businessSoftware": "Custom business software",
+    "about": "About"
   },
   "home": {
     "hero": {
@@ -190,6 +195,33 @@
       "pricePerDay": "/day.",
       "priceTTC": "€350 incl. VAT",
       "priceHT": "i.e. €291.67 excl. VAT/day (20% VAT)."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "whoIsDibodev": {
+        "question": "Who is Dibodev?",
+        "answer": "Dibodev is the company of Léo Guillaume, a freelance full-stack developer based near Rennes, France, in Saint-Erblon. Since 2025, he has been building custom business apps, management software, websites and AI automations for small and medium businesses."
+      },
+      "services": {
+        "question": "What services do you offer?",
+        "answer": "Custom business apps and management software (scheduling, inventory, quotes and invoices, time tracking, online booking), SaaS products, fast and well-ranked websites, and AI integration in your tools."
+      },
+      "area": {
+        "question": "Where do you work?",
+        "answer": "In Rennes and across Ille-et-Vilaine, where I can travel for important meetings, and remotely across France for projects that allow it."
+      },
+      "price": {
+        "question": "How much does a project cost?",
+        "answer": "Every project comes with a free fixed-price quote. For a custom business app, the budget is usually between €5,000 and €15,000, then €100 to €300 per month for maintenance."
+      },
+      "process": {
+        "question": "How does a project work?",
+        "answer": "A free first call to understand your needs, a clear quote with the scope, price and stages, deliveries in stages so you can test the tool as we go, then launch, onboarding and maintenance."
+      },
+      "technologies": {
+        "question": "Which technologies do you use?",
+        "answer": "Mainly Nuxt, Vue.js and TypeScript, with Node.js, Python or .NET on the server depending on the project, and AI models to automate repetitive tasks."
+      }
     }
   },
   "contact": {
@@ -529,6 +561,82 @@
     "cta": {
       "title": "An Excel file getting out of hand? Let's talk about your tool.",
       "description": "Describe your need in a few lines: I will reply within 24 hours with a first idea of the solution and budget.",
+      "button": "Discuss my project"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "Léo Guillaume, freelance full-stack developer near Rennes",
+      "description": "I am the founder of Dibodev. I build custom business apps, management software, websites and AI automations for small and medium businesses in Rennes, Brittany and across France.",
+      "cta": "Discuss my project"
+    },
+    "story": {
+      "title": "Who am I?",
+      "background": "My name is Léo Guillaume and I have been building web applications for 7 years. After training at Epitech Rennes, I spent four years in companies building tools used every day: three business apps at Kodeva, then the booking platform of Izidoor for sports and leisure.",
+      "dibodev": "In 2025, I founded Dibodev to work directly with small and medium businesses. My goal: replace spreadsheets, paperwork and repetitive tasks with simple tools designed for the people who use them.",
+      "workingStyle": "I work alone, in direct contact with you, from the first call to maintenance. Every project has a fixed price with a clear quote, and is delivered in stages so you can test the tool as the project moves forward."
+    },
+    "facts": {
+      "title": "At a glance",
+      "company": {
+        "label": "Company",
+        "value": "Dibodev, sole proprietorship founded on June 20, 2025"
+      },
+      "location": {
+        "label": "Based in",
+        "value": "Saint-Erblon, near Rennes (Ille-et-Vilaine, France)"
+      },
+      "area": {
+        "label": "Service area",
+        "value": "Rennes, Ille-et-Vilaine and Brittany, and remotely across France"
+      },
+      "experience": {
+        "label": "Experience",
+        "value": "7 years of development, including 4 years in companies"
+      },
+      "education": {
+        "label": "Education",
+        "value": "Master's degree in software architecture (AI and data), Epitech Rennes"
+      },
+      "stack": {
+        "label": "Technologies",
+        "value": "Nuxt, Vue.js, TypeScript, Node.js, Python, .NET"
+      }
+    },
+    "profiles": {
+      "title": "Find me elsewhere"
+    },
+    "path": {
+      "title": "My background",
+      "webAcademy": {
+        "period": "2020 – 2022",
+        "title": "Web{'@'}cadémie, Epitech Rennes",
+        "description": "Intensive web development training: JavaScript, Node.js, APIs and databases, with projects deployed to production."
+      },
+      "kodeva": {
+        "period": "2021 – 2022",
+        "title": "Full-stack developer at Kodeva",
+        "description": "Three business apps built from scratch and used every day: inventory management, time tracking and field service tracking."
+      },
+      "izidoor": {
+        "period": "2023 – 2025",
+        "title": "Full-stack engineer at Izidoor",
+        "description": "A complete business back office (scheduling, payments, statistics) and an online booking module used by sports and leisure organizations."
+      },
+      "master": {
+        "period": "2023 – 2025",
+        "title": "Master's degree in software architecture (AI and data), Epitech",
+        "description": "Software architecture, artificial intelligence and data, alongside my position at Izidoor."
+      },
+      "dibodev": {
+        "period": "Since 2025",
+        "title": "Founder of Dibodev",
+        "description": "Custom business apps, management software, websites and AI automations for small and medium businesses, at a fixed price."
+      }
+    },
+    "cta": {
+      "title": "A software or website project?",
+      "description": "Tell me about your needs in a few lines: I will reply within 24 hours with first ideas and a budget estimate.",
       "button": "Discuss my project"
     }
   }

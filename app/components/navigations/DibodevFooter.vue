@@ -148,6 +148,7 @@ const footerLinks: ComputedRef<FooterLink[]> = computed((): FooterLink[] => [
   { title: t('footer.myProjects'), to: localePath('projects') },
   { title: t('footer.businessSoftware'), to: localePath('custom-business-software') },
   { title: t('footer.blog'), to: localePath('/blog') },
+  { title: t('footer.about'), to: localePath('about') },
   { title: t('footer.contactPage'), to: localePath('/contact') },
 ])
 

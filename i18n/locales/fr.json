@@ -24,6 +24,10 @@
     "businessSoftwarePage": {
       "title": "Application métier sur mesure à Rennes — Développeur freelance {'|'} Dibodev",
       "description": "Développeur freelance près de Rennes : applications métier et logiciels de gestion sur mesure pour TPE et PME. Au forfait, de 5 000 à 15 000 € selon le projet."
+    },
+    "aboutPage": {
+      "title": "À propos — Léo Guillaume, développeur freelance à Rennes {'|'} Dibodev",
+      "description": "Léo Guillaume, fondateur de Dibodev : développeur freelance full-stack près de Rennes. Parcours, compétences, zone d'intervention et profils en ligne."
     }
   },
   "nav": {
@@ -74,7 +78,8 @@
       "rennesFrance": "Rennes, France",
       "freelance": "Freelance"
     },
-    "businessSoftware": "Application métier sur mesure"
+    "businessSoftware": "Application métier sur mesure",
+    "about": "À propos"
   },
   "home": {
     "hero": {
@@ -190,6 +195,33 @@
       "pricePerDay": "/Jour.",
       "priceTTC": "350€ TTC",
       "priceHT": "Soit 291,67€ HT/Jour (TVA 20%)."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "whoIsDibodev": {
+        "question": "Qui est Dibodev ?",
+        "answer": "Dibodev est l'entreprise de Léo Guillaume, développeur freelance full-stack installé près de Rennes, à Saint-Erblon. Depuis 2025, il crée des applications métier, des logiciels de gestion, des sites web et des automatisations avec l'IA pour les TPE et PME."
+      },
+      "services": {
+        "question": "Quels services proposez-vous ?",
+        "answer": "Des applications métier et des logiciels de gestion sur mesure (planning, stocks, devis et factures, suivi du temps, réservation en ligne), des SaaS, des sites web rapides et bien référencés, et l'intégration de l'IA dans vos outils."
+      },
+      "area": {
+        "question": "Où intervenez-vous ?",
+        "answer": "À Rennes et dans toute l'Ille-et-Vilaine, où je peux me déplacer pour les réunions importantes, et à distance partout en France pour les projets qui s'y prêtent."
+      },
+      "price": {
+        "question": "Combien coûte un projet ?",
+        "answer": "Chaque projet fait l'objet d'un devis gratuit, au forfait. Pour une application métier, le budget se situe le plus souvent entre 5 000 et 15 000 €, puis de 100 à 300 € par mois pour la maintenance."
+      },
+      "process": {
+        "question": "Comment se déroule un projet ?",
+        "answer": "Un premier échange gratuit pour comprendre votre besoin, un devis clair avec le périmètre, le prix et les étapes, des livraisons par étapes pour tester l'outil au fil du projet, puis la mise en ligne, la prise en main et la maintenance."
+      },
+      "technologies": {
+        "question": "Avec quelles technologies travaillez-vous ?",
+        "answer": "Principalement Nuxt, Vue.js et TypeScript, avec Node.js, Python ou .NET côté serveur selon le projet, et des modèles d'IA pour automatiser les tâches répétitives."
+      }
     }
   },
   "contact": {
@@ -529,6 +561,82 @@
     "cta": {
       "title": "Un fichier Excel qui déborde ? Parlons de votre outil.",
       "description": "Décrivez-moi votre besoin en quelques lignes : je vous réponds sous 24 h avec une première idée de solution et de budget.",
+      "button": "Discuter de mon projet"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "Léo Guillaume, développeur freelance full-stack près de Rennes",
+      "description": "Je suis le fondateur de Dibodev. Je crée des applications métier, des logiciels de gestion, des sites web et des automatisations avec l'IA pour les TPE et PME de Rennes, de Bretagne et de toute la France.",
+      "cta": "Discuter de mon projet"
+    },
+    "story": {
+      "title": "Qui suis-je ?",
+      "background": "Je m'appelle Léo Guillaume et je développe des applications web depuis 7 ans. Après une formation à Epitech Rennes, j'ai passé quatre ans en entreprise à construire des outils utilisés chaque jour : trois applications métier chez Kodeva, puis la plateforme de réservation d'Izidoor pour le sport et les loisirs.",
+      "dibodev": "En 2025, j'ai créé Dibodev pour travailler directement avec les TPE et PME. Mon objectif : remplacer les fichiers Excel, les papiers et les tâches répétitives par des outils simples, pensés pour les personnes qui les utilisent.",
+      "workingStyle": "Je travaille seul, en lien direct avec vous, du premier échange à la maintenance. Chaque projet est chiffré au forfait, avec un devis clair, et livré par étapes pour que vous puissiez tester l'outil au fil du projet."
+    },
+    "facts": {
+      "title": "En bref",
+      "company": {
+        "label": "Entreprise",
+        "value": "Dibodev, entreprise individuelle créée le 20 juin 2025"
+      },
+      "location": {
+        "label": "Basé à",
+        "value": "Saint-Erblon, près de Rennes (Ille-et-Vilaine)"
+      },
+      "area": {
+        "label": "Zone d'intervention",
+        "value": "Rennes, l'Ille-et-Vilaine et la Bretagne, et à distance partout en France"
+      },
+      "experience": {
+        "label": "Expérience",
+        "value": "7 ans de développement, dont 4 ans en entreprise"
+      },
+      "education": {
+        "label": "Formation",
+        "value": "Master Ingénieur Architecte (IA et data), Epitech Rennes"
+      },
+      "stack": {
+        "label": "Technologies",
+        "value": "Nuxt, Vue.js, TypeScript, Node.js, Python, .NET"
+      }
+    },
+    "profiles": {
+      "title": "Me retrouver ailleurs"
+    },
+    "path": {
+      "title": "Mon parcours",
+      "webAcademy": {
+        "period": "2020 – 2022",
+        "title": "Web{'@'}cadémie, Epitech Rennes",
+        "description": "Formation intensive au développement web : JavaScript, Node.js, API et bases de données, avec des projets mis en production."
+      },
+      "kodeva": {
+        "period": "2021 – 2022",
+        "title": "Développeur full-stack chez Kodeva",
+        "description": "Trois applications métier développées de zéro et utilisées au quotidien : gestion de stock, gestion du temps et suivi des interventions."
+      },
+      "izidoor": {
+        "period": "2023 – 2025",
+        "title": "Ingénieur full-stack chez Izidoor",
+        "description": "Un back-office métier complet (planning, paiements, statistiques) et un module de réservation en ligne utilisé par des structures de sport et de loisirs."
+      },
+      "master": {
+        "period": "2023 – 2025",
+        "title": "Master Ingénieur Architecte (IA et data), Epitech",
+        "description": "Architecture logicielle, intelligence artificielle et data, en parallèle de mon poste chez Izidoor."
+      },
+      "dibodev": {
+        "period": "Depuis 2025",
+        "title": "Fondateur de Dibodev",
+        "description": "Applications métier, logiciels de gestion, sites web et automatisations avec l'IA pour les TPE et PME, au forfait."
+      }
+    },
+    "cta": {
+      "title": "Un projet d'outil ou de site ?",
+      "description": "Parlez-moi de votre besoin en quelques lignes : je vous réponds sous 24 h avec des premières pistes et une idée de budget.",
       "button": "Discuter de mon projet"
     }
   }
