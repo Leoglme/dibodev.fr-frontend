@@ -53,7 +53,8 @@ import { useArticlesWithTranslations } from '~/composables/useArticlesWithTransl
 const SITE_URL: string = 'https://dibodev.fr'
 const DEFAULT_OG_IMAGE_URL: string = `${SITE_URL}/android-chrome-512x512.png`
 
-const PER_PAGE: number = 12
+// No pagination UI: list every published article (Storyblok max page size) so none ends up unlinked.
+const PER_PAGE: number = 100
 
 const { data: articlesData } = await useArticlesWithTranslations({ page: 1, perPage: PER_PAGE })
 const articles = computed((): DibodevArticle[] => articlesData.value ?? [])

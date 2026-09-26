@@ -54,12 +54,39 @@ const SECTION_TITLES_I18N: readonly string[] = [
   'Solution',
   'Key features',
   'Results',
+  'Main features',
   'Contexto',
   'Problema',
   'Solución',
   'Funcionalidades principales',
+  'Características principales',
   'Resultados',
 ]
+
+/**
+ * Strips the markdown heading marks and the trailing colon a translation may add around a section title.
+ *
+ * @param {string} line - First line of a paragraph block.
+ * @returns {string} The title as it should be displayed.
+ */
+function cleanSectionTitle(line: string): string {
+  return line
+    .trim()
+    .replace(/^#+\s*/, '')
+    .replace(/\s*:\s*$/, '')
+}
+
+/**
+ * Normalizes a title for matching, ignoring case and a leading article ("The Problem" matches "Problem").
+ *
+ * @param {string} line - Title candidate.
+ * @returns {string} The normalized title.
+ */
+function normalizeSectionTitle(line: string): string {
+  return cleanSectionTitle(line)
+    .toLowerCase()
+    .replace(/^(?:the|el|la|los|las)\s+/, '')
+}
 
 function normalizeLineEndings(text: string): string {
   return text.replace(/\r\n/g, '\n').replace(/\r/g, '\n')
@@ -215,13 +242,14 @@ export function stringToDescriptionHtml(text: string, sectionTitles: readonly st
     .filter((p) => p.length > 0)
   if (paragraphs.length === 0) return ''
 
+  const normalizedSectionTitles: Set<string> = new Set(sectionTitles.map(normalizeSectionTitle))
   const out: string[] = []
   for (const p of paragraphs) {
     const firstLine = p.split('\n')[0]?.trim() ?? ''
     const rest = p.includes('\n') ? p.slice(p.indexOf('\n') + 1).trim() : ''
 
-    if (sectionTitles.includes(firstLine)) {
-      out.push(`<h2>${textToHtmlWithBold(firstLine)}</h2>`)
+    if (normalizedSectionTitles.has(normalizeSectionTitle(firstLine))) {
+      out.push(`<h2>${textToHtmlWithBold(cleanSectionTitle(firstLine))}</h2>`)
       if (rest && isListBlock(rest)) {
         out.push(listBlockToHtml(rest))
       } else if (rest && isOrderedListBlock(rest)) {

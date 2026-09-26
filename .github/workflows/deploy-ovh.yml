@@ -91,6 +91,11 @@ jobs:
             exit 1
           fi
 
+      - name: 🧾 List generated pages
+        run: |
+          (cd .output/public && find . -type f \( -name 'index.html' -o -name '_payload.json' \) | sed 's|^\./||' | LC_ALL=C sort) > generated-pages.txt
+          echo "Generated pages: $(wc -l < generated-pages.txt)"
+
       - name: 📤 Deploy static files to VPS
         uses: appleboy/scp-action@master
         with:
@@ -101,6 +106,17 @@ jobs:
           source: '.output/public/*'
           target: '/var/www/dibodev.fr/html'
           strip_components: 2
+
+      - name: 📤 Upload generated pages list to VPS
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: 'generated-pages.txt'
+          target: '/var/www/dibodev.fr'
+          strip_components: 0
 
       - name: 📤 Deploy Nitro server to VPS
         uses: appleboy/scp-action@master
@@ -150,3 +166,35 @@ jobs:
             # Restart Nginx
             sudo nginx -t
             sudo systemctl restart nginx
+
+      # scp never deletes anything: pages renamed or removed since a previous build would stay online forever.
+      - name: 🧹 Remove pages that are no longer generated
+        continue-on-error: true
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            set -e
+            cd /var/www/dibodev.fr/html
+            generated=/var/www/dibodev.fr/generated-pages.txt
+            generated_count=$(wc -l < "$generated")
+            if [ "$generated_count" -lt 150 ]; then
+              echo "Only $generated_count generated pages listed: prune skipped."
+              exit 0
+            fi
+            find . -type f \( -name 'index.html' -o -name '_payload.json' \) | sed 's|^\./||' | LC_ALL=C sort > /tmp/dibodev-live-pages.txt
+            LC_ALL=C comm -23 /tmp/dibodev-live-pages.txt "$generated" > /tmp/dibodev-stale-pages.txt
+            stale_count=$(wc -l < /tmp/dibodev-stale-pages.txt)
+            echo "Stale pages: $stale_count"
+            cat /tmp/dibodev-stale-pages.txt
+            if [ "$stale_count" -gt 60 ]; then
+              echo "Unusually many stale pages: prune skipped, check the list above."
+              exit 0
+            fi
+            while IFS= read -r file; do
+              rm -f -- "$file"
+              rmdir -p --ignore-fail-on-non-empty -- "$(dirname -- "$file")" 2>/dev/null || true
+            done < /tmp/dibodev-stale-pages.txt

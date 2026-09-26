@@ -245,7 +245,7 @@ const cardFields: DibodevTableCardField[] = [
 
 function getItemUrl(item: TranslatableItem): string {
   if (item.type === 'project') {
-    return `${SITE_URL}/projets/${item.slug}`
+    return `${SITE_URL}/project/${item.slug}`
   }
   if (item.type === 'article') {
     return `${SITE_URL}/blog/${item.slug}`

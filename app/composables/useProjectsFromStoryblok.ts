@@ -19,6 +19,7 @@ export function useProjectsFromStoryblok() {
         const response = await StoryblokService.getStories<StoryblokProjectContent>(
           {
             starts_with: 'project/',
+            per_page: 100,
             resolve_links: 'url',
             resolve_relations: 'project.sectors,project.categories',
           },

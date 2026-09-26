@@ -111,19 +111,26 @@ async function fetchStoryBySlug(
   return { content, relsSlugMap }
 }
 
-const PROJECT_SYSTEM_EN: string = `You are a professional translator. Translate the following French project fields to English. 
-Return ONLY a valid JSON object with these exact keys: name, shortDescription, longDescription, metaTitle, metaDescription, categories, sectors, stack, tags.
+const PROJECT_SYSTEM_EN: string = `You are a professional translator. Translate the following French project fields to English.
+Return ONLY a valid JSON object with these exact keys: name, shortDescription, longDescription, metaTitle, metaDescription, categories, sectors, tags.
 - longDescription is a Markdown-like formatted string: keep headings as plain lines, preserve blank lines, keep bullet list markers (* ), ordered list markers (1. 2. 3.), and blockquote markers (> ).
+- Translate the section headings exactly as: Context, Problem, Solution, Key features, Results.
+- Do NOT add links or any Markdown that is not in the source.
 - Do NOT wrap longDescription in JSON or additional quotes; keep it as a plain string value.
 - categories and sectors must be JSON arrays of slug keys (e.g. site-web, logiciel, gaming). Keep the exact same keys as in the source; do not translate them.
-- stack and tags must be JSON arrays of translated strings. Preserve tone and terminology (tech, marketing).`
+- tags must be a JSON array of translated strings, with as many items as the source. Preserve tone and terminology (tech, marketing).`
 
-const PROJECT_SYSTEM_ES: string = `You are a professional translator. Translate the following French project fields to Spanish. 
-Return ONLY a valid JSON object with these exact keys: name, shortDescription, longDescription, metaTitle, metaDescription, categories, sectors, stack, tags.
+const PROJECT_SYSTEM_ES: string = `You are a professional translator. Translate the following French project fields to Spanish.
+Return ONLY a valid JSON object with these exact keys: name, shortDescription, longDescription, metaTitle, metaDescription, categories, sectors, tags.
 - longDescription is a Markdown-like formatted string: keep headings as plain lines, preserve blank lines, keep bullet list markers (* ), ordered list markers (1. 2. 3.), and blockquote markers (> ).
+- Translate the section headings exactly as: Contexto, Problema, Solución, Funcionalidades principales, Resultados.
+- Do NOT add links or any Markdown that is not in the source.
 - Do NOT wrap longDescription in JSON or additional quotes; keep it as a plain string value.
 - categories and sectors must be JSON arrays of slug keys (e.g. site-web, logiciel, gaming). Keep the exact same keys as in the source; do not translate them.
-- stack and tags must be JSON arrays of translated strings. Preserve tone and terminology (tech, marketing).`
+- tags must be a JSON array of translated strings, with as many items as the source. Preserve tone and terminology (tech, marketing).`
+
+/** Markdown link syntax: the source text never contains links, so any link in a translation is invented. */
+const MARKDOWN_LINK_REGEX: RegExp = /\[([^\]]+)\]\([^)]+\)/g
 
 const ARTICLE_META_SYSTEM_EN: string = `You are a professional translator. Translate the following French article metadata to English. 
 Return ONLY a valid JSON object with these exact keys: title, excerpt, metaTitle, metaDescription, tags.
@@ -277,6 +284,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
       .filter(Boolean)
     const stack: string[] = normalizeStringList(effective.stack as string[] | string)
     const tags: string[] = normalizeStringList(effective.tags as string[] | string)
+    // Stack names are technology names: they are never translated (translating them broke the stack icons).
     const userMessage: string = JSON.stringify({
       name,
       shortDescription,
@@ -285,7 +293,6 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
       metaDescription,
       categories,
       sectors,
-      stack,
       tags,
     })
 
@@ -305,12 +312,12 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
         translated = {
           name: String(parsed.name ?? ''),
           shortDescription: String(parsed.shortDescription ?? ''),
-          longDescription: String(parsed.longDescription ?? ''),
+          longDescription: String(parsed.longDescription ?? '').replace(MARKDOWN_LINK_REGEX, '$1'),
           metaTitle: String(parsed.metaTitle ?? ''),
           metaDescription: String(parsed.metaDescription ?? ''),
           categories: Array.isArray(parsed.categories) ? (parsed.categories as string[]).map(String) : [],
           sectors: Array.isArray(parsed.sectors) ? (parsed.sectors as string[]).map(String) : [],
-          stack: Array.isArray(parsed.stack) ? (parsed.stack as string[]).map(String) : [],
+          stack,
           tags: Array.isArray(parsed.tags) ? (parsed.tags as string[]).map(String) : [],
         }
       } catch {

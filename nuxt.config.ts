@@ -2,6 +2,8 @@ import tailwindcss from '@tailwindcss/vite'
 import mkcert from 'vite-plugin-mkcert'
 import { getPrerenderSectorIgnoreUrls } from './config/sector-prerender-ignore'
 import { getPrerenderCategoryIgnoreUrls } from './config/category-prerender-ignore'
+import { getStoryblokPrerenderRoutes } from './config/storyblok-prerender-routes'
+import { LEGACY_REDIRECTS, getLegacyRedirectRouteRules } from './config/legacy-redirects'
 import { POSTHOG_CLIENT_CONFIG, POSTHOG_EU_API_HOST } from './app/core/constants/posthog'
 
 // Prerender : ignorer les URLs secteur/catégorie "croisées" (slug d'une langue sur le path d'une autre) pour éviter 404.
@@ -78,12 +80,37 @@ export default defineNuxtConfig({
     '/en/dashboard/**': { robots: false },
     '/es/dashboard': { robots: false },
     '/es/dashboard/**': { robots: false },
+    ...getLegacyRedirectRouteRules(),
   } as Record<string, object>,
   robots: {
     disallow: ['/dashboard', '/en/dashboard', '/es/dashboard'],
   },
   sitemap: {
-    exclude: ['/dashboard', '/dashboard/**', '/en/dashboard', '/en/dashboard/**', '/es/dashboard', '/es/dashboard/**'],
+    exclude: [
+      '/dashboard',
+      '/dashboard/**',
+      '/en/dashboard',
+      '/en/dashboard/**',
+      '/es/dashboard',
+      '/es/dashboard/**',
+      ...Object.keys(LEGACY_REDIRECTS),
+    ],
+  },
+  hooks: {
+    /**
+     * Prerenders every published article/project and legacy redirect, so each deploy rewrites their HTML.
+     *
+     * @param {{ routes: Set<string> }} context - Nuxt prerender context holding the routes to generate.
+     * @returns {Promise<void>}
+     */
+    async 'prerender:routes'(context: { routes: Set<string> }): Promise<void> {
+      const storyblokRoutes: string[] = await getStoryblokPrerenderRoutes(
+        process.env.NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN,
+      )
+      for (const route of [...storyblokRoutes, ...Object.keys(LEGACY_REDIRECTS)]) {
+        context.routes.add(route)
+      }
+    },
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
