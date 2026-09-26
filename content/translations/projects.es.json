@@ -529,5 +529,41 @@
       "aplicación de escritorio",
       "control móvil"
     ]
+  },
+  "project/goupixdex": {
+    "name": "GoupixDex — Escáner, estimar y vender cartas Pokémon en Vinted y eBay",
+    "shortDescription": "Aplicación web y de escritorio para revender cartas Pokémon: reconocimiento de cartas al escanear, precios de Cardmarket, anuncios publicados en Vinted, eBay y Leboncoin, y seguimiento del stock, márgenes y valor de la colección.",
+    "longDescription": "Contexto\n\nGoupixDex surgió de una necesidad personal: revender cartas Pokémon en Vinted y eBay sin dedicar todas las noches. Para cada carta, había que encontrar la extensión y el número, verificar el precio en Cardmarket, tomar fotos, redactar el anuncio, publicarlo en cada plataforma y recordar qué se había vendido, dónde y con qué margen.\n\nLa herramienta evolucionó hasta convertirse en una aplicación completa, usada a diario, disponible **en versión web** y **como aplicación de escritorio** para Windows y macOS.\n\nProblema\n\nRevender cartas de forma individual es principalmente trabajo de entrada de datos:\n\n* identificar cada carta (extensión, número, idioma) lleva tiempo, especialmente para las cartas japonesas\n* sin un precio de referencia fiable, se vende demasiado caro o a pérdida\n* cada marketplace tiene su propio formulario: el mismo anuncio se copia varias veces\n* el stock y las márgenes terminan dispersos entre Vinted, eBay y una hoja de cálculo.\n\nSolución\n\nGoupixDex automatiza todo el proceso, desde la foto hasta la venta. El teléfono actúa como escáner: la carta se reconoce **directamente en el dispositivo**, mediante modelos de visión ejecutados en el navegador, y aparece en tiempo real en la colección. El precio de referencia proviene del guía de precios de Cardmarket, actualizado cada noche, con TCGPlayer y eBay como comparación. El anuncio se prerellena (título, descripción, precio con la margen elegida) y se publica con un clic.\n\nVinted, Leboncoin y Cardmarket bloquean a los robots que funcionan en servidores. Por eso, la aplicación de escritorio incluye **workers locales** que controlan el navegador del usuario desde su propia conexión. eBay se integra mediante su **API oficial**, con una conexión OAuth única para cada usuario.\n\nFuncionalidades principales\n\n* escaneo de cartas con el teléfono, en modo «caja» (entrada/salida)\n* precios de Cardmarket, TCGPlayer y eBay en cada ficha de artículo\n* publicación y retiro de anuncios en Vinted, eBay y Leboncoin\n* sincronización del perfil de Vinted (anuncios en línea y ventas)\n* tablero de control: ingresos, beneficio, stock en venta, distribución Vinted/eBay\n* colección, productos sellados y evolución del valor con el tiempo\n* clasificadores virtuales, como el Pokédex de Kanto con 151 cartas\n* importación de pedidos de Cardmarket desde facturas PDF, para conocer el precio de compra de cada carta\n* etiquetas de envío Avery para pedidos de eBay.\n\nResultados\n\nGoupixDex opera en producción en [goupixdex.dibodev.fr](http://goupixdex.dibodev.fr), con una aplicación de escritorio publicada automáticamente en cada actualización (más de 120 versiones hasta la fecha). El código es público en GitHub.\n\nEl proyecto demuestra que es posible automatizar tareas repetitivas entre múltiples plataformas, incluso cuando no todas ofrecen una API. El mismo principio se aplica a muchas empresas que recopilan los mismos datos de una herramienta a otra.",
+    "metaTitle": "GoupixDex — Escaneo, precios de Cardmarket y venta de cartas Pokémon",
+    "metaDescription": "Software web y de escritorio para revender cartas Pokémon: reconocimiento al escanear, precios de Cardmarket, anuncios en Vinted, eBay y Leboncoin, seguimiento de stock y márgenes.",
+    "categories": [
+      "logiciel",
+      "application-metier",
+      "ia"
+    ],
+    "sectors": [
+      "productivite"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "Tauri",
+      "Python",
+      "FastAPI",
+      "MariaDB"
+    ],
+    "tags": [
+      "cartas Pokémon",
+      "reventa en Vinted",
+      "anuncios en eBay",
+      "precios de Cardmarket",
+      "escaneo de cartas",
+      "gestión de colección",
+      "gestión de inventario",
+      "aplicación de escritorio",
+      "automatización de navegador",
+      "reconocimiento de imágenes"
+    ]
   }
 }

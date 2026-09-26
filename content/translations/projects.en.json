@@ -524,5 +524,41 @@
       "desktop app",
       "mobile control"
     ]
+  },
+  "project/goupixdex": {
+    "name": "GoupixDex — Scan, Price, and Sell Pokémon Cards on Vinted and eBay",
+    "shortDescription": "Web and desktop app for reselling Pokémon cards: card recognition via scanning, Cardmarket pricing, listings published on Vinted, eBay, and Leboncoin, and tracking inventory, margins, and collection value.",
+    "longDescription": "Context\n\nGoupixDex started from a personal need: reselling Pokémon cards on Vinted and eBay without spending every evening on it. For each card, one had to find the set and number, check the price on Cardmarket, take photos, write the listing, publish it on each platform, and then remember what was sold, where, and at what profit.\n\nThe tool evolved into a full-fledged application, used daily, available **as a web version** and **as a desktop app** for Windows and macOS.\n\nProblem\n\nReselling cards individually is mostly about data entry:\n\n* Identifying each card (set, number, language) takes time, especially for Japanese cards\n* Without a reliable reference price, you sell too high or at a loss\n* Each marketplace has its own form: the same listing is copied multiple times\n* Inventory and margins end up scattered between Vinted, eBay, and a spreadsheet.\n\nSolution\n\nGoupixDex automates the entire process, from photo to sale. The phone acts as a scanner: the card is recognized **directly on the device**, using computer vision models running in the browser, and appears in real-time in the collection. The reference price comes from the Cardmarket price guide, updated every night, with comparisons from TCGPlayer and eBay. The listing is then pre-filled (title, description, price with the chosen margin) and published with one click.\n\nVinted, Leboncoin, and Cardmarket block bots running on servers. The desktop app therefore includes **local workers** that control the user’s browser from their own connection. eBay is accessed via its **official API**, with a dedicated OAuth connection for each user.\n\nKey Features\n\n* Card scanning via phone, in « cashier » mode (in/out)\n* Cardmarket, TCGPlayer, and eBay prices on each product page\n* Publishing and removing listings on Vinted, eBay, and Leboncoin\n* Synchronization of Vinted wardrobe (live listings and sales)\n* Dashboard: revenue, profit, items for sale, Vinted/eBay split\n* Collection, sealed products, and value evolution over time\n* Virtual binders, like the Kanto Pokédex with 151 cards\n* Import of Cardmarket orders from PDF invoices to track purchase prices\n* Avery shipping labels for eBay orders.\n\nResults\n\nGoupixDex is live at goupixdex.dibodev.fr, with the desktop app automatically updated on every release (over 120 versions to date). The code is public on GitHub.\n\nThe project demonstrates that repetitive cross-platform workflows can be automated, even when not all platforms offer APIs. The same principle applies to many businesses that manually copy data between tools.",
+    "metaTitle": "GoupixDex — Scan, Cardmarket Pricing, and Sell Pokémon Cards",
+    "metaDescription": "Web and desktop software for reselling Pokémon cards: scan recognition, Cardmarket pricing, Vinted, eBay, and Leboncoin listings, inventory and margin tracking.",
+    "categories": [
+      "logiciel",
+      "application-metier",
+      "ia"
+    ],
+    "sectors": [
+      "productivite"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "Tauri",
+      "Python",
+      "FastAPI",
+      "MariaDB"
+    ],
+    "tags": [
+      "Pokémon cards",
+      "Vinted resale",
+      "eBay listings",
+      "Cardmarket pricing",
+      "card scanning",
+      "collection management",
+      "inventory tracking",
+      "desktop application",
+      "browser automation",
+      "image recognition"
+    ]
   }
 }
