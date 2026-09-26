@@ -418,5 +418,40 @@
       "freelance",
       "business website"
     ]
+  },
+  "project/devleadhunter": {
+    "name": "DevLeadHunter — Automated Prospecting for Selling Websites to Tradespeople",
+    "shortDescription": "Automated prospecting SaaS that identifies tradespeople and businesses without websites, generates a personalized demo site for each, contacts them via email, and publishes the site upon payment.",
+    "longDescription": "Context\n\nDevLeadHunter was born from a simple question: how do you offer a website to a tradesperson without sending yet another sales pitch? Many plumbers, electricians, garages, and landscapers still lack a website, and traditional prospecting (calls, generic emails) takes considerable time for few responses.\n\nThe idea: show, don’t promise. Each lead receives **their own website**, already live, with their photos, reviews, and business hours.\n\nProblem\n\n* Finding businesses without websites and valid contact details requires hours of manual research\n* Generic prospecting emails are ignored\n* Follow-ups, tracking, and post-sale site deployment are done manually\n* Difficult to gauge genuine prospect interest\n\nSolution\n\nDevLeadHunter automates the entire pipeline, from research to sale. Users select a trade and location: the tool queries Google, local directories, and OpenStreetMap, filters out businesses with existing websites, and retrieves contact emails.\n\nFor each prospect, a trade-specific template populates with their real data, becoming a demo site under their name—live for 21 days. An email campaign then launches, featuring two A/B-tested variants with automated follow-ups.\n\nProspect behavior on their demo and in emails generates a **score** (hot, warm, cold), paired with an AI-written summary. When the client pays, their site instantly goes live on their domain, and they receive CMS access for self-editing.\n\nSince September 2026, a second module has been added: an **AI receptionist** that answers visitor inquiries 24/7, captures quote requests, and schedules appointments.\n\nKey Features\n\n* Prospect search by trade and location, with a prospecting map\n* Trade-specific website templates, editable directly from the preview\n* Customized demo sites, live for 21 days\n* A/B email campaigns with adjustable follow-ups and pacing\n* Behavioral scoring and AI-generated prospect summaries\n* One-click payment, live deployment, and CMS access delivery\n* Multilingual AI receptionist: handles quote requests and appointment booking\n* Web app, Windows/macOS desktop app, and mobile interface.\n\nResults\n\nDevLeadHunter is live at devleadhunter.fr. With over 1,000 commits and 1,200+ automated tests, it’s the most polished project in the portfolio—covering prospecting, site generation, sales, and customer follow-up.\n\nIts AI receptionist even engages visitors on this site: check the chat bubble at the bottom of the page.",
+    "metaTitle": "DevLeadHunter — Automated Prospecting & Demo Websites",
+    "metaDescription": "SaaS that finds tradespeople without websites, generates a demo site in their name, runs A/B email campaigns, and publishes the site upon payment.",
+    "categories": [
+      "saas",
+      "application-metier",
+      "ia"
+    ],
+    "sectors": [
+      "b2b"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Tauri",
+      "Python",
+      "FastAPI"
+    ],
+    "tags": [
+      "automated prospecting",
+      "demo websites",
+      "tradespeople without websites",
+      "email campaigns",
+      "A/B testing",
+      "lead scoring",
+      "AI receptionist",
+      "website generation",
+      "website sales"
+    ]
   }
 }

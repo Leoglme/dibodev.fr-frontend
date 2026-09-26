@@ -419,5 +419,44 @@
       "freelance",
       "sitio empresa"
     ]
+  },
+  "project/devleadhunter": {
+    "name": "DevLeadHunter — Prospección automatizada para vender sitios web a artesanos",
+    "shortDescription": "SaaS de prospección automatizada que identifica a artesanos y comercios sin sitio web, genera un sitio de demostración personalizado con su nombre, los contacta por correo electrónico y publica el sitio al día del pago.",
+    "longDescription": "Contexto\n\nDevLeadHunter nació de una pregunta sencilla: ¿cómo ofrecer un sitio web a un artesano sin enviarle otro argumento más? Muchos fontaneros, electricistas, talleres mecánicos o paisajistas aún no tienen sitio web, y la prospección tradicional (llamadas, correos genéricos) consume mucho tiempo con pocas respuestas.\n\nLa idea: **mostrar en lugar de prometer**. Cada prospecto recibe **su propio sitio web**, ya en línea, con sus fotos, reseñas y horarios.\n\nProblema\n\n* Encontrar empresas sin sitio web y con un contacto válido requiere horas de investigación\n* Un correo de prospección genérico suele ser ignorado\n* Las seguimientos, el control y la publicación tras la venta se hacen manualmente\n* Es difícil saber qué prospectos están realmente interesados.\n\nSolución\n\nDevLeadHunter automatiza toda la cadena, desde la búsqueda hasta la venta. Se selecciona una profesión y una ciudad: la herramienta consulta Google, directorios locales y OpenStreetMap, filtra las empresas que ya tienen sitio web y extrae el correo de contacto.\n\nPara cada prospecto, un modelo específico por profesión se personaliza con sus datos reales y se convierte en un sitio de demostración bajo su nombre, disponible durante 21 días. Luego, comienza una campaña de correos con dos variantes probadas en A/B y seguimientos automáticos.\n\nEl comportamiento de cada prospecto en su demo y en sus correos genera un **puntuación** (caliente, tibio, frío), acompañada de un resumen redactado por IA. Cuando el cliente paga, su sitio pasa automáticamente a producción bajo su dominio y recibe las credenciales del CMS para modificarlo por sí mismo.\n\nDesde septiembre de 2026, se añade un segundo módulo: una **receptionista de IA** que responde a los visitantes del sitio 24/7, recibe solicitudes de presupuestos y propone horarios para citas.\n\nFuncionalidades principales\n\n* Búsqueda de prospectos por profesión y ciudad, con mapa de prospección\n* Plantillas de sitios por profesión, editables directamente desde la vista previa\n* Sitios de demostración personalizados, en línea durante 21 días\n* Campañas de correos A/B con seguimientos y ritmo ajustable\n* Puntuación de comportamiento y resumen de IA para cada prospecto\n* Pago, publicación y entrega de accesos al CMS en un clic\n* Receptionista de IA multilingüe: gestión de presupuestos y citas\n* Aplicación web, aplicación de escritorio para Windows/macOS e interfaz móvil.\n\nResultados\n\nDevLeadHunter está en línea en devleadhunter.fr. Con más de mil commits y más de 1,200 pruebas automatizadas, es el proyecto más pulido del portafolio: abarca prospección, generación de sitios, venta y seguimiento de clientes.\n\nSu receptionista de IA responde a los visitantes de este sitio: es el chat en la parte inferior de la página.",
+    "metaTitle": "DevLeadHunter — Prospección automatizada y sitios de demo",
+    "metaDescription": "SaaS que encuentra artesanos sin sitio web, genera un sitio de demo personalizado, lanza campañas de correos A/B y publica el sitio al momento del pago.",
+    "categories": [
+      "saas",
+      "application-metier",
+      "ia"
+    ],
+    "sectors": [
+      "b2b"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Tauri",
+      "Python",
+      "FastAPI"
+    ],
+    "tags": [
+      "prospección automatizada",
+      "sitios de demostración",
+      "artesanos sin sitio web",
+      "campañas de correos electrónicos",
+      "pruebas A/B",
+      "puntuación de prospectos",
+      "receptionista de IA",
+      "generación de sitios web",
+      "venta de sitios web",
+      "automatización comercial",
+      "gestión de leads",
+      "herramientas de ventas B2B",
+      "integración de IA en negocios"
+    ]
   }
 }
