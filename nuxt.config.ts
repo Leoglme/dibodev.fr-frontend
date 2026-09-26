@@ -180,6 +180,8 @@ export default defineNuxtConfig({
     langDir: 'locales',
     strategy: 'prefix_except_default',
     customRoutes: 'meta',
+    // No redirect to the browser language: the en-US renderers of Google and Bing were sent from / to /en.
+    detectBrowserLanguage: false,
   },
   /** Utilisé par @nuxtjs/sitemap. Avec i18n strategy !== no_prefix, le sitemap inclut automatiquement les URLs par locale (fr, en, es) et les balises hreflang. */
   site: {
