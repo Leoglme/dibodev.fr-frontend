@@ -493,5 +493,41 @@
       "identidad de marca",
       "generación de visuales"
     ]
+  },
+  "project/nightforge": {
+    "name": "NightForge — Hacer trabajar a Claude Code y Cursor en autonomía durante la noche",
+    "shortDescription": "Aplicación web, móvil y de escritorio que hace trabajar a Claude Code y Cursor en autonomía en los ordenadores de un desarrollador, de noche o durante sus ausencias, a partir de colas de prompts por proyecto, y que se controla desde un teléfono.",
+    "longDescription": "Contexto\n\nNightForge nació de una frustración de desarrollador. Con una suscripción a Claude Max, un agente de código como Claude Code trabaja por ventanas de cuota: cuando la ventana de 5 horas se agota, todo se detiene, y hay que volver a escribir «continue» una vez recargado el cuota. De noche, ese tiempo se pierde por completo.\n\nNightForge ejecuta a Claude Code y Cursor **en autonomía** en los ordenadores del desarrollador, a partir de colas de prompts preparadas con antelación, y se controla desde un teléfono.\n\nProblema\n\n* los cuotas se recargan en horarios en los que nadie está frente a su pantalla\n* encadenar varias tareas en varios proyectos requiere una presencia constante\n* lanzar un agente a distancia implica abrir acceso al PC (VPN, puerto abierto)\n* al despertar, aún hay que identificar qué se modificó y dónde.\n\nSolución\n\nEl desarrollador compone su noche por proyecto: una secuencia de mensajes, la herramienta (Claude Code o Cursor), el modelo y la máquina objetivo. Un planificador calcula cuándo cada cuota estará disponible y reanuda el trabajo solo después de cada recarga.\n\nEn cada PC, un agente en Python abre una conexión **saliente** hacia el servidor central: ningún puerto abierto, ningún VPN. Ejecuta las herramientas en línea de comandos con las suscripciones del desarrollador, sube el código a GitHub (en la rama principal o en una rama fechada de la noche) y transmite los registros en tiempo real.\n\nLa misma interfaz de Nuxt se sirve en web, como PWA en móvil y como **aplicación de escritorio Tauri** para Windows, con actualizaciones automáticas.\n\nFuncionalidades principales\n\n* cola de prompts por proyecto (herramienta, modelo, esfuerzo, máquina objetivo)\n* composición de la noche con una biblioteca de prompts reutilizables\n* planificación de cuotas Claude Max y reanudación automática tras cada recarga\n* ejecución simultánea de Claude Code y Cursor\n* ejecución en paralelo en múltiples máquinas\n* revisión del código: archivos modificados y diferencias línea por línea\n* discusiones desde el teléfono, con notificaciones push\n* salvaguardas: parada de emergencia y parada automática tras varios fallos.\n\nResultados\n\nNightForge está en línea en nightforge.dibodev.fr, con una aplicación de escritorio publicada en continuo (unas treinta versiones en pocas semanas). Sirve para avanzar en proyectos durante la noche, y el código es público en GitHub.\n\nEl proyecto ilustra una idea sencilla: un agente de IA solo tiene valor si está bien orquestado, con tareas claras, salvaguardas y control humano al despertar.",
+    "metaTitle": "NightForge — Claude Code y Cursor en autonomía durante la noche",
+    "metaDescription": "Orquestador autoalojado para Claude Code y Cursor: colas de prompts por proyecto, planificación de cuotas, ejecución en múltiples PC y revisión de código.",
+    "categories": [
+      "logiciel",
+      "saas",
+      "ia"
+    ],
+    "sectors": [
+      "productivite"
+    ],
+    "stack": [
+      "Nuxt.js",
+      "Vue.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Tauri",
+      "Python",
+      "FastAPI",
+      "MariaDB"
+    ],
+    "tags": [
+      "agentes de IA de código",
+      "Claude Code",
+      "Cursor",
+      "automatización del desarrollo",
+      "cola de prompts",
+      "cuotas Claude Max",
+      "ejecución multi-máquinas",
+      "aplicación de escritorio",
+      "control móvil"
+    ]
   }
 }
