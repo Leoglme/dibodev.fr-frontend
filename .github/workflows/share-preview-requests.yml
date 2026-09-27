@@ -1,6 +1,6 @@
 name: 🔎 Share preview requests
 
-# Manual diagnosis of link previews: what the preview bots asked the VPS and got. IP addresses are replaced by aliases, this repository and its logs are public.
+# Manual diagnosis of link previews: what the preview bots asked the VPS and got. IP addresses are hidden, this repository and its logs are public.
 on:
   workflow_dispatch:
 
@@ -33,6 +33,7 @@ jobs:
             echo '--- Latest dibodev.fr nginx errors'
             sudo sh -c 'cat /var/log/nginx/*error*.log 2>/dev/null' \
               | grep -aE 'server: (www\.)?dibodev\.fr,' \
+              | grep -avE 'request: "[A-Z]+ /api/' \
               | sort \
               | sed -E 's/[0-9]{1,3}(\.[0-9]{1,3}){3}/x.x.x.x/g' \
               | tail -n 40
