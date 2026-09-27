@@ -578,7 +578,7 @@
     },
     "story": {
       "title": "Qui suis-je ?",
-      "background": "Je m'appelle Léo Guillaume. Avant d'écrire du code, j'ai été cuisinier pendant cinq ans. En 2020, j'ai fait du développement mon métier en entrant à la Web{'@'}cadémie d'Epitech Rennes, en alternance, puis j'ai poursuivi jusqu'au master en IA et data.",
+      "background": "Je m'appelle Léo Guillaume. Avant d'écrire du code, j'ai été cuisinier. En 2017, j'ai commencé ma reconversion vers le développement web, et en 2020 j'en ai fait mon métier en entrant à la Web{'@'}cadémie d'Epitech Rennes, en alternance, avant de poursuivre jusqu'au MSc en intelligence artificielle et data.",
       "career": "Depuis, j'ai construit des outils utilisés chaque jour : trois applications métier chez Kodeva, toujours en production dans des TPE et PME, puis la plateforme de réservation d'Izidoor, adoptée par une trentaine de structures de sport et de loisirs.",
       "dibodev": "En 2025, j'ai créé Dibodev pour travailler directement avec les TPE et PME. Mon objectif : remplacer les fichiers Excel, les papiers et les tâches répétitives par des outils simples, pensés pour les personnes qui les utilisent.",
       "ai": "Depuis avril 2026, je suis aussi en mission chez PrePeers, une startup EdTech qui aide les 15-25 ans à choisir leur orientation grâce à l'intelligence artificielle. J'y développe la plateforme et les chats IA qui conseillent les étudiants, jusque sur les sites des écoles partenaires.",
@@ -608,7 +608,7 @@
       },
       "education": {
         "label": "Formation",
-        "value": "Master Ingénieur Architecte (IA et data), Epitech Rennes"
+        "value": "MSc Pro (bac+5) en intelligence artificielle et data, Epitech Rennes"
       },
       "languages": {
         "label": "Langues",
@@ -646,7 +646,7 @@
         }
       },
       "dibodev": {
-        "period": "Depuis 2025",
+        "period": "Depuis septembre 2025",
         "title": "Fondateur et développeur freelance",
         "organization": "Dibodev",
         "context": "Entreprise individuelle, près de Rennes",
@@ -682,11 +682,11 @@
         }
       },
       "master": {
-        "period": "2023 à 2025",
-        "title": "Master Ingénieur Architecte (IA et data)",
+        "period": "2022 à 2025",
+        "title": "MSc Pro, intelligence artificielle et data",
         "organization": "Epitech Rennes",
-        "context": "MSc Pro, bac+5, en alternance",
-        "description": "Architecture logicielle, intelligence artificielle et data. Projets d'IA menés à Epitech : détection de pneumonie sur radiographies avec des réseaux de neurones et planification de voyage en langage naturel."
+        "context": "Master of Science, bac+5, en alternance",
+        "description": "Une formation tournée vers l'application concrète de l'IA : NLP, fine-tuning de modèles comme CamemBERT, traitement de gros volumes de données. Projets : détection de pneumonie sur radiographies (CNN et KNN) et planification de voyage en langage naturel."
       },
       "webAcademy": {
         "period": "2020 à 2022",
@@ -698,9 +698,9 @@
       "cooking": {
         "period": "2013 à 2016",
         "title": "Bac pro cuisine",
-        "organization": "Lycée hôtelier Notre-Dame",
+        "organization": "Lycée hôtelier Notre-Dame, Saint-Méen-le-Grand",
         "context": "Avant la reconversion",
-        "description": "Cinq ans comme cuisinier avant de me reconvertir dans le développement en 2020."
+        "description": "Un premier parcours en hôtellerie-restauration, avant ma reconversion vers le développement web en 2017."
       }
     },
     "skills": {

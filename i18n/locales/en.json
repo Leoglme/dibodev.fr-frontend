@@ -578,7 +578,7 @@
     },
     "story": {
       "title": "Who am I?",
-      "background": "My name is Léo Guillaume. Before writing code, I worked as a cook for five years. In 2020, I turned software development into my job by joining the Web{'@'}cadémie at Epitech Rennes as a work-study student, then went on to earn a master's degree in AI and data.",
+      "background": "My name is Léo Guillaume. Before writing code, I worked as a cook. In 2017, I started retraining as a web developer, and in 2020 I turned it into my job by joining the Web{'@'}cadémie at Epitech Rennes as a work-study student, then went on to earn an MSc in artificial intelligence and data.",
       "career": "Since then, I have built tools people use every day: three business apps at Kodeva, still running in small and medium businesses, then the Izidoor booking platform, now used by around thirty sports and leisure organizations.",
       "dibodev": "In 2025, I founded Dibodev to work directly with small and medium businesses. My goal: replace spreadsheets, paperwork and repetitive tasks with simple tools designed for the people who use them.",
       "ai": "Since April 2026, I have also been on a mission for PrePeers, an EdTech startup that uses artificial intelligence to help 15 to 25-year-olds choose their path. I build the platform and the AI chats that guide students, all the way to partner schools' websites.",
@@ -608,7 +608,7 @@
       },
       "education": {
         "label": "Education",
-        "value": "Master's degree in software architecture (AI and data), Epitech Rennes"
+        "value": "MSc Pro (master's level) in artificial intelligence and data, Epitech Rennes"
       },
       "languages": {
         "label": "Languages",
@@ -646,7 +646,7 @@
         }
       },
       "dibodev": {
-        "period": "Since 2025",
+        "period": "Since September 2025",
         "title": "Founder and freelance developer",
         "organization": "Dibodev",
         "context": "Sole proprietorship, near Rennes",
@@ -682,11 +682,11 @@
         }
       },
       "master": {
-        "period": "2023 to 2025",
-        "title": "Master's degree in software architecture (AI and data)",
+        "period": "2022 to 2025",
+        "title": "MSc Pro, artificial intelligence and data",
         "organization": "Epitech Rennes",
-        "context": "MSc Pro, work-study",
-        "description": "Software architecture, artificial intelligence and data. AI projects at Epitech: pneumonia detection on X-rays with neural networks and natural language travel planning."
+        "context": "Master of Science, work-study",
+        "description": "A program focused on applying AI to real projects: NLP, fine-tuning models such as CamemBERT, processing large datasets. Projects: pneumonia detection on X-rays (CNN and KNN) and natural language travel planning."
       },
       "webAcademy": {
         "period": "2020 to 2022",
@@ -698,9 +698,9 @@
       "cooking": {
         "period": "2013 to 2016",
         "title": "Vocational diploma in cooking",
-        "organization": "Notre-Dame hospitality high school",
+        "organization": "Notre-Dame hospitality high school, Saint-Méen-le-Grand",
         "context": "Before my career change",
-        "description": "Five years as a cook before switching to software development in 2020."
+        "description": "A first path in hospitality and catering, before retraining as a web developer in 2017."
       }
     },
     "skills": {
