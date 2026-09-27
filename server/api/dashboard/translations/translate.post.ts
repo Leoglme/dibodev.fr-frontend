@@ -11,6 +11,8 @@ import {
 } from '~~/server/utils/githubContent'
 import { mistralGenerate } from '~~/server/utils/mistral'
 import { extractRichtextTexts, injectRichtextTranslations } from '~~/server/utils/translationsRichtext'
+import { translateTextSegments } from '~~/server/utils/translateTextSegments'
+import type { TranslationTargetLanguage } from '~~/server/utils/translateTextSegments'
 import { richtextToMarkdown } from '~~/server/utils/richtextToMarkdown'
 import type {
   TranslatableEntityType,
@@ -140,12 +142,6 @@ const ARTICLE_META_SYSTEM_ES: string = `You are a professional translator. Trans
 Return ONLY a valid JSON object with these exact keys: title, excerpt, metaTitle, metaDescription, tags.
 tags must be a JSON array of strings. Preserve tone.`
 
-const ARTICLE_CONTENT_SYSTEM_EN: string = `You are a professional translator. You will receive a JSON object with one key "texts": an array of French text segments from a blog article (in order). 
-Translate each segment to English. Return ONLY a valid JSON object with one key "texts": an array of the same length, each element the English translation of the corresponding segment. Preserve paragraph order.`
-
-const ARTICLE_CONTENT_SYSTEM_ES: string = `You are a professional translator. You will receive a JSON object with one key "texts": an array of French text segments from a blog article (in order). 
-Translate each segment to Spanish. Return ONLY a valid JSON object with one key "texts": an array of the same length, each element the Spanish translation of the corresponding segment. Preserve paragraph order.`
-
 const SECTOR_PAGE_SYSTEM_EN: string = `You are a professional translator. Translate the following French sector page fields to English. 
 Return ONLY a valid JSON object with these exact keys: title, description, metaTitle, metaDescription.
 Preserve tone and terminology (professional, SEO).`
@@ -170,8 +166,14 @@ function getArticleMetaSystemInstruction(locale: TranslationTargetLocale): strin
   return locale === 'en' ? ARTICLE_META_SYSTEM_EN : ARTICLE_META_SYSTEM_ES
 }
 
-function getArticleContentSystemInstruction(locale: TranslationTargetLocale): string {
-  return locale === 'en' ? ARTICLE_CONTENT_SYSTEM_EN : ARTICLE_CONTENT_SYSTEM_ES
+/**
+ * Returns the language name the segment translator expects for a target locale.
+ *
+ * @param {TranslationTargetLocale} locale - The target locale (en or es).
+ * @returns {TranslationTargetLanguage} The language name.
+ */
+function getTargetLanguage(locale: TranslationTargetLocale): TranslationTargetLanguage {
+  return locale === 'en' ? 'English' : 'Spanish'
 }
 
 function getSectorPageSystemInstruction(locale: TranslationTargetLocale): string {
@@ -414,27 +416,13 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
         })
       }
 
-      let translatedContentTexts: string[] = []
-      if (contentTexts.length > 0) {
-        const contentUserMessage: string = JSON.stringify({ texts: contentTexts })
-        const { content: contentRaw }: { content: string } = await mistralGenerate({
-          apiKey: mistralApiKey,
-          model: TRANSLATION_MODEL,
-          systemInstruction: getArticleContentSystemInstruction(locale),
-          userMessage: contentUserMessage,
-          temperature: 0.3,
-          maxTokens: 4000,
-        })
-        try {
-          const parsed: { texts?: string[] } = JSON.parse(contentRaw) as { texts?: string[] }
-          translatedContentTexts = Array.isArray(parsed.texts) ? parsed.texts.map(String) : []
-        } catch {
-          throw createError({
-            statusCode: 502,
-            statusMessage: `Mistral returned invalid JSON for article content (${locale}).`,
-          })
-        }
-      }
+      const translatedContentTexts: string[] = await translateTextSegments({
+        apiKey: mistralApiKey,
+        model: TRANSLATION_MODEL,
+        targetLanguage: getTargetLanguage(locale),
+        texts: contentTexts,
+        errorLabel: `article content (${locale})`,
+      })
 
       let translatedRichtext: { type: string; content?: StoryblokRichtextNode[] }
       if (richtext) {
@@ -529,25 +517,13 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
 
       let translatedIntro: TranslatedSectorFields['intro'] | undefined
       if (introDoc && introTexts.length > 0) {
-        const contentUserMessage: string = JSON.stringify({ texts: introTexts })
-        const { content: contentRaw }: { content: string } = await mistralGenerate({
+        const translatedIntroTexts: string[] = await translateTextSegments({
           apiKey: mistralApiKey,
           model: TRANSLATION_MODEL,
-          systemInstruction: getArticleContentSystemInstruction(locale),
-          userMessage: contentUserMessage,
-          temperature: 0.3,
-          maxTokens: 4000,
+          targetLanguage: getTargetLanguage(locale),
+          texts: introTexts,
+          errorLabel: `sector intro (${locale})`,
         })
-        let translatedIntroTexts: string[] = []
-        try {
-          const parsed: { texts?: string[] } = JSON.parse(contentRaw) as { texts?: string[] }
-          translatedIntroTexts = Array.isArray(parsed.texts) ? parsed.texts.map(String) : []
-        } catch {
-          throw createError({
-            statusCode: 502,
-            statusMessage: `Mistral returned invalid JSON for sector intro (${locale}).`,
-          })
-        }
         const clone: StoryblokRichtextNode = JSON.parse(JSON.stringify(introDoc)) as StoryblokRichtextNode
         injectRichtextTranslations(clone, translatedIntroTexts)
         translatedIntro = { type: clone.type, content: clone.content }
@@ -635,25 +611,13 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
 
       let translatedIntro: TranslatedCategoryFields['intro'] | undefined
       if (introDoc && introTexts.length > 0) {
-        const contentUserMessage: string = JSON.stringify({ texts: introTexts })
-        const { content: contentRaw }: { content: string } = await mistralGenerate({
+        const translatedIntroTexts: string[] = await translateTextSegments({
           apiKey: mistralApiKey,
           model: TRANSLATION_MODEL,
-          systemInstruction: getArticleContentSystemInstruction(locale),
-          userMessage: contentUserMessage,
-          temperature: 0.3,
-          maxTokens: 4000,
+          targetLanguage: getTargetLanguage(locale),
+          texts: introTexts,
+          errorLabel: `category intro (${locale})`,
         })
-        let translatedIntroTexts: string[] = []
-        try {
-          const parsed: { texts?: string[] } = JSON.parse(contentRaw) as { texts?: string[] }
-          translatedIntroTexts = Array.isArray(parsed.texts) ? parsed.texts.map(String) : []
-        } catch {
-          throw createError({
-            statusCode: 502,
-            statusMessage: `Mistral returned invalid JSON for category intro (${locale}).`,
-          })
-        }
         const clone: StoryblokRichtextNode = JSON.parse(JSON.stringify(introDoc)) as StoryblokRichtextNode
         injectRichtextTranslations(clone, translatedIntroTexts)
         translatedIntro = { type: clone.type, content: clone.content }
