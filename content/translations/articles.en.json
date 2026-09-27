@@ -8816,5 +8816,760 @@
         }
       ]
     }
+  },
+  "blog/pass-commerce-artisanat-rennes-site-internet": {
+    "title": "Pass Commerce and Craftsmanship in Rennes Métropole: Funding for Your Website",
+    "excerpt": "Up to €6,000 in aid: who qualifies in Rennes Métropole, what matters for a website, the minimum threshold to meet, and the scheduling mistake that can cost you the aid.",
+    "metaTitle": "Rennes Commerce and Craftsmanship Pass: Funding Your Website",
+    "metaDescription": "Running a shop or workshop near Rennes? The Commerce and Craftsmanship Pass can fund up to 30% of your project, including your website. Eligible municipalities, minimum requirements, and steps explained.",
+    "tags": [
+      "commerce and craftsmanship pass",
+      "website funding assistance",
+      "commerce subsidy in Rennes",
+      "local business support",
+      "artisan website in Rennes",
+      "artisan digitalization",
+      "Rennes Métropole"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Saint-Erblon, where I live, is one of the 23 municipalities in Rennes Métropole where the Pass Commerce et Artisanat applies. In concrete terms, a baker, hairdresser, or electrician from one of these municipalities can receive 30% assistance on a modernization project, including a website.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On paper, it’s simple. Yet, there are three or four lines in the guidelines that change everything, and a scheduling error can be enough to lose the aid. I read it line by line with one question in mind: what does this mean for a merchant or artisan who wants a website? Here’s what I retain, without jargon. I verified this information in September 2026; rules may change, and the CCI (Chamber of Commerce) and CMA (Chamber of Trades) always have the final say.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The Pass Commerce et Artisanat of Rennes Métropole, explained",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is a subsidy from Rennes Métropole, in partnership with the Brittany Region, for small local businesses and artisans investing in: renovations, equipment, and digital solutions.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- 30% of approved investments;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- up to €20,000 HT (excluding tax), meaning a maximum of €6,000 in aid;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- for investments starting at €6,000 HT;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- for a project completed within three years.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The regional program has been extended until 2028. The aid is paid out at the end, once invoices are verified: you must front the money. All details are in the ",
+              "type": "text"
+            },
+            {
+              "text": "official guidelines of Rennes Métropole",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.entreprendre-rennes.fr/voy_content/uploads/2024/10/Notice-descriptive-du-Pass-Commerce-Artisanat-de-Rennes-Metropole-avec-compression.pdf",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Who qualifies? Not the center of Rennes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is the point many overlook. In Rennes Métropole, the Pass does not cover the entire metropolitan area: it targets municipalities with fewer than 5,000 inhabitants and priority neighborhoods in Rennes, where businesses are most vulnerable.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The 23 eligible municipalities: Bécherel, Bourgbarré, Brécé, Chavagne, Chevaigné, Cintré, Clayes, Corps-Nuds, La Chapelle-Chaussée, La Chapelle-des-Fougeretz, La Chapelle-Thouarault, Langan, Le Verger, L'Hermitage, Miniac-sous-Bécherel, Montgermont, Nouvoitou, Parthenay-de-Bretagne, Pont-Péan, Romillé, Saint-Armel, Saint-Erblon, and Saint-Sulpice-la-Forêt.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Priority neighborhoods in Rennes: Villejean, Le Blosne, Cleunay, Clôteaux–Champs Manceaux, and Maurepas, within their official boundaries.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A store in the center of Rennes, Cesson-Sévigné, or Bruz does not qualify for this program. And in the 23 municipalities, a ‘window display’ business must also be located in the central area defined by the PLUi (Local Urban Plan), essentially the town center. A production artisan, like a cabinetmaker or a ceramist in their workshop, does not have this constraint.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For the rest, the business must:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- be an independent retail or artisan business, registered with the RCS (Commercial and Companies Register) or RNE (National Enterprise Directory) (or an association registered with the RNA);",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- generate most of its revenue from individual customers in a local activity: bakery, café, restaurant, hairdressing, florist, cobbler, but also painter, electrician, or plumber;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- have no more than 10 full-time equivalent employees (excluding the manager);",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- generate no more than €1 million in annual revenue (excluding tax).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Excluded, among others: liberal professions, medical and paramedical services, personal care services, real estate or travel agencies, shops in shopping malls or commercial zones, and fully online activities.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What the Pass covers for your website",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On the digital side, the guidelines include:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- the creation or redesign of a website;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- an online sales module (ordering, in-store pickup);",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- a day of training to learn how to manage the new website;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- digital or web visibility consulting for the portion that remains your responsibility;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- computer equipment related to a digital project, such as a point-of-sale software.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What is not covered: hosting, maintenance, and subscriptions, creation of visuals, and advertising.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Two gray areas to confirm with the CCI or CMA before signing. Some consulting services related to a website are only covered if they accompany the purchase of digital equipment. And a custom tool, like an appointment scheduler or order tracker, is not explicitly mentioned: depending on its function, it may resemble a sales module or management software, but the chamber makes the final decision. If you’re unsure between the two, I explain the difference in ",
+              "type": "text"
+            },
+            {
+              "text": "website or business tool: which to choose",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/site-vitrine-ou-outil-metier-sur-mesure-que-choisir",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The €6,000 threshold: a website alone rarely qualifies",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is the line people read too quickly. The Pass from Rennes Métropole starts at €6,000 HT in approved investments. However, a business website often costs less than that.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In practice, the website is part of a broader project: a refrigerated display case, a sign, accessibility renovations, or a point-of-sale software. Everything is combined in the same application.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Two additional conditions in Rennes Métropole. The application must include at least one investment related to CSR (Corporate Social Responsibility), such as energy-efficient equipment. And before submitting, you must complete an online CSR self-assessment, free of charge, provided by the Métropole.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "A numbered example",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Imagine a baker in the town center of Pont-Péan. They want to take online orders for Yule logs and crêpes, and their refrigerated display case is nearing the end of its life. Their project includes:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- a website with online ordering and in-store pickup: €4,500 HT;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- a new refrigerated display case: €8,000 HT;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- switching the store lighting to LED: €1,500 HT, their CSR investment.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Total: €14,000 HT. The 30% aid amounts to €4,200. Hosting and website maintenance remain their responsibility. Alone, the €4,500 website would not meet the threshold: it’s the complete project that qualifies.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The mistake that costs you the aid: signing your quote too early",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is the classic trap. Quotes and invoices must be dated after sending your letter of intent on the Brittany Region’s platform. A quote dated before the letter means the expense won’t be covered.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The order is as follows: letter of intent, receipt of acknowledgment from Rennes Métropole, then signing the quotes. This acknowledgment does not guarantee the aid, but it authorizes you to proceed with expenses.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For the web portion, ask your provider for a quote dated after the letter, clearly separating website creation (eligible) from hosting and maintenance (not eligible). You’ll avoid back-and-forth with the chamber.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Steps to obtain the Pass Commerce et Artisanat",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1. Verify your eligibility: municipality, activity, staff count, and revenue.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "2. Call the chamber that oversees you: the CCI Ille-et-Vilaine (02 99 33 66 66) if you’re registered with the RCS or are an association, or the CMA Ille-et-Vilaine (02 23 500 500) if you’re registered with the trades directory.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "3. Create your account on the ",
+              "type": "text"
+            },
+            {
+              "text": "regional Pass Commerce et Artisanat platform",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://region.bretagne.bzh/passcommerce/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " and send your letter of intent.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "4. Wait for the acknowledgment of receipt from Rennes Métropole before signing anything.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "5. Complete the online CSR self-assessment before submitting your application.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "6. Gather your quotes and prepare your financing plan, including loans. The chamber will conduct an on-site visit.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "7. Submit the complete application within 6 months of receiving the acknowledgment: a K-bis extract less than a year old, bank details, a statement from your accountant, financing plan, quotes, a minimis attestation (summary of public aid already received), and bank agreements.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "8. Complete the project, then submit your invoices: Rennes Métropole will pay the aid after verification, and you’ll display a communication support from the Region and the Métropole on your storefront.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Outside of Rennes Métropole, each intercommunality has its own rules",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The Pass Commerce et Artisanat exists in most Breton intercommunalities, but each adapts it. The regional framework offers 30% on up to €25,000 HT in expenses, meaning up to €7,500 in aid. Rennes Métropole chose €20,000 and €6,000, with its own conditions.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Some communities of communes go further on digital. For example, Bretagne Porte de Loire Communauté, in the southern part of the department, offers a 50% digital subsidy for a website project between €2,000 and €15,000. If your business is near Vitré, Fougères, Châteaugiron, or Liffré, check with your community of communes: amounts and conditions vary by territory.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What I do for your application, and what I don’t do",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’m an independent developer in Saint-Erblon. I create websites and custom tools for local merchants and artisans.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I don’t prepare your application for you—that’s the job of the CCI or CMA. My role is the digital part:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- a clear quote, dated at the right time, separating eligible lines from hosting or maintenance;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- a project description, detailing what the website does and for whom, which you can include in your application;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- the website or tool itself, including a training session if you want one.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "And if your project doesn’t meet the threshold or your business isn’t in an eligible municipality, I’ll tell you right away. It’s better to know before filling out paperwork.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Your questions about the Pass Commerce et Artisanat",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My business is in the center of Rennes—do I qualify?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Not with the Pass from Rennes Métropole, unless your address is in one of the priority neighborhoods: Villejean, Le Blosne, Cleunay, Clôteaux–Champs Manceaux, or Maurepas. In case of doubt, the CCI or CMA will verify your address.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can a website alone be funded?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Creating a website is part of eligible expenses. However, you must reach €6,000 HT in approved expenses and include a CSR investment: in practice, the website almost always fits into a larger project. The chamber will tell you if yours qualifies alone.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is hosting and maintenance covered?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. The guidelines exclude them, along with subscriptions, creation of visuals, and advertising.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How long does this take?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "You have 6 months after receiving the acknowledgment to submit the complete application, then 3 years to complete the project. The aid arrives at the end, once invoices are verified.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Can we discuss your project together?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Do you have a business or workshop in one of the eligible municipalities and an idea for a website, online ordering, or tool? Write to me or call me before signing anything. We’ll review what qualifies for the Pass, and I’ll provide a clear breakdown of the digital portion, including what’s eligible and what’s not. If it’s not worth the effort, I’ll tell you too.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "980ea90d-82aa-4d85-b971-81f4bf94bd9c",
+            "body": [
+              {
+                "_uid": "i-799452e6-6a75-4673-a1f7-9fdfb2ee14fd",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Let’s discuss your project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
