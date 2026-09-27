@@ -2,7 +2,24 @@
   "meta": {
     "title": "Dibodev — Freelance Web Developer in Rennes",
     "description": "Freelance developer in Rennes: custom web, mobile, software and AI solutions. End-to-end support.",
-    "shareImageAlt": "Léo Guillaume, full-stack and AI freelance developer near Rennes, founder of Dibodev",
+    "shareImage": {
+      "alt": "Portrait of Léo Guillaume, full-stack and AI freelance developer in Rennes, with the caption “{pageLabel}”",
+      "pageLabels": {
+        "home": "Business apps, SaaS and AI",
+        "about": "My background and projects",
+        "contact": "Let's talk about your project",
+        "businessSoftware": "Custom business software",
+        "projects": "Selected projects",
+        "blog": "Blog: web, AI and business apps"
+      }
+    },
+    "shareLabels": {
+      "author": "Written by",
+      "readingTime": "Reading time",
+      "readingTimeValue": "{minutes} min",
+      "technologies": "Technologies",
+      "year": "Year"
+    },
     "blog": {
       "title": "Blog — Dibodev",
       "description": "Articles and tips for craftsmen, SMEs and entrepreneurs: digital, websites, applications, AI. By Léo Guillaume, freelance developer in Rennes."
@@ -10,9 +27,11 @@
     "blogArticle": {
       "descriptionFallback": "Article by Léo Guillaume, freelance developer in Rennes."
     },
-    "contact": {
-      "title": "Contact me — Dibodev",
-      "description": "Contact Léo Guillaume, freelance developer in Rennes, for your web, mobile or software project."
+    "contactPage": {
+      "title": "Contact Léo Guillaume — Freelance Web & Mobile Developer in Rennes",
+      "description": "Have a web, mobile or AI project? Léo Guillaume, freelance developer in Rennes, replies within 24 hours. Describe your project and get a free quote.",
+      "ogTitle": "Contact Léo Guillaume — Freelance Developer in Rennes",
+      "ogDescription": "Web, mobile or AI project? Reply within 24 hours and a free quote. Let's talk about your project."
     },
     "projects": {
       "title": "My projects — Dibodev",

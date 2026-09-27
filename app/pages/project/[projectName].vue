@@ -34,6 +34,8 @@ import type { RouteLocationNormalizedLoadedGeneric, Router } from 'vue-router'
 import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
 import type { DibodevProject } from '~/core/types/DibodevProject'
+import type { SeoMetaTag } from '~/core/types/SeoMetaTag'
+import type { SharePreviewDetail } from '~/core/types/SharePreviewDetail'
 import DibodevProjectLandingSection from '~/components/sections/DibodevProjectLandingSection.vue'
 import DibodevProjectGallerySection from '~/components/sections/DibodevProjectGallerySection.vue'
 import DibodevAboutProjectSection from '~/components/sections/DibodevAboutProjectSection.vue'
@@ -42,14 +44,20 @@ import DibodevRecommendedProjectSection from '~/components/sections/DibodevRecom
 import type { StoryblokVersion } from '~/services/types/storyblok'
 import { StoryblokProjectService } from '~/services/storyblokProjectService'
 import { buildProjectSchemaJson } from '~/config/projectSchema'
-import { buildShareImageMeta, getDefaultShareImageUrl } from '~/config/shareImage'
+import { buildShareImageMeta } from '~/config/shareImage'
+import { buildSharePreviewDetailsMeta } from '~/config/sharePreviewDetails'
+import { usePageShareImageMeta } from '~/composables/usePageShareImageMeta'
 import { StoryblokImageUtils } from '~/core/utils/StoryblokImageUtils'
 import { formatProjectDate } from '~/core/utils/formatProjectDate'
 
+const MAX_SHARED_TECHNOLOGIES: number = 4
+const PROJECT_YEAR_REGEX: RegExp = /^\d{4}/
+
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
 const router: Router = useRouter()
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 const storyblokLanguage: ComputedRef<string | undefined> = useStoryblokProjectLanguage()
+const buildPageShareImageMeta = usePageShareImageMeta()
 
 const projectName: string = String(route.params.projectName || '').trim()
 const isStoryblokEditor: boolean = typeof route.query._storyblok !== 'undefined'
@@ -91,10 +99,16 @@ useHead((): Record<string, unknown> => {
   const description: string = p.metaDescription || p.shortDescription
   const schemaJson: string = buildProjectSchemaJson(p, locale.value as string)
 
-  const shareImageUrl: string =
-    StoryblokImageUtils.getShareImageUrl(p.media1) ||
-    StoryblokImageUtils.getShareImageUrl(p.media2) ||
-    getDefaultShareImageUrl(locale.value as string)
+  const projectShareImageUrl: string =
+    StoryblokImageUtils.getShareImageUrl(p.media1) || StoryblokImageUtils.getShareImageUrl(p.media2)
+  const shareImageMeta: SeoMetaTag[] = projectShareImageUrl
+    ? buildShareImageMeta(projectShareImageUrl, title)
+    : buildPageShareImageMeta('projects')
+  const projectYear: string = p.date.match(PROJECT_YEAR_REGEX)?.[0] ?? ''
+  const projectDetails: SharePreviewDetail[] = [
+    { label: t('meta.shareLabels.technologies'), value: p.stack.slice(0, MAX_SHARED_TECHNOLOGIES).join(', ') },
+    { label: t('meta.shareLabels.year'), value: projectYear },
+  ]
 
   return {
     title,
@@ -105,7 +119,8 @@ useHead((): Record<string, unknown> => {
       { property: 'og:type', content: 'website' },
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description },
-      ...buildShareImageMeta(shareImageUrl, title),
+      ...buildSharePreviewDetailsMeta(projectDetails),
+      ...shareImageMeta,
     ],
     script: [{ type: 'application/ld+json', innerHTML: schemaJson }],
   }

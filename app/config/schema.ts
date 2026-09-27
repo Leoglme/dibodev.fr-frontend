@@ -36,6 +36,8 @@ export type SchemaPerson = {
   '@type': 'Person'
   '@id': string
   name: string
+  givenName: string
+  familyName: string
   jobTitle: string
   email: string
   telephone: string
@@ -95,8 +97,10 @@ const SITE_URL: string = 'https://dibodev.fr'
 export const PERSON_ID: string = 'https://dibodev.fr/#person'
 export const ORGANIZATION_ID: string = 'https://dibodev.fr/#organization'
 
-export const PERSON_NAME: string = 'Léo Guillaume'
-const JOB_TITLE: string = 'Développeur web & mobile freelance'
+export const PERSON_GIVEN_NAME: string = 'Léo'
+export const PERSON_FAMILY_NAME: string = 'Guillaume'
+export const PERSON_NAME: string = `${PERSON_GIVEN_NAME} ${PERSON_FAMILY_NAME}`
+const JOB_TITLE: string = 'Développeur freelance full-stack et IA'
 const PERSON_IMAGE: string = `${SITE_URL}/images/about/leo-guillaume-portrait-800.webp`
 const EMAIL: string = 'contact@dibodev.fr'
 const TELEPHONE: string = '+33642193812'
@@ -193,6 +197,8 @@ export const personSchema: SchemaPerson = {
   '@type': 'Person',
   '@id': PERSON_ID,
   name: PERSON_NAME,
+  givenName: PERSON_GIVEN_NAME,
+  familyName: PERSON_FAMILY_NAME,
   jobTitle: JOB_TITLE,
   email: EMAIL,
   telephone: TELEPHONE,

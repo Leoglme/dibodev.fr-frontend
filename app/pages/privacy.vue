@@ -73,6 +73,8 @@ useHead(() => ({
       name: 'description',
       content: t('privacy.meta.description'),
     },
+    { property: 'og:title', content: t('privacy.meta.title') },
+    { property: 'og:description', content: t('privacy.meta.description') },
   ],
 }))
 </script>

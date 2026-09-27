@@ -48,11 +48,16 @@ import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import DibodevBadge from '~/components/ui/DibodevBadge.vue'
 import type { DibodevArticle } from '~/core/types/DibodevArticle'
+import type { SeoMetaTag } from '~/core/types/SeoMetaTag'
+import type { SharePreviewDetail } from '~/core/types/SharePreviewDetail'
 import type { StoryblokVersion } from '~/services/types/storyblok'
 import { StoryblokArticleService } from '~/services/storyblokArticleService'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { buildArticleSchemaJson } from '~/config/articleSchema'
-import { buildShareImageMeta, getDefaultShareImageUrl } from '~/config/shareImage'
+import { buildShareImageMeta, getPageShareImageUrl } from '~/config/shareImage'
+import { buildSharePreviewDetailsMeta } from '~/config/sharePreviewDetails'
+import { PERSON_NAME } from '~/config/schema'
+import { usePageShareImageMeta } from '~/composables/usePageShareImageMeta'
 import { StoryblokImageUtils } from '~/core/utils/StoryblokImageUtils'
 
 const RELATED_ARTICLES_COUNT: number = 3
@@ -89,7 +94,8 @@ function selectRelatedArticles(
 const route = useRoute()
 const router = useRouter()
 const storyblokLanguage = useStoryblokProjectLanguage()
-const { locale } = useI18n()
+const { t, locale } = useI18n()
+const buildPageShareImageMeta = usePageShareImageMeta()
 
 const slug: string = String(route.params.slug ?? '').trim()
 const isStoryblokEditor: boolean = typeof route.query._storyblok !== 'undefined'
@@ -151,9 +157,19 @@ useHead((): Record<string, unknown> => {
 
   const canonicalPath: string = localePath(article.value.route)
   const canonicalUrl: string = `${siteUrl}${canonicalPath}`
-  const defaultShareImageUrl: string = getDefaultShareImageUrl(locale.value)
-  const shareImageUrl: string = StoryblokImageUtils.getShareImageUrl(article.value.ogImageUrl) || defaultShareImageUrl
-  const schemaImageUrl: string = article.value.ogImageUrl || defaultShareImageUrl
+  const articleShareImageUrl: string = StoryblokImageUtils.getShareImageUrl(article.value.ogImageUrl)
+  const shareImageMeta: SeoMetaTag[] = articleShareImageUrl
+    ? buildShareImageMeta(articleShareImageUrl, article.value.metaTitle)
+    : buildPageShareImageMeta('blog')
+  const schemaImageUrl: string = article.value.ogImageUrl || getPageShareImageUrl('blog', locale.value)
+  const readingTimeMinutes: number = article.value.readingTimeMinutes
+  const articleDetails: SharePreviewDetail[] = [
+    { label: t('meta.shareLabels.author'), value: PERSON_NAME },
+    {
+      label: t('meta.shareLabels.readingTime'),
+      value: readingTimeMinutes > 0 ? t('meta.shareLabels.readingTimeValue', { minutes: readingTimeMinutes }) : '',
+    },
+  ]
 
   return {
     title: article.value.metaTitle,
@@ -165,9 +181,12 @@ useHead((): Record<string, unknown> => {
       { property: 'og:url', content: canonicalUrl },
       { property: 'og:locale', content: locale.value === 'fr' ? 'fr_FR' : locale.value === 'es' ? 'es_ES' : 'en_US' },
       { property: 'article:published_time', content: article.value.date },
+      { property: 'article:author', content: `${siteUrl}${localePath('about')}` },
+      ...article.value.tags.map((tag: string): SeoMetaTag => ({ property: 'article:tag', content: tag })),
       { name: 'twitter:title', content: article.value.metaTitle },
       { name: 'twitter:description', content: article.value.metaDescription },
-      ...buildShareImageMeta(shareImageUrl, article.value.metaTitle),
+      ...buildSharePreviewDetailsMeta(articleDetails),
+      ...shareImageMeta,
     ],
     link: [{ rel: 'canonical', href: canonicalUrl }],
     script: [

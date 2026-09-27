@@ -2,7 +2,24 @@
   "meta": {
     "title": "Dibodev — Développeur Web Freelance à Rennes",
     "description": "Développeur freelance à Rennes : sites web, applications mobiles, logiciels et IA sur mesure. Accompagnement de A à Z.",
-    "shareImageAlt": "Léo Guillaume, développeur freelance full-stack et IA près de Rennes, fondateur de Dibodev",
+    "shareImage": {
+      "alt": "Portrait de Léo Guillaume, développeur freelance full-stack et IA à Rennes, avec la mention « {pageLabel} »",
+      "pageLabels": {
+        "home": "Applications métier, SaaS et IA",
+        "about": "Parcours, projets et méthode",
+        "contact": "Parlons de votre projet",
+        "businessSoftware": "Applications métier sur mesure",
+        "projects": "Projets réalisés",
+        "blog": "Le blog : web, IA et outils métier"
+      }
+    },
+    "shareLabels": {
+      "author": "Écrit par",
+      "readingTime": "Temps de lecture",
+      "readingTimeValue": "{minutes} min",
+      "technologies": "Technologies",
+      "year": "Année"
+    },
     "blog": {
       "title": "Blog — Dibodev",
       "description": "Articles et conseils pour artisans, PME et entrepreneurs : digital, sites web, applications, IA. Par Léo Guillaume, développeur freelance à Rennes."
@@ -10,9 +27,11 @@
     "blogArticle": {
       "descriptionFallback": "Article par Léo Guillaume, développeur freelance à Rennes."
     },
-    "contact": {
-      "title": "Me contacter — Dibodev",
-      "description": "Contactez Léo Guillaume, développeur freelance à Rennes, pour votre projet web, mobile ou logiciel."
+    "contactPage": {
+      "title": "Contactez Léo Guillaume — Développeur Freelance Web & Mobile à Rennes",
+      "description": "Vous avez un projet web, mobile ou IA ? Léo Guillaume, développeur freelance à Rennes, vous répond sous 24h. Décrivez votre projet, obtenez un devis gratuit.",
+      "ogTitle": "Contactez Léo Guillaume — Développeur Freelance à Rennes",
+      "ogDescription": "Projet web, mobile ou IA ? Réponse sous 24h et devis gratuit. Parlons de votre projet."
     },
     "projects": {
       "title": "Mes projets — Dibodev",

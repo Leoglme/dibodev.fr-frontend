@@ -14,6 +14,23 @@ const prerenderCategoryIgnore = getPrerenderCategoryIgnoreUrls()
 export default defineNuxtConfig({
   app: {
     head: {
+      // Same on every page: icons (browser tab, Google results, iOS home screen, iMessage), browser and Discord colour, X account.
+      link: [
+        { rel: 'icon', type: 'image/x-icon', sizes: '48x48', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+        { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/android-chrome-192x192.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/site.webmanifest' },
+      ],
+      meta: [
+        { name: 'theme-color', content: '#101623' },
+        { name: 'application-name', content: 'Dibodev' },
+        { name: 'apple-mobile-web-app-title', content: 'Dibodev' },
+        { name: 'author', content: 'Léo Guillaume' },
+        { name: 'twitter:site', content: '@dibodev' },
+        { name: 'twitter:creator', content: '@dibodev' },
+      ],
       script: [
         ...(process.env.NODE_ENV === 'production'
           ? [

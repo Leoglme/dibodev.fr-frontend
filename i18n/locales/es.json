@@ -2,7 +2,24 @@
   "meta": {
     "title": "Dibodev — Desarrollador Web Freelance en Rennes",
     "description": "Desarrollador freelance en Rennes: sitios web, aplicaciones móviles, software e IA a medida. Acompañamiento de principio a fin.",
-    "shareImageAlt": "Léo Guillaume, desarrollador freelance full-stack e IA cerca de Rennes, fundador de Dibodev",
+    "shareImage": {
+      "alt": "Retrato de Léo Guillaume, desarrollador freelance full-stack e IA en Rennes, con el texto «{pageLabel}»",
+      "pageLabels": {
+        "home": "Software de gestión, SaaS e IA",
+        "about": "Trayectoria, proyectos y método",
+        "contact": "Hablemos de tu proyecto",
+        "businessSoftware": "Software de gestión a medida",
+        "projects": "Proyectos realizados",
+        "blog": "El blog: web, IA y software"
+      }
+    },
+    "shareLabels": {
+      "author": "Escrito por",
+      "readingTime": "Tiempo de lectura",
+      "readingTimeValue": "{minutes} min",
+      "technologies": "Tecnologías",
+      "year": "Año"
+    },
     "blog": {
       "title": "Blog — Dibodev",
       "description": "Artículos y consejos para artesanos, pymes y emprendedores: digital, sitios web, aplicaciones, IA. Por Léo Guillaume, desarrollador freelance en Rennes."
@@ -10,9 +27,11 @@
     "blogArticle": {
       "descriptionFallback": "Artículo por Léo Guillaume, desarrollador freelance en Rennes."
     },
-    "contact": {
-      "title": "Contactarme — Dibodev",
-      "description": "Contacta con Léo Guillaume, desarrollador freelance en Rennes, para tu proyecto web, móvil o de software."
+    "contactPage": {
+      "title": "Contacta con Léo Guillaume — Desarrollador freelance web y móvil en Rennes",
+      "description": "¿Tienes un proyecto web, móvil o de IA? Léo Guillaume, desarrollador freelance en Rennes, te responde en 24 h. Describe tu proyecto y recibe un presupuesto gratuito.",
+      "ogTitle": "Contacta con Léo Guillaume — Desarrollador freelance en Rennes",
+      "ogDescription": "¿Proyecto web, móvil o de IA? Respuesta en 24 h y presupuesto gratuito. Hablemos de tu proyecto."
     },
     "projects": {
       "title": "Mis proyectos — Dibodev",
