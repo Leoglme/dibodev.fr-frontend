@@ -118,6 +118,16 @@ jobs:
           target: '/var/www/dibodev.fr'
           strip_components: 0
 
+      # tar cannot turn a folder into the links Nitro makes for duplicated packages; server/.data (article drafts, queue) stays.
+      - name: 🧹 Remove previous server dependencies
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: rm -rf /var/www/dibodev.fr/server/node_modules
+
       - name: 📤 Deploy Nitro server to VPS
         uses: appleboy/scp-action@master
         with:
