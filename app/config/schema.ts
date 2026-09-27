@@ -174,7 +174,9 @@ const PERSON_SAME_AS: string[] = [
   'https://github.com/Leoglme',
   'https://www.codeur.com/-leoglme',
   'https://www.malt.fr/profile/leoguillaume2',
+  'https://www.lesbonsfreelances.com/freelance/leog4',
   'https://dev.to/dibodev',
+  'https://dibodev.hashnode.dev/',
   'https://zestedesavoir.com/@dibodevcode',
 ]
 
