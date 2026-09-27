@@ -4,9 +4,7 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+  # Used by the dashboard to rebuild the site on main after publishing an article.
   workflow_dispatch:
 
 # One deploy at a time: two runs would publish into the same staging folder on the VPS. A newer run waits, it never stops a deploy halfway.
@@ -232,7 +230,6 @@ jobs:
 
       # Tells Bing and the other IndexNow engines to recrawl the pages listed in the live sitemaps.
       - name: 📣 Notify search engines (IndexNow)
-        if: github.event_name != 'pull_request'
         continue-on-error: true
         run: |
           key=$(tr -d '[:space:]' < public/indexnow-key.txt)
