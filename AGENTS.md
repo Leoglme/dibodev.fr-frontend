@@ -23,3 +23,4 @@ Standard scripts are in `package.json`. Key ones:
 - The `.env.example` file lists all env vars. Copy it to `.env` for local dev. The app will run without real values (most are optional), but content pages will be empty without a valid `NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN`.
 - Husky pre-commit hook runs `npm run lint` — all 3 lint checks must pass before committing.
 - `postinstall` script runs `nuxt prepare` automatically after `npm install`.
+- The deploy workflow installs with `npm ci` on **Node 22 / npm 10**. A `package-lock.json` written by npm 11 can miss optional peer dependencies that npm 10 requires, and `npm ci` then fails. After adding or upgrading a dependency, rewrite the lock with `npx -y npm@10 install --package-lock-only`.
