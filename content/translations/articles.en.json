@@ -9571,5 +9571,625 @@
         }
       ]
     }
+  },
+  "blog/facture-electronique-artisan-ce-qui-change": {
+    "title": "Electronic Invoicing: What Changes for Artisans, Even with Private Clients",
+    "excerpt": "Since September 2026, you must be able to receive electronic invoices; in 2027, you will have to issue them. What changes for an artisan and how to prepare for it.",
+    "metaTitle": "Artisan Electronic Invoicing: Key Changes in 2026 and 2027",
+    "metaDescription": "Mandatory reception since September 2026, issuance in 2027: how electronic invoicing impacts artisans, including those with private clients.",
+    "tags": [
+      "artisan electronic invoicing",
+      "mandatory electronic billing",
+      "electronic invoicing for private clients",
+      "approved platform",
+      "artisan billing",
+      "customized artisan tool",
+      "artisan digitalization"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "September 1, 2026, passed quietly in many workshops. Yet, since that date, any business subject to VAT must be able to receive electronic invoices. And one year later, on September 1, 2027, it will be the turn of artisans and small businesses to send them.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "One question keeps coming up everywhere on this topic, and it’s one of the most searched on Google: *“My clients are private individuals—does this concern me?”* The short answer: yes, but not in the way you might think. I build quoting and invoicing tools for artisans, so here’s what’s really changing, case by case, without any jargon. I verified this information in September 2026 on official government websites; the details may still evolve, and your accountant remains the best person to confirm your specific situation.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Electronic invoicing in two phases",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- **As of September 1, 2026**",
+              "type": "text"
+            },
+            {
+              "text": ": All businesses must be able to receive electronic invoices. Large companies and mid-sized enterprises must also issue them.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "- **As of September 1, 2027**",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": ": SMEs, small businesses, and micro-enterprises will also have to issue them.",
+              "type": "text"
+            },
+            {
+              "text": "An electronic invoice isn’t just a PDF sent by email. It’s a structured file in UBL, CII, or Factur-X format (a PDF embedding its data), transmitted through a platform approved by the state. Your platform sends it to your client’s platform and forwards the relevant data to the tax authorities.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "What’s already mandatory: receiving invoices from your suppliers",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is a point many artisans have overlooked. Large suppliers—like a wholesaler of building materials or a national equipment rental company—must already send you electronic invoices. To receive them, you need an approved platform.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "In practice: choose a platform from the **official list published by the tax authorities**, open an account, and ensure your business appears in the directory so suppliers know where to send their invoices. If you haven’t done this yet, it’s the first thing to address—even before thinking about your own invoices.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Your clients are private individuals: what changes, and what doesn’t",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good news: your invoices to private individuals don’t become electronic. After fixing Mrs. Martin’s water heater, you can still hand her a paper invoice or a PDF.",
+              "type": "text"
+            },
+            {
+              "text": "What changes is e-reporting. Starting September 1, 2027, the data from these sales must be reported to the tax authorities: the daily cumulative amounts and the corresponding VAT, not the details of each invoice. Your platform handles this, at a frequency based on your VAT regime. The catch? Your sales must be recorded there—which is where handwritten invoices become problematic.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "And if you’re a micro-entrepreneur without VAT? You’re still affected. VAT exemption changes the details on your invoices, not your obligations under the reform.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "You also work for professionals",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A plumber working in a restaurant, a mason subcontracted by a general contractor, a carpenter renovating a shop—any time an invoice goes to a French business, it must be electronic starting September 1, 2027.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Four new mandatory details will appear on your invoices:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- your professional client’s SIREN number;",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "- their delivery address, if different from the billing address;",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- the nature of the transaction: sale of goods, service provision, or both;",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- if applicable, the option for VAT payment based on invoicing (reverse charge).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Start recording your professional clients’ SIREN numbers in your database now. It’s tedious, but it’s exactly the kind of task that causes delays when everything needs to go out on time.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "You create quotes and invoices in Excel or Word",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "This is where things get tricky. Starting September 2027, an invoice typed in Word or Excel and sent as a PDF to a professional client won’t be compliant. And for private clients, your sales must still be reported to your platform.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "You have two simple options:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- switch to an invoicing software connected to an approved platform (many already offer this);",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "- invoice directly from your platform’s space, if it allows it.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If your business is straightforward, an off-the-shelf software will work perfectly. I say this all the more because my specialty is custom solutions—which only make sense if your quotes or workflows are truly unique. I explain how to decide between **off-the-shelf software or custom development** in another article.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You have a custom or in-house tool",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Some artisans use a tool tailored to their needs: software that calculates quotes based on their rates, tracks projects, and generates invoices. There’s no need to scrap it. Most approved platforms offer an integration for this case: your tool generates the invoice in the correct format and sends it to the platform, which handles the rest.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "If you’re using a large Excel spreadsheet with macros, now might be the time to upgrade to a proper tool—whether off-the-shelf or custom-built. This is exactly the kind of project I work on: connecting an existing tool to a platform or building a quoting and invoicing system that fits your workflow, ready for 2027. To see what this looks like, I’ve described **an electrician’s custom tool**, from service request to invoice.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Your action plan by September 2027",
+              "type": "text"
+            },
+            {
+              "text": "1. If you haven’t already, choose an approved platform to receive invoices—this has been mandatory since September 2026.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "2. Sort your clients: private individuals on one side, professionals on the other.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "3. Update your professional client file: SIREN number, billing address, delivery address.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "4. Decide how you’ll invoice: off-the-shelf software, platform space, or custom tool connected to the platform.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "5. Test with a few real invoices in spring 2027 to avoid last-minute surprises on September 1.",
+              "type": "text"
+            },
+            {
+              "text": "6. Talk to your accountant—they see all your invoices and can advise on what’s best for your situation.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/electricien-outil-sur-mesure-devis-interventions-factures",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "What you risk if you’re not ready",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "As of now, a non-electronic invoice that should have been one incurs a €50 fine, capped at €15,000 per year. Not having a platform to receive invoices exposes you, after a three-month warning, to a €500 fine, then €1,000 per quarter of delay. A first error corrected on its own or within 30 days of the tax authority’s request isn’t penalized.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The official details are on the **‘Discover electronic invoicing’** page of the tax authority’s website.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Your questions about electronic invoicing",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "**I’m a micro-entrepreneur without VAT—does this affect me?**",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Yes. Since September 2026, you’ve had to be able to receive electronic invoices, and starting September 2027, you must issue electronic invoices to professionals and report sales data to private individuals.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "**Is a PDF invoice sent by email considered electronic?**",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. An electronic invoice contains structured data (UBL, CII, or Factur-X) and is transmitted via an approved platform. A standard PDF remains acceptable for private clients.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "**Is the platform paid?**",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It depends: each platform sets its own pricing, and some offer free plans for very small businesses. You’re not required to use the same platform as your suppliers or clients—they communicate with each other.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "**All my clients are private individuals—can I wait until 2027?**",
+              "type": "text"
+            },
+            {
+              "text": "For your own invoices, yes: nothing changes before September 2027. But receiving invoices has been mandatory since September 2016—you already need a platform for your suppliers’ invoices.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.impots.gouv.fr/professionnel/je-decouvre-la-facturation-electronique",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "**Let’s review how you invoice?**",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "If you create quotes and invoices manually or with a tool you’re not ready to abandon, let’s discuss it—over the phone or in person near Rennes. I’ll honestly tell you what suits you best: off-the-shelf software if it’s enough, or a tool integrated with your platform if your workflow demands it. You’ll leave with a clear plan for September 2027, even if you don’t work with me afterward.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "**Discuss my project**",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Oui. Vous devez pouvoir recevoir des factures électroniques depuis septembre 2026, et à partir de septembre 2027, émettre vos factures aux professionnels en électronique et transmettre les données de vos ventes aux particuliers.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Une facture PDF envoyée par mail, c'est une facture électronique ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Non. Une facture électronique contient des données structurées (UBL, CII ou Factur-X) et passe par une plateforme agréée. Le PDF classique reste possible pour vos clients particuliers.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La plateforme, c'est payant ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Ça dépend : chaque plateforme fixe ses prix, et certaines proposent des formules gratuites pour les très petites entreprises. Vous n'êtes pas obligé de choisir la même que vos fournisseurs ou vos clients : les plateformes communiquent entre elles.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tous mes clients sont des particuliers, je peux attendre 2027 ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Pour vos propres factures, oui : rien ne change avant septembre 2027. Mais la réception est obligatoire depuis septembre 2026 : il vous faut déjà une plateforme pour les factures de vos fournisseurs.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "On fait le point sur votre façon de facturer ?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si vous faites vos devis et vos factures à la main, ou avec un outil que vous ne voulez pas lâcher, on peut regarder ça ensemble, au téléphone ou autour d'un café du côté de Rennes. Je vous dis franchement ce qui vous convient : un logiciel du marché si ça suffit, ou un outil relié à votre plateforme si votre façon de travailler le demande. Vous repartez avec un plan clair pour septembre 2027, même si vous ne travaillez pas avec moi ensuite.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "87a79bbf-e83e-42ea-8b13-075124f9ec45",
+            "body": [
+              {
+                "_uid": "i-1aa1c311-0f24-4eaf-88f1-af8683da6333",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuter de mon projet",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

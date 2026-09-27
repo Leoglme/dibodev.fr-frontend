@@ -9571,5 +9571,625 @@
         }
       ]
     }
+  },
+  "blog/facture-electronique-artisan-ce-qui-change": {
+    "title": "Factura electrónica: lo que cambia para los artesanos, incluso con clientes particulares",
+    "excerpt": "Desde septiembre de 2026, deberás poder recibir facturas electrónicas; en 2027, estarás obligado a emitirlas. ¿Qué cambia para un artesano y cómo prepararse?",
+    "metaTitle": "Factura electrónica para artesanos: cambios en 2026 y 2027",
+    "metaDescription": "Recepción obligatoria desde septiembre de 2026, emisión en 2027: lo que la factura electrónica implica para un artesano, incluyendo clientes particulares.",
+    "tags": [
+      "factura electrónica artesano",
+      "facturación electrónica obligatoria",
+      "factura electrónica para particulares",
+      "plataforma autorizada",
+      "facturación artesanal",
+      "herramienta personalizada para artesanos",
+      "digitalización para artesanos"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El 1 de septiembre de 2026 pasó sin pena en muchos talleres. Sin embargo, desde esa fecha, toda empresa sujeta al IVA debe poder recibir facturas electrónicas. Y en un año, el 1 de septiembre de 2027, le tocará a su vez a los artesanos y a las pequeñas empresas emitirlas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una pregunta que surge por todas partes sobre este tema, y que es una de las más buscadas en Google: «mis clientes son particulares, ¿estoy afectado?». La respuesta corta: sí, pero no como se imagina. Construyo herramientas de presupuestos y facturación para artesanos, así que aquí está lo que realmente cambia, caso por caso, sin tecnicismos. He verificado esta información en septiembre de 2026 en los sitios oficiales; las modalidades aún pueden cambiar, y su asesor contable sigue siendo el mejor interlocutor para validar su caso.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "La factura electrónica en dos fechas",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- Desde el 1 de septiembre de 2026: todas las empresas deben poder recibir facturas electrónicas. Las grandes empresas y las empresas de tamaño intermedio también deben emitirlas.",
+              "type": "text"
+            },
+            {
+              "text": "- A partir del 1 de septiembre de 2027: las PYMES, las microempresas y las pequeñas empresas deberán, a su vez, emitirlas.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Una factura electrónica no es un PDF enviado por correo. Es un archivo estructurado, en formato UBL, CII o Factur-X (un PDF que incorpora sus datos), que pasa por una plataforma aprobada por el Estado. Su plataforma se lo envía a la de su cliente y transmite al mismo tiempo los datos útiles a la administración fiscal.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Lo que ya es obligatorio: recibir las facturas de sus proveedores",
+              "type": "text"
+            },
+            {
+              "text": "Es el punto que muchos artesanos han pasado por alto. Los grandes proveedores, como un mayorista de materiales o un arrendador de equipos a nivel nacional, ya deben enviarle sus facturas en formato electrónico. Para recibirlas, necesita una plataforma aprobada.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Concretamente: elegir una plataforma en la \"lista oficial publicada por los impuestos\", abrir su cuenta y verificar que su empresa aparezca correctamente en el directorio, para que sus proveedores sepan dónde enviar sus facturas. Si aún no lo ha hecho, es lo primero que debe resolver, incluso antes de pensar en sus propias facturas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sus clientes son particulares: lo que cambia y lo que no cambia",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Buena noticia: sus facturas a particulares no se convertirán en facturas electrónicas. Después de cambiar el calentador de agua de la señora Martín, aún podrá entregarle una factura en papel o un PDF.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lo que cambia es el e-reporting. A partir del 1 de septiembre de 2027, los datos de estas ventas deberán enviarse a la administración: los montos acumulados por día y el IVA correspondiente, no el detalle de cada factura. Su plataforma se encargará de esto, con una frecuencia que depende de su régimen de IVA. Eso sí, sus ventas deben estar registradas allí: es aquí donde las facturas hechas a mano plantean un problema.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Y si es microempresario sin IVA? También está afectado. La exención del IVA cambia las menciones de sus facturas, pero no sus obligaciones frente a la reforma.",
+              "type": "text"
+            },
+            {
+              "text": "También trabaja para profesionales",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Un fontanero que interviene en un restaurante, un albañil subcontratado por una empresa general, un carpintero que acondiciona una tienda: cada vez que una factura se envíe a una empresa francesa, deberá ser electrónica a partir del 1 de septiembre de 2027.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cuatro nuevas menciones aparecerán al mismo tiempo en sus facturas:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- el número SIREN de su cliente profesional;",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- su dirección de entrega, si difiere de su dirección de facturación;",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- la naturaleza de la operación: venta de bienes, prestación de servicios, o ambas;",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "- en su caso, la opción para el pago del IVA según los débitos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Empiece ahora mismo a anotar el SIREN de sus clientes profesionales en su archivo. Es un trabajo sin interés, pero es típicamente lo que bloquea el día en que todo debe salir.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hace sus presupuestos y facturas en Excel o Word",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ahí es donde se complica. A partir de septiembre de 2027, una factura escrita en Word o Excel y enviada en PDF a un cliente profesional ya no será conforme. Y para sus clientes particulares, sus ventas deberán, de todos modos, remitirse a su plataforma.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Tiene dos opciones simples:",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- pasar a un software de facturación conectado a una plataforma aprobada, algo que muchos softwares ya ofrecen;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- facturar directamente desde el espacio de su plataforma, si esta lo permite.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si su actividad es sencilla, un software del mercado hará un excelente trabajo. Lo digo con más énfasis porque mi oficio es el desarrollo a medida: solo tiene sentido si sus presupuestos o su organización realmente salen de lo común. Explico cómo decidir entre \"software del mercado o desarrollo a medida\".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Tiene una herramienta interna o un software a medida",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Algunos artesanos tienen una herramienta hecha para ellos: un software que calcula los presupuestos a partir de sus tarifas, sigue los proyectos y genera las facturas. No hay que tirar todo por la borda. La mayoría de las plataformas aprobadas prevén una conexión para este caso: su herramienta produce la factura en el formato correcto y se la envía, y la plataforma hace el resto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para un gran cuaderno de Excel con macros, a menudo es el momento adecuado para pasar a una verdadera herramienta, ya sea del mercado o hecha para usted. Es típicamente el tipo de proyecto que llevo a cabo: conectar una herramienta existente a una plataforma o construir la herramienta de presupuestos y facturación que se adapte a su forma de trabajar, lista para 2027. Para ver a qué se parece, he descrito \"la herramienta a medida de un electricista\", desde la solicitud de intervención hasta la factura.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El plan para septiembre de 2027",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "1. Si aún no lo ha hecho, elija una plataforma aprobada para recibir sus facturas: es obligatorio desde septiembre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "2. Clasifique a sus clientes: los particulares de un lado, los profesionales del otro.",
+              "type": "text"
+            },
+            {
+              "text": "3. Complete su archivo de clientes profesionales: SIREN, dirección de facturación, dirección de entrega.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "4. Elija cómo va a facturar: software del mercado, espacio de la plataforma o herramienta interna conectada a la plataforma.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "5. Haga una prueba en primavera de 2027 con algunas facturas reales, para no descubrir un problema el 1 de septiembre.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "6. Hable con su asesor contable: él ve pasar todas sus facturas y sabrá qué conviene a su caso.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lo que arriesga si no está preparado",
+              "type": "text"
+            },
+            {
+              "text": "Hasta la fecha, una factura que debería haber sido electrónica y no lo es conlleva una multa de 50 €, con un límite de 15.000 € por año. No tener una plataforma para recibir facturas expone, tras una advertencia de tres meses, a una multa de 500 €, y luego de 1.000 € por trimestre de retraso. Un primer error corregido por sí mismo, o dentro de los 30 días siguientes a la solicitud de la administración, no es sancionado.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/electricien-outil-sur-mesure-devis-interventions-factures",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "El detalle oficial está en la página \"Descubra la facturación electrónica\" del sitio de los impuestos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Sus preguntas sobre la factura electrónica",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Soy autónomo sin IVA, ¿estoy afectado?",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí. Debe poder recibir facturas electrónicas desde septiembre de 2026, y a partir de septiembre de 2027, emitir sus facturas a profesionales en formato electrónico y transmitir los datos de sus ventas a particulares.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "¿Una factura en PDF enviada por correo es una factura electrónica?",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. Una factura electrónica contiene datos estructurados (UBL, CII o Factur-X) y pasa por una plataforma aprobada. El PDF clásico sigue siendo posible para sus clientes particulares.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "¿La plataforma es de pago?",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Depende: cada plataforma fija sus precios, y algunas ofrecen fórmulas gratuitas para las muy pequeñas empresas. No está obligado a elegir la misma que sus proveedores o sus clientes: las plataformas se comunican entre sí.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Todos mis clientes son particulares, ¿puedo esperar hasta 2027?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para sus propias facturas, sí: nada cambia antes de septiembre de 2027. Pero la recepción es obligatoria desde septiembre de 2026: ya necesita una plataforma para las facturas de sus proveedores.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hagamos un balance de su forma de facturar",
+              "type": "text"
+            },
+            {
+              "text": "Si hace sus presupuestos y facturas a mano, o con una herramienta que no quiere soltar, podemos revisarlo juntos, por teléfono o tomando un café por el lado de Rennes. Le diré francamente lo que le conviene: un software del mercado si es suficiente, o una herramienta conectada a su plataforma si su forma de trabajar lo requiere. Se irá con un plan claro para septiembre de 2027, incluso si no trabaja conmigo después.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.impots.gouv.fr/professionnel/je-decouvre-la-facturation-electronique",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Hablemos de mi proyecto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Vos questions sur la facture électronique",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Je suis auto-entrepreneur sans TVA, je suis concerné ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Oui. Vous devez pouvoir recevoir des factures électroniques depuis septembre 2026, et à partir de septembre 2027, émettre vos factures aux professionnels en électronique et transmettre les données de vos ventes aux particuliers.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Une facture PDF envoyée par mail, c'est une facture électronique ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Non. Une facture électronique contient des données structurées (UBL, CII ou Factur-X) et passe par une plateforme agréée. Le PDF classique reste possible pour vos clients particuliers.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La plateforme, c'est payant ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Ça dépend : chaque plateforme fixe ses prix, et certaines proposent des formules gratuites pour les très petites entreprises. Vous n'êtes pas obligé de choisir la même que vos fournisseurs ou vos clients : les plateformes communiquent entre elles.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tous mes clients sont des particuliers, je peux attendre 2027 ?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Pour vos propres factures, oui : rien ne change avant septembre 2027. Mais la réception est obligatoire depuis septembre 2026 : il vous faut déjà une plateforme pour les factures de vos fournisseurs.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "On fait le point sur votre façon de facturer ?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si vous faites vos devis et vos factures à la main, ou avec un outil que vous ne voulez pas lâcher, on peut regarder ça ensemble, au téléphone ou autour d'un café du côté de Rennes. Je vous dis franchement ce qui vous convient : un logiciel du marché si ça suffit, ou un outil relié à votre plateforme si votre façon de travailler le demande. Vous repartez avec un plan clair pour septembre 2027, même si vous ne travaillez pas avec moi ensuite.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "87a79bbf-e83e-42ea-8b13-075124f9ec45",
+            "body": [
+              {
+                "_uid": "i-1aa1c311-0f24-4eaf-88f1-af8683da6333",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuter de mon projet",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
