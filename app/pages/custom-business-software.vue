@@ -33,7 +33,7 @@ import DibodevFaqSection from '~/components/sections/DibodevFaqSection.vue'
 import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
-import { usePageShareImageMeta } from '~/composables/usePageShareImageMeta'
+import { usePageShareImage } from '~/composables/usePageShareImage'
 
 definePageMeta({
   i18n: {
@@ -54,7 +54,7 @@ const RELATED_ARTICLE_SLUGS: string[] = [
 const FAQ_QUESTION_KEYS: string[] = ['price', 'delay', 'freelance', 'area', 'excel', 'existing']
 
 const { t } = useI18n()
-const buildPageShareImageMeta = usePageShareImageMeta()
+usePageShareImage('businessSoftware')
 const localePath = useLocalePath()
 const { data: articlesPool } = await useArticlesWithTranslations({ perPage: ARTICLES_POOL_SIZE })
 
@@ -79,7 +79,6 @@ useHead(() => ({
     { name: 'description', content: t('meta.businessSoftwarePage.description') },
     { property: 'og:title', content: t('meta.businessSoftwarePage.title') },
     { property: 'og:description', content: t('meta.businessSoftwarePage.description') },
-    ...buildPageShareImageMeta('businessSoftware'),
   ],
 }))
 </script>

@@ -49,7 +49,7 @@ import BlogArticleCard from '~/components/blog/BlogArticleCard.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import type { DibodevArticle } from '~/core/types/DibodevArticle'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
-import { usePageShareImageMeta } from '~/composables/usePageShareImageMeta'
+import { usePageShareImage } from '~/composables/usePageShareImage'
 
 // No pagination UI: list every published article (Storyblok max page size) so none ends up unlinked.
 const PER_PAGE: number = 100
@@ -58,7 +58,7 @@ const { data: articlesData } = await useArticlesWithTranslations({ page: 1, perP
 const articles = computed((): DibodevArticle[] => articlesData.value ?? [])
 
 const { t } = useI18n()
-const buildPageShareImageMeta = usePageShareImageMeta()
+usePageShareImage('blog')
 
 useHead(
   (): Record<string, unknown> => ({
@@ -68,7 +68,6 @@ useHead(
       { property: 'og:title', content: t('meta.blog.title') },
       { property: 'og:description', content: t('meta.blog.description') },
       { property: 'og:type', content: 'website' },
-      ...buildPageShareImageMeta('blog'),
     ],
   }),
 )

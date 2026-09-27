@@ -32,7 +32,7 @@ const isCategoryRoute: ComputedRef<boolean> = computed((): boolean => {
 })
 
 import { normalizeUrlPath } from '~/composables/useSeoMetaFromI18n'
-import { usePageShareImageMeta } from '~/composables/usePageShareImageMeta'
+import { usePageShareImage } from '~/composables/usePageShareImage'
 import DibodevProjectsLandingSection from '~/components/sections/DibodevProjectsLandingSection.vue'
 import DibodevProjectsSection from '~/components/sections/DibodevProjectsSection.vue'
 // import DibodevPricingSection from '~/components/sections/DibodevPricingSection.vue'
@@ -46,7 +46,8 @@ const SEO_LOCALES = [
 
 const { t } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
-const buildPageShareImageMeta = usePageShareImageMeta()
+// Also the share image of the sector and category pages, which render inside this parent route.
+usePageShareImage('projects')
 
 function buildCanonicalUrl(path: string): string {
   const normalized = normalizeUrlPath(path)
@@ -87,8 +88,6 @@ useHead(() => {
       { property: 'og:description', content: description },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: canonicalUrl },
-      // Also the share image of the sector and category pages, which render inside this parent route.
-      ...buildPageShareImageMeta('projects'),
     ],
     link: [{ rel: 'canonical', href: canonicalUrl }, ...alternateLinks],
   }

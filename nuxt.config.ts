@@ -1,3 +1,4 @@
+import type { JpegOptions, SharpOptions } from 'sharp'
 import tailwindcss from '@tailwindcss/vite'
 import mkcert from 'vite-plugin-mkcert'
 import { getPrerenderSectorIgnoreUrls } from './config/sector-prerender-ignore'
@@ -5,6 +6,10 @@ import { getPrerenderCategoryIgnoreUrls } from './config/category-prerender-igno
 import { getStoryblokPrerenderRoutes } from './config/storyblok-prerender-routes'
 import { LEGACY_REDIRECTS, getLegacyRedirectRouteRules } from './config/legacy-redirects'
 import { POSTHOG_CLIENT_CONFIG, POSTHOG_EU_API_HOST } from './app/core/constants/posthog'
+import { SHARE_IMAGE_HEIGHT, SHARE_IMAGE_WIDTH } from './app/core/constants/shareImage'
+
+// nuxt-og-image hands these options to sharp().jpeg() as well: full colour resolution (4:4:4), the default 4:2:0 blurs coloured text.
+const SHARE_IMAGE_JPEG_OPTIONS: Partial<SharpOptions> & JpegOptions = { quality: 90, chromaSubsampling: '4:4:4' }
 
 // Prerender : ignorer les URLs secteur/catégorie "croisées" (slug d'une langue sur le path d'une autre) pour éviter 404.
 const prerenderSectorIgnore = getPrerenderSectorIgnoreUrls()
@@ -186,6 +191,7 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxtjs/google-fonts',
     '@posthog/nuxt',
+    'nuxt-og-image',
   ],
   i18n: {
     locales: [
@@ -204,6 +210,17 @@ export default defineNuxtConfig({
   site: {
     url: 'https://dibodev.fr',
     name: 'Dibodev',
+  },
+  // Share images (app/components/OgImage), rendered by Satori during `nuxt generate` only: no image route in production.
+  ogImage: {
+    zeroRuntime: true,
+    fonts: ['Rubik:400', 'Rubik:500', 'Rubik:600'],
+    defaults: {
+      width: SHARE_IMAGE_WIDTH,
+      height: SHARE_IMAGE_HEIGHT,
+      extension: 'jpeg',
+    },
+    sharpOptions: SHARE_IMAGE_JPEG_OPTIONS,
   },
   googleFonts: {
     families: {

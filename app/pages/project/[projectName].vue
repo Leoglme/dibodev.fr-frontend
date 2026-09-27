@@ -34,7 +34,6 @@ import type { RouteLocationNormalizedLoadedGeneric, Router } from 'vue-router'
 import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
 import type { DibodevProject } from '~/core/types/DibodevProject'
-import type { SeoMetaTag } from '~/core/types/SeoMetaTag'
 import type { SharePreviewDetail } from '~/core/types/SharePreviewDetail'
 import DibodevProjectLandingSection from '~/components/sections/DibodevProjectLandingSection.vue'
 import DibodevProjectGallerySection from '~/components/sections/DibodevProjectGallerySection.vue'
@@ -44,20 +43,21 @@ import DibodevRecommendedProjectSection from '~/components/sections/DibodevRecom
 import type { StoryblokVersion } from '~/services/types/storyblok'
 import { StoryblokProjectService } from '~/services/storyblokProjectService'
 import { buildProjectSchemaJson } from '~/config/projectSchema'
-import { buildShareImageMeta } from '~/config/shareImage'
 import { buildSharePreviewDetailsMeta } from '~/config/sharePreviewDetails'
-import { usePageShareImageMeta } from '~/composables/usePageShareImageMeta'
+import { usePageShareImage } from '~/composables/usePageShareImage'
 import { StoryblokImageUtils } from '~/core/utils/StoryblokImageUtils'
 import { formatProjectDate } from '~/core/utils/formatProjectDate'
 
 const MAX_SHARED_TECHNOLOGIES: number = 4
 const PROJECT_YEAR_REGEX: RegExp = /^\d{4}/
+const TITLE_SEPARATOR_REGEX: RegExp = /\s[—–]\s/
+/** Twice the width the share image draws the screenshot at (600 px), so it stays sharp. */
+const SHARE_SCREENSHOT_WIDTH: number = 1200
 
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
 const router: Router = useRouter()
 const { t, locale } = useI18n()
 const storyblokLanguage: ComputedRef<string | undefined> = useStoryblokProjectLanguage()
-const buildPageShareImageMeta = usePageShareImageMeta()
 
 const projectName: string = String(route.params.projectName || '').trim()
 const isStoryblokEditor: boolean = typeof route.query._storyblok !== 'undefined'
@@ -92,6 +92,34 @@ const projectDisplayDate: ComputedRef<string> = computed((): string => {
   return formatProjectDate(p.date, loc)
 })
 
+const shareScreenshotUrl: string =
+  StoryblokImageUtils.getPngUrl(currentProject.value?.media1, SHARE_SCREENSHOT_WIDTH) ||
+  StoryblokImageUtils.getPngUrl(currentProject.value?.media2, SHARE_SCREENSHOT_WIDTH)
+
+/**
+ * Splits a project name such as "Izidoor — Plateforme SaaS de réservation" into its short name and its tagline.
+ * @param {string} projectName - The full project name shown as the page title.
+ * @returns {[string, string]} The short name, then the tagline (empty when the name has no separator).
+ */
+function splitProjectName(projectName: string): [string, string] {
+  const [shortName, ...taglineParts]: string[] = projectName
+    .split(TITLE_SEPARATOR_REGEX)
+    .map((part: string): string => part.trim())
+  return [shortName || projectName, taglineParts.join(' — ')]
+}
+
+// Projects with a screenshot get their own share image; the others use the projects page image.
+if (currentProject.value && shareScreenshotUrl) {
+  const [projectShortName, projectTagline]: [string, string] = splitProjectName(currentProject.value.name)
+  defineOgImageComponent(
+    'DibodevProjectShareImage',
+    { name: projectShortName, tagline: projectTagline, screenshotUrl: shareScreenshotUrl },
+    { alt: currentProject.value.name },
+  )
+} else {
+  usePageShareImage('projects')
+}
+
 useHead((): Record<string, unknown> => {
   const p: DibodevProject | null = currentProjectComputed.value
   if (!p) return {}
@@ -99,11 +127,6 @@ useHead((): Record<string, unknown> => {
   const description: string = p.metaDescription || p.shortDescription
   const schemaJson: string = buildProjectSchemaJson(p, locale.value as string)
 
-  const projectShareImageUrl: string =
-    StoryblokImageUtils.getShareImageUrl(p.media1) || StoryblokImageUtils.getShareImageUrl(p.media2)
-  const shareImageMeta: SeoMetaTag[] = projectShareImageUrl
-    ? buildShareImageMeta(projectShareImageUrl, title)
-    : buildPageShareImageMeta('projects')
   const projectYear: string = p.date.match(PROJECT_YEAR_REGEX)?.[0] ?? ''
   const projectDetails: SharePreviewDetail[] = [
     { label: t('meta.shareLabels.technologies'), value: p.stack.slice(0, MAX_SHARED_TECHNOLOGIES).join(', ') },
@@ -120,7 +143,6 @@ useHead((): Record<string, unknown> => {
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description },
       ...buildSharePreviewDetailsMeta(projectDetails),
-      ...shareImageMeta,
     ],
     script: [{ type: 'application/ld+json', innerHTML: schemaJson }],
   }

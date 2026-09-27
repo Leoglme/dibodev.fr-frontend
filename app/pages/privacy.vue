@@ -64,7 +64,10 @@
 </template>
 
 <script lang="ts" setup>
+import { usePageShareImage } from '~/composables/usePageShareImage'
+
 const { t } = useI18n()
+usePageShareImage('home')
 
 useHead(() => ({
   title: t('privacy.meta.title'),

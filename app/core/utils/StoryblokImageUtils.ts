@@ -1,4 +1,4 @@
-import { SHARE_IMAGE_BACKGROUND_COLOR, SHARE_IMAGE_HEIGHT, SHARE_IMAGE_WIDTH } from '~/config/shareImage'
+import { SHARE_IMAGE_BACKGROUND_COLOR, SHARE_IMAGE_HEIGHT, SHARE_IMAGE_WIDTH } from '~/core/constants/shareImage'
 
 /**
  * Utility class building optimized image URLs with the Storyblok image service.
@@ -32,6 +32,19 @@ export class StoryblokImageUtils {
       return ''
     }
     return widths.map((width: number): string => `${this.getResizedUrl(assetUrl, width)} ${width}w`).join(', ')
+  }
+
+  /**
+   * Returns the URL of a Storyblok asset resized to the given width and converted to PNG, transparency included.
+   * @param {string | undefined} assetUrl - The original Storyblok asset URL.
+   * @param {number} width - The target width in pixels.
+   * @returns {string} The PNG URL, or an empty string for a missing, animated or vector asset.
+   */
+  public static getPngUrl(assetUrl: string | undefined, width: number): string {
+    if (!assetUrl || !this.isResizable(assetUrl)) {
+      return ''
+    }
+    return `${assetUrl}/m/${width}x0/filters:format(png)`
   }
 
   /**

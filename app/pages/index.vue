@@ -18,5 +18,8 @@ import DibodevLatestArticlesSection from '~/components/sections/DibodevLatestArt
 import DibodevHomeHelpSection from '~/components/sections/DibodevHomeHelpSection.vue'
 import DibodevWhyWorkWithMeSection from '~/components/sections/DibodevWhyWorkWithMeSection.vue'
 import DibodevHomeFaqSection from '~/components/sections/DibodevHomeFaqSection.vue'
+import { usePageShareImage } from '~/composables/usePageShareImage'
 // import DibodevPricingSection from '~/components/sections/DibodevPricingSection.vue'
+
+usePageShareImage('home')
 </script>

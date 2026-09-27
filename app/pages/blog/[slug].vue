@@ -54,14 +54,15 @@ import type { StoryblokVersion } from '~/services/types/storyblok'
 import { StoryblokArticleService } from '~/services/storyblokArticleService'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { buildArticleSchemaJson } from '~/config/articleSchema'
-import { buildShareImageMeta, getPageShareImageUrl } from '~/config/shareImage'
+import { buildShareImageMeta } from '~/config/shareImage'
 import { buildSharePreviewDetailsMeta } from '~/config/sharePreviewDetails'
 import { PERSON_NAME } from '~/config/schema'
-import { usePageShareImageMeta } from '~/composables/usePageShareImageMeta'
+import { usePageShareImage } from '~/composables/usePageShareImage'
 import { StoryblokImageUtils } from '~/core/utils/StoryblokImageUtils'
 
 const RELATED_ARTICLES_COUNT: number = 3
 const RELATED_ARTICLES_POOL_SIZE: number = 24
+const ARTICLE_SCHEMA_FALLBACK_IMAGE_PATH: string = '/images/og/leo-guillaume-portrait.jpg'
 
 /**
  * Selects up to `limit` related articles ranked by shared tags then recency, excluding the current one.
@@ -95,7 +96,6 @@ const route = useRoute()
 const router = useRouter()
 const storyblokLanguage = useStoryblokProjectLanguage()
 const { t, locale } = useI18n()
-const buildPageShareImageMeta = usePageShareImageMeta()
 
 const slug: string = String(route.params.slug ?? '').trim()
 const isStoryblokEditor: boolean = typeof route.query._storyblok !== 'undefined'
@@ -151,17 +151,22 @@ const formattedDate: ComputedRef<string> = computed((): string => {
 
 const siteUrl: string = 'https://dibodev.fr'
 const localePath = useLocalePath()
+const articleShareImageUrl: string = StoryblokImageUtils.getShareImageUrl(article.value?.ogImageUrl)
+
+// Articles without a usable cover (missing, GIF or SVG) use the blog page image.
+if (!articleShareImageUrl) {
+  usePageShareImage('blog')
+}
 
 useHead((): Record<string, unknown> => {
   if (!article.value) return {}
 
   const canonicalPath: string = localePath(article.value.route)
   const canonicalUrl: string = `${siteUrl}${canonicalPath}`
-  const articleShareImageUrl: string = StoryblokImageUtils.getShareImageUrl(article.value.ogImageUrl)
   const shareImageMeta: SeoMetaTag[] = articleShareImageUrl
     ? buildShareImageMeta(articleShareImageUrl, article.value.metaTitle)
-    : buildPageShareImageMeta('blog')
-  const schemaImageUrl: string = article.value.ogImageUrl || getPageShareImageUrl('blog', locale.value)
+    : []
+  const schemaImageUrl: string = article.value.ogImageUrl || `${siteUrl}${ARTICLE_SCHEMA_FALLBACK_IMAGE_PATH}`
   const readingTimeMinutes: number = article.value.readingTimeMinutes
   const articleDetails: SharePreviewDetail[] = [
     { label: t('meta.shareLabels.author'), value: PERSON_NAME },

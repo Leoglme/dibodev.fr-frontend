@@ -4,6 +4,8 @@
     "description": "Desarrollador freelance en Rennes: sitios web, aplicaciones móviles, software e IA a medida. Acompañamiento de principio a fin.",
     "shareImage": {
       "alt": "Retrato de Léo Guillaume, desarrollador freelance full-stack e IA en Rennes, con el texto «{pageLabel}»",
+      "role": "Desarrollador freelance full-stack e IA",
+      "place": "Rennes, Francia",
       "pageLabels": {
         "home": "Software de gestión, SaaS e IA",
         "about": "Trayectoria, proyectos y método",
@@ -28,10 +30,10 @@
       "descriptionFallback": "Artículo por Léo Guillaume, desarrollador freelance en Rennes."
     },
     "contactPage": {
-      "title": "Contacta con Léo Guillaume — Desarrollador freelance web y móvil en Rennes",
-      "description": "¿Tienes un proyecto web, móvil o de IA? Léo Guillaume, desarrollador freelance en Rennes, te responde en 24 h. Describe tu proyecto y recibe un presupuesto gratuito.",
+      "title": "Contacto — Léo Guillaume, desarrollador freelance en Rennes {'|'} Dibodev",
+      "description": "¿Software de gestión, web o IA? Léo Guillaume, desarrollador freelance cerca de Rennes (Francia), responde en 24 h. Presupuesto gratuito.",
       "ogTitle": "Contacta con Léo Guillaume — Desarrollador freelance en Rennes",
-      "ogDescription": "¿Proyecto web, móvil o de IA? Respuesta en 24 h y presupuesto gratuito. Hablemos de tu proyecto."
+      "ogDescription": "¿Software de gestión, sitio web o IA? Respuesta en 24 h, primera llamada y presupuesto gratuitos."
     },
     "projects": {
       "title": "Mis proyectos — Dibodev",

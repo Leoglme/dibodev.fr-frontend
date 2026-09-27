@@ -62,7 +62,7 @@ import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSec
 import { MALT_PROFILE_URL } from '~/config/contact'
 import { buildProfilePageSchemaJson } from '~/config/profilePageSchema'
 import { PERSON_FAMILY_NAME, PERSON_GIVEN_NAME, PERSON_NAME } from '~/config/schema'
-import { usePageShareImageMeta } from '~/composables/usePageShareImageMeta'
+import { usePageShareImage } from '~/composables/usePageShareImage'
 
 definePageMeta({
   i18n: {
@@ -76,7 +76,7 @@ definePageMeta({
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
-const buildPageShareImageMeta = usePageShareImageMeta()
+usePageShareImage('about')
 
 const SITE_URL: string = 'https://dibodev.fr'
 const PORTRAIT_SIZE: number = 800
@@ -102,7 +102,6 @@ useHead(() => ({
     { property: 'og:type', content: 'profile' },
     { property: 'profile:first_name', content: PERSON_GIVEN_NAME },
     { property: 'profile:last_name', content: PERSON_FAMILY_NAME },
-    ...buildPageShareImageMeta('about'),
   ],
   script: [
     {

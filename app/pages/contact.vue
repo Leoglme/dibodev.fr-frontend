@@ -5,10 +5,10 @@
 <script setup lang="ts">
 import DibodevContactLandingSection from '~/components/sections/DibodevContactLandingSection.vue'
 import DibodevContactFormSection from '~/components/sections/DibodevContactFormSection.vue'
-import { usePageShareImageMeta } from '~/composables/usePageShareImageMeta'
+import { usePageShareImage } from '~/composables/usePageShareImage'
 
 const { t } = useI18n()
-const buildPageShareImageMeta = usePageShareImageMeta()
+usePageShareImage('contact')
 
 useHead(() => ({
   title: t('meta.contactPage.title'),
@@ -16,7 +16,6 @@ useHead(() => ({
     { name: 'description', content: t('meta.contactPage.description') },
     { property: 'og:title', content: t('meta.contactPage.ogTitle') },
     { property: 'og:description', content: t('meta.contactPage.ogDescription') },
-    ...buildPageShareImageMeta('contact'),
   ],
 }))
 </script>

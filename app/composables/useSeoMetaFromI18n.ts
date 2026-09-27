@@ -5,7 +5,6 @@
  */
 
 import type { SeoMetaTag } from '~/core/types/SeoMetaTag'
-import { usePageShareImageMeta } from '~/composables/usePageShareImageMeta'
 
 const CANONICAL_ORIGIN = 'https://dibodev.fr'
 const SITE_NAME: string = 'Dibodev'
@@ -59,7 +58,6 @@ export function useSeoMetaFromI18n(): void {
   const { t, locale } = useI18n()
   const route = useRoute()
   const switchLocalePath = useSwitchLocalePath()
-  const buildPageShareImageMeta = usePageShareImageMeta()
 
   useHead(() => {
     const path: string = route.path ?? ''
@@ -122,8 +120,6 @@ export function useSeoMetaFromI18n(): void {
         { property: 'og:site_name', content: SITE_NAME },
         { property: 'og:type', content: 'website' },
         ...ogLocaleMeta,
-        // Default share image: pages with their own image override these tags (same property, registered later).
-        ...buildPageShareImageMeta('home'),
       ],
       htmlAttrs: {
         lang: locale.value,
