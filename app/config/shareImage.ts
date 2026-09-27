@@ -2,7 +2,7 @@ import type { SeoMetaTag } from '~/core/types/SeoMetaTag'
 import { SHARE_IMAGE_HEIGHT, SHARE_IMAGE_WIDTH } from '~/core/constants/shareImage'
 
 /**
- * Builds the Open Graph and X meta tags describing a 1200×630 JPEG share image.
+ * Builds the Open Graph and X meta tags describing a JPEG share image of the site size.
  * @param {string} imageUrl - The absolute URL of the share image.
  * @param {string} imageAlt - The alternative text of the share image.
  * @returns {SeoMetaTag[]} The meta tags to add to the page head.

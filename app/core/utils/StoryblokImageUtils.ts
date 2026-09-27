@@ -48,7 +48,7 @@ export class StoryblokImageUtils {
   }
 
   /**
-   * Returns a Storyblok asset as a 1200×630 JPEG share image: cropped when landscape, framed on the site background when portrait.
+   * Returns a Storyblok asset as a share image JPEG: cropped when landscape, framed on the site background when portrait.
    * @param {string | undefined} assetUrl - The original Storyblok asset URL.
    * @returns {string} The share image URL, or an empty string for a missing, animated or vector asset.
    */

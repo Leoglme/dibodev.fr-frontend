@@ -1,5 +1,5 @@
 <template>
-  <!-- Rendered by Satori at build time (gradients inline); the key content stays in a centred 600 px column for square crops. -->
+  <!-- Rendered by Satori at build time (gradients inline); key content stays in the centred 600×600 zone every platform keeps. -->
   <div
     class="relative flex h-full w-full flex-col items-center justify-center bg-[#101623] text-[#f5f4fb]"
     style="
@@ -8,18 +8,18 @@
         radial-gradient(circle at 0% 100%, rgba(34, 211, 238, 0.14) 0%, rgba(34, 211, 238, 0) 35%);
     "
   >
-    <div class="absolute top-[44px] left-[56px] flex flex-row items-center gap-[14px]">
+    <div class="absolute top-[112px] left-[56px] flex flex-row items-center gap-[14px]">
       <DibodevLogo :size="44" />
       <span class="text-[30px] font-medium">Dibodev</span>
     </div>
 
-    <div class="absolute top-[40px] right-[56px] flex items-center gap-[12px] text-[22px] font-medium text-[#d9d3ff]">
+    <div class="absolute top-[108px] right-[56px] flex items-center gap-[12px] text-[22px] font-medium text-[#d9d3ff]">
       <img :src="PORTRAIT_SRC" class="h-[48px] w-[48px] rounded-full border-2 border-[#8472f3]" />
       <span>{{ PERSON_NAME }}</span>
     </div>
 
-    <div class="flex h-[270px] w-[600px] items-center justify-center">
-      <img :src="props.screenshotUrl" class="max-h-[270px] max-w-[600px] rounded-[16px] object-contain" />
+    <div class="flex h-[300px] w-[600px] items-center justify-center">
+      <img :src="props.screenshotUrl" class="max-h-[300px] max-w-[600px] rounded-[16px] object-contain" />
     </div>
 
     <p

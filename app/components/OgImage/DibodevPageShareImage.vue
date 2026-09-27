@@ -1,5 +1,5 @@
 <template>
-  <!-- Rendered by Satori at build time (gradients inline); the key content stays in a centred 600 px column for square crops. -->
+  <!-- Rendered by Satori at build time (gradients inline); key content stays in the centred 600×600 zone every platform keeps. -->
   <div
     class="relative flex h-full w-full flex-col items-center justify-center bg-[#101623] text-[#f5f4fb]"
     style="
@@ -9,13 +9,13 @@
         radial-gradient(circle at 0% 100%, rgba(34, 211, 238, 0.14) 0%, rgba(34, 211, 238, 0) 35%);
     "
   >
-    <div class="absolute top-[44px] left-[56px] flex flex-row items-center gap-[14px]">
+    <div class="absolute top-[112px] left-[56px] flex flex-row items-center gap-[14px]">
       <DibodevLogo :size="44" />
       <span class="text-[30px] font-medium">Dibodev</span>
     </div>
 
     <div
-      class="absolute top-[46px] right-[56px] flex items-center gap-[10px] rounded-full border-2 border-[#bdb3ff59] px-[20px] py-[10px] text-[22px] font-medium text-[#d9d3ff]"
+      class="absolute top-[114px] right-[56px] flex items-center gap-[10px] rounded-full border-2 border-[#bdb3ff59] px-[20px] py-[10px] text-[22px] font-medium text-[#d9d3ff]"
     >
       <svg
         width="24"
