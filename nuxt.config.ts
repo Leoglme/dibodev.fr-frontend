@@ -4,7 +4,11 @@ import mkcert from 'vite-plugin-mkcert'
 import { getPrerenderSectorIgnoreUrls } from './config/sector-prerender-ignore'
 import { getPrerenderCategoryIgnoreUrls } from './config/category-prerender-ignore'
 import { getStoryblokPrerenderRoutes } from './config/storyblok-prerender-routes'
-import { LEGACY_REDIRECTS, getLegacyRedirectRouteRules } from './config/legacy-redirects'
+import {
+  LEGACY_REDIRECTS,
+  getLegacyRedirectPrerenderIgnoreUrls,
+  getLegacyRedirectRouteRules,
+} from './config/legacy-redirects'
 import { POSTHOG_CLIENT_CONFIG, POSTHOG_EU_API_HOST } from './app/core/constants/posthog'
 import { SHARE_IMAGE_HEIGHT, SHARE_IMAGE_WIDTH } from './app/core/constants/shareImage'
 
@@ -166,7 +170,7 @@ export default defineNuxtConfig({
     },
     prerender: {
       crawlLinks: true,
-      ignore: [...prerenderSectorIgnore, ...prerenderCategoryIgnore],
+      ignore: [...prerenderSectorIgnore, ...prerenderCategoryIgnore, ...getLegacyRedirectPrerenderIgnoreUrls()],
     },
     serverAssets: [
       {

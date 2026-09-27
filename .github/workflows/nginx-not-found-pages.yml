@@ -1,0 +1,24 @@
+name: 🧭 Nginx not found pages
+
+# Manual: shows how nginx answers unknown dibodev.fr URLs (today: the home page with a 200, a soft 404). This repository and its logs are public.
+on:
+  workflow_dispatch:
+
+jobs:
+  not-found-pages:
+    name: 🧭 Nginx not found pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔎 Show the dibodev.fr routing rules
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            site_files=$(sudo grep -rlE 'server_name([[:space:]]+[^;[:space:]]+)*[[:space:]]+(www\.)?dibodev\.fr[[:space:]]*[;[:space:]]' /etc/nginx/sites-enabled/ /etc/nginx/conf.d/ 2>/dev/null)
+            for site_file in $site_files; do
+              echo "--- $site_file"
+              sudo grep -nE 'server_name|listen|root |index |location|try_files|error_page|rewrite|return|include' "$site_file"
+            done
