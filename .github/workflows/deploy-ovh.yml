@@ -9,6 +9,11 @@ on:
       - main
   workflow_dispatch:
 
+# One deploy at a time: two runs would publish into the same staging folder on the VPS. A newer run waits, it never stops a deploy halfway.
+concurrency:
+  group: deploy-ovh-vps
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
     name: 🏗️ Build & Deploy
