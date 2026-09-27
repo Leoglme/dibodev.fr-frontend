@@ -96,7 +96,8 @@ jobs:
           (cd .output/public && find . -type f \( -name 'index.html' -o -name '_payload.json' \) | sed 's|^\./||' | LC_ALL=C sort) > generated-pages.txt
           echo "Generated pages: $(wc -l < generated-pages.txt)"
 
-      - name: 📤 Deploy static files to VPS
+      # Staging folder: extracting straight into html/ served half-written files during the upload (Slack cached a truncated share image).
+      - name: 📤 Upload static files to VPS
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -104,8 +105,23 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: '.output/public/*'
-          target: '/var/www/dibodev.fr/html'
+          target: '/var/www/dibodev.fr/html-upload'
           strip_components: 2
+          rm: true
+
+      # rsync only rewrites changed files, each under a temporary name renamed at the end (--delay-updates): no partial file is ever served.
+      - name: 🔀 Publish static files
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            set -e
+            command -v rsync > /dev/null || (sudo apt-get update && sudo apt-get install -y rsync)
+            rsync -a --checksum --delay-updates /var/www/dibodev.fr/html-upload/ /var/www/dibodev.fr/html/
+            rm -rf /var/www/dibodev.fr/html-upload
 
       - name: 📤 Upload generated pages list to VPS
         uses: appleboy/scp-action@master
