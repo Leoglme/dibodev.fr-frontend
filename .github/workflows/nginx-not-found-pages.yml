@@ -1,24 +1,77 @@
 name: 🧭 Nginx not found pages
 
-# Manual: shows how nginx answers unknown dibodev.fr URLs (today: the home page with a 200, a soft 404). This repository and its logs are public.
+# Manual: unknown dibodev.fr URLs served the home page with a 200 (soft 404); this makes nginx answer a real 404. Dry run unless "apply" is ticked.
 on:
   workflow_dispatch:
+    inputs:
+      apply:
+        description: Write the change and reload nginx (otherwise only show it)
+        type: boolean
+        default: false
 
 jobs:
   not-found-pages:
     name: 🧭 Nginx not found pages
     runs-on: ubuntu-latest
     steps:
-      - name: 🔎 Show the dibodev.fr routing rules
+      - name: 🧭 Answer 404 for unknown URLs
         uses: appleboy/ssh-action@master
+        env:
+          APPLY: ${{ inputs.apply }}
         with:
           host: ${{ secrets.SSH_HOST }}
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          envs: APPLY
           script: |
-            site_files=$(sudo grep -rlE 'server_name([[:space:]]+[^;[:space:]]+)*[[:space:]]+(www\.)?dibodev\.fr[[:space:]]*[;[:space:]]' /etc/nginx/sites-enabled/ /etc/nginx/conf.d/ 2>/dev/null)
-            for site_file in $site_files; do
-              echo "--- $site_file"
-              sudo grep -nE 'server_name|listen|root |index |location|try_files|error_page|rewrite|return|include' "$site_file"
-            done
+            set -e
+            site_file=$(readlink -f /etc/nginx/sites-enabled/dibodev.fr)
+            backup_file="/etc/nginx/dibodev.fr.backup-$(date +%Y%m%d-%H%M%S)"
+            sudo cp "$site_file" /tmp/dibodev.fr.new
+            # The Storyblok preview (/cms) is only rendered in the browser: it keeps the home page fallback.
+            sudo python3 - /tmp/dibodev.fr.new <<'PY'
+            import pathlib, re, sys
+            path = pathlib.Path(sys.argv[1])
+            config = path.read_text()
+            if "error_page 404 /404.html;" in config:
+                print("Already applied.")
+                sys.exit(0)
+            fallback = re.compile(r"^([ \t]*)location / \{[ \t]*\n([ \t]*)try_files \$uri \$uri/index\.html /index\.html;[ \t]*\n", re.M)
+            if len(fallback.findall(config)) != 1:
+                sys.exit("Unexpected layout: nothing changed.")
+            def not_found(match):
+                indent, inner = match.group(1), match.group(2)
+                return (
+                    f"{indent}location ~ ^/((en|es)/)?cms(/|$) {{\n{inner}try_files $uri $uri/index.html /index.html;\n{indent}}}\n\n"
+                    f"{indent}error_page 404 /404.html;\n\n"
+                    f"{indent}location / {{\n{inner}try_files $uri $uri/index.html =404;\n"
+                )
+            path.write_text(fallback.sub(not_found, config))
+            PY
+            if sudo cmp -s "$site_file" /tmp/dibodev.fr.new; then
+              echo "Nothing to change."
+              exit 0
+            fi
+            sudo diff -u "$site_file" /tmp/dibodev.fr.new || true
+            if [ "$APPLY" != "true" ]; then
+              echo "Dry run: nothing written."
+              exit 0
+            fi
+            sudo cp "$site_file" "$backup_file"
+            sudo cp /tmp/dibodev.fr.new "$site_file"
+            if sudo nginx -t; then
+              sudo systemctl reload nginx
+              echo "Applied, previous config kept in $backup_file"
+            else
+              sudo cp "$backup_file" "$site_file"
+              echo "nginx -t failed: previous config restored."
+              exit 1
+            fi
+
+      - name: ✅ Check the answers
+        if: inputs.apply
+        run: |
+          for path in / /project/izidoor /cms /api/github/repos /llms-full.txt /en/es/projects; do
+            echo "$(curl -s -o /dev/null -w '%{http_code}' "https://dibodev.fr$path") $path"
+          done
