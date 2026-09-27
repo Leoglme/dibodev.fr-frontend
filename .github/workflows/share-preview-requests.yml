@@ -30,7 +30,8 @@ jobs:
             for jail in $(sudo fail2ban-client status 2>/dev/null | sed -n 's/.*Jail list:\s*//p' | tr ',' ' '); do
               echo "fail2ban $jail: $(sudo fail2ban-client status "$jail" | grep -E 'Currently banned|Total banned' | tr -s ' \t\n' ' ')"
             done
-            echo '--- Latest nginx errors'
+            echo '--- Latest dibodev.fr nginx errors'
             sudo sh -c 'cat /var/log/nginx/*error*.log 2>/dev/null' \
+              | grep -E 'server: (www\.)?dibodev\.fr,' \
               | sed -E 's/[0-9]{1,3}(\.[0-9]{1,3}){3}/x.x.x.x/g' \
               | tail -n 40
