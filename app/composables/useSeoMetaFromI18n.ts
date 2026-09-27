@@ -4,7 +4,11 @@
  * URLs canoniques : https://dibodev.fr, sans www, sans slash final, sans querystring.
  */
 
+import type { SeoMetaTag } from '~/core/types/SeoMetaTag'
+import { buildShareImageMeta, getDefaultShareImageUrl } from '~/config/shareImage'
+
 const CANONICAL_ORIGIN = 'https://dibodev.fr'
+const SITE_NAME: string = 'Dibodev'
 
 const SEO_LOCALES = [
   { code: 'fr', hreflang: 'fr-FR' as const },
@@ -92,18 +96,19 @@ export function useSeoMetaFromI18n(): void {
     const currentHreflang = currentLocaleEntry?.hreflang
     const ogLocaleMeta: Array<{ property: string; content: string }> = []
     if (currentHreflang) {
-      ogLocaleMeta.push({ property: 'og:locale', content: currentHreflang })
+      // Open Graph expects "fr_FR", unlike hreflang ("fr-FR").
+      ogLocaleMeta.push({ property: 'og:locale', content: currentHreflang.replace('-', '_') })
       // Alternates OG = autres locales connues uniquement (sans doublon, exclut la courante)
-      const alternateHreflangs = SEO_LOCALES.filter((l) => l.code !== locale.value).map((l) => l.hreflang)
+      const alternateHreflangs = SEO_LOCALES.filter((l) => l.code !== locale.value).map((l) =>
+        l.hreflang.replace('-', '_'),
+      )
       ogLocaleMeta.push(...alternateHreflangs.map((content) => ({ property: 'og:locale:alternate' as const, content })))
     }
     // Si locale.value inconnue : on n’ajoute que og:url (pas og:locale ni alternates)
 
-    const ogImageUrl: string = `${CANONICAL_ORIGIN}/android-chrome-512x512.png`
-
     const head: {
       title: string
-      meta: Array<{ name?: string; property?: string; content: string }>
+      meta: SeoMetaTag[]
       htmlAttrs: { lang: string }
       link?: Array<{ rel: string; hreflang?: string; href: string; key?: string }>
     } = {
@@ -113,11 +118,10 @@ export function useSeoMetaFromI18n(): void {
         { property: 'og:url', content: canonicalUrl },
         { property: 'og:title', content: t('meta.title') },
         { property: 'og:description', content: t('meta.description') },
-        { property: 'og:image', content: ogImageUrl },
+        { property: 'og:site_name', content: SITE_NAME },
         { property: 'og:type', content: 'website' },
         ...ogLocaleMeta,
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:image', content: ogImageUrl },
+        ...buildShareImageMeta(getDefaultShareImageUrl(locale.value), t('meta.shareImageAlt')),
       ],
       htmlAttrs: {
         lang: locale.value,

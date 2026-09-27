@@ -82,7 +82,6 @@ const PORTRAIT_SRC: string = '/images/about/leo-guillaume-portrait-800.webp'
 const PORTRAIT_SRCSET: string =
   '/images/about/leo-guillaume-portrait-400.webp 400w, /images/about/leo-guillaume-portrait-800.webp 800w'
 const PORTRAIT_SIZES: string = '(min-width: 1280px) 448px, (min-width: 1024px) 320px, 144px'
-const SHARE_IMAGE_URL: string = `${SITE_URL}/images/about/leo-guillaume-og.jpg`
 const SHOWCASED_PROJECT_SLUGS: string[] = [
   'izidoor',
   'goupixdex',
@@ -98,8 +97,6 @@ useHead(() => ({
     { name: 'description', content: t('meta.aboutPage.description') },
     { property: 'og:title', content: t('meta.aboutPage.title') },
     { property: 'og:description', content: t('meta.aboutPage.description') },
-    { property: 'og:image', content: SHARE_IMAGE_URL },
-    { name: 'twitter:image', content: SHARE_IMAGE_URL },
   ],
   script: [
     {

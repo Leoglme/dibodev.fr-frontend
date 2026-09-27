@@ -42,19 +42,9 @@ import DibodevRecommendedProjectSection from '~/components/sections/DibodevRecom
 import type { StoryblokVersion } from '~/services/types/storyblok'
 import { StoryblokProjectService } from '~/services/storyblokProjectService'
 import { buildProjectSchemaJson } from '~/config/projectSchema'
+import { buildShareImageMeta, getDefaultShareImageUrl } from '~/config/shareImage'
+import { StoryblokImageUtils } from '~/core/utils/StoryblokImageUtils'
 import { formatProjectDate } from '~/core/utils/formatProjectDate'
-
-const SITE_URL: string = 'https://dibodev.fr'
-const DEFAULT_OG_IMAGE_URL: string = `${SITE_URL}/android-chrome-512x512.png`
-
-function toAbsoluteImageUrl(maybeUrl: string | undefined | null): string {
-  const url: string = String(maybeUrl ?? '').trim()
-  if (!url) return ''
-  if (url.startsWith('http://') || url.startsWith('https://')) return url
-  if (url.startsWith('//')) return `https:${url}`
-  if (url.startsWith('/')) return `${SITE_URL}${url}`
-  return url
-}
 
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
 const router: Router = useRouter()
@@ -101,11 +91,10 @@ useHead((): Record<string, unknown> => {
   const description: string = p.metaDescription || p.shortDescription
   const schemaJson: string = buildProjectSchemaJson(p, locale.value as string)
 
-  const ogImageUrl: string =
-    toAbsoluteImageUrl(p.media1) ||
-    toAbsoluteImageUrl(p.media2) ||
-    toAbsoluteImageUrl(p.logoUrl) ||
-    DEFAULT_OG_IMAGE_URL
+  const shareImageUrl: string =
+    StoryblokImageUtils.getShareImageUrl(p.media1) ||
+    StoryblokImageUtils.getShareImageUrl(p.media2) ||
+    getDefaultShareImageUrl(locale.value as string)
 
   return {
     title,
@@ -113,12 +102,10 @@ useHead((): Record<string, unknown> => {
       { name: 'description', content: description },
       { property: 'og:title', content: title },
       { property: 'og:description', content: description },
-      { property: 'og:image', content: ogImageUrl },
       { property: 'og:type', content: 'website' },
-      { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description },
-      { name: 'twitter:image', content: ogImageUrl },
+      ...buildShareImageMeta(shareImageUrl, title),
     ],
     script: [{ type: 'application/ld+json', innerHTML: schemaJson }],
   }

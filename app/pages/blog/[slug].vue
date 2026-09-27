@@ -52,6 +52,8 @@ import type { StoryblokVersion } from '~/services/types/storyblok'
 import { StoryblokArticleService } from '~/services/storyblokArticleService'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { buildArticleSchemaJson } from '~/config/articleSchema'
+import { buildShareImageMeta, getDefaultShareImageUrl } from '~/config/shareImage'
+import { StoryblokImageUtils } from '~/core/utils/StoryblokImageUtils'
 
 const RELATED_ARTICLES_COUNT: number = 3
 const RELATED_ARTICLES_POOL_SIZE: number = 24
@@ -149,7 +151,9 @@ useHead((): Record<string, unknown> => {
 
   const canonicalPath: string = localePath(article.value.route)
   const canonicalUrl: string = `${siteUrl}${canonicalPath}`
-  const ogImageUrl: string = article.value.ogImageUrl || `${siteUrl}/android-chrome-512x512.png`
+  const defaultShareImageUrl: string = getDefaultShareImageUrl(locale.value)
+  const shareImageUrl: string = StoryblokImageUtils.getShareImageUrl(article.value.ogImageUrl) || defaultShareImageUrl
+  const schemaImageUrl: string = article.value.ogImageUrl || defaultShareImageUrl
 
   return {
     title: article.value.metaTitle,
@@ -157,21 +161,19 @@ useHead((): Record<string, unknown> => {
       { name: 'description', content: article.value.metaDescription },
       { property: 'og:title', content: article.value.metaTitle },
       { property: 'og:description', content: article.value.metaDescription },
-      { property: 'og:image', content: ogImageUrl },
       { property: 'og:type', content: 'article' },
       { property: 'og:url', content: canonicalUrl },
       { property: 'og:locale', content: locale.value === 'fr' ? 'fr_FR' : locale.value === 'es' ? 'es_ES' : 'en_US' },
       { property: 'article:published_time', content: article.value.date },
-      { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: article.value.metaTitle },
       { name: 'twitter:description', content: article.value.metaDescription },
-      { name: 'twitter:image', content: ogImageUrl },
+      ...buildShareImageMeta(shareImageUrl, article.value.metaTitle),
     ],
     link: [{ rel: 'canonical', href: canonicalUrl }],
     script: [
       {
         type: 'application/ld+json',
-        innerHTML: buildArticleSchemaJson(article.value, canonicalUrl, ogImageUrl, locale.value),
+        innerHTML: buildArticleSchemaJson(article.value, canonicalUrl, schemaImageUrl, locale.value),
       },
     ],
   }
