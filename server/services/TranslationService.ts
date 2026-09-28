@@ -131,7 +131,11 @@ export class TranslationService {
     const files: PutGitHubFilesItem[] = []
     for (const locale of params.locales) {
       const path: string = `${this.FILES_PATH}/articles.${locale}.json`
-      const current: ArticlesTranslationFile = await this.readArticlesFile(params.githubToken, params.githubRepo, path)
+      const current: ArticlesTranslationFile = await this.readTranslationFile<TranslatedArticleFields>(
+        params.githubToken,
+        params.githubRepo,
+        path,
+      )
       const updated: ArticlesTranslationFile = { ...current, ...translationsByLocale[locale] }
       files.push({ path, content: JSON.stringify(updated, null, 2) })
     }
@@ -149,6 +153,30 @@ export class TranslationService {
     if (!pushResult.ok) {
       throw createError({ statusCode: 502, statusMessage: pushResult.message || 'Failed to push to GitHub' })
     }
+  }
+
+  /**
+   * Reads a translation file from GitHub before updating it; only a missing file counts as empty, so a failed read never wipes it.
+   * @template Entry - Type of one translated entry (article, project, sector or category).
+   * @param {string} token - GitHub token.
+   * @param {string} repo - Repository in "owner/repo" form.
+   * @param {string} path - Path of the translation file.
+   * @returns {Promise<Record<string, Entry>>} The current translations, or an empty object when the file does not exist yet.
+   * @throws {H3Error} 502 when GitHub fails to return the file.
+   */
+  static async readTranslationFile<Entry>(token: string, repo: string, path: string): Promise<Record<string, Entry>> {
+    const file: GetRawFileResult = await getGitHubRawFile(token, repo, path)
+    if (file.ok) {
+      const translations: Record<string, Entry> = JSON.parse(file.content)
+      return translations
+    }
+    if (file.statusCode === 404) {
+      return {}
+    }
+    throw createError({
+      statusCode: 502,
+      statusMessage: `Cannot read ${path} on GitHub (${file.statusCode}): nothing pushed.`,
+    })
   }
 
   /**
@@ -230,28 +258,6 @@ export class TranslationService {
         statusMessage: `Mistral returned invalid JSON for article metadata (${locale}).`,
       })
     }
-  }
-
-  /**
-   * Reads an articles translation file from GitHub; only a missing file counts as empty, so a failed read never wipes it.
-   * @param {string} token - GitHub token.
-   * @param {string} repo - Repository in "owner/repo" form.
-   * @param {string} path - Path of the translation file.
-   * @returns {Promise<ArticlesTranslationFile>} The current translations, or an empty object when the file does not exist yet.
-   * @throws {H3Error} 502 when GitHub fails to return the file.
-   */
-  private static async readArticlesFile(token: string, repo: string, path: string): Promise<ArticlesTranslationFile> {
-    const file: GetRawFileResult = await getGitHubRawFile(token, repo, path)
-    if (file.ok) {
-      return JSON.parse(file.content) as ArticlesTranslationFile
-    }
-    if (file.statusCode === 404) {
-      return {}
-    }
-    throw createError({
-      statusCode: 502,
-      statusMessage: `Cannot read ${path} on GitHub (${file.statusCode}): nothing pushed.`,
-    })
   }
 
   /**

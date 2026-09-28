@@ -1,14 +1,7 @@
 import type { H3Event } from 'h3'
 import { createError, readBody } from 'h3'
 import { requireDashboardAuth } from '~~/server/utils/dashboardAuth'
-import {
-  getGitHubFile,
-  putGitHubFile,
-  putGitHubFiles,
-  type GetFileResult,
-  type PutFileResult,
-  type PutGitHubFilesItem,
-} from '~~/server/utils/githubContent'
+import { putGitHubFiles, type PutGitHubFilesItem, type PutGitHubFilesResult } from '~~/server/utils/githubContent'
 import { mistralGenerate } from '~~/server/utils/mistral'
 import { extractRichtextTexts, injectRichtextTranslations } from '~~/server/utils/translationsRichtext'
 import { translateTextSegments } from '~~/server/utils/translateTextSegments'
@@ -243,37 +236,23 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
         })
       }
       const filePath: string = `${TranslationService.FILES_PATH}/projects.${locale}.json`
-      const existing: GetFileResult = await getGitHubFile(githubToken, githubRepo, filePath)
-      const current: ProjectsTranslationFile = existing.ok
-        ? (JSON.parse(existing.content) as ProjectsTranslationFile)
-        : {}
+      const current: ProjectsTranslationFile = await TranslationService.readTranslationFile<TranslatedProjectFields>(
+        githubToken,
+        githubRepo,
+        filePath,
+      )
       const updated: ProjectsTranslationFile = { ...current, [fullSlug]: translated }
       filesToPush.push({ path: filePath, content: JSON.stringify(updated, null, 2) })
     }
 
-    if (filesToPush.length === 1) {
-      const existing: GetFileResult = await getGitHubFile(githubToken, githubRepo, filesToPush[0]!.path)
-      const putRes: PutFileResult = await putGitHubFile({
-        token: githubToken,
-        repo: githubRepo,
-        path: filesToPush[0]!.path,
-        content: filesToPush[0]!.content,
-        message: `chore(translations): update project ${fullSlug} → ${locales[0]}`,
-        sha: existing.ok ? existing.sha : undefined,
-      })
-      if (!putRes.ok) {
-        throw createError({ statusCode: 502, statusMessage: putRes.message || 'Failed to push to GitHub' })
-      }
-    } else {
-      const putRes: Awaited<ReturnType<typeof putGitHubFiles>> = await putGitHubFiles({
-        token: githubToken,
-        repo: githubRepo,
-        message: `chore(translations): update project ${fullSlug} → EN + ES`,
-        files: filesToPush,
-      })
-      if (!putRes.ok) {
-        throw createError({ statusCode: 502, statusMessage: putRes.message || 'Failed to push to GitHub' })
-      }
+    const putRes: PutGitHubFilesResult = await putGitHubFiles({
+      token: githubToken,
+      repo: githubRepo,
+      message: `chore(translations): update project ${fullSlug} → ${locales.join(' + ').toUpperCase()}`,
+      files: filesToPush,
+    })
+    if (!putRes.ok) {
+      throw createError({ statusCode: 502, statusMessage: putRes.message || 'Failed to push to GitHub' })
     }
     const localeLabel: string = locales.length === 2 ? 'EN et ES' : locales[0] === 'en' ? 'EN' : 'ES'
     return { ok: true, message: `Projet ${fullSlug} traduit en ${localeLabel}.` }
@@ -352,35 +331,23 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
 
       const translated: TranslatedSectorFields = { ...translatedMeta, intro: translatedIntro }
       const filePath: string = `${TranslationService.FILES_PATH}/sectors.${locale}.json`
-      const existing: GetFileResult = await getGitHubFile(githubToken, githubRepo, filePath)
-      const current: SectorsTranslationFile = existing.ok
-        ? (JSON.parse(existing.content) as SectorsTranslationFile)
-        : {}
+      const current: SectorsTranslationFile = await TranslationService.readTranslationFile<TranslatedSectorFields>(
+        githubToken,
+        githubRepo,
+        filePath,
+      )
       const updated: SectorsTranslationFile = { ...current, [fullSlug]: translated }
       sectorFilesToPush.push({ path: filePath, content: JSON.stringify(updated, null, 2) })
     }
 
-    if (sectorFilesToPush.length === 1) {
-      const existing: GetFileResult = await getGitHubFile(githubToken, githubRepo, sectorFilesToPush[0]!.path)
-      const putRes: PutFileResult = await putGitHubFile({
-        token: githubToken,
-        repo: githubRepo,
-        path: sectorFilesToPush[0]!.path,
-        content: sectorFilesToPush[0]!.content,
-        message: `chore(translations): update sector ${fullSlug} → ${locales[0]}`,
-        sha: existing.ok ? existing.sha : undefined,
-      })
-      if (!putRes.ok)
-        throw createError({ statusCode: 502, statusMessage: putRes.message || 'Failed to push to GitHub' })
-    } else {
-      const putRes: Awaited<ReturnType<typeof putGitHubFiles>> = await putGitHubFiles({
-        token: githubToken,
-        repo: githubRepo,
-        message: `chore(translations): update sector ${fullSlug} → EN + ES`,
-        files: sectorFilesToPush,
-      })
-      if (!putRes.ok)
-        throw createError({ statusCode: 502, statusMessage: putRes.message || 'Failed to push to GitHub' })
+    const sectorPutRes: PutGitHubFilesResult = await putGitHubFiles({
+      token: githubToken,
+      repo: githubRepo,
+      message: `chore(translations): update sector ${fullSlug} → ${locales.join(' + ').toUpperCase()}`,
+      files: sectorFilesToPush,
+    })
+    if (!sectorPutRes.ok) {
+      throw createError({ statusCode: 502, statusMessage: sectorPutRes.message || 'Failed to push to GitHub' })
     }
     const sectorLocaleLabel: string = locales.length === 2 ? 'EN et ES' : locales[0] === 'en' ? 'EN' : 'ES'
     return { ok: true, message: `Secteur ${fullSlug} traduit en ${sectorLocaleLabel}.` }
@@ -446,35 +413,23 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
 
       const translated: TranslatedCategoryFields = { ...translatedMeta, intro: translatedIntro }
       const filePath: string = `${TranslationService.FILES_PATH}/categories.${locale}.json`
-      const existing: GetFileResult = await getGitHubFile(githubToken, githubRepo, filePath)
-      const current: CategoriesTranslationFile = existing.ok
-        ? (JSON.parse(existing.content) as CategoriesTranslationFile)
-        : {}
+      const current: CategoriesTranslationFile = await TranslationService.readTranslationFile<TranslatedCategoryFields>(
+        githubToken,
+        githubRepo,
+        filePath,
+      )
       const updated: CategoriesTranslationFile = { ...current, [fullSlug]: translated }
       categoryFilesToPush.push({ path: filePath, content: JSON.stringify(updated, null, 2) })
     }
 
-    if (categoryFilesToPush.length === 1) {
-      const existing: GetFileResult = await getGitHubFile(githubToken, githubRepo, categoryFilesToPush[0]!.path)
-      const putRes: PutFileResult = await putGitHubFile({
-        token: githubToken,
-        repo: githubRepo,
-        path: categoryFilesToPush[0]!.path,
-        content: categoryFilesToPush[0]!.content,
-        message: `chore(translations): update category ${fullSlug} → ${locales[0]}`,
-        sha: existing.ok ? existing.sha : undefined,
-      })
-      if (!putRes.ok)
-        throw createError({ statusCode: 502, statusMessage: putRes.message || 'Failed to push to GitHub' })
-    } else {
-      const putRes: Awaited<ReturnType<typeof putGitHubFiles>> = await putGitHubFiles({
-        token: githubToken,
-        repo: githubRepo,
-        message: `chore(translations): update category ${fullSlug} → EN + ES`,
-        files: categoryFilesToPush,
-      })
-      if (!putRes.ok)
-        throw createError({ statusCode: 502, statusMessage: putRes.message || 'Failed to push to GitHub' })
+    const categoryPutRes: PutGitHubFilesResult = await putGitHubFiles({
+      token: githubToken,
+      repo: githubRepo,
+      message: `chore(translations): update category ${fullSlug} → ${locales.join(' + ').toUpperCase()}`,
+      files: categoryFilesToPush,
+    })
+    if (!categoryPutRes.ok) {
+      throw createError({ statusCode: 502, statusMessage: categoryPutRes.message || 'Failed to push to GitHub' })
     }
     const categoryLocaleLabel: string = locales.length === 2 ? 'EN et ES' : locales[0] === 'en' ? 'EN' : 'ES'
     return { ok: true, message: `Catégorie ${fullSlug} traduite en ${categoryLocaleLabel}.` }

@@ -1,7 +1,7 @@
 import type { H3Event } from 'h3'
 import { createError } from 'h3'
 import { requireDashboardAuth } from '~~/server/utils/dashboardAuth'
-import { getGitHubFile, type GetFileResult } from '~~/server/utils/githubContent'
+import { getGitHubRawFile, type GetRawFileResult } from '~~/server/utils/githubContent'
 import type {
   TranslatableItem,
   ListTranslatablesResponse,
@@ -123,15 +123,15 @@ export default defineEventHandler(async (event: H3Event): Promise<ListTranslatab
     sectorsEsRes,
     categoriesEnRes,
     categoriesEsRes,
-  ]: GetFileResult[] = await Promise.all([
-    getGitHubFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/projects.en.json`),
-    getGitHubFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/projects.es.json`),
-    getGitHubFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/articles.en.json`),
-    getGitHubFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/articles.es.json`),
-    getGitHubFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/sectors.en.json`),
-    getGitHubFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/sectors.es.json`),
-    getGitHubFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/categories.en.json`),
-    getGitHubFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/categories.es.json`),
+  ]: GetRawFileResult[] = await Promise.all([
+    getGitHubRawFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/projects.en.json`),
+    getGitHubRawFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/projects.es.json`),
+    getGitHubRawFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/articles.en.json`),
+    getGitHubRawFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/articles.es.json`),
+    getGitHubRawFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/sectors.en.json`),
+    getGitHubRawFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/sectors.es.json`),
+    getGitHubRawFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/categories.en.json`),
+    getGitHubRawFile(githubToken, githubRepo, `${TRANSLATIONS_PATH}/categories.es.json`),
   ])
 
   const projectsEn: ProjectsTranslationFile = projectsEnRes.ok

@@ -1,7 +1,7 @@
 import type { H3Event } from 'h3'
 import fs from 'node:fs'
 import path from 'node:path'
-import { getGitHubFile } from '~~/server/utils/githubContent'
+import { getGitHubRawFile, type GetRawFileResult } from '~~/server/utils/githubContent'
 import type { CategoriesTranslationFile } from '~~/server/types/dashboard/translations'
 
 const TRANSLATIONS_PATH: string = 'content/translations'
@@ -32,7 +32,7 @@ export default defineEventHandler(async (event: H3Event): Promise<CategoriesTran
   }
 
   const filePath: string = `${TRANSLATIONS_PATH}/categories.${locale}.json`
-  const result = await getGitHubFile(githubToken, githubRepo, filePath)
+  const result: GetRawFileResult = await getGitHubRawFile(githubToken, githubRepo, filePath)
   if (!result.ok) {
     return {}
   }
