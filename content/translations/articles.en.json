@@ -2115,7 +2115,7 @@
           },
           "content": [
             {
-              "text": "I don’t trim hedges and I’ve never laid a single border in my life. My job is to build tools for craftsmen, and to do that, I spend a lot of time watching people work. Among landscapers, there’s one object I keep seeing almost every time: a **Microsoft Excel** file. A big one. Opened in the evening, at the kitchen table, after a day outside. A file that started simple but, over the seasons, has grown into a monster no one dares to touch anymore.",
+              "text": "I don’t trim hedges and I’ve never laid a single border in my life. My job is to build tools for craftsmen, and to do that, I spend a lot of time watching people work. Among landscapers, there’s one object I keep seeing almost every time: a Microsoft Excel file. A big one. Opened in the evening, at the kitchen table, after a day outside. A file that started simple but, over the seasons, has grown into a monster no one dares to touch anymore.",
               "type": "text"
             }
           ]
@@ -2164,7 +2164,7 @@
           },
           "content": [
             {
-              "text": "You ask it to track your quotes, your schedule, your time logs, your supplier list, your maintenance contracts, and sometimes even your before/after photos stuck in a cell. But a spreadsheet wasn’t designed for that. So we improvise. We duplicate the ‘template’ tab, rename the file ‘**quote_MartinV2_final_really.xlsx**’, we end up with multiple versions of the same schedule, and one day a formula breaks without anyone knowing why, and a total goes wrong.",
+              "text": "You ask it to track your quotes, your schedule, your time logs, your supplier list, your maintenance contracts, and sometimes even your before/after photos stuck in a cell. But a spreadsheet wasn’t designed for that. So we improvise. We duplicate the ‘template’ tab, rename the file ‘quote_MartinV2_final_really.xlsx’, we end up with multiple versions of the same schedule, and one day a formula breaks without anyone knowing why, and a total goes wrong.",
               "type": "text"
             }
           ]
@@ -2299,7 +2299,7 @@
           },
           "content": [
             {
-              "text": "What a well-designed tool brings here isn’t surveillance. It’s memory. On every job, your crew clocks in their hours in two taps from the truck. The before/after photos are linked to the right client, not buried in your phone’s camera roll. The ordered materials are listed. At the end, you see if the job lived up to its promises—not to scold yourself, but to price the next one with real numbers, *your* numbers.",
+              "text": "What a well-designed tool brings here isn’t surveillance. It’s memory. On every job, your crew clocks in their hours in two taps from the truck. The before/after photos are linked to the right client, not buried in your phone’s camera roll. The ordered materials are listed. At the end, you see if the job lived up to its promises—not to scold yourself, but to price the next one with real numbers, your numbers.",
               "type": "text"
             }
           ]
@@ -2360,7 +2360,7 @@
           },
           "content": [
             {
-              "text": "A tool made for you knows the difference between a one-off job and maintenance that should automatically reappear in your schedule. It knows that next week, it’s the turn of such-and-such a co-ownership. It shows you where your teams are, which jobs can be postponed if rain interferes, and what must *never* fall through the cracks. You keep the final say. The tool just handles what you can’t keep track of in your head.",
+              "text": "A tool made for you knows the difference between a one-off job and maintenance that should automatically reappear in your schedule. It knows that next week, it’s the turn of such-and-such a co-ownership. It shows you where your teams are, which jobs can be postponed if rain interferes, and what must never fall through the cracks. You keep the final say. The tool just handles what you can’t keep track of in your head.",
               "type": "text"
             }
           ]
@@ -2410,7 +2410,7 @@
               ]
             },
             {
-              "text": " language. One that measures hedge length in linear meters and lawn area in square meters—not in abstract references. One that knows your services, your suppliers, how you break down a season. One that doesn’t force you to check fifteen irrelevant boxes designed for a plumber or a tiler. A tool that mirrors *your* trade, not your neighbor’s.",
+              "text": " language. One that measures hedge length in linear meters and lawn area in square meters—not in abstract references. One that knows your services, your suppliers, how you break down a season. One that doesn’t force you to check fifteen irrelevant boxes designed for a plumber or a tiler. A tool that mirrors your trade, not your neighbor’s.",
               "type": "text"
             }
           ]
@@ -2483,7 +2483,7 @@
               "type": "hard_break"
             },
             {
-              "text": "The goal is the opposite: a simple tool, designed for *your* workflow—not for an IT specialist. If it requires a thick manual to use, we’ve gone wrong.",
+              "text": "The goal is the opposite: a simple tool, designed for your workflow—not for an IT specialist. If it requires a thick manual to use, we’ve gone wrong.",
               "type": "text"
             }
           ]
@@ -2720,7 +2720,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Those hours? You actually worked them. But between closing the panel and when you *should* invoice them, a week passes, three more jobs happen, and half of them vanish. No one records them. No one follows up.",
+              "text": "Those hours? You actually worked them. But between closing the panel and when you should invoice them, a week passes, three more jobs happen, and half of them vanish. No one records them. No one follows up.",
               "type": "text"
             }
           ]
@@ -2729,7 +2729,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Ask yourself the real question: Over the last month, how many hours did you *actually* work, and how many did you invoice? If you can’t answer in three seconds, it’s probably hundreds of euros slipping through your fingers every month—not because you’re doing a bad job, but because there’s no connection between ‘I did the work’ and ‘I billed for it.’",
+              "text": "Ask yourself the real question: Over the last month, how many hours did you actually work, and how many did you invoice? If you can’t answer in three seconds, it’s probably hundreds of euros slipping through your fingers every month—not because you’re doing a bad job, but because there’s no connection between ‘I did the work’ and ‘I billed for it.’",
               "type": "text"
             }
           ]
@@ -2850,7 +2850,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Not a bloated, overcomplicated system. A tool that does just three or four key things—the ones that matter to *you*:",
+              "text": "Not a bloated, overcomplicated system. A tool that does just three or four key things—the ones that matter to you:",
               "type": "text"
             }
           ]
@@ -4152,6 +4152,59 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To give you a benchmark right now: at a fixed price, most tools for small and mid-sized businesses (scheduling, inventory, quotes, time tracking) cost ",
+              "type": "text"
+            },
+            {
+              "text": "between €5,000 and €15,000",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", then ",
+              "type": "text"
+            },
+            {
+              "text": "€100 to €300 per month",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " for maintenance, depending on the tool. The price mainly depends on the number of screens, users and connections to your software, and it’s set in the quote before we start. Everything is explained on my ",
+              "type": "text"
+            },
+            {
+              "text": "custom business software in Rennes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/en/custom-business-software-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " page.",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -5321,7 +5374,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I don’t run a garage, I’ve never drawn up a roofing quote, nor supervised three masonry sites in the same week. But after years of building tools for tradespeople and small businesses, I’ve seen the same scene play out time and again. A Sunday night Excel file, titled something like `client_tracking_v4_final_ok.xlsx`, that no one dares touch anymore for fear of breaking it. And scattered around it, two or three software packages that do “sort of” the job, but none that actually fit how the business works.",
+              "text": "I don’t run a garage, I’ve never drafted a quote for roofing or managed three masonry projects in the same week. But after developing tools for tradespeople and small businesses, I’ve seen the same scene play out over and over. An Excel file opened on Sunday night, named something like `suivi_clients_v4_final_ok.xlsx`, that no one dares to modify for fear of breaking everything. And around it, two or three software programs that do the job ‘more or less,’ but none that truly fit how the business actually operates.",
               "type": "text"
             }
           ]
@@ -5330,7 +5383,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "That’s usually when someone mentions a “custom business app” — often without being sure it’s really what they need. This guide is here to clear things up: what it is, when it’s worth it, what it actually changes, and how much time and money it requires.",
+              "text": "That’s usually when people talk to me about a ‘custom-built business application’—often unsure if that’s really what they need. This guide is here to clarify: what it is, when it’s worth it, what it actually changes, and how much time and money it requires.",
               "type": "text"
             }
           ]
@@ -5342,7 +5395,7 @@
           },
           "content": [
             {
-              "text": "So, what exactly is a custom business app?",
+              "text": "What exactly is a custom-built business application?",
               "type": "text"
             }
           ]
@@ -5351,7 +5404,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "It’s software built around",
+              "text": "It’s software built around ",
               "type": "text"
             },
             {
@@ -5364,7 +5417,7 @@
               ]
             },
             {
-              "text": " — yours. Not a spreadsheet repurposed beyond its limits, not a generic tool you shoehorn your workflow into while only using one-fifth of its features.",
+              "text": " — yours. Not a spreadsheet repurposed for another use, not a generic software where you’re forced to squeeze in using only one-fifth of the features.",
               "type": "text"
             }
           ]
@@ -5373,7 +5426,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "In practice, it looks like the tool that tracks quotes, sites, and schedules for a ",
+              "text": "In practice, it takes the form of a tool that tracks quotes, projects, and schedules for a ",
               "type": "text"
             },
             {
@@ -5391,7 +5444,7 @@
               ]
             },
             {
-              "text": ", the one that manages appointments, quotes, and vehicle tracking for a ",
+              "text": ", one that manages appointments, quotes, and vehicle tracking in a ",
               "type": "text"
             },
             {
@@ -5409,7 +5462,7 @@
               ]
             },
             {
-              "text": ", or the module that links jobs, quotes, and invoices for an ",
+              "text": ", or the module that connects interventions, quotes, and invoices for an ",
               "type": "text"
             },
             {
@@ -5427,7 +5480,7 @@
               ]
             },
             {
-              "text": ". The common thread isn’t the technology: it’s that ",
+              "text": ". The common thread isn’t the technology—it’s that ",
               "type": "text"
             },
             {
@@ -5440,7 +5493,7 @@
               ]
             },
             {
-              "text": ", instead of forcing the trade to fit the tool.",
+              "text": ", instead of forcing the trade to adapt to the tool.",
               "type": "text"
             }
           ]
@@ -5452,7 +5505,7 @@
           },
           "content": [
             {
-              "text": "The signs your business needs one",
+              "text": "Signs your business needs one",
               "type": "text"
             }
           ]
@@ -5461,7 +5514,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "You don’t need an audit to spot them — they almost always come up:",
+              "text": "You don’t need an audit to spot them—they almost always show up in the same way:",
               "type": "text"
             }
           ]
@@ -5474,7 +5527,7 @@
               "type": "text"
             },
             {
-              "text": "enter the same information",
+              "text": "re-enter the same information",
               "type": "text",
               "marks": [
                 {
@@ -5483,14 +5536,14 @@
               ]
             },
             {
-              "text": " multiple times — the client in one place, the quote in another, the invoice in a third.",
+              "text": " multiple times—the client in one place, the quote in another, the invoice in a third.",
               "type": "text"
             },
             {
               "type": "hard_break"
             },
             {
-              "text": "- Your Excel file has become a multi-layered mess ",
+              "text": "- Your Excel has become a mess that ",
               "type": "text"
             },
             {
@@ -5503,56 +5556,56 @@
               ]
             },
             {
-              "text": ", and it breaks the moment a colleague touches a cell.",
+              "text": ", and it crashes as soon as an employee touches a cell.",
               "type": "text"
             },
             {
               "type": "hard_break"
             },
             {
-              "text": "- The information you need ",
+              "text": "- The information you need in the field ",
               "type": "text"
             },
             {
-              "text": "in the field",
+              "text": "stays stuck in the office",
               "type": "text",
               "marks": [
                 {
                   "type": "bold"
                 }
               ]
-            },
-            {
-              "text": " is ",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "stuck at the office",
-              "type": "text"
             },
             {
               "text": " — the schedule, the latest quote, a client’s history.",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
             },
             {
               "text": "- You spend your ",
               "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
+            },
             {
               "text": "evenings and Sundays",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " on administrative tasks instead of handling them during the day.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The real question is this: over your last busy month, how many hours did you spend copying information from one tool to another, or searching for a document you knew was ‘somewhere’? That’s the time a specialized app saves you.",
               "type": "text"
             }
           ]
@@ -5564,7 +5617,7 @@
           },
           "content": [
             {
-              "text": " on admin instead of having it sorted out during the day.",
+              "text": "What a custom-built application truly changes",
               "type": "text"
             }
           ]
@@ -5573,93 +5626,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The real question is this: over the last busy month, how many hours did you spend copying data from one tool to another, or hunting for a document you knew was “somewhere”? That’s the time a custom business app gives back to you.",
+              "text": "The first change isn’t flashy—it’s subtle: ",
               "type": "text"
             },
-            {
-              "text": "What a custom app really changes",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "text": "The first change isn’t flashy; it’s quiet: ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
             {
               "text": "a single source of truth",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": ". A client, a quote, a site exists in one place, up to date, accessible from your phone or your desk. No more three versions of the same file.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "heading",
-          "attrs": {
-            "level": 2
-          },
-          "content": [
-            {
-              "text": "Then come the pleasant side effects. Quotes go out the same day because they generate in two clicks. Follow-ups don’t get forgotten because the tool flags them. Copy-paste errors vanish because there’s no more copying. And you present your clients with a sharper image — in many trades, that matters as much as the price.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "Nothing magical here: we take your real workflow and strip away the friction, one by one.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "A real-world example",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "heading",
-          "attrs": {
-            "level": 2
-          },
-          "content": [
-            {
-              "text": "Take a plumber-heating engineer with two employees. Before, each job lived across a notebook, a text message, and a corner of a spreadsheet: the appointment scribbled in haste, the quote typed up at night, the invoice sometimes forgotten for three weeks. The result? Cash flow that’s stuck and follow-ups you’re too embarrassed to make because you’re not sure who owes what.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "With a tool tailored to him, the same day unfolds differently. He creates the job from his phone between sites, the quote turns into an invoice with one click once the work is approved, and his dashboard shows him overdue invoices in black and white on Monday morning. He hasn’t changed his trade — he’s just stopped losing it in scattered files.",
-              "type": "text"
-            },
-            {
-              "text": "Off-the-shelf or custom: the right reflex",
               "type": "text",
               "marks": [
                 {
@@ -5667,12 +5638,94 @@
                 }
               ]
             },
+            {
+              "text": ". One client, one quote, one job exists in one place, up to date, accessible from your phone or your desk. No more three versions of the same file.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Then come the pleasant side effects. Quotes go out the same day because they’re generated in two clicks. Follow-ups aren’t forgotten because the tool reminds you. Copying errors vanish because there’s no copying left. And you present a more polished image to your clients—which, in many trades, matters just as much as the price.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nothing magical about it: we take your real workflow and remove the friction, one piece at a time.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "An example, to make it concrete",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Take a plumber-heating technician with two employees. Before, every job relied on a notebook, a text message, and a corner of a spreadsheet: the appointment jotted down hastily, the quote typed up at night, the invoice sometimes forgotten for three weeks. Result: cash sitting idle and follow-ups you’re too embarrassed to make because you’re not sure who owes what.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "With a tool built for him, the same day unfolds differently. He creates the job from his phone between projects, the quote turns into an invoice with one click once the work is validated, and his dashboard shows him in black and white which invoices are overdue every Monday morning. He hasn’t changed his trade—he’s just stopped losing it in scattered files.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Off-the-shelf or custom: the right reflex",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
             {
               "text": "Let’s be honest: ",
               "type": "text"
             },
             {
-              "text": "custom isn’t always the answer.",
+              "text": "custom solutions aren’t always the right answer.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " If an existing software already handles 90% of the work without twisting your arm, go for it—it’ll be cheaper and faster. Custom solutions make sense when your way of working ",
+              "type": "text"
+            },
+            {
+              "text": "precisely",
               "type": "text",
               "marks": [
                 {
@@ -5681,7 +5734,7 @@
               ]
             },
             {
-              "text": " If an existing tool already does 90% of the job without twisting your arm, go for it — it’ll be cheaper and faster. Custom makes sense when your way of working ",
+              "text": " is what sets you apart, or when you’re already juggling multiple tools that don’t communicate with each other.",
               "type": "text"
             }
           ]
@@ -5690,11 +5743,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "is exactly what sets you apart",
+              "text": "If you’re still torn between a simple brochure website, an off-the-shelf tool, and a dedicated app, I’ve broken down the decision in a ",
               "type": "text"
             },
             {
-              "text": " or when you’re already juggling several tools that don’t talk to each other.",
+              "text": "separate comparison",
               "type": "text",
               "marks": [
                 {
@@ -5708,7 +5761,7 @@
               ]
             },
             {
-              "text": "If you’re still torn between a simple website, an off-the-shelf tool, and a dedicated app, I’ve broken it down in a ",
+              "text": ". The principle remains the same: we choose the lightest option that actually solves the problem.",
               "type": "text"
             }
           ]
@@ -5720,7 +5773,7 @@
           },
           "content": [
             {
-              "text": "separate comparison",
+              "text": "How much does it cost, how long does it take",
               "type": "text"
             }
           ]
@@ -5729,20 +5782,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": ". The principle stays the same: choose the lightest option that actually solves the problem.",
-              "type": "text"
-            },
-            {
-              "text": "How much does it cost, how long does it take",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "text": "It’s the question everyone dreads, so let’s tackle it head-on. A ",
+              "text": "That’s the tricky question, so let’s answer it honestly. A ",
               "type": "text"
             },
             {
@@ -5755,20 +5795,11 @@
               ]
             },
             {
-              "text": " — not an over-engineered monster, but the piece that fixes your biggest pain point — usually costs ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "a few thousand euros and a few weeks",
+              "text": " — not a bloated system, but the core piece that fixes the most painful issue — usually costs ",
               "type": "text"
             },
             {
-              "text": ", not tens of thousands or years.",
+              "text": "between €5,000 and €15,000",
               "type": "text",
               "marks": [
                 {
@@ -5777,7 +5808,82 @@
               ]
             },
             {
-              "text": "Here’s why: we don’t build everything at once. We start with what hurts most (often quotes or site tracking), get it in your hands ",
+              "text": ", as a fixed price, and is delivered in ",
+              "type": "text"
+            },
+            {
+              "text": "a few weeks",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", not years.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The reason: we don’t build everything at once. We start with what hurts the most (often quotes or job-site tracking), put it in your hands ",
+              "type": "text"
+            },
+            {
+              "text": "quickly",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", and then add the rest later, once the tool is already saving you time. You fund the rest with the time the first version has given you back—not with a blank check upfront.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Once the tool is in place, maintenance costs ",
+              "type": "text"
+            },
+            {
+              "text": "€100 to €300 per month",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", depending on the tool. The price depends on the number of screens, users and connections to your software, and it’s set in the quote before we start. The details are on my ",
+              "type": "text"
+            },
+            {
+              "text": "custom business software in Rennes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/en/custom-business-software-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " page.",
               "type": "text"
             }
           ]
@@ -5789,7 +5895,7 @@
           },
           "content": [
             {
-              "text": "fast",
+              "text": "How does a project actually unfold?",
               "type": "text"
             }
           ]
@@ -5798,11 +5904,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": ", and add the rest later, once the tool is already saving you time. You fund the next steps with the hours the first version frees up, not with a blank check upfront.",
+              "text": "In practice, it comes down to four steps. We start by ",
               "type": "text"
             },
             {
-              "text": "How a project actually works",
+              "text": "looking at your current organization",
               "type": "text",
               "marks": [
                 {
@@ -5811,20 +5917,7 @@
               ]
             },
             {
-              "text": "In practice, it boils down to four steps. First, we ",
-              "type": "text"
-            },
-            {
-              "text": "review your current setup",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "text": " — your files, your tools, your pain points. Then, we ",
+              "text": " — your files, your tools, your pain points. Then we ",
               "type": "text"
             },
             {
@@ -5837,11 +5930,11 @@
               ]
             },
             {
-              "text": " the scope of the first version: the bare minimum to make it useful from day one. I ",
+              "text": " the scope of the first version: the bare minimum to make it useful right from day one. I develop, you ",
               "type": "text"
             },
             {
-              "text": "develop",
+              "text": "test in the field",
               "type": "text",
               "marks": [
                 {
@@ -5850,7 +5943,20 @@
               ]
             },
             {
-              "text": ", you ",
+              "text": " quickly, and we ",
+              "type": "text"
+            },
+            {
+              "text": "adjust",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " based on your real feedback — because a business tool is judged by how it works in practice, not just on a mockup.",
               "type": "text"
             }
           ]
@@ -5859,7 +5965,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "test in the field",
+              "text": "I’m a freelance developer in Rennes, working with tradespeople and small businesses across France, and I remain your single point of contact from start to finish: no opaque subcontracting, no customer service on the other side of the world.",
               "type": "text"
             }
           ]
@@ -5871,49 +5977,7 @@
           },
           "content": [
             {
-              "text": " quickly, and we ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "adjust",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": " based on your real feedback — because a trade tool is judged in the mud, not on a mock-up.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "I’m a freelance developer based in Rennes, working with tradespeople and small businesses across France. I’m your single point of contact from start to finish: no opaque subcontracting, no customer service halfway around the world.",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "Frequently asked questions",
+              "text": "Frequently Asked Questions",
               "type": "text"
             }
           ]
@@ -5934,7 +5998,7 @@
               "type": "hard_break"
             },
             {
-              "text": "No, especially not. We start with the biggest pain point, and the rest comes later if the need is there.",
+              "text": "No, definitely not. We start with the most painful point, and the rest follows if needed.",
               "type": "text"
             }
           ]
@@ -5943,7 +6007,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Will I be \"locked in\" with the provider?",
+              "text": "Will I be ‘locked in’ with the service provider?",
               "type": "text",
               "marks": [
                 {
@@ -5955,7 +6019,49 @@
               "type": "hard_break"
             },
             {
-              "text": "The code and your data are yours. The goal isn’t to make you dependent; it’s to make you self-sufficient.",
+              "text": "The code and data are yours. The goal isn’t to make you dependent, but to make you self-sufficient.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Does it work on phones, on-site?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Yes. The field is often where the tool is most useful — so it’s designed for mobile from the start.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What if an existing software solution is enough?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "I’ll let you know. Making you spend on something you don’t need is the best way to never work together again.",
               "type": "text"
             }
           ]
@@ -5967,7 +6073,7 @@
           },
           "content": [
             {
-              "text": "Does it work on my phone, on the job site?",
+              "text": "Want to talk about it?",
               "type": "text"
             }
           ]
@@ -5976,11 +6082,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Yes. The field is often where the tool is most useful — so it’s designed for mobile from the start.",
+              "text": "The right first step isn’t a quote—it’s a ",
               "type": "text"
             },
             {
-              "text": "What if an existing tool is enough?",
+              "text": "look at where things stand",
               "type": "text",
               "marks": [
                 {
@@ -5989,37 +6095,37 @@
               ]
             },
             {
-              "text": "I’ll tell you. Selling you something you don’t need is the fastest way to never work together again.",
-              "type": "text"
-            },
-            {
-              "text": "Ready to talk?",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "text": "The right first step isn’t a quote; it’s an ",
-              "type": "text"
-            },
-            {
-              "text": "assessment",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "text": ". I’ll review your setup, pinpoint what’s costing you the most time, and send you a ",
+              "text": ". I’ll review your workflow, identify the biggest time-waster, and send you a ",
               "type": "text"
             },
             {
               "text": "written action plan",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " with a ",
+              "type": "text"
+            },
+            {
+              "text": "realistic budget estimate",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " — and if an existing tool already works, I’ll tell you straight up. You can check out a preview of ",
+              "type": "text"
+            },
+            {
+              "text": "my industry-specific apps",
               "type": "text",
               "marks": [
                 {
@@ -6033,7 +6139,7 @@
               ]
             },
             {
-              "text": " with a ",
+              "text": " to get an idea of what they look like.",
               "type": "text"
             }
           ]
@@ -6052,7 +6158,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "realistic budget estimate",
+                "label": "Let’s discuss my project",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -6082,7 +6188,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "For the past two years, everyone has been talking to me about AI. A craftsman who wants ‘something with ChatGPT,’ a small business manager afraid of missing the boat, a boss who tried a chatbot once and didn’t understand how it could help him. The word is everywhere, yet in most of the small businesses I encounter, AI still hasn’t made any real impact.",
               "type": "text"
             }
           ]
@@ -6091,7 +6197,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "I’ll try to be honest because this is a topic where empty talk flows freely. AI isn’t magic—it won’t ‘run your business’ for you. But when properly connected to your data and your tasks, it can take a significant portion of repetitive work off your shoulders. That’s what it means, in concrete terms.",
               "type": "text"
             }
           ]
@@ -6103,7 +6209,7 @@
           },
           "content": [
             {
-              "text": "[object Object]",
+              "text": "General AI doesn’t know your business",
               "type": "text"
             }
           ]
@@ -6112,7 +6218,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "When you use ChatGPT as-is, you’re talking to a model that has read a large portion of the internet but knows nothing about you: not your quotes, your product sheets, your customer interactions, or your internal procedures. It answers well in general, but misses the mark on your specific case. That’s why many executives try it, get disappointed, and conclude, ‘It’s not for us.’",
               "type": "text"
             }
           ]
@@ -6121,7 +6227,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "The real leverage for a small business isn’t general AI. It’s AI connected to your own data.",
               "type": "text"
             }
           ]
@@ -6133,7 +6239,7 @@
           },
           "content": [
             {
-              "text": "[object Object]",
+              "text": "Answering from your documents (what’s called RAG)",
               "type": "text"
             }
           ]
@@ -6142,7 +6248,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "Imagine an assistant who has read all your documents: your technical sheets, your sales terms, your past quotes, your meeting notes, your internal FAQ. When a customer or employee asks a question, it answers based on those documents, citing the source—not on generic information found online.",
               "type": "text"
             }
           ]
@@ -6151,7 +6257,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "This is called RAG (Retrieval-Augmented Generation). In short: the AI first finds the right information in your documents, then writes the answer based on that. The result isn’t a model making things up—it’s a model responding with your content.",
               "type": "text"
             }
           ]
@@ -6160,7 +6266,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "For a small business, this makes a very practical difference: a new employee finding the answer on their own instead of bothering a veteran, a customer getting accurate information at 10 p.m., a pre-filled quote based on similar past quotes.",
               "type": "text"
             }
           ]
@@ -6172,7 +6278,7 @@
           },
           "content": [
             {
-              "text": "[object Object]",
+              "text": "Doing tasks, not just answering (agents)",
               "type": "text"
             }
           ]
@@ -6181,7 +6287,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "Answering a question is good. But the next step is doing the work. An agent is an AI you assign a multi-step task to, with permission to use your tools: reading an incoming email, extracting the info, filling out a form, drafting a response, and saving it as a draft for your approval.",
               "type": "text"
             }
           ]
@@ -6190,7 +6296,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "The example I see working most often: sorting and preparing. Emails come in, the agent categorizes them, extracts attachments, fills in what needs to be filled in your tool, and presents everything ready for review. You keep the decision-making, and lose the chore.",
               "type": "text"
             }
           ]
@@ -6199,7 +6305,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "The key word here is ‘draft.’ An AI well integrated into a small business shouldn’t act behind your back. It prepares, you validate. That’s what makes it usable without stress.",
               "type": "text"
             }
           ]
@@ -6211,7 +6317,7 @@
           },
           "content": [
             {
-              "text": "[object Object]",
+              "text": "A concrete example",
               "type": "text"
             }
           ]
@@ -6220,7 +6326,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "Take a 15-person SME that receives dozens of daily email requests: product questions, quote requests, customer service. Right now, someone manually sorts and distributes all of this.",
               "type": "text"
             }
           ]
@@ -6229,7 +6335,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "With an assistant connected to their data: product questions receive a proposed answer, pulled from technical sheets, ready to send with one click. Quote requests are pre-filled based on similar past quotes. Customer service is prioritized by urgency. The person who used to sort doesn’t disappear—they shift from ‘copying and searching’ to ‘verifying and deciding,’ handling three times as many requests without losing their cool.",
               "type": "text"
             }
           ]
@@ -6241,7 +6347,7 @@
           },
           "content": [
             {
-              "text": "[object Object]",
+              "text": "Custom-built or off-the-shelf tool?",
               "type": "text"
             }
           ]
@@ -6250,7 +6356,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "Many small businesses don’t need custom development: an off-the-shelf tool with some built-in AI often suffices to start. I tell my clients this frankly. Custom solutions make sense when your data is sensitive (you don’t want to send it just anywhere), when your industry has rules standard tools can’t handle, or when you want the AI to integrate with your existing software—not the other way around.",
               "type": "text"
             }
           ]
@@ -6259,7 +6365,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "In those cases, a solution built for you, hosted on your servers, connected to your tools, and following your rules, makes perfect sense. And it stays yours—not locked into a subscription you don’t control.",
               "type": "text"
             }
           ]
@@ -6271,7 +6377,7 @@
           },
           "content": [
             {
-              "text": "[object Object]",
+              "text": "FAQ",
               "type": "text"
             }
           ]
@@ -6280,7 +6386,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "Will my data go to an American tech giant?",
               "type": "text",
               "marks": [
                 {
@@ -6292,7 +6398,7 @@
               "type": "hard_break"
             },
             {
-              "text": "[object Object]",
+              "text": "Not necessarily. Depending on the sensitivity, you can choose models hosted in Europe, or even run certain parts on your own infrastructure. It’s a decision we make together, based on your constraints.",
               "type": "text"
             }
           ]
@@ -6301,7 +6407,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "Do I need to be a large company for it to be worth it?",
               "type": "text",
               "marks": [
                 {
@@ -6313,7 +6419,7 @@
               "type": "hard_break"
             },
             {
-              "text": "[object Object]",
+              "text": "No. A small to medium-sized business with 10 to 50 employees, dealing with many repetitive questions or documents to sift through, is often the best fit: the time savings are immediate and obvious.",
               "type": "text"
             }
           ]
@@ -6322,7 +6428,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "Will AI replace my employees?",
               "type": "text",
               "marks": [
                 {
@@ -6334,7 +6440,7 @@
               "type": "hard_break"
             },
             {
-              "text": "[object Object]",
+              "text": "Not with my approach. It handles the tedious tasks (copying, searching, sorting) and lets people focus on what they do better than a machine: deciding, reassuring, selling. AI prepares, humans validate.",
               "type": "text"
             }
           ]
@@ -6343,7 +6449,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "How do I start without breaking the bank?",
               "type": "text",
               "marks": [
                 {
@@ -6355,7 +6461,7 @@
               "type": "hard_break"
             },
             {
-              "text": "[object Object]",
+              "text": "Start with one specific case—the one causing you the most trouble (sorting emails, handling customer service responses, searching through your documents). We’ll do it well, measure the results, and only expand if it proves its value.",
               "type": "text"
             }
           ]
@@ -6367,7 +6473,7 @@
           },
           "content": [
             {
-              "text": "[object Object]",
+              "text": "Want to talk about it?",
               "type": "text"
             }
           ]
@@ -6376,7 +6482,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "[object Object]",
+              "text": "If you feel AI could help but don’t know where to begin, we can explore it together. I’ll start with an audit: which repetitive tasks cost you the most, what data you have, what’s realistic and what isn’t. I’ll provide a clear action plan and an honest budget. And if an existing tool already works, I’ll tell you.",
               "type": "text"
             }
           ]
@@ -6395,7 +6501,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "[object Object]",
+                "label": "Discuss my project",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -6743,7 +6849,7 @@
     "title": "Custom B2B Software Development: What Does It Really Cost?",
     "excerpt": "How much does a custom B2B business software solution actually cost? The real pricing factors, concrete cost ranges, and the pitfalls that drive up the bill.",
     "metaTitle": "Custom B2B Business Software: What Does It Really Cost?",
-    "metaDescription": "The price of a custom B2B business software solution depends on 5 key factors. Realistic cost ranges, what drives up expenses, and how to pay the right price.",
+    "metaDescription": "Custom B2B business software costs €5,000 to €15,000 for most SME tools. The 5 price factors, the traps to avoid, and how to pay the right price.",
     "tags": [
       "custom b2b software development",
       "tailored business software",
@@ -6779,7 +6885,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "A custom B2B software solution, by definition, fits **YOUR** way of working: your processes, your rules, your terminology. Two companies in the same industry almost never end up with the same tool—and that’s exactly what makes it valuable. It’s also what makes every quote unique—just look at the variety of ",
+              "text": "A custom B2B software solution, by definition, fits YOUR way of working: your processes, your rules, your terminology. Two companies in the same industry almost never end up with the same tool—and that’s exactly what makes it valuable. It’s also what makes every quote unique—just look at the variety of ",
               "type": "text"
             },
             {
@@ -6929,7 +7035,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Ballpark figures—not a quote:",
+              "text": "Here are my prices, on a fixed-price basis. Ballpark figures, not a quote:",
               "type": "text"
             }
           ]
@@ -6942,7 +7048,7 @@
               "type": "text"
             },
             {
-              "text": "A simple and targeted tool",
+              "text": "A business tool for a small or mid-sized company",
               "type": "text",
               "marks": [
                 {
@@ -6951,18 +7057,11 @@
               ]
             },
             {
-              "text": " (one profession, one user type, no heavy integration): a few thousand euros.",
+              "text": " (scheduling, inventory, quotes, time tracking): ",
               "type": "text"
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "A full-fledged professional tool",
+              "text": "between €5,000 and €15,000",
               "type": "text",
               "marks": [
                 {
@@ -6971,7 +7070,7 @@
               ]
             },
             {
-              "text": " (multiple roles, a few integrations, dashboard): from tens to several tens of thousands of euros.",
+              "text": ". A simple, targeted tool (one trade, one type of user, no heavy integration) stays at the low end of the range; several roles, integrations and a dashboard push it up.",
               "type": "text"
             },
             {
@@ -6991,7 +7090,40 @@
               ]
             },
             {
-              "text": " (multi-user, customer space, integrations, scalability): beyond that, and it’s broken down into packages.",
+              "text": " (multi-user, customer space, integrations, scalability): beyond that, and it’s split into phases.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Maintenance",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", once the tool is live: ",
+              "type": "text"
+            },
+            {
+              "text": "€100 to €300 per month",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", depending on the tool.",
               "type": "text"
             }
           ]
@@ -7001,6 +7133,33 @@
           "content": [
             {
               "text": "What matters isn’t the absolute number—it’s the return. A tool that saves three people five hours a week pays for itself quickly.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "These prices are net (VAT not applicable), and the exact amount is set in the quote before we start. To size your project, everything is explained on my ",
+              "type": "text"
+            },
+            {
+              "text": "custom business software in Rennes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/en/custom-business-software-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " page.",
               "type": "text"
             }
           ]
@@ -7191,7 +7350,7 @@
               "type": "hard_break"
             },
             {
-              "text": "Software evolves: fixes, updates, enhancements. Plan for a small annual budget. It’s the cost of keeping your tool reliable over time.",
+              "text": "Software evolves: fixes, updates, enhancements. Count on €100 to €300 per month, depending on the tool. It’s the cost of keeping your tool reliable over time.",
               "type": "text"
             }
           ]
@@ -7438,7 +7597,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Customization makes perfect sense when the shelf forces **YOUR** business to bend to **ITS** mold.",
+              "text": "Customization makes perfect sense when the shelf forces YOUR business to bend to ITS mold.",
               "type": "text"
             }
           ]
@@ -9711,7 +9870,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "One question keeps coming up everywhere on this topic, and it’s one of the most searched on Google: *“My clients are private individuals—does this concern me?”* The short answer: yes, but not in the way you might think. I build quoting and invoicing tools for artisans, so here’s what’s really changing, case by case, without the jargon. I verified this information in September 2026 on official government websites; the details may still evolve, and your accountant remains the best person to confirm your situation.",
+              "text": "One question keeps coming up everywhere on this topic, and it’s one of the most searched on Google: “My clients are private individuals—does this concern me?” The short answer: yes, but not in the way you might think. I build quoting and invoicing tools for artisans, so here’s what’s really changing, case by case, without the jargon. I verified this information in September 2026 on official government websites; the details may still evolve, and your accountant remains the best person to confirm your situation.",
               "type": "text"
             }
           ]
@@ -10678,7 +10837,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The fear when talking about « custom-made » is the five-figure quote. It’s not a foregone conclusion. A well-made business website remains a reasonable and controlled budget. And for a specialized tool, you don’t have to build everything at once: start with ",
+              "text": "The fear when talking about « custom-made » is a sky-high quote. It’s not a foregone conclusion. A well-made business website remains a reasonable and controlled budget. And for a specialized tool, you don’t have to build everything at once: start with ",
               "type": "text"
             },
             {
@@ -10692,6 +10851,59 @@
             },
             {
               "text": " specific problem—the quotes, the schedule, the follow-up—for a controlled cost, and only expand if it proves its worth.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To give you a benchmark: a tool that solves one of these problems usually costs ",
+              "type": "text"
+            },
+            {
+              "text": "between €5,000 and €15,000",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " at a fixed price, then ",
+              "type": "text"
+            },
+            {
+              "text": "€100 to €300 per month",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " for maintenance. The amount is set in the quote before we start, and everything is explained on my ",
+              "type": "text"
+            },
+            {
+              "text": "custom business software in Rennes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/en/custom-business-software-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " page.",
               "type": "text"
             }
           ]
@@ -10989,7 +11201,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I live in Saint-Erblon, just south of Rennes. My job is to build custom websites and tools for artisans and small businesses—often locals I meet on a job site, at an appointment, or through word of mouth. Over time, I’ve noticed something: most artisans here don’t need *another* website. They need something that brings them clients and a tool that gives back their evenings.",
+              "text": "I live in Saint-Erblon, just south of Rennes. My job is to build custom websites and tools for artisans and small businesses—often locals I meet on a job site, at an appointment, or through word of mouth. Over time, I’ve noticed something: most artisans here don’t need another website. They need something that brings them clients and a tool that gives back their evenings.",
               "type": "text"
             }
           ]
@@ -10998,7 +11210,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "This article is for artisans and small businesses in the Rennes area who are wondering where to start and whether they *really* need to ‘hire a developer.’",
+              "text": "This article is for artisans and small businesses in the Rennes area who are wondering where to start and whether they really need to ‘hire a developer.’",
               "type": "text"
             }
           ]
@@ -11010,7 +11222,7 @@
           },
           "content": [
             {
-              "text": "An artisan in Rennes doesn’t need *another* website.",
+              "text": "An artisan in Rennes doesn’t need another website.",
               "type": "text"
             }
           ]
@@ -11028,7 +11240,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The real issue isn’t *having* a site. It’s being found when someone in Rennes or Bruz searches ‘plumber near me’ or ‘electrician renovation Cesson’ on a Sunday night. That means a site built for local SEO, linked to your Google listing, fast on mobile—because that’s where your clients are searching—and where calling or requesting a quote takes one tap.",
+              "text": "The real issue isn’t having a site. It’s being found when someone in Rennes or Bruz searches ‘plumber near me’ or ‘electrician renovation Cesson’ on a Sunday night. That means a site built for local SEO, linked to your Google listing, fast on mobile—because that’s where your clients are searching—and where calling or requesting a quote takes one tap.",
               "type": "text"
             }
           ]
@@ -11049,7 +11261,7 @@
           },
           "content": [
             {
-              "text": "Often, the real need is a *work tool*—not just a brochure.",
+              "text": "Often, the real need is a work tool—not just a brochure.",
               "type": "text"
             }
           ]
@@ -11067,7 +11279,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "A website brings you clients. But once they’re there, it’s your organization that decides whether you earn a living or just chase your own paperwork. That’s why a custom business app in Rennes—built for *how you work*—is often worth more than another brochure site: it helps you price accurately, follow up on the right quotes, and stop letting billable hours slip through the cracks.",
+              "text": "A website brings you clients. But once they’re there, it’s your organization that decides whether you earn a living or just chase your own paperwork. That’s why a custom business app in Rennes—built for how you work—is often worth more than another brochure site: it helps you price accurately, follow up on the right quotes, and stop letting billable hours slip through the cracks.",
               "type": "text"
             }
           ]
@@ -11097,7 +11309,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "You *can* build a site with an agency across France or an overseas platform. Sometimes it works. But there’s a difference when the person building your tool is just 20 minutes from your workshop.",
+              "text": "You can build a site with an agency across France or an overseas platform. Sometimes it works. But there’s a difference when the person building your tool is just 20 minutes from your workshop.",
               "type": "text"
             }
           ]
@@ -11450,7 +11662,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Ask yourself: over the last month, how many hours did you *actually* spend under the cars, and how many did you bill for? If the gap is fuzzy, it’s probably hundreds of euros lost—not because you’re doing a bad job, but because nothing cleanly connects ‘what you did’ to ‘what you billed.’",
+              "text": "Ask yourself: over the last month, how many hours did you actually spend under the cars, and how many did you bill for? If the gap is fuzzy, it’s probably hundreds of euros lost—not because you’re doing a bad job, but because nothing cleanly connects ‘what you did’ to ‘what you billed.’",
               "type": "text"
             }
           ]
@@ -11519,7 +11731,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "You’ve probably been pitched some massive garage management software. Maybe you’ve got one tucked away somewhere that you never open. Because it does too much, takes ten minutes to log a simple oil change, and wasn’t built for how *you* actually work.",
+              "text": "You’ve probably been pitched some massive garage management software. Maybe you’ve got one tucked away somewhere that you never open. Because it does too much, takes ten minutes to log a simple oil change, and wasn’t built for how you actually work.",
               "type": "text"
             }
           ]
@@ -11763,7 +11975,7 @@
               "type": "hard_break"
             },
             {
-              "text": "No, it’s actually the opposite. A dealership has staff for management. A neighborhood garage, however, has no one—it’s *exactly* the kind of place where saving two hours a week makes all the difference.",
+              "text": "No, it’s actually the opposite. A dealership has staff for management. A neighborhood garage, however, has no one—it’s exactly the kind of place where saving two hours a week makes all the difference.",
               "type": "text"
             }
           ]
@@ -11784,7 +11996,7 @@
               "type": "hard_break"
             },
             {
-              "text": "If you actually use it and it works for you, don’t change anything. If you paid for it but it’s gathering dust because it’s too cumbersome, the issue isn’t finding another one like it—it’s getting a tool you’ll *open*.",
+              "text": "If you actually use it and it works for you, don’t change anything. If you paid for it but it’s gathering dust because it’s too cumbersome, the issue isn’t finding another one like it—it’s getting a tool you’ll open.",
               "type": "text"
             }
           ]
@@ -12849,7 +13061,27 @@
               ]
             },
             {
-              "text": " : Integrate your social media feeds to showcase your latest posts and encourage visitors to follow you. - **Targeted ads** : Use social media ads to target local customers and promote your services.",
+              "text": " : Integrate your social media feeds to showcase your latest posts and encourage visitors to follow you.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": " - ",
+              "type": "text"
+            },
+            {
+              "text": "Targeted ads",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " : Use social media ads to target local customers and promote your services.",
               "type": "text"
             }
           ]

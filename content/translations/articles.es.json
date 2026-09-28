@@ -3037,7 +3037,7 @@
               "type": "hard_break"
             },
             {
-              "text": "Si realmente lo usa y le conviene, no cambie nada. Si lo pagó pero está 'dormido' porque es demasiado pesado, el tema no es adoptar otro igual — es tener una herramienta que realmente **abrirá** y usará.",
+              "text": "Si realmente lo usa y le conviene, no cambie nada. Si lo pagó pero está 'dormido' porque es demasiado pesado, el tema no es adoptar otro igual — es tener una herramienta que realmente abrirá y usará.",
               "type": "text"
             }
           ]
@@ -3100,7 +3100,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si se ha identificado con solo una de estas situaciones, podemos tomar treinta minutos juntos. Revisaré cómo gestiona hoy sus **presupuestos**, sus **intervenciones** y sus **facturas**, y le haré ",
+              "text": "Si se ha identificado con solo una de estas situaciones, podemos tomar treinta minutos juntos. Revisaré cómo gestiona hoy sus presupuestos, sus intervenciones y sus facturas, y le haré ",
               "type": "text"
             },
             {
@@ -4147,6 +4147,59 @@
             },
             {
               "text": " — prefiero un cliente que vuelva a una venta forzada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para darte una referencia desde ya: a precio cerrado, la mayoría de las herramientas de pymes (planificación, stock, presupuestos, control horario) cuestan ",
+              "type": "text"
+            },
+            {
+              "text": "entre 5.000 y 15.000 €",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", y después ",
+              "type": "text"
+            },
+            {
+              "text": "de 100 a 300 € al mes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " de mantenimiento según la herramienta. El precio depende sobre todo del número de pantallas, de usuarios y de conexiones con tus programas, y se fija en el presupuesto antes de empezar. Lo tienes todo explicado en mi página de ",
+              "type": "text"
+            },
+            {
+              "text": "software de gestión a medida en Rennes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/software-de-gestion-a-medida-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
               "type": "text"
             }
           ]
@@ -5746,7 +5799,7 @@
               "type": "text"
             },
             {
-              "text": "unos pocos miles de euros y unas semanas",
+              "text": "entre 5.000 y 15.000 €",
               "type": "text",
               "marks": [
                 {
@@ -5755,7 +5808,20 @@
               ]
             },
             {
-              "text": ", no decenas de miles ni años.",
+              "text": ", a precio cerrado, y se entrega en ",
+              "type": "text"
+            },
+            {
+              "text": "unas semanas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", no en años.",
               "type": "text"
             }
           ]
@@ -5778,6 +5844,46 @@
             },
             {
               "text": ", y luego se añade el resto una vez que la herramienta ya le está ahorrando tiempo. Financia el resto con el tiempo que le ha devuelto la primera versión, no con un cheque en blanco al inicio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una vez en marcha, el mantenimiento cuesta ",
+              "type": "text"
+            },
+            {
+              "text": "de 100 a 300 € al mes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " según la herramienta. El precio depende del número de pantallas, de usuarios y de conexiones con sus programas, y se fija en el presupuesto antes de empezar. Encontrará el detalle en mi página de ",
+              "type": "text"
+            },
+            {
+              "text": "software de gestión a medida en Rennes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/software-de-gestion-a-medida-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
               "type": "text"
             }
           ]
@@ -6091,7 +6197,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Voy a ser honesto, porque es un tema donde los discursos vacíos fluyen sin parar. La IA no es mágica, no va a « gestionar su empresa ». Pero bien conectada a **sus datos** y **sus tareas**, puede quitarle de los hombros una gran parte del trabajo repetitivo. Así es lo que significa, en concreto.",
+              "text": "Voy a ser honesto, porque es un tema donde los discursos vacíos fluyen sin parar. La IA no es mágica, no va a « gestionar su empresa ». Pero bien conectada a sus datos y sus tareas, puede quitarle de los hombros una gran parte del trabajo repetitivo. Así es lo que significa, en concreto.",
               "type": "text"
             }
           ]
@@ -6112,7 +6218,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Cuando usa ChatGPT tal cual, habla con un modelo que ha leído gran parte de Internet, pero que no conoce **a usted**: ni sus presupuestos, ni sus fichas de producto, ni sus intercambios con clientes, ni sus procedimientos internos. Responde bien en general, pero se desvía en su caso concreto. Por eso muchos directivos prueban, quedan decepcionados y concluyen: «no es para nosotros».",
+              "text": "Cuando usa ChatGPT tal cual, habla con un modelo que ha leído gran parte de Internet, pero que no le conoce a usted: ni sus presupuestos, ni sus fichas de producto, ni sus intercambios con clientes, ni sus procedimientos internos. Responde bien en general, pero se desvía en su caso concreto. Por eso muchos directivos prueban, quedan decepcionados y concluyen: «no es para nosotros».",
               "type": "text"
             }
           ]
@@ -6133,7 +6239,7 @@
           },
           "content": [
             {
-              "text": "Responder a partir de **sus documentos** (lo que se llama RAG)",
+              "text": "Responder a partir de sus documentos (lo que se llama RAG)",
               "type": "text"
             }
           ]
@@ -6142,7 +6248,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Imagine un asistente que ha leído todos sus documentos: sus fichas técnicas, sus condiciones de venta, sus presupuestos antiguos, sus actas, su FAQ interna. Cuando un cliente o un empleado hace una pregunta, responde basándose en **esos documentos**, citando la fuente, y no en generalidades encontradas en la web.",
+              "text": "Imagine un asistente que ha leído todos sus documentos: sus fichas técnicas, sus condiciones de venta, sus presupuestos antiguos, sus actas, su FAQ interna. Cuando un cliente o un empleado hace una pregunta, responde basándose en esos documentos, citando la fuente, y no en generalidades encontradas en la web.",
               "type": "text"
             }
           ]
@@ -6151,7 +6257,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Eso es lo que se conoce como RAG (la búsqueda aumentada). En claro: la IA primero busca la información correcta en sus documentos, luego redacta la respuesta a partir de eso. El resultado no es un modelo que inventa, es un modelo que responde con **su material**.",
+              "text": "Eso es lo que se conoce como RAG (la búsqueda aumentada). En claro: la IA primero busca la información correcta en sus documentos, luego redacta la respuesta a partir de eso. El resultado no es un modelo que inventa, es un modelo que responde con su material.",
               "type": "text"
             }
           ]
@@ -6250,7 +6356,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Muchas PYMES no necesitan un desarrollo a medida: una herramienta del mercado con un poco de IA integrada suele ser suficiente para empezar. Se lo digo francamente a mis clientes. El desarrollo a medida se justifica cuando sus datos son sensibles (no quiere enviarlos a cualquier lugar), cuando su negocio tiene reglas que las herramientas estándar no saben seguir, o cuando quiere que la IA se conecte a **sus** softwares existentes en lugar de al revés.",
+              "text": "Muchas PYMES no necesitan un desarrollo a medida: una herramienta del mercado con un poco de IA integrada suele ser suficiente para empezar. Se lo digo francamente a mis clientes. El desarrollo a medida se justifica cuando sus datos son sensibles (no quiere enviarlos a cualquier lugar), cuando su negocio tiene reglas que las herramientas estándar no saben seguir, o cuando quiere que la IA se conecte a sus softwares existentes en lugar de al revés.",
               "type": "text"
             }
           ]
@@ -6743,7 +6849,7 @@
     "title": "Desarrollo de software B2B a medida: ¿cuánto cuesta realmente?",
     "excerpt": "¿Cuánto cuesta un software empresarial B2B a medida? Los verdaderos factores de precio, rangos concretos y las trampas que inflan la factura.",
     "metaTitle": "Software empresarial B2B a medida: ¿cuánto cuesta realmente?",
-    "metaDescription": "El precio de un software empresarial B2B a medida depende de 5 factores clave. Rangos realistas, qué eleva el costo y cómo pagar el precio justo.",
+    "metaDescription": "Un software B2B a medida cuesta de 5.000 a 15.000 € para la mayoría de las herramientas de pymes. Los 5 factores del precio, las trampas y cómo pagar lo justo.",
     "tags": [
       "desarrollo de software b2b",
       "software empresarial a medida",
@@ -6758,7 +6864,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Desde que desarrollo herramientas empresariales para empresas, la primera pregunta que surge es casi siempre la misma: *«¿cuánto cuesta un software a medida?»*. La respuesta honesta, esa que a nadie le gusta dar, es: *«depende»*. Pero *«depende»* no ayuda a nadie. Por eso aquí tienes los **verdaderos factores** que influyen en el precio, rangos concretos y los **trampas** que inflan la factura.",
+              "text": "Desde que desarrollo herramientas empresariales para empresas, la primera pregunta que surge es casi siempre la misma: «¿cuánto cuesta un software a medida?». La respuesta honesta, esa que a nadie le gusta dar, es: «depende». Pero «depende» no ayuda a nadie. Por eso aquí tienes los verdaderos factores que influyen en el precio, rangos concretos y los trampas que inflan la factura.",
               "type": "text"
             }
           ]
@@ -6779,7 +6885,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Un software B2B a medida, por definición, se adapta **a TU** forma de trabajar: tus etapas, tus reglas, tu vocabulario. Dos empresas del mismo sector casi nunca tienen la misma herramienta, y eso es justamente lo que le da valor. También es lo que hace que cada presupuesto sea único —mira la variedad de las ",
+              "text": "Un software B2B a medida, por definición, se adapta a TU forma de trabajar: tus etapas, tus reglas, tu vocabulario. Dos empresas del mismo sector casi nunca tienen la misma herramienta, y eso es justamente lo que le da valor. También es lo que hace que cada presupuesto sea único —mira la variedad de las ",
               "type": "text"
             },
             {
@@ -6836,7 +6942,7 @@
               ]
             },
             {
-              "text": " Una herramienta que gestiona una sola cosa (un calendario, un seguimiento de expedientes) cuesta mucho menos que una plataforma que conecta presupuestos, facturación, inventario y clientes. Cada *«y también…»* añade días.",
+              "text": " Una herramienta que gestiona una sola cosa (un calendario, un seguimiento de expedientes) cuesta mucho menos que una plataforma que conecta presupuestos, facturación, inventario y clientes. Cada «y también…» añade días.",
               "type": "text"
             }
           ]
@@ -6908,7 +7014,7 @@
               ]
             },
             {
-              "text": " Una herramienta interna usada por tres personas tolera algunos detalles ásperos. Una herramienta que verán tus clientes debe ser pulida, rápida e impecable en móvil. *«Acabado»* tiene su costo.",
+              "text": " Una herramienta interna usada por tres personas tolera algunos detalles ásperos. Una herramienta que verán tus clientes debe ser pulida, rápida e impecable en móvil. «Acabado» tiene su costo.",
               "type": "text"
             }
           ]
@@ -6929,7 +7035,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Ordenes de magnitud, no un presupuesto:",
+              "text": "Estas son mis tarifas, a precio cerrado. Órdenes de magnitud, no un presupuesto:",
               "type": "text"
             }
           ]
@@ -6942,7 +7048,7 @@
               "type": "text"
             },
             {
-              "text": "Una herramienta sencilla y enfocada",
+              "text": "Una herramienta de gestión para una pyme",
               "type": "text",
               "marks": [
                 {
@@ -6951,18 +7057,11 @@
               ]
             },
             {
-              "text": " (un solo oficio, un tipo de usuario, sin integración compleja): unos pocos miles de euros.",
+              "text": " (planificación, stock, presupuestos, control horario): ",
               "type": "text"
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Una herramienta profesional completa",
+              "text": "entre 5.000 y 15.000 €",
               "type": "text",
               "marks": [
                 {
@@ -6971,7 +7070,7 @@
               ]
             },
             {
-              "text": " (varios roles, algunas integraciones, panel de control): desde decenas hasta algunas decenas de miles de euros.",
+              "text": ". Una herramienta sencilla y enfocada (un solo oficio, un tipo de usuario, sin integración compleja) se queda en la parte baja del rango; varios roles, integraciones y un panel de control la hacen subir.",
               "type": "text"
             },
             {
@@ -6991,7 +7090,40 @@
               ]
             },
             {
-              "text": " (multi-usuario, espacio cliente, integraciones, escalabilidad): más allá, y se divide en lotes.",
+              "text": " (multiusuario, espacio cliente, integraciones, escalabilidad): más allá, y se divide en lotes.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "El mantenimiento",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", una vez en marcha la herramienta: ",
+              "type": "text"
+            },
+            {
+              "text": "de 100 a 300 € al mes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " según la herramienta.",
               "type": "text"
             }
           ]
@@ -7001,6 +7133,33 @@
           "content": [
             {
               "text": "Lo que importa no es la cifra absoluta, sino el retorno. Una herramienta que ahorra cinco horas por semana a tres personas se paga rápido.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Son precios netos (IVA no aplicable), y el importe exacto se fija en el presupuesto antes de empezar. Para situar un proyecto, todo el detalle está en mi página de ",
+              "type": "text"
+            },
+            {
+              "text": "software de gestión a medida en Rennes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/software-de-gestion-a-medida-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
               "type": "text"
             }
           ]
@@ -7191,7 +7350,7 @@
               "type": "hard_break"
             },
             {
-              "text": "Un software evoluciona: correcciones, actualizaciones, mejoras. Prevea un pequeño presupuesto anual. Es el precio de una herramienta que sigue siendo confiable con el tiempo.",
+              "text": "Un software evoluciona: correcciones, actualizaciones, mejoras. Hay que contar de 100 a 300 € al mes según la herramienta. Es el precio de una herramienta que sigue siendo confiable con el tiempo.",
               "type": "text"
             }
           ]
@@ -7438,7 +7597,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Lo personalizado cobra todo su sentido cuando el estante obliga a **VUESTRO** oficio a adaptarse a **SU** molde.",
+              "text": "Lo personalizado cobra todo su sentido cuando el estante obliga a VUESTRO oficio a adaptarse a SU molde.",
               "type": "text"
             }
           ]
@@ -7547,7 +7706,7 @@
               ]
             },
             {
-              "text": " — la verdadera pregunta siempre siendo *«¿cuánto me hace ganar?»*.",
+              "text": " — la verdadera pregunta siempre siendo «¿cuánto me hace ganar?».",
               "type": "text"
             }
           ]
@@ -9711,7 +9870,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Una pregunta que surge en todas partes sobre este tema, y que es una de las más buscadas en Google, es: *«mis clientes son particulares, ¿estoy afectado?»*. La respuesta breve: sí, pero no como se imagina. Como desarrollo herramientas de presupuestos y facturación para artesanos, aquí está lo que realmente cambia, caso por caso, sin tecnicismos. He verificado esta información en septiembre de 2026 en los sitios oficiales; las modalidades aún pueden variar, y su asesor contable sigue siendo el mejor interlocutor para validar su caso.",
+              "text": "Una pregunta que surge en todas partes sobre este tema, y que es una de las más buscadas en Google, es: «mis clientes son particulares, ¿estoy afectado?». La respuesta breve: sí, pero no como se imagina. Como desarrollo herramientas de presupuestos y facturación para artesanos, aquí está lo que realmente cambia, caso por caso, sin tecnicismos. He verificado esta información en septiembre de 2026 en los sitios oficiales; las modalidades aún pueden variar, y su asesor contable sigue siendo el mejor interlocutor para validar su caso.",
               "type": "text"
             }
           ]
@@ -9852,7 +10011,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Lo que cambia es el *e-reporting*. A partir del 1 de septiembre de 2027, los datos de estas ventas deberán enviarse a la administración: los montos acumulados por día y el IVA correspondiente, no el detalle de cada factura. Es su plataforma la que se encarga de esto, con una frecuencia que depende de su régimen de IVA. Eso sí, sus ventas deben estar registradas allí: ahí es donde las facturas hechas a mano plantean un problema.",
+              "text": "Lo que cambia es el e-reporting. A partir del 1 de septiembre de 2027, los datos de estas ventas deberán enviarse a la administración: los montos acumulados por día y el IVA correspondiente, no el detalle de cada factura. Es su plataforma la que se encarga de esto, con una frecuencia que depende de su régimen de IVA. Eso sí, sus ventas deben estar registradas allí: ahí es donde las facturas hechas a mano plantean un problema.",
               "type": "text"
             }
           ]
@@ -9985,7 +10144,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si su actividad es sencilla, un software del mercado hará un trabajo excelente. Lo digo con más énfasis porque mi oficio es el *sur mesure*: solo tiene sentido si sus presupuestos o su organización salen realmente de lo común. Explico cómo decidir entre ",
+              "text": "Si su actividad es sencilla, un software del mercado hará un trabajo excelente. Lo digo con más énfasis porque mi oficio es el desarrollo a medida: solo tiene sentido si sus presupuestos o su organización salen realmente de lo común. Explico cómo decidir entre ",
               "type": "text"
             },
             {
@@ -10678,7 +10837,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El miedo al hablar de «a medida» es el presupuesto de cinco cifras. No es una fatalidad. Una página web corporativa bien hecha sigue siendo un presupuesto razonable y controlado. Y para una herramienta especializada, no es necesario construirlo todo de golpe: se empieza por ",
+              "text": "El miedo al hablar de «a medida» es un presupuesto desorbitado. No es una fatalidad. Una página web corporativa bien hecha sigue siendo un presupuesto razonable y controlado. Y para una herramienta especializada, no es necesario construirlo todo de golpe: se empieza por ",
               "type": "text"
             },
             {
@@ -10692,6 +10851,59 @@
             },
             {
               "text": " problema concreto — cotizaciones, planificación, seguimiento — con un coste controlado, y se amplía solo si ha demostrado su valor.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para hacerse una idea: una herramienta que resuelve uno de esos problemas suele costar ",
+              "type": "text"
+            },
+            {
+              "text": "entre 5.000 y 15.000 €",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " a precio cerrado, y después ",
+              "type": "text"
+            },
+            {
+              "text": "de 100 a 300 € al mes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " de mantenimiento. El importe se fija en el presupuesto antes de empezar, y encontrará todo explicado en mi página de ",
+              "type": "text"
+            },
+            {
+              "text": "software de gestión a medida en Rennes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/software-de-gestion-a-medida-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
               "type": "text"
             }
           ]
@@ -11274,7 +11486,7 @@
               "type": "hard_break"
             },
             {
-              "text": "Si es el caso, se lo diré en lugar de venderle algo a medida. El objetivo es que **usted** gane tiempo, no que yo le cobre una solución compleja.",
+              "text": "Si es el caso, se lo diré en lugar de venderle algo a medida. El objetivo es que usted gane tiempo, no que yo le cobre una solución compleja.",
               "type": "text"
             }
           ]
@@ -11304,7 +11516,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "A partir de ahí, le entrego un **audit** de su organización y un plan de acción escrito: lo que realmente le frena, lo que merece la pena automatizar primero —web o herramienta especializada—, y por dónde empezar para que le alivie rápido. Un documento claro, del que **usted** sigue siendo dueño, incluso si luego decide hacerlo de otra forma.",
+              "text": "A partir de ahí, le entrego una auditoría de su organización y un plan de acción escrito: lo que realmente le frena, lo que merece la pena automatizar primero —web o herramienta especializada—, y por dónde empezar para que le alivie rápido. Un documento claro, del que usted sigue siendo dueño, incluso si luego decide hacerlo de otra forma.",
               "type": "text"
             }
           ]
@@ -11423,7 +11635,7 @@
           },
           "content": [
             {
-              "text": "El presupuesto de reparación: ese que se hace *«cuando haya tiempo»*",
+              "text": "El presupuesto de reparación: ese que se hace «cuando haya tiempo»",
               "type": "text"
             }
           ]
@@ -11450,7 +11662,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Pregúntese: en el último mes, ¿cuántas horas pasó realmente bajo los coches y cuántas facturó? Si la diferencia es borrosa, probablemente sean cientos de euros los que se pierden —no porque trabaje mal, sino porque nada conecta claramente *«lo que hice»* con *«lo que cobré»*—.",
+              "text": "Pregúntese: en el último mes, ¿cuántas horas pasó realmente bajo los coches y cuántas facturó? Si la diferencia es borrosa, probablemente sean cientos de euros los que se pierden —no porque trabaje mal, sino porque nada conecta claramente «lo que hice» con «lo que cobré»—.",
               "type": "text"
             }
           ]
@@ -11471,7 +11683,7 @@
           },
           "content": [
             {
-              "text": "El historial del vehículo: *«¿qué hizo la última vez?»*",
+              "text": "El historial del vehículo: «¿qué hizo la última vez?»",
               "type": "text"
             }
           ]
@@ -11480,7 +11692,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Un cliente regresa seis meses después. *«¿Qué cambió ya?»*. Y entonces rebusca en viejos archivadores o intenta recordar. A veces lo encuentra, otras no.",
+              "text": "Un cliente regresa seis meses después. «¿Qué cambió ya?». Y entonces rebusca en viejos archivadores o intenta recordar. A veces lo encuentra, otras no.",
               "type": "text"
             }
           ]
@@ -11510,7 +11722,7 @@
           },
           "content": [
             {
-              "text": "Por qué los software *«todo-en-uno»* para talleres acaban ignorados",
+              "text": "Por qué los software «todo-en-uno» para talleres acaban ignorados",
               "type": "text"
             }
           ]
@@ -11784,7 +11996,7 @@
               "type": "hard_break"
             },
             {
-              "text": "Si realmente lo usa y le funciona, no cambie nada. Si lo pagó pero está abandonado porque es demasiado pesado, el tema no es volver a uno igual — es tener una herramienta que **abrirá**.",
+              "text": "Si realmente lo usa y le funciona, no cambie nada. Si lo pagó pero está abandonado porque es demasiado pesado, el tema no es volver a uno igual — es tener una herramienta que abrirá.",
               "type": "text"
             }
           ]
@@ -11851,7 +12063,7 @@
               "type": "text"
             },
             {
-              "text": "un **auditoría de su organización**",
+              "text": "una auditoría de su organización",
               "type": "text",
               "marks": [
                 {
@@ -11864,7 +12076,7 @@
               "type": "text"
             },
             {
-              "text": "un **plan de acción escrito**",
+              "text": "un plan de acción escrito",
               "type": "text",
               "marks": [
                 {
@@ -11882,7 +12094,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Y si una herramienta existente ya hace el trabajo, se lo diré con franqueza. — **cuénteme sobre su taller, le respondo rápido**.",
+              "text": "Y si una herramienta existente ya hace el trabajo, se lo diré con franqueza. — cuénteme sobre su taller, le respondo rápido.",
               "type": "text"
             }
           ]
@@ -12244,7 +12456,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El primer paso para atraer más clientes locales es hacer que tu sitio web sea visible en los motores de búsqueda. Para ello, debes optimizar tu sitio web para el **SEO local**.",
+              "text": "El primer paso para atraer más clientes locales es hacer que tu sitio web sea visible en los motores de búsqueda. Para ello, debes optimizar tu sitio web para el SEO local.",
               "type": "text"
             }
           ]
@@ -12265,7 +12477,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Usa palabras clave locales en tu contenido para atraer clientes de tu región. Por ejemplo, si eres un restaurante en **Rennes**, usa palabras clave como *«restaurante en Rennes»* o *«mejor restaurante de Rennes»*.",
+              "text": "Usa palabras clave locales en tu contenido para atraer clientes de tu región. Por ejemplo, si eres un restaurante en Rennes, usa palabras clave como «restaurante en Rennes» o «mejor restaurante de Rennes».",
               "type": "text"
             }
           ]
@@ -12277,7 +12489,7 @@
           },
           "content": [
             {
-              "text": "Crea una ficha en **Google My Business**",
+              "text": "Crea una ficha en Google My Business",
               "type": "text"
             }
           ]
@@ -12286,7 +12498,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Crea una ficha en **Google My Business** para tu restaurante. Esto te permitirá aparecer en los resultados de búsqueda locales y atraer más clientes.",
+              "text": "Crea una ficha en Google My Business para tu restaurante. Esto te permitirá aparecer en los resultados de búsqueda locales y atraer más clientes.",
               "type": "text"
             }
           ]
@@ -12349,7 +12561,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Ofrece promociones especiales en tu sitio web para incentivar a los clientes a reservar directamente. Por ejemplo, puedes ofrecer un **10% de descuento** en reservas realizadas en línea.",
+              "text": "Ofrece promociones especiales en tu sitio web para incentivar a los clientes a reservar directamente. Por ejemplo, puedes ofrecer un 10% de descuento en reservas realizadas en línea.",
               "type": "text"
             }
           ]
@@ -12382,7 +12594,7 @@
           },
           "content": [
             {
-              "text": "Usa un diseño adaptable (*responsive*)",
+              "text": "Usa un diseño adaptable (responsive)",
               "type": "text"
             }
           ]
@@ -12391,7 +12603,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Usa un diseño adaptable (*responsive*) para tu sitio web. Así, tus clientes podrán navegar fácilmente, ya sea desde un ordenador, una tableta o un smartphone.",
+              "text": "Usa un diseño adaptable (responsive) para tu sitio web. Así, tus clientes podrán navegar fácilmente, ya sea desde un ordenador, una tableta o un smartphone.",
               "type": "text"
             }
           ]
@@ -12849,7 +13061,27 @@
               ]
             },
             {
-              "text": " : Integre sus redes sociales para mostrar tus últimas publicaciones y animar a los visitantes a seguirte. - **Publicidad dirigida** : Usa publicidad en redes sociales para dirigirte a clientes locales y promocionar tus servicios.",
+              "text": " : Integre sus redes sociales para mostrar tus últimas publicaciones y animar a los visitantes a seguirte.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": " - ",
+              "type": "text"
+            },
+            {
+              "text": "Publicidad dirigida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " : Usa publicidad en redes sociales para dirigirte a clientes locales y promocionar tus servicios.",
               "type": "text"
             }
           ]
