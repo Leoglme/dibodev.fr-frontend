@@ -4,13 +4,16 @@ import type {
   ProcessQueueResponse,
   PublishToStoryblokParams,
   PublishToStoryblokResult,
+  QueueTranslationOutcome,
   StoryblokArticleInput,
   TriggerRebuildResult,
 } from '~~/server/types/dashboard/articles'
+import type { TranslationCredentials } from '~~/server/types/dashboard/translations'
 import type { StoryblokAssetRef } from '~~/server/utils/uploadImageToStoryblok'
 import type { RichtextNode } from '~~/server/utils/markdownToRichtext'
 import { markdownToRichtext } from '~~/server/utils/markdownToRichtext'
 import { uploadImageToStoryblok } from '~~/server/utils/uploadImageToStoryblok'
+import { TranslationService } from '~~/server/services/TranslationService'
 import { randomUUID } from 'node:crypto'
 
 const STORYBLOK_MAPI_BASE = 'https://mapi.storyblok.com/v1/spaces'
@@ -24,6 +27,8 @@ const DEFAULT_CTA_HREF = '/contact'
 const CTA_LINK_PATTERN = /\[([^\]]+)\]\((\/(?:[a-z]{2}\/)?contact\/?)\)/i
 /** Minimum leftover length (after removing the CTA link) to keep the line as a reassurance paragraph rather than drop it. */
 const MIN_KEPT_REASSURANCE_LENGTH = 20
+/** Queue runs (one per hour) that try to translate a published article before giving up. */
+const MAX_TRANSLATION_ATTEMPTS: number = 3
 
 /**
  * Article domain service: local draft/queue persistence, Storyblok publication,
@@ -443,6 +448,7 @@ export class ArticleService {
           publishedAt: now,
           updatedAt: now,
           error: undefined,
+          translationStatus: record.autoTranslate ? 'pending' : undefined,
         }
         await this.saveRecord(published)
         publishedIds.push(record.id)
@@ -454,8 +460,15 @@ export class ArticleService {
       }
     }
 
+    const translation: QueueTranslationOutcome = await this.translatePendingArticles({
+      storyblokToken: config.storyblokDeliveryApiToken as string,
+      mistralApiKey: config.mistralApiKey as string,
+      githubToken,
+      githubRepo,
+    })
+
     let rebuildNote = ''
-    if (wantsRebuild) {
+    if (wantsRebuild && !translation.translationsPushed) {
       if (githubToken && githubRepo) {
         const rebuild = await this.triggerSiteRebuild(githubToken, githubRepo)
         rebuildNote = rebuild.ok ? ' Rebuild déclenché.' : ` Rebuild non déclenché (${rebuild.statusCode}).`
@@ -468,7 +481,64 @@ export class ArticleService {
       processed: due.length,
       publishedIds,
       failedIds,
-      message: `File traitée : ${publishedIds.length} publié(s), ${failedIds.length} échec(s).${rebuildNote}`,
+      message: `File traitée : ${publishedIds.length} publié(s), ${failedIds.length} échec(s).${translation.note}${rebuildNote}`,
     }
+  }
+
+  /**
+   * Translates into EN and ES every queue-published article still waiting for it, in a single commit.
+   * @param {TranslationCredentials} credentials - Storyblok, Mistral and GitHub credentials.
+   * @returns {Promise<QueueTranslationOutcome>} Whether translation files were pushed, and a note for the queue message.
+   */
+  private static async translatePendingArticles(credentials: TranslationCredentials): Promise<QueueTranslationOutcome> {
+    const pending: ArticleRecord[] = (await this.listRecords()).filter(
+      (record: ArticleRecord): boolean =>
+        record.status === 'published' && record.translationStatus === 'pending' && Boolean(record.fullSlug),
+    )
+    if (pending.length === 0) {
+      return { translationsPushed: false, note: '' }
+    }
+
+    const hasCredentials: boolean = Object.values(credentials).every((value: string): boolean => Boolean(value))
+    if (!hasCredentials) {
+      return {
+        translationsPushed: false,
+        note: ' Traductions en attente : jeton Storyblok, clé Mistral ou accès GitHub manquant.',
+      }
+    }
+
+    try {
+      await TranslationService.translateArticles({
+        ...credentials,
+        fullSlugs: pending.flatMap((record: ArticleRecord): string[] => (record.fullSlug ? [record.fullSlug] : [])),
+        locales: ['en', 'es'],
+      })
+    } catch (error) {
+      const message: string = error instanceof Error ? error.message : 'Unknown error'
+      for (const record of pending) {
+        const attempts: number = (record.translationAttempts ?? 0) + 1
+        await this.saveRecord({
+          ...record,
+          translationStatus: attempts >= MAX_TRANSLATION_ATTEMPTS ? 'failed' : 'pending',
+          translationAttempts: attempts,
+          translationError: message,
+          updatedAt: new Date().toISOString(),
+        })
+      }
+      return {
+        translationsPushed: false,
+        note: ` Traduction EN/ES échouée (${message}), nouvel essai au prochain passage.`,
+      }
+    }
+
+    for (const record of pending) {
+      await this.saveRecord({
+        ...record,
+        translationStatus: 'translated',
+        translationError: undefined,
+        updatedAt: new Date().toISOString(),
+      })
+    }
+    return { translationsPushed: true, note: ` ${pending.length} article(s) traduit(s) en EN et ES.` }
   }
 }

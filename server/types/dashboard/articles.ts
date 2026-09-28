@@ -72,6 +72,9 @@ export type ArticleRecordStatus = 'draft' | 'scheduled' | 'publishing' | 'publis
 /** How the article body was produced. */
 export type ArticleRecordOrigin = 'manual' | 'ai'
 
+/** EN + ES translation of an article published by the queue: pending until pushed, failed after the last retry. */
+export type ArticleTranslationStatus = 'pending' | 'translated' | 'failed'
+
 /**
  * A locally persisted article (draft, queued or published).
  * Source of truth for the editor and the drip queue; stored via useStorage('data').
@@ -105,6 +108,9 @@ export type ArticleRecord = {
   publishedAt?: string
   /** Last error message when status is 'failed'. */
   error?: string
+  translationStatus?: ArticleTranslationStatus
+  translationAttempts?: number
+  translationError?: string
   createdAt: string
   updatedAt: string
 }
@@ -162,6 +168,12 @@ export type ProcessQueueResponse = {
   publishedIds: string[]
   failedIds: string[]
   message: string
+}
+
+/** Outcome of the queue's translation pass: whether files were pushed (the push starts a deployment) and a note for the queue message. */
+export type QueueTranslationOutcome = {
+  translationsPushed: boolean
+  note: string
 }
 
 /** Minimal article shape needed to create a Storyblok blog story. */

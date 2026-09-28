@@ -15,6 +15,8 @@ export type GetFileResult =
   | { ok: true; content: string; sha: string }
   | { ok: false; statusCode: number; message: string }
 
+export type GetRawFileResult = { ok: true; content: string } | { ok: false; statusCode: number; message: string }
+
 export type PutFileParams = {
   token: string
   repo: string
@@ -59,6 +61,27 @@ export async function getGitHubFile(token: string, repo: string, path: string): 
 
   const decoded: string = Buffer.from(data.content, 'base64').toString('utf-8')
   return { ok: true, content: decoded, sha: data.sha }
+}
+
+/**
+ * Get the raw content of a repository file, up to 100 MB (the JSON Contents API returns no content above 1 MB).
+ * @param {string} token - GitHub token.
+ * @param {string} repo - Repository in "owner/repo" form.
+ * @param {string} path - File path in the repository.
+ * @returns {Promise<GetRawFileResult>} The UTF-8 content, or the failing status code and message.
+ */
+export async function getGitHubRawFile(token: string, repo: string, path: string): Promise<GetRawFileResult> {
+  const res: Response = await fetch(`${GITHUB_API_BASE}/repos/${repo}/contents/${path}`, {
+    headers: {
+      Accept: 'application/vnd.github.raw+json',
+      Authorization: `Bearer ${token}`,
+    },
+  })
+  if (!res.ok) {
+    const text: string = await res.text()
+    return { ok: false, statusCode: res.status, message: text || `GitHub API ${res.status}` }
+  }
+  return { ok: true, content: await res.text() }
 }
 
 /**

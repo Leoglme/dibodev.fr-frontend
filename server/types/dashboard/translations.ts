@@ -81,6 +81,34 @@ export type TranslatedArticleFields = {
 
 export type ArticlesTranslationFile = Record<string, TranslatedArticleFields>
 
+/** Metadata of an article translated by Mistral (everything but the richtext body). */
+export type TranslatedArticleMeta = Omit<TranslatedArticleFields, 'content'>
+
+/** Storyblok CDN answer for a single story, with the resolved relations when asked. */
+export type StoryblokStoryResponse<T> = {
+  story?: { content?: T; full_slug?: string }
+  rels?: Array<{ uuid?: string; full_slug?: string }>
+}
+
+/** Content of a published story and the full slug of each resolved relation, keyed by uuid. */
+export type PublishedStory = {
+  content: Record<string, unknown>
+  relsSlugMap: Record<string, string>
+}
+
+/** Credentials to read Storyblok, call Mistral and push the translation files to GitHub. */
+export type TranslationCredentials = {
+  storyblokToken: string
+  mistralApiKey: string
+  githubToken: string
+  githubRepo: string
+}
+
+export type TranslateArticlesParams = TranslationCredentials & {
+  fullSlugs: string[]
+  locales: TranslationTargetLocale[]
+}
+
 /** Shape of sectors.en.json / sectors.es.json: fullSlug → translated fields. */
 export type TranslatedSectorFields = {
   title: string

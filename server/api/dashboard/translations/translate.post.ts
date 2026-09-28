@@ -12,33 +12,21 @@ import {
 import { mistralGenerate } from '~~/server/utils/mistral'
 import { extractRichtextTexts, injectRichtextTranslations } from '~~/server/utils/translationsRichtext'
 import { translateTextSegments } from '~~/server/utils/translateTextSegments'
-import type { TranslationTargetLanguage } from '~~/server/utils/translateTextSegments'
 import { richtextToMarkdown } from '~~/server/utils/richtextToMarkdown'
+import { TranslationService } from '~~/server/services/TranslationService'
 import type {
   TranslatableEntityType,
   TranslateBody,
   TranslateResponse,
   TranslationTargetLocale,
   TranslatedProjectFields,
-  TranslatedArticleFields,
   TranslatedSectorFields,
   TranslatedCategoryFields,
   ProjectsTranslationFile,
-  ArticlesTranslationFile,
   SectorsTranslationFile,
   CategoriesTranslationFile,
   StoryblokRichtextNode,
 } from '~~/server/types/dashboard/translations'
-
-const STORYBLOK_CDN_BASE: string = 'https://api.storyblok.com/v2/cdn'
-const TRANSLATIONS_PATH: string = 'content/translations'
-/** Free-tier translation model with a high token-per-minute allowance (937k), well above mistral-small's throttled 20k. */
-const TRANSLATION_MODEL: string = 'ministral-14b-latest'
-
-type StoryblokStoryResponse<T> = {
-  story?: { content?: T; full_slug?: string }
-  rels?: Array<{ uuid?: string; full_slug?: string }>
-}
 
 function lastSegment(path: string): string | null {
   const trimmed = String(path)
@@ -50,28 +38,6 @@ function lastSegment(path: string): string | null {
   return last || null
 }
 
-function buildRelsSlugMap(rels: StoryblokStoryResponse<unknown>['rels']): Record<string, string> {
-  const map: Record<string, string> = {}
-  if (!Array.isArray(rels)) return map
-  for (const s of rels) {
-    if (s?.uuid && typeof s.full_slug === 'string') map[s.uuid] = s.full_slug
-  }
-  return map
-}
-
-function normalizeStringList(value: string[] | string | undefined): string[] {
-  if (Array.isArray(value)) {
-    return value.map((v: string): string => String(v).trim()).filter((v: string): boolean => v.length > 0)
-  }
-  if (typeof value === 'string') {
-    return value
-      .split(/[\n,]+/g)
-      .map((v: string): string => v.trim())
-      .filter((v: string): boolean => v.length > 0)
-  }
-  return []
-}
-
 function getEffectiveProjectContent(content: Record<string, unknown>): Record<string, unknown> {
   const body: unknown = content.body
   if (Array.isArray(body) && body.length > 0 && body[0] != null && typeof body[0] === 'object') {
@@ -81,36 +47,6 @@ function getEffectiveProjectContent(content: Record<string, unknown>): Record<st
     }
   }
   return content
-}
-
-async function fetchStoryBySlug(
-  token: string,
-  fullSlug: string,
-  resolveRelations?: string,
-): Promise<{ content: Record<string, unknown>; relsSlugMap: Record<string, string> }> {
-  let url: string = `${STORYBLOK_CDN_BASE}/stories/${encodeURIComponent(fullSlug)}?token=${token}&version=published`
-  if (resolveRelations) {
-    url += `&resolve_relations=${encodeURIComponent(resolveRelations)}`
-  }
-  const res: Response = await fetch(url)
-  if (!res.ok) {
-    throw createError({
-      statusCode: 502,
-      statusMessage: `Storyblok story not found: ${fullSlug}`,
-    })
-  }
-  const data: StoryblokStoryResponse<Record<string, unknown>> = (await res.json()) as StoryblokStoryResponse<
-    Record<string, unknown>
-  >
-  const content: Record<string, unknown> | undefined = data.story?.content as Record<string, unknown> | undefined
-  if (!content || typeof content !== 'object') {
-    throw createError({
-      statusCode: 502,
-      statusMessage: 'Invalid story content',
-    })
-  }
-  const relsSlugMap: Record<string, string> = buildRelsSlugMap(data.rels)
-  return { content, relsSlugMap }
 }
 
 const PROJECT_SYSTEM_EN: string = `You are a professional translator. Translate the following French project fields to English.
@@ -134,14 +70,6 @@ Return ONLY a valid JSON object with these exact keys: name, shortDescription, l
 /** Markdown link syntax: the source text never contains links, so any link in a translation is invented. */
 const MARKDOWN_LINK_REGEX: RegExp = /\[([^\]]+)\]\([^)]+\)/g
 
-const ARTICLE_META_SYSTEM_EN: string = `You are a professional translator. Translate the following French article metadata to English. 
-Return ONLY a valid JSON object with these exact keys: title, excerpt, metaTitle, metaDescription, tags.
-tags must be a JSON array of strings. Preserve tone.`
-
-const ARTICLE_META_SYSTEM_ES: string = `You are a professional translator. Translate the following French article metadata to Spanish. 
-Return ONLY a valid JSON object with these exact keys: title, excerpt, metaTitle, metaDescription, tags.
-tags must be a JSON array of strings. Preserve tone.`
-
 const SECTOR_PAGE_SYSTEM_EN: string = `You are a professional translator. Translate the following French sector page fields to English. 
 Return ONLY a valid JSON object with these exact keys: title, description, metaTitle, metaDescription.
 Preserve tone and terminology (professional, SEO).`
@@ -160,20 +88,6 @@ Preserve tone and terminology (professional, SEO).`
 
 function getProjectSystemInstruction(locale: TranslationTargetLocale): string {
   return locale === 'en' ? PROJECT_SYSTEM_EN : PROJECT_SYSTEM_ES
-}
-
-function getArticleMetaSystemInstruction(locale: TranslationTargetLocale): string {
-  return locale === 'en' ? ARTICLE_META_SYSTEM_EN : ARTICLE_META_SYSTEM_ES
-}
-
-/**
- * Returns the language name the segment translator expects for a target locale.
- *
- * @param {TranslationTargetLocale} locale - The target locale (en or es).
- * @returns {TranslationTargetLanguage} The language name.
- */
-function getTargetLanguage(locale: TranslationTargetLocale): TranslationTargetLanguage {
-  return locale === 'en' ? 'English' : 'Spanish'
 }
 
 function getSectorPageSystemInstruction(locale: TranslationTargetLocale): string {
@@ -246,7 +160,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
   }
 
   if (entityType === 'project') {
-    const { content, relsSlugMap } = await fetchStoryBySlug(
+    const { content, relsSlugMap } = await TranslationService.fetchPublishedStory(
       storyblokToken,
       fullSlug,
       'project.sectors,project.categories',
@@ -268,7 +182,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
     }
     const metaTitle: string = String(effective.metaTitle ?? '')
     const metaDescription: string = String(effective.metaDescription ?? '')
-    const rawCategories: string[] = normalizeStringList(effective.categories as string[] | string)
+    const rawCategories: string[] = TranslationService.normalizeStringList(effective.categories as string[] | string)
     const categories: string[] = rawCategories
       .map((uuidOrKey: string) => {
         const fullSlugFromRels = relsSlugMap[uuidOrKey]
@@ -276,7 +190,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
         return uuidOrKey
       })
       .filter(Boolean)
-    const rawSectors: string[] = normalizeStringList(effective.sectors as string[] | string)
+    const rawSectors: string[] = TranslationService.normalizeStringList(effective.sectors as string[] | string)
     const sectors: string[] = rawSectors
       .map((uuidOrKey: string) => {
         const fullSlugFromRels = relsSlugMap[uuidOrKey]
@@ -284,8 +198,8 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
         return uuidOrKey
       })
       .filter(Boolean)
-    const stack: string[] = normalizeStringList(effective.stack as string[] | string)
-    const tags: string[] = normalizeStringList(effective.tags as string[] | string)
+    const stack: string[] = TranslationService.normalizeStringList(effective.stack as string[] | string)
+    const tags: string[] = TranslationService.normalizeStringList(effective.tags as string[] | string)
     // Stack names are technology names: they are never translated (translating them broke the stack icons).
     const userMessage: string = JSON.stringify({
       name,
@@ -302,7 +216,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
     for (const locale of locales) {
       const { content: raw }: { content: string } = await mistralGenerate({
         apiKey: mistralApiKey,
-        model: TRANSLATION_MODEL,
+        model: TranslationService.MODEL,
         systemInstruction: getProjectSystemInstruction(locale),
         userMessage,
         temperature: 0.3,
@@ -328,7 +242,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
           statusMessage: `Mistral returned invalid JSON for project translation (${locale}).`,
         })
       }
-      const filePath: string = `${TRANSLATIONS_PATH}/projects.${locale}.json`
+      const filePath: string = `${TranslationService.FILES_PATH}/projects.${locale}.json`
       const existing: GetFileResult = await getGitHubFile(githubToken, githubRepo, filePath)
       const current: ProjectsTranslationFile = existing.ok
         ? (JSON.parse(existing.content) as ProjectsTranslationFile)
@@ -366,114 +280,21 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
   }
 
   if (entityType === 'article') {
-    const { content } = await fetchStoryBySlug(storyblokToken, fullSlug)
-    const seo: { metaTitle?: string; metaDescription?: string } | undefined = content.seo as
-      | { metaTitle?: string; metaDescription?: string }
-      | undefined
-    const title: string = String(content.title ?? '')
-    const excerpt: string = String(content.excerpt ?? '')
-    const metaTitle: string = String(content.metaTitle ?? seo?.metaTitle ?? '')
-    const metaDescription: string = String(content.metaDescription ?? seo?.metaDescription ?? '')
-    const tags: string[] = normalizeStringList(content.tags as string[] | string)
-    const richtext: { type: string; content?: StoryblokRichtextNode[] } | undefined = content.content as
-      | { type: string; content?: StoryblokRichtextNode[] }
-      | undefined
-    const contentTexts: string[] = richtext ? extractRichtextTexts(richtext as StoryblokRichtextNode) : []
-    const metaUserMessage: string = JSON.stringify({ title, excerpt, metaTitle, metaDescription, tags })
-
-    type TranslatedArticleMeta = {
-      title: string
-      excerpt: string
-      metaTitle: string
-      metaDescription: string
-      tags: string[]
-    }
-
-    const articleFilesToPush: PutGitHubFilesItem[] = []
-    for (const locale of locales) {
-      const { content: metaRaw }: { content: string } = await mistralGenerate({
-        apiKey: mistralApiKey,
-        model: TRANSLATION_MODEL,
-        systemInstruction: getArticleMetaSystemInstruction(locale),
-        userMessage: metaUserMessage,
-        temperature: 0.3,
-        maxTokens: 2000,
-      })
-      let translatedMeta: TranslatedArticleMeta
-      try {
-        const parsed: Record<string, unknown> = JSON.parse(metaRaw) as Record<string, unknown>
-        translatedMeta = {
-          title: String(parsed.title ?? ''),
-          excerpt: String(parsed.excerpt ?? ''),
-          metaTitle: String(parsed.metaTitle ?? ''),
-          metaDescription: String(parsed.metaDescription ?? ''),
-          tags: Array.isArray(parsed.tags) ? (parsed.tags as string[]).map(String) : [],
-        }
-      } catch {
-        throw createError({
-          statusCode: 502,
-          statusMessage: `Mistral returned invalid JSON for article metadata (${locale}).`,
-        })
-      }
-
-      const translatedContentTexts: string[] = await translateTextSegments({
-        apiKey: mistralApiKey,
-        model: TRANSLATION_MODEL,
-        targetLanguage: getTargetLanguage(locale),
-        texts: contentTexts,
-        errorLabel: `article content (${locale})`,
-      })
-
-      let translatedRichtext: { type: string; content?: StoryblokRichtextNode[] }
-      if (richtext) {
-        const clone: StoryblokRichtextNode = JSON.parse(JSON.stringify(richtext)) as StoryblokRichtextNode
-        injectRichtextTranslations(clone, translatedContentTexts)
-        translatedRichtext = { type: clone.type, content: clone.content }
-      } else {
-        translatedRichtext = { type: 'doc', content: [] }
-      }
-
-      const translatedArticle: TranslatedArticleFields = { ...translatedMeta, content: translatedRichtext }
-      const filePath: string = `${TRANSLATIONS_PATH}/articles.${locale}.json`
-      const existing: GetFileResult = await getGitHubFile(githubToken, githubRepo, filePath)
-      const current: ArticlesTranslationFile = existing.ok
-        ? (JSON.parse(existing.content) as ArticlesTranslationFile)
-        : {}
-      const updated: ArticlesTranslationFile = { ...current, [fullSlug]: translatedArticle }
-      articleFilesToPush.push({ path: filePath, content: JSON.stringify(updated, null, 2) })
-    }
-
-    if (articleFilesToPush.length === 1) {
-      const existing: GetFileResult = await getGitHubFile(githubToken, githubRepo, articleFilesToPush[0]!.path)
-      const putRes: PutFileResult = await putGitHubFile({
-        token: githubToken,
-        repo: githubRepo,
-        path: articleFilesToPush[0]!.path,
-        content: articleFilesToPush[0]!.content,
-        message: `chore(translations): update article ${fullSlug} → ${locales[0]}`,
-        sha: existing.ok ? existing.sha : undefined,
-      })
-      if (!putRes.ok) {
-        throw createError({ statusCode: 502, statusMessage: putRes.message || 'Failed to push to GitHub' })
-      }
-    } else {
-      const putRes: Awaited<ReturnType<typeof putGitHubFiles>> = await putGitHubFiles({
-        token: githubToken,
-        repo: githubRepo,
-        message: `chore(translations): update article ${fullSlug} → EN + ES`,
-        files: articleFilesToPush,
-      })
-      if (!putRes.ok) {
-        throw createError({ statusCode: 502, statusMessage: putRes.message || 'Failed to push to GitHub' })
-      }
-    }
+    await TranslationService.translateArticles({
+      fullSlugs: [fullSlug],
+      locales,
+      storyblokToken,
+      mistralApiKey,
+      githubToken,
+      githubRepo,
+    })
     const localeLabel: string = locales.length === 2 ? 'EN et ES' : locales[0] === 'en' ? 'EN' : 'ES'
     return { ok: true, message: `Article ${fullSlug} traduit en ${localeLabel}.` }
   }
 
   // ——— sector ———
   if (entityType === 'sector') {
-    const { content } = await fetchStoryBySlug(storyblokToken, fullSlug)
+    const { content } = await TranslationService.fetchPublishedStory(storyblokToken, fullSlug)
     const effective: Record<string, unknown> = getEffectiveSectorOrCategoryContent(content)
     const title: string = String(effective.title ?? '')
     const description: string = String(effective.description ?? '')
@@ -493,7 +314,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
     for (const locale of locales) {
       const { content: metaRaw }: { content: string } = await mistralGenerate({
         apiKey: mistralApiKey,
-        model: TRANSLATION_MODEL,
+        model: TranslationService.MODEL,
         systemInstruction: getSectorPageSystemInstruction(locale),
         userMessage: metaUserMessage,
         temperature: 0.3,
@@ -519,8 +340,8 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
       if (introDoc && introTexts.length > 0) {
         const translatedIntroTexts: string[] = await translateTextSegments({
           apiKey: mistralApiKey,
-          model: TRANSLATION_MODEL,
-          targetLanguage: getTargetLanguage(locale),
+          model: TranslationService.MODEL,
+          targetLanguage: TranslationService.getTargetLanguage(locale),
           texts: introTexts,
           errorLabel: `sector intro (${locale})`,
         })
@@ -530,7 +351,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
       }
 
       const translated: TranslatedSectorFields = { ...translatedMeta, intro: translatedIntro }
-      const filePath: string = `${TRANSLATIONS_PATH}/sectors.${locale}.json`
+      const filePath: string = `${TranslationService.FILES_PATH}/sectors.${locale}.json`
       const existing: GetFileResult = await getGitHubFile(githubToken, githubRepo, filePath)
       const current: SectorsTranslationFile = existing.ok
         ? (JSON.parse(existing.content) as SectorsTranslationFile)
@@ -567,7 +388,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
 
   // ——— category ———
   if (entityType === 'category') {
-    const { content } = await fetchStoryBySlug(storyblokToken, fullSlug)
+    const { content } = await TranslationService.fetchPublishedStory(storyblokToken, fullSlug)
     const effective: Record<string, unknown> = getEffectiveSectorOrCategoryContent(content)
     const title: string = String(effective.title ?? '')
     const description: string = String(effective.description ?? '')
@@ -587,7 +408,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
     for (const locale of locales) {
       const { content: metaRaw }: { content: string } = await mistralGenerate({
         apiKey: mistralApiKey,
-        model: TRANSLATION_MODEL,
+        model: TranslationService.MODEL,
         systemInstruction: getCategoryPageSystemInstruction(locale),
         userMessage: metaUserMessage,
         temperature: 0.3,
@@ -613,8 +434,8 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
       if (introDoc && introTexts.length > 0) {
         const translatedIntroTexts: string[] = await translateTextSegments({
           apiKey: mistralApiKey,
-          model: TRANSLATION_MODEL,
-          targetLanguage: getTargetLanguage(locale),
+          model: TranslationService.MODEL,
+          targetLanguage: TranslationService.getTargetLanguage(locale),
           texts: introTexts,
           errorLabel: `category intro (${locale})`,
         })
@@ -624,7 +445,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
       }
 
       const translated: TranslatedCategoryFields = { ...translatedMeta, intro: translatedIntro }
-      const filePath: string = `${TRANSLATIONS_PATH}/categories.${locale}.json`
+      const filePath: string = `${TranslationService.FILES_PATH}/categories.${locale}.json`
       const existing: GetFileResult = await getGitHubFile(githubToken, githubRepo, filePath)
       const current: CategoriesTranslationFile = existing.ok
         ? (JSON.parse(existing.content) as CategoriesTranslationFile)
