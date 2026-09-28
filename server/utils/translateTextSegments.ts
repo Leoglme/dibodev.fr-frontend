@@ -9,6 +9,8 @@ const CHARACTERS_PER_BATCH: number = 5000
 const ATTEMPTS_PER_BATCH: number = 2
 const LEADING_SPACES_REGEX: RegExp = /^\s+/
 const TRAILING_SPACES_REGEX: RegExp = /\s+$/
+/** Markdown asterisks Mistral adds around bold or italic fragments, whose formatting already lives in the rich text marks. */
+const MARKDOWN_ASTERISKS_REGEX: RegExp = /\*+/g
 
 export type TranslationTargetLanguage = 'English' | 'Spanish'
 
@@ -29,7 +31,8 @@ export type TranslateTextSegmentsParams = {
 function buildSystemInstruction(targetLanguage: TranslationTargetLanguage): string {
   return `You are a professional translator. You will receive a JSON object {"segments": {"<id>": "<French text>"}} holding the text segments of a blog article, in order.
 Translate every segment to ${targetLanguage}. Return ONLY a valid JSON object {"segments": {"<id>": "<${targetLanguage} translation>"}} with exactly the same ids.
-Never merge, split or skip a segment: a segment can be a fragment of a sentence (bold or link text), translate it as a fragment. Preserve tone.`
+Never merge, split or skip a segment: a segment can be a fragment of a sentence (bold or link text), translate it as a fragment. Preserve tone.
+Return plain text: never add Markdown such as ** or *, the formatting is kept outside the text.`
 }
 
 /**
@@ -71,6 +74,17 @@ function keepSurroundingSpaces(source: string, translation: string): string {
 }
 
 /**
+ * Removes the asterisks Mistral adds when the French segment has none, since they would show on the page.
+ *
+ * @param {string} source - The French segment.
+ * @param {string} translation - Its translation.
+ * @returns {string} The translation without the added asterisks.
+ */
+function removeAddedAsterisks(source: string, translation: string): string {
+  return source.includes('*') ? translation : translation.replace(MARKDOWN_ASTERISKS_REGEX, '')
+}
+
+/**
  * Translates one batch and returns its translations only when Mistral answers every id of the batch.
  *
  * @param {TranslateTextSegmentsParams} params - API key, model and target language.
@@ -98,7 +112,7 @@ async function translateBatch(params: TranslateTextSegmentsParams, batch: string
     for (const [index, source] of batch.entries()) {
       const translation: unknown = answer[`s${index}`]
       if (typeof translation !== 'string' || translation.trim() === '') return null
-      translations.push(keepSurroundingSpaces(source, translation))
+      translations.push(keepSurroundingSpaces(source, removeAddedAsterisks(source, translation)))
     }
     return translations
   } catch {
