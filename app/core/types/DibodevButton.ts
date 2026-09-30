@@ -6,6 +6,12 @@ export const dibodevButtonSizes: string[] = ['xs', 'sm', 'md', 'lg', 'xl', '2xl'
  */
 export type DibodevButtonSize = (typeof dibodevButtonSizes)[number]
 
+/** Default background of the primary button: the brand violet (readable with white text). */
+export const DIBODEV_BUTTON_DEFAULT_BACKGROUND_COLOR: string = '#6f5fe0'
+
+/** Default hover background of the primary button. */
+export const DIBODEV_BUTTON_DEFAULT_BACKGROUND_HOVER_COLOR: string = '#5b4bd0'
+
 /**
  * Type definitions for the dibodev button component props
  * @type {DibodevButtonProps}
@@ -16,7 +22,7 @@ export type DibodevButtonSize = (typeof dibodevButtonSizes)[number]
  * @property {string | null} icon - The icon to display
  * @property {'left' | 'right' | null} iconPosition - The icon position
  * @property {DibodevButtonSize} size - The button size
- * @property {boolean} outlined - Whether the button is outlined
+ * @property {boolean} outlined - Whether the button is outlined (transparent background, ink border)
  */
 export type DibodevButtonProps = {
   to?: string | null

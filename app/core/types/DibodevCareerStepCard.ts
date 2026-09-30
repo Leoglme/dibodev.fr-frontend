@@ -7,6 +7,8 @@ export type DibodevCareerStep = {
   highlights: string[]
   technologies: string[]
   monogram: string
+  /** Logo of the organisation, shown instead of the monogram when set. */
+  logoSrc: string | null
   isCurrent: boolean
 }
 

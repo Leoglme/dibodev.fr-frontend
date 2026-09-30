@@ -4,17 +4,19 @@
       <button
         :id="id"
         type="button"
-        class="flex h-12 w-full cursor-pointer items-center justify-between rounded-md border-2 border-transparent bg-gray-600 pr-10 pl-3 text-left text-base text-gray-100 transition-colors hover:border-gray-300"
+        class="flex h-11 w-full min-w-[88px] cursor-pointer items-center justify-between rounded-lg border border-gray-400 bg-white pr-10 pl-3 text-left text-base text-gray-100 transition-colors hover:border-gray-100"
         :aria-expanded="isOpen"
         :aria-haspopup="true"
         :aria-label="`${currentLocaleLabel} — ${$t('accessibility.chooseLanguage')}`"
         @click="isOpen = !isOpen"
       >
         <span>{{ currentLocaleLabel }}</span>
-        <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+        <div class="text-muted pointer-events-none absolute inset-y-0 right-3 flex items-center">
           <DibodevIcon
             name="ChevronDown"
             mode="stroke"
+            :width="20"
+            :height="20"
             :class="{ 'rotate-180': isOpen }"
             class="transition-transform"
           />
@@ -24,7 +26,7 @@
       <Transition name="dropdown">
         <div
           v-show="isOpen"
-          class="absolute top-full right-0 left-0 z-10 mt-1 rounded-md border-2 border-gray-300 bg-gray-600 py-1 shadow-lg"
+          class="absolute top-full right-0 left-0 z-10 mt-1 rounded-lg border border-gray-300 bg-white py-1 shadow-lg"
           role="menu"
         >
           <template v-for="opt in options" :key="opt.value">
@@ -32,7 +34,7 @@
               v-if="!isCurrentLocale(opt.value)"
               :to="localePathFor(opt.value)"
               role="menuitem"
-              class="block px-3 py-2 text-base text-gray-100 hover:bg-gray-500"
+              class="block px-3 py-2 text-base text-gray-200 hover:bg-gray-800 hover:text-gray-100"
               @click="onSelectLocale(opt.value)"
             >
               {{ opt.label }}
@@ -41,7 +43,7 @@
               v-else
               role="menuitem"
               aria-current="page"
-              class="block px-3 py-2 text-base font-semibold text-gray-100"
+              class="block px-3 py-2 text-base font-medium text-gray-100"
             >
               {{ opt.label }}
             </span>
@@ -53,14 +55,18 @@
 </template>
 
 <script lang="ts" setup>
-import type { PropType } from 'vue'
+import type { ComputedRef, PropType, Ref } from 'vue'
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
+import type { DibodevLanguageSwitcherProps } from '~/core/types/DibodevLanguageSwitcher'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
-const props = defineProps({
+/**
+ * Locale switcher: current locale as a button, the others as crawlable links.
+ */
+const props: DibodevLanguageSwitcherProps = defineProps({
   options: {
     type: Array as PropType<DibodevSelectOption[]>,
     required: true,
@@ -72,21 +78,33 @@ const { locale } = useI18n()
 const switchLocalePathWithSlug = useSwitchLocalePathWithSlug()
 const { track } = useTracking()
 
-const isOpen = ref(false)
-const rootRef = ref<HTMLElement | null>(null)
+const isOpen: Ref<boolean> = ref(false)
+const rootRef: Ref<HTMLElement | null> = ref<HTMLElement | null>(null)
 
-const currentLocaleLabel = computed((): string => {
-  const opt = props.options.find((o) => o.value === locale.value)
+const currentLocaleLabel: ComputedRef<string> = computed((): string => {
+  const opt: DibodevSelectOption | undefined = props.options.find(
+    (option: DibodevSelectOption): boolean => option.value === locale.value,
+  )
   return opt?.label ?? props.options[0]?.label ?? ''
 })
 
+/**
+ * Localized path of the current page in another locale.
+ * @param {string | number} value - The target locale code.
+ * @returns {string} The path.
+ */
 const localePathFor = (value: string | number): string => {
-  const code = typeof value === 'string' ? value : String(value)
+  const code: string = typeof value === 'string' ? value : String(value)
   return switchLocalePathWithSlug(code)
 }
 
+/**
+ * Whether the option is the active locale.
+ * @param {string | number} value - The locale code.
+ * @returns {boolean} True when active.
+ */
 const isCurrentLocale = (value: string | number): boolean => {
-  const code = typeof value === 'string' ? value : String(value)
+  const code: string = typeof value === 'string' ? value : String(value)
   return locale.value === code
 }
 
@@ -101,18 +119,23 @@ function onSelectLocale(value: string | number): void {
   isOpen.value = false
 }
 
+/**
+ * Close the menu when clicking outside of it.
+ * @param {MouseEvent} event - The document click event.
+ * @returns {void}
+ */
 const closeOnClickOutside = (event: MouseEvent): void => {
-  const target = event.target as Node
+  const target: Node = event.target as Node
   if (rootRef.value && !rootRef.value.contains(target)) {
     isOpen.value = false
   }
 }
 
-onMounted(() => {
+onMounted((): void => {
   document.addEventListener('click', closeOnClickOutside)
 })
 
-onUnmounted(() => {
+onUnmounted((): void => {
   document.removeEventListener('click', closeOnClickOutside)
 })
 </script>

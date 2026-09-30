@@ -1,9 +1,6 @@
 <template>
-  <figure class="relative w-28 sm:w-36 lg:mx-auto lg:w-full lg:max-w-md">
-    <div class="bg-primary/30 absolute -inset-8 hidden rounded-full blur-3xl lg:block" aria-hidden="true" />
-    <div
-      class="border-primary-light/60 relative aspect-square overflow-hidden rounded-full border-2 bg-black lg:aspect-4/5 lg:rounded-3xl lg:border-gray-600"
-    >
+  <figure class="relative mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-md">
+    <div class="relative aspect-[4/5] overflow-hidden rounded-xl border border-gray-300 bg-gray-800">
       <img
         :src="props.src"
         :srcset="props.srcset || undefined"
@@ -18,9 +15,9 @@
     </div>
     <figcaption
       v-if="props.name"
-      class="absolute inset-x-4 bottom-4 hidden gap-0.5 rounded-2xl border border-gray-600 bg-gray-900/75 px-5 py-4 backdrop-blur-md lg:grid"
+      class="absolute inset-x-4 bottom-4 grid gap-0.5 rounded-lg border border-gray-300 bg-white/95 px-4 py-3"
     >
-      <span class="text-base font-semibold text-gray-100">{{ props.name }}</span>
+      <span class="text-base font-medium text-gray-100">{{ props.name }}</span>
       <span v-if="props.caption" class="text-sm text-gray-200">{{ props.caption }}</span>
     </figcaption>
   </figure>
@@ -30,6 +27,9 @@
 import type { PropType } from 'vue'
 import type { DibodevFramedPortraitProps } from '~/core/types/DibodevFramedPortrait'
 
+/**
+ * Portrait in a light frame with an optional name and caption card.
+ */
 const props: DibodevFramedPortraitProps = defineProps({
   src: {
     type: String as PropType<string>,

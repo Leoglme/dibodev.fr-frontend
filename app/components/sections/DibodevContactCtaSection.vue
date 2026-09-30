@@ -1,67 +1,94 @@
 <template>
-  <div class="py-32 sm:py-40">
-    <section
-      data-aos="fade-up"
-      data-aos-duration="600"
-      class="relative z-2 flex w-full max-w-screen items-center justify-center px-6 py-16 sm:px-8 sm:py-24"
+  <section id="contact-cta" class="px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
+    <div
+      class="bg-accent-tint mx-auto grid w-full max-w-7xl justify-items-center gap-6 rounded-2xl px-6 py-14 text-center sm:px-12 sm:py-20"
     >
-      <div
-        class="border-primary-light grid w-full max-w-3xl gap-6 rounded-2xl border-2 bg-gray-400 px-6 py-6 sm:gap-8 sm:px-8 sm:py-6"
-      >
-        <div class="grid gap-3 sm:gap-4">
-          <h2 class="text-2xl font-medium text-gray-100 sm:text-3xl">
-            {{ displayTitle }}
-          </h2>
-          <p class="text-sm leading-7 font-normal text-gray-200">
-            {{ displayDescription }}
-          </p>
-        </div>
-        <DibodevButton
-          icon="Mail"
-          iconPosition="right"
-          :to="localePath('/contact')"
-          size="lg"
-          class="w-full"
-          @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'contact_cta_section' })"
+      <div class="grid max-w-2xl justify-items-center gap-4">
+        <h2
+          class="text-[28px] leading-[1.15] font-medium tracking-[-0.01em] text-gray-100 sm:text-[36px] lg:text-[40px]"
         >
-          {{ displayCtaText }}
-        </DibodevButton>
+          <DibodevHyphenSafeText :text="displayTitle" />
+        </h2>
+        <p class="max-w-[560px] text-[17px] leading-7 text-gray-200">
+          {{ displayDescription }}
+        </p>
       </div>
-    </section>
-  </div>
+
+      <DibodevButton
+        :to="localePath('/contact')"
+        size="lg"
+        class="w-full sm:w-auto"
+        @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'contact_cta_section' })"
+      >
+        {{ displayCtaText }}
+      </DibodevButton>
+
+      <ul class="flex flex-col items-center gap-2 text-[15px] text-gray-200 sm:flex-row sm:flex-wrap sm:justify-center">
+        <li>
+          <a
+            :href="`mailto:${CONTACT_EMAIL}`"
+            class="hover:text-primary font-medium text-gray-100 transition-colors"
+            @click="track(TRACKING_EVENTS.contactEmail, { location: 'contact_cta_section' })"
+          >
+            {{ CONTACT_EMAIL }}
+          </a>
+        </li>
+        <li class="text-muted hidden sm:block" aria-hidden="true">·</li>
+        <li>
+          <a
+            :href="`tel:${PHONE_E164}`"
+            class="hover:text-primary font-medium text-gray-100 transition-colors"
+            @click="track(TRACKING_EVENTS.contactPhone, { location: 'contact_cta_section' })"
+          >
+            {{ PHONE_DISPLAY }}
+          </a>
+        </li>
+        <li class="text-muted hidden sm:block" aria-hidden="true">·</li>
+        <li>{{ $t('footer.location') }}</li>
+      </ul>
+    </div>
+  </section>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import type { ComputedRef } from 'vue'
+import type { ComputedRef, PropType } from 'vue'
+import type { DibodevContactCtaSectionProps } from '~/core/types/DibodevContactCtaSection'
 import DibodevButton from '~/components/core/DibodevButton.vue'
+import DibodevHyphenSafeText from '~/components/ui/DibodevHyphenSafeText.vue'
+import { CONTACT_EMAIL, PHONE_DISPLAY, PHONE_E164 } from '~/config/contact'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
-const props = withDefaults(
-  defineProps<{
-    title?: string
-    description?: string
-    ctaText?: string
-  }>(),
-  {
-    title: '',
-    description: '',
-    ctaText: '',
+/**
+ * Centred lavender call-to-action block placed at the bottom of the pages: title, intro, button and contact line.
+ */
+const props: DibodevContactCtaSectionProps = defineProps({
+  title: {
+    type: String as PropType<string>,
+    default: '',
   },
-)
+  description: {
+    type: String as PropType<string>,
+    default: '',
+  },
+  ctaText: {
+    type: String as PropType<string>,
+    default: '',
+  },
+})
 
 const { t } = useI18n()
 const localePath = useLocalePath()
 const { track } = useTracking()
 
 const displayTitle: ComputedRef<string> = computed((): string =>
-  props.title?.trim() ? props.title : t('blog.cta.title'),
+  props.title.trim() ? props.title : t('blog.cta.title'),
 )
 const displayDescription: ComputedRef<string> = computed((): string =>
-  props.description?.trim() ? props.description : t('blog.cta.description'),
+  props.description.trim() ? props.description : t('blog.cta.description'),
 )
 const displayCtaText: ComputedRef<string> = computed((): string =>
-  props.ctaText?.trim() ? props.ctaText : t('blog.cta.ctaText'),
+  props.ctaText.trim() ? props.ctaText : t('blog.cta.ctaText'),
 )
 </script>

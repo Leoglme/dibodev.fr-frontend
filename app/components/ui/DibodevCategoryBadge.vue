@@ -6,8 +6,9 @@
 <script setup lang="ts">
 import DibodevBadge from '~/components/ui/DibodevBadge.vue'
 import { computed } from 'vue'
-import type { ComputedRef } from 'vue'
+import type { ComputedRef, PropType } from 'vue'
 import type { DibodevBadgeSize } from '~/core/types/DibodevBadge'
+import type { DibodevCategoryBadgeProps } from '~/core/types/DibodevCategoryBadge'
 import type { DibodevProjectCategory } from '~/core/types/DibodevProject'
 import { CATEGORY_KEYS } from '~/core/constants/projectEnums'
 import type { CategoryKey } from '~/core/constants/projectEnums'
@@ -24,18 +25,27 @@ const categoryKeyColors: Record<CategoryKey, { color: string; backgroundColor: s
   ia: { color: '#FF8C00', backgroundColor: '#FFE4B5' },
 }
 
+/**
+ * Whether a string is one of the known category keys.
+ * @param {string} v - The value to test.
+ * @returns {boolean} True when it is a category key.
+ */
 const isCategoryKey = (v: string): v is CategoryKey => (CATEGORY_KEYS as readonly string[]).includes(v)
 
 /* PROPS */
-const props = withDefaults(
-  defineProps<{
-    category: string
-    size?: DibodevBadgeSize
-  }>(),
-  {
-    size: 'md',
+/**
+ * Coloured badge of a project category (known key translated, otherwise the free label).
+ */
+const props: DibodevCategoryBadgeProps = defineProps({
+  category: {
+    type: String as PropType<string>,
+    required: true,
   },
-)
+  size: {
+    type: String as PropType<DibodevBadgeSize>,
+    default: 'md',
+  },
+})
 
 /* DATAS */
 const categories: DibodevProjectCategory[] = [
@@ -118,13 +128,17 @@ const displayLabel: ComputedRef<string> = computed((): string => {
 
 const categoryColor: ComputedRef<string> = computed((): string => {
   if (isCategoryKey(props.category)) return categoryKeyColors[props.category]?.color ?? '#2711BB'
-  const cat = categories.find((c) => c.name === props.category)
+  const cat: DibodevProjectCategory | undefined = categories.find(
+    (c: DibodevProjectCategory): boolean => c.name === props.category,
+  )
   return cat ? cat.color : '#2711BB'
 })
 
 const categoryBackgroundColor: ComputedRef<string> = computed((): string => {
   if (isCategoryKey(props.category)) return categoryKeyColors[props.category]?.backgroundColor ?? '#D6D0FB'
-  const cat = categories.find((c) => c.name === props.category)
+  const cat: DibodevProjectCategory | undefined = categories.find(
+    (c: DibodevProjectCategory): boolean => c.name === props.category,
+  )
   return cat ? cat.backgroundColor : '#D6D0FB'
 })
 </script>

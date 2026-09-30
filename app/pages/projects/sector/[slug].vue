@@ -1,34 +1,51 @@
 <template>
-  <div class="relative z-2 flex min-h-screen w-screen max-w-screen flex-col">
-    <!-- Même landing que la page projets, avec contenu secteur (titre + description Storyblok) -->
+  <div class="relative flex w-full flex-col">
     <DibodevLandingSection
-      v-if="sectorTitleFromCms"
+      :breadcrumbs="breadcrumbs"
       :title="sectorPageTitle"
       :description="sectorPageDescription"
       :ctaText="$t('projects.landing.cta')"
       ctaTarget="#projects"
-    />
-    <DibodevLandingSection
-      v-else
-      :titlePart1="$t('projects.sectorPage.titlePart1', { sector: sectorLabel })"
-      :titleHighlight1="$t('projects.sectorPage.titleHighlight1')"
-      :titlePart2="$t('projects.sectorPage.titlePart2')"
-      :titleHighlight2="$t('projects.sectorPage.titleHighlight2')"
-      :titlePart3="$t('projects.sectorPage.titlePart3')"
-      :description="sectorPageDescription"
-      :ctaText="$t('projects.landing.cta')"
-      ctaTarget="#projects"
-    />
+      :compactTitle="true"
+      :align="projectsBySector.length >= MOSAIC_MINIMUM_PROJECTS ? 'left' : 'center'"
+    >
+      <template v-if="projectsBySector.length >= MOSAIC_MINIMUM_PROJECTS" #aside>
+        <DibodevProjectLogoMosaic :projects="projectsBySector" trackingSource="sector_hero" />
+      </template>
+    </DibodevLandingSection>
 
-    <!-- Section intro secteur (richtext CMS), style aligné project-about -->
     <DibodevSectorIntroSection
       v-if="sectorIntroHtml"
       :title="$t('projects.sectorPage.introTitle')"
       :html="sectorIntroHtml"
+      :facts="listingFacts"
+      :technologies="listingTechnologies"
+      :technologiesTitle="$t('projects.listingFacts.technologiesTitle')"
+    >
+      <template #aside>
+        <DibodevContactAsideCard
+          :title="$t('projects.sectorPage.asideCtaTitle')"
+          :description="$t('projects.asideCta.description')"
+          :buttonLabel="$t('projects.asideCta.button')"
+          trackingLocation="sector_intro"
+        />
+      </template>
+    </DibodevSectorIntroSection>
+
+    <DibodevProjectsSection :initial-projects="projectsBySector" />
+
+    <DibodevProjectTaxonomySection
+      :eyebrow="$t('projects.hub.typesEyebrow')"
+      :title="$t('projects.sectorPage.otherTypesTitle')"
+      :links="categoryLinks"
+      variant="cards"
     />
 
-    <!-- Même UI que la page projets : filtres + grille + CTA (liste = projets du secteur) -->
-    <DibodevProjectsSection :initial-projects="projectsBySector" />
+    <DibodevContactCtaSection
+      :title="$t('projects.cta.text')"
+      :description="$t('projects.cta.description')"
+      :ctaText="$t('projects.cta.button')"
+    />
   </div>
 </template>
 
@@ -48,6 +65,14 @@ import type { ComputedRef } from 'vue'
 import DibodevLandingSection from '~/components/sections/DibodevLandingSection.vue'
 import DibodevSectorIntroSection from '~/components/sections/DibodevSectorIntroSection.vue'
 import DibodevProjectsSection from '~/components/sections/DibodevProjectsSection.vue'
+import DibodevProjectTaxonomySection from '~/components/sections/DibodevProjectTaxonomySection.vue'
+import DibodevContactAsideCard from '~/components/cards/DibodevContactAsideCard.vue'
+import DibodevProjectLogoMosaic from '~/components/data-displays/DibodevProjectLogoMosaic.vue'
+import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
+import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
+import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
+import { useProjectTaxonomyLinks } from '~/composables/useProjectTaxonomyLinks'
+import { useProjectListingFacts } from '~/composables/useProjectListingFacts'
 import type { DibodevProject } from '~/core/types/DibodevProject'
 import type { SectorKey } from '~/core/constants/projectEnums'
 import type { SupportedLocale } from '~/core/constants/sectorSlugs'
@@ -59,6 +84,9 @@ import { SECTEURS_STORYBLOK_FOLDER, normalizeSectorContent } from '~/services/ty
 import { StoryblokService } from '~/services/storyblokService'
 import { StoryblokRichtextUtils } from '~/core/utils/StoryblokRichtextUtils'
 import type { RouteLocationNormalizedLoadedGeneric } from '#vue-router'
+
+/** The header mosaic needs a full first row of three tiles to look intentional. */
+const MOSAIC_MINIMUM_PROJECTS: number = 3
 
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
 const { locale, t } = useI18n()
@@ -138,8 +166,15 @@ const allProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[]
 const projectsBySector: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] => {
   return allProjects.value.filter((p: DibodevProject) => Array.isArray(p.sectors) && p.sectors.includes(sectorKey))
 })
+const { listingFacts, listingTechnologies } = useProjectListingFacts(projectsBySector, 'categories')
 
 const sectorLabel: string = sectorLabelByLocale(currentLocale, sectorKey)
+const { categoryLinks } = useProjectTaxonomyLinks(allProjects)
+const localePath = useLocalePath()
+const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => [
+  { label: t('nav.projects'), to: localePath('projects') },
+  { label: sectorLabel, to: null },
+])
 const sectorPageContent: ComputedRef<StoryblokSectorContent | null> = computed(
   () => sectorStoryData.value?.normalized ?? null,
 )
@@ -154,13 +189,6 @@ const sectorPageTitle: ComputedRef<string> = computed((): string => {
   const fromCms = sectorPageContent.value?.title?.trim()
   return fromCms ?? t('projects.sectorPage.title', { sector: sectorLabel })
 })
-
-/** Titre fourni par le CMS ou une traduction (sinon on utilise le titre structuré i18n avec highlights) */
-const sectorTitleFromCms: ComputedRef<boolean> = computed(
-  (): boolean =>
-    (sectorPageContent.value?.title?.trim()?.length ?? 0) > 0 ||
-    (sectorTranslation.value?.title?.trim()?.length ?? 0) > 0,
-)
 
 /** Description : traduction EN/ES si présente, sinon CMS, sinon i18n */
 const sectorPageDescription: ComputedRef<string> = computed((): string => {

@@ -2,16 +2,25 @@
   <section
     v-if="businessProjects.length > 0"
     id="business-software-projects"
+    class="bg-gray-800 px-6 py-20 sm:px-8 lg:py-28"
     data-aos="fade-up"
-    data-aos-duration="600"
-    class="relative z-2 flex w-screen max-w-screen items-center justify-center bg-gray-900 px-6 py-32 sm:px-8 sm:py-40"
   >
-    <div class="grid w-full max-w-7xl gap-10 sm:gap-12">
-      <h2 class="text-left text-2xl font-semibold sm:text-[32px]">{{ t('businessSoftwarePage.projects.title') }}</h2>
+    <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
+      <DibodevSectionHeading
+        :eyebrow="t('businessSoftwarePage.projects.eyebrow')"
+        :title="t('businessSoftwarePage.projects.title')"
+      >
+        <template #action>
+          <DibodevLink :link="businessProjectsCategoryPath">
+            <span>{{ t('businessSoftwarePage.projects.seeAll') }}</span>
+            <DibodevIcon name="ArrowRight" mode="stroke" :width="18" :height="18" aria-hidden="true" />
+          </DibodevLink>
+        </template>
+      </DibodevSectionHeading>
 
-      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         <DibodevProjectCard
-          v-for="(project, index) in businessProjects"
+          v-for="project in businessProjects"
           :key="project.route"
           :name="project.name"
           :description="project.metaDescription"
@@ -21,16 +30,7 @@
           :secondaryColor="project.secondaryColor"
           :route="project.route"
           :categories="project.categories ?? []"
-          data-aos="zoom-in"
-          :data-aos-delay="index * 100"
         />
-      </div>
-
-      <div class="flex w-full items-center justify-end">
-        <DibodevLink :link="businessProjectsCategoryPath">
-          <span>{{ t('businessSoftwarePage.projects.seeAll') }}</span>
-          <DibodevIcon name="ArrowRight" mode="stroke" :width="20" :height="20" />
-        </DibodevLink>
       </div>
     </div>
   </section>
@@ -41,6 +41,7 @@ import type { ComputedRef } from 'vue'
 import type { DibodevProject } from '~/core/types/DibodevProject'
 import type { CategoryKey } from '~/core/constants/projectEnums'
 import { computed } from 'vue'
+import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'

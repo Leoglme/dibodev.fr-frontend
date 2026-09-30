@@ -8,6 +8,7 @@ export type DibodevProjectScreenshot = {
 }
 
 export type DibodevProjectScreenshotsSectionProps = {
+  eyebrow: string
   title: string
   description: string
   seeAllLabel: string

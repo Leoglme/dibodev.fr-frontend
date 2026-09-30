@@ -1,3 +1,11 @@
+<template>
+  <section v-editable="blok" class="py-4">
+    <p class="text-[17px] leading-7 whitespace-pre-line text-gray-200">
+      {{ blok.text }}
+    </p>
+  </section>
+</template>
+
 <script setup lang="ts">
 type SbBlok = {
   _uid: string
@@ -13,11 +21,3 @@ defineProps<{
   blok: TextBlockBlok
 }>()
 </script>
-
-<template>
-  <section v-editable="blok" class="py-6">
-    <div class="prose prose-neutral max-w-none">
-      {{ blok.text }}
-    </div>
-  </section>
-</template>

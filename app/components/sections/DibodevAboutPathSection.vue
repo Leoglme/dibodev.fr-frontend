@@ -1,28 +1,26 @@
 <template>
-  <section
-    id="about-path"
-    data-aos="fade-up"
-    data-aos-duration="600"
-    class="relative z-2 flex w-screen max-w-screen items-center justify-center px-6 py-24 sm:px-8 sm:py-32"
-  >
-    <div class="grid w-full max-w-5xl gap-16">
-      <div class="grid gap-4">
-        <h2 class="text-left text-2xl font-semibold sm:text-[32px]">{{ t('aboutPage.path.title') }}</h2>
-        <p class="text-left text-base leading-8 text-gray-200">{{ t('aboutPage.path.subtitle') }}</p>
-      </div>
+  <section id="about-path" class="bg-gray-800 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
+    <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-16">
+      <DibodevSectionHeading
+        :eyebrow="t('aboutPage.path.eyebrow')"
+        :title="t('aboutPage.path.title')"
+        :intro="t('aboutPage.path.subtitle')"
+      />
 
-      <div v-for="timeline in timelines" :key="timeline.title" class="grid gap-8">
-        <h3 class="text-xl font-medium text-gray-100">{{ timeline.title }}</h3>
-        <ol class="grid gap-8 border-l-2 border-gray-600 pl-6 sm:pl-10">
-          <li v-for="step in timeline.steps" :key="step.title" class="relative">
-            <span
-              class="absolute top-7 -left-[31px] h-3 w-3 rounded-full sm:top-9 sm:-left-[47px]"
-              :class="step.isCurrent ? 'bg-primary-light ring-primary/30 ring-4' : 'bg-gray-400'"
-              aria-hidden="true"
-            />
-            <DibodevCareerStepCard :step="step" :currentStepLabel="t('aboutPage.path.currentStep')" />
-          </li>
-        </ol>
+      <div class="grid gap-12 lg:grid-cols-[3fr_2fr] lg:gap-10">
+        <div v-for="timeline in timelines" :key="timeline.title" class="grid content-start gap-6">
+          <h3 class="text-xl font-medium text-gray-100">{{ timeline.title }}</h3>
+          <ol class="grid gap-6 border-l-2 border-gray-300 pl-6 sm:pl-10">
+            <li v-for="step in timeline.steps" :key="step.title" class="relative">
+              <span
+                class="absolute top-7 -left-[31px] h-3 w-3 rounded-full sm:top-9 sm:-left-[47px]"
+                :class="step.isCurrent ? 'bg-primary ring-accent-tint ring-4' : 'bg-gray-400'"
+                aria-hidden="true"
+              />
+              <DibodevCareerStepCard :step="step" :currentStepLabel="t('aboutPage.path.currentStep')" />
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
   </section>
@@ -33,6 +31,7 @@ import type { ComputedRef } from 'vue'
 import type { DibodevAboutCareerStepConfig, DibodevAboutTimeline } from '~/core/types/DibodevAboutPage'
 import type { DibodevCareerStep } from '~/core/types/DibodevCareerStepCard'
 import { computed } from 'vue'
+import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevCareerStepCard from '~/components/cards/DibodevCareerStepCard.vue'
 
 const { t } = useI18n()
@@ -41,6 +40,7 @@ const EXPERIENCE_STEPS: DibodevAboutCareerStepConfig[] = [
   {
     key: 'prepeers',
     monogram: 'PP',
+    logoSrc: '/images/clients/prepeers.svg',
     highlightKeys: ['platform', 'schools', 'data'],
     technologies: ['Nuxt 4', 'Vue 3', 'TypeScript', 'LLM', '.NET', 'Azure', 'PostHog'],
     isCurrent: true,
@@ -48,6 +48,7 @@ const EXPERIENCE_STEPS: DibodevAboutCareerStepConfig[] = [
   {
     key: 'dibodev',
     monogram: 'D',
+    logoSrc: '/android-chrome-192x192.png',
     highlightKeys: ['website', 'nightforge', 'goupixdex'],
     technologies: ['Nuxt', 'Storyblok', 'Python', 'FastAPI', 'Tauri', 'Stripe'],
     isCurrent: false,
@@ -55,6 +56,7 @@ const EXPERIENCE_STEPS: DibodevAboutCareerStepConfig[] = [
   {
     key: 'izidoor',
     monogram: 'I',
+    logoSrc: '/images/clients/izidoor.png',
     highlightKeys: ['backOffice', 'adoption', 'shareholder'],
     technologies: ['Nuxt', 'TypeScript', 'GraphQL', 'PostgreSQL', 'Stripe', 'Docker'],
     isCurrent: false,
@@ -62,6 +64,7 @@ const EXPERIENCE_STEPS: DibodevAboutCareerStepConfig[] = [
   {
     key: 'kodeva',
     monogram: 'K',
+    logoSrc: '/images/clients/kodeva.png',
     highlightKeys: ['stockpme', 'gestTime', 'production'],
     technologies: ['C#', '.NET', 'Nuxt', 'Vue.js', 'SQL Server', 'MongoDB'],
     isCurrent: false,
@@ -71,6 +74,7 @@ const EDUCATION_STEPS: DibodevAboutCareerStepConfig[] = [
   {
     key: 'master',
     monogram: 'E',
+    logoSrc: '/images/about/logos/epitech.svg',
     highlightKeys: [],
     technologies: ['Python', 'Machine learning', 'NLP'],
     isCurrent: false,
@@ -78,6 +82,7 @@ const EDUCATION_STEPS: DibodevAboutCareerStepConfig[] = [
   {
     key: 'webAcademy',
     monogram: 'E',
+    logoSrc: '/images/about/logos/epitech.svg',
     highlightKeys: [],
     technologies: ['JavaScript', 'Node.js', 'SQL'],
     isCurrent: false,
@@ -85,6 +90,7 @@ const EDUCATION_STEPS: DibodevAboutCareerStepConfig[] = [
   {
     key: 'cooking',
     monogram: 'C',
+    logoSrc: null,
     highlightKeys: [],
     technologies: [],
     isCurrent: false,
@@ -114,6 +120,7 @@ function buildCareerStep(stepConfig: DibodevAboutCareerStepConfig): DibodevCaree
     ),
     technologies: stepConfig.technologies,
     monogram: stepConfig.monogram,
+    logoSrc: stepConfig.logoSrc,
     isCurrent: stepConfig.isCurrent,
   }
 }

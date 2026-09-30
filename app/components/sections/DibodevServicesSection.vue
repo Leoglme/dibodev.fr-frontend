@@ -1,27 +1,28 @@
 <template>
-  <section
-    id="services"
-    data-aos="fade-up"
-    data-aos-duration="600"
-    class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-36 sm:px-8"
-  >
-    <div class="grid w-full max-w-7xl gap-16 sm:gap-20">
-      <div class="grid justify-start gap-4 sm:gap-8">
-        <h2 class="text-left text-2xl font-semibold sm:text-[32px]">{{ $t('home.services.title') }}</h2>
-        <p class="text-left text-sm leading-7 text-gray-200 sm:text-base">
-          {{ $t('home.services.intro') }}
-        </p>
-      </div>
+  <section id="services" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
+    <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
+      <DibodevSectionHeading
+        :eyebrow="$t('home.services.eyebrow')"
+        :title="$t('home.services.title')"
+        :intro="$t('home.services.intro')"
+      >
+        <template #action>
+          <DibodevLink :link="estimatorRoute">
+            <span>{{ $t('home.services.estimatorLink') }}</span>
+            <DibodevIcon name="ArrowRight" mode="stroke" :width="18" :height="18" aria-hidden="true" />
+          </DibodevLink>
+        </template>
+      </DibodevSectionHeading>
 
-      <div class="grid gap-x-20 gap-y-18 pt-4 sm:grid-cols-2">
+      <div class="grid gap-5 sm:grid-cols-2 lg:gap-6 xl:grid-cols-4">
         <DibodevServiceItem
-          v-for="(service, index) in services"
-          :key="service.title"
+          v-for="service in services"
+          :key="service.key"
           :title="service.title"
           :description="service.description"
-          :color="service.color"
-          data-aos="fade-right"
-          :data-aos-delay="index * 100"
+          :price="service.price"
+          :accentColor="service.palette.color"
+          :accentBackground="service.palette.background"
         >
           <template #icon>
             <DibodevServiceIcon :serviceIconName="service.icon" />
@@ -32,52 +33,54 @@
   </section>
 </template>
 <script setup lang="ts">
+import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
+import type { DibodevAccentPalette } from '~/core/types/DibodevAccentPalette'
+import type { DibodevServiceIconName } from '~/core/types/DibodevServiceIcon'
+import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevServiceIcon from '~/components/ui/DibodevServiceIcon.vue'
 import DibodevServiceItem from '~/components/data-displays/DibodevServiceItem.vue'
-import type { DibodevServiceIconName } from '~/core/types/DibodevServiceIcon'
+import DibodevLink from '~/components/core/DibodevLink.vue'
+import DibodevIcon from '~/components/ui/DibodevIcon.vue'
+import { getAccentPalette } from '~/core/constants/accentPalettes'
 
-type DibodevServiceItem = {
+type HomeService = {
+  key: string
   title: string
   description: string
-  color: string
+  price: string
   icon: DibodevServiceIconName
+  palette: DibodevAccentPalette
+}
+
+/** Service keys (i18n `home.services.items.*`) paired with their icon. */
+const SERVICE_ICONS: Record<string, DibodevServiceIconName> = {
+  software: 'apps',
+  website: 'website-content',
+  mobile: 'mobile',
+  aiAutomation: 'ai',
 }
 
 /* I18N */
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 /* DATAS */
-const services: ComputedRef<DibodevServiceItem[]> = computed((): DibodevServiceItem[] => [
-  {
-    title: t('home.services.items.websites.title'),
-    description: t('home.services.items.websites.description'),
-    color: '#EFEAFF',
-    icon: 'website-content',
-  },
-  {
-    title: t('home.services.items.apps.title'),
-    description: t('home.services.items.apps.description'),
-    color: '#F1E8FF',
-    icon: 'mobile',
-  },
-  {
-    title: t('home.services.items.saas.title'),
-    description: t('home.services.items.saas.description'),
-    color: '#FFE7FB',
-    icon: 'cloud-computing',
-  },
-  {
-    title: t('home.services.items.aiAutomation.title'),
-    description: t('home.services.items.aiAutomation.description'),
-    color: '#EDEAFF',
-    icon: 'ai',
-  },
-  {
-    title: t('home.services.items.seo.title'),
-    description: t('home.services.items.seo.description'),
-    color: '#ECFFDA',
-    icon: 'seo-tag',
-  },
-])
+const services: ComputedRef<HomeService[]> = computed((): HomeService[] =>
+  Object.entries(SERVICE_ICONS).map(
+    ([key, icon]: [string, DibodevServiceIconName], index: number): HomeService => ({
+      key,
+      title: t(`home.services.items.${key}.title`),
+      description: t(`home.services.items.${key}.description`),
+      price: t(`home.services.items.${key}.price`),
+      icon,
+      palette: getAccentPalette(index),
+    }),
+  ),
+)
+
+/** Budget estimator of the business software page, where every kind of project gets a price range. */
+const estimatorRoute: ComputedRef<string> = computed(
+  (): string => `${localePath('custom-business-software')}#estimator`,
+)
 </script>

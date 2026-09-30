@@ -5,11 +5,11 @@
       type="search"
       @input="emitValue($event)"
       :value="props.value"
-      class="focus:border-primary relative flex h-12 w-full items-center justify-center rounded-md rounded-r-none border-2 border-transparent bg-gray-600 pl-3 text-gray-100 outline-none placeholder:text-base placeholder:text-gray-300 hover:border-gray-300 focus:bg-gray-700"
+      class="focus:border-primary placeholder:text-muted relative flex h-12 w-full items-center justify-center rounded-lg rounded-r-none border border-r-0 border-gray-400 bg-white pl-3 text-gray-100 outline-none placeholder:text-base hover:border-gray-100"
       :placeholder="props.placeholder"
     />
-    <div class="flex h-full items-center rounded-r-md bg-gray-700 p-2">
-      <DibodevIcon :width="20" :height="20" name="Search" mode="stroke" color="#F5F4FB" style="top: 0" />
+    <div class="flex h-full items-center rounded-r-lg border border-gray-400 bg-gray-800 px-3">
+      <DibodevIcon :width="20" :height="20" name="Search" mode="stroke" class="text-muted" style="top: 0" />
     </div>
   </div>
 </template>
@@ -74,11 +74,11 @@ const handleKeyDown: (event: KeyboardEvent) => void = (event: KeyboardEvent): vo
   }
 }
 
-onMounted(() => {
+onMounted((): void => {
   window.addEventListener('keydown', handleKeyDown)
 })
 
-onUnmounted(() => {
+onUnmounted((): void => {
   window.removeEventListener('keydown', handleKeyDown)
 })
 </script>

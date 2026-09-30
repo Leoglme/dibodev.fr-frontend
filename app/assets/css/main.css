@@ -1,73 +1,53 @@
 @import 'tailwindcss';
 
+/*
+ * Light theme tokens. The gray scale keeps its historical semantics
+ * (100 = main text … 900 = page background) so every component reads the same way:
+ * gray-100 ink, gray-200 secondary text, gray-300 hairline, gray-400 strong line,
+ * gray-600 input surface, gray-700 deeper surface, gray-800 alternate section, gray-900 page.
+ * The brand violet drives the buttons, the links and the highlighted words; `surface-tint` is the coloured band.
+ */
 @theme {
   --font-sans:
     'Rubik', 'ui-sans-serif', system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     'Noto Color Emoji';
-  --color-primary: #8472f3;
-  --color-primary-light: #bdb3ff;
-  --color-primary-dark: #6b59d9;
-  --color-gray-100: #f5f4fb;
-  --color-gray-200: rgba(255, 255, 255, 0.7);
-  --color-gray-300: rgba(255, 255, 255, 0.3);
-  --color-gray-400: #454d5e;
-  --color-gray-600: #35424d;
-  --color-gray-700: #222b39;
-  --color-gray-800: #1b232d;
-  --color-gray-900: #101623;
+  --color-primary: #6f5fe0;
+  --color-primary-light: #8472f3;
+  --color-primary-dark: #5b4bd0;
+  --color-accent-tint: #e6e1ff;
+  --color-surface-tint: #f5f3ff;
+  --color-muted: #66665f;
+  --color-gray-100: #141414;
+  --color-gray-200: #4b4b47;
+  --color-gray-300: rgba(20, 20, 20, 0.12);
+  --color-gray-400: rgba(20, 20, 20, 0.22);
+  --color-gray-600: #f0f0ee;
+  --color-gray-700: #ebebe7;
+  --color-gray-800: #f6f6f3;
+  --color-gray-900: #ffffff;
 }
 
-@layer utilities {
-  .animate-bounce-pulse {
-    animation: bouncePulse 3s ease-in-out infinite;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
 
-  @keyframes bouncePulse {
-    0%,
-    100% {
-      transform: translateY(0) scale(1);
-      opacity: 1;
-    }
-    25% {
-      transform: translateY(4px) scale(1.05);
-      opacity: 0.8;
-    }
-    50% {
-      transform: translateY(0) scale(1);
-      opacity: 1;
-    }
-    75% {
-      transform: translateY(4px) scale(1.05);
-      opacity: 0.8;
-    }
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
+}
 
-  .heartbeat {
-    animation: heartbeat 3s infinite;
-  }
+body {
+  background-color: var(--color-gray-900);
+  color: var(--color-gray-100);
+  -webkit-font-smoothing: antialiased;
+}
 
-  @keyframes heartbeat {
-    0% {
-      transform: scale(1);
-      opacity: 0.8;
-    }
-    25% {
-      transform: scale(1.2);
-      opacity: 1;
-    }
-    50% {
-      transform: scale(1);
-      opacity: 0.8;
-    }
-    75% {
-      transform: scale(1.2);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 0.8;
-    }
-  }
+h1,
+h2,
+h3 {
+  text-wrap: balance;
 }
 
 .error-message {

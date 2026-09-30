@@ -14,6 +14,8 @@ export type DibodevAboutProfileLink = {
 export type DibodevAboutCareerStepConfig = {
   key: string
   monogram: string
+  /** Logo of the organisation, shown instead of the monogram when set. */
+  logoSrc: string | null
   highlightKeys: string[]
   technologies: string[]
   isCurrent: boolean

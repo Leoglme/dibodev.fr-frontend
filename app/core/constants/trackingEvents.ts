@@ -24,6 +24,24 @@ export const TRACKING_EVENTS = {
   articleCtaClicked: 'article_cta_clicked',
   /** Language change via the switcher. */
   localeSwitched: 'locale_switched',
+  /** Quote requested from the budget estimator, with the estimated range. */
+  budgetEstimated: 'budget_estimated',
+  /** First choice made in the budget estimator (sent once per page view). */
+  budgetEstimatorStarted: 'budget_estimator_started',
+  /** Detailed comparison opened on tablets and phones. */
+  comparisonDetailsOpened: 'comparison_details_opened',
+  /** First answer given in a trade test (sent once per page view), to compare with the page views. */
+  tunnelStarted: 'tunnel_started',
+  /** Step of a trade test answered (single choice picked, or several confirmed). */
+  tunnelStepAnswered: 'tunnel_step_answered',
+  /** Result of a trade test displayed, with the recommendation. */
+  tunnelCompleted: 'tunnel_completed',
+  /** Short lead form opened under a trade test result. */
+  tunnelLeadFormOpened: 'tunnel_lead_form_opened',
+  /** Lead sent from a trade test (success or failure via the `status` property). */
+  tunnelLeadSubmitted: 'tunnel_lead_submitted',
+  /** Click on a teaser linking to a trade test (from an article, a project or a service page). */
+  toolTeaserClicked: 'tool_teaser_clicked',
 } as const
 
 /** Tracking event name (value of the `TRACKING_EVENTS` catalog). */

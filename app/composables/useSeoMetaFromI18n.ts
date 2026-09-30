@@ -16,6 +16,7 @@ const SEO_LOCALES = [
 ] as const
 
 const DEFAULT_LOCALE_CODE = 'fr'
+const ROUTE_NAME_LOCALE_SEPARATOR: string = '___'
 
 export function normalizeUrlPath(path: string): string {
   const withoutQuery = path.includes('?') ? path.slice(0, path.indexOf('?')) : path
@@ -37,6 +38,21 @@ const SECTOR_PATH_REGEX = /^\/(?:(?:en|es)\/)?(?:projets\/secteur|projects\/sect
 /** Path catégorie : /projets/categorie/x, /en/projects/category/x, /es/proyectos/categoria/x */
 const CATEGORY_PATH_REGEX = /^\/(?:(?:en|es)\/)?(?:projets\/categorie|projects\/category|proyectos\/categoria)\/[^/]+$/i
 
+const BLOG_ARTICLE_ROUTE_NAME: string = 'blog-slug'
+const BLOG_ARTICLE_PATH_REGEX: RegExp = /^\/(?:(?:en|es)\/)?blog\/[^/]+$/i
+
+/**
+ * Tells whether the route is a blog article, whose page declares only its translated locales (canonical + hreflang).
+ *
+ * @param {{ path?: string; name?: string | symbol }} route - The current route.
+ * @returns {boolean} True for /blog/x, /en/blog/x and /es/blog/x.
+ */
+function isBlogArticleRoute(route: { path?: string; name?: string | symbol }): boolean {
+  const name: string = typeof route.name === 'string' ? route.name : ''
+  if (name === BLOG_ARTICLE_ROUTE_NAME || name.startsWith(`${BLOG_ARTICLE_ROUTE_NAME}___`)) return true
+  return BLOG_ARTICLE_PATH_REGEX.test(normalizeUrlPath(route.path ?? ''))
+}
+
 /** Routes dont le slug dépend de la locale (canonical + hreflang gérés par la page). */
 function isRouteWithLocaleDependentSlug(route: { path?: string; name?: string | symbol }): boolean {
   const name = typeof route.name === 'string' ? route.name : ''
@@ -57,11 +73,27 @@ function isRouteWithLocaleDependentSlug(route: { path?: string; name?: string | 
 export function useSeoMetaFromI18n(): void {
   const { t, locale } = useI18n()
   const route = useRoute()
+  const router = useRouter()
   const switchLocalePath = useSwitchLocalePath()
+
+  /**
+   * Tells whether the current page exists in a locale, since a page written for one country has no /en or /es copy.
+   * @param {string} code - The locale code.
+   * @returns {boolean} True when the page exists in this locale, or when the route has no localized name to check.
+   */
+  function isPageGeneratedInLocale(code: string): boolean {
+    const routeName: string = typeof route.name === 'string' ? route.name : ''
+    const baseRouteName: string = routeName.split(ROUTE_NAME_LOCALE_SEPARATOR)[0] ?? ''
+    if (!routeName.includes(ROUTE_NAME_LOCALE_SEPARATOR) || !baseRouteName) return true
+    return router.hasRoute(`${baseRouteName}${ROUTE_NAME_LOCALE_SEPARATOR}${code}`)
+  }
 
   useHead(() => {
     const path: string = route.path ?? ''
-    const skipLinkAlternates: boolean = isRouteWithLocaleDependentSlug(route)
+    const skipLinkAlternates: boolean = isRouteWithLocaleDependentSlug(route) || isBlogArticleRoute(route)
+    const pageLocales: (typeof SEO_LOCALES)[number][] = SEO_LOCALES.filter(
+      ({ code }: (typeof SEO_LOCALES)[number]): boolean => isPageGeneratedInLocale(code),
+    )
 
     // Canonical basé sur la route courante (fiable) + normalisation trailing slash
     const canonicalUrl = buildCanonicalUrl(path)
@@ -70,7 +102,7 @@ export function useSeoMetaFromI18n(): void {
     // La `key` par hreflang est partagée avec les composables SEO de page (useSectorSeo/useCategorySeo) : sur ces routes, switchLocalePath ne traduit pas le slug et produirait un hreflang en 404 ; la version émise par la page (enregistrée après app.vue) écrase donc la nôtre via cette dédup.
     const alternateLinks: Array<{ rel: string; hreflang: string; href: string; key: string }> = skipLinkAlternates
       ? []
-      : SEO_LOCALES.map(({ code, hreflang }) => {
+      : pageLocales.map(({ code, hreflang }) => {
           const pathForLocale = switchLocalePath(code) || path
           return {
             rel: 'alternate',
@@ -98,9 +130,9 @@ export function useSeoMetaFromI18n(): void {
       // Open Graph expects "fr_FR", unlike hreflang ("fr-FR").
       ogLocaleMeta.push({ property: 'og:locale', content: currentHreflang.replace('-', '_') })
       // Alternates OG = autres locales connues uniquement (sans doublon, exclut la courante)
-      const alternateHreflangs = SEO_LOCALES.filter((l) => l.code !== locale.value).map((l) =>
-        l.hreflang.replace('-', '_'),
-      )
+      const alternateHreflangs = pageLocales
+        .filter((l) => l.code !== locale.value)
+        .map((l) => l.hreflang.replace('-', '_'))
       ogLocaleMeta.push(...alternateHreflangs.map((content) => ({ property: 'og:locale:alternate' as const, content })))
     }
     // Si locale.value inconnue : on n’ajoute que og:url (pas og:locale ni alternates)

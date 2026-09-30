@@ -8,11 +8,6 @@ import type { StoryblokLink } from '~/services/types/storyblok'
 import { StoryblokService } from '~/services/storyblokService'
 import { buildRelsSlugMap, mapStoryblokProjectToDibodevProject } from '~/services/storyblokProjectMapper'
 
-const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
-function hasUuid(arr: string[] | undefined): boolean {
-  return Array.isArray(arr) && arr.some((s) => typeof s === 'string' && UUID_REGEX.test(s.trim()))
-}
-
 type ProjectTranslation = {
   name: string
   shortDescription: string
@@ -66,8 +61,8 @@ export function useProjectsWithTranslations() {
             const key: string = projectKey(p)
             const t: ProjectTranslation | undefined = translations[key]
             if (!t) return p
-            const useTranslationCategories = !hasUuid(t.categories)
-            const useTranslationSectors = t.sectors != null && !hasUuid(t.sectors)
+            // Categories and sectors are locale-independent keys: Storyblok stays the single source of truth,
+            // so every language shows the same listings and counts (the translation files drifted on them).
             return {
               ...p,
               name: t.name,
@@ -75,8 +70,6 @@ export function useProjectsWithTranslations() {
               longDescription: t.longDescription,
               metaTitle: t.metaTitle,
               metaDescription: t.metaDescription,
-              categories: useTranslationCategories ? (t.categories as DibodevProject['categories']) : p.categories,
-              sectors: useTranslationSectors ? (t.sectors as DibodevProject['sectors']) : p.sectors,
               stack: t.stack,
               tags: t.tags,
             }
@@ -84,7 +77,9 @@ export function useProjectsWithTranslations() {
         }
 
         return projects
-      } catch {
+      } catch (error) {
+        // A silent empty list would hide a Storyblok outage in the prerendered pages: make it visible in the logs.
+        console.error('[projects] Storyblok fetch failed, rendering an empty project list', error)
         return []
       }
     },

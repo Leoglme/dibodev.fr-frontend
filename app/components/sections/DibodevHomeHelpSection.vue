@@ -1,46 +1,46 @@
 <template>
-  <section
-    id="help"
-    data-aos="fade-up"
-    data-aos-duration="600"
-    class="relative z-2 flex w-screen max-w-screen items-center justify-center bg-gray-800 px-6 py-32 sm:px-8 sm:py-56"
-  >
-    <div class="grid w-full max-w-7xl gap-16 sm:gap-20">
-      <div class="grid justify-start gap-4">
-        <h2 class="text-left text-[22px] font-semibold sm:text-[32px]">
-          {{ $t('home.help.title') }}
-        </h2>
-        <p class="text-left text-sm leading-7 text-gray-200 sm:text-base">
-          {{ $t('home.help.subtitle') }}
-        </p>
-      </div>
+  <section id="help" class="bg-gray-800 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
+    <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
+      <DibodevSectionHeading
+        :eyebrow="$t('home.help.eyebrow')"
+        :title="$t('home.help.title')"
+        :intro="$t('home.help.subtitle')"
+        align="center"
+      />
 
-      <div class="grid gap-x-20 gap-y-20 sm:grid-cols-2">
-        <div
+      <ul class="grid gap-5 sm:grid-cols-2 lg:gap-6">
+        <li
           v-for="(block, index) in blocks"
-          :key="block.title"
-          class="grid gap-2 border-l-[3px] pl-4"
-          :style="{ borderLeftColor: block.borderColor }"
-          data-aos="fade-up"
-          :data-aos-delay="index * 80"
+          :key="block.key"
+          class="situation-card flex gap-5 rounded-xl border border-gray-300 bg-white p-6 sm:p-7"
+          :style="{ '--situation-accent': block.palette.color }"
         >
-          <h3 class="text-left text-base font-medium text-gray-100 sm:text-lg">
-            {{ block.title }}
-          </h3>
-          <p class="text-left text-sm leading-7 text-gray-200">
-            {{ block.text }}
-          </p>
-        </div>
-      </div>
+          <span
+            class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[15px] font-medium"
+            :style="{ backgroundColor: block.palette.background, color: block.palette.color }"
+            aria-hidden="true"
+          >
+            {{ formatSituationNumber(index + 1) }}
+          </span>
+          <div class="grid content-start gap-2">
+            <h3 class="text-lg leading-snug font-medium text-gray-100">
+              {{ block.title }}
+            </h3>
+            <p class="text-[15px] leading-6 text-gray-200">
+              {{ block.text }}
+            </p>
+          </div>
+        </li>
+      </ul>
 
-      <div class="flex flex-col items-center gap-6 pt-14 sm:pt-16" data-aos="fade-up" data-aos-delay="400">
-        <p class="text-center text-base text-gray-100">
+      <div class="grid justify-items-center gap-5 text-center">
+        <p class="max-w-xl text-[17px] leading-7 text-gray-200">
           {{ $t('home.help.ctaIntro') }}
         </p>
         <DibodevButton
           :to="localePath('/contact')"
-          icon="Mail"
-          class="w-full sm:max-w-xs"
+          size="lg"
+          class="w-full sm:w-auto"
           @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'home_help' })"
         >
           {{ $t('home.help.cta') }}
@@ -51,48 +51,69 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
+import type { DibodevAccentPalette } from '~/core/types/DibodevAccentPalette'
+import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
+import { getAccentPalette } from '~/core/constants/accentPalettes'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
+
+type HelpBlock = {
+  key: string
+  title: string
+  text: string
+  palette: DibodevAccentPalette
+}
+
+const HELP_BLOCK_KEYS: string[] = ['launch', 'tool', 'automate', 'ai']
 
 const localePath = useLocalePath()
 const { t } = useI18n()
 const { track } = useTracking()
 
-type HelpBlock = {
-  title: string
-  text: string
-  borderColor: string
+const blocks: ComputedRef<HelpBlock[]> = computed((): HelpBlock[] =>
+  HELP_BLOCK_KEYS.map(
+    (key: string, index: number): HelpBlock => ({
+      key,
+      title: t(`home.help.blocks.${key}.title`),
+      text: t(`home.help.blocks.${key}.text`),
+      palette: getAccentPalette(index),
+    }),
+  ),
+)
+
+/**
+ * Formats a situation number on two digits ("01", "02"…).
+ * @param {number} situationNumber - The 1-based number.
+ * @returns {string} The zero-padded number.
+ */
+function formatSituationNumber(situationNumber: number): string {
+  return situationNumber < 10 ? `0${situationNumber}` : String(situationNumber)
+}
+</script>
+
+<style scoped>
+.situation-card {
+  border-left: 4px solid var(--situation-accent);
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
-const BLOCK_BORDER_COLORS: readonly [string, string, string, string] = [
-  '#bdb3ff' /* primary-light */,
-  '#7dd3fc' /* sky */,
-  '#86efac' /* green */,
-  '#f9a8d4' /* pink */,
-]
+.situation-card:hover {
+  box-shadow: 0 14px 36px rgba(20, 20, 20, 0.06);
+  transform: translateY(-2px);
+}
 
-const blocks: ComputedRef<HelpBlock[]> = computed((): HelpBlock[] => [
-  {
-    title: t('home.help.blocks.launch.title'),
-    text: t('home.help.blocks.launch.text'),
-    borderColor: BLOCK_BORDER_COLORS[0],
-  },
-  {
-    title: t('home.help.blocks.tool.title'),
-    text: t('home.help.blocks.tool.text'),
-    borderColor: BLOCK_BORDER_COLORS[1],
-  },
-  {
-    title: t('home.help.blocks.automate.title'),
-    text: t('home.help.blocks.automate.text'),
-    borderColor: BLOCK_BORDER_COLORS[2],
-  },
-  {
-    title: t('home.help.blocks.ai.title'),
-    text: t('home.help.blocks.ai.text'),
-    borderColor: BLOCK_BORDER_COLORS[3],
-  },
-])
-</script>
+@media (prefers-reduced-motion: reduce) {
+  .situation-card {
+    transition: none;
+  }
+
+  .situation-card:hover {
+    transform: none;
+  }
+}
+</style>

@@ -29,6 +29,7 @@ import { computed, type ComputedRef } from 'vue'
  * @type {DibodevLinkProps}
  * @property {boolean} externalLink - Whether the link is external or internal
  * @property {string} link - The link to navigate to
+ * @property {string} color - The link color (accent ink by default)
  */
 const props: DibodevLinkProps = defineProps({
   externalLink: {
@@ -41,7 +42,7 @@ const props: DibodevLinkProps = defineProps({
   },
   color: {
     type: String,
-    default: '#bdb3ff',
+    default: '#6f5fe0',
   },
   ariaLabel: {
     type: String,
@@ -49,7 +50,7 @@ const props: DibodevLinkProps = defineProps({
   },
 })
 
-const href: ComputedRef<string | undefined> = computed(() => {
+const href: ComputedRef<string | undefined> = computed((): string | undefined => {
   if (props.externalLink) {
     return String(props.link)
   }

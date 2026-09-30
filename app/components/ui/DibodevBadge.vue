@@ -42,7 +42,7 @@ const props: DibodevBadgeProps = defineProps({
   },
   backgroundColor: {
     type: String,
-    default: '#D6D0FB',
+    default: '#e6e1ff',
   },
   textColor: {
     type: String,

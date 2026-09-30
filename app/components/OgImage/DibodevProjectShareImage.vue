@@ -1,39 +1,38 @@
 <template>
-  <!-- Rendered by Satori at build time (gradients inline); key content stays in the centred 600×600 zone every platform keeps. -->
-  <div
-    class="relative flex h-full w-full flex-col items-center justify-center bg-[#101623] text-[#f5f4fb]"
-    style="
-      background-image:
-        radial-gradient(circle at 50% 30%, rgba(132, 114, 243, 0.32) 0%, rgba(132, 114, 243, 0) 45%),
-        radial-gradient(circle at 0% 100%, rgba(34, 211, 238, 0.14) 0%, rgba(34, 211, 238, 0) 35%);
-    "
-  >
-    <div class="absolute top-[112px] left-[56px] flex flex-row items-center gap-[14px]">
+  <!-- Rendered by Satori at build time; key content stays in the centred 600×600 zone every platform keeps. -->
+  <div class="relative flex h-full w-full flex-col items-center justify-center bg-[#ffffff] text-[#141414]">
+    <div class="absolute top-[64px] left-[64px] flex flex-row items-center gap-[14px]">
       <DibodevLogo :size="44" />
       <span class="text-[30px] font-medium">Dibodev</span>
     </div>
 
-    <div class="absolute top-[108px] right-[56px] flex items-center gap-[12px] text-[22px] font-medium text-[#d9d3ff]">
-      <img :src="PORTRAIT_SRC" class="h-[48px] w-[48px] rounded-full border-2 border-[#8472f3]" />
+    <div class="absolute top-[60px] right-[64px] flex items-center gap-[12px] text-[22px] font-medium text-[#4b4b47]">
+      <img :src="PORTRAIT_SRC" class="h-[52px] w-[52px] rounded-full border-2 border-[#e6e1ff]" />
       <span>{{ PERSON_NAME }}</span>
     </div>
 
-    <div class="flex h-[300px] w-[600px] items-center justify-center">
-      <img :src="props.screenshotUrl" class="max-h-[300px] max-w-[600px] rounded-[16px] object-contain" />
+    <div
+      class="flex h-[330px] w-[680px] items-center justify-center rounded-[24px] border-2 border-[#e6e1ff] bg-[#f5f3ff]"
+    >
+      <img :src="props.screenshotUrl" class="h-[282px] w-[620px] rounded-[12px] object-contain" />
     </div>
 
+    <div class="mt-[40px] h-[4px] w-[56px] rounded-full bg-[#6f5fe0]" />
     <p
-      class="mt-[28px] max-w-[900px] text-center leading-[1.1] font-semibold tracking-[-0.5px]"
+      class="mt-[18px] max-w-[900px] text-center leading-[1.08] font-semibold tracking-[-1px]"
       :style="{ fontSize: `${titleFontSize}px` }"
     >
       {{ props.name }}
     </p>
-    <p
-      v-if="props.tagline"
-      class="mt-[12px] max-w-[700px] text-center text-[28px] leading-[1.3] font-medium text-[#bdb3ff]"
-    >
+    <p v-if="props.tagline" class="mt-[10px] max-w-[760px] text-center text-[28px] leading-[1.3] text-[#66665f]">
       {{ props.tagline }}
     </p>
+
+    <div class="absolute bottom-[52px] flex flex-row items-center gap-[16px] text-[22px] font-medium text-[#66665f]">
+      <div class="h-[2px] w-[44px] bg-[#14141433]" />
+      <span>dibodev.fr</span>
+      <div class="h-[2px] w-[44px] bg-[#14141433]" />
+    </div>
   </div>
 </template>
 

@@ -1,82 +1,74 @@
 <template>
-  <section
-    id="projects"
-    data-aos="fade-up"
-    data-aos-duration="600"
-    data-aos-offset="300"
-    class="relative z-2 flex h-full min-h-screen w-screen max-w-screen flex-col items-center justify-center gap-18 px-6 py-24 sm:px-8 sm:py-36"
-  >
-    <DibodevProjectFilters
-      :all-projects="allProjects"
-      :search-title="t('projects.section.searchTitle')"
-      :search-placeholder="t('projects.section.searchPlaceholder')"
-      :all-languages-label="t('projects.section.allLanguages')"
-      v-model:search-term="searchTerm"
-      v-model:selected-language="selectedLanguage"
-    />
+  <section id="projects" class="w-full scroll-mt-24 bg-gray-800 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
+    <div class="mx-auto grid w-full max-w-7xl gap-10">
+      <DibodevSectionHeading :eyebrow="t('projects.section.eyebrow')" :title="t('projects.section.title')" />
 
-    <div v-if="projects.length > 0" class="grid w-full max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      <DibodevProjectCard
-        v-for="(project, index) in projects"
-        :key="project.route"
-        :name="project.name"
-        :description="project.metaDescription"
-        :createdAt="project.date"
-        :logo="project.logoUrl"
-        :primaryColor="project.primaryColor"
-        :secondaryColor="project.secondaryColor"
-        :route="project.route"
-        :categories="project.categories ?? []"
-        data-aos="zoom-in"
-        :data-aos-delay="index * 100"
+      <DibodevProjectFilters
+        v-if="hasEnoughProjectsForFilters"
+        :all-projects="allProjects"
+        :search-title="t('projects.section.searchTitle')"
+        :search-placeholder="t('projects.section.searchPlaceholder')"
+        :all-languages-label="t('projects.section.allLanguages')"
+        v-model:search-term="searchTerm"
+        v-model:selected-language="selectedLanguage"
       />
-    </div>
 
-    <div v-else class="flex w-full max-w-7xl flex-col items-center justify-center gap-6 py-24">
-      <div class="rounded-full bg-gray-800 p-6">
-        <svg class="h-16 w-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
+      <div v-if="projects.length > 0" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <DibodevProjectCard
+          v-for="project in projects"
+          :key="project.route"
+          :name="project.name"
+          :description="project.metaDescription"
+          :createdAt="project.date"
+          :logo="project.logoUrl"
+          :primaryColor="project.primaryColor"
+          :secondaryColor="project.secondaryColor"
+          :route="project.route"
+          :categories="project.categories ?? []"
+        />
       </div>
-      <div class="flex flex-col items-center gap-2">
-        <h2 class="text-2xl font-semibold text-gray-100">{{ $t('projects.section.noResultsTitle') }}</h2>
-        <p class="text-center text-base text-gray-300">
-          {{ $t('projects.section.noResultsDescription') }}
-        </p>
+
+      <div
+        v-else
+        class="flex w-full flex-col items-center justify-center gap-6 rounded-lg border border-gray-300 bg-white px-6 py-20"
+      >
+        <div class="rounded-full bg-gray-800 p-5">
+          <DibodevIcon name="Search" mode="stroke" :width="32" :height="32" class="text-muted" aria-hidden="true" />
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <h3 class="text-2xl font-medium text-gray-100">{{ $t('projects.section.noResultsTitle') }}</h3>
+          <p class="max-w-md text-center text-[15px] leading-6 text-gray-200">
+            {{ $t('projects.section.noResultsDescription') }}
+          </p>
+        </div>
       </div>
     </div>
-
-    <DibodevContactCtaSection
-      :title="$t('projects.cta.text')"
-      :description="$t('projects.cta.description')"
-      :ctaText="$t('projects.cta.button')"
-    />
   </section>
 </template>
 
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
-import type { Ref, ComputedRef } from 'vue'
+import type { Ref, ComputedRef, PropType } from 'vue'
+import type { DibodevProject } from '~/core/types/DibodevProject'
+import type { DibodevProjectsSectionProps } from '~/core/types/DibodevProjectsSection'
+import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
+import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
 import DibodevProjectFilters from '~/components/sections/DibodevProjectFilters.vue'
-import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
-import type { DibodevProject } from '~/core/types/DibodevProject'
+import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { getProjectDescriptionForSchema } from '~/core/utils/projectDescriptionForSchema'
-import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
 import { useProjectsWithTranslations } from '~/composables/useProjectsWithTranslations'
+import { ProjectOrderUtils } from '~/core/utils/ProjectOrderUtils'
 
-const props = withDefaults(
-  defineProps<{
-    /** Liste préfiltrée (ex. page secteur / catégorie) ; si fournie, utilisée à la place du fetch. */
-    initialProjects?: DibodevProject[]
-  }>(),
-  { initialProjects: undefined },
-)
+/**
+ * Filterable project grid (search + technology filter), optionally fed with a pre-filtered list.
+ */
+const props: DibodevProjectsSectionProps = defineProps({
+  initialProjects: {
+    type: Array as PropType<DibodevProject[] | null>,
+    default: null,
+  },
+})
 
 const { t } = useI18n()
 const { data: storyblokProjectsData } = await useProjectsWithTranslations()
@@ -87,12 +79,16 @@ const selectedLanguage: Ref<DibodevSelectOption> = ref<DibodevSelectOption>({
   value: 'all',
 })
 
-const allProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] => {
-  if (props.initialProjects != null && Array.isArray(props.initialProjects)) {
-    return props.initialProjects
-  }
-  return storyblokProjectsData.value ?? []
-})
+/** Projects of the listing: the favourites put forward in Storyblok first, then the most recent ones. */
+const allProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] =>
+  ProjectOrderUtils.favoritesFirst(props.initialProjects ?? storyblokProjectsData.value ?? []),
+)
+
+/** Filters are only useful from this number of projects. */
+const MIN_PROJECTS_FOR_FILTERS: number = 3
+const hasEnoughProjectsForFilters: ComputedRef<boolean> = computed(
+  (): boolean => allProjects.value.length >= MIN_PROJECTS_FOR_FILTERS,
+)
 
 /* METHODS */
 /**

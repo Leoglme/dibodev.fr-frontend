@@ -4,12 +4,32 @@
   <!-- Route index /projets : liste des projets -->
   <template v-else>
     <DibodevProjectsLandingSection />
+    <DibodevProjectTaxonomySection
+      :eyebrow="t('projects.hub.typesEyebrow')"
+      :title="t('projects.hub.typesTitle')"
+      :intro="t('projects.hub.typesIntro')"
+      :links="categoryLinks"
+      variant="cards"
+      tone="tint"
+    />
     <DibodevProjectsSection />
+    <DibodevProjectTaxonomySection
+      :eyebrow="t('projects.hub.sectorsEyebrow')"
+      :title="t('projects.hub.sectorsTitle')"
+      :links="sectorLinks"
+      variant="chips"
+    />
+    <DibodevContactCtaSection
+      :title="t('projects.cta.text')"
+      :description="t('projects.cta.description')"
+      :ctaText="t('projects.cta.button')"
+    />
   </template>
 </template>
 <script setup lang="ts">
 import type { ComputedRef } from 'vue'
 import type { RouteLocationNormalizedLoaded } from 'vue-router'
+import type { DibodevProject } from '~/core/types/DibodevProject'
 
 definePageMeta({
   i18n: {
@@ -33,9 +53,12 @@ const isCategoryRoute: ComputedRef<boolean> = computed((): boolean => {
 
 import { normalizeUrlPath } from '~/composables/useSeoMetaFromI18n'
 import { usePageShareImage } from '~/composables/usePageShareImage'
+import { useProjectsWithTranslations } from '~/composables/useProjectsWithTranslations'
+import { useProjectTaxonomyLinks } from '~/composables/useProjectTaxonomyLinks'
 import DibodevProjectsLandingSection from '~/components/sections/DibodevProjectsLandingSection.vue'
+import DibodevProjectTaxonomySection from '~/components/sections/DibodevProjectTaxonomySection.vue'
 import DibodevProjectsSection from '~/components/sections/DibodevProjectsSection.vue'
-// import DibodevPricingSection from '~/components/sections/DibodevPricingSection.vue'
+import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 
 const CANONICAL_ORIGIN = 'https://dibodev.fr'
 const SEO_LOCALES = [
@@ -49,6 +72,15 @@ const switchLocalePath = useSwitchLocalePath()
 // Also the share image of the sector and category pages, which render inside this parent route.
 usePageShareImage('projects')
 
+const { data: storyblokProjectsData } = await useProjectsWithTranslations()
+const allProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] => storyblokProjectsData.value ?? [])
+const { categoryLinks, sectorLinks } = useProjectTaxonomyLinks(allProjects)
+
+/**
+ * Canonical URL of a path (no trailing slash, no query string).
+ * @param {string} path - The route path.
+ * @returns {string} The canonical URL.
+ */
 function buildCanonicalUrl(path: string): string {
   const normalized = normalizeUrlPath(path)
   const pathPart = normalized === '/' ? '' : normalized

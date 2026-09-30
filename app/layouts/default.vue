@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-900 text-gray-100">
+  <div class="bg-white text-gray-100">
     <DibodevNavbar />
     <main>
       <slot />
@@ -21,8 +21,8 @@ useHead({
   ],
 })
 
-onMounted(async () => {
+onMounted(async (): Promise<void> => {
   const [{ default: Aos }, _] = await Promise.all([import('aos'), import('aos/dist/aos.css')])
-  Aos.init({ easing: 'ease-out-cubic' })
+  Aos.init({ easing: 'ease-out-cubic', once: true, duration: 600, offset: 80 })
 })
 </script>

@@ -1,55 +1,38 @@
 <template>
-  <section
-    id="favorite-projects"
-    data-aos="fade-up"
-    data-aos-duration="600"
-    data-aos-offset="300"
-    class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-36 sm:px-8 sm:py-60"
-  >
-    <div class="grid gap-14 sm:gap-12">
-      <div class="flex items-center justify-center gap-4">
-        <h2 class="text-center text-2xl font-semibold sm:text-[32px]">
-          {{ $t('home.favoriteProjects.title') }}
-        </h2>
-        <div title="999 bpm">
-          <svg
-            class="heartbeat h-[24px] w-[26px] sm:h-[30px] sm:w-[34px]"
-            width="34"
-            height="30"
-            viewBox="0 0 34 30"
-            fill="none"
-          >
-            <path
-              d="M24.5 0C21.35 0 18.575 1.75 17 4.5C15.425 1.75 12.65 0 9.5 0C4.55 0 0.5 4.5 0.5 10C0.5 19.9167 17 30 17 30C17 30 33.5 20 33.5 10C33.5 4.5 29.45 0 24.5 0Z"
-              fill="#F44336"
-            />
-          </svg>
-        </div>
-      </div>
-      <div class="flex w-full max-w-7xl flex-col-reverse gap-10 sm:grid sm:gap-8">
-        <div class="flex w-full items-center justify-end">
+  <section id="projects" class="scroll-mt-24 bg-gray-800 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
+    <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
+      <DibodevSectionHeading
+        :eyebrow="$t('home.projects.eyebrow')"
+        :title="$t('home.projects.title')"
+        :intro="$t('home.projects.intro')"
+      >
+        <template #action>
           <DibodevLink :link="localePath('projects')">
-            <span>{{ $t('home.favoriteProjects.seeAllProjects') }}</span>
-            <DibodevIcon name="ArrowRight" mode="stroke" :width="20" :height="20" />
+            <span>{{ $t('home.projects.seeAllProjects') }}</span>
+            <DibodevIcon name="ArrowRight" mode="stroke" :width="18" :height="18" aria-hidden="true" />
           </DibodevLink>
-        </div>
+        </template>
+      </DibodevSectionHeading>
 
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
-          <DibodevProjectCard
-            v-for="(project, index) in favoriteProjects"
-            :key="project.route"
-            :name="project.name"
-            :description="project.metaDescription"
-            :createdAt="project.date"
-            :logo="project.logoUrl"
-            :primaryColor="project.primaryColor"
-            :secondaryColor="project.secondaryColor"
-            :route="project.route"
-            :categories="project.categories ?? []"
-            data-aos="zoom-in"
-            :data-aos-delay="index * 100"
-          />
-        </div>
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <DibodevProjectCard
+          v-for="(project, projectIndex) in favoriteProjects"
+          :key="project.route"
+          :class="{ 'sm:max-lg:hidden': projectIndex === tabletHiddenProjectIndex }"
+          :name="project.name"
+          :description="project.metaDescription"
+          :createdAt="project.date"
+          :logo="project.logoUrl"
+          :primaryColor="project.primaryColor"
+          :secondaryColor="project.secondaryColor"
+          :route="project.route"
+          :categories="project.categories ?? []"
+        />
+      </div>
+
+      <div class="flex flex-col gap-4 border-t border-gray-300 pt-8 sm:flex-row sm:items-center sm:gap-6">
+        <p class="text-muted shrink-0 text-sm font-medium">{{ $t('home.projects.byTypeTitle') }}</p>
+        <DibodevProjectTaxonomyChips :links="categoryLinks" />
       </div>
     </div>
   </section>
@@ -58,21 +41,32 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
+import type { DibodevProject } from '~/core/types/DibodevProject'
+import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
-
-const localePath = useLocalePath()
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
-import type { DibodevProject } from '~/core/types/DibodevProject'
+import DibodevProjectTaxonomyChips from '~/components/navigations/DibodevProjectTaxonomyChips.vue'
+import { useProjectTaxonomyLinks } from '~/composables/useProjectTaxonomyLinks'
 import { useProjectsWithTranslations } from '~/composables/useProjectsWithTranslations'
 
+/** Number of favourite projects displayed on the home page (one row of three cards on desktops). */
+const FAVORITE_PROJECTS_COUNT: number = 3
+
+const localePath = useLocalePath()
 const { data: storyblokProjectsData } = await useProjectsWithTranslations()
 
+const allProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] => storyblokProjectsData.value ?? [])
+const { categoryLinks } = useProjectTaxonomyLinks(allProjects)
+
 /**
- * Projects from Storyblok filtered by isFavorite.
+ * Projects from Storyblok flagged as favourites, most recent first.
  */
-const favoriteProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] => {
-  const all: DibodevProject[] = storyblokProjectsData.value ?? []
-  return all.filter((p: DibodevProject) => p.isFavorite)
-})
+const favoriteProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] =>
+  allProjects.value.filter((project: DibodevProject): boolean => project.isFavorite).slice(0, FAVORITE_PROJECTS_COUNT),
+)
+/** Last card of an odd list, hidden on two-column tablets so no card sits alone on its row (-1 when none). */
+const tabletHiddenProjectIndex: ComputedRef<number> = computed((): number =>
+  favoriteProjects.value.length > 1 && favoriteProjects.value.length % 2 === 1 ? favoriteProjects.value.length - 1 : -1,
+)
 </script>

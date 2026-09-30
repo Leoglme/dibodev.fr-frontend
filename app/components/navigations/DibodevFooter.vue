@@ -1,140 +1,133 @@
 <template>
-  <footer class="grid gap-10 border-t border-t-gray-400 bg-gray-800 p-8 px-4 py-8 sm:gap-x-8 sm:gap-y-8 sm:px-6">
-    <div class="grid gap-8 sm:grid-cols-2">
-      <div class="grid gap-6 sm:grid-cols-2">
-        <div class="grid gap-10 sm:gap-8">
-          <DibodevLogo :large="true" :size="30" />
-          <div class="flex items-center gap-4">
-            <NuxtLink
-              v-for="social in socials"
-              :key="social.name"
-              :to="social.link"
-              :title="social.name"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <DibodevSquareButton
-                :size="40"
-                :backgroundColor="social.color"
-                :backgroundHoverColor="social.hoverColor"
-                :aria-label="social.name"
-              >
-                <DibodevIcon :name="social.icon" :width="20" :height="20" mode="stroke" />
-              </DibodevSquareButton>
-            </NuxtLink>
-          </div>
-          <div class="flex flex-col gap-8">
-            <PhoneLink variant="navbar" />
-            <div class="w-full sm:hidden">
-              <DibodevButton
-                v-if="!isContactPage"
-                :to="localePath('/contact')"
-                icon="Mail"
-                backgroundColor="#6B59D9"
-                class="w-full"
-                @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'footer' })"
-              >
-                {{ $t('footer.contactMe') }}
-              </DibodevButton>
-            </div>
-          </div>
-        </div>
-        <div class="grid gap-4">
-          <DibodevLink v-for="link in footerLinks" :key="link.to" :link="link.to">
-            {{ link.title }}
-          </DibodevLink>
-        </div>
-      </div>
-
-      <div class="flex flex-wrap items-center justify-end gap-8">
-        <div class="hidden w-full sm:block sm:w-fit">
-          <DibodevButton
-            v-if="!isContactPage"
-            :to="localePath('/contact')"
-            icon="Mail"
-            backgroundColor="#6B59D9"
-            class="w-full"
-            @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'footer' })"
-          >
-            {{ $t('footer.contactMe') }}
-          </DibodevButton>
-        </div>
-        <div class="w-full sm:w-fit">
+  <footer class="border-t border-gray-300 bg-gray-800">
+    <div
+      class="mx-auto grid w-full max-w-7xl gap-12 px-6 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:gap-12 lg:py-20"
+    >
+      <div class="grid content-start gap-6 sm:col-span-2 lg:col-span-1">
+        <DibodevLogo :large="true" :size="30" />
+        <p class="max-w-sm text-[15px] leading-6 text-gray-200">{{ $t('footer.description') }}</p>
+        <div class="w-fit">
           <DibodevLanguageSwitcher id="language-switcher" :options="languages" />
         </div>
       </div>
+
+      <div class="grid content-start gap-10">
+        <nav class="grid content-start gap-4" :aria-label="$t('footer.pagesTitle')">
+          <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ $t('footer.pagesTitle') }}</h2>
+          <ul class="grid gap-3">
+            <li v-for="link in footerLinks" :key="link.to">
+              <NuxtLink :to="link.to" class="text-[15px] text-gray-200 transition-colors hover:text-gray-100">
+                {{ link.title }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="grid content-start gap-4" :aria-label="$t('footer.toolsTitle')">
+          <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ $t('footer.toolsTitle') }}</h2>
+          <ul class="grid gap-3">
+            <li v-for="toolLink in toolLinks" :key="toolLink.key">
+              <NuxtLink :to="toolLink.to" class="text-[15px] text-gray-200 transition-colors hover:text-gray-100">
+                {{ toolLink.title }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <nav class="grid content-start gap-4" :aria-label="$t('footer.projectTypesTitle')">
+        <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ $t('footer.projectTypesTitle') }}</h2>
+        <ul class="grid gap-3">
+          <li v-for="categoryLink in categoryLinks" :key="categoryLink.key">
+            <NuxtLink :to="categoryLink.to" class="text-[15px] text-gray-200 transition-colors hover:text-gray-100">
+              {{ categoryLink.title }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="grid content-start gap-4">
+        <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ $t('footer.contactTitle') }}</h2>
+        <ul class="grid gap-3">
+          <li>
+            <a
+              :href="`mailto:${CONTACT_EMAIL}`"
+              class="text-[15px] text-gray-200 transition-colors hover:text-gray-100"
+              @click="track(TRACKING_EVENTS.contactEmail, { location: 'footer' })"
+            >
+              {{ CONTACT_EMAIL }}
+            </a>
+          </li>
+          <li>
+            <PhoneLink variant="footer" />
+          </li>
+          <li class="text-[15px] text-gray-200">{{ $t('footer.location') }}</li>
+        </ul>
+        <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 pt-1">
+          <li v-for="social in socials" :key="social.name">
+            <a
+              :href="social.link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-primary inline-flex items-center gap-2 text-[15px] font-medium text-gray-100 transition-colors"
+              @click="track(TRACKING_EVENTS.externalProfileClicked, { platform: social.name, location: 'footer' })"
+            >
+              <span>{{ social.name }}</span>
+              <DibodevIcon name="ExternalLink" :width="14" :height="14" mode="stroke" aria-hidden="true" />
+            </a>
+          </li>
+        </ul>
+        <DibodevButton
+          v-if="!isContactPage"
+          :to="localePath('/contact')"
+          class="mt-2 w-full sm:w-fit"
+          @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'footer' })"
+        >
+          {{ $t('footer.contactMe') }}
+        </DibodevButton>
+      </div>
     </div>
 
-    <div class="flex w-full flex-wrap items-center justify-start gap-x-2 gap-y-3">
-      <DibodevBadge v-for="tag in tags" :key="tag" backgroundColor="#35424D" textColor="#F5F4FB">
-        {{ tag }}
-      </DibodevBadge>
-    </div>
-
-    <DibodevDivider />
-
-    <div class="flex w-full flex-wrap items-center justify-between gap-10">
-      <span class="text-base font-normal text-gray-200">
-        © 2025
-        <DibodevLink :externalLink="true" link="https://dibodev.fr" color="#e5e7eb"> dibodev.fr </DibodevLink>
-        — {{ $t('footer.allRightsReserved') }}
-      </span>
-      <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-        <DibodevLink v-for="legal in legalLinks" :key="legal.to" :link="legal.to">
-          {{ legal.title }}
-        </DibodevLink>
+    <div class="border-t border-gray-300">
+      <div
+        class="text-muted mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-6 py-6 text-sm sm:px-8"
+      >
+        <p>© {{ currentYear }} Dibodev · {{ $t('footer.allRightsReserved') }} · {{ $t('legal.publisher.siret') }}</p>
+        <ul class="flex flex-wrap items-center gap-x-5 gap-y-2">
+          <li v-for="legal in legalLinks" :key="legal.to">
+            <NuxtLink :to="legal.to" class="transition-colors hover:text-gray-100">{{ legal.title }}</NuxtLink>
+          </li>
+        </ul>
       </div>
     </div>
   </footer>
 </template>
 <script setup lang="ts">
+import type { ComputedRef } from 'vue'
+import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
+import type { DibodevFooterLink, DibodevFooterSocialLink } from '~/core/types/DibodevFooter'
+import type { CategoryKey } from '~/core/constants/projectEnums'
+import type { SupportedLocale } from '~/core/constants/categorySlugs'
+import { allCategoryKeys, categoryToSlug } from '~/core/constants/categorySlugs'
 import DibodevLogo from '~/components/branding/DibodevLogo.vue'
-import DibodevSquareButton from '~/components/buttons/DibodevSquareButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
-import DibodevLink from '~/components/core/DibodevLink.vue'
 import PhoneLink from '~/components/core/PhoneLink.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevLanguageSwitcher from '~/components/core/DibodevLanguageSwitcher.vue'
-import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
-import type { ComputedRef } from 'vue'
-import DibodevBadge from '~/components/ui/DibodevBadge.vue'
-import DibodevDivider from '~/components/decorators/DibodevDivider.vue'
+import { CONTACT_EMAIL, MALT_PROFILE_URL } from '~/config/contact'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
-type Socials = {
-  name: string
-  icon: string
-  link: string
-  color: string
-  hoverColor: string
-}
-
-type FooterLink = {
-  title: string
-  to: string
-}
 
 /* I18N */
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const { track } = useTracking()
 
 /* DATAS */
-const socials: Socials[] = [
-  {
-    name: 'GitHub',
-    icon: 'Github',
-    link: 'https://github.com/Leoglme/',
-    color: '#1C2128',
-    hoverColor: '#161B22',
-  },
-  {
-    name: 'LinkedIn',
-    icon: 'Linkedin',
-    link: 'https://www.linkedin.com/in/dibodev/',
-    color: '#0A66C2',
-    hoverColor: '#184D81',
-  },
+const socials: DibodevFooterSocialLink[] = [
+  { name: 'LinkedIn', link: 'https://www.linkedin.com/in/dibodev/' },
+  { name: 'Malt', link: MALT_PROFILE_URL },
+  { name: 'GitHub', link: 'https://github.com/Leoglme/' },
 ]
 
 const languages: DibodevSelectOption[] = [
@@ -143,7 +136,9 @@ const languages: DibodevSelectOption[] = [
   { label: 'ES', value: 'es' },
 ]
 
-const footerLinks: ComputedRef<FooterLink[]> = computed((): FooterLink[] => [
+const currentYear: number = new Date().getFullYear()
+
+const footerLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLink[] => [
   { title: t('footer.home'), to: localePath('/') },
   { title: t('footer.myProjects'), to: localePath('projects') },
   { title: t('footer.businessSoftware'), to: localePath('custom-business-software') },
@@ -152,18 +147,50 @@ const footerLinks: ComputedRef<FooterLink[]> = computed((): FooterLink[] => [
   { title: t('footer.contactPage'), to: localePath('/contact') },
 ])
 
-const legalLinks: ComputedRef<FooterLink[]> = computed((): FooterLink[] => [
-  { title: t('footer.legal'), to: localePath('/legal') },
-  { title: t('footer.privacy'), to: localePath('/privacy') },
+/** Free tools, linked from every page for internal linking. */
+const toolLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLink[] => [
+  {
+    key: 'drivingSchoolSoftware',
+    title: t('footer.tools.drivingSchoolSoftware'),
+    to: localePath('tools-driving-school-software'),
+  },
+  {
+    key: 'eventRentalSoftware',
+    title: t('footer.tools.eventRentalSoftware'),
+    to: localePath('tools-event-rental-software'),
+  },
+  {
+    key: 'bikeShopSoftware',
+    title: t('footer.tools.bikeShopSoftware'),
+    to: localePath('tools-bike-shop-software'),
+  },
+  {
+    key: 'autoRepairShopSoftware',
+    title: t('footer.tools.autoRepairShopSoftware'),
+    to: localePath('tools-auto-repair-shop-software'),
+  },
+  {
+    key: 'budgetEstimator',
+    title: t('footer.tools.budgetEstimator'),
+    to: `${localePath('custom-business-software')}#estimator`,
+  },
 ])
 
-const tags: ComputedRef<string[]> = computed((): string[] => [
-  t('footer.tags.webDeveloper'),
-  t('footer.tags.mobile'),
-  t('footer.tags.software'),
-  t('footer.tags.ai'),
-  t('footer.tags.rennesFrance'),
-  t('footer.tags.freelance'),
+/** Category listing pages, linked from every page for internal linking. */
+const categoryLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLink[] => {
+  const currentLocale: SupportedLocale = (locale.value as SupportedLocale) || 'fr'
+  return allCategoryKeys().map(
+    (key: CategoryKey): DibodevFooterLink => ({
+      key,
+      title: t(`projects.categories.${key}`),
+      to: localePath({ name: 'projects-category-slug', params: { slug: categoryToSlug(currentLocale, key) } }),
+    }),
+  )
+})
+
+const legalLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLink[] => [
+  { title: t('footer.legal'), to: localePath('/legal') },
+  { title: t('footer.privacy'), to: localePath('/privacy') },
 ])
 
 /* REFS */

@@ -190,9 +190,19 @@ declare module 'vue-i18n' {
     dashboard: {
       login: {
         title: string
-        passwordPlaceholder: string
+        passwordLabel: string
+        capsLockOn: string
         submit: string
         errorInvalid: string
+        heading: string
+        subtitle: string
+        backToSite: string
+        protectedAccess: string
+        panelWordWrite: string
+        panelWordMeasure: string
+        panelWordImprove: string
+        panelLine: string
+        panelModules: { articles: string; translations: string; search: string; indexing: string; audit: string }
       }
       logout: string
     }

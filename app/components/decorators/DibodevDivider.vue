@@ -3,7 +3,7 @@
     class="relative flex w-full items-center before:flex-1 before:border-t before:content-[''] after:flex-1 after:border-t after:content-['']"
     :class="[
       props.text ? 'before:mr-4 after:ml-4' : 'justify-center',
-      props.dark ? 'before:border-gray-600 after:border-gray-600' : 'before:border-gray-300 after:border-gray-300',
+      props.dark ? 'before:border-gray-400 after:border-gray-400' : 'before:border-gray-300 after:border-gray-300',
     ]"
     role="separator"
   >

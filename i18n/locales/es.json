@@ -3,8 +3,8 @@
     "title": "Dibodev — Desarrollador Web Freelance en Rennes",
     "description": "Desarrollador freelance en Rennes: sitios web, aplicaciones móviles, software e IA a medida. Acompañamiento de principio a fin.",
     "shareImage": {
-      "alt": "Retrato de Léo Guillaume, desarrollador freelance full-stack e IA en Rennes, con el texto «{pageLabel}»",
-      "role": "Desarrollador freelance full-stack e IA",
+      "alt": "Retrato de Léo Guillaume, desarrollador freelance full‑stack e IA en Rennes, con el texto «{pageLabel}»",
+      "role": "Desarrollador freelance full‑stack e IA",
       "place": "Rennes, Francia",
       "pageLabels": {
         "home": "Software de gestión, SaaS e IA",
@@ -45,79 +45,129 @@
     },
     "businessSoftwarePage": {
       "title": "Software de gestión a medida en Rennes — Desarrollador freelance {'|'} Dibodev",
-      "description": "Desarrollador freelance cerca de Rennes (Francia): aplicaciones de gestión a medida para pymes. Precio cerrado, de 5.000 a 15.000 € según el proyecto."
+      "description": "Desarrollador freelance cerca de Rennes (Francia): aplicaciones de gestión a medida para pymes. Precio cerrado, de 5.000 a 15.000 € según el proyecto."
     },
     "aboutPage": {
       "title": "Sobre mí — Léo Guillaume, desarrollador freelance en Rennes {'|'} Dibodev",
-      "description": "Léo Guillaume, fundador de Dibodev: desarrollador freelance full-stack e IA cerca de Rennes (Francia). Trayectoria (Kodeva, Izidoor, PrePeers), competencias y opiniones."
+      "description": "Léo Guillaume, fundador de Dibodev: desarrollador freelance full‑stack e IA cerca de Rennes (Francia). Trayectoria (Kodeva, Izidoor, PrePeers), competencias y opiniones."
     }
   },
   "nav": {
     "home": "Inicio",
-    "myProjects": "Mis proyectos",
+    "services": "Servicios",
+    "projects": "Proyectos",
+    "businessSoftware": "Software a medida",
+    "about": "Sobre mí",
     "blog": "Blog",
-    "contactMe": "Contactarme",
-    "openMenu": "Abrir menú",
-    "closeMenu": "Cerrar menú"
+    "contactMe": "Hablar de mi proyecto",
+    "openMenu": "Abrir el menú",
+    "closeMenu": "Cerrar el menú",
+    "mainNavigation": "Navegación principal",
+    "homeLinkLabel": "Dibodev, volver al inicio",
+    "contact": "Contacto"
   },
   "blog": {
     "landing": {
-      "title": "Blog Dibodev",
       "description": "Consejos y experiencias sobre digital, sitios web, aplicaciones e IA. Artículos dirigidos a artesanos, pymes y emprendedores.",
-      "cta": "Descubrir mis artículos"
+      "cta": "Descubrir mis artículos",
+      "titlePart1": "El blog ",
+      "titleHighlight1": "Dibodev",
+      "titlePart2": "",
+      "featuredEyebrow": "Último artículo"
     },
     "cta": {
       "title": "¿Tienes un proyecto en mente?",
-      "description": "¿Buscas un desarrollador freelance para concretar tu idea? Hablemos de tu proyecto web, móvil o de software.",
-      "ctaText": "Contactarme"
+      "description": "Cuéntame tu necesidad en unas líneas: te respondo en 24 horas con primeras ideas y una estimación de presupuesto.",
+      "ctaText": "Hablar de mi proyecto"
     },
     "card": {
       "readMore": "Leer el artículo",
       "readingTime": "min de lectura"
     },
     "related": {
-      "title": "Artículos similares"
+      "title": "Artículos similares",
+      "eyebrow": "Blog"
     },
     "list": {
       "noArticles": "Ningún artículo por el momento.",
-      "loadMore": "Cargar más artículos"
+      "loadMore": "Cargar más artículos",
+      "eyebrow": "Todos los artículos",
+      "title": "Todos los artículos del blog"
+    },
+    "toc": {
+      "title": "Índice"
+    },
+    "author": {
+      "eyebrow": "Escrito por",
+      "role": "Desarrollador independiente cerca de Rennes",
+      "bio": "Creo aplicaciones de gestión, sitios web y automatizaciones con IA para pymes y autónomos. Estos artículos comparten lo que veo sobre el terreno, con mis clientes.",
+      "link": "Conocer mi trayectoria"
+    },
+    "sidebarCta": {
+      "title": "¿Tienes un proyecto en mente?",
+      "description": "Cuéntame tu necesidad, te respondo en 24 horas.",
+      "button": "Hablar de mi proyecto"
+    },
+    "start": {
+      "eyebrow": "Por dónde empezar",
+      "title": "Tres artículos para hacerse una idea",
+      "intro": "Las preguntas más frecuentes antes de lanzar una herramienta a medida."
     }
   },
   "footer": {
-    "contactMe": "Contactarme",
+    "contactMe": "Hablar de mi proyecto",
     "home": "Inicio",
-    "myProjects": "Mis proyectos",
+    "myProjects": "Proyectos",
     "blog": "Blog",
     "contactPage": "Página de contacto",
     "legal": "Aviso legal",
     "privacy": "Política de privacidad",
-    "allRightsReserved": "Todos los derechos reservados.",
-    "tags": {
-      "webDeveloper": "Desarrollador Web",
-      "mobile": "Móvil",
-      "software": "Software",
-      "ai": "Inteligencia artificial",
-      "rennesFrance": "Rennes, Francia",
-      "freelance": "Freelance"
-    },
+    "allRightsReserved": "Todos los derechos reservados",
     "businessSoftware": "Software de gestión a medida",
-    "about": "Sobre mí"
+    "about": "Sobre mí",
+    "description": "Desarrollador independiente cerca de Rennes. Software de gestión, sitios web y automatizaciones con IA para pymes y autónomos.",
+    "pagesTitle": "Páginas",
+    "contactTitle": "Contacto",
+    "location": "Saint-Erblon, cerca de Rennes",
+    "projectTypesTitle": "Proyectos por tipo",
+    "toolsTitle": "Herramientas gratuitas",
+    "tools": {
+      "drivingSchoolSoftware": "¿Qué software para mi autoescuela?",
+      "eventRentalSoftware": "¿Qué software para mi alquiler de material para eventos?",
+      "bikeShopSoftware": "¿Qué software para mi taller de bicicletas?",
+      "autoRepairShopSoftware": "¿Qué software para mi taller mecánico?",
+      "budgetEstimator": "¿Cuánto cuesta mi software de gestión?"
+    }
   },
   "home": {
     "hero": {
-      "titleBefore": "¿Tienes un ",
-      "titleHighlight": "proyecto",
-      "titleAfter": "?",
-      "subtitleBefore": "Lo desarrollo ",
-      "subtitleHighlight": "contigo",
-      "subtitleAfter": ".",
-      "description": "Sitios web, apps, SaaS, API o IA — desde el diseño hasta el lanzamiento.",
-      "cta": "Hablar de mi proyecto",
-      "ctaSecondary": "Descubrir"
+      "eyebrow": "Desarrollador independiente · Rennes y en remoto",
+      "title": "Un software de gestión o un sitio web a medida para tu empresa.",
+      "description": "Creo aplicaciones de gestión, sitios web y automatizaciones con IA para pymes y autónomos. Un único interlocutor, desde la primera conversación hasta la puesta en marcha.",
+      "ctaPrimary": "Hablar de mi proyecto",
+      "ctaSecondary": "Ver mis proyectos",
+      "stats": {
+        "experienceValue": "7 años",
+        "experienceLabel": "de desarrollo",
+        "projectsLabel": "proyectos en línea",
+        "ratingValue": "5/5",
+        "ratingLabel": "en Malt"
+      },
+      "titlePart1": "Un software de gestión o un sitio web ",
+      "titleHighlight1": "a medida",
+      "titlePart2": " para tu empresa.",
+      "showcase": {
+        "label": "Vista previa de proyectos entregados",
+        "roleDescription": "carrusel",
+        "previous": "Proyecto anterior",
+        "next": "Proyecto siguiente",
+        "goTo": "Ver {name}"
+      }
     },
     "services": {
-      "title": "Mis servicios",
-      "intro": "Desarrollo soluciones a medida para lanzar un proyecto, automatizar una necesidad de negocio o mejorar tu presencia en línea.",
+      "title": "Lo que puedo hacer por ti",
+      "intro": "Herramientas a medida para lanzar un proyecto, ganar tiempo cada día o mejorar tu presencia en línea. Cada proyecto empieza con una conversación gratuita y un presupuesto claro.",
+      "estimatorLink": "Estimar el presupuesto de mi proyecto",
       "items": {
         "websites": {
           "title": "Sitios web",
@@ -132,33 +182,41 @@
           "description": "Creación de herramientas y automatización de tareas para simplificar tu actividad."
         },
         "aiAutomation": {
-          "title": "IA y automatización",
-          "description": "Integración de IA, análisis de datos y automatización inteligente."
+          "title": "Automatización e IA",
+          "description": "Clasificación de solicitudes, extracción de datos de tus documentos, respuestas automáticas: la IA integrada en tus herramientas.",
+          "price": "Desde 2.500 €"
         },
         "seo": {
           "title": "SEO",
           "description": "Mejora tu visibilidad en Google para atraer más visitantes cualificados."
+        },
+        "software": {
+          "title": "Software de gestión a medida",
+          "description": "Planificación, presupuestos y facturas, stock, control horario: una herramienta que sustituye tus hojas de Excel y se adapta a tu forma de trabajar.",
+          "price": "Desde 5.000 €"
+        },
+        "website": {
+          "title": "Sitio web profesional",
+          "description": "Un sitio claro y rápido, bien posicionado en Google, que puedes actualizar tú mismo.",
+          "price": "Desde 1.500 €"
+        },
+        "mobile": {
+          "title": "Aplicación móvil",
+          "description": "Una app iOS y Android para tus equipos sobre el terreno o para tus clientes.",
+          "price": "Con presupuesto"
         }
-      }
-    },
-    "stats": {
-      "yearsExperience": "Años de experiencia",
-      "yearsInCompany": "Años en empresa",
-      "projectsDone": "Proyectos realizados",
-      "passion": "Pasión e implicación"
-    },
-    "favoriteProjects": {
-      "title": "Mis proyectos favoritos",
-      "seeAllProjects": "Ver todos los proyectos"
+      },
+      "eyebrow": "Servicios"
     },
     "latestArticles": {
       "title": "Últimos artículos",
       "intro": "Comparto aquí mi experiencia, mis decisiones técnicas y mi visión de producto.",
       "seeAllArticles": "Ver todos los artículos",
-      "readArticle": "Leer el artículo"
+      "readArticle": "Leer el artículo",
+      "eyebrow": "Blog"
     },
     "help": {
-      "title": "¿Cómo puedo ayudarte?",
+      "title": "¿Te reconoces?",
       "subtitle": "Según tu situación, así es como puedo intervenir.",
       "ctaIntro": "Si alguno de estos casos te habla, hablemos de ello con sencillez.",
       "cta": "Contactarme",
@@ -179,50 +237,47 @@
           "title": "Ir más allá con la IA",
           "text": "Te ayudo a aprovechar tus datos y automatizar acciones inteligentes."
         }
-      }
-    },
-    "whyWorkWithMe": {
-      "title": "¿Por qué trabajar conmigo?",
-      "subtitle": "Un acompañamiento sencillo, serio y orientado al resultado.",
-      "ctaIntro": "¿Tienes una necesidad clara (o solo una idea)?",
-      "cta": "Contactarme",
-      "items": {
-        "one": {
-          "label": "Acompañamiento",
-          "title": "Un acompañamiento de A a Z",
-          "description": "Desde la reflexión inicial hasta el producto final, te acompaño en cada etapa."
-        },
-        "two": {
-          "label": "Calidad",
-          "title": "Código limpio y mantenible",
-          "description": "Bases sólidas, pensadas para durar y evolucionar sin deuda técnica."
-        },
-        "three": {
-          "label": "Comunicación",
-          "title": "Un único interlocutor",
-          "description": "Intercambias directamente con la persona que concibe y desarrolla tu proyecto."
-        },
-        "four": {
-          "label": "Visión",
-          "title": "Una visión global del producto",
-          "description": "Frontend, backend, API, automatización e IA: pienso el producto en su conjunto."
-        }
-      }
+      },
+      "eyebrow": "Situaciones"
     },
     "pricing": {
-      "title": "Mi tarifa de desarrollador freelance",
-      "intro": "Este precio se establece a partir de un tipo de jornada medio (TJM). Un día de trabajo equivale a",
-      "hours": "7H",
-      "requestQuote": "Solicitar presupuesto",
-      "pricePerDay": "/día.",
-      "priceTTC": "350€ IVA incl.",
-      "priceHT": "Es decir, 291,67€ HT/día (IVA 20%)."
+      "eyebrow": "Tarifas",
+      "title": "Precios claros, fijados antes de empezar",
+      "intro": "Cada proyecto tiene un presupuesto gratuito a precio cerrado. Estos son los órdenes de magnitud para orientarte.",
+      "offers": {
+        "website": {
+          "title": "Sitio web",
+          "price": "Desde 1.500 €",
+          "description": "Sitio de presentación de unas pocas páginas, rápido y bien posicionado, que actualizas tú mismo."
+        },
+        "automation": {
+          "title": "Automatización o pequeña herramienta",
+          "price": "Desde 2.500 €",
+          "description": "Una necesidad concreta: una automatización, un panel de control o una integración de IA en una herramienta existente."
+        },
+        "software": {
+          "title": "Software de gestión a medida",
+          "price": "De 5.000 a 15.000 €",
+          "description": "Planificación, stock, presupuestos, control horario: la mayoría de las herramientas de pymes están en este rango."
+        },
+        "maintenance": {
+          "title": "Mantenimiento y mejoras",
+          "price": "De 100 a 300 € al mes",
+          "description": "Alojamiento, copias de seguridad, actualizaciones y correcciones. Las mejoras más importantes se presupuestan aparte."
+        }
+      },
+      "dailyRateNote": "También trabajo por días, en modalidad de tiempo y materiales: 400 € al día.",
+      "freeQuoteNote": "La primera conversación y el presupuesto son gratuitos.",
+      "vatNote": "Precios netos: IVA no aplicable (artículo 293 B del Código General de Impuestos francés).",
+      "cta": "Pedir un presupuesto gratuito",
+      "highlightLabel": "El más solicitado",
+      "estimatorLink": "Estimar el presupuesto de mi proyecto"
     },
     "faq": {
       "title": "Preguntas frecuentes",
       "whoIsDibodev": {
         "question": "¿Quién es Dibodev?",
-        "answer": "Dibodev es la empresa de Léo Guillaume, desarrollador freelance full-stack instalado cerca de Rennes (Francia), en Saint-Erblon. Desde 2025 crea aplicaciones de gestión a medida, software de gestión, sitios web y automatizaciones con IA para pymes."
+        "answer": "Dibodev es la empresa de Léo Guillaume, desarrollador freelance full‑stack instalado cerca de Rennes (Francia), en Saint-Erblon. Desde 2025 crea aplicaciones de gestión a medida, software de gestión, sitios web y automatizaciones con IA para pymes."
       },
       "services": {
         "question": "¿Qué servicios ofreces?",
@@ -234,7 +289,7 @@
       },
       "price": {
         "question": "¿Cuánto cuesta un proyecto?",
-        "answer": "Cada proyecto tiene un presupuesto gratuito a precio cerrado. Para una aplicación de gestión, el presupuesto suele estar entre 5.000 y 15.000 €, y después de 100 a 300 € al mes de mantenimiento."
+        "answer": "Cada proyecto tiene un presupuesto gratuito a precio cerrado. Para una aplicación de gestión, el presupuesto suele estar entre 5.000 y 15.000 €, y después de 100 a 300 € al mes de mantenimiento."
       },
       "process": {
         "question": "¿Cómo se desarrolla un proyecto?",
@@ -243,23 +298,59 @@
       "technologies": {
         "question": "¿Con qué tecnologías trabajas?",
         "answer": "Principalmente Nuxt, Vue.js y TypeScript, con Node.js, Python o .NET en el servidor según el proyecto, y modelos de IA para automatizar las tareas repetitivas."
-      }
+      },
+      "eyebrow": "FAQ"
+    },
+    "clients": {
+      "eyebrow": "Referencias",
+      "title": "Han confiado en mí",
+      "intro": "Pymes, autónomos y startups que usan cada día las herramientas que he desarrollado."
+    },
+    "projects": {
+      "eyebrow": "Proyectos",
+      "title": "Algunos proyectos entregados",
+      "intro": "Aplicaciones de gestión, plataformas y sitios web, desde la idea hasta la puesta en producción.",
+      "seeAllProjects": "Ver todos los proyectos",
+      "byTypeTitle": "Ver por tipo de proyecto"
+    },
+    "founder": {
+      "eyebrow": "Quién está detrás de Dibodev",
+      "title": "Léo Guillaume, desarrollador desde hace siete años, cerca de Rennes",
+      "paragraph1": "Tras más de cuatro años en empresa creando software de gestión y plataformas, en Kodeva y después en Izidoor, fundé Dibodev en 2025 para acompañar directamente a pymes y autónomos.",
+      "paragraph2": "Me encargo de todo, desde la definición hasta el mantenimiento, y te explico cada decisión con palabras sencillas, sin jerga.",
+      "facts": {
+        "location": {
+          "label": "Con base en",
+          "value": "Saint-Erblon, cerca de Rennes"
+        },
+        "area": {
+          "label": "Intervenciones",
+          "value": "Rennes, Ille-et-Vilaine y Bretaña, y a distancia en toda Francia"
+        },
+        "education": {
+          "label": "Formación",
+          "value": "Máster en inteligencia artificial y datos, Epitech Rennes"
+        }
+      },
+      "cta": "Conocer mi trayectoria",
+      "portraitAlt": "Retrato de Léo Guillaume, fundador de Dibodev"
     }
   },
   "contact": {
     "landing": {
-      "description": "Desarrollador freelance especializado en web, móvil e IA — transformo tu idea en un producto concreto. Respuesta en 24h, presupuesto gratuito.",
-      "cta": "Contactarme"
+      "description": "Cuéntame tu necesidad en unas líneas, aunque todavía no sea precisa. Te respondo en 24 horas con primeras ideas y una estimación de presupuesto, sin compromiso.",
+      "titlePart1": "Hablemos de ",
+      "titleHighlight1": "tu proyecto",
+      "titlePart2": ""
     },
     "form": {
       "projectTypeLabel": "¿Cómo puedo ayudarte?",
       "pagesRangeLabel": "¿Cuántas páginas necesitas?",
       "budgetLabel": "Presupuesto estimado",
-      "budgetPlaceholder": "0",
       "nameLabel": "Nombre",
-      "namePlaceholder": "John Doe",
+      "namePlaceholder": "Tu nombre",
       "emailLabel": "Email",
-      "emailPlaceholder": "email{'@'}dibodev.com",
+      "emailPlaceholder": "tu{'@'}empresa.es",
       "phoneLabel": "Teléfono (opcional)",
       "phonePlaceholder": "+33 6 12 34 56 78",
       "phoneHelper": "Para poder llamarte más rápido, si lo prefieres.",
@@ -270,7 +361,9 @@
       "projectType": {
         "website": "Sitio web",
         "mobile": "Aplicación móvil",
-        "other": "Otro"
+        "other": "Otro",
+        "software": "Software de gestión",
+        "automation": "Automatización o IA"
       },
       "pagesRange": {
         "1_3": "1–3",
@@ -279,72 +372,106 @@
         "10_plus": "10+"
       },
       "budgetRange": {
-        "under_1k": "< 1 000 €",
-        "1k_5k": "1 000–5 000 €",
-        "5k_10k": "5 000–10 000 €",
-        "10k_plus": "10 000 €+"
+        "under_2k": "Menos de 2.000 €",
+        "2k_5k": "De 2.000 a 5.000 €",
+        "5k_15k": "De 5.000 a 15.000 €",
+        "15k_plus": "Más de 15.000 €"
       },
       "successMessage": "Tu mensaje se ha enviado correctamente. Se te ha enviado un correo de confirmación.",
       "errorInvalid": "El formulario no es válido. Por favor, verifica la información.",
       "errorServer": "Error del servidor. Por favor, inténtalo más tarde.",
-      "errorUnexpected": "Error inesperado. Por favor, inténtalo más tarde."
+      "errorUnexpected": "Error inesperado. Por favor, inténtalo más tarde.",
+      "privacyNote": "Tus datos solo sirven para responderte.",
+      "groups": {
+        "need": "Tu necesidad",
+        "details": "Tus datos de contacto",
+        "message": "Tu mensaje"
+      }
     },
     "reassurance": {
-      "response24h": "Respuesta en 24h",
+      "response24h": "Respuesta en 24 h",
       "freeQuote": "Presupuesto gratuito",
       "noCommitment": "Sin compromiso"
     },
     "sidebar": {
       "phone": "06 42 19 38 12",
-      "location": "Rennes, Francia",
+      "location": "Saint-Erblon, cerca de Rennes",
       "emailLabel": "Enviar un correo",
       "phoneLabel": "Llamar por teléfono",
       "locationLabel": "Ubicación"
+    },
+    "nextSteps": {
+      "title": "Qué pasa después",
+      "steps": {
+        "reply": {
+          "title": "Te respondo en 24 horas",
+          "description": "Por correo o por teléfono, como prefieras."
+        },
+        "call": {
+          "title": "Una conversación de 30 minutos",
+          "description": "Vemos juntos tu necesidad, tus herramientas actuales y lo que ya existe."
+        },
+        "proposal": {
+          "title": "Una propuesta con precio",
+          "description": "Alcance, precio cerrado y etapas, gratis y sin compromiso."
+        }
+      }
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Antes de escribirme"
+    },
+    "channels": {
+      "emailTitle": "Por correo",
+      "emailText": "Respuesta en 24 h, de lunes a viernes.",
+      "phoneTitle": "Por teléfono",
+      "phoneText": "De lunes a viernes, de 9 h a 18 h.",
+      "addressTitle": "En persona",
+      "addressText": "A 10 minutos de Rennes. Me desplazo por Ille-et-Vilaine y Bretaña cuando es útil."
+    },
+    "map": {
+      "title": "Saint-Erblon, cerca de Rennes",
+      "iframeTitle": "Mapa de Saint-Erblon, cerca de Rennes",
+      "openInMaps": "Abrir en Google Maps"
     }
   },
   "projects": {
     "landing": {
-      "title": "Mis proyectos — Desarrollador Freelance Web, Móvil e IA",
-      "titlePart1": "Mis ",
-      "titleHighlight1": "proyectos",
-      "titlePart2": " — Desarrollador ",
-      "titleHighlight2": "Freelance",
-      "titlePart3": " Web, Móvil e IA",
-      "description": "Sitios web, aplicaciones móviles, aplicaciones de negocio, SaaS y proyectos de IA — del diseño a la puesta en marcha.",
-      "cta": "Descubrir los proyectos"
+      "description": "Herramientas usadas cada día en pymes, pequeñas empresas y startups, desde la idea hasta la puesta en producción. Cada ficha detalla la necesidad, la solución y las tecnologías.",
+      "cta": "Ver todos los proyectos",
+      "titlePart1": "",
+      "titleHighlight1": "Mis proyectos",
+      "titlePart2": ": aplicaciones de gestión, sitios web y software entregados"
     },
     "section": {
       "searchTitle": "Buscar un proyecto",
-      "searchPlaceholder": "Buscar un proyecto... (Ctrl + E)",
+      "searchPlaceholder": "Buscar un proyecto…",
       "allLanguages": "Todos los lenguajes",
       "allCategories": "Todas las categorías",
       "allSectors": "Todos los sectores",
       "noResultsTitle": "Ningún proyecto encontrado",
-      "noResultsDescription": "Ningún proyecto coincide con tus criterios de búsqueda. Prueba a modificar los filtros."
+      "noResultsDescription": "Ningún proyecto coincide con tus criterios de búsqueda. Prueba a modificar los filtros.",
+      "eyebrow": "Todos los proyectos",
+      "title": "Explora los proyectos"
     },
     "categoryPage": {
       "title": "Proyectos {category} — Desarrollador Freelance Web, Móvil e IA",
-      "titlePart1": "Proyectos {category} — Desarrollador ",
-      "titleHighlight1": "Freelance",
-      "titlePart2": " Web, Móvil e IA",
-      "titleHighlight2": "",
-      "titlePart3": "",
       "description": "Descubre mis realizaciones en la categoría {category}.",
-      "introTitle": "Sobre esta categoría"
+      "introTitle": "Sobre esta categoría",
+      "asideCtaTitle": "¿Un proyecto de este tipo?",
+      "otherSectorsTitle": "Ver también por sector"
     },
     "sectorPage": {
       "title": "Proyectos {sector} — Desarrollador Freelance Web, Móvil e IA",
-      "titlePart1": "Proyectos {sector} — Desarrollador ",
-      "titleHighlight1": "Freelance",
-      "titlePart2": " Web, Móvil e IA",
-      "titlePart3": "",
       "description": "Descubre mis realizaciones en el sector {sector}: sitios web, aplicaciones móviles, SaaS y proyectos de IA.",
-      "introTitle": "Sobre este sector"
+      "introTitle": "Sobre este sector",
+      "asideCtaTitle": "¿Un proyecto en este sector?",
+      "otherTypesTitle": "Ver también por tipo de proyecto"
     },
     "cta": {
-      "text": "¿Tienes un proyecto similar? Hablemos",
-      "description": "¿Buscas un desarrollador freelance para concretar tu idea? Hablemos de tu proyecto web, móvil o software.",
-      "button": "Contactarme"
+      "text": "¿Tienes un proyecto similar? Hablemos.",
+      "description": "Cuéntame tu necesidad en unas líneas: te respondo en 24 horas con primeras ideas y una estimación de presupuesto.",
+      "button": "Hablar de mi proyecto"
     },
     "sectors": {
       "sport-loisirs": "Deporte y ocio",
@@ -364,14 +491,50 @@
       "application-metier": "Aplicación de negocio",
       "logiciel": "Software",
       "ia": "IA"
+    },
+    "card": {
+      "seeProject": "Ver el proyecto"
+    },
+    "hub": {
+      "typesEyebrow": "Por tipo de proyecto",
+      "typesTitle": "Encuentra el proyecto que se parece al tuyo",
+      "typesIntro": "Cada página reúne los proyectos de un mismo tipo, con lo que conviene saber antes de lanzar el tuyo.",
+      "sectorsEyebrow": "Por sector",
+      "sectorsTitle": "Proyectos en nueve sectores de actividad",
+      "projectCount": "{count} proyecto | {count} proyectos",
+      "seeListing": "Ver los proyectos"
+    },
+    "categoryDescriptions": {
+      "site-web": "Sitios de presentación, rediseños y posicionamiento.",
+      "application-mobile": "Aplicaciones iOS y Android para tus equipos o tus clientes.",
+      "saas": "Plataformas en línea usadas por varios clientes.",
+      "application-metier": "Herramientas de gestión a medida para pymes.",
+      "logiciel": "Software de escritorio y herramientas internas.",
+      "ia": "Asistentes, automatizaciones y modelos de inteligencia artificial."
+    },
+    "asideCta": {
+      "description": "Cuéntame tu necesidad en unas líneas: te respondo en 24 horas con primeras ideas y una estimación de presupuesto.",
+      "button": "Hablar de mi proyecto"
+    },
+    "mosaic": {
+      "label": "Proyectos de esta página",
+      "tileLabel": "Ver el proyecto {name}"
+    },
+    "listingFacts": {
+      "projectsLabel": "proyecto entregado | proyectos entregados",
+      "sinceLabel": "primer proyecto entregado",
+      "sectorsLabel": "sector cubierto | sectores cubiertos",
+      "categoriesLabel": "tipo de proyecto | tipos de proyecto",
+      "technologiesTitle": "Tecnologías usadas en estos proyectos"
     }
   },
   "project": {
     "landing": {
-      "discover": "Descubrir",
+      "discover": "Leer la descripción",
       "viewSite": "Ver el sitio"
     },
     "gallery": {
+      "eyebrow": "Vista previa",
       "title": "Vista previa del proyecto",
       "subtitle": "Descubre la interfaz y las funcionalidades principales",
       "preview": "Vista previa",
@@ -379,11 +542,162 @@
     },
     "about": {
       "descriptionTitle": "Descripción del proyecto",
-      "devEnvironmentTitle": "Entorno de desarrollo"
+      "githubButton": "Ver el repositorio en GitHub"
     },
     "recommended": {
       "title": "Proyectos similares",
-      "seeAllProjects": "Ver todos los proyectos"
+      "seeAllProjects": "Ver todos los proyectos",
+      "eyebrow": "Proyectos"
+    },
+    "facts": {
+      "title": "Ficha del proyecto",
+      "year": "Año",
+      "type": "Tipo de proyecto",
+      "sector": "Sector",
+      "technologies": "Tecnologías"
+    },
+    "asideCta": {
+      "title": "¿Un proyecto similar?",
+      "description": "Te respondo en 24 horas con primeras ideas y una estimación de presupuesto.",
+      "button": "Hablar de mi proyecto"
+    },
+    "caseStudy": {
+      "eyebrow": "Caso de estudio",
+      "title": "Lo que cambió el proyecto",
+      "stages": {
+        "before": "Antes",
+        "built": "Lo que construí",
+        "after": "Después"
+      },
+      "studies": {
+        "izidoor": {
+          "role": "Ingeniero full-stack en alternancia en Izidoor de enero de 2023 a julio de 2025, en un equipo ágil: arquitectura, interfaces, desarrollo, atención al cliente.",
+          "stats": {
+            "structures": {
+              "value": "~30",
+              "label": "estructuras de deporte y ocio equipadas"
+            },
+            "bookings": {
+              "value": "Miles",
+              "label": "de reservas cada temporada"
+            },
+            "shareholder": {
+              "value": "Accionista",
+              "label": "de Izidoor hoy"
+            }
+          },
+          "before": {
+            "product": "Un producto anticuado, inestable y lleno de errores, casi sin usuarios.",
+            "manual": "En la mayoría de las estructuras, reservas gestionadas por teléfono, en Excel o en papel.",
+            "competitors": "Otras estructuras usaban programas de la competencia."
+          },
+          "built": {
+            "backOffice": "Un back-office completo: reservas, planificación, productos, pagos, estadísticas y caja para cobrar in situ.",
+            "onlineBooking": "Un módulo de reserva en línea integrado en la web de cada estructura, con pago Stripe, anticipos y reembolsos.",
+            "engine": "Un motor de disponibilidad multicriterio, tarificación dinámica y conexiones con FFVoile, Mailjet y Twilio."
+          },
+          "after": {
+            "adoption": "Una plataforma fiable, adoptada por una treintena de estructuras.",
+            "volume": "Varios miles de reservas cada temporada, un volumen que se ha mantenido estable desde mi salida.",
+            "switch": "Estructuras que llegaron desde programas de la competencia, convencidas por las funcionalidades."
+          }
+        },
+        "gestTime": {
+          "role": "Creado desde cero en Kodeva, donde era ingeniero full-stack en alternancia en un equipo ágil, de octubre de 2020 a agosto de 2022, en contacto directo con los clientes. Distribuido a las empresas por Breizhtic.",
+          "stats": {
+            "companySize": {
+              "value": "20 a 200",
+              "label": "empleados en las pymes equipadas"
+            },
+            "production": {
+              "value": "Sigue",
+              "label": "en producción hoy"
+            },
+            "applications": {
+              "value": "3",
+              "label": "aplicaciones de gestión creadas desde cero en Kodeva, esta incluida"
+            }
+          },
+          "before": {
+            "paper": "Horas anotadas en papel o en archivos Excel dispersos.",
+            "retyping": "Datos que se volvían a teclear a mano antes de cada validación, fuente de errores.",
+            "visibility": "Poca visibilidad para los responsables sobre el tiempo dedicado a cada proyecto u obra."
+          },
+          "built": {
+            "entry": "El registro de horas por día, proyecto, tarea u obra, pensado para tableta y equipos de campo.",
+            "validation": "La validación semanal de las hojas de horas, con alertas sobre horas que faltan o excesos.",
+            "reporting": "La gestión de ausencias y días libres, informes por proyecto y exportaciones a Excel y PDF."
+          },
+          "after": {
+            "replaced": "El papel y los archivos Excel sustituidos por una sola herramienta.",
+            "reliable": "Sin datos tecleados dos veces y con un seguimiento de horas más fiable.",
+            "production": "Implantado en pymes de 20 a 200 empleados, sigue en producción hoy."
+          }
+        },
+        "stockPme": {
+          "role": "En Kodeva, donde era ingeniero full-stack en alternancia en un equipo ágil, de octubre de 2020 a agosto de 2022. El proyecto apenas había empezado a mi llegada; Breizhtic lo distribuía junto con el material.",
+          "stats": {
+            "companySize": {
+              "value": "20 a 200",
+              "label": "empleados en las pymes equipadas"
+            },
+            "production": {
+              "value": "Sigue",
+              "label": "en producción hoy"
+            },
+            "applications": {
+              "value": "3",
+              "label": "aplicaciones de gestión creadas desde cero en Kodeva, esta incluida"
+            }
+          },
+          "before": {
+            "spreadsheets": "Existencias controladas en hojas de cálculo o a mano.",
+            "errors": "Errores de inventario, roturas de stock o excedentes difíciles de prever.",
+            "traceability": "Poca trazabilidad de los movimientos entre ubicaciones y almacenes."
+          },
+          "built": {
+            "catalog": "Fichas de producto, niveles de stock e historial de cada movimiento: entradas, salidas, correcciones, inventarios.",
+            "transfers": "Traslados entre ubicaciones y almacenes, con estadísticas de evolución del stock.",
+            "labels": "Etiquetas profesionales con código QR, con el material distribuido por Breizhtic, y seguimiento del servicio posventa."
+          },
+          "after": {
+            "replaced": "El papel y las hojas de cálculo sustituidos por una sola herramienta.",
+            "reliable": "Sin datos tecleados dos veces y con inventarios más fiables.",
+            "production": "Implantado en pymes de 20 a 200 empleados, sigue en producción hoy."
+          }
+        },
+        "a2mOrizon": {
+          "role": "Proyecto que llevé yo solo como freelance, de la maqueta a la puesta en línea, para una empresa de acompañamiento social. En línea desde diciembre de 2025.",
+          "stats": {
+            "visits": {
+              "value": "4000",
+              "label": "visitas desde el lanzamiento"
+            },
+            "visitors": {
+              "value": "1000",
+              "label": "visitantes únicos"
+            },
+            "autonomy": {
+              "value": "100 %",
+              "label": "del contenido editable por la clienta"
+            }
+          },
+          "before": {
+            "noPresence": "Ninguna presencia en internet: ni web, ni correo profesional.",
+            "noVisibility": "Una empresa que empezaba sin visibilidad ni forma de ser contactada en línea."
+          },
+          "built": {
+            "site": "Una web corporativa rápida con CMS: la clienta edita ella misma sus páginas, su blog, sus preguntas frecuentes y sus imágenes.",
+            "seo": "Un correo profesional, un SEO completo y estadísticas de visitas respetuosas con la privacidad.",
+            "contact": "Un formulario de contacto con acuse de recibo automático y una publicación automatizada en cada cambio."
+          },
+          "after": {
+            "traffic": "4000 visitas y 1000 visitantes únicos desde el lanzamiento.",
+            "leads": "Solicitudes de contacto regulares.",
+            "autonomy": "Una clienta autónoma con su contenido y una empresa que pudo arrancar con buen pie."
+          }
+        }
+      }
     }
   },
   "legal": {
@@ -403,7 +717,7 @@
       "addressLine2": "35230 Saint-Erblon",
       "addressLine3": "Francia",
       "contact": "Contacto:",
-      "siret": "SIRET: 988 307 906 00020"
+      "siret": "SIRET: 988 307 906 00020"
     },
     "host": {
       "title": "Alojamiento",
@@ -415,8 +729,9 @@
     },
     "activity": {
       "title": "Actividad",
-      "description": "Desarrollador full-stack web, IA y móvil en freelance."
-    }
+      "description": "Desarrollador full‑stack web, IA y móvil en freelance."
+    },
+    "intro": "La información legal de dibodev.fr: editor, alojamiento y actividad."
   },
   "privacy": {
     "meta": {
@@ -463,21 +778,42 @@
   "dashboard": {
     "login": {
       "title": "Acceso al back office",
-      "passwordPlaceholder": "Contraseña",
+      "passwordLabel": "Contraseña",
+      "capsLockOn": "Bloq Mayús activado",
       "submit": "Entrar",
-      "errorInvalid": "Contraseña incorrecta."
+      "errorInvalid": "Contraseña incorrecta.",
+      "heading": "Hola de nuevo.",
+      "subtitle": "Artículos, traducciones, Search Console y auditorías de dibodev.fr.",
+      "backToSite": "Volver al sitio",
+      "protectedAccess": "Acceso restringido · la sesión dura 7 días en este dispositivo",
+      "panelWordWrite": "Escribir",
+      "panelWordMeasure": "Medir",
+      "panelWordImprove": "Mejorar",
+      "panelLine": "El back office de dibodev.fr: artículos, posicionamiento y rendimiento en un solo lugar.",
+      "panelModules": {
+        "articles": "Artículos",
+        "translations": "Traducciones",
+        "search": "Consultas de Google",
+        "indexing": "Indexación",
+        "audit": "Auditoría SEO"
+      }
     },
     "logout": "Cerrar sesión"
   },
   "accessibility": {
     "chooseLanguage": "Elegir idioma",
-    "blurBackground": ""
+    "blurBackground": "",
+    "showPassword": "Mostrar la contraseña",
+    "hidePassword": "Ocultar la contraseña"
   },
   "businessSoftwarePage": {
     "hero": {
-      "title": "Desarrollador de software de gestión a medida en Rennes",
       "description": "Creo para pequeñas y medianas empresas de Rennes y Bretaña programas de gestión que sustituyen los archivos Excel, el papeleo y las tareas repetitivas: planificación, stock, presupuestos, control horario, reservas.",
-      "cta": "Hablar de mi proyecto"
+      "cta": "Hablar de mi proyecto",
+      "ctaSecondary": "Ver las tarifas",
+      "titlePart1": "Desarrollador de software de gestión ",
+      "titleHighlight1": "a medida",
+      "titlePart2": " en Rennes"
     },
     "tools": {
       "title": "Las herramientas que desarrollo",
@@ -505,56 +841,67 @@
       "ai": {
         "title": "Automatizaciones e IA",
         "description": "Clasificar solicitudes, extraer datos de tus documentos o responder a las preguntas frecuentes de tus clientes."
-      }
-    },
-    "steps": {
-      "title": "Cómo trabajo",
-      "subtitle": "Un único interlocutor, desde la primera conversación hasta el mantenimiento.",
-      "discovery": {
-        "label": "Conversación",
-        "title": "Una primera conversación gratuita",
-        "description": "Vemos juntos cómo trabajas y qué te hace perder tiempo. Si un programa existente basta, te lo digo."
       },
-      "quote": {
-        "label": "Presupuesto",
-        "title": "Un presupuesto claro y cerrado",
-        "description": "El alcance, el precio y las etapas se fijan antes de empezar: sin sorpresas por el camino."
-      },
-      "build": {
-        "label": "Desarrollo",
-        "title": "Entregas por etapas",
-        "description": "Pruebas la herramienta a medida que avanza el proyecto y tus comentarios se tienen en cuenta antes del lanzamiento."
-      },
-      "support": {
-        "label": "Seguimiento",
-        "title": "Lanzamiento y acompañamiento",
-        "description": "Importo tus datos existentes, formo a tu equipo y me encargo del mantenimiento y las mejoras."
+      "eyebrow": "Ejemplos de herramientas",
+      "exampleLabel": "Ver un ejemplo: {name}",
+      "integrations": {
+        "title": "Y se conecta con lo que ya utilizas",
+        "intro": "Tu herramienta se comunica con tu software en lugar de sustituirlo: pagos, correos, archivos, IA.",
+        "items": {
+          "payment": {
+            "name": "Stripe",
+            "label": "Pagos en línea"
+          },
+          "emails": {
+            "name": "Mailjet",
+            "label": "Correos automáticos"
+          },
+          "content": {
+            "name": "Storyblok",
+            "label": "Contenidos editables"
+          },
+          "files": {
+            "name": "Excel y CSV",
+            "label": "Importación y exportación"
+          },
+          "ai": {
+            "name": "Mistral AI",
+            "label": "Inteligencia artificial"
+          },
+          "api": {
+            "name": "Tu software",
+            "label": "Conexión por API"
+          }
+        }
       }
     },
     "pricing": {
       "title": "¿Cuánto cuesta un software de gestión a medida?",
+      "estimatorIntro": "La mayoría de las aplicaciones de gestión para pymes cuestan entre 5.000 y 15.000 €. El precio depende del número de pantallas, de usuarios y de conexiones con tus programas: tres preguntas bastan para situar el tuyo.",
       "project": {
         "title": "Aplicación de gestión a precio cerrado",
-        "price": "De 5.000 a 15.000 €",
+        "price": "De 5.000 a 15.000 €",
         "description": "El precio depende del número de pantallas, de usuarios y de conexiones con tus programas actuales. La mayoría de las herramientas de pymes están en este rango; una plataforma más completa puede costar más. El precio se fija en el presupuesto, antes de empezar."
       },
       "maintenance": {
         "title": "Mantenimiento y mejoras",
-        "price": "De 100 a 300 € al mes",
+        "price": "De 100 a 300 € al mes",
         "description": "Alojamiento, copias de seguridad, actualizaciones y correcciones, según la herramienta. Las mejoras más importantes se presupuestan aparte."
       },
       "note": "La primera conversación y el presupuesto son gratuitos.",
-      "vatNote": "Precios netos: IVA no aplicable (artículo 293 B del Código General de Impuestos francés)."
+      "vatNote": "Precios netos: IVA no aplicable (artículo 293 B del Código General de Impuestos francés).",
+      "eyebrow": "Tarifas"
     },
     "projects": {
       "title": "Aplicaciones de gestión ya en producción",
-      "seeAll": "Ver todos los proyectos de aplicaciones de gestión"
+      "seeAll": "Ver todos los proyectos de aplicaciones de gestión",
+      "eyebrow": "Proyectos"
     },
     "faq": {
       "title": "Preguntas frecuentes",
       "price": {
         "question": "¿Cuánto cuesta un software de gestión a medida?",
-        "answer": "A precio cerrado, entre 5.000 y 15.000 € para la mayoría de las herramientas de pymes (planificación, stock, presupuestos, control horario). El precio depende del número de pantallas, de usuarios y de conexiones con tus programas; una plataforma más completa puede costar más. Se fija en el presupuesto antes de empezar, y el mantenimiento cuesta después de 100 a 300 € al mes según la herramienta."
+        "answer": "A precio cerrado, entre 5.000 y 15.000 € para la mayoría de las herramientas de pymes (planificación, stock, presupuestos, control horario). El precio depende del número de pantallas, de usuarios y de conexiones con tus programas; una plataforma más completa puede costar más. Se fija en el presupuesto antes de empezar, y el mantenimiento cuesta después de 100 a 300 € al mes según la herramienta."
       },
       "delay": {
         "question": "¿Cuánto tiempo hace falta para crear la herramienta?",
@@ -575,26 +922,108 @@
       "existing": {
         "question": "¿Y si un programa existente es suficiente?",
         "answer": "Te lo digo en la primera conversación. Un software a medida solo tiene sentido si los programas del mercado no se adaptan a tu forma de trabajar."
-      }
+      },
+      "eyebrow": "FAQ"
     },
     "articles": {
-      "title": "Para saber más"
+      "title": "Para saber más",
+      "eyebrow": "Blog"
     },
     "cta": {
       "title": "¿Un Excel que se desborda? Hablemos de tu herramienta.",
       "description": "Descríbeme tu necesidad en unas líneas: te respondo en 24 horas con una primera idea de solución y de presupuesto.",
       "button": "Hablar de mi proyecto"
+    },
+    "guarantees": {
+      "eyebrow": "Lo que obtienes",
+      "title": "Una herramienta tuya, pensada para durar",
+      "intro": "Seis compromisos escritos en cada presupuesto, para que sepas exactamente lo que compras.",
+      "items": {
+        "ownership": {
+          "title": "Una herramienta que te pertenece",
+          "description": "El código fuente y tus datos están a tu nombre, alojados donde quieras."
+        },
+        "data": {
+          "title": "Tus datos actuales importados",
+          "description": "Tus hojas de Excel y tus programas actuales se importan: nadie empieza de cero."
+        },
+        "training": {
+          "title": "Una puesta en marcha sencilla",
+          "description": "Tu equipo recibe formación y una documentación breve."
+        },
+        "price": {
+          "title": "Un precio fijado antes de empezar",
+          "description": "Presupuesto cerrado, alcance por escrito, sin sorpresas por el camino."
+        },
+        "steps": {
+          "title": "Entregas por etapas",
+          "description": "Pruebas la herramienta a medida que avanza el proyecto y ajustas antes del lanzamiento."
+        },
+        "support": {
+          "title": "Seguimiento tras la puesta en marcha",
+          "description": "Mantenimiento, copias de seguridad y mejoras, de 100 a 300 € al mes."
+        }
+      }
+    },
+    "comparison": {
+      "eyebrow": "Comparativa",
+      "title": "¿Software del mercado, agencia o a medida?",
+      "intro": "Tres maneras de equipar tu empresa. Esto es lo que cambia, punto por punto, para una pyme.",
+      "criterionLabel": "Criterio",
+      "columns": {
+        "offTheShelf": "Software del mercado",
+        "agency": "Agencia",
+        "dibodev": "A medida con Dibodev"
+      },
+      "rows": {
+        "fit": {
+          "label": "Adaptado a tu forma de trabajar",
+          "offTheShelf": "Adaptas tus hábitos a la herramienta.",
+          "agency": "Sí, tras varios talleres de definición.",
+          "dibodev": "Sí, diseñado a partir de tus procesos reales."
+        },
+        "price": {
+          "label": "Precio",
+          "offTheShelf": "Suscripción por usuario, que sube con el equipo.",
+          "agency": "Presupuesto alto: jefe de proyecto, diseñador, equipo.",
+          "dibodev": "Precio cerrado antes de empezar, a menudo de 5000 a 15 000 €."
+        },
+        "contact": {
+          "label": "Interlocutor",
+          "offTheShelf": "Un soporte al cliente, a menudo por ticket.",
+          "agency": "Un jefe de proyecto entre tú y los desarrolladores.",
+          "dibodev": "Directamente el desarrollador, desde la primera llamada hasta el mantenimiento."
+        },
+        "ownership": {
+          "label": "Propiedad del código y de los datos",
+          "offTheShelf": "Tus datos se quedan en el editor.",
+          "agency": "Según el contrato, a comprobar.",
+          "dibodev": "Código fuente y datos a tu nombre."
+        },
+        "evolutions": {
+          "label": "Evoluciones",
+          "offTheShelf": "Según la hoja de ruta del editor.",
+          "agency": "Posibles, a menudo caras.",
+          "dibodev": "A demanda, al ritmo de tu actividad."
+        },
+        "delay": {
+          "label": "Puesta en marcha",
+          "offTheShelf": "Inmediata, pero hay que adaptarse.",
+          "agency": "Varios meses.",
+          "dibodev": "Primeras entregas en pocas semanas."
+        }
+      }
     }
   },
   "aboutPage": {
     "hero": {
       "titlePart1": "Léo Guillaume, ",
       "titleHighlight": "desarrollador freelance",
-      "titlePart2": " full-stack e IA cerca de Rennes",
+      "titlePart2": " full‑stack e IA cerca de Rennes",
       "description": "Soy el fundador de Dibodev. Creo aplicaciones de gestión a medida, software de gestión, sitios web y automatizaciones con IA para pymes de Rennes, de Bretaña y de toda Francia.",
       "cta": "Hablar de mi proyecto",
       "ctaSecondary": "Descubrir mi trayectoria",
-      "portraitAlt": "Retrato de Léo Guillaume, desarrollador freelance full-stack e IA cerca de Rennes",
+      "portraitAlt": "Retrato de Léo Guillaume, desarrollador freelance full‑stack e IA cerca de Rennes",
       "portraitCaption": "Fundador de Dibodev, cerca de Rennes"
     },
     "story": {
@@ -603,7 +1032,8 @@
       "career": "Desde entonces he creado herramientas que se usan cada día: tres aplicaciones de gestión en Kodeva, todavía en producción en pymes, y después la plataforma de reservas de Izidoor, adoptada por una treintena de entidades de deporte y ocio.",
       "dibodev": "En 2025 creé Dibodev para trabajar directamente con las pymes. Mi objetivo: sustituir los archivos Excel, el papeleo y las tareas repetitivas por herramientas sencillas, pensadas para las personas que las usan.",
       "ai": "Desde abril de 2026 también trabajo en una misión para PrePeers, una startup EdTech que ayuda a los jóvenes de 15 a 25 años a elegir su orientación gracias a la inteligencia artificial. Desarrollo la plataforma y los chats de IA que aconsejan a los estudiantes, incluso en los sitios web de las escuelas asociadas.",
-      "workingStyle": "Trabajo solo, en contacto directo contigo, desde la primera conversación hasta el mantenimiento. Cada proyecto tiene un precio cerrado con un presupuesto claro y se entrega por etapas para que puedas probar la herramienta a medida que avanza."
+      "workingStyle": "Trabajo solo, en contacto directo contigo, desde la primera conversación hasta el mantenimiento. Cada proyecto tiene un precio cerrado con un presupuesto claro y se entrega por etapas para que puedas probar la herramienta a medida que avanza.",
+      "eyebrow": "Sobre mí"
     },
     "facts": {
       "title": "En resumen",
@@ -613,7 +1043,7 @@
       },
       "currentMission": {
         "label": "Ahora mismo",
-        "value": "Misión full-stack e IA en PrePeers, startup EdTech, desde abril de 2026"
+        "value": "Misión full‑stack e IA en PrePeers, startup EdTech, desde abril de 2026"
       },
       "location": {
         "label": "Ubicación",
@@ -639,15 +1069,6 @@
     "profiles": {
       "title": "Encuéntrame en otras plataformas"
     },
-    "testimonial": {
-      "title": "La opinión de un cliente",
-      "quote": "Pedimos ayuda a Léo en un proyecto Nuxt. Lo recomiendo porque entendió muy rápido nuestra necesidad y trabajó con rapidez y eficacia. Valoré especialmente lo fácil que fue integrarlo en el equipo y comunicarse con él.",
-      "authorName": "Gilles",
-      "authorRole": "CTO de PrePeers",
-      "sourceNote": "Opinión de cliente publicada en Malt en mayo de 2026, traducida del francés",
-      "sourceLink": "Ver la opinión en Malt",
-      "ratingLabel": "Valoración: 5 sobre 5"
-    },
     "path": {
       "title": "Mi trayectoria",
       "subtitle": "Seis años creando herramientas que se usan a diario, desde la alternancia hasta mis propios clientes.",
@@ -656,7 +1077,7 @@
       "currentStep": "En curso",
       "prepeers": {
         "period": "Desde abril de 2026",
-        "title": "Desarrollador full-stack e IA",
+        "title": "Desarrollador full‑stack e IA",
         "organization": "PrePeers",
         "context": "Misión freelance, startup EdTech cerca de Lyon",
         "description": "PrePeers ayuda a los jóvenes de 15 a 25 años a encontrar su camino con una IA conversacional y después los pone en contacto con las escuelas que les encajan. Soy el desarrollador principal de las interfaces de la plataforma.",
@@ -680,7 +1101,7 @@
       },
       "izidoor": {
         "period": "Enero de 2023 a julio de 2025",
-        "title": "Ingeniero full-stack",
+        "title": "Ingeniero full‑stack",
         "organization": "Izidoor",
         "context": "Alternancia, SaaS de reservas",
         "description": "Una plataforma de reservas y de gestión para escuelas de deportes al aire libre: vela, esquí, kayak o surf.",
@@ -692,7 +1113,7 @@
       },
       "kodeva": {
         "period": "Octubre de 2020 a agosto de 2022",
-        "title": "Ingeniero full-stack",
+        "title": "Ingeniero full‑stack",
         "organization": "Kodeva",
         "context": "Alternancia, software para pymes",
         "description": "Tres aplicaciones de gestión SaaS desarrolladas desde cero en un equipo ágil y distribuidas después a las empresas por Breizhtic.",
@@ -722,7 +1143,8 @@
         "organization": "Instituto de hostelería Notre-Dame, Saint-Méen-le-Grand",
         "context": "Antes de mi reconversión",
         "description": "Un primer recorrido en hostelería y restauración, antes de mi reconversión al desarrollo web en 2017."
-      }
+      },
+      "eyebrow": "Trayectoria"
     },
     "skills": {
       "title": "Lo que sé hacer",
@@ -742,17 +1164,176 @@
       "delivery": {
         "title": "Puesta en línea y seguimiento",
         "description": "Despliegue automatizado, medición de audiencia y SEO, para que la herramienta siga viva después de la entrega."
-      }
+      },
+      "eyebrow": "Competencias"
     },
     "projects": {
       "title": "Algunos proyectos en imágenes",
       "description": "Herramientas de gestión para empresas, plataformas y proyectos de IA, desde la idea hasta la puesta en producción.",
-      "seeAll": "Ver todos mis proyectos"
+      "seeAll": "Ver todos mis proyectos",
+      "eyebrow": "Proyectos"
     },
     "cta": {
       "title": "¿Un proyecto de herramienta o de sitio web?",
       "description": "Cuéntame tu necesidad en unas líneas: te respondo en 24 horas con primeras ideas y una estimación de presupuesto.",
       "button": "Hablar de mi proyecto"
     }
+  },
+  "testimonial": {
+    "title": "La opinión de un cliente",
+    "quote": "Pedimos ayuda a Léo en un proyecto Nuxt. Lo recomiendo porque entendió muy rápido nuestra necesidad y trabajó con rapidez y eficacia. Valoré especialmente lo fácil que fue integrarlo en el equipo y comunicarse con él.",
+    "authorName": "Gilles",
+    "authorRole": "CTO de PrePeers",
+    "sourceNote": "Opinión de cliente publicada en Malt en mayo de 2026, traducida del francés",
+    "sourceLink": "Ver la opinión en Malt",
+    "ratingLabel": "Valoración: 5 sobre 5",
+    "eyebrow": "Opinión de cliente",
+    "verifiedLabel": "Opinión verificada · Malt, mayo de 2026"
+  },
+  "method": {
+    "title": "Cómo se desarrolla un proyecto",
+    "subtitle": "Un único interlocutor, desde la primera conversación hasta el mantenimiento.",
+    "discovery": {
+      "label": "Conversación",
+      "title": "Una primera conversación gratuita",
+      "description": "Vemos juntos cómo trabajas y qué te hace perder tiempo. Si un programa existente basta, te lo digo."
+    },
+    "quote": {
+      "label": "Presupuesto",
+      "title": "Un presupuesto claro y cerrado",
+      "description": "El alcance, el precio y las etapas se fijan antes de empezar: sin sorpresas por el camino."
+    },
+    "build": {
+      "label": "Desarrollo",
+      "title": "Entregas por etapas",
+      "description": "Pruebas la herramienta a medida que avanza el proyecto y tus comentarios se tienen en cuenta antes del lanzamiento."
+    },
+    "support": {
+      "label": "Seguimiento",
+      "title": "Lanzamiento y acompañamiento",
+      "description": "Importo tus datos existentes, formo a tu equipo y me encargo del mantenimiento y las mejoras."
+    },
+    "eyebrow": "Método"
+  },
+  "breadcrumb": {
+    "label": "Ruta de navegación"
+  },
+  "error": {
+    "codeLabel": "Error {code}",
+    "notFound": {
+      "title": "Esta página no existe o ya no existe",
+      "description": "Puede que la dirección haya cambiado. Encontrarás todo desde el inicio, los proyectos o la página de contacto."
+    },
+    "generic": {
+      "title": "Se ha producido un error",
+      "description": "Vuelve a intentarlo en un momento. Si el problema persiste, escríbeme y me ocupo rápidamente."
+    },
+    "home": "Volver al inicio",
+    "projects": "Ver los proyectos",
+    "contact": "Contactarme"
+  },
+  "comparison": {
+    "states": {
+      "yes": "Sí",
+      "partial": "En parte",
+      "no": "No"
+    },
+    "showDetails": "Ver la comparativa punto por punto",
+    "hideDetails": "Ocultar la comparativa"
+  },
+  "estimator": {
+    "eyebrow": "Estimación",
+    "title": "Estima el presupuesto de tu proyecto",
+    "intro": "Tres preguntas para situar tu proyecto. La estimación es orientativa: el presupuesto, gratuito, fija el precio exacto.",
+    "kindLabel": "¿Qué tipo de proyecto?",
+    "kinds": {
+      "website": "Sitio web",
+      "tool": "Automatización o pequeña herramienta",
+      "software": "Software de gestión"
+    },
+    "sizeLabel": "¿Qué tamaño?",
+    "sizes": {
+      "small": {
+        "label": "Sencillo",
+        "hint": "Unas pocas pantallas o páginas, un solo tipo de usuario."
+      },
+      "medium": {
+        "label": "Estándar",
+        "hint": "Varias pantallas, roles diferentes y algunas automatizaciones."
+      },
+      "large": {
+        "label": "Completo",
+        "hint": "Una plataforma completa: muchas pantallas, roles, paneles y conexiones."
+      }
+    },
+    "optionsLabel": "Opciones",
+    "options": {
+      "dataImport": "Recuperación de tus datos",
+      "integrations": "Conexión con tu software",
+      "mobileApp": "Aplicación móvil",
+      "ai": "Inteligencia artificial"
+    },
+    "note": "Rangos basados en los proyectos ya entregados. Precios netos, IVA no aplicable (artículo 293 B del Código General de Impuestos francés).",
+    "resultLabel": "Estimación orientativa",
+    "priceRange": "{min} a {max}",
+    "durationLabel": "Duración",
+    "durationRange": "{min} a {max} semanas",
+    "maintenanceLabel": "Mantenimiento",
+    "maintenanceValue": "100 a 300 €/mes",
+    "disclaimer": "El precio exacto se fija en el presupuesto, gratuito y sin compromiso.",
+    "cta": "Recibir un presupuesto preciso",
+    "includedTitle": "Incluido en cada proyecto",
+    "included": {
+      "ownership": "Código fuente y datos a tu nombre",
+      "steps": "Entregas por etapas, para probar sobre la marcha",
+      "training": "Puesta en marcha y formación de tus equipos"
+    }
+  },
+  "quizTunnel": {
+    "progressLabel": "Progreso del test",
+    "questionCount": "Pregunta {current} de {total}",
+    "resultCount": "Resultado",
+    "back": "Volver",
+    "editAnswers": "Cambiar mis respuestas",
+    "multipleHint": "Puedes elegir varias respuestas.",
+    "maxHint": "Hasta {max} respuestas.",
+    "continue": "Continuar",
+    "resultEyebrow": "Tu resultado",
+    "yourAnswers": "Tus respuestas: {recap}",
+    "restart": "Repetir el test",
+    "callMe": "o llámame al",
+    "response24h": "Respuesta en 24 h",
+    "freeFirstCall": "Primera conversación gratuita",
+    "resultAnnouncement": "Tu resultado: {title}",
+    "form": {
+      "nameLabel": "Nombre y apellidos",
+      "emailLabel": "Email",
+      "phoneLabel": "Teléfono (opcional)",
+      "cancel": "Cancelar",
+      "submit": "Enviar mi solicitud",
+      "submitting": "Enviando…",
+      "privacyNote": "Tus datos solo sirven para responderte.",
+      "error": "No se ha podido enviar. Inténtalo de nuevo o llámame al {phone}."
+    },
+    "sent": {
+      "title": "Solicitud enviada",
+      "text": "Gracias. Te respondo en 24 horas, de lunes a viernes. Te acabo de enviar un correo de confirmación."
+    },
+    "lead": {
+      "intro": "Solicitud enviada desde el test «{quiz}»",
+      "result": "Resultado: {title}",
+      "answer": "{question}: {answer}"
+    }
+  },
+  "toolTeaserList": {
+    "emphasizedIntro": "¿Buscas un software para tu oficio en Francia?",
+    "text": "Cada test tiene 6 preguntas y da los precios 2026 de los programas del mercado francés."
+  },
+  "toolPage": {
+    "updatedOn": "Actualizado el",
+    "aboutTitle": "Sobre este test"
+  },
+  "sourcedFacts": {
+    "source": "Fuente: {name}"
   }
 }

@@ -26,6 +26,7 @@ export function useSwitchLocalePathWithSlug(): (targetLocale: string) => string 
   const route = useRoute()
   const { locale } = useI18n()
   const switchLocalePath = useSwitchLocalePath()
+  const localePath = useLocalePath()
 
   return (targetLocale: string): string => {
     const path = (route.path && String(route.path)) || ''
@@ -57,6 +58,7 @@ export function useSwitchLocalePathWithSlug(): (targetLocale: string) => string 
       }
     }
 
-    return switchLocalePath(targetLocale) || path
+    // A page written for one country (a French tool) has no version in the other locales: their home page is the closest.
+    return switchLocalePath(targetLocale) || localePath('/', targetLocale)
   }
 }

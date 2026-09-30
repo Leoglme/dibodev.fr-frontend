@@ -1,79 +1,94 @@
 <template>
-  <Form v-slot="{ meta }" ref="contactForm" class="flex flex-col gap-10 sm:gap-8" @submit="onSubmit">
-    <div class="flex flex-col gap-4">
-      <DibodevLabel id="projectType">{{ $t('contact.form.projectTypeLabel') }}</DibodevLabel>
+  <Form ref="contactForm" class="flex flex-col gap-10" @submit="onSubmit">
+    <fieldset class="contact-group grid gap-6">
+      <legend class="contact-group__legend">
+        <span class="contact-group__number" aria-hidden="true">1</span>
+        {{ $t('contact.form.groups.need') }}
+      </legend>
+      <div class="flex flex-col gap-4">
+        <DibodevLabel id="projectType">{{ $t('contact.form.projectTypeLabel') }}</DibodevLabel>
 
-      <DibodevTogglePillGroup v-model:value="projectType" :options="projectTypeOptions" />
+        <DibodevTogglePillGroup v-model:value="projectType" :options="projectTypeOptions" />
 
-      <Field name="type de projet" rules="required" as="input" type="hidden" v-model="projectType" />
-      <ErrorMessage name="type de projet" class="text-sm text-red-500" />
-    </div>
-
-    <div class="flex flex-col gap-4">
-      <DibodevLabel id="pagesRange">{{ $t('contact.form.pagesRangeLabel') }}</DibodevLabel>
-
-      <DibodevTogglePillGroup v-model:value="pagesRange" :options="pagesOptions" />
-
-      <Field name="nombre de pages" rules="required" as="input" type="hidden" v-model="pagesRange" />
-      <ErrorMessage name="nombre de pages" class="text-sm text-red-500" />
-    </div>
-
-    <div class="flex flex-col gap-4">
-      <DibodevLabel id="budgetRange">{{ $t('contact.form.budgetLabel') }}</DibodevLabel>
-
-      <DibodevTogglePillGroup v-model:value="budgetRange" :options="budgetRangeOptions" :deselectable="true" />
-    </div>
-
-    <div class="grid grid-cols-1 gap-10 sm:gap-4 lg:grid-cols-2">
-      <DibodevInput
-        id="nom"
-        autocomplete="name"
-        :label="$t('contact.form.nameLabel')"
-        :placeholder="$t('contact.form.namePlaceholder')"
-        :value="fullName"
-        rules="required"
-        @update:value="fullName = $event.toString()"
-      />
-
-      <div class="flex flex-col gap-2">
-        <DibodevInput
-          id="telephone"
-          type="tel"
-          autocomplete="tel"
-          :label="$t('contact.form.phoneLabel')"
-          :placeholder="$t('contact.form.phonePlaceholder')"
-          :value="phone"
-          @update:value="phone = $event.toString()"
-          @blur="onPhoneBlur"
-        />
-        <p class="text-sm text-gray-200">{{ $t('contact.form.phoneHelper') }}</p>
+        <Field name="type de projet" rules="required" as="input" type="hidden" v-model="projectType" />
+        <ErrorMessage name="type de projet" class="text-sm text-red-500" />
       </div>
-    </div>
 
-    <div>
-      <DibodevInput
-        id="email"
-        autocomplete="email"
-        :label="$t('contact.form.emailLabel')"
-        :placeholder="$t('contact.form.emailPlaceholder')"
-        :value="email"
-        rules="required|email"
-        @update:value="email = $event.toString()"
-        @blur="onEmailBlur"
-      />
-    </div>
+      <div v-if="isWebsiteProject" class="flex flex-col gap-4">
+        <DibodevLabel id="pagesRange">{{ $t('contact.form.pagesRangeLabel') }}</DibodevLabel>
 
-    <div>
-      <DibodevInput
-        id="message"
-        :label="$t('contact.form.messageLabel')"
-        :placeholder="$t('contact.form.messagePlaceholder')"
-        :rows="6"
-        :value="message"
-        rules="required"
-        @update:value="message = $event.toString()"
-      />
-    </div>
+        <DibodevTogglePillGroup v-model:value="pagesRange" :options="pagesOptions" :deselectable="true" />
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <DibodevLabel id="budgetRange">{{ $t('contact.form.budgetLabel') }}</DibodevLabel>
+
+        <DibodevTogglePillGroup v-model:value="budgetRange" :options="budgetRangeOptions" :deselectable="true" />
+      </div>
+    </fieldset>
+
+    <fieldset class="contact-group grid gap-6">
+      <legend class="contact-group__legend">
+        <span class="contact-group__number" aria-hidden="true">2</span>
+        {{ $t('contact.form.groups.details') }}
+      </legend>
+      <div class="grid grid-cols-1 gap-10 sm:gap-4 lg:grid-cols-2 lg:items-start">
+        <DibodevInput
+          id="nom"
+          autocomplete="name"
+          :label="$t('contact.form.nameLabel')"
+          :placeholder="$t('contact.form.namePlaceholder')"
+          :value="fullName"
+          rules="required"
+          @update:value="fullName = $event.toString()"
+        />
+
+        <div class="flex flex-col gap-2">
+          <DibodevInput
+            id="telephone"
+            type="tel"
+            autocomplete="tel"
+            :label="$t('contact.form.phoneLabel')"
+            :placeholder="$t('contact.form.phonePlaceholder')"
+            :value="phone"
+            @update:value="phone = $event.toString()"
+            @blur="onPhoneBlur"
+          />
+          <p class="text-muted text-sm">{{ $t('contact.form.phoneHelper') }}</p>
+        </div>
+      </div>
+
+      <div>
+        <DibodevInput
+          id="email"
+          autocomplete="email"
+          :label="$t('contact.form.emailLabel')"
+          :placeholder="$t('contact.form.emailPlaceholder')"
+          :value="email"
+          rules="required|email"
+          @update:value="email = $event.toString()"
+          @blur="onEmailBlur"
+        />
+      </div>
+    </fieldset>
+
+    <fieldset class="contact-group grid gap-6">
+      <legend class="contact-group__legend">
+        <span class="contact-group__number" aria-hidden="true">3</span>
+        {{ $t('contact.form.groups.message') }}
+      </legend>
+      <div>
+        <DibodevInput
+          id="message"
+          :label="$t('contact.form.messageLabel')"
+          :placeholder="$t('contact.form.messagePlaceholder')"
+          :rows="6"
+          :value="message"
+          rules="required"
+          @update:value="message = $event.toString()"
+        />
+      </div>
+    </fieldset>
 
     <DibodevAlert v-if="errorMessage" :message="errorMessage" variant="error" dismissible @hide="errorMessage = null" />
     <DibodevAlert
@@ -84,26 +99,14 @@
       @hide="successMessage = null"
     />
 
-    <ul
-      class="flex flex-col gap-y-4 text-base font-medium text-gray-200 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-4"
-      role="list"
-    >
-      <li class="flex w-full items-center gap-2 sm:w-auto">
-        <span class="text-primary-light" aria-hidden="true">✓</span>
-        <span>{{ $t('contact.reassurance.response24h') }}</span>
-      </li>
-      <li class="flex w-full items-center gap-2 sm:w-auto">
-        <span class="text-primary-light" aria-hidden="true">✓</span>
-        <span>{{ $t('contact.reassurance.freeQuote') }}</span>
-      </li>
-      <li class="flex w-full items-center gap-2 sm:w-auto">
-        <span class="text-primary-light" aria-hidden="true">✓</span>
-        <span>{{ $t('contact.reassurance.noCommitment') }}</span>
-      </li>
-    </ul>
-
-    <div class="flex justify-end">
-      <DibodevButton type="submit" icon="Send" class="w-full lg:w-auto" :disabled="!meta.valid || isSubmitting">
+    <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+      <p class="text-muted text-sm leading-6">
+        {{ $t('contact.form.privacyNote') }}
+        <NuxtLink :to="localePath('/privacy')" class="text-primary underline underline-offset-4">
+          {{ $t('footer.privacy') }}
+        </NuxtLink>
+      </p>
+      <DibodevButton type="submit" icon="Send" class="w-full lg:w-auto" :disabled="isSubmitting">
         {{ isSubmitting ? $t('contact.form.submitting') : $t('contact.form.submit') }}
       </DibodevButton>
     </div>
@@ -128,14 +131,19 @@ import { useLeadSource } from '~/composables/useLeadSource'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 /** Project type, pages range and budget range keys (values sent to API are translated via $t). */
-const PROJECT_TYPE_KEYS = ['website', 'mobile', 'other'] as const
+const PROJECT_TYPE_KEYS = ['software', 'website', 'mobile', 'automation', 'other'] as const
 const PAGES_RANGE_KEYS = ['1_3', '3_6', '6_10', '10_plus'] as const
-const BUDGET_RANGE_KEYS = ['under_1k', '1k_5k', '5k_10k', '10k_plus'] as const
+const BUDGET_RANGE_KEYS = ['under_2k', '2k_5k', '5k_15k', '15k_plus'] as const
 type ProjectTypeKey = (typeof PROJECT_TYPE_KEYS)[number]
 type PagesRangeKey = (typeof PAGES_RANGE_KEYS)[number]
 type BudgetRangeKey = (typeof BUDGET_RANGE_KEYS)[number]
 
+/** The pages question only makes sense for a website. */
+const WEBSITE_PROJECT_TYPE: ProjectTypeKey = 'website'
+const DEFAULT_PROJECT_TYPE: ProjectTypeKey = 'software'
+
 const { t } = useI18n()
+const localePath = useLocalePath()
 const { track } = useTracking()
 const { getLeadSource } = useLeadSource()
 
@@ -166,9 +174,16 @@ const budgetRangeOptions: ComputedRef<Option[]> = computed((): Option[] =>
 )
 
 /** REFS */
-const projectType: Ref<ProjectTypeKey | null> = ref<ProjectTypeKey>('website')
+/** `?type=` and `?budget=` come from the budget estimator; ignored when they are not known keys. */
+const route = useRoute()
+const prefilledProjectType: ProjectTypeKey | null =
+  PROJECT_TYPE_KEYS.find((key: ProjectTypeKey): boolean => key === String(route.query.type ?? '')) ?? null
+const prefilledBudgetRange: BudgetRangeKey | null =
+  BUDGET_RANGE_KEYS.find((key: BudgetRangeKey): boolean => key === String(route.query.budget ?? '')) ?? null
+
+const projectType: Ref<ProjectTypeKey | null> = ref<ProjectTypeKey>(prefilledProjectType ?? DEFAULT_PROJECT_TYPE)
 const pagesRange: Ref<PagesRangeKey | null> = ref<PagesRangeKey | null>(null)
-const budgetRange: Ref<BudgetRangeKey | null> = ref<BudgetRangeKey | null>(null)
+const budgetRange: Ref<BudgetRangeKey | null> = ref<BudgetRangeKey | null>(prefilledBudgetRange)
 const fullName: Ref<string> = ref('')
 const email: Ref<string> = ref('')
 const phone: Ref<string> = ref('')
@@ -179,31 +194,53 @@ const successMessage: Ref<string | null> = ref(null)
 const lastSentIntentKey: Ref<string | null> = ref(null)
 const contactForm: Ref<FormContext | null> = ref(null)
 
+/** COMPUTED */
+const isWebsiteProject: ComputedRef<boolean> = computed((): boolean => projectType.value === WEBSITE_PROJECT_TYPE)
+
 /** METHODS */
-/** Validates email format client-side */
-function isValidEmail(email: string): boolean {
+/**
+ * Validates email format client-side.
+ * @param {string} emailValue - The email to test.
+ * @returns {boolean} True when the email looks valid.
+ */
+function isValidEmail(emailValue: string): boolean {
   const emailRegex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  return emailRegex.test(email.trim())
+  return emailRegex.test(emailValue.trim())
 }
 
-/** Map project type key to translated value for API. */
+/**
+ * Map project type key to translated value for API.
+ * @param {ProjectTypeKey | null} key - The selected project type.
+ * @returns {string | null} The translated label.
+ */
 function getProjectTypeDisplay(key: ProjectTypeKey | null): string | null {
   return key ? t(`contact.form.projectType.${key}`) : null
 }
 
-/** Map pages range key to translated value for API. */
+/**
+ * Map pages range key to translated value for API (only sent for a website project).
+ * @param {PagesRangeKey | null} key - The selected pages range.
+ * @returns {string | null} The translated label.
+ */
 function getPagesRangeDisplay(key: PagesRangeKey | null): string | null {
-  return key ? t(`contact.form.pagesRange.${key}`) : null
+  return key && isWebsiteProject.value ? t(`contact.form.pagesRange.${key}`) : null
 }
 
-/** Map budget range key to translated value for API. */
+/**
+ * Map budget range key to translated value for API.
+ * @param {BudgetRangeKey | null} key - The selected budget range.
+ * @returns {string} The translated label, or an empty string.
+ */
 function getBudgetRangeDisplay(key: BudgetRangeKey | null): string {
   return key ? t(`contact.form.budgetRange.${key}`) : ''
 }
 
-/** Reset form fields */
+/**
+ * Reset form fields after a successful submission.
+ * @returns {void}
+ */
 function resetFormValues(): void {
-  projectType.value = 'website'
+  projectType.value = DEFAULT_PROJECT_TYPE
   pagesRange.value = null
   budgetRange.value = null
   fullName.value = ''
@@ -213,8 +250,7 @@ function resetFormValues(): void {
   lastSentIntentKey.value = null
   contactForm.value?.resetForm({
     values: {
-      'type de projet': 'website',
-      'nombre de pages': null,
+      'type de projet': DEFAULT_PROJECT_TYPE,
       nom: '',
       email: '',
       telephone: '',
@@ -282,7 +318,10 @@ async function onPhoneBlur(): Promise<void> {
   await debouncedSendContactIntent()
 }
 
-/** Handles form submission */
+/**
+ * Handles form submission (vee-validate only calls it once every rule passes).
+ * @returns {Promise<void>} Resolves once the request settles.
+ */
 async function onSubmit(): Promise<void> {
   errorMessage.value = null
   successMessage.value = null
@@ -337,3 +376,34 @@ async function onSubmit(): Promise<void> {
   }
 }
 </script>
+
+<style scoped>
+.contact-group {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.contact-group__legend {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--color-gray-100);
+}
+
+.contact-group__number {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: var(--color-accent-tint);
+  color: var(--color-primary);
+  font-size: 0.875rem;
+}
+</style>

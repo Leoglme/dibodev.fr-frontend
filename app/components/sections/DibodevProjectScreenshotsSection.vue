@@ -2,23 +2,20 @@
   <section
     v-if="projectScreenshots.length > 0"
     id="project-screenshots"
+    class="bg-surface-tint px-6 py-20 sm:px-8 lg:py-28"
     data-aos="fade-up"
-    data-aos-duration="600"
-    class="relative z-2 flex w-screen max-w-screen items-center justify-center px-6 py-24 sm:px-8 sm:py-32"
   >
-    <div class="grid w-full max-w-7xl gap-10 sm:gap-12">
-      <div class="flex flex-wrap items-end justify-between gap-6">
-        <div class="grid max-w-3xl gap-4">
-          <h2 class="text-left text-2xl font-semibold sm:text-[32px]">{{ props.title }}</h2>
-          <p v-if="props.description" class="text-left text-base leading-8 text-gray-200">{{ props.description }}</p>
-        </div>
-        <DibodevLink v-if="props.seeAllLabel" :link="localePath('projects')">
-          <span>{{ props.seeAllLabel }}</span>
-          <DibodevIcon name="ArrowRight" mode="stroke" :width="20" :height="20" aria-hidden="true" />
-        </DibodevLink>
-      </div>
+    <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
+      <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.description">
+        <template v-if="props.seeAllLabel" #action>
+          <DibodevLink :link="localePath('projects')">
+            <span>{{ props.seeAllLabel }}</span>
+            <DibodevIcon name="ArrowRight" mode="stroke" :width="18" :height="18" aria-hidden="true" />
+          </DibodevLink>
+        </template>
+      </DibodevSectionHeading>
 
-      <ul class="grid auto-rows-[170px] grid-cols-2 gap-4 sm:auto-rows-[220px] lg:grid-cols-3 lg:gap-6">
+      <ul class="grid auto-rows-[170px] grid-cols-2 gap-4 sm:auto-rows-[220px] lg:grid-cols-3 lg:gap-5">
         <li
           v-for="(projectScreenshot, index) in projectScreenshots"
           :key="projectScreenshot.route"
@@ -26,12 +23,10 @@
             'col-span-2 row-span-2': index === 0,
             'col-span-2 lg:col-span-1': index > 0 && index === projectScreenshots.length - 1,
           }"
-          data-aos="zoom-in"
-          :data-aos-delay="index * 80"
         >
           <NuxtLink
             :to="localePath(projectScreenshot.route)"
-            class="group focus-visible:outline-primary-light relative block h-full overflow-hidden rounded-2xl border border-gray-600 bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-4"
+            class="group focus-visible:outline-primary relative block h-full overflow-hidden rounded-lg border border-gray-300 bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-4"
             @click="
               track(TRACKING_EVENTS.projectCardClicked, {
                 project: projectScreenshot.name,
@@ -50,10 +45,10 @@
               class="h-full w-full object-cover transition-transform duration-300 ease-out motion-safe:group-hover:scale-105"
             />
             <div
-              class="absolute inset-x-0 bottom-0 grid gap-1 bg-linear-to-t from-gray-900 via-gray-900/80 to-transparent px-4 pt-10 pb-4"
+              class="absolute inset-x-0 bottom-0 grid gap-1 bg-linear-to-t from-black/80 via-black/50 to-transparent px-4 pt-10 pb-4"
             >
-              <span class="text-sm font-semibold text-gray-100 sm:text-base">{{ projectScreenshot.brand }}</span>
-              <span v-if="projectScreenshot.tagline" class="line-clamp-2 hidden text-sm text-gray-200 sm:block">
+              <span class="text-sm font-medium text-white sm:text-base">{{ projectScreenshot.brand }}</span>
+              <span v-if="projectScreenshot.tagline" class="line-clamp-2 hidden text-sm text-white/80 sm:block">
                 {{ projectScreenshot.tagline }}
               </span>
             </div>
@@ -72,6 +67,7 @@ import type {
   DibodevProjectScreenshotsSectionProps,
 } from '~/core/types/DibodevProjectScreenshotsSection'
 import { computed } from 'vue'
+import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import { useProjectsWithTranslations } from '~/composables/useProjectsWithTranslations'
@@ -80,6 +76,10 @@ import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 import { StoryblokImageUtils } from '~/core/utils/StoryblokImageUtils'
 
 const props: DibodevProjectScreenshotsSectionProps = defineProps({
+  eyebrow: {
+    type: String as PropType<string>,
+    default: '',
+  },
   title: {
     type: String as PropType<string>,
     required: true,

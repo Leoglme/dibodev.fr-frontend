@@ -4,25 +4,26 @@
     id="project-gallery"
     data-aos="fade-up"
     data-aos-duration="600"
-    class="relative z-2 flex w-screen max-w-screen items-center justify-center px-3 py-24 pt-36 sm:pt-48"
+    class="bg-surface-tint w-full scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28"
   >
-    <div class="grid w-full max-w-5xl gap-12">
+    <div class="mx-auto grid w-full max-w-7xl gap-12">
       <!-- Section Title -->
-      <div class="flex flex-col items-center justify-center gap-4">
-        <h2 class="text-center text-3xl font-semibold text-gray-100 sm:text-[40px]">
+      <div class="grid gap-3">
+        <p class="text-primary text-xs font-medium tracking-[0.08em] uppercase">{{ $t('project.gallery.eyebrow') }}</p>
+        <h2 class="text-[28px] leading-[1.15] font-medium tracking-[-0.01em] text-gray-100 sm:text-[36px]">
           {{ $t('project.gallery.title') }}
         </h2>
-        <p class="text-center text-base leading-7 font-normal text-gray-200">
+        <p class="text-[17px] leading-7 text-gray-200">
           {{ $t('project.gallery.subtitle') }}
         </p>
       </div>
 
       <!-- Gallery Grid - Images stacked vertically -->
-      <div v-if="hasBothMedia" class="flex flex-col items-center gap-16">
+      <div v-if="hasBothMedia" class="grid items-start gap-6 lg:grid-cols-2">
         <!-- Media 1 -->
         <div
-          class="group hover:shadow-primary/20 relative cursor-pointer overflow-hidden rounded-2xl border-1 border-gray-700 transition-all duration-300 hover:border-gray-600 hover:shadow-2xl"
-          :class="[media1IsPortrait ? 'w-full max-w-xs bg-gray-800' : 'w-full max-w-3xl bg-transparent']"
+          class="group relative cursor-pointer overflow-hidden rounded-lg border border-gray-300 transition-colors duration-300 hover:border-gray-400"
+          :class="[media1IsPortrait ? 'mx-auto w-full max-w-xs bg-gray-800' : 'w-full bg-transparent']"
           data-aos="fade-up"
           data-aos-delay="100"
           data-aos-duration="800"
@@ -38,7 +39,7 @@
                 media1Loaded ? 'opacity-100' : 'opacity-0',
               ]"
               class="absolute inset-0 h-full w-full transition-opacity transition-transform duration-300 duration-500 group-hover:scale-105"
-              loading="lazy"
+              loading="eager"
               width="1200"
               height="675"
               @load="onMedia1Load"
@@ -46,7 +47,7 @@
             />
           </div>
           <div
-            class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           >
             <div class="rounded-full bg-white/20 p-4 backdrop-blur-sm">
               <svg
@@ -69,8 +70,8 @@
 
         <!-- Media 2 -->
         <div
-          class="group hover:shadow-primary/20 relative cursor-pointer overflow-hidden rounded-2xl border-1 border-gray-700 transition-all duration-300 hover:border-gray-600 hover:shadow-2xl"
-          :class="[media2IsPortrait ? 'w-full max-w-xs bg-gray-800' : 'w-full max-w-3xl bg-transparent']"
+          class="group relative cursor-pointer overflow-hidden rounded-lg border border-gray-300 transition-colors duration-300 hover:border-gray-400"
+          :class="[media2IsPortrait ? 'mx-auto w-full max-w-xs bg-gray-800' : 'w-full bg-transparent']"
           data-aos="fade-up"
           data-aos-delay="200"
           data-aos-duration="800"
@@ -86,7 +87,7 @@
                 media2Loaded ? 'opacity-100' : 'opacity-0',
               ]"
               class="absolute inset-0 h-full w-full transition-opacity transition-transform duration-300 duration-500 group-hover:scale-105"
-              loading="lazy"
+              loading="eager"
               width="1200"
               height="675"
               @load="onMedia2Load"
@@ -94,7 +95,7 @@
             />
           </div>
           <div
-            class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           >
             <div class="rounded-full bg-white/20 p-4 backdrop-blur-sm">
               <svg
@@ -117,9 +118,9 @@
       </div>
 
       <!-- Single Media (Centered) -->
-      <div v-else class="flex items-center justify-center">
+      <div v-else class="flex items-start justify-start">
         <div
-          class="group hover:shadow-primary/20 relative cursor-pointer overflow-hidden rounded-2xl border-1 border-gray-700 transition-all duration-300 hover:border-gray-600 hover:shadow-2xl"
+          class="group relative cursor-pointer overflow-hidden rounded-lg border border-gray-300 transition-colors duration-300 hover:border-gray-400"
           :class="[singleMediaIsPortrait ? 'w-full max-w-xs bg-gray-800' : 'w-full max-w-3xl bg-transparent']"
           data-aos="zoom-in"
           data-aos-delay="100"
@@ -136,7 +137,7 @@
                 singleMediaLoaded ? 'opacity-100' : 'opacity-0',
               ]"
               class="absolute inset-0 h-full w-full transition-opacity transition-transform duration-300 duration-500 group-hover:scale-105"
-              loading="lazy"
+              loading="eager"
               width="1200"
               height="675"
               @load="onSingleMediaLoad"
@@ -144,7 +145,7 @@
             />
           </div>
           <div
-            class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           >
             <div class="rounded-full bg-white/20 p-4 backdrop-blur-sm">
               <svg
@@ -189,7 +190,7 @@
             <img
               :src="modalImageSrc"
               :alt="modalImageAlt"
-              class="h-auto max-h-[90vh] w-auto max-w-[90vw] rounded-2xl object-contain"
+              class="h-auto max-h-[90vh] w-auto max-w-[90vw] rounded-lg object-contain"
             />
           </div>
         </div>
@@ -215,10 +216,6 @@ const props = defineProps({
   media2: {
     type: String as PropType<string | null | undefined>,
     default: null,
-  },
-  primaryColor: {
-    type: String as PropType<string>,
-    default: '#5661f7',
   },
 })
 
@@ -423,11 +420,6 @@ onMounted((): void => {
 </script>
 
 <style scoped>
-.hover\:shadow-primary\/20:hover {
-  --tw-shadow-color: v-bind(primaryColor);
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
 /* Modal transition animations */
 .modal-enter-active,
 .modal-leave-active {

@@ -1,82 +1,80 @@
 <template>
-  <nav
-    class="fixed top-0 right-0 left-0 z-50 flex h-[70px] max-w-screen items-center border-b bg-gray-900/75 px-6 py-3.5 backdrop-blur-[12px] backdrop-saturate-[1.8] transition-all duration-600 ease-linear"
-    :class="scrollPosition === 0 ? 'border-b-transparent' : 'border-b-gray-300'"
-  >
-    <div class="mx-auto flex w-full max-w-7xl items-center justify-between">
-      <ol>
-        <li>
-          <NuxtLink :to="localePath('/')">
-            <DibodevLogo :size="30" :large="true" />
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-gray-300 bg-white/95 backdrop-blur-sm">
+    <nav
+      class="mx-auto flex h-[72px] w-full max-w-7xl items-center justify-between gap-6 px-6 sm:px-8"
+      :aria-label="$t('nav.mainNavigation')"
+    >
+      <NuxtLink :to="localePath('/')" class="shrink-0" :aria-label="$t('nav.homeLinkLabel')">
+        <DibodevLogo :size="30" :large="true" />
+      </NuxtLink>
+
+      <ul class="hidden items-center gap-6 lg:flex xl:gap-7">
+        <li v-for="link in links" :key="link.to">
+          <NuxtLink
+            :to="link.to"
+            class="text-[15px] font-medium whitespace-nowrap text-gray-200 transition-colors hover:text-gray-100"
+          >
+            {{ link.text }}
           </NuxtLink>
         </li>
-      </ol>
+      </ul>
 
-      <ol class="hidden items-center justify-center gap-8 text-base font-normal sm:flex">
-        <li class="flex items-center justify-center gap-8">
-          <DibodevLink v-for="link in links" :key="link.to" :link="link.to" color="#f5f4fb">
-            {{ link.text }}
-          </DibodevLink>
-        </li>
-        <li class="ml-6 flex items-center gap-10">
+      <div class="hidden items-center gap-6 lg:flex">
+        <div class="hidden xl:block">
           <PhoneLink variant="navbar" />
-          <DibodevButton
-            v-if="!isContactPage"
-            :to="localePath('/contact')"
-            icon="Mail"
-            size="sm"
-            @click="trackContactCta('navbar')"
-            >{{ $t('nav.contactMe') }}</DibodevButton
-          >
-        </li>
-      </ol>
+        </div>
+        <DibodevButton v-if="!isContactPage" :to="localePath('/contact')" @click="trackContactCta('navbar')">
+          {{ $t('nav.contactMe') }}
+        </DibodevButton>
+      </div>
 
       <DibodevSquareButton
-        :size="35"
-        backgroundColor="#1b232d"
-        backgroundHoverColor="#141a20"
-        class="sm:hidden"
+        :size="44"
+        class="lg:hidden"
         :aria-label="mobileMenuOpen ? $t('nav.closeMenu') : $t('nav.openMenu')"
+        :aria-expanded="mobileMenuOpen"
         @click="mobileMenuOpen = !mobileMenuOpen"
       >
-        <DibodevIcon name="Menu" />
+        <DibodevIcon :name="mobileMenuOpen ? 'X' : 'Menu'" mode="stroke" />
       </DibodevSquareButton>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <teleport to="body">
     <transition name="fade">
       <div
         v-show="mobileMenuOpen"
-        class="fixed top-0 right-0 bottom-0 left-0 z-[9998] bg-[rgba(0,0,0,.8)] sm:hidden"
+        class="fixed inset-0 z-[9998] bg-[rgba(20,20,20,0.35)] lg:hidden"
         @click.self="mobileMenuOpen = false"
       >
-        <transition name="slide-up-down">
-          <div v-if="mobileMenuOpen" class="absolute right-0 bottom-0 left-0 z-[9999] m-auto h-[calc(100dvh-70px)]">
-            <section class="relative h-full w-full overflow-auto bg-gray-900 outline-none" @click.stop>
-              <div class="flex flex-col gap-8 p-8">
-                <DibodevLink
-                  v-for="link in links"
-                  :key="link.to"
-                  :link="link.to"
-                  color="#f5f4fb"
-                  @click="mobileMenuOpen = false"
-                >
-                  {{ link.text }}
-                </DibodevLink>
-                <PhoneLink variant="menu" class="mb-2 w-full justify-start" @click="mobileMenuOpen = false" />
-                <DibodevButton
-                  v-if="!isContactPage"
-                  :to="localePath('/contact')"
-                  icon="Mail"
-                  size="sm"
-                  @click="trackContactCta('navbar_mobile', true)"
-                >
-                  {{ $t('nav.contactMe') }}
-                </DibodevButton>
+        <transition name="slide-down">
+          <div
+            v-if="mobileMenuOpen"
+            class="absolute inset-x-0 top-[72px] z-[9999] max-h-[calc(100dvh-72px)] overflow-auto border-b border-gray-300 bg-white"
+          >
+            <nav class="flex flex-col px-6 pt-2 pb-8 sm:px-8" :aria-label="$t('nav.mainNavigation')" @click.stop>
+              <NuxtLink
+                v-for="link in links"
+                :key="link.to"
+                :to="link.to"
+                class="border-b border-gray-300 py-4 text-lg font-medium text-gray-100"
+                @click="mobileMenuOpen = false"
+              >
+                {{ link.text }}
+              </NuxtLink>
+              <PhoneLink variant="menu" class="mt-4" @click="mobileMenuOpen = false" />
+              <DibodevButton
+                v-if="!isContactPage"
+                :to="localePath('/contact')"
+                class="mt-4 w-full"
+                @click="trackContactCta('navbar_mobile', true)"
+              >
+                {{ $t('nav.contactMe') }}
+              </DibodevButton>
+              <div class="mt-6">
                 <DibodevLanguageSwitcher id="language-switcher-mobile" :options="languages" />
               </div>
-            </section>
+            </nav>
           </div>
         </transition>
       </div>
@@ -84,18 +82,18 @@
   </teleport>
 </template>
 <script setup lang="ts">
+import type { Ref, ComputedRef } from 'vue'
+import type { DibodevNavbarLink } from '~/core/types/DibodevNavbar'
+import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
 import DibodevLogo from '~/components/branding/DibodevLogo.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevLanguageSwitcher from '~/components/core/DibodevLanguageSwitcher.vue'
-import type { DibodevNavbarLink } from '~/core/types/DibodevNavbar'
-import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
-import type { Ref, ComputedRef } from 'vue'
-import DibodevLink from '~/components/core/DibodevLink.vue'
 import PhoneLink from '~/components/core/PhoneLink.vue'
 import DibodevSquareButton from '~/components/buttons/DibodevSquareButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
+
 /* ROUTE */
 const route = useRoute()
 
@@ -112,8 +110,10 @@ const languages: DibodevSelectOption[] = [
 ]
 
 const links: ComputedRef<DibodevNavbarLink[]> = computed((): DibodevNavbarLink[] => [
-  { text: t('nav.home'), to: localePath('/') },
-  { text: t('nav.myProjects'), to: localePath('projects') },
+  { text: t('nav.services'), to: `${localePath('/')}#services` },
+  { text: t('nav.projects'), to: localePath('projects') },
+  { text: t('nav.businessSoftware'), to: localePath('custom-business-software') },
+  { text: t('nav.about'), to: localePath('about') },
   { text: t('nav.blog'), to: localePath('/blog') },
 ])
 
@@ -123,37 +123,29 @@ const isContactPage: ComputedRef<boolean> = computed(
   (): boolean => route.path === '/contact' || route.path.endsWith('/contact'),
 )
 
-// Manage scroll position
-const scrollPosition: Ref<number> = ref(0)
-
-const updateScroll = () => {
-  scrollPosition.value = window.scrollY
-}
-
 /**
  * Track the contact CTA event, and close the mobile menu when requested.
  * @param {string} location - CTA location (navbar / navbar_mobile).
  * @param {boolean} [closeMobileMenu] - Close the mobile menu after the click.
  * @returns {void}
  */
-function trackContactCta(location: string, closeMobileMenu = false): void {
+function trackContactCta(location: string, closeMobileMenu: boolean = false): void {
   if (closeMobileMenu) {
     mobileMenuOpen.value = false
   }
   track(TRACKING_EVENTS.ctaProjectDiscussion, { location })
 }
 
-onMounted(() => {
-  window.addEventListener('scroll', updateScroll)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', updateScroll)
-})
-
-watch(mobileMenuOpen, (open: boolean) => {
+watch(mobileMenuOpen, (open: boolean): void => {
   document.body.style.overflow = open ? 'hidden' : ''
 })
+
+watch(
+  (): string => route.fullPath,
+  (): void => {
+    mobileMenuOpen.value = false
+  },
+)
 </script>
 
 <style scoped>
@@ -171,17 +163,21 @@ watch(mobileMenuOpen, (open: boolean) => {
   opacity: 1;
 }
 
-/* Slide-up-down menu */
-.slide-up-down-enter-active,
-.slide-up-down-leave-active {
-  transition: transform 0.3s ease;
+/* Slide-down menu panel */
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
-.slide-up-down-enter-from,
-.slide-up-down-leave-to {
-  transform: translateY(100%);
+.slide-down-enter-from,
+.slide-down-leave-to {
+  transform: translateY(-12px);
+  opacity: 0;
 }
-.slide-up-down-enter-to,
-.slide-up-down-leave-from {
-  transform: translateY(0%);
+.slide-down-enter-to,
+.slide-down-leave-from {
+  transform: translateY(0);
+  opacity: 1;
 }
 </style>

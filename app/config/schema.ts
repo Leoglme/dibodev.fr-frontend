@@ -1,3 +1,5 @@
+import { GOOGLE_BUSINESS_URL } from '~/config/contact'
+
 /**
  * Schema.org structured data (JSON-LD) for the site: a Person (Léo Guillaume)
  * and an Organization (Dibodev, also typed ProfessionalService with its service
@@ -84,6 +86,7 @@ export type SchemaOrganization = {
   areaServed: string[]
   address: SchemaPostalAddress
   vatID: string
+  duns: string
   identifier: SchemaPropertyValue
   hasOfferCatalog: SchemaOfferCatalog
 }
@@ -118,6 +121,7 @@ const ORGANIZATION_FOUNDING_DATE: string = '2025-06-20'
 const ORGANIZATION_LOGO: string = `${SITE_URL}/android-chrome-512x512.png`
 const ORGANIZATION_VAT_ID: string = 'FR02988307906'
 const ORGANIZATION_SIRET: string = '98830790600020'
+const ORGANIZATION_DUNS: string = '284774546'
 
 const AREA_SERVED: string[] = ['Rennes', 'Ille-et-Vilaine', 'Bretagne', 'France']
 
@@ -178,13 +182,19 @@ const PERSON_SAME_AS: string[] = [
   'https://dev.to/dibodev',
   'https://dibodev.hashnode.dev/',
   'https://zestedesavoir.com/@dibodevcode',
+  'https://www.wikidata.org/wiki/Q141592129',
+  'https://www.crunchbase.com/person/l%C3%A9o-guillaume',
 ]
 
 const ORGANIZATION_SAME_AS: string[] = [
-  'https://www.google.com/maps?cid=6567115254526097431',
+  GOOGLE_BUSINESS_URL,
   'https://www.linkedin.com/company/dibodev/',
   'https://x.com/dibodev',
   'https://www.pagesjaunes.fr/pros/64381216',
+  'https://www.wikidata.org/wiki/Q141592139',
+  'https://www.crunchbase.com/organization/dibodev',
+  'https://fr.kompass.com/c/m-leo-guillaume/fra0ddqgz/',
+  'https://www.europages.fr/fr/company/dibodev-22420274',
 ]
 
 const schemaAddress: SchemaPostalAddress = {
@@ -230,6 +240,7 @@ export const organizationSchema: SchemaOrganization = {
   areaServed: AREA_SERVED,
   address: schemaAddress,
   vatID: ORGANIZATION_VAT_ID,
+  duns: ORGANIZATION_DUNS,
   identifier: {
     '@type': 'PropertyValue',
     propertyID: 'SIRET',

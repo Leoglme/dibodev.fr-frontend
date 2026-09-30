@@ -1,5 +1,10 @@
 <template>
-  <DibodevFaqSection :title="t('home.faq.title')" :questions="faqQuestions" />
+  <DibodevFaqSection
+    :eyebrow="t('home.faq.eyebrow')"
+    :title="t('home.faq.title')"
+    :questions="faqQuestions"
+    tone="offWhite"
+  />
 </template>
 
 <script setup lang="ts">

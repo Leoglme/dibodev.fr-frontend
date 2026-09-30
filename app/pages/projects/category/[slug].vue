@@ -1,31 +1,51 @@
 <template>
-  <div class="relative z-2 flex min-h-screen w-screen max-w-screen flex-col">
+  <div class="relative flex w-full flex-col">
     <DibodevLandingSection
-      v-if="categoryTitleFromCms"
+      :breadcrumbs="breadcrumbs"
       :title="categoryPageTitle"
       :description="categoryPageDescription"
       :ctaText="$t('projects.landing.cta')"
       ctaTarget="#projects"
-    />
-    <DibodevLandingSection
-      v-else
-      :titlePart1="$t('projects.categoryPage.titlePart1', { category: categoryLabel })"
-      :titleHighlight1="$t('projects.categoryPage.titleHighlight1')"
-      :titlePart2="$t('projects.categoryPage.titlePart2')"
-      :titleHighlight2="$t('projects.categoryPage.titleHighlight2')"
-      :titlePart3="$t('projects.categoryPage.titlePart3')"
-      :description="categoryPageDescription"
-      :ctaText="$t('projects.landing.cta')"
-      ctaTarget="#projects"
-    />
+      :compactTitle="true"
+      :align="projectsByCategory.length >= MOSAIC_MINIMUM_PROJECTS ? 'left' : 'center'"
+    >
+      <template v-if="projectsByCategory.length >= MOSAIC_MINIMUM_PROJECTS" #aside>
+        <DibodevProjectLogoMosaic :projects="projectsByCategory" trackingSource="category_hero" />
+      </template>
+    </DibodevLandingSection>
 
     <DibodevSectorIntroSection
       v-if="categoryIntroHtml"
       :title="$t('projects.categoryPage.introTitle')"
       :html="categoryIntroHtml"
-    />
+      :facts="listingFacts"
+      :technologies="listingTechnologies"
+      :technologiesTitle="$t('projects.listingFacts.technologiesTitle')"
+    >
+      <template #aside>
+        <DibodevContactAsideCard
+          :title="$t('projects.categoryPage.asideCtaTitle')"
+          :description="$t('projects.asideCta.description')"
+          :buttonLabel="$t('projects.asideCta.button')"
+          trackingLocation="category_intro"
+        />
+      </template>
+    </DibodevSectorIntroSection>
 
     <DibodevProjectsSection :initial-projects="projectsByCategory" />
+
+    <DibodevProjectTaxonomySection
+      :eyebrow="$t('projects.hub.sectorsEyebrow')"
+      :title="$t('projects.categoryPage.otherSectorsTitle')"
+      :links="sectorLinks"
+      variant="chips"
+    />
+
+    <DibodevContactCtaSection
+      :title="$t('projects.cta.text')"
+      :description="$t('projects.cta.description')"
+      :ctaText="$t('projects.cta.button')"
+    />
   </div>
 </template>
 
@@ -45,6 +65,14 @@ import type { ComputedRef } from 'vue'
 import DibodevLandingSection from '~/components/sections/DibodevLandingSection.vue'
 import DibodevSectorIntroSection from '~/components/sections/DibodevSectorIntroSection.vue'
 import DibodevProjectsSection from '~/components/sections/DibodevProjectsSection.vue'
+import DibodevProjectTaxonomySection from '~/components/sections/DibodevProjectTaxonomySection.vue'
+import DibodevContactAsideCard from '~/components/cards/DibodevContactAsideCard.vue'
+import DibodevProjectLogoMosaic from '~/components/data-displays/DibodevProjectLogoMosaic.vue'
+import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
+import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
+import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
+import { useProjectTaxonomyLinks } from '~/composables/useProjectTaxonomyLinks'
+import { useProjectListingFacts } from '~/composables/useProjectListingFacts'
 import type { DibodevProject } from '~/core/types/DibodevProject'
 import type { CategoryKey } from '~/core/constants/projectEnums'
 import type { SupportedLocale } from '~/core/constants/categorySlugs'
@@ -56,6 +84,9 @@ import { CATEGORIES_STORYBLOK_FOLDER, normalizeCategoryContent } from '~/service
 import { StoryblokService } from '~/services/storyblokService'
 import { StoryblokRichtextUtils } from '~/core/utils/StoryblokRichtextUtils'
 import type { RouteLocationNormalizedLoadedGeneric } from '#vue-router'
+
+/** The header mosaic needs a full first row of three tiles to look intentional. */
+const MOSAIC_MINIMUM_PROJECTS: number = 3
 
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
 const { locale, t } = useI18n()
@@ -138,8 +169,15 @@ const projectsByCategory: ComputedRef<DibodevProject[]> = computed((): DibodevPr
     (p: DibodevProject) => Array.isArray(p.categories) && p.categories.includes(categoryKey),
   )
 })
+const { listingFacts, listingTechnologies } = useProjectListingFacts(projectsByCategory, 'sectors')
 
 const categoryLabel: string = categoryLabelByLocale(currentLocale, categoryKey)
+const { sectorLinks } = useProjectTaxonomyLinks(allProjects)
+const localePath = useLocalePath()
+const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => [
+  { label: t('nav.projects'), to: localePath('projects') },
+  { label: categoryLabel, to: null },
+])
 const categoryPageContent: ComputedRef<StoryblokCategoryContent | null> = computed(
   () => categoryStoryData.value?.normalized ?? null,
 )
@@ -154,12 +192,6 @@ const categoryPageTitle: ComputedRef<string> = computed((): string => {
   const fromCms = categoryPageContent.value?.title?.trim()
   return fromCms ?? t('projects.categoryPage.title', { category: categoryLabel })
 })
-
-const categoryTitleFromCms: ComputedRef<boolean> = computed(
-  (): boolean =>
-    (categoryPageContent.value?.title?.trim()?.length ?? 0) > 0 ||
-    (categoryTranslation.value?.title?.trim()?.length ?? 0) > 0,
-)
 
 /** Description : traduction EN/ES si présente, sinon CMS, sinon i18n */
 const categoryPageDescription: ComputedRef<string> = computed((): string => {

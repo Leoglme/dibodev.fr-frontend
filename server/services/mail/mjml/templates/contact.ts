@@ -32,7 +32,7 @@ export default `
     </mj-text>
 
     <mj-text padding="0" padding-left="0px" align="left" line-height="28px" padding-bottom="8px">
-      Message: {{message}}
+      Message:<br /><span style="white-space: pre-line">{{message}}</span>
     </mj-text>
 
     {{#if acquisitionSource}}

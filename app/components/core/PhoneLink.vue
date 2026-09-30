@@ -4,8 +4,7 @@
     :aria-label="ariaLabel"
     @click="onPhoneClick"
     :class="linkClasses"
-    :style="linkStyle"
-    class="focus-visible:ring-primary inline-flex cursor-pointer items-center gap-3 font-medium decoration-2 underline-offset-4 transition-colors hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+    class="focus-visible:ring-primary inline-flex cursor-pointer items-center gap-2.5 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
   >
     <DibodevIcon name="Phone" :width="iconSize" :height="iconSize" mode="stroke" class="shrink-0" />
     <span>{{ PHONE_DISPLAY }}</span>
@@ -13,15 +12,18 @@
 </template>
 
 <script lang="ts" setup>
-import type { PropType } from 'vue'
+import { computed } from 'vue'
+import type { ComputedRef, PropType } from 'vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
+import type { PhoneLinkProps, PhoneLinkVariant } from '~/core/types/PhoneLink'
 import { PHONE_DISPLAY, PHONE_E164 } from '~/config/contact'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
-type PhoneLinkVariant = 'navbar' | 'menu' | 'footer'
-
-const props = defineProps({
+/**
+ * Phone link with its icon, tracked on click.
+ */
+const props: PhoneLinkProps = defineProps({
   variant: {
     type: String as PropType<PhoneLinkVariant>,
     default: 'navbar',
@@ -34,28 +36,18 @@ const props = defineProps({
 
 const { track } = useTracking()
 
-const ariaLabel = `Appeler ${PHONE_DISPLAY}`
+const ariaLabel: string = `Appeler ${PHONE_DISPLAY}`
 
 const iconSize: number = props.variant === 'menu' ? 22 : 18
 
-/** primary-light (#bdb3ff), comme DibodevLink. */
-const PRIMARY_LIGHT = '#bdb3ff'
-
-const linkStyle = computed((): { color?: string } => {
-  if (props.variant === 'navbar' || props.variant === 'menu') {
-    return { color: PRIMARY_LIGHT }
-  }
-  return {}
-})
-
-const linkClasses = computed((): string => {
-  const base = 'rounded-md'
+const linkClasses: ComputedRef<string> = computed((): string => {
+  const base: string = 'rounded-md'
   const variantClasses: Record<PhoneLinkVariant, string> = {
-    navbar: '',
-    menu: 'min-h-[44px] w-full items-center justify-start text-base',
-    footer: 'text-gray-300 hover:text-gray-200',
+    navbar: 'text-primary hover:text-primary-dark text-[15px]',
+    menu: 'text-primary hover:text-primary-dark min-h-[44px] w-full items-center justify-start text-lg',
+    footer: 'text-[15px] text-gray-200 hover:text-gray-100',
   }
-  const variant = variantClasses[props.variant] ?? variantClasses.navbar
+  const variant: string = variantClasses[props.variant] ?? variantClasses.navbar
   return [base, variant, props.class].filter(Boolean).join(' ')
 })
 

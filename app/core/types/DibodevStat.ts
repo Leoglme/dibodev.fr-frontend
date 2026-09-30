@@ -1,10 +1,12 @@
 /**
- * Type definitions for the DibodevStat component props.
+ * One key figure: its value, its label and, for a rating, the five stars shown before it.
  * @type {DibodevStatItemProps}
- * @property {string | number} value - The value of the stat item, which can be a string or a number.
- * @property {string} label - The label for the stat item, typically displayed above or
+ * @property {string} value - The figure displayed (e.g. "6 ans", "17", "5/5").
+ * @property {string} label - The short label read after the figure.
+ * @property {boolean} hasStarRating - Shows five stars before the figure (a 5/5 rating).
  */
 export type DibodevStatItemProps = {
-  value: string | number
+  value: string
   label: string
+  hasStarRating?: boolean
 }

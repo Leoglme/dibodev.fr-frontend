@@ -1,16 +1,47 @@
 <template>
   <DibodevLandingSection
+    :breadcrumbs="breadcrumbs"
     :titlePart1="$t('projects.landing.titlePart1')"
     :titleHighlight1="$t('projects.landing.titleHighlight1')"
     :titlePart2="$t('projects.landing.titlePart2')"
-    :titleHighlight2="$t('projects.landing.titleHighlight2')"
-    :titlePart3="$t('projects.landing.titlePart3')"
     :description="$t('projects.landing.description')"
     :ctaText="$t('projects.landing.cta')"
     ctaTarget="#projects"
-  />
+    :stats="heroStats"
+    :compactTitle="true"
+  >
+    <template v-if="showcaseProjects.length >= MOSAIC_MINIMUM_PROJECTS" #aside>
+      <DibodevProjectLogoMosaic :projects="showcaseProjects" trackingSource="projects_hero" />
+    </template>
+  </DibodevLandingSection>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+import type { ComputedRef } from 'vue'
+import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
+import type { DibodevProject } from '~/core/types/DibodevProject'
+import type { DibodevStatItemProps } from '~/core/types/DibodevStat'
 import DibodevLandingSection from '~/components/sections/DibodevLandingSection.vue'
+import DibodevProjectLogoMosaic from '~/components/data-displays/DibodevProjectLogoMosaic.vue'
+import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
+import { useHeroStats } from '~/composables/useHeroStats'
+import { useProjectsWithTranslations } from '~/composables/useProjectsWithTranslations'
+import { ProjectOrderUtils } from '~/core/utils/ProjectOrderUtils'
+
+/** The header mosaic needs a full first row of three tiles to look intentional. */
+const MOSAIC_MINIMUM_PROJECTS: number = 3
+
+const { t } = useI18n()
+
+const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => [
+  { label: t('nav.projects'), to: null },
+])
+const heroStats: ComputedRef<DibodevStatItemProps[]> = await useHeroStats()
+const { data: storyblokProjectsData } = await useProjectsWithTranslations()
+
+/** Favourite projects first, then the most recent ones (the list is already sorted by date). */
+const showcaseProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] =>
+  ProjectOrderUtils.favoritesFirst(storyblokProjectsData.value ?? []),
+)
 </script>

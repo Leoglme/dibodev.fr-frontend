@@ -22,18 +22,21 @@ import type { DibodevSquareButtonProps } from '~/core/types/DibodevSquareButton'
 import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
 
+/**
+ * Square icon button: off-white surface with an ink icon by default.
+ */
 const props: DibodevSquareButtonProps = defineProps({
   backgroundColor: {
     type: String,
-    default: '#8472F3',
+    default: '#f6f6f3',
   },
   backgroundHoverColor: {
     type: String,
-    default: '#6B59D9',
+    default: '#ebebe7',
   },
   textColor: {
     type: String,
-    default: '#F5F4FB',
+    default: '#141414',
   },
   disabled: {
     type: Boolean,
@@ -46,22 +49,17 @@ const props: DibodevSquareButtonProps = defineProps({
 })
 
 const computedClass: ComputedRef<string> = computed(
-  () => `
+  (): string => `
   inline-flex items-center justify-center
   font-semibold select-none
-  leading-6 rounded-md cursor-pointer
-  focus:outline-none focus:shadow-outline transition duration-150 ease-in-out
+  leading-6 rounded-lg cursor-pointer
+  focus:outline-none focus-visible:ring-2 focus-visible:ring-primary transition duration-150 ease-in-out
   ${props.disabled ? 'opacity-70 cursor-not-allowed' : ''}
 `,
 )
 </script>
 
 <style>
-:root {
-  --background-color: #8472f3;
-  --background-hover-color: #6b59d9;
-}
-
 .dibodev-button,
 .dibodev-button:active,
 .dibodev-button:hover:active {

@@ -1,8 +1,8 @@
 <template>
-  <div class="relative flex flex-col gap-4">
+  <div class="relative flex flex-col gap-3">
     <DibodevLabel v-if="props.label" :id="props.id">
       {{ props.label }}
-      <span v-if="rules && rules.includes('required')" class="ml-1 text-red-400"> * </span>
+      <span v-if="rules && rules.includes('required')" class="ml-1 text-red-500"> * </span>
     </DibodevLabel>
 
     <Field
@@ -25,13 +25,12 @@
         :autocomplete="props.autocomplete || undefined"
         :value="props.value"
         @blur="emit('blur')"
-        class="focus:border-primary relative flex w-full items-center justify-center rounded border-2 bg-gray-600 pt-3 pl-3 text-gray-100 outline-none placeholder:text-base placeholder:text-gray-300 focus:bg-gray-800"
+        class="focus:border-primary placeholder:text-muted relative flex w-full items-center justify-center rounded-lg border bg-white px-3 py-3 text-gray-100 outline-none placeholder:text-base"
         :placeholder="props.placeholder || undefined"
         :class="{
-          'pr-3': typeRef === 'number',
-          'border-[#EC364B]': meta.validated && !meta.valid,
-          'border-transparent': !meta.validated || meta.valid,
-          'hover:border-gray-300': !meta.validated || meta.valid,
+          'border-red-500': meta.validated && !meta.valid,
+          'border-gray-400': !meta.validated || meta.valid,
+          'hover:border-gray-100': !meta.validated || meta.valid,
         }"
       />
       <input
@@ -44,40 +43,28 @@
         :min="props.min ? props.min.toString() : undefined"
         :step="props.step ? props.step.toString() : undefined"
         @blur="emit('blur')"
-        class="focus:border-primary relative flex h-12 w-full appearance-none items-center justify-center rounded border-2 bg-gray-600 pl-3 text-gray-100 outline-none placeholder:text-base placeholder:text-gray-300 focus:bg-gray-800"
+        class="focus:border-primary placeholder:text-muted relative flex h-12 w-full appearance-none items-center justify-center rounded-lg border bg-white pl-3 text-gray-100 outline-none placeholder:text-base"
         :placeholder="props.placeholder || undefined"
         :class="{
           'pr-3': typeRef === 'number',
-          'border-[#EC364B]': meta.validated && !meta.valid,
-          'border-transparent': !meta.validated || meta.valid,
-          'hover:border-gray-300': !meta.validated || meta.valid,
+          'pr-12': type === 'password',
+          'border-red-500': meta.validated && !meta.valid,
+          'border-gray-400': !meta.validated || meta.valid,
+          'hover:border-gray-100': !meta.validated || meta.valid,
         }"
       />
     </Field>
 
-    <div
-      :class="props.label ? 'top-10' : 'top-2'"
-      class="absolute right-4 cursor-pointer"
+    <button
       v-if="type === 'password'"
-      @click.prevent="handleTogglePassword"
+      type="button"
+      :class="props.label ? 'top-11' : 'top-2'"
+      class="text-muted absolute right-2.5 grid h-8 w-8 cursor-pointer place-items-center rounded-md transition-colors hover:text-gray-100"
+      :aria-label="togglePassword ? $t('accessibility.hidePassword') : $t('accessibility.showPassword')"
+      @click="handleTogglePassword"
     >
-      <DibodevIcon
-        v-if="!togglePassword"
-        class="-bottom-1"
-        title="Afficher le mot de passe"
-        name="Eye"
-        mode="stroke"
-        color="#908e97"
-      />
-      <DibodevIcon
-        v-if="togglePassword"
-        class="-bottom-1"
-        title="Masquer le mot de passe"
-        name="EyeOff"
-        mode="stroke"
-        color="#908e97"
-      />
-    </div>
+      <DibodevIcon :name="togglePassword ? 'EyeOff' : 'Eye'" mode="stroke" :width="18" :height="18" />
+    </button>
     <ErrorMessage class="slide-from-left error-message text-sm text-red-500" :name="props.id" />
   </div>
 </template>

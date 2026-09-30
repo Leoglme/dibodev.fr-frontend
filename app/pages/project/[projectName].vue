@@ -1,6 +1,7 @@
 <template>
   <DibodevProjectLandingSection
     v-if="currentProjectComputed"
+    :breadcrumbs="breadcrumbs"
     :title="currentProjectComputed.name"
     :primaryColor="currentProjectComputed.primaryColor"
     :secondaryColor="currentProjectComputed.secondaryColor"
@@ -16,14 +17,32 @@
     :projectName="currentProjectComputed.name"
     :media1="currentProjectComputed.media1"
     :media2="currentProjectComputed.media2"
-    :primaryColor="currentProjectComputed.primaryColor"
   />
-  <DibodevAboutProjectSection v-if="currentProjectComputed" :project="currentProjectComputed" />
+  <DibodevProjectCaseStudySection
+    v-if="currentProjectComputed && caseStudy"
+    :eyebrow="$t('project.caseStudy.eyebrow')"
+    :title="$t('project.caseStudy.title')"
+    :intro="caseStudy.role"
+    :stats="caseStudy.stats"
+    :columns="caseStudy.columns"
+  />
+  <DibodevProjectDetailsSection
+    v-if="currentProjectComputed"
+    :project="currentProjectComputed"
+    :formattedDate="projectDisplayDate"
+  />
+  <div v-if="toolTeasers.length" class="grid gap-4 px-6 sm:px-8">
+    <DibodevToolTeaser
+      v-for="toolTeaser in toolTeasers"
+      :key="toolTeaser.toolId"
+      :teaser="toolTeaser"
+      trackingLocation="project"
+    />
+  </div>
   <DibodevContactCtaSection
     :title="$t('projects.cta.text')"
     :description="$t('projects.cta.description')"
     :ctaText="$t('projects.cta.button')"
-    class="pb-0!"
   />
   <DibodevRecommendedProjectSection v-if="currentProjectComputed" :currentProject="currentProjectComputed" />
 </template>
@@ -34,12 +53,24 @@ import type { RouteLocationNormalizedLoadedGeneric, Router } from 'vue-router'
 import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
 import type { DibodevProject } from '~/core/types/DibodevProject'
+import type { DibodevProjectCaseStudy } from '~/core/types/DibodevProjectCaseStudy'
 import type { SharePreviewDetail } from '~/core/types/SharePreviewDetail'
+import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
+import type { DibodevToolTeaserContent } from '~/core/types/DibodevToolTeaser'
+import type { CategoryKey } from '~/core/constants/projectEnums'
+import type { SupportedLocale } from '~/core/constants/categorySlugs'
+import { categoryToSlug } from '~/core/constants/categorySlugs'
+import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
+import { useProjectCaseStudy } from '~/composables/useProjectCaseStudy'
+import { useToolTeasers } from '~/composables/useToolTeasers'
+import { TOOL_TEASERS_BY_PROJECT_SLUG } from '~/core/constants/tools/toolTeasers'
 import DibodevProjectLandingSection from '~/components/sections/DibodevProjectLandingSection.vue'
 import DibodevProjectGallerySection from '~/components/sections/DibodevProjectGallerySection.vue'
-import DibodevAboutProjectSection from '~/components/sections/DibodevAboutProjectSection.vue'
+import DibodevProjectCaseStudySection from '~/components/sections/DibodevProjectCaseStudySection.vue'
+import DibodevProjectDetailsSection from '~/components/sections/DibodevProjectDetailsSection.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import DibodevRecommendedProjectSection from '~/components/sections/DibodevRecommendedProjectSection.vue'
+import DibodevToolTeaser from '~/components/data-displays/DibodevToolTeaser.vue'
 import type { StoryblokVersion } from '~/services/types/storyblok'
 import { StoryblokProjectService } from '~/services/storyblokProjectService'
 import { buildProjectSchemaJson } from '~/config/projectSchema'
@@ -57,6 +88,7 @@ const SHARE_SCREENSHOT_WIDTH: number = 1200
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
 const router: Router = useRouter()
 const { t, locale } = useI18n()
+const localePath = useLocalePath()
 const storyblokLanguage: ComputedRef<string | undefined> = useStoryblokProjectLanguage()
 
 const projectName: string = String(route.params.projectName || '').trim()
@@ -84,6 +116,28 @@ if (!currentProject.value) {
 const currentProjectComputed: ComputedRef<DibodevProject | null> = computed(
   (): DibodevProject | null => currentProject.value ?? null,
 )
+
+const caseStudy: ComputedRef<DibodevProjectCaseStudy | null> = useProjectCaseStudy(projectName)
+const toolTeasers: ComputedRef<DibodevToolTeaserContent[]> = useToolTeasers((): DibodevToolTeaserContent[] =>
+  TOOL_TEASERS_BY_PROJECT_SLUG[projectName] ? [TOOL_TEASERS_BY_PROJECT_SLUG[projectName]] : [],
+)
+
+/** Trail: home, projects, the first category listing, then the project short name. */
+const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => {
+  const project: DibodevProject | null = currentProjectComputed.value
+  const items: DibodevBreadcrumbItem[] = [{ label: t('nav.projects'), to: localePath('projects') }]
+  if (!project) return items
+  const mainCategory: CategoryKey | undefined = project.categories[0]
+  if (mainCategory) {
+    const currentLocale: SupportedLocale = (locale.value as SupportedLocale) || 'fr'
+    items.push({
+      label: t(`projects.categories.${mainCategory}`),
+      to: localePath({ name: 'projects-category-slug', params: { slug: categoryToSlug(currentLocale, mainCategory) } }),
+    })
+  }
+  items.push({ label: splitProjectName(project.name)[0], to: null })
+  return items
+})
 
 const projectDisplayDate: ComputedRef<string> = computed((): string => {
   const p: DibodevProject | null = currentProjectComputed.value

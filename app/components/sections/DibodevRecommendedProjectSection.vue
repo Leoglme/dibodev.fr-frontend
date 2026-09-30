@@ -1,54 +1,42 @@
 <template>
-  <section
-    id="recommended-projects"
-    data-aos="fade-up"
-    data-aos-duration="600"
-    data-aos-offset="300"
-    class="relative z-2 flex h-full min-h-screen w-screen max-w-screen items-center justify-center px-6 py-36 pb-60 sm:px-8 sm:py-60 sm:pb-96"
-  >
-    <div class="grid gap-14 sm:gap-12">
-      <h2 class="text-left text-2xl font-semibold sm:text-center sm:text-[32px]">
-        {{ $t('project.recommended.title') }}
-      </h2>
-      <div class="flex w-full max-w-7xl flex-col-reverse gap-10 sm:grid sm:gap-8">
-        <div class="flex w-full items-center justify-end">
+  <section id="recommended-projects" class="bg-gray-800 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
+    <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
+      <DibodevSectionHeading :eyebrow="$t('project.recommended.eyebrow')" :title="$t('project.recommended.title')">
+        <template #action>
           <DibodevLink :link="localePath('projects')">
             <span>{{ $t('project.recommended.seeAllProjects') }}</span>
-            <DibodevIcon name="ArrowRight" mode="stroke" :width="20" :height="20" />
+            <DibodevIcon name="ArrowRight" mode="stroke" :width="18" :height="18" aria-hidden="true" />
           </DibodevLink>
-        </div>
+        </template>
+      </DibodevSectionHeading>
 
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
-          <DibodevProjectCard
-            v-for="(recommendedProject, index) in recommendedProjects"
-            :key="recommendedProject.route"
-            :name="recommendedProject.name"
-            :description="recommendedProject.metaDescription"
-            :createdAt="recommendedProject.date"
-            :logo="recommendedProject.logoUrl"
-            :primaryColor="recommendedProject.primaryColor"
-            :secondaryColor="recommendedProject.secondaryColor"
-            :route="recommendedProject.route"
-            :categories="recommendedProject.categories ?? []"
-            data-aos="zoom-in"
-            :data-aos-delay="index * 100"
-          />
-        </div>
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <DibodevProjectCard
+          v-for="recommendedProject in recommendedProjects"
+          :key="recommendedProject.route"
+          :name="recommendedProject.name"
+          :description="recommendedProject.metaDescription"
+          :createdAt="recommendedProject.date"
+          :logo="recommendedProject.logoUrl"
+          :primaryColor="recommendedProject.primaryColor"
+          :secondaryColor="recommendedProject.secondaryColor"
+          :route="recommendedProject.route"
+          :categories="recommendedProject.categories ?? []"
+        />
       </div>
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
-import DibodevLink from '~/components/core/DibodevLink.vue'
-
-const localePath = useLocalePath()
-import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
-import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { computed, type PropType } from 'vue'
 import type { ComputedRef } from 'vue'
 import type { DibodevProject } from '~/core/types/DibodevProject'
 import type { DibodevRecommendedProjectSectionProps } from '~/core/types/DibodevRecommendedProjectSection'
+import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
+import DibodevLink from '~/components/core/DibodevLink.vue'
+import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
+import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { useProjectsWithTranslations } from '~/composables/useProjectsWithTranslations'
 
 /* TYPES */
@@ -58,6 +46,9 @@ type ProjectWithScore = {
   date: number
 }
 
+/** Number of similar projects displayed. */
+const RECOMMENDED_PROJECTS_COUNT: number = 3
+
 /* PROPS */
 const props: DibodevRecommendedProjectSectionProps = defineProps({
   currentProject: {
@@ -66,16 +57,17 @@ const props: DibodevRecommendedProjectSectionProps = defineProps({
   },
 })
 
+const localePath = useLocalePath()
 const { data: storyblokProjectsData } = await useProjectsWithTranslations()
 
 /**
  * Similarity score between two projects (higher = more similar).
+ * @param {DibodevProject} projectOne - First project.
+ * @param {DibodevProject} projectTwo - Second project.
+ * @returns {number} The score.
  */
-const calculateSimilarityScore: (projectOne: DibodevProject, projectTwo: DibodevProject) => number = (
-  projectOne: DibodevProject,
-  projectTwo: DibodevProject,
-): number => {
-  let score = 0
+function calculateSimilarityScore(projectOne: DibodevProject, projectTwo: DibodevProject): number {
+  let score: number = 0
 
   const commonCategories: string[] = projectOne.categories.filter((cat: string) => projectTwo.categories.includes(cat))
   score += commonCategories.length
@@ -112,6 +104,6 @@ const recommendedProjects: ComputedRef<DibodevProject[]> = computed((): DibodevP
       return b.date - a.date
     })
 
-  return projectsWithScores.slice(0, 3).map((item: ProjectWithScore) => item.project)
+  return projectsWithScores.slice(0, RECOMMENDED_PROJECTS_COUNT).map((item: ProjectWithScore) => item.project)
 })
 </script>
