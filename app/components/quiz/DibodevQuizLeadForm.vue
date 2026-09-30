@@ -116,7 +116,7 @@ const emit: {
   (event: 'sent'): void
 }>()
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const { track } = useTracking()
 const { getLeadSource } = useLeadSource()
@@ -154,7 +154,12 @@ async function sendContactIntent(): Promise<void> {
   if (intentKey === lastSentIntentKey) return
   lastSentIntentKey = intentKey
 
-  const payload: ContactIntentPayload = { email: currentEmail, phone: currentPhone, source: getLeadSource() }
+  const payload: ContactIntentPayload = {
+    email: currentEmail,
+    phone: currentPhone,
+    source: getLeadSource(),
+    locale: locale.value,
+  }
   try {
     await $fetch('/api/mail/contact-intent', { method: 'POST', body: payload })
     track(TRACKING_EVENTS.contactIntentSubmitted, { hasEmail: currentEmail !== null, hasPhone: currentPhone !== null })
@@ -179,6 +184,7 @@ async function onSubmit(): Promise<void> {
     phone: phone.value.trim() || null,
     message: props.leadMessage,
     source: getLeadSource(),
+    locale: locale.value,
   }
 
   try {

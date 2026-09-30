@@ -54,21 +54,22 @@ export default class MjmlService {
     const layoutFileName: string = `${this.layoutDirectory}/${layoutName || this.defaultLayoutName}`
     let mainLayoutContent: string = await this.getMjmlContent(layoutFileName)
 
-    let bodyContent: string | undefined = viewPath ? await this.getMjmlContent(viewPath) : mjmlContent
+    const bodyContent: string | undefined = viewPath ? await this.getMjmlContent(viewPath) : mjmlContent
     if (!bodyContent) {
       throw new Error('No view content provided')
     }
 
-    bodyContent = this.replacePlaceholders(bodyContent, payload)
-    mainLayoutContent = mainLayoutContent.replace('{{body}}', bodyContent)
-
-    if (partialsNames) {
-      for (const partialName of partialsNames) {
-        let partialContent: string = await this.getMjmlContent(`${this.partialsDirectory}/${partialName}`)
-        partialContent = this.replacePlaceholders(partialContent, payload)
-        mainLayoutContent = mainLayoutContent.replace(`{{${partialName}}}`, partialContent)
-      }
+    const renderedParts: Record<string, string> = { body: this.replacePlaceholders(bodyContent, payload) }
+    for (const partialName of partialsNames ?? []) {
+      const partialContent: string = await this.getMjmlContent(`${this.partialsDirectory}/${partialName}`)
+      renderedParts[partialName] = this.replacePlaceholders(partialContent, payload)
     }
+
+    // One pass over the layout only: a visitor message containing "{{body}}" or "$&" is never read as a placeholder.
+    mainLayoutContent = mainLayoutContent.replace(
+      /{{(\w+)}}/g,
+      (placeholder: string, partName: string): string => renderedParts[partName] ?? placeholder,
+    )
 
     const { html, errors }: MjmlResult = mjml(mainLayoutContent)
 
@@ -81,7 +82,7 @@ export default class MjmlService {
   }
 
   /**
-   * Retrieves MJML content from a file.
+   * Retrieves MJML content from a file, without the `export default` wrapper of the template modules.
    *
    * @param {string} viewPath - The path to the MJML file (without extension).
    * @returns {Promise<string>} - The MJML content.
@@ -90,7 +91,8 @@ export default class MjmlService {
   public static async getMjmlContent(viewPath: string): Promise<string> {
     try {
       const templatePath: string = path.resolve(process.cwd(), 'server/services/mail/mjml/templates', `${viewPath}.ts`)
-      return await fs.readFile(templatePath, 'utf-8')
+      const fileContent: string = await fs.readFile(templatePath, 'utf-8')
+      return fileContent.replace(/^\s*export default `/, '').replace(/`\s*$/, '')
     } catch (error) {
       console.error(`MjmlService:getMjmlContent: Error reading MJML template: ${viewPath}`, error)
       throw error

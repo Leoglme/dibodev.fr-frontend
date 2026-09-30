@@ -142,7 +142,7 @@ type BudgetRangeKey = (typeof BUDGET_RANGE_KEYS)[number]
 const WEBSITE_PROJECT_TYPE: ProjectTypeKey = 'website'
 const DEFAULT_PROJECT_TYPE: ProjectTypeKey = 'software'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const { track } = useTracking()
 const { getLeadSource } = useLeadSource()
@@ -279,7 +279,7 @@ async function sendContactIntent(): Promise<void> {
   try {
     const { data, error } = await useFetch<{ message: string }>('/api/mail/contact-intent', {
       method: 'POST',
-      body: { email: currentEmail, phone: currentPhone, source: getLeadSource() },
+      body: { email: currentEmail, phone: currentPhone, source: getLeadSource(), locale: locale.value },
     })
 
     if (error.value) {
@@ -336,6 +336,7 @@ async function onSubmit(): Promise<void> {
     phone: phone.value.trim() || null,
     message: message.value.trim(),
     source: getLeadSource(),
+    locale: locale.value,
   }
 
   try {

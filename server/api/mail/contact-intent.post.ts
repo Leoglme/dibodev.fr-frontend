@@ -44,6 +44,7 @@ export default defineEventHandler(async (event: H3Event) => {
       email: body.email ?? null,
       phone: body.phone ?? null,
       source: body.source ?? null,
+      locale: body.locale ?? null,
     })
     return { message: 'Contact intent notification sent successfully.' }
   } catch (error) {
