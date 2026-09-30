@@ -1,572 +1,541 @@
 <template>
-  <div class="flex min-w-0 flex-1 flex-col gap-8 px-4 py-8 sm:px-6 sm:py-12">
-    <div class="min-w-0">
-      <h1 class="text-2xl font-semibold text-gray-100">Indexation Google</h1>
-      <p class="mt-1 text-gray-200">
-        Liste des pages du site (accueil, contact, blog, projets) et statut d’indexation dans Google (Search Console).
-        Les données sont lues depuis le cache ; utilise « Actualiser » pour mettre à jour.
-      </p>
-    </div>
+  <DashboardPage title="Indexation Google" icon="scan-search">
+    <template #actions>
+      <span v-if="lastCheckedAt" class="text-muted hidden items-center gap-1.5 text-[13px] lg:inline-flex">
+        <DashboardIcon name="clock" :size="14" />
+        Vérifiée {{ DashboardFormatUtils.formatRelative(lastCheckedAt) }}
+      </span>
+      <DashboardButton
+        v-if="!isIndexingRefreshRunning"
+        variant="primary"
+        size="sm"
+        icon="refresh-cw"
+        :disabled="!payload?.gscConnected"
+        @click="onStartRefresh"
+      >
+        <span class="max-sm:hidden">Tout actualiser</span>
+      </DashboardButton>
+    </template>
 
-    <DibodevAlert v-if="error" :message="error" variant="error" dismissible @hide="error = ''" />
+    <template #toolbar>
+      <DashboardTabs
+        v-model="filter"
+        :items="filterTabs"
+        screen-reader-label="État dans Google"
+        class="min-w-0 @max-4xl/page:w-full"
+      />
+      <DashboardSearchInput
+        v-model="search"
+        id="indexing-search"
+        placeholder="Titre ou URL…"
+        class="w-full pb-1 @4xl/page:ml-auto @4xl/page:w-[220px] @4xl/page:pb-0 @6xl/page:w-[260px]"
+      />
+    </template>
 
-    <div class="flex w-full flex-col gap-4">
-      <div class="flex w-full flex-col gap-4 md:flex-row md:flex-wrap md:items-end md:justify-between">
-        <div class="flex w-full flex-col flex-wrap items-end gap-3 sm:flex-row sm:gap-4 md:min-w-0 md:flex-1">
-          <div class="w-full min-w-0 md:max-w-[180px] [&>*]:!min-w-0">
-            <DibodevSelect
-              id="filter-verdict"
-              label="Verdict"
-              :options="verdictOptions"
-              :model-value="selectedVerdict"
-              @update:model-value="selectedVerdict = $event"
-            />
-          </div>
-          <div class="w-full min-w-0 md:max-w-[180px] [&>*]:!min-w-0">
-            <DibodevSelect
-              id="filter-type"
-              label="Type"
-              :options="typeOptions"
-              :model-value="selectedType"
-              @update:model-value="selectedType = $event"
-            />
-          </div>
-          <div class="w-full min-w-0 md:max-w-[180px] [&>*]:!min-w-0">
-            <DibodevSelect
-              id="filter-lang"
-              label="Langue"
-              :options="langOptions"
-              :model-value="selectedLang"
-              @update:model-value="selectedLang = $event"
-            />
-          </div>
-        </div>
-        <div class="w-full min-w-0 flex-1 md:max-w-md">
-          <DibodevSearchBar title="Recherche" placeholder="Titre ou URL…" v-model:value="searchText" />
-        </div>
-      </div>
-      <div class="flex w-full flex-wrap items-center justify-end gap-3 sm:justify-start">
-        <DibodevButton :disabled="loading || refreshStatus === 'running'" @click="startRefresh">
-          <span
-            v-if="refreshStatus === 'running'"
-            class="mr-2 inline-block h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"
-          />
-          {{
-            refreshStatus === 'running' && refreshCurrentIndex != null && refreshTotalCount != null
-              ? `Mise à jour ${refreshCurrentIndex}/${refreshTotalCount}`
-              : refreshStatus === 'running'
-                ? 'Mise à jour…'
-                : 'Actualiser'
-          }}
-        </DibodevButton>
-        <DibodevButton v-if="refreshStatus === 'running'" outlined @click="cancelRefresh">
-          Annuler l’actualisation
-        </DibodevButton>
-      </div>
-    </div>
-
-    <div v-if="loading && items.length === 0" class="flex items-center gap-2 text-gray-300">
-      <DibodevSpinner :size="24" />
-      Chargement…
+    <div
+      v-if="isIndexingRefreshRunning"
+      class="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-(--dash-cyan-tint) bg-(--dash-cyan-wash) px-4 py-3.5"
+      role="status"
+    >
+      <DashboardIcon name="refresh-cw" :size="16" class="dash-spin text-(--dash-cyan)" />
+      <span class="text-[13.5px] text-gray-200">
+        Mise à jour
+        <b class="font-medium text-gray-100 tabular-nums"
+          >{{ refreshProgress.current }} / {{ refreshProgress.total }}</b
+        >
+        <span v-if="refreshProgress.path" class="dash-mono text-muted ml-1.5 text-xs">{{ refreshProgress.path }}</span>
+      </span>
+      <span class="h-1.5 min-w-[120px] flex-1 overflow-hidden rounded-full bg-(--dash-cyan-tint)">
+        <span
+          class="block h-full rounded-full bg-(--dash-cyan) transition-[width] duration-300"
+          :style="{ width: `${refreshProgress.ratio}%` }"
+        />
+      </span>
+      <DashboardButton variant="ghost" size="sm" @click="onCancelRefresh">Annuler</DashboardButton>
     </div>
 
     <div
-      v-else-if="filteredItems.length === 0"
-      class="rounded-lg border border-gray-600 bg-gray-800 p-8 text-center text-gray-300"
+      v-if="payload && !payload.gscConnected"
+      class="flex gap-3 rounded-xl bg-(--dash-amber-tint) p-4 text-sm text-(--dash-amber)"
+      role="alert"
     >
-      {{ items.length === 0 ? 'Aucune page pour le moment.' : 'Aucun résultat pour les filtres choisis.' }}
-    </div>
-
-    <div v-else class="w-full min-w-0 sm:max-w-[calc(100vw-310px)]">
-      <p class="mb-3 text-sm font-medium text-gray-200">
-        {{ filteredItems.length === 1 ? '1 résultat' : `${filteredItems.length} résultats` }}
+      <DashboardIcon name="triangle-alert" :size="18" class="mt-0.5" />
+      <p>
+        Search Console n’est pas connecté. Ajoute <code class="dash-mono">GSC_SERVICE_ACCOUNT_JSON</code> dans le
+        <code class="dash-mono">.env</code> avec la clé d’un compte de service, puis donne-lui le rôle Propriétaire dans
+        Search Console.
       </p>
-      <DibodevTable
-        :fields="indexingTableFields"
-        :card-fields="indexingCardFields"
-        :items="filteredItems"
-        :load="false"
-        :row-key="'url'"
-        :switch-to-card-at="768"
-      >
-        <template #card-header="{ item }">
-          <span class="text-lg font-semibold text-gray-100">{{ (item as IndexingItem).title }}</span>
-        </template>
-        <template #coverageState="{ item }">
-          <template v-if="(item as IndexingItem).coverageState">
-            {{ (item as IndexingItem).coverageState }}
-            <span
-              v-if="
-                (item as IndexingItem).googleCanonical &&
-                (item as IndexingItem).coverageState?.toLowerCase().includes('redirection')
-              "
-              class="mt-1 block text-xs text-gray-500"
+    </div>
+    <p v-if="error" class="flex items-center gap-2 text-sm text-(--dash-red)" role="alert">
+      <DashboardIcon name="circle-alert" :size="16" />
+      {{ error }}
+    </p>
+
+    <DashboardCard>
+      <div class="flex flex-wrap items-center gap-2 border-b border-(--dash-line-soft) px-4 py-3 sm:px-5">
+        <p class="text-[14.5px] font-medium text-gray-100">
+          {{ DashboardFormatUtils.plural(filteredRows.length, 'page') }}
+        </p>
+        <div class="flex w-full gap-2 sm:ml-auto sm:w-auto">
+          <DashboardSelect
+            v-model="typeFilter"
+            id="indexing-type"
+            :options="TYPE_OPTIONS"
+            screen-reader-label="Type de page"
+            class="flex-1 sm:flex-none"
+          />
+          <DashboardSelect
+            v-model="localeFilter"
+            id="indexing-locale"
+            :options="LOCALE_OPTIONS"
+            screen-reader-label="Langue"
+            class="flex-1 sm:flex-none"
+          />
+        </div>
+      </div>
+
+      <div v-if="isLoadingIndexing && !payload" class="flex flex-col gap-2 p-5">
+        <span v-for="index in 8" :key="index" class="dash-skeleton h-12 w-full" />
+      </div>
+
+      <DashboardEmptyState
+        v-else-if="filteredRows.length === 0"
+        :icon="filter === 'duplicate' || filter === 'error' ? 'circle-check' : 'scan-search'"
+        :title="emptyTitle"
+        :text="search ? 'Essaie un autre mot.' : 'Change de filtre pour voir les autres pages.'"
+      />
+
+      <template v-else>
+        <table class="dash-table @max-xl:hidden">
+          <thead>
+            <tr>
+              <th>Page</th>
+              <th class="dash-col-sm">Type</th>
+              <th>État dans Google</th>
+              <th class="dash-col-md">Exploré le</th>
+              <th class="is-right"><span class="sr-only">Actions</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              v-for="row in pagedRows"
+              :key="row.url"
+              class="is-clickable"
+              :class="{ 'is-selected': openedItemKey === row.url }"
+              @click="openRow(row.url)"
             >
-              Redirige vers {{ (item as IndexingItem).googleCanonical }}
+              <td class="dash-col-main">
+                <div class="flex min-w-0 items-center gap-3">
+                  <DashboardIconTile
+                    :icon="DashboardIndexingUtils.TYPES[row.type].icon"
+                    :tone="DashboardIndexingUtils.TYPES[row.type].tone"
+                    size="lg"
+                  />
+                  <div class="min-w-0">
+                    <p class="truncate font-medium text-gray-100">{{ row.title }}</p>
+                    <p class="dash-mono text-muted mt-0.5 truncate text-xs">
+                      {{ DashboardIndexingUtils.path(row.url) }}
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td class="dash-col-sm whitespace-nowrap">
+                <span class="text-[13px] text-gray-200">{{ DashboardIndexingUtils.TYPES[row.type].label }}</span>
+                <span
+                  class="dash-mono ml-2 inline-grid h-5 min-w-[26px] place-items-center rounded-[5px] border border-gray-300 px-1 text-[10.5px] font-medium text-gray-200 uppercase"
+                >
+                  {{ DashboardIndexingUtils.locale(row.url) }}
+                </span>
+              </td>
+              <td>
+                <DashboardBadge
+                  :tone="stateOf(row).tone"
+                  :icon="isRowRefreshing(row) ? 'loader-circle' : stateOf(row).icon"
+                  :is-spinning="isRowRefreshing(row)"
+                >
+                  {{ stateOf(row).label }}
+                </DashboardBadge>
+                <p
+                  v-if="row.checkedAt || canonicalOf(row)"
+                  class="text-muted mt-1.5 max-w-[240px] truncate text-[12.5px] @3xl:max-w-[320px] @6xl:max-w-[420px]"
+                  :title="DashboardIndexingUtils.reason(row)"
+                >
+                  {{
+                    canonicalOf(row) ? `Canonique retenue : ${canonicalOf(row)}` : DashboardIndexingUtils.reason(row)
+                  }}
+                </p>
+              </td>
+              <td class="dash-col-md text-[13px] whitespace-nowrap">
+                <span v-if="row.lastCrawlTime" class="text-gray-200">{{
+                  DashboardFormatUtils.formatDateTime(row.lastCrawlTime)
+                }}</span>
+                <span v-else-if="row.checkedAt" class="text-gray-200">Jamais</span>
+                <span v-else class="text-(--dash-faint)">—</span>
+              </td>
+              <td class="is-right" @click.stop>
+                <div class="inline-flex items-center gap-1">
+                  <DashboardButton
+                    variant="ghost"
+                    size="sm"
+                    square
+                    icon="refresh-cw"
+                    :loading="refreshingUrls.includes(row.url)"
+                    :disabled="!payload?.gscConnected"
+                    :aria-label="`Actualiser ${row.title}`"
+                    data-tip="Actualiser cette page"
+                    class="dash-hover-reveal"
+                    @click="onRefreshUrl(row)"
+                  />
+                  <DashboardButton
+                    variant="ghost"
+                    size="sm"
+                    square
+                    icon="chevron-right"
+                    :aria-label="`Détail de ${row.title}`"
+                    @click="openRow(row.url)"
+                  />
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <ul class="@xl:hidden">
+          <DashboardListRow
+            v-for="row in pagedRows"
+            :key="row.url"
+            :is-selected="openedItemKey === row.url"
+            @select="openRow(row.url)"
+          >
+            <DashboardIconTile
+              :icon="DashboardIndexingUtils.TYPES[row.type].icon"
+              :tone="DashboardIndexingUtils.TYPES[row.type].tone"
+              size="lg"
+            />
+            <span class="min-w-0 flex-1">
+              <span class="block truncate text-sm font-medium text-gray-100">{{ row.title }}</span>
+              <span class="dash-mono text-muted mt-0.5 block truncate text-xs">{{
+                DashboardIndexingUtils.path(row.url)
+              }}</span>
+              <span class="mt-1.5 block">
+                <DashboardBadge
+                  :tone="stateOf(row).tone"
+                  :icon="isRowRefreshing(row) ? 'loader-circle' : stateOf(row).icon"
+                  :is-spinning="isRowRefreshing(row)"
+                >
+                  {{ stateOf(row).label }}
+                </DashboardBadge>
+              </span>
             </span>
-          </template>
-          <span v-else class="text-gray-500">—</span>
-        </template>
-        <template #verdict="{ item }">
-          <span
-            v-if="(item as IndexingItem).verdict === 'PASS'"
-            class="rounded-full bg-emerald-500/20 px-2 py-0.5 text-xs font-medium text-emerald-400"
-            >PASS</span
-          >
-          <span
-            v-else-if="(item as IndexingItem).verdict === 'FAIL'"
-            class="rounded-full bg-red-500/20 px-2 py-0.5 text-xs font-medium text-red-400"
-            >FAIL</span
-          >
-          <span
-            v-else-if="(item as IndexingItem).verdict === 'NEUTRAL'"
-            class="rounded-full bg-amber-500/20 px-2 py-0.5 text-xs font-medium text-amber-400"
-            >NEUTRAL</span
-          >
-          <span v-else class="text-gray-500">—</span>
-        </template>
-        <template #lastCrawlTime="{ item }">
-          <span class="text-gray-200">{{ formatLastCrawl((item as IndexingItem).lastCrawlTime) }}</span>
-        </template>
-        <template #url="{ item }">
-          <div class="flex min-w-0 flex-wrap items-center justify-start gap-2 break-words">
-            <DibodevCopyButton :value="(item as IndexingItem).url" />
-            <DibodevLink :link="(item as IndexingItem).url" external-link class="min-w-0 break-all">
-              {{ (item as IndexingItem).url }}
-            </DibodevLink>
-          </div>
-        </template>
-        <template #signal="{ item }">
-          <span class="rounded px-2 py-0.5 text-xs font-medium" :class="getSignalBadgeClass(item as IndexingItem)">
-            {{ getSignalLabel(item as IndexingItem) }}
-          </span>
-        </template>
-        <template #actions="{ item }">
-          <div class="flex w-full flex-col gap-2">
-            <DibodevButton
-              v-if="gscConnected"
-              class="w-full"
-              size="sm"
-              :disabled="isItemRefreshing((item as IndexingItem).url)"
-              @click="refreshUrl((item as IndexingItem).url)"
-            >
-              <span
-                v-if="isItemRefreshing((item as IndexingItem).url)"
-                class="mr-1.5 inline-block h-3.5 w-3.5 animate-spin rounded-full border-2 border-current border-t-transparent"
-              />
-              {{ isItemRefreshing((item as IndexingItem).url) ? 'Actualisation…' : 'Actualiser' }}
-            </DibodevButton>
-            <DibodevButton
-              v-if="(item as IndexingItem).inspectionResultLink"
-              class="w-full"
-              size="sm"
-              outlined
-              :to="gscConsoleUrl((item as IndexingItem).inspectionResultLink!)"
-            >
-              Search Console
-            </DibodevButton>
-            <span v-if="!gscConnected && !(item as IndexingItem).inspectionResultLink" class="text-sm text-gray-400"
-              >GSC non connecté</span
-            >
-          </div>
-        </template>
-      </DibodevTable>
-    </div>
+            <DashboardIcon name="chevron-right" :size="16" class="text-muted" />
+          </DashboardListRow>
+        </ul>
+      </template>
 
-    <div v-if="!gscConnected && !loading" class="rounded-lg border border-amber-600/50 bg-amber-500/10 p-4">
-      <p class="text-sm text-amber-200">
-        Configure Google Search Console pour afficher le statut. Ajoute
-        <code class="rounded bg-gray-800 px-1">GSC_SERVICE_ACCOUNT_JSON</code> dans ton fichier
-        <code class="rounded bg-gray-800 px-1">.env</code> avec la clé JSON d'un Service Account, puis ajoute l'email du
-        SA comme <strong>Owner</strong> dans Search Console.
-      </p>
-    </div>
-  </div>
+      <template v-if="filteredRows.length > 0" #footer>
+        <span class="tabular-nums">{{ countLabel }}</span>
+        <span v-if="pageCount > 1" class="inline-flex items-center gap-1">
+          <DashboardButton
+            variant="ghost"
+            size="sm"
+            square
+            icon="chevron-left"
+            aria-label="Page précédente"
+            :disabled="page === 1"
+            @click="page -= 1"
+          />
+          <span class="min-w-[52px] text-center text-xs tabular-nums">{{ page }} / {{ pageCount }}</span>
+          <DashboardButton
+            variant="ghost"
+            size="sm"
+            square
+            icon="chevron-right"
+            aria-label="Page suivante"
+            :disabled="page === pageCount"
+            @click="page += 1"
+          />
+        </span>
+      </template>
+    </DashboardCard>
+  </DashboardPage>
 </template>
 
-<script setup lang="ts">
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
-import type { Ref } from 'vue'
-import DibodevAlert from '~/components/feedback/DibodevAlert.vue'
-import DibodevButton from '~/components/core/DibodevButton.vue'
-import DibodevCopyButton from '~/components/DibodevCopyButton.vue'
-import DibodevLink from '~/components/core/DibodevLink.vue'
-import DibodevTable from '~/components/core/DibodevTable.vue'
-import DibodevSearchBar from '~/components/inputs/DibodevSearchBar.vue'
-import DibodevSelect from '~/components/core/DibodevSelect.vue'
-import DibodevSpinner from '~/components/ui/DibodevSpinner.vue'
-import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
-import type { DibodevTableField } from '~/core/types/DibodevTable'
-import type { DibodevTableCardField } from '~/core/types/DibodevTableCard'
+<script lang="ts" setup>
+import type { UseDashboardToastReturn } from '~/composables/useDashboardToast'
+import type { UseDashboardIndexingReturn } from '~/composables/useDashboardIndexing'
+import type { UseDashboardDrawerReturn } from '~/composables/useDashboardDrawer'
+import type { DashboardIndexingFilter, DashboardIndexingRefreshProgress } from '~/core/types/DashboardIndexingPage'
+import type { ComputedRef, Ref } from 'vue'
+import type { DashboardSelectOption, DashboardTabItem } from '~/core/types/Dashboard'
+import type { IndexingStateDisplay } from '~/core/utils/DashboardIndexingUtils'
+import type { IndexingStatusRow } from '~~/server/types/indexing'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import DashboardPage from '~/components/dashboard/shell/DashboardPage.vue'
+import DashboardBadge from '~/components/dashboard/ui/DashboardBadge.vue'
+import DashboardButton from '~/components/dashboard/ui/DashboardButton.vue'
+import DashboardCard from '~/components/dashboard/ui/DashboardCard.vue'
+import DashboardEmptyState from '~/components/dashboard/ui/DashboardEmptyState.vue'
+import DashboardIcon from '~/components/dashboard/ui/DashboardIcon.vue'
+import DashboardIconTile from '~/components/dashboard/ui/DashboardIconTile.vue'
+import DashboardListRow from '~/components/dashboard/ui/DashboardListRow.vue'
+import DashboardSearchInput from '~/components/dashboard/ui/DashboardSearchInput.vue'
+import DashboardSelect from '~/components/dashboard/ui/DashboardSelect.vue'
+import DashboardTabs from '~/components/dashboard/ui/DashboardTabs.vue'
+import { DashboardFormatUtils } from '~/core/utils/DashboardFormatUtils'
+import { DashboardIndexingUtils } from '~/core/utils/DashboardIndexingUtils'
+import { useDashboardDrawer } from '~/composables/useDashboardDrawer'
+import { useDashboardIndexing } from '~/composables/useDashboardIndexing'
+import { useDashboardToast } from '~/composables/useDashboardToast'
 
 definePageMeta({
   layout: 'dashboard',
 })
 
 useHead({
-  title: 'Indexation Google — Dashboard',
-  meta: [{ name: 'robots', content: 'noindex, nofollow' }],
+  title: 'Indexation Google · Dibodev Admin',
 })
 
-export type IndexingItem = {
-  url: string
-  title: string
-  type: string
-  verdict?: string
-  coverageState?: string
-  lastCrawlTime?: string
-  inspectionResultLink?: string
-  googleCanonical?: string
-  checkedAt?: string
-}
+const route: ReturnType<typeof useRoute> = useRoute()
+const router: ReturnType<typeof useRouter> = useRouter()
 
-type IndexingApiResponse = {
-  items: IndexingItem[]
-  refresh: {
-    status: 'idle' | 'running'
-    startedAt?: string
-    finishedAt?: string
-    /** URL en cours d’actualisation par le job « Actualiser » global. */
-    currentUrl?: string
-    currentIndex?: number
-    totalCount?: number
-  }
-  gscConnected: boolean
-}
+const {
+  payload,
+  loading: isLoadingIndexing,
+  error,
+  refreshingUrls,
+  counts,
+  isIndexingRefreshRunning,
+  loadIndexing,
+  startRefresh,
+  cancelRefresh,
+  refreshUrl,
+  stopPolling,
+}: UseDashboardIndexingReturn = useDashboardIndexing()
 
-const CACHE_KEY: string = 'dashboard-indexing-cache'
-const POLL_INTERVAL_MS: number = 3000
+const { openedItemKey, openDrawer }: UseDashboardDrawerReturn = useDashboardDrawer()
+const { showToast }: UseDashboardToastReturn = useDashboardToast()
+const initialFilter: string = typeof route.query.filter === 'string' ? route.query.filter : 'all'
 
-const items: Ref<IndexingItem[]> = ref([])
-const loading: Ref<boolean> = ref(true)
-const error: Ref<string> = ref('')
-const gscConnected: Ref<boolean> = ref(false)
-const refreshStatus: Ref<'idle' | 'running'> = ref('idle')
-const refreshAllCurrentUrl: Ref<string | null> = ref(null)
-const refreshCurrentIndex: Ref<number | null> = ref(null)
-const refreshTotalCount: Ref<number | null> = ref(null)
-const searchText: Ref<string> = ref('')
-const refreshingUrls: Ref<string[]> = ref([])
-
-const verdictOptions: DibodevSelectOption[] = [
-  { label: 'Tous les verdicts', value: '' },
-  { label: 'PASS', value: 'PASS' },
-  { label: 'NEUTRAL', value: 'NEUTRAL' },
-  { label: 'FAIL', value: 'FAIL' },
-]
-const typeOptions: DibodevSelectOption[] = [
-  { label: 'Tous les types', value: '' },
-  { label: 'Page', value: 'page' },
-  { label: 'Blog', value: 'blog' },
-  { label: 'Projet', value: 'project' },
-  { label: 'Catégorie', value: 'category' },
-  { label: 'Secteur', value: 'sector' },
-]
-const langOptions: DibodevSelectOption[] = [
-  { label: 'Toutes les langues', value: '' },
-  { label: 'Français', value: 'fr' },
-  { label: 'Anglais', value: 'en' },
-  { label: 'Espagnol', value: 'es' },
-]
-const selectedVerdict = ref<DibodevSelectOption>(verdictOptions[0]!)
-const selectedType = ref<DibodevSelectOption>(typeOptions[0]!)
-const selectedLang: Ref<DibodevSelectOption> = ref(langOptions[0]!)
-
-const indexingTableFields: DibodevTableField[] = [
-  { key: 'url', label: 'URL', cellsClasses: '!whitespace-normal min-w-[300px] max-w-[320px] break-words' },
-  { key: 'coverageState', label: 'Statut' },
-  { key: 'verdict', label: 'Verdict' },
-  { key: 'signal', label: 'Signal' },
-  { key: 'lastCrawlTime', label: 'Dernière exploration' },
-  { key: 'actions', label: 'Actions', cellsClasses: 'text-right' },
-]
-const indexingCardFields: DibodevTableCardField[] = [
-  { key: 'url', label: 'URL' },
-  { key: 'coverageState', label: 'Statut' },
-  { key: 'verdict', label: 'Verdict' },
-  { key: 'signal', label: 'Signal' },
-  { key: 'lastCrawlTime', label: 'Dernière exploration' },
-  { key: 'actions', label: 'Actions' },
+const FILTER_VALUES: DashboardIndexingFilter[] = [
+  'all',
+  'indexed',
+  'not-indexed',
+  'duplicate',
+  'unknown',
+  'excluded',
+  'error',
 ]
 
-/** Normalise l’URL GSC pour utiliser le chemin u/1 (ex. https://search.google.com/u/1/search-console). */
-function gscConsoleUrl(link: string): string {
-  if (!link) return 'https://search.google.com/u/1/search-console'
-  if (link.includes('search.google.com/u/1/')) return link
-  return link.replace(/search\.google\.com\/(?!u\/1)/, 'search.google.com/u/1/')
-}
+const PAGE_SIZE: number = 25
 
-/**
- * Ranks a page by indexation status so freshly published (not-yet-indexed) pages surface first.
- *
- * @param {IndexingItem} item - The indexing row.
- * @returns {number} A rank where a lower value sorts higher in the list.
- */
-function indexingPriority(item: IndexingItem): number {
-  if (!item.checkedAt && !item.verdict) return 0
-  if (item.verdict !== 'PASS') return 1
-  return 2
-}
+const TYPE_OPTIONS: DashboardSelectOption[] = [
+  { value: '', label: 'Tous les types' },
+  { value: 'blog', label: 'Articles' },
+  { value: 'project', label: 'Projets' },
+  { value: 'page', label: 'Pages' },
+  { value: 'category', label: 'Catégories' },
+  { value: 'sector', label: 'Secteurs' },
+]
 
-type UrlLocale = 'fr' | 'en' | 'es'
+const LOCALE_OPTIONS: DashboardSelectOption[] = [
+  { value: '', label: 'Toutes les langues' },
+  { value: 'fr', label: 'Français' },
+  { value: 'en', label: 'Anglais' },
+  { value: 'es', label: 'Espagnol' },
+]
 
-/**
- * Resolves the site locale of a page from its URL prefix (/en/ or /es/; French otherwise).
- * @param {string} url - The absolute page URL.
- * @returns {UrlLocale} The resolved locale ('fr', 'en' or 'es').
- */
-function getUrlLocale(url: string): UrlLocale {
-  let pathname: string
-  try {
-    pathname = new URL(url).pathname
-  } catch {
-    pathname = url
-  }
-  if (pathname === '/en' || pathname.startsWith('/en/')) return 'en'
-  if (pathname === '/es' || pathname.startsWith('/es/')) return 'es'
-  return 'fr'
-}
+const filter: Ref<string> = ref(
+  FILTER_VALUES.includes(initialFilter as DashboardIndexingFilter) ? initialFilter : 'all',
+)
 
-const filteredItems = computed((): IndexingItem[] => {
-  let list: IndexingItem[] = items.value
-  const v: string | undefined = selectedVerdict.value?.value
-  if (v) list = list.filter((row: IndexingItem) => row.verdict === v)
-  const t: string | undefined = selectedType.value?.value
-  if (t) list = list.filter((row: IndexingItem) => row.type === t)
-  const lang: string | undefined = selectedLang.value?.value
-  if (lang) list = list.filter((row: IndexingItem): boolean => getUrlLocale(row.url) === lang)
-  const q: string = searchText.value.trim().toLowerCase()
-  if (q) {
-    list = list.filter(
-      (row: IndexingItem): boolean => row.title.toLowerCase().includes(q) || row.url.toLowerCase().includes(q),
+const search: Ref<string> = ref('')
+const typeFilter: Ref<string> = ref('')
+const localeFilter: Ref<string> = ref('')
+const page: Ref<number> = ref(1)
+
+const filterTabs: ComputedRef<DashboardTabItem[]> = computed((): DashboardTabItem[] => {
+  const tabs: DashboardTabItem[] = [
+    { value: 'all', label: 'Toutes', count: counts.value.total },
+    { value: 'indexed', label: 'Indexées', count: counts.value.indexed },
+    { value: 'not-indexed', label: 'Non indexées', count: counts.value['not-indexed'] },
+    { value: 'duplicate', label: 'En double', count: counts.value.duplicate, alert: counts.value.duplicate > 0 },
+    { value: 'unknown', label: 'Inconnues', count: counts.value.unknown },
+  ]
+  if (counts.value.error > 0) tabs.push({ value: 'error', label: 'Erreurs', count: counts.value.error, alert: true })
+  if (counts.value.excluded > 0) tabs.push({ value: 'excluded', label: 'Exclues', count: counts.value.excluded })
+  return tabs
+})
+
+const filteredRows: ComputedRef<IndexingStatusRow[]> = computed((): IndexingStatusRow[] => {
+  const needle: string = search.value.trim().toLowerCase()
+  return (payload.value?.items ?? [])
+    .filter(
+      (row: IndexingStatusRow): boolean => filter.value === 'all' || DashboardIndexingUtils.state(row) === filter.value,
     )
-  }
-  return [...list].sort((a: IndexingItem, b: IndexingItem): number => {
-    const rankA: number = indexingPriority(a)
-    const rankB: number = indexingPriority(b)
-    if (rankA !== rankB) return rankA - rankB
-    return a.title.localeCompare(b.title, 'fr')
-  })
+    .filter((row: IndexingStatusRow): boolean => !typeFilter.value || row.type === typeFilter.value)
+    .filter(
+      (row: IndexingStatusRow): boolean =>
+        !localeFilter.value || DashboardIndexingUtils.locale(row.url) === localeFilter.value,
+    )
+    .filter((row: IndexingStatusRow): boolean => !needle || `${row.title} ${row.url}`.toLowerCase().includes(needle))
+    .sort((a: IndexingStatusRow, b: IndexingStatusRow): number => {
+      const rank: number = DashboardIndexingUtils.priority(a) - DashboardIndexingUtils.priority(b)
+      return rank !== 0 ? rank : a.title.localeCompare(b.title, 'fr')
+    })
 })
 
-/** True si l’item est en cours d’actualisation (bouton manuel ou job global). */
-function isItemRefreshing(url: string): boolean {
-  return refreshingUrls.value.includes(url) || (refreshStatus.value === 'running' && refreshAllCurrentUrl.value === url)
+const pageCount: ComputedRef<number> = computed((): number =>
+  Math.max(1, Math.ceil(filteredRows.value.length / PAGE_SIZE)),
+)
+
+const pagedRows: ComputedRef<IndexingStatusRow[]> = computed((): IndexingStatusRow[] =>
+  filteredRows.value.slice((page.value - 1) * PAGE_SIZE, page.value * PAGE_SIZE),
+)
+
+const countLabel: ComputedRef<string> = computed((): string => {
+  const total: number = filteredRows.value.length
+  return `${(page.value - 1) * PAGE_SIZE + 1}–${Math.min(total, page.value * PAGE_SIZE)} sur ${DashboardFormatUtils.plural(total, 'page')}`
+})
+
+const lastCheckedAt: ComputedRef<string | null> = computed((): string | null => {
+  const dates: string[] = (payload.value?.items ?? [])
+    .map((row: IndexingStatusRow): string => row.checkedAt ?? '')
+    .filter((date: string): boolean => date !== '')
+    .sort()
+  return dates[dates.length - 1] ?? null
+})
+
+const refreshProgress: ComputedRef<DashboardIndexingRefreshProgress> = computed(
+  (): DashboardIndexingRefreshProgress => {
+    const current: number = payload.value?.refresh.currentIndex ?? 0
+    const total: number = payload.value?.refresh.totalCount ?? counts.value.total
+    const url: string | undefined = payload.value?.refresh.currentUrl
+    return {
+      current,
+      total,
+      ratio: total > 0 ? (current / total) * 100 : 0,
+      path: url ? DashboardIndexingUtils.path(url) : '',
+    }
+  },
+)
+
+const emptyTitle: ComputedRef<string> = computed((): string => {
+  if (search.value) return 'Aucune page ne correspond'
+  if (filter.value === 'duplicate') return 'Aucune page en double'
+  if (filter.value === 'error') return 'Aucune page en erreur'
+  return 'Aucune page pour ces filtres'
+})
+
+/**
+ * Label and tone of a page state.
+ *
+ * @param {IndexingStatusRow} row - The page.
+ * @returns {IndexingStateDisplay} The display.
+ */
+function stateOf(row: IndexingStatusRow): IndexingStateDisplay {
+  return DashboardIndexingUtils.STATES[DashboardIndexingUtils.state(row)]
 }
 
-function formatLastCrawl(iso?: string): string {
-  if (!iso) return '—'
+/**
+ * Whether Search Console is being asked about this page right now (single refresh or full pass).
+ *
+ * @param {IndexingStatusRow} row - The page.
+ * @returns {boolean} True while the page is being refreshed.
+ */
+function isRowRefreshing(row: IndexingStatusRow): boolean {
+  return refreshingUrls.value.includes(row.url) || payload.value?.refresh.currentUrl === row.url
+}
+
+/**
+ * Canonical chosen by Google, for duplicates.
+ *
+ * @param {IndexingStatusRow} row - The page.
+ * @returns {string | null} The canonical path, or null.
+ */
+function canonicalOf(row: IndexingStatusRow): string | null {
+  return DashboardIndexingUtils.state(row) === 'duplicate' ? DashboardIndexingUtils.chosenCanonical(row) : null
+}
+
+/**
+ * Opens the drawer of a page; the arrows browse the filtered list.
+ *
+ * @param {string} url - Page URL.
+ * @returns {void}
+ */
+function openRow(url: string): void {
+  openDrawer({ kind: 'indexing', url, browseUrls: filteredRows.value.map((row: IndexingStatusRow): string => row.url) })
+}
+
+/**
+ * Starts the inspection of every page.
+ *
+ * @returns {Promise<void>}
+ */
+async function onStartRefresh(): Promise<void> {
   try {
-    const d: Date = new Date(iso)
-    return d.toLocaleDateString('fr-FR', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
+    await startRefresh()
+    showToast({
+      tone: 'cyan',
+      icon: 'scan-search',
+      title: 'Actualisation lancée',
+      text: 'Chaque page est inspectée dans Search Console.',
     })
   } catch {
-    return iso
+    showToast({ tone: 'red', title: 'Impossible de lancer l’actualisation' })
   }
 }
 
-const ONE_DAY_MS = 24 * 60 * 60 * 1000
-
-function getSignalLabel(item: IndexingItem): string {
-  if (item.verdict === 'PASS') return 'Indexée'
-  if (item.coverageState === 'Explorée, actuellement non indexée') return 'Crawl OK, indexation pas encore faite'
-  if (item.coverageState === 'Google ne reconnaît pas cette URL') return 'Non découverte (pas crawlé)'
-  if (
-    item.verdict !== 'PASS' &&
-    item.lastCrawlTime &&
-    Date.now() - new Date(item.lastCrawlTime).getTime() < ONE_DAY_MS
-  ) {
-    return "Crawl récent — en attente d'indexation"
-  }
-  return item.coverageState?.trim() || 'À vérifier'
-}
-
-function getSignalBadgeClass(item: IndexingItem): string {
-  const label = getSignalLabel(item)
-  if (label === 'Indexée') return 'bg-emerald-500/20 text-emerald-300'
-  if (label === 'Crawl OK, indexation pas encore faite') return 'bg-amber-500/30 text-amber-200'
-  if (label === 'Non découverte (pas crawlé)') return 'bg-red-500/20 text-red-300'
-  if (label === "Crawl récent — en attente d'indexation") return 'bg-blue-500/30 text-blue-200'
-  return 'bg-purple-500/20 text-purple-200'
-}
-
-async function fetchFromApi(force: boolean = false): Promise<void> {
-  const cache: Ref<IndexingApiResponse | null> = useState<IndexingApiResponse | null>(CACHE_KEY)
-  if (!force && cache.value) {
-    items.value = cache.value.items ?? []
-    gscConnected.value = cache.value.gscConnected ?? false
-    refreshStatus.value = cache.value.refresh?.status ?? 'idle'
-    refreshAllCurrentUrl.value = cache.value.refresh?.currentUrl ?? null
-    refreshCurrentIndex.value = cache.value.refresh?.currentIndex ?? null
-    refreshTotalCount.value = cache.value.refresh?.totalCount ?? null
-    loading.value = false
-    return
-  }
-  loading.value = true
-  error.value = ''
+/**
+ * Stops the inspection job.
+ *
+ * @returns {Promise<void>}
+ */
+async function onCancelRefresh(): Promise<void> {
   try {
-    const data: IndexingApiResponse = await $fetch<IndexingApiResponse>('/api/indexing-status')
-    items.value = data.items ?? []
-    gscConnected.value = data.gscConnected ?? false
-    refreshStatus.value = data.refresh?.status ?? 'idle'
-    refreshAllCurrentUrl.value = data.refresh?.currentUrl ?? null
-    refreshCurrentIndex.value = data.refresh?.currentIndex ?? null
-    refreshTotalCount.value = data.refresh?.totalCount ?? null
-    cache.value = data
-  } catch (e: unknown) {
-    const msg: string = e instanceof Error ? e.message : 'Erreur lors du chargement.'
-    error.value = msg
-    items.value = []
-  } finally {
-    loading.value = false
+    await cancelRefresh()
+    showToast({
+      tone: 'amber',
+      icon: 'circle-x',
+      title: 'Actualisation arrêtée',
+      text: 'Les pages déjà vérifiées sont gardées.',
+    })
+  } catch {
+    showToast({ tone: 'red', title: 'Impossible d’arrêter l’actualisation' })
   }
 }
 
-let pollIntervalId: ReturnType<typeof setInterval> | null = null
-let pollTimeoutId: ReturnType<typeof setTimeout> | null = null
-
-function stopPolling(): void {
-  if (pollIntervalId) {
-    clearInterval(pollIntervalId)
-    pollIntervalId = null
-  }
-  if (pollTimeoutId) {
-    clearTimeout(pollTimeoutId)
-    pollTimeoutId = null
-  }
+/**
+ * Inspects one page.
+ *
+ * @param {IndexingStatusRow} row - The page.
+ * @returns {Promise<void>}
+ */
+async function onRefreshUrl(row: IndexingStatusRow): Promise<void> {
+  const updated: IndexingStatusRow | null = await refreshUrl(row.url)
+  if (updated)
+    showToast({
+      tone: 'cyan',
+      icon: 'scan-search',
+      title: 'Statut actualisé',
+      text: `${row.title} : ${stateOf(updated).label}.`,
+    })
 }
 
-function startPolling(): void {
-  stopPolling()
-
-  pollIntervalId = setInterval(async (): Promise<void> => {
-    const data: IndexingApiResponse = await $fetch<IndexingApiResponse>('/api/indexing-status')
-    refreshStatus.value = data.refresh?.status ?? 'idle'
-    refreshAllCurrentUrl.value = data.refresh?.currentUrl ?? null
-    refreshCurrentIndex.value = data.refresh?.currentIndex ?? null
-    refreshTotalCount.value = data.refresh?.totalCount ?? null
-    items.value = data.items ?? []
-    useState(CACHE_KEY).value = data
-
-    if (data.refresh?.status !== 'running') {
-      refreshAllCurrentUrl.value = null
-      refreshCurrentIndex.value = null
-      refreshTotalCount.value = null
-      stopPolling()
-    }
-  }, POLL_INTERVAL_MS)
-
-  pollTimeoutId = setTimeout(() => {
-    stopPolling()
-    refreshStatus.value = 'idle'
-    refreshAllCurrentUrl.value = null
-    refreshCurrentIndex.value = null
-    refreshTotalCount.value = null
-  }, 600_000)
-}
-
-async function startRefresh(): Promise<void> {
-  try {
-    await $fetch('/api/indexing-status/refresh', { method: 'POST' })
-    refreshStatus.value = 'running'
-    startPolling()
-  } catch (e: unknown) {
-    error.value = e instanceof Error ? e.message : 'Erreur lors de l’actualisation.'
-  }
-}
-
-async function cancelRefresh(): Promise<void> {
-  try {
-    await $fetch('/api/indexing-status/refresh-cancel', { method: 'POST' })
-    // UX: on débloque l’UI immédiatement (le job serveur sortira à la prochaine URL).
-    stopPolling()
-    refreshStatus.value = 'idle'
-    refreshAllCurrentUrl.value = null
-    refreshCurrentIndex.value = null
-    refreshTotalCount.value = null
-    const cache: Ref<IndexingApiResponse | null> = useState<IndexingApiResponse | null>(CACHE_KEY)
-    if (cache.value) {
-      cache.value = {
-        ...cache.value,
-        refresh: {
-          status: 'idle',
-          startedAt: cache.value.refresh?.startedAt,
-          finishedAt: new Date().toISOString(),
-        },
-      }
-    }
-  } catch (e: unknown) {
-    error.value = e instanceof Error ? e.message : 'Impossible d’annuler l’actualisation.'
-  }
-}
-
-async function refreshUrl(url: string): Promise<void> {
-  refreshingUrls.value = [...refreshingUrls.value, url]
-  error.value = ''
-  try {
-    const data: { ok: boolean; item: IndexingItem } = await $fetch<{ ok: boolean; item: IndexingItem }>(
-      '/api/indexing-status/refresh-url',
-      {
-        method: 'POST',
-        body: { url },
-      },
-    )
-    const idx: number = items.value.findIndex((r: IndexingItem) => r.url === url)
-    if (idx !== -1 && data.item) items.value[idx] = data.item
-    const cache: Ref<IndexingApiResponse | null> = useState<IndexingApiResponse | null>(CACHE_KEY)
-    if (cache.value) cache.value = { ...cache.value, items: [...items.value] }
-  } catch (e: unknown) {
-    error.value = e instanceof Error ? e.message : "Erreur lors de l'actualisation de l'URL."
-  } finally {
-    refreshingUrls.value = refreshingUrls.value.filter((u: string) => u !== url)
-  }
-}
-
-onMounted(async (): Promise<void> => {
-  const cache: Ref<IndexingApiResponse | null> = useState<IndexingApiResponse | null>(CACHE_KEY)
-  if (cache.value) {
-    items.value = cache.value.items ?? []
-    gscConnected.value = cache.value.gscConnected ?? false
-    refreshStatus.value = cache.value.refresh?.status ?? 'idle'
-    refreshAllCurrentUrl.value = cache.value.refresh?.currentUrl ?? null
-    refreshCurrentIndex.value = cache.value.refresh?.currentIndex ?? null
-    refreshTotalCount.value = cache.value.refresh?.totalCount ?? null
-    loading.value = false
-
-    // Si un refresh est en cours côté serveur, on se resynchronise et on relance le polling
-    // (le cache Nuxt peut être figé si l’utilisateur a quitté la page).
-    if (cache.value.refresh?.status === 'running') {
-      try {
-        const data: IndexingApiResponse = await $fetch<IndexingApiResponse>('/api/indexing-status')
-        items.value = data.items ?? []
-        gscConnected.value = data.gscConnected ?? false
-        refreshStatus.value = data.refresh?.status ?? 'idle'
-        refreshAllCurrentUrl.value = data.refresh?.currentUrl ?? null
-        refreshCurrentIndex.value = data.refresh?.currentIndex ?? null
-        refreshTotalCount.value = data.refresh?.totalCount ?? null
-        cache.value = data
-
-        if (data.refresh?.status === 'running') {
-          startPolling()
-        }
-      } catch {
-        // en cas d’erreur, on garde les données du cache
-      }
-    }
-    return
-  }
-  await fetchFromApi(false)
-  if (refreshStatus.value === 'running') {
-    startPolling()
-  }
+watch([filter, search, typeFilter, localeFilter], (): void => {
+  page.value = 1
 })
 
-onBeforeUnmount(() => {
+watch(filter, (value: string): void => {
+  router
+    .replace({ query: { ...route.query, filter: value === 'all' ? undefined : value } })
+    .catch((): void => undefined)
+})
+
+onMounted((): void => {
+  loadIndexing().catch((): void => undefined)
+})
+
+onBeforeUnmount((): void => {
   stopPolling()
 })
 </script>

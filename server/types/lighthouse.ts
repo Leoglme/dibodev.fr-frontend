@@ -33,3 +33,33 @@ export type LighthouseReportResponse = {
   mobile: LighthouseStrategyReport
   desktop: LighthouseStrategyReport
 }
+
+export type LighthouseKeyMetric = {
+  id: string
+  label: string
+}
+
+export type LighthouseMetric = {
+  id: string
+  label: string
+  displayValue: string
+  score: number | null
+}
+
+export type LighthouseStrategySummary = {
+  fetchTime: string
+  scores: Record<LighthouseCategoryId, number | null>
+  metrics: LighthouseMetric[]
+  runtimeError: string | null
+}
+
+export type LighthouseSummary = {
+  url: string
+  auditedAt: string
+  mobile: LighthouseStrategySummary
+  desktop: LighthouseStrategySummary
+}
+
+export type LighthouseHistoryResponse = {
+  summaries: LighthouseSummary[]
+}

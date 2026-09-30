@@ -1,0 +1,297 @@
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/dm-mono/dm-mono-400-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/dm-mono/dm-mono-500-latin.woff2') format('woff2');
+}
+
+/* The chat widget injected on every page in production stays off the back office. */
+body:has(.dashboard-root) #dlh-assistant-launcher,
+body:has(.dashboard-root) #dlh-assistant-frame,
+body:has(.dashboard-root) .dlh-sheet {
+  display: none !important;
+}
+
+.dashboard-root {
+  --dash-canvas: #f6f6f3;
+  --dash-sunken: #f0f0ee;
+  --dash-shimmer: #f7f7f5;
+  --dash-hover: rgba(20, 20, 20, 0.045);
+  --dash-line-soft: rgba(20, 20, 20, 0.075);
+  --dash-faint: #a3a39b;
+  --dash-row-hover: #fafaf8;
+  --dash-toolbar: #fcfcfb;
+  --dash-scrim: rgba(20, 20, 20, 0.35);
+  --dash-scrim-light: rgba(20, 20, 20, 0.16);
+  --dash-ink-tint: #ececea;
+  --dash-violet-tint: #efeaff;
+  --dash-cyan: #0e7490;
+  --dash-cyan-tint: #e0f5fa;
+  --dash-cyan-wash: #f3fbfd;
+  --dash-green: #047857;
+  --dash-green-tint: #e4f8ec;
+  --dash-pink: #be185d;
+  --dash-pink-tint: #fde7f3;
+  --dash-amber: #b45309;
+  --dash-amber-tint: #fdf1dc;
+  --dash-amber-wash: #fffaf1;
+  --dash-red: #b42318;
+  --dash-red-tint: #fdecea;
+  --dash-chart-good: #1f9d63;
+  --dash-chart-average: #e2a13b;
+  --dash-chart-poor: #d64545;
+  --dash-chart-empty: #d6d6cf;
+  --dash-device-frame: #1c1c1c;
+  --dash-serp-favicon: #f1f3f4;
+  --dash-serp-site: #202124;
+  --dash-serp-title: #1a0dab;
+  --dash-serp-text: #4d5156;
+  --dash-serp-meta: #70757a;
+  --dash-shadow-raise: 0 1px 2px rgba(20, 20, 20, 0.06), 0 0 0 1px rgba(20, 20, 20, 0.09);
+  --dash-shadow-pop: 0 24px 48px -18px rgba(20, 20, 20, 0.28), 0 0 0 1px rgba(20, 20, 20, 0.07);
+  --dash-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dash-mono: 'DM Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Keyboard focus is outlined on actions only: fields show focus through their border. */
+.dashboard-root :is(a, button, summary, [role='button'], [role='tab'], [role='option']):focus-visible {
+  outline: 2px solid var(--color-gray-100);
+  outline-offset: 2px;
+}
+
+.dash-mono {
+  font-family: var(--dash-mono);
+}
+
+.dash-label {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.dash-scroll-x {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.dash-scroll-x::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── Tables ─── */
+.dash-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+}
+
+.dash-table th {
+  height: 38px;
+  padding: 0 14px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  background: var(--dash-canvas);
+  border-bottom: 1px solid var(--dash-line-soft);
+  white-space: nowrap;
+}
+
+.dash-table th:first-child,
+.dash-table td:first-child {
+  padding-left: 20px;
+}
+
+.dash-table th:last-child,
+.dash-table td:last-child {
+  padding-right: 20px;
+}
+
+.dash-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--dash-line-soft);
+  vertical-align: middle;
+}
+
+.dash-table tbody tr {
+  transition: background-color 0.12s ease;
+}
+
+.dash-table tbody tr.is-clickable {
+  cursor: pointer;
+}
+
+.dash-table tbody tr:hover,
+.dash-table tbody tr.is-selected {
+  background: var(--dash-row-hover);
+}
+
+.dash-table tbody tr.is-selected {
+  box-shadow: inset 2px 0 0 var(--color-primary);
+}
+
+.dash-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.dash-table .is-right {
+  text-align: right;
+}
+
+/* The main column takes the width the other columns leave: its texts wrap or truncate instead of widening the table. */
+.dash-table .dash-col-main {
+  width: 100%;
+  max-width: 0;
+}
+
+.dash-hover-reveal {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.dash-table tr:hover .dash-hover-reveal,
+.dash-hover-reveal:focus-visible {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .dash-hover-reveal {
+    opacity: 1;
+  }
+}
+
+@container (max-width: 999px) {
+  .dash-table .dash-col-lg {
+    display: none;
+  }
+}
+
+@container (max-width: 859px) {
+  .dash-table .dash-col-md {
+    display: none;
+  }
+}
+
+@container (max-width: 719px) {
+  .dash-table .dash-col-sm {
+    display: none;
+  }
+}
+
+/* ─── Charts ─── */
+.dash-chart text {
+  font-size: 11px;
+  fill: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.dash-draw-line {
+  stroke-dasharray: var(--dash-line-length);
+  stroke-dashoffset: var(--dash-line-length);
+  animation: dash-draw 0.9s var(--dash-ease) 0.1s forwards;
+}
+
+@keyframes dash-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ─── Page entrance ─── */
+.dash-rise > * {
+  animation: dash-rise 0.42s var(--dash-ease) both;
+}
+
+.dash-rise > *:nth-child(2) {
+  animation-delay: 0.05s;
+}
+
+.dash-rise > *:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+.dash-rise > *:nth-child(4) {
+  animation-delay: 0.15s;
+}
+
+.dash-rise > *:nth-child(n + 5) {
+  animation-delay: 0.2s;
+}
+
+@keyframes dash-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@keyframes dash-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dash-spin {
+  animation: dash-spin 0.8s linear infinite;
+}
+
+.dash-skeleton {
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--dash-sunken) 0%, var(--dash-shimmer) 50%, var(--dash-sunken) 100%);
+  background-size: 200% 100%;
+  animation: dash-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes dash-shimmer {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-root *,
+  .dashboard-root *::before,
+  .dashboard-root *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .dash-draw-line {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* main.css balances h1–h3 outside any layer, which beats Tailwind's truncate utility: restore it here. */
+.dashboard-root .truncate {
+  white-space: nowrap;
+}
+
+/* iOS zooms into fields under 16 px: fields marked .dash-field-large keep their bigger size. */
+@media (max-width: 767px) {
+  .dashboard-root input:not(.dash-field-large),
+  .dashboard-root textarea:not(.dash-field-large),
+  .dashboard-root select:not(.dash-field-large) {
+    font-size: 16px !important;
+  }
+}

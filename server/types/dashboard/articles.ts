@@ -219,3 +219,9 @@ export type PublishToStoryblokResult = {
 
 /** Result of dispatching the deploy workflow (site rebuild). */
 export type TriggerRebuildResult = { ok: true } | { ok: false; statusCode: number; message: string }
+
+export type StoryblokAssetObject = {
+  filename?: string | null
+}
+
+export type StoryblokAssetField = StoryblokAssetObject | string | null

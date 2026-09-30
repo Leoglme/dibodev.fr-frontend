@@ -1,454 +1,185 @@
 <template>
-  <div class="flex min-h-full flex-col">
-    <!-- Sticky action bar -->
-    <header
-      class="sticky top-[70px] z-30 flex flex-wrap items-center justify-between gap-3 border-b border-gray-700 bg-gray-900/85 px-4 py-3 backdrop-blur sm:px-6 md:top-0"
-    >
-      <div class="flex items-center gap-3">
-        <NuxtLink
-          :to="localePath('/dashboard/articles')"
-          class="inline-flex items-center gap-1.5 text-sm text-gray-300 transition-colors hover:text-gray-100"
-        >
-          <DibodevIcon name="ChevronLeft" class="h-4 w-4" mode="stroke" />
-          Brouillons &amp; file
+  <DashboardPage title="Éditeur d’article" icon="file-text">
+    <template #title>
+      <nav class="flex min-w-0 items-center gap-1.5 text-[15px]" aria-label="Fil d’Ariane">
+        <NuxtLink :to="localePath('/dashboard/articles')" class="text-muted shrink-0 hover:text-gray-100 max-sm:hidden">
+          Articles
         </NuxtLink>
-        <DibodevBadge
-          v-if="currentStatusBadge"
-          :backgroundColor="currentStatusBadge.backgroundColor"
-          :textColor="currentStatusBadge.textColor"
-          size="sm"
-        >
-          {{ currentStatusBadge.label }}
-        </DibodevBadge>
-      </div>
-      <div class="flex items-center gap-2">
-        <DibodevButton v-if="hasContent" type="button" outlined size="sm" @click="resetAll"
-          >Nouvel article</DibodevButton
-        >
-        <DibodevButton type="button" outlined size="sm" :disabled="saving || !title.trim()" @click="saveDraft">
-          {{ saving ? 'Enregistrement…' : 'Enregistrer' }}
-        </DibodevButton>
-        <DibodevButton type="button" size="sm" :disabled="publishing || !canPublish" @click="goToPublish">
-          {{ publishing ? 'Ouverture…' : 'Publier' }}
-        </DibodevButton>
-      </div>
-    </header>
-
-    <div v-if="successMessage || errorMessage" class="px-4 pt-4 sm:px-6">
-      <DibodevAlert
-        v-if="successMessage"
-        :message="successMessage"
-        variant="success"
-        dismissible
-        @hide="successMessage = ''"
+        <DashboardIcon name="chevron-right" :size="14" class="shrink-0 text-(--dash-faint) max-sm:hidden" />
+        <h1 class="truncate font-medium text-gray-100">{{ title.trim() || 'Nouvel article' }}</h1>
+      </nav>
+      <DashboardStatus
+        v-if="savedStatus"
+        :tone="DASHBOARD_ARTICLE_STATUSES[savedStatus].tone"
+        :label="DASHBOARD_ARTICLE_STATUSES[savedStatus].label"
+        class="max-lg:hidden"
       />
-      <DibodevAlert v-if="errorMessage" :message="errorMessage" variant="error" dismissible @hide="errorMessage = ''" />
-    </div>
+    </template>
 
-    <!-- Two-pane editor : config left, article sticky right -->
-    <div class="grid flex-1 gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[360px_minmax(0,1fr)]">
-      <!-- Config column (left) -->
-      <aside class="flex flex-col gap-4 lg:order-1">
-        <!-- Cover image -->
-        <section class="overflow-hidden rounded-xl border border-gray-600 bg-gray-800">
-          <button
-            type="button"
-            class="flex w-full cursor-pointer items-center justify-between px-4 py-3 text-sm font-semibold text-gray-100"
-            :aria-expanded="coverOpen"
-            @click="coverOpen = !coverOpen"
-          >
-            <span class="flex items-center gap-2">
-              Image de couverture
-              <span v-if="coverUrl" class="h-1.5 w-1.5 rounded-full bg-emerald-400" aria-hidden="true" />
-            </span>
-            <DibodevIcon
-              name="ChevronRight"
-              class="h-4 w-4 text-gray-300 transition-transform"
-              :class="{ 'rotate-90': coverOpen }"
-              mode="stroke"
-            />
-          </button>
-          <div v-show="coverOpen" class="border-t border-gray-700 px-4 py-4">
-            <div v-if="coverUrl" class="flex flex-col gap-3">
-              <button
-                type="button"
-                class="group relative w-full cursor-pointer overflow-hidden rounded-lg border border-gray-600 transition hover:border-gray-500"
-                aria-label="Agrandir la couverture"
-                @click="openCoverModal(coverUrl, 'Couverture choisie')"
-              >
-                <div class="aspect-video w-full overflow-hidden bg-gray-700">
-                  <img
-                    :src="coverUrl"
-                    alt="Couverture choisie"
-                    class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                  />
-                </div>
-              </button>
-              <DibodevButton type="button" outlined size="sm" class="w-full" @click="clearCover">
-                Changer d’image
-              </DibodevButton>
-            </div>
-            <template v-else>
-              <DibodevButton
-                type="button"
-                outlined
-                size="sm"
-                class="w-full"
-                :disabled="loadingSuggest || !title.trim()"
-                @click="suggestCover"
-              >
-                {{ loadingSuggest ? 'Recherche…' : 'Suggérer une photo (Unsplash)' }}
-              </DibodevButton>
-              <div class="mt-3 flex items-center gap-2">
-                <input
-                  v-model="customUrlInput"
-                  type="url"
-                  placeholder="ou colle une URL d’image"
-                  class="min-w-0 flex-1 rounded-lg border border-gray-600 bg-gray-900/50 px-3 py-2 text-sm text-gray-100 placeholder:text-gray-500 focus:border-[#8472F3] focus:outline-none"
-                  @keydown.enter.prevent="useCustomUrl"
-                />
-                <DibodevButton
-                  type="button"
-                  outlined
-                  size="sm"
-                  :disabled="!customUrlInput.trim()"
-                  @click="useCustomUrl"
-                >
-                  OK
-                </DibodevButton>
-              </div>
-              <p v-if="suggestCoverError" class="mt-2 text-xs text-amber-500">{{ suggestCoverError }}</p>
-              <div v-if="suggestedPhoto" class="mt-3 flex flex-col gap-2">
-                <button
-                  type="button"
-                  class="group relative w-full cursor-pointer overflow-hidden rounded-lg border border-gray-600 transition hover:border-gray-500"
-                  aria-label="Agrandir la suggestion"
-                  @click="openCoverModal(suggestedPhoto.url, 'Suggestion Unsplash')"
-                >
-                  <div class="aspect-video w-full overflow-hidden bg-gray-700">
-                    <img
-                      :src="suggestedPhoto.url"
-                      alt="Suggestion Unsplash"
-                      class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                </button>
-                <p class="text-xs text-gray-300">{{ suggestedPhoto.attribution }}</p>
-                <div class="flex gap-2">
-                  <DibodevButton type="button" size="sm" class="flex-1" @click="useSuggestedPhoto"
-                    >Utiliser</DibodevButton
-                  >
-                  <DibodevButton type="button" outlined size="sm" :disabled="loadingSuggest" @click="suggestCover">
-                    Une autre
-                  </DibodevButton>
-                </div>
-              </div>
-            </template>
-          </div>
-        </section>
+    <template #actions>
+      <span class="text-muted hidden items-center gap-1.5 text-[13px] xl:inline-flex">
+        <DashboardIcon :name="savedAt ? 'check' : 'save'" :size="14" />
+        {{ savedAt ? `Enregistré à ${savedAt}` : 'Sauvegarde locale' }}
+      </span>
+      <DashboardButton
+        variant="outline"
+        size="sm"
+        icon="save"
+        :loading="isSavingDraft"
+        :disabled="!title.trim()"
+        data-tip="Enregistrer · Ctrl S"
+        @click="saveDraft(true)"
+      >
+        <span class="max-sm:hidden">Enregistrer</span>
+      </DashboardButton>
+      <DashboardButton
+        variant="primary"
+        size="sm"
+        icon="send"
+        :loading="isOpeningPublishDrawer"
+        :disabled="!canPublish"
+        @click="openPublishDrawer"
+      >
+        <span class="max-sm:hidden">Publier…</span>
+      </DashboardButton>
+    </template>
 
-        <!-- SEO & metadata -->
-        <section class="overflow-hidden rounded-xl border border-gray-600 bg-gray-800">
-          <button
-            type="button"
-            class="flex w-full cursor-pointer items-center justify-between px-4 py-3 text-sm font-semibold text-gray-100"
-            :aria-expanded="seoOpen"
-            @click="seoOpen = !seoOpen"
-          >
-            SEO &amp; métadonnées
-            <DibodevIcon
-              name="ChevronRight"
-              class="h-4 w-4 text-gray-300 transition-transform"
-              :class="{ 'rotate-90': seoOpen }"
-              mode="stroke"
-            />
-          </button>
-          <div v-show="seoOpen" class="flex flex-col gap-4 border-t border-gray-700 px-4 py-4">
-            <div class="flex flex-col gap-1.5">
-              <label for="field-slug" class="text-sm font-medium text-gray-200">Slug</label>
-              <input
-                id="field-slug"
-                v-model="slug"
-                type="text"
-                placeholder="genere-depuis-le-titre-si-vide"
-                :class="INPUT_CLASS"
-              />
-            </div>
-            <div class="flex flex-col gap-1.5">
-              <label for="field-excerpt" class="text-sm font-medium text-gray-200">Extrait (100-180 car.)</label>
-              <textarea
-                id="field-excerpt"
-                v-model="excerpt"
-                rows="3"
-                placeholder="1 à 2 phrases qui résument l’article."
-                :class="TEXTAREA_CLASS"
-              />
-            </div>
-            <div class="flex flex-col gap-1.5">
-              <div class="flex items-center justify-between">
-                <label for="field-meta-title" class="text-sm font-medium text-gray-200">Meta title</label>
-                <span
-                  class="text-xs tabular-nums"
-                  :class="metaTitle.length >= 55 && metaTitle.length <= 65 ? 'text-emerald-400' : 'text-gray-400'"
-                  >{{ metaTitle.length }}/65</span
-                >
-              </div>
-              <input
-                id="field-meta-title"
-                v-model="metaTitle"
-                type="text"
-                placeholder="55-65 caractères"
-                :class="INPUT_CLASS"
-              />
-            </div>
-            <div class="flex flex-col gap-1.5">
-              <div class="flex items-center justify-between">
-                <label for="field-meta-description" class="text-sm font-medium text-gray-200">Meta description</label>
-                <span
-                  class="text-xs tabular-nums"
-                  :class="
-                    metaDescription.length >= 140 && metaDescription.length <= 160
-                      ? 'text-emerald-400'
-                      : 'text-gray-400'
-                  "
-                  >{{ metaDescription.length }}/160</span
-                >
-              </div>
-              <textarea
-                id="field-meta-description"
-                v-model="metaDescription"
-                rows="3"
-                placeholder="140-160 caractères, orientée clic."
-                :class="TEXTAREA_CLASS"
-              />
-            </div>
-            <div class="flex flex-col gap-1.5">
-              <label for="field-tags" class="text-sm font-medium text-gray-200">Tags (séparés par des virgules)</label>
-              <input
-                id="field-tags"
-                v-model="tagsInput"
-                type="text"
-                placeholder="gestion de chantiers, devis BTP"
-                :class="INPUT_CLASS"
-              />
-              <div v-if="tags.length > 0" class="mt-1 flex flex-wrap gap-1.5">
-                <DibodevBadge v-for="tag in tags" :key="tag" backgroundColor="#35424d" textColor="#f5f4fb" size="sm">
-                  {{ tag }}
-                </DibodevBadge>
-              </div>
-            </div>
-          </div>
-        </section>
-      </aside>
+    <div
+      class="grid items-start gap-6 @4xl:grid-cols-[minmax(0,1fr)_340px] @6xl:grid-cols-[minmax(0,1fr)_380px] @6xl:gap-7"
+    >
+      <div class="flex min-w-0 flex-col gap-[18px]">
+        <DashboardArticleCoverField v-model="coverUrl" :article-title="title" :tags="tags" />
 
-      <!-- Article column (right, sticky) -->
-      <div class="flex min-w-0 flex-col gap-5 lg:sticky lg:top-[86px] lg:order-2 lg:self-start">
-        <!-- Mode -->
-        <div class="flex flex-wrap items-center gap-3">
-          <div class="inline-flex rounded-lg border border-gray-600 bg-gray-800 p-1">
-            <button
-              v-for="option in MODE_OPTIONS"
-              :key="option.value"
-              type="button"
-              class="cursor-pointer rounded-md px-4 py-1.5 text-sm font-medium transition-colors"
-              :class="mode === option.value ? 'bg-primary text-white' : 'text-gray-300 hover:text-gray-100'"
-              :aria-pressed="mode === option.value"
-              @click="mode = option.value"
-            >
-              {{ option.label }}
-            </button>
-          </div>
-          <p class="text-xs text-gray-400">
-            {{ mode === 'ai' ? 'L’IA rédige un premier jet, tu édites tout ensuite.' : 'Tu écris l’article toi-même.' }}
-          </p>
-        </div>
-
-        <!-- AI assistant -->
-        <div v-if="mode === 'ai'" class="flex flex-col gap-3 rounded-xl border border-gray-600 bg-gray-800 p-4">
-          <label for="optional-sentence" class="text-sm font-medium text-gray-200">
-            Idée optionnelle (oriente le sujet)
-          </label>
+        <div class="flex flex-col gap-1.5">
+          <label for="article-title" class="sr-only">Titre de l’article</label>
           <textarea
-            id="optional-sentence"
-            v-model="optionalSentence"
-            rows="2"
-            placeholder="Ex : un article pour les plombiers qui cherchent un site vitrine"
-            :class="TEXTAREA_CLASS"
-          />
-          <div class="flex flex-wrap items-center gap-3">
-            <DibodevButton type="button" outlined size="sm" :disabled="loadingSubject" @click="suggestSubject">
-              {{ loadingSubject ? 'Proposition…' : 'Proposer un sujet' }}
-            </DibodevButton>
-            <template v-if="suggestedTopic">
-              <span class="min-w-0 flex-1 truncate text-sm text-gray-100">{{ suggestedTopic }}</span>
-              <button
-                type="button"
-                class="cursor-pointer text-xs text-gray-300 underline-offset-2 hover:text-gray-100 hover:underline"
-                :disabled="loadingSubject"
-                @click="onRequestAnotherSubject"
-              >
-                un autre
-              </button>
-            </template>
-          </div>
-          <DibodevButton type="button" :disabled="loadingArticle || !canGenerate" @click="generateArticle">
-            {{ loadingArticle ? 'Génération…' : 'Générer dans l’éditeur' }}
-          </DibodevButton>
-        </div>
-
-        <!-- Title -->
-        <div class="rounded-xl border border-gray-600 bg-gray-800 px-5 py-4">
-          <input
-            id="field-title"
+            id="article-title"
+            ref="titleInput"
             v-model="title"
-            type="text"
+            rows="1"
             placeholder="Titre de l’article"
-            aria-label="Titre de l’article"
-            class="w-full bg-transparent text-2xl font-semibold text-gray-100 placeholder:text-gray-500 focus:outline-none"
+            class="dash-field-large w-full resize-none overflow-hidden bg-transparent text-2xl leading-tight font-medium tracking-[-0.015em] text-balance text-gray-100 outline-none placeholder:text-(--dash-faint) md:text-[30px]"
+            @input="fitTextareaToContent($event.target as HTMLTextAreaElement)"
           />
-          <p class="mt-1 truncate text-xs text-gray-400">/{{ slug || 'slug-genere-depuis-le-titre' }}</p>
+          <div class="dash-mono text-muted flex min-w-0 items-center gap-0.5 text-[13px]">
+            <span class="shrink-0">dibodev.fr/blog/</span>
+            <label for="article-slug" class="sr-only">Slug</label>
+            <input
+              id="article-slug"
+              v-model="slug"
+              type="text"
+              placeholder="genere-depuis-le-titre"
+              class="min-w-0 flex-1 rounded bg-transparent px-1 py-0.5 text-gray-200 outline-none placeholder:text-(--dash-faint) focus:bg-gray-800"
+            />
+          </div>
         </div>
 
-        <!-- Content editor -->
-        <div class="flex min-h-[480px] flex-col overflow-hidden rounded-xl border border-gray-600 bg-gray-800">
-          <div class="flex items-center justify-between gap-3 border-b border-gray-700 px-4 py-2.5">
-            <div class="inline-flex rounded-lg bg-gray-900 p-1">
-              <button
-                type="button"
-                class="cursor-pointer rounded-md px-3 py-1 text-xs font-medium transition-colors"
-                :class="contentView === 'write' ? 'bg-gray-700 text-gray-100' : 'text-gray-300 hover:text-gray-100'"
-                :aria-pressed="contentView === 'write'"
-                @click="setContentView('write')"
-              >
-                Écrire
-              </button>
-              <button
-                type="button"
-                class="cursor-pointer rounded-md px-3 py-1 text-xs font-medium transition-colors"
-                :class="contentView === 'preview' ? 'bg-gray-700 text-gray-100' : 'text-gray-300 hover:text-gray-100'"
-                :aria-pressed="contentView === 'preview'"
-                :disabled="loadingPreview"
-                @click="setContentView('preview')"
-              >
-                {{ loadingPreview ? 'Aperçu…' : 'Aperçu' }}
-              </button>
-            </div>
-            <div class="flex items-center gap-3 text-xs text-gray-400">
-              <span v-if="qualityScore != null" class="rounded-full px-2 py-0.5 font-medium" :class="qualityScoreClass">
-                Score {{ qualityScore }}/100
-              </span>
-              <span class="tabular-nums">{{ contentWordCount }} mots</span>
-            </div>
+        <div class="flex flex-col gap-1.5">
+          <div class="flex items-center justify-between gap-2">
+            <label for="article-excerpt" class="text-[13px] font-medium text-gray-200">Extrait</label>
+            <DashboardCounter :length="excerpt.length" :min="100" :max="180" />
           </div>
-          <div class="flex-1 p-4">
-            <textarea
-              v-show="contentView === 'write'"
-              id="field-content"
-              v-model="content"
-              placeholder="## Introduction&#10;&#10;Écris ton article en Markdown : ## pour les titres, **gras**, *italique*, listes."
-              class="h-full min-h-[400px] w-full resize-none bg-transparent font-mono text-sm leading-relaxed text-gray-100 placeholder:text-gray-500 focus:outline-none"
-            />
-            <div v-show="contentView === 'preview'" class="h-full min-h-[400px] overflow-y-auto">
-              <BlogArticleContent v-if="content.trim()" :content="previewRichtext" />
-              <p v-else class="text-sm text-gray-400">Rien à prévisualiser — écris d’abord du contenu.</p>
-            </div>
-          </div>
+          <DashboardTextField
+            id="article-excerpt"
+            v-model="excerpt"
+            multiline
+            :rows="2"
+            size="lg"
+            placeholder="Une ou deux phrases qui résument l’article."
+            class="field-sizing-content min-h-16"
+          />
         </div>
+
+        <DashboardArticleContentEditor
+          v-model="content"
+          v-model:content-view="contentView"
+          :quality-score="qualityScore"
+        />
       </div>
-    </div>
 
-    <!-- Cover lightbox -->
-    <Teleport to="body">
-      <Transition name="cover-modal">
-        <div
-          v-if="coverModalOpen"
-          class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
-          @click="closeCoverModal"
-        >
-          <button
-            type="button"
-            class="absolute top-4 right-4 z-10 cursor-pointer rounded-full bg-white/10 p-3 text-white transition hover:bg-white/20"
-            aria-label="Fermer"
-            @click="closeCoverModal"
-          >
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-          <div class="relative max-h-[90vh] max-w-[90vw]" @click.stop>
-            <img
-              v-if="coverModalSrc"
-              :src="coverModalSrc"
-              :alt="coverModalAlt"
-              class="h-auto max-h-[90vh] w-auto max-w-[90vw] rounded-2xl object-contain"
-            />
-          </div>
-        </div>
-      </Transition>
-    </Teleport>
-  </div>
+      <aside class="flex min-w-0 flex-col gap-3.5 @4xl:sticky @4xl:top-0" aria-label="Réglages de l’article">
+        <DashboardArticleAssistantCard
+          v-model:is-expanded="isAssistantOpen"
+          v-model:writing-mode="writingMode"
+          v-model:subject-idea="subjectIdea"
+          @article-generated="applyGeneratedArticle"
+        />
+        <DashboardArticleSeoCard
+          v-model:meta-title="metaTitle"
+          v-model:meta-description="metaDescription"
+          :article-title="title"
+          :slug="slug"
+          :excerpt="excerpt"
+        />
+        <DashboardArticleQualityCard
+          v-model:tags="tags"
+          :quality-score="qualityScore"
+          :content="content"
+          :meta-title="metaTitle"
+          :meta-description="metaDescription"
+          :cover-url="coverUrl"
+        />
+      </aside>
+    </div>
+  </DashboardPage>
 </template>
 
 <script lang="ts" setup>
-import { ref, computed, watch, onMounted } from 'vue'
-import type { Ref, ComputedRef } from 'vue'
-import DibodevButton from '~/components/core/DibodevButton.vue'
-import DibodevAlert from '~/components/feedback/DibodevAlert.vue'
-import DibodevBadge from '~/components/ui/DibodevBadge.vue'
-import DibodevIcon from '~/components/ui/DibodevIcon.vue'
-import BlogArticleContent from '~/components/blog/BlogArticleContent.vue'
-import { ARTICLE_STATUS_BADGES } from '~/core/constants/articleStatus'
+import type { SaveArticleDraftBody } from '~~/server/types/dashboard/articles'
+import type { UseDashboardArticlesReturn } from '~/composables/useDashboardArticles'
+import type { UseDashboardDrawerReturn } from '~/composables/useDashboardDrawer'
+import type { UseDashboardToastReturn } from '~/composables/useDashboardToast'
+import type { ComputedRef, Ref, WritableComputedRef } from 'vue'
+import type { DashboardEditorContentView } from '~/core/types/DashboardArticleContentEditor'
+import type {
+  DashboardArticleDraftResponse,
+  DashboardArticleEditorBuffer,
+} from '~/core/types/DashboardArticleEditorPage'
 import type {
   ArticleEditorMode,
   ArticleRecord,
   ArticleRecordStatus,
-  ArticleStatusBadge,
   GeneratedArticleForPreview,
 } from '~/types/dashboard'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import DashboardArticleAssistantCard from '~/components/dashboard/cards/DashboardArticleAssistantCard.vue'
+import DashboardArticleQualityCard from '~/components/dashboard/cards/DashboardArticleQualityCard.vue'
+import DashboardArticleSeoCard from '~/components/dashboard/cards/DashboardArticleSeoCard.vue'
+import DashboardArticleContentEditor from '~/components/dashboard/fields/DashboardArticleContentEditor.vue'
+import DashboardArticleCoverField from '~/components/dashboard/fields/DashboardArticleCoverField.vue'
+import DashboardPage from '~/components/dashboard/shell/DashboardPage.vue'
+import DashboardButton from '~/components/dashboard/ui/DashboardButton.vue'
+import DashboardCounter from '~/components/dashboard/ui/DashboardCounter.vue'
+import DashboardIcon from '~/components/dashboard/ui/DashboardIcon.vue'
+import DashboardStatus from '~/components/dashboard/ui/DashboardStatus.vue'
+import DashboardTextField from '~/components/dashboard/ui/DashboardTextField.vue'
+import { DASHBOARD_ARTICLE_STATUSES } from '~/core/constants/articleStatus'
+import { useDashboardArticles } from '~/composables/useDashboardArticles'
+import { useDashboardDrawer } from '~/composables/useDashboardDrawer'
+import { useDashboardToast } from '~/composables/useDashboardToast'
 
 definePageMeta({
   layout: 'dashboard',
 })
 
 useHead({
-  title: 'Éditeur d’article — Dashboard',
-  meta: [{ name: 'robots', content: 'noindex, nofollow' }],
+  title: 'Éditeur d’article · Dibodev Admin',
 })
-
-type ContentView = 'write' | 'preview'
-type PreviewRichtext = { type: string; content?: unknown[] }
-type EditorBuffer = {
-  mode: ArticleEditorMode
-  currentId: string | null
-  title: string
-  slug: string
-  excerpt: string
-  metaTitle: string
-  metaDescription: string
-  tagsInput: string
-  content: string
-  coverUrl: string | null
-  qualityScore: number | null
-}
 
 const localePath = useLocalePath()
 const route = useRoute()
+const { upsertRecord }: UseDashboardArticlesReturn = useDashboardArticles()
+const { openDrawer }: UseDashboardDrawerReturn = useDashboardDrawer()
+const { showToast }: UseDashboardToastReturn = useDashboardToast()
 
-const STORAGE_KEY = 'dibodev-dashboard-article-editor'
-const INPUT_CLASS =
-  'h-11 w-full rounded-lg border border-gray-600 bg-gray-900/50 px-3 text-sm text-gray-100 placeholder:text-gray-500 focus:border-[#8472F3] focus:bg-gray-900 focus:outline-none'
-const TEXTAREA_CLASS =
-  'w-full rounded-lg border border-gray-600 bg-gray-900/50 px-3 py-2 text-sm text-gray-100 placeholder:text-gray-500 focus:border-[#8472F3] focus:bg-gray-900 focus:outline-none'
+const STORAGE_KEY: string = 'dibodev-dashboard-article-editor'
 
-const MODE_OPTIONS: Array<{ label: string; value: ArticleEditorMode }> = [
-  { label: 'Manuel', value: 'manual' },
-  { label: 'Assisté par IA', value: 'ai' },
-]
+const titleInput: Ref<HTMLTextAreaElement | null> = ref(null)
 
-const mode: Ref<ArticleEditorMode> = ref('manual')
+const writingMode: Ref<ArticleEditorMode> = ref('manual')
 const currentId: Ref<string | null> = ref(null)
 const savedStatus: Ref<ArticleRecordStatus | null> = ref(null)
-
+const savedAt: Ref<string | null> = ref(null)
 const title: Ref<string> = ref('')
 const slug: Ref<string> = ref('')
 const excerpt: Ref<string> = ref('')
@@ -458,78 +189,49 @@ const tagsInput: Ref<string> = ref('')
 const content: Ref<string> = ref('')
 const coverUrl: Ref<string | null> = ref(null)
 const qualityScore: Ref<number | null> = ref(null)
+const contentView: Ref<DashboardEditorContentView> = ref('write')
+const subjectIdea: Ref<string> = ref('')
 
-const optionalSentence: Ref<string> = ref('')
-const existingSubjects: Ref<string[]> = ref([])
-const rejectedSubjects: Ref<string[]> = ref([])
-const suggestedTopic: Ref<string> = ref('')
+const isAssistantOpen: Ref<boolean> = ref(true)
+const isSavingDraft: Ref<boolean> = ref(false)
+const isOpeningPublishDrawer: Ref<boolean> = ref(false)
 
-const loadingSubject: Ref<boolean> = ref(false)
-const loadingArticle: Ref<boolean> = ref(false)
-const saving: Ref<boolean> = ref(false)
-const publishing: Ref<boolean> = ref(false)
-const loadingPreview: Ref<boolean> = ref(false)
-
-const contentView: Ref<ContentView> = ref('write')
-const previewRichtext: Ref<PreviewRichtext> = ref({ type: 'doc', content: [] })
-const seoOpen: Ref<boolean> = ref(true)
-const coverOpen: Ref<boolean> = ref(false)
-
-const suggestedPhoto: Ref<{ url: string; attribution: string } | null> = ref(null)
-const loadingSuggest: Ref<boolean> = ref(false)
-const suggestCoverError: Ref<string> = ref('')
-const customUrlInput: Ref<string> = ref('')
-
-const coverModalOpen: Ref<boolean> = ref(false)
-const coverModalSrc: Ref<string> = ref('')
-const coverModalAlt: Ref<string> = ref('')
-
-const successMessage: Ref<string> = ref('')
-const errorMessage: Ref<string> = ref('')
-
-const tags: ComputedRef<string[]> = computed((): string[] =>
-  tagsInput.value
-    .split(',')
-    .map((t: string): string => t.trim())
-    .filter((t: string): boolean => t.length > 0),
-)
-
-const hasContent: ComputedRef<boolean> = computed(
-  (): boolean => title.value.trim().length > 0 || content.value.trim().length > 0 || currentId.value != null,
-)
-
-const canGenerate: ComputedRef<boolean> = computed((): boolean => suggestedTopic.value.trim().length > 0)
+const tags: WritableComputedRef<string[]> = computed({
+  get: (): string[] =>
+    tagsInput.value
+      .split(',')
+      .map((tag: string): string => tag.trim())
+      .filter((tag: string): boolean => tag.length > 0),
+  set: (value: string[]): void => {
+    tagsInput.value = value.join(', ')
+  },
+})
 
 const canPublish: ComputedRef<boolean> = computed(
-  (): boolean => title.value.trim().length > 0 && slug.value.trim().length > 0 && content.value.trim().length > 0,
+  (): boolean => title.value.trim().length > 0 && content.value.trim().length > 0,
 )
-
-const contentWordCount: ComputedRef<number> = computed((): number => {
-  const trimmed = content.value.trim()
-  return trimmed ? trimmed.split(/\s+/).length : 0
-})
-
-const currentStatusBadge: ComputedRef<ArticleStatusBadge | null> = computed((): ArticleStatusBadge | null =>
-  savedStatus.value ? ARTICLE_STATUS_BADGES[savedStatus.value] : null,
-)
-
-const qualityScoreClass: ComputedRef<string> = computed((): string => {
-  const score = qualityScore.value ?? 0
-  if (score >= 70) return 'bg-emerald-500/20 text-emerald-400'
-  if (score >= 50) return 'bg-amber-500/20 text-amber-400'
-  return 'bg-red-500/20 text-red-400'
-})
 
 /**
- * Builds the draft payload (content + SEO + cover) from the current editor state.
- * Publication options (date, translation, rebuild) are set on the publish page.
+ * Grows a textarea with its content (the title never scrolls).
  *
- * @returns The editable fields for the draft upsert.
+ * @param {HTMLTextAreaElement | null} element - The textarea.
+ * @returns {void}
  */
-function buildPayload(): Record<string, unknown> {
+function fitTextareaToContent(element: HTMLTextAreaElement | null): void {
+  if (!element) return
+  element.style.height = 'auto'
+  element.style.height = `${element.scrollHeight}px`
+}
+
+/**
+ * Builds the editable fields for the draft upsert (publication options live in the publication drawer).
+ *
+ * @returns {SaveArticleDraftBody} The payload.
+ */
+function buildDraftPayload(): SaveArticleDraftBody {
   return {
     id: currentId.value ?? undefined,
-    origin: mode.value,
+    origin: writingMode.value,
     title: title.value.trim(),
     slug: slug.value.trim(),
     excerpt: excerpt.value.trim(),
@@ -543,14 +245,13 @@ function buildPayload(): Record<string, unknown> {
 }
 
 /**
- * Serializes the editor state to localStorage for crash recovery.
+ * Keeps a local copy of the editor on this device (crash, reload, iOS killing the app).
  *
- * @returns Nothing.
+ * @returns {void}
  */
 function saveBuffer(): void {
-  if (typeof window === 'undefined') return
-  const buffer: EditorBuffer = {
-    mode: mode.value,
+  const buffer: DashboardArticleEditorBuffer = {
+    mode: writingMode.value,
     currentId: currentId.value,
     title: title.value,
     slug: slug.value,
@@ -565,25 +266,24 @@ function saveBuffer(): void {
   try {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(buffer))
   } catch {
-    // quota or disabled — ignore
+    // quota exceeded or storage disabled: the server draft stays the reference
   }
 }
 
 /**
- * Restores the editor state from localStorage when present.
+ * Restores the local copy when there is one.
  *
- * @returns True when a buffer was loaded.
+ * @returns {boolean} True when a copy was restored.
  */
 function loadBuffer(): boolean {
-  if (typeof window === 'undefined') return false
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY)
+    const raw: string | null = window.localStorage.getItem(STORAGE_KEY)
     if (!raw) return false
-    const buffer = JSON.parse(raw) as Partial<EditorBuffer>
+    const buffer: Partial<DashboardArticleEditorBuffer> = JSON.parse(raw) as Partial<DashboardArticleEditorBuffer>
     if (typeof buffer.title !== 'string') return false
-    mode.value = buffer.mode === 'ai' ? 'ai' : 'manual'
+    writingMode.value = buffer.mode === 'ai' ? 'ai' : 'manual'
     currentId.value = buffer.currentId ?? null
-    title.value = buffer.title ?? ''
+    title.value = buffer.title
     slug.value = buffer.slug ?? ''
     excerpt.value = buffer.excerpt ?? ''
     metaTitle.value = buffer.metaTitle ?? ''
@@ -599,29 +299,28 @@ function loadBuffer(): boolean {
 }
 
 /**
- * Clears the localStorage buffer.
+ * Removes the local copy.
  *
- * @returns Nothing.
+ * @returns {void}
  */
 function clearBuffer(): void {
-  if (typeof window === 'undefined') return
   try {
     window.localStorage.removeItem(STORAGE_KEY)
   } catch {
-    // ignore
+    // storage disabled: nothing to clear
   }
 }
 
 /**
- * Fills the editor fields from a stored article record (edit flow).
+ * Fills the editor from a stored record.
  *
- * @param record - The record to load.
- * @returns Nothing.
+ * @param {ArticleRecord} record - The record to edit.
+ * @returns {void}
  */
 function loadRecord(record: ArticleRecord): void {
   currentId.value = record.id
   savedStatus.value = record.status
-  mode.value = record.origin
+  writingMode.value = record.origin
   title.value = record.title
   slug.value = record.slug
   excerpt.value = record.excerpt
@@ -632,17 +331,19 @@ function loadRecord(record: ArticleRecord): void {
   coverUrl.value = record.coverImageUrl ?? null
   qualityScore.value = record.qualityScore ?? null
   contentView.value = 'write'
+  isAssistantOpen.value = record.content.trim().length === 0
 }
 
 /**
- * Resets the editor to a blank new article.
+ * Starts a blank article.
  *
- * @returns Nothing.
+ * @returns {void}
  */
-function resetAll(): void {
-  mode.value = 'manual'
+function resetEditor(): void {
+  writingMode.value = 'manual'
   currentId.value = null
   savedStatus.value = null
+  savedAt.value = null
   title.value = ''
   slug.value = ''
   excerpt.value = ''
@@ -652,385 +353,146 @@ function resetAll(): void {
   content.value = ''
   coverUrl.value = null
   qualityScore.value = null
-  optionalSentence.value = ''
-  suggestedTopic.value = ''
-  rejectedSubjects.value = []
-  suggestedPhoto.value = null
-  customUrlInput.value = ''
+  subjectIdea.value = ''
   contentView.value = 'write'
-  seoOpen.value = true
-  coverOpen.value = false
-  successMessage.value = ''
-  errorMessage.value = ''
-  suggestCoverError.value = ''
+  isAssistantOpen.value = true
   clearBuffer()
 }
 
 /**
- * Loads existing blog subjects to avoid duplicate AI suggestions.
+ * Fills every field with the first draft written by the AI.
  *
- * @returns Nothing.
+ * @param {GeneratedArticleForPreview} article - The generated article.
+ * @returns {Promise<void>}
  */
-async function fetchSubjects(): Promise<void> {
-  try {
-    const data = await $fetch<{ existingSubjects: string[] }>('/api/dashboard/articles/subjects')
-    existingSubjects.value = data.existingSubjects ?? []
-  } catch {
-    existingSubjects.value = []
-  }
+async function applyGeneratedArticle(article: GeneratedArticleForPreview): Promise<void> {
+  title.value = article.title
+  slug.value = article.slug
+  excerpt.value = article.excerpt
+  metaTitle.value = article.metaTitle
+  metaDescription.value = article.metaDescription
+  tagsInput.value = article.tags.join(', ')
+  content.value = article.content
+  qualityScore.value = article.qualityScore ?? null
+  contentView.value = 'write'
+  await nextTick()
+  fitTextareaToContent(titleInput.value)
+  showToast({
+    tone: 'violet',
+    icon: 'sparkles',
+    title: 'Premier jet généré',
+    text: 'Titre, contenu, meta et tags sont remplis. Relis tout avant de publier.',
+  })
 }
 
 /**
- * Asks the AI for a subject suggestion.
+ * Saves the draft on the server (creates it the first time).
  *
- * @returns Nothing.
+ * @param {boolean} notify - Show a toast when saved.
+ * @returns {Promise<string | null>} The record id, or null on failure.
  */
-async function suggestSubject(): Promise<void> {
-  loadingSubject.value = true
-  errorMessage.value = ''
+async function saveDraft(notify: boolean): Promise<string | null> {
+  if (!title.value.trim()) return null
+  isSavingDraft.value = true
   try {
-    const data = await $fetch<{ suggestedTopic: string }>('/api/dashboard/articles/suggest-subject', {
-      method: 'POST',
-      body: {
-        existingSubjects: existingSubjects.value,
-        optionalSentence: optionalSentence.value.trim() || undefined,
-        rejectedSubjects: rejectedSubjects.value.length > 0 ? rejectedSubjects.value : undefined,
+    const data: DashboardArticleDraftResponse = await $fetch<DashboardArticleDraftResponse>(
+      '/api/dashboard/articles/drafts',
+      {
+        method: 'POST',
+        body: { ...buildDraftPayload(), status: savedStatus.value === 'scheduled' ? 'scheduled' : 'draft' },
       },
-    })
-    suggestedTopic.value = data.suggestedTopic
-  } catch (e) {
-    errorMessage.value = e instanceof Error ? e.message : 'Erreur lors de la proposition du sujet.'
-  } finally {
-    loadingSubject.value = false
-  }
-}
-
-/**
- * Rejects the current subject and asks for another one.
- *
- * @returns Nothing.
- */
-function onRequestAnotherSubject(): void {
-  if (suggestedTopic.value) {
-    rejectedSubjects.value = [...rejectedSubjects.value, suggestedTopic.value]
-  }
-  suggestSubject()
-}
-
-/**
- * Generates a full article with the AI and fills the editor fields.
- *
- * @returns Nothing.
- */
-async function generateArticle(): Promise<void> {
-  if (!suggestedTopic.value) return
-  loadingArticle.value = true
-  errorMessage.value = ''
-  try {
-    const data = await $fetch<GeneratedArticleForPreview>('/api/dashboard/articles/generate', {
-      method: 'POST',
-      body: { suggestedTopic: suggestedTopic.value, existingSubjects: existingSubjects.value },
-    })
-    title.value = data.title
-    slug.value = data.slug
-    excerpt.value = data.excerpt
-    metaTitle.value = data.metaTitle
-    metaDescription.value = data.metaDescription
-    tagsInput.value = data.tags.join(', ')
-    content.value = data.content
-    qualityScore.value = data.qualityScore ?? null
-    previewRichtext.value = data.contentRichtext
-    contentView.value = 'write'
-    successMessage.value = 'Article généré — tu peux tout éditer avant de publier.'
-  } catch (e) {
-    errorMessage.value = e instanceof Error ? e.message : 'Erreur lors de la génération.'
-  } finally {
-    loadingArticle.value = false
-  }
-}
-
-/**
- * Switches the content pane, refreshing the richtext preview from the markdown when shown.
- *
- * @param view - The pane to display (write or preview).
- * @returns Nothing.
- */
-async function setContentView(view: ContentView): Promise<void> {
-  if (view === 'write') {
-    contentView.value = 'write'
-    return
-  }
-  loadingPreview.value = true
-  errorMessage.value = ''
-  try {
-    const data = await $fetch<{ contentRichtext: PreviewRichtext }>('/api/dashboard/articles/preview', {
-      method: 'POST',
-      body: { content: content.value },
-    })
-    previewRichtext.value = data.contentRichtext
-    contentView.value = 'preview'
-  } catch (e) {
-    errorMessage.value = e instanceof Error ? e.message : 'Erreur lors de l’aperçu.'
-  } finally {
-    loadingPreview.value = false
-  }
-}
-
-/**
- * Saves the current editor state as a draft (creates or updates the record).
- *
- * @returns The saved record id, or null on failure.
- */
-async function saveDraft(): Promise<string | null> {
-  saving.value = true
-  errorMessage.value = ''
-  try {
-    const data = await $fetch<{ record: ArticleRecord }>('/api/dashboard/articles/drafts', {
-      method: 'POST',
-      body: { ...buildPayload(), status: 'draft' },
-    })
+    )
     currentId.value = data.record.id
     slug.value = data.record.slug
     savedStatus.value = data.record.status
-    successMessage.value = 'Brouillon enregistré.'
+    savedAt.value = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })
+    upsertRecord(data.record)
+    if (notify) showToast({ tone: 'violet', icon: 'check', title: 'Brouillon enregistré' })
     return data.record.id
-  } catch (e) {
-    errorMessage.value = e instanceof Error ? e.message : 'Erreur lors de l’enregistrement.'
+  } catch (error: unknown) {
+    showToast({ tone: 'red', title: 'L’enregistrement a échoué', text: error instanceof Error ? error.message : '' })
     return null
   } finally {
-    saving.value = false
+    isSavingDraft.value = false
   }
 }
 
 /**
- * Saves the draft, then opens the dedicated publication page to set date, translation and rebuild.
+ * Saves, then opens the publication drawer.
  *
- * @returns Nothing.
+ * @returns {Promise<void>}
  */
-async function goToPublish(): Promise<void> {
-  publishing.value = true
-  errorMessage.value = ''
-  try {
-    const savedId = await saveDraft()
-    if (!savedId) return
-    await navigateTo(localePath({ path: '/dashboard/publish-article', query: { draft: savedId } }))
-  } finally {
-    publishing.value = false
+async function openPublishDrawer(): Promise<void> {
+  isOpeningPublishDrawer.value = true
+  const id: string | null = await saveDraft(false)
+  isOpeningPublishDrawer.value = false
+  if (id) openDrawer({ kind: 'publish', articleId: id })
+}
+
+/**
+ * Ctrl/Cmd S saves the draft.
+ *
+ * @param {KeyboardEvent} event - The key event.
+ * @returns {void}
+ */
+function saveDraftOnShortcut(event: KeyboardEvent): void {
+  if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 's') {
+    event.preventDefault()
+    saveDraft(true).catch((): void => undefined)
   }
-}
-
-/**
- * Maps French artisan métiers to English Unsplash search terms: Unsplash is English-biased,
- * so a raw French keyword returns irrelevant photos while the mapped term stays on-topic.
- */
-const METIER_TO_UNSPLASH_EN: Record<string, string> = {
-  paysagiste: 'landscape gardener',
-  jardinier: 'gardener',
-  plombier: 'plumber',
-  electricien: 'electrician',
-  menuisier: 'carpenter workshop',
-  charpentier: 'carpenter',
-  couvreur: 'roofer',
-  macon: 'bricklayer construction',
-  carreleur: 'tiler',
-  peintre: 'painter decorator',
-  platrier: 'plasterer',
-  chauffagiste: 'heating engineer',
-  serrurier: 'locksmith',
-  boulanger: 'bakery',
-  boulangerie: 'bakery',
-  patissier: 'pastry chef',
-  fleuriste: 'florist',
-  coiffeur: 'hair salon',
-  garagiste: 'car mechanic',
-  mecanicien: 'car mechanic',
-  restaurateur: 'restaurant kitchen',
-  restaurant: 'restaurant kitchen',
-  traiteur: 'catering food',
-  artisan: 'craftsman workshop',
-  batiment: 'construction site',
-  btp: 'construction site',
-  coach: 'personal trainer',
-}
-
-/**
- * Strips accents and lowercases a word so it can be matched against the métier map.
- *
- * @param {string} word - The raw word.
- * @returns {string} The accent-free, lowercase word.
- */
-function normalizeMetierWord(word: string): string {
-  return word
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[^a-z0-9]/g, '')
-}
-
-/**
- * Builds a coherent Unsplash search query from the article tags and title, preferring a mapped métier term.
- *
- * @returns {string} A short search query.
- */
-function buildCoverSearchQuery(): string {
-  const words = [...tags.value, title.value]
-    .join(' ')
-    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
-    .split(/\s+/)
-    .map(normalizeMetierWord)
-    .filter((w: string): boolean => w.length > 2)
-
-  for (const word of words) {
-    const singular = word.replace(/s$/, '')
-    const mapped = METIER_TO_UNSPLASH_EN[word] ?? METIER_TO_UNSPLASH_EN[singular]
-    if (mapped) return mapped
-  }
-
-  const firstTag = tags.value[0]?.trim()
-  if (firstTag) return firstTag
-  if (words.length >= 2) return `${words[0]} ${words[1]}`
-  if (words.length === 1) return words[0]!
-  return 'small business'
-}
-
-/**
- * Asks the server for a matching Unsplash cover photo.
- *
- * @returns Nothing.
- */
-async function suggestCover(): Promise<void> {
-  loadingSuggest.value = true
-  suggestedPhoto.value = null
-  suggestCoverError.value = ''
-  try {
-    const query = buildCoverSearchQuery()
-    const data = await $fetch<{ url: string | null; attribution: string | null }>(
-      `/api/dashboard/articles/suggest-cover?query=${encodeURIComponent(query)}`,
-    )
-    if (data.url) {
-      suggestedPhoto.value = { url: data.url, attribution: data.attribution ?? 'Unsplash' }
-    } else {
-      suggestCoverError.value = 'Aucune photo trouvée pour ce sujet.'
-    }
-  } catch {
-    suggestCoverError.value = 'Impossible de contacter Unsplash.'
-  } finally {
-    loadingSuggest.value = false
-  }
-}
-
-/**
- * Selects the suggested Unsplash photo as the cover.
- *
- * @returns Nothing.
- */
-function useSuggestedPhoto(): void {
-  if (suggestedPhoto.value?.url) {
-    coverUrl.value = suggestedPhoto.value.url
-    suggestedPhoto.value = null
-  }
-}
-
-/**
- * Uses the pasted custom URL as the cover image.
- *
- * @returns Nothing.
- */
-function useCustomUrl(): void {
-  const url = customUrlInput.value.trim()
-  if (url) {
-    coverUrl.value = url
-    customUrlInput.value = ''
-    suggestedPhoto.value = null
-  }
-}
-
-/**
- * Clears the chosen cover image.
- *
- * @returns Nothing.
- */
-function clearCover(): void {
-  coverUrl.value = null
-  suggestedPhoto.value = null
-  customUrlInput.value = ''
-}
-
-/**
- * Opens the cover image lightbox.
- *
- * @param src - The image source URL.
- * @param alt - The image alt text.
- * @returns Nothing.
- */
-function openCoverModal(src: string, alt: string): void {
-  coverModalSrc.value = src
-  coverModalAlt.value = alt
-  coverModalOpen.value = true
-  document.body.style.overflow = 'hidden'
-}
-
-/**
- * Closes the cover image lightbox.
- *
- * @returns Nothing.
- */
-function closeCoverModal(): void {
-  coverModalOpen.value = false
-  document.body.style.overflow = ''
 }
 
 watch(
-  [mode, currentId, title, slug, excerpt, metaTitle, metaDescription, tagsInput, content, coverUrl, qualityScore],
+  [
+    writingMode,
+    currentId,
+    title,
+    slug,
+    excerpt,
+    metaTitle,
+    metaDescription,
+    tagsInput,
+    content,
+    coverUrl,
+    qualityScore,
+  ],
   (): void => saveBuffer(),
 )
 
-watch(optionalSentence, (): void => {
-  rejectedSubjects.value = []
+watch(title, (): void => {
+  nextTick((): void => fitTextareaToContent(titleInput.value)).catch((): void => undefined)
 })
 
 onMounted(async (): Promise<void> => {
-  fetchSubjects()
-  const draftId = typeof route.query.draft === 'string' ? route.query.draft : ''
+  window.addEventListener('keydown', saveDraftOnShortcut)
+  const draftId: string = typeof route.query.draft === 'string' ? route.query.draft : ''
   if (draftId) {
     try {
-      const data = await $fetch<{ record: ArticleRecord }>(`/api/dashboard/articles/drafts/${draftId}`)
+      const data: DashboardArticleDraftResponse = await $fetch<DashboardArticleDraftResponse>(
+        `/api/dashboard/articles/drafts/${draftId}`,
+      )
       loadRecord(data.record)
-      return
     } catch {
-      errorMessage.value = 'Brouillon introuvable.'
+      showToast({ tone: 'red', title: 'Brouillon introuvable', text: 'Il a peut-être été supprimé.' })
     }
-  }
-  // An explicit "new article" navigation (?new) starts blank; strip the flag afterwards so a
-  // later reload restores the in-progress buffer instead of wiping the work again.
-  if (route.query.new) {
-    resetAll()
-    if (typeof window !== 'undefined') {
-      window.history.replaceState(window.history.state, '', window.location.pathname)
+  } else if (route.query.new) {
+    // An explicit « new article » starts blank; the flag is stripped so a reload restores the work in progress.
+    resetEditor()
+    const idea: string = typeof route.query.idea === 'string' ? route.query.idea : ''
+    if (idea) {
+      writingMode.value = 'ai'
+      subjectIdea.value = `Un article qui vise la requête « ${idea} ».`
     }
-    return
+    window.history.replaceState(window.history.state, '', window.location.pathname)
+  } else {
+    loadBuffer()
+    isAssistantOpen.value = content.value.trim().length === 0
   }
-  loadBuffer()
+  await nextTick()
+  fitTextareaToContent(titleInput.value)
+})
+
+onBeforeUnmount((): void => {
+  window.removeEventListener('keydown', saveDraftOnShortcut)
 })
 </script>
-
-<style scoped>
-.cover-modal-enter-active,
-.cover-modal-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.cover-modal-enter-from,
-.cover-modal-leave-to {
-  opacity: 0;
-}
-
-.cover-modal-enter-active img,
-.cover-modal-leave-active img {
-  transition: transform 0.3s ease;
-}
-
-.cover-modal-enter-from img,
-.cover-modal-leave-to img {
-  transform: scale(0.9);
-}
-</style>

@@ -1,4 +1,9 @@
 import type { H3Event } from 'h3'
+import type {
+  SearchPerformancePeriod,
+  SearchPerformanceResponse,
+  SearchPerformanceTrendPoint,
+} from '~~/server/types/dashboard/searchPerformance'
 import { createError, getQuery } from 'h3'
 import { requireDashboardAuth } from '~~/server/utils/dashboardAuth'
 import { getGscAccessToken } from '~~/server/utils/gscAuth'
@@ -8,11 +13,6 @@ import {
   toSearchTotals,
   type GscSearchAnalyticsRow,
 } from '~~/server/utils/gscSearchAnalytics'
-import type {
-  SearchPerformancePeriod,
-  SearchPerformanceResponse,
-  SearchPerformanceTrendPoint,
-} from '~~/server/types/dashboard/searchPerformance'
 
 const GSC_SITE_PROPERTY = 'sc-domain:dibodev.fr'
 const PERIOD_DAYS: Record<SearchPerformancePeriod, number> = { '7d': 7, '28d': 28, '3m': 90, '6m': 180 }
@@ -116,6 +116,7 @@ export default defineEventHandler(async (event: H3Event): Promise<SearchPerforma
           date: row.keys?.[0] ?? '',
           clicks: row.clicks ?? 0,
           impressions: row.impressions ?? 0,
+          position: row.position ?? 0,
         }),
       )
       .filter((point: SearchPerformanceTrendPoint): boolean => point.date !== '')

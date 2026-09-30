@@ -2,6 +2,14 @@ import type { H3Event } from 'h3'
 import axios from 'axios'
 import { createError } from 'h3'
 import type { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
+import type {
+  DeployHeadCommit,
+  DeployRun,
+  DeployRunStatus,
+  GithubCommitPayload,
+  GithubWorkflowRunPayload,
+  GithubWorkflowRunsPayload,
+} from '~~/server/types/dashboard/deploy'
 
 export type RepositoryCounts = {
   public: number
@@ -183,6 +191,62 @@ export class GithubService {
         statusCode: axiosError.response?.status || 500,
         statusMessage: `Failed to fetch repository counts: ${axiosError.message}`,
       })
+    }
+  }
+
+  /**
+   * Latest commit of the default branch of a repository.
+   *
+   * @param {H3Event} event - Request event, used to read the GitHub token.
+   * @param {string} repo - Repository as owner/name.
+   * @returns {Promise<DeployHeadCommit | null>} The commit, or null when GitHub cannot be read.
+   */
+  static async getHeadCommit(event: H3Event, repo: string): Promise<DeployHeadCommit | null> {
+    try {
+      const response: AxiosResponse<GithubCommitPayload> = await axios.get(
+        `https://api.github.com/repos/${repo}/commits/HEAD`,
+        this.getAxiosConfig(event),
+      )
+      const commit: GithubCommitPayload = response.data
+      if (!commit.sha) return null
+      return {
+        sha: commit.sha,
+        message: commit.commit?.message?.split('\n')[0] ?? null,
+        date: commit.commit?.committer?.date ?? commit.commit?.author?.date ?? null,
+      }
+    } catch {
+      return null
+    }
+  }
+
+  /**
+   * Latest run of the repository workflows (build and deployment).
+   *
+   * @param {H3Event} event - Request event, used to read the GitHub token.
+   * @param {string} repo - Repository as owner/name.
+   * @returns {Promise<DeployRun | null>} The run, or null when the token cannot read GitHub Actions.
+   */
+  static async getLatestWorkflowRun(event: H3Event, repo: string): Promise<DeployRun | null> {
+    try {
+      const response: AxiosResponse<GithubWorkflowRunsPayload> = await axios.get(
+        `https://api.github.com/repos/${repo}/actions/runs?per_page=1`,
+        this.getAxiosConfig(event),
+      )
+      const run: GithubWorkflowRunPayload | undefined = response.data.workflow_runs?.[0]
+      if (!run) return null
+      const knownStatuses: DeployRunStatus[] = ['queued', 'in_progress', 'completed']
+      const status: DeployRunStatus =
+        knownStatuses.find((knownStatus: DeployRunStatus): boolean => knownStatus === run.status) ?? 'unknown'
+      return {
+        status,
+        conclusion: run.conclusion ?? null,
+        url: run.html_url ?? null,
+        startedAt: run.run_started_at ?? null,
+        finishedAt: status === 'completed' ? (run.updated_at ?? null) : null,
+        title: run.display_title ?? null,
+      }
+    } catch {
+      return null
     }
   }
 }

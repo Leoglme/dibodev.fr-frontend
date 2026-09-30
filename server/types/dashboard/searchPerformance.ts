@@ -14,6 +14,7 @@ export type SearchPerformanceTrendPoint = {
   date: string
   clicks: number
   impressions: number
+  position: number
 }
 
 /** One ranked row (a query, page, country or device) with its metrics. */

@@ -32,7 +32,8 @@ function urlToTitle(url: string): string {
   const pathname: string = new URL(url).pathname
   const segments: string[] = pathname.split('/').filter((s: string): boolean => s.length > 0)
   const lastSegment: string | undefined = segments[segments.length - 1]
-  if (!lastSegment) return pathname || 'Accueil'
+  if (!lastSegment) return 'Accueil'
+  if (segments.length === 1 && /^(en|es)$/.test(lastSegment)) return `Accueil (${lastSegment.toUpperCase()})`
   return slugToTitle(lastSegment)
 }
 

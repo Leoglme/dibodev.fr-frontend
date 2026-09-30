@@ -1,4 +1,5 @@
 import type { H3Event } from 'h3'
+import type { StoryblokAssetField } from '~~/server/types/dashboard/articles'
 import { createError } from 'h3'
 import { requireDashboardAuth } from '~~/server/utils/dashboardAuth'
 
@@ -7,7 +8,7 @@ const BLOG_FOLDER = 'blog/'
 const SITE_URL = 'https://dibodev.fr'
 
 type StoryItem = {
-  content?: { title?: string; slug?: string; date?: string }
+  content?: { title?: string; slug?: string; date?: string; excerpt?: string; coverImage?: StoryblokAssetField }
   full_slug?: string
 }
 
@@ -21,6 +22,20 @@ export type DashboardArticleItem = {
   fullSlug: string
   url: string
   date?: string
+  excerpt?: string
+  coverImageUrl?: string
+}
+
+/**
+ * Reads the URL of a Storyblok asset field (object with a filename, or a plain string).
+ *
+ * @param {StoryblokAssetField | undefined} asset - The asset field.
+ * @returns {string | undefined} The asset URL, or undefined when empty.
+ */
+function assetUrl(asset: StoryblokAssetField | undefined): string | undefined {
+  if (!asset) return undefined
+  if (typeof asset === 'string') return asset || undefined
+  return asset.filename || undefined
 }
 
 /**
@@ -72,6 +87,8 @@ export default defineEventHandler(async (event: H3Event): Promise<{ articles: Da
         fullSlug: canonicalPath,
         url: `${SITE_URL}/${canonicalPath}`,
         date: s.content?.date,
+        excerpt: s.content?.excerpt,
+        coverImageUrl: assetUrl(s.content?.coverImage),
       }
     })
 

@@ -1,7 +1,4 @@
 import type { H3Event } from 'h3'
-import { getQuery } from 'h3'
-import { createError } from 'h3'
-import { requireDashboardAuth } from '~~/server/utils/dashboardAuth'
 import type {
   LighthouseReportResponse,
   LighthouseStrategyReport,
@@ -9,6 +6,10 @@ import type {
   LighthouseAuditItem,
   LighthouseCategoryId,
 } from '~~/server/types/lighthouse'
+import { getQuery } from 'h3'
+import { createError } from 'h3'
+import { requireDashboardAuth } from '~~/server/utils/dashboardAuth'
+import { LighthouseService } from '~~/server/services/LighthouseService'
 
 const PAGE_SPEED_BASE: string = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed'
 
@@ -167,10 +168,19 @@ export default defineEventHandler(async (event: H3Event): Promise<LighthouseRepo
     })
   }
 
+  if (query.cached === '1') {
+    const stored: LighthouseReportResponse | null = await LighthouseService.getReport(requestedUrl)
+    if (!stored) {
+      throw createError({ statusCode: 404, statusMessage: 'No stored report for this URL' })
+    }
+    return stored
+  }
+
   const apiKey: string = String((config as Record<string, unknown>).psiApiKey ?? '').trim()
 
   const runStrategy = async (strategy: 'mobile' | 'desktop'): Promise<LighthouseStrategyReport> => {
-    const params: string[] = [`url=${encodeURIComponent(requestedUrl)}`, `strategy=${strategy}`]
+    // locale=fr: audit titles, descriptions and values come back in French.
+    const params: string[] = [`url=${encodeURIComponent(requestedUrl)}`, `strategy=${strategy}`, 'locale=fr']
     for (const cat of CATEGORY_API_VALUES) {
       params.push(`category=${cat}`)
     }
@@ -213,6 +223,10 @@ export default defineEventHandler(async (event: H3Event): Promise<LighthouseRepo
     finalUrl: requestedUrl,
     mobile,
     desktop,
+  }
+
+  if (!mobile.runtimeError || !desktop.runtimeError) {
+    await LighthouseService.saveReport(response)
   }
 
   return response

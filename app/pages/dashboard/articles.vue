@@ -1,232 +1,422 @@
 <template>
-  <div class="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-10 sm:px-6 sm:py-12">
-    <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-      <div>
-        <h1 class="text-2xl font-semibold text-gray-100">Brouillons & file d’attente</h1>
-        <p class="mt-1 text-gray-400">Tes articles en brouillon, planifiés et publiés. Édite, planifie ou publie.</p>
+  <DashboardPage title="Articles" icon="file-text">
+    <template #actions>
+      <DashboardButton
+        v-if="dueCount > 0"
+        variant="outline"
+        size="sm"
+        icon="send"
+        :loading="isProcessingQueue"
+        data-tip="Publie les articles planifiés dont l’heure est passée"
+        @click="onProcessQueue"
+      >
+        <span class="max-sm:hidden">Traiter la file</span>
+        <span class="text-muted tabular-nums">{{ dueCount }}</span>
+      </DashboardButton>
+      <DashboardButton
+        variant="primary"
+        size="sm"
+        icon="plus"
+        :to="localePath({ path: DASHBOARD_EDITOR_PATH, query: { new: '1' } })"
+      >
+        <span class="max-sm:hidden">Nouvel article</span>
+        <span class="sm:hidden">Nouveau</span>
+      </DashboardButton>
+    </template>
+
+    <template #toolbar>
+      <DashboardTabs
+        v-model="tab"
+        :items="tabs"
+        screen-reader-label="Statut des articles"
+        class="min-w-0 @max-4xl/page:w-full"
+      />
+      <DashboardSearchInput
+        v-model="search"
+        id="articles-search"
+        placeholder="Rechercher un article…"
+        class="w-full pb-1 @4xl/page:ml-auto @4xl/page:w-[220px] @4xl/page:pb-0 @6xl/page:w-[260px]"
+      />
+    </template>
+
+    <p v-if="error" class="flex items-center gap-2 text-sm text-(--dash-red)" role="alert">
+      <DashboardIcon name="circle-alert" :size="16" />
+      {{ error }}
+    </p>
+
+    <DashboardCard>
+      <div v-if="isLoadingArticles && rows.length === 0" class="flex flex-col gap-2 p-5">
+        <span v-for="index in 6" :key="index" class="dash-skeleton h-14 w-full" />
       </div>
-      <div class="flex flex-wrap gap-3">
-        <DibodevButton type="button" outlined size="sm" :disabled="processingQueue" @click="processQueue">
-          {{ processingQueue ? 'Traitement…' : 'Traiter la file' }}
-        </DibodevButton>
-        <NuxtLink
-          :to="localePath({ path: '/dashboard/generate-article', query: { new: '1' } })"
-          class="bg-primary inline-flex items-center rounded px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
+
+      <DashboardEmptyState
+        v-else-if="filteredRows.length === 0"
+        :icon="emptyStateContent.icon"
+        :title="emptyStateContent.title"
+        :text="emptyStateContent.text"
+      >
+        <DashboardButton
+          v-if="tab === 'draft' || tab === 'all'"
+          variant="primary"
+          icon="plus"
+          :to="localePath({ path: DASHBOARD_EDITOR_PATH, query: { new: '1' } })"
         >
-          Nouvel article
-        </NuxtLink>
-      </div>
-    </div>
+          Écrire un article
+        </DashboardButton>
+      </DashboardEmptyState>
 
-    <DibodevAlert
-      v-if="successMessage"
-      :message="successMessage"
-      variant="success"
-      dismissible
-      @hide="successMessage = ''"
-    />
-    <DibodevAlert v-if="errorMessage" :message="errorMessage" variant="error" dismissible @hide="errorMessage = ''" />
-
-    <div v-if="loading" class="flex justify-center py-16">
-      <DibodevSpinner />
-    </div>
-
-    <div v-else-if="records.length === 0" class="rounded-lg border border-gray-600 bg-gray-800 p-10 text-center">
-      <p class="text-gray-300">Aucun article pour l’instant.</p>
-      <NuxtLink
-        :to="localePath({ path: '/dashboard/generate-article', query: { new: '1' } })"
-        class="text-primary mt-3 inline-block text-sm font-medium"
-      >
-        Créer un premier article
-      </NuxtLink>
-    </div>
-
-    <ul v-else class="flex flex-col gap-4">
-      <li
-        v-for="record in records"
-        :key="record.id"
-        class="flex flex-col gap-4 rounded-lg border border-gray-600 bg-gray-800 p-5 sm:flex-row sm:items-center sm:justify-between"
-      >
-        <div class="flex min-w-0 flex-col gap-2">
-          <div class="flex flex-wrap items-center gap-2">
-            <DibodevBadge
-              :backgroundColor="statusStyle(record.status).backgroundColor"
-              :textColor="statusStyle(record.status).textColor"
-              size="sm"
+      <template v-else>
+        <table class="dash-table @max-xl:hidden">
+          <thead>
+            <tr>
+              <th>Article</th>
+              <th>Statut</th>
+              <th class="dash-col-sm">Langues</th>
+              <th>Date</th>
+              <th class="is-right"><span class="sr-only">Actions</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              v-for="row in pagedRows"
+              :key="row.key"
+              class="is-clickable"
+              :class="{ 'is-selected': openedItemKey === row.key }"
+              @click="openArticle(row.key)"
             >
-              {{ statusStyle(record.status).label }}
-            </DibodevBadge>
-            <span class="text-xs text-gray-400">{{ originLabel(record.origin) }}</span>
-          </div>
-          <p class="truncate font-medium text-gray-100">{{ record.title || '(sans titre)' }}</p>
-          <p class="text-xs text-gray-400">{{ metaLine(record) }}</p>
-          <p v-if="record.status === 'failed' && record.error" class="text-xs text-red-400">{{ record.error }}</p>
-        </div>
+              <td class="dash-col-main">
+                <div class="flex min-w-0 items-center gap-3">
+                  <DashboardArticleCover :src="row.coverImageUrl" class="dash-col-lg" />
+                  <div class="min-w-0">
+                    <p class="line-clamp-2 leading-snug font-medium text-gray-100">{{ row.title }}</p>
+                    <p class="dash-mono text-muted mt-0.5 truncate text-xs">/blog/{{ row.slug || '…' }}</p>
+                  </div>
+                </div>
+              </td>
+              <td class="whitespace-nowrap">
+                <div class="flex flex-col items-start gap-1.5">
+                  <DashboardBadge
+                    :tone="DASHBOARD_ARTICLE_STATUSES[row.status].tone"
+                    :icon="DASHBOARD_ARTICLE_STATUSES[row.status].icon"
+                    :is-spinning="row.status === 'publishing'"
+                  >
+                    {{ DASHBOARD_ARTICLE_STATUSES[row.status].label }}
+                  </DashboardBadge>
+                  <span v-if="row.origin" class="text-muted inline-flex items-center gap-1.5 text-[12.5px]">
+                    <DashboardIcon :name="row.origin === 'ai' ? 'sparkles' : 'pen-line'" :size="13" />
+                    {{ ARTICLE_ORIGIN_LABELS[row.origin] }}
+                  </span>
+                </div>
+              </td>
+              <td class="dash-col-sm">
+                <DashboardLangChips :english="languagesOf(row).english" :spanish="languagesOf(row).spanish" />
+              </td>
+              <td class="whitespace-nowrap">
+                <span class="block text-[13px] text-gray-200">{{ dateOf(row) }}</span>
+                <span class="text-muted block text-xs">{{ DATE_KIND_LABELS[row.dateKind] }}</span>
+              </td>
+              <td class="is-right" @click.stop>
+                <div class="inline-flex items-center justify-end gap-1">
+                  <DashboardButton
+                    v-if="row.status === 'published' && row.slug"
+                    variant="ghost"
+                    size="sm"
+                    trailing-icon="arrow-up-right"
+                    :href="`https://dibodev.fr/blog/${row.slug}`"
+                    class="dash-col-sm"
+                  >
+                    Voir
+                  </DashboardButton>
+                  <DashboardButton
+                    v-else-if="row.recordId && row.status !== 'publishing'"
+                    variant="outline"
+                    size="sm"
+                    class="dash-col-sm"
+                    @click="openPublish(row.recordId)"
+                  >
+                    {{ row.status === 'failed' ? 'Réessayer' : row.status === 'scheduled' ? 'Replanifier' : 'Publier' }}
+                  </DashboardButton>
+                  <DashboardButton
+                    variant="ghost"
+                    size="sm"
+                    square
+                    icon="chevron-right"
+                    :aria-label="`Détail de « ${row.title} »`"
+                    @click="openArticle(row.key)"
+                  />
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-        <div class="flex flex-wrap items-center gap-2">
-          <NuxtLink
-            :to="localePath({ path: '/dashboard/generate-article', query: { draft: record.id } })"
-            class="hover:border-primary hover:text-primary inline-flex items-center rounded border border-gray-600 px-3 py-1.5 text-sm text-gray-200 transition-colors"
+        <ul class="@xl:hidden">
+          <DashboardListRow
+            v-for="row in pagedRows"
+            :key="row.key"
+            :is-selected="openedItemKey === row.key"
+            @select="openArticle(row.key)"
           >
-            Éditer
-          </NuxtLink>
-          <NuxtLink
-            v-if="record.status !== 'published' && record.status !== 'publishing'"
-            :to="localePath({ path: '/dashboard/publish-article', query: { draft: record.id } })"
-            class="bg-primary inline-flex items-center rounded px-3 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
-          >
-            Publier
-          </NuxtLink>
-          <a
-            v-if="record.status === 'published' && record.fullSlug"
-            :href="`https://dibodev.fr/${record.fullSlug}`"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center rounded border border-gray-600 px-3 py-1.5 text-sm text-gray-200 transition-colors hover:border-gray-400"
-          >
-            Voir
-          </a>
-          <DibodevButton
-            type="button"
-            outlined
+            <DashboardArticleCover :src="row.coverImageUrl" />
+            <span class="min-w-0 flex-1">
+              <span class="line-clamp-2 text-sm leading-snug font-medium text-gray-100">{{ row.title }}</span>
+              <span class="mt-1 flex flex-wrap items-center gap-x-2.5 gap-y-1">
+                <DashboardBadge
+                  :tone="DASHBOARD_ARTICLE_STATUSES[row.status].tone"
+                  :icon="DASHBOARD_ARTICLE_STATUSES[row.status].icon"
+                  :is-spinning="row.status === 'publishing'"
+                >
+                  {{ DASHBOARD_ARTICLE_STATUSES[row.status].label }}
+                </DashboardBadge>
+                <span class="text-muted text-xs">{{ dateOf(row) }}</span>
+              </span>
+            </span>
+            <DashboardIcon name="chevron-right" :size="16" class="text-muted" />
+          </DashboardListRow>
+        </ul>
+      </template>
+
+      <template v-if="filteredRows.length > 0" #footer>
+        <span class="tabular-nums">{{ countLabel }}</span>
+        <span v-if="pageCount > 1" class="inline-flex items-center gap-1">
+          <DashboardButton
+            variant="ghost"
             size="sm"
-            :disabled="busyId === record.id"
-            @click="removeRecord(record)"
-          >
-            Supprimer
-          </DibodevButton>
-        </div>
-      </li>
-    </ul>
-  </div>
+            square
+            icon="chevron-left"
+            aria-label="Page précédente"
+            :disabled="page === 1"
+            @click="page -= 1"
+          />
+          <span class="min-w-[52px] text-center text-xs tabular-nums">{{ page }} / {{ pageCount }}</span>
+          <DashboardButton
+            variant="ghost"
+            size="sm"
+            square
+            icon="chevron-right"
+            aria-label="Page suivante"
+            :disabled="page === pageCount"
+            @click="page += 1"
+          />
+        </span>
+      </template>
+    </DashboardCard>
+  </DashboardPage>
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
-import type { Ref } from 'vue'
-import DibodevButton from '~/components/core/DibodevButton.vue'
-import DibodevAlert from '~/components/feedback/DibodevAlert.vue'
-import DibodevBadge from '~/components/ui/DibodevBadge.vue'
-import DibodevSpinner from '~/components/ui/DibodevSpinner.vue'
-import { ARTICLE_ORIGIN_LABELS, ARTICLE_STATUS_BADGES } from '~/core/constants/articleStatus'
-import type { ArticleEditorMode, ArticleRecord, ArticleRecordStatus, ArticleStatusBadge } from '~/types/dashboard'
+import type { UseDashboardTranslationsReturn } from '~/composables/useDashboardTranslations'
+import type { UseDashboardToastReturn } from '~/composables/useDashboardToast'
+import type { UseDashboardDrawerReturn } from '~/composables/useDashboardDrawer'
+import type { UseDashboardArticlesReturn } from '~/composables/useDashboardArticles'
+import type {
+  DashboardArticleLanguages,
+  DashboardArticlesEmptyContent,
+  DashboardArticlesTab,
+} from '~/core/types/DashboardArticlesPage'
+import type { ComputedRef, Ref } from 'vue'
+import type { DashboardArticleRow, DashboardTabItem } from '~/core/types/Dashboard'
+import type { TranslatableItem } from '~/types/dashboard/translations'
+import { computed, onMounted, ref, watch } from 'vue'
+import DashboardPage from '~/components/dashboard/shell/DashboardPage.vue'
+import DashboardArticleCover from '~/components/dashboard/ui/DashboardArticleCover.vue'
+import DashboardBadge from '~/components/dashboard/ui/DashboardBadge.vue'
+import DashboardButton from '~/components/dashboard/ui/DashboardButton.vue'
+import DashboardCard from '~/components/dashboard/ui/DashboardCard.vue'
+import DashboardEmptyState from '~/components/dashboard/ui/DashboardEmptyState.vue'
+import DashboardIcon from '~/components/dashboard/ui/DashboardIcon.vue'
+import DashboardListRow from '~/components/dashboard/ui/DashboardListRow.vue'
+import DashboardLangChips from '~/components/dashboard/ui/DashboardLangChips.vue'
+import DashboardSearchInput from '~/components/dashboard/ui/DashboardSearchInput.vue'
+import DashboardTabs from '~/components/dashboard/ui/DashboardTabs.vue'
+import { ARTICLE_ORIGIN_LABELS, DASHBOARD_ARTICLE_STATUSES } from '~/core/constants/articleStatus'
+import { DASHBOARD_EDITOR_PATH } from '~/core/constants/dashboardNavigation'
+import { DashboardFormatUtils } from '~/core/utils/DashboardFormatUtils'
+import { useDashboardArticles } from '~/composables/useDashboardArticles'
+import { useDashboardDrawer } from '~/composables/useDashboardDrawer'
+import { useDashboardToast } from '~/composables/useDashboardToast'
+import { useDashboardTranslations } from '~/composables/useDashboardTranslations'
 
 definePageMeta({
   layout: 'dashboard',
 })
 
 useHead({
-  title: 'Brouillons & file — Dashboard',
-  meta: [{ name: 'robots', content: 'noindex, nofollow' }],
+  title: 'Articles · Dibodev Admin',
 })
 
-const localePath = useLocalePath()
+const localePath: ReturnType<typeof useLocalePath> = useLocalePath()
+const route: ReturnType<typeof useRoute> = useRoute()
+const router: ReturnType<typeof useRouter> = useRouter()
 
-const records: Ref<ArticleRecord[]> = ref([])
-const loading: Ref<boolean> = ref(true)
-const processingQueue: Ref<boolean> = ref(false)
-const busyId: Ref<string | null> = ref(null)
-const successMessage: Ref<string> = ref('')
-const errorMessage: Ref<string> = ref('')
+const {
+  rows,
+  counts,
+  loading: isLoadingArticles,
+  error,
+  loadArticles,
+  processQueue,
+}: UseDashboardArticlesReturn = useDashboardArticles()
 
-/**
- * Returns the badge style/label for a given status.
- *
- * @param status - The article status.
- * @returns The label and colors for the status badge.
- */
-function statusStyle(status: ArticleRecordStatus): ArticleStatusBadge {
-  return ARTICLE_STATUS_BADGES[status]
+const { lists: translationLists, loadTranslations }: UseDashboardTranslationsReturn = useDashboardTranslations()
+const { openedItemKey, openDrawer }: UseDashboardDrawerReturn = useDashboardDrawer()
+const { showToast }: UseDashboardToastReturn = useDashboardToast()
+const initialTab: string = typeof route.query.tab === 'string' ? route.query.tab : 'all'
+
+const TAB_VALUES: DashboardArticlesTab[] = ['all', 'draft', 'scheduled', 'published', 'failed']
+const PAGE_SIZE: number = 20
+
+const DATE_KIND_LABELS: Record<DashboardArticleRow['dateKind'], string> = {
+  updated: 'Modifié',
+  scheduled: 'Mise en ligne',
+  published: 'Publié',
 }
 
-/**
- * Returns a human label for the article origin.
- *
- * @param origin - The article origin.
- * @returns The origin label.
- */
-function originLabel(origin: ArticleEditorMode): string {
-  return ARTICLE_ORIGIN_LABELS[origin]
-}
+const tab: Ref<string> = ref(TAB_VALUES.includes(initialTab as DashboardArticlesTab) ? initialTab : 'all')
+const search: Ref<string> = ref('')
+const page: Ref<number> = ref(1)
+const isProcessingQueue: Ref<boolean> = ref(false)
+const now: Ref<number> = ref(Date.now())
 
-/**
- * Builds the secondary info line for a record (slug, dates).
- *
- * @param record - The article record.
- * @returns A short descriptive line.
- */
-function metaLine(record: ArticleRecord): string {
-  const parts: string[] = [`/${record.slug}`]
-  if (record.status === 'scheduled' && record.scheduledAt) {
-    parts.push(`planifié le ${new Date(record.scheduledAt).toLocaleString('fr-FR')}`)
-  } else if (record.status === 'published' && record.publishedAt) {
-    parts.push(`publié le ${new Date(record.publishedAt).toLocaleDateString('fr-FR')}`)
-  } else if (record.publishDate) {
-    parts.push(`date ${record.publishDate}`)
+const tabs: ComputedRef<DashboardTabItem[]> = computed((): DashboardTabItem[] => [
+  { value: 'all', label: 'Tous', count: counts.value.total },
+  { value: 'draft', label: 'Brouillons', count: counts.value.draft },
+  { value: 'scheduled', label: 'Planifiés', count: counts.value.scheduled },
+  { value: 'published', label: 'Publiés', count: counts.value.published },
+  { value: 'failed', label: 'Échecs', count: counts.value.failed, alert: counts.value.failed > 0 },
+])
+
+const filteredRows: ComputedRef<DashboardArticleRow[]> = computed((): DashboardArticleRow[] => {
+  const needle: string = DashboardFormatUtils.toSearchableText(search.value.trim())
+  return rows.value.filter((row: DashboardArticleRow): boolean => {
+    if (tab.value !== 'all' && row.status !== tab.value) return false
+    return !needle || DashboardFormatUtils.toSearchableText(`${row.title} ${row.slug}`).includes(needle)
+  })
+})
+
+const pageCount: ComputedRef<number> = computed((): number =>
+  Math.max(1, Math.ceil(filteredRows.value.length / PAGE_SIZE)),
+)
+
+const pagedRows: ComputedRef<DashboardArticleRow[]> = computed((): DashboardArticleRow[] =>
+  filteredRows.value.slice((page.value - 1) * PAGE_SIZE, page.value * PAGE_SIZE),
+)
+
+const countLabel: ComputedRef<string> = computed((): string => {
+  const total: number = filteredRows.value.length
+  const start: number = (page.value - 1) * PAGE_SIZE + 1
+  const end: number = Math.min(total, page.value * PAGE_SIZE)
+  return `${start}–${end} sur ${DashboardFormatUtils.plural(total, 'article')}`
+})
+
+const dueCount: ComputedRef<number> = computed(
+  (): number =>
+    rows.value.filter(
+      (row: DashboardArticleRow): boolean =>
+        row.status === 'scheduled' && row.dateIso !== null && new Date(row.dateIso).getTime() <= now.value,
+    ).length,
+)
+
+const emptyStateContent: ComputedRef<DashboardArticlesEmptyContent> = computed((): DashboardArticlesEmptyContent => {
+  if (search.value)
+    return { icon: 'search', title: 'Aucun article ne correspond', text: `Rien pour « ${search.value} ».` }
+  const byTab: Record<DashboardArticlesTab, DashboardArticlesEmptyContent> = {
+    all: {
+      icon: 'file-text',
+      title: 'Aucun article pour l’instant',
+      text: 'Écris le premier, à la main ou avec l’IA.',
+    },
+    draft: { icon: 'pen-line', title: 'Aucun brouillon', text: 'Tout ce qui est commencé est publié ou planifié.' },
+    scheduled: {
+      icon: 'calendar-clock',
+      title: 'Rien de planifié',
+      text: 'Planifie un brouillon pour étaler les publications.',
+    },
+    published: { icon: 'file-text', title: 'Aucun article publié', text: 'Les articles publiés apparaîtront ici.' },
+    failed: { icon: 'circle-check', title: 'Aucune publication en échec', text: 'Tout est passé.' },
   }
-  return parts.join(' · ')
+  return byTab[tab.value as DashboardArticlesTab]
+})
+
+/**
+ * Languages of an article: published articles read the translation files, others are French only.
+ *
+ * @param {DashboardArticleRow} row - The article.
+ * @returns {DashboardArticleLanguages} English and Spanish availability.
+ */
+function languagesOf(row: DashboardArticleRow): DashboardArticleLanguages {
+  if (row.status !== 'published') return { english: false, spanish: false }
+  const item: TranslatableItem | undefined = translationLists.value?.articles.find(
+    (article: TranslatableItem): boolean => article.slug === row.slug,
+  )
+  return { english: item?.hasEn ?? null, spanish: item?.hasEs ?? null }
 }
 
 /**
- * Loads all stored article records.
+ * Date shown in the list.
  *
- * @returns Nothing.
+ * @param {DashboardArticleRow} row - The article.
+ * @returns {string} Planned datetime, relative update time or publication date.
  */
-async function loadRecords(): Promise<void> {
-  loading.value = true
+function dateOf(row: DashboardArticleRow): string {
+  if (row.dateKind === 'scheduled') return DashboardFormatUtils.formatPlannedDate(row.dateIso)
+  if (row.dateKind === 'updated') return DashboardFormatUtils.formatRelative(row.dateIso, now.value)
+  return DashboardFormatUtils.formatShortDate(row.dateIso)
+}
+
+/**
+ * Opens the drawer of an article; the arrows browse the filtered list.
+ *
+ * @param {string} key - Row key.
+ * @returns {void}
+ */
+function openArticle(key: string): void {
+  openDrawer({
+    kind: 'article',
+    articleKey: key,
+    browseKeys: filteredRows.value.map((row: DashboardArticleRow): string => row.key),
+  })
+}
+
+/**
+ * Opens the publication drawer of a record.
+ *
+ * @param {string} recordId - Local record id.
+ * @returns {void}
+ */
+function openPublish(recordId: string): void {
+  openDrawer({ kind: 'publish', articleId: recordId })
+}
+
+/**
+ * Publishes the scheduled articles whose time has come.
+ *
+ * @returns {Promise<void>}
+ */
+async function onProcessQueue(): Promise<void> {
+  isProcessingQueue.value = true
   try {
-    const data = await $fetch<{ records: ArticleRecord[] }>('/api/dashboard/articles/drafts')
-    records.value = data.records
-  } catch (e) {
-    errorMessage.value = e instanceof Error ? e.message : 'Erreur lors du chargement.'
+    const message: string = await processQueue()
+    showToast({ tone: 'cyan', icon: 'calendar-clock', title: 'File traitée', text: message })
+  } catch {
+    showToast({ tone: 'red', title: 'Le traitement de la file a échoué', text: 'Réessaie dans un instant.' })
   } finally {
-    loading.value = false
+    isProcessingQueue.value = false
   }
 }
 
-/**
- * Deletes a record after confirmation.
- *
- * @param record - The record to delete.
- * @returns Nothing.
- */
-async function removeRecord(record: ArticleRecord): Promise<void> {
-  if (typeof window !== 'undefined' && !window.confirm(`Supprimer « ${record.title || 'cet article'} » ?`)) {
-    return
-  }
-  busyId.value = record.id
-  errorMessage.value = ''
-  try {
-    await $fetch(`/api/dashboard/articles/drafts/${record.id}`, { method: 'DELETE' })
-    records.value = records.value.filter((r: ArticleRecord): boolean => r.id !== record.id)
-  } catch (e) {
-    errorMessage.value = e instanceof Error ? e.message : 'Erreur lors de la suppression.'
-  } finally {
-    busyId.value = null
-  }
-}
+watch([tab, search], (): void => {
+  page.value = 1
+})
 
-/**
- * Runs the drip queue processor now (publishes any due scheduled article).
- *
- * @returns Nothing.
- */
-async function processQueue(): Promise<void> {
-  processingQueue.value = true
-  errorMessage.value = ''
-  successMessage.value = ''
-  try {
-    const data = await $fetch<{ message: string }>('/api/dashboard/articles/process-queue', { method: 'POST' })
-    successMessage.value = data.message
-    await loadRecords()
-  } catch (e) {
-    errorMessage.value = e instanceof Error ? e.message : 'Erreur lors du traitement de la file.'
-  } finally {
-    processingQueue.value = false
-  }
-}
+watch(tab, (value: string): void => {
+  router.replace({ query: { ...route.query, tab: value === 'all' ? undefined : value } }).catch((): void => undefined)
+})
 
 onMounted((): void => {
-  loadRecords()
+  loadArticles().catch((): void => undefined)
+  loadTranslations().catch((): void => undefined)
+  const publishId: unknown = route.query.publish
+  if (typeof publishId === 'string' && publishId) openPublish(publishId)
 })
 </script>

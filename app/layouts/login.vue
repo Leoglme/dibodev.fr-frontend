@@ -1,18 +1,15 @@
 <template>
-  <div class="flex min-h-screen items-center justify-center bg-gray-900 px-4">
+  <div
+    class="dashboard-root min-h-dvh bg-white pr-[env(safe-area-inset-right,0px)] pl-[env(safe-area-inset-left,0px)] text-gray-100"
+  >
+    <NuxtLoadingIndicator color="var(--color-primary)" :height="2" :throttle="200" />
     <slot />
   </div>
 </template>
 
-<script setup lang="ts">
-import Aos from 'aos'
-import 'aos/dist/aos.css'
+<script lang="ts" setup>
+import '~/assets/css/dashboard.css'
+import { useDashboardAppHead } from '~/composables/useDashboardAppHead'
 
-useHead({
-  meta: [{ name: 'robots', content: 'noindex, nofollow' }],
-})
-
-onMounted(() => {
-  Aos.init({ easing: 'ease-out-cubic' })
-})
+useDashboardAppHead('#ffffff')
 </script>

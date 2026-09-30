@@ -1,338 +1,598 @@
 <template>
-  <div class="flex min-w-0 flex-1 flex-col gap-8 px-4 py-8 sm:px-6 sm:py-12">
-    <div class="flex min-w-0 flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-      <div class="min-w-0">
-        <h1 class="text-2xl font-semibold text-gray-100">Requêtes Google</h1>
-        <p class="mt-1 text-gray-200">
-          Ce que les gens tapent pour te trouver, ce qui marche et ce qui reste à convertir. Données Search Console.
-        </p>
-      </div>
-      <div class="flex w-full flex-col gap-2 sm:flex-row sm:items-center lg:w-auto">
-        <div class="flex w-full rounded-lg border border-gray-600 bg-gray-800 p-1 sm:w-auto">
-          <button
-            v-for="option in PERIOD_OPTIONS"
-            :key="option.value"
-            type="button"
-            class="flex-1 cursor-pointer rounded-md px-3 py-2 text-center text-sm font-medium transition-colors sm:flex-none sm:py-1.5"
-            :class="period === option.value ? 'bg-primary text-white' : 'text-gray-300 hover:text-gray-100'"
-            @click="period = option.value"
-          >
-            {{ option.label }}
-          </button>
-        </div>
-        <DibodevButton class="w-full sm:w-auto" :disabled="loading" @click="load(true)">
-          <span
-            v-if="loading"
-            class="mr-2 inline-block h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"
-          />
-          {{ loading ? 'Chargement…' : 'Actualiser' }}
-        </DibodevButton>
-        <DibodevButton class="w-full sm:w-auto" outlined :disabled="!data || !data.gscConnected" @click="exportJson">
-          Exporter JSON
-        </DibodevButton>
-      </div>
-    </div>
+  <DashboardPage title="Requêtes Google" icon="trending-up">
+    <template #actions>
+      <DashboardButton variant="outline" size="sm" icon="download" :disabled="!data" @click="exportJson">
+        <span class="max-sm:hidden">Exporter en JSON</span>
+      </DashboardButton>
+    </template>
 
-    <DibodevAlert v-if="error" :message="error" variant="error" dismissible @hide="error = ''" />
+    <template #toolbar>
+      <DashboardSegmented v-model="period" :options="PERIOD_OPTIONS" screen-reader-label="Période" />
+      <span v-if="data" class="text-muted text-[13px] @max-4xl/page:order-last @max-4xl/page:w-full">{{
+        rangeLabel
+      }}</span>
+      <div class="ml-auto flex items-center gap-2">
+        <span class="text-muted inline-flex items-center gap-1.5 text-[13px] @max-4xl/page:hidden">
+          <DashboardIcon name="clock" :size="14" />
+          Google finalise ses données à J-3
+        </span>
+        <DashboardButton
+          variant="ghost"
+          square
+          icon="refresh-cw"
+          :loading="isLoadingPeriod"
+          aria-label="Actualiser"
+          data-tip="Actualiser"
+          @click="loadPeriodData(true)"
+        />
+      </div>
+    </template>
 
     <div
-      v-if="data && !data.gscConnected"
-      class="rounded-lg border border-amber-600/50 bg-amber-500/10 p-4 text-sm text-amber-200"
+      v-if="entry && !entry.data.gscConnected"
+      class="flex gap-3 rounded-xl bg-(--dash-amber-tint) p-4 text-sm text-(--dash-amber)"
+      role="alert"
     >
-      Google Search Console n'est pas connecté. Ajoute
-      <code class="rounded bg-gray-800 px-1">GSC_SERVICE_ACCOUNT_JSON</code> (ou le refresh token OAuth) dans le
-      <code class="rounded bg-gray-800 px-1">.env</code>, avec l'accès à la propriété
-      <code class="rounded bg-gray-800 px-1">sc-domain:dibodev.fr</code>.
-    </div>
-
-    <div v-if="loading && !data" class="flex items-center gap-2 text-gray-300">
-      <DibodevSpinner :size="24" />
-      Chargement des performances…
-    </div>
-
-    <template v-if="data && data.gscConnected">
-      <p class="-mt-4 text-xs text-gray-400">
-        Du {{ formatRangeDate(data.range.startDate) }} au {{ formatRangeDate(data.range.endDate) }} · Google finalise
-        ses données avec ~3 jours de décalage.
+      <DashboardIcon name="triangle-alert" :size="18" class="mt-0.5" />
+      <p>
+        Google Search Console n’est pas connecté. Ajoute <code class="dash-mono">GSC_SERVICE_ACCOUNT_JSON</code> (ou le
+        refresh token OAuth) dans le <code class="dash-mono">.env</code>, avec l’accès à la propriété
+        <code class="dash-mono">sc-domain:dibodev.fr</code>.
       </p>
+    </div>
+    <p v-if="error" class="flex items-center gap-2 text-sm text-(--dash-red)" role="alert">
+      <DashboardIcon name="circle-alert" :size="16" />
+      {{ error }}
+    </p>
 
-      <!-- KPIs -->
-      <div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
-        <SeoStatCard label="Clics" :value="clicksValue" :delta="clicksDelta" delta-suffix="%" />
-        <SeoStatCard label="Impressions" :value="impressionsValue" :delta="impressionsDelta" delta-suffix="%" />
-        <SeoStatCard label="CTR moyen" :value="ctrValue" :delta="ctrDelta" delta-suffix=" pts" />
-        <SeoStatCard
-          label="Position moyenne"
-          :value="positionValue"
-          :delta="positionDelta"
-          delta-suffix=" pts"
-          :positive-is-good="false"
+    <DashboardKpiBand :kpis="kpis" :loading="isLoadingPeriod" />
+
+    <DashboardCard :title="chartTitle" :description="chartDescription">
+      <div class="px-3 pt-2 pb-4 sm:px-5">
+        <DashboardTrendChart
+          v-if="chartPoints.length > 0"
+          :points="chartPoints"
+          :weekly="isTrendWeekly"
+          :markers="markers"
+        />
+        <div v-else class="dash-skeleton h-[280px] w-full" />
+      </div>
+    </DashboardCard>
+
+    <section id="opportunites" ref="opportunitiesSection" class="flex scroll-mt-4 flex-col gap-4">
+      <div>
+        <h2 class="text-[19px] font-medium tracking-[-0.01em] text-gray-100">Opportunités</h2>
+        <p class="text-muted mt-1 text-[13.5px]">
+          Le site apparaît déjà sur ces requêtes. Chaque colonne dit quoi faire.
+        </p>
+      </div>
+      <div class="grid items-start gap-5 @4xl:grid-cols-3">
+        <DashboardCard v-for="group in opportunityGroups" :key="group.key">
+          <div class="flex items-center gap-2.5 px-4 pt-4 sm:px-[18px]">
+            <span class="h-2 w-2 rounded-full" :class="DASHBOARD_TONES[group.tone].dot" aria-hidden="true" />
+            <h3 class="text-[15.5px] font-medium text-gray-100">{{ group.title }}</h3>
+            <span class="text-muted ml-auto text-sm tabular-nums">{{ group.items.length }}</span>
+          </div>
+          <p class="text-muted px-4 pt-2 text-[13px] leading-snug sm:px-[18px]">{{ group.hint }}</p>
+          <ul v-if="group.items.length > 0" class="mt-3 px-2 pb-2">
+            <li
+              v-for="(item, index) in group.items"
+              :key="item.key"
+              class="flex items-center gap-2.5 rounded-lg transition-colors hover:bg-(--dash-row-hover)"
+              :class="{ 'border-t border-(--dash-line-soft)': index > 0 }"
+            >
+              <button
+                type="button"
+                class="min-w-0 flex-1 cursor-pointer px-2.5 py-2.5 text-left"
+                @click="openQuery(item.key)"
+              >
+                <span class="block truncate text-sm font-medium text-gray-100">{{ item.key }}</span>
+                <span class="text-muted mt-0.5 block text-xs tabular-nums">{{ opportunityMeta(item, group.key) }}</span>
+              </button>
+              <span
+                v-if="group.key === 'working'"
+                class="mr-2.5 rounded-md bg-(--dash-green-tint) px-2 py-1 text-[12.5px] font-medium whitespace-nowrap text-(--dash-green) tabular-nums"
+              >
+                {{ DashboardFormatUtils.plural(item.clicks, 'clic') }}
+              </span>
+              <DashboardButton
+                v-else-if="group.key === 'almost'"
+                variant="ghost"
+                size="sm"
+                square
+                icon="pen-line"
+                class="mr-1.5"
+                :to="localePath({ path: DASHBOARD_EDITOR_PATH, query: { new: '1', idea: item.key } })"
+                :aria-label="`Écrire un article sur « ${item.key} »`"
+                data-tip="Écrire un article sur cette requête"
+              />
+            </li>
+          </ul>
+          <p v-else class="text-muted px-4 pt-3 pb-5 text-[13px] sm:px-[18px]">Rien sur cette période.</p>
+        </DashboardCard>
+      </div>
+    </section>
+
+    <DashboardCard>
+      <div class="flex flex-wrap items-center gap-x-3 border-b border-(--dash-line-soft) px-3 sm:px-5">
+        <DashboardTabs
+          v-model="detailTab"
+          :items="detailTabs"
+          screen-reader-label="Détail"
+          class="min-w-0 @max-3xl:w-full"
+        />
+        <DashboardSearchInput
+          v-model="filter"
+          id="search-performance-filter"
+          :placeholder="DETAIL_PLACEHOLDERS[detailTab as DashboardSearchDetailTab]"
+          class="w-full pb-2.5 @3xl:ml-auto @3xl:w-[240px] @3xl:pb-0"
         />
       </div>
 
-      <!-- Trend -->
-      <section class="rounded-2xl border border-gray-600 bg-gray-800 p-4 sm:p-6">
-        <h2 class="mb-4 text-lg font-semibold text-gray-100">Évolution des clics &amp; impressions</h2>
-        <SeoTrendChart :points="data.trend" />
-      </section>
+      <table class="dash-table @max-xl:hidden">
+        <thead>
+          <tr>
+            <th
+              v-for="column in COLUMNS"
+              :key="column.key"
+              :class="[column.key === 'key' ? '' : 'is-right', { 'dash-col-sm': column.key === 'ctr' }]"
+            >
+              <button
+                type="button"
+                class="inline-flex cursor-pointer items-center gap-1 uppercase hover:text-gray-100"
+                :aria-sort="sortKey === column.key ? (sortDirection < 0 ? 'descending' : 'ascending') : 'none'"
+                @click="toggleSort(column.key)"
+              >
+                {{ column.key === 'key' ? DETAIL_LABELS[detailTab as DashboardSearchDetailTab] : column.label }}
+                <DashboardIcon
+                  v-if="sortKey === column.key"
+                  :name="sortDirection < 0 ? 'arrow-down' : 'arrow-up'"
+                  :size="12"
+                />
+              </button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            v-for="row in pagedRows"
+            :key="row.key"
+            class="is-clickable"
+            :class="{ 'is-selected': openedItemKey === row.key }"
+            @click="openRow(row)"
+          >
+            <td class="dash-col-main">
+              <span
+                class="block truncate font-medium text-gray-100"
+                :class="{ 'dash-mono text-[13px]': detailTab === 'pages' }"
+              >
+                {{ rowLabel(row) }}
+              </span>
+            </td>
+            <td class="is-right tabular-nums">
+              <span :class="row.clicks > 0 ? 'font-medium text-gray-100' : 'text-muted'">{{ row.clicks }}</span>
+            </td>
+            <td class="is-right">
+              <span class="inline-flex items-center gap-2.5">
+                <span class="tabular-nums">{{ DashboardFormatUtils.formatNumber(row.impressions) }}</span>
+                <DashboardMeter :value="row.impressions" :max="maxImpressions" class="dash-col-sm" />
+              </span>
+            </td>
+            <td class="is-right dash-col-sm whitespace-nowrap tabular-nums">
+              {{ DashboardFormatUtils.formatPercent(row.ctr, 1) }} %
+            </td>
+            <td class="is-right"><DashboardPositionBadge :position="row.position" /></td>
+          </tr>
+          <tr v-if="pagedRows.length === 0">
+            <td colspan="5" class="text-muted py-10 text-center">{{ emptyLabel }}</td>
+          </tr>
+        </tbody>
+      </table>
 
-      <!-- Opportunities -->
-      <section class="flex flex-col gap-4">
-        <div>
-          <h2 class="text-lg font-semibold text-gray-100">🎯 Opportunités — quoi faire pour plus de clics</h2>
-          <p class="mt-1 text-sm text-gray-300">
-            Le site apparaît déjà sur ces requêtes. À gauche = à récupérer d'urgence ; au milieu = à pousser en page 1 ;
-            à droite = ce qui marche déjà.
-          </p>
-        </div>
+      <ul class="@xl:hidden">
+        <DashboardListRow
+          v-for="row in pagedRows"
+          :key="row.key"
+          :is-selected="openedItemKey === row.key"
+          @select="openRow(row)"
+        >
+          <span class="min-w-0 flex-1">
+            <span
+              class="block truncate text-sm font-medium text-gray-100"
+              :class="{ 'dash-mono text-[13px]': detailTab === 'pages' }"
+            >
+              {{ rowLabel(row) }}
+            </span>
+            <span class="text-muted mt-0.5 block text-xs tabular-nums">
+              {{ DashboardFormatUtils.formatNumber(row.impressions) }} impr. ·
+              {{ DashboardFormatUtils.plural(row.clicks, 'clic') }} ·
+              {{ DashboardFormatUtils.formatPercent(row.ctr, 1) }} %
+            </span>
+          </span>
+          <DashboardPositionBadge :position="row.position" />
+        </DashboardListRow>
+        <li v-if="pagedRows.length === 0" class="text-muted px-4 py-10 text-center text-sm">{{ emptyLabel }}</li>
+      </ul>
 
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-          <SeoOpportunityCard
-            v-for="group in opportunityGroups"
-            :key="group.key"
-            :title="group.title"
-            :title-class="group.titleClass"
-            :accent-bar-class="group.accentBarClass"
-            :hint="group.hint"
-            :items="group.items"
+      <template #footer>
+        <span class="tabular-nums">{{ countLabel }}</span>
+        <span v-if="pageCount > 1" class="inline-flex items-center gap-1">
+          <DashboardButton
+            variant="ghost"
+            size="sm"
+            square
+            icon="chevron-left"
+            aria-label="Page précédente"
+            :disabled="page === 1"
+            @click="page -= 1"
           />
-        </div>
-
-        <div v-if="data.queries.length > 0" class="rounded-2xl border border-gray-600 bg-gray-800 p-4 sm:p-6">
-          <h3 class="mb-1 text-sm font-semibold text-gray-100">Tes plus grosses requêtes</h3>
-          <p class="mb-4 text-xs text-gray-300">
-            Classées par volume d'impressions. La longueur de barre = les impressions ; sa couleur = le CTR (rouge =
-            beaucoup vu, peu cliqué → à récupérer).
-          </p>
-          <SeoQueryBars :entries="data.queries" />
-        </div>
-      </section>
-
-      <!-- Queries + pages side by side, each scrollable -->
-      <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        <section class="min-w-0 rounded-2xl border border-gray-600 bg-gray-800 p-4 sm:p-6">
-          <h2 class="mb-4 text-lg font-semibold text-gray-100">Toutes les requêtes</h2>
-          <SeoEntryTable :entries="data.queries" key-label="Requête" :limit="200" searchable cap-height />
-        </section>
-        <section class="min-w-0 rounded-2xl border border-gray-600 bg-gray-800 p-4 sm:p-6">
-          <h2 class="mb-4 text-lg font-semibold text-gray-100">Pages les plus vues</h2>
-          <SeoEntryTable :entries="data.pages" key-label="Page" key-kind="url" :limit="100" cap-height />
-        </section>
-      </div>
-
-      <!-- Countries + devices -->
-      <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        <section class="min-w-0 rounded-2xl border border-gray-600 bg-gray-800 p-4 sm:p-6">
-          <h2 class="mb-4 text-lg font-semibold text-gray-100">Pays</h2>
-          <SeoEntryTable :entries="data.countries" key-label="Pays" key-kind="country" :limit="15" />
-        </section>
-        <section class="min-w-0 rounded-2xl border border-gray-600 bg-gray-800 p-4 sm:p-6">
-          <h2 class="mb-4 text-lg font-semibold text-gray-100">Appareils</h2>
-          <SeoEntryTable :entries="data.devices" key-label="Appareil" key-kind="device" :limit="10" />
-        </section>
-      </div>
-    </template>
-  </div>
+          <span class="min-w-[52px] text-center text-xs tabular-nums">{{ page }} / {{ pageCount }}</span>
+          <DashboardButton
+            variant="ghost"
+            size="sm"
+            square
+            icon="chevron-right"
+            aria-label="Page suivante"
+            :disabled="page === pageCount"
+            @click="page += 1"
+          />
+        </span>
+      </template>
+    </DashboardCard>
+  </DashboardPage>
 </template>
 
 <script lang="ts" setup>
-import { ref, computed, onMounted, watch } from 'vue'
+import type { UseDashboardToastReturn } from '~/composables/useDashboardToast'
+import type { UseDashboardSearchPerformanceReturn } from '~/composables/useDashboardSearchPerformance'
+import type { UseDashboardIndexingReturn } from '~/composables/useDashboardIndexing'
+import type { UseDashboardDrawerReturn } from '~/composables/useDashboardDrawer'
+import type { UseDashboardArticlesReturn } from '~/composables/useDashboardArticles'
+import type {
+  DashboardSearchDetailTab,
+  DashboardSearchOpportunityGroup,
+  DashboardSearchSortKey,
+} from '~/core/types/DashboardSearchPerformancePage'
 import type { ComputedRef, Ref } from 'vue'
-import DibodevAlert from '~/components/feedback/DibodevAlert.vue'
-import DibodevButton from '~/components/core/DibodevButton.vue'
-import DibodevSpinner from '~/components/ui/DibodevSpinner.vue'
-import SeoStatCard from '~/components/dashboard/SeoStatCard.vue'
-import SeoTrendChart from '~/components/dashboard/SeoTrendChart.vue'
-import SeoOpportunityCard from '~/components/dashboard/SeoOpportunityCard.vue'
-import SeoQueryBars from '~/components/dashboard/SeoQueryBars.vue'
-import SeoEntryTable from '~/components/dashboard/SeoEntryTable.vue'
-import { SeoDisplayUtils } from '~/core/utils/SeoDisplayUtils'
+import type { DashboardKpi, DashboardSegmentOption, DashboardTabItem } from '~/core/types/Dashboard'
+import type { DashboardChartMarker } from '~/core/types/DashboardTrendChart'
+import type { SearchPerformanceCacheEntry } from '~/composables/useDashboardSearchPerformance'
+import type { SearchOpportunities } from '~/core/utils/DashboardSearchUtils'
 import type {
   SearchPerformanceEntry,
   SearchPerformancePeriod,
   SearchPerformanceResponse,
+  SearchPerformanceTrendPoint,
 } from '~~/server/types/dashboard/searchPerformance'
+import type { IndexingStatusRow } from '~~/server/types/indexing'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
+import DashboardPage from '~/components/dashboard/shell/DashboardPage.vue'
+import DashboardTrendChart from '~/components/dashboard/charts/DashboardTrendChart.vue'
+import DashboardButton from '~/components/dashboard/ui/DashboardButton.vue'
+import DashboardCard from '~/components/dashboard/ui/DashboardCard.vue'
+import DashboardIcon from '~/components/dashboard/ui/DashboardIcon.vue'
+import DashboardListRow from '~/components/dashboard/ui/DashboardListRow.vue'
+import DashboardKpiBand from '~/components/dashboard/ui/DashboardKpiBand.vue'
+import DashboardMeter from '~/components/dashboard/ui/DashboardMeter.vue'
+import DashboardPositionBadge from '~/components/dashboard/ui/DashboardPositionBadge.vue'
+import DashboardSearchInput from '~/components/dashboard/ui/DashboardSearchInput.vue'
+import DashboardSegmented from '~/components/dashboard/ui/DashboardSegmented.vue'
+import DashboardTabs from '~/components/dashboard/ui/DashboardTabs.vue'
+import { DASHBOARD_EDITOR_PATH } from '~/core/constants/dashboardNavigation'
+import { DASHBOARD_TONES } from '~/core/constants/dashboardTones'
+import { DashboardFormatUtils } from '~/core/utils/DashboardFormatUtils'
+import { DashboardSearchUtils } from '~/core/utils/DashboardSearchUtils'
+import { SeoDisplayUtils } from '~/core/utils/SeoDisplayUtils'
+import { useDashboardArticles } from '~/composables/useDashboardArticles'
+import { useDashboardDrawer } from '~/composables/useDashboardDrawer'
+import { useDashboardIndexing } from '~/composables/useDashboardIndexing'
+import { useDashboardSearchPerformance } from '~/composables/useDashboardSearchPerformance'
+import { useDashboardToast } from '~/composables/useDashboardToast'
 
 definePageMeta({
   layout: 'dashboard',
 })
 
 useHead({
-  title: 'Requêtes Google — Dashboard',
-  meta: [{ name: 'robots', content: 'noindex, nofollow' }],
+  title: 'Requêtes Google · Dibodev Admin',
 })
 
-type PeriodOption = { value: SearchPerformancePeriod; label: string }
-type OpportunityGroup = {
-  key: string
-  title: string
-  titleClass: string
-  accentBarClass: string
-  hint: string
-  items: SearchPerformanceEntry[]
-}
+const localePath: ReturnType<typeof useLocalePath> = useLocalePath()
+const route: ReturnType<typeof useRoute> = useRoute()
 
-const PERIOD_OPTIONS: PeriodOption[] = [
+const { cache, loadingPeriods, errors, loadSearchPerformance }: UseDashboardSearchPerformanceReturn =
+  useDashboardSearchPerformance()
+
+const { rows: articleRows, loadArticles }: UseDashboardArticlesReturn = useDashboardArticles()
+const { payload: indexingPayload, loadIndexing }: UseDashboardIndexingReturn = useDashboardIndexing()
+const { openedItemKey, openDrawer }: UseDashboardDrawerReturn = useDashboardDrawer()
+const { showToast }: UseDashboardToastReturn = useDashboardToast()
+
+const PERIOD_OPTIONS: DashboardSegmentOption[] = [
   { value: '7d', label: '7 jours' },
   { value: '28d', label: '28 jours' },
   { value: '3m', label: '3 mois' },
   { value: '6m', label: '6 mois' },
 ]
 
-const MIN_IMPRESSIONS_TO_OPTIMIZE: number = 10
-const LOW_CTR: number = 0.02
-const OPTIMIZE_MAX_POSITION: number = 20
-const ALMOST_PAGE_ONE_MIN_POSITION: number = 10
-const ALMOST_PAGE_ONE_MAX_POSITION: number = 20
-const ALMOST_PAGE_ONE_MIN_IMPRESSIONS: number = 5
-const OPPORTUNITY_LIMIT: number = 8
+const COLUMNS: Array<{ key: DashboardSearchSortKey; label: string }> = [
+  { key: 'key', label: 'Requête' },
+  { key: 'clicks', label: 'Clics' },
+  { key: 'impressions', label: 'Impressions' },
+  { key: 'ctr', label: 'Taux de clic' },
+  { key: 'position', label: 'Position' },
+]
 
-const period: Ref<SearchPerformancePeriod> = ref('28d')
-const data: Ref<SearchPerformanceResponse | null> = ref(null)
-const loading: Ref<boolean> = ref(true)
-const error: Ref<string> = ref('')
+const DETAIL_LABELS: Record<DashboardSearchDetailTab, string> = {
+  queries: 'Requête',
+  pages: 'Page',
+  countries: 'Pays',
+  devices: 'Appareil',
+}
 
-/** True when the previous period holds enough data to compare against. */
-const hasComparison: ComputedRef<boolean> = computed((): boolean => (data.value?.previousTotals.impressions ?? 0) > 0)
+const DETAIL_PLACEHOLDERS: Record<DashboardSearchDetailTab, string> = {
+  queries: 'Filtrer les requêtes…',
+  pages: 'Filtrer les pages…',
+  countries: 'Filtrer les pays…',
+  devices: 'Filtrer…',
+}
 
-const clicksValue: ComputedRef<string> = computed((): string =>
-  SeoDisplayUtils.formatInteger(data.value?.totals.clicks ?? 0),
-)
-const impressionsValue: ComputedRef<string> = computed((): string =>
-  SeoDisplayUtils.formatInteger(data.value?.totals.impressions ?? 0),
-)
-const ctrValue: ComputedRef<string> = computed(
-  (): string => `${((data.value?.totals.ctr ?? 0) * 100).toLocaleString('fr-FR', { maximumFractionDigits: 1 })} %`,
-)
-const positionValue: ComputedRef<string> = computed((): string =>
-  (data.value?.totals.position ?? 0).toLocaleString('fr-FR', { maximumFractionDigits: 1 }),
-)
+const PAGE_SIZE: number = 12
+const WEEKLY_THRESHOLD: number = 60
 
-const clicksDelta: ComputedRef<number | null> = computed((): number | null =>
-  hasComparison.value ? percentChange(data.value!.totals.clicks, data.value!.previousTotals.clicks) : null,
-)
-const impressionsDelta: ComputedRef<number | null> = computed((): number | null =>
-  hasComparison.value ? percentChange(data.value!.totals.impressions, data.value!.previousTotals.impressions) : null,
-)
-const ctrDelta: ComputedRef<number | null> = computed((): number | null =>
-  hasComparison.value ? (data.value!.totals.ctr - data.value!.previousTotals.ctr) * 100 : null,
-)
-const positionDelta: ComputedRef<number | null> = computed((): number | null =>
-  hasComparison.value ? data.value!.totals.position - data.value!.previousTotals.position : null,
+const period: Ref<string> = ref('28d')
+const detailTab: Ref<string> = ref('queries')
+const filter: Ref<string> = ref('')
+const sortKey: Ref<DashboardSearchSortKey> = ref('impressions')
+const sortDirection: Ref<number> = ref(-1)
+const page: Ref<number> = ref(1)
+const opportunitiesSection: Ref<HTMLElement | null> = ref(null)
+
+const periodKey: ComputedRef<SearchPerformancePeriod> = computed(
+  (): SearchPerformancePeriod => period.value as SearchPerformancePeriod,
 )
 
-/** The three opportunity buckets derived from the period's queries. */
-const opportunityGroups: ComputedRef<OpportunityGroup[]> = computed((): OpportunityGroup[] => {
-  const queries: SearchPerformanceEntry[] = data.value?.queries ?? []
-  const byImpressions = (a: SearchPerformanceEntry, b: SearchPerformanceEntry): number => b.impressions - a.impressions
-  const toOptimize: SearchPerformanceEntry[] = queries
-    .filter(
-      (entry: SearchPerformanceEntry): boolean =>
-        entry.impressions >= MIN_IMPRESSIONS_TO_OPTIMIZE &&
-        entry.position <= OPTIMIZE_MAX_POSITION &&
-        entry.ctr < LOW_CTR,
-    )
-    .sort(byImpressions)
-    .slice(0, OPPORTUNITY_LIMIT)
-  const almostPageOne: SearchPerformanceEntry[] = queries
-    .filter(
-      (entry: SearchPerformanceEntry): boolean =>
-        entry.position > ALMOST_PAGE_ONE_MIN_POSITION &&
-        entry.position <= ALMOST_PAGE_ONE_MAX_POSITION &&
-        entry.impressions >= ALMOST_PAGE_ONE_MIN_IMPRESSIONS,
-    )
-    .sort(byImpressions)
-    .slice(0, OPPORTUNITY_LIMIT)
-  const working: SearchPerformanceEntry[] = queries
-    .filter((entry: SearchPerformanceEntry): boolean => entry.clicks > 0)
-    .sort((a: SearchPerformanceEntry, b: SearchPerformanceEntry): number => b.clicks - a.clicks)
-    .slice(0, OPPORTUNITY_LIMIT)
-  return [
+const entry: ComputedRef<SearchPerformanceCacheEntry | null> = computed(
+  (): SearchPerformanceCacheEntry | null => cache.value[periodKey.value] ?? null,
+)
+
+const data: ComputedRef<SearchPerformanceResponse | null> = computed((): SearchPerformanceResponse | null =>
+  entry.value?.data.gscConnected ? entry.value.data : null,
+)
+
+const isLoadingPeriod: ComputedRef<boolean> = computed((): boolean => loadingPeriods.value.includes(periodKey.value))
+const error: ComputedRef<string> = computed((): string => errors.value[periodKey.value] ?? '')
+
+const kpis: ComputedRef<DashboardKpi[]> = computed((): DashboardKpi[] =>
+  data.value ? DashboardSearchUtils.buildKpis(data.value) : [],
+)
+
+const isTrendWeekly: ComputedRef<boolean> = computed((): boolean => (data.value?.trend.length ?? 0) > WEEKLY_THRESHOLD)
+
+const chartPoints: ComputedRef<SearchPerformanceTrendPoint[]> = computed((): SearchPerformanceTrendPoint[] => {
+  const trend: SearchPerformanceTrendPoint[] = data.value?.trend ?? []
+  return isTrendWeekly.value ? DashboardSearchUtils.aggregateWeekly(trend) : trend
+})
+
+const chartTitle: ComputedRef<string> = computed((): string =>
+  isTrendWeekly.value ? 'Impressions et clics par semaine' : 'Impressions et clics par jour',
+)
+
+const chartDescription: ComputedRef<string> = computed((): string =>
+  markers.value.length > 0
+    ? 'Les repères marquent les publications d’articles.'
+    : 'Survole ou touche le graphique pour le détail.',
+)
+
+const rangeLabel: ComputedRef<string> = computed((): string => {
+  const range: SearchPerformanceResponse['range'] | undefined = data.value?.range
+  if (!range) return ''
+  return `Du ${DashboardFormatUtils.formatShortDate(range.startDate)} au ${DashboardFormatUtils.formatLongDate(range.endDate)}`
+})
+
+const markers: ComputedRef<DashboardChartMarker[]> = computed((): DashboardChartMarker[] => {
+  const range: SearchPerformanceResponse['range'] | undefined = data.value?.range
+  if (!range) return []
+  const byDay: Map<string, string[]> = new Map()
+  for (const row of articleRows.value) {
+    if (row.status !== 'published' || !row.dateIso) continue
+    const day: string = row.dateIso.slice(0, 10)
+    if (day < range.startDate || day > range.endDate) continue
+    byDay.set(day, [...(byDay.get(day) ?? []), row.title])
+  }
+  return [...byDay.entries()].map(
+    ([date, titles]: [string, string[]]): DashboardChartMarker => ({
+      date,
+      count: titles.length,
+      note:
+        titles.length === 1
+          ? `Publié : « ${titles[0]} »`
+          : `Publiés : ${titles.map((t: string): string => `« ${t} »`).join(', ')}`,
+    }),
+  )
+})
+
+const opportunities: ComputedRef<SearchOpportunities> = computed(
+  (): SearchOpportunities => DashboardSearchUtils.buildOpportunities(data.value?.queries ?? []),
+)
+
+const opportunityGroups: ComputedRef<DashboardSearchOpportunityGroup[]> = computed(
+  (): DashboardSearchOpportunityGroup[] => [
     {
-      key: 'optimize',
-      title: 'À récupérer en priorité',
-      titleClass: 'text-red-300',
-      accentBarClass: 'bg-red-500',
-      hint: "Beaucoup d'impressions, presque pas de clics : retravaille le title/meta, ou vise le top 3.",
-      items: toOptimize,
+      key: 'recover',
+      title: 'À récupérer',
+      hint: 'En première page mais presque jamais cliquées : retravaille le titre et la meta description.',
+      tone: 'red',
+      items: opportunities.value.toRecover,
     },
     {
       key: 'almost',
       title: 'Presque en page 1',
-      titleClass: 'text-amber-300',
-      accentBarClass: 'bg-amber-500',
-      hint: 'Position 11-20 : un article ou un renfort de contenu peut la faire basculer en page 1.',
-      items: almostPageOne,
+      hint: 'Positions 11 à 20 : un article de renfort peut les faire passer en première page.',
+      tone: 'amber',
+      items: opportunities.value.almostPageOne,
     },
     {
       key: 'working',
       title: 'Ce qui marche',
-      titleClass: 'text-emerald-300',
-      accentBarClass: 'bg-emerald-500',
-      hint: 'Tes requêtes qui rapportent déjà des clics — à consolider et à décliner.',
-      items: working,
+      hint: 'Les requêtes qui apportent déjà des clics : à consolider et à décliner.',
+      tone: 'green',
+      items: opportunities.value.working,
     },
-  ]
+  ],
+)
+
+const detailRows: ComputedRef<SearchPerformanceEntry[]> = computed((): SearchPerformanceEntry[] => {
+  const source: Record<DashboardSearchDetailTab, SearchPerformanceEntry[]> = {
+    queries: data.value?.queries ?? [],
+    pages: data.value?.pages ?? [],
+    countries: data.value?.countries ?? [],
+    devices: data.value?.devices ?? [],
+  }
+  return source[detailTab.value as DashboardSearchDetailTab]
 })
 
+const detailTabs: ComputedRef<DashboardTabItem[]> = computed((): DashboardTabItem[] => [
+  { value: 'queries', label: 'Requêtes', count: data.value?.queries.length ?? null },
+  { value: 'pages', label: 'Pages', count: data.value?.pages.length ?? null },
+  { value: 'countries', label: 'Pays', count: data.value?.countries.length ?? null },
+  { value: 'devices', label: 'Appareils', count: data.value?.devices.length ?? null },
+])
+
+const filteredRows: ComputedRef<SearchPerformanceEntry[]> = computed((): SearchPerformanceEntry[] => {
+  const needle: string = DashboardFormatUtils.toSearchableText(filter.value.trim())
+  const rows: SearchPerformanceEntry[] = needle
+    ? detailRows.value.filter((row: SearchPerformanceEntry): boolean =>
+        DashboardFormatUtils.toSearchableText(rowLabel(row)).includes(needle),
+      )
+    : detailRows.value
+  return [...rows].sort((a: SearchPerformanceEntry, b: SearchPerformanceEntry): number => {
+    if (sortKey.value === 'key') return rowLabel(a).localeCompare(rowLabel(b), 'fr') * sortDirection.value
+    return (a[sortKey.value] - b[sortKey.value]) * sortDirection.value
+  })
+})
+
+const pageCount: ComputedRef<number> = computed((): number =>
+  Math.max(1, Math.ceil(filteredRows.value.length / PAGE_SIZE)),
+)
+
+const pagedRows: ComputedRef<SearchPerformanceEntry[]> = computed((): SearchPerformanceEntry[] =>
+  filteredRows.value.slice((page.value - 1) * PAGE_SIZE, page.value * PAGE_SIZE),
+)
+
+const maxImpressions: ComputedRef<number> = computed((): number =>
+  Math.max(1, ...detailRows.value.map((row: SearchPerformanceEntry): number => row.impressions)),
+)
+
+const countLabel: ComputedRef<string> = computed((): string => {
+  const total: number = filteredRows.value.length
+  if (total === 0) return '0 ligne'
+  const start: number = (page.value - 1) * PAGE_SIZE + 1
+  const end: number = Math.min(total, page.value * PAGE_SIZE)
+  return `${start}–${end} sur ${DashboardFormatUtils.formatNumber(total)}`
+})
+
+const emptyLabel: ComputedRef<string> = computed((): string =>
+  filter.value
+    ? `Aucune ligne ne contient « ${filter.value} ».`
+    : isLoadingPeriod.value
+      ? 'Chargement…'
+      : 'Aucune donnée sur la période.',
+)
+
 /**
- * Percentage change from a previous value, or null when there is nothing to compare to.
+ * Readable label of a row (path for pages, country and device names).
  *
- * @param {number} current - The current value.
- * @param {number} previous - The previous value.
- * @returns {number | null} The percentage change, or null when previous is zero.
+ * @param {SearchPerformanceEntry} row - The row.
+ * @returns {string} The label.
  */
-function percentChange(current: number, previous: number): number | null {
-  if (previous <= 0) return null
-  return ((current - previous) / previous) * 100
+function rowLabel(row: SearchPerformanceEntry): string {
+  if (detailTab.value === 'pages') {
+    try {
+      return new URL(row.key).pathname
+    } catch {
+      return row.key
+    }
+  }
+  if (detailTab.value === 'countries')
+    return `${SeoDisplayUtils.countryFlag(row.key)} ${SeoDisplayUtils.countryName(row.key)}`
+  if (detailTab.value === 'devices') return SeoDisplayUtils.deviceLabel(row.key)
+  return row.key
 }
 
 /**
- * Formats an ISO date as a short French day/month label.
+ * Secondary line of an opportunity.
  *
- * @param {string} isoDate - The YYYY-MM-DD date.
- * @returns {string} The formatted label.
+ * @param {SearchPerformanceEntry} item - The query.
+ * @param {DashboardSearchOpportunityGroup['key']} group - Its column.
+ * @returns {string} Impressions, position and click-through rate.
  */
-function formatRangeDate(isoDate: string): string {
-  try {
-    return new Date(isoDate).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
-  } catch {
-    return isoDate
+function opportunityMeta(item: SearchPerformanceEntry, group: DashboardSearchOpportunityGroup['key']): string {
+  const position: string = `pos. ${DashboardFormatUtils.formatNumber(item.position, 1)}`
+  if (group === 'working') return position
+  const impressions: string = `${DashboardFormatUtils.formatNumber(item.impressions)} impr.`
+  if (group === 'almost') return `${impressions} · ${position}`
+  return `${impressions} · ${position} · ${DashboardFormatUtils.formatPercent(item.ctr, 1)} %`
+}
+
+/**
+ * Sorts by a column, toggling the direction on the same column.
+ *
+ * @param {DashboardSearchSortKey} key - Column to sort by.
+ * @returns {void}
+ */
+function toggleSort(key: DashboardSearchSortKey): void {
+  if (sortKey.value === key) sortDirection.value = -sortDirection.value
+  else {
+    sortKey.value = key
+    sortDirection.value = key === 'key' || key === 'position' ? 1 : -1
   }
 }
 
 /**
- * Loads the search-performance payload for the current period, using a per-period client cache.
+ * Opens the drawer of a query.
  *
- * @param {boolean} force - Bypass the cache and re-fetch from the API.
- * @returns {Promise<void>} Resolves when loading finishes.
+ * @param {string} query - The query.
+ * @returns {void}
  */
-async function load(force: boolean = false): Promise<void> {
-  const cacheKey: string = `dashboard-search-performance-${period.value}`
-  const cached: Ref<SearchPerformanceResponse | null> = useState<SearchPerformanceResponse | null>(cacheKey)
-  if (!force && cached.value) {
-    data.value = cached.value
-    loading.value = false
+function openQuery(query: string): void {
+  openDrawer({ kind: 'query', query, period: periodKey.value })
+}
+
+/**
+ * Opens a row: query drawer, indexing drawer for a known page, nothing for countries and devices.
+ *
+ * @param {SearchPerformanceEntry} row - The clicked row.
+ * @returns {void}
+ */
+function openRow(row: SearchPerformanceEntry): void {
+  if (detailTab.value === 'queries') {
+    openQuery(row.key)
     return
   }
-  loading.value = true
-  error.value = ''
-  try {
-    const response: SearchPerformanceResponse = await $fetch<SearchPerformanceResponse>(
-      '/api/dashboard/search-performance',
-      { query: { period: period.value } },
-    )
-    data.value = response
-    cached.value = response
-  } catch (e: unknown) {
-    error.value = e instanceof Error ? e.message : 'Erreur lors du chargement des performances.'
-  } finally {
-    loading.value = false
+  if (detailTab.value !== 'pages') return
+  const known: IndexingStatusRow | undefined = indexingPayload.value?.items.find(
+    (item: IndexingStatusRow): boolean => item.url === row.key,
+  )
+  if (known) openDrawer({ kind: 'indexing', url: known.url, browseUrls: [known.url] })
+  else window.open(row.key, '_blank', 'noopener')
+}
+
+/**
+ * Loads the selected period.
+ *
+ * @param {boolean} force - Bypass the session cache.
+ * @returns {Promise<void>}
+ */
+async function loadPeriodData(force: boolean): Promise<void> {
+  await loadSearchPerformance(periodKey.value, force)
+  if (force && !errors.value[periodKey.value]) {
+    showToast({ tone: 'green', icon: 'refresh-cw', title: 'Données à jour', text: 'Search Console relu à l’instant.' })
   }
 }
 
 /**
- * Downloads the current period's Search Console payload as a JSON file, for the weekly review.
+ * Downloads the payload of the period as JSON (for the weekly review).
  *
  * @returns {void}
  */
@@ -342,16 +602,30 @@ function exportJson(): void {
   const url: string = URL.createObjectURL(blob)
   const link: HTMLAnchorElement = document.createElement('a')
   link.href = url
-  link.download = `dibodev-gsc-${period.value}-${data.value.range.endDate}.json`
+  link.download = `dibodev-gsc-${periodKey.value}-${data.value.range.endDate}.json`
   link.click()
   URL.revokeObjectURL(url)
+  showToast({ tone: 'green', icon: 'download', title: 'Export prêt', text: link.download })
 }
 
 watch(period, (): void => {
-  load(false)
+  page.value = 1
+  loadPeriodData(false).catch((): void => undefined)
+})
+
+watch([detailTab, filter], (): void => {
+  page.value = 1
 })
 
 onMounted((): void => {
-  load(false)
+  loadPeriodData(false)
+    .then(async (): Promise<void> => {
+      if (route.query.focus !== 'opportunities') return
+      await nextTick()
+      opportunitiesSection.value?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    })
+    .catch((): void => undefined)
+  loadArticles().catch((): void => undefined)
+  loadIndexing().catch((): void => undefined)
 })
 </script>

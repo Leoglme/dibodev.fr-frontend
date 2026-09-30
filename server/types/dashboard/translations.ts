@@ -81,6 +81,12 @@ export type TranslatedArticleFields = {
 
 export type ArticlesTranslationFile = Record<string, TranslatedArticleFields>
 
+/** An articles translation file kept in memory by the public endpoint, with the time it was read. */
+export type CachedArticlesTranslationFile = {
+  readAt: number
+  translations: ArticlesTranslationFile
+}
+
 /** Metadata of an article translated by Mistral (everything but the richtext body). */
 export type TranslatedArticleMeta = Omit<TranslatedArticleFields, 'content'>
 

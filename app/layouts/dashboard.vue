@@ -1,253 +1,202 @@
 <template>
-  <div class="flex min-h-screen bg-gray-900 text-gray-100">
-    <!-- Mobile top bar -->
-    <header
-      class="fixed top-0 right-0 left-0 z-40 flex h-[70px] items-center justify-between border-b border-gray-700 bg-gray-800 px-4 md:hidden"
-    >
-      <NuxtLink :to="localePath('/dashboard')">
-        <DibodevLogo :size="28" :large="true" />
-      </NuxtLink>
-      <DibodevSquareButton
-        :size="35"
-        backgroundColor="#1b232d"
-        backgroundHoverColor="#141a20"
-        @click="mobileMenuOpen = !mobileMenuOpen"
-      >
-        <DibodevIcon name="Menu" />
-      </DibodevSquareButton>
-    </header>
+  <div
+    class="dashboard-root min-h-dvh bg-gray-800 pr-[env(safe-area-inset-right,0px)] pl-[env(safe-area-inset-left,0px)] text-gray-100 md:flex md:h-dvh md:overflow-hidden"
+    :class="{ 'is-first-paint': isFirstPaint }"
+  >
+    <NuxtLoadingIndicator color="var(--color-primary)" :height="2" :throttle="200" />
+    <DashboardSidebar class="hidden shrink-0 md:flex" />
 
-    <!-- Desktop sidebar -->
-    <aside class="fixed top-0 left-0 z-40 hidden h-full w-64 flex-col border-r border-gray-700 bg-gray-800 md:flex">
-      <div class="flex h-[70px] items-center border-b border-gray-700 px-4">
-        <NuxtLink :to="localePath('/dashboard')">
-          <DibodevLogo :size="28" :large="true" />
-        </NuxtLink>
-      </div>
-      <nav class="flex flex-1 flex-col gap-1 px-3 py-4">
-        <NuxtLink
-          :to="localePath('/dashboard/generate-article')"
-          class="rounded-md px-3 py-2 text-sm font-medium transition-colors"
-          :class="
-            $route.path.endsWith('/generate-article')
-              ? 'bg-gray-700 text-gray-100'
-              : 'text-gray-100 hover:bg-gray-700 hover:text-gray-100'
-          "
-        >
-          Éditeur d’article
-        </NuxtLink>
-        <NuxtLink
-          :to="localePath('/dashboard/articles')"
-          class="rounded-md px-3 py-2 text-sm font-medium transition-colors"
-          :class="
-            $route.path.endsWith('/articles')
-              ? 'bg-gray-700 text-gray-100'
-              : 'text-gray-100 hover:bg-gray-700 hover:text-gray-100'
-          "
-        >
-          Brouillons &amp; file
-        </NuxtLink>
-        <NuxtLink
-          :to="localePath('/dashboard/indexing')"
-          class="rounded-md px-3 py-2 text-sm font-medium transition-colors"
-          :class="
-            $route.path.endsWith('/indexing')
-              ? 'bg-gray-700 text-gray-100'
-              : 'text-gray-100 hover:bg-gray-700 hover:text-gray-100'
-          "
-        >
-          Indexation Google
-        </NuxtLink>
-        <NuxtLink
-          :to="localePath('/dashboard/search-performance')"
-          class="rounded-md px-3 py-2 text-sm font-medium transition-colors"
-          :class="
-            $route.path.endsWith('/search-performance')
-              ? 'bg-gray-700 text-gray-100'
-              : 'text-gray-100 hover:bg-gray-700 hover:text-gray-100'
-          "
-        >
-          Requêtes Google
-        </NuxtLink>
-        <NuxtLink
-          :to="localePath('/dashboard/translations')"
-          class="rounded-md px-3 py-2 text-sm font-medium transition-colors"
-          :class="
-            $route.path.endsWith('/translations')
-              ? 'bg-gray-700 text-gray-100'
-              : 'text-gray-100 hover:bg-gray-700 hover:text-gray-100'
-          "
-        >
-          Traductions
-        </NuxtLink>
-        <NuxtLink
-          :to="localePath('/dashboard/audit')"
-          class="rounded-md px-3 py-2 text-sm font-medium transition-colors"
-          :class="
-            $route.path.endsWith('/audit')
-              ? 'bg-gray-700 text-gray-100'
-              : 'text-gray-100 hover:bg-gray-700 hover:text-gray-100'
-          "
-        >
-          Audit SEO
-        </NuxtLink>
-        <div class="mt-auto space-y-1 border-t border-gray-700 pt-4">
-          <button
-            type="button"
-            class="flex w-full cursor-pointer items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-gray-700 hover:text-gray-100"
-            @click="onLogout"
-          >
-            <DibodevIcon name="LogOut" class="h-4 w-4 shrink-0" mode="stroke" />
-            {{ $t('dashboard.logout') }}
-          </button>
-          <DibodevLink
-            :link="localePath('/')"
-            class="flex w-full items-center gap-2 rounded-md bg-gray-700 px-3 py-2 text-sm font-medium text-gray-200 hover:bg-gray-600 hover:text-gray-100"
-          >
-            <DibodevIcon name="ArrowLeft" class="h-4 w-4 shrink-0" mode="stroke" />
-            Retour au site
-          </DibodevLink>
-        </div>
-      </nav>
-    </aside>
-
-    <main class="min-h-screen flex-1 pt-[70px] pl-0 md:pt-0 md:pl-64">
-      <slot />
-    </main>
-  </div>
-
-  <Teleport to="body">
-    <Transition name="fade">
+    <Transition name="dash-menu-scrim">
       <div
-        v-show="mobileMenuOpen"
-        class="fixed inset-0 z-[9998] bg-[rgba(0,0,0,.8)] md:hidden"
+        v-if="isMobileMenuOpen"
+        class="fixed inset-0 z-[60] bg-(--dash-scrim) md:hidden"
         aria-hidden="true"
-        @click.self="mobileMenuOpen = false"
+        @click="isMobileMenuOpen = false"
+      />
+    </Transition>
+    <Transition name="dash-menu">
+      <div
+        v-if="isMobileMenuOpen"
+        class="fixed inset-y-0 left-0 z-[65] flex bg-gray-800 pt-[env(safe-area-inset-top,0px)] pb-[env(safe-area-inset-bottom,0px)] shadow-[0_24px_48px_-18px_rgba(20,20,20,0.28)] md:hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menu"
       >
-        <Transition name="slide-up-down">
-          <div v-if="mobileMenuOpen" class="absolute right-0 bottom-0 left-0 z-[9999] max-h-[calc(100dvh-70px)]">
-            <section class="relative w-full overflow-auto bg-gray-800 outline-none" @click.stop>
-              <div class="flex flex-col gap-1 p-4">
-                <NuxtLink
-                  :to="localePath('/dashboard/generate-article')"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-100 hover:bg-gray-700"
-                  @click="mobileMenuOpen = false"
-                >
-                  Éditeur d’article
-                </NuxtLink>
-                <NuxtLink
-                  :to="localePath('/dashboard/articles')"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-100 hover:bg-gray-700"
-                  @click="mobileMenuOpen = false"
-                >
-                  Brouillons &amp; file
-                </NuxtLink>
-                <NuxtLink
-                  :to="localePath('/dashboard/indexing')"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-100 hover:bg-gray-700"
-                  @click="mobileMenuOpen = false"
-                >
-                  Indexation Google
-                </NuxtLink>
-                <NuxtLink
-                  :to="localePath('/dashboard/search-performance')"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-100 hover:bg-gray-700"
-                  @click="mobileMenuOpen = false"
-                >
-                  Requêtes Google
-                </NuxtLink>
-                <NuxtLink
-                  :to="localePath('/dashboard/translations')"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-100 hover:bg-gray-700"
-                  @click="mobileMenuOpen = false"
-                >
-                  Traductions
-                </NuxtLink>
-                <NuxtLink
-                  :to="localePath('/dashboard/audit')"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-100 hover:bg-gray-700"
-                  @click="mobileMenuOpen = false"
-                >
-                  Audit SEO
-                </NuxtLink>
-                <button
-                  type="button"
-                  class="flex cursor-pointer items-center gap-2 rounded-md px-3 py-2 text-left text-sm font-medium text-gray-200 hover:bg-gray-700 hover:text-gray-100"
-                  @click="onLogoutThenClose"
-                >
-                  <DibodevIcon name="LogOut" class="h-4 w-4 shrink-0" mode="stroke" />
-                  {{ $t('dashboard.logout') }}
-                </button>
-                <DibodevLink
-                  :link="localePath('/')"
-                  class="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-gray-600 hover:text-gray-100"
-                  @click="mobileMenuOpen = false"
-                >
-                  <DibodevIcon name="ArrowLeft" class="h-4 w-4 shrink-0" mode="stroke" />
-                  Retour au site
-                </DibodevLink>
-              </div>
-            </section>
-          </div>
-        </Transition>
+        <DashboardSidebar force-expanded class="w-[min(300px,86vw)]" />
       </div>
     </Transition>
-  </Teleport>
+
+    <main
+      class="flex min-h-dvh min-w-0 flex-1 flex-col bg-white pb-[calc(64px+env(safe-area-inset-bottom,0px))] transition-[margin] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] md:m-2 md:ml-0 md:min-h-0 md:overflow-hidden md:rounded-[14px] md:border md:border-gray-300 md:pb-0"
+      :class="{ 'xl:mr-[496px]': isDrawerOpen }"
+    >
+      <slot />
+    </main>
+
+    <DashboardTabBar />
+    <DashboardDrawerHost />
+    <DashboardCommandPalette />
+    <DashboardConfirmDialog />
+    <DashboardToastHost />
+    <DashboardTooltipHost />
+  </div>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue'
+<script lang="ts" setup>
+import type { UseDashboardTranslationsReturn } from '~/composables/useDashboardTranslations'
+import type { UseDashboardShellReturn } from '~/composables/useDashboardShell'
+import type { UseDashboardPwaReturn } from '~/composables/useDashboardPwa'
+import type { UseDashboardIndexingReturn } from '~/composables/useDashboardIndexing'
+import type { UseDashboardDrawerReturn } from '~/composables/useDashboardDrawer'
+import type { UseDashboardDeployStatusReturn } from '~/composables/useDashboardDeployStatus'
+import type { UseDashboardConfirmReturn } from '~/composables/useDashboardConfirm'
+import type { UseDashboardArticlesReturn } from '~/composables/useDashboardArticles'
 import type { Ref } from 'vue'
-import DibodevLogo from '~/components/branding/DibodevLogo.vue'
-import DibodevLink from '~/components/core/DibodevLink.vue'
-import DibodevIcon from '~/components/ui/DibodevIcon.vue'
-import DibodevSquareButton from '~/components/buttons/DibodevSquareButton.vue'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import '~/assets/css/dashboard.css'
+import DashboardSidebar from '~/components/dashboard/shell/DashboardSidebar.vue'
+import DashboardTabBar from '~/components/dashboard/shell/DashboardTabBar.vue'
+import DashboardCommandPalette from '~/components/dashboard/overlays/DashboardCommandPalette.vue'
+import DashboardConfirmDialog from '~/components/dashboard/overlays/DashboardConfirmDialog.vue'
+import DashboardDrawerHost from '~/components/dashboard/overlays/DashboardDrawerHost.vue'
+import DashboardToastHost from '~/components/dashboard/overlays/DashboardToastHost.vue'
+import DashboardTooltipHost from '~/components/dashboard/overlays/DashboardTooltipHost.vue'
+import { useDashboardAppHead } from '~/composables/useDashboardAppHead'
+import { useDashboardArticles } from '~/composables/useDashboardArticles'
+import { useDashboardConfirm } from '~/composables/useDashboardConfirm'
+import { useDashboardDeployStatus } from '~/composables/useDashboardDeployStatus'
+import { useDashboardDrawer } from '~/composables/useDashboardDrawer'
+import { useDashboardIndexing } from '~/composables/useDashboardIndexing'
+import { useDashboardPwa } from '~/composables/useDashboardPwa'
+import { useDashboardShell } from '~/composables/useDashboardShell'
+import { useDashboardTranslations } from '~/composables/useDashboardTranslations'
 
-const localePath = useLocalePath()
-const mobileMenuOpen: Ref<boolean> = ref(false)
+const route: ReturnType<typeof useRoute> = useRoute()
+
+const {
+  isSidebarCollapsed,
+  isMobileMenuOpen,
+  isCommandPaletteOpen,
+  openCommandPalette,
+  closeCommandPalette,
+  restoreSidebarPreference,
+}: UseDashboardShellReturn = useDashboardShell()
+
+const { isDrawerOpen, closeDrawer, closeAllDrawers }: UseDashboardDrawerReturn = useDashboardDrawer()
+const { confirmOptions, settleConfirm }: UseDashboardConfirmReturn = useDashboardConfirm()
+const { loadArticles }: UseDashboardArticlesReturn = useDashboardArticles()
+const { loadIndexing, stopPolling }: UseDashboardIndexingReturn = useDashboardIndexing()
+const { loadTranslations }: UseDashboardTranslationsReturn = useDashboardTranslations()
+const { watchDeploys, unwatchDeploys }: UseDashboardDeployStatusReturn = useDashboardDeployStatus()
+const { initPwa }: UseDashboardPwaReturn = useDashboardPwa()
 
 useHead({
-  meta: [{ name: 'robots', content: 'noindex, nofollow' }],
+  htmlAttrs: { lang: 'fr' },
 })
+useDashboardAppHead('#f6f6f3')
 
-watch(mobileMenuOpen, (open: boolean) => {
-  document.body.style.overflow = open ? 'hidden' : ''
-})
+const isFirstPaint: Ref<boolean> = ref(true)
+let tabletQuery: MediaQueryList | null = null
+let stopPwa: (() => void) | null = null
+let idleTimer: ReturnType<typeof setTimeout> | null = null
 
-async function onLogout(): Promise<void> {
-  await $fetch('/api/auth/logout', { method: 'POST' })
-  await navigateTo(localePath('/dashboard/login'))
+/**
+ * Collapses the sidebar to icons from 768 to 1279 px (iPads, small laptops) and restores the saved choice above.
+ *
+ * @returns {void}
+ */
+function applySidebarModeForScreenWidth(): void {
+  if (tabletQuery?.matches) isSidebarCollapsed.value = true
+  else restoreSidebarPreference()
 }
 
-async function onLogoutThenClose(): Promise<void> {
-  mobileMenuOpen.value = false
-  await onLogout()
+/**
+ * Global shortcuts: Ctrl/Cmd K toggles the palette; Escape closes the dialog, the palette, the drawer or the menu.
+ *
+ * @param {KeyboardEvent} event - The key event.
+ * @returns {void}
+ */
+function onKeydown(event: KeyboardEvent): void {
+  if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
+    event.preventDefault()
+    if (isCommandPaletteOpen.value) closeCommandPalette()
+    else openCommandPalette()
+    return
+  }
+  if (event.key !== 'Escape') return
+  if (confirmOptions.value) settleConfirm(false)
+  else if (isCommandPaletteOpen.value) closeCommandPalette()
+  else if (isDrawerOpen.value) closeDrawer()
+  else if (isMobileMenuOpen.value) isMobileMenuOpen.value = false
 }
+
+watch(
+  (): string => route.path,
+  (): void => {
+    isMobileMenuOpen.value = false
+    closeAllDrawers()
+  },
+)
+
+watch(isMobileMenuOpen, (open: boolean): void => {
+  document.documentElement.style.overflow = open ? 'hidden' : ''
+})
+
+onMounted((): void => {
+  tabletQuery = window.matchMedia('(min-width: 768px) and (max-width: 1279px)')
+  applySidebarModeForScreenWidth()
+  tabletQuery.addEventListener('change', applySidebarModeForScreenWidth)
+  window.addEventListener('keydown', onKeydown)
+  stopPwa = initPwa()
+  watchDeploys()
+  loadArticles().catch((): void => undefined)
+  loadIndexing().catch((): void => undefined)
+  idleTimer = setTimeout((): void => {
+    loadTranslations().catch((): void => undefined)
+  }, 2500)
+  requestAnimationFrame((): void => {
+    requestAnimationFrame((): void => {
+      isFirstPaint.value = false
+    })
+  })
+})
+
+onBeforeUnmount((): void => {
+  tabletQuery?.removeEventListener('change', applySidebarModeForScreenWidth)
+  window.removeEventListener('keydown', onKeydown)
+  stopPwa?.()
+  unwatchDeploys()
+  stopPolling()
+  if (idleTimer) clearTimeout(idleTimer)
+  document.documentElement.style.overflow = ''
+})
 </script>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s ease;
+.is-first-paint :deep(aside) {
+  transition: none !important;
 }
-.fade-enter-from,
-.fade-leave-to {
+
+.dash-menu-scrim-enter-active,
+.dash-menu-scrim-leave-active {
+  transition: opacity 0.22s ease;
+}
+
+.dash-menu-scrim-enter-from,
+.dash-menu-scrim-leave-to {
   opacity: 0;
 }
-.fade-enter-to,
-.fade-leave-from {
-  opacity: 1;
+
+.dash-menu-enter-active {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.slide-up-down-enter-active,
-.slide-up-down-leave-active {
-  transition: transform 0.3s ease;
+
+.dash-menu-leave-active {
+  transition: transform 0.22s ease;
 }
-.slide-up-down-enter-from,
-.slide-up-down-leave-to {
-  transform: translateY(100%);
-}
-.slide-up-down-enter-to,
-.slide-up-down-leave-from {
-  transform: translateY(0%);
+
+.dash-menu-enter-from,
+.dash-menu-leave-to {
+  transform: translateX(-102%);
 }
 </style>
