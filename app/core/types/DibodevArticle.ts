@@ -18,6 +18,15 @@ export type DibodevArticle = {
   route: string
 }
 
+/** Locales whose article text comes from the translation files (French is the source, in Storyblok). */
+export type ArticleTranslationLocale = 'en' | 'es'
+
+/** An article in the requested locale, with the locales where its translation is known to be missing. */
+export type DibodevLocalizedArticle = {
+  article: DibodevArticle
+  localesWithoutTranslation: ArticleTranslationLocale[]
+}
+
 export type DibodevArticleTranslation = {
   title: string
   excerpt: string

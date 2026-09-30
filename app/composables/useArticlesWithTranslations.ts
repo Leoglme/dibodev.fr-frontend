@@ -1,18 +1,7 @@
-/**
- * Liste d'articles avec overlay des traductions EN/ES (depuis GitHub).
- * FR = Storyblok uniquement. EN/ES = Storyblok (FR) + overlay par slug ; pas de traduction = fallback FR.
- */
-import type { DibodevArticle } from '~/core/types/DibodevArticle'
+/** Blog article lists with EN/ES metadata overlaid; untranslated articles are left out of EN/ES unless the translations cannot be read. */
+import type { DibodevArticle, DibodevArticleTranslation } from '~/core/types/DibodevArticle'
 import { StoryblokArticleService } from '~/services/storyblokArticleService'
 import { mapStoryblokArticleToDibodevArticle } from '~/services/storyblokArticleMapper'
-
-type ArticleTranslation = {
-  title: string
-  excerpt: string
-  metaTitle: string
-  metaDescription: string
-  tags: string[]
-}
 
 function articleKey(article: DibodevArticle): string {
   return article.route.replace(/^\//, '').trim() || article.route
@@ -57,26 +46,31 @@ export function useArticlesWithTranslations(params: UseArticlesWithTranslationsP
 
         const currentLocale: string = locale.value as string
         if (currentLocale === 'en' || currentLocale === 'es') {
-          const translations: Record<string, ArticleTranslation> = await $fetch<Record<string, ArticleTranslation>>(
-            `/api/translations/articles/${currentLocale}`,
-          ).catch(() => ({}))
-          articles = articles.map((a: DibodevArticle): DibodevArticle => {
-            const key: string = articleKey(a)
-            const t: ArticleTranslation | undefined = translations[key]
-            if (!t) return a
-            return {
-              ...a,
-              title: t.title,
-              excerpt: t.excerpt,
-              metaTitle: t.metaTitle,
-              metaDescription: t.metaDescription,
-              tags: t.tags,
-            }
-          })
+          const translations: Record<string, DibodevArticleTranslation> | null =
+            await StoryblokArticleService.getArticleTranslations(currentLocale)
+          // An untranslated article redirects to its French page, so it leaves the EN/ES lists (French cards stay when the translations are unreadable).
+          if (translations) {
+            articles = articles.flatMap((a: DibodevArticle): DibodevArticle[] => {
+              const t: DibodevArticleTranslation | undefined = translations[articleKey(a)]
+              if (!t) return []
+              return [
+                {
+                  ...a,
+                  title: t.title,
+                  excerpt: t.excerpt,
+                  metaTitle: t.metaTitle,
+                  metaDescription: t.metaDescription,
+                  tags: t.tags,
+                },
+              ]
+            })
+          }
         }
 
         return articles
-      } catch {
+      } catch (error) {
+        // A silent empty list would hide a Storyblok outage in the prerendered pages: make it visible in the logs.
+        console.error('[articles] Storyblok fetch failed, rendering an empty article list', error)
         return []
       }
     },

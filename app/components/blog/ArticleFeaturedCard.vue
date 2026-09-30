@@ -1,10 +1,11 @@
 <template>
-  <article
-    class="hover:border-primary flex min-h-0 flex-col gap-4 rounded-2xl border-2 border-gray-600 bg-gray-900 p-4 transition-colors sm:p-5"
-    @click="track(TRACKING_EVENTS.articleCardClicked, { article: props.route })"
-  >
-    <NuxtLink :to="localePath(props.route)" class="grid shrink-0 gap-3">
-      <div class="relative aspect-video w-full overflow-hidden rounded-xl bg-gray-600 lg:aspect-[2/1]">
+  <article class="article-card group flex h-full flex-col overflow-hidden rounded-xl border border-gray-300 bg-white">
+    <NuxtLink
+      :to="localePath(props.route)"
+      class="flex h-full flex-col"
+      @click="track(TRACKING_EVENTS.articleCardClicked, { article: props.route })"
+    >
+      <div class="relative aspect-video w-full overflow-hidden bg-gray-700 lg:aspect-[2/1]">
         <img
           v-if="props.coverImageUrl"
           :src="props.coverImageUrl"
@@ -12,82 +13,95 @@
           class="h-full w-full object-cover"
           loading="eager"
         />
-        <div v-else class="flex h-full w-full flex-col justify-center gap-2 p-4" aria-hidden="true">
-          <div class="h-3 w-full max-w-[85%] rounded bg-gray-600/80" />
-          <div class="h-3 w-full max-w-[70%] rounded bg-gray-600/60" />
-          <div class="h-3 w-full max-w-[90%] rounded bg-gray-600/50" />
+        <div v-else class="flex h-full w-full flex-col justify-center gap-2 p-6" aria-hidden="true">
+          <div class="h-3 w-full max-w-[85%] rounded bg-gray-400/40" />
+          <div class="h-3 w-full max-w-[70%] rounded bg-gray-400/30" />
+          <div class="h-3 w-full max-w-[90%] rounded bg-gray-400/20" />
         </div>
       </div>
-      <h3 class="text-left text-xl font-medium text-gray-100 sm:text-2xl">
-        {{ props.title }}
-      </h3>
-      <p class="line-clamp-3 text-left text-sm leading-relaxed text-gray-200">
-        {{ props.excerpt }}
-      </p>
-      <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-gray-300">
-        <time :datetime="props.date">{{ formattedDate }}</time>
-        <span v-if="props.readingTimeMinutes > 0">
-          {{ props.readingTimeMinutes }} {{ $t('blog.card.readingTime') }}
-        </span>
-      </div>
-      <div v-if="props.tags.length > 0" class="flex flex-wrap gap-1">
-        <DibodevBadge
-          v-for="tag in props.tags.slice(0, 4)"
-          :key="tag"
-          backgroundColor="#35424d"
-          textColor="#f5f4fb"
-          size="sm"
+
+      <div class="flex flex-1 flex-col gap-3 p-6 sm:p-7">
+        <div v-if="props.tags.length > 0" class="flex flex-wrap gap-1.5">
+          <DibodevBadge v-for="tag in props.tags.slice(0, 4)" :key="tag" size="sm">
+            {{ tag }}
+          </DibodevBadge>
+        </div>
+        <h3
+          class="group-hover:text-primary text-xl leading-snug font-medium text-gray-100 transition-colors sm:text-[26px]"
         >
-          {{ tag }}
-        </DibodevBadge>
+          {{ props.title }}
+        </h3>
+        <p class="line-clamp-3 text-[15px] leading-6 text-gray-200">
+          {{ props.excerpt }}
+        </p>
+        <div class="mt-auto flex flex-wrap items-center justify-between gap-x-4 gap-y-2 pt-3 text-sm">
+          <div class="text-muted flex flex-wrap items-center gap-x-3">
+            <time :datetime="props.date">{{ formattedDate }}</time>
+            <span v-if="props.readingTimeMinutes > 0">
+              {{ props.readingTimeMinutes }} {{ $t('blog.card.readingTime') }}
+            </span>
+          </div>
+          <span class="text-primary inline-flex items-center gap-1.5 font-medium group-hover:underline">
+            {{ $t('home.latestArticles.readArticle') }}
+            <DibodevIcon name="ArrowRight" mode="stroke" :width="16" :height="16" aria-hidden="true" />
+          </span>
+        </div>
       </div>
     </NuxtLink>
-    <div class="flex min-h-0 flex-1 flex-col justify-end">
-      <DibodevButton
-        icon="ArrowRight"
-        iconPosition="right"
-        :to="localePath(props.route)"
-        size="sm"
-        class="w-full sm:max-w-xs sm:self-end"
-      >
-        {{ $t('home.latestArticles.readArticle') }}
-      </DibodevButton>
-    </div>
   </article>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import type { ComputedRef } from 'vue'
-import type { PropType } from 'vue'
-import DibodevButton from '~/components/core/DibodevButton.vue'
+import type { ComputedRef, PropType } from 'vue'
+import type { DibodevArticleCardProps } from '~/core/types/DibodevArticleCard'
 import DibodevBadge from '~/components/ui/DibodevBadge.vue'
+import DibodevIcon from '~/components/ui/DibodevIcon.vue'
+import { formatArticleDate } from '~/core/utils/formatArticleDate'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
-const props = defineProps({
-  title: { type: String, required: true },
-  excerpt: { type: String, required: true },
-  date: { type: String, required: true },
-  coverImageUrl: { type: String, default: '' },
+/**
+ * Large article card (cover, tags, title, excerpt, date) used for the most recent article on the home page.
+ */
+const props: DibodevArticleCardProps = defineProps({
+  title: { type: String as PropType<string>, required: true },
+  excerpt: { type: String as PropType<string>, required: true },
+  date: { type: String as PropType<string>, required: true },
+  coverImageUrl: { type: String as PropType<string>, default: '' },
   tags: { type: Array as PropType<string[]>, default: (): string[] => [] },
-  readingTimeMinutes: { type: Number, default: 0 },
-  route: { type: String, required: true },
+  readingTimeMinutes: { type: Number as PropType<number>, default: 0 },
+  route: { type: String as PropType<string>, required: true },
 })
 
 const localePath = useLocalePath()
+const { locale } = useI18n()
 const { track } = useTracking()
 
-const formattedDate: ComputedRef<string> = computed((): string => {
-  try {
-    const d: Date = new Date(props.date)
-    return new Intl.DateTimeFormat('fr-FR', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric',
-    }).format(d)
-  } catch {
-    return props.date
-  }
-})
+const formattedDate: ComputedRef<string> = computed((): string => formatArticleDate(props.date, locale.value as string))
 </script>
+
+<style scoped>
+.article-card {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.article-card:hover {
+  border-color: rgba(111, 95, 224, 0.45);
+  box-shadow: 0 14px 36px rgba(111, 95, 224, 0.1);
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .article-card {
+    transition: none;
+  }
+
+  .article-card:hover {
+    transform: none;
+  }
+}
+</style>

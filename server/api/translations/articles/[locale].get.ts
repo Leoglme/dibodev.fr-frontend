@@ -1,8 +1,11 @@
 import type { H3Event } from 'h3'
 import { getGitHubRawFile, type GetRawFileResult } from '~~/server/utils/githubContent'
-import type { ArticlesTranslationFile } from '~~/server/types/dashboard/translations'
+import type { ArticlesTranslationFile, CachedArticlesTranslationFile } from '~~/server/types/dashboard/translations'
 
 const TRANSLATIONS_PATH: string = 'content/translations'
+/** A build prerenders every article page and each one asks for these files: a successful read is kept one minute. */
+const CACHE_DURATION_MS: number = 60_000
+const cachedFiles: Map<string, CachedArticlesTranslationFile> = new Map<string, CachedArticlesTranslationFile>()
 
 /**
  * GET /api/translations/articles/[locale]
@@ -12,6 +15,11 @@ export default defineEventHandler(async (event: H3Event): Promise<ArticlesTransl
   const locale: string = String(getRouterParam(event, 'locale') ?? '').toLowerCase()
   if (locale !== 'en' && locale !== 'es') {
     return {}
+  }
+
+  const cached: CachedArticlesTranslationFile | undefined = cachedFiles.get(locale)
+  if (cached && Date.now() - cached.readAt < CACHE_DURATION_MS) {
+    return cached.translations
   }
 
   const config = useRuntimeConfig()
@@ -28,7 +36,9 @@ export default defineEventHandler(async (event: H3Event): Promise<ArticlesTransl
   }
 
   try {
-    return JSON.parse(result.content) as ArticlesTranslationFile
+    const translations: ArticlesTranslationFile = JSON.parse(result.content)
+    cachedFiles.set(locale, { readAt: Date.now(), translations })
+    return translations
   } catch {
     return {}
   }
