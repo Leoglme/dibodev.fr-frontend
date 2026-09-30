@@ -4,7 +4,7 @@
     class="bg-surface-tint scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28"
     data-aos="fade-up"
   >
-    <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
+    <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <DibodevSectionHeading
         :eyebrow="t('businessSoftwarePage.tools.eyebrow')"
         :title="t('businessSoftwarePage.tools.title')"
@@ -18,7 +18,6 @@
           :title="tool.title"
           :description="tool.description"
           :accentColor="getAccentPalette(index).color"
-          :accentBackground="getAccentPalette(index).background"
         >
           <template #icon>
             <DibodevServiceIcon :serviceIconName="tool.icon" />

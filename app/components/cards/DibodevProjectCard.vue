@@ -1,43 +1,70 @@
 <template>
   <article
-    class="project-card group flex h-full flex-col rounded-2xl border-2 bg-white p-3 sm:p-4"
+    class="project-card group flex h-full flex-col overflow-hidden rounded-2xl border-2 bg-white"
     :style="{ '--project-color': props.primaryColor }"
   >
-    <NuxtLink :to="projectLink" class="flex h-full flex-col gap-4" @click="onCardClick">
+    <NuxtLink :to="projectLink" class="flex h-full flex-col" @click="onCardClick">
       <div
-        class="flex h-44 items-center justify-center rounded-xl px-8"
-        :style="{ backgroundColor: props.secondaryColor }"
+        class="relative aspect-video w-full overflow-hidden border-b border-gray-300"
+        :class="props.screenshot ? 'bg-gray-800' : ''"
+        :style="props.screenshot ? undefined : { backgroundColor: props.secondaryColor }"
       >
         <img
-          class="max-h-24 w-auto max-w-[180px] object-contain"
+          v-if="props.screenshot"
+          :src="props.screenshot.url"
+          :srcset="props.screenshot.srcset || undefined"
+          :sizes="SCREENSHOT_SIZES"
+          :alt="screenshotAlt"
+          :width="SCREENSHOT_WIDTH"
+          :height="SCREENSHOT_HEIGHT"
+          loading="lazy"
+          decoding="async"
+          class="project-card__screenshot h-full w-full object-contain"
+        />
+        <img
+          v-else
+          class="absolute inset-0 m-auto max-h-20 w-auto max-w-[55%] object-contain"
           :src="props.logo"
           :alt="props.name"
           loading="lazy"
           decoding="async"
         />
+        <span
+          v-if="props.screenshot"
+          class="absolute top-3 left-3 flex h-9 max-w-[7.5rem] items-center rounded-lg bg-white px-2 py-1.5 shadow-[0_2px_10px_rgba(20,20,20,0.12)]"
+          aria-hidden="true"
+        >
+          <img :src="props.logo" alt="" class="h-full w-auto object-contain" loading="lazy" decoding="async" />
+        </span>
       </div>
 
-      <div class="flex flex-1 flex-col gap-3 px-1 sm:px-2">
+      <div class="flex flex-1 flex-col gap-3 p-4 sm:p-5">
         <div v-if="props.categories?.length" class="flex flex-wrap gap-1.5">
           <DibodevCategoryBadge v-for="category in props.categories" :key="category" :category="category" size="sm" />
         </div>
         <div class="grid gap-1">
-          <h3 class="text-lg leading-snug font-medium text-gray-100">
-            {{ props.name }}
+          <h3 class="text-[17px] leading-snug font-medium text-gray-100">
+            {{ nameParts.shortName }}
           </h3>
-          <span v-if="formattedDate" class="text-muted text-sm">{{ formattedDate }}</span>
+          <p class="line-clamp-2 text-[15px] leading-6 text-gray-200">
+            {{ nameParts.tagline || props.description }}
+          </p>
         </div>
-        <p class="border-t border-gray-300 pt-3 text-[15px] leading-6 text-gray-200">
-          {{ props.description }}
-        </p>
+        <div class="mt-auto flex items-center justify-between gap-3 border-t border-gray-300 pt-3">
+          <span v-if="formattedDate" class="text-muted text-sm">{{ formattedDate }}</span>
+          <span class="project-card__link ml-auto inline-flex items-center gap-1.5 text-[15px] font-medium">
+            {{ $t('projects.card.seeProject') }}
+            <DibodevIcon
+              name="ArrowRight"
+              mode="stroke"
+              :width="18"
+              :height="18"
+              class="project-card__arrow"
+              aria-hidden="true"
+            />
+          </span>
+        </div>
       </div>
-
-      <span
-        class="project-card__button mt-auto flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-[15px] leading-6 font-medium text-white"
-      >
-        {{ $t('projects.card.seeProject') }}
-        <DibodevIcon name="ArrowRight" mode="stroke" :width="18" :height="18" aria-hidden="true" />
-      </span>
     </NuxtLink>
   </article>
 </template>
@@ -45,17 +72,23 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import type { ComputedRef, PropType } from 'vue'
+import type { DibodevProjectNameParts } from '~/core/types/DibodevProject'
 import type { DibodevProjectCardProps } from '~/core/types/DibodevProjectCard'
+import type { DibodevProjectCardScreenshot } from '~/core/types/DibodevProjectCardScreenshot'
 import DibodevCategoryBadge from '~/components/ui/DibodevCategoryBadge.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
+import { ProjectUtils } from '~/core/utils/ProjectUtils'
 import { StringUtils } from '~/core/utils/StringUtils'
 import { formatProjectDate } from '~/core/utils/formatProjectDate'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
+const SCREENSHOT_WIDTH: number = 800
+const SCREENSHOT_HEIGHT: number = 450
+const SCREENSHOT_SIZES: string = '(min-width: 1280px) 340px, (min-width: 640px) 50vw, 100vw'
+
 /**
- * Project card in the project colours: tinted border, logo panel, categories, name, date, description
- * and a full-width "see project" button. The whole card is one link.
+ * Project card in the project colours: screenshot with the logo in a corner (logo panel without screenshot), categories, name, tagline, date and link.
  */
 const props: DibodevProjectCardProps = defineProps({
   name: {
@@ -73,6 +106,10 @@ const props: DibodevProjectCardProps = defineProps({
   logo: {
     type: String,
     required: true,
+  },
+  screenshot: {
+    type: Object as PropType<DibodevProjectCardScreenshot | null>,
+    default: null,
   },
   primaryColor: {
     type: String,
@@ -93,7 +130,7 @@ const props: DibodevProjectCardProps = defineProps({
 })
 
 const localePath = useLocalePath()
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 const { track } = useTracking()
 
 /** Canonical project URL with current locale prefix (Storyblok route when provided, otherwise derived from name). */
@@ -106,6 +143,14 @@ const projectLink: ComputedRef<string> = computed((): string => {
       : `/project/${StringUtils.formatForRoute(props.name)}`
   return localePath(path)
 })
+
+const nameParts: ComputedRef<DibodevProjectNameParts> = computed(
+  (): DibodevProjectNameParts => ProjectUtils.splitNameAndTagline(props.name),
+)
+
+const screenshotAlt: ComputedRef<string> = computed((): string =>
+  t('projects.card.screenshotAlt', { name: nameParts.value.shortName }),
+)
 
 /** Project date as "Month YYYY" in the current locale (empty when the project has no date). */
 const formattedDate: ComputedRef<string> = computed((): string =>
@@ -130,28 +175,44 @@ function onCardClick(): void {
     transform 0.2s ease;
 }
 
-.project-card:hover {
+.project-card:hover,
+.project-card:focus-within {
   border-color: var(--project-color);
   box-shadow: 0 16px 40px color-mix(in srgb, var(--project-color) 18%, transparent);
   transform: translateY(-2px);
 }
 
-.project-card__button {
-  background-color: var(--project-color);
-  transition: filter 0.15s ease;
+.project-card__screenshot {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.project-card:hover .project-card__button {
-  filter: brightness(0.92);
+.project-card:hover .project-card__screenshot {
+  transform: scale(1.02);
+}
+
+.project-card__link {
+  color: var(--project-color);
+}
+
+.project-card__arrow {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover .project-card__arrow,
+.project-card:focus-within .project-card__arrow {
+  transform: translateX(4px);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .project-card,
-  .project-card__button {
+  .project-card__screenshot,
+  .project-card__arrow {
     transition: none;
   }
 
-  .project-card:hover {
+  .project-card:hover,
+  .project-card:hover .project-card__screenshot,
+  .project-card:hover .project-card__arrow {
     transform: none;
   }
 }

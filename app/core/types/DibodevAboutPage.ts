@@ -1,3 +1,4 @@
+import type { DibodevAccentPalette } from '~/core/types/DibodevAccentPalette'
 import type { DibodevCareerStep } from '~/core/types/DibodevCareerStepCard'
 import type { DibodevServiceIconName } from '~/core/types/DibodevServiceIcon'
 
@@ -29,7 +30,6 @@ export type DibodevAboutTimeline = {
 export type DibodevAboutSkillGroupConfig = {
   key: string
   serviceIconName: DibodevServiceIconName
-  iconBackgroundColor: string
   technologies: string[]
   isHighlighted: boolean
 }
@@ -37,4 +37,5 @@ export type DibodevAboutSkillGroupConfig = {
 export type DibodevAboutSkillGroup = DibodevAboutSkillGroupConfig & {
   title: string
   description: string
+  palette: DibodevAccentPalette
 }

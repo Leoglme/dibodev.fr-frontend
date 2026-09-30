@@ -1,6 +1,6 @@
 <template>
   <section id="recommended-projects" class="bg-gray-800 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
-    <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
+    <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <DibodevSectionHeading :eyebrow="$t('project.recommended.eyebrow')" :title="$t('project.recommended.title')">
         <template #action>
           <DibodevLink :link="localePath('projects')">
@@ -18,6 +18,7 @@
           :description="recommendedProject.metaDescription"
           :createdAt="recommendedProject.date"
           :logo="recommendedProject.logoUrl"
+          :screenshot="ProjectUtils.resolveCardScreenshot(recommendedProject)"
           :primaryColor="recommendedProject.primaryColor"
           :secondaryColor="recommendedProject.secondaryColor"
           :route="recommendedProject.route"
@@ -36,6 +37,7 @@ import type { DibodevRecommendedProjectSectionProps } from '~/core/types/Dibodev
 import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
+import { ProjectUtils } from '~/core/utils/ProjectUtils'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { useProjectsWithTranslations } from '~/composables/useProjectsWithTranslations'
 

@@ -25,6 +25,20 @@
   --color-gray-700: #ebebe7;
   --color-gray-800: #f6f6f3;
   --color-gray-900: #ffffff;
+  --container-site: 80rem;
+}
+
+/* Shared page width (`max-w-site`): navbar, sections and footer widen together on large screens. */
+@media (width >= 90rem) {
+  :root {
+    --container-site: 86rem;
+  }
+}
+
+@media (width >= 100rem) {
+  :root {
+    --container-site: 90rem;
+  }
 }
 
 html {
@@ -48,11 +62,6 @@ h1,
 h2,
 h3 {
   text-wrap: balance;
-}
-
-.error-message {
-  position: absolute;
-  bottom: -28px;
 }
 
 /* Firefox */

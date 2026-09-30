@@ -1,6 +1,6 @@
 <template>
   <section id="services" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
-    <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
+    <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <DibodevSectionHeading
         :eyebrow="$t('home.services.eyebrow')"
         :title="$t('home.services.title')"
@@ -22,7 +22,6 @@
           :description="service.description"
           :price="service.price"
           :accentColor="service.palette.color"
-          :accentBackground="service.palette.background"
         >
           <template #icon>
             <DibodevServiceIcon :serviceIconName="service.icon" />

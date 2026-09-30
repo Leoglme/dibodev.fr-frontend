@@ -1,7 +1,7 @@
 <template>
   <header class="fixed inset-x-0 top-0 z-50 border-b border-gray-300 bg-white/95 backdrop-blur-sm">
     <nav
-      class="mx-auto flex h-[72px] w-full max-w-7xl items-center justify-between gap-6 px-6 sm:px-8"
+      class="max-w-site mx-auto flex h-[72px] w-full items-center justify-between gap-6 px-6 sm:px-8"
       :aria-label="$t('nav.mainNavigation')"
     >
       <NuxtLink :to="localePath('/')" class="shrink-0" :aria-label="$t('nav.homeLinkLabel')">
@@ -12,7 +12,9 @@
         <li v-for="link in links" :key="link.to">
           <NuxtLink
             :to="link.to"
-            class="text-[15px] font-medium whitespace-nowrap text-gray-200 transition-colors hover:text-gray-100"
+            class="text-[15px] font-medium whitespace-nowrap transition-colors"
+            :class="isCurrentSection(link) ? 'text-primary' : 'text-gray-200 hover:text-gray-100'"
+            :aria-current="isCurrentSection(link) ? 'page' : undefined"
           >
             {{ link.text }}
           </NuxtLink>
@@ -41,42 +43,90 @@
   </header>
 
   <teleport to="body">
-    <transition name="fade">
+    <transition name="menu-fade">
       <div
-        v-show="mobileMenuOpen"
-        class="fixed inset-0 z-[9998] bg-[rgba(20,20,20,0.35)] lg:hidden"
-        @click.self="mobileMenuOpen = false"
+        v-if="mobileMenuOpen"
+        class="fixed inset-0 z-[9999] flex flex-col bg-white lg:hidden"
+        role="dialog"
+        aria-modal="true"
+        :aria-label="$t('nav.mainNavigation')"
       >
-        <transition name="slide-down">
-          <div
-            v-if="mobileMenuOpen"
-            class="absolute inset-x-0 top-[72px] z-[9999] max-h-[calc(100dvh-72px)] overflow-auto border-b border-gray-300 bg-white"
+        <div
+          class="bg-accent-tint pointer-events-none absolute -right-24 bottom-24 h-72 w-72 rounded-full opacity-60 blur-[90px]"
+          aria-hidden="true"
+        />
+
+        <div class="relative flex h-[72px] shrink-0 items-center justify-between border-b border-gray-300 px-6 sm:px-8">
+          <NuxtLink :to="localePath('/')" :aria-label="$t('nav.homeLinkLabel')" @click="mobileMenuOpen = false">
+            <DibodevLogo :size="30" :large="true" />
+          </NuxtLink>
+          <DibodevSquareButton :size="44" :aria-label="$t('nav.closeMenu')" @click="mobileMenuOpen = false">
+            <DibodevIcon name="X" mode="stroke" />
+          </DibodevSquareButton>
+        </div>
+
+        <nav
+          class="relative flex flex-1 flex-col justify-center gap-1 overflow-y-auto px-6 py-8 sm:px-8"
+          :aria-label="$t('nav.mainNavigation')"
+        >
+          <NuxtLink
+            v-for="(link, linkIndex) in links"
+            :key="link.to"
+            :to="link.to"
+            class="menu-item flex items-center justify-between gap-4 py-2 text-[34px] leading-tight font-medium tracking-[-0.01em] transition-colors sm:text-[40px]"
+            :class="isCurrentSection(link) ? 'text-primary' : 'hover:text-primary text-gray-100'"
+            :style="{ '--menu-item-delay': `${linkIndex * MENU_ITEM_STAGGER_MS}ms` }"
+            :aria-current="isCurrentSection(link) ? 'page' : undefined"
+            @click="mobileMenuOpen = false"
           >
-            <nav class="flex flex-col px-6 pt-2 pb-8 sm:px-8" :aria-label="$t('nav.mainNavigation')" @click.stop>
-              <NuxtLink
-                v-for="link in links"
-                :key="link.to"
-                :to="link.to"
-                class="border-b border-gray-300 py-4 text-lg font-medium text-gray-100"
-                @click="mobileMenuOpen = false"
-              >
-                {{ link.text }}
-              </NuxtLink>
-              <PhoneLink variant="menu" class="mt-4" @click="mobileMenuOpen = false" />
-              <DibodevButton
-                v-if="!isContactPage"
-                :to="localePath('/contact')"
-                class="mt-4 w-full"
-                @click="trackContactCta('navbar_mobile', true)"
-              >
-                {{ $t('nav.contactMe') }}
-              </DibodevButton>
-              <div class="mt-6">
-                <DibodevLanguageSwitcher id="language-switcher-mobile" :options="languages" />
-              </div>
-            </nav>
+            {{ link.text }}
+            <DibodevIcon
+              v-if="isCurrentSection(link)"
+              name="ArrowRight"
+              mode="stroke"
+              :width="26"
+              :height="26"
+              class="shrink-0"
+              aria-hidden="true"
+            />
+          </NuxtLink>
+        </nav>
+
+        <div class="relative grid shrink-0 gap-4 border-t border-gray-300 px-6 py-6 sm:px-8">
+          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
+            <div>
+              <PhoneLink variant="menu" @click="mobileMenuOpen = false" />
+            </div>
+            <ul class="flex items-center gap-1" :aria-label="$t('accessibility.chooseLanguage')">
+              <li v-for="language in languages" :key="language.value">
+                <span
+                  v-if="language.value === locale"
+                  class="bg-accent-tint text-primary flex h-11 min-w-11 items-center justify-center rounded-lg px-2 text-sm font-medium"
+                  aria-current="true"
+                >
+                  {{ language.label }}
+                </span>
+                <NuxtLink
+                  v-else
+                  :to="switchLocalePathWithSlug(String(language.value))"
+                  :hreflang="String(language.value)"
+                  class="flex h-11 min-w-11 items-center justify-center rounded-lg px-2 text-sm font-medium text-gray-200 transition-colors hover:bg-gray-800 hover:text-gray-100"
+                  @click="onMobileLocaleClick(String(language.value))"
+                >
+                  {{ language.label }}
+                </NuxtLink>
+              </li>
+            </ul>
           </div>
-        </transition>
+          <DibodevButton
+            v-if="!isContactPage"
+            :to="localePath('/contact')"
+            class="w-full"
+            @click="trackContactCta('navbar_mobile', true)"
+          >
+            {{ $t('nav.contactMe') }}
+          </DibodevButton>
+        </div>
       </div>
     </transition>
   </teleport>
@@ -87,19 +137,22 @@ import type { DibodevNavbarLink } from '~/core/types/DibodevNavbar'
 import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
 import DibodevLogo from '~/components/branding/DibodevLogo.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
-import DibodevLanguageSwitcher from '~/components/core/DibodevLanguageSwitcher.vue'
 import PhoneLink from '~/components/core/PhoneLink.vue'
 import DibodevSquareButton from '~/components/buttons/DibodevSquareButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
+/** Delay between two links appearing in the mobile menu. */
+const MENU_ITEM_STAGGER_MS: number = 50
+
 /* ROUTE */
 const route = useRoute()
 
 /* I18N */
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
+const switchLocalePathWithSlug = useSwitchLocalePathWithSlug()
 const { track } = useTracking()
 
 /* DATAS */
@@ -109,12 +162,13 @@ const languages: DibodevSelectOption[] = [
   { label: 'ES', value: 'es' },
 ]
 
+/** Real pages only (no anchors of the home page), ordered from the main offer to the background. */
 const links: ComputedRef<DibodevNavbarLink[]> = computed((): DibodevNavbarLink[] => [
-  { text: t('nav.services'), to: `${localePath('/')}#services` },
-  { text: t('nav.projects'), to: localePath('projects') },
-  { text: t('nav.businessSoftware'), to: localePath('custom-business-software') },
-  { text: t('nav.about'), to: localePath('about') },
-  { text: t('nav.blog'), to: localePath('/blog') },
+  { text: t('nav.businessSoftware'), to: localePath('custom-business-software'), activePrefixes: [] },
+  { text: t('nav.projects'), to: localePath('projects'), activePrefixes: [localePath('/project')] },
+  { text: t('nav.tools'), to: localePath('tools'), activePrefixes: [] },
+  { text: t('nav.blog'), to: localePath('/blog'), activePrefixes: [] },
+  { text: t('nav.about'), to: localePath('about'), activePrefixes: [] },
 ])
 
 /* REFS */
@@ -122,6 +176,17 @@ const mobileMenuOpen: Ref<boolean> = ref(false)
 const isContactPage: ComputedRef<boolean> = computed(
   (): boolean => route.path === '/contact' || route.path.endsWith('/contact'),
 )
+
+/**
+ * Whether the current page belongs to the section of a navbar link (the page itself or one of its sub-pages).
+ * @param {DibodevNavbarLink} link - The navbar link.
+ * @returns {boolean} True when the link matches the current page.
+ */
+function isCurrentSection(link: DibodevNavbarLink): boolean {
+  return [link.to, ...link.activePrefixes].some(
+    (path: string): boolean => route.path === path || route.path.startsWith(`${path}/`),
+  )
+}
 
 /**
  * Track the contact CTA event, and close the mobile menu when requested.
@@ -136,6 +201,27 @@ function trackContactCta(location: string, closeMobileMenu: boolean = false): vo
   track(TRACKING_EVENTS.ctaProjectDiscussion, { location })
 }
 
+/**
+ * Track the language picked in the mobile menu, then close the menu.
+ * @param {string} targetLocale - The locale picked.
+ * @returns {void}
+ */
+function onMobileLocaleClick(targetLocale: string): void {
+  track(TRACKING_EVENTS.localeSwitched, { from: locale.value, to: targetLocale })
+  mobileMenuOpen.value = false
+}
+
+/**
+ * Close the mobile menu with the Escape key.
+ * @param {KeyboardEvent} event - The keyboard event.
+ * @returns {void}
+ */
+function closeMenuOnEscape(event: KeyboardEvent): void {
+  if (event.key === 'Escape') {
+    mobileMenuOpen.value = false
+  }
+}
+
 watch(mobileMenuOpen, (open: boolean): void => {
   document.body.style.overflow = open ? 'hidden' : ''
 })
@@ -146,38 +232,46 @@ watch(
     mobileMenuOpen.value = false
   },
 )
+
+onMounted((): void => {
+  document.addEventListener('keydown', closeMenuOnEscape)
+})
+
+onUnmounted((): void => {
+  document.removeEventListener('keydown', closeMenuOnEscape)
+  document.body.style.overflow = ''
+})
 </script>
 
 <style scoped>
-/* Fade backdrop */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s ease;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-.fade-enter-to,
-.fade-leave-from {
-  opacity: 1;
+/* Full-screen mobile menu: fades in, links rise one after the other. */
+.menu-fade-enter-active,
+.menu-fade-leave-active {
+  transition: opacity 0.25s ease;
 }
 
-/* Slide-down menu panel */
-.slide-down-enter-active,
-.slide-down-leave-active {
-  transition:
-    transform 0.25s ease,
-    opacity 0.25s ease;
-}
-.slide-down-enter-from,
-.slide-down-leave-to {
-  transform: translateY(-12px);
+.menu-fade-enter-from,
+.menu-fade-leave-to {
   opacity: 0;
 }
-.slide-down-enter-to,
-.slide-down-leave-from {
-  transform: translateY(0);
-  opacity: 1;
+
+.menu-fade-enter-active .menu-item {
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--menu-item-delay);
+}
+
+.menu-fade-enter-from .menu-item {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-fade-enter-active,
+  .menu-fade-leave-active,
+  .menu-fade-enter-active .menu-item {
+    transition: none;
+  }
 }
 </style>

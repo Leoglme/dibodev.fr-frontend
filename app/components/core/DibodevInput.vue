@@ -65,7 +65,7 @@
     >
       <DibodevIcon :name="togglePassword ? 'EyeOff' : 'Eye'" mode="stroke" :width="18" :height="18" />
     </button>
-    <ErrorMessage class="slide-from-left error-message text-sm text-red-500" :name="props.id" />
+    <ErrorMessage class="slide-from-left -mt-1 text-sm leading-5 text-red-500" :name="props.id" role="alert" />
   </div>
 </template>
 

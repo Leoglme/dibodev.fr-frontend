@@ -11,12 +11,12 @@
       />
     </template>
 
-    <div class="relative mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
+    <div class="max-w-site relative mx-auto grid w-full gap-12 lg:gap-14">
       <div
         class="grid items-center gap-12"
         :class="
           $slots.aside
-            ? 'lg:grid-cols-[minmax(0,1fr)_minmax(0,24rem)] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,38rem)] xl:gap-16'
+            ? 'lg:grid-cols-[minmax(0,1fr)_minmax(0,24rem)] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,34rem)] xl:gap-20 2xl:grid-cols-[minmax(0,1fr)_minmax(0,38rem)] 2xl:gap-24'
             : ''
         "
       >
@@ -91,10 +91,14 @@
 
           <ul
             v-if="props.reassurances.length > 0"
-            class="flex flex-col gap-2.5 text-left text-sm text-gray-200 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-5 sm:gap-y-2"
-            :class="isCentered ? 'sm:justify-center' : ''"
+            class="flex flex-wrap items-center gap-x-5 gap-y-2.5 text-left text-sm text-gray-200"
+            :class="isCentered ? 'justify-center' : ''"
           >
-            <li v-for="reassurance in props.reassurances" :key="reassurance" class="flex items-center gap-2">
+            <li
+              v-for="reassurance in props.reassurances"
+              :key="reassurance"
+              class="flex items-center gap-2 whitespace-nowrap"
+            >
               <DibodevIcon
                 name="Check"
                 mode="stroke"

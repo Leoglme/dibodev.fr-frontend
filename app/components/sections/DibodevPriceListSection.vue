@@ -1,6 +1,6 @@
 <template>
   <section :id="props.anchorId" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
-    <div class="mx-auto grid w-full max-w-7xl gap-10 lg:gap-12">
+    <div class="max-w-site mx-auto grid w-full gap-10 lg:gap-12">
       <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.intro" align="center" />
 
       <div class="hidden overflow-hidden rounded-2xl border border-gray-300 bg-white md:block">

@@ -164,7 +164,7 @@ defineOgImageComponent(
 const { data: articlesPool } = await useArticlesWithTranslations({ perPage: ARTICLES_POOL_SIZE })
 
 const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => [
-  { label: t('nav.businessSoftware'), to: localePath('custom-business-software') },
+  { label: t('nav.tools'), to: localePath('tools') },
   { label: props.page.breadcrumbLabel, to: null },
 ])
 

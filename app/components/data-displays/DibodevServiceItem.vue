@@ -1,10 +1,6 @@
 <template>
   <article class="service-card flex h-full flex-col gap-5 rounded-xl border border-gray-300 bg-white p-6 sm:p-7">
-    <div
-      class="flex h-16 w-16 items-center justify-center rounded-2xl p-3.5"
-      :style="{ backgroundColor: props.accentBackground }"
-      aria-hidden="true"
-    >
+    <div class="flex h-12 w-12 items-center justify-center" :style="{ color: props.accentColor }" aria-hidden="true">
       <slot name="icon" />
     </div>
 
@@ -17,11 +13,7 @@
       </p>
     </div>
 
-    <p
-      v-if="props.price"
-      class="mt-auto border-t border-gray-300 pt-4 text-[15px] font-medium"
-      :style="{ color: props.accentColor }"
-    >
+    <p v-if="props.price" class="mt-auto border-t border-gray-300 pt-4 text-[15px] font-medium text-gray-100">
       {{ props.price }}
     </p>
     <div v-else-if="$slots.footer" class="mt-auto border-t border-gray-300 pt-4">
@@ -35,7 +27,7 @@ import type { PropType } from 'vue'
 import type { DibodevServiceItemProps } from '~/core/types/DibodevServiceItem'
 
 /**
- * Service card: coloured icon tile, title, description and an optional price line in the accent colour.
+ * Service card: line icon drawn in the card's accent colour, title, description and an optional price line.
  */
 const props: DibodevServiceItemProps = defineProps({
   title: {
@@ -53,10 +45,6 @@ const props: DibodevServiceItemProps = defineProps({
   accentColor: {
     type: String as PropType<string>,
     default: '#5b4bd0',
-  },
-  accentBackground: {
-    type: String as PropType<string>,
-    default: '#efeaff',
   },
 })
 </script>

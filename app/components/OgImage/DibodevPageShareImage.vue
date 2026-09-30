@@ -89,6 +89,7 @@ const PAGE_ICON_PATHS: Record<ShareImagePage, string[]> = {
     'M12 7v14',
     'M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z',
   ],
+  tools: ['M21 4h-7', 'M10 4H3', 'M21 12h-9', 'M8 12H3', 'M21 20h-5', 'M12 20H3', 'M14 2v4', 'M8 10v4', 'M16 18v4'],
 }
 const PLACE_ICON_PATHS: string[] = [
   'M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z',

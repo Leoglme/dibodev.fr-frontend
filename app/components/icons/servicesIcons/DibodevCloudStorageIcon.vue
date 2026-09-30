@@ -1,6 +1,6 @@
 <template>
   <svg width="40" height="40" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
-    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#00796B" stroke="none">
+    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
       <path
         d="M2400 5114 c-385 -48 -697 -200 -966 -468 -213 -214 -353 -455 -420
 -726 -10 -41 -23 -78 -29 -82 -5 -4 -26 -8 -46 -8 -70 0 -233 -50 -344 -104

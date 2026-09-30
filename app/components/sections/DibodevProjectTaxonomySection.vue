@@ -1,6 +1,6 @@
 <template>
   <section v-if="visibleLinks.length > 0" class="px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
-    <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
+    <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.intro" />
 
       <ul v-if="props.variant === 'cards'" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
@@ -12,7 +12,7 @@
             <div class="flex items-start justify-between gap-4">
               <span
                 class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl p-3"
-                :style="{ backgroundColor: getAccentPalette(index).background }"
+                :style="{ backgroundColor: getAccentPalette(index).background, color: getAccentPalette(index).color }"
                 aria-hidden="true"
               >
                 <DibodevServiceIcon :serviceIconName="getCategoryIcon(link.key)" />

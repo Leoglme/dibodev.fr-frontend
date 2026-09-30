@@ -1,12 +1,12 @@
 <template>
   <section id="testimonial" class="px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
-    <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
+    <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" />
 
       <figure
-        class="grid gap-8 rounded-lg border border-gray-300 bg-white p-6 sm:p-10 lg:grid-cols-[minmax(0,1fr)_260px] lg:gap-16"
+        class="grid gap-8 rounded-lg border border-gray-300 bg-white p-6 sm:p-10 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-16"
       >
-        <div class="grid content-start gap-6">
+        <div class="grid content-start gap-6 lg:order-last">
           <div class="flex flex-wrap items-center gap-4">
             <div v-if="props.rating > 0" class="flex gap-0.5 text-amber-500" role="img" :aria-label="props.ratingLabel">
               <DibodevIcon
@@ -32,7 +32,7 @@
         </div>
 
         <figcaption
-          class="grid content-start gap-5 border-t border-gray-300 pt-6 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-10"
+          class="grid content-start gap-5 border-t border-gray-300 pt-6 lg:border-t-0 lg:border-r lg:pt-0 lg:pr-10"
         >
           <div class="flex items-center gap-4">
             <span

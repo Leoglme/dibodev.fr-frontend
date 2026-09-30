@@ -1,6 +1,6 @@
 <template>
   <section id="about-skills" class="px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
-    <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
+    <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <DibodevSectionHeading
         :eyebrow="t('aboutPage.skills.eyebrow')"
         :title="t('aboutPage.skills.title')"
@@ -17,7 +17,7 @@
           <div class="flex items-center gap-4">
             <div
               class="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg p-3"
-              :style="{ backgroundColor: skillGroup.iconBackgroundColor }"
+              :style="{ backgroundColor: skillGroup.palette.background, color: skillGroup.palette.color }"
               aria-hidden="true"
             >
               <DibodevServiceIcon :serviceIconName="skillGroup.serviceIconName" />
@@ -43,6 +43,7 @@ import { computed } from 'vue'
 import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevBadge from '~/components/ui/DibodevBadge.vue'
 import DibodevServiceIcon from '~/components/ui/DibodevServiceIcon.vue'
+import { getAccentPalette } from '~/core/constants/accentPalettes'
 
 const { t } = useI18n()
 
@@ -50,28 +51,24 @@ const SKILL_GROUPS: DibodevAboutSkillGroupConfig[] = [
   {
     key: 'webApps',
     serviceIconName: 'apps',
-    iconBackgroundColor: '#FFF1F1',
     technologies: ['Nuxt', 'Vue.js', 'TypeScript', 'Tailwind CSS', 'Tauri'],
     isHighlighted: false,
   },
   {
     key: 'ai',
     serviceIconName: 'ai',
-    iconBackgroundColor: '#F0F0EE',
     technologies: ['Claude', 'OpenAI', 'LLM', 'RAG', 'NLP', 'Python'],
     isHighlighted: false,
   },
   {
     key: 'backend',
     serviceIconName: 'cloud-storage',
-    iconBackgroundColor: '#E2F3FF',
     technologies: ['Node.js', '.NET', 'FastAPI', 'PostgreSQL', 'Stripe'],
     isHighlighted: false,
   },
   {
     key: 'delivery',
     serviceIconName: 'seo',
-    iconBackgroundColor: '#ECFFDA',
     technologies: ['Docker', 'GitHub Actions', 'PostHog', 'Storyblok', 'SEO'],
     isHighlighted: false,
   },
@@ -79,10 +76,11 @@ const SKILL_GROUPS: DibodevAboutSkillGroupConfig[] = [
 
 const skillGroups: ComputedRef<DibodevAboutSkillGroup[]> = computed((): DibodevAboutSkillGroup[] =>
   SKILL_GROUPS.map(
-    (skillGroupConfig: DibodevAboutSkillGroupConfig): DibodevAboutSkillGroup => ({
+    (skillGroupConfig: DibodevAboutSkillGroupConfig, index: number): DibodevAboutSkillGroup => ({
       ...skillGroupConfig,
       title: t(`aboutPage.skills.${skillGroupConfig.key}.title`),
       description: t(`aboutPage.skills.${skillGroupConfig.key}.description`),
+      palette: getAccentPalette(index),
     }),
   ),
 )

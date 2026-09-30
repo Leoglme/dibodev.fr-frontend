@@ -1,7 +1,7 @@
 <template>
   <a
     v-if="props.externalLink"
-    class="inline-flex cursor-pointer items-center gap-x-1.5 font-medium decoration-2 underline-offset-4 hover:underline"
+    class="dibodev-link inline-flex cursor-pointer items-center gap-x-1.5 font-medium decoration-2 underline-offset-4 hover:underline"
     :href="href"
     target="_blank"
     rel="noopener noreferrer"
@@ -13,7 +13,7 @@
   <nuxt-link
     v-else
     :to="props.link"
-    class="inline-flex cursor-pointer items-center gap-x-1.5 font-medium decoration-2 underline-offset-4 hover:underline"
+    class="dibodev-link inline-flex cursor-pointer items-center gap-x-1.5 font-medium decoration-2 underline-offset-4 hover:underline"
     :style="{ color: props.color }"
   >
     <slot />
@@ -57,3 +57,27 @@ const href: ComputedRef<string | undefined> = computed((): string | undefined =>
   return undefined
 })
 </script>
+
+<style scoped>
+.dibodev-link :slotted(svg[data-icon='ArrowRight']),
+.dibodev-link :slotted(svg[data-icon='ExternalLink']) {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dibodev-link:hover :slotted(svg[data-icon='ArrowRight']),
+.dibodev-link:focus-visible :slotted(svg[data-icon='ArrowRight']) {
+  transform: translateX(4px);
+}
+
+.dibodev-link:hover :slotted(svg[data-icon='ExternalLink']),
+.dibodev-link:focus-visible :slotted(svg[data-icon='ExternalLink']) {
+  transform: translate(2px, -2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dibodev-link :slotted(svg[data-icon='ArrowRight']),
+  .dibodev-link :slotted(svg[data-icon='ExternalLink']) {
+    transition: none;
+  }
+}
+</style>

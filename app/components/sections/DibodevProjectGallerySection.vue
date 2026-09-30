@@ -6,7 +6,7 @@
     data-aos-duration="600"
     class="bg-surface-tint w-full scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28"
   >
-    <div class="mx-auto grid w-full max-w-7xl gap-12">
+    <div class="max-w-site mx-auto grid w-full gap-12">
       <!-- Section Title -->
       <div class="grid gap-3">
         <p class="text-primary text-xs font-medium tracking-[0.08em] uppercase">{{ $t('project.gallery.eyebrow') }}</p>

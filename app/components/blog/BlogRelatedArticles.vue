@@ -1,6 +1,6 @@
 <template>
   <section v-if="props.articles.length > 0" class="px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
-    <div class="mx-auto grid w-full max-w-7xl gap-12">
+    <div class="max-w-site mx-auto grid w-full gap-12">
       <DibodevSectionHeading :eyebrow="displayEyebrow" :title="props.title" :intro="props.intro" />
       <div class="grid gap-5 sm:grid-cols-2 lg:auto-rows-fr lg:grid-cols-3">
         <BlogArticleCard

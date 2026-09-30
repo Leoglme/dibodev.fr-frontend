@@ -5,7 +5,7 @@
     :titleHighlight1="$t('contact.landing.titleHighlight1')"
     :titlePart2="$t('contact.landing.titlePart2')"
     :description="$t('contact.landing.description')"
-    align="center"
+    align="left"
   />
 </template>
 

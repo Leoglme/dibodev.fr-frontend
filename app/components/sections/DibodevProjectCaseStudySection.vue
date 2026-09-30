@@ -5,7 +5,7 @@
     :class="toneClass"
     data-aos="fade-up"
   >
-    <div class="mx-auto grid w-full max-w-7xl gap-10 lg:gap-12">
+    <div class="max-w-site mx-auto grid w-full gap-10 lg:gap-12">
       <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.intro" />
 
       <DibodevStatsBand v-if="props.stats.length > 0" :stats="props.stats" />

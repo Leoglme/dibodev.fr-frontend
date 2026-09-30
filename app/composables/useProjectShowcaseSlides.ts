@@ -1,14 +1,13 @@
 import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
 import type { DibodevHeroShowcaseSlide, DibodevShowcaseProjectEntry } from '~/core/types/DibodevHeroShowcase'
-import type { DibodevProject } from '~/core/types/DibodevProject'
+import type { DibodevProject, DibodevProjectNameParts } from '~/core/types/DibodevProject'
 import { useProjectsWithTranslations } from '~/composables/useProjectsWithTranslations'
+import { ProjectUtils } from '~/core/utils/ProjectUtils'
 import { StoryblokImageUtils } from '~/core/utils/StoryblokImageUtils'
 
 const IMAGE_WIDTHS: number[] = [600, 900, 1200]
 const FALLBACK_IMAGE_WIDTH: number = 1200
-/** Separates the short project name from its tagline in the Storyblok name ("Gest-Time — Logiciel de…"). */
-const PROJECT_NAME_SEPARATOR_REGEX: RegExp = /\s[—–-]\s/
 
 /**
  * Builds the slides of a screenshot showcase from Storyblok projects, in the order of the entries.
@@ -27,8 +26,8 @@ export async function useProjectShowcaseSlides(
    * @returns {DibodevProject | undefined} The project when it exists.
    */
   function findProjectBySlug(slug: string): DibodevProject | undefined {
-    return (storyblokProjectsData.value ?? []).find((project: DibodevProject): boolean =>
-      project.route.endsWith(`/${slug}`),
+    return (storyblokProjectsData.value ?? []).find(
+      (project: DibodevProject): boolean => ProjectUtils.getSlug(project) === slug,
     )
   }
 
@@ -39,9 +38,9 @@ export async function useProjectShowcaseSlides(
    * @returns {DibodevHeroShowcaseSlide} The slide.
    */
   function toSlide(project: DibodevProject, screenshotUrl: string): DibodevHeroShowcaseSlide {
-    const [name = project.name, tagline = ''] = project.name.split(PROJECT_NAME_SEPARATOR_REGEX)
+    const { shortName, tagline }: DibodevProjectNameParts = ProjectUtils.splitNameAndTagline(project.name)
     return {
-      name,
+      name: shortName,
       tagline,
       route: project.route,
       imageUrl: StoryblokImageUtils.getResizedUrl(screenshotUrl, FALLBACK_IMAGE_WIDTH),

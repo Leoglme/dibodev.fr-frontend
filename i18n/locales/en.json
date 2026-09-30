@@ -12,7 +12,8 @@
         "contact": "Let's talk about your project",
         "businessSoftware": "Custom business software",
         "projects": "Selected projects",
-        "blog": "Blog: web, AI and business apps"
+        "blog": "Blog: web, AI and business apps",
+        "tools": "Free tools by trade"
       }
     },
     "shareLabels": {
@@ -47,6 +48,10 @@
       "title": "Custom Business Software in Rennes — Freelance Developer {'|'} Dibodev",
       "description": "Freelance developer near Rennes, France: custom business apps and management software for small businesses. Fixed price, from €5,000 to €15,000 per project."
     },
+    "toolsHubPage": {
+      "title": "Free Tools: Which Software for Your Business? {'|'} Dibodev",
+      "description": "Free tests by trade (driving school, event rental, bike shop, garage) and a budget estimator: which software to choose in France, and at what price."
+    },
     "aboutPage": {
       "title": "About — Léo Guillaume, Freelance Developer in Rennes {'|'} Dibodev",
       "description": "Léo Guillaume, founder of Dibodev: full‑stack and AI freelance developer near Rennes, France. Background (Kodeva, Izidoor, PrePeers), skills and client review."
@@ -54,9 +59,9 @@
   },
   "nav": {
     "home": "Home",
-    "services": "Services",
     "projects": "Work",
     "businessSoftware": "Custom software",
+    "tools": "Free tools",
     "about": "About",
     "blog": "Blog",
     "contactMe": "Discuss my project",
@@ -132,11 +137,48 @@
     "projectTypesTitle": "Work by type",
     "toolsTitle": "Free tools",
     "tools": {
+      "allTools": "All free tools",
       "drivingSchoolSoftware": "Which software for my driving school?",
       "eventRentalSoftware": "Which software for my event rental business?",
       "bikeShopSoftware": "Which software for my bike shop?",
       "autoRepairShopSoftware": "Which software for my garage?",
       "budgetEstimator": "How much will my business software cost?"
+    }
+  },
+  "toolsHubPage": {
+    "hero": {
+      "titlePart1": "Free tools to choose ",
+      "titleHighlight1": "the right software",
+      "titlePart2": "",
+      "description": "Driving school, event equipment rental, bike shop, garage: in 6 questions, each test tells you which software to choose and how much to budget, with the 2026 prices of the software on the French market. Trade not listed? The estimator gives a price range for custom software.",
+      "cta": "Choose a test",
+      "reassurance": {
+        "free": "Free, no sign-up or email",
+        "instant": "Instant result",
+        "prices": "Prices taken from the publishers"
+      }
+    },
+    "list": {
+      "eyebrow": "Tests by trade",
+      "title": "Choose your tool",
+      "intro": "Each test is designed by Léo Guillaume, business software developer near Rennes, France. Market software prices come from the publishers' pricing pages."
+    },
+    "cards": {
+      "test": {
+        "meta": "6 questions · 2 minutes",
+        "link": "Take the test"
+      },
+      "estimator": {
+        "title": "How much will my business software cost?",
+        "description": "Project type, size, options: in three questions, the estimator gives you a price range for custom software.",
+        "meta": "3 questions",
+        "link": "Estimate my budget"
+      },
+      "contact": {
+        "title": "Your trade isn't listed?",
+        "description": "Tell me about your business: I'll tell you for free whether off-the-shelf software is enough or whether a custom tool is worth it.",
+        "link": "Discuss my project"
+      }
     }
   },
   "home": {
@@ -148,7 +190,7 @@
       "ctaSecondary": "See my work",
       "stats": {
         "experienceValue": "7 years",
-        "experienceLabel": "of development",
+        "experienceLabel": "of experience",
         "projectsLabel": "projects online",
         "ratingValue": "5/5",
         "ratingLabel": "on Malt"
@@ -304,7 +346,8 @@
     "clients": {
       "eyebrow": "References",
       "title": "Trusted by",
-      "intro": "Small businesses, SMEs and startups that use the tools I built every day."
+      "intro": "Small businesses, SMEs and startups that use the tools I built every day.",
+      "projectLinkLabel": "See the project built for {name}"
     },
     "projects": {
       "eyebrow": "Work",
@@ -493,7 +536,8 @@
       "ia": "AI"
     },
     "card": {
-      "seeProject": "See the project"
+      "seeProject": "See the project",
+      "screenshotAlt": "Screenshot of {name}"
     },
     "hub": {
       "typesEyebrow": "By project type",

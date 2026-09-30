@@ -12,7 +12,8 @@
         "contact": "Hablemos de tu proyecto",
         "businessSoftware": "Software de gestión a medida",
         "projects": "Proyectos realizados",
-        "blog": "El blog: web, IA y software"
+        "blog": "El blog: web, IA y software",
+        "tools": "Herramientas gratuitas por oficio"
       }
     },
     "shareLabels": {
@@ -47,6 +48,10 @@
       "title": "Software de gestión a medida en Rennes — Desarrollador freelance {'|'} Dibodev",
       "description": "Desarrollador freelance cerca de Rennes (Francia): aplicaciones de gestión a medida para pymes. Precio cerrado, de 5.000 a 15.000 € según el proyecto."
     },
+    "toolsHubPage": {
+      "title": "Herramientas gratuitas: ¿qué software para tu negocio? {'|'} Dibodev",
+      "description": "Tests gratuitos por oficio (autoescuela, alquiler para eventos, taller de bicicletas o mecánico) y estimador: qué software elegir y a qué precio."
+    },
     "aboutPage": {
       "title": "Sobre mí — Léo Guillaume, desarrollador freelance en Rennes {'|'} Dibodev",
       "description": "Léo Guillaume, fundador de Dibodev: desarrollador freelance full‑stack e IA cerca de Rennes (Francia). Trayectoria (Kodeva, Izidoor, PrePeers), competencias y opiniones."
@@ -54,9 +59,9 @@
   },
   "nav": {
     "home": "Inicio",
-    "services": "Servicios",
     "projects": "Proyectos",
     "businessSoftware": "Software a medida",
+    "tools": "Herramientas",
     "about": "Sobre mí",
     "blog": "Blog",
     "contactMe": "Hablar de mi proyecto",
@@ -132,11 +137,48 @@
     "projectTypesTitle": "Proyectos por tipo",
     "toolsTitle": "Herramientas gratuitas",
     "tools": {
+      "allTools": "Todas las herramientas gratuitas",
       "drivingSchoolSoftware": "¿Qué software para mi autoescuela?",
       "eventRentalSoftware": "¿Qué software para mi alquiler de material para eventos?",
       "bikeShopSoftware": "¿Qué software para mi taller de bicicletas?",
       "autoRepairShopSoftware": "¿Qué software para mi taller mecánico?",
       "budgetEstimator": "¿Cuánto cuesta mi software de gestión?"
+    }
+  },
+  "toolsHubPage": {
+    "hero": {
+      "titlePart1": "Herramientas gratuitas para elegir ",
+      "titleHighlight1": "tu software",
+      "titlePart2": "",
+      "description": "Autoescuela, alquiler de material para eventos, taller de bicicletas, taller mecánico: en 6 preguntas, cada test te dice qué programa elegir y cuánto prever, con los precios 2026 de los programas del mercado francés. ¿Tu oficio no está? El estimador te da un orden de precio para una herramienta a medida.",
+      "cta": "Elegir un test",
+      "reassurance": {
+        "free": "Gratis, sin registro ni e-mail",
+        "instant": "Resultado inmediato",
+        "prices": "Precios de las webs de los editores"
+      }
+    },
+    "list": {
+      "eyebrow": "Tests por oficio",
+      "title": "Elige tu herramienta",
+      "intro": "Cada test lo ha diseñado Léo Guillaume, desarrollador de software de gestión cerca de Rennes (Francia). Los precios de los programas del mercado vienen de las páginas de tarifas de los editores."
+    },
+    "cards": {
+      "test": {
+        "meta": "6 preguntas · 2 minutos",
+        "link": "Hacer el test"
+      },
+      "estimator": {
+        "title": "¿Cuánto cuesta mi software de gestión?",
+        "description": "Tipo de proyecto, tamaño, opciones: en tres preguntas, el estimador te da una horquilla de precio para una herramienta a medida.",
+        "meta": "3 preguntas",
+        "link": "Estimar mi presupuesto"
+      },
+      "contact": {
+        "title": "¿Tu oficio no está en la lista?",
+        "description": "Cuéntame tu actividad: te digo gratis si basta con un programa del mercado o si merece la pena una herramienta a medida.",
+        "link": "Hablar de mi proyecto"
+      }
     }
   },
   "home": {
@@ -148,7 +190,7 @@
       "ctaSecondary": "Ver mis proyectos",
       "stats": {
         "experienceValue": "7 años",
-        "experienceLabel": "de desarrollo",
+        "experienceLabel": "de experiencia",
         "projectsLabel": "proyectos en línea",
         "ratingValue": "5/5",
         "ratingLabel": "en Malt"
@@ -304,7 +346,8 @@
     "clients": {
       "eyebrow": "Referencias",
       "title": "Han confiado en mí",
-      "intro": "Pymes, autónomos y startups que usan cada día las herramientas que he desarrollado."
+      "intro": "Pymes, autónomos y startups que usan cada día las herramientas que he desarrollado.",
+      "projectLinkLabel": "Ver el proyecto realizado para {name}"
     },
     "projects": {
       "eyebrow": "Proyectos",
@@ -493,7 +536,8 @@
       "ia": "IA"
     },
     "card": {
-      "seeProject": "Ver el proyecto"
+      "seeProject": "Ver el proyecto",
+      "screenshotAlt": "Captura de pantalla de {name}"
     },
     "hub": {
       "typesEyebrow": "Por tipo de proyecto",

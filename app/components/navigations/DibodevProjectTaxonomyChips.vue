@@ -3,10 +3,14 @@
     <li v-for="link in visibleLinks" :key="link.key">
       <NuxtLink
         :to="link.to"
-        class="hover:border-primary hover:text-primary inline-flex min-h-11 items-center gap-2 rounded-full border border-gray-400 bg-white px-4 text-sm font-medium text-gray-100 transition-colors"
+        class="group hover:border-primary hover:text-primary focus-visible:border-primary inline-flex h-11 items-center gap-2.5 rounded-full border border-gray-400 bg-white pr-1.5 pl-4 text-sm font-medium text-gray-100 transition-[color,border-color,box-shadow] hover:shadow-[0_6px_18px_rgba(111,95,224,0.12)]"
       >
         <span>{{ link.label }}</span>
-        <span class="text-muted">{{ link.count }}</span>
+        <span
+          class="group-hover:bg-accent-tint group-hover:text-primary flex h-7 min-w-7 items-center justify-center rounded-full bg-gray-800 px-2 text-xs font-medium text-gray-200 transition-colors"
+        >
+          {{ link.count }}
+        </span>
       </NuxtLink>
     </li>
   </ul>
@@ -19,7 +23,7 @@ import type { DibodevProjectTaxonomyLink } from '~/core/types/DibodevProjectTaxo
 import type { DibodevProjectTaxonomyChipsProps } from '~/core/types/DibodevProjectTaxonomyChips'
 
 /**
- * Compact chips linking to category or sector listing pages, with their project counts.
+ * Compact chips linking to category or sector listing pages, each with its project count in a counter.
  */
 const props: DibodevProjectTaxonomyChipsProps = defineProps({
   links: {

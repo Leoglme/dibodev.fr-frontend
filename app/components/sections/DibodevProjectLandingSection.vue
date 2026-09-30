@@ -1,6 +1,6 @@
 <template>
   <section id="project-landing" class="relative w-full px-6 pt-[120px] pb-16 sm:px-8 lg:pt-[160px] lg:pb-24">
-    <div class="mx-auto grid w-full max-w-7xl gap-8">
+    <div class="max-w-site mx-auto grid w-full gap-8">
       <div class="mx-auto grid max-w-3xl justify-items-center gap-6 text-center" data-aos="fade-up">
         <DibodevBreadcrumb v-if="props.breadcrumbs.length > 0" :items="props.breadcrumbs" />
         <div class="flex flex-col items-center gap-5">

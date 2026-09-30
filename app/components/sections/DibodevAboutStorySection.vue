@@ -1,6 +1,6 @@
 <template>
   <section id="about-story" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
-    <div class="mx-auto grid w-full max-w-7xl gap-14 lg:gap-16">
+    <div class="max-w-site mx-auto grid w-full gap-14 lg:gap-16">
       <div class="mx-auto grid w-full max-w-4xl gap-8">
         <div class="grid gap-4 text-center">
           <p class="text-primary text-xs font-medium tracking-[0.08em] uppercase">{{ t('aboutPage.story.eyebrow') }}</p>

@@ -1,7 +1,7 @@
 <template>
   <section id="contact-cta" class="px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
     <div
-      class="bg-accent-tint mx-auto grid w-full max-w-7xl justify-items-center gap-6 rounded-2xl px-6 py-14 text-center sm:px-12 sm:py-20"
+      class="bg-accent-tint max-w-site mx-auto grid w-full justify-items-center gap-6 rounded-2xl px-6 py-14 text-center sm:px-12 sm:py-20"
     >
       <div class="grid max-w-2xl justify-items-center gap-4">
         <h2

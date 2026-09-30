@@ -12,6 +12,7 @@
         "contact": "Parlons de votre projet",
         "businessSoftware": "Applications métier sur mesure",
         "projects": "Projets réalisés",
+        "tools": "Outils gratuits par métier",
         "blog": "Le blog : web, IA et outils métier"
       }
     },
@@ -47,6 +48,10 @@
       "title": "Application métier sur mesure à Rennes — Développeur freelance {'|'} Dibodev",
       "description": "Développeur freelance près de Rennes : applications métier et logiciels de gestion sur mesure pour TPE et PME. Au forfait, de 5 000 à 15 000 € selon le projet."
     },
+    "toolsHubPage": {
+      "title": "Outils gratuits\u202f: quel logiciel pour votre métier\u202f? {'|'} Dibodev",
+      "description": "Tests gratuits par métier (auto-école, location de matériel, atelier vélo, garage) et estimateur de budget\u202f: quel logiciel choisir, et à quel prix."
+    },
     "aboutPage": {
       "title": "À propos — Léo Guillaume, développeur freelance à Rennes {'|'} Dibodev",
       "description": "Léo Guillaume, fondateur de Dibodev : développeur freelance full‑stack et IA près de Rennes. Parcours (Kodeva, Izidoor, PrePeers), compétences et avis client."
@@ -54,9 +59,9 @@
   },
   "nav": {
     "home": "Accueil",
-    "services": "Services",
     "projects": "Réalisations",
     "businessSoftware": "Logiciel sur mesure",
+    "tools": "Outils gratuits",
     "about": "À propos",
     "blog": "Blog",
     "contactMe": "Discuter de mon projet",
@@ -132,11 +137,48 @@
     "projectTypesTitle": "Réalisations par type",
     "toolsTitle": "Outils gratuits",
     "tools": {
+      "allTools": "Tous les outils gratuits",
       "drivingSchoolSoftware": "Quel logiciel pour mon auto-école ?",
       "eventRentalSoftware": "Quel logiciel pour ma location de matériel événementiel ?",
       "bikeShopSoftware": "Quel logiciel pour mon atelier vélo ?",
       "autoRepairShopSoftware": "Quel logiciel pour mon garage ?",
       "budgetEstimator": "Combien coûte mon logiciel métier ?"
+    }
+  },
+  "toolsHubPage": {
+    "hero": {
+      "titlePart1": "Des outils gratuits pour choisir ",
+      "titleHighlight1": "votre logiciel",
+      "titlePart2": "",
+      "description": "Auto-école, location de matériel événementiel, atelier vélo, garage\u202f: en 6 questions, chaque test vous dit quel logiciel choisir et combien prévoir, avec les prix 2026 des logiciels du marché. Votre métier n'y est pas\u202f? L'estimateur donne un ordre de prix pour un outil sur mesure.",
+      "cta": "Choisir un test",
+      "reassurance": {
+        "free": "Gratuit, sans inscription ni e-mail",
+        "instant": "Résultat immédiat",
+        "prices": "Prix relevés chez les éditeurs"
+      }
+    },
+    "list": {
+      "eyebrow": "Tests par métier",
+      "title": "Choisissez votre outil",
+      "intro": "Chaque test est conçu par Léo Guillaume, développeur d'applications métier près de Rennes. Les prix des logiciels du marché viennent des pages tarifs des éditeurs."
+    },
+    "cards": {
+      "test": {
+        "meta": "6 questions · 2 minutes",
+        "link": "Faire le test"
+      },
+      "estimator": {
+        "title": "Combien coûte mon logiciel métier\u202f?",
+        "description": "Type de projet, taille, options\u202f: en trois questions, l'estimateur vous donne une fourchette de prix pour un outil sur mesure.",
+        "meta": "3 questions",
+        "link": "Estimer mon budget"
+      },
+      "contact": {
+        "title": "Votre métier n'est pas dans la liste\u202f?",
+        "description": "Décrivez-moi votre activité\u202f: je vous dis gratuitement si un logiciel du marché suffit ou si un outil sur mesure vaut le coup.",
+        "link": "Discuter de mon projet"
+      }
     }
   },
   "home": {
@@ -148,7 +190,7 @@
       "ctaSecondary": "Voir mes réalisations",
       "stats": {
         "experienceValue": "7 ans",
-        "experienceLabel": "de développement",
+        "experienceLabel": "d'expérience",
         "projectsLabel": "projets en ligne",
         "ratingValue": "5/5",
         "ratingLabel": "sur Malt"
@@ -304,7 +346,8 @@
     "clients": {
       "eyebrow": "Références",
       "title": "Ils m'ont fait confiance",
-      "intro": "Des TPE, des PME et des startups qui utilisent tous les jours les outils que j'ai développés."
+      "intro": "Des TPE, des PME et des startups qui utilisent tous les jours les outils que j'ai développés.",
+      "projectLinkLabel": "Voir le projet réalisé pour {name}"
     },
     "projects": {
       "eyebrow": "Réalisations",
@@ -493,7 +536,8 @@
       "ia": "IA"
     },
     "card": {
-      "seeProject": "Voir le projet"
+      "seeProject": "Voir le projet",
+      "screenshotAlt": "Capture d'écran de {name}"
     },
     "hub": {
       "typesEyebrow": "Par type de projet",

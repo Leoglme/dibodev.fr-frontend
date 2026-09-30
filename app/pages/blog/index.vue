@@ -34,7 +34,7 @@
     />
 
     <section id="blog-list" class="w-full scroll-mt-24 bg-gray-800 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
-      <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
+      <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
         <DibodevSectionHeading :eyebrow="$t('blog.list.eyebrow')" :title="$t('blog.list.title')" />
 
         <div v-if="articles.length === 0" class="grid gap-8 py-16 text-center">

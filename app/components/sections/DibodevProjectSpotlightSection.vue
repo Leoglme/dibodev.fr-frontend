@@ -1,7 +1,7 @@
 <template>
   <section class="px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
     <div
-      class="mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16"
+      class="max-w-site mx-auto grid w-full items-center gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16"
     >
       <div class="grid content-start gap-6">
         <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.description" />

@@ -1,6 +1,6 @@
 <template>
   <section id="contact-form" class="scroll-mt-24 px-6 pb-20 sm:px-8 lg:pb-28" data-aos="fade-up">
-    <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
+    <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <ul class="grid gap-3 md:grid-cols-3 md:gap-5 lg:gap-6">
         <li>
           <a
@@ -68,8 +68,8 @@
         </li>
       </ul>
 
-      <div class="grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-16">
-        <div class="rounded-xl border border-gray-300 bg-white p-6 sm:p-8 lg:p-10">
+      <div class="grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-12 xl:gap-14">
+        <div class="rounded-xl border border-gray-300 bg-white p-5 sm:p-7 lg:p-8">
           <DibodevContactForm />
         </div>
 

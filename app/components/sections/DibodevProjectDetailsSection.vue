@@ -1,6 +1,6 @@
 <template>
   <section id="project-details" class="w-full px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
-    <div class="mx-auto grid w-full max-w-7xl items-start gap-12 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-16">
+    <div class="max-w-site mx-auto grid w-full items-start gap-12 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-16">
       <div class="mx-auto grid w-full max-w-3xl gap-6 lg:mx-0">
         <h2
           class="text-[28px] leading-[1.15] font-medium tracking-[-0.01em] text-gray-100 sm:text-[36px] lg:text-[40px]"

@@ -5,7 +5,7 @@
     class="bg-gray-800 px-6 py-20 sm:px-8 lg:py-28"
     data-aos="fade-up"
   >
-    <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
+    <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <DibodevSectionHeading
         :eyebrow="t('businessSoftwarePage.projects.eyebrow')"
         :title="t('businessSoftwarePage.projects.title')"
@@ -26,6 +26,7 @@
           :description="project.metaDescription"
           :createdAt="project.date"
           :logo="project.logoUrl"
+          :screenshot="ProjectUtils.resolveCardScreenshot(project)"
           :primaryColor="project.primaryColor"
           :secondaryColor="project.secondaryColor"
           :route="project.route"
@@ -43,6 +44,7 @@ import type { CategoryKey } from '~/core/constants/projectEnums'
 import { computed } from 'vue'
 import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
+import { ProjectUtils } from '~/core/utils/ProjectUtils'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { categoryToSlug } from '~/core/constants/categorySlugs'

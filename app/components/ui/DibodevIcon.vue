@@ -12,6 +12,7 @@
     stroke-linejoin="round"
     :style="color"
     :aria-labelledby="name"
+    :data-icon="name"
   >
     <g :fill="mode === 'fill' ? color : undefined" :stroke="mode === 'stroke' ? color : undefined">
       <component :is="iconComponent" v-if="iconComponent" />

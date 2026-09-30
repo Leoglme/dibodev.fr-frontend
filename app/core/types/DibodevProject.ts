@@ -77,3 +77,14 @@ export type DibodevProjectCategory = {
   color: string
   backgroundColor: string
 }
+
+/**
+ * Short name and tagline split from the Storyblok project name ("Gest-Time — Logiciel de…").
+ * @type {DibodevProjectNameParts}
+ * @property {string} shortName - The part before the separator, or the whole name without one.
+ * @property {string} tagline - The part after the separator, empty without one.
+ */
+export type DibodevProjectNameParts = {
+  shortName: string
+  tagline: string
+}

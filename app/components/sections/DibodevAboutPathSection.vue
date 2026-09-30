@@ -1,6 +1,6 @@
 <template>
   <section id="about-path" class="bg-gray-800 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
-    <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-16">
+    <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-16">
       <DibodevSectionHeading
         :eyebrow="t('aboutPage.path.eyebrow')"
         :title="t('aboutPage.path.title')"

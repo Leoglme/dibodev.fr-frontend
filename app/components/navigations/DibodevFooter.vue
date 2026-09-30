@@ -1,39 +1,57 @@
 <template>
   <footer class="border-t border-gray-300 bg-gray-800">
     <div
-      class="mx-auto grid w-full max-w-7xl gap-12 px-6 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:gap-12 lg:py-20"
+      class="max-w-site mx-auto grid w-full gap-x-10 gap-y-12 px-6 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:py-20 xl:grid-cols-[minmax(0,1.35fr)_minmax(0,0.9fr)_minmax(0,1.25fr)_minmax(0,0.9fr)_minmax(0,1fr)] xl:gap-x-10"
     >
-      <div class="grid content-start gap-6 sm:col-span-2 lg:col-span-1">
-        <DibodevLogo :large="true" :size="30" />
-        <p class="max-w-sm text-[15px] leading-6 text-gray-200">{{ $t('footer.description') }}</p>
-        <div class="w-fit">
-          <DibodevLanguageSwitcher id="language-switcher" :options="languages" />
+      <div
+        class="grid content-start gap-6 sm:col-span-2 lg:col-span-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-start lg:gap-x-12 xl:col-span-1 xl:grid-cols-1"
+      >
+        <div class="grid content-start gap-6">
+          <DibodevLogo :large="true" :size="30" />
+          <p class="max-w-sm text-[15px] leading-6 text-gray-200">{{ $t('footer.description') }}</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-3">
+          <DibodevButton
+            v-if="!isContactPage"
+            :to="localePath('/contact')"
+            class="w-full sm:w-fit"
+            @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'footer' })"
+          >
+            {{ $t('footer.contactMe') }}
+          </DibodevButton>
+          <div class="w-fit">
+            <DibodevLanguageSwitcher id="language-switcher" :options="languages" />
+          </div>
         </div>
       </div>
 
-      <div class="grid content-start gap-10">
-        <nav class="grid content-start gap-4" :aria-label="$t('footer.pagesTitle')">
-          <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ $t('footer.pagesTitle') }}</h2>
-          <ul class="grid gap-3">
-            <li v-for="link in footerLinks" :key="link.to">
-              <NuxtLink :to="link.to" class="text-[15px] text-gray-200 transition-colors hover:text-gray-100">
-                {{ link.title }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </nav>
+      <nav class="grid content-start gap-4" :aria-label="$t('footer.pagesTitle')">
+        <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ $t('footer.pagesTitle') }}</h2>
+        <ul class="grid gap-3">
+          <li v-for="link in footerLinks" :key="link.to">
+            <NuxtLink :to="link.to" class="text-[15px] text-gray-200 transition-colors hover:text-gray-100">
+              {{ link.title }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </nav>
 
-        <nav class="grid content-start gap-4" :aria-label="$t('footer.toolsTitle')">
-          <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ $t('footer.toolsTitle') }}</h2>
-          <ul class="grid gap-3">
-            <li v-for="toolLink in toolLinks" :key="toolLink.key">
-              <NuxtLink :to="toolLink.to" class="text-[15px] text-gray-200 transition-colors hover:text-gray-100">
-                {{ toolLink.title }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="grid content-start gap-4" :aria-label="$t('footer.toolsTitle')">
+        <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ $t('footer.toolsTitle') }}</h2>
+        <ul class="grid gap-3">
+          <li v-for="toolLink in toolLinks" :key="toolLink.key">
+            <NuxtLink :to="toolLink.to" class="text-[15px] text-gray-200 transition-colors hover:text-gray-100">
+              {{ toolLink.title }}
+            </NuxtLink>
+          </li>
+          <li>
+            <DibodevLink :link="localePath('tools')" class="text-[15px]">
+              <span>{{ $t('footer.tools.allTools') }}</span>
+              <DibodevIcon name="ArrowRight" mode="stroke" :width="16" :height="16" aria-hidden="true" />
+            </DibodevLink>
+          </li>
+        </ul>
+      </nav>
 
       <nav class="grid content-start gap-4" :aria-label="$t('footer.projectTypesTitle')">
         <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ $t('footer.projectTypesTitle') }}</h2>
@@ -77,20 +95,12 @@
             </a>
           </li>
         </ul>
-        <DibodevButton
-          v-if="!isContactPage"
-          :to="localePath('/contact')"
-          class="mt-2 w-full sm:w-fit"
-          @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'footer' })"
-        >
-          {{ $t('footer.contactMe') }}
-        </DibodevButton>
       </div>
     </div>
 
     <div class="border-t border-gray-300">
       <div
-        class="text-muted mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-6 py-6 text-sm sm:px-8"
+        class="text-muted max-w-site mx-auto flex w-full flex-wrap items-center justify-between gap-x-6 gap-y-3 px-6 py-6 text-sm sm:px-8"
       >
         <p>© {{ currentYear }} Dibodev · {{ $t('footer.allRightsReserved') }} · {{ $t('legal.publisher.siret') }}</p>
         <ul class="flex flex-wrap items-center gap-x-5 gap-y-2">
@@ -113,6 +123,7 @@ import DibodevLogo from '~/components/branding/DibodevLogo.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import PhoneLink from '~/components/core/PhoneLink.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
+import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevLanguageSwitcher from '~/components/core/DibodevLanguageSwitcher.vue'
 import { CONTACT_EMAIL, MALT_PROFILE_URL } from '~/config/contact'
 import { useTracking } from '~/composables/useTracking'
@@ -140,8 +151,8 @@ const currentYear: number = new Date().getFullYear()
 
 const footerLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLink[] => [
   { title: t('footer.home'), to: localePath('/') },
-  { title: t('footer.myProjects'), to: localePath('projects') },
   { title: t('footer.businessSoftware'), to: localePath('custom-business-software') },
+  { title: t('footer.myProjects'), to: localePath('projects') },
   { title: t('footer.blog'), to: localePath('/blog') },
   { title: t('footer.about'), to: localePath('about') },
   { title: t('footer.contactPage'), to: localePath('/contact') },

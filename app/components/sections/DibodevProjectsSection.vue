@@ -1,6 +1,6 @@
 <template>
   <section id="projects" class="w-full scroll-mt-24 bg-gray-800 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
-    <div class="mx-auto grid w-full max-w-7xl gap-10">
+    <div class="max-w-site mx-auto grid w-full gap-10">
       <DibodevSectionHeading :eyebrow="t('projects.section.eyebrow')" :title="t('projects.section.title')" />
 
       <DibodevProjectFilters
@@ -21,6 +21,7 @@
           :description="project.metaDescription"
           :createdAt="project.date"
           :logo="project.logoUrl"
+          :screenshot="ProjectUtils.resolveCardScreenshot(project)"
           :primaryColor="project.primaryColor"
           :secondaryColor="project.secondaryColor"
           :route="project.route"
@@ -54,6 +55,7 @@ import type { DibodevProjectsSectionProps } from '~/core/types/DibodevProjectsSe
 import type { DibodevSelectOption } from '~/core/types/DibodevSelect'
 import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
+import { ProjectUtils } from '~/core/utils/ProjectUtils'
 import DibodevProjectFilters from '~/components/sections/DibodevProjectFilters.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { getProjectDescriptionForSchema } from '~/core/utils/projectDescriptionForSchema'
