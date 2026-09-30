@@ -90,8 +90,8 @@ export const DRIVING_SCHOOL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
       {
         name: 'Klaxo',
         coverage: 'Agenda, reserva en línea, recordatorios por SMS, tienda, contratos, libro, ANTS y RdvPermis',
-        price: 'Con presupuesto',
-        priceCondition: 'Tres planes según las inscripciones, tarifas no publicadas',
+        price: `99 a 249${NBSP}€ al mes`,
+        priceCondition: `De 10 a 50 inscripciones al mes según el plan, y luego 9,90${NBSP}€ por inscripción`,
       },
       {
         name: 'Rapido, Elgéaweb, AGX',
@@ -173,7 +173,7 @@ export const DRIVING_SCHOOL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
         cells: [
           {
             state: 'yes',
-            text: `Gratis a 79${NBSP}€ sin IVA al mes para un centro, o con presupuesto según el editor`,
+            text: `Gratis a 249${NBSP}€ sin IVA al mes para un centro, o con presupuesto según el editor`,
           },
           { state: 'partial', text: `Tu suscripción, más 2500 a 7000${NBSP}€ una sola vez` },
           {
@@ -248,7 +248,7 @@ export const DRIVING_SCHOOL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     questions: [
       {
         question: '¿Cuánto cuesta un programa de gestión para autoescuelas en Francia?',
-        answer: `Entre 0 y 79${NBSP}€ sin IVA al mes para un centro con los programas que publican sus precios. Drivea y el plan básico de rdv360 son gratuitos, Ma Gestion Zen cuesta 39${NBSP}€ al mes, Drivup 45 o 69${NBSP}€ para un centro, Kréno 2 49${NBSP}€ hasta 200 inscripciones al año y GestAuto-École 79${NBSP}€ (precios públicos consultados a finales de septiembre de 2026). Klaxo, Rapido, Elgéaweb y AGX funcionan con presupuesto. Un complemento a medida cuesta de 2500 a 7000${NBSP}€ una sola vez, una herramienta completa de 5000 a 25${NBSP}000${NBSP}€, y luego de 100 a 300${NBSP}€ al mes de mantenimiento.`,
+        answer: `Entre 0 y 249${NBSP}€ sin IVA al mes para un centro con los programas que publican sus precios. Drivea y el plan básico de rdv360 son gratuitos, Ma Gestion Zen cuesta 39${NBSP}€ al mes, Drivup 45 o 69${NBSP}€ para un centro, Kréno 2 49${NBSP}€ hasta 200 inscripciones al año y GestAuto-École 79${NBSP}€ y Klaxo de 99 a 249${NBSP}€ según las inscripciones (precios públicos consultados a finales de septiembre de 2026). Rapido, Elgéaweb y AGX funcionan con presupuesto. Un complemento a medida cuesta de 2500 a 7000${NBSP}€ una sola vez, una herramienta completa de 5000 a 25${NBSP}000${NBSP}€, y luego de 100 a 300${NBSP}€ al mes de mantenimiento.`,
       },
       {
         question: '¿Existe un software gratuito para autoescuelas?',

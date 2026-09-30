@@ -89,8 +89,8 @@ export const DRIVING_SCHOOL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       {
         name: 'Klaxo',
         coverage: 'Scheduling, online booking, text reminders, online shop, contracts, logbook, ANTS and RdvPermis',
-        price: 'On quote',
-        priceCondition: 'Three plans depending on sign-ups, prices not published',
+        price: '€99 to €249 per month',
+        priceCondition: '10 to 50 sign-ups a month depending on the plan, then €9.90 per sign-up',
       },
       {
         name: 'Rapido, Elgéaweb, AGX',
@@ -170,7 +170,7 @@ export const DRIVING_SCHOOL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
         cells: [
           {
             state: 'yes',
-            text: 'Free to €79 excl. VAT per month for one branch, or on quote depending on the publisher',
+            text: 'Free to €249 excl. VAT per month for one branch, or on quote depending on the publisher',
           },
           { state: 'partial', text: 'Your subscription, plus €2,500 to €7,000 once' },
           { state: 'partial', text: '€5,000 to €25,000 once, plus €100 to €300 per month for maintenance' },
@@ -243,7 +243,7 @@ export const DRIVING_SCHOOL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       {
         question: 'How much does driving school management software cost in France?',
         answer:
-          'Between €0 and €79 excl. VAT per month for one branch with the software that publishes its prices. Drivea and the basic plan of rdv360 are free, Ma Gestion Zen costs €39 per month, Drivup €45 or €69 for one branch, Kréno 2 €49 up to 200 sign-ups a year and GestAuto-École €79 (public prices checked at the end of September 2026). Klaxo, Rapido, Elgéaweb and AGX are on quote. A custom extension costs €2,500 to €7,000 once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
+          'Between €0 and €249 excl. VAT per month for one branch with the software that publishes its prices. Drivea and the basic plan of rdv360 are free, Ma Gestion Zen costs €39 per month, Drivup €45 or €69 for one branch, Kréno 2 €49 up to 200 sign-ups a year and GestAuto-École €79 and Klaxo €99 to €249 depending on sign-ups (public prices checked at the end of September 2026). Rapido, Elgéaweb and AGX are on quote. A custom extension costs €2,500 to €7,000 once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
       },
       {
         question: 'Is there free driving school software?',

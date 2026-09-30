@@ -87,8 +87,8 @@ export const DRIVING_SCHOOL_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
       {
         name: 'Klaxo',
         coverage: 'Planning, réservation en ligne, rappels SMS, boutique, contrats, livret, ANTS et RdvPermis',
-        price: 'Sur devis',
-        priceCondition: 'Trois formules selon le nombre d’inscriptions, tarifs non publiés',
+        price: `99 à 249${NBSP}€ par mois`,
+        priceCondition: `De 10 à 50 inscriptions par mois selon la formule, puis 9,90${NBSP}€ l’inscription`,
       },
       {
         name: 'Rapido, Elgéaweb, AGX',
@@ -168,7 +168,7 @@ export const DRIVING_SCHOOL_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
         cells: [
           {
             state: 'yes',
-            text: `Gratuit à 79${NBSP}€ HT par mois pour une agence, ou sur devis selon l’éditeur`,
+            text: `Gratuit à 249${NBSP}€ HT par mois pour une agence, ou sur devis selon l’éditeur`,
           },
           { state: 'partial', text: `Votre abonnement, plus 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois` },
           {
@@ -243,7 +243,7 @@ export const DRIVING_SCHOOL_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     questions: [
       {
         question: `Combien coûte un logiciel de gestion d’auto-école${NBSP}?`,
-        answer: `Entre 0 et 79${NBSP}€ HT par mois pour une agence avec les logiciels qui affichent leurs prix. Drivea et la formule de base de rdv360 sont gratuits, Ma Gestion Zen coûte 39${NBSP}€ par mois, Drivup 45 ou 69${NBSP}€ pour une agence, Kréno 2 49${NBSP}€ jusqu’à 200 inscriptions par an et GestAuto-École 79${NBSP}€ (tarifs publics relevés fin septembre 2026). Klaxo, Rapido, Elgéaweb et AGX sont sur devis. Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
+        answer: `Entre 0 et 249${NBSP}€ HT par mois pour une agence avec les logiciels qui affichent leurs prix. Drivea et la formule de base de rdv360 sont gratuits, Ma Gestion Zen coûte 39${NBSP}€ par mois, Drivup 45 ou 69${NBSP}€ pour une agence, Kréno 2 49${NBSP}€ jusqu’à 200 inscriptions par an et GestAuto-École 79${NBSP}€ et Klaxo de 99 à 249${NBSP}€ selon le nombre d’inscriptions (tarifs publics relevés fin septembre 2026). Rapido, Elgéaweb et AGX sont sur devis. Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
       },
       {
         question: `Existe-t-il un logiciel d’auto-école gratuit${NBSP}?`,

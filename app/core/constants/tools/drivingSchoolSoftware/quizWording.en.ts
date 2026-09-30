@@ -149,16 +149,17 @@ export const DRIVING_SCHOOL_QUIZ_WORDING_EN: DibodevDrivingSchoolQuizWording = {
   agenciesFeature: 'A view per branch, and an overall view for management',
   market: {
     eyebrow: 'Budget to plan',
-    priceRange: 'Free to €79',
+    priceRange: 'Free to €249',
     priceSuffix: 'per month excl. VAT, for one branch',
     priceExamples: [
       { label: 'Ma Gestion Zen', value: '€39/month' },
       { label: 'Drivup', value: 'from €45/month' },
       { label: 'Kréno 2', value: '€49/month' },
       { label: 'GestAuto-École', value: '€79/month' },
+      { label: 'Klaxo', value: 'from €99/month' },
     ],
     footnote:
-      'Drivea and the basic plan of rdv360 are free: check that they handle the digital logbook. Klaxo, Rapido, Elgéaweb and AGX are on quote.',
+      'Drivea and the basic plan of rdv360 are free: check that they handle the digital logbook. Rapido, Elgéaweb and AGX are on quote.',
     footnoteLink: { label: 'See all prices', href: '#software' },
     adviceTitle: 'What to check before choosing',
     disclaimer: 'Public prices excluding VAT, checked at the end of September 2026.',
@@ -166,7 +167,7 @@ export const DRIVING_SCHOOL_QUIZ_WORDING_EN: DibodevDrivingSchoolQuizWording = {
     leadFormTitle: 'Free advice to choose your software',
     leadFormIntro:
       'I reply within 24 hours to talk it through, by phone or video call. Your test answers are attached to your message.',
-    leadBudget: 'Off-the-shelf software, free to €79 excl. VAT per month',
+    leadBudget: 'Off-the-shelf software, free to €249 excl. VAT per month',
   },
   project: {
     eyebrow: 'Price range, fixed price',

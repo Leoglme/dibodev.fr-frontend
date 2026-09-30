@@ -155,23 +155,24 @@ export const DRIVING_SCHOOL_QUIZ_WORDING_ES: DibodevDrivingSchoolQuizWording = {
   agenciesFeature: 'Una vista por centro y una vista global para la dirección',
   market: {
     eyebrow: 'Presupuesto a prever',
-    priceRange: `Gratis a 79${NBSP}€`,
+    priceRange: `Gratis a 249${NBSP}€`,
     priceSuffix: 'al mes sin IVA, para un centro',
     priceExamples: [
       { label: 'Ma Gestion Zen', value: `39${NBSP}€/mes` },
       { label: 'Drivup', value: `desde 45${NBSP}€/mes` },
       { label: 'Kréno 2', value: `49${NBSP}€/mes` },
       { label: 'GestAuto-École', value: `79${NBSP}€/mes` },
+      { label: 'Klaxo', value: `desde 99${NBSP}€/mes` },
     ],
     footnote:
-      'Drivea y el plan básico de rdv360 son gratuitos: comprueba que gestionan el libro de aprendizaje digital. Klaxo, Rapido, Elgéaweb y AGX funcionan con presupuesto.',
+      'Drivea y el plan básico de rdv360 son gratuitos: comprueba que gestionan el libro de aprendizaje digital. Rapido, Elgéaweb y AGX funcionan con presupuesto.',
     footnoteLink: { label: 'Ver todos los precios', href: '#programas' },
     adviceTitle: 'Qué comprobar antes de elegir',
     disclaimer: 'Precios públicos sin IVA, consultados a finales de septiembre de 2026.',
     ctaLabel: 'Pedir consejo gratis',
     leadFormTitle: 'Un consejo gratuito para elegir tu programa',
     leadFormIntro: `Te respondo en 24${NBSP}h para hablarlo, por teléfono o videollamada. Tus respuestas al test se adjuntan a tu mensaje.`,
-    leadBudget: `Programa del mercado, gratis a 79${NBSP}€ sin IVA al mes`,
+    leadBudget: `Programa del mercado, gratis a 249${NBSP}€ sin IVA al mes`,
   },
   project: {
     eyebrow: 'Orden de precio, a precio cerrado',
