@@ -26,7 +26,7 @@
 ## À propos
 
 - [Qui est Léo Guillaume ?](https://dibodev.fr/a-propos) : parcours, compétences, avis client et profils (Malt, Codeur, LinkedIn, GitHub, fiche Google, Pages Jaunes, dev.to).
-- Parcours : cuisinier, reconversion vers le développement web en 2017, Web@cadémie d'Epitech Rennes (2020-2022) puis MSc Pro en intelligence artificielle et data (2022-2025) ; ingénieur full-stack en alternance chez Kodeva (oct. 2020 - août 2022 : 3 applications métier toujours en production dans des TPE et PME) et chez Izidoor (janv. 2023 - juil. 2025 : SaaS de réservation adopté par une trentaine de structures, dont il est devenu actionnaire) ; freelance avec Dibodev depuis septembre 2025.
+- Parcours : cuisinier, reconversion vers le développement web en 2017, Web@cadémie d'Epitech Rennes (2020-2022) puis MSc Pro en intelligence artificielle et data (2022-2025) ; ingénieur full-stack en alternance chez Kodeva (oct. 2020 - août 2022 : 3 applications métier toujours en production dans des TPE et PME) et chez Izidoor (janv. 2023 - juil. 2025 : SaaS de réservation adopté par une trentaine de structures, dont il est devenu actionnaire) ; freelance avec Dibodev depuis juin 2025.
 - En ce moment : mission de développement full-stack et IA chez PrePeers (startup EdTech d'orientation pour les 15-25 ans) depuis avril 2026 : plateforme étudiante, chats IA (Lola pour les étudiants, Lily sur les sites des écoles partenaires), intégration CRM et suivi analytique.
 - Avis client : « a très vite compris notre besoin, et a travaillé rapidement et avec efficacité » (Gilles, CTO de PrePeers, avis 5/5 sur Malt).
 - Entreprise individuelle Dibodev (EI Guillaume Léo), SIRET 988 307 906 00020, créée le 20 juin 2025.

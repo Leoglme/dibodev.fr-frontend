@@ -263,6 +263,6 @@ export const BIKE_SHOP_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   contactCta: {
     title: `Un doute sur le bon outil pour votre atelier${NBSP}?`,
     description: `Décrivez-moi votre atelier en quelques lignes. Je vous réponds sous 24${NBSP}h, et si un logiciel du marché vous suffit, je vous le dis.`,
-    button: 'Parler de mon projet',
+    button: 'Discuter de mon projet',
   },
 }

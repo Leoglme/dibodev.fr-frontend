@@ -261,6 +261,6 @@ export const EVENT_RENTAL_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   contactCta: {
     title: `Un doute sur le bon outil pour votre parc de location${NBSP}?`,
     description: `Décrivez-moi votre activité en quelques lignes. Je vous réponds sous 24${NBSP}h, et si un logiciel du marché vous suffit, je vous le dis.`,
-    button: 'Parler de mon projet',
+    button: 'Discuter de mon projet',
   },
 }

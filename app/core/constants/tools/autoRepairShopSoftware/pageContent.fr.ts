@@ -263,6 +263,6 @@ export const AUTO_REPAIR_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   contactCta: {
     title: `Un doute sur le bon outil pour votre garage${NBSP}?`,
     description: `Décrivez-moi votre garage en quelques lignes. Je vous réponds sous 24${NBSP}h, et si un logiciel du marché vous suffit, je vous le dis.`,
-    button: 'Parler de mon projet',
+    button: 'Discuter de mon projet',
   },
 }

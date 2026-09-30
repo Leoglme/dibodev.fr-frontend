@@ -283,6 +283,6 @@ export const DRIVING_SCHOOL_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   contactCta: {
     title: `Un doute sur le bon choix pour votre auto-école${NBSP}?`,
     description: `Décrivez-moi votre auto-école en quelques lignes. Je vous réponds sous 24${NBSP}h, et si un logiciel du marché vous suffit, je vous le dis.`,
-    button: 'Parler de mon projet',
+    button: 'Discuter de mon projet',
   },
 }

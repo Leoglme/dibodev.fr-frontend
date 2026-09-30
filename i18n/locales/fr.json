@@ -59,7 +59,7 @@
     "businessSoftware": "Logiciel sur mesure",
     "about": "À propos",
     "blog": "Blog",
-    "contactMe": "Parler de mon projet",
+    "contactMe": "Discuter de mon projet",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
     "mainNavigation": "Navigation principale",
@@ -78,7 +78,7 @@
     "cta": {
       "title": "Un projet en tête ?",
       "description": "Décrivez-moi votre besoin en quelques lignes : je vous réponds sous 24 h avec de premières pistes et une idée de budget.",
-      "ctaText": "Parler de mon projet"
+      "ctaText": "Discuter de mon projet"
     },
     "card": {
       "readMore": "Lire l'article",
@@ -106,7 +106,7 @@
     "sidebarCta": {
       "title": "Un projet en tête ?",
       "description": "Décrivez-moi votre besoin, je vous réponds sous 24 h.",
-      "button": "Parler de mon projet"
+      "button": "Discuter de mon projet"
     },
     "start": {
       "eyebrow": "Par où commencer",
@@ -115,7 +115,7 @@
     }
   },
   "footer": {
-    "contactMe": "Parler de mon projet",
+    "contactMe": "Discuter de mon projet",
     "home": "Accueil",
     "myProjects": "Réalisations",
     "blog": "Blog",
@@ -144,7 +144,7 @@
       "eyebrow": "Développeur indépendant · Rennes et à distance",
       "title": "Un logiciel de gestion ou un site web sur mesure pour votre entreprise.",
       "description": "Je crée des applications métier, des sites web et des automatisations avec l'IA pour les TPE et PME. Un seul interlocuteur, du premier échange à la mise en ligne.",
-      "ctaPrimary": "Parler de mon projet",
+      "ctaPrimary": "Discuter de mon projet",
       "ctaSecondary": "Voir mes réalisations",
       "stats": {
         "experienceValue": "7 ans",
@@ -471,7 +471,7 @@
     "cta": {
       "text": "Vous avez un projet similaire ? Parlons‑en.",
       "description": "Décrivez-moi votre besoin en quelques lignes : je vous réponds sous 24 h avec de premières pistes et une idée de budget.",
-      "button": "Parler de mon projet"
+      "button": "Discuter de mon projet"
     },
     "sectors": {
       "sport-loisirs": "Sport & Loisirs",
@@ -514,7 +514,7 @@
     },
     "asideCta": {
       "description": "Décrivez-moi votre besoin en quelques lignes : je vous réponds sous 24 h avec de premières pistes et une idée de budget.",
-      "button": "Parler de mon projet"
+      "button": "Discuter de mon projet"
     },
     "mosaic": {
       "label": "Projets de cette page",
@@ -559,7 +559,7 @@
     "asideCta": {
       "title": "Un projet similaire ?",
       "description": "Je vous réponds sous 24 h avec de premières pistes et une idée de budget.",
-      "button": "Parler de mon projet"
+      "button": "Discuter de mon projet"
     },
     "caseStudy": {
       "eyebrow": "Étude de cas",
@@ -1088,7 +1088,7 @@
         }
       },
       "dibodev": {
-        "period": "Depuis septembre 2025",
+        "period": "Depuis juin 2025",
         "title": "Fondateur et développeur freelance",
         "organization": "Dibodev",
         "context": "Entreprise individuelle, près de Rennes",

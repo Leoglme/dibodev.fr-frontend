@@ -116,32 +116,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- Difficulty in tracking the progress of construction sites in real-time",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Difficulty in tracking the progress of construction sites in real-time",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Risk of data entry errors and data loss",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- Risk of data entry errors and data loss",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Lack of real-time collaboration",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Lack of real-time collaboration",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Difficulty in generating reports and invoices",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Difficulty in generating reports and invoices",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -450,25 +481,49 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- No automatic reminders",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "No automatic reminders",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "No synchronization with common tools",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- No synchronization with common tools",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- No real-time cancellation management",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "No real-time cancellation management",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -1303,32 +1358,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- Create a custom website that showcases your work and expertise.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Create a custom website that showcases your work and expertise.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Optimize your website for natural search engine optimization (SEO) to attract more local clients.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- Optimize your website for natural search engine optimization (SEO) to attract more local clients.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Integrate marketing features to increase your sales.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Integrate marketing features to increase your sales.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Ensure the maintenance and updates of your website.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Ensure the maintenance and updates of your website.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -1442,64 +1528,76 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Low initial cost",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Low initial cost",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": No need to invest in hardware or servers.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ": No need to invest in hardware or servers.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Automatic updates",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Automatic updates",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": You always benefit from the latest version without having to intervene.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ": You always benefit from the latest version without having to intervene.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Accessibility",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Accessibility",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": You can access it from any device connected to the Internet.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": ": You can access it from any device connected to the Internet.",
-              "type": "text"
             }
           ]
         },
@@ -1513,44 +1611,53 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Limited customization",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Limited customization",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": You must adapt to the software, not the other way around.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ": You must adapt to the software, not the other way around.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Dependence on the provider",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Dependence on the provider",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": You are at the mercy of the provider's decisions regarding pricing, features, etc.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": ": You are at the mercy of the provider's decisions regarding pricing, features, etc.",
-              "type": "text"
             }
           ]
         },
@@ -1576,64 +1683,76 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Full customization",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Full customization",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": The software is designed to adapt to your business processes.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ": The software is designed to adapt to your business processes.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Data ownership",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Data ownership",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": You control your data and hosting.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ": You control your data and hosting.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Scalability",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Scalability",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": You can add or modify features according to your needs.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": ": You can add or modify features according to your needs.",
-              "type": "text"
             }
           ]
         },
@@ -1647,44 +1766,53 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "High initial cost",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "High initial cost",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": Developing a custom software requires a larger investment.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ": Developing a custom software requires a larger investment.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Development time",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Development time",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": It takes time to design and deploy a custom solution.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": ": It takes time to design and deploy a custom solution.",
-              "type": "text"
             }
           ]
         },
@@ -1710,84 +1838,99 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Your specific needs",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Your specific needs",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": Do you have unique business processes that require a custom solution?",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ": Do you have unique business processes that require a custom solution?",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Your budget",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Your budget",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": What is your initial and recurring budget for management software?",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ": What is your initial and recurring budget for management software?",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Your risk tolerance",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Your risk tolerance",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": Are you willing to invest time and money in developing a custom solution?",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ": Are you willing to invest time and money in developing a custom solution?",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Your technical skills",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Your technical skills",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": Do you have the necessary skills to manage a custom solution?",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": ": Do you have the necessary skills to manage a custom solution?",
-              "type": "text"
             }
           ]
         },
@@ -2599,7 +2742,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "👉 Discuss my project",
+                "label": "Discuss my project",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -2856,84 +2999,99 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Record an intervention in thirty seconds",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Record an intervention in thirty seconds",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", straight from the job site, with photos.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ", straight from the job site, with photos.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "See at a glance what hasn’t been billed yet",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "See at a glance what hasn’t been billed yet",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " — the number one money leak.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " — the number one money leak.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Generate a clean quote in minutes",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Generate a clean quote in minutes",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", based on your usual services and rates.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ", based on your usual services and rates.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Retrieve a customer’s history",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Retrieve a customer’s history",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " when they call back six months later.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " when they call back six months later.",
-              "type": "text"
             }
           ]
         },
@@ -2959,32 +3117,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- A fast, clean quote lands more jobs than a cheaper one that arrives late.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "A fast, clean quote lands more jobs than a cheaper one that arrives late.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Lost hours? They’re the small, unbilled jobs—where the money slips away.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- Lost hours? They’re the small, unbilled jobs—where the money slips away.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "A generic software that slows you down will end up gathering dust; a tool built for your trade, you’ll actually use.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- A generic software that slows you down will end up gathering dust; a tool built for your trade, you’ll actually use.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- You don’t digitize just to digitize: you first fix the most painful issue.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You don’t digitize just to digitize: you first fix the most painful issue.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -3247,25 +3436,49 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- Each client has a file with their boilers: brand, installation date, last visit.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Each client has a file with their boilers: brand, installation date, last visit.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "The system automatically calculates upcoming visits and lists them by month.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- The system automatically calculates upcoming visits and lists them by month.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- A follow-up is sent automatically—SMS or email—weeks before the deadline.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "A follow-up is sent automatically—SMS or email—weeks before the deadline.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -3591,64 +3804,76 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Every call is logged",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Every call is logged",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " — even the ones we couldn’t answer — so we can call back immediately instead of forgetting about them.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " — even the ones we couldn’t answer — so we can call back immediately instead of forgetting about them.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Today’s jobs",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Today’s jobs",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " are visible at a glance: who, where, at what time.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " are visible at a glance: who, where, at what time.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Installation quotes",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Installation quotes",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " are sent and followed up automatically, so non-urgent requests don’t slip through the cracks.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " are sent and followed up automatically, so non-urgent requests don’t slip through the cracks.",
-              "type": "text"
             }
           ]
         },
@@ -3973,64 +4198,76 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "We actually talk.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "We actually talk.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " A real kickoff session over video, screen-sharing, is worth ten email exchanges. You show me, I understand the field, and we don’t waste three weeks on misunderstandings.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " A real kickoff session over video, screen-sharing, is worth ten email exchanges. You show me, I understand the field, and we don’t waste three weeks on misunderstandings.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Responsiveness.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Responsiveness.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " A bug on a Tuesday morning, a \"Hey, we should add this\": I’m in the same time zone, the same week, reachable—no offshore hotline with ticket number 4712.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " A bug on a Tuesday morning, a \"Hey, we should add this\": I’m in the same time zone, the same week, reachable—no offshore hotline with ticket number 4712.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "No black box.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "No black box.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " You know who codes your tool, and you can show me the problem during a video call with screen sharing. It might seem minor, but it’s actually what makes a project succeed.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " You know who codes your tool, and you can show me the problem during a video call with screen sharing. It might seem minor, but it’s actually what makes a project succeed.",
-              "type": "text"
             }
           ]
         },
@@ -4323,7 +4560,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Discussing my project",
+                "label": "Discuss my project",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -5520,84 +5757,115 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- You ",
-              "type": "text"
-            },
-            {
-              "text": "re-enter the same information",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "re-enter the same information",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " multiple times—the client in one place, the quote in another, the invoice in a third.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " multiple times—the client in one place, the quote in another, the invoice in a third.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Your Excel has become a mess that ",
-              "type": "text"
-            },
-            {
-              "text": "only you know how to navigate",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Your Excel has become a mess that ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "only you know how to navigate",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", and it crashes as soon as an employee touches a cell.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ", and it crashes as soon as an employee touches a cell.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- The information you need in the field ",
-              "type": "text"
-            },
-            {
-              "text": "stays stuck in the office",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "The information you need in the field ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "stays stuck in the office",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " — the schedule, the latest quote, a client’s history.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " — the schedule, the latest quote, a client’s history.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- You spend your ",
-              "type": "text"
-            },
-            {
-              "text": "evenings and Sundays",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You spend your ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "evenings and Sundays",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " on administrative tasks instead of handling them during the day.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " on administrative tasks instead of handling them during the day.",
-              "type": "text"
             }
           ]
         },
@@ -6158,7 +6426,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Let’s discuss my project",
+                "label": "Discuss my project",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -7041,90 +7309,102 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "A business tool for a small or mid-sized company",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "A business tool for a small or mid-sized company",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " (scheduling, inventory, quotes, time tracking): ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "between €5,000 and €15,000",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ". A simple, targeted tool (one trade, one type of user, no heavy integration) stays at the low end of the range; several roles, integrations and a dashboard push it up.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " (scheduling, inventory, quotes, time tracking): ",
-              "type": "text"
-            },
-            {
-              "text": "between €5,000 and €15,000",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "A B2B platform",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " (multi-user, customer space, integrations, scalability): beyond that, and it’s split into phases.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ". A simple, targeted tool (one trade, one type of user, no heavy integration) stays at the low end of the range; several roles, integrations and a dashboard push it up.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "A B2B platform",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Maintenance",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", once the tool is live: ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "€100 to €300 per month",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", depending on the tool.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " (multi-user, customer space, integrations, scalability): beyond that, and it’s split into phases.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Maintenance",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "text": ", once the tool is live: ",
-              "type": "text"
-            },
-            {
-              "text": "€100 to €300 per month",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "text": ", depending on the tool.",
-              "type": "text"
             }
           ]
         },
@@ -7177,64 +7457,76 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "The scope that grows along the way.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "The scope that grows along the way.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " The ‘quick extra feature’ is the first item to exceed the budget. A good provider defines the scope and pushes the rest to Phase 2.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " The ‘quick extra feature’ is the first item to exceed the budget. A good provider defines the scope and pushes the rest to Phase 2.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "The initial ambiguity.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "The initial ambiguity.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " The less clear the need is from the start, the more back-and-forth—and cost—you’ll pay. A short scoping phase saves big.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " The less clear the need is from the start, the more back-and-forth—and cost—you’ll pay. A short scoping phase saves big.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Custom work when off-the-shelf would suffice.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Custom work when off-the-shelf would suffice.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Sometimes an existing tool covers 80% of the work. Coding those 80% from scratch is wasteful: you only customize what truly differentiates you.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " Sometimes an existing tool covers 80% of the work. Coding those 80% from scratch is wasteful: you only customize what truly differentiates you.",
-              "type": "text"
             }
           ]
         },
@@ -7511,64 +7803,76 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Your need is standard.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Your need is standard.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Invoicing, sending newsletters, managing a shared calendar—thousands of companies do the same, the tools exist, they’re reliable and affordable.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " Invoicing, sending newsletters, managing a shared calendar—thousands of companies do the same, the tools exist, they’re reliable and affordable.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "You’re just starting out.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You’re just starting out.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Until your processes are stabilized, a flexible SaaS lets you experiment without committing to a development budget.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " Until your processes are stabilized, a flexible SaaS lets you experiment without committing to a development budget.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Time is of the essence.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Time is of the essence.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " A SaaS can be used tomorrow. Custom development takes weeks. If you’re in a hurry for a basic need, off-the-shelf wins.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " A SaaS can be used tomorrow. Custom development takes weeks. If you’re in a hurry for a basic need, off-the-shelf wins.",
-              "type": "text"
             }
           ]
         },
@@ -7603,84 +7907,99 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Your process is your value.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Your process is your value.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " If your way of working sets you apart, a standard tool makes you ordinary. Customization protects it and speeds it up.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " If your way of working sets you apart, a standard tool makes you ordinary. Customization protects it and speeds it up.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "You’re already bypassing the tool.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You’re already bypassing the tool.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Excel exports everywhere, repurposed fields, three incompatible software programs: signs that the shelf no longer fits.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " Excel exports everywhere, repurposed fields, three incompatible software programs: signs that the shelf no longer fits.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Your data is sensitive.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Your data is sensitive.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " You don’t want to entrust it to a third-party service hosted who knows where: a tool on your own infrastructure meets this requirement.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " You don’t want to entrust it to a third-party service hosted who knows where: a tool on your own infrastructure meets this requirement.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Subscription costs skyrocket.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Subscription costs skyrocket.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " With dozens of users, a per-person subscription eventually costs more than owning your own tool.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " With dozens of users, a per-person subscription eventually costs more than owning your own tool.",
-              "type": "text"
             }
           ]
         },
@@ -7790,18 +8109,35 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- If not (invoicing, counting, scheduling like everyone else) → shelf solution.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "If not (invoicing, counting, scheduling like everyone else) → shelf solution.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- If yes (your method, your customer relationships, your production line) → custom development for that part.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "If yes (your method, your customer relationships, your production line) → custom development for that part.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -7945,7 +8281,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Talking about my project",
+                "label": "Discuss my project",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -8001,84 +8337,99 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Lost Time.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Lost Time.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Each employee fills out their own table, someone consolidates the data, fixes broken formulas, and follows up with latecomers. Hours each month are wasted just counting hours.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": "Each employee fills out their own table, someone consolidates the data, fixes broken formulas, and follows up with latecomers. Hours each month are wasted just counting hours.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Errors.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Errors.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Data entered from memory at the end of the month, overwritten cells, wrong tabs. The numbers are approximate—and you invoice or pay based on that approximation.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": "Data entered from memory at the end of the month, overwritten cells, wrong tabs. The numbers are approximate—and you invoice or pay based on that approximation.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Zero Real-Time Visibility.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Zero Real-Time Visibility.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "You only discover a project’s budget overrun when it’s too late to react.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": "You only discover a project’s budget overrun when it’s too late to react.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Nothing Actionable.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Nothing Actionable.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "It’s impossible to quickly determine which client is profitable, which project is off track, or who is overloaded.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": "It’s impossible to quickly determine which client is profitable, which project is off track, or who is overloaded.",
-              "type": "text"
             }
           ]
         },
@@ -8113,84 +8464,99 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Entry Takes Seconds.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Entry Takes Seconds.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "You start a timer or log your hours from your phone throughout the day, not from memory three weeks later.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": "You start a timer or log your hours from your phone throughout the day, not from memory three weeks later.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Everything Is Automatically Categorized",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Everything Is Automatically Categorized",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "by client, project, or task. The total is calculated automatically, without needing to fix formulas.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": "by client, project, or task. The total is calculated automatically, without needing to fix formulas.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "You See It in Real Time",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You See It in Real Time",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "where time is being spent: which projects consume too much, who is overwhelmed, what is billable and what isn’t.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": "where time is being spent: which projects consume too much, who is overwhelmed, what is billable and what isn’t.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Exports Are Ready",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exports Are Ready",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "for invoicing and payroll in one click, with no manual copying.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": "for invoicing and payroll in one click, with no manual copying.",
-              "type": "text"
             }
           ]
         },
@@ -8421,7 +8787,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Let’s discuss your project.",
+                "label": "Discuss my project",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -8496,64 +8862,76 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "fast pages",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "fast pages",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", loading before JavaScript even finishes executing;",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ", loading before JavaScript even finishes executing;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "good SEO",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "good SEO",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", because Google (and AI) receive real content—not a blank page to fill out;",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ", because Google (and AI) receive real content—not a blank page to fill out;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "a single codebase",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "a single codebase",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " for the homepage, blog, and connected space, instead of three poorly integrated tools.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " for the homepage, blog, and connected space, instead of three poorly integrated tools.",
-              "type": "text"
             }
           ]
         },
@@ -8698,44 +9076,53 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Texts Invisible to AI Robots.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Texts Invisible to AI Robots.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Some project descriptions were added via JavaScript after the page loaded. Google handled it well. But ChatGPT or Perplexity bots only read HTML: for them, these texts simply didn’t exist. Generating them during build fixed the issue—they now appear everywhere.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " Some project descriptions were added via JavaScript after the page loaded. Google handled it well. But ChatGPT or Perplexity bots only read HTML: for them, these texts simply didn’t exist. Generating them during build fixed the issue—they now appear everywhere.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Overzealous Language Redirection.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Overzealous Language Redirection.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " A default setting in the translation module redirected all browsers set to English to the English version of the site. Google’s rendering bot was included: it saw my homepage in English. One line of configuration fixed the problem.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " A default setting in the translation module redirected all browsers set to English to the English version of the site. Google’s rendering bot was included: it saw my homepage in English. One line of configuration fixed the problem.",
-              "type": "text"
             }
           ]
         },
@@ -8818,84 +9205,99 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "– ",
-              "type": "text"
-            },
-            {
-              "text": "in Rennes or remotely",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "in Rennes or remotely",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : I can come see you to define the project scope, then work remotely on a daily basis.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : I can come see you to define the project scope, then work remotely on a daily basis.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "– ",
-              "type": "text"
-            },
-            {
-              "text": "Fixed-price",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Fixed-price",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " for a well-defined project (a migration, a new application), with a clear quote: scope, price, and milestones set before we start.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " for a well-defined project (a migration, a new application), with a clear quote: scope, price, and milestones set before we start.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "– ",
-              "type": "text"
-            },
-            {
-              "text": "Reusable code",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Reusable code",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : TypeScript, readable components, concise yet useful documentation. You’re never locked in with your service provider—including me.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : TypeScript, readable components, concise yet useful documentation. You’re never locked in with your service provider—including me.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "– ",
-              "type": "text"
-            },
-            {
-              "text": "Honesty",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Honesty",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : If Nuxt isn’t the right fit for your needs, or if an existing tool already does the job, I’ll tell you.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : If Nuxt isn’t the right fit for your needs, or if an existing tool already does the job, I’ll tell you.",
-              "type": "text"
             }
           ]
         },
@@ -9142,32 +9544,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- 30% of approved investments;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "30% of approved investments;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "up to €20,000 HT (excluding tax), meaning a maximum of €6,000 in aid;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- up to €20,000 HT (excluding tax), meaning a maximum of €6,000 in aid;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "for investments starting at €6,000 HT;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- for investments starting at €6,000 HT;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- for a project completed within three years.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "for a project completed within three years.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -9256,32 +9689,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- be an independent retail or artisan business, registered with the RCS (Commercial and Companies Register) or RNE (National Enterprise Directory) (or an association registered with the RNA);",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "be an independent retail or artisan business, registered with the RCS (Commercial and Companies Register) or RNE (National Enterprise Directory) (or an association registered with the RNA);",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "generate most of its revenue from individual customers in a local activity: bakery, café, restaurant, hairdressing, florist, cobbler, but also painter, electrician, or plumber;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- generate most of its revenue from individual customers in a local activity: bakery, café, restaurant, hairdressing, florist, cobbler, but also painter, electrician, or plumber;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "have no more than 10 full-time equivalent employees (excluding the manager);",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- have no more than 10 full-time equivalent employees (excluding the manager);",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- generate no more than €1 million in annual revenue (excluding tax).",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "generate no more than €1 million in annual revenue (excluding tax).",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -9316,39 +9780,77 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- the creation or redesign of a website;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "the creation or redesign of a website;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "an online sales module (ordering, in-store pickup);",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- an online sales module (ordering, in-store pickup);",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "a day of training to learn how to manage the new website;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "digital or web visibility consulting for the portion that remains your responsibility;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- a day of training to learn how to manage the new website;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- digital or web visibility consulting for the portion that remains your responsibility;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- computer equipment related to a digital project, such as a point-of-sale software.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "computer equipment related to a digital project, such as a point-of-sale software.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -9449,25 +9951,49 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- a website with online ordering and in-store pickup: €4,500 HT;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "a website with online ordering and in-store pickup: €4,500 HT;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "a new refrigerated display case: €8,000 HT;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- a new refrigerated display case: €8,000 HT;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- switching the store lighting to LED: €1,500 HT, their CSR investment.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "switching the store lighting to LED: €1,500 HT, their CSR investment.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -9668,25 +10194,49 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- a clear quote, dated at the right time, separating eligible lines from hosting or maintenance;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "a clear quote, dated at the right time, separating eligible lines from hosting or maintenance;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "a project description, detailing what the website does and for whom, which you can include in your application;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- a project description, detailing what the website does and for whom, which you can include in your application;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- the website or tool itself, including a training session if you want one.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "the website or tool itself, including a training session if you want one.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -9830,7 +10380,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Let’s discuss your project",
+                "label": "Discuss my project",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -9888,44 +10438,53 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "As of September 1, 2026",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "As of September 1, 2026",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : all businesses must be able to receive electronic invoices. Large companies and mid-sized businesses must also issue them.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : all businesses must be able to receive electronic invoices. Large companies and mid-sized businesses must also issue them.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "As of September 1, 2027",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "As of September 1, 2027",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : SMEs, small businesses, and micro-enterprises will also have to issue them.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : SMEs, small businesses, and micro-enterprises will also have to issue them.",
-              "type": "text"
             }
           ]
         },
@@ -10056,32 +10615,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- the SIREN number of your professional client;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "the SIREN number of your professional client;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "their delivery address, if it differs from their billing address;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- their delivery address, if it differs from their billing address;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "the nature of the operation: sale of goods, service provision, or both;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- the nature of the operation: sale of goods, service provision, or both;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- if applicable, the option for VAT payment based on debits.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "if applicable, the option for VAT payment based on debits.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -10125,18 +10715,35 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- switch to an invoicing software connected to an approved platform, which many software solutions already offer;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "switch to an invoicing software connected to an approved platform, which many software solutions already offer;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- invoice directly from your platform’s space, if it allows it.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "invoice directly from your platform’s space, if it allows it.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -10608,32 +11215,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- generating a clean quote in five minutes, straight from your phone, with your rates already included;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "generating a clean quote in five minutes, straight from your phone, with your rates already included;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "getting an instant overview of where each job stands and who’s handling what this week;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- getting an instant overview of where each job stands and who’s handling what this week;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "finding a meter photo or a blueprint without digging through three different inboxes;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- finding a meter photo or a blueprint without digging through three different inboxes;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- turning an accepted quote into an invoice without re-entering everything.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "turning an accepted quote into an invoice without re-entering everything.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -10703,51 +11341,75 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- If it’s « they can’t find me » → ",
-              "type": "text"
-            },
-            {
-              "text": "a business website",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "If it’s « they can’t find me » → ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "a business website",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " first.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " first.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- If it’s « I’m drowning in admin » → ",
-              "type": "text"
-            },
-            {
-              "text": "a specialized tool",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "If it’s « I’m drowning in admin » → ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "a specialized tool",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " first.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " first.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- If it’s both… that’s normal, and we’ll tackle that right after.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "If it’s both… that’s normal, and we’ll tackle that right after.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -10960,74 +11622,85 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Business website",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Business website",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " = being found and building trust. Issue of ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "visibility",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "italic"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ".",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " = being found and building trust. Issue of ",
-              "type": "text"
-            },
-            {
-              "text": "visibility",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "italic"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Specialized tool",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " = saving time and stopping internal money loss. Issue of",
+                      "type": "text"
+                    },
+                    {
+                      "text": "organization",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "italic"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ".",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": ".",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Specialized tool",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "text": " = saving time and stopping internal money loss. Issue of",
-              "type": "text"
-            },
-            {
-              "text": "organization",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "italic"
-                }
-              ]
-            },
-            {
-              "text": ".",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
             {
               "text": "We start with ",
               "type": "text"
@@ -11170,7 +11843,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Let’s discuss my project",
+                "label": "Discuss my project",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -11366,32 +12039,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- A ‘standard’ brochure site isn’t enough: what matters is being found locally and being easy to contact.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "A ‘standard’ brochure site isn’t enough: what matters is being found locally and being easy to contact.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "An artisan’s biggest pain point is often their organization (quotes, jobs, invoices), not their image.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- An artisan’s biggest pain point is often their organization (quotes, jobs, invoices), not their image.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "We start with what hurts most—website or tool—not with the ‘full package.’",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- We start with what hurts most—website or tool—not with the ‘full package.’",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Working with someone near Rennes is about proximity, not chauvinism: we talk, we understand each other, and we move fast.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Working with someone near Rennes is about proximity, not chauvinism: we talk, we understand each other, and we move fast.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -11544,7 +12248,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Let’s discuss my project",
+                "label": "Discuss my project",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -11819,78 +12523,93 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "A clear appointment book",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "A clear appointment book",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", visible to the team, with online booking if you wish.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ", visible to the team, with online booking if you wish.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "A repair quote in minutes",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "A repair quote in minutes",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", based on your rates and parts.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ", based on your rates and parts.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "The vehicle file",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "The vehicle file",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " with the customer’s full maintenance history.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " with the customer’s full maintenance history.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "See at a glance what hasn’t been invoiced yet.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "See at a glance what hasn’t been invoiced yet.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -11918,32 +12637,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- The paper appointment book eventually overflows: slots overlap, and the day runs over.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "The paper appointment book eventually overflows: slots overlap, and the day runs over.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "The quotes done \"when you have the time\" and unbilled hours—that’s where the money slips away.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- The quotes done \"when you have the time\" and unbilled hours—that’s where the money slips away.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Vehicle history tracking saves time and builds loyalty—provided you can find it again.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Vehicle history tracking saves time and builds loyalty—provided you can find it again.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- A generic, overly complex software will end up ignored; a tool tailored to your garage, you’ll actually use.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "A generic, overly complex software will end up ignored; a tool tailored to your garage, you’ll actually use.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -12717,77 +13467,76 @@
           ]
         },
         {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Visibility",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Visibility",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : A website lets you be easily found by potential customers searching for your services online. ",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : A website lets you be easily found by potential customers searching for your services online. ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Credibility",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Credibility",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Having a professional website boosts your credibility and shows you take your craft seriously. ",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Having a professional website boosts your credibility and shows you take your craft seriously. ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Accessibility",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Accessibility",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Your customers can view your services, hours, and contact details anytime—even outside business hours.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : Your customers can view your services, hours, and contact details anytime—even outside business hours.",
-              "type": "text"
             }
           ]
         },
@@ -12817,77 +13566,76 @@
           ]
         },
         {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Local Keywords",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Local Keywords",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Use region-specific keywords like \"artisan in Rennes\" or \"plumber in Rennes\".",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Use region-specific keywords like \"artisan in Rennes\" or \"plumber in Rennes\".",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Meta Tags",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Meta Tags",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Ensure your title and description tags include relevant, local keywords. ",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Ensure your title and description tags include relevant, local keywords. ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "High-quality content",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "High-quality content",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Publish useful and informative content regularly about your profession, services, and region.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : Publish useful and informative content regularly about your profession, services, and region.",
-              "type": "text"
             }
           ]
         },
@@ -12917,77 +13665,76 @@
           ]
         },
         {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Responsive design",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Responsive design",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Your site should be accessible and easy to navigate on all devices, including smartphones and tablets. ",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Your site should be accessible and easy to navigate on all devices, including smartphones and tablets. ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Intuitive navigation",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Intuitive navigation",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Ensure visitors can easily find what they're looking for, whether it's your services, contact details, or opening hours. ",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Ensure visitors can easily find what they're looking for, whether it's your services, contact details, or opening hours. ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Calls to Action (CTA)",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Calls to Action (CTA)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Encourage visitors to contact you or request a quote by placing clear and visible call-to-action buttons.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : Encourage visitors to contact you or request a quote by placing clear and visible call-to-action buttons.",
-              "type": "text"
             }
           ]
         },
@@ -13017,72 +13764,76 @@
           ]
         },
         {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Share buttons",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Share buttons",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Add share buttons on your pages to allow visitors to share your content on their social networks.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Add share buttons on your pages to allow visitors to share your content on their social networks.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": " - ",
-              "type": "text"
-            },
-            {
-              "text": "Social feeds",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Social feeds",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Integrate your social media feeds to showcase your latest posts and encourage visitors to follow you.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Integrate your social media feeds to showcase your latest posts and encourage visitors to follow you.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": " - ",
-              "type": "text"
-            },
-            {
-              "text": "Targeted ads",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Targeted ads",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Use social media ads to target local customers and promote your services.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : Use social media ads to target local customers and promote your services.",
-              "type": "text"
             }
           ]
         },
@@ -13112,77 +13863,76 @@
           ]
         },
         {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Dedicated Page",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Dedicated Page",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Create a dedicated page for customer testimonials and reviews to showcase positive feedback from your clients. ",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Create a dedicated page for customer testimonials and reviews to showcase positive feedback from your clients. ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Service Page Integration",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Service Page Integration",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Add relevant testimonials on the corresponding service pages to build trust with visitors. ",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Add relevant testimonials on the corresponding service pages to build trust with visitors. ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Encourage Reviews",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Encourage Reviews",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Encourage satisfied customers to leave a review on your website or on platforms like Google My Business.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : Encourage satisfied customers to leave a review on your website or on platforms like Google My Business.",
-              "type": "text"
             }
           ]
         },

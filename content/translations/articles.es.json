@@ -116,32 +116,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- Dificultad para seguir el avance de los proyectos en tiempo real",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Dificultad para seguir el avance de los proyectos en tiempo real",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Riesgo de errores de entrada y pérdida de datos",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- Riesgo de errores de entrada y pérdida de datos",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Falta de colaboración en tiempo real",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Falta de colaboración en tiempo real",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Dificultad para generar informes y facturas",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Dificultad para generar informes y facturas",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -450,25 +481,49 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- No hay recordatorios automáticos",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "No hay recordatorios automáticos",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "No hay sincronización con las herramientas habituales",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- No hay sincronización con las herramientas habituales",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- No hay gestión de las cancelaciones en tiempo real",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "No hay gestión de las cancelaciones en tiempo real",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -1303,32 +1358,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- Crear un sitio web personalizado que muestre sus trabajos y su experiencia.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Crear un sitio web personalizado que muestre sus trabajos y su experiencia.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Optimizar su sitio para el posicionamiento en buscadores (SEO) y atraer más clientes locales.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- Optimizar su sitio para el posicionamiento en buscadores (SEO) y atraer más clientes locales.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Integrar funciones de marketing para aumentar sus ventas.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Integrar funciones de marketing para aumentar sus ventas.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Garantizar el mantenimiento y las actualizaciones de su sitio web.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Garantizar el mantenimiento y las actualizaciones de su sitio web.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -1442,64 +1528,76 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Costo inicial bajo",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Costo inicial bajo",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : No es necesario invertir en hardware ni servidores.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : No es necesario invertir en hardware ni servidores.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Actualizaciones automáticas",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Actualizaciones automáticas",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Siempre tendrás la última versión sin necesidad de intervenir.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Siempre tendrás la última versión sin necesidad de intervenir.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Accesibilidad",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Accesibilidad",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Puedes acceder desde cualquier dispositivo con conexión a Internet.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : Puedes acceder desde cualquier dispositivo con conexión a Internet.",
-              "type": "text"
             }
           ]
         },
@@ -1513,44 +1611,53 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Personalización limitada",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Personalización limitada",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Debes adaptarte al software, no al revés.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Debes adaptarte al software, no al revés.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Dependencia del proveedor",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Dependencia del proveedor",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Estás sujeto a las decisiones del proveedor en cuanto a precios, funciones, etc.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : Estás sujeto a las decisiones del proveedor en cuanto a precios, funciones, etc.",
-              "type": "text"
             }
           ]
         },
@@ -1576,64 +1683,76 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Personalización total",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Personalización total",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : El software se diseña para adaptarse a tus procesos de negocio.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : El software se diseña para adaptarse a tus procesos de negocio.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Propiedad de los datos",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Propiedad de los datos",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Tú controlas tus datos y su alojamiento.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Tú controlas tus datos y su alojamiento.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Escalabilidad",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Escalabilidad",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Puedes añadir o modificar funciones según tus necesidades.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : Puedes añadir o modificar funciones según tus necesidades.",
-              "type": "text"
             }
           ]
         },
@@ -1647,44 +1766,53 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Costo inicial elevado",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Costo inicial elevado",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : El desarrollo de un software a medida requiere una inversión mayor.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : El desarrollo de un software a medida requiere una inversión mayor.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Tiempo de desarrollo",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Tiempo de desarrollo",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Se necesita tiempo para diseñar e implementar una solución a medida.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : Se necesita tiempo para diseñar e implementar una solución a medida.",
-              "type": "text"
             }
           ]
         },
@@ -1710,84 +1838,99 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Tus necesidades específicas",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Tus necesidades específicas",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : ¿Tienes procesos de negocio únicos que requieran una solución a medida?",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : ¿Tienes procesos de negocio únicos que requieran una solución a medida?",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Tu presupuesto",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Tu presupuesto",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : ¿Cuál es tu presupuesto inicial y recurrente para un software de gestión?",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : ¿Cuál es tu presupuesto inicial y recurrente para un software de gestión?",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Tu tolerancia al riesgo",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Tu tolerancia al riesgo",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : ¿Estás dispuesto a invertir tiempo y dinero en el desarrollo de una solución a medida?",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : ¿Estás dispuesto a invertir tiempo y dinero en el desarrollo de una solución a medida?",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Tus habilidades técnicas",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Tus habilidades técnicas",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : ¿Tienes las habilidades necesarias para gestionar una solución a medida?",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : ¿Tienes las habilidades necesarias para gestionar una solución a medida?",
-              "type": "text"
             }
           ]
         },
@@ -2599,7 +2742,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "👉 Hablar de mi proyecto",
+                "label": "Hablar de mi proyecto",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -2856,84 +2999,99 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Registrar una intervención en treinta segundos",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Registrar una intervención en treinta segundos",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", desde el propio chantier, con fotos.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ", desde el propio chantier, con fotos.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Ver de un vistazo lo que aún no está facturado",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Ver de un vistazo lo que aún no está facturado",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " — la fuga de dinero número uno.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " — la fuga de dinero número uno.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Emitir un presupuesto impecable en unos minutos",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Emitir un presupuesto impecable en unos minutos",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", basado en sus servicios y tarifas habituales.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ", basado en sus servicios y tarifas habituales.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Recuperar el historial de un cliente",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Recuperar el historial de un cliente",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " cuando llame seis meses después.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " cuando llame seis meses después.",
-              "type": "text"
             }
           ]
         },
@@ -2959,32 +3117,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- Un presupuesto rápido y bien presentado consigue más proyectos que uno más barato que llega tarde.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Un presupuesto rápido y bien presentado consigue más proyectos que uno más barato que llega tarde.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Las horas que se pierden son las pequeñas intervenciones no facturadas: ahí es donde se pierde el dinero.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- Las horas que se pierden son las pequeñas intervenciones no facturadas: ahí es donde se pierde el dinero.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Un software genérico que le frena acabará en el cajón; una herramienta diseñada para su oficio, la utilizará.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Un software genérico que le frena acabará en el cajón; una herramienta diseñada para su oficio, la utilizará.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- No digitalizamos por digitalizar: primero resolvemos el problema que más duele.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "No digitalizamos por digitalizar: primero resolvemos el problema que más duele.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -3247,25 +3436,49 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- Cada cliente tiene una ficha con sus calderas: marca, fecha de instalación, última visita.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Cada cliente tiene una ficha con sus calderas: marca, fecha de instalación, última visita.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "El sistema calcula automáticamente las visitas futuras y muestra la lista del mes.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- El sistema calcula automáticamente las visitas futuras y muestra la lista del mes.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Un recordatorio parte automáticamente —por SMS o correo— unas semanas antes de la fecha límite.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Un recordatorio parte automáticamente —por SMS o correo— unas semanas antes de la fecha límite.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -3469,7 +3682,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Hablemos de mi proyecto",
+                "label": "Hablar de mi proyecto",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -3591,64 +3804,76 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Cada llamada queda registrada",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Cada llamada queda registrada",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " —incluso la que no se pudo atender— para volver a contactar al cliente de inmediato en lugar de olvidarlo.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " —incluso la que no se pudo atender— para volver a contactar al cliente de inmediato en lugar de olvidarlo.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Las intervenciones del día",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Las intervenciones del día",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " son visibles de un vistazo: quién, dónde, a qué hora.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " son visibles de un vistazo: quién, dónde, a qué hora.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Los presupuestos de instalación",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Los presupuestos de instalación",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " se envían y se relanzan automáticamente para no dejar dormir las solicitudes que no son urgentes.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " se envían y se relanzan automáticamente para no dejar dormir las solicitudes que no son urgentes.",
-              "type": "text"
             }
           ]
         },
@@ -3834,7 +4059,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Discuter de mon projet",
+                "label": "Hablar de mi proyecto",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -3973,64 +4198,76 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Nos hablamos de verdad.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Nos hablamos de verdad.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Una sesión de lanzamiento real en videollamada, con pantalla compartida, vale más que diez intercambios de correos. Me muestra el terreno, entiendo su contexto, no perdemos tres semanas en malentendidos.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " Una sesión de lanzamiento real en videollamada, con pantalla compartida, vale más que diez intercambios de correos. Me muestra el terreno, entiendo su contexto, no perdemos tres semanas en malentendidos.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "La reactividad.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "La reactividad.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Un error un martes por la mañana, un « oye, habría que añadir esto »: estoy en el mismo husos horario, la misma semana, accesible — no una línea de atención offshore con un ticket número 4712.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " Un error un martes por la mañana, un « oye, habría que añadir esto »: estoy en el mismo husos horario, la misma semana, accesible — no una línea de atención offshore con un ticket número 4712.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Sin caja negra.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Sin caja negra.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Sabes quién programa tu herramienta, y puedo mostrarte el problema en una videollamada, con pantalla compartida. Parece anecdótico; en realidad, es lo que hace que un proyecto tenga éxito.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " Sabes quién programa tu herramienta, y puedo mostrarte el problema en una videollamada, con pantalla compartida. Parece anecdótico; en realidad, es lo que hace que un proyecto tenga éxito.",
-              "type": "text"
             }
           ]
         },
@@ -4717,7 +4954,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Hablemos de mi proyecto",
+                "label": "Hablar de mi proyecto",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -5061,7 +5298,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Hablemos de su proyecto",
+                "label": "Hablar de mi proyecto",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -5520,84 +5757,115 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- Vuelve a introducir la misma información ",
-              "type": "text"
-            },
-            {
-              "text": "varias veces",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Vuelve a introducir la misma información ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "varias veces",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " —el cliente en un sitio, el presupuesto en otro, la factura en un tercero.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " —el cliente en un sitio, el presupuesto en otro, la factura en un tercero.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Su Excel se ha convertido en un pastel de milhojas que ",
-              "type": "text"
-            },
-            {
-              "text": "solo usted sabe manejar",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Su Excel se ha convertido en un pastel de milhojas que ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "solo usted sabe manejar",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", y se rompe en cuanto un empleado toca una celda.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ", y se rompe en cuanto un empleado toca una celda.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- La información que necesita en el terreno ",
-              "type": "text"
-            },
-            {
-              "text": "se queda en la oficina",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "La información que necesita en el terreno ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "se queda en la oficina",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " —el calendario, el último presupuesto, el historial de un cliente.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " —el calendario, el último presupuesto, el historial de un cliente.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Pasa sus ",
-              "type": "text"
-            },
-            {
-              "text": "tardes y domingos",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Pasa sus ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "tardes y domingos",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " haciendo tareas administrativas en lugar de haberlas resuelto durante el día.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " haciendo tareas administrativas en lugar de haberlas resuelto durante el día.",
-              "type": "text"
             }
           ]
         },
@@ -6158,7 +6426,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Hablemos de mi proyecto",
+                "label": "Hablar de mi proyecto",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -6501,7 +6769,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Discutir mi proyecto",
+                "label": "Hablar de mi proyecto",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -6835,7 +7103,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Hablemos de mi proyecto",
+                "label": "Hablar de mi proyecto",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -7041,90 +7309,102 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Una herramienta de gestión para una pyme",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Una herramienta de gestión para una pyme",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " (planificación, stock, presupuestos, control horario): ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "entre 5.000 y 15.000 €",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ". Una herramienta sencilla y enfocada (un solo oficio, un tipo de usuario, sin integración compleja) se queda en la parte baja del rango; varios roles, integraciones y un panel de control la hacen subir.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " (planificación, stock, presupuestos, control horario): ",
-              "type": "text"
-            },
-            {
-              "text": "entre 5.000 y 15.000 €",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Una plataforma B2B",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " (multiusuario, espacio cliente, integraciones, escalabilidad): más allá, y se divide en lotes.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ". Una herramienta sencilla y enfocada (un solo oficio, un tipo de usuario, sin integración compleja) se queda en la parte baja del rango; varios roles, integraciones y un panel de control la hacen subir.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Una plataforma B2B",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "El mantenimiento",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", una vez en marcha la herramienta: ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "de 100 a 300 € al mes",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " según la herramienta.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " (multiusuario, espacio cliente, integraciones, escalabilidad): más allá, y se divide en lotes.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "El mantenimiento",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "text": ", una vez en marcha la herramienta: ",
-              "type": "text"
-            },
-            {
-              "text": "de 100 a 300 € al mes",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "text": " según la herramienta.",
-              "type": "text"
             }
           ]
         },
@@ -7177,64 +7457,76 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "El alcance que se infla en el camino.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "El alcance que se infla en el camino.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " La funcionalidad «rápido y extra» es el primer concepto de sobrecosto. Un buen proveedor delimita el alcance y pospone el resto para la fase 2.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " La funcionalidad «rápido y extra» es el primer concepto de sobrecosto. Un buen proveedor delimita el alcance y pospone el resto para la fase 2.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "La ambigüedad inicial.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "La ambigüedad inicial.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Cuanto menos claro esté el besoin desde el principio, más se paga en idas y vueltas. Una breve fase de encuadre ahorra mucho.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " Cuanto menos claro esté el besoin desde el principio, más se paga en idas y vueltas. Una breve fase de encuadre ahorra mucho.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "La personalización cuando bastaba con lo estándar.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "La personalización cuando bastaba con lo estándar.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " A veces una herramienta existente cubre el 80 % del trabajo. Desarrollar esos 80 % es un desperdicio: solo se programa a medida lo que realmente los diferencia.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " A veces una herramienta existente cubre el 80 % del trabajo. Desarrollar esos 80 % es un desperdicio: solo se programa a medida lo que realmente los diferencia.",
-              "type": "text"
             }
           ]
         },
@@ -7390,7 +7682,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Hablemos de su proyecto",
+                "label": "Hablar de mi proyecto",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -7511,64 +7803,76 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Tu necesidad es estándar.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Tu necesidad es estándar.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Facturar, enviar newsletters, gestionar una agenda compartida: miles de empresas lo hacen igual, la herramienta existe, está madura y es económica.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " Facturar, enviar newsletters, gestionar una agenda compartida: miles de empresas lo hacen igual, la herramienta existe, está madura y es económica.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Estás empezando.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Estás empezando.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Mientras el proceso no se estabilice, un SaaS flexible te permite probar sin comprometerte con un presupuesto de desarrollo.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " Mientras el proceso no se estabilice, un SaaS flexible te permite probar sin comprometerte con un presupuesto de desarrollo.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "El plazo es prioritario.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "El plazo es prioritario.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Un SaaS está listo para usar mañana. Un desarrollo a medida requiere semanas. Si tienes prisa por una necesidad básica, la solución estándar gana.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " Un SaaS está listo para usar mañana. Un desarrollo a medida requiere semanas. Si tienes prisa por una necesidad básica, la solución estándar gana.",
-              "type": "text"
             }
           ]
         },
@@ -7603,84 +7907,99 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Su proceso es su valor.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Su proceso es su valor.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Si su forma de trabajar los diferencia, una herramienta estándar los vuelve comunes. Lo personalizado la protege y la acelera.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " Si su forma de trabajar los diferencia, una herramienta estándar los vuelve comunes. Lo personalizado la protege y la acelera.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Ya está esquivando la herramienta.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Ya está esquivando la herramienta.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Exportaciones de Excel en todas direcciones, campos adaptados, tres programas que no se comunican: señal de que el estante ya no encaja.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " Exportaciones de Excel en todas direcciones, campos adaptados, tres programas que no se comunican: señal de que el estante ya no encaja.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Sus datos son sensibles.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Sus datos son sensibles.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " No quiere confiarlos a un servicio externo alojado quién sabe dónde: una herramienta en su infraestructura responde a esa necesidad.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " No quiere confiarlos a un servicio externo alojado quién sabe dónde: una herramienta en su infraestructura responde a esa necesidad.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "La suma de las suscripciones explota.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "La suma de las suscripciones explota.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Con varias decenas de usuarios, una suscripción por persona termina costando más que una herramienta que posean.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " Con varias decenas de usuarios, una suscripción por persona termina costando más que una herramienta que posean.",
-              "type": "text"
             }
           ]
         },
@@ -7790,18 +8109,35 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- Si no (facturar, contar, planificar como todo el mundo) → estantería.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Si no (facturar, contar, planificar como todo el mundo) → estantería.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Si sí (su método, su relación con el cliente, su cadena de producción) → a medida en esa parte.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Si sí (su método, su relación con el cliente, su cadena de producción) → a medida en esa parte.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -8001,84 +8337,99 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Tiempo perdido.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Tiempo perdido.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Cada empleado rellena su tabla, alguien consolida los datos, corrige fórmulas rotas y recuerda a los rezagados. Horas cada mes, solo para contar horas.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": "Cada empleado rellena su tabla, alguien consolida los datos, corrige fórmulas rotas y recuerda a los rezagados. Horas cada mes, solo para contar horas.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Errores.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Errores.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Registro de memoria al final del mes, celdas sobrescritas, pestaña equivocada. Los números son aproximados — y factura o paga en base a esa aproximación.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": "Registro de memoria al final del mes, celdas sobrescritas, pestaña equivocada. Los números son aproximados — y factura o paga en base a esa aproximación.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Cero visibilidad en tiempo real.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Cero visibilidad en tiempo real.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Descubre el sobrepaso de un proyecto cuando ya es demasiado tarde para reaccionar.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": "Descubre el sobrepaso de un proyecto cuando ya es demasiado tarde para reaccionar.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Nada aprovechable.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Nada aprovechable.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Es imposible saber rápidamente qué cliente es rentable, qué proyecto se desvía o quién está sobrecargado.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": "Es imposible saber rápidamente qué cliente es rentable, qué proyecto se desvía o quién está sobrecargado.",
-              "type": "text"
             }
           ]
         },
@@ -8113,84 +8464,99 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "El registro toma solo unos segundos.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "El registro toma solo unos segundos.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Se inicia un cronómetro o se anotan las horas desde el teléfono, a lo largo del día, no de memoria tres semanas después.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": "Se inicia un cronómetro o se anotan las horas desde el teléfono, a lo largo del día, no de memoria tres semanas después.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Todo se distribuye automáticamente",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Todo se distribuye automáticamente",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "por cliente, proyecto y tarea. El total se calcula solo, sin fórmulas que reparar.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": "por cliente, proyecto y tarea. El total se calcula solo, sin fórmulas que reparar.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Ve en tiempo real",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Ve en tiempo real",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "dónde se va el tiempo: qué proyecto consume demasiado, quién está sobrecargado, qué es facturable y qué no lo es.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": "dónde se va el tiempo: qué proyecto consume demasiado, quién está sobrecargado, qué es facturable y qué no lo es.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Los informes están listos",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Los informes están listos",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "para la facturación y la nómina, con un clic, sin necesidad de copiar datos.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": "para la facturación y la nómina, con un clic, sin necesidad de copiar datos.",
-              "type": "text"
             }
           ]
         },
@@ -8421,7 +8787,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Hablemos de su proyecto",
+                "label": "Hablar de mi proyecto",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -8496,64 +8862,76 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "páginas rápidas",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "páginas rápidas",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", que se muestran incluso antes de que el JavaScript termine de cargarse;",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ", que se muestran incluso antes de que el JavaScript termine de cargarse;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "un buen posicionamiento en buscadores",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "un buen posicionamiento en buscadores",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", porque Google (y las IA) reciben un contenido real, no una página en blanco por completar;",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ", porque Google (y las IA) reciben un contenido real, no una página en blanco por completar;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "una sola base de código",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "una sola base de código",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " para el sitio web, el blog y el espacio conectado, en lugar de tres herramientas que no se comunican bien entre sí.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " para el sitio web, el blog y el espacio conectado, en lugar de tres herramientas que no se comunican bien entre sí.",
-              "type": "text"
             }
           ]
         },
@@ -8698,44 +9076,53 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Textos invisibles para los robots de las IA.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Textos invisibles para los robots de las IA.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Algunas descripciones de proyectos se añadían mediante JavaScript después de cargar la página. Google lo manejaba muy bien. Pero los robots de ChatGPT o de Perplexity solo leen el HTML: para ellos, esos textos simplemente no existían. Basta con generarlos durante la construcción para que aparezcan en todas partes.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " Algunas descripciones de proyectos se añadían mediante JavaScript después de cargar la página. Google lo manejaba muy bien. Pero los robots de ChatGPT o de Perplexity solo leen el HTML: para ellos, esos textos simplemente no existían. Basta con generarlos durante la construcción para que aparezcan en todas partes.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Una redirección de idioma demasiado estricta.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Una redirección de idioma demasiado estricta.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Una opción activada por defecto en el módulo de traducción redirigía a cualquier navegador configurado en inglés hacia la versión en inglés del sitio. El robot de renderizado de Google formaba parte de esto: veía mi página de inicio en inglés. Una línea de configuración resolvió el problema.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " Una opción activada por defecto en el módulo de traducción redirigía a cualquier navegador configurado en inglés hacia la versión en inglés del sitio. El robot de renderizado de Google formaba parte de esto: veía mi página de inicio en inglés. Una línea de configuración resolvió el problema.",
-              "type": "text"
             }
           ]
         },
@@ -8818,84 +9205,99 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "en Rennes o a distancia",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "en Rennes o a distancia",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : puedo visitarles para definir el proyecto y luego trabajar a distancia a diario.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : puedo visitarles para definir el proyecto y luego trabajar a distancia a diario.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "A precio fijo",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "A precio fijo",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " para un proyecto bien definido (una migración, una nueva aplicación), con un presupuesto claro: alcance, precio y etapas fijados antes de empezar.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " para un proyecto bien definido (una migración, una nueva aplicación), con un presupuesto claro: alcance, precio y etapas fijados antes de empezar.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Código que puedes reutilizar",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Código que puedes reutilizar",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : TypeScript, componentes legibles, documentación breve pero útil. Nunca quedas atrapado con tu proveedor, ni siquiera conmigo.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : TypeScript, componentes legibles, documentación breve pero útil. Nunca quedas atrapado con tu proveedor, ni siquiera conmigo.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Franqueza",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Franqueza",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : si Nuxt no es la mejor opción para tu necesidad, o si una herramienta existente ya cumple el trabajo, te lo diré.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : si Nuxt no es la mejor opción para tu necesidad, o si una herramienta existente ya cumple el trabajo, te lo diré.",
-              "type": "text"
             }
           ]
         },
@@ -9075,7 +9477,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Hablemos de mi proyecto",
+                "label": "Hablar de mi proyecto",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -9142,32 +9544,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- 30 % de los inversiones aprobadas;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "30 % de los inversiones aprobadas;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "hasta 20.000 € HT como máximo, lo que equivale a 6.000 € de ayuda como máximo;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- hasta 20.000 € HT como máximo, lo que equivale a 6.000 € de ayuda como máximo;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "a partir de 6.000 € HT de inversiones;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- a partir de 6.000 € HT de inversiones;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- para un proyecto realizado en un plazo máximo de tres años.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "para un proyecto realizado en un plazo máximo de tres años.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -9256,32 +9689,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ser un comercio o una empresa artesanal independiente, inscrita en el RCS o en el RNE (o una asociación inscrita en el RNA);",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "ser un comercio o una empresa artesanal independiente, inscrita en el RCS o en el RNE (o una asociación inscrita en el RNA);",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "realizar la mayor parte de su volumen de negocios con particulares, en una actividad de proximidad: panadería, café, restaurante, peluquería, floristería, zapatería, pero también pintor, electricista o fontanero;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- realizar la mayor parte de su volumen de negocios con particulares, en una actividad de proximidad: panadería, café, restaurante, peluquería, floristería, zapatería, pero también pintor, electricista o fontanero;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "contar con un máximo de 10 empleados en CDI a tiempo completo, sin incluir al gerente;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- contar con un máximo de 10 empleados en CDI a tiempo completo, sin incluir al gerente;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- tener un volumen de negocios máximo de 1 millón de euros HT.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "tener un volumen de negocios máximo de 1 millón de euros HT.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -9316,39 +9780,77 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- la creación o rediseño de un sitio web;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "la creación o rediseño de un sitio web;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "un módulo de venta en línea (pedido, recogida en tienda);",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- un módulo de venta en línea (pedido, recogida en tienda);",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "un día de formación para aprender a gestionar el nuevo sitio;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "asesoramiento digital o de visibilidad en la web, para la parte que queda a su cargo;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- un día de formación para aprender a gestionar el nuevo sitio;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- asesoramiento digital o de visibilidad en la web, para la parte que queda a su cargo;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- material informático relacionado con un proyecto digital, como un software de caja registradora.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "material informático relacionado con un proyecto digital, como un software de caja registradora.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -9449,25 +9951,49 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- un sitio con pedidos en línea y recogida en tienda: 4.500 € HT;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "un sitio con pedidos en línea y recogida en tienda: 4.500 € HT;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "una nueva vitrina refrigerada: 8.000 € HT;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- una nueva vitrina refrigerada: 8.000 € HT;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- la iluminación de la tienda cambiada a LED: 1.500 € HT, su inversión en RSE.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "la iluminación de la tienda cambiada a LED: 1.500 € HT, su inversión en RSE.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -9668,25 +10194,49 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- un presupuesto claro, fechado en el momento adecuado, con las líneas elegibles de un lado y el alojamiento o el mantenimiento del otro;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "un presupuesto claro, fechado en el momento adecuado, con las líneas elegibles de un lado y el alojamiento o el mantenimiento del otro;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "una descripción del proyecto, lo que hace el sitio y para quién, que puede incluir en su expediente;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- una descripción del proyecto, lo que hace el sitio y para quién, que puede incluir en su expediente;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- el sitio o la herramienta en sí, con el día de toma de contacto si lo desea.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "el sitio o la herramienta en sí, con el día de toma de contacto si lo desea.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -9830,7 +10380,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Hablemos de su proyecto",
+                "label": "Hablar de mi proyecto",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -9888,44 +10438,53 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Desde el 1 de septiembre de 2026",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Desde el 1 de septiembre de 2026",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : todas las empresas deben poder recibir facturas electrónicas. Las grandes empresas y las empresas de tamaño intermedio también deben emitirlas.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : todas las empresas deben poder recibir facturas electrónicas. Las grandes empresas y las empresas de tamaño intermedio también deben emitirlas.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "A partir del 1 de septiembre de 2027",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "A partir del 1 de septiembre de 2027",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : las Pymes, las microempresas y las pequeñas empresas deberán, a su vez, emitirlas.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : las Pymes, las microempresas y las pequeñas empresas deberán, a su vez, emitirlas.",
-              "type": "text"
             }
           ]
         },
@@ -10056,32 +10615,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- el número SIREN de su cliente profesional;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "el número SIREN de su cliente profesional;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "su dirección de entrega, si difiere de su dirección de facturación;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- su dirección de entrega, si difiere de su dirección de facturación;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "la naturaleza de la operación: venta de bienes, prestación de servicios, o ambas;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- la naturaleza de la operación: venta de bienes, prestación de servicios, o ambas;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- en su caso, la opción para el pago del IVA según los débitos.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "en su caso, la opción para el pago del IVA según los débitos.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -10125,18 +10715,35 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- pasar a un software de facturación conectado a una plataforma aprobada, algo que muchos softwares ya ofrecen;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "pasar a un software de facturación conectado a una plataforma aprobada, algo que muchos softwares ya ofrecen;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- facturar directamente desde el espacio de su plataforma, si lo permite.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "facturar directamente desde el espacio de su plataforma, si lo permite.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -10608,32 +11215,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- emitir un presupuesto impecable en cinco minutos, desde el teléfono, con sus tarifas ya incluidas;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "emitir un presupuesto impecable en cinco minutos, desde el teléfono, con sus tarifas ya incluidas;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "saber al instante en qué estado está cada obra y quién hace qué esta semana;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- saber al instante en qué estado está cada obra y quién hace qué esta semana;",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "encontrar la foto de un contador o un plano sin revisar tres buzones de mensajería;",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- encontrar la foto de un contador o un plano sin revisar tres buzones de mensajería;",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- convertir un presupuesto aceptado en factura sin tener que volver a introducir toda la información.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "convertir un presupuesto aceptado en factura sin tener que volver a introducir toda la información.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -10703,51 +11341,75 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- Si es « no me encuentran » → ",
-              "type": "text"
-            },
-            {
-              "text": "sitio web corporativo",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Si es « no me encuentran » → ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "sitio web corporativo",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " primero.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " primero.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Si es « estoy ahogado en lo administrativo » → ",
-              "type": "text"
-            },
-            {
-              "text": "herramienta especializada",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Si es « estoy ahogado en lo administrativo » → ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "herramienta especializada",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " primero.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " primero.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Si es las dos… es normal, y lo abordamos justo después.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Si es las dos… es normal, y lo abordamos justo después.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -10960,90 +11622,106 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Página web corporativa",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Página web corporativa",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " = ser encontrado y generar confianza. Problema de ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "visibilidad",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "italic"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ".",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " = ser encontrado y generar confianza. Problema de ",
-              "type": "text"
-            },
-            {
-              "text": "visibilidad",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "italic"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Herramienta especializada",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " = ganar tiempo y dejar de perder dinero internamente. Problema de",
+                      "type": "text"
+                    },
+                    {
+                      "text": "organización",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "italic"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ".",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ".",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Herramienta especializada",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Se empieza por ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "lo que más cuesta hoy",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", no por lo que más brille.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " = ganar tiempo y dejar de perder dinero internamente. Problema de",
-              "type": "text"
-            },
-            {
-              "text": "organización",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "italic"
-                }
-              ]
-            },
-            {
-              "text": ".",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Se empieza por ",
-              "type": "text"
-            },
-            {
-              "text": "lo que más cuesta hoy",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "text": ", no por lo que más brille.",
-              "type": "text"
             }
           ]
         },
@@ -11170,7 +11848,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Hablemos de mi proyecto",
+                "label": "Hablar de mi proyecto",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -11366,32 +12044,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- Un sitio web corporativo « como los demás » no es suficiente: lo importante es ser encontrado localmente y ser fácil de contactar.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Un sitio web corporativo « como los demás » no es suficiente: lo importante es ser encontrado localmente y ser fácil de contactar.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "El punto más doloroso para un artesano suele estar en su organización (presupuestos, proyectos, facturas), no en su imagen.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- El punto más doloroso para un artesano suele estar en su organización (presupuestos, proyectos, facturas), no en su imagen.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Empezamos por lo que más duele, sea sitio o herramienta — no por « el paquete completo ».",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Empezamos por lo que más duele, sea sitio o herramienta — no por « el paquete completo ».",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Trabajar con alguien cerca de Rennes es cercanía, no chauvinismo: nos hablamos, nos entendemos, avanzamos rápido.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Trabajar con alguien cerca de Rennes es cercanía, no chauvinismo: nos hablamos, nos entendemos, avanzamos rápido.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -11544,7 +12253,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Hablemos de mi proyecto",
+                "label": "Hablar de mi proyecto",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -11819,78 +12528,93 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Un cuaderno de citas claro",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Un cuaderno de citas claro",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", visible para el equipo, con la toma de citas en línea si lo desean.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ", visible para el equipo, con la toma de citas en línea si lo desean.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Un presupuesto de reparación en unos minutos",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Un presupuesto de reparación en unos minutos",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", basado en sus tarifas y piezas.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": ", basado en sus tarifas y piezas.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "La ficha del vehículo",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "La ficha del vehículo",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " con todo el historial de mantenimiento del cliente.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " con todo el historial de mantenimiento del cliente.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Ver de un vistazo lo que aún no está facturado.",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Ver de un vistazo lo que aún no está facturado.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -11918,32 +12642,63 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- La libreta de citas en papel termina por desbordarse: los horarios se solapan, el día se alarga.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "La libreta de citas en papel termina por desbordarse: los horarios se solapan, el día se alarga.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Los presupuestos hechos « cuando se tiene tiempo » y las horas no facturadas, ahí es donde se va el dinero.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "- Los presupuestos hechos « cuando se tiene tiempo » y las horas no facturadas, ahí es donde se va el dinero.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "El historial del vehículo ahorra tiempo y fideliza — siempre que lo encuentres.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hard_break"
-            },
-            {
-              "text": "- El historial del vehículo ahorra tiempo y fideliza — siempre que lo encuentres.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "- Un software genérico demasiado pesado terminará siendo ignorado; una herramienta diseñada para tu taller, la abrirás.",
-              "type": "text"
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Un software genérico demasiado pesado terminará siendo ignorado; una herramienta diseñada para tu taller, la abrirás.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -12717,77 +13472,76 @@
           ]
         },
         {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Visibilidad",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Visibilidad",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Un sitio web le permite ser encontrado fácilmente por los clientes potenciales que buscan sus servicios en línea. ",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Un sitio web le permite ser encontrado fácilmente por los clientes potenciales que buscan sus servicios en línea. ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Credibilidad",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Credibilidad",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Tener un sitio web profesional refuerza su credibilidad y demuestra que es serio en su oficio. ",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Tener un sitio web profesional refuerza su credibilidad y demuestra que es serio en su oficio. ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Accesibilidad",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Accesibilidad",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Sus clientes pueden consultar sus servicios, horarios y contactos en cualquier momento, incluso fuera del horario de apertura.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : Sus clientes pueden consultar sus servicios, horarios y contactos en cualquier momento, incluso fuera del horario de apertura.",
-              "type": "text"
             }
           ]
         },
@@ -12817,77 +13571,76 @@
           ]
         },
         {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Palabras clave locales",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Palabras clave locales",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Utilice palabras clave específicas de su región, como \"artesano en Rennes\" o \"fontanero en Rennes\".",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Utilice palabras clave específicas de su región, como \"artesano en Rennes\" o \"fontanero en Rennes\".",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Etiquetas meta",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Etiquetas meta",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Asegúrese de que sus etiquetas de título y descripción contengan palabras clave relevantes y locales. ",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Asegúrese de que sus etiquetas de título y descripción contengan palabras clave relevantes y locales. ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Contenido de calidad",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Contenido de calidad",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Publique regularmente contenido útil e informativo sobre su profesión, servicios y región.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : Publique regularmente contenido útil e informativo sobre su profesión, servicios y región.",
-              "type": "text"
             }
           ]
         },
@@ -12917,77 +13670,76 @@
           ]
         },
         {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Diseño responsivo",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Diseño responsivo",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Su sitio debe ser accesible y fácil de navegar en todos los dispositivos, incluyendo smartphones y tabletas. ",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Su sitio debe ser accesible y fácil de navegar en todos los dispositivos, incluyendo smartphones y tabletas. ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Navegación intuitiva",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Navegación intuitiva",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Asegúrese de que los visitantes puedan encontrar fácilmente lo que buscan, ya sea sus servicios, sus coordenadas o sus horarios. ",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Asegúrese de que los visitantes puedan encontrar fácilmente lo que buscan, ya sea sus servicios, sus coordenadas o sus horarios. ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Llamados a la acción (CTA)",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Llamados a la acción (CTA)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Anime a los visitantes a contactarlo o solicitar un presupuesto colocando botones de llamada a la acción bien visibles.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : Anime a los visitantes a contactarlo o solicitar un presupuesto colocando botones de llamada a la acción bien visibles.",
-              "type": "text"
             }
           ]
         },
@@ -13017,72 +13769,76 @@
           ]
         },
         {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Botones de compartir",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Botones de compartir",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Agregue botones de compartir en sus páginas para permitir que los visitantes compartan su contenido en sus redes sociales.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Agregue botones de compartir en sus páginas para permitir que los visitantes compartan su contenido en sus redes sociales.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": " - ",
-              "type": "text"
-            },
-            {
-              "text": "Flujos sociales",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Flujos sociales",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Integre sus redes sociales para mostrar tus últimas publicaciones y animar a los visitantes a seguirte.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Integre sus redes sociales para mostrar tus últimas publicaciones y animar a los visitantes a seguirte.",
-              "type": "text"
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": " - ",
-              "type": "text"
-            },
-            {
-              "text": "Publicidad dirigida",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Publicidad dirigida",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Usa publicidad en redes sociales para dirigirte a clientes locales y promocionar tus servicios.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : Usa publicidad en redes sociales para dirigirte a clientes locales y promocionar tus servicios.",
-              "type": "text"
             }
           ]
         },
@@ -13112,77 +13868,76 @@
           ]
         },
         {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
+          "type": "bullet_list",
           "content": [
             {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Página dedicada",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Página dedicada",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Crea una página dedicada a los testimonios y reseñas de clientes para mostrar los comentarios positivos de tus clientes. ",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Crea una página dedicada a los testimonios y reseñas de clientes para mostrar los comentarios positivos de tus clientes. ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Integración en las páginas de servicios",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Integración en las páginas de servicios",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Añade testimonios relevantes en las páginas de servicios correspondientes para reforzar la confianza de los visitantes. ",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "text": " : Añade testimonios relevantes en las páginas de servicios correspondientes para reforzar la confianza de los visitantes. ",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "attrs": {
-            "textAlign": null
-          },
-          "content": [
-            {
-              "text": "- ",
-              "type": "text"
-            },
-            {
-              "text": "Fomenta las reseñas",
-              "type": "text",
-              "marks": [
+              "type": "list_item",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Fomenta las reseñas",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " : Anima a tus clientes satisfechos a dejar una reseña en tu sitio web o en plataformas como Google My Business.",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "text": " : Anima a tus clientes satisfechos a dejar una reseña en tu sitio web o en plataformas como Google My Business.",
-              "type": "text"
             }
           ]
         },
