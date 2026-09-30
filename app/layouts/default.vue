@@ -23,6 +23,12 @@ useHead({
 
 onMounted(async (): Promise<void> => {
   const [{ default: Aos }, _] = await Promise.all([import('aos'), import('aos/dist/aos.css')])
-  Aos.init({ easing: 'ease-out-cubic', once: true, duration: 600, offset: 80 })
+  Aos.init({
+    easing: 'ease-out-cubic',
+    once: true,
+    duration: 600,
+    offset: 80,
+    disable: (): boolean => window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+  })
 })
 </script>

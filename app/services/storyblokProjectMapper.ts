@@ -3,6 +3,7 @@ import { normalizeSectorFromStoryblok, normalizeCategoryFromStoryblok } from '~/
 import type { SectorKey, CategoryKey } from '~/core/constants/projectEnums'
 import type { StoryblokProjectContent } from '~/services/types/storyblokProject'
 import type { StoryblokLink, StoryblokStory } from '~/services/types/storyblok'
+import { FrenchTypographyUtils } from '~/core/utils/FrenchTypographyUtils'
 
 /**
  * Resolve a Storyblok asset field to a URL string.
@@ -241,17 +242,19 @@ export function mapStoryblokProjectToDibodevProject(
   const rawLongDescription: StoryblokProjectContent['longDescription'] =
     effective.longDescription ?? content.longDescription
   const longDescription: DibodevProject['longDescription'] =
-    typeof rawLongDescription === 'string' ? rawLongDescription : rawLongDescription
+    typeof rawLongDescription === 'string'
+      ? FrenchTypographyUtils.formatText(rawLongDescription)
+      : FrenchTypographyUtils.formatRichtext(rawLongDescription)
 
   return {
-    name: effective.name ?? content.name,
+    name: FrenchTypographyUtils.formatText(effective.name ?? content.name),
     primaryColor: effective.primaryColor ?? content.primaryColor,
     secondaryColor: effective.secondaryColor ?? content.secondaryColor,
     logoUrl: resolveAssetUrl((effective.logoUrl ?? content.logoUrl) as StoryblokProjectContent['logoUrl']),
     categories,
     sectors,
     date: effective.date ?? content.date,
-    shortDescription: effective.shortDescription ?? content.shortDescription,
+    shortDescription: FrenchTypographyUtils.formatText(effective.shortDescription ?? content.shortDescription),
     longDescription,
     siteUrl: effective.siteUrl ?? content.siteUrl,
     stack: normalizeStringList((effective.stack ?? content.stack) as StoryblokProjectContent['tags']),
@@ -261,7 +264,7 @@ export function mapStoryblokProjectToDibodevProject(
     route,
     tags: normalizeStringList((effective.tags ?? content.tags) as StoryblokProjectContent['tags']),
     metaTitle: effective.metaTitle ?? content.metaTitle,
-    metaDescription: effective.metaDescription ?? content.metaDescription,
+    metaDescription: FrenchTypographyUtils.formatText(effective.metaDescription ?? content.metaDescription),
     isFavorite: effective.isFavorite ?? content.isFavorite,
   }
 }

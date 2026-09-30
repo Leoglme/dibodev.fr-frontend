@@ -111,7 +111,9 @@ const localePath = useLocalePath()
 const { locale } = useI18n()
 const { track } = useTracking()
 
-const formattedDate: ComputedRef<string> = computed((): string => formatArticleDate(props.date, locale.value as string))
+const formattedDate: ComputedRef<string> = computed((): string =>
+  formatArticleDate(props.date, locale.value as string, 'short'),
+)
 </script>
 
 <style scoped>

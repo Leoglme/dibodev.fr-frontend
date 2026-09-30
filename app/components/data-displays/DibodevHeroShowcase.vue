@@ -55,37 +55,41 @@
       <div v-if="props.slides.length > 1" class="flex shrink-0 items-center gap-2">
         <button
           type="button"
-          class="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-gray-400 bg-white text-gray-100 transition-colors hover:border-gray-100"
+          class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-gray-400 bg-white text-gray-100 transition-colors hover:border-gray-100"
           :aria-label="$t('home.hero.showcase.previous')"
           @click="goTo(activeIndex - 1)"
         >
           <DibodevIcon name="ChevronLeft" mode="stroke" :width="18" :height="18" aria-hidden="true" />
         </button>
-        <ol class="flex items-center gap-1.5" :aria-label="$t('home.hero.showcase.label')">
+        <ol class="flex items-center" :aria-label="$t('home.hero.showcase.label')">
           <li v-for="(slide, index) in props.slides" :key="slide.route">
             <button
               type="button"
-              class="relative block h-2.5 cursor-pointer overflow-hidden rounded-full transition-all"
-              :class="index === activeIndex ? 'bg-accent-tint w-8' : 'w-2.5 bg-gray-400 hover:bg-gray-100'"
+              class="group flex h-10 cursor-pointer items-center px-[3px]"
               :aria-label="$t('home.hero.showcase.goTo', { name: slide.name })"
               :aria-current="index === activeIndex ? 'true' : undefined"
               @click="goTo(index)"
             >
               <span
-                v-if="index === activeIndex"
-                :key="`progress-${activeIndex}`"
-                class="bg-primary absolute inset-0 origin-left rounded-full"
-                :class="isAutoplayEnabled ? 'showcase-progress' : ''"
-                :style="progressStyle"
-                aria-hidden="true"
-                @animationend="goTo(activeIndex + 1)"
-              />
+                class="relative block h-2.5 overflow-hidden rounded-full transition-all"
+                :class="index === activeIndex ? 'bg-accent-tint w-8' : 'w-2.5 bg-gray-400 group-hover:bg-gray-100'"
+              >
+                <span
+                  v-if="index === activeIndex"
+                  :key="`progress-${activeIndex}`"
+                  class="bg-primary absolute inset-0 origin-left rounded-full"
+                  :class="isAutoplayEnabled ? 'showcase-progress' : ''"
+                  :style="progressStyle"
+                  aria-hidden="true"
+                  @animationend="goTo(activeIndex + 1)"
+                />
+              </span>
             </button>
           </li>
         </ol>
         <button
           type="button"
-          class="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-gray-400 bg-white text-gray-100 transition-colors hover:border-gray-100"
+          class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-gray-400 bg-white text-gray-100 transition-colors hover:border-gray-100"
           :aria-label="$t('home.hero.showcase.next')"
           @click="goTo(activeIndex + 1)"
         >

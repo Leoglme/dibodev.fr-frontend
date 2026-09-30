@@ -3,7 +3,7 @@
     "title": "Dibodev — Développeur Web Freelance à Rennes",
     "description": "Développeur freelance à Rennes : sites web, applications mobiles, logiciels et IA sur mesure. Accompagnement de A à Z.",
     "shareImage": {
-      "alt": "Portrait de Léo Guillaume, développeur freelance full‑stack et IA à Rennes, avec la mention « {pageLabel} »",
+      "alt": "Portrait de Léo Guillaume, développeur freelance full‑stack et IA à Rennes, avec la mention « {pageLabel} »",
       "role": "Développeur freelance full‑stack et IA",
       "place": "Rennes, Bretagne",
       "pageLabels": {
@@ -31,9 +31,9 @@
     },
     "contactPage": {
       "title": "Contact — Léo Guillaume, développeur freelance à Rennes {'|'} Dibodev",
-      "description": "Application métier, site web ou IA ? Léo Guillaume, développeur freelance près de Rennes, vous répond sous 24 h. Premier échange et devis gratuits.",
+      "description": "Application métier, site web ou IA ? Léo Guillaume, développeur freelance près de Rennes, vous répond sous 24 h. Premier échange et devis gratuits.",
       "ogTitle": "Contactez Léo Guillaume — Développeur freelance à Rennes",
-      "ogDescription": "Application métier, site web ou IA ? Réponse sous 24 h, premier échange et devis gratuits."
+      "ogDescription": "Application métier, site web ou IA ? Réponse sous 24 h, premier échange et devis gratuits."
     },
     "projects": {
       "title": "Mes projets — Dibodev",
@@ -77,7 +77,7 @@
     },
     "cta": {
       "title": "Un projet en tête ?",
-      "description": "Décrivez-moi votre besoin en quelques lignes : je vous réponds sous 24 h avec de premières pistes et une idée de budget.",
+      "description": "Décrivez-moi votre besoin en quelques lignes : je vous réponds sous 24 h avec de premières pistes et une idée de budget.",
       "ctaText": "Parler de mon projet"
     },
     "card": {
@@ -105,7 +105,7 @@
     },
     "sidebarCta": {
       "title": "Un projet en tête ?",
-      "description": "Décrivez-moi votre besoin, je vous réponds sous 24 h.",
+      "description": "Décrivez-moi votre besoin, je vous réponds sous 24 h.",
       "button": "Parler de mon projet"
     },
     "start": {
@@ -133,9 +133,9 @@
     "toolsTitle": "Outils gratuits",
     "tools": {
       "drivingSchoolSoftware": "Quel logiciel pour mon auto-école ?",
-      "eventRentalSoftware": "Quel logiciel pour ma location de matériel événementiel ?",
-      "bikeShopSoftware": "Quel logiciel pour mon atelier vélo ?",
-      "autoRepairShopSoftware": "Quel logiciel pour mon garage ?",
+      "eventRentalSoftware": "Quel logiciel pour ma location de matériel événementiel ?",
+      "bikeShopSoftware": "Quel logiciel pour mon atelier vélo ?",
+      "autoRepairShopSoftware": "Quel logiciel pour mon garage ?",
       "budgetEstimator": "Combien coûte mon logiciel métier ?"
     }
   },
@@ -285,7 +285,7 @@
       },
       "area": {
         "question": "Où intervenez-vous ?",
-        "answer": "À Rennes, dans toute l'Ille-et-Vilaine et à distance partout en France : on échange par téléphone, WhatsApp ou visio, sur Google Meet."
+        "answer": "À Rennes, dans toute l'Ille-et-Vilaine et à distance partout en France : on échange par téléphone, WhatsApp ou visio, sur Google Meet."
       },
       "price": {
         "question": "Combien coûte un projet ?",
@@ -338,7 +338,7 @@
   },
   "contact": {
     "landing": {
-      "description": "Décrivez-moi votre besoin en quelques lignes, même s’il n’est pas encore précis. Je vous réponds sous 24 h avec de premières pistes et une idée de budget, sans engagement.",
+      "description": "Décrivez-moi votre besoin en quelques lignes, même s’il n’est pas encore précis. Je vous réponds sous 24 h avec de premières pistes et une idée de budget, sans engagement.",
       "titlePart1": "Parlons de ",
       "titleHighlight1": "votre projet",
       "titlePart2": ""
@@ -404,7 +404,7 @@
       "title": "Ce qui se passe ensuite",
       "steps": {
         "reply": {
-          "title": "Je vous réponds sous 24 h",
+          "title": "Je vous réponds sous 24 h",
           "description": "Par e-mail ou par téléphone, selon ce que vous préférez."
         },
         "call": {
@@ -423,9 +423,9 @@
     },
     "channels": {
       "emailTitle": "Par e-mail",
-      "emailText": "Réponse sous 24 h, du lundi au vendredi.",
+      "emailText": "Réponse sous 24 h, du lundi au vendredi.",
       "phoneTitle": "Par téléphone",
-      "phoneText": "Du lundi au vendredi, de 9 h à 18 h.",
+      "phoneText": "Du lundi au vendredi, de 9 h à 18 h.",
       "addressTitle": "Sur place",
       "addressText": "À 10 minutes de Rennes. Je me déplace en Ille-et-Vilaine et en Bretagne quand c'est utile."
     },
@@ -470,7 +470,7 @@
     },
     "cta": {
       "text": "Vous avez un projet similaire ? Parlons‑en.",
-      "description": "Décrivez-moi votre besoin en quelques lignes : je vous réponds sous 24 h avec de premières pistes et une idée de budget.",
+      "description": "Décrivez-moi votre besoin en quelques lignes : je vous réponds sous 24 h avec de premières pistes et une idée de budget.",
       "button": "Parler de mon projet"
     },
     "sectors": {
@@ -513,7 +513,7 @@
       "ia": "Assistants, automatisations et modèles d'intelligence artificielle."
     },
     "asideCta": {
-      "description": "Décrivez-moi votre besoin en quelques lignes : je vous réponds sous 24 h avec de premières pistes et une idée de budget.",
+      "description": "Décrivez-moi votre besoin en quelques lignes : je vous réponds sous 24 h avec de premières pistes et une idée de budget.",
       "button": "Parler de mon projet"
     },
     "mosaic": {
@@ -558,7 +558,7 @@
     },
     "asideCta": {
       "title": "Un projet similaire ?",
-      "description": "Je vous réponds sous 24 h avec de premières pistes et une idée de budget.",
+      "description": "Je vous réponds sous 24 h avec de premières pistes et une idée de budget.",
       "button": "Parler de mon projet"
     },
     "caseStudy": {
@@ -571,7 +571,7 @@
       },
       "studies": {
         "izidoor": {
-          "role": "Ingénieur full-stack en alternance chez Izidoor de janvier 2023 à juillet 2025, dans une équipe agile : architecture, interfaces, développement, support client.",
+          "role": "Ingénieur full-stack en alternance chez Izidoor de janvier 2023 à juillet 2025, dans une équipe agile : architecture, interfaces, développement, support client.",
           "stats": {
             "structures": {
               "value": "~30",
@@ -592,7 +592,7 @@
             "competitors": "D’autres structures équipées de logiciels concurrents."
           },
           "built": {
-            "backOffice": "Un back-office métier complet : réservations, plannings, produits, paiements, statistiques et caisse pour encaisser sur place.",
+            "backOffice": "Un back-office métier complet : réservations, plannings, produits, paiements, statistiques et caisse pour encaisser sur place.",
             "onlineBooking": "Un module de réservation en ligne intégré au site de chaque structure, avec paiement Stripe, acomptes et remboursements.",
             "engine": "Un moteur de disponibilités multicritère, une tarification dynamique et les connexions FFVoile, Mailjet et Twilio."
           },
@@ -635,7 +635,7 @@
           }
         },
         "stockPme": {
-          "role": "Chez Kodeva, où j’étais ingénieur full-stack en alternance dans une équipe agile, d’octobre 2020 à août 2022. Le projet démarrait à peine à mon arrivée ; Breizhtic le distribuait avec le matériel associé.",
+          "role": "Chez Kodeva, où j’étais ingénieur full-stack en alternance dans une équipe agile, d’octobre 2020 à août 2022. Le projet démarrait à peine à mon arrivée ; Breizhtic le distribuait avec le matériel associé.",
           "stats": {
             "companySize": {
               "value": "20 à 200",
@@ -656,7 +656,7 @@
             "traceability": "Peu de traçabilité sur les mouvements entre emplacements et entrepôts."
           },
           "built": {
-            "catalog": "Les fiches produits, les niveaux de stock et l’historique de chaque mouvement : entrées, sorties, corrections, inventaires.",
+            "catalog": "Les fiches produits, les niveaux de stock et l’historique de chaque mouvement : entrées, sorties, corrections, inventaires.",
             "transfers": "Les transferts entre emplacements et entrepôts, avec des statistiques d’évolution des stocks.",
             "labels": "Des étiquettes professionnelles à QR code, avec le matériel distribué par Breizhtic, et le suivi du SAV."
           },
@@ -683,11 +683,11 @@
             }
           },
           "before": {
-            "noPresence": "Aucune présence en ligne : ni site, ni messagerie professionnelle.",
+            "noPresence": "Aucune présence en ligne : ni site, ni messagerie professionnelle.",
             "noVisibility": "Une entreprise qui démarrait sans visibilité ni moyen d’être contactée en ligne."
           },
           "built": {
-            "site": "Un site vitrine rapide avec un CMS : la cliente modifie elle-même ses pages, son blog, sa FAQ et ses images.",
+            "site": "Un site vitrine rapide avec un CMS : la cliente modifie elle-même ses pages, son blog, sa FAQ et ses images.",
             "seo": "Une messagerie professionnelle, un référencement complet et des statistiques de visite respectueuses de la vie privée.",
             "contact": "Un formulaire de contact avec accusé de réception automatique, et une mise en ligne automatisée à chaque modification."
           },
@@ -731,7 +731,7 @@
       "title": "Activité",
       "description": "Développeur full‑stack web, IA et mobile en freelance."
     },
-    "intro": "Les informations légales du site dibodev.fr : éditeur, hébergeur et activité."
+    "intro": "Les informations légales du site dibodev.fr : éditeur, hébergeur et activité."
   },
   "privacy": {
     "meta": {
@@ -747,7 +747,7 @@
     "contactFormData": {
       "title": "Données collectées via le formulaire de contact",
       "paragraph1": "Lorsque vous m'écrivez via le formulaire, je reçois : type de projet, fourchette de pages, budget, nom et prénom, adresse email et message. Ces informations sont utilisées uniquement pour traiter votre demande et vous répondre.",
-      "paragraph2": "Je ne stocke pas ces données dans une base de données. Elles sont transmises par email (via le prestataire Mailjet) et figurent dans ma messagerie le temps de notre échange. Je m'engage à supprimer les données personnelles contenues dans ces échanges dans un délai de 2 ans après le dernier contact, sauf obligation légale de conservation."
+      "paragraph2": "Je ne stocke pas ces données dans une base de données. Elles sont transmises par email (via le prestataire Mailjet) et figurent dans ma messagerie le temps de notre échange. Je m'engage à supprimer les données personnelles contenues dans ces échanges dans un délai de 2 ans après le dernier contact, sauf obligation légale de conservation."
     },
     "subcontractor": {
       "title": "Sous-traitant pour l'envoi d'emails",
@@ -789,7 +789,7 @@
       "panelWordWrite": "Écrire",
       "panelWordMeasure": "Mesurer",
       "panelWordImprove": "Améliorer",
-      "panelLine": "Le back-office de dibodev.fr : articles, référencement et performances au même endroit.",
+      "panelLine": "Le back-office de dibodev.fr : articles, référencement et performances au même endroit.",
       "panelModules": {
         "articles": "Articles",
         "translations": "Traductions",
@@ -843,10 +843,10 @@
         "description": "Trier les demandes, extraire les données de vos documents ou répondre aux questions fréquentes de vos clients."
       },
       "eyebrow": "Exemples d'outils",
-      "exampleLabel": "Voir un exemple : {name}",
+      "exampleLabel": "Voir un exemple : {name}",
       "integrations": {
         "title": "Et il se connecte à ce que vous utilisez déjà",
-        "intro": "Votre outil échange avec vos logiciels au lieu de les remplacer : paiement, e-mails, fichiers, IA.",
+        "intro": "Votre outil échange avec vos logiciels au lieu de les remplacer : paiement, e-mails, fichiers, IA.",
         "items": {
           "payment": {
             "name": "Stripe",
@@ -931,7 +931,7 @@
     },
     "cta": {
       "title": "Un fichier Excel qui déborde ? Parlons de votre outil.",
-      "description": "Décrivez-moi votre besoin en quelques lignes : je vous réponds sous 24 h avec une première idée de solution et de budget.",
+      "description": "Décrivez-moi votre besoin en quelques lignes : je vous réponds sous 24 h avec une première idée de solution et de budget.",
       "button": "Discuter de mon projet"
     },
     "guarantees": {
@@ -985,7 +985,7 @@
         "price": {
           "label": "Prix",
           "offTheShelf": "Abonnement par utilisateur, qui grimpe avec l'équipe.",
-          "agency": "Devis élevé : chef de projet, designer, équipe.",
+          "agency": "Devis élevé : chef de projet, designer, équipe.",
           "dibodev": "Forfait fixé avant de commencer, souvent 5 000 à 15 000 €."
         },
         "contact": {
@@ -1031,7 +1031,7 @@
       "background": "Je m'appelle Léo Guillaume. Avant d'écrire du code, j'ai été cuisinier. En 2017, j'ai commencé ma reconversion vers le développement web, et en 2020 j'en ai fait mon métier en entrant à la Web{'@'}cadémie d'Epitech Rennes, en alternance, avant de poursuivre jusqu'au MSc en intelligence artificielle et data.",
       "career": "Depuis, j'ai construit des outils utilisés chaque jour : trois applications métier chez Kodeva, toujours en production dans des TPE et PME, puis la plateforme de réservation d'Izidoor, adoptée par une trentaine de structures de sport et de loisirs.",
       "dibodev": "En 2025, j'ai créé Dibodev pour travailler directement avec les TPE et PME. Mon objectif : remplacer les fichiers Excel, les papiers et les tâches répétitives par des outils simples, pensés pour les personnes qui les utilisent.",
-      "ai": "Depuis avril 2026, je suis aussi en mission chez PrePeers, une startup EdTech qui aide les 15-25 ans à choisir leur orientation grâce à l'intelligence artificielle. J'y développe la plateforme et les chats IA qui conseillent les étudiants, jusque sur les sites des écoles partenaires.",
+      "ai": "Depuis avril 2026, je suis aussi en mission chez PrePeers, une startup EdTech qui aide les 15-25 ans à choisir leur orientation grâce à l'intelligence artificielle. J'y développe la plateforme et les chats IA qui conseillent les étudiants, jusque sur les sites des écoles partenaires.",
       "workingStyle": "Je travaille seul, en lien direct avec vous, du premier échange à la maintenance. Chaque projet est chiffré au forfait, avec un devis clair, et livré par étapes pour que vous puissiez tester l'outil au fil du projet.",
       "eyebrow": "À propos"
     },
@@ -1055,7 +1055,7 @@
       },
       "experience": {
         "label": "Expérience",
-        "value": "6 ans d'expérience professionnelle : alternance chez Kodeva et Izidoor, puis freelance"
+        "value": "6 ans d'expérience professionnelle : alternance chez Kodeva et Izidoor, puis freelance"
       },
       "education": {
         "label": "Formation",
@@ -1080,11 +1080,11 @@
         "title": "Développeur full‑stack et IA",
         "organization": "PrePeers",
         "context": "Mission freelance, startup EdTech près de Lyon",
-        "description": "PrePeers aide les 15-25 ans à trouver leur voie grâce à une IA conversationnelle, puis les met en relation avec les écoles qui leur correspondent. J'y suis le développeur principal des interfaces de la plateforme.",
+        "description": "PrePeers aide les 15-25 ans à trouver leur voie grâce à une IA conversationnelle, puis les met en relation avec les écoles qui leur correspondent. J'y suis le développeur principal des interfaces de la plateforme.",
         "highlights": {
           "platform": "Parcours étudiant de bout en bout : inscription, profil et conversation avec Lola, l'IA d'orientation",
           "schools": "Lily, un chat IA intégré aux sites des écoles partenaires, et l'espace de gestion des écoles",
-          "data": "Intégration CRM côté API .NET et suivi analytique complet du parcours, avec environ 82 % d'inscriptions finalisées"
+          "data": "Intégration CRM côté API .NET et suivi analytique complet du parcours, avec environ 82 % d'inscriptions finalisées"
         }
       },
       "dibodev": {
@@ -1175,7 +1175,7 @@
     },
     "cta": {
       "title": "Un projet d'outil ou de site ?",
-      "description": "Parlez-moi de votre besoin en quelques lignes : je vous réponds sous 24 h avec des premières pistes et une idée de budget.",
+      "description": "Parlez-moi de votre besoin en quelques lignes : je vous réponds sous 24 h avec des premières pistes et une idée de budget.",
       "button": "Discuter de mon projet"
     }
   },
@@ -1244,7 +1244,7 @@
   "estimator": {
     "eyebrow": "Estimation",
     "title": "Estimez le budget de votre projet",
-    "intro": "Trois questions pour situer votre projet. L'estimation est indicative : le devis, gratuit, fixe le prix exact.",
+    "intro": "Trois questions pour situer votre projet. L'estimation est indicative : le devis, gratuit, fixe le prix exact.",
     "kindLabel": "Quel type de projet ?",
     "kinds": {
       "website": "Site web",
@@ -1263,7 +1263,7 @@
       },
       "large": {
         "label": "Complet",
-        "hint": "Une plateforme complète : nombreux écrans, rôles, tableaux de bord et connexions."
+        "hint": "Une plateforme complète : nombreux écrans, rôles, tableaux de bord et connexions."
       }
     },
     "optionsLabel": "Options",
@@ -1299,12 +1299,12 @@
     "maxHint": "Jusqu'à {max} réponses.",
     "continue": "Continuer",
     "resultEyebrow": "Votre résultat",
-    "yourAnswers": "Vos réponses : {recap}",
+    "yourAnswers": "Vos réponses : {recap}",
     "restart": "Refaire le test",
     "callMe": "ou appelez-moi au",
-    "response24h": "Réponse sous 24 h",
+    "response24h": "Réponse sous 24 h",
     "freeFirstCall": "Premier échange gratuit",
-    "resultAnnouncement": "Votre résultat : {title}",
+    "resultAnnouncement": "Votre résultat : {title}",
     "form": {
       "nameLabel": "Nom et prénom",
       "emailLabel": "E-mail",
@@ -1317,16 +1317,16 @@
     },
     "sent": {
       "title": "Demande envoyée",
-      "text": "Merci. Je vous réponds sous 24 h, du lundi au vendredi. Un e-mail de confirmation vient de partir dans votre boîte."
+      "text": "Merci. Je vous réponds sous 24 h, du lundi au vendredi. Un e-mail de confirmation vient de partir dans votre boîte."
     },
     "lead": {
-      "intro": "Demande envoyée depuis le test « {quiz} »",
-      "result": "Résultat : {title}",
-      "answer": "{question} : {answer}"
+      "intro": "Demande envoyée depuis le test « {quiz} »",
+      "result": "Résultat : {title}",
+      "answer": "{question} : {answer}"
     }
   },
   "toolTeaserList": {
-    "emphasizedIntro": "Vous cherchez un logiciel pour votre métier ?",
+    "emphasizedIntro": "Vous cherchez un logiciel pour votre métier ?",
     "text": "Chaque test tient en 6 questions et donne les prix 2026 des logiciels du marché."
   },
   "toolPage": {
@@ -1334,6 +1334,6 @@
     "aboutTitle": "À propos du test"
   },
   "sourcedFacts": {
-    "source": "Source : {name}"
+    "source": "Source : {name}"
   }
 }

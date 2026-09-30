@@ -1,11 +1,11 @@
 <template>
   <section id="contact-form" class="scroll-mt-24 px-6 pb-20 sm:px-8 lg:pb-28" data-aos="fade-up">
     <div class="mx-auto grid w-full max-w-7xl gap-12 lg:gap-14">
-      <ul class="grid gap-5 md:grid-cols-3 lg:gap-6">
+      <ul class="grid gap-3 md:grid-cols-3 md:gap-5 lg:gap-6">
         <li>
           <a
             :href="`mailto:${CONTACT_EMAIL}`"
-            class="contact-channel group flex h-full flex-col gap-4 rounded-xl border border-gray-300 bg-white p-6"
+            class="contact-channel group flex h-full items-start gap-4 rounded-xl border border-gray-300 bg-white p-5 md:flex-col md:p-6"
             @click="track(TRACKING_EVENTS.contactEmail, { location: 'contact_channels' })"
           >
             <span
@@ -28,7 +28,7 @@
         <li>
           <a
             :href="`tel:${PHONE_E164}`"
-            class="contact-channel group flex h-full flex-col gap-4 rounded-xl border border-gray-300 bg-white p-6"
+            class="contact-channel group flex h-full items-start gap-4 rounded-xl border border-gray-300 bg-white p-5 md:flex-col md:p-6"
             :aria-label="$t('contact.sidebar.phoneLabel')"
             @click="track(TRACKING_EVENTS.contactPhone, { location: 'contact_channels' })"
           >
@@ -49,7 +49,9 @@
             </span>
           </a>
         </li>
-        <li class="contact-channel flex h-full flex-col gap-4 rounded-xl border border-gray-300 bg-white p-6">
+        <li
+          class="contact-channel flex h-full items-start gap-4 rounded-xl border border-gray-300 bg-white p-5 md:flex-col md:p-6"
+        >
           <span
             class="contact-channel__icon"
             :style="{ backgroundColor: getAccentPalette(2).background, color: getAccentPalette(2).color }"
@@ -157,6 +159,7 @@ a.contact-channel:hover {
 
 .contact-channel__icon {
   display: inline-flex;
+  flex-shrink: 0;
   width: 3rem;
   height: 3rem;
   align-items: center;

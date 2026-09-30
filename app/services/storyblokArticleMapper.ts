@@ -5,6 +5,7 @@ import type {
   StoryblokStringListInput,
 } from '~/services/types/storyblokArticle'
 import type { StoryblokStory } from '~/services/types/storyblok'
+import { FrenchTypographyUtils } from '~/core/utils/FrenchTypographyUtils'
 
 const WORDS_PER_MINUTE: number = 200
 
@@ -84,9 +85,9 @@ export function mapStoryblokArticleToDibodevArticle(story: StoryblokStory<Storyb
 
   return {
     slug: content.slug,
-    title: content.title,
-    excerpt: content.excerpt,
-    content: content.content,
+    title: FrenchTypographyUtils.formatText(content.title),
+    excerpt: FrenchTypographyUtils.formatText(content.excerpt),
+    content: FrenchTypographyUtils.formatRichtext(content.content),
     date: content.date,
     coverImageUrl,
     tags,
