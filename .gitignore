@@ -25,3 +25,6 @@ logs
 gsc.sh
 toto.md
 scripts/*
+.claude
+.claude-cache
+.cursor

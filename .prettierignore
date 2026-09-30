@@ -1,6 +1,9 @@
 # content is duplicated here due to https://github.com/prettier/prettier/issues/8506
 .gitignore
 
+# HTML compact pour Gmail (Probador) — ne pas reformater
+public/email/dibodev-signature-v2-variant-1.html
+
 src-tauri/target/
 src-tauri/gen/schemas
 
