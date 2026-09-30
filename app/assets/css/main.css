@@ -31,13 +31,13 @@
 /* Shared page width (`max-w-site`): navbar, sections and footer widen together on large screens. */
 @media (width >= 90rem) {
   :root {
-    --container-site: 86rem;
+    --container-site: 83rem;
   }
 }
 
 @media (width >= 100rem) {
   :root {
-    --container-site: 90rem;
+    --container-site: 86rem;
   }
 }
 
@@ -56,6 +56,31 @@ body {
   background-color: var(--color-gray-900);
   color: var(--color-gray-100);
   -webkit-font-smoothing: antialiased;
+}
+
+/* Arrow icons inside links and buttons slide right on hover (`data-icon` is set by DibodevIcon). */
+svg[data-icon='ArrowRight'] {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+a:hover svg[data-icon='ArrowRight'],
+a:focus-visible svg[data-icon='ArrowRight'],
+button:hover svg[data-icon='ArrowRight'],
+button:focus-visible svg[data-icon='ArrowRight'] {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  svg[data-icon='ArrowRight'] {
+    transition: none;
+  }
+
+  a:hover svg[data-icon='ArrowRight'],
+  a:focus-visible svg[data-icon='ArrowRight'],
+  button:hover svg[data-icon='ArrowRight'],
+  button:focus-visible svg[data-icon='ArrowRight'] {
+    transform: none;
+  }
 }
 
 h1,

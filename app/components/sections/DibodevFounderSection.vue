@@ -3,7 +3,8 @@
     <div
       class="max-w-site mx-auto grid w-full items-center gap-12 lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:gap-20"
     >
-      <div class="mx-auto w-full max-w-sm lg:mx-0">
+      <div class="relative mx-auto w-full max-w-sm lg:mx-0">
+        <div class="bg-accent-tint absolute -top-4 -left-4 h-32 w-32 rounded-2xl" aria-hidden="true" />
         <img
           :src="PORTRAIT_SRC"
           :srcset="PORTRAIT_SRCSET"
@@ -13,7 +14,7 @@
           :height="PORTRAIT_SIZE"
           loading="lazy"
           decoding="async"
-          class="aspect-[4/5] w-full rounded-xl object-cover shadow-[0_18px_40px_rgba(20,20,20,0.08)]"
+          class="relative aspect-[4/5] w-full rounded-xl object-cover shadow-[0_18px_40px_rgba(20,20,20,0.08)]"
         />
       </div>
 
@@ -29,7 +30,7 @@
         <p class="text-[17px] leading-7 text-gray-200">{{ $t('home.founder.paragraph1') }}</p>
         <p class="text-[17px] leading-7 text-gray-200">{{ $t('home.founder.paragraph2') }}</p>
 
-        <dl class="grid gap-4 border-t border-gray-300 pt-7">
+        <dl class="grid gap-6 border-t border-gray-300 pt-7 lg:gap-4">
           <div v-for="fact in facts" :key="fact.label" class="flex items-start gap-4">
             <span
               class="bg-accent-tint text-primary flex h-10 w-10 shrink-0 items-center justify-center rounded-full"

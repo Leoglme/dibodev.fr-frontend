@@ -29,13 +29,6 @@
           loading="lazy"
           decoding="async"
         />
-        <span
-          v-if="props.screenshot"
-          class="absolute top-3 left-3 flex h-9 max-w-[7.5rem] items-center rounded-lg bg-white px-2 py-1.5 shadow-[0_2px_10px_rgba(20,20,20,0.12)]"
-          aria-hidden="true"
-        >
-          <img :src="props.logo" alt="" class="h-full w-auto object-contain" loading="lazy" decoding="async" />
-        </span>
       </div>
 
       <div class="flex flex-1 flex-col gap-3 p-4 sm:p-5">
@@ -43,9 +36,19 @@
           <DibodevCategoryBadge v-for="category in props.categories" :key="category" :category="category" size="sm" />
         </div>
         <div class="grid gap-1">
-          <h3 class="text-[17px] leading-snug font-medium text-gray-100">
-            {{ nameParts.shortName }}
-          </h3>
+          <div class="flex items-center gap-2.5">
+            <img
+              v-if="props.screenshot"
+              :src="props.logo"
+              alt=""
+              class="h-6 w-auto max-w-[4.5rem] shrink-0 object-contain"
+              loading="lazy"
+              decoding="async"
+            />
+            <h3 class="text-[17px] leading-snug font-medium text-gray-100">
+              {{ nameParts.shortName }}
+            </h3>
+          </div>
           <p class="line-clamp-2 text-[15px] leading-6 text-gray-200">
             {{ nameParts.tagline || props.description }}
           </p>
@@ -54,14 +57,7 @@
           <span v-if="formattedDate" class="text-muted text-sm">{{ formattedDate }}</span>
           <span class="project-card__link ml-auto inline-flex items-center gap-1.5 text-[15px] font-medium">
             {{ $t('projects.card.seeProject') }}
-            <DibodevIcon
-              name="ArrowRight"
-              mode="stroke"
-              :width="18"
-              :height="18"
-              class="project-card__arrow"
-              aria-hidden="true"
-            />
+            <DibodevIcon name="ArrowRight" mode="stroke" :width="18" :height="18" aria-hidden="true" />
           </span>
         </div>
       </div>
@@ -88,7 +84,7 @@ const SCREENSHOT_HEIGHT: number = 450
 const SCREENSHOT_SIZES: string = '(min-width: 1280px) 340px, (min-width: 640px) 50vw, 100vw'
 
 /**
- * Project card in the project colours: screenshot with the logo in a corner (logo panel without screenshot), categories, name, tagline, date and link.
+ * Project card in the project colours: screenshot (logo panel without one), categories, logo and name, tagline, date and link.
  */
 const props: DibodevProjectCardProps = defineProps({
   name: {
@@ -194,25 +190,14 @@ function onCardClick(): void {
   color: var(--project-color);
 }
 
-.project-card__arrow {
-  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.project-card:hover .project-card__arrow,
-.project-card:focus-within .project-card__arrow {
-  transform: translateX(4px);
-}
-
 @media (prefers-reduced-motion: reduce) {
   .project-card,
-  .project-card__screenshot,
-  .project-card__arrow {
+  .project-card__screenshot {
     transition: none;
   }
 
   .project-card:hover,
-  .project-card:hover .project-card__screenshot,
-  .project-card:hover .project-card__arrow {
+  .project-card:hover .project-card__screenshot {
     transform: none;
   }
 }

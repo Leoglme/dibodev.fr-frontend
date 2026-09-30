@@ -6,6 +6,7 @@
     :titlePart2="$t('contact.landing.titlePart2')"
     :description="$t('contact.landing.description')"
     align="left"
+    :singleLineTitleOnPhones="true"
   />
 </template>
 

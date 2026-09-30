@@ -91,14 +91,10 @@
 
           <ul
             v-if="props.reassurances.length > 0"
-            class="flex flex-wrap items-center gap-x-5 gap-y-2.5 text-left text-sm text-gray-200"
-            :class="isCentered ? 'justify-center' : ''"
+            class="flex flex-col gap-2.5 text-left text-sm text-gray-200 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-5 sm:gap-y-2"
+            :class="isCentered ? 'sm:justify-center' : ''"
           >
-            <li
-              v-for="reassurance in props.reassurances"
-              :key="reassurance"
-              class="flex items-center gap-2 whitespace-nowrap"
-            >
+            <li v-for="reassurance in props.reassurances" :key="reassurance" class="flex items-center gap-2">
               <DibodevIcon
                 name="Check"
                 mode="stroke"
@@ -199,6 +195,10 @@ const props: DibodevLandingSectionProps = defineProps({
     type: Boolean as PropType<boolean>,
     default: false,
   },
+  singleLineTitleOnPhones: {
+    type: Boolean as PropType<boolean>,
+    default: false,
+  },
 })
 
 const slots = useSlots()
@@ -208,11 +208,15 @@ const { track } = useTracking()
 /** Centred only when asked for and when no visual takes the right-hand column. */
 const isCentered: ComputedRef<boolean> = computed((): boolean => props.align === 'center' && !slots.aside)
 
-const titleClass: ComputedRef<string> = computed((): string =>
-  props.compactTitle
-    ? 'text-[28px] leading-[1.2] sm:text-[34px] lg:text-[38px]'
-    : 'text-[34px] leading-[1.15] sm:text-[44px] lg:text-[40px] xl:text-[52px]',
-)
+const titleClass: ComputedRef<string> = computed((): string => {
+  if (props.compactTitle) {
+    return 'text-[28px] leading-[1.2] sm:text-[34px] lg:text-[38px]'
+  }
+  const phoneSizeClass: string = props.singleLineTitleOnPhones
+    ? 'text-[clamp(1.375rem,7.2vw,2.125rem)] whitespace-nowrap sm:whitespace-normal'
+    : 'text-[34px]'
+  return `${phoneSizeClass} leading-[1.15] sm:text-[44px] lg:text-[40px] xl:text-[52px]`
+})
 
 /* METHODS */
 /**

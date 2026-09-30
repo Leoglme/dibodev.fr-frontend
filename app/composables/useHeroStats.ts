@@ -18,8 +18,8 @@ export async function useHeroStats(): Promise<ComputedRef<DibodevStatItemProps[]
   )
 
   return computed((): DibodevStatItemProps[] => [
-    { value: t('home.hero.stats.ratingValue'), label: t('home.hero.stats.ratingLabel'), hasStarRating: true },
-    { value: String(publishedProjectsCount.value), label: t('home.hero.stats.projectsLabel') },
     { value: t('home.hero.stats.experienceValue'), label: t('home.hero.stats.experienceLabel') },
+    { value: String(publishedProjectsCount.value), label: t('home.hero.stats.projectsLabel') },
+    { value: t('home.hero.stats.ratingValue'), label: t('home.hero.stats.ratingLabel'), hasStarRating: true },
   ])
 }

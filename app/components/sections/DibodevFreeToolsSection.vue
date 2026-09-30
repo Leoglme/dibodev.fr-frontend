@@ -29,14 +29,7 @@
               <span class="text-muted text-sm">{{ tool.meta }}</span>
               <span class="text-primary inline-flex items-center gap-1.5 text-[15px] font-medium">
                 {{ tool.linkLabel }}
-                <DibodevIcon
-                  name="ArrowRight"
-                  mode="stroke"
-                  :width="16"
-                  :height="16"
-                  class="free-tool-card__arrow"
-                  aria-hidden="true"
-                />
+                <DibodevIcon name="ArrowRight" mode="stroke" :width="16" :height="16" aria-hidden="true" />
               </span>
             </span>
           </NuxtLink>
@@ -112,25 +105,13 @@ function onToolClick(tool: DibodevFreeToolCard): void {
   transform: translateY(-2px);
 }
 
-.free-tool-card__arrow {
-  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.free-tool-card:hover .free-tool-card__arrow,
-.free-tool-card:focus-visible .free-tool-card__arrow {
-  transform: translateX(4px);
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .free-tool-card,
-  .free-tool-card__arrow {
+  .free-tool-card {
     transition: none;
   }
 
   .free-tool-card:hover,
-  .free-tool-card:focus-visible,
-  .free-tool-card:hover .free-tool-card__arrow,
-  .free-tool-card:focus-visible .free-tool-card__arrow {
+  .free-tool-card:focus-visible {
     transform: none;
   }
 }

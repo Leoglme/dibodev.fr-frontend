@@ -59,14 +59,8 @@ const href: ComputedRef<string | undefined> = computed((): string | undefined =>
 </script>
 
 <style scoped>
-.dibodev-link :slotted(svg[data-icon='ArrowRight']),
 .dibodev-link :slotted(svg[data-icon='ExternalLink']) {
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.dibodev-link:hover :slotted(svg[data-icon='ArrowRight']),
-.dibodev-link:focus-visible :slotted(svg[data-icon='ArrowRight']) {
-  transform: translateX(4px);
 }
 
 .dibodev-link:hover :slotted(svg[data-icon='ExternalLink']),
@@ -75,7 +69,6 @@ const href: ComputedRef<string | undefined> = computed((): string | undefined =>
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .dibodev-link :slotted(svg[data-icon='ArrowRight']),
   .dibodev-link :slotted(svg[data-icon='ExternalLink']) {
     transition: none;
   }

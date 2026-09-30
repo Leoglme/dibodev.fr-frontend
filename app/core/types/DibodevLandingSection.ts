@@ -42,6 +42,7 @@ export type DibodevLandingAlignment = 'left' | 'center'
  * @property {DibodevLandingAlignment} align - Text alignment when the section has no visual.
  * @property {string[]} reassurances - Short reassurance points listed under the buttons (none when empty).
  * @property {boolean} decorated - Whether soft brand halos are drawn behind the header (home and service pages).
+ * @property {boolean} singleLineTitleOnPhones - Whether the title shrinks to stay on one line on phones (short titles only).
  */
 export type DibodevLandingSectionProps = {
   breadcrumbs: DibodevBreadcrumbItem[]
@@ -62,4 +63,5 @@ export type DibodevLandingSectionProps = {
   align: DibodevLandingAlignment
   reassurances: string[]
   decorated: boolean
+  singleLineTitleOnPhones: boolean
 }

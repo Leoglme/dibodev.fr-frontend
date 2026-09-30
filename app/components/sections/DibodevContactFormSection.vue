@@ -69,7 +69,7 @@
       </ul>
 
       <div class="grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-12 xl:gap-14">
-        <div class="rounded-xl border border-gray-300 bg-white p-5 sm:p-7 lg:p-8">
+        <div class="sm:rounded-xl sm:border sm:border-gray-300 sm:bg-white sm:p-7 lg:p-8">
           <DibodevContactForm />
         </div>
 
