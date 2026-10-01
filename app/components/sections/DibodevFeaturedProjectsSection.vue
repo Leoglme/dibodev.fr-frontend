@@ -41,7 +41,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import type { ComputedRef } from 'vue'
+import type { ComputedRef, PropType } from 'vue'
+import type { DibodevFeaturedProjectsSectionProps } from '~/core/types/DibodevFeaturedProjectsSection'
 import type { DibodevProject } from '~/core/types/DibodevProject'
 import type { HomeFeaturedProjectsDevice, HomeFeaturedProjectsGridLayouts } from '~/core/types/HomeFeaturedProjects'
 import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
@@ -54,6 +55,16 @@ import { useProjectsWithTranslations } from '~/composables/useProjectsWithTransl
 import { HOME_PAGE_CONTENT } from '~/core/constants/homePageContent'
 import { HomeFeaturedProjectsUtils } from '~/core/utils/HomeFeaturedProjectsUtils'
 import { ProjectUtils } from '~/core/utils/ProjectUtils'
+
+/**
+ * Home page section presenting the projects chosen from the dashboard, with links to the listings by project type.
+ */
+const props: DibodevFeaturedProjectsSectionProps = defineProps({
+  projectSlugs: {
+    type: Array as PropType<string[]>,
+    default: (): string[] => HOME_PAGE_CONTENT.featuredProjectSlugs,
+  },
+})
 
 const HIDDEN_CARD_CLASSES: Record<HomeFeaturedProjectsDevice, string> = {
   phone: 'max-sm:hidden',
@@ -72,7 +83,7 @@ const { categoryLinks } = useProjectTaxonomyLinks(allProjects)
  * Projects chosen and ordered from the dashboard (Storyblok favourites, most recent first, while nothing is saved there).
  */
 const featuredProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] =>
-  HomeFeaturedProjectsUtils.resolveDisplayedProjects(allProjects.value, HOME_PAGE_CONTENT.featuredProjectSlugs),
+  HomeFeaturedProjectsUtils.resolveDisplayedProjects(allProjects.value, props.projectSlugs),
 )
 
 const gridLayouts: ComputedRef<HomeFeaturedProjectsGridLayouts> = computed(

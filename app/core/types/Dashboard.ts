@@ -19,7 +19,7 @@ export type DashboardChartColors = Record<DashboardScoreLevel, string>
 export type DashboardSectionKey =
   | 'overview'
   | 'articles'
-  | 'homePage'
+  | 'siteEditor'
   | 'translations'
   | 'search'
   | 'indexing'

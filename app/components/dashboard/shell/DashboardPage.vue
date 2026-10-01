@@ -41,7 +41,10 @@
       <slot name="toolbar" />
     </div>
 
-    <div ref="scrollBody" class="@container flex-1 px-4 pt-5 pb-8 md:min-h-0 md:overflow-y-auto md:px-6 md:pt-6">
+    <div v-if="props.isFullBleed" class="@container flex flex-1 flex-col md:min-h-0">
+      <slot />
+    </div>
+    <div v-else ref="scrollBody" class="@container flex-1 px-4 pt-5 pb-8 md:min-h-0 md:overflow-y-auto md:px-6 md:pt-6">
       <div class="dash-rise flex flex-col gap-5 md:gap-6">
         <slot />
       </div>
@@ -69,6 +72,10 @@ const props: DashboardPageProps = defineProps({
   icon: {
     type: String as PropType<DashboardIconName | null>,
     default: null,
+  },
+  isFullBleed: {
+    type: Boolean,
+    default: false,
   },
 })
 

@@ -58,6 +58,7 @@ export type DashboardIconName =
   | 'minus'
   | 'monitor'
   | 'panel-left'
+  | 'panels-top-left'
   | 'pen-line'
   | 'pencil'
   | 'plus'
@@ -193,6 +194,8 @@ export const DASHBOARD_ICONS: Record<DashboardIconName, string> = {
     '<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8m-4-4v4"/></g>',
   'panel-left':
     '<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></g>',
+  'panels-top-left':
+    '<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M9 21V9"/></g>',
   'pen-line':
     '<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M13 21h8m.174-14.188a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>',
   pencil:

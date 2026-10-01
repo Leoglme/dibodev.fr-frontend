@@ -67,10 +67,10 @@ import {
   DASHBOARD_ARTICLES_ITEM,
   DASHBOARD_AUDIT_ITEM,
   DASHBOARD_EDITOR_PATH,
-  DASHBOARD_HOME_PAGE_ITEM,
   DASHBOARD_INDEXING_ITEM,
   DASHBOARD_OVERVIEW_ITEM,
   DASHBOARD_SEARCH_ITEM,
+  DASHBOARD_SITE_EDITOR_ITEM,
   DASHBOARD_TRANSLATIONS_ITEM,
 } from '~/core/constants/dashboardNavigation'
 import { useDashboardIndexing } from '~/composables/useDashboardIndexing'
@@ -89,7 +89,9 @@ const leftTabs: DashboardTabBarEntry[] = [
 const searchTab: DashboardTabBarEntry = { ...DASHBOARD_SEARCH_ITEM, shortLabel: 'Google' }
 
 const isMoreTabActive: ComputedRef<boolean> = computed((): boolean =>
-  [DASHBOARD_HOME_PAGE_ITEM, DASHBOARD_TRANSLATIONS_ITEM, DASHBOARD_INDEXING_ITEM, DASHBOARD_AUDIT_ITEM].some(isActive),
+  [DASHBOARD_SITE_EDITOR_ITEM, DASHBOARD_TRANSLATIONS_ITEM, DASHBOARD_INDEXING_ITEM, DASHBOARD_AUDIT_ITEM].some(
+    isActive,
+  ),
 )
 
 const hasAlertInMoreTab: ComputedRef<boolean> = computed(

@@ -7,30 +7,30 @@ import type {
 } from '~~/server/types/dashboard/homePage'
 import { StoryblokProjectService } from '~/services/storyblokProjectService'
 
-export type UseDashboardHomePageReturn = {
+export type UseDashboardSiteEditorReturn = {
   projects: Ref<DibodevProject[]>
-  content: Ref<HomePageContentResponse | null>
+  homePageContent: Ref<HomePageContentResponse | null>
   loading: Ref<boolean>
   error: Ref<string>
   saving: Ref<boolean>
-  loadHomePage: (force?: boolean) => Promise<void>
+  loadSiteContent: (force?: boolean) => Promise<void>
   saveFeaturedProjects: (projectSlugs: string[]) => Promise<SaveFeaturedProjectsResponse>
 }
 
 /**
- * Home page content edited from the dashboard: the published projects and the selection shown in the home page section.
+ * Site content edited from the dashboard: the published projects and the content of the home page.
  *
- * @returns {UseDashboardHomePageReturn} The projects, the saved and deployed content, and the actions.
+ * @returns {UseDashboardSiteEditorReturn} The projects, the saved and deployed content, and the actions.
  */
-export function useDashboardHomePage(): UseDashboardHomePageReturn {
-  const projects: Ref<DibodevProject[]> = useState('dashboard-home-page-projects', (): DibodevProject[] => [])
-  const content: Ref<HomePageContentResponse | null> = useState(
-    'dashboard-home-page-content',
+export function useDashboardSiteEditor(): UseDashboardSiteEditorReturn {
+  const projects: Ref<DibodevProject[]> = useState('dashboard-site-editor-projects', (): DibodevProject[] => [])
+  const homePageContent: Ref<HomePageContentResponse | null> = useState(
+    'dashboard-site-editor-home-page',
     (): HomePageContentResponse | null => null,
   )
-  const loading: Ref<boolean> = useState('dashboard-home-page-loading', (): boolean => false)
-  const error: Ref<string> = useState('dashboard-home-page-error', (): string => '')
-  const saving: Ref<boolean> = useState('dashboard-home-page-saving', (): boolean => false)
+  const loading: Ref<boolean> = useState('dashboard-site-editor-loading', (): boolean => false)
+  const error: Ref<string> = useState('dashboard-site-editor-error', (): string => '')
+  const saving: Ref<boolean> = useState('dashboard-site-editor-saving', (): boolean => false)
 
   /**
    * Loads the published projects (Storyblok) and the home page content (repository and running build).
@@ -38,8 +38,8 @@ export function useDashboardHomePage(): UseDashboardHomePageReturn {
    * @param {boolean} force - Reload even when data is already in memory.
    * @returns {Promise<void>}
    */
-  async function loadHomePage(force: boolean = false): Promise<void> {
-    if (!force && content.value && projects.value.length > 0) return
+  async function loadSiteContent(force: boolean = false): Promise<void> {
+    if (!force && homePageContent.value && projects.value.length > 0) return
     loading.value = true
     error.value = ''
     try {
@@ -48,9 +48,9 @@ export function useDashboardHomePage(): UseDashboardHomePageReturn {
         $fetch<HomePageContentResponse>('/api/dashboard/home-page'),
       ])
       projects.value = loadedProjects
-      content.value = loadedContent
+      homePageContent.value = loadedContent
     } catch (loadError: unknown) {
-      error.value = loadError instanceof Error ? loadError.message : 'Impossible de charger la page d’accueil.'
+      error.value = loadError instanceof Error ? loadError.message : 'Impossible de charger le contenu du site.'
     } finally {
       loading.value = false
     }
@@ -70,12 +70,12 @@ export function useDashboardHomePage(): UseDashboardHomePageReturn {
         '/api/dashboard/home-page/featured-projects',
         { method: 'PUT', body },
       )
-      if (content.value) content.value = { ...content.value, saved: response.saved }
+      if (homePageContent.value) homePageContent.value = { ...homePageContent.value, saved: response.saved }
       return response
     } finally {
       saving.value = false
     }
   }
 
-  return { projects, content, loading, error, saving, loadHomePage, saveFeaturedProjects }
+  return { projects, homePageContent, loading, error, saving, loadSiteContent, saveFeaturedProjects }
 }

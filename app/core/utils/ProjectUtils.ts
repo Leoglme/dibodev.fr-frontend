@@ -29,6 +29,20 @@ export class ProjectUtils {
   }
 
   /**
+   * Picks the projects matching a list of slugs, in the order of the slugs; slugs without a project are skipped.
+   * @param {DibodevProject[]} projects - The projects to pick from.
+   * @param {string[]} projectSlugs - Slugs of the wanted projects, in the wanted order.
+   * @returns {DibodevProject[]} The matching projects.
+   */
+  public static pickBySlugs(projects: DibodevProject[], projectSlugs: string[]): DibodevProject[] {
+    return projectSlugs
+      .map((slug: string): DibodevProject | undefined =>
+        projects.find((project: DibodevProject): boolean => this.getSlug(project) === slug),
+      )
+      .filter((project: DibodevProject | undefined): project is DibodevProject => project !== undefined)
+  }
+
+  /**
    * Splits a Storyblok project name into its short name and its tagline (empty when the name has no separator).
    * @param {string} name - The full project name.
    * @returns {DibodevProjectNameParts} The short name and the tagline.

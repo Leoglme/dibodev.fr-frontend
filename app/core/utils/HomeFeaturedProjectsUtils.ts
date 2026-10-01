@@ -15,27 +15,13 @@ export class HomeFeaturedProjectsUtils {
   private static readonly DESKTOP_COLUMNS_COUNT: number = 4
 
   /**
-   * Picks the projects of a selection, in the order of its slugs; slugs without a published project are skipped.
-   * @param {DibodevProject[]} projects - Every published project.
-   * @param {string[]} projectSlugs - Slugs of the selection, in display order.
-   * @returns {DibodevProject[]} The selected projects.
-   */
-  public static pickProjects(projects: DibodevProject[], projectSlugs: string[]): DibodevProject[] {
-    return projectSlugs
-      .map((slug: string): DibodevProject | undefined =>
-        projects.find((project: DibodevProject): boolean => ProjectUtils.getSlug(project) === slug),
-      )
-      .filter((project: DibodevProject | undefined): project is DibodevProject => project !== undefined)
-  }
-
-  /**
    * Projects shown in the home page section: the selection saved from the dashboard, or the Storyblok favourites without one.
    * @param {DibodevProject[]} projects - Every published project, most recent first.
    * @param {string[]} projectSlugs - Slugs saved from the dashboard (empty when nothing was saved).
    * @returns {DibodevProject[]} The projects to display, in order.
    */
   public static resolveDisplayedProjects(projects: DibodevProject[], projectSlugs: string[]): DibodevProject[] {
-    const selectedProjects: DibodevProject[] = this.pickProjects(projects, projectSlugs)
+    const selectedProjects: DibodevProject[] = ProjectUtils.pickBySlugs(projects, projectSlugs)
     if (selectedProjects.length > 0) {
       return selectedProjects
     }

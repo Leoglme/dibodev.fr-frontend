@@ -1,4 +1,4 @@
-import type { Ref } from 'vue'
+import type { ComputedRef, Ref } from 'vue'
 import { onBeforeUnmount, ref } from 'vue'
 
 export type UseDashboardDragReorderReturn = {
@@ -11,13 +11,13 @@ const PRIMARY_MOUSE_BUTTON: number = 0
 /**
  * Reorders the same-height rows of a vertical list by dragging a handle (mouse, finger or pen).
  *
- * @param {Ref<HTMLElement | null>} listElement - Element whose box is exactly the stack of rows.
+ * @param {Ref<HTMLElement | null> | ComputedRef<HTMLElement | null>} listElement - Element whose box is exactly the stack of rows.
  * @param {() => number} getRowsCount - Returns the current number of rows.
  * @param {(fromIndex: number, toIndex: number) => void} moveRow - Moves a row to another position.
  * @returns {UseDashboardDragReorderReturn} The index of the dragged row and the handler starting a drag.
  */
 export function useDashboardDragReorder(
-  listElement: Ref<HTMLElement | null>,
+  listElement: Ref<HTMLElement | null> | ComputedRef<HTMLElement | null>,
   getRowsCount: () => number,
   moveRow: (fromIndex: number, toIndex: number) => void,
 ): UseDashboardDragReorderReturn {
