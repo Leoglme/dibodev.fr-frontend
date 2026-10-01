@@ -1,7 +1,7 @@
 <template>
   <header class="fixed inset-x-0 top-0 z-50 border-b border-gray-300 bg-white/95 backdrop-blur-sm">
     <nav
-      class="flex h-[72px] w-full items-center justify-between gap-6 px-6 sm:px-8 xl:px-10"
+      class="max-w-site mx-auto flex h-[72px] w-full items-center justify-between gap-6 px-6 sm:px-8"
       :aria-label="$t('nav.mainNavigation')"
     >
       <NuxtLink :to="localePath('/')" class="shrink-0" :aria-label="$t('nav.homeLinkLabel')">

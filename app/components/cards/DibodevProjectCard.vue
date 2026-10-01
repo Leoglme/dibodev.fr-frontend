@@ -29,6 +29,19 @@
           loading="lazy"
           decoding="async"
         />
+        <span
+          v-if="props.screenshot"
+          class="absolute inset-x-0 bottom-0 flex items-end bg-linear-to-t from-white via-white/85 to-white/0 px-4 pt-10 pb-3.5"
+          aria-hidden="true"
+        >
+          <img
+            :src="props.logo"
+            alt=""
+            class="h-7 w-auto max-w-[8rem] object-contain"
+            loading="lazy"
+            decoding="async"
+          />
+        </span>
       </div>
 
       <div class="flex flex-1 flex-col gap-3 p-4 sm:p-5">
@@ -36,26 +49,8 @@
           <DibodevCategoryBadge v-for="category in props.categories" :key="category" :category="category" size="sm" />
         </div>
         <div class="grid gap-1">
-          <h3 class="flex items-center gap-2.5 text-[17px] leading-snug font-medium text-gray-100">
-            <img
-              v-if="props.screenshot && isWordmarkLogo"
-              :src="props.logo"
-              :alt="nameParts.shortName"
-              class="h-5 w-auto max-w-[9rem] object-contain"
-              loading="lazy"
-              decoding="async"
-            />
-            <template v-else>
-              <img
-                v-if="props.screenshot"
-                :src="props.logo"
-                alt=""
-                class="h-6 w-6 shrink-0 object-contain"
-                loading="lazy"
-                decoding="async"
-              />
-              <span>{{ nameParts.shortName }}</span>
-            </template>
+          <h3 class="text-[17px] leading-snug font-medium text-gray-100">
+            {{ nameParts.shortName }}
           </h3>
           <p class="line-clamp-2 text-[15px] leading-6 text-gray-200">
             {{ nameParts.tagline || props.description }}
@@ -92,7 +87,7 @@ const SCREENSHOT_HEIGHT: number = 450
 const SCREENSHOT_SIZES: string = '(min-width: 1280px) 340px, (min-width: 640px) 50vw, 100vw'
 
 /**
- * Project card in the project colours: screenshot (logo panel without one), categories, name (icon logo in front, or the wordmark itself), tagline, date and link.
+ * Project card in the project colours: screenshot with the logo in a light strip at its foot (logo panel without screenshot), categories, name, tagline, date and link.
  */
 const props: DibodevProjectCardProps = defineProps({
   name: {
@@ -151,9 +146,6 @@ const projectLink: ComputedRef<string> = computed((): string => {
 const nameParts: ComputedRef<DibodevProjectNameParts> = computed(
   (): DibodevProjectNameParts => ProjectUtils.splitNameAndTagline(props.name),
 )
-
-/** A wordmark already shows the name, so it replaces the text; an icon logo sits in front of it. */
-const isWordmarkLogo: ComputedRef<boolean> = computed((): boolean => ProjectUtils.isWordmarkLogo(props.route ?? ''))
 
 const screenshotAlt: ComputedRef<string> = computed((): string =>
   t('projects.card.screenshotAlt', { name: nameParts.value.shortName }),

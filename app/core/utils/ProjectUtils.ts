@@ -5,7 +5,6 @@ import type {
   DibodevProjectScreenshotMediaKey,
 } from '~/core/types/DibodevProjectCardScreenshot'
 import { PROJECT_CARD_SCREENSHOT_OVERRIDES } from '~/core/constants/projectCardScreenshots'
-import { PROJECT_WORDMARK_LOGO_SLUGS } from '~/core/constants/projectLogos'
 import { StoryblokImageUtils } from '~/core/utils/StoryblokImageUtils'
 
 /**
@@ -26,16 +25,7 @@ export class ProjectUtils {
    * @returns {string} The slug, or an empty string when the route is empty.
    */
   public static getSlug(project: DibodevProject): string {
-    return this.getSlugFromRoute(project.route)
-  }
-
-  /**
-   * Last segment of a project route ("/project/stockpme" gives "stockpme").
-   * @param {string} route - The project route.
-   * @returns {string} The slug, or an empty string when the route is empty.
-   */
-  public static getSlugFromRoute(route: string): string {
-    return route.split('/').filter(Boolean).pop() ?? ''
+    return project.route.split('/').filter(Boolean).pop() ?? ''
   }
 
   /**
@@ -46,15 +36,6 @@ export class ProjectUtils {
   public static splitNameAndTagline(name: string): DibodevProjectNameParts {
     const [shortName = name, tagline = '']: string[] = name.split(this.NAME_SEPARATOR_REGEX)
     return { shortName, tagline }
-  }
-
-  /**
-   * Tells whether the logo of a project is a wordmark (the name written as a logo) rather than an icon.
-   * @param {string} route - The project route.
-   * @returns {boolean} True when the project is listed among the wordmark logos.
-   */
-  public static isWordmarkLogo(route: string): boolean {
-    return PROJECT_WORDMARK_LOGO_SLUGS.includes(this.getSlugFromRoute(route))
   }
 
   /**
