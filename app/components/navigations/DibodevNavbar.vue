@@ -1,15 +1,15 @@
 <template>
   <header class="fixed inset-x-0 top-0 z-50 border-b border-gray-300 bg-white/95 backdrop-blur-sm">
     <nav
-      class="max-w-site mx-auto flex h-[72px] w-full items-center justify-between gap-6 px-6 sm:px-8"
+      class="flex h-[72px] w-full items-center justify-between gap-6 px-6 sm:px-8 xl:px-10"
       :aria-label="$t('nav.mainNavigation')"
     >
       <NuxtLink :to="localePath('/')" class="shrink-0" :aria-label="$t('nav.homeLinkLabel')">
         <DibodevLogo :size="30" :large="true" />
       </NuxtLink>
 
-      <div class="hidden items-center gap-8 lg:flex">
-        <ul class="flex items-center gap-7">
+      <div class="hidden items-center gap-10 lg:flex">
+        <ul class="flex items-center gap-8">
           <li v-for="link in links" :key="link.to">
             <NuxtLink
               :to="link.to"
