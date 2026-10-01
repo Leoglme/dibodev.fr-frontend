@@ -46,6 +46,7 @@ import EyeOff from '~/components/icons/EyeOff.vue'
 import FileSpreadsheet from '~/components/icons/FileSpreadsheet.vue'
 import Flag from '~/components/icons/Flag.vue'
 import Github from '~/components/icons/Github.vue'
+import Globe from '~/components/icons/Globe.vue'
 import Info from '~/components/icons/Info.vue'
 import KeyRound from '~/components/icons/KeyRound.vue'
 import Laptop from '~/components/icons/Laptop.vue'
@@ -138,6 +139,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   FileSpreadsheet,
   Flag,
   Github,
+  Globe,
   Info,
   KeyRound,
   Laptop,

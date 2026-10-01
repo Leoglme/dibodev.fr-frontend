@@ -138,11 +138,11 @@
     "toolsTitle": "Free tools",
     "tools": {
       "allTools": "All free tools",
-      "drivingSchoolSoftware": "Which software for my driving school?",
-      "eventRentalSoftware": "Which software for my event rental business?",
-      "bikeShopSoftware": "Which software for my bike shop?",
-      "autoRepairShopSoftware": "Which software for my garage?",
-      "budgetEstimator": "How much will my business software cost?"
+      "drivingSchoolSoftware": "Driving school software",
+      "eventRentalSoftware": "Event rental software",
+      "bikeShopSoftware": "Bike shop software",
+      "autoRepairShopSoftware": "Auto repair shop software",
+      "budgetEstimator": "Budget estimator"
     }
   },
   "toolsHubPage": {

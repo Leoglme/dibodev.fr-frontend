@@ -1,24 +1,29 @@
 <template>
   <footer class="border-t border-gray-300 bg-gray-800 px-6 sm:px-8">
     <div
-      class="max-w-site mx-auto grid w-full gap-x-8 gap-y-12 py-16 sm:grid-cols-2 lg:grid-cols-12 lg:gap-x-10 lg:py-20"
+      class="max-w-site mx-auto grid w-full gap-x-8 gap-y-12 py-16 sm:grid-cols-2 lg:grid-cols-[minmax(17.5rem,1fr)_repeat(3,max-content)] lg:grid-rows-[auto_1fr] lg:gap-x-[clamp(2.5rem,21.875vw_-_11.5rem,7rem)] lg:gap-y-7 lg:py-22"
     >
-      <div class="grid content-start gap-6 sm:col-span-2 lg:col-span-3">
+      <div class="grid content-start gap-6 sm:col-span-2 lg:col-span-1">
         <DibodevLogo :large="true" :size="30" />
-        <p class="max-w-xs text-[15px] leading-6 text-gray-200">{{ $t('footer.description') }}</p>
+        <p class="max-w-xs text-[15px] leading-6 text-gray-200 lg:max-w-84">{{ $t('footer.description') }}</p>
+        <!-- On desktop the contact band above the footer already carries this button. -->
         <DibodevButton
           v-if="!isContactPage"
           :to="localePath('/contact')"
-          class="w-full sm:w-fit"
+          class="w-full sm:w-fit lg:hidden"
           @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'footer' })"
         >
           {{ $t('footer.contactMe') }}
         </DibodevButton>
       </div>
 
-      <nav class="grid content-start gap-5 lg:col-span-2" :aria-label="$t('footer.pagesTitle')">
-        <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ $t('footer.pagesTitle') }}</h2>
-        <ul class="grid gap-3.5">
+      <nav class="grid content-start gap-5 lg:row-span-2 lg:pt-1.25" :aria-label="$t('footer.pagesTitle')">
+        <h2
+          class="text-muted text-xs font-medium tracking-[0.08em] uppercase lg:text-sm lg:tracking-normal lg:text-gray-100 lg:normal-case"
+        >
+          {{ $t('footer.pagesTitle') }}
+        </h2>
+        <ul class="grid gap-3.5 lg:gap-3">
           <li v-for="link in footerLinks" :key="link.to">
             <NuxtLink :to="link.to" class="text-[15px] leading-6 text-gray-200 transition-colors hover:text-gray-100">
               {{ link.title }}
@@ -27,9 +32,13 @@
         </ul>
       </nav>
 
-      <nav class="grid content-start gap-5 lg:col-span-3" :aria-label="$t('footer.toolsTitle')">
-        <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ $t('footer.toolsTitle') }}</h2>
-        <ul class="grid gap-3.5">
+      <nav class="grid content-start gap-5 lg:row-span-2 lg:pt-1.25" :aria-label="$t('footer.toolsTitle')">
+        <h2
+          class="text-muted text-xs font-medium tracking-[0.08em] uppercase lg:text-sm lg:tracking-normal lg:text-gray-100 lg:normal-case"
+        >
+          {{ $t('footer.toolsTitle') }}
+        </h2>
+        <ul class="grid gap-3.5 lg:gap-3">
           <li v-for="toolLink in toolLinks" :key="toolLink.key">
             <NuxtLink
               :to="toolLink.to"
@@ -47,9 +56,13 @@
         </ul>
       </nav>
 
-      <nav class="grid content-start gap-5 lg:col-span-2" :aria-label="$t('footer.projectTypesTitle')">
-        <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ $t('footer.projectTypesTitle') }}</h2>
-        <ul class="grid gap-3.5">
+      <nav class="grid content-start gap-5 lg:row-span-2 lg:pt-1.25" :aria-label="$t('footer.projectTypesTitle')">
+        <h2
+          class="text-muted text-xs font-medium tracking-[0.08em] uppercase lg:text-sm lg:tracking-normal lg:text-gray-100 lg:normal-case"
+        >
+          {{ $t('footer.projectTypesTitle') }}
+        </h2>
+        <ul class="grid gap-3.5 lg:gap-3">
           <li v-for="categoryLink in categoryLinks" :key="categoryLink.key">
             <NuxtLink
               :to="categoryLink.to"
@@ -61,22 +74,32 @@
         </ul>
       </nav>
 
-      <div class="grid content-start gap-5 lg:col-span-2">
-        <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ $t('footer.contactTitle') }}</h2>
-        <ul class="grid gap-3.5">
+      <div class="grid content-start gap-5 lg:col-start-1 lg:row-start-2 lg:gap-6">
+        <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase lg:sr-only">
+          {{ $t('footer.contactTitle') }}
+        </h2>
+        <ul class="grid gap-3.5 lg:gap-3">
           <li>
             <a
               :href="`mailto:${CONTACT_EMAIL}`"
-              class="text-[15px] leading-6 text-gray-200 transition-colors hover:text-gray-100"
+              class="inline-flex items-center gap-2.5 text-[15px] leading-6 text-gray-200 transition-colors hover:text-gray-100"
               @click="track(TRACKING_EVENTS.contactEmail, { location: 'footer' })"
             >
-              {{ CONTACT_EMAIL }}
+              <span class="text-muted hidden shrink-0 lg:flex" aria-hidden="true">
+                <DibodevIcon name="Mail" mode="stroke" :width="18" :height="18" />
+              </span>
+              <span>{{ CONTACT_EMAIL }}</span>
             </a>
           </li>
-          <li>
+          <li class="lg:-order-1">
             <PhoneLink variant="footer" />
           </li>
-          <li class="text-[15px] leading-6 text-gray-200">{{ $t('footer.location') }}</li>
+          <li class="flex items-center gap-2.5 text-[15px] leading-6 text-gray-200">
+            <span class="text-muted hidden shrink-0 lg:flex" aria-hidden="true">
+              <DibodevIcon name="MapPin" mode="stroke" :width="18" :height="18" />
+            </span>
+            <span>{{ $t('footer.location') }}</span>
+          </li>
         </ul>
         <ul class="flex flex-wrap items-center gap-x-5 gap-y-2">
           <li v-for="social in socials" :key="social.name">
@@ -88,7 +111,14 @@
               @click="track(TRACKING_EVENTS.externalProfileClicked, { platform: social.name, location: 'footer' })"
             >
               <span>{{ social.name }}</span>
-              <DibodevIcon name="ExternalLink" :width="14" :height="14" mode="stroke" aria-hidden="true" />
+              <DibodevIcon
+                name="ExternalLink"
+                :width="14"
+                :height="14"
+                mode="stroke"
+                class="lg:text-muted"
+                aria-hidden="true"
+              />
             </a>
           </li>
         </ul>
@@ -96,21 +126,45 @@
     </div>
 
     <div class="-mx-6 border-t border-gray-300 px-6 sm:-mx-8 sm:px-8">
+      <!-- On desktop the assistant launcher covers the right end of the bar. -->
       <div
-        class="text-muted max-w-site mx-auto flex w-full flex-col gap-4 py-6 text-sm sm:flex-row sm:items-center sm:justify-between"
+        class="text-muted max-w-site mx-auto flex w-full flex-col gap-4 py-6 text-sm sm:flex-row sm:items-center sm:justify-between lg:flex-wrap lg:justify-start lg:gap-x-10 lg:gap-y-3 lg:pr-95"
       >
         <p class="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:gap-x-1.5">
           <span>© {{ currentYear }} Dibodev · {{ $t('footer.allRightsReserved') }}</span>
           <span class="hidden sm:inline" aria-hidden="true">·</span>
           <span>{{ $t('legal.publisher.siret') }}</span>
         </p>
-        <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
-          <div class="w-fit">
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-3 lg:gap-x-10">
+          <div class="w-fit lg:hidden">
             <DibodevLanguageSwitcher id="language-switcher" :options="languages" />
           </div>
-          <ul class="flex flex-wrap items-center gap-x-5 gap-y-2">
+          <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 lg:gap-x-7">
             <li v-for="legal in legalLinks" :key="legal.to">
               <NuxtLink :to="legal.to" class="transition-colors hover:text-gray-100">{{ legal.title }}</NuxtLink>
+            </li>
+          </ul>
+          <ul class="hidden items-center gap-3.5 lg:flex" :aria-label="$t('accessibility.chooseLanguage')">
+            <li aria-hidden="true">
+              <DibodevIcon name="Globe" mode="stroke" :width="16" :height="16" />
+            </li>
+            <li v-for="language in languages" :key="language.value">
+              <span
+                v-if="language.value === locale"
+                class="font-medium text-gray-100 underline decoration-2 underline-offset-4"
+                aria-current="true"
+              >
+                {{ language.label }}
+              </span>
+              <NuxtLink
+                v-else
+                :to="switchLocalePathWithSlug(String(language.value))"
+                :hreflang="String(language.value)"
+                class="transition-colors hover:text-gray-100"
+                @click="track(TRACKING_EVENTS.localeSwitched, { from: locale, to: String(language.value) })"
+              >
+                {{ language.label }}
+              </NuxtLink>
             </li>
           </ul>
         </div>
@@ -138,6 +192,7 @@ import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 /* I18N */
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
+const switchLocalePathWithSlug = useSwitchLocalePathWithSlug()
 const { track } = useTracking()
 
 /* DATAS */

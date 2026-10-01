@@ -138,11 +138,11 @@
     "toolsTitle": "Outils gratuits",
     "tools": {
       "allTools": "Tous les outils gratuits",
-      "drivingSchoolSoftware": "Quel logiciel pour mon auto-école ?",
-      "eventRentalSoftware": "Quel logiciel pour ma location de matériel événementiel ?",
-      "bikeShopSoftware": "Quel logiciel pour mon atelier vélo ?",
-      "autoRepairShopSoftware": "Quel logiciel pour mon garage ?",
-      "budgetEstimator": "Combien coûte mon logiciel métier ?"
+      "drivingSchoolSoftware": "Logiciel pour auto-école",
+      "eventRentalSoftware": "Logiciel de location événementielle",
+      "bikeShopSoftware": "Logiciel pour atelier vélo",
+      "autoRepairShopSoftware": "Logiciel pour garage",
+      "budgetEstimator": "Estimateur de budget"
     }
   },
   "toolsHubPage": {
