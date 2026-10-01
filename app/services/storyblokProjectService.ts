@@ -1,10 +1,17 @@
 import type { DibodevProject, DibodevProjectTranslation } from '~/core/types/DibodevProject'
 import type { StoryblokProjectContent } from '~/services/types/storyblokProject'
-import type { StoryblokStoryResponse, StoryblokVersion } from '~/services/types/storyblok'
+import type {
+  StoryblokStoriesResponse,
+  StoryblokStory,
+  StoryblokStoryResponse,
+  StoryblokVersion,
+} from '~/services/types/storyblok'
 import { StoryblokService } from '~/services/storyblokService'
 import { buildRelsSlugMap, mapStoryblokProjectToDibodevProject } from '~/services/storyblokProjectMapper'
 
 const PROJECT_FOLDER: string = 'project/'
+/** Largest page Storyblok returns: every project fits in one request. */
+const PROJECTS_PER_PAGE: number = 100
 const PROJECT_RELATIONS: string = 'project.sectors,project.categories'
 const UUID_REGEX: RegExp = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 
@@ -12,6 +19,37 @@ const UUID_REGEX: RegExp = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-
  * Service for fetching project pages from Storyblok.
  */
 export class StoryblokProjectService {
+  /**
+   * Fetches every published project (always FR in Storyblok, with its categories and sectors), most recent first.
+   *
+   * @param {string} [language] - Storyblok language code, omitted for the default language.
+   * @returns {Promise<DibodevProject[]>} The projects sorted by date, newest first.
+   * @throws {HttpError} When Storyblok cannot return the stories.
+   */
+  public static async getProjects(language?: string): Promise<DibodevProject[]> {
+    const storiesResponse: StoryblokStoriesResponse<StoryblokProjectContent> =
+      await StoryblokService.getStories<StoryblokProjectContent>(
+        {
+          starts_with: PROJECT_FOLDER,
+          per_page: PROJECTS_PER_PAGE,
+          resolve_links: 'url',
+          resolve_relations: PROJECT_RELATIONS,
+        },
+        language,
+      )
+    const relsSlugMap: Record<string, string> = buildRelsSlugMap(storiesResponse.rels)
+    return storiesResponse.stories
+      .map(
+        (story: StoryblokStory<StoryblokProjectContent>): DibodevProject =>
+          mapStoryblokProjectToDibodevProject(story, storiesResponse.links ?? undefined, relsSlugMap),
+      )
+      .sort((projectA: DibodevProject, projectB: DibodevProject): number => {
+        const timeA: number = new Date(projectA.date).getTime() || 0
+        const timeB: number = new Date(projectB.date).getTime() || 0
+        return timeB - timeA
+      })
+  }
+
   /**
    * Fetches a project (always FR in Storyblok, with its categories and sectors) and overlays its EN/ES translation.
    *

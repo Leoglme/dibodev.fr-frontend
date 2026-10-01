@@ -1,4 +1,6 @@
-/** GitHub API helpers for the translation JSON files (content/translations/*.json): raw read and single-commit push. */
+/** GitHub API helpers for the JSON files committed from the dashboard (content/translations, content/cms): raw read and single-commit push. */
+
+import { createError } from 'h3'
 
 const GITHUB_API_BASE: string = 'https://api.github.com'
 
@@ -23,6 +25,34 @@ export async function getGitHubRawFile(token: string, repo: string, path: string
     return { ok: false, statusCode: res.status, message: text || `GitHub API ${res.status}` }
   }
   return { ok: true, content: await res.text() }
+}
+
+/**
+ * Read a JSON file from GitHub before updating it; only a missing file counts as empty, so a failed read never wipes it.
+ * @template Entry - Type of one entry of the file.
+ * @param {string} token - GitHub token.
+ * @param {string} repo - Repository in "owner/repo" form.
+ * @param {string} path - File path in the repository.
+ * @returns {Promise<Record<string, Entry>>} The parsed file, or an empty object when the file does not exist yet.
+ * @throws {H3Error} 502 when GitHub fails to return the file.
+ */
+export async function readGitHubJsonFile<Entry>(
+  token: string,
+  repo: string,
+  path: string,
+): Promise<Record<string, Entry>> {
+  const file: GetRawFileResult = await getGitHubRawFile(token, repo, path)
+  if (file.ok) {
+    const entries: Record<string, Entry> = JSON.parse(file.content)
+    return entries
+  }
+  if (file.statusCode === 404) {
+    return {}
+  }
+  throw createError({
+    statusCode: 502,
+    statusMessage: `Cannot read ${path} on GitHub (${file.statusCode}): nothing pushed.`,
+  })
 }
 
 const GIT_MODE_BLOB: string = '100644'

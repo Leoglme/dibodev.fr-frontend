@@ -1,6 +1,6 @@
 import { createError } from 'h3'
-import { getGitHubRawFile, putGitHubFiles } from '~~/server/utils/githubContent'
-import type { GetRawFileResult, PutGitHubFilesItem, PutGitHubFilesResult } from '~~/server/utils/githubContent'
+import { putGitHubFiles, readGitHubJsonFile } from '~~/server/utils/githubContent'
+import type { PutGitHubFilesItem, PutGitHubFilesResult } from '~~/server/utils/githubContent'
 import { mistralGenerate } from '~~/server/utils/mistral'
 import { extractRichtextTexts, injectRichtextTranslations } from '~~/server/utils/translationsRichtext'
 import { translateTextSegments } from '~~/server/utils/translateTextSegments'
@@ -131,7 +131,7 @@ export class TranslationService {
     const files: PutGitHubFilesItem[] = []
     for (const locale of params.locales) {
       const path: string = `${this.FILES_PATH}/articles.${locale}.json`
-      const current: ArticlesTranslationFile = await this.readTranslationFile<TranslatedArticleFields>(
+      const current: ArticlesTranslationFile = await readGitHubJsonFile<TranslatedArticleFields>(
         params.githubToken,
         params.githubRepo,
         path,
@@ -153,30 +153,6 @@ export class TranslationService {
     if (!pushResult.ok) {
       throw createError({ statusCode: 502, statusMessage: pushResult.message || 'Failed to push to GitHub' })
     }
-  }
-
-  /**
-   * Reads a translation file from GitHub before updating it; only a missing file counts as empty, so a failed read never wipes it.
-   * @template Entry - Type of one translated entry (article, project, sector or category).
-   * @param {string} token - GitHub token.
-   * @param {string} repo - Repository in "owner/repo" form.
-   * @param {string} path - Path of the translation file.
-   * @returns {Promise<Record<string, Entry>>} The current translations, or an empty object when the file does not exist yet.
-   * @throws {H3Error} 502 when GitHub fails to return the file.
-   */
-  static async readTranslationFile<Entry>(token: string, repo: string, path: string): Promise<Record<string, Entry>> {
-    const file: GetRawFileResult = await getGitHubRawFile(token, repo, path)
-    if (file.ok) {
-      const translations: Record<string, Entry> = JSON.parse(file.content)
-      return translations
-    }
-    if (file.statusCode === 404) {
-      return {}
-    }
-    throw createError({
-      statusCode: 502,
-      statusMessage: `Cannot read ${path} on GitHub (${file.statusCode}): nothing pushed.`,
-    })
   }
 
   /**

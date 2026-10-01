@@ -16,7 +16,7 @@
 
       <div class="grid gap-5 sm:grid-cols-2 lg:gap-6" :class="gridColumnsClass">
         <DibodevProjectCard
-          v-for="(project, projectIndex) in favoriteProjects"
+          v-for="(project, projectIndex) in featuredProjects"
           :key="project.route"
           :class="hiddenCardClass(projectIndex)"
           :name="project.name"
@@ -43,6 +43,7 @@
 import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
 import type { DibodevProject } from '~/core/types/DibodevProject'
+import type { HomeFeaturedProjectsDevice, HomeFeaturedProjectsGridLayouts } from '~/core/types/HomeFeaturedProjects'
 import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
@@ -50,27 +51,16 @@ import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import DibodevProjectTaxonomyChips from '~/components/navigations/DibodevProjectTaxonomyChips.vue'
 import { useProjectTaxonomyLinks } from '~/composables/useProjectTaxonomyLinks'
 import { useProjectsWithTranslations } from '~/composables/useProjectsWithTranslations'
+import { HOME_PAGE_CONTENT } from '~/core/constants/homePageContent'
+import { HomeFeaturedProjectsUtils } from '~/core/utils/HomeFeaturedProjectsUtils'
 import { ProjectUtils } from '~/core/utils/ProjectUtils'
 
-type GridBreakpoint = {
-  columns: number
-  hiddenClass: string
+const HIDDEN_CARD_CLASSES: Record<HomeFeaturedProjectsDevice, string> = {
+  phone: 'max-sm:hidden',
+  tablet: 'sm:max-lg:hidden',
+  laptop: 'lg:max-xl:hidden',
+  desktop: 'xl:hidden',
 }
-
-/** Number of favourite projects displayed on the home page (one row of four cards on large screens). */
-const FAVORITE_PROJECTS_COUNT: number = 4
-/** Stacked cards on phones: capped so the section stays short. */
-const MOBILE_VISIBLE_COUNT: number = 3
-
-/**
- * Columns of the grid per breakpoint, with the class hiding a card in that range only.
- * Cards that would leave an incomplete row are hidden, so no card sits alone on its row.
- */
-const GRID_BREAKPOINTS: GridBreakpoint[] = [
-  { columns: 2, hiddenClass: 'sm:max-lg:hidden' },
-  { columns: 3, hiddenClass: 'lg:max-xl:hidden' },
-  { columns: 4, hiddenClass: 'xl:hidden' },
-]
 
 const localePath = useLocalePath()
 const { data: storyblokProjectsData } = await useProjectsWithTranslations()
@@ -79,15 +69,21 @@ const allProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[]
 const { categoryLinks } = useProjectTaxonomyLinks(allProjects)
 
 /**
- * Projects from Storyblok flagged as favourites, most recent first.
+ * Projects chosen and ordered from the dashboard (Storyblok favourites, most recent first, while nothing is saved there).
  */
-const favoriteProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] =>
-  allProjects.value.filter((project: DibodevProject): boolean => project.isFavorite).slice(0, FAVORITE_PROJECTS_COUNT),
+const featuredProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] =>
+  HomeFeaturedProjectsUtils.resolveDisplayedProjects(allProjects.value, HOME_PAGE_CONTENT.featuredProjectSlugs),
 )
 
-/** Four columns only when there are four cards to fill them, three otherwise. */
+const gridLayouts: ComputedRef<HomeFeaturedProjectsGridLayouts> = computed(
+  (): HomeFeaturedProjectsGridLayouts => HomeFeaturedProjectsUtils.getGridLayouts(featuredProjects.value.length),
+)
+
+/** Four columns on large screens only when they show at least as many cards as three columns would. */
 const gridColumnsClass: ComputedRef<string> = computed((): string =>
-  favoriteProjects.value.length >= FAVORITE_PROJECTS_COUNT ? 'lg:grid-cols-3 xl:grid-cols-4' : 'lg:grid-cols-3',
+  gridLayouts.value.desktop.columnsCount > gridLayouts.value.laptop.columnsCount
+    ? 'lg:grid-cols-3 xl:grid-cols-4'
+    : 'lg:grid-cols-3',
 )
 
 /**
@@ -96,25 +92,8 @@ const gridColumnsClass: ComputedRef<string> = computed((): string =>
  * @returns {string[]} The Tailwind classes to apply.
  */
 function hiddenCardClass(projectIndex: number): string[] {
-  const projectsCount: number = favoriteProjects.value.length
-  const classes: string[] = projectIndex >= MOBILE_VISIBLE_COUNT ? ['max-sm:hidden'] : []
-  for (const breakpoint of GRID_BREAKPOINTS) {
-    const columns: number = gridColumnsCount(breakpoint.columns)
-    const fullRowsCount: number = Math.floor(projectsCount / columns) * columns
-    const visibleCount: number = fullRowsCount > 0 ? fullRowsCount : projectsCount
-    if (projectIndex >= visibleCount) {
-      classes.push(breakpoint.hiddenClass)
-    }
-  }
-  return classes
-}
-
-/**
- * Real number of columns used for a breakpoint (the four-column layout falls back to three with fewer cards).
- * @param {number} columns - Columns planned for the breakpoint.
- * @returns {number} Columns actually rendered.
- */
-function gridColumnsCount(columns: number): number {
-  return columns === 4 && favoriteProjects.value.length < FAVORITE_PROJECTS_COUNT ? 3 : columns
+  return (Object.keys(HIDDEN_CARD_CLASSES) as HomeFeaturedProjectsDevice[])
+    .filter((device: HomeFeaturedProjectsDevice): boolean => projectIndex >= gridLayouts.value[device].visibleCount)
+    .map((device: HomeFeaturedProjectsDevice): string => HIDDEN_CARD_CLASSES[device])
 }
 </script>

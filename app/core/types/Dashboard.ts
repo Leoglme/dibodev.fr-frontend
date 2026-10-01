@@ -16,7 +16,14 @@ export type DashboardScoreLevel = 'good' | 'average' | 'poor' | 'empty'
 
 export type DashboardChartColors = Record<DashboardScoreLevel, string>
 
-export type DashboardSectionKey = 'overview' | 'articles' | 'translations' | 'search' | 'indexing' | 'audit'
+export type DashboardSectionKey =
+  | 'overview'
+  | 'articles'
+  | 'homePage'
+  | 'translations'
+  | 'search'
+  | 'indexing'
+  | 'audit'
 
 export type DashboardNavItem = {
   key: DashboardSectionKey

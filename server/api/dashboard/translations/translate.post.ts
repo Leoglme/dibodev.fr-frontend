@@ -1,7 +1,12 @@
 import type { H3Event } from 'h3'
 import { createError, readBody } from 'h3'
 import { requireDashboardAuth } from '~~/server/utils/dashboardAuth'
-import { putGitHubFiles, type PutGitHubFilesItem, type PutGitHubFilesResult } from '~~/server/utils/githubContent'
+import {
+  putGitHubFiles,
+  readGitHubJsonFile,
+  type PutGitHubFilesItem,
+  type PutGitHubFilesResult,
+} from '~~/server/utils/githubContent'
 import { mistralGenerate } from '~~/server/utils/mistral'
 import { extractRichtextTexts, injectRichtextTranslations } from '~~/server/utils/translationsRichtext'
 import { translateTextSegments } from '~~/server/utils/translateTextSegments'
@@ -236,7 +241,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
         })
       }
       const filePath: string = `${TranslationService.FILES_PATH}/projects.${locale}.json`
-      const current: ProjectsTranslationFile = await TranslationService.readTranslationFile<TranslatedProjectFields>(
+      const current: ProjectsTranslationFile = await readGitHubJsonFile<TranslatedProjectFields>(
         githubToken,
         githubRepo,
         filePath,
@@ -331,7 +336,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
 
       const translated: TranslatedSectorFields = { ...translatedMeta, intro: translatedIntro }
       const filePath: string = `${TranslationService.FILES_PATH}/sectors.${locale}.json`
-      const current: SectorsTranslationFile = await TranslationService.readTranslationFile<TranslatedSectorFields>(
+      const current: SectorsTranslationFile = await readGitHubJsonFile<TranslatedSectorFields>(
         githubToken,
         githubRepo,
         filePath,
@@ -413,7 +418,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TranslateRespo
 
       const translated: TranslatedCategoryFields = { ...translatedMeta, intro: translatedIntro }
       const filePath: string = `${TranslationService.FILES_PATH}/categories.${locale}.json`
-      const current: CategoriesTranslationFile = await TranslationService.readTranslationFile<TranslatedCategoryFields>(
+      const current: CategoriesTranslationFile = await readGitHubJsonFile<TranslatedCategoryFields>(
         githubToken,
         githubRepo,
         filePath,

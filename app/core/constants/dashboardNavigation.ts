@@ -20,6 +20,16 @@ export const DASHBOARD_ARTICLES_ITEM: DashboardNavItem = {
   matches: ['/dashboard/generate-article', '/dashboard/publish-article'],
 }
 
+/** Home page entry: the content of the public home page edited without Storyblok. */
+export const DASHBOARD_HOME_PAGE_ITEM: DashboardNavItem = {
+  key: 'homePage',
+  label: 'Page d’accueil',
+  path: '/dashboard/home-page',
+  icon: 'house',
+  tone: 'cyan',
+  matches: [],
+}
+
 /** Translations entry. */
 export const DASHBOARD_TRANSLATIONS_ITEM: DashboardNavItem = {
   key: 'translations',
@@ -63,7 +73,7 @@ export const DASHBOARD_AUDIT_ITEM: DashboardNavItem = {
 /** Sidebar groups, in display order (same order as the weekly review: measure, content, Google). */
 export const DASHBOARD_NAV_GROUPS: DashboardNavGroup[] = [
   { label: 'Pilotage', items: [DASHBOARD_OVERVIEW_ITEM] },
-  { label: 'Contenu', items: [DASHBOARD_ARTICLES_ITEM, DASHBOARD_TRANSLATIONS_ITEM] },
+  { label: 'Contenu', items: [DASHBOARD_ARTICLES_ITEM, DASHBOARD_HOME_PAGE_ITEM, DASHBOARD_TRANSLATIONS_ITEM] },
   { label: 'Google', items: [DASHBOARD_SEARCH_ITEM, DASHBOARD_INDEXING_ITEM, DASHBOARD_AUDIT_ITEM] },
 ]
 

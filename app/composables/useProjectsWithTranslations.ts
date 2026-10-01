@@ -3,10 +3,7 @@
  * FR = Storyblok uniquement. EN/ES = Storyblok (FR) + overlay par slug ; pas de traduction = fallback FR.
  */
 import type { DibodevProject } from '~/core/types/DibodevProject'
-import type { StoryblokProjectContent } from '~/services/types/storyblokProject'
-import type { StoryblokLink } from '~/services/types/storyblok'
-import { StoryblokService } from '~/services/storyblokService'
-import { buildRelsSlugMap, mapStoryblokProjectToDibodevProject } from '~/services/storyblokProjectMapper'
+import { StoryblokProjectService } from '~/services/storyblokProjectService'
 
 type ProjectTranslation = {
   name: string
@@ -32,25 +29,7 @@ export function useProjectsWithTranslations() {
     () => `projects-with-translations-${locale.value}`,
     async (): Promise<DibodevProject[]> => {
       try {
-        const response = await StoryblokService.getStories<StoryblokProjectContent>(
-          {
-            starts_with: 'project/',
-            per_page: 100,
-            resolve_links: 'url',
-            resolve_relations: 'project.sectors,project.categories',
-          },
-          storyblokLanguage.value,
-        )
-        const resolvedLinks: Record<string, StoryblokLink> | undefined = response.links ?? undefined
-        const relsSlugMap: Record<string, string> = buildRelsSlugMap(response.rels)
-        let projects: DibodevProject[] = response.stories.map((story) =>
-          mapStoryblokProjectToDibodevProject(story, resolvedLinks, relsSlugMap),
-        )
-        projects = projects.sort((a: DibodevProject, b: DibodevProject): number => {
-          const timeA: number = new Date(a.date).getTime() || 0
-          const timeB: number = new Date(b.date).getTime() || 0
-          return timeB - timeA
-        })
+        let projects: DibodevProject[] = await StoryblokProjectService.getProjects(storyblokLanguage.value)
 
         const currentLocale: string = locale.value as string
         if (currentLocale === 'en' || currentLocale === 'es') {

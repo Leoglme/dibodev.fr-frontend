@@ -2,7 +2,7 @@
   <DibodevHomeLandingSection />
   <DibodevClientLogosSection />
   <DibodevServicesSection />
-  <DibodevFavoriteProjectSection />
+  <DibodevFeaturedProjectsSection />
   <DibodevTestimonialSection
     :eyebrow="t('testimonial.eyebrow')"
     :title="t('testimonial.title')"
@@ -34,7 +34,7 @@ import type { DibodevMethodStep } from '~/core/types/DibodevMethodSection'
 import DibodevHomeLandingSection from '~/components/sections/DibodevHomeLandingSection.vue'
 import DibodevClientLogosSection from '~/components/sections/DibodevClientLogosSection.vue'
 import DibodevServicesSection from '~/components/sections/DibodevServicesSection.vue'
-import DibodevFavoriteProjectSection from '~/components/sections/DibodevFavoriteProjectSection.vue'
+import DibodevFeaturedProjectsSection from '~/components/sections/DibodevFeaturedProjectsSection.vue'
 import DibodevTestimonialSection from '~/components/sections/DibodevTestimonialSection.vue'
 import DibodevMethodSection from '~/components/sections/DibodevMethodSection.vue'
 import DibodevFounderSection from '~/components/sections/DibodevFounderSection.vue'

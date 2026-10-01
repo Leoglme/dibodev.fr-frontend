@@ -55,3 +55,6 @@ assets/fonts/assets/css/google-fonts.css
 
 # Generated translation files (committed via the GitHub API, not formatted locally by prettier)
 content/translations/
+
+# Site content edited from the dashboard (committed via the GitHub API, not formatted locally by prettier)
+content/cms/
