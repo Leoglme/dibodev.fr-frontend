@@ -4,10 +4,10 @@
     class="relative mx-auto w-full max-w-md pt-3.5 pr-3.5 pb-8 pl-7 sm:max-w-lg lg:max-w-[34rem] lg:pb-0 xl:pt-5 xl:pr-5 xl:pl-11"
     :aria-roledescription="$t('photoSlideshow.roleDescription')"
     :aria-label="props.accessibleName"
-    @mouseenter="isPaused = true"
-    @mouseleave="isPaused = false"
-    @focusin="isPaused = true"
-    @focusout="isPaused = false"
+    @pointerenter="onPointerEnter"
+    @pointerleave="isHoveredWithMouse = false"
+    @focusin="onFocusIn"
+    @focusout="hasKeyboardFocus = false"
   >
     <div class="bg-accent-tint absolute inset-0 bottom-1/6 left-1/4 rounded-4xl lg:bottom-1/8" aria-hidden="true" />
 
@@ -57,25 +57,24 @@
         </p>
         <p class="truncate text-sm leading-5 text-gray-200">{{ activeSlide.subtitle }}</p>
       </div>
-      <ol v-if="hasSeveralSlides" class="mt-1 flex">
+      <ol v-if="hasSeveralSlides" class="mt-1 -ml-1 flex">
         <li v-for="(slide, index) in props.slides" :key="slide.id">
           <button
             type="button"
-            class="group focus-visible:ring-primary flex h-6 cursor-pointer items-center rounded-sm pr-1.5 focus:outline-none focus-visible:ring-2"
+            class="group focus-visible:ring-primary flex h-6 cursor-pointer items-center rounded-sm px-1 focus:outline-none focus-visible:ring-2"
             :aria-label="$t('photoSlideshow.goTo', { name: slide.title })"
             :aria-current="index === activeIndex ? 'true' : undefined"
             @click="goTo(index, 'marker')"
           >
             <span
-              class="relative block h-1 w-5 overflow-hidden rounded-full bg-gray-300 transition-colors group-hover:bg-gray-400"
+              class="relative block h-1 overflow-hidden rounded-full transition-[width,background-color] duration-300 motion-reduce:transition-none"
+              :class="index === activeIndex ? 'bg-primary/25 w-9' : 'w-4 bg-gray-300 group-hover:bg-gray-400'"
             >
-              <span v-if="index < activeIndex" class="bg-primary absolute inset-0" aria-hidden="true" />
               <span
-                v-else-if="index === activeIndex"
+                v-if="index === activeIndex"
                 :key="`progress-${activeIndex}`"
                 class="bg-primary absolute inset-0 origin-left"
-                :class="isAutoplayEnabled ? 'slideshow-progress' : ''"
-                :style="progressStyle"
+                :class="isAutoplayRunning ? 'slideshow-progress' : ''"
                 aria-hidden="true"
                 @animationend="goTo(activeIndex + 1)"
               />
@@ -119,8 +118,6 @@ const emit: (event: 'navigate', navigation: DibodevPhotoSlideshowNavigation) => 
   (event: 'navigate', navigation: DibodevPhotoSlideshowNavigation): void
 }>()
 
-/** Time a slide stays on screen before the next one shows (the active marker fills up over this duration). */
-const AUTOPLAY_INTERVAL_MS: number = 4000
 const SWIPE_MIN_DISTANCE_PX: number = 40
 /** A swipe is followed by a click on some browsers: it is ignored during this delay. */
 const CLICK_AFTER_SWIPE_DELAY_MS: number = 400
@@ -134,7 +131,8 @@ let lastSwipeTimestamp: number = 0
 
 /* REFS */
 const activeIndex: Ref<number> = ref(0)
-const isPaused: Ref<boolean> = ref(false)
+const isHoveredWithMouse: Ref<boolean> = ref(false)
+const hasKeyboardFocus: Ref<boolean> = ref(false)
 const isAutoplayEnabled: Ref<boolean> = ref(false)
 const hasMounted: Ref<boolean> = ref(false)
 
@@ -150,16 +148,8 @@ const renderedSlides: ComputedRef<DibodevPhotoSlideshowSlide[]> = computed((): D
   hasMounted.value ? props.slides : props.slides.slice(0, 1),
 )
 
-const isAutoplayRunning: ComputedRef<boolean> = computed((): boolean => isAutoplayEnabled.value && !isPaused.value)
-
-const progressStyle: ComputedRef<Record<string, string> | undefined> = computed(
-  (): Record<string, string> | undefined =>
-    isAutoplayEnabled.value
-      ? {
-          animationDuration: `${AUTOPLAY_INTERVAL_MS}ms`,
-          animationPlayState: isPaused.value ? 'paused' : 'running',
-        }
-      : undefined,
+const isAutoplayRunning: ComputedRef<boolean> = computed(
+  (): boolean => isAutoplayEnabled.value && !isHoveredWithMouse.value && !hasKeyboardFocus.value,
 )
 
 /* METHODS */
@@ -184,6 +174,24 @@ function refreshAutoplay(): void {
   if (!import.meta.client) return
   const prefersReducedMotion: boolean = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   isAutoplayEnabled.value = !prefersReducedMotion && hasSeveralSlides.value
+}
+
+/**
+ * Pauses auto-play under a mouse pointer only: a finger never leaves the slideshow the way a mouse does.
+ * @param {PointerEvent} event - The pointer enter event.
+ * @returns {void}
+ */
+function onPointerEnter(event: PointerEvent): void {
+  if (event.pointerType === 'mouse') isHoveredWithMouse.value = true
+}
+
+/**
+ * Pauses auto-play when the focus comes from the keyboard, not from a click or a tap.
+ * @param {FocusEvent} event - The focus in event.
+ * @returns {void}
+ */
+function onFocusIn(event: FocusEvent): void {
+  hasKeyboardFocus.value = event.target instanceof HTMLElement && event.target.matches(':focus-visible')
 }
 
 /**
@@ -247,10 +255,10 @@ onMounted((): void => {
 </script>
 
 <style scoped>
+/* The duration is the time a slide stays on screen: the next one shows when the active marker is full. */
 .slideshow-progress {
-  animation-name: slideshow-progress;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
+  animation: slideshow-progress 3s linear forwards;
+  will-change: transform;
 }
 
 .slideshow-caption {

@@ -209,35 +209,35 @@
         "label": "Des outils sur mesure pour chaque métier",
         "intro": "Un outil sur mesure pour",
         "items": {
-          "garage": {
-            "name": "votre garage",
-            "tasks": "Rendez-vous, devis, factures",
-            "alt": "Un garagiste, tablette à la main, montre une voiture sur le pont à une cliente"
+          "business": {
+            "name": "votre entreprise",
+            "tasks": "Logiciel, site web, IA",
+            "alt": "Deux collègues travaillent ensemble devant un ordinateur portable"
+          },
+          "shop": {
+            "name": "votre commerce",
+            "tasks": "Site web, commandes, clients",
+            "alt": "Une commerçante sert un client au comptoir, une tablette de caisse devant elle"
+          },
+          "craftsman": {
+            "name": "votre activité d'artisan",
+            "tasks": "Interventions, devis, factures",
+            "alt": "Un électricien contrôle un tableau électrique"
           },
           "drivingSchool": {
             "name": "votre auto-école",
             "tasks": "Planning, élèves, heures",
             "alt": "Une conductrice souriante au volant pendant une leçon de conduite"
           },
-          "shop": {
-            "name": "votre commerce",
-            "tasks": "Site web, commandes, clients",
-            "alt": "Une fleuriste compose un bouquet dans sa boutique"
-          },
           "bikeShop": {
             "name": "votre atelier vélo",
             "tasks": "Réparations, rendez-vous, caisse",
             "alt": "Un mécanicien souriant répare un vélo dans son atelier"
           },
-          "warehouse": {
-            "name": "votre PME",
-            "tasks": "Stock, commandes, suivi",
-            "alt": "Un responsable consulte une tablette dans un entrepôt"
-          },
-          "plumber": {
-            "name": "votre métier d'artisan",
-            "tasks": "Interventions, devis, rappels",
-            "alt": "Un plombier intervient sur une installation sous un meuble"
+          "garage": {
+            "name": "votre garage",
+            "tasks": "Rendez-vous, devis, factures",
+            "alt": "Un garagiste, tablette à la main, montre une voiture sur le pont à une cliente"
           }
         }
       }

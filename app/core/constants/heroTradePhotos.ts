@@ -5,10 +5,10 @@ export const HERO_TRADE_PHOTO_WIDTHS: number[] = [480, 960]
 
 /** Trades shown in the home hero slideshow, in display order (Unsplash photos under the free licence, cropped to the 12:13 frame). */
 export const HERO_TRADE_PHOTOS: DibodevHeroTradePhoto[] = [
-  { id: 'garage', fileSlug: 'garage' },
+  { id: 'business', fileSlug: 'business' },
+  { id: 'shop', fileSlug: 'shop-counter' },
+  { id: 'craftsman', fileSlug: 'craftsman' },
   { id: 'drivingSchool', fileSlug: 'driving-school' },
-  { id: 'shop', fileSlug: 'shop' },
   { id: 'bikeShop', fileSlug: 'bike-shop' },
-  { id: 'warehouse', fileSlug: 'warehouse' },
-  { id: 'plumber', fileSlug: 'plumber' },
+  { id: 'garage', fileSlug: 'garage' },
 ]

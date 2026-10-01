@@ -209,35 +209,35 @@
         "label": "Custom tools for every trade",
         "intro": "A custom tool for",
         "items": {
-          "garage": {
-            "name": "your garage",
-            "tasks": "Bookings, quotes, invoices",
-            "alt": "A mechanic holding a tablet shows a customer a car on the lift"
+          "business": {
+            "name": "your business",
+            "tasks": "Software, website, AI",
+            "alt": "Two colleagues working together at a laptop"
+          },
+          "shop": {
+            "name": "your shop",
+            "tasks": "Website, orders, customers",
+            "alt": "A shopkeeper serving a customer at the counter, with a till tablet in front of her"
+          },
+          "craftsman": {
+            "name": "your trade business",
+            "tasks": "Call-outs, quotes, invoices",
+            "alt": "An electrician checking an electrical panel"
           },
           "drivingSchool": {
             "name": "your driving school",
             "tasks": "Schedule, students, hours",
             "alt": "A smiling driver at the wheel during a driving lesson"
           },
-          "shop": {
-            "name": "your shop",
-            "tasks": "Website, orders, customers",
-            "alt": "A florist arranging a bouquet in her shop"
-          },
           "bikeShop": {
             "name": "your bike shop",
             "tasks": "Repairs, bookings, till",
             "alt": "A smiling mechanic repairing a bike in his workshop"
           },
-          "warehouse": {
-            "name": "your small business",
-            "tasks": "Stock, orders, tracking",
-            "alt": "A manager checking a tablet in a warehouse"
-          },
-          "plumber": {
-            "name": "your trade business",
-            "tasks": "Call-outs, quotes, reminders",
-            "alt": "A plumber working on the pipes under a cabinet"
+          "garage": {
+            "name": "your garage",
+            "tasks": "Bookings, quotes, invoices",
+            "alt": "A mechanic holding a tablet shows a customer a car on the lift"
           }
         }
       }
