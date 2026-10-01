@@ -42,6 +42,8 @@ export const TRACKING_EVENTS = {
   tunnelLeadSubmitted: 'tunnel_lead_submitted',
   /** Click on a teaser linking to a trade test (from an article, a project or a service page). */
   toolTeaserClicked: 'tool_teaser_clicked',
+  /** Slide changed by the visitor in a photo slideshow (click on the photo, swipe or progress marker). */
+  photoSlideshowNavigated: 'photo_slideshow_navigated',
 } as const
 
 /** Tracking event name (value of the `TRACKING_EVENTS` catalog). */

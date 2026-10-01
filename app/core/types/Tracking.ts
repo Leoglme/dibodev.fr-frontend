@@ -3,6 +3,7 @@ import type {
   DibodevEstimatorProjectKind,
   DibodevEstimatorProjectSize,
 } from '~/core/types/DibodevBudgetEstimator'
+import type { DibodevPhotoSlideshowNavigationMethod } from '~/core/types/DibodevPhotoSlideshow'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 /** Status of a contact form submission. */
@@ -52,4 +53,9 @@ export type TrackingEventPayloads = {
     errorStatus?: number | null
   }
   [TRACKING_EVENTS.toolTeaserClicked]: { tool: string; location: string }
+  [TRACKING_EVENTS.photoSlideshowNavigated]: {
+    slide: string
+    method: DibodevPhotoSlideshowNavigationMethod
+    location: string
+  }
 }

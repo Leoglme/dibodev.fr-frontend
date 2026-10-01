@@ -204,6 +204,42 @@
         "previous": "Previous project",
         "next": "Next project",
         "goTo": "View {name}"
+      },
+      "trades": {
+        "label": "Custom tools for every trade",
+        "intro": "A custom tool for",
+        "items": {
+          "garage": {
+            "name": "your garage",
+            "tasks": "Bookings, quotes, invoices",
+            "alt": "A mechanic holding a tablet shows a customer a car on the lift"
+          },
+          "drivingSchool": {
+            "name": "your driving school",
+            "tasks": "Schedule, students, hours",
+            "alt": "A smiling driver at the wheel during a driving lesson"
+          },
+          "shop": {
+            "name": "your shop",
+            "tasks": "Website, orders, customers",
+            "alt": "A florist arranging a bouquet in her shop"
+          },
+          "bikeShop": {
+            "name": "your bike shop",
+            "tasks": "Repairs, bookings, till",
+            "alt": "A smiling mechanic repairing a bike in his workshop"
+          },
+          "warehouse": {
+            "name": "your small business",
+            "tasks": "Stock, orders, tracking",
+            "alt": "A manager checking a tablet in a warehouse"
+          },
+          "plumber": {
+            "name": "your trade business",
+            "tasks": "Call-outs, quotes, reminders",
+            "alt": "A plumber working on the pipes under a cabinet"
+          }
+        }
       }
     },
     "services": {
@@ -1379,5 +1415,10 @@
   },
   "sourcedFacts": {
     "source": "Source: {name}"
+  },
+  "photoSlideshow": {
+    "roleDescription": "slideshow",
+    "next": "Show the next photo",
+    "goTo": "Show: {name}"
   }
 }

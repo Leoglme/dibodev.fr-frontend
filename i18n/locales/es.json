@@ -204,6 +204,42 @@
         "previous": "Proyecto anterior",
         "next": "Proyecto siguiente",
         "goTo": "Ver {name}"
+      },
+      "trades": {
+        "label": "Herramientas a medida para cada oficio",
+        "intro": "Una herramienta a medida para",
+        "items": {
+          "garage": {
+            "name": "tu taller mecánico",
+            "tasks": "Citas, presupuestos, facturas",
+            "alt": "Un mecánico, tableta en mano, muestra a una clienta un coche en el elevador"
+          },
+          "drivingSchool": {
+            "name": "tu autoescuela",
+            "tasks": "Planificación, alumnos, horas",
+            "alt": "Una conductora sonriente al volante durante una clase de conducir"
+          },
+          "shop": {
+            "name": "tu comercio",
+            "tasks": "Sitio web, pedidos, clientes",
+            "alt": "Una florista prepara un ramo en su tienda"
+          },
+          "bikeShop": {
+            "name": "tu taller de bicicletas",
+            "tasks": "Reparaciones, citas, caja",
+            "alt": "Un mecánico sonriente repara una bicicleta en su taller"
+          },
+          "warehouse": {
+            "name": "tu pyme",
+            "tasks": "Stock, pedidos, seguimiento",
+            "alt": "Un responsable consulta una tableta en un almacén"
+          },
+          "plumber": {
+            "name": "tu oficio de artesano",
+            "tasks": "Avisos, presupuestos, facturas",
+            "alt": "Un fontanero trabaja en una instalación bajo un mueble"
+          }
+        }
       }
     },
     "services": {
@@ -1379,5 +1415,10 @@
   },
   "sourcedFacts": {
     "source": "Fuente: {name}"
+  },
+  "photoSlideshow": {
+    "roleDescription": "presentación de fotos",
+    "next": "Mostrar la foto siguiente",
+    "goTo": "Mostrar: {name}"
   }
 }

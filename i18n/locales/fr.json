@@ -204,6 +204,42 @@
         "previous": "Projet précédent",
         "next": "Projet suivant",
         "goTo": "Voir {name}"
+      },
+      "trades": {
+        "label": "Des outils sur mesure pour chaque métier",
+        "intro": "Un outil sur mesure pour",
+        "items": {
+          "garage": {
+            "name": "votre garage",
+            "tasks": "Rendez-vous, devis, factures",
+            "alt": "Un garagiste, tablette à la main, montre une voiture sur le pont à une cliente"
+          },
+          "drivingSchool": {
+            "name": "votre auto-école",
+            "tasks": "Planning, élèves, heures",
+            "alt": "Une conductrice souriante au volant pendant une leçon de conduite"
+          },
+          "shop": {
+            "name": "votre commerce",
+            "tasks": "Site web, commandes, clients",
+            "alt": "Une fleuriste compose un bouquet dans sa boutique"
+          },
+          "bikeShop": {
+            "name": "votre atelier vélo",
+            "tasks": "Réparations, rendez-vous, caisse",
+            "alt": "Un mécanicien souriant répare un vélo dans son atelier"
+          },
+          "warehouse": {
+            "name": "votre PME",
+            "tasks": "Stock, commandes, suivi",
+            "alt": "Un responsable consulte une tablette dans un entrepôt"
+          },
+          "plumber": {
+            "name": "votre métier d'artisan",
+            "tasks": "Interventions, devis, rappels",
+            "alt": "Un plombier intervient sur une installation sous un meuble"
+          }
+        }
       }
     },
     "services": {
@@ -1379,5 +1415,10 @@
   },
   "sourcedFacts": {
     "source": "Source : {name}"
+  },
+  "photoSlideshow": {
+    "roleDescription": "diaporama",
+    "next": "Afficher la photo suivante",
+    "goTo": "Afficher : {name}"
   }
 }
