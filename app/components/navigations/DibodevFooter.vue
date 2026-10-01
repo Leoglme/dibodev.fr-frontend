@@ -1,7 +1,7 @@
 <template>
-  <footer class="border-t border-gray-300 bg-gray-800">
+  <footer class="border-t border-gray-300 bg-gray-800 px-6 sm:px-8">
     <div
-      class="max-w-site mx-auto grid w-full gap-x-8 gap-y-12 px-6 py-16 sm:grid-cols-2 sm:px-8 lg:grid-cols-12 lg:gap-x-10 lg:py-20"
+      class="max-w-site mx-auto grid w-full gap-x-8 gap-y-12 py-16 sm:grid-cols-2 lg:grid-cols-12 lg:gap-x-10 lg:py-20"
     >
       <div class="grid content-start gap-6 sm:col-span-2 lg:col-span-3">
         <DibodevLogo :large="true" :size="30" />
@@ -95,9 +95,9 @@
       </div>
     </div>
 
-    <div class="border-t border-gray-300">
+    <div class="-mx-6 border-t border-gray-300 px-6 sm:-mx-8 sm:px-8">
       <div
-        class="text-muted max-w-site mx-auto flex w-full flex-col gap-4 px-6 py-6 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8"
+        class="text-muted max-w-site mx-auto flex w-full flex-col gap-4 py-6 text-sm sm:flex-row sm:items-center sm:justify-between"
       >
         <p class="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:gap-x-1.5">
           <span>© {{ currentYear }} Dibodev · {{ $t('footer.allRightsReserved') }}</span>
