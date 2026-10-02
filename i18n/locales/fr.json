@@ -1052,26 +1052,50 @@
       "exampleLabel": "Voir un exemple : {name}",
       "integrations": {
         "title": "Et il se connecte à ce que vous utilisez déjà",
-        "intro": "Votre outil échange avec vos logiciels au lieu de les remplacer : paiement, e-mails, fichiers, IA.",
+        "intro": "Votre outil échange avec vos logiciels au lieu de les remplacer : paiement, facturation, e-mails, agenda, IA.",
         "items": {
           "payment": {
             "name": "Stripe",
             "label": "Paiement en ligne"
           },
+          "banking": {
+            "name": "Qonto",
+            "label": "Banque et facturation"
+          },
+          "accounting": {
+            "name": "Pennylane",
+            "label": "Comptabilité partagée avec votre expert-comptable"
+          },
+          "quotes": {
+            "name": "EBP",
+            "label": "Devis et factures"
+          },
+          "crm": {
+            "name": "HubSpot",
+            "label": "CRM et suivi des clients"
+          },
           "emails": {
             "name": "Mailjet",
             "label": "E-mails automatiques"
           },
-          "content": {
-            "name": "Storyblok",
-            "label": "Contenus éditables"
+          "messaging": {
+            "name": "WhatsApp et SMS",
+            "label": "Confirmations et rappels"
+          },
+          "calendar": {
+            "name": "Google Agenda",
+            "label": "Agendas synchronisés"
           },
           "files": {
             "name": "Excel et CSV",
             "label": "Imports et exports"
           },
+          "automation": {
+            "name": "n8n",
+            "label": "Automatisations entre vos outils"
+          },
           "ai": {
-            "name": "Mistral AI",
+            "name": "Claude",
             "label": "Intelligence artificielle"
           },
           "api": {

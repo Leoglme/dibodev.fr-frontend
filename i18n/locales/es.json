@@ -1052,26 +1052,50 @@
       "exampleLabel": "Ver un ejemplo: {name}",
       "integrations": {
         "title": "Y se conecta con lo que ya utilizas",
-        "intro": "Tu herramienta se comunica con tu software en lugar de sustituirlo: pagos, correos, archivos, IA.",
+        "intro": "Tu herramienta se comunica con tu software en lugar de sustituirlo: pagos, facturación, correos, agenda, IA.",
         "items": {
           "payment": {
             "name": "Stripe",
             "label": "Pagos en línea"
           },
+          "banking": {
+            "name": "Qonto",
+            "label": "Banca y facturación"
+          },
+          "accounting": {
+            "name": "Pennylane",
+            "label": "Contabilidad compartida con tu asesor"
+          },
+          "quotes": {
+            "name": "EBP",
+            "label": "Presupuestos y facturas"
+          },
+          "crm": {
+            "name": "HubSpot",
+            "label": "CRM y seguimiento de clientes"
+          },
           "emails": {
             "name": "Mailjet",
             "label": "Correos automáticos"
           },
-          "content": {
-            "name": "Storyblok",
-            "label": "Contenidos editables"
+          "messaging": {
+            "name": "WhatsApp y SMS",
+            "label": "Confirmaciones y recordatorios"
+          },
+          "calendar": {
+            "name": "Google Calendar",
+            "label": "Agendas sincronizadas"
           },
           "files": {
             "name": "Excel y CSV",
-            "label": "Importación y exportación"
+            "label": "Importaciones y exportaciones"
+          },
+          "automation": {
+            "name": "n8n",
+            "label": "Automatizaciones entre tus herramientas"
           },
           "ai": {
-            "name": "Mistral AI",
+            "name": "Claude",
             "label": "Inteligencia artificial"
           },
           "api": {

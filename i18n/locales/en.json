@@ -1052,31 +1052,55 @@
       "exampleLabel": "See an example: {name}",
       "integrations": {
         "title": "And it connects to what you already use",
-        "intro": "Your tool talks to your software instead of replacing it: payments, emails, files, AI.",
+        "intro": "Your tool talks to your software instead of replacing it: payments, invoicing, emails, calendar, AI.",
         "items": {
           "payment": {
             "name": "Stripe",
             "label": "Online payments"
           },
+          "banking": {
+            "name": "Qonto",
+            "label": "Banking and invoicing"
+          },
+          "accounting": {
+            "name": "Pennylane",
+            "label": "Accounting shared with your accountant"
+          },
+          "quotes": {
+            "name": "EBP",
+            "label": "Quotes and invoices"
+          },
+          "crm": {
+            "name": "HubSpot",
+            "label": "CRM and customer follow-up"
+          },
           "emails": {
             "name": "Mailjet",
-            "label": "Automated emails"
+            "label": "Automatic emails"
           },
-          "content": {
-            "name": "Storyblok",
-            "label": "Editable content"
+          "messaging": {
+            "name": "WhatsApp and SMS",
+            "label": "Confirmations and reminders"
+          },
+          "calendar": {
+            "name": "Google Calendar",
+            "label": "Synchronised calendars"
           },
           "files": {
             "name": "Excel and CSV",
             "label": "Imports and exports"
           },
+          "automation": {
+            "name": "n8n",
+            "label": "Automations between your tools"
+          },
           "ai": {
-            "name": "Mistral AI",
+            "name": "Claude",
             "label": "Artificial intelligence"
           },
           "api": {
             "name": "Your software",
-            "label": "Connected through APIs"
+            "label": "Connection through an API"
           }
         }
       }
