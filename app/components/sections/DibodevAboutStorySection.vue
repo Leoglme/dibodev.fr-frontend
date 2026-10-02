@@ -1,7 +1,7 @@
 <template>
   <section id="about-story" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
-    <div class="max-w-site mx-auto grid w-full gap-16 lg:gap-20">
-      <div class="grid gap-12 lg:gap-14">
+    <div class="max-w-site mx-auto grid w-full gap-20 lg:gap-32">
+      <div class="grid gap-14 lg:gap-20">
         <div class="grid gap-7">
           <div class="grid gap-4">
             <p class="text-primary text-xs font-medium tracking-[0.08em] uppercase">
@@ -17,10 +17,16 @@
             {{ t('aboutPage.story.lead') }}
           </p>
         </div>
-        <div class="grid gap-x-12 gap-y-10 lg:grid-cols-3">
-          <div v-for="storyBlock in storyBlocks" :key="storyBlock.title" class="grid content-start gap-3">
-            <h3 class="text-xl font-medium text-gray-100">{{ storyBlock.title }}</h3>
-            <p class="text-[17px] leading-7 text-gray-200">{{ storyBlock.text }}</p>
+        <div class="grid gap-y-10 lg:gap-y-14">
+          <div
+            v-for="storyBlock in storyBlocks"
+            :key="storyBlock.title"
+            class="grid gap-3 lg:grid-cols-[minmax(0,22rem)_minmax(0,42rem)] lg:gap-x-20"
+          >
+            <h3 class="text-xl leading-[1.35] font-medium text-gray-100 lg:text-2xl lg:leading-[1.3]">
+              {{ storyBlock.title }}
+            </h3>
+            <p class="text-[17px] leading-7 text-gray-200 lg:text-lg lg:leading-8">{{ storyBlock.text }}</p>
           </div>
         </div>
       </div>
@@ -93,7 +99,7 @@ import { CareerUtils } from '~/core/utils/CareerUtils'
 const { t } = useI18n()
 const { track } = useTracking()
 
-/** Titled paragraphs of the story (i18n `aboutPage.story.*`), side by side on wide screens. */
+/** Titled paragraphs of the story (i18n `aboutPage.story.*`), one per row with the title beside its text on wide screens. */
 const STORY_BLOCK_KEYS: string[] = ['proof', 'clients', 'method']
 /** Facts of the "in short" list (i18n `aboutPage.facts.*`), each with its line icon. */
 const FACT_ICONS: Record<string, string> = {
