@@ -1,5 +1,4 @@
 import type { DibodevAccentPalette } from '~/core/types/DibodevAccentPalette'
-import type { DibodevBrandLogo } from '~/core/types/DibodevBrandGlyph'
 import type { DibodevCareerStep } from '~/core/types/DibodevCareerStepCard'
 import type { DibodevServiceIconName } from '~/core/types/DibodevServiceIcon'
 
@@ -14,24 +13,16 @@ export type DibodevAboutKeyFact = DibodevAboutFact & {
 }
 
 /**
- * One of Léo's profiles on another site, shown with the colours of its brand.
+ * One of Léo's profiles on another site, shown with the logo of its brand.
  * @type {DibodevAboutProfileLink}
  * @property {string} label - Name of the site.
  * @property {string} href - URL of the profile.
- * @property {string} brandColor - Brand colour shown around the link on hover.
- * @property {string} tileColor - Background of the tile behind the logo.
- * @property {string} logoColor - Colour of a single-colour logo or of the monogram on the tile.
- * @property {DibodevBrandLogo | null} logo - The brand logo, or null for a brand shown by its monogram.
- * @property {string | null} monogram - Initials shown when the brand has no logo.
+ * @property {string} logoSrc - Path of the brand logo file.
  */
 export type DibodevAboutProfileLink = {
   label: string
   href: string
-  brandColor: string
-  tileColor: string
-  logoColor: string
-  logo: DibodevBrandLogo | null
-  monogram: string | null
+  logoSrc: string
 }
 
 export type DibodevAboutCareerStepConfig = {

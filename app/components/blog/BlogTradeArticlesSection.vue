@@ -8,38 +8,39 @@
     <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.intro" />
 
-      <ul class="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
-        <li v-for="tradeLink in props.links" :key="tradeLink.key">
-          <NuxtLink
-            :to="tradeLink.route"
-            class="blog-trade-link bg-surface-tint flex min-h-16 items-center justify-between gap-4 rounded-2xl px-5 py-4 text-[17px] font-medium text-gray-100"
-            @click="track(TRACKING_EVENTS.articleCardClicked, { article: tradeLink.route, source: 'trade_list' })"
-          >
-            <span>{{ tradeLink.label }}</span>
-            <DibodevIcon
-              name="ArrowRight"
-              mode="stroke"
-              :width="18"
-              :height="18"
-              class="text-primary shrink-0"
-              aria-hidden="true"
-            />
-          </NuxtLink>
-        </li>
-        <li>
-          <NuxtLink
-            :to="localePath('/contact')"
-            class="blog-trade-link blog-trade-link--contact text-primary flex min-h-16 items-center justify-between gap-4 rounded-2xl bg-white px-5 py-4 text-[17px] font-medium"
-            @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'blog_trades' })"
-          >
-            <span class="grid">
-              <span class="text-muted text-sm font-normal">{{ props.missingTradeText }}</span>
-              <span>{{ props.missingTradeLinkLabel }}</span>
-            </span>
+      <div class="grid gap-8 lg:gap-10">
+        <ul class="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
+          <li v-for="tradeLink in props.links" :key="tradeLink.key">
+            <NuxtLink
+              :to="tradeLink.route"
+              class="blog-trade-link bg-surface-tint flex min-h-16 items-center justify-between gap-4 rounded-2xl px-5 py-4 text-[17px] font-medium text-gray-100"
+              @click="track(TRACKING_EVENTS.articleCardClicked, { article: tradeLink.route, source: 'trade_list' })"
+            >
+              <span>{{ tradeLink.label }}</span>
+              <DibodevIcon
+                name="ArrowRight"
+                mode="stroke"
+                :width="18"
+                :height="18"
+                class="text-primary shrink-0"
+                aria-hidden="true"
+              />
+            </NuxtLink>
+          </li>
+        </ul>
+
+        <NuxtLink
+          :to="localePath('/contact')"
+          class="blog-trade-link blog-trade-link--contact flex flex-col gap-3 rounded-2xl bg-white px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:px-8 sm:py-7"
+          @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'blog_trades' })"
+        >
+          <span class="text-lg font-medium text-gray-100 sm:text-xl">{{ props.missingTradeText }}</span>
+          <span class="text-primary inline-flex shrink-0 items-center gap-2 text-[17px] font-medium">
+            {{ props.missingTradeLinkLabel }}
             <DibodevIcon name="ArrowRight" mode="stroke" :width="18" :height="18" class="shrink-0" aria-hidden="true" />
-          </NuxtLink>
-        </li>
-      </ul>
+          </span>
+        </NuxtLink>
+      </div>
     </div>
   </section>
 </template>
@@ -53,7 +54,7 @@ import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 /**
- * Blog section listing the trades that have an article of their own: a heading, then one tile per trade and a last one for the trades not listed yet.
+ * Blog section listing the trades that have an article of their own: a heading, one tile per trade, then a wider contact row for the trades not listed yet.
  */
 const props: BlogTradeArticlesSectionProps = defineProps({
   eyebrow: {

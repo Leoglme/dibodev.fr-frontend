@@ -10,17 +10,17 @@
     >
       <div class="grid max-w-3xl justify-items-start gap-6" data-aos="fade-up">
         <DibodevBreadcrumb v-if="props.breadcrumbs.length > 0" :items="props.breadcrumbs" />
-        <div class="flex flex-col items-start gap-5 sm:flex-row sm:gap-6">
+        <div class="flex flex-col items-start gap-5">
           <div
-            class="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl p-3.5 sm:mt-1"
+            class="flex h-24 w-24 shrink-0 items-center justify-center rounded-2xl border border-gray-300 p-4"
             :style="{ backgroundColor: props.secondaryColor }"
           >
             <img
               :src="props.logoUrl"
               :alt="props.title + ' logo'"
-              class="h-full w-full object-contain"
-              width="52"
-              height="52"
+              class="h-16 w-16 object-contain"
+              width="64"
+              height="64"
             />
           </div>
 
