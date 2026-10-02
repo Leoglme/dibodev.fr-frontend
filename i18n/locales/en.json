@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Dibodev — Freelance Web Developer in Rennes",
-    "description": "Freelance developer in Rennes: custom web, mobile, software and AI solutions. End-to-end support.",
+    "title": "Dibodev — Freelance Developer in Rennes: Software and Websites",
+    "description": "Léo Guillaume, freelance developer near Rennes, builds custom business software, websites and AI automations for small and mid-sized companies. Free quote.",
     "shareImage": {
       "alt": "Portrait of Léo Guillaume, full‑stack and AI freelance developer in Rennes, with the caption “{pageLabel}”",
       "role": "Full-stack and AI freelance developer",
@@ -24,8 +24,8 @@
       "year": "Year"
     },
     "blog": {
-      "title": "Blog — Dibodev",
-      "description": "Articles and tips for craftsmen, SMEs and entrepreneurs: digital, websites, applications, AI. By Léo Guillaume, freelance developer in Rennes."
+      "title": "Blog — Software, Websites and AI for Small Businesses {'|'} Dibodev",
+      "description": "Practical guides for tradespeople and small businesses: leaving Excel, choosing software, building a website, using AI. By Léo Guillaume, freelance developer."
     },
     "blogArticle": {
       "descriptionFallback": "Article by Léo Guillaume, freelance developer in Rennes."
@@ -41,8 +41,8 @@
       "description": "Discover web projects, mobile apps and software by Léo Guillaume, freelance developer in Rennes."
     },
     "projectsPage": {
-      "title": "Portfolio — Freelance Web & Mobile Developer in Rennes {'|'} Dibodev",
-      "description": "Discover web, mobile and AI projects by Léo Guillaume, freelance developer in Rennes. SaaS, business applications, AI and more."
+      "title": "My Work: Business Software, Websites and Apps {'|'} Dibodev",
+      "description": "Business software, booking platforms, websites and AI: projects delivered by Léo Guillaume, freelance developer in Rennes, with screenshots and results."
     },
     "businessSoftwarePage": {
       "title": "Custom Business Software in Rennes — Freelance Developer {'|'} Dibodev",
@@ -189,7 +189,7 @@
       "ctaPrimary": "Discuss my project",
       "ctaSecondary": "See my work",
       "stats": {
-        "experienceValue": "7 years",
+        "experienceValue": "{years} years",
         "experienceLabel": "of experience",
         "projectsLabel": "projects online",
         "ratingValue": "5/5",
@@ -394,7 +394,7 @@
     },
     "founder": {
       "eyebrow": "Who is behind Dibodev",
-      "title": "Léo Guillaume, developer for seven years, near Rennes",
+      "title": "Léo Guillaume, developer for {years} years, near Rennes",
       "paragraph1": "After more than four years in-house building management software and platforms, at Kodeva then Izidoor, I founded Dibodev in 2025 to work directly with small and medium businesses.",
       "paragraph2": "I take care of everything, from scoping to maintenance, and I explain every choice in plain language, without jargon.",
       "facts": {
@@ -1135,7 +1135,7 @@
       },
       "experience": {
         "label": "Experience",
-        "value": "6 years of professional experience: work-study at Kodeva and Izidoor, then freelance"
+        "value": "{years} years of professional experience: work-study at Kodeva and Izidoor, then freelance"
       },
       "education": {
         "label": "Education",
@@ -1151,7 +1151,7 @@
     },
     "path": {
       "title": "My background",
-      "subtitle": "Six years building tools people use every day, from work-study positions to my own clients.",
+      "subtitle": "{years} years building tools people use every day, from work-study positions to my own clients.",
       "experiencesTitle": "Experience",
       "educationTitle": "Education",
       "currentStep": "Current",

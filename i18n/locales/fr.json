@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Dibodev — Développeur Web Freelance à Rennes",
-    "description": "Développeur freelance à Rennes : sites web, applications mobiles, logiciels et IA sur mesure. Accompagnement de A à Z.",
+    "title": "Dibodev — Développeur freelance à Rennes : logiciels et sites web",
+    "description": "Léo Guillaume, développeur freelance près de Rennes : logiciels de gestion, sites web et automatisations IA sur mesure pour TPE et PME. Devis gratuit.",
     "shareImage": {
       "alt": "Portrait de Léo Guillaume, développeur freelance full‑stack et IA à Rennes, avec la mention « {pageLabel} »",
       "role": "Développeur freelance full‑stack et IA",
@@ -24,8 +24,8 @@
       "year": "Année"
     },
     "blog": {
-      "title": "Blog — Dibodev",
-      "description": "Articles et conseils pour artisans, PME et entrepreneurs : digital, sites web, applications, IA. Par Léo Guillaume, développeur freelance à Rennes."
+      "title": "Blog — Logiciels, sites web et IA pour artisans et TPE {'|'} Dibodev",
+      "description": "Guides concrets pour artisans et TPE : quitter Excel, choisir un logiciel, créer son site, utiliser l'IA. Par Léo Guillaume, développeur freelance à Rennes."
     },
     "blogArticle": {
       "descriptionFallback": "Article par Léo Guillaume, développeur freelance à Rennes."
@@ -41,8 +41,8 @@
       "description": "Découvrez les projets web, applications mobiles et logiciels réalisés par Léo Guillaume, développeur freelance à Rennes."
     },
     "projectsPage": {
-      "title": "Portfolio — Développeur Freelance Web & Mobile à Rennes {'|'} Dibodev",
-      "description": "Découvrez les projets web, mobile et IA réalisés par Léo Guillaume, développeur freelance à Rennes. SaaS, applications métier, IA et plus."
+      "title": "Réalisations : applications métier, sites web et logiciels {'|'} Dibodev",
+      "description": "Applications métier, plateformes de réservation, sites web et IA : les projets de Léo Guillaume, développeur freelance à Rennes, avec captures et résultats."
     },
     "businessSoftwarePage": {
       "title": "Application métier sur mesure à Rennes — Développeur freelance {'|'} Dibodev",
@@ -189,7 +189,7 @@
       "ctaPrimary": "Discuter de mon projet",
       "ctaSecondary": "Voir mes réalisations",
       "stats": {
-        "experienceValue": "7 ans",
+        "experienceValue": "{years} ans",
         "experienceLabel": "d'expérience",
         "projectsLabel": "projets en ligne",
         "ratingValue": "5/5",
@@ -394,7 +394,7 @@
     },
     "founder": {
       "eyebrow": "Qui est derrière Dibodev",
-      "title": "Léo Guillaume, développeur depuis sept ans, près de Rennes",
+      "title": "Léo Guillaume, développeur depuis {years} ans, près de Rennes",
       "paragraph1": "Après plus de quatre ans en entreprise à concevoir des logiciels de gestion et des plateformes, chez Kodeva puis Izidoor, j'ai créé Dibodev en 2025 pour accompagner directement les TPE et PME.",
       "paragraph2": "Je m'occupe de tout, du cadrage à la maintenance, et je vous explique chaque choix simplement, sans jargon.",
       "facts": {
@@ -1135,7 +1135,7 @@
       },
       "experience": {
         "label": "Expérience",
-        "value": "6 ans d'expérience professionnelle : alternance chez Kodeva et Izidoor, puis freelance"
+        "value": "{years} ans d'expérience professionnelle : alternance chez Kodeva et Izidoor, puis freelance"
       },
       "education": {
         "label": "Formation",
@@ -1151,7 +1151,7 @@
     },
     "path": {
       "title": "Mon parcours",
-      "subtitle": "Six ans à construire des outils utilisés au quotidien, de l'alternance jusqu'à mes propres clients.",
+      "subtitle": "{years} ans à construire des outils utilisés au quotidien, de l'alternance jusqu'à mes propres clients.",
       "experiencesTitle": "Expériences",
       "educationTitle": "Formation",
       "currentStep": "En cours",

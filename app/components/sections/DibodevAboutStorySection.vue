@@ -61,6 +61,7 @@ import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { GOOGLE_BUSINESS_URL, MALT_PROFILE_URL } from '~/config/contact'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
+import { CareerUtils } from '~/core/utils/CareerUtils'
 
 const { t } = useI18n()
 const { track } = useTracking()
@@ -84,7 +85,7 @@ const facts: ComputedRef<DibodevAboutFact[]> = computed((): DibodevAboutFact[] =
   FACT_KEYS.map(
     (key: string): DibodevAboutFact => ({
       label: t(`aboutPage.facts.${key}.label`),
-      value: t(`aboutPage.facts.${key}.value`),
+      value: t(`aboutPage.facts.${key}.value`, { years: CareerUtils.getYearsOfExperience() }),
     }),
   ),
 )

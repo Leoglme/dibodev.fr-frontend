@@ -4,7 +4,7 @@
       <DibodevSectionHeading
         :eyebrow="t('aboutPage.path.eyebrow')"
         :title="t('aboutPage.path.title')"
-        :intro="t('aboutPage.path.subtitle')"
+        :intro="t('aboutPage.path.subtitle', { years: YEARS_OF_EXPERIENCE })"
       />
 
       <div class="grid gap-12 lg:grid-cols-[3fr_2fr] lg:gap-10">
@@ -33,9 +33,11 @@ import type { DibodevCareerStep } from '~/core/types/DibodevCareerStepCard'
 import { computed } from 'vue'
 import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevCareerStepCard from '~/components/cards/DibodevCareerStepCard.vue'
+import { CareerUtils } from '~/core/utils/CareerUtils'
 
 const { t } = useI18n()
 
+const YEARS_OF_EXPERIENCE: number = CareerUtils.getYearsOfExperience()
 const EXPERIENCE_STEPS: DibodevAboutCareerStepConfig[] = [
   {
     key: 'prepeers',

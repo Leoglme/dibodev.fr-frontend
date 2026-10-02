@@ -24,7 +24,7 @@
           <h2
             class="text-[28px] leading-[1.15] font-medium tracking-[-0.01em] text-gray-100 sm:text-[36px] lg:text-[40px]"
           >
-            {{ $t('home.founder.title') }}
+            {{ $t('home.founder.title', { years: YEARS_OF_EXPERIENCE }) }}
           </h2>
         </div>
         <p class="text-[17px] leading-7 text-gray-200">{{ $t('home.founder.paragraph1') }}</p>
@@ -59,6 +59,7 @@ import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
+import { CareerUtils } from '~/core/utils/CareerUtils'
 
 type FounderFact = {
   label: string
@@ -78,6 +79,8 @@ const FACT_ICONS: Record<string, string> = {
   area: 'Monitor',
   education: 'CheckCircle',
 }
+
+const YEARS_OF_EXPERIENCE: number = CareerUtils.getYearsOfExperience()
 
 const { t } = useI18n()
 const localePath = useLocalePath()

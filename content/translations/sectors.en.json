@@ -2,8 +2,8 @@
   "sectors/gaming": {
     "title": "Gaming Projects — Web Games & Community Platforms",
     "description": "Development of web games and websites dedicated to gaming communities and interactive experiences.",
-    "metaTitle": "Gaming Projects — Web Games & Interactive Platforms | Dibodev",
-    "metaDescription": "Web games and gaming applications developed by Léo Guillaume, freelance developer in Rennes: online games, community sites, and interactive experiences.",
+    "metaTitle": "Web Games and Gaming Community Websites | Dibodev",
+    "metaDescription": "Connect 4 playable online, the website of a GTA RP server: the web games and community sites built by Léo Guillaume, freelance developer in Rennes.",
     "intro": {
       "type": "doc",
       "content": [
@@ -22,8 +22,8 @@
   "sectors/reseaux-sociaux": {
     "title": "Social Network Projects — Community Applications",
     "description": "Development of social, community, and interactive multi-platform applications.",
-    "metaTitle": "Social Network Projects — Social Applications | Dibodev",
-    "metaDescription": "Community and social applications developed by Léo Guillaume, freelance developer in Rennes: web, mobile, and multi-platform solutions.",
+    "metaTitle": "Social Apps and Real-Time Messaging: Projects | Dibodev",
+    "metaDescription": "Real-time messaging, a cross-platform Reddit client: the social and community applications built by Léo Guillaume, freelance developer in Rennes.",
     "intro": {
       "type": "doc",
       "content": [
@@ -42,8 +42,8 @@
   "sectors/b2b": {
     "title": "B2B Projects — Management Tools & Professional Solutions",
     "description": "SaaS applications and software designed to meet the business needs of SMEs and VSEs.",
-    "metaTitle": "B2B Projects — SaaS Development & Business Tools | Dibodev",
-    "metaDescription": "B2B SaaS solutions and business applications developed by Léo Guillaume, freelance developer in Rennes for SMEs and VSEs.",
+    "metaTitle": "Custom B2B Business Software Development | Dibodev",
+    "metaDescription": "Custom B2B applications, software and platforms: tools to run and automate your business, built by Léo Guillaume, freelance developer in Rennes.",
     "intro": {
       "type": "doc",
       "content": [
@@ -62,8 +62,8 @@
   "sectors/logistique": {
     "title": "Logistics Projects — Inventory Management & Traceability",
     "description": "Digital solutions for stock tracking, inventories, and product flows in businesses.",
-    "metaTitle": "Logistics Projects — Inventory Management Software | Dibodev",
-    "metaDescription": "Stock management and traceability applications developed by Léo Guillaume, freelance developer in Rennes for SMEs and professional organizations.",
+    "metaTitle": "Custom Stock Management Software for SMEs | Dibodev",
+    "metaDescription": "Product tracking, inventories, QR labels and statistics: the stock management software built for SMEs by Léo Guillaume, freelance developer in Rennes.",
     "intro": {
       "type": "doc",
       "content": [
@@ -82,8 +82,8 @@
   "sectors/productivite": {
     "title": "Productivity Projects — Business Tools & Task Management",
     "description": "Dedicated applications for organization, time management, and workflow optimization.",
-    "metaTitle": "Productivity Projects — Custom Business Applications | Dibodev",
-    "metaDescription": "Time management and productivity tools developed by Léo Guillaume, freelance developer in Rennes: organization, workflows, and business applications.",
+    "metaTitle": "Custom Productivity Tools: Completed Projects | Dibodev",
+    "metaDescription": "Time tracking, task management, automation of repetitive work: the productivity tools built by Léo Guillaume, freelance developer in Rennes.",
     "intro": {
       "type": "doc",
       "content": [
@@ -102,8 +102,8 @@
   "sectors/voyage-transport": {
     "title": "Travel & Transport Projects — Mobility Applications",
     "description": "Digital solutions for route planning, mobility, and traveler experience.",
-    "metaTitle": "Travel & Transport Projects — Mobility Applications | Dibodev",
-    "metaDescription": "Route planning and mobility applications developed by Léo Guillaume, freelance developer based in Rennes.",
+    "metaTitle": "Travel and Transport: Custom Applications | Dibodev",
+    "metaDescription": "Route planning in plain language, driving school and lesson management: the applications built by Léo Guillaume, freelance developer in Rennes.",
     "intro": {
       "type": "doc",
       "content": [
@@ -122,8 +122,8 @@
   "sectors/sante": {
     "title": "Health Projects — Medical Digital Applications & Solutions",
     "description": "Digital solutions and artificial intelligence projects applied to the healthcare sector.",
-    "metaTitle": "Health Projects — Medical Application Developer | Dibodev",
-    "metaDescription": "Health applications and medical AI projects developed by Léo Guillaume, freelance developer in Rennes: image analysis, data science, and high-performance web interfaces.",
+    "metaTitle": "Health and Social Care: Custom Apps and Websites | Dibodev",
+    "metaDescription": "AI analysis of chest X-rays, a website for a social services company: the health and social care projects of Léo Guillaume, freelance developer in Rennes.",
     "intro": {
       "type": "doc",
       "content": [
@@ -142,8 +142,8 @@
   "sectors/immobilier": {
     "title": "Real Estate Projects — Collaborative Applications & Platforms",
     "description": "Digital tools to simplify property search, management, and collaboration around real estate assets.",
-    "metaTitle": "Real Estate Projects — Custom Web Applications | Dibodev",
-    "metaDescription": "Collaborative real estate applications developed by Léo Guillaume, freelance developer in Rennes: ad management, interactive maps, and decision-making tools.",
+    "metaTitle": "Real Estate: Custom Web Applications | Dibodev",
+    "metaDescription": "Centralised listings, interactive map and home comparison: the real estate applications built by Léo Guillaume, freelance developer in Rennes.",
     "intro": {
       "type": "doc",
       "content": [
@@ -162,8 +162,8 @@
   "sectors/sport-loisirs": {
     "title": "Sports & Leisure Projects — Custom Digital Solutions",
     "description": "Booking platforms, management tools, and dedicated applications for sports and leisure facilities.",
-    "metaTitle": "Sports & Leisure Projects — Web Developer & SaaS | Dibodev",
-    "metaDescription": "Explore my digital projects for sports and leisure: booking platforms, internal management, and SaaS tools developed by Léo Guillaume, freelance based in Rennes.",
+    "metaTitle": "Sports and Leisure: Custom Booking Software | Dibodev",
+    "metaDescription": "Online booking, scheduling, payments and staff management: the tools built for sports and leisure venues by Léo Guillaume, freelance developer in Rennes.",
     "intro": {
       "type": "doc",
       "content": [
