@@ -133,7 +133,7 @@ const RELATED_ARTICLE_SLUGS: string[] = [
   'freelance-ou-agence-rennes-outil-metier-sur-mesure',
   'developpement-logiciel-b2b-sur-mesure-prix',
 ]
-const FAQ_QUESTION_KEYS: string[] = ['price', 'delay', 'freelance', 'area', 'excel', 'existing']
+const FAQ_QUESTION_KEYS: string[] = ['price', 'delay', 'freelance', 'area', 'excel', 'existing', 'vocabulary']
 const METHOD_STEP_KEYS: string[] = ['discovery', 'quote', 'build', 'support']
 const GUARANTEE_KEYS: string[] = ['ownership', 'data', 'training', 'price', 'steps', 'support']
 const REASSURANCE_KEYS: string[] = ['response24h', 'freeQuote', 'noCommitment']

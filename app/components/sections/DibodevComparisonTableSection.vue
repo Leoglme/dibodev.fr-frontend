@@ -122,6 +122,8 @@
           </li>
         </ul>
       </div>
+
+      <slot name="footer" />
     </div>
   </section>
 </template>

@@ -41,6 +41,8 @@
 
           <BlogArticleContent :content="article.content" />
 
+          <DibodevToolTeaser :teaser="BUSINESS_SOFTWARE_PAGE_TEASER" trackingLocation="article_end" class="mt-10" />
+
           <DibodevAuthorCard variant="inline" class="mt-12" />
         </div>
 
@@ -90,6 +92,7 @@ import { useArticlesWithTranslations } from '~/composables/useArticlesWithTransl
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { useToolTeasers } from '~/composables/useToolTeasers'
 import { TOOL_TEASERS_BY_ARTICLE_SLUG } from '~/core/constants/tools/toolTeasers'
+import { BUSINESS_SOFTWARE_PAGE_TEASER } from '~/core/constants/businessSoftwarePageTeaser'
 import { buildArticleSchemaJson } from '~/config/articleSchema'
 import { buildShareImageMeta } from '~/config/shareImage'
 import { buildSharePreviewDetailsMeta } from '~/config/sharePreviewDetails'

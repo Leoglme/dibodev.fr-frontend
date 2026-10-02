@@ -22,6 +22,7 @@
           :description="service.description"
           :price="service.price"
           :accentColor="service.palette.color"
+          :linkTo="service.pageRoute"
         >
           <template #icon>
             <DibodevServiceIcon :serviceIconName="service.icon" />
@@ -50,6 +51,7 @@ type HomeService = {
   price: string
   icon: DibodevServiceIconName
   palette: DibodevAccentPalette
+  pageRoute: string
 }
 
 /** Service keys (i18n `home.services.items.*`) paired with their icon. */
@@ -58,6 +60,10 @@ const SERVICE_ICONS: Record<string, DibodevServiceIconName> = {
   website: 'website-content',
   mobile: 'mobile',
   aiAutomation: 'ai',
+}
+/** Services presented on a page of their own: the card title links to it. */
+const SERVICE_PAGE_ROUTE_NAMES: Record<string, string> = {
+  software: 'custom-business-software',
 }
 
 /* I18N */
@@ -74,6 +80,7 @@ const services: ComputedRef<HomeService[]> = computed((): HomeService[] =>
       price: t(`home.services.items.${key}.price`),
       icon,
       palette: getAccentPalette(index),
+      pageRoute: SERVICE_PAGE_ROUTE_NAMES[key] ? localePath(SERVICE_PAGE_ROUTE_NAMES[key]) : '',
     }),
   ),
 )

@@ -1003,6 +1003,10 @@
         "question": "What if existing software is enough?",
         "answer": "I will tell you on the first call. Custom software only makes sense when off-the-shelf tools do not fit the way you work."
       },
+      "vocabulary": {
+        "question": "Business application, business software, custom tool: what is the difference?",
+        "answer": "None in practice: all three mean software designed around the work of one specific company, such as scheduling, stock, quotes or time tracking. When the tool runs in a browser, it is also called a business web application."
+      },
       "eyebrow": "FAQ"
     },
     "articles": {

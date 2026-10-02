@@ -65,7 +65,15 @@
     :collapsedRowCount="props.page.comparison.rowsShownOnSmallScreens"
     tone="offWhite"
     :trackingLocation="props.trackingLocation"
-  />
+  >
+    <template #footer>
+      <DibodevToolTeaser
+        :teaser="BUSINESS_SOFTWARE_PAGE_TEASER"
+        :trackingLocation="props.trackingLocation"
+        tone="white"
+      />
+    </template>
+  </DibodevComparisonTableSection>
 
   <DibodevProjectSpotlightSection
     :eyebrow="props.page.project.eyebrow"
@@ -121,6 +129,8 @@ import { useArticlesWithTranslations } from '~/composables/useArticlesWithTransl
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { PERSON_ID, ORGANIZATION_ID } from '~/config/schema'
 import { StoryblokImageUtils } from '~/core/utils/StoryblokImageUtils'
+import DibodevToolTeaser from '~/components/data-displays/DibodevToolTeaser.vue'
+import { BUSINESS_SOFTWARE_PAGE_TEASER } from '~/core/constants/businessSoftwarePageTeaser'
 
 const SITE_URL: string = 'https://dibodev.fr'
 const STORYBLOK_ASSET_HOST: string = 'a.storyblok.com'

@@ -1003,6 +1003,10 @@
         "question": "¿Y si un programa existente es suficiente?",
         "answer": "Te lo digo en la primera conversación. Un software a medida solo tiene sentido si los programas del mercado no se adaptan a tu forma de trabajar."
       },
+      "vocabulary": {
+        "question": "Aplicación de gestión, software de gestión, herramienta a medida: ¿cuál es la diferencia?",
+        "answer": "Ninguna en la práctica: son palabras para un software diseñado para el trabajo de una empresa concreta, como la planificación, el stock, los presupuestos o el control de horas. Cuando la herramienta se usa en un navegador, también se habla de aplicación web de gestión."
+      },
       "eyebrow": "FAQ"
     },
     "articles": {

@@ -64,6 +64,10 @@ import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { useProjectCaseStudy } from '~/composables/useProjectCaseStudy'
 import { useToolTeasers } from '~/composables/useToolTeasers'
 import { TOOL_TEASERS_BY_PROJECT_SLUG } from '~/core/constants/tools/toolTeasers'
+import {
+  BUSINESS_SOFTWARE_CATEGORY_KEY,
+  BUSINESS_SOFTWARE_PAGE_TEASER,
+} from '~/core/constants/businessSoftwarePageTeaser'
 import DibodevProjectLandingSection from '~/components/sections/DibodevProjectLandingSection.vue'
 import DibodevProjectGallerySection from '~/components/sections/DibodevProjectGallerySection.vue'
 import DibodevProjectCaseStudySection from '~/components/sections/DibodevProjectCaseStudySection.vue'
@@ -118,9 +122,14 @@ const currentProjectComputed: ComputedRef<DibodevProject | null> = computed(
 )
 
 const caseStudy: ComputedRef<DibodevProjectCaseStudy | null> = useProjectCaseStudy(projectName)
-const toolTeasers: ComputedRef<DibodevToolTeaserContent[]> = useToolTeasers((): DibodevToolTeaserContent[] =>
-  TOOL_TEASERS_BY_PROJECT_SLUG[projectName] ? [TOOL_TEASERS_BY_PROJECT_SLUG[projectName]] : [],
-)
+const toolTeasers: ComputedRef<DibodevToolTeaserContent[]> = useToolTeasers((): DibodevToolTeaserContent[] => {
+  const projectToolTeasers: DibodevToolTeaserContent[] = TOOL_TEASERS_BY_PROJECT_SLUG[projectName]
+    ? [TOOL_TEASERS_BY_PROJECT_SLUG[projectName]]
+    : []
+  const isBusinessSoftwareProject: boolean =
+    currentProjectComputed.value?.categories.includes(BUSINESS_SOFTWARE_CATEGORY_KEY) ?? false
+  return isBusinessSoftwareProject ? [...projectToolTeasers, BUSINESS_SOFTWARE_PAGE_TEASER] : projectToolTeasers
+})
 
 /** Trail: home, projects, the first category listing, then the project short name. */
 const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => {

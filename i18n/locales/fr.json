@@ -1003,6 +1003,10 @@
         "question": "Et si un logiciel existant suffit ?",
         "answer": "Je vous le dis dès le premier échange. Un outil sur mesure n'a de sens que si les logiciels du marché ne collent pas à votre façon de travailler."
       },
+      "vocabulary": {
+        "question": "Application métier, logiciel métier, outil métier : quelle différence ?",
+        "answer": "Aucune en pratique : ces mots désignent un logiciel conçu pour le travail d'une entreprise précise, comme le planning, le stock, les devis ou le suivi du temps. On parle aussi d'applicatif métier, ou d'application web métier quand l'outil s'utilise dans un navigateur."
+      },
       "eyebrow": "FAQ"
     },
     "articles": {

@@ -6,7 +6,10 @@
 
     <div class="grid gap-2.5">
       <h3 class="text-lg leading-snug font-medium text-gray-100">
-        {{ props.title }}
+        <NuxtLink v-if="props.linkTo" :to="props.linkTo" class="hover:text-primary transition-colors">
+          {{ props.title }}
+        </NuxtLink>
+        <template v-else>{{ props.title }}</template>
       </h3>
       <p class="text-[15px] leading-6 text-gray-200">
         {{ props.description }}
@@ -45,6 +48,10 @@ const props: DibodevServiceItemProps = defineProps({
   accentColor: {
     type: String as PropType<string>,
     default: '#5b4bd0',
+  },
+  linkTo: {
+    type: String as PropType<string>,
+    default: '',
   },
 })
 </script>

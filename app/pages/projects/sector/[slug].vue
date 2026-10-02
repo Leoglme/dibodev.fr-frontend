@@ -32,7 +32,11 @@
       </template>
     </DibodevSectorIntroSection>
 
-    <DibodevProjectsSection :initial-projects="projectsBySector" />
+    <DibodevProjectsSection :initial-projects="projectsBySector">
+      <template v-if="shouldShowBusinessSoftwareTeaser" #footer>
+        <DibodevToolTeaser :teaser="BUSINESS_SOFTWARE_PAGE_TEASER" trackingLocation="sector" tone="white" />
+      </template>
+    </DibodevProjectsSection>
 
     <DibodevProjectTaxonomySection
       :eyebrow="$t('projects.hub.typesEyebrow')"
@@ -82,6 +86,11 @@ import { useProjectsWithTranslations } from '~/composables/useProjectsWithTransl
 import type { StoryblokSectorContent } from '~/services/types/storyblokSector'
 import { SECTEURS_STORYBLOK_FOLDER, normalizeSectorContent } from '~/services/types/storyblokSector'
 import { StoryblokService } from '~/services/storyblokService'
+import DibodevToolTeaser from '~/components/data-displays/DibodevToolTeaser.vue'
+import {
+  BUSINESS_SOFTWARE_PAGE_TEASER,
+  BUSINESS_SOFTWARE_RELATED_SECTOR_KEYS,
+} from '~/core/constants/businessSoftwarePageTeaser'
 import { StoryblokRichtextUtils } from '~/core/utils/StoryblokRichtextUtils'
 import type { RouteLocationNormalizedLoadedGeneric } from '#vue-router'
 
@@ -103,6 +112,7 @@ if (sectorKey === null) {
 
 /** Contenu de la page secteur depuis Storyblok. On garde le contenu brut pour convertir l’intro en HTML côté client. */
 const sectorStorySlug: string = `${SECTEURS_STORYBLOK_FOLDER}/${sectorKey}`
+const shouldShowBusinessSoftwareTeaser: boolean = BUSINESS_SOFTWARE_RELATED_SECTOR_KEYS.includes(sectorKey)
 
 const sectorDataKey: string = `sector-page-${currentLocale}-${sectorKey}`
 

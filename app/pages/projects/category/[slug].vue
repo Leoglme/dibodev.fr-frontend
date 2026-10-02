@@ -32,7 +32,11 @@
       </template>
     </DibodevSectorIntroSection>
 
-    <DibodevProjectsSection :initial-projects="projectsByCategory" />
+    <DibodevProjectsSection :initial-projects="projectsByCategory">
+      <template v-if="shouldShowBusinessSoftwareTeaser" #footer>
+        <DibodevToolTeaser :teaser="BUSINESS_SOFTWARE_PAGE_TEASER" trackingLocation="category" tone="white" />
+      </template>
+    </DibodevProjectsSection>
 
     <DibodevProjectTaxonomySection
       :eyebrow="$t('projects.hub.sectorsEyebrow')"
@@ -82,6 +86,11 @@ import { useProjectsWithTranslations } from '~/composables/useProjectsWithTransl
 import type { StoryblokCategoryContent } from '~/services/types/storyblokCategory'
 import { CATEGORIES_STORYBLOK_FOLDER, normalizeCategoryContent } from '~/services/types/storyblokCategory'
 import { StoryblokService } from '~/services/storyblokService'
+import DibodevToolTeaser from '~/components/data-displays/DibodevToolTeaser.vue'
+import {
+  BUSINESS_SOFTWARE_PAGE_TEASER,
+  BUSINESS_SOFTWARE_RELATED_CATEGORY_KEYS,
+} from '~/core/constants/businessSoftwarePageTeaser'
 import { StoryblokRichtextUtils } from '~/core/utils/StoryblokRichtextUtils'
 import type { RouteLocationNormalizedLoadedGeneric } from '#vue-router'
 
@@ -102,6 +111,7 @@ if (categoryKey === null) {
 }
 
 const categoryStorySlug: string = `${CATEGORIES_STORYBLOK_FOLDER}/${categoryKey}`
+const shouldShowBusinessSoftwareTeaser: boolean = BUSINESS_SOFTWARE_RELATED_CATEGORY_KEYS.includes(categoryKey)
 
 const categoryDataKey: string = `category-page-${currentLocale}-${categoryKey}`
 
