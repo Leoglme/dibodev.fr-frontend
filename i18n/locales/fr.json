@@ -267,13 +267,6 @@
       "titlePart1": "Un logiciel de gestion ou un site web ",
       "titleHighlight1": "sur mesure",
       "titlePart2": " pour votre entreprise.",
-      "showcase": {
-        "label": "Aperçu de projets livrés",
-        "roleDescription": "carrousel",
-        "previous": "Projet précédent",
-        "next": "Projet suivant",
-        "goTo": "Voir {name}"
-      },
       "trades": {
         "label": "Des outils sur mesure pour chaque métier",
         "intro": "Un outil sur mesure pour",
@@ -964,7 +957,69 @@
       "ctaSecondary": "Voir les tarifs",
       "titlePart1": "Développeur d'application métier ",
       "titleHighlight1": "sur mesure",
-      "titlePart2": " à Rennes"
+      "titlePart2": " à Rennes",
+      "slides": {
+        "label": "Des logiciels sur mesure, métier par métier",
+        "needSuffix": ", pour {trade}.",
+        "items": {
+          "services": {
+            "pill": "Entreprise de services",
+            "trade": "une entreprise de services",
+            "need": "Suivi des prospects et relances automatiques",
+            "photoAlt": "Une gérante au téléphone dans son bureau",
+            "screenshotAlt": "Écran de création d'une automatisation de prospection"
+          },
+          "sailingSchool": {
+            "pill": "École de voile",
+            "trade": "une école de voile",
+            "need": "Réservations en ligne et planning",
+            "photoAlt": "Deux petits voiliers d'école sur une mer turquoise",
+            "screenshotAlt": "Planning de réservation sur ordinateur et téléphone"
+          },
+          "stock": {
+            "pill": "PME",
+            "trade": "une PME",
+            "need": "Stock et inventaire",
+            "photoAlt": "Une employée en gilet jaune contrôle des cartons, fiche d'inventaire en main",
+            "screenshotAlt": "Fiche produit d'un logiciel de gestion de stock"
+          },
+          "drivingSchool": {
+            "pill": "Auto-école",
+            "trade": "une auto-école",
+            "need": "Planning des leçons et des moniteurs",
+            "photoAlt": "Un moniteur d'auto-école souriant à côté de son élève au volant",
+            "screenshotAlt": "Planning mensuel des leçons de conduite"
+          },
+          "cardShop": {
+            "pill": "Boutique Pokémon",
+            "trade": "une boutique de cartes Pokémon",
+            "need": "Collection, estimation et vente en ligne",
+            "photoAlt": "Vitrines de cartes Pokémon dans une boutique",
+            "screenshotAlt": "Tableau de bord d'une collection de cartes"
+          },
+          "radiology": {
+            "pill": "Radiologie",
+            "trade": "un cabinet de radiologie",
+            "need": "Aide au diagnostic par IA sur radiographies",
+            "photoAlt": "Une médecin examine une radiographie du thorax",
+            "screenshotAlt": "Résultat d'analyse d'une radiographie par l'IA"
+          },
+          "construction": {
+            "pill": "Bâtiment",
+            "trade": "une entreprise du bâtiment",
+            "need": "Feuilles de temps des équipes terrain",
+            "photoAlt": "Une équipe de chantier réunie autour des plans",
+            "screenshotAlt": "Feuille de temps sur téléphone"
+          },
+          "developers": {
+            "pill": "Développeurs",
+            "trade": "une équipe de développeurs",
+            "need": "Claude Code et Cursor qui travaillent la nuit",
+            "photoAlt": "Un développeur travaille de nuit devant deux écrans de code",
+            "screenshotAlt": "Tableau de bord des machines et des tâches de nuit"
+          }
+        }
+      }
     },
     "tools": {
       "title": "Les outils que je développe",

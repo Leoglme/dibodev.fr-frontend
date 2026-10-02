@@ -5,9 +5,9 @@
     :aria-roledescription="$t('photoSlideshow.roleDescription')"
     :aria-label="props.accessibleName"
     @pointerenter="onPointerEnter"
-    @pointerleave="isHoveredWithMouse = false"
+    @pointerleave="onPointerLeave"
     @focusin="onFocusIn"
-    @focusout="hasKeyboardFocus = false"
+    @focusout="onFocusOut"
   >
     <div class="bg-accent-tint absolute inset-0 bottom-1/6 left-1/4 rounded-4xl lg:bottom-1/8" aria-hidden="true" />
 
@@ -36,7 +36,7 @@
         type="button"
         class="focus-visible:ring-primary absolute inset-0 cursor-pointer touch-pan-y rounded-[inherit] select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-inset"
         :aria-label="$t('photoSlideshow.next')"
-        @click="onPhotoClick"
+        @click="onPictureClick"
         @pointerdown="onPointerDown"
         @pointerup="onPointerUp"
         @pointercancel="onPointerCancel"
@@ -87,16 +87,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue'
-import type { ComputedRef, PropType, Ref } from 'vue'
+import type { PropType } from 'vue'
 import type {
   DibodevPhotoSlideshowNavigation,
-  DibodevPhotoSlideshowNavigationMethod,
   DibodevPhotoSlideshowProps,
   DibodevPhotoSlideshowSlide,
 } from '~/core/types/DibodevPhotoSlideshow'
-
-type SwipeStartPoint = { x: number; y: number }
+import { useSlideshow } from '~/composables/useSlideshow'
 
 /** Framed photo fading from one slide to the next (auto-play, click or swipe), with a caption card and progress markers over it. */
 const props: DibodevPhotoSlideshowProps = defineProps({
@@ -118,140 +115,30 @@ const emit: (event: 'navigate', navigation: DibodevPhotoSlideshowNavigation) => 
   (event: 'navigate', navigation: DibodevPhotoSlideshowNavigation): void
 }>()
 
-const SWIPE_MIN_DISTANCE_PX: number = 40
-/** A swipe is followed by a click on some browsers: it is ignored during this delay. */
-const CLICK_AFTER_SWIPE_DELAY_MS: number = 400
 const IMAGE_WIDTH: number = 960
 const IMAGE_HEIGHT: number = 1040
 const IMAGE_SIZES: string =
   '(min-width: 1280px) 480px, (min-width: 1024px) 342px, (min-width: 640px) 470px, calc(100vw - 90px)'
 
-let swipeStartPoint: SwipeStartPoint | null = null
-let lastSwipeTimestamp: number = 0
-
-/* REFS */
-const activeIndex: Ref<number> = ref(0)
-const isHoveredWithMouse: Ref<boolean> = ref(false)
-const hasKeyboardFocus: Ref<boolean> = ref(false)
-const isAutoplayEnabled: Ref<boolean> = ref(false)
-const hasMounted: Ref<boolean> = ref(false)
-
-/* COMPUTED */
-const hasSeveralSlides: ComputedRef<boolean> = computed((): boolean => props.slides.length > 1)
-
-const activeSlide: ComputedRef<DibodevPhotoSlideshowSlide> = computed(
-  (): DibodevPhotoSlideshowSlide => props.slides[activeIndex.value] ?? props.slides[0]!,
+const {
+  activeIndex,
+  activeSlide,
+  renderedSlides,
+  hasSeveralSlides,
+  isAutoplayRunning,
+  goTo,
+  onPointerEnter,
+  onPointerLeave,
+  onFocusIn,
+  onFocusOut,
+  onPictureClick,
+  onPointerDown,
+  onPointerUp,
+  onPointerCancel,
+} = useSlideshow(
+  (): DibodevPhotoSlideshowSlide[] => props.slides,
+  (navigation: DibodevPhotoSlideshowNavigation): void => emit('navigate', navigation),
 )
-
-/** Only the first photo is rendered on the server, so the other ones never delay it. */
-const renderedSlides: ComputedRef<DibodevPhotoSlideshowSlide[]> = computed((): DibodevPhotoSlideshowSlide[] =>
-  hasMounted.value ? props.slides : props.slides.slice(0, 1),
-)
-
-const isAutoplayRunning: ComputedRef<boolean> = computed(
-  (): boolean => isAutoplayEnabled.value && !isHoveredWithMouse.value && !hasKeyboardFocus.value,
-)
-
-/* METHODS */
-/**
- * Shows a slide, wrapping around at both ends, and reports the change when the visitor made it.
- * @param {number} index - Target slide index (may be out of range).
- * @param {DibodevPhotoSlideshowNavigationMethod | null} [method=null] - How the visitor asked for it, or null for auto-play.
- * @returns {void}
- */
-function goTo(index: number, method: DibodevPhotoSlideshowNavigationMethod | null = null): void {
-  const count: number = props.slides.length
-  if (count === 0) return
-  activeIndex.value = ((index % count) + count) % count
-  if (method) emit('navigate', { slideId: activeSlide.value.id, method })
-}
-
-/**
- * Enables auto-play when there are several slides and the visitor accepts motion (client only).
- * @returns {void}
- */
-function refreshAutoplay(): void {
-  if (!import.meta.client) return
-  const prefersReducedMotion: boolean = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  isAutoplayEnabled.value = !prefersReducedMotion && hasSeveralSlides.value
-}
-
-/**
- * Pauses auto-play under a mouse pointer only: a finger never leaves the slideshow the way a mouse does.
- * @param {PointerEvent} event - The pointer enter event.
- * @returns {void}
- */
-function onPointerEnter(event: PointerEvent): void {
-  if (event.pointerType === 'mouse') isHoveredWithMouse.value = true
-}
-
-/**
- * Pauses auto-play when the focus comes from the keyboard, not from a click or a tap.
- * @param {FocusEvent} event - The focus in event.
- * @returns {void}
- */
-function onFocusIn(event: FocusEvent): void {
-  hasKeyboardFocus.value = event.target instanceof HTMLElement && event.target.matches(':focus-visible')
-}
-
-/**
- * Shows the next slide on a click on the photo, unless the click only ends a swipe.
- * @returns {void}
- */
-function onPhotoClick(): void {
-  if (performance.now() - lastSwipeTimestamp < CLICK_AFTER_SWIPE_DELAY_MS) return
-  goTo(activeIndex.value + 1, 'photo')
-}
-
-/**
- * Remembers where a pointer gesture starts on the photo.
- * @param {PointerEvent} event - The pointer down event.
- * @returns {void}
- */
-function onPointerDown(event: PointerEvent): void {
-  swipeStartPoint = { x: event.clientX, y: event.clientY }
-}
-
-/**
- * Shows the next or previous slide when the gesture that ends is a horizontal swipe.
- * @param {PointerEvent} event - The pointer up event.
- * @returns {void}
- */
-function onPointerUp(event: PointerEvent): void {
-  const startPoint: SwipeStartPoint | null = swipeStartPoint
-  swipeStartPoint = null
-  if (!startPoint) return
-  const horizontalDistance: number = event.clientX - startPoint.x
-  const verticalDistance: number = event.clientY - startPoint.y
-  const isHorizontalSwipe: boolean =
-    Math.abs(horizontalDistance) >= SWIPE_MIN_DISTANCE_PX && Math.abs(horizontalDistance) > Math.abs(verticalDistance)
-  if (!isHorizontalSwipe) return
-  lastSwipeTimestamp = performance.now()
-  goTo(activeIndex.value + (horizontalDistance < 0 ? 1 : -1), 'swipe')
-}
-
-/**
- * Forgets the gesture in progress when the browser takes it over (vertical scroll).
- * @returns {void}
- */
-function onPointerCancel(): void {
-  swipeStartPoint = null
-}
-
-/* WATCHERS */
-watch(
-  (): number => props.slides.length,
-  (): void => {
-    activeIndex.value = 0
-    refreshAutoplay()
-  },
-)
-
-/* LIFECYCLE */
-onMounted((): void => {
-  hasMounted.value = true
-  refreshAutoplay()
-})
 </script>
 
 <style scoped>

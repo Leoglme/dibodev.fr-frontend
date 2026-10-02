@@ -267,13 +267,6 @@
       "titlePart1": "Un software de gestión o un sitio web ",
       "titleHighlight1": "a medida",
       "titlePart2": " para tu empresa.",
-      "showcase": {
-        "label": "Vista previa de proyectos entregados",
-        "roleDescription": "carrusel",
-        "previous": "Proyecto anterior",
-        "next": "Proyecto siguiente",
-        "goTo": "Ver {name}"
-      },
       "trades": {
         "label": "Herramientas a medida para cada oficio",
         "intro": "Una herramienta a medida para",
@@ -964,7 +957,69 @@
       "ctaSecondary": "Ver las tarifas",
       "titlePart1": "Desarrollador de software de gestión ",
       "titleHighlight1": "a medida",
-      "titlePart2": " en Rennes"
+      "titlePart2": " en Rennes",
+      "slides": {
+        "label": "Software a medida, oficio por oficio",
+        "needSuffix": ", para {trade}.",
+        "items": {
+          "services": {
+            "pill": "Empresa de servicios",
+            "trade": "una empresa de servicios",
+            "need": "Seguimiento de prospectos y recordatorios automáticos",
+            "photoAlt": "Una gerente al teléfono en su oficina",
+            "screenshotAlt": "Pantalla de creación de una automatización de prospección"
+          },
+          "sailingSchool": {
+            "pill": "Escuela de vela",
+            "trade": "una escuela de vela",
+            "need": "Reservas en línea y planificación",
+            "photoAlt": "Dos pequeños veleros de escuela en un mar turquesa",
+            "screenshotAlt": "Planificador de reservas en ordenador y teléfono"
+          },
+          "stock": {
+            "pill": "Pyme",
+            "trade": "una pyme",
+            "need": "Stock e inventario",
+            "photoAlt": "Una empleada con chaleco reflectante revisa cajas con una hoja de inventario",
+            "screenshotAlt": "Ficha de producto de un software de gestión de stock"
+          },
+          "drivingSchool": {
+            "pill": "Autoescuela",
+            "trade": "una autoescuela",
+            "need": "Planificación de clases y profesores",
+            "photoAlt": "Un profesor de autoescuela sonriente junto a su alumna al volante",
+            "screenshotAlt": "Planificador mensual de las clases de conducir"
+          },
+          "cardShop": {
+            "pill": "Tienda Pokémon",
+            "trade": "una tienda de cartas Pokémon",
+            "need": "Colección, tasación y venta en línea",
+            "photoAlt": "Vitrinas de cartas Pokémon en una tienda",
+            "screenshotAlt": "Panel de una colección de cartas"
+          },
+          "radiology": {
+            "pill": "Radiología",
+            "trade": "un gabinete de radiología",
+            "need": "Ayuda al diagnóstico por IA en radiografías",
+            "photoAlt": "Una médica examina una radiografía de tórax",
+            "screenshotAlt": "Resultado del análisis de una radiografía por IA"
+          },
+          "construction": {
+            "pill": "Construcción",
+            "trade": "una empresa de construcción",
+            "need": "Partes de horas de los equipos de obra",
+            "photoAlt": "Un equipo de obra reunido alrededor de los planos",
+            "screenshotAlt": "Parte de horas en el teléfono"
+          },
+          "developers": {
+            "pill": "Desarrolladores",
+            "trade": "un equipo de desarrolladores",
+            "need": "Claude Code y Cursor trabajando de noche",
+            "photoAlt": "Un desarrollador trabaja de noche frente a dos pantallas de código",
+            "screenshotAlt": "Panel de las máquinas y las tareas nocturnas"
+          }
+        }
+      }
     },
     "tools": {
       "title": "Las herramientas que desarrollo",

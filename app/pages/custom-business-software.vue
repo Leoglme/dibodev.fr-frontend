@@ -15,7 +15,11 @@
     :decorated="true"
   >
     <template #aside>
-      <DibodevHeroShowcase :slides="showcaseSlides" />
+      <DibodevTradeToolSlideshow
+        :slides="heroSlides"
+        :accessibleName="t('businessSoftwarePage.hero.slides.label')"
+        @navigate="onHeroSlideNavigation"
+      />
     </template>
   </DibodevLandingSection>
   <DibodevBusinessSoftwareToolsSection />
@@ -85,7 +89,9 @@ import type {
   DibodevComparisonRow,
   DibodevComparisonState,
 } from '~/core/types/DibodevComparisonTableSection'
-import type { DibodevHeroShowcaseSlide, DibodevShowcaseProjectEntry } from '~/core/types/DibodevHeroShowcase'
+import type { DibodevPhotoSlideshowNavigation } from '~/core/types/DibodevPhotoSlideshow'
+import type { DibodevTradeToolSlide } from '~/core/types/DibodevTradeToolSlideshow'
+import type { DibodevBusinessSoftwareHeroSlide } from '~/core/types/DibodevBusinessSoftwareHeroSlide'
 import type { ComputedRef } from 'vue'
 import type { DibodevArticle } from '~/core/types/DibodevArticle'
 import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
@@ -104,7 +110,7 @@ import DibodevTestimonialSection from '~/components/sections/DibodevTestimonialS
 import DibodevFaqSection from '~/components/sections/DibodevFaqSection.vue'
 import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
-import DibodevHeroShowcase from '~/components/data-displays/DibodevHeroShowcase.vue'
+import DibodevTradeToolSlideshow from '~/components/data-displays/DibodevTradeToolSlideshow.vue'
 import DibodevComparisonTableSection from '~/components/sections/DibodevComparisonTableSection.vue'
 import DibodevBudgetEstimatorSection from '~/components/sections/DibodevBudgetEstimatorSection.vue'
 import DibodevToolTeaserList from '~/components/data-displays/DibodevToolTeaserList.vue'
@@ -112,10 +118,15 @@ import { MALT_PROFILE_URL } from '~/config/contact'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { useHeroStats } from '~/composables/useHeroStats'
-import { useProjectShowcaseSlides } from '~/composables/useProjectShowcaseSlides'
+import { useTracking } from '~/composables/useTracking'
 import { usePageShareImage } from '~/composables/usePageShareImage'
 import { useToolTeasers } from '~/composables/useToolTeasers'
 import { BUSINESS_SOFTWARE_TOOL_TEASERS } from '~/core/constants/tools/toolTeasers'
+import {
+  BUSINESS_SOFTWARE_HERO_PHOTO_WIDTHS,
+  BUSINESS_SOFTWARE_HERO_SLIDES,
+} from '~/core/constants/businessSoftwareHeroSlides'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 definePageMeta({
   i18n: {
@@ -149,14 +160,10 @@ const COMPARISON_STATES: Record<string, DibodevComparisonState[]> = {
   evolutions: ['no', 'partial', 'yes'],
   delay: ['yes', 'partial', 'partial'],
 }
-/** Real screenshots of business tools shown in the hero carousel. */
-const SHOWCASE_PROJECTS: DibodevShowcaseProjectEntry[] = [
-  { slug: 'stockpme', staticPath: '/images/projects/stockpme-card.webp' },
-  { slug: 'goupixdex', media: 'media2' },
-  { slug: 'signdex', media: 'media1' },
-]
+const HERO_IMAGES_FOLDER: string = '/images/business-software/hero'
 
 const { t } = useI18n()
+const { track } = useTracking()
 usePageShareImage('businessSoftware')
 const localePath = useLocalePath()
 const { data: articlesPool } = await useArticlesWithTranslations({ perPage: ARTICLES_POOL_SIZE })
@@ -180,10 +187,51 @@ const comparisonRows: ComputedRef<DibodevComparisonRow[]> = computed((): Dibodev
     }),
   ),
 )
-const showcaseSlides: ComputedRef<DibodevHeroShowcaseSlide[]> = await useProjectShowcaseSlides(SHOWCASE_PROJECTS)
+const heroSlides: ComputedRef<DibodevTradeToolSlide[]> = computed((): DibodevTradeToolSlide[] =>
+  BUSINESS_SOFTWARE_HERO_SLIDES.map((slide: DibodevBusinessSoftwareHeroSlide): DibodevTradeToolSlide => {
+    const texts: string = `businessSoftwarePage.hero.slides.items.${slide.id}`
+    return {
+      id: slide.id,
+      photoUrl: buildHeroPhotoUrl(slide.fileSlug, BUSINESS_SOFTWARE_HERO_PHOTO_WIDTHS[0]!),
+      photoSrcset: BUSINESS_SOFTWARE_HERO_PHOTO_WIDTHS.map(
+        (width: number): string => `${buildHeroPhotoUrl(slide.fileSlug, width)} ${width}w`,
+      ).join(', '),
+      photoAlt: t(`${texts}.photoAlt`),
+      screenshotUrl: `${HERO_IMAGES_FOLDER}/${slide.fileSlug}-screen.webp`,
+      screenshotAlt: t(`${texts}.screenshotAlt`),
+      hasTransparentScreenshot: slide.hasTransparentScreenshot,
+      tradeLabel: t(`${texts}.pill`),
+      need: t(`${texts}.need`),
+      needSuffix: t('businessSoftwarePage.hero.slides.needSuffix', { trade: t(`${texts}.trade`) }),
+    }
+  }),
+)
 const toolTeasers: ComputedRef<DibodevToolTeaserContent[]> = useToolTeasers(
   (): DibodevToolTeaserContent[] => BUSINESS_SOFTWARE_TOOL_TEASERS,
 )
+
+/**
+ * Builds the URL of a hero photo file at a given width.
+ * @param {string} fileSlug - Slug of the photo files.
+ * @param {number} width - Width of the file, in pixels.
+ * @returns {string} The URL of the photo, served from `public/images/business-software/hero`.
+ */
+function buildHeroPhotoUrl(fileSlug: string, width: number): string {
+  return `${HERO_IMAGES_FOLDER}/${fileSlug}-photo-${width}.webp`
+}
+
+/**
+ * Tracks a slide change made by the visitor in the hero slideshow (auto-play is not reported).
+ * @param {DibodevPhotoSlideshowNavigation} navigation - The slide now displayed and how the visitor reached it.
+ * @returns {void}
+ */
+function onHeroSlideNavigation(navigation: DibodevPhotoSlideshowNavigation): void {
+  track(TRACKING_EVENTS.photoSlideshowNavigated, {
+    slide: navigation.slideId,
+    method: navigation.method,
+    location: 'business_software_hero',
+  })
+}
 
 const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => [
   { label: t('nav.businessSoftware'), to: null },

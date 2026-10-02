@@ -267,13 +267,6 @@
       "titlePart1": "Custom management software or a website ",
       "titleHighlight1": "for your business",
       "titlePart2": ".",
-      "showcase": {
-        "label": "Preview of delivered projects",
-        "roleDescription": "carousel",
-        "previous": "Previous project",
-        "next": "Next project",
-        "goTo": "View {name}"
-      },
       "trades": {
         "label": "Custom tools for every trade",
         "intro": "A custom tool for",
@@ -964,7 +957,69 @@
       "ctaSecondary": "See pricing",
       "titlePart1": "",
       "titleHighlight1": "Custom business software",
-      "titlePart2": " developer in Rennes"
+      "titlePart2": " developer in Rennes",
+      "slides": {
+        "label": "Custom software, trade by trade",
+        "needSuffix": ", for {trade}.",
+        "items": {
+          "services": {
+            "pill": "Service company",
+            "trade": "a service company",
+            "need": "Lead tracking and automatic follow-ups",
+            "photoAlt": "A business owner on the phone in her office",
+            "screenshotAlt": "Screen for creating a prospecting automation"
+          },
+          "sailingSchool": {
+            "pill": "Sailing school",
+            "trade": "a sailing school",
+            "need": "Online bookings and planning",
+            "photoAlt": "Two small training sailboats on a turquoise sea",
+            "screenshotAlt": "Booking planner on a laptop and a phone"
+          },
+          "stock": {
+            "pill": "SMB",
+            "trade": "a small business",
+            "need": "Stock and inventory",
+            "photoAlt": "A worker in a high-visibility vest checks boxes with an inventory sheet",
+            "screenshotAlt": "Product sheet of an inventory management software"
+          },
+          "drivingSchool": {
+            "pill": "Driving school",
+            "trade": "a driving school",
+            "need": "Lesson and instructor planning",
+            "photoAlt": "A smiling driving instructor next to his student at the wheel",
+            "screenshotAlt": "Monthly planner of driving lessons"
+          },
+          "cardShop": {
+            "pill": "Pokémon shop",
+            "trade": "a Pokémon card shop",
+            "need": "Collection, pricing and online sales",
+            "photoAlt": "Display cases of Pokémon cards in a shop",
+            "screenshotAlt": "Dashboard of a card collection"
+          },
+          "radiology": {
+            "pill": "Radiology",
+            "trade": "a radiology practice",
+            "need": "AI-assisted diagnosis on X-rays",
+            "photoAlt": "A doctor examines a chest X-ray",
+            "screenshotAlt": "AI analysis result of an X-ray"
+          },
+          "construction": {
+            "pill": "Construction",
+            "trade": "a construction company",
+            "need": "Timesheets for field teams",
+            "photoAlt": "A construction crew gathered around the plans",
+            "screenshotAlt": "Timesheet on a phone"
+          },
+          "developers": {
+            "pill": "Developers",
+            "trade": "a development team",
+            "need": "Claude Code and Cursor working through the night",
+            "photoAlt": "A developer works at night in front of two screens of code",
+            "screenshotAlt": "Dashboard of machines and overnight tasks"
+          }
+        }
+      }
     },
     "tools": {
       "title": "The tools I build",
