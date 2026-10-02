@@ -1,6 +1,6 @@
 {
   "categories/ia": {
-    "title": "AI Projects — Artificial Intelligence & Data",
+    "title": "Artificial intelligence projects: assistants, models and data",
     "description": "Applications leveraging machine learning, NLP, and data analysis.",
     "metaTitle": "Custom Artificial Intelligence Projects | Dibodev",
     "metaDescription": "Image analysis, natural language understanding, automations: the artificial intelligence projects built by Léo Guillaume, freelance developer in Rennes.",
@@ -20,7 +20,7 @@
     }
   },
   "categories/logiciel": {
-    "title": "Software Projects — Desktop Applications & Technical Solutions",
+    "title": "Software projects: desktop applications and internal tools",
     "description": "Software and technical applications developed to meet specific needs.",
     "metaTitle": "Custom Software Development: Completed Projects | Dibodev",
     "metaDescription": "Desktop applications, internal tools and cross-platform software built to order by Léo Guillaume, freelance developer in Rennes.",
@@ -40,7 +40,7 @@
     }
   },
   "categories/application-metier": {
-    "title": "Business Application Projects — Custom Professional Tools",
+    "title": "Business application projects: custom management tools",
     "description": "Applications designed to meet specific business needs in companies.",
     "metaTitle": "Custom Business Applications: Delivered Projects | Dibodev",
     "metaDescription": "Scheduling, stock, time tracking, booking: custom business applications delivered to small companies by Léo Guillaume, freelance developer in Rennes.",
@@ -60,7 +60,7 @@
     }
   },
   "categories/saas": {
-    "title": "SaaS Projects — Online Platforms and Tools",
+    "title": "SaaS projects: online platforms and tools",
     "description": "SaaS applications designed to digitalize processes and enhance business management.",
     "metaTitle": "SaaS Development: Online Platforms I Have Built | Dibodev",
     "metaDescription": "Booking, stock management, time tracking, prospecting: the SaaS platforms designed and built by Léo Guillaume, freelance developer in Rennes.",
@@ -80,7 +80,7 @@
     }
   },
   "categories/application-mobile": {
-    "title": "Mobile App Projects — Cross-Platform Experiences",
+    "title": "Mobile app projects: iOS, Android and cross-platform",
     "description": "Mobile and hybrid applications designed to deliver a seamless experience across all devices.",
     "metaTitle": "Mobile and Cross-Platform Apps: Projects | Dibodev",
     "metaDescription": "One codebase for mobile, desktop and web: the cross-platform applications built by Léo Guillaume, freelance developer in Rennes.",
@@ -100,7 +100,7 @@
     }
   },
   "categories/site-web": {
-    "title": "Website Projects — Custom Creation & Development",
+    "title": "Website projects: custom builds and redesigns",
     "description": "Modern, high-performance websites tailored to the specific needs of each project.",
     "metaTitle": "Custom Website Development: Completed Projects | Dibodev",
     "metaDescription": "Showcase sites, platforms and websites with editable content: the custom websites built by Léo Guillaume, freelance developer in Rennes.",

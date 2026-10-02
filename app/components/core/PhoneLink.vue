@@ -52,7 +52,7 @@ const linkClasses: ComputedRef<string> = computed((): string => {
   const variantClasses: Record<PhoneLinkVariant, string> = {
     navbar: 'text-primary hover:text-primary-dark text-[15px]',
     menu: 'text-primary hover:text-primary-dark min-h-[44px] w-full items-center justify-start text-lg',
-    footer: 'text-[15px] text-gray-200 hover:text-gray-100 lg:text-gray-100',
+    footer: 'tap-area text-[15px] text-gray-200 [--tap-area-extension:7px] hover:text-gray-100 lg:text-gray-100',
   }
   const variant: string = variantClasses[props.variant] ?? variantClasses.navbar
   return [base, variant, props.class].filter(Boolean).join(' ')

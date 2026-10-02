@@ -25,7 +25,10 @@
         </h2>
         <ul class="grid gap-3.5 lg:gap-3">
           <li v-for="link in footerLinks" :key="link.to">
-            <NuxtLink :to="link.to" class="text-[15px] leading-6 text-gray-200 transition-colors hover:text-gray-100">
+            <NuxtLink
+              :to="link.to"
+              class="tap-area inline-block text-[15px] leading-6 text-gray-200 transition-colors [--tap-area-extension:7px] hover:text-gray-100"
+            >
               {{ link.title }}
             </NuxtLink>
           </li>
@@ -42,13 +45,13 @@
           <li v-for="toolLink in toolLinks" :key="toolLink.key">
             <NuxtLink
               :to="toolLink.to"
-              class="text-[15px] leading-6 text-gray-200 transition-colors hover:text-gray-100"
+              class="tap-area inline-block text-[15px] leading-6 text-gray-200 transition-colors [--tap-area-extension:7px] hover:text-gray-100"
             >
               {{ toolLink.title }}
             </NuxtLink>
           </li>
           <li>
-            <DibodevLink :link="localePath('tools')" class="text-[15px] leading-6">
+            <DibodevLink :link="localePath('tools')" class="text-[15px] leading-6 [--tap-area-extension:7px]">
               <span>{{ $t('footer.tools.allTools') }}</span>
               <DibodevIcon name="ArrowRight" mode="stroke" :width="16" :height="16" aria-hidden="true" />
             </DibodevLink>
@@ -66,7 +69,7 @@
           <li v-for="categoryLink in categoryLinks" :key="categoryLink.key">
             <NuxtLink
               :to="categoryLink.to"
-              class="text-[15px] leading-6 text-gray-200 transition-colors hover:text-gray-100"
+              class="tap-area inline-block text-[15px] leading-6 text-gray-200 transition-colors [--tap-area-extension:7px] hover:text-gray-100"
             >
               {{ categoryLink.title }}
             </NuxtLink>
@@ -82,7 +85,7 @@
           <li>
             <a
               :href="`mailto:${CONTACT_EMAIL}`"
-              class="inline-flex items-center gap-2.5 text-[15px] leading-6 text-gray-200 transition-colors hover:text-gray-100"
+              class="tap-area inline-flex items-center gap-2.5 text-[15px] leading-6 text-gray-200 transition-colors [--tap-area-extension:7px] hover:text-gray-100"
               @click="track(TRACKING_EVENTS.contactEmail, { location: 'footer' })"
             >
               <span class="text-muted hidden shrink-0 lg:flex" aria-hidden="true">
@@ -107,7 +110,7 @@
               :href="social.link"
               target="_blank"
               rel="noopener noreferrer"
-              class="hover:text-primary inline-flex items-center gap-2 text-[15px] font-medium text-gray-100 transition-colors"
+              class="hover:text-primary tap-area inline-flex items-center gap-2 text-[15px] font-medium text-gray-100 transition-colors"
               @click="track(TRACKING_EVENTS.externalProfileClicked, { platform: social.name, location: 'footer' })"
             >
               <span>{{ social.name }}</span>

@@ -1,6 +1,6 @@
 {
   "sectors/gaming": {
-    "title": "Proyectos Gaming — Juegos web y plataformas comunitarias",
+    "title": "Proyectos gaming: juegos web y plataformas comunitarias",
     "description": "Desarrollo de juegos web y sitios dedicados a comunidades gaming y experiencias interactivas.",
     "metaTitle": "Juegos web y sitios de comunidades de jugadores | Dibodev",
     "metaDescription": "Conecta 4 jugable en línea, web de un servidor de GTA RP: los juegos web y sitios comunitarios de Léo Guillaume, desarrollador freelance en Rennes.",
@@ -20,7 +20,7 @@
     }
   },
   "sectors/reseaux-sociaux": {
-    "title": "Proyectos de Redes Sociales — Aplicaciones Comunitarias",
+    "title": "Proyectos de redes sociales: aplicaciones comunitarias",
     "description": "Desarrollo de aplicaciones sociales, comunitarias e interactivas multiplataforma.",
     "metaTitle": "Aplicaciones sociales y mensajería en tiempo real | Dibodev",
     "metaDescription": "Mensajería en tiempo real, cliente de Reddit multiplataforma: las aplicaciones sociales y comunitarias de Léo Guillaume, desarrollador freelance en Rennes.",
@@ -40,8 +40,8 @@
     }
   },
   "sectors/b2b": {
-    "title": "Proyectos B2B — Herramientas de gestión y soluciones profesionales",
-    "description": "Aplicaciones SaaS y software diseñados para satisfacer las necesidades empresariales de empresas TPE y PYMES.",
+    "title": "Proyectos B2B: herramientas de gestión para empresas",
+    "description": "Aplicaciones SaaS y software diseñados para las necesidades de gestión de pymes y microempresas.",
     "metaTitle": "Desarrollo de software de gestión B2B a medida | Dibodev",
     "metaDescription": "Aplicaciones, software y plataformas B2B a medida: herramientas para gestionar y automatizar tu actividad, por Léo Guillaume, freelance en Rennes.",
     "intro": {
@@ -60,7 +60,7 @@
     }
   },
   "sectors/logistique": {
-    "title": "Proyectos Logísticos — Gestión de inventario y trazabilidad",
+    "title": "Proyectos para la logística: gestión de stock y trazabilidad",
     "description": "Soluciones digitales para el seguimiento de inventarios, stocks y flujos de productos en empresas.",
     "metaTitle": "Software de gestión de stock a medida para pymes | Dibodev",
     "metaDescription": "Seguimiento de productos, inventarios, etiquetas QR y estadísticas: el software de gestión de stock creado para pymes por Léo Guillaume, freelance en Rennes.",
@@ -80,7 +80,7 @@
     }
   },
   "sectors/productivite": {
-    "title": "Proyectos de Productividad — Herramientas profesionales y gestión de tareas",
+    "title": "Proyectos de productividad: herramientas de gestión y tareas",
     "description": "Aplicaciones especializadas en organización, gestión del tiempo y optimización de flujos de trabajo.",
     "metaTitle": "Herramientas de productividad a medida: proyectos | Dibodev",
     "metaDescription": "Control de horas, gestión de tareas, automatización del trabajo repetitivo: las herramientas de productividad de Léo Guillaume, freelance en Rennes.",
@@ -100,7 +100,7 @@
     }
   },
   "sectors/voyage-transport": {
-    "title": "Proyectos de Viaje y Transporte — Aplicaciones de movilidad",
+    "title": "Proyectos para viajes y transporte: aplicaciones de movilidad",
     "description": "Soluciones digitales para la planificación de rutas, la movilidad y la experiencia del viajero.",
     "metaTitle": "Viajes y transporte: aplicaciones a medida | Dibodev",
     "metaDescription": "Planificación de rutas en lenguaje natural, gestión de autoescuela y clases de conducir: las aplicaciones de Léo Guillaume, desarrollador freelance en Rennes.",
@@ -120,7 +120,7 @@
     }
   },
   "sectors/sante": {
-    "title": "Proyectos de Salud — Aplicaciones y soluciones digitales médicas",
+    "title": "Proyectos para la salud: aplicaciones y soluciones médicas",
     "description": "Soluciones digitales y proyectos de inteligencia artificial aplicados al ámbito de la salud.",
     "metaTitle": "Salud y social: aplicaciones y sitios web a medida | Dibodev",
     "metaDescription": "Análisis de radiografías con inteligencia artificial, web de una empresa de servicios sociales: los proyectos de salud de Léo Guillaume, freelance en Rennes.",
@@ -140,7 +140,7 @@
     }
   },
   "sectors/immobilier": {
-    "title": "Proyectos Inmobiliarios — Aplicaciones y plataformas colaborativas",
+    "title": "Proyectos para el sector inmobiliario: aplicaciones y plataformas colaborativas",
     "description": "Herramientas digitales para simplificar la búsqueda, gestión y colaboración en torno a bienes inmuebles.",
     "metaTitle": "Inmobiliaria: aplicaciones web a medida | Dibodev",
     "metaDescription": "Anuncios centralizados, mapa interactivo y comparación de viviendas: las aplicaciones inmobiliarias de Léo Guillaume, desarrollador freelance en Rennes.",
@@ -160,7 +160,7 @@
     }
   },
   "sectors/sport-loisirs": {
-    "title": "Proyectos de Deporte y Ocio — Soluciones digitales a medida",
+    "title": "Proyectos para el deporte y el ocio: reservas y gestión a medida",
     "description": "Plataformas de reserva, herramientas de gestión y aplicaciones dedicadas a estructuras deportivas y de ocio.",
     "metaTitle": "Deporte y ocio: software de reservas a medida | Dibodev",
     "metaDescription": "Reservas en línea, planificación, pagos y gestión de equipos: las herramientas creadas para centros de deporte y ocio por Léo Guillaume, freelance en Rennes.",

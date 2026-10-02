@@ -1420,5 +1420,14 @@
     "roleDescription": "slideshow",
     "next": "Show the next photo",
     "goTo": "Show: {name}"
+  },
+  "validation": {
+    "fieldNames": {
+      "name": "name",
+      "phone": "phone",
+      "email": "email",
+      "message": "message",
+      "projectType": "project type"
+    }
   }
 }

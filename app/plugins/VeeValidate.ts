@@ -1,17 +1,17 @@
 import type { NuxtApp } from '#app'
 import { configure, defineRule } from 'vee-validate'
-import { localize, setLocale } from '@vee-validate/i18n'
+import { localize } from '@vee-validate/i18n'
 import en from '@vee-validate/i18n/dist/locale/en.json'
 import es from '@vee-validate/i18n/dist/locale/es.json'
 import fr from '@vee-validate/i18n/dist/locale/fr.json'
 import { required, email, numeric, min, max, min_value, max_value, integer, alpha_spaces } from '@vee-validate/rules'
 
-/**
- * Field names shown in validation messages, per site language (field ids are French, so French needs none).
- */
-const TRANSLATED_FIELD_NAMES: Record<'en' | 'es', Record<string, string>> = {
-  en: { nom: 'name', telephone: 'phone', 'type de projet': 'project type' },
-  es: { nom: 'nombre', telephone: 'teléfono', message: 'mensaje', 'type de projet': 'tipo de proyecto' },
+const FIELD_NAME_TRANSLATION_KEYS: Record<string, string> = {
+  nom: 'validation.fieldNames.name',
+  telephone: 'validation.fieldNames.phone',
+  email: 'validation.fieldNames.email',
+  message: 'validation.fieldNames.message',
+  'type de projet': 'validation.fieldNames.projectType',
 }
 
 export default defineNuxtPlugin(() => {
@@ -46,17 +46,18 @@ export default defineNuxtPlugin(() => {
   })
 
   // Localisation
-  configure({
-    generateMessage: localize({
-      fr,
-      en: { ...en, names: TRANSLATED_FIELD_NAMES.en },
-      es: { ...es, names: TRANSLATED_FIELD_NAMES.es },
-    }),
-  })
+  configure({ generateMessage: localize({ fr, en, es }) })
 
   watch(
     (): string => nuxtApp.$i18n.locale.value,
-    (locale: string): void => setLocale(locale),
+    (locale: string): void => {
+      const fieldNames: Record<string, string> = Object.fromEntries(
+        Object.entries(FIELD_NAME_TRANSLATION_KEYS).map(
+          ([fieldId, translationKey]: [string, string]): [string, string] => [fieldId, nuxtApp.$i18n.t(translationKey)],
+        ),
+      )
+      localize(locale, { names: fieldNames })
+    },
     { immediate: true },
   )
 })

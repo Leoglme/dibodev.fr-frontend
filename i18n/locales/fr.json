@@ -1420,5 +1420,14 @@
     "roleDescription": "diaporama",
     "next": "Afficher la photo suivante",
     "goTo": "Afficher : {name}"
+  },
+  "validation": {
+    "fieldNames": {
+      "name": "nom",
+      "phone": "téléphone",
+      "email": "email",
+      "message": "message",
+      "projectType": "type de projet"
+    }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <a
     v-if="props.externalLink"
-    class="dibodev-link inline-flex cursor-pointer items-center gap-x-1.5 font-medium decoration-2 underline-offset-4 hover:underline"
+    class="dibodev-link tap-area inline-flex cursor-pointer items-center gap-x-1.5 font-medium decoration-2 underline-offset-4 hover:underline"
     :href="href"
     target="_blank"
     rel="noopener noreferrer"
@@ -13,7 +13,7 @@
   <nuxt-link
     v-else
     :to="props.link"
-    class="dibodev-link inline-flex cursor-pointer items-center gap-x-1.5 font-medium decoration-2 underline-offset-4 hover:underline"
+    class="dibodev-link tap-area inline-flex cursor-pointer items-center gap-x-1.5 font-medium decoration-2 underline-offset-4 hover:underline"
     :style="{ color: props.color }"
   >
     <slot />

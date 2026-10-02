@@ -41,6 +41,19 @@
   }
 }
 
+/* Text links keep their size but get a taller tappable area on touch screens (`--tap-area-extension` above and below). */
+@utility tap-area {
+  @media (pointer: coarse) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      inset: calc(var(--tap-area-extension, 0.625rem) * -1) 0;
+      content: '';
+    }
+  }
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 96px;

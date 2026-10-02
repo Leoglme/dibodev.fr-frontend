@@ -1,6 +1,6 @@
 {
   "sectors/gaming": {
-    "title": "Gaming Projects — Web Games & Community Platforms",
+    "title": "Gaming projects: web games and community platforms",
     "description": "Development of web games and websites dedicated to gaming communities and interactive experiences.",
     "metaTitle": "Web Games and Gaming Community Websites | Dibodev",
     "metaDescription": "Connect 4 playable online, the website of a GTA RP server: the web games and community sites built by Léo Guillaume, freelance developer in Rennes.",
@@ -20,7 +20,7 @@
     }
   },
   "sectors/reseaux-sociaux": {
-    "title": "Social Network Projects — Community Applications",
+    "title": "Social network projects: community applications",
     "description": "Development of social, community, and interactive multi-platform applications.",
     "metaTitle": "Social Apps and Real-Time Messaging: Projects | Dibodev",
     "metaDescription": "Real-time messaging, a cross-platform Reddit client: the social and community applications built by Léo Guillaume, freelance developer in Rennes.",
@@ -40,7 +40,7 @@
     }
   },
   "sectors/b2b": {
-    "title": "B2B Projects — Management Tools & Professional Solutions",
+    "title": "B2B projects: management tools for businesses",
     "description": "SaaS applications and software designed to meet the business needs of SMEs and VSEs.",
     "metaTitle": "Custom B2B Business Software Development | Dibodev",
     "metaDescription": "Custom B2B applications, software and platforms: tools to run and automate your business, built by Léo Guillaume, freelance developer in Rennes.",
@@ -60,7 +60,7 @@
     }
   },
   "sectors/logistique": {
-    "title": "Logistics Projects — Inventory Management & Traceability",
+    "title": "Logistics projects: stock management and traceability",
     "description": "Digital solutions for stock tracking, inventories, and product flows in businesses.",
     "metaTitle": "Custom Stock Management Software for SMEs | Dibodev",
     "metaDescription": "Product tracking, inventories, QR labels and statistics: the stock management software built for SMEs by Léo Guillaume, freelance developer in Rennes.",
@@ -80,7 +80,7 @@
     }
   },
   "sectors/productivite": {
-    "title": "Productivity Projects — Business Tools & Task Management",
+    "title": "Productivity projects: business tools and task management",
     "description": "Dedicated applications for organization, time management, and workflow optimization.",
     "metaTitle": "Custom Productivity Tools: Completed Projects | Dibodev",
     "metaDescription": "Time tracking, task management, automation of repetitive work: the productivity tools built by Léo Guillaume, freelance developer in Rennes.",
@@ -100,7 +100,7 @@
     }
   },
   "sectors/voyage-transport": {
-    "title": "Travel & Transport Projects — Mobility Applications",
+    "title": "Travel and transport projects: mobility applications",
     "description": "Digital solutions for route planning, mobility, and traveler experience.",
     "metaTitle": "Travel and Transport: Custom Applications | Dibodev",
     "metaDescription": "Route planning in plain language, driving school and lesson management: the applications built by Léo Guillaume, freelance developer in Rennes.",
@@ -120,7 +120,7 @@
     }
   },
   "sectors/sante": {
-    "title": "Health Projects — Medical Digital Applications & Solutions",
+    "title": "Healthcare projects: applications and medical solutions",
     "description": "Digital solutions and artificial intelligence projects applied to the healthcare sector.",
     "metaTitle": "Health and Social Care: Custom Apps and Websites | Dibodev",
     "metaDescription": "AI analysis of chest X-rays, a website for a social services company: the health and social care projects of Léo Guillaume, freelance developer in Rennes.",
@@ -140,7 +140,7 @@
     }
   },
   "sectors/immobilier": {
-    "title": "Real Estate Projects — Collaborative Applications & Platforms",
+    "title": "Real estate projects: applications and collaborative platforms",
     "description": "Digital tools to simplify property search, management, and collaboration around real estate assets.",
     "metaTitle": "Real Estate: Custom Web Applications | Dibodev",
     "metaDescription": "Centralised listings, interactive map and home comparison: the real estate applications built by Léo Guillaume, freelance developer in Rennes.",
@@ -160,7 +160,7 @@
     }
   },
   "sectors/sport-loisirs": {
-    "title": "Sports & Leisure Projects — Custom Digital Solutions",
+    "title": "Sports and leisure projects: custom booking and management",
     "description": "Booking platforms, management tools, and dedicated applications for sports and leisure facilities.",
     "metaTitle": "Sports and Leisure: Custom Booking Software | Dibodev",
     "metaDescription": "Online booking, scheduling, payments and staff management: the tools built for sports and leisure venues by Léo Guillaume, freelance developer in Rennes.",

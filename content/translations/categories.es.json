@@ -1,6 +1,6 @@
 {
   "categories/ia": {
-    "title": "Proyectos de IA — Inteligencia Artificial y Datos",
+    "title": "Proyectos de inteligencia artificial: asistentes, modelos y datos",
     "description": "Aplicaciones que aprovechan el aprendizaje automático, el procesamiento de lenguaje natural (NLP) y el análisis de datos.",
     "metaTitle": "Proyectos de inteligencia artificial a medida | Dibodev",
     "metaDescription": "Análisis de imágenes, comprensión del lenguaje, automatizaciones: los proyectos de inteligencia artificial de Léo Guillaume, desarrollador freelance en Rennes.",
@@ -20,7 +20,7 @@
     }
   },
   "categories/logiciel": {
-    "title": "Proyectos de Software — Aplicaciones de escritorio y soluciones técnicas",
+    "title": "Proyectos de software: aplicaciones de escritorio y herramientas internas",
     "description": "Software y aplicaciones técnicas desarrolladas para satisfacer necesidades específicas.",
     "metaTitle": "Desarrollo de software a medida: proyectos realizados | Dibodev",
     "metaDescription": "Aplicaciones de escritorio, herramientas internas y software multiplataforma desarrollados a medida por Léo Guillaume, desarrollador freelance en Rennes.",
@@ -40,7 +40,7 @@
     }
   },
   "categories/application-metier": {
-    "title": "Proyectos de Aplicaciones Empresariales — Herramientas profesionales a medida",
+    "title": "Proyectos de aplicaciones de gestión: herramientas a medida",
     "description": "Aplicaciones diseñadas para satisfacer necesidades empresariales específicas en empresas.",
     "metaTitle": "Aplicaciones de gestión a medida: proyectos entregados | Dibodev",
     "metaDescription": "Planificación, stock, control de horas, reservas: aplicaciones de gestión a medida entregadas a pymes por Léo Guillaume, desarrollador freelance en Rennes.",
@@ -60,7 +60,7 @@
     }
   },
   "categories/saas": {
-    "title": "Proyectos SaaS — Plataformas y herramientas en línea",
+    "title": "Proyectos SaaS: plataformas y herramientas en línea",
     "description": "Aplicaciones SaaS diseñadas para digitalizar procesos y mejorar la gestión empresarial.",
     "metaTitle": "Desarrollo SaaS: plataformas en línea realizadas | Dibodev",
     "metaDescription": "Reservas, gestión de stock, control de horas, prospección: las plataformas SaaS diseñadas y desarrolladas por Léo Guillaume, freelance en Rennes.",
@@ -80,7 +80,7 @@
     }
   },
   "categories/application-mobile": {
-    "title": "Proyectos de Aplicaciones Móviles — Experiencias multiplataforma",
+    "title": "Proyectos de aplicaciones móviles: iOS, Android y multiplataforma",
     "description": "Aplicaciones móviles e híbridas desarrolladas para ofrecer una experiencia fluida en todos los dispositivos.",
     "metaTitle": "Aplicaciones móviles y multiplataforma: proyectos | Dibodev",
     "metaDescription": "Una sola base de código para móvil, escritorio y web: las aplicaciones multiplataforma desarrolladas por Léo Guillaume, desarrollador freelance en Rennes.",
@@ -100,7 +100,7 @@
     }
   },
   "categories/site-web": {
-    "title": "Proyectos Web — Creación y desarrollo a medida",
+    "title": "Proyectos de sitios web: creación y rediseño a medida",
     "description": "Sitios web modernos, performantes y adaptados a las necesidades específicas de cada proyecto.",
     "metaTitle": "Creación de sitios web a medida: proyectos realizados | Dibodev",
     "metaDescription": "Sitios corporativos, plataformas y webs con contenido editable: los sitios web a medida creados por Léo Guillaume, desarrollador freelance en Rennes.",
