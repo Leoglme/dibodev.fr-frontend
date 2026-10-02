@@ -17,7 +17,6 @@ declare module 'vue-i18n' {
       contactMe: string
     }
     footer: {
-      contactMe: string
       home: string
       myProjects: string
       contactPage: string

@@ -9,4 +9,6 @@ export const PROJECT_CARD_SCREENSHOT_OVERRIDES: Record<string, DibodevProjectCar
   'gestion-temps': { media: 'media2' },
   /** Both Storyblok media are animated GIFs of more than 1 MB: a still frame of the first one is served from the site. */
   stockpme: { staticPath: '/images/projects/stockpme-card.webp' },
+  /** The first media is a pale form that fades into the card; the second one is the landing page, readable at card size. */
+  devleadhunter: { media: 'media2' },
 }

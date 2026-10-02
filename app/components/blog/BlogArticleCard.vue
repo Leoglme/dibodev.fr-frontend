@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="flex flex-1 flex-col gap-3 p-6">
-        <div v-if="props.tags.length > 0" class="flex flex-wrap gap-1.5">
+        <div v-if="props.tags.length > 0" class="hidden flex-wrap gap-1.5 sm:flex">
           <DibodevBadge v-for="tag in props.tags.slice(0, 3)" :key="tag" size="sm">
             {{ tag }}
           </DibodevBadge>

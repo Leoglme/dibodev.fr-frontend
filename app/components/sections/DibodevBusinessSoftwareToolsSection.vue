@@ -99,7 +99,7 @@ import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 /** Tools of the page (i18n `businessSoftwarePage.tools.*`), with a delivered example when one exists. */
 const TOOLS: DibodevBusinessSoftwareToolConfig[] = [
-  { key: 'planning', icon: 'apps', exampleSlug: null },
+  { key: 'planning', icon: 'apps', exampleSlug: 'driving-school' },
   { key: 'stock', icon: 'cloud-storage', exampleSlug: 'stockpme' },
   { key: 'quotes', icon: 'website-content', exampleSlug: null },
   { key: 'time', icon: 'cloud-computing', exampleSlug: 'gestion-temps' },

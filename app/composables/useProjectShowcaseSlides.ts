@@ -34,11 +34,16 @@ export async function useProjectShowcaseSlides(
   /**
    * Turns a project and one of its screenshots into a slide.
    * @param {DibodevProject} project - The project.
-   * @param {string} screenshotUrl - Storyblok URL of the screenshot.
-   * @returns {DibodevHeroShowcaseSlide} The slide.
+   * @param {DibodevShowcaseProjectEntry} entry - Where the screenshot of the project comes from.
+   * @returns {DibodevHeroShowcaseSlide | null} The slide, or null when the project has no such screenshot.
    */
-  function toSlide(project: DibodevProject, screenshotUrl: string): DibodevHeroShowcaseSlide {
+  function toSlide(project: DibodevProject, entry: DibodevShowcaseProjectEntry): DibodevHeroShowcaseSlide | null {
     const { shortName, tagline }: DibodevProjectNameParts = ProjectUtils.splitNameAndTagline(project.name)
+    if (entry.staticPath) {
+      return { name: shortName, tagline, route: project.route, imageUrl: entry.staticPath, imageSrcset: '' }
+    }
+    const screenshotUrl: string | undefined = entry.media ? project[entry.media] : undefined
+    if (!screenshotUrl) return null
     return {
       name: shortName,
       tagline,
@@ -51,8 +56,8 @@ export async function useProjectShowcaseSlides(
   return computed((): DibodevHeroShowcaseSlide[] =>
     entries.flatMap((entry: DibodevShowcaseProjectEntry): DibodevHeroShowcaseSlide[] => {
       const project: DibodevProject | undefined = findProjectBySlug(entry.slug)
-      const screenshotUrl: string | undefined = project?.[entry.media]
-      return project && screenshotUrl ? [toSlide(project, screenshotUrl)] : []
+      const slide: DibodevHeroShowcaseSlide | null = project ? toSlide(project, entry) : null
+      return slide ? [slide] : []
     }),
   )
 }

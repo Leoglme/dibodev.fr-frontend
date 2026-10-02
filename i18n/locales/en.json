@@ -120,7 +120,6 @@
     }
   },
   "footer": {
-    "contactMe": "Discuss my project",
     "home": "Home",
     "myProjects": "Work",
     "blog": "Blog",
@@ -288,7 +287,7 @@
     },
     "latestArticles": {
       "title": "Latest articles",
-      "intro": "I share here my experience, technical choices and product vision.",
+      "intro": "Practical guides to choose software, leave Excel behind or build your website, written for tradespeople and small businesses.",
       "seeAllArticles": "See all articles",
       "readArticle": "Read article",
       "eyebrow": "Blog"
@@ -1021,7 +1020,7 @@
     "guarantees": {
       "eyebrow": "What you get",
       "title": "A tool of your own, built to last",
-      "intro": "Six commitments written into every quote, so you know exactly what you are buying.",
+      "intro": "Written in black and white in every quote, so you know exactly what you are buying.",
       "items": {
         "ownership": {
           "title": "A tool you own",
@@ -1034,18 +1033,6 @@
         "training": {
           "title": "Easy onboarding",
           "description": "Your team is trained and gets a short documentation."
-        },
-        "price": {
-          "title": "A price set before we start",
-          "description": "Fixed-price quote, written scope, no surprises along the way."
-        },
-        "steps": {
-          "title": "Delivery in stages",
-          "description": "You test the tool as the project progresses and adjust before launch."
-        },
-        "support": {
-          "title": "Support after launch",
-          "description": "Maintenance, backups and improvements, from €100 to €300 per month."
         }
       }
     },

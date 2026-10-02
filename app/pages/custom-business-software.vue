@@ -19,6 +19,18 @@
     </template>
   </DibodevLandingSection>
   <DibodevBusinessSoftwareToolsSection />
+  <DibodevBusinessSoftwareProjectsSection />
+  <DibodevBudgetEstimatorSection
+    :eyebrow="t('businessSoftwarePage.pricing.eyebrow')"
+    :title="t('businessSoftwarePage.pricing.title')"
+    :intro="t('businessSoftwarePage.pricing.estimatorIntro')"
+    tone="tint"
+    trackingLocation="business_software"
+  >
+    <template v-if="toolTeasers.length" #footer>
+      <DibodevToolTeaserList :teasers="toolTeasers" trackingLocation="business_software" tone="white" />
+    </template>
+  </DibodevBudgetEstimatorSection>
   <DibodevComparisonTableSection
     :eyebrow="t('businessSoftwarePage.comparison.eyebrow')"
     :title="t('businessSoftwarePage.comparison.title')"
@@ -41,18 +53,6 @@
     :intro="t('method.subtitle')"
     :steps="methodSteps"
   />
-  <DibodevBudgetEstimatorSection
-    :eyebrow="t('businessSoftwarePage.pricing.eyebrow')"
-    :title="t('businessSoftwarePage.pricing.title')"
-    :intro="t('businessSoftwarePage.pricing.estimatorIntro')"
-    tone="tint"
-    trackingLocation="business_software"
-  >
-    <template v-if="toolTeasers.length" #footer>
-      <DibodevToolTeaserList :teasers="toolTeasers" trackingLocation="business_software" tone="white" />
-    </template>
-  </DibodevBudgetEstimatorSection>
-  <DibodevBusinessSoftwareProjectsSection />
   <DibodevTestimonialSection
     :eyebrow="t('testimonial.eyebrow')"
     :title="t('testimonial.title')"
@@ -135,7 +135,7 @@ const RELATED_ARTICLE_SLUGS: string[] = [
 ]
 const FAQ_QUESTION_KEYS: string[] = ['price', 'delay', 'freelance', 'area', 'excel', 'existing', 'vocabulary']
 const METHOD_STEP_KEYS: string[] = ['discovery', 'quote', 'build', 'support']
-const GUARANTEE_KEYS: string[] = ['ownership', 'data', 'training', 'price', 'steps', 'support']
+const GUARANTEE_KEYS: string[] = ['ownership', 'data', 'training']
 const REASSURANCE_KEYS: string[] = ['response24h', 'freeQuote', 'noCommitment']
 /** Options compared, in column order; the third one is Dibodev. */
 const COMPARISON_COLUMN_KEYS: string[] = ['offTheShelf', 'agency', 'dibodev']
@@ -151,9 +151,9 @@ const COMPARISON_STATES: Record<string, DibodevComparisonState[]> = {
 }
 /** Real screenshots of business tools shown in the hero carousel. */
 const SHOWCASE_PROJECTS: DibodevShowcaseProjectEntry[] = [
-  { slug: 'driving-school', media: 'media1' },
-  { slug: 'gestion-temps', media: 'media2' },
+  { slug: 'stockpme', staticPath: '/images/projects/stockpme-card.webp' },
   { slug: 'goupixdex', media: 'media2' },
+  { slug: 'signdex', media: 'media1' },
 ]
 
 const { t } = useI18n()

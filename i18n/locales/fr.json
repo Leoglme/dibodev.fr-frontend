@@ -120,7 +120,6 @@
     }
   },
   "footer": {
-    "contactMe": "Discuter de mon projet",
     "home": "Accueil",
     "myProjects": "Réalisations",
     "blog": "Blog",
@@ -288,7 +287,7 @@
     },
     "latestArticles": {
       "title": "Derniers articles",
-      "intro": "Je partage ici mes retours d'expérience, mes choix techniques et ma vision produit.",
+      "intro": "Des guides concrets pour choisir un logiciel, quitter Excel ou créer votre site, écrits pour les artisans, les TPE et les PME.",
       "seeAllArticles": "Voir tous les articles",
       "readArticle": "Lire l'article",
       "eyebrow": "Blog"
@@ -1021,7 +1020,7 @@
     "guarantees": {
       "eyebrow": "Ce que vous obtenez",
       "title": "Un outil à vous, pensé pour durer",
-      "intro": "Six engagements écrits dans chaque devis, pour que vous sachiez exactement ce que vous achetez.",
+      "intro": "Écrit noir sur blanc dans chaque devis, pour que vous sachiez exactement ce que vous achetez.",
       "items": {
         "ownership": {
           "title": "Un outil qui vous appartient",
@@ -1034,18 +1033,6 @@
         "training": {
           "title": "Une prise en main simple",
           "description": "Vos équipes sont formées et disposent d’une documentation courte."
-        },
-        "price": {
-          "title": "Un prix fixé avant de commencer",
-          "description": "Devis au forfait, périmètre écrit, aucune surprise en cours de route."
-        },
-        "steps": {
-          "title": "Des livraisons par étapes",
-          "description": "Vous testez l’outil au fil du projet et ajustez avant la mise en ligne."
-        },
-        "support": {
-          "title": "Un suivi après la mise en ligne",
-          "description": "Maintenance, sauvegardes et évolutions, de 100 à 300 € par mois."
         }
       }
     },

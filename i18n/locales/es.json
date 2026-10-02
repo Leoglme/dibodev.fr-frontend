@@ -120,7 +120,6 @@
     }
   },
   "footer": {
-    "contactMe": "Hablar de mi proyecto",
     "home": "Inicio",
     "myProjects": "Proyectos",
     "blog": "Blog",
@@ -288,7 +287,7 @@
     },
     "latestArticles": {
       "title": "Últimos artículos",
-      "intro": "Comparto aquí mi experiencia, mis decisiones técnicas y mi visión de producto.",
+      "intro": "Guías prácticas para elegir un software, dejar Excel o crear tu sitio web, pensadas para artesanos y pymes.",
       "seeAllArticles": "Ver todos los artículos",
       "readArticle": "Leer el artículo",
       "eyebrow": "Blog"
@@ -1021,7 +1020,7 @@
     "guarantees": {
       "eyebrow": "Lo que obtienes",
       "title": "Una herramienta tuya, pensada para durar",
-      "intro": "Seis compromisos escritos en cada presupuesto, para que sepas exactamente lo que compras.",
+      "intro": "Escrito negro sobre blanco en cada presupuesto, para que sepas exactamente lo que compras.",
       "items": {
         "ownership": {
           "title": "Una herramienta que te pertenece",
@@ -1034,18 +1033,6 @@
         "training": {
           "title": "Una puesta en marcha sencilla",
           "description": "Tu equipo recibe formación y una documentación breve."
-        },
-        "price": {
-          "title": "Un precio fijado antes de empezar",
-          "description": "Presupuesto cerrado, alcance por escrito, sin sorpresas por el camino."
-        },
-        "steps": {
-          "title": "Entregas por etapas",
-          "description": "Pruebas la herramienta a medida que avanza el proyecto y ajustas antes del lanzamiento."
-        },
-        "support": {
-          "title": "Seguimiento tras la puesta en marcha",
-          "description": "Mantenimiento, copias de seguridad y mejoras, de 100 a 300 € al mes."
         }
       }
     },

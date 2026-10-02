@@ -7,7 +7,7 @@
         :intro="$t('home.clients.intro')"
         align="center"
       />
-      <ul class="flex w-full flex-wrap items-center justify-center gap-y-7 sm:gap-y-8 lg:justify-between">
+      <ul class="flex w-full flex-wrap items-center justify-center gap-y-7 sm:gap-y-8 lg:gap-x-10 xl:justify-between">
         <li
           v-for="client in CLIENT_LOGOS"
           :key="client.name"

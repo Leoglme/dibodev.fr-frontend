@@ -6,15 +6,6 @@
       <div class="grid content-start gap-6 sm:col-span-2 lg:col-span-1">
         <DibodevLogo :large="true" :size="30" />
         <p class="max-w-xs text-[15px] leading-6 text-gray-200 lg:max-w-84">{{ $t('footer.description') }}</p>
-        <!-- On desktop the contact band above the footer already carries this button. -->
-        <DibodevButton
-          v-if="!isContactPage"
-          :to="localePath('/contact')"
-          class="w-full sm:w-fit lg:hidden"
-          @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'footer' })"
-        >
-          {{ $t('footer.contactMe') }}
-        </DibodevButton>
       </div>
 
       <nav class="grid content-start gap-5 lg:row-span-2 lg:pt-1.25" :aria-label="$t('footer.pagesTitle')">
@@ -185,7 +176,6 @@ import { allCategoryKeys, categoryToSlug } from '~/core/constants/categorySlugs'
 import DibodevLogo from '~/components/branding/DibodevLogo.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import PhoneLink from '~/components/core/PhoneLink.vue'
-import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevLanguageSwitcher from '~/components/core/DibodevLanguageSwitcher.vue'
 import { CONTACT_EMAIL, MALT_PROFILE_URL } from '~/config/contact'
@@ -267,11 +257,4 @@ const legalLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterL
   { title: t('footer.legal'), to: localePath('/legal') },
   { title: t('footer.privacy'), to: localePath('/privacy') },
 ])
-
-/* REFS */
-const route = useRoute()
-
-const isContactPage: ComputedRef<boolean> = computed(
-  (): boolean => route.path === '/contact' || route.path.endsWith('/contact'),
-)
 </script>

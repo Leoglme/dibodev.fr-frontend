@@ -16,14 +16,16 @@ export type DibodevHeroShowcaseSlide = {
 }
 
 /**
- * A project to show in a showcase and which of its two media assets is the clean screenshot to use.
+ * A project to show in a showcase and where its clean screenshot comes from.
  * @type {DibodevShowcaseProjectEntry}
  * @property {string} slug - Last segment of the project route (e.g. "gestion-temps").
- * @property {'media1' | 'media2'} media - The media field holding a real screenshot (not a device mockup).
+ * @property {'media1' | 'media2'} [media] - The media field holding a real screenshot (not a device mockup).
+ * @property {string} [staticPath] - Public path of a static screenshot, for projects whose media are animated GIFs.
  */
 export type DibodevShowcaseProjectEntry = {
   slug: string
-  media: 'media1' | 'media2'
+  media?: 'media1' | 'media2'
+  staticPath?: string
 }
 
 /**

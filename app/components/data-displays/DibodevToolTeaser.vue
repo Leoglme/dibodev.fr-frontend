@@ -10,13 +10,12 @@
       class="text-primary hover:text-primary-dark w-fit text-[15px] leading-6 font-medium transition-colors"
       @click="track(TRACKING_EVENTS.toolTeaserClicked, { tool: props.teaser.toolId, location: props.trackingLocation })"
     >
-      {{ wording.linkLabel }}
-      <DibodevIcon
+      {{ wording.linkLabel }}&nbsp;<DibodevIcon
         name="ArrowRight"
         mode="stroke"
         :width="16"
         :height="16"
-        class="ml-1 align-[-3px]"
+        class="align-[-3px]"
         aria-hidden="true"
       />
     </NuxtLink>
