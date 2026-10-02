@@ -73,12 +73,82 @@
   },
   "blog": {
     "landing": {
-      "description": "Consejos y experiencias sobre digital, sitios web, aplicaciones e IA. Artículos dirigidos a artesanos, pymes y emprendedores.",
-      "cta": "Descubrir mis artículos",
-      "titlePart1": "El blog ",
-      "titleHighlight1": "Dibodev",
-      "titlePart2": "",
-      "featuredEyebrow": "Último artículo"
+      "eyebrow": "El blog de Dibodev",
+      "titlePart1": "Software, sitios web e IA: ",
+      "titleHighlight1": "guías prácticas",
+      "titlePart2": " para tu oficio.",
+      "description": "Qué software elegir, cómo dejar Excel, cuánto cuesta una herramienta a medida, qué puede hacer de verdad la IA en una pequeña empresa: respondo con ejemplos y rangos de precio.",
+      "ctaPrimary": "Ver todos los artículos",
+      "ctaSecondary": "Encontrar mi oficio",
+      "stats": {
+        "articlesLabel": "artículos",
+        "tradesLabel": "oficios tratados"
+      },
+      "reassurance": {
+        "plainWords": "Sin jerga",
+        "examples": "Ejemplos concretos",
+        "byTrade": "Ordenados por oficio"
+      },
+      "trades": {
+        "label": "Oficios tratados en el blog",
+        "intro": "En el blog, para",
+        "items": {
+          "bakery": {
+            "name": "tu panadería",
+            "topic": "Un sitio web que invita a entrar",
+            "alt": "Hogaza de pan en manos de un panadero"
+          },
+          "construction": {
+            "name": "tus obras",
+            "topic": "Planificación y presupuestos, sin Excel",
+            "alt": "Albañil comprobando el nivel de un muro de ladrillo"
+          },
+          "florist": {
+            "name": "tu floristería",
+            "topic": "Un sitio web y pedidos",
+            "alt": "Fachada de una floristería"
+          },
+          "plumber": {
+            "name": "tus intervenciones",
+            "topic": "Software del mercado o a medida",
+            "alt": "Fontanero apretando el sifón de un lavabo"
+          },
+          "landscaper": {
+            "name": "tus jardines y obras",
+            "topic": "Presupuestos, obras y planificación",
+            "alt": "Paisajista empujando una carretilla por el césped"
+          },
+          "coach": {
+            "name": "tus sesiones de coaching",
+            "topic": "Reserva en línea, menos cancelaciones",
+            "alt": "Entrenador personal sentado en un gimnasio"
+          }
+        }
+      }
+    },
+    "trades": {
+      "eyebrow": "Por oficio",
+      "title": "Puede que tu oficio ya tenga su artículo",
+      "intro": "Cada artículo parte de un oficio concreto: sus jornadas, las herramientas que usa hoy y lo que un software o un sitio web le aportaría de verdad.",
+      "missingTrade": "¿Tu oficio no está en la lista?",
+      "missingTradeLink": "Hablemos de tu actividad",
+      "items": {
+        "construction": "Albañil y obra",
+        "plumber": "Fontanero",
+        "electrician": "Electricista",
+        "heatingEngineer": "Técnico de calefacción",
+        "locksmith": "Cerrajero",
+        "landscaper": "Paisajista",
+        "carpenter": "Carpintero",
+        "garage": "Taller mecánico",
+        "drivingSchool": "Autoescuela",
+        "bikeShop": "Taller de bicicletas",
+        "coach": "Entrenador personal",
+        "bakery": "Panadería",
+        "florist": "Floristería",
+        "restaurant": "Restaurante",
+        "localShop": "Comercio de proximidad"
+      }
     },
     "cta": {
       "title": "¿Tienes un proyecto en mente?",
@@ -97,7 +167,7 @@
       "noArticles": "Ningún artículo por el momento.",
       "loadMore": "Cargar más artículos",
       "eyebrow": "Todos los artículos",
-      "title": "Todos los artículos del blog"
+      "title": "Del más reciente al más antiguo"
     },
     "toc": {
       "title": "Índice"
@@ -424,7 +494,7 @@
     "form": {
       "projectTypeLabel": "¿Cómo puedo ayudarte?",
       "pagesRangeLabel": "¿Cuántas páginas necesitas?",
-      "budgetLabel": "Presupuesto estimado",
+      "budgetLabel": "Presupuesto estimado (opcional)",
       "nameLabel": "Nombre",
       "namePlaceholder": "Tu nombre",
       "emailLabel": "Email",
@@ -453,7 +523,8 @@
         "under_2k": "Menos de 2.000 €",
         "2k_5k": "De 2.000 a 5.000 €",
         "5k_15k": "De 5.000 a 15.000 €",
-        "15k_plus": "Más de 15.000 €"
+        "15k_plus": "Más de 15.000 €",
+        "unknown": "Aún no lo sé"
       },
       "successMessage": "Tu mensaje se ha enviado correctamente. Se te ha enviado un correo de confirmación.",
       "errorInvalid": "El formulario no es válido. Por favor, verifica la información.",
@@ -1111,10 +1182,6 @@
       "company": {
         "label": "Empresa",
         "value": "Dibodev, empresa individual creada el 20 de junio de 2025"
-      },
-      "currentMission": {
-        "label": "Ahora mismo",
-        "value": "Misión full‑stack e IA en PrePeers, startup EdTech, desde abril de 2026"
       },
       "location": {
         "label": "Ubicación",

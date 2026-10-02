@@ -40,19 +40,19 @@ const { t } = useI18n()
 const YEARS_OF_EXPERIENCE: number = CareerUtils.getYearsOfExperience()
 const EXPERIENCE_STEPS: DibodevAboutCareerStepConfig[] = [
   {
-    key: 'prepeers',
-    monogram: 'PP',
-    logoSrc: '/images/clients/prepeers.svg',
-    highlightKeys: ['platform', 'schools', 'data'],
-    technologies: ['Nuxt 4', 'Vue 3', 'TypeScript', 'LLM', '.NET', 'Azure', 'PostHog'],
-    isCurrent: true,
-  },
-  {
     key: 'dibodev',
     monogram: 'D',
     logoSrc: '/android-chrome-192x192.png',
     highlightKeys: ['website', 'nightforge', 'goupixdex'],
     technologies: ['Nuxt', 'Storyblok', 'Python', 'FastAPI', 'Tauri', 'Stripe'],
+    isCurrent: true,
+  },
+  {
+    key: 'prepeers',
+    monogram: 'PP',
+    logoSrc: '/images/clients/prepeers.svg',
+    highlightKeys: ['platform', 'schools', 'data'],
+    technologies: ['Nuxt 4', 'Vue 3', 'TypeScript', 'LLM', '.NET', 'Azure', 'PostHog'],
     isCurrent: false,
   },
   {

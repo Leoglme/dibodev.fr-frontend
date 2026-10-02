@@ -72,7 +72,7 @@ const toolCards: ComputedRef<DibodevFreeToolCard[]> = computed((): DibodevFreeTo
     (teaser: DibodevToolTeaserContent): DibodevFreeToolCard => ({
       key: teaser.toolId,
       title: teaser.wording[locale.value as SupportedLocale]?.listLabel ?? '',
-      description: teaser.wording[locale.value as SupportedLocale]?.text ?? '',
+      description: teaser.wording[locale.value as SupportedLocale]?.hubDescription ?? '',
       icon: teaser.icon,
       meta: t('toolsHubPage.cards.test.meta'),
       linkLabel: t('toolsHubPage.cards.test.link'),

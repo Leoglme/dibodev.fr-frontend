@@ -22,6 +22,20 @@ export class StoryblokImageUtils {
   }
 
   /**
+   * Returns the URL of a Storyblok asset cropped around its subject to the given size and converted to WebP.
+   * @param {string} assetUrl - The original Storyblok asset URL.
+   * @param {number} width - The target width in pixels.
+   * @param {number} height - The target height in pixels.
+   * @returns {string} The cropped asset URL, or the original URL when the asset cannot be resized.
+   */
+  public static getCroppedUrl(assetUrl: string, width: number, height: number): string {
+    if (!this.isResizable(assetUrl)) {
+      return assetUrl
+    }
+    return `${assetUrl}/m/${width}x${height}/smart/filters:format(webp):quality(75)`
+  }
+
+  /**
    * Builds a srcset attribute value with one resized URL per width.
    * @param {string} assetUrl - The original Storyblok asset URL.
    * @param {number[]} widths - The widths in pixels to include.

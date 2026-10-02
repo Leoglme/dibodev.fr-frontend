@@ -73,12 +73,82 @@
   },
   "blog": {
     "landing": {
-      "description": "Tips and experience sharing on digital, websites, applications and AI. Articles targeted at craftsmen, SMEs and entrepreneurs.",
-      "cta": "Discover my articles",
-      "titlePart1": "The ",
-      "titleHighlight1": "Dibodev",
-      "titlePart2": " blog",
-      "featuredEyebrow": "Latest article"
+      "eyebrow": "The Dibodev blog",
+      "titlePart1": "Software, websites and AI: ",
+      "titleHighlight1": "practical guides",
+      "titlePart2": " for your trade.",
+      "description": "Which software to choose, how to move off Excel, what a custom tool costs, what AI can really do in a small business: I answer with examples and price ranges.",
+      "ctaPrimary": "See all articles",
+      "ctaSecondary": "Find my trade",
+      "stats": {
+        "articlesLabel": "articles",
+        "tradesLabel": "trades covered"
+      },
+      "reassurance": {
+        "plainWords": "No jargon",
+        "examples": "Real examples",
+        "byTrade": "Sorted by trade"
+      },
+      "trades": {
+        "label": "Trades covered on the blog",
+        "intro": "On the blog, for",
+        "items": {
+          "bakery": {
+            "name": "your bakery",
+            "topic": "A website that makes people walk in",
+            "alt": "Country loaf held by a baker"
+          },
+          "construction": {
+            "name": "your building sites",
+            "topic": "Schedules and quotes, without Excel",
+            "alt": "Bricklayer checking the level of a brick wall"
+          },
+          "florist": {
+            "name": "your flower shop",
+            "topic": "A website and orders",
+            "alt": "Front of a flower shop"
+          },
+          "plumber": {
+            "name": "your call-outs",
+            "topic": "Off-the-shelf or custom software",
+            "alt": "Plumber tightening a sink trap"
+          },
+          "landscaper": {
+            "name": "your gardens and sites",
+            "topic": "Quotes, sites and schedules",
+            "alt": "Landscaper pushing a wheelbarrow across a lawn"
+          },
+          "coach": {
+            "name": "your coaching sessions",
+            "topic": "Online booking, fewer cancellations",
+            "alt": "Fitness coach sitting in a gym"
+          }
+        }
+      }
+    },
+    "trades": {
+      "eyebrow": "By trade",
+      "title": "Your trade may already have its article",
+      "intro": "Each article starts from one specific trade: its days, the tools it uses today, and what software or a website would really bring.",
+      "missingTrade": "Your trade is not in the list?",
+      "missingTradeLink": "Tell me about your business",
+      "items": {
+        "construction": "Builder",
+        "plumber": "Plumber",
+        "electrician": "Electrician",
+        "heatingEngineer": "Heating engineer",
+        "locksmith": "Locksmith",
+        "landscaper": "Landscaper",
+        "carpenter": "Carpenter",
+        "garage": "Garage",
+        "drivingSchool": "Driving school",
+        "bikeShop": "Bike shop",
+        "coach": "Fitness coach",
+        "bakery": "Bakery",
+        "florist": "Florist",
+        "restaurant": "Restaurant",
+        "localShop": "Local shop"
+      }
     },
     "cta": {
       "title": "Have a project in mind?",
@@ -97,7 +167,7 @@
       "noArticles": "No articles yet.",
       "loadMore": "Load more articles",
       "eyebrow": "All articles",
-      "title": "Every article on the blog"
+      "title": "From the most recent to the oldest"
     },
     "toc": {
       "title": "Contents"
@@ -424,7 +494,7 @@
     "form": {
       "projectTypeLabel": "How can I help you?",
       "pagesRangeLabel": "How many pages do you need?",
-      "budgetLabel": "Estimated budget",
+      "budgetLabel": "Estimated budget (optional)",
       "nameLabel": "Name",
       "namePlaceholder": "Your name",
       "emailLabel": "Email",
@@ -453,7 +523,8 @@
         "under_2k": "Under €2,000",
         "2k_5k": "€2,000 to €5,000",
         "5k_15k": "€5,000 to €15,000",
-        "15k_plus": "Over €15,000"
+        "15k_plus": "Over €15,000",
+        "unknown": "I do not know yet"
       },
       "successMessage": "Your message has been sent successfully! A confirmation email has been sent to you.",
       "errorInvalid": "The form is invalid. Please check your information.",
@@ -1111,10 +1182,6 @@
       "company": {
         "label": "Company",
         "value": "Dibodev, sole proprietorship founded on June 20, 2025"
-      },
-      "currentMission": {
-        "label": "Currently",
-        "value": "Full-stack and AI mission at PrePeers, an EdTech startup, since April 2026"
       },
       "location": {
         "label": "Based in",

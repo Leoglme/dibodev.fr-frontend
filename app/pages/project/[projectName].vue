@@ -11,6 +11,7 @@
     :sectors="currentProjectComputed.sectors"
     :date="projectDisplayDate"
     :siteUrl="currentProjectComputed.siteUrl"
+    :screenshot="ProjectUtils.resolvePageScreenshot(currentProjectComputed)"
   />
   <DibodevProjectGallerySection
     v-if="currentProjectComputed"
@@ -77,6 +78,7 @@ import DibodevRecommendedProjectSection from '~/components/sections/DibodevRecom
 import DibodevToolTeaser from '~/components/data-displays/DibodevToolTeaser.vue'
 import type { StoryblokVersion } from '~/services/types/storyblok'
 import { StoryblokProjectService } from '~/services/storyblokProjectService'
+import { ProjectUtils } from '~/core/utils/ProjectUtils'
 import { buildProjectSchemaJson } from '~/config/projectSchema'
 import { buildSharePreviewDetailsMeta } from '~/config/sharePreviewDetails'
 import { usePageShareImage } from '~/composables/usePageShareImage'

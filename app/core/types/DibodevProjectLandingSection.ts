@@ -1,5 +1,6 @@
 import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
 import type { CategoryKey, SectorKey } from '~/core/constants/projectEnums'
+import type { DibodevProjectCardScreenshot } from '~/core/types/DibodevProjectCardScreenshot'
 
 /**
  * Type definitions for the DibodevProjectLandingSection component props.
@@ -14,6 +15,7 @@ import type { CategoryKey, SectorKey } from '~/core/constants/projectEnums'
  * @property {SectorKey[]} sectors - Sector keys, linked to their listing pages.
  * @property {string} date - Project date already formatted for display.
  * @property {string | null} siteUrl - Public site URL, when the project is online.
+ * @property {DibodevProjectCardScreenshot | null} screenshot - Screenshot shown next to the text on wide screens.
  */
 export type DibodevProjectLandingSectionProps = {
   breadcrumbs: DibodevBreadcrumbItem[]
@@ -26,4 +28,5 @@ export type DibodevProjectLandingSectionProps = {
   sectors: SectorKey[]
   date: string
   siteUrl: string | null
+  screenshot: DibodevProjectCardScreenshot | null
 }

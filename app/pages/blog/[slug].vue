@@ -100,43 +100,17 @@ import { PERSON_NAME } from '~/config/schema'
 import { usePageShareImage } from '~/composables/usePageShareImage'
 import { extractArticleHeadings } from '~/core/utils/articleHeadings'
 import { StoryblokImageUtils } from '~/core/utils/StoryblokImageUtils'
+import { ArticleSimilarityUtils } from '~/core/utils/ArticleSimilarityUtils'
 import { formatArticleDate } from '~/core/utils/formatArticleDate'
 
 const RELATED_ARTICLES_COUNT: number = 3
-const RELATED_ARTICLES_POOL_SIZE: number = 24
+/** Every published article (Storyblok maximum page size), so the closest ones are found whatever their date. */
+const RELATED_ARTICLES_POOL_SIZE: number = 100
 const ARTICLE_SCHEMA_FALLBACK_IMAGE_PATH: string = '/images/og/leo-guillaume-portrait.jpg'
 /** A table of contents is only useful from this number of sections. */
 const MIN_HEADINGS_FOR_TOC: number = 3
 const ARTICLE_LOCALES: SupportedLocale[] = ['fr', 'en', 'es']
 const HREFLANG_BY_LOCALE: Record<SupportedLocale, string> = { fr: 'fr-FR', en: 'en-US', es: 'es-ES' }
-
-/**
- * Selects up to `limit` related articles ranked by shared tags then recency, excluding the current one.
- *
- * @param {DibodevArticle[]} all - All fetched articles.
- * @param {string} currentSlug - Slug of the current article, excluded from the result.
- * @param {string[]} currentTags - Tags of the current article, used to score relevance.
- * @param {number} limit - Maximum number of related articles to return.
- * @returns {DibodevArticle[]} The related articles, most relevant first.
- */
-function selectRelatedArticles(
-  all: DibodevArticle[],
-  currentSlug: string,
-  currentTags: string[],
-  limit: number,
-): DibodevArticle[] {
-  const currentTagSet: Set<string> = new Set(currentTags)
-  const sharedTagCount = (candidate: DibodevArticle): number =>
-    candidate.tags.filter((tag: string): boolean => currentTagSet.has(tag)).length
-  return all
-    .filter((candidate: DibodevArticle): boolean => candidate.slug !== currentSlug)
-    .sort(
-      (first: DibodevArticle, second: DibodevArticle): number =>
-        sharedTagCount(second) - sharedTagCount(first) ||
-        new Date(second.date).getTime() - new Date(first.date).getTime(),
-    )
-    .slice(0, limit)
-}
 
 const route = useRoute()
 const storyblokLanguage = useStoryblokProjectLanguage()
@@ -198,7 +172,7 @@ const { data: articlesPool } = await useArticlesWithTranslations({ perPage: RELA
 
 const relatedArticles: ComputedRef<DibodevArticle[]> = computed((): DibodevArticle[] =>
   article.value
-    ? selectRelatedArticles(articlesPool.value ?? [], slug, article.value.tags, RELATED_ARTICLES_COUNT)
+    ? ArticleSimilarityUtils.selectRelatedArticles(articlesPool.value ?? [], article.value, RELATED_ARTICLES_COUNT)
     : [],
 )
 

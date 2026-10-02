@@ -1,9 +1,16 @@
 <template>
   <section id="project-landing" class="relative w-full px-6 pt-[120px] pb-16 sm:px-8 lg:pt-[160px] lg:pb-24">
-    <div class="max-w-site mx-auto grid w-full gap-8">
-      <div class="mx-auto grid max-w-3xl justify-items-center gap-6 text-center" data-aos="fade-up">
+    <div
+      class="max-w-site mx-auto grid w-full items-center gap-12"
+      :class="
+        props.screenshot
+          ? 'lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,36rem)] xl:gap-20'
+          : ''
+      "
+    >
+      <div class="grid max-w-3xl justify-items-start gap-6" data-aos="fade-up">
         <DibodevBreadcrumb v-if="props.breadcrumbs.length > 0" :items="props.breadcrumbs" />
-        <div class="flex flex-col items-center gap-5">
+        <div class="flex flex-col items-start gap-5">
           <div
             class="flex h-24 w-24 shrink-0 items-center justify-center rounded-2xl border border-gray-300 p-4"
             :style="{ backgroundColor: props.secondaryColor }"
@@ -24,12 +31,12 @@
           </h1>
         </div>
 
-        <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-3">
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-3">
           <p class="text-muted text-sm">
             {{ props.date }}
           </p>
 
-          <div class="flex flex-wrap items-center justify-center gap-2">
+          <div class="flex flex-wrap items-center gap-2">
             <NuxtLink
               v-for="category in props.categories"
               :key="'cat-' + category"
@@ -52,11 +59,11 @@
           </div>
         </div>
 
-        <p class="mx-auto max-w-[640px] text-[17px] leading-7 text-gray-200">
+        <p class="max-w-[600px] text-[17px] leading-7 text-gray-200">
           {{ props.description }}
         </p>
 
-        <div class="flex flex-wrap items-center justify-center gap-3">
+        <div class="flex w-full flex-wrap items-center gap-3">
           <DibodevButton
             v-if="props.siteUrl"
             :to="props.siteUrl"
@@ -77,6 +84,27 @@
           </DibodevButton>
         </div>
       </div>
+
+      <div v-if="props.screenshot" class="relative mx-auto w-full max-w-xl lg:max-w-none" data-aos="fade-up">
+        <div
+          class="bg-accent-tint absolute -top-4 -right-4 hidden h-full w-full rounded-3xl sm:block"
+          aria-hidden="true"
+        />
+        <div
+          class="relative aspect-video overflow-hidden rounded-2xl border border-gray-300 bg-gray-800 shadow-[0_18px_44px_rgba(20,20,20,0.08)]"
+        >
+          <img
+            :src="props.screenshot.url"
+            :srcset="props.screenshot.srcset || undefined"
+            :sizes="SCREENSHOT_SIZES"
+            :alt="$t('projects.card.screenshotAlt', { name: props.title })"
+            :width="SCREENSHOT_WIDTH"
+            :height="SCREENSHOT_HEIGHT"
+            decoding="async"
+            class="h-full w-full object-contain"
+          />
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -85,6 +113,7 @@
 import type { PropType } from 'vue'
 import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
 import type { DibodevProjectLandingSectionProps } from '~/core/types/DibodevProjectLandingSection'
+import type { DibodevProjectCardScreenshot } from '~/core/types/DibodevProjectCardScreenshot'
 import DibodevBreadcrumb from '~/components/navigations/DibodevBreadcrumb.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
@@ -99,10 +128,13 @@ import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 /** Section scrolled to by the "discover" button, and the room kept above it for the fixed navbar. */
 const DISCOVER_TARGET_SELECTOR: string = '#project-gallery'
 const SCROLL_TARGET_OFFSET: number = 96
+const SCREENSHOT_WIDTH: number = 1200
+const SCREENSHOT_HEIGHT: number = 675
+const SCREENSHOT_SIZES: string = '(min-width: 1280px) 576px, (min-width: 1024px) 416px, calc(100vw - 48px)'
 
 /* PROPS */
 /**
- * Project page header: breadcrumb, logo tile, title, date, categories and sectors, description and buttons.
+ * Project page header: breadcrumb, logo tile, title, date, categories and sectors, description and buttons, with a screenshot beside them on wide screens.
  */
 const props: DibodevProjectLandingSectionProps = defineProps({
   breadcrumbs: {
@@ -143,6 +175,10 @@ const props: DibodevProjectLandingSectionProps = defineProps({
   },
   siteUrl: {
     type: String as PropType<string | null>,
+    default: null,
+  },
+  screenshot: {
+    type: Object as PropType<DibodevProjectCardScreenshot | null>,
     default: null,
   },
 })

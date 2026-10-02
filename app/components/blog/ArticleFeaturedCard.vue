@@ -21,8 +21,13 @@
       </div>
 
       <div class="flex flex-1 flex-col gap-3 p-6 sm:p-7">
-        <div v-if="props.tags.length > 0" class="hidden flex-wrap gap-1.5 sm:flex">
-          <DibodevBadge v-for="tag in props.tags.slice(0, 4)" :key="tag" size="sm">
+        <div v-if="props.tags.length > 0" class="flex flex-wrap gap-1.5">
+          <DibodevBadge
+            v-for="(tag, tagIndex) in props.tags.slice(0, 4)"
+            :key="tag"
+            size="sm"
+            :class="tagIndex >= PHONE_VISIBLE_TAGS_COUNT ? 'hidden sm:flex' : ''"
+          >
             {{ tag }}
           </DibodevBadge>
         </div>
@@ -60,6 +65,9 @@ import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { formatArticleDate } from '~/core/utils/formatArticleDate'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
+
+/** Tags kept on phones, where each one takes a full line. */
+const PHONE_VISIBLE_TAGS_COUNT: number = 2
 
 /**
  * Large article card (cover, tags, title, excerpt, date) used for the most recent article on the home page.

@@ -73,12 +73,82 @@
   },
   "blog": {
     "landing": {
-      "description": "Conseils et retours d'expérience sur le digital, les sites web, applications et IA. Articles ciblés pour artisans, PME et entrepreneurs.",
-      "cta": "Découvrir mes articles",
-      "titlePart1": "Le blog ",
-      "titleHighlight1": "Dibodev",
-      "titlePart2": "",
-      "featuredEyebrow": "Dernier article"
+      "eyebrow": "Le blog Dibodev",
+      "titlePart1": "Logiciels, sites web et IA : ",
+      "titleHighlight1": "des guides concrets",
+      "titlePart2": " pour votre métier.",
+      "description": "Quel logiciel choisir, comment quitter Excel, combien coûte un outil sur mesure, ce que l'IA peut vraiment faire dans une petite entreprise : je réponds avec des exemples et des ordres de prix.",
+      "ctaPrimary": "Voir tous les articles",
+      "ctaSecondary": "Trouver mon métier",
+      "stats": {
+        "articlesLabel": "articles",
+        "tradesLabel": "métiers couverts"
+      },
+      "reassurance": {
+        "plainWords": "Sans jargon",
+        "examples": "Exemples concrets",
+        "byTrade": "Classés par métier"
+      },
+      "trades": {
+        "label": "Métiers abordés sur le blog",
+        "intro": "Sur le blog, pour",
+        "items": {
+          "bakery": {
+            "name": "votre boulangerie",
+            "topic": "Un site web qui donne envie d'entrer",
+            "alt": "Pain de campagne tenu par un boulanger"
+          },
+          "construction": {
+            "name": "vos chantiers",
+            "topic": "Planning et devis, sans Excel",
+            "alt": "Maçon qui vérifie le niveau d'un mur en briques"
+          },
+          "florist": {
+            "name": "votre boutique de fleurs",
+            "topic": "Un site web et des commandes",
+            "alt": "Devanture d'une boutique de fleurs"
+          },
+          "plumber": {
+            "name": "vos interventions",
+            "topic": "Logiciel du marché ou sur mesure",
+            "alt": "Plombier qui resserre un siphon de lavabo"
+          },
+          "landscaper": {
+            "name": "vos jardins et chantiers",
+            "topic": "Devis, chantiers et plannings",
+            "alt": "Paysagiste qui pousse une brouette sur une pelouse"
+          },
+          "coach": {
+            "name": "vos séances de coaching",
+            "topic": "Réservation en ligne, moins d'annulations",
+            "alt": "Coach sportif assis dans une salle de sport"
+          }
+        }
+      }
+    },
+    "trades": {
+      "eyebrow": "Par métier",
+      "title": "Votre métier a peut‑être déjà son article",
+      "intro": "Chaque article part d'un métier précis : ses journées, les outils qu'il utilise aujourd'hui, et ce qu'un logiciel ou un site web lui apporterait vraiment.",
+      "missingTrade": "Votre métier n'est pas dans la liste ?",
+      "missingTradeLink": "Parlons de votre activité",
+      "items": {
+        "construction": "Artisan du bâtiment",
+        "plumber": "Plombier",
+        "electrician": "Électricien",
+        "heatingEngineer": "Chauffagiste",
+        "locksmith": "Serrurier",
+        "landscaper": "Paysagiste",
+        "carpenter": "Menuisier",
+        "garage": "Garage automobile",
+        "drivingSchool": "Auto-école",
+        "bikeShop": "Atelier vélo",
+        "coach": "Coach sportif",
+        "bakery": "Boulangerie",
+        "florist": "Fleuriste",
+        "restaurant": "Restaurant",
+        "localShop": "Commerce de proximité"
+      }
     },
     "cta": {
       "title": "Un projet en tête ?",
@@ -97,7 +167,7 @@
       "noArticles": "Aucun article pour le moment.",
       "loadMore": "Charger plus d'articles",
       "eyebrow": "Tous les articles",
-      "title": "Tous les articles du blog"
+      "title": "Du plus récent au plus ancien"
     },
     "toc": {
       "title": "Sommaire"
@@ -424,7 +494,7 @@
     "form": {
       "projectTypeLabel": "Comment puis-je vous aider ?",
       "pagesRangeLabel": "Combien de pages souhaitez-vous ?",
-      "budgetLabel": "Budget estimé",
+      "budgetLabel": "Budget estimé (optionnel)",
       "nameLabel": "Nom",
       "namePlaceholder": "Votre nom",
       "emailLabel": "Email",
@@ -453,7 +523,8 @@
         "under_2k": "Moins de 2 000 €",
         "2k_5k": "2 000 à 5 000 €",
         "5k_15k": "5 000 à 15 000 €",
-        "15k_plus": "Plus de 15 000 €"
+        "15k_plus": "Plus de 15 000 €",
+        "unknown": "Je ne sais pas encore"
       },
       "successMessage": "Votre message a été envoyé avec succès ! Un accusé de réception vous a été envoyé par email.",
       "errorInvalid": "Le formulaire est invalide. Veuillez vérifier vos informations.",
@@ -1111,10 +1182,6 @@
       "company": {
         "label": "Entreprise",
         "value": "Dibodev, entreprise individuelle créée le 20 juin 2025"
-      },
-      "currentMission": {
-        "label": "En ce moment",
-        "value": "Mission full‑stack et IA chez PrePeers, startup EdTech, depuis avril 2026"
       },
       "location": {
         "label": "Basé à",

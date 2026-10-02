@@ -133,14 +133,13 @@ import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 /** Project type, pages range and budget range keys (values sent to API are translated via $t). */
 const PROJECT_TYPE_KEYS = ['software', 'website', 'mobile', 'automation', 'other'] as const
 const PAGES_RANGE_KEYS = ['1_3', '3_6', '6_10', '10_plus'] as const
-const BUDGET_RANGE_KEYS = ['under_2k', '2k_5k', '5k_15k', '15k_plus'] as const
+const BUDGET_RANGE_KEYS = ['under_2k', '2k_5k', '5k_15k', '15k_plus', 'unknown'] as const
 type ProjectTypeKey = (typeof PROJECT_TYPE_KEYS)[number]
 type PagesRangeKey = (typeof PAGES_RANGE_KEYS)[number]
 type BudgetRangeKey = (typeof BUDGET_RANGE_KEYS)[number]
 
 /** The pages question only makes sense for a website. */
 const WEBSITE_PROJECT_TYPE: ProjectTypeKey = 'website'
-const DEFAULT_PROJECT_TYPE: ProjectTypeKey = 'software'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -181,7 +180,7 @@ const prefilledProjectType: ProjectTypeKey | null =
 const prefilledBudgetRange: BudgetRangeKey | null =
   BUDGET_RANGE_KEYS.find((key: BudgetRangeKey): boolean => key === String(route.query.budget ?? '')) ?? null
 
-const projectType: Ref<ProjectTypeKey | null> = ref<ProjectTypeKey>(prefilledProjectType ?? DEFAULT_PROJECT_TYPE)
+const projectType: Ref<ProjectTypeKey | null> = ref<ProjectTypeKey | null>(prefilledProjectType)
 const pagesRange: Ref<PagesRangeKey | null> = ref<PagesRangeKey | null>(null)
 const budgetRange: Ref<BudgetRangeKey | null> = ref<BudgetRangeKey | null>(prefilledBudgetRange)
 const fullName: Ref<string> = ref('')
@@ -240,7 +239,7 @@ function getBudgetRangeDisplay(key: BudgetRangeKey | null): string {
  * @returns {void}
  */
 function resetFormValues(): void {
-  projectType.value = DEFAULT_PROJECT_TYPE
+  projectType.value = null
   pagesRange.value = null
   budgetRange.value = null
   fullName.value = ''
@@ -250,7 +249,7 @@ function resetFormValues(): void {
   lastSentIntentKey.value = null
   contactForm.value?.resetForm({
     values: {
-      'type de projet': DEFAULT_PROJECT_TYPE,
+      'type de projet': null,
       nom: '',
       email: '',
       telephone: '',

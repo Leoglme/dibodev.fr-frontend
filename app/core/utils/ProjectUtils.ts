@@ -66,7 +66,28 @@ export class ProjectUtils {
     }
 
     const mediaKey: DibodevProjectScreenshotMediaKey = override?.media ?? this.DEFAULT_SCREENSHOT_MEDIA_KEY
-    const mediaUrl: string | undefined = project[mediaKey]
+    return this.buildScreenshot(project[mediaKey])
+  }
+
+  /**
+   * Screenshot shown next to the title of a project page: the one of its card, or its first still media when the card has none.
+   * @param {DibodevProject} project - The project of the page.
+   * @returns {DibodevProjectCardScreenshot | null} The screenshot, or null when the project has no usable one.
+   */
+  public static resolvePageScreenshot(project: DibodevProject): DibodevProjectCardScreenshot | null {
+    return (
+      this.resolveCardScreenshot(project) ??
+      this.buildScreenshot(project.media1) ??
+      this.buildScreenshot(project.media2)
+    )
+  }
+
+  /**
+   * Builds the resized sources of a Storyblok media used as a screenshot.
+   * @param {string | undefined} mediaUrl - Storyblok URL of the media.
+   * @returns {DibodevProjectCardScreenshot | null} The screenshot, or null for a missing or animated media.
+   */
+  private static buildScreenshot(mediaUrl: string | undefined): DibodevProjectCardScreenshot | null {
     if (!mediaUrl || this.ANIMATED_EXTENSION_REGEX.test(mediaUrl)) {
       return null
     }
