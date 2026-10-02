@@ -45,11 +45,13 @@ export type DibodevBusinessSoftwareTool = {
  * @property {string} key - Translation key under `businessSoftwarePage.tools.integrations.items`.
  * @property {string} logoSrc - Path of the logo or pictogram in `public/`.
  * @property {string} logoBackground - Soft tint behind the logo, matching its colour.
+ * @property {boolean} [hasRoundLogo] - True for a circular logo, drawn slightly larger because a circle reads smaller than a square of the same size.
  */
 export type DibodevBusinessSoftwareIntegrationConfig = {
   key: string
   logoSrc: string
   logoBackground: string
+  hasRoundLogo?: boolean
 }
 
 /**

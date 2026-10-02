@@ -58,9 +58,9 @@
               <img
                 :src="integration.logoSrc"
                 alt=""
-                width="28"
-                height="28"
-                class="h-7 w-7"
+                :width="integration.hasRoundLogo ? 32 : 28"
+                :height="integration.hasRoundLogo ? 32 : 28"
+                :class="integration.hasRoundLogo ? 'h-8 w-8' : 'h-7 w-7'"
                 loading="lazy"
                 decoding="async"
               />

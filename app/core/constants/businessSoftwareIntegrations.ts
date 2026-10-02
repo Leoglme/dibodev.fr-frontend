@@ -4,7 +4,7 @@ import type { DibodevBusinessSoftwareIntegrationConfig } from '~/core/types/Dibo
 export const BUSINESS_SOFTWARE_INTEGRATIONS: DibodevBusinessSoftwareIntegrationConfig[] = [
   { key: 'payment', logoSrc: '/images/integrations/stripe.svg', logoBackground: '#efeeff' },
   { key: 'banking', logoSrc: '/images/integrations/qonto.png', logoBackground: '#ededeb' },
-  { key: 'accounting', logoSrc: '/images/integrations/pennylane.png', logoBackground: '#e6f5ef' },
+  { key: 'accounting', logoSrc: '/images/integrations/pennylane.svg', logoBackground: '#e6f5ef', hasRoundLogo: true },
   { key: 'quotes', logoSrc: '/images/integrations/ebp.png', logoBackground: '#e4eefb' },
   { key: 'crm', logoSrc: '/images/integrations/hubspot.svg', logoBackground: '#fff0eb' },
   { key: 'emails', logoSrc: '/images/integrations/mailjet.png', logoBackground: '#f1edff' },
