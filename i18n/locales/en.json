@@ -73,12 +73,12 @@
   },
   "blog": {
     "landing": {
-      "eyebrow": "The Dibodev blog",
-      "titlePart1": "Software, websites and AI: ",
-      "titleHighlight1": "practical guides",
-      "titlePart2": " for your trade.",
-      "description": "Which software to choose, how to move off Excel, what a custom tool costs, what AI can really do in a small business: I answer with examples and price ranges.",
-      "ctaPrimary": "See all articles",
+      "eyebrow": "Blog",
+      "titlePart1": "The Dibodev blog: ",
+      "titleHighlight1": "articles and advice",
+      "titlePart2": " for tradespeople and small businesses.",
+      "description": "Each article answers one practical question: which software to choose, how to move off Excel, what a custom tool costs, what AI can really do in a small business.",
+      "ctaPrimary": "Read the latest articles",
       "ctaSecondary": "Find my trade",
       "stats": {
         "articlesLabel": "articles",
@@ -91,7 +91,7 @@
       },
       "trades": {
         "label": "Trades covered on the blog",
-        "intro": "On the blog, for",
+        "intro": "An article for",
         "items": {
           "bakery": {
             "name": "your bakery",
@@ -568,7 +568,7 @@
     },
     "faq": {
       "eyebrow": "FAQ",
-      "title": "Before you write"
+      "title": "Frequently asked questions"
     },
     "channels": {
       "emailTitle": "By email",
@@ -681,7 +681,8 @@
   "project": {
     "landing": {
       "discover": "Read the description",
-      "viewSite": "View site"
+      "viewSite": "View site",
+      "discuss": "Discuss a similar project"
     },
     "gallery": {
       "eyebrow": "Preview",

@@ -73,12 +73,12 @@
   },
   "blog": {
     "landing": {
-      "eyebrow": "Le blog Dibodev",
-      "titlePart1": "Logiciels, sites web et IA : ",
-      "titleHighlight1": "des guides concrets",
-      "titlePart2": " pour votre métier.",
-      "description": "Quel logiciel choisir, comment quitter Excel, combien coûte un outil sur mesure, ce que l'IA peut vraiment faire dans une petite entreprise : je réponds avec des exemples et des ordres de prix.",
-      "ctaPrimary": "Voir tous les articles",
+      "eyebrow": "Blog",
+      "titlePart1": "Le blog Dibodev : ",
+      "titleHighlight1": "articles et conseils",
+      "titlePart2": " pour artisans, TPE et PME.",
+      "description": "Chaque article répond à une question concrète : quel logiciel choisir, comment quitter Excel, combien coûte un outil sur mesure, ce que l'IA peut vraiment faire dans une petite entreprise.",
+      "ctaPrimary": "Lire les derniers articles",
       "ctaSecondary": "Trouver mon métier",
       "stats": {
         "articlesLabel": "articles",
@@ -91,7 +91,7 @@
       },
       "trades": {
         "label": "Métiers abordés sur le blog",
-        "intro": "Sur le blog, pour",
+        "intro": "Un article pour",
         "items": {
           "bakery": {
             "name": "votre boulangerie",
@@ -568,7 +568,7 @@
     },
     "faq": {
       "eyebrow": "FAQ",
-      "title": "Avant de m’écrire"
+      "title": "Questions fréquentes"
     },
     "channels": {
       "emailTitle": "Par e-mail",
@@ -681,7 +681,8 @@
   "project": {
     "landing": {
       "discover": "Lire la description",
-      "viewSite": "Voir le site"
+      "viewSite": "Voir le site",
+      "discuss": "Discuter d'un projet similaire"
     },
     "gallery": {
       "eyebrow": "Aperçu",

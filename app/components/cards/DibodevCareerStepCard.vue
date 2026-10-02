@@ -6,7 +6,8 @@
     <header class="flex items-start gap-4">
       <span
         v-if="props.step.logoSrc"
-        class="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-gray-300 bg-white p-2"
+        class="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl"
+        :class="props.step.hasFullTileLogo ? '' : 'border border-gray-300 bg-white p-2'"
         aria-hidden="true"
       >
         <img :src="props.step.logoSrc" alt="" class="h-full w-full object-contain" loading="lazy" decoding="async" />

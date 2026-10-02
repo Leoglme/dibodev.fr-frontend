@@ -20,53 +20,53 @@
         </div>
       </div>
 
-      <dl class="grid gap-x-10 gap-y-8 border-t border-gray-300 pt-10 sm:grid-cols-2 lg:grid-cols-3 lg:pt-12">
-        <div v-for="fact in facts" :key="fact.label" class="flex items-start gap-4">
-          <span
-            class="bg-accent-tint text-primary flex h-10 w-10 shrink-0 items-center justify-center rounded-full"
-            aria-hidden="true"
-          >
-            <DibodevIcon :name="fact.icon" mode="stroke" :width="18" :height="18" />
-          </span>
-          <div class="grid gap-1">
-            <dt class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ fact.label }}</dt>
-            <dd class="text-[15px] leading-6 text-gray-100">{{ fact.value }}</dd>
-          </div>
-        </div>
-      </dl>
-
-      <div class="flex flex-col gap-5 border-t border-gray-300 pt-8 lg:flex-row lg:items-center lg:gap-8">
-        <h3 class="shrink-0 text-lg font-medium text-gray-100">{{ t('aboutPage.profiles.title') }}</h3>
-        <ul class="flex flex-wrap gap-3">
-          <li v-for="profileLink in ABOUT_PROFILE_LINKS" :key="profileLink.href">
-            <a
-              :href="profileLink.href"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="profile-link focus-visible:outline-primary inline-flex min-h-12 items-center gap-3 rounded-xl border border-gray-300 bg-white py-1.5 pr-4 pl-1.5 text-[15px] font-medium text-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2"
-              :style="{ '--profile-brand-color': profileLink.brandColor }"
-              @click="track(TRACKING_EVENTS.externalProfileClicked, { platform: profileLink.label, location: 'about' })"
-            >
+      <div class="mx-auto grid w-full max-w-4xl gap-14 lg:gap-16">
+        <div class="bg-surface-tint grid gap-9 rounded-3xl px-6 py-9 sm:px-10 sm:py-12">
+          <h3 class="text-xl font-medium text-gray-100">{{ t('aboutPage.facts.title') }}</h3>
+          <dl class="grid gap-x-12 gap-y-9 sm:grid-cols-2">
+            <div v-for="fact in facts" :key="fact.label" class="flex items-start gap-4">
               <span
-                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-[13px] font-semibold"
-                :style="{ backgroundColor: profileLink.brandColor, color: profileLink.logoColor }"
+                class="text-primary flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white"
                 aria-hidden="true"
               >
-                <DibodevBrandGlyph v-if="profileLink.logoPath" :path="profileLink.logoPath" />
-                <template v-else>{{ profileLink.monogram }}</template>
+                <DibodevIcon :name="fact.icon" mode="stroke" :width="19" :height="19" />
               </span>
-              {{ profileLink.label }}
-              <DibodevIcon
-                name="ExternalLink"
-                mode="stroke"
-                :width="14"
-                :height="14"
-                class="text-muted"
-                aria-hidden="true"
-              />
-            </a>
-          </li>
-        </ul>
+              <div class="grid gap-1.5">
+                <dt class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ fact.label }}</dt>
+                <dd class="text-base leading-6 text-gray-100">{{ fact.value }}</dd>
+              </div>
+            </div>
+          </dl>
+        </div>
+
+        <div class="grid gap-6">
+          <h3 class="text-xl font-medium text-gray-100">{{ t('aboutPage.profiles.title') }}</h3>
+          <ul class="flex flex-wrap gap-3 sm:gap-4">
+            <li v-for="profileLink in ABOUT_PROFILE_LINKS" :key="profileLink.href">
+              <a
+                :href="profileLink.href"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="profile-link focus-visible:outline-primary inline-flex min-h-14 items-center gap-3 rounded-2xl bg-white py-2 pr-5 pl-2 text-base font-medium text-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2"
+                :style="{ '--profile-brand-color': profileLink.brandColor }"
+                @click="
+                  track(TRACKING_EVENTS.externalProfileClicked, { platform: profileLink.label, location: 'about' })
+                "
+              >
+                <span
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl font-bold tracking-tight"
+                  :class="profileLink.monogram && profileLink.monogram.length > 2 ? 'text-[11px]' : 'text-[15px]'"
+                  :style="{ backgroundColor: profileLink.tileColor, color: profileLink.logoColor }"
+                  aria-hidden="true"
+                >
+                  <DibodevBrandGlyph v-if="profileLink.logo" :logo="profileLink.logo" :size="22" />
+                  <template v-else>{{ profileLink.monogram }}</template>
+                </span>
+                {{ profileLink.label }}
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -113,17 +113,20 @@ const facts: ComputedRef<DibodevAboutKeyFact[]> = computed((): DibodevAboutKeyFa
 
 <style scoped>
 .profile-link {
+  box-shadow:
+    0 1px 2px rgba(20, 20, 20, 0.06),
+    0 6px 18px rgba(20, 20, 20, 0.06);
   transition:
-    border-color 0.2s ease,
     box-shadow 0.2s ease,
     transform 0.2s ease;
 }
 
 .profile-link:hover,
 .profile-link:focus-visible {
-  border-color: var(--profile-brand-color);
-  box-shadow: 0 8px 20px rgba(20, 20, 20, 0.06);
-  transform: translateY(-1px);
+  box-shadow:
+    0 0 0 1.5px var(--profile-brand-color),
+    0 10px 24px rgba(20, 20, 20, 0.1);
+  transform: translateY(-2px);
 }
 
 @media (prefers-reduced-motion: reduce) {

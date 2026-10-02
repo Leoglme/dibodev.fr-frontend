@@ -9,6 +9,7 @@ export type DibodevCareerStep = {
   monogram: string
   /** Logo of the organisation, shown instead of the monogram when set. */
   logoSrc: string | null
+  hasFullTileLogo: boolean
   isCurrent: boolean
 }
 

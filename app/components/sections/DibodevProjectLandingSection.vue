@@ -10,17 +10,17 @@
     >
       <div class="grid max-w-3xl justify-items-start gap-6" data-aos="fade-up">
         <DibodevBreadcrumb v-if="props.breadcrumbs.length > 0" :items="props.breadcrumbs" />
-        <div class="flex flex-col items-start gap-5">
+        <div class="flex flex-col items-start gap-5 sm:flex-row sm:gap-6">
           <div
-            class="flex h-24 w-24 shrink-0 items-center justify-center rounded-2xl border border-gray-300 p-4"
+            class="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl p-3.5 sm:mt-1"
             :style="{ backgroundColor: props.secondaryColor }"
           >
             <img
               :src="props.logoUrl"
               :alt="props.title + ' logo'"
-              class="h-16 w-16 object-contain"
-              width="64"
-              height="64"
+              class="h-full w-full object-contain"
+              width="52"
+              height="52"
             />
           </div>
 
@@ -65,8 +65,16 @@
 
         <div class="flex w-full flex-wrap items-center gap-3">
           <DibodevButton
+            :to="localePath('/contact')"
+            class="w-full sm:w-auto"
+            @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'project_hero' })"
+          >
+            {{ $t('project.landing.discuss') }}
+          </DibodevButton>
+          <DibodevButton
             v-if="props.siteUrl"
             :to="props.siteUrl"
+            :outlined="true"
             class="w-full sm:w-auto"
             @click="
               track(TRACKING_EVENTS.projectSiteVisited, {
@@ -79,29 +87,22 @@
             {{ $t('project.landing.viewSite') }}
             <DibodevIcon name="ExternalLink" mode="stroke" :width="18" :height="18" class="ml-2" aria-hidden="true" />
           </DibodevButton>
-          <DibodevButton :outlined="true" class="w-full sm:w-auto" @click="scrollToTargetSection">
+          <DibodevButton v-else :outlined="true" class="w-full sm:w-auto" @click="scrollToTargetSection">
             {{ $t('project.landing.discover') }}
           </DibodevButton>
         </div>
       </div>
 
-      <div v-if="props.screenshot" class="relative mx-auto w-full max-w-xl lg:max-w-none" data-aos="fade-up">
-        <div
-          class="bg-accent-tint absolute -top-4 -right-4 hidden h-full w-full rounded-3xl sm:block"
-          aria-hidden="true"
-        />
-        <div
-          class="relative aspect-video overflow-hidden rounded-2xl border border-gray-300 bg-gray-800 shadow-[0_18px_44px_rgba(20,20,20,0.08)]"
-        >
+      <div v-if="props.screenshot" class="flex justify-center lg:justify-end" data-aos="fade-up">
+        <div class="relative w-fit max-w-full">
+          <div class="bg-accent-tint absolute -top-4 -right-4 h-full w-full rounded-3xl" aria-hidden="true" />
           <img
             :src="props.screenshot.url"
             :srcset="props.screenshot.srcset || undefined"
             :sizes="SCREENSHOT_SIZES"
             :alt="$t('projects.card.screenshotAlt', { name: props.title })"
-            :width="SCREENSHOT_WIDTH"
-            :height="SCREENSHOT_HEIGHT"
             decoding="async"
-            class="h-full w-full object-contain"
+            class="relative block h-auto max-h-[26rem] w-auto max-w-full rounded-2xl drop-shadow-[0_18px_32px_rgba(20,20,20,0.14)]"
           />
         </div>
       </div>
@@ -128,8 +129,6 @@ import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 /** Section scrolled to by the "discover" button, and the room kept above it for the fixed navbar. */
 const DISCOVER_TARGET_SELECTOR: string = '#project-gallery'
 const SCROLL_TARGET_OFFSET: number = 96
-const SCREENSHOT_WIDTH: number = 1200
-const SCREENSHOT_HEIGHT: number = 675
 const SCREENSHOT_SIZES: string = '(min-width: 1280px) 576px, (min-width: 1024px) 416px, calc(100vw - 48px)'
 
 /* PROPS */

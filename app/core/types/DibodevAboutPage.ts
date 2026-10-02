@@ -1,4 +1,5 @@
 import type { DibodevAccentPalette } from '~/core/types/DibodevAccentPalette'
+import type { DibodevBrandLogo } from '~/core/types/DibodevBrandGlyph'
 import type { DibodevCareerStep } from '~/core/types/DibodevCareerStepCard'
 import type { DibodevServiceIconName } from '~/core/types/DibodevServiceIcon'
 
@@ -17,17 +18,19 @@ export type DibodevAboutKeyFact = DibodevAboutFact & {
  * @type {DibodevAboutProfileLink}
  * @property {string} label - Name of the site.
  * @property {string} href - URL of the profile.
- * @property {string} brandColor - Brand colour of the tile behind the logo.
- * @property {string} logoColor - Colour of the logo or of the monogram on the tile.
- * @property {string | null} logoPath - Path of the brand logo (24 × 24 box), or null for a brand shown by its monogram.
- * @property {string | null} monogram - Initials shown when the brand has no logo path.
+ * @property {string} brandColor - Brand colour shown around the link on hover.
+ * @property {string} tileColor - Background of the tile behind the logo.
+ * @property {string} logoColor - Colour of a single-colour logo or of the monogram on the tile.
+ * @property {DibodevBrandLogo | null} logo - The brand logo, or null for a brand shown by its monogram.
+ * @property {string | null} monogram - Initials shown when the brand has no logo.
  */
 export type DibodevAboutProfileLink = {
   label: string
   href: string
   brandColor: string
+  tileColor: string
   logoColor: string
-  logoPath: string | null
+  logo: DibodevBrandLogo | null
   monogram: string | null
 }
 
@@ -36,6 +39,8 @@ export type DibodevAboutCareerStepConfig = {
   monogram: string
   /** Logo of the organisation, shown instead of the monogram when set. */
   logoSrc: string | null
+  /** The logo is a full square image that fills the tile, instead of a mark centred on white. */
+  hasFullTileLogo: boolean
   highlightKeys: string[]
   technologies: string[]
   isCurrent: boolean

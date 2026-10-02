@@ -70,14 +70,14 @@ export class ProjectUtils {
   }
 
   /**
-   * Screenshot shown next to the title of a project page: the one of its card, or its first still media when the card has none.
+   * Screenshot shown next to the title of a project page: its first media, or the one of its card when that media is animated.
    * @param {DibodevProject} project - The project of the page.
    * @returns {DibodevProjectCardScreenshot | null} The screenshot, or null when the project has no usable one.
    */
   public static resolvePageScreenshot(project: DibodevProject): DibodevProjectCardScreenshot | null {
     return (
-      this.resolveCardScreenshot(project) ??
       this.buildScreenshot(project.media1) ??
+      this.resolveCardScreenshot(project) ??
       this.buildScreenshot(project.media2)
     )
   }

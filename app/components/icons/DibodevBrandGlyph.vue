@@ -1,26 +1,30 @@
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
+    :viewBox="props.logo.viewBox"
     :width="props.size"
     :height="props.size"
-    fill="currentColor"
     aria-hidden="true"
   >
-    <path :d="props.path" />
+    <path
+      v-for="logoPath in props.logo.paths"
+      :key="logoPath.path"
+      :d="logoPath.path"
+      :fill="logoPath.color ?? 'currentColor'"
+    />
   </svg>
 </template>
 
 <script lang="ts" setup>
 import type { PropType } from 'vue'
-import type { DibodevBrandGlyphProps } from '~/core/types/DibodevBrandGlyph'
+import type { DibodevBrandGlyphProps, DibodevBrandLogo } from '~/core/types/DibodevBrandGlyph'
 
 /**
- * Single-colour brand logo drawn from its path (24 × 24 box), in the current text colour.
+ * Brand logo drawn from its paths: each one in its own brand colour, or in the current text colour when it has none.
  */
 const props: DibodevBrandGlyphProps = defineProps({
-  path: {
-    type: String as PropType<string>,
+  logo: {
+    type: Object as PropType<DibodevBrandLogo>,
     required: true,
   },
   size: {

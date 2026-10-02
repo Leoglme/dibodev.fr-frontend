@@ -2,7 +2,6 @@
   <Form ref="contactForm" class="flex flex-col gap-10" @submit="onSubmit">
     <fieldset class="contact-group grid gap-6">
       <legend class="contact-group__legend">
-        <span class="contact-group__number" aria-hidden="true">1</span>
         {{ $t('contact.form.groups.need') }}
       </legend>
       <div class="flex flex-col gap-4">
@@ -29,7 +28,6 @@
 
     <fieldset class="contact-group grid gap-6">
       <legend class="contact-group__legend">
-        <span class="contact-group__number" aria-hidden="true">2</span>
         {{ $t('contact.form.groups.details') }}
       </legend>
       <div class="grid grid-cols-1 gap-10 sm:gap-4 lg:grid-cols-2 lg:items-start">
@@ -74,7 +72,6 @@
 
     <fieldset class="contact-group grid gap-6">
       <legend class="contact-group__legend">
-        <span class="contact-group__number" aria-hidden="true">3</span>
         {{ $t('contact.form.groups.message') }}
       </legend>
       <div>
@@ -140,6 +137,9 @@ type BudgetRangeKey = (typeof BUDGET_RANGE_KEYS)[number]
 
 /** The pages question only makes sense for a website. */
 const WEBSITE_PROJECT_TYPE: ProjectTypeKey = 'website'
+/** Choices selected on arrival, so the form can be sent without thinking about them. */
+const DEFAULT_PROJECT_TYPE: ProjectTypeKey = 'other'
+const DEFAULT_BUDGET_RANGE: BudgetRangeKey = 'unknown'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -180,9 +180,9 @@ const prefilledProjectType: ProjectTypeKey | null =
 const prefilledBudgetRange: BudgetRangeKey | null =
   BUDGET_RANGE_KEYS.find((key: BudgetRangeKey): boolean => key === String(route.query.budget ?? '')) ?? null
 
-const projectType: Ref<ProjectTypeKey | null> = ref<ProjectTypeKey | null>(prefilledProjectType)
+const projectType: Ref<ProjectTypeKey | null> = ref<ProjectTypeKey | null>(prefilledProjectType ?? DEFAULT_PROJECT_TYPE)
 const pagesRange: Ref<PagesRangeKey | null> = ref<PagesRangeKey | null>(null)
-const budgetRange: Ref<BudgetRangeKey | null> = ref<BudgetRangeKey | null>(prefilledBudgetRange)
+const budgetRange: Ref<BudgetRangeKey | null> = ref<BudgetRangeKey | null>(prefilledBudgetRange ?? DEFAULT_BUDGET_RANGE)
 const fullName: Ref<string> = ref('')
 const email: Ref<string> = ref('')
 const phone: Ref<string> = ref('')
@@ -239,9 +239,9 @@ function getBudgetRangeDisplay(key: BudgetRangeKey | null): string {
  * @returns {void}
  */
 function resetFormValues(): void {
-  projectType.value = null
+  projectType.value = DEFAULT_PROJECT_TYPE
   pagesRange.value = null
-  budgetRange.value = null
+  budgetRange.value = DEFAULT_BUDGET_RANGE
   fullName.value = ''
   email.value = ''
   phone.value = ''
@@ -249,7 +249,7 @@ function resetFormValues(): void {
   lastSentIntentKey.value = null
   contactForm.value?.resetForm({
     values: {
-      'type de projet': null,
+      'type de projet': DEFAULT_PROJECT_TYPE,
       nom: '',
       email: '',
       telephone: '',
@@ -393,17 +393,5 @@ async function onSubmit(): Promise<void> {
   font-size: 1.125rem;
   font-weight: 500;
   color: var(--color-gray-100);
-}
-
-.contact-group__number {
-  display: inline-flex;
-  width: 2rem;
-  height: 2rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 9999px;
-  background-color: var(--color-accent-tint);
-  color: var(--color-primary);
-  font-size: 0.875rem;
 }
 </style>
