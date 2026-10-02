@@ -7,6 +7,11 @@ export type DibodevAboutFact = {
   value: string
 }
 
+export type DibodevAboutStoryBlock = {
+  title: string
+  text: string
+}
+
 /** A fact of the "in short" list of the About page, shown with a line icon. */
 export type DibodevAboutKeyFact = DibodevAboutFact & {
   icon: string

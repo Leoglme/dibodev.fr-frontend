@@ -1170,13 +1170,21 @@
       "portraitCaption": "Fondateur de Dibodev, près de Rennes"
     },
     "story": {
-      "title": "Qui suis-je ?",
-      "background": "Je m'appelle Léo Guillaume. Avant d'écrire du code, j'ai été cuisinier. En 2017, j'ai commencé ma reconversion vers le développement web, et en 2020 j'en ai fait mon métier en entrant à la Web{'@'}cadémie d'Epitech Rennes, en alternance, avant de poursuivre jusqu'au MSc en intelligence artificielle et data.",
-      "career": "Depuis, j'ai construit des outils utilisés chaque jour : trois applications métier chez Kodeva, toujours en production dans des TPE et PME, puis la plateforme de réservation d'Izidoor, adoptée par une trentaine de structures de sport et de loisirs.",
-      "dibodev": "En 2025, j'ai créé Dibodev pour travailler directement avec les TPE et PME. Mon objectif : remplacer les fichiers Excel, les papiers et les tâches répétitives par des outils simples, pensés pour les personnes qui les utilisent.",
-      "ai": "Depuis avril 2026, je suis aussi en mission chez PrePeers, une startup EdTech qui aide les 15-25 ans à choisir leur orientation grâce à l'intelligence artificielle. J'y développe la plateforme et les chats IA qui conseillent les étudiants, jusque sur les sites des écoles partenaires.",
-      "workingStyle": "Je travaille seul, en lien direct avec vous, du premier échange à la maintenance. Chaque projet est chiffré au forfait, avec un devis clair, et livré par étapes pour que vous puissiez tester l'outil au fil du projet.",
-      "eyebrow": "À propos"
+      "eyebrow": "Qui suis-je ?",
+      "title": "D'abord cuisinier, développeur depuis {years} ans",
+      "lead": "Je m'appelle Léo Guillaume. Je me suis reconverti dans le développement en 2017, jusqu'à un bac+5 en intelligence artificielle et data à Epitech Rennes. Aujourd'hui, je conçois les logiciels dont les TPE et PME se servent chaque jour pour travailler, et je les construis pour qu'ils durent.",
+      "proof": {
+        "title": "Des outils encore utilisés aujourd'hui",
+        "text": "Chez Kodeva, j'ai construit trois applications métier pour des entreprises de 20 à 200 salariés : elles sont toujours en production. Chez Izidoor, j'ai développé la plateforme de réservation adoptée par une trentaine de structures de sport et de loisirs, et j'en suis devenu actionnaire. Depuis 2026, je développe aussi la plateforme et les assistants IA de PrePeers, une startup qui aide les 15-25 ans à choisir leur orientation."
+      },
+      "clients": {
+        "title": "Je pars de votre métier",
+        "text": "J'ai créé Dibodev en 2025 pour travailler en direct avec les TPE et PME. Avant d'écrire une ligne de code, je me mets à la place de la personne qui utilisera l'outil : ses journées, ses habitudes, ce qui lui fait perdre du temps. Ensuite seulement, je remplace les fichiers Excel, le papier et les tâches répétitives."
+      },
+      "method": {
+        "title": "Un seul interlocuteur, un prix connu",
+        "text": "Vous échangez avec moi du premier appel à la maintenance, sans intermédiaire. Le prix est fixé par un devis avant de commencer. Le projet est livré par étapes, pour que vous puissiez tester l'outil au fur et à mesure et corriger le tir tôt."
+      }
     },
     "facts": {
       "title": "En bref",
@@ -1194,7 +1202,7 @@
       },
       "experience": {
         "label": "Expérience",
-        "value": "{years} ans d'expérience professionnelle : alternance chez Kodeva et Izidoor, puis freelance"
+        "value": "{years} ans de métier, et des logiciels toujours utilisés dans des entreprises de 20 à 200 salariés"
       },
       "education": {
         "label": "Formation",

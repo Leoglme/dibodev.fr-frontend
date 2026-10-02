@@ -1170,13 +1170,21 @@
       "portraitCaption": "Founder of Dibodev, near Rennes"
     },
     "story": {
-      "title": "Who am I?",
-      "background": "My name is Léo Guillaume. Before writing code, I worked as a cook. In 2017, I started retraining as a web developer, and in 2020 I turned it into my job by joining the Web{'@'}cadémie at Epitech Rennes as a work-study student, then went on to earn an MSc in artificial intelligence and data.",
-      "career": "Since then, I have built tools people use every day: three business apps at Kodeva, still running in small and medium businesses, then the Izidoor booking platform, now used by around thirty sports and leisure organizations.",
-      "dibodev": "In 2025, I founded Dibodev to work directly with small and medium businesses. My goal: replace spreadsheets, paperwork and repetitive tasks with simple tools designed for the people who use them.",
-      "ai": "Since April 2026, I have also been on a mission for PrePeers, an EdTech startup that uses artificial intelligence to help 15 to 25-year-olds choose their path. I build the platform and the AI chats that guide students, all the way to partner schools' websites.",
-      "workingStyle": "I work alone, in direct contact with you, from the first call to maintenance. Every project has a fixed price with a clear quote, and is delivered in stages so you can test the tool as the project moves forward.",
-      "eyebrow": "About"
+      "eyebrow": "Who am I?",
+      "title": "A cook first, a developer for {years} years",
+      "lead": "My name is Léo Guillaume. I retrained as a developer in 2017 and went on to earn an MSc in artificial intelligence and data at Epitech Rennes. Today I design the software small and medium businesses rely on every day, and I build it to last.",
+      "proof": {
+        "title": "Tools still in use today",
+        "text": "At Kodeva, I built three business apps for companies of 20 to 200 employees: they are still in production. At Izidoor, I developed the booking platform now used by around thirty sports and leisure organizations, and I became a shareholder. Since 2026, I have also been building the platform and AI assistants of PrePeers, a startup that helps 15 to 25-year-olds choose their path."
+      },
+      "clients": {
+        "title": "I start from your trade",
+        "text": "I founded Dibodev in 2025 to work directly with small and medium businesses. Before writing a line of code, I put myself in the shoes of the person who will use the tool: their days, their habits, what wastes their time. Only then do I replace spreadsheets, paperwork and repetitive tasks."
+      },
+      "method": {
+        "title": "One contact, a known price",
+        "text": "You deal with me from the first call to maintenance, with no go-between. The price is set by a quote before work starts. The project is delivered in stages, so you can test the tool as it grows and adjust early."
+      }
     },
     "facts": {
       "title": "At a glance",
@@ -1194,7 +1202,7 @@
       },
       "experience": {
         "label": "Experience",
-        "value": "{years} years of professional experience: work-study at Kodeva and Izidoor, then freelance"
+        "value": "{years} years in the trade, with software still used in companies of 20 to 200 employees"
       },
       "education": {
         "label": "Education",

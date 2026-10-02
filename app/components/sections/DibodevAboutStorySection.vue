@@ -1,22 +1,27 @@
 <template>
   <section id="about-story" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
     <div class="max-w-site mx-auto grid w-full gap-16 lg:gap-20">
-      <div class="grid gap-8">
-        <div class="grid gap-4">
-          <p class="text-primary text-xs font-medium tracking-[0.08em] uppercase">{{ t('aboutPage.story.eyebrow') }}</p>
-          <h2
-            class="text-[28px] leading-[1.15] font-medium tracking-[-0.01em] text-gray-100 sm:text-[36px] lg:text-[40px]"
-          >
-            {{ t('aboutPage.story.title') }}
-          </h2>
-        </div>
-        <p class="max-w-4xl text-[19px] leading-8 text-gray-100 sm:text-[21px] sm:leading-9">
-          {{ t(`aboutPage.story.${STORY_LEAD_KEY}`) }}
-        </p>
-        <div class="text-[17px] leading-7 text-gray-200 md:columns-2 md:gap-x-16">
-          <p v-for="paragraphKey in STORY_BODY_KEYS" :key="paragraphKey" class="mb-6 break-inside-avoid">
-            {{ t(`aboutPage.story.${paragraphKey}`) }}
+      <div class="grid gap-12 lg:gap-14">
+        <div class="grid gap-7">
+          <div class="grid gap-4">
+            <p class="text-primary text-xs font-medium tracking-[0.08em] uppercase">
+              {{ t('aboutPage.story.eyebrow') }}
+            </p>
+            <h2
+              class="text-[28px] leading-[1.15] font-medium tracking-[-0.01em] text-gray-100 sm:text-[36px] lg:text-[40px]"
+            >
+              {{ t('aboutPage.story.title', { years: yearsOfExperience }) }}
+            </h2>
+          </div>
+          <p class="max-w-4xl text-[19px] leading-8 text-gray-100 sm:text-[21px] sm:leading-9">
+            {{ t('aboutPage.story.lead') }}
           </p>
+        </div>
+        <div class="grid gap-x-12 gap-y-10 lg:grid-cols-3">
+          <div v-for="storyBlock in storyBlocks" :key="storyBlock.title" class="grid content-start gap-3">
+            <h3 class="text-xl font-medium text-gray-100">{{ storyBlock.title }}</h3>
+            <p class="text-[17px] leading-7 text-gray-200">{{ storyBlock.text }}</p>
+          </div>
         </div>
       </div>
 
@@ -77,7 +82,7 @@
 
 <script lang="ts" setup>
 import type { ComputedRef } from 'vue'
-import type { DibodevAboutKeyFact } from '~/core/types/DibodevAboutPage'
+import type { DibodevAboutKeyFact, DibodevAboutStoryBlock } from '~/core/types/DibodevAboutPage'
 import { computed } from 'vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { ABOUT_PROFILE_LINKS } from '~/core/constants/aboutProfileLinks'
@@ -88,10 +93,8 @@ import { CareerUtils } from '~/core/utils/CareerUtils'
 const { t } = useI18n()
 const { track } = useTracking()
 
-/** First paragraph, displayed as a lead. */
-const STORY_LEAD_KEY: string = 'background'
-/** Remaining paragraphs, displayed in two columns on wide screens. */
-const STORY_BODY_KEYS: string[] = ['career', 'dibodev', 'ai', 'workingStyle']
+/** Titled paragraphs of the story (i18n `aboutPage.story.*`), side by side on wide screens. */
+const STORY_BLOCK_KEYS: string[] = ['proof', 'clients', 'method']
 /** Facts of the "in short" list (i18n `aboutPage.facts.*`), each with its line icon. */
 const FACT_ICONS: Record<string, string> = {
   company: 'Store',
@@ -102,11 +105,22 @@ const FACT_ICONS: Record<string, string> = {
   languages: 'MessageCircle',
 }
 
+const yearsOfExperience: number = CareerUtils.getYearsOfExperience()
+
+const storyBlocks: ComputedRef<DibodevAboutStoryBlock[]> = computed((): DibodevAboutStoryBlock[] =>
+  STORY_BLOCK_KEYS.map(
+    (key: string): DibodevAboutStoryBlock => ({
+      title: t(`aboutPage.story.${key}.title`),
+      text: t(`aboutPage.story.${key}.text`),
+    }),
+  ),
+)
+
 const facts: ComputedRef<DibodevAboutKeyFact[]> = computed((): DibodevAboutKeyFact[] =>
   Object.entries(FACT_ICONS).map(
     ([key, icon]: [string, string]): DibodevAboutKeyFact => ({
       label: t(`aboutPage.facts.${key}.label`),
-      value: t(`aboutPage.facts.${key}.value`, { years: CareerUtils.getYearsOfExperience() }),
+      value: t(`aboutPage.facts.${key}.value`, { years: yearsOfExperience }),
       icon,
     }),
   ),
