@@ -83,7 +83,7 @@
     <div class="mt-13 flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
       <p
         :key="`caption-${activeSlide.id}`"
-        class="slideshow-caption text-[15px] leading-[22px] text-gray-200"
+        class="slideshow-caption min-h-[4.125rem] text-[15px] leading-[22px] text-gray-200"
         :aria-live="isAutoplayRunning ? 'off' : 'polite'"
       >
         <strong class="font-medium text-gray-100">{{ activeSlide.need }}</strong
