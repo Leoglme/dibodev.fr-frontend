@@ -1,10 +1,22 @@
+import type { NuxtApp } from '#app'
 import { configure, defineRule } from 'vee-validate'
-import { localize } from '@vee-validate/i18n'
+import { localize, setLocale } from '@vee-validate/i18n'
 import en from '@vee-validate/i18n/dist/locale/en.json'
+import es from '@vee-validate/i18n/dist/locale/es.json'
 import fr from '@vee-validate/i18n/dist/locale/fr.json'
 import { required, email, numeric, min, max, min_value, max_value, integer, alpha_spaces } from '@vee-validate/rules'
 
+/**
+ * Field names shown in validation messages, per site language (field ids are French, so French needs none).
+ */
+const TRANSLATED_FIELD_NAMES: Record<'en' | 'es', Record<string, string>> = {
+  en: { nom: 'name', telephone: 'phone', 'type de projet': 'project type' },
+  es: { nom: 'nombre', telephone: 'teléfono', message: 'mensaje', 'type de projet': 'tipo de proyecto' },
+}
+
 export default defineNuxtPlugin(() => {
+  const nuxtApp: NuxtApp = useNuxtApp()
+
   // Règles natives
   defineRule('required', required)
   defineRule('email', email)
@@ -34,8 +46,17 @@ export default defineNuxtPlugin(() => {
   })
 
   // Localisation
-  localize({ en, fr })
   configure({
-    generateMessage: localize('fr', { names: {} }),
+    generateMessage: localize({
+      fr,
+      en: { ...en, names: TRANSLATED_FIELD_NAMES.en },
+      es: { ...es, names: TRANSLATED_FIELD_NAMES.es },
+    }),
   })
+
+  watch(
+    (): string => nuxtApp.$i18n.locale.value,
+    (locale: string): void => setLocale(locale),
+    { immediate: true },
+  )
 })
