@@ -40,8 +40,8 @@ const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail(():
 const heroStats: ComputedRef<DibodevStatItemProps[]> = await useHeroStats()
 const { data: storyblokProjectsData } = await useProjectsWithTranslations()
 
-/** Favourite projects first, then the most recent ones (the list is already sorted by date). */
+/** Projects chosen for the home page first, then the most recent ones (the list is already sorted by date). */
 const showcaseProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] =>
-  ProjectOrderUtils.favoritesFirst(storyblokProjectsData.value ?? []),
+  ProjectOrderUtils.homePageSelectionFirst(storyblokProjectsData.value ?? []),
 )
 </script>

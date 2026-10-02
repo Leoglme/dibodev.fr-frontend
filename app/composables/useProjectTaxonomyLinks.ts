@@ -19,12 +19,12 @@ const LISTING_LOGO_COUNT: number = 3
 const DEFAULT_LOGO_BACKGROUND: string = '#f5f3ff'
 
 /**
- * Picks the logos of a listing: favourite projects first, then the most recent ones.
+ * Picks the logos of a listing: projects chosen for the home page first, then the most recent ones.
  * @param {DibodevProject[]} listingProjects - Projects of the listing (already sorted by date, newest first).
  * @returns {DibodevProjectTaxonomyLogo[]} Up to three logo tiles.
  */
 function pickListingLogos(listingProjects: DibodevProject[]): DibodevProjectTaxonomyLogo[] {
-  return ProjectOrderUtils.favoritesFirst(listingProjects)
+  return ProjectOrderUtils.homePageSelectionFirst(listingProjects)
     .slice(0, LISTING_LOGO_COUNT)
     .map(
       (project: DibodevProject): DibodevProjectTaxonomyLogo => ({

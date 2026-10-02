@@ -81,9 +81,9 @@ const selectedLanguage: Ref<DibodevSelectOption> = ref<DibodevSelectOption>({
   value: 'all',
 })
 
-/** Projects of the listing: the favourites put forward in Storyblok first, then the most recent ones. */
+/** Projects of the listing: the ones chosen for the home page first, then the most recent ones. */
 const allProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] =>
-  ProjectOrderUtils.favoritesFirst(props.initialProjects ?? storyblokProjectsData.value ?? []),
+  ProjectOrderUtils.homePageSelectionFirst(props.initialProjects ?? storyblokProjectsData.value ?? []),
 )
 
 /** Filters are only useful from this number of projects. */
