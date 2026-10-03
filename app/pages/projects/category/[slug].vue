@@ -46,7 +46,7 @@
       :eyebrow="$t('projects.hub.sectorsEyebrow')"
       :title="$t('projects.categoryPage.otherSectorsTitle')"
       :links="sectorLinks"
-      variant="chips"
+      variant="photoTiles"
     />
 
     <DibodevContactCtaSection

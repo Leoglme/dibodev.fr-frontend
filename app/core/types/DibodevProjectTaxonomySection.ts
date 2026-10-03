@@ -52,7 +52,7 @@ export type DibodevProjectTaxonomyLink = {
  * @property {string} title - The section title.
  * @property {string} intro - Optional paragraph displayed under the title.
  * @property {DibodevProjectTaxonomyLink[]} links - The listing pages to link to.
- * @property {'cards' | 'chips'} variant - Cards (icon, label, description, logos, count) or compact chips (label, count), shown as photo tiles below 1024 px when every link has a photo.
+ * @property {'cards' | 'photoTiles'} variant - Cards (icon, label, description, logos, count) or photo tiles (photo, label, count) for listings that have a photo.
  * @property {boolean} hideEmpty - Whether listings without projects are left out.
  * @property {DibodevSectionTone} tone - Background tone of the section.
  */
@@ -61,7 +61,7 @@ export type DibodevProjectTaxonomySectionProps = {
   title: string
   intro: string
   links: DibodevProjectTaxonomyLink[]
-  variant: 'cards' | 'chips'
+  variant: 'cards' | 'photoTiles'
   hideEmpty: boolean
   tone: DibodevSectionTone
 }

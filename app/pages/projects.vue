@@ -17,7 +17,7 @@
       :eyebrow="t('projects.hub.sectorsEyebrow')"
       :title="t('projects.hub.sectorsTitle')"
       :links="sectorLinks"
-      variant="chips"
+      variant="photoTiles"
     />
     <DibodevContactCtaSection
       :title="t('projects.cta.text')"

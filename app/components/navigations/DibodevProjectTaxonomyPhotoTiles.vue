@@ -1,12 +1,12 @@
 <template>
-  <ul class="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
+  <ul class="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:gap-5">
     <li
       v-for="(link, index) in props.links"
       :key="link.key"
       :class="
         isAloneOnLastPhoneRow(index)
-          ? 'col-span-2 aspect-[2/1] sm:col-span-1 sm:aspect-[4/3]'
-          : 'aspect-square sm:aspect-[4/3]'
+          ? 'col-span-2 aspect-[2/1] sm:col-span-1 sm:aspect-[4/3] lg:aspect-[16/10]'
+          : 'aspect-square sm:aspect-[4/3] lg:aspect-[16/10]'
       "
     >
       <NuxtLink :to="link.to" class="group relative block h-full overflow-hidden rounded-2xl bg-gray-700">
@@ -27,9 +27,9 @@
         >
           <DibodevIcon name="ArrowRight" mode="stroke" :width="16" :height="16" />
         </span>
-        <span class="absolute inset-x-3.5 bottom-3 grid gap-0.5 text-white">
-          <span class="text-base leading-tight font-medium">{{ link.label }}</span>
-          <span class="text-[13px] text-white/80">{{ $t('projects.hub.projectCount', link.count) }}</span>
+        <span class="absolute inset-x-3.5 bottom-3 grid gap-0.5 text-white lg:inset-x-5 lg:bottom-4.5">
+          <span class="text-base leading-tight font-medium lg:text-xl">{{ link.label }}</span>
+          <span class="text-[13px] text-white/80 lg:text-sm">{{ $t('projects.hub.projectCount', link.count) }}</span>
         </span>
       </NuxtLink>
     </li>
@@ -42,7 +42,7 @@ import type { DibodevProjectTaxonomyLink } from '~/core/types/DibodevProjectTaxo
 import type { DibodevProjectTaxonomyPhotoTilesProps } from '~/core/types/DibodevProjectTaxonomyPhotoTiles'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 
-/** Two tiles per row on phones, three on tablets. */
+/** Two tiles per row on phones, three from tablets up. */
 const PHOTO_SIZES: string = '(min-width: 640px) 33vw, 50vw'
 /** The tile left alone on the last phone row takes the full width. */
 const FULL_WIDTH_PHOTO_SIZES: string = '(min-width: 640px) 33vw, 100vw'
