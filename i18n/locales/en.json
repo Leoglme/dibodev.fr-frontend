@@ -219,8 +219,15 @@
       "titlePart1": "Free tools to choose ",
       "titleHighlight1": "the right software",
       "titlePart2": "",
-      "description": "Driving school, event equipment rental, bike shop, garage: in 6 questions, each test tells you which software to choose and how much to budget, with the 2026 prices of the software on the French market. Trade not listed? The estimator gives a price range for custom software.",
+      "description": "Driving school, event equipment rental, bike shop, garage: in 6 questions, each test tells you which software to choose and how much to budget, with the 2026 prices of the software on the French market.",
       "cta": "Choose a test",
+      "ctaSecondary": "Estimate my budget",
+      "stats": {
+        "testsLabel": "tests by trade",
+        "durationValue": "2",
+        "durationLabel": "minutes per test"
+      },
+      "previewCaption": "A real result: the garage test, for a mechanic who works alone.",
       "reassurance": {
         "free": "Free, no sign-up or email",
         "instant": "Instant result",
@@ -248,6 +255,42 @@
         "description": "Tell me about your business: I'll tell you for free whether off-the-shelf software is enough or whether a custom tool is worth it.",
         "link": "Discuss my project"
       }
+    },
+    "examples": {
+      "title": "A straight answer, with real prices",
+      "intro": "Depending on your answers, the test tells you whether off-the-shelf software is enough or whether a custom tool is worth it. When software at a few dozen euros a month does the job, it tells you that too.",
+      "points": {
+        "kind": "The kind of tool you need: off-the-shelf software or a custom tool",
+        "prices": "The software that suits your trade, with its 2026 public prices",
+        "budget": "A price and time range when a custom tool makes sense"
+      },
+      "cta": "Choose a test"
+    },
+    "faq": {
+      "title": "Frequently asked questions about the tests",
+      "items": {
+        "free": {
+          "question": "Are the tests really free?",
+          "answer": "Yes. No sign-up, no email required: you answer the six questions and the result shows up right away. You can then contact me if you want to go further, with no commitment."
+        },
+        "prices": {
+          "question": "Where do the software prices come from?",
+          "answer": "From the publishers' public pricing pages, checked on 29 September 2026. When a publisher does not publish its prices, the test says they are on quote."
+        },
+        "marketSoftware": {
+          "question": "Why would a developer recommend off-the-shelf software?",
+          "answer": "Because it is often the right answer for a small business: software at a few dozen euros a month covers the essentials. A custom tool is only worth it when the way you work goes beyond what this software can do."
+        },
+        "missingTrade": {
+          "question": "My trade isn't listed, what should I do?",
+          "answer": "Use the budget estimator for a price range, or tell me about your business: I'll tell you for free whether off-the-shelf software is enough or whether a custom tool is worth it."
+        }
+      }
+    },
+    "contactCta": {
+      "title": "Unsure about your test result?",
+      "description": "Tell me about your business: I'll look at your case for free and get back to you within 24 hours, by phone or email.",
+      "button": "Discuss my project"
     }
   },
   "home": {
@@ -343,7 +386,7 @@
         "mobile": {
           "title": "Mobile app",
           "description": "An iOS and Android app for your field teams or your customers.",
-          "price": "On quote"
+          "price": "From €5,000"
         }
       },
       "eyebrow": "Services"
@@ -754,8 +797,8 @@
               "label": "employees in the SMEs using it"
             },
             "production": {
-              "value": "Still",
-              "label": "in production today"
+              "value": "In production",
+              "label": "still in use today"
             },
             "applications": {
               "value": "3",
@@ -786,8 +829,8 @@
               "label": "employees in the SMEs using it"
             },
             "production": {
-              "value": "Still",
-              "label": "in production today"
+              "value": "In production",
+              "label": "still in use today"
             },
             "applications": {
               "value": "3",

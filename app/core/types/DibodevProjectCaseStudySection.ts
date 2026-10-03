@@ -10,6 +10,7 @@ import type { DibodevStatItemProps } from '~/core/types/DibodevStat'
  * @property {string} intro - Paragraph displayed under the title (role and period on the project).
  * @property {DibodevStatItemProps[]} stats - Key figures, shown in a band under the heading.
  * @property {DibodevProjectCaseStudyColumn[]} columns - Before, built and after, in reading order.
+ * @property {string} accentColor - Project colour, used lightened for the short bars above the key figures.
  * @property {DibodevSectionTone} tone - Background tone of the section.
  */
 export type DibodevProjectCaseStudySectionProps = {
@@ -18,5 +19,6 @@ export type DibodevProjectCaseStudySectionProps = {
   intro: string
   stats: DibodevStatItemProps[]
   columns: DibodevProjectCaseStudyColumn[]
+  accentColor: string
   tone: DibodevSectionTone
 }

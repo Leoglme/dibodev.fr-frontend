@@ -8,7 +8,7 @@
     <div class="max-w-site mx-auto grid w-full gap-10 lg:gap-12">
       <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.intro" />
 
-      <DibodevStatsBand v-if="props.stats.length > 0" :stats="props.stats" />
+      <DibodevStatsBand v-if="props.stats.length > 0" :stats="props.stats" :accentColor="props.accentColor" />
 
       <ol class="grid gap-5 lg:grid-cols-3">
         <li
@@ -104,6 +104,10 @@ const props: DibodevProjectCaseStudySectionProps = defineProps({
   columns: {
     type: Array as PropType<DibodevProjectCaseStudyColumn[]>,
     required: true,
+  },
+  accentColor: {
+    type: String as PropType<string>,
+    default: '',
   },
   tone: {
     type: String as PropType<DibodevSectionTone>,

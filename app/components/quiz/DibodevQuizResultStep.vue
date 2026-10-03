@@ -16,43 +16,7 @@
     </div>
 
     <div class="grid items-start gap-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-10">
-      <div class="bg-primary-dark relative grid gap-5 overflow-hidden rounded-2xl p-5 text-white sm:p-6">
-        <div
-          class="pointer-events-none absolute -top-16 -right-12 h-56 w-56 rounded-full bg-white/10 blur-2xl"
-          aria-hidden="true"
-        />
-        <div class="relative grid gap-1">
-          <p class="text-xs font-medium tracking-[0.08em] text-white/85 uppercase">
-            {{ props.result.priceCard.eyebrow }}
-          </p>
-          <p class="text-[32px] leading-tight font-medium tracking-[-0.01em] tabular-nums sm:text-[40px]">
-            {{ props.result.priceCard.price }}
-          </p>
-          <p v-if="props.result.priceCard.priceSuffix" class="text-[15px] text-white/85">
-            {{ props.result.priceCard.priceSuffix }}
-          </p>
-        </div>
-        <dl class="relative grid rounded-xl bg-white/10 px-4">
-          <div
-            v-for="priceDetail in props.result.priceCard.details"
-            :key="priceDetail.label"
-            class="flex items-baseline justify-between gap-4 border-b border-white/15 py-3 last:border-b-0"
-          >
-            <dt class="text-[15px] font-medium">{{ priceDetail.label }}</dt>
-            <dd class="text-right text-[15px] whitespace-nowrap text-white/90 tabular-nums">{{ priceDetail.value }}</dd>
-          </div>
-        </dl>
-        <p class="relative text-sm leading-6 text-white/85">
-          {{ props.result.priceCard.footnote }}
-          <a
-            v-if="props.result.priceCard.footnoteLink"
-            :href="props.result.priceCard.footnoteLink.href"
-            class="font-medium whitespace-nowrap text-white underline underline-offset-2 hover:no-underline"
-          >
-            {{ props.result.priceCard.footnoteLink.label }}
-          </a>
-        </p>
-      </div>
+      <DibodevQuizPriceCard :priceCard="props.result.priceCard" />
 
       <div class="grid content-start gap-3 lg:pt-2">
         <p class="text-base font-medium text-gray-100">{{ props.result.adviceTitle }}</p>
@@ -158,6 +122,7 @@ import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import DibodevHyphenSafeText from '~/components/ui/DibodevHyphenSafeText.vue'
 import DibodevQuizLeadForm from '~/components/quiz/DibodevQuizLeadForm.vue'
+import DibodevQuizPriceCard from '~/components/quiz/DibodevQuizPriceCard.vue'
 import { PHONE_DISPLAY, PHONE_E164 } from '~/config/contact'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'

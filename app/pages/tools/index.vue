@@ -7,11 +7,15 @@
     :description="t('toolsHubPage.hero.description')"
     :ctaText="t('toolsHubPage.hero.cta')"
     ctaTarget="#free-tools"
+    :secondaryCta="{ text: t('toolsHubPage.hero.ctaSecondary'), to: estimatorPath }"
+    :stats="heroStats"
     :reassurances="reassurances"
-    :compactTitle="true"
-    align="center"
     :decorated="true"
-  />
+  >
+    <template v-if="headerResultExample" #aside>
+      <DibodevQuizResultPreview :example="headerResultExample" :caption="t('toolsHubPage.hero.previewCaption')" />
+    </template>
+  </DibodevLandingSection>
   <DibodevFreeToolsSection
     :eyebrow="t('toolsHubPage.list.eyebrow')"
     :title="t('toolsHubPage.list.title')"
@@ -19,21 +23,45 @@
     :tools="toolCards"
     trackingLocation="tools_hub"
   />
+  <DibodevQuizResultExamplesSection
+    v-if="resultExamples.length > 0"
+    :title="t('toolsHubPage.examples.title')"
+    :intro="t('toolsHubPage.examples.intro')"
+    :points="resultExamplePoints"
+    :ctaText="t('toolsHubPage.examples.cta')"
+    ctaTo="#free-tools"
+    :examples="resultExamples"
+  />
+  <DibodevFaqSection :title="t('toolsHubPage.faq.title')" :questions="faqQuestions" tone="tint" />
+  <DibodevContactCtaSection
+    :title="t('toolsHubPage.contactCta.title')"
+    :description="t('toolsHubPage.contactCta.description')"
+    :ctaText="t('toolsHubPage.contactCta.button')"
+  />
 </template>
 
 <script lang="ts" setup>
 import type { ComputedRef } from 'vue'
 import type { SupportedLocale } from '~/core/constants/categorySlugs'
 import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
+import type { DibodevFaqQuestion } from '~/core/types/DibodevFaqSection'
 import type { DibodevFreeToolCard } from '~/core/types/DibodevFreeToolsSection'
+import type { DibodevQuizResultExample, DibodevQuizResultExampleConfig } from '~/core/types/DibodevQuizResultExample'
+import type { DibodevStatItemProps } from '~/core/types/DibodevStat'
 import type { DibodevToolTeaserContent } from '~/core/types/DibodevToolTeaser'
 import { computed } from 'vue'
 import DibodevLandingSection from '~/components/sections/DibodevLandingSection.vue'
 import DibodevFreeToolsSection from '~/components/sections/DibodevFreeToolsSection.vue'
+import DibodevQuizResultExamplesSection from '~/components/sections/DibodevQuizResultExamplesSection.vue'
+import DibodevFaqSection from '~/components/sections/DibodevFaqSection.vue'
+import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
+import DibodevQuizResultPreview from '~/components/quiz/DibodevQuizResultPreview.vue'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { usePageShareImage } from '~/composables/usePageShareImage'
+import { useQuizResultExamples } from '~/composables/useQuizResultExamples'
 import { useToolTeasers } from '~/composables/useToolTeasers'
 import { PERSON_ID, ORGANIZATION_ID } from '~/config/schema'
+import { TOOLS_HUB_HEADER_RESULT_EXAMPLE, TOOLS_HUB_RESULT_EXAMPLES } from '~/core/constants/tools/quizResultExamples'
 import { BUSINESS_SOFTWARE_TOOL_TEASERS } from '~/core/constants/tools/toolTeasers'
 
 definePageMeta({
@@ -48,6 +76,8 @@ definePageMeta({
 
 const SITE_URL: string = 'https://dibodev.fr'
 const REASSURANCE_KEYS: string[] = ['free', 'instant', 'prices']
+const RESULT_EXAMPLE_POINT_KEYS: string[] = ['kind', 'prices', 'budget']
+const FAQ_QUESTION_KEYS: string[] = ['free', 'prices', 'marketSoftware', 'missingTrade']
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -64,6 +94,39 @@ const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail(():
 
 const reassurances: ComputedRef<string[]> = computed((): string[] =>
   REASSURANCE_KEYS.map((key: string): string => t(`toolsHubPage.hero.reassurance.${key}`)),
+)
+
+const estimatorPath: ComputedRef<string> = computed((): string => `${localePath('custom-business-software')}#estimator`)
+
+const heroStats: ComputedRef<DibodevStatItemProps[]> = computed((): DibodevStatItemProps[] => [
+  { value: String(toolTeasers.value.length), label: t('toolsHubPage.hero.stats.testsLabel') },
+  { value: t('toolsHubPage.hero.stats.durationValue'), label: t('toolsHubPage.hero.stats.durationLabel') },
+])
+
+/** Real result of the garage test, shown in the header: what a visitor gets after six questions. */
+const headerResultExamples: ComputedRef<DibodevQuizResultExample[]> = useQuizResultExamples(
+  (): DibodevQuizResultExampleConfig[] => [TOOLS_HUB_HEADER_RESULT_EXAMPLE],
+)
+const headerResultExample: ComputedRef<DibodevQuizResultExample | null> = computed(
+  (): DibodevQuizResultExample | null => headerResultExamples.value[0] ?? null,
+)
+
+/** Two real results with opposite answers: market software for a small business, a custom tool for a larger one. */
+const resultExamples: ComputedRef<DibodevQuizResultExample[]> = useQuizResultExamples(
+  (): DibodevQuizResultExampleConfig[] => TOOLS_HUB_RESULT_EXAMPLES,
+)
+
+const resultExamplePoints: ComputedRef<string[]> = computed((): string[] =>
+  RESULT_EXAMPLE_POINT_KEYS.map((key: string): string => t(`toolsHubPage.examples.points.${key}`)),
+)
+
+const faqQuestions: ComputedRef<DibodevFaqQuestion[]> = computed((): DibodevFaqQuestion[] =>
+  FAQ_QUESTION_KEYS.map(
+    (key: string): DibodevFaqQuestion => ({
+      question: t(`toolsHubPage.faq.items.${key}.question`),
+      answer: t(`toolsHubPage.faq.items.${key}.answer`),
+    }),
+  ),
 )
 
 /** Trade tests first, then the budget estimator, then a way out for the trades without a test. */
@@ -87,7 +150,7 @@ const toolCards: ComputedRef<DibodevFreeToolCard[]> = computed((): DibodevFreeTo
     icon: 'SlidersHorizontal',
     meta: t('toolsHubPage.cards.estimator.meta'),
     linkLabel: t('toolsHubPage.cards.estimator.link'),
-    to: `${localePath('custom-business-software')}#estimator`,
+    to: estimatorPath.value,
     toolId: 'budget-estimator',
   },
   {

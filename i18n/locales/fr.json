@@ -219,8 +219,15 @@
       "titlePart1": "Des outils gratuits pour choisir ",
       "titleHighlight1": "votre logiciel",
       "titlePart2": "",
-      "description": "Auto-école, location de matériel événementiel, atelier vélo, garage\u202f: en 6 questions, chaque test vous dit quel logiciel choisir et combien prévoir, avec les prix 2026 des logiciels du marché. Votre métier n'y est pas\u202f? L'estimateur donne un ordre de prix pour un outil sur mesure.",
+      "description": "Auto-école, location de matériel, atelier vélo, garage\u202f: en 6 questions, chaque test vous dit quel logiciel choisir et combien prévoir, avec les prix 2026 des logiciels du marché.",
       "cta": "Choisir un test",
+      "ctaSecondary": "Estimer mon budget",
+      "stats": {
+        "testsLabel": "tests par métier",
+        "durationValue": "2",
+        "durationLabel": "minutes par test"
+      },
+      "previewCaption": "Un vrai résultat\u202f: le test garage, pour un garagiste qui travaille seul.",
       "reassurance": {
         "free": "Gratuit, sans inscription ni e-mail",
         "instant": "Résultat immédiat",
@@ -248,6 +255,42 @@
         "description": "Décrivez-moi votre activité\u202f: je vous dis gratuitement si un logiciel du marché suffit ou si un outil sur mesure vaut le coup.",
         "link": "Discuter de mon projet"
       }
+    },
+    "examples": {
+      "title": "Une réponse franche, avec les vrais prix",
+      "intro": "Selon vos réponses, le test vous dit si un logiciel du marché suffit ou si un outil sur mesure vaut le coup. Quand un logiciel à quelques dizaines d'euros par mois fait l'affaire, il vous le dit aussi.",
+      "points": {
+        "kind": "Le type d'outil qu'il vous faut\u202f: logiciel du marché ou outil sur mesure",
+        "prices": "Les logiciels adaptés à votre métier, avec leurs prix publics 2026",
+        "budget": "Un ordre de prix et de délai quand un outil sur mesure se justifie"
+      },
+      "cta": "Choisir un test"
+    },
+    "faq": {
+      "title": "Questions fréquentes sur les tests",
+      "items": {
+        "free": {
+          "question": "Les tests sont-ils vraiment gratuits\u202f?",
+          "answer": "Oui. Pas d'inscription, pas d'e-mail demandé\u202f: vous répondez aux six questions et le résultat s'affiche tout de suite. Vous pouvez ensuite me contacter si vous voulez aller plus loin, sans engagement."
+        },
+        "prices": {
+          "question": "D'où viennent les prix des logiciels\u202f?",
+          "answer": "Des pages tarifs publiques des éditeurs, relevées le 29 septembre 2026. Quand un éditeur ne publie pas ses prix, le test indique qu'ils sont sur devis."
+        },
+        "marketSoftware": {
+          "question": "Pourquoi un développeur me conseillerait-il un logiciel du marché\u202f?",
+          "answer": "Parce que c'est souvent la bonne réponse pour une petite structure\u202f: un logiciel à quelques dizaines d'euros par mois couvre l'essentiel. Un outil sur mesure ne vaut le coup que si votre façon de travailler sort du cadre de ces logiciels."
+        },
+        "missingTrade": {
+          "question": "Mon métier n'est pas dans la liste, que faire\u202f?",
+          "answer": "Utilisez l'estimateur de budget pour un ordre de prix, ou décrivez-moi votre activité\u202f: je vous dis gratuitement si un logiciel du marché suffit ou si un outil sur mesure vaut le coup."
+        }
+      }
+    },
+    "contactCta": {
+      "title": "Un doute sur le résultat de votre test\u202f?",
+      "description": "Décrivez-moi votre activité\u202f: je regarde votre cas gratuitement et je vous réponds sous 24\u202fh, par téléphone ou par e-mail.",
+      "button": "Discuter de mon projet"
     }
   },
   "home": {
@@ -343,7 +386,7 @@
         "mobile": {
           "title": "Application mobile",
           "description": "Une application iOS et Android pour vos équipes sur le terrain ou pour vos clients.",
-          "price": "Sur devis"
+          "price": "À partir de 5 000 €"
         }
       },
       "eyebrow": "Services"
@@ -754,8 +797,8 @@
               "label": "salariés dans les PME équipées"
             },
             "production": {
-              "value": "Toujours",
-              "label": "en production aujourd’hui"
+              "value": "En production",
+              "label": "toujours utilisé aujourd’hui"
             },
             "applications": {
               "value": "3",
@@ -786,8 +829,8 @@
               "label": "salariés dans les PME équipées"
             },
             "production": {
-              "value": "Toujours",
-              "label": "en production aujourd’hui"
+              "value": "En production",
+              "label": "toujours utilisé aujourd’hui"
             },
             "applications": {
               "value": "3",

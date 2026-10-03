@@ -26,6 +26,7 @@
     :intro="caseStudy.role"
     :stats="caseStudy.stats"
     :columns="caseStudy.columns"
+    :accentColor="currentProjectComputed.primaryColor"
   />
   <DibodevProjectDetailsSection
     v-if="currentProjectComputed"

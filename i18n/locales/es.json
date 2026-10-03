@@ -219,8 +219,15 @@
       "titlePart1": "Herramientas gratuitas para elegir ",
       "titleHighlight1": "tu software",
       "titlePart2": "",
-      "description": "Autoescuela, alquiler de material para eventos, taller de bicicletas, taller mecánico: en 6 preguntas, cada test te dice qué programa elegir y cuánto prever, con los precios 2026 de los programas del mercado francés. ¿Tu oficio no está? El estimador te da un orden de precio para una herramienta a medida.",
+      "description": "Autoescuela, alquiler de material para eventos, taller de bicicletas, taller mecánico: en 6 preguntas, cada test te dice qué programa elegir y cuánto prever, con los precios 2026 de los programas del mercado francés.",
       "cta": "Elegir un test",
+      "ctaSecondary": "Estimar mi presupuesto",
+      "stats": {
+        "testsLabel": "tests por oficio",
+        "durationValue": "2",
+        "durationLabel": "minutos por test"
+      },
+      "previewCaption": "Un resultado real: el test de taller mecánico, para un mecánico que trabaja solo.",
       "reassurance": {
         "free": "Gratis, sin registro ni e-mail",
         "instant": "Resultado inmediato",
@@ -248,6 +255,42 @@
         "description": "Cuéntame tu actividad: te digo gratis si basta con un programa del mercado o si merece la pena una herramienta a medida.",
         "link": "Hablar de mi proyecto"
       }
+    },
+    "examples": {
+      "title": "Una respuesta franca, con los precios reales",
+      "intro": "Según tus respuestas, el test te dice si basta con un programa del mercado o si merece la pena una herramienta a medida. Cuando un programa de unas decenas de euros al mes es suficiente, también te lo dice.",
+      "points": {
+        "kind": "El tipo de herramienta que necesitas: programa del mercado o herramienta a medida",
+        "prices": "Los programas adaptados a tu oficio, con sus precios públicos 2026",
+        "budget": "Un orden de precio y de plazo cuando una herramienta a medida tiene sentido"
+      },
+      "cta": "Elegir un test"
+    },
+    "faq": {
+      "title": "Preguntas frecuentes sobre los tests",
+      "items": {
+        "free": {
+          "question": "¿Los tests son realmente gratuitos?",
+          "answer": "Sí. Sin registro ni e-mail: respondes a las seis preguntas y el resultado aparece al momento. Después puedes contactarme si quieres ir más lejos, sin compromiso."
+        },
+        "prices": {
+          "question": "¿De dónde vienen los precios de los programas?",
+          "answer": "De las páginas de tarifas públicas de los editores, consultadas el 29 de septiembre de 2026. Cuando un editor no publica sus precios, el test indica que son con presupuesto."
+        },
+        "marketSoftware": {
+          "question": "¿Por qué un desarrollador me recomendaría un programa del mercado?",
+          "answer": "Porque a menudo es la respuesta correcta para una pequeña empresa: un programa de unas decenas de euros al mes cubre lo esencial. Una herramienta a medida solo merece la pena si tu forma de trabajar se sale de lo que hacen esos programas."
+        },
+        "missingTrade": {
+          "question": "Mi oficio no está en la lista, ¿qué hago?",
+          "answer": "Usa el estimador de presupuesto para un orden de precio, o cuéntame tu actividad: te digo gratis si basta con un programa del mercado o si merece la pena una herramienta a medida."
+        }
+      }
+    },
+    "contactCta": {
+      "title": "¿Dudas sobre el resultado de tu test?",
+      "description": "Cuéntame tu actividad: miro tu caso gratis y te respondo en 24\u202fh, por teléfono o por e-mail.",
+      "button": "Hablar de mi proyecto"
     }
   },
   "home": {
@@ -343,7 +386,7 @@
         "mobile": {
           "title": "Aplicación móvil",
           "description": "Una app iOS y Android para tus equipos sobre el terreno o para tus clientes.",
-          "price": "Con presupuesto"
+          "price": "Desde 5.000 €"
         }
       },
       "eyebrow": "Servicios"
@@ -754,8 +797,8 @@
               "label": "empleados en las pymes equipadas"
             },
             "production": {
-              "value": "Sigue",
-              "label": "en producción hoy"
+              "value": "En producción",
+              "label": "sigue en uso hoy"
             },
             "applications": {
               "value": "3",
@@ -786,8 +829,8 @@
               "label": "empleados en las pymes equipadas"
             },
             "production": {
-              "value": "Sigue",
-              "label": "en producción hoy"
+              "value": "En producción",
+              "label": "sigue en uso hoy"
             },
             "applications": {
               "value": "3",
