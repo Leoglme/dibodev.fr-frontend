@@ -9,10 +9,17 @@
       <li v-for="teaser in props.teasers" :key="teaser.toolId">
         <NuxtLink
           :to="localePath({ name: teaser.routeName })"
-          class="text-primary hover:text-primary-dark inline-flex items-center gap-2 text-[15px] leading-6 font-medium transition-colors"
+          class="text-primary hover:text-primary-dark inline-flex items-start gap-2 text-[15px] leading-6 font-medium transition-colors"
           @click="track(TRACKING_EVENTS.toolTeaserClicked, { tool: teaser.toolId, location: props.trackingLocation })"
         >
-          <DibodevIcon :name="teaser.icon" mode="stroke" :width="16" :height="16" aria-hidden="true" />
+          <DibodevIcon
+            :name="teaser.icon"
+            mode="stroke"
+            :width="16"
+            :height="16"
+            class="mt-1 shrink-0"
+            aria-hidden="true"
+          />
           {{ listLabelOf(teaser) }}
         </NuxtLink>
       </li>

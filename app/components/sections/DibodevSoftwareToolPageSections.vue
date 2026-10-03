@@ -59,6 +59,7 @@
     :eyebrow="props.page.comparison.eyebrow"
     :title="props.page.comparison.title"
     :intro="props.page.comparison.intro"
+    headingAlign="left"
     :columns="props.page.comparison.columns"
     :rows="props.page.comparison.rows"
     :criterionLabel="props.page.comparison.criterionLabel"

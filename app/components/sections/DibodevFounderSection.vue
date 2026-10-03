@@ -30,7 +30,7 @@
         <p class="text-[17px] leading-7 text-gray-200">{{ $t('home.founder.paragraph1') }}</p>
         <p class="text-[17px] leading-7 text-gray-200">{{ $t('home.founder.paragraph2') }}</p>
 
-        <dl class="grid gap-6 border-t border-gray-300 pt-7 lg:gap-4">
+        <dl class="grid gap-8 border-t border-gray-300 pt-7 sm:gap-6 lg:gap-4">
           <div v-for="fact in facts" :key="fact.label" class="flex items-start gap-4">
             <span
               class="bg-accent-tint text-primary flex h-10 w-10 shrink-0 items-center justify-center rounded-full"

@@ -1,7 +1,12 @@
 <template>
   <section id="comparison" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
     <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
-      <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.intro" align="center" />
+      <DibodevSectionHeading
+        :eyebrow="props.eyebrow"
+        :title="props.title"
+        :intro="props.intro"
+        :align="props.headingAlign"
+      />
 
       <div class="hidden overflow-hidden rounded-2xl border border-gray-300 bg-white lg:block">
         <table class="w-full table-fixed border-collapse text-left">
@@ -138,6 +143,7 @@ import type {
   DibodevComparisonSummaryItem,
   DibodevComparisonTableSectionProps,
 } from '~/core/types/DibodevComparisonTableSection'
+import type { DibodevSectionHeadingProps } from '~/core/types/DibodevSectionHeading'
 import type { DibodevSectionTone } from '~/core/types/DibodevSectionTone'
 import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
@@ -177,6 +183,10 @@ const props: DibodevComparisonTableSectionProps = defineProps({
   intro: {
     type: String as PropType<string>,
     default: '',
+  },
+  headingAlign: {
+    type: String as PropType<DibodevSectionHeadingProps['align']>,
+    default: 'center',
   },
   columns: {
     type: Array as PropType<string[]>,

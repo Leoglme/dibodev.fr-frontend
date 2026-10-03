@@ -1,3 +1,4 @@
+import type { DibodevSectionHeadingProps } from '~/core/types/DibodevSectionHeading'
 import type { DibodevSectionTone } from '~/core/types/DibodevSectionTone'
 
 /**
@@ -34,6 +35,7 @@ export type DibodevComparisonRow = {
  * @property {string} eyebrow - Small uppercase line displayed above the title.
  * @property {string} title - The section title.
  * @property {string} intro - Optional paragraph displayed under the title.
+ * @property {DibodevSectionHeadingProps['align']} headingAlign - Alignment of the eyebrow, title and intro.
  * @property {string[]} columns - Column labels (the options compared).
  * @property {number} highlightedColumn - Index of the recommended column (emphasised), -1 for none.
  * @property {DibodevComparisonRow[]} rows - The criteria.
@@ -46,6 +48,7 @@ export type DibodevComparisonTableSectionProps = {
   eyebrow: string
   title: string
   intro: string
+  headingAlign: DibodevSectionHeadingProps['align']
   columns: string[]
   highlightedColumn: number
   rows: DibodevComparisonRow[]

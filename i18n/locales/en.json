@@ -73,7 +73,6 @@
   },
   "blog": {
     "landing": {
-      "eyebrow": "Blog",
       "titlePart1": "The Dibodev blog: ",
       "titleHighlight1": "articles and advice",
       "titlePart2": " for tradespeople and small businesses.",
@@ -1377,9 +1376,11 @@
         "context": "Sole proprietorship, near Rennes",
         "description": "I design and build custom business apps, management software, websites and AI automations for small and medium businesses, at a fixed price.",
         "highlights": {
-          "website": "A2M Ôrizon Solution: a website with a CMS built from scratch, 4,000 visits since launch",
-          "nightforge": "NightForge: an orchestrator that runs AI coding agents autonomously, controlled from a mobile app",
-          "goupixdex": "GoupixDex: AI recognition of Pokémon cards and automatic listing on Vinted and eBay"
+          "prepeers": "PrePeers: an ongoing engagement with an EdTech startup, as lead developer of its AI guidance platform's interfaces",
+          "lexial": "Lexial, a law firm in Paris, Brussels and Geneva: harmonized email signatures for the firm, and the “Lawyer” title shown under the founding partner's name on Google within 14 days",
+          "a2mOrizonSolution": "A2M Ôrizon Solution: a website with a CMS built from scratch, 4,000 visits since launch",
+          "devleadhunter": "DevLeadHunter: my automated prospecting software (demo websites, email campaigns), with 100% deliverability, about 66% opens and clicks and about 33% conversion",
+          "nightforge": "NightForge: an orchestrator that runs AI coding agents autonomously, controlled from a mobile app"
         }
       },
       "izidoor": {

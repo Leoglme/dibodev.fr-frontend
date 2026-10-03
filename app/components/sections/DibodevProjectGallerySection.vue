@@ -18,153 +18,35 @@
         </p>
       </div>
 
-      <!-- Gallery Grid - Images stacked vertically -->
       <div v-if="hasBothMedia" class="grid items-start gap-6 lg:grid-cols-2">
-        <!-- Media 1 -->
-        <div
-          class="group relative cursor-pointer overflow-hidden rounded-lg border border-gray-300 transition-colors duration-300 hover:border-gray-400"
-          :class="[media1IsPortrait ? 'mx-auto w-full max-w-xs bg-gray-800' : 'w-full bg-transparent']"
+        <DibodevZoomableImageTile
+          :src="props.media1 ?? ''"
+          :alt="`${props.projectName} - ${$t('project.gallery.preview')} 1`"
           data-aos="fade-up"
           data-aos-delay="100"
           data-aos-duration="800"
           @click="openModal(props.media1, `${props.projectName} - ${$t('project.gallery.preview')} 1`)"
-        >
-          <div class="relative w-full overflow-hidden" :style="{ aspectRatio: media1Ratio }">
-            <div v-show="!media1Loaded" class="absolute inset-0 animate-pulse bg-gray-700" aria-hidden="true" />
-            <img
-              :src="props.media1"
-              :alt="`${props.projectName} - ${$t('project.gallery.preview')} 1`"
-              :class="[
-                media1IsPortrait ? 'object-contain' : 'object-cover',
-                media1Loaded ? 'opacity-100' : 'opacity-0',
-              ]"
-              class="absolute inset-0 h-full w-full transition-opacity transition-transform duration-300 duration-500 group-hover:scale-105"
-              loading="eager"
-              width="1200"
-              height="675"
-              @load="onMedia1Load"
-              @error="onMedia1Error"
-            />
-          </div>
-          <div
-            class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-          >
-            <div class="rounded-full bg-white/20 p-4 backdrop-blur-sm">
-              <svg
-                class="h-8 w-8 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <!-- Media 2 -->
-        <div
-          class="group relative cursor-pointer overflow-hidden rounded-lg border border-gray-300 transition-colors duration-300 hover:border-gray-400"
-          :class="[media2IsPortrait ? 'mx-auto w-full max-w-xs bg-gray-800' : 'w-full bg-transparent']"
+        />
+        <DibodevZoomableImageTile
+          :src="props.media2 ?? ''"
+          :alt="`${props.projectName} - ${$t('project.gallery.preview')} 2`"
           data-aos="fade-up"
           data-aos-delay="200"
           data-aos-duration="800"
           @click="openModal(props.media2, `${props.projectName} - ${$t('project.gallery.preview')} 2`)"
-        >
-          <div class="relative w-full overflow-hidden" :style="{ aspectRatio: media2Ratio }">
-            <div v-show="!media2Loaded" class="absolute inset-0 animate-pulse bg-gray-700" aria-hidden="true" />
-            <img
-              :src="props.media2"
-              :alt="`${props.projectName} - ${$t('project.gallery.preview')} 2`"
-              :class="[
-                media2IsPortrait ? 'object-contain' : 'object-cover',
-                media2Loaded ? 'opacity-100' : 'opacity-0',
-              ]"
-              class="absolute inset-0 h-full w-full transition-opacity transition-transform duration-300 duration-500 group-hover:scale-105"
-              loading="eager"
-              width="1200"
-              height="675"
-              @load="onMedia2Load"
-              @error="onMedia2Error"
-            />
-          </div>
-          <div
-            class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-          >
-            <div class="rounded-full bg-white/20 p-4 backdrop-blur-sm">
-              <svg
-                class="h-8 w-8 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
+        />
       </div>
 
-      <!-- Single Media (Centered) -->
       <div v-else class="flex items-start justify-start">
-        <div
-          class="group relative cursor-pointer overflow-hidden rounded-lg border border-gray-300 transition-colors duration-300 hover:border-gray-400"
-          :class="[singleMediaIsPortrait ? 'w-full max-w-xs bg-gray-800' : 'w-full max-w-3xl bg-transparent']"
+        <DibodevZoomableImageTile
+          :src="singleMedia ?? ''"
+          :alt="`${props.projectName} - ${$t('project.gallery.preview')}`"
+          isSingleImage
           data-aos="zoom-in"
           data-aos-delay="100"
           data-aos-duration="800"
           @click="openModal(singleMedia, `${props.projectName} - ${$t('project.gallery.preview')}`)"
-        >
-          <div class="relative w-full overflow-hidden" :style="{ aspectRatio: singleMediaRatio }">
-            <div v-show="!singleMediaLoaded" class="absolute inset-0 animate-pulse bg-gray-700" aria-hidden="true" />
-            <img
-              :src="singleMedia"
-              :alt="`${props.projectName} - ${$t('project.gallery.preview')}`"
-              :class="[
-                singleMediaIsPortrait ? 'object-contain' : 'object-cover',
-                singleMediaLoaded ? 'opacity-100' : 'opacity-0',
-              ]"
-              class="absolute inset-0 h-full w-full transition-opacity transition-transform duration-300 duration-500 group-hover:scale-105"
-              loading="eager"
-              width="1200"
-              height="675"
-              @load="onSingleMediaLoad"
-              @error="onSingleMediaError"
-            />
-          </div>
-          <div
-            class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-          >
-            <div class="rounded-full bg-white/20 p-4 backdrop-blur-sm">
-              <svg
-                class="h-8 w-8 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
+        />
       </div>
     </div>
 
@@ -200,8 +82,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, onMounted } from 'vue'
+import { computed, ref } from 'vue'
 import type { ComputedRef, PropType, Ref } from 'vue'
+import DibodevZoomableImageTile from '~/components/data-displays/DibodevZoomableImageTile.vue'
 
 /* PROPS */
 const props = defineProps({
@@ -220,89 +103,11 @@ const props = defineProps({
 })
 
 /* REFS */
-const media1Ratio: Ref<string> = ref<string>('16 / 9')
-const media2Ratio: Ref<string> = ref<string>('16 / 9')
-const media1IsPortrait: Ref<boolean> = ref<boolean>(false)
-const media2IsPortrait: Ref<boolean> = ref<boolean>(false)
-const media1Loaded: Ref<boolean> = ref<boolean>(false)
-const media2Loaded: Ref<boolean> = ref<boolean>(false)
-const singleMediaLoaded: Ref<boolean> = ref<boolean>(false)
 const isModalOpen: Ref<boolean> = ref<boolean>(false)
 const modalImageSrc: Ref<string> = ref<string>('')
 const modalImageAlt: Ref<string> = ref<string>('')
 
 /* METHODS */
-/**
- * Handle media1 image load to calculate its aspect ratio
- * @param event - The load event
- */
-const onMedia1Load = (event: Event): void => {
-  media1Loaded.value = true
-  const img: HTMLImageElement = event.target as HTMLImageElement
-  if (img.naturalWidth && img.naturalHeight) {
-    const ratio: number = img.naturalWidth / img.naturalHeight
-    media1IsPortrait.value = ratio < 1
-    media1Ratio.value = `${img.naturalWidth} / ${img.naturalHeight}`
-  }
-}
-
-/**
- * Handle media1 image error
- */
-const onMedia1Error = (): void => {
-  console.error('Failed to load media1 image')
-  media1Loaded.value = true
-}
-
-/**
- * Handle media2 image load to calculate its aspect ratio
- * @param event - The load event
- */
-const onMedia2Load = (event: Event): void => {
-  media2Loaded.value = true
-  const img: HTMLImageElement = event.target as HTMLImageElement
-  if (img.naturalWidth && img.naturalHeight) {
-    const ratio: number = img.naturalWidth / img.naturalHeight
-    media2IsPortrait.value = ratio < 1
-    media2Ratio.value = `${img.naturalWidth} / ${img.naturalHeight}`
-  }
-}
-
-/**
- * Handle media2 image error
- */
-const onMedia2Error = (): void => {
-  console.error('Failed to load media2 image')
-  media2Loaded.value = true
-}
-
-/**
- * Handle single media image load to calculate its aspect ratio
- * @param event - The load event
- */
-const onSingleMediaLoad = (event: Event): void => {
-  singleMediaLoaded.value = true
-  const img: HTMLImageElement = event.target as HTMLImageElement
-  if (img.naturalWidth && img.naturalHeight) {
-    const ratio: number = img.naturalWidth / img.naturalHeight
-    if (props.media1) {
-      media1IsPortrait.value = ratio < 1
-      media1Ratio.value = `${img.naturalWidth} / ${img.naturalHeight}`
-    } else {
-      media2IsPortrait.value = ratio < 1
-      media2Ratio.value = `${img.naturalWidth} / ${img.naturalHeight}`
-    }
-  }
-}
-
-/**
- * Handle single media image error
- */
-const onSingleMediaError = (): void => {
-  console.error('Failed to load single media image')
-  singleMediaLoaded.value = true
-}
-
 /**
  * Open modal with enlarged image
  * @param src - Image source URL
@@ -345,77 +150,6 @@ const hasBothMedia: ComputedRef<boolean> = computed<boolean>(() => {
  */
 const singleMedia: ComputedRef<string | null | undefined> = computed<string | null | undefined>(() => {
   return props.media1 || props.media2
-})
-
-/**
- * Get the aspect ratio for single media
- */
-const singleMediaRatio: ComputedRef<string> = computed<string>(() => {
-  return props.media1 ? media1Ratio.value : media2Ratio.value
-})
-
-/**
- * Check if single media is portrait
- */
-const singleMediaIsPortrait: ComputedRef<boolean> = computed<boolean>(() => {
-  return props.media1 ? media1IsPortrait.value : media2IsPortrait.value
-})
-
-/**
- * Check if images are already loaded on mount (for cached images)
- */
-onMounted((): void => {
-  if (hasBothMedia.value) {
-    const img1: HTMLImageElement | null = document.querySelector(`img[alt="${props.projectName} - preview 1"]`)
-    if (img1 && img1.complete && img1.naturalHeight !== 0) {
-      media1Loaded.value = true
-      if (img1.naturalWidth && img1.naturalHeight) {
-        const ratio: number = img1.naturalWidth / img1.naturalHeight
-        media1IsPortrait.value = ratio < 1
-        media1Ratio.value = `${img1.naturalWidth} / ${img1.naturalHeight}`
-      }
-    }
-
-    const img2: HTMLImageElement | null = document.querySelector(`img[alt="${props.projectName} - preview 2"]`)
-    if (img2 && img2.complete && img2.naturalHeight !== 0) {
-      media2Loaded.value = true
-      if (img2.naturalWidth && img2.naturalHeight) {
-        const ratio: number = img2.naturalWidth / img2.naturalHeight
-        media2IsPortrait.value = ratio < 1
-        media2Ratio.value = `${img2.naturalWidth} / ${img2.naturalHeight}`
-      }
-    }
-  } else if (singleMedia.value) {
-    const imgSingle: HTMLImageElement | null = document.querySelector(`img[alt="${props.projectName} - preview"]`)
-    if (imgSingle && imgSingle.complete && imgSingle.naturalHeight !== 0) {
-      singleMediaLoaded.value = true
-      if (imgSingle.naturalWidth && imgSingle.naturalHeight) {
-        const ratio: number = imgSingle.naturalWidth / imgSingle.naturalHeight
-        if (props.media1) {
-          media1IsPortrait.value = ratio < 1
-          media1Ratio.value = `${imgSingle.naturalWidth} / ${imgSingle.naturalHeight}`
-        } else {
-          media2IsPortrait.value = ratio < 1
-          media2Ratio.value = `${imgSingle.naturalWidth} / ${imgSingle.naturalHeight}`
-        }
-      }
-    }
-  }
-
-  setTimeout((): void => {
-    if (!media1Loaded.value && props.media1) {
-      console.warn('Media1 failed to trigger load event, forcing display')
-      media1Loaded.value = true
-    }
-    if (!media2Loaded.value && props.media2) {
-      console.warn('Media2 failed to trigger load event, forcing display')
-      media2Loaded.value = true
-    }
-    if (!singleMediaLoaded.value && singleMedia.value) {
-      console.warn('Single media failed to trigger load event, forcing display')
-      singleMediaLoaded.value = true
-    }
-  }, 3000)
 })
 </script>
 

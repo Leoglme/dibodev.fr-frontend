@@ -1,7 +1,7 @@
 <template>
   <section id="method" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
     <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-16">
-      <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.intro" align="center" />
+      <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.intro" />
 
       <ol class="method-steps grid gap-8 md:grid-cols-2 md:gap-6 xl:grid-cols-4">
         <li

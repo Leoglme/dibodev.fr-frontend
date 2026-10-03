@@ -73,7 +73,6 @@
   },
   "blog": {
     "landing": {
-      "eyebrow": "Blog",
       "titlePart1": "El blog de Dibodev: ",
       "titleHighlight1": "artículos y consejos",
       "titlePart2": " para artesanos y pymes.",
@@ -1377,9 +1376,11 @@
         "context": "Empresa individual, cerca de Rennes",
         "description": "Diseño y desarrollo a precio cerrado aplicaciones de gestión, software de gestión, sitios web y automatizaciones con IA para pymes.",
         "highlights": {
-          "website": "A2M Ôrizon Solution: sitio web con CMS creado desde cero, 4.000 visitas desde su lanzamiento",
-          "nightforge": "NightForge: un orquestador que pone a trabajar agentes de código con IA de forma autónoma, controlado desde una app móvil",
-          "goupixdex": "GoupixDex: reconocimiento de cartas Pokémon con IA y puesta a la venta automática en Vinted y eBay"
+          "prepeers": "PrePeers: misión en curso para una startup EdTech, como desarrollador principal de las interfaces de su plataforma de orientación con IA",
+          "lexial": "Lexial, bufete de abogados en París, Bruselas y Ginebra: firmas de correo del bufete unificadas, y el título «Abogado» bajo el nombre del socio fundador en Google en 14 días",
+          "a2mOrizonSolution": "A2M Ôrizon Solution: sitio web con CMS creado desde cero, 4.000 visitas desde su lanzamiento",
+          "devleadhunter": "DevLeadHunter: mi software de prospección automatizada (sitios de demostración, campañas de correo), con un 100 % de entregabilidad, cerca del 66 % de apertura y clic y cerca del 33 % de conversión",
+          "nightforge": "NightForge: un orquestador que pone a trabajar agentes de código con IA de forma autónoma, controlado desde una app móvil"
         }
       },
       "izidoor": {

@@ -1,7 +1,7 @@
 <template>
   <section id="estimator" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
     <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
-      <DibodevSectionHeading :eyebrow="headingEyebrow" :title="headingTitle" :intro="headingIntro" align="center" />
+      <DibodevSectionHeading :eyebrow="headingEyebrow" :title="headingTitle" :intro="headingIntro" />
 
       <div class="grid items-stretch gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
         <div class="grid content-start gap-8 rounded-2xl border border-gray-300 bg-white p-6 sm:p-8">

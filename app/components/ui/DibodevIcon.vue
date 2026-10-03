@@ -54,6 +54,7 @@ import Linkedin from '~/components/icons/Linkedin.vue'
 import LogOut from '~/components/icons/LogOut.vue'
 import Mail from '~/components/icons/Mail.vue'
 import MapPin from '~/components/icons/MapPin.vue'
+import Maximize2 from '~/components/icons/Maximize2.vue'
 import Menu from '~/components/icons/Menu.vue'
 import MessageCircle from '~/components/icons/MessageCircle.vue'
 import Monitor from '~/components/icons/Monitor.vue'
@@ -77,6 +78,7 @@ import Wrench from '~/components/icons/Wrench.vue'
 import X from '~/components/icons/X.vue'
 import XCircle from '~/components/icons/XCircle.vue'
 import Zap from '~/components/icons/Zap.vue'
+import ZoomIn from '~/components/icons/ZoomIn.vue'
 import type { DibodevIconMode, DibodevIconProps, IconComponent } from '~/core/types/DibodevIcon'
 import { iconsList } from '~/core/types/DibodevIcon'
 
@@ -147,6 +149,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   LogOut,
   Mail,
   MapPin,
+  Maximize2,
   Menu,
   MessageCircle,
   Monitor,
@@ -170,6 +173,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   X,
   XCircle,
   Zap,
+  ZoomIn,
 }
 
 /**

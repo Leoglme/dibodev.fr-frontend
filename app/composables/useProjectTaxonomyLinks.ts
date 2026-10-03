@@ -6,6 +6,7 @@ import type { CategoryKey, SectorKey } from '~/core/constants/projectEnums'
 import type { SupportedLocale } from '~/core/constants/categorySlugs'
 import { allCategoryKeys, categoryToSlug } from '~/core/constants/categorySlugs'
 import { allSectorKeys, sectorToSlug } from '~/core/constants/sectorSlugs'
+import { ColorUtils } from '~/core/utils/ColorUtils'
 import { ProjectOrderUtils } from '~/core/utils/ProjectOrderUtils'
 
 export type UseProjectTaxonomyLinksReturn = {
@@ -19,6 +20,17 @@ const LISTING_LOGO_COUNT: number = 3
 const DEFAULT_LOGO_BACKGROUND: string = '#f5f3ff'
 
 /**
+ * Background of a logo bubble: the secondary colour, or a light tint of the primary one when the secondary is near-white.
+ * @param {DibodevProject} project - The project of the logo.
+ * @returns {string} A CSS colour.
+ */
+function getLogoBubbleBackground(project: DibodevProject): string {
+  const secondaryColor: string = project.secondaryColor ?? DEFAULT_LOGO_BACKGROUND
+  if (!ColorUtils.isNearWhite(secondaryColor)) return secondaryColor
+  return ColorUtils.getLightTint(project.primaryColor, DEFAULT_LOGO_BACKGROUND)
+}
+
+/**
  * Picks the logos of a listing: projects chosen for the home page first, then the most recent ones.
  * @param {DibodevProject[]} listingProjects - Projects of the listing (already sorted by date, newest first).
  * @returns {DibodevProjectTaxonomyLogo[]} Up to three logo tiles.
@@ -30,7 +42,7 @@ function pickListingLogos(listingProjects: DibodevProject[]): DibodevProjectTaxo
       (project: DibodevProject): DibodevProjectTaxonomyLogo => ({
         name: project.name,
         url: project.logoUrl,
-        backgroundColor: project.secondaryColor ?? DEFAULT_LOGO_BACKGROUND,
+        backgroundColor: getLogoBubbleBackground(project),
       }),
     )
 }

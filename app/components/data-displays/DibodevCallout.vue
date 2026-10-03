@@ -1,19 +1,17 @@
 <template>
-  <div class="mx-auto flex max-w-3xl items-start gap-4 rounded-2xl border p-5 sm:p-6" :class="toneClasses.frame">
-    <span
-      class="text-primary-dark flex h-9 w-9 shrink-0 items-center justify-center rounded-full"
-      :class="toneClasses.iconBadge"
-      aria-hidden="true"
-    >
-      <DibodevIcon :name="props.icon" mode="stroke" :width="18" :height="18" />
-    </span>
-    <div class="grid gap-1.5">
-      <p class="text-[15px] leading-6 text-gray-200">
-        <span class="font-medium text-gray-100">{{ props.emphasizedIntro }}</span> {{ props.text }}
-      </p>
-      <p v-if="props.footnote" class="text-muted text-sm">{{ props.footnote }}</p>
-      <slot />
-    </div>
+  <div class="mx-auto grid max-w-3xl gap-2 rounded-2xl border p-5 sm:p-6" :class="toneClasses.frame">
+    <p class="flow-root text-[15px] leading-6 text-gray-200">
+      <span
+        class="text-primary-dark float-left -mt-1.5 mr-3 flex h-9 w-9 items-center justify-center rounded-full"
+        :class="toneClasses.iconBadge"
+        aria-hidden="true"
+      >
+        <DibodevIcon :name="props.icon" mode="stroke" :width="18" :height="18" />
+      </span>
+      <span class="font-medium text-gray-100">{{ props.emphasizedIntro }}</span> {{ props.text }}
+    </p>
+    <p v-if="props.footnote" class="text-muted text-sm">{{ props.footnote }}</p>
+    <slot />
   </div>
 </template>
 

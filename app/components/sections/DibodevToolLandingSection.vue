@@ -10,7 +10,9 @@
     />
 
     <div class="relative mx-auto grid w-full max-w-5xl gap-8 sm:gap-10">
-      <div class="grid justify-items-start gap-4 text-left sm:justify-items-center sm:gap-5 sm:text-center">
+      <div
+        class="grid justify-items-start gap-4 px-2 text-left sm:justify-items-center sm:gap-5 sm:px-0 sm:text-center"
+      >
         <DibodevBreadcrumb :items="props.breadcrumbs" align="centerFromSmallScreens" />
         <h1
           class="text-[32px] leading-[1.12] font-medium tracking-[-0.01em] text-gray-100 sm:text-[44px] lg:text-[52px]"
@@ -41,7 +43,7 @@
         <slot name="tool" />
       </div>
 
-      <div class="grid gap-5 border-t border-gray-300 pt-8">
+      <div class="grid gap-5 border-t border-gray-300 px-2 pt-8 sm:px-0">
         <div class="grid gap-2">
           <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ t('toolPage.aboutTitle') }}</h2>
           <p class="max-w-3xl text-base leading-7 text-gray-200 sm:text-[17px]">{{ props.description }}</p>

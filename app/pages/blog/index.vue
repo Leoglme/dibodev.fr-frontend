@@ -2,7 +2,6 @@
   <div>
     <DibodevLandingSection
       :breadcrumbs="breadcrumbs"
-      :eyebrow="$t('blog.landing.eyebrow')"
       :titlePart1="$t('blog.landing.titlePart1')"
       :titleHighlight1="$t('blog.landing.titleHighlight1')"
       :titlePart2="$t('blog.landing.titlePart2')"
@@ -50,7 +49,7 @@
           </p>
         </div>
 
-        <div v-else class="grid auto-rows-fr gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <div v-else class="grid gap-5 sm:grid-cols-2 lg:auto-rows-fr lg:grid-cols-3 lg:gap-6">
           <BlogArticleCard
             v-for="article in listedArticles"
             :key="article.slug"

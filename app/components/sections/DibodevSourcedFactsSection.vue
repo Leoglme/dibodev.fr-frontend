@@ -1,7 +1,7 @@
 <template>
   <section :id="props.anchorId" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
     <div class="max-w-site mx-auto grid w-full gap-10 lg:gap-12">
-      <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.intro" align="center" />
+      <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.intro" />
 
       <div class="grid gap-4 md:grid-cols-2 lg:gap-5" :class="factsGridClass">
         <article
@@ -71,6 +71,6 @@ const toneClass: ComputedRef<string> = computed((): string => SECTION_TONE_CLASS
 const cardClass: ComputedRef<string> = computed((): string => SECTION_TONE_CARD_CLASSES[props.tone])
 /** Four facts sit two by two rather than three plus one left alone. */
 const factsGridClass: ComputedRef<string> = computed((): string =>
-  props.facts.length === 4 ? 'mx-auto w-full max-w-5xl' : 'lg:grid-cols-3',
+  props.facts.length === 4 ? 'w-full max-w-5xl' : 'lg:grid-cols-3',
 )
 </script>

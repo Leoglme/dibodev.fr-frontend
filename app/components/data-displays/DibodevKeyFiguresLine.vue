@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex flex-wrap items-center gap-x-4 gap-y-2 text-[15px] leading-[22px] text-gray-200">
+  <ul class="flex flex-wrap items-center gap-x-4 gap-y-3.5 text-[15px] leading-[22px] text-gray-200 sm:gap-y-2">
     <li
       v-for="(figure, figureIndex) in props.figures"
       :key="figure.label"

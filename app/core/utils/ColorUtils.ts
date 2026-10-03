@@ -9,6 +9,8 @@ export class ColorUtils {
   private static readonly MINIMUM_TINTABLE_SATURATION: number = 25
   /** Below this lightness (%), a colour is near-black and its tint would look grey. */
   private static readonly MINIMUM_TINTABLE_LIGHTNESS: number = 16
+  /** From this lightness (%), a colour is near-white and a shape filled with it disappears on white. */
+  private static readonly MINIMUM_NEAR_WHITE_LIGHTNESS: number = 94
 
   /**
    * Light background tint of a brand colour, or the fallback when the colour is grey, near-black or not a 6-digit hex.
@@ -24,6 +26,20 @@ export class ColorUtils {
       return `color-mix(in srgb, ${hex} ${this.LIGHT_TINT_COLOR_SHARE}, white)`
     } catch {
       return fallback
+    }
+  }
+
+  /**
+   * Tells whether a colour is near-white, so a shape filled with it disappears on a white background.
+   * @param {string} hex - The colour in hex format (e.g. '#f9f9f9').
+   * @returns {boolean} True when near-white; false for a darker colour or a value that is not a 6-digit hex.
+   */
+  public static isNearWhite(hex: string): boolean {
+    try {
+      const { r, g, b }: { r: number; g: number; b: number } = this.hexToRGB(hex)
+      return this.rgbToHSL(r, g, b).l >= this.MINIMUM_NEAR_WHITE_LIGHTNESS
+    } catch {
+      return false
     }
   }
 

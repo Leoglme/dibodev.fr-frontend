@@ -37,7 +37,7 @@
                 <li
                   v-for="logo in link.logos"
                   :key="logo.url"
-                  class="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border-2 border-white"
+                  class="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border-2 border-white ring-1 ring-gray-300"
                   :style="{ backgroundColor: logo.backgroundColor }"
                   :title="logo.name"
                 >
