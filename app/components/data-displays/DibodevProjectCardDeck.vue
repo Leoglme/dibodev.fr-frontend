@@ -16,7 +16,7 @@
     />
 
     <div
-      class="relative h-[440px] sm:h-[470px] lg:h-[460px] xl:h-[500px]"
+      class="relative h-[452px] sm:h-[470px] lg:h-[460px] xl:h-[500px]"
       :class="hasSeveralSlides ? 'touch-pan-y' : ''"
       @pointerdown="onPointerDown"
       @pointerup="onDeckPointerUp"
