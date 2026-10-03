@@ -56,9 +56,11 @@
             {{ nameParts.tagline || props.description }}
           </p>
         </div>
-        <div class="mt-auto flex items-center justify-between gap-3 border-t border-gray-300 pt-3">
-          <span v-if="formattedDate" class="text-muted text-sm">{{ formattedDate }}</span>
-          <span class="project-card__link ml-auto inline-flex items-center gap-1.5 text-[15px] font-medium">
+        <div class="mt-auto flex flex-wrap items-center justify-between gap-x-3 gap-y-1 border-t border-gray-300 pt-3">
+          <span v-if="formattedDate" class="text-muted text-sm whitespace-nowrap">{{ formattedDate }}</span>
+          <span
+            class="project-card__link ml-auto inline-flex items-center gap-1.5 text-[15px] font-medium whitespace-nowrap"
+          >
             {{ $t('projects.card.seeProject') }}
             <DibodevIcon name="ArrowRight" mode="stroke" :width="18" :height="18" aria-hidden="true" />
           </span>
@@ -126,6 +128,10 @@ const props: DibodevProjectCardProps = defineProps({
     type: Array as PropType<string[]>,
     default: (): string[] => [],
   },
+  trackingSource: {
+    type: String as PropType<string>,
+    default: '',
+  },
 })
 
 const localePath = useLocalePath()
@@ -161,7 +167,11 @@ const formattedDate: ComputedRef<string> = computed((): string =>
  * @returns {void}
  */
 function onCardClick(): void {
-  track(TRACKING_EVENTS.projectCardClicked, { project: props.name, route: props.route ?? null })
+  track(TRACKING_EVENTS.projectCardClicked, {
+    project: props.name,
+    route: props.route ?? null,
+    ...(props.trackingSource ? { source: props.trackingSource } : {}),
+  })
 }
 </script>
 

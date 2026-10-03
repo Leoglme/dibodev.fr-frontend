@@ -89,41 +89,26 @@
         <strong class="font-medium text-gray-100">{{ activeSlide.need }}</strong
         >{{ activeSlide.needSuffix }}
       </p>
-      <ol v-if="hasSeveralSlides" class="-ml-1 flex shrink-0">
-        <li v-for="(slide, index) in props.slides" :key="slide.id">
-          <button
-            type="button"
-            class="group focus-visible:ring-primary flex h-6 cursor-pointer items-center rounded-sm px-1 focus:outline-none focus-visible:ring-2"
-            :aria-label="$t('photoSlideshow.goTo', { name: slide.tradeLabel })"
-            :aria-current="index === activeIndex ? 'true' : undefined"
-            @click="goTo(index, 'marker')"
-          >
-            <span
-              class="relative block h-1 overflow-hidden rounded-full transition-[width,background-color] duration-300 motion-reduce:transition-none"
-              :class="
-                index === activeIndex ? 'bg-primary/25 w-7 sm:w-9' : 'w-3 bg-gray-300 group-hover:bg-gray-400 sm:w-4'
-              "
-            >
-              <span
-                v-if="index === activeIndex"
-                :key="`progress-${activeIndex}`"
-                class="bg-primary absolute inset-0 origin-left"
-                :class="isAutoplayRunning ? 'slideshow-progress' : ''"
-                aria-hidden="true"
-                @animationend="goTo(activeIndex + 1)"
-              />
-            </span>
-          </button>
-        </li>
-      </ol>
+      <DibodevSlideshowMarkers
+        v-if="hasSeveralSlides"
+        class="-ml-1 shrink-0"
+        :slideNames="slideNames"
+        :activeIndex="activeIndex"
+        :isAutoplayRunning="isAutoplayRunning"
+        size="compact"
+        @select="goTo($event, 'marker')"
+        @progressEnd="goTo(activeIndex + 1)"
+      />
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'vue'
+import type { ComputedRef, PropType } from 'vue'
 import type { DibodevPhotoSlideshowNavigation } from '~/core/types/DibodevPhotoSlideshow'
 import type { DibodevTradeToolSlide, DibodevTradeToolSlideshowProps } from '~/core/types/DibodevTradeToolSlideshow'
+import { computed } from 'vue'
+import DibodevSlideshowMarkers from '~/components/data-displays/DibodevSlideshowMarkers.vue'
 import { useSlideshow } from '~/composables/useSlideshow'
 
 /** Framed photo of a trade with the software built for it floating over its corner, fading from one slide to the next (auto-play, click or swipe), a caption and progress markers under it. */
@@ -168,26 +153,15 @@ const {
   (): DibodevTradeToolSlide[] => props.slides,
   (navigation: DibodevPhotoSlideshowNavigation): void => emit('navigate', navigation),
 )
+
+const slideNames: ComputedRef<string[]> = computed((): string[] =>
+  props.slides.map((slide: DibodevTradeToolSlide): string => slide.tradeLabel),
+)
 </script>
 
 <style scoped>
-/* The duration is the time a slide stays on screen: the next one shows when the active marker is full. */
-.slideshow-progress {
-  animation: slideshow-progress 3s linear forwards;
-  will-change: transform;
-}
-
 .slideshow-caption {
   animation: slideshow-caption-in 0.35s ease-out;
-}
-
-@keyframes slideshow-progress {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
 }
 
 @keyframes slideshow-caption-in {

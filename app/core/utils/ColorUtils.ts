@@ -3,6 +3,30 @@
  * Provides methods to convert hex colors to HSL, adjust lightness, and convert back to hex.
  */
 export class ColorUtils {
+  /** Share of a brand colour in its light tint, the rest being white. */
+  private static readonly LIGHT_TINT_COLOR_SHARE: string = '15%'
+  /** Below this saturation (%), a colour is grey and its tint would look dull. */
+  private static readonly MINIMUM_TINTABLE_SATURATION: number = 25
+  /** Below this lightness (%), a colour is near-black and its tint would look grey. */
+  private static readonly MINIMUM_TINTABLE_LIGHTNESS: number = 16
+
+  /**
+   * Light background tint of a brand colour, or the fallback when the colour is grey, near-black or not a 6-digit hex.
+   * @param {string} hex - The brand colour in hex format (e.g. '#5661f7').
+   * @param {string} fallback - CSS colour used when the brand colour would give a dull grey tint.
+   * @returns {string} A CSS colour.
+   */
+  public static getLightTint(hex: string, fallback: string): string {
+    try {
+      const { r, g, b }: { r: number; g: number; b: number } = this.hexToRGB(hex)
+      const { s, l }: { h: number; s: number; l: number } = this.rgbToHSL(r, g, b)
+      if (s < this.MINIMUM_TINTABLE_SATURATION || l < this.MINIMUM_TINTABLE_LIGHTNESS) return fallback
+      return `color-mix(in srgb, ${hex} ${this.LIGHT_TINT_COLOR_SHARE}, white)`
+    } catch {
+      return fallback
+    }
+  }
+
   /**
    * Converts a hex color to HSL format.
    * @param {string} hex - The hex color string (e.g., '#D6D0FB').

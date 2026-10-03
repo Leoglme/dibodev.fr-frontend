@@ -386,7 +386,7 @@
         "mobile": {
           "title": "Aplicación móvil",
           "description": "Una app iOS y Android para tus equipos sobre el terreno o para tus clientes.",
-          "price": "Desde 5.000 €"
+          "price": "Desde 3.500 €"
         }
       },
       "eyebrow": "Servicios"
@@ -705,6 +705,9 @@
     "mosaic": {
       "label": "Proyectos de esta página",
       "tileLabel": "Ver el proyecto {name}"
+    },
+    "deck": {
+      "label": "Una selección de proyectos"
     },
     "listingFacts": {
       "projectsLabel": "proyecto entregado | proyectos entregados",

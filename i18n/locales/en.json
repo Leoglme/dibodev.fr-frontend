@@ -386,7 +386,7 @@
         "mobile": {
           "title": "Mobile app",
           "description": "An iOS and Android app for your field teams or your customers.",
-          "price": "From €5,000"
+          "price": "From €3,500"
         }
       },
       "eyebrow": "Services"
@@ -705,6 +705,9 @@
     "mosaic": {
       "label": "Projects on this page",
       "tileLabel": "View the project {name}"
+    },
+    "deck": {
+      "label": "A selection of projects"
     },
     "listingFacts": {
       "projectsLabel": "project delivered | projects delivered",
