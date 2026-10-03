@@ -35,7 +35,7 @@ export const EVENT_RENTAL_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     reassurances: ['2 minutes', 'Sans inscription ni e-mail', 'Résultat immédiat'],
     authorIntro: 'Test conçu par',
     authorBio:
-      ', développeur d’applications métier près de Rennes. J’ai déjà développé un logiciel de gestion de stock multi-entrepôts pour des PME.',
+      'développeur d’applications métier près de Rennes. J’ai déjà développé un logiciel de gestion de stock multi-entrepôts pour des PME.',
     updatedAt: EVENT_RENTAL_PAGE_UPDATED_AT,
   },
   marketSoftware: {

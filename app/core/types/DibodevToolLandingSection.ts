@@ -1,6 +1,6 @@
 import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
 
-/** `authorIntro` and `authorBio` surround the author's linked name ("Test conçu par" … ", développeur…"). */
+/** `authorIntro` comes before the author's linked name ("Test conçu par"), `authorBio` after it, without a leading comma ("développeur…"). */
 export type DibodevToolLandingSectionProps = {
   breadcrumbs: DibodevBreadcrumbItem[]
   titleBefore: string

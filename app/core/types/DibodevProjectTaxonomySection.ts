@@ -14,6 +14,17 @@ export type DibodevProjectTaxonomyLogo = {
 }
 
 /**
+ * Photo illustrating a listing page, the same one as at the top of the page.
+ * @type {DibodevProjectTaxonomyPhoto}
+ * @property {string} url - URL of the smallest photo file, the image fallback.
+ * @property {string} srcset - Every width of the photo.
+ */
+export type DibodevProjectTaxonomyPhoto = {
+  url: string
+  srcset: string
+}
+
+/**
  * Link to a project category or sector listing page, with the number of projects it holds.
  * @type {DibodevProjectTaxonomyLink}
  * @property {string} key - Category or sector key (stable identifier).
@@ -22,6 +33,7 @@ export type DibodevProjectTaxonomyLogo = {
  * @property {number} count - Number of published projects in the listing.
  * @property {string} to - Localized route of the listing page.
  * @property {DibodevProjectTaxonomyLogo[]} logos - Up to three project logos of the listing (favourites first).
+ * @property {DibodevProjectTaxonomyPhoto | null} photo - Photo of the listing (sectors), null when it has none (categories).
  */
 export type DibodevProjectTaxonomyLink = {
   key: string
@@ -30,6 +42,7 @@ export type DibodevProjectTaxonomyLink = {
   count: number
   to: string
   logos: DibodevProjectTaxonomyLogo[]
+  photo: DibodevProjectTaxonomyPhoto | null
 }
 
 /**
@@ -39,7 +52,7 @@ export type DibodevProjectTaxonomyLink = {
  * @property {string} title - The section title.
  * @property {string} intro - Optional paragraph displayed under the title.
  * @property {DibodevProjectTaxonomyLink[]} links - The listing pages to link to.
- * @property {'cards' | 'chips'} variant - Cards (icon, label, description, logos, count) or compact chips (label, count).
+ * @property {'cards' | 'chips'} variant - Cards (icon, label, description, logos, count) or compact chips (label, count), shown as photo tiles below 1024 px when every link has a photo.
  * @property {boolean} hideEmpty - Whether listings without projects are left out.
  * @property {DibodevSectionTone} tone - Background tone of the section.
  */

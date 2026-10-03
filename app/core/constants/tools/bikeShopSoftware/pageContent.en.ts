@@ -40,7 +40,7 @@ export const BIKE_SHOP_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     reassurances: ['2 minutes', 'No sign-up, no email', 'Instant result'],
     authorIntro: 'Test designed by',
     authorBio:
-      ', a business software developer near Rennes, France. I built the online booking platform used by around thirty sports and leisure centres.',
+      'a business software developer near Rennes, France. I built the online booking platform used by around thirty sports and leisure centres.',
     updatedAt: BIKE_SHOP_PAGE_UPDATED_AT,
   },
   marketSoftware: {

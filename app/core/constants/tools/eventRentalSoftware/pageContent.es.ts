@@ -38,7 +38,7 @@ export const EVENT_RENTAL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     reassurances: ['2 minutos', 'Sin registro ni correo', 'Resultado inmediato'],
     authorIntro: 'Test creado por',
     authorBio:
-      ', desarrollador de software de gestión cerca de Rennes (Francia). Ya he desarrollado un software de gestión de stock multialmacén para pymes.',
+      'desarrollador de software de gestión cerca de Rennes (Francia). Ya he desarrollado un software de gestión de stock multialmacén para pymes.',
     updatedAt: EVENT_RENTAL_PAGE_UPDATED_AT,
   },
   marketSoftware: {

@@ -35,7 +35,7 @@ export const AUTO_REPAIR_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     reassurances: ['2 minutes', 'Sans inscription ni e-mail', 'Résultat immédiat'],
     authorIntro: 'Test conçu par',
     authorBio:
-      ', développeur d’applications métier près de Rennes. J’ai créé de zéro un logiciel de suivi des heures par chantier, toujours utilisé par des PME.',
+      'développeur d’applications métier près de Rennes. J’ai créé de zéro un logiciel de suivi des heures par chantier, toujours utilisé par des PME.',
     updatedAt: AUTO_REPAIR_PAGE_UPDATED_AT,
   },
   marketSoftware: {

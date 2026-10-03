@@ -38,7 +38,7 @@ export const AUTO_REPAIR_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     reassurances: ['2 minutos', 'Sin registro ni correo', 'Resultado inmediato'],
     authorIntro: 'Test creado por',
     authorBio:
-      ', desarrollador de software de gestión cerca de Rennes (Francia). Creé desde cero un software de control de horas por obra que siguen usando varias pymes.',
+      'desarrollador de software de gestión cerca de Rennes (Francia). Creé desde cero un software de control de horas por obra que siguen usando varias pymes.',
     updatedAt: AUTO_REPAIR_PAGE_UPDATED_AT,
   },
   marketSoftware: {

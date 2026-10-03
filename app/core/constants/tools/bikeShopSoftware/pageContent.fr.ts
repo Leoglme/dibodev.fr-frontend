@@ -38,7 +38,7 @@ export const BIKE_SHOP_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     reassurances: ['2 minutes', 'Sans inscription ni e-mail', 'Résultat immédiat'],
     authorIntro: 'Test conçu par',
     authorBio:
-      ', développeur d’applications métier près de Rennes. J’ai développé la plateforme de réservation en ligne d’une trentaine de structures de sport et de loisirs.',
+      'développeur d’applications métier près de Rennes. J’ai développé la plateforme de réservation en ligne d’une trentaine de structures de sport et de loisirs.',
     updatedAt: BIKE_SHOP_PAGE_UPDATED_AT,
   },
   marketSoftware: {

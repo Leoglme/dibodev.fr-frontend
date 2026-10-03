@@ -37,7 +37,7 @@ export const EVENT_RENTAL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     reassurances: ['2 minutes', 'No sign-up, no email', 'Instant result'],
     authorIntro: 'Test designed by',
     authorBio:
-      ', a business software developer near Rennes, France. I have already built multi-warehouse stock management software for small and mid-sized companies.',
+      'a business software developer near Rennes, France. I have already built multi-warehouse stock management software for small and mid-sized companies.',
     updatedAt: EVENT_RENTAL_PAGE_UPDATED_AT,
   },
   marketSoftware: {

@@ -43,12 +43,14 @@
         <slot name="tool" />
       </div>
 
-      <div class="grid gap-5 border-t border-gray-300 px-2 pt-8 sm:px-0">
-        <div class="grid gap-2">
+      <div class="grid gap-8 border-t border-gray-300 px-2 pt-8 sm:px-0 lg:gap-5">
+        <div class="grid gap-3 lg:gap-2">
           <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ t('toolPage.aboutTitle') }}</h2>
           <p class="max-w-3xl text-base leading-7 text-gray-200 sm:text-[17px]">{{ props.description }}</p>
         </div>
-        <div class="flex max-w-3xl items-start gap-4">
+        <div
+          class="grid max-w-3xl grid-cols-[3rem_minmax(0,1fr)] items-center gap-x-3.5 gap-y-0.5 lg:flex lg:items-start lg:gap-4"
+        >
           <img
             :src="PORTRAIT_SRC"
             :alt="t('home.founder.portraitAlt')"
@@ -56,18 +58,24 @@
             :height="PORTRAIT_SIZE"
             loading="lazy"
             decoding="async"
-            class="h-12 w-12 shrink-0 rounded-full object-cover"
+            class="row-span-2 h-12 w-12 shrink-0 rounded-full object-cover"
           />
-          <div class="grid gap-1">
-            <p class="text-[15px] leading-6 text-gray-200">
-              {{ props.authorIntro }}
-              <NuxtLink
-                :to="localePath('about')"
-                class="font-medium text-gray-100 underline decoration-gray-400 underline-offset-2 transition-colors hover:decoration-gray-100"
-                >{{ PERSON_NAME }}</NuxtLink
-              >{{ props.authorBio }}
+          <div class="contents lg:grid lg:gap-1">
+            <p class="contents text-gray-200 lg:block lg:text-[15px] lg:leading-6">
+              <span class="self-end text-base leading-6 lg:text-[15px]"
+                >{{ props.authorIntro }}
+                <NuxtLink
+                  :to="localePath('about')"
+                  class="font-medium text-gray-100 underline decoration-gray-400 underline-offset-2 transition-colors hover:decoration-gray-100"
+                  >{{ PERSON_NAME }}</NuxtLink
+                ></span
+              ><span class="hidden lg:inline">, </span
+              ><span
+                class="col-span-2 mt-4 block text-base leading-7 first-letter:uppercase lg:mt-0 lg:inline lg:text-[15px] lg:leading-6"
+                >{{ props.authorBio }}</span
+              >
             </p>
-            <p class="text-muted text-sm">
+            <p class="text-muted col-start-2 row-start-2 self-start text-sm lg:col-start-auto lg:row-start-auto">
               {{ t('toolPage.updatedOn') }} <time :datetime="props.updatedAt">{{ updatedAtLabel }}</time>
             </p>
           </div>

@@ -8,6 +8,7 @@ import { allCategoryKeys, categoryToSlug } from '~/core/constants/categorySlugs'
 import { allSectorKeys, sectorToSlug } from '~/core/constants/sectorSlugs'
 import { ColorUtils } from '~/core/utils/ColorUtils'
 import { ProjectOrderUtils } from '~/core/utils/ProjectOrderUtils'
+import { SectorPhotoUtils } from '~/core/utils/SectorPhotoUtils'
 
 export type UseProjectTaxonomyLinksReturn = {
   categoryLinks: ComputedRef<DibodevProjectTaxonomyLink[]>
@@ -70,6 +71,7 @@ export function useProjectTaxonomyLinks(projects: ComputedRef<DibodevProject[]>)
         count: listingProjects.length,
         to: localePath({ name: 'projects-category-slug', params: { slug: categoryToSlug(currentLocale, key) } }),
         logos: pickListingLogos(listingProjects),
+        photo: null,
       }
     })
   })
@@ -87,6 +89,7 @@ export function useProjectTaxonomyLinks(projects: ComputedRef<DibodevProject[]>)
         count: listingProjects.length,
         to: localePath({ name: 'projects-sector-slug', params: { slug: sectorToSlug(currentLocale, key) } }),
         logos: pickListingLogos(listingProjects),
+        photo: { url: SectorPhotoUtils.getFallbackUrl(key), srcset: SectorPhotoUtils.getSrcset(key) },
       }
     })
   })

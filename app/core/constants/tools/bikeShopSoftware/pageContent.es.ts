@@ -41,7 +41,7 @@ export const BIKE_SHOP_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     reassurances: ['2 minutos', 'Sin registro ni correo', 'Resultado inmediato'],
     authorIntro: 'Test creado por',
     authorBio:
-      ', desarrollador de software de gestión cerca de Rennes (Francia). Desarrollé la plataforma de reservas en línea de una treintena de centros deportivos y de ocio.',
+      'desarrollador de software de gestión cerca de Rennes (Francia). Desarrollé la plataforma de reservas en línea de una treintena de centros deportivos y de ocio.',
     updatedAt: BIKE_SHOP_PAGE_UPDATED_AT,
   },
   marketSoftware: {

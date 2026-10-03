@@ -37,7 +37,7 @@ export const AUTO_REPAIR_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     reassurances: ['2 minutes', 'No sign-up, no email', 'Instant result'],
     authorIntro: 'Test designed by',
     authorBio:
-      ', a business software developer near Rennes, France. I built from scratch time-tracking software per job site, still used by small and mid-sized companies.',
+      'a business software developer near Rennes, France. I built from scratch time-tracking software per job site, still used by small and mid-sized companies.',
     updatedAt: AUTO_REPAIR_PAGE_UPDATED_AT,
   },
   marketSoftware: {

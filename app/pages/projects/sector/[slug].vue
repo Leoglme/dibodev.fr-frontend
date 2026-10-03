@@ -103,14 +103,13 @@ import type { DibodevPhotoSlideshowNavigation } from '~/core/types/DibodevPhotoS
 import type { DibodevPhotoWithScreenSlide } from '~/core/types/DibodevPhotoWithScreenSlideshow'
 import type { DibodevProjectCardScreenshot } from '~/core/types/DibodevProjectCardScreenshot'
 import { useTracking } from '~/composables/useTracking'
-import { SECTOR_HERO_PHOTO_FILE_SLUGS, SECTOR_HERO_PHOTO_WIDTHS } from '~/core/constants/sectorHeroPhotos'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 import { ProjectOrderUtils } from '~/core/utils/ProjectOrderUtils'
 import { ProjectUtils } from '~/core/utils/ProjectUtils'
+import { SectorPhotoUtils } from '~/core/utils/SectorPhotoUtils'
 
 /** Projects shown one after the other over the photo of the sector. */
 const HERO_PROJECT_COUNT: number = 6
-const SECTOR_PHOTOS_FOLDER: string = '/images/sectors'
 
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
 const { locale, t } = useI18n()
@@ -204,11 +203,8 @@ const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail(():
 
 /** Photo of the sector with, over its corner, the screenshot of each project of the sector, in the order of the grid below. */
 const heroSlides: ComputedRef<DibodevPhotoWithScreenSlide[]> = computed((): DibodevPhotoWithScreenSlide[] => {
-  const photoFileSlug: string = SECTOR_HERO_PHOTO_FILE_SLUGS[sectorKey]
-  const photoUrl: string = buildSectorPhotoUrl(photoFileSlug, SECTOR_HERO_PHOTO_WIDTHS[0]!)
-  const photoSrcset: string = SECTOR_HERO_PHOTO_WIDTHS.map(
-    (width: number): string => `${buildSectorPhotoUrl(photoFileSlug, width)} ${width}w`,
-  ).join(', ')
+  const photoUrl: string = SectorPhotoUtils.getFallbackUrl(sectorKey)
+  const photoSrcset: string = SectorPhotoUtils.getSrcset(sectorKey)
   return ProjectOrderUtils.homePageSelectionFirst(projectsBySector.value)
     .flatMap((project: DibodevProject): DibodevPhotoWithScreenSlide[] => {
       const screenshot: DibodevProjectCardScreenshot | null = ProjectUtils.resolveCardScreenshot(project)
@@ -281,16 +277,6 @@ const sectorMetaDescription: ComputedRef<string> = computed((): string => {
   const fromCms = sectorPageContent.value?.metaDescription?.trim()
   return fromCms ?? sectorPageDescription.value
 })
-
-/**
- * Builds the URL of a sector photo file at a given width.
- * @param {string} fileSlug - Slug of the photo files.
- * @param {number} width - Width of the file, in pixels.
- * @returns {string} The URL of the photo, served from `public/images/sectors`.
- */
-function buildSectorPhotoUrl(fileSlug: string, width: number): string {
-  return `${SECTOR_PHOTOS_FOLDER}/${fileSlug}-${width}.webp`
-}
 
 /**
  * Tracks a project change made by the visitor in the header (auto-play is not reported).

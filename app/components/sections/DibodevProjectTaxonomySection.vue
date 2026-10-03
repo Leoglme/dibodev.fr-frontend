@@ -59,7 +59,12 @@
         </li>
       </ul>
 
-      <DibodevProjectTaxonomyChips v-else :links="visibleLinks" :hideEmpty="false" />
+      <template v-else>
+        <DibodevProjectTaxonomyPhotoTiles v-if="hasPhotoForEveryLink" :links="visibleLinks" class="lg:hidden" />
+        <div :class="hasPhotoForEveryLink ? 'hidden lg:block' : ''">
+          <DibodevProjectTaxonomyChips :links="visibleLinks" :hideEmpty="false" />
+        </div>
+      </template>
     </div>
   </section>
 </template>
@@ -77,6 +82,7 @@ import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.v
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import DibodevServiceIcon from '~/components/ui/DibodevServiceIcon.vue'
 import DibodevProjectTaxonomyChips from '~/components/navigations/DibodevProjectTaxonomyChips.vue'
+import DibodevProjectTaxonomyPhotoTiles from '~/components/navigations/DibodevProjectTaxonomyPhotoTiles.vue'
 import { getAccentPalette } from '~/core/constants/accentPalettes'
 import { SECTION_TONE_CLASSES } from '~/core/constants/sectionTone'
 
@@ -91,10 +97,7 @@ const CATEGORY_ICONS: Record<string, DibodevServiceIconName> = {
 }
 const DEFAULT_CATEGORY_ICON: DibodevServiceIconName = 'apps'
 
-/**
- * Internal-linking hub: the category or sector listing pages with their project counts,
- * as illustrated cards (icon, description, project logos) or compact chips.
- */
+/** Internal-linking hub to the category or sector pages: illustrated cards, or chips that become photo tiles on phones and tablets when each link has a photo. */
 const props: DibodevProjectTaxonomySectionProps = defineProps({
   eyebrow: {
     type: String as PropType<string>,
@@ -130,6 +133,9 @@ const toneClass: ComputedRef<string> = computed((): string => SECTION_TONE_CLASS
 
 const visibleLinks: ComputedRef<DibodevProjectTaxonomyLink[]> = computed((): DibodevProjectTaxonomyLink[] =>
   props.hideEmpty ? props.links.filter((link: DibodevProjectTaxonomyLink): boolean => link.count > 0) : props.links,
+)
+const hasPhotoForEveryLink: ComputedRef<boolean> = computed((): boolean =>
+  visibleLinks.value.every((link: DibodevProjectTaxonomyLink): boolean => link.photo !== null),
 )
 
 /**

@@ -36,7 +36,7 @@ export const DRIVING_SCHOOL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     reassurances: ['2 minutes', 'No sign-up, no email', 'Instant result'],
     authorIntro: 'Test designed by',
     authorBio:
-      ', a business software developer near Rennes, France. I have already built a driving school management application.',
+      'a business software developer near Rennes, France. I have already built a driving school management application.',
     updatedAt: DRIVING_SCHOOL_PAGE_UPDATED_AT,
   },
   marketSoftware: {

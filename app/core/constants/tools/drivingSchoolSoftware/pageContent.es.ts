@@ -37,7 +37,7 @@ export const DRIVING_SCHOOL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     reassurances: ['2 minutos', 'Sin registro ni correo', 'Resultado inmediato'],
     authorIntro: 'Test creado por',
     authorBio:
-      ', desarrollador de software de gestión cerca de Rennes (Francia). Ya he desarrollado una aplicación de gestión para autoescuelas.',
+      'desarrollador de software de gestión cerca de Rennes (Francia). Ya he desarrollado una aplicación de gestión para autoescuelas.',
     updatedAt: DRIVING_SCHOOL_PAGE_UPDATED_AT,
   },
   marketSoftware: {
