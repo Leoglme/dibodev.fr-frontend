@@ -3,14 +3,14 @@
     <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-16">
       <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.intro" />
 
-      <ol class="method-steps grid gap-8 md:grid-cols-2 md:gap-6 xl:grid-cols-4">
+      <ol class="method-steps grid gap-13 pt-5.5 md:grid-cols-2 md:gap-6 md:pt-0 xl:grid-cols-4">
         <li
           v-for="(step, index) in props.steps"
           :key="step.title"
-          class="method-step relative grid grid-cols-[3.5rem_minmax(0,1fr)] content-start gap-x-5 gap-y-4 md:grid-cols-1 md:grid-rows-[auto_minmax(0,1fr)]"
+          class="method-step relative md:grid md:grid-cols-1 md:grid-rows-[auto_minmax(0,1fr)] md:content-start md:gap-x-5 md:gap-y-4"
         >
           <span
-            class="method-step__number relative z-10 flex h-14 w-14 items-center justify-center rounded-full text-lg font-medium ring-4 ring-white"
+            class="method-step__number absolute -top-5.5 left-5 z-20 flex h-11 w-11 items-center justify-center rounded-full text-base font-medium ring-4 ring-white md:relative md:top-auto md:left-auto md:z-10 md:h-14 md:w-14 md:text-lg"
             :style="{
               backgroundColor: getStepPalette(index).background,
               color: getStepPalette(index).color,
@@ -19,7 +19,10 @@
           >
             {{ formatStepNumber(index + 1) }}
           </span>
-          <div class="grid content-start gap-3 rounded-xl border border-gray-300 p-6" :class="cardClass">
+          <div
+            class="relative z-1 grid content-start gap-3 rounded-xl border border-gray-300 px-5 pt-8.5 pb-5 md:p-6"
+            :class="cardClass"
+          >
             <span
               class="text-xs font-medium tracking-[0.08em] uppercase"
               :style="{ color: getStepPalette(index).color }"
@@ -27,7 +30,7 @@
               {{ step.label }}
             </span>
             <h3 class="text-lg leading-snug font-medium text-gray-100">{{ step.title }}</h3>
-            <p class="text-[15px] leading-6 text-gray-200">{{ step.description }}</p>
+            <p class="text-base leading-[26px] text-gray-200 md:text-[15px] md:leading-6">{{ step.description }}</p>
           </div>
         </li>
       </ol>
@@ -99,15 +102,16 @@ function getStepPalette(index: number): DibodevAccentPalette {
 </script>
 
 <style scoped>
-/* Vertical connector between the numbered circles (phones, single column). */
+/* Vertical connector on phones: from each number to the next one, passing behind the cards. */
 .method-step:not(:last-child)::before {
   content: '';
   position: absolute;
-  top: 3.5rem;
-  bottom: -2rem;
-  left: calc(1.75rem - 1px);
+  z-index: 0;
+  top: 0;
+  bottom: -3.25rem;
+  left: calc(1.25rem + 1.375rem - 1px);
   width: 2px;
-  background-color: var(--color-gray-300);
+  background-color: var(--color-gray-400);
 }
 
 /* Two columns on tablets: no connector, the numbers alone carry the order. */
@@ -121,12 +125,14 @@ function getStepPalette(index: number): DibodevAccentPalette {
 @media (min-width: 80rem) {
   .method-step:not(:last-child)::before {
     display: block;
+    z-index: auto;
     top: calc(1.75rem - 1px);
     bottom: auto;
     left: 3.5rem;
     right: -1.5rem;
     width: auto;
     height: 2px;
+    background-color: var(--color-gray-300);
   }
 }
 </style>
