@@ -651,7 +651,22 @@
       "description": "Descubre mis realizaciones en el sector {sector}: sitios web, aplicaciones móviles, SaaS y proyectos de IA.",
       "introTitle": "Sobre este sector",
       "asideCtaTitle": "¿Un proyecto en este sector?",
-      "otherTypesTitle": "Ver también por tipo de proyecto"
+      "otherTypesTitle": "Ver también por tipo de proyecto",
+      "hero": {
+        "label": "Proyectos del sector {sector}",
+        "screenshotAlt": "Captura de pantalla de {project}",
+        "photoAlts": {
+          "sport-loisirs": "Un hombre escala un muro de escalada en interior",
+          "immobilier": "Una agente inmobiliaria muestra las llaves de una vivienda",
+          "sante": "Un profesional escanea la pierna de un paciente con una tableta",
+          "voyage-transport": "Un viaje preparado sobre un mapa del mundo, con pasaporte y cámara",
+          "productivite": "Una mujer trabaja con su portátil junto a un cuaderno",
+          "logistique": "Una empleada hace el inventario de las estanterías con una tableta",
+          "b2b": "Un equipo reunido alrededor de una pizarra en una oficina",
+          "reseaux-sociaux": "Unos amigos se hacen un selfi al aire libre",
+          "gaming": "Dos amigos juegan a un videojuego con cascos"
+        }
+      }
     },
     "cta": {
       "text": "¿Tienes un proyecto similar? Hablemos.",
@@ -701,10 +716,6 @@
     "asideCta": {
       "description": "Cuéntame tu necesidad en unas líneas: te respondo en 24 horas con primeras ideas y una estimación de presupuesto.",
       "button": "Hablar de mi proyecto"
-    },
-    "mosaic": {
-      "label": "Proyectos de esta página",
-      "tileLabel": "Ver el proyecto {name}"
     },
     "deck": {
       "label": "Una selección de proyectos"

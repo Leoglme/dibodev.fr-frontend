@@ -7,10 +7,16 @@
       :ctaText="$t('projects.landing.cta')"
       ctaTarget="#projects"
       :compactTitle="true"
-      :align="projectsBySector.length >= MOSAIC_MINIMUM_PROJECTS ? 'left' : 'center'"
+      :align="heroSlides.length > 0 ? 'left' : 'center'"
     >
-      <template v-if="projectsBySector.length >= MOSAIC_MINIMUM_PROJECTS" #aside>
-        <DibodevProjectLogoMosaic :projects="projectsBySector" trackingSource="sector_hero" />
+      <template v-if="heroSlides.length > 0" #aside>
+        <DibodevPhotoWithScreenSlideshow
+          :slides="heroSlides"
+          :accessibleName="t('projects.sectorPage.hero.label', { sector: sectorLabel })"
+          captionLayout="stacked"
+          @navigate="onHeroSlideNavigation"
+          @captionLinkClick="onHeroProjectClick"
+        />
       </template>
     </DibodevLandingSection>
 
@@ -71,13 +77,13 @@ import DibodevSectorIntroSection from '~/components/sections/DibodevSectorIntroS
 import DibodevProjectsSection from '~/components/sections/DibodevProjectsSection.vue'
 import DibodevProjectTaxonomySection from '~/components/sections/DibodevProjectTaxonomySection.vue'
 import DibodevContactAsideCard from '~/components/cards/DibodevContactAsideCard.vue'
-import DibodevProjectLogoMosaic from '~/components/data-displays/DibodevProjectLogoMosaic.vue'
+import DibodevPhotoWithScreenSlideshow from '~/components/data-displays/DibodevPhotoWithScreenSlideshow.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { useProjectTaxonomyLinks } from '~/composables/useProjectTaxonomyLinks'
 import { useProjectListingFacts } from '~/composables/useProjectListingFacts'
-import type { DibodevProject } from '~/core/types/DibodevProject'
+import type { DibodevProject, DibodevProjectNameParts } from '~/core/types/DibodevProject'
 import type { SectorKey } from '~/core/constants/projectEnums'
 import type { SupportedLocale } from '~/core/constants/sectorSlugs'
 import { parseSectorFromSlug, sectorLabelByLocale } from '~/core/constants/sectorSlugs'
@@ -93,12 +99,22 @@ import {
 } from '~/core/constants/businessSoftwarePageTeaser'
 import { StoryblokRichtextUtils } from '~/core/utils/StoryblokRichtextUtils'
 import type { RouteLocationNormalizedLoadedGeneric } from '#vue-router'
+import type { DibodevPhotoSlideshowNavigation } from '~/core/types/DibodevPhotoSlideshow'
+import type { DibodevPhotoWithScreenSlide } from '~/core/types/DibodevPhotoWithScreenSlideshow'
+import type { DibodevProjectCardScreenshot } from '~/core/types/DibodevProjectCardScreenshot'
+import { useTracking } from '~/composables/useTracking'
+import { SECTOR_HERO_PHOTO_FILE_SLUGS, SECTOR_HERO_PHOTO_WIDTHS } from '~/core/constants/sectorHeroPhotos'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
+import { ProjectOrderUtils } from '~/core/utils/ProjectOrderUtils'
+import { ProjectUtils } from '~/core/utils/ProjectUtils'
 
-/** The header mosaic needs a full first row of three tiles to look intentional. */
-const MOSAIC_MINIMUM_PROJECTS: number = 3
+/** Projects shown one after the other over the photo of the sector. */
+const HERO_PROJECT_COUNT: number = 6
+const SECTOR_PHOTOS_FOLDER: string = '/images/sectors'
 
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
 const { locale, t } = useI18n()
+const { track } = useTracking()
 const storyblokLanguage: ComputedRef<string | undefined> = useStoryblokProjectLanguage()
 
 const slug: string = String(route.params.slug ?? '').trim()
@@ -185,6 +201,39 @@ const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail(():
   { label: t('nav.projects'), to: localePath('projects') },
   { label: sectorLabel, to: null },
 ])
+
+/** Photo of the sector with, over its corner, the screenshot of each project of the sector, in the order of the grid below. */
+const heroSlides: ComputedRef<DibodevPhotoWithScreenSlide[]> = computed((): DibodevPhotoWithScreenSlide[] => {
+  const photoFileSlug: string = SECTOR_HERO_PHOTO_FILE_SLUGS[sectorKey]
+  const photoUrl: string = buildSectorPhotoUrl(photoFileSlug, SECTOR_HERO_PHOTO_WIDTHS[0]!)
+  const photoSrcset: string = SECTOR_HERO_PHOTO_WIDTHS.map(
+    (width: number): string => `${buildSectorPhotoUrl(photoFileSlug, width)} ${width}w`,
+  ).join(', ')
+  return ProjectOrderUtils.homePageSelectionFirst(projectsBySector.value)
+    .flatMap((project: DibodevProject): DibodevPhotoWithScreenSlide[] => {
+      const screenshot: DibodevProjectCardScreenshot | null = ProjectUtils.resolveCardScreenshot(project)
+      if (!screenshot) return []
+      const { shortName, tagline }: DibodevProjectNameParts = ProjectUtils.splitNameAndTagline(project.name)
+      return [
+        {
+          id: project.route,
+          name: shortName,
+          photoUrl,
+          photoSrcset,
+          photoAlt: t(`projects.sectorPage.hero.photoAlts.${sectorKey}`),
+          screenshotUrl: screenshot.url,
+          screenshotSrcset: screenshot.srcset,
+          screenshotAlt: t('projects.sectorPage.hero.screenshotAlt', { project: shortName }),
+          hasTransparentScreenshot: ProjectUtils.hasTransparentCardScreenshot(project),
+          label: sectorLabel,
+          captionTitle: shortName,
+          captionText: tagline || project.metaDescription,
+          captionLink: localePath(project.route),
+        },
+      ]
+    })
+    .slice(0, HERO_PROJECT_COUNT)
+})
 const sectorPageContent: ComputedRef<StoryblokSectorContent | null> = computed(
   () => sectorStoryData.value?.normalized ?? null,
 )
@@ -232,6 +281,45 @@ const sectorMetaDescription: ComputedRef<string> = computed((): string => {
   const fromCms = sectorPageContent.value?.metaDescription?.trim()
   return fromCms ?? sectorPageDescription.value
 })
+
+/**
+ * Builds the URL of a sector photo file at a given width.
+ * @param {string} fileSlug - Slug of the photo files.
+ * @param {number} width - Width of the file, in pixels.
+ * @returns {string} The URL of the photo, served from `public/images/sectors`.
+ */
+function buildSectorPhotoUrl(fileSlug: string, width: number): string {
+  return `${SECTOR_PHOTOS_FOLDER}/${fileSlug}-${width}.webp`
+}
+
+/**
+ * Tracks a project change made by the visitor in the header (auto-play is not reported).
+ * @param {DibodevPhotoSlideshowNavigation} navigation - The project now shown and how the visitor brought it.
+ * @returns {void}
+ */
+function onHeroSlideNavigation(navigation: DibodevPhotoSlideshowNavigation): void {
+  track(TRACKING_EVENTS.photoSlideshowNavigated, {
+    slide: navigation.slideId,
+    method: navigation.method,
+    location: 'sector_hero',
+  })
+}
+
+/**
+ * Tracks a click on the project named under the photo, like a click on a project card.
+ * @param {DibodevPhotoWithScreenSlide} slide - The slide of the clicked project.
+ * @returns {void}
+ */
+function onHeroProjectClick(slide: DibodevPhotoWithScreenSlide): void {
+  const project: DibodevProject | undefined = projectsBySector.value.find(
+    (sectorProject: DibodevProject): boolean => sectorProject.route === slide.id,
+  )
+  track(TRACKING_EVENTS.projectCardClicked, {
+    project: project?.name ?? slide.captionTitle,
+    route: slide.id,
+    source: 'sector_hero',
+  })
+}
 
 useHead(() => {
   const title = sectorMetaTitle.value

@@ -644,7 +644,22 @@
       "description": "Discover my work in the {sector} sector: websites, mobile apps, SaaS and AI projects.",
       "introTitle": "About this sector",
       "asideCtaTitle": "A project in this sector?",
-      "otherTypesTitle": "Also browse by project type"
+      "otherTypesTitle": "Also browse by project type",
+      "hero": {
+        "label": "Projects in {sector}",
+        "screenshotAlt": "Screenshot of {project}",
+        "photoAlts": {
+          "sport-loisirs": "A man climbing an indoor climbing wall",
+          "immobilier": "A real estate agent holding up the keys to a home",
+          "sante": "A practitioner scanning a patient's leg with a tablet",
+          "voyage-transport": "A trip being planned on a world map, with a passport and a camera",
+          "productivite": "A woman working on her laptop next to a notebook",
+          "logistique": "An employee taking stock of the shelves with a tablet",
+          "b2b": "A team meeting around a board in an office",
+          "reseaux-sociaux": "Friends taking a selfie outdoors",
+          "gaming": "Two friends playing a video game with headsets on"
+        }
+      }
     },
     "categoryPage": {
       "title": "Projects {category} — Freelance Web, Mobile & AI Developer",
@@ -701,10 +716,6 @@
     "asideCta": {
       "description": "Tell me about your needs in a few lines: I will reply within 24 hours with first ideas and a budget estimate.",
       "button": "Discuss my project"
-    },
-    "mosaic": {
-      "label": "Projects on this page",
-      "tileLabel": "View the project {name}"
     },
     "deck": {
       "label": "A selection of projects"

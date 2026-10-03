@@ -70,6 +70,15 @@ export class ProjectUtils {
   }
 
   /**
+   * Whether the card screenshot of a project is a device picture on a transparent background.
+   * @param {DibodevProject} project - The project.
+   * @returns {boolean} True when the screenshot must be shown whole instead of filling its frame.
+   */
+  public static hasTransparentCardScreenshot(project: DibodevProject): boolean {
+    return PROJECT_CARD_SCREENSHOT_OVERRIDES[this.getSlug(project)]?.hasTransparentBackground ?? false
+  }
+
+  /**
    * Screenshot shown next to the title of a project page: its first media, or the one of its card when that media is animated.
    * @param {DibodevProject} project - The project of the page.
    * @returns {DibodevProjectCardScreenshot | null} The screenshot, or null when the project has no usable one.

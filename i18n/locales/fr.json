@@ -644,7 +644,22 @@
       "description": "Découvrez mes réalisations dans le secteur {sector} : sites web, applications mobiles, SaaS et projets IA.",
       "introTitle": "À propos de ce secteur",
       "asideCtaTitle": "Un projet dans ce secteur ?",
-      "otherTypesTitle": "Voir aussi par type de projet"
+      "otherTypesTitle": "Voir aussi par type de projet",
+      "hero": {
+        "label": "Projets du secteur {sector}",
+        "screenshotAlt": "Capture d'écran de {project}",
+        "photoAlts": {
+          "sport-loisirs": "Un homme grimpe sur un mur d'escalade en salle",
+          "immobilier": "Une agente immobilière tend les clés d'un logement",
+          "sante": "Un praticien scanne la jambe d'un patient avec une tablette",
+          "voyage-transport": "Un voyage préparé sur une carte du monde, avec un passeport et un appareil photo",
+          "productivite": "Une femme travaille sur son ordinateur portable, un carnet à côté",
+          "logistique": "Une employée fait l'inventaire des étagères avec une tablette",
+          "b2b": "Une équipe en réunion autour d'un tableau, dans un bureau",
+          "reseaux-sociaux": "Des amis prennent un selfie en plein air",
+          "gaming": "Deux amis jouent à un jeu vidéo, casque sur les oreilles"
+        }
+      }
     },
     "categoryPage": {
       "title": "Projets {category} — Développeur Freelance Web, Mobile & IA",
@@ -701,10 +716,6 @@
     "asideCta": {
       "description": "Décrivez-moi votre besoin en quelques lignes : je vous réponds sous 24 h avec de premières pistes et une idée de budget.",
       "button": "Discuter de mon projet"
-    },
-    "mosaic": {
-      "label": "Projets de cette page",
-      "tileLabel": "Voir le projet {name}"
     },
     "deck": {
       "label": "Une sélection de réalisations"

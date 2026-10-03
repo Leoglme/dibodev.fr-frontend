@@ -15,7 +15,7 @@
     :decorated="true"
   >
     <template #aside>
-      <DibodevTradeToolSlideshow
+      <DibodevPhotoWithScreenSlideshow
         :slides="heroSlides"
         :accessibleName="t('businessSoftwarePage.hero.slides.label')"
         @navigate="onHeroSlideNavigation"
@@ -90,7 +90,7 @@ import type {
   DibodevComparisonState,
 } from '~/core/types/DibodevComparisonTableSection'
 import type { DibodevPhotoSlideshowNavigation } from '~/core/types/DibodevPhotoSlideshow'
-import type { DibodevTradeToolSlide } from '~/core/types/DibodevTradeToolSlideshow'
+import type { DibodevPhotoWithScreenSlide } from '~/core/types/DibodevPhotoWithScreenSlideshow'
 import type { DibodevBusinessSoftwareHeroSlide } from '~/core/types/DibodevBusinessSoftwareHeroSlide'
 import type { ComputedRef } from 'vue'
 import type { DibodevArticle } from '~/core/types/DibodevArticle'
@@ -110,7 +110,7 @@ import DibodevTestimonialSection from '~/components/sections/DibodevTestimonialS
 import DibodevFaqSection from '~/components/sections/DibodevFaqSection.vue'
 import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
-import DibodevTradeToolSlideshow from '~/components/data-displays/DibodevTradeToolSlideshow.vue'
+import DibodevPhotoWithScreenSlideshow from '~/components/data-displays/DibodevPhotoWithScreenSlideshow.vue'
 import DibodevComparisonTableSection from '~/components/sections/DibodevComparisonTableSection.vue'
 import DibodevBudgetEstimatorSection from '~/components/sections/DibodevBudgetEstimatorSection.vue'
 import DibodevToolTeaserList from '~/components/data-displays/DibodevToolTeaserList.vue'
@@ -187,22 +187,25 @@ const comparisonRows: ComputedRef<DibodevComparisonRow[]> = computed((): Dibodev
     }),
   ),
 )
-const heroSlides: ComputedRef<DibodevTradeToolSlide[]> = computed((): DibodevTradeToolSlide[] =>
-  BUSINESS_SOFTWARE_HERO_SLIDES.map((slide: DibodevBusinessSoftwareHeroSlide): DibodevTradeToolSlide => {
+const heroSlides: ComputedRef<DibodevPhotoWithScreenSlide[]> = computed((): DibodevPhotoWithScreenSlide[] =>
+  BUSINESS_SOFTWARE_HERO_SLIDES.map((slide: DibodevBusinessSoftwareHeroSlide): DibodevPhotoWithScreenSlide => {
     const texts: string = `businessSoftwarePage.hero.slides.items.${slide.id}`
     return {
       id: slide.id,
+      name: t(`${texts}.pill`),
       photoUrl: buildHeroPhotoUrl(slide.fileSlug, BUSINESS_SOFTWARE_HERO_PHOTO_WIDTHS[0]!),
       photoSrcset: BUSINESS_SOFTWARE_HERO_PHOTO_WIDTHS.map(
         (width: number): string => `${buildHeroPhotoUrl(slide.fileSlug, width)} ${width}w`,
       ).join(', '),
       photoAlt: t(`${texts}.photoAlt`),
       screenshotUrl: `${HERO_IMAGES_FOLDER}/${slide.fileSlug}-screen.webp`,
+      screenshotSrcset: '',
       screenshotAlt: t(`${texts}.screenshotAlt`),
       hasTransparentScreenshot: slide.hasTransparentScreenshot,
-      tradeLabel: t(`${texts}.pill`),
-      need: t(`${texts}.need`),
-      needSuffix: t('businessSoftwarePage.hero.slides.needSuffix', { trade: t(`${texts}.trade`) }),
+      label: t(`${texts}.pill`),
+      captionTitle: t(`${texts}.need`),
+      captionText: t('businessSoftwarePage.hero.slides.needSuffix', { trade: t(`${texts}.trade`) }),
+      captionLink: null,
     }
   }),
 )

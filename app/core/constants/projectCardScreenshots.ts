@@ -1,7 +1,7 @@
 import type { DibodevProjectCardScreenshotOverride } from '~/core/types/DibodevProjectCardScreenshot'
 
 /**
- * Projects whose card must not use their first Storyblok media as screenshot, keyed by slug.
+ * Projects whose card screenshot needs a setting, keyed by slug: another media, a static image or a transparent background.
  * Every other project shows its first media (`media1`).
  */
 export const PROJECT_CARD_SCREENSHOT_OVERRIDES: Record<string, DibodevProjectCardScreenshotOverride> = {
@@ -11,4 +11,6 @@ export const PROJECT_CARD_SCREENSHOT_OVERRIDES: Record<string, DibodevProjectCar
   stockpme: { staticPath: '/images/projects/stockpme-card.webp' },
   /** The first media is a pale form that fades into the card; the second one is the landing page, readable at card size. */
   devleadhunter: { media: 'media2' },
+  /** The first media is a laptop and a phone on a transparent background. */
+  izidoor: { hasTransparentBackground: true },
 }

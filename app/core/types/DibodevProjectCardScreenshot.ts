@@ -19,8 +19,10 @@ export type DibodevProjectScreenshotMediaKey = keyof Pick<DibodevProject, 'media
  * @type {DibodevProjectCardScreenshotOverride}
  * @property {DibodevProjectScreenshotMediaKey} [media] - Storyblok media to use instead of the first one.
  * @property {string} [staticPath] - Public path of a static image used instead of the Storyblok media.
+ * @property {boolean} [hasTransparentBackground] - The screenshot is a device picture on a transparent background, to show whole rather than cropped.
  */
 export type DibodevProjectCardScreenshotOverride = {
   media?: DibodevProjectScreenshotMediaKey
   staticPath?: string
+  hasTransparentBackground?: boolean
 }

@@ -2,7 +2,7 @@
   <section
     v-if="props.slides.length > 0"
     class="mx-auto w-full max-w-md sm:max-w-lg lg:max-w-[34rem]"
-    :aria-roledescription="$t('photoSlideshow.roleDescription')"
+    :aria-roledescription="hasSeveralSlides ? $t('photoSlideshow.roleDescription') : undefined"
     :aria-label="props.accessibleName"
     @pointerenter="onPointerEnter"
     @pointerleave="onPointerLeave"
@@ -34,11 +34,11 @@
             :class="index === activeIndex ? 'opacity-100' : 'opacity-0'"
           />
           <span
-            :key="`trade-${activeSlide.id}`"
+            :key="`label-${activeSlide.label}`"
             class="slideshow-caption absolute top-4 right-4 inline-flex h-8 items-center gap-2 rounded-full bg-white/95 pr-3 pl-2.5 text-[13px] font-medium text-gray-100 shadow-[0_2px_8px_rgba(20,20,20,0.12)]"
           >
             <span class="bg-primary h-2 w-2 rounded-full" aria-hidden="true" />
-            {{ activeSlide.tradeLabel }}
+            {{ activeSlide.label }}
           </span>
           <button
             v-if="hasSeveralSlides"
@@ -67,6 +67,8 @@
           >
             <img
               :src="slide.screenshotUrl"
+              :srcset="slide.screenshotSrcset || undefined"
+              :sizes="slide.screenshotSrcset ? SCREENSHOT_SIZES : undefined"
               :alt="slide.screenshotAlt"
               :width="SCREENSHOT_WIDTH"
               :height="slide.hasTransparentScreenshot ? undefined : SCREENSHOT_HEIGHT"
@@ -86,8 +88,26 @@
         class="slideshow-caption min-h-[4.125rem] text-[15px] leading-[22px] text-gray-200"
         :aria-live="isAutoplayRunning ? 'off' : 'polite'"
       >
-        <strong class="font-medium text-gray-100">{{ activeSlide.need }}</strong
-        >{{ activeSlide.needSuffix }}
+        <NuxtLink
+          v-if="activeSlide.captionLink"
+          :to="activeSlide.captionLink"
+          class="group focus-visible:ring-primary items-center gap-1.5 rounded-sm font-medium text-gray-100 focus:outline-none focus-visible:ring-2"
+          :class="props.captionLayout === 'stacked' ? 'flex w-fit' : 'inline-flex'"
+          @click="emit('captionLinkClick', activeSlide)"
+        >
+          <span class="underline-offset-4 group-hover:underline">{{ activeSlide.captionTitle }}</span>
+          <DibodevIcon
+            name="ArrowRight"
+            mode="stroke"
+            :width="16"
+            :height="16"
+            class="text-primary shrink-0"
+            aria-hidden="true"
+          /> </NuxtLink
+        ><strong v-else class="font-medium text-gray-100" :class="props.captionLayout === 'stacked' ? 'block' : ''">{{
+          activeSlide.captionTitle
+        }}</strong
+        >{{ activeSlide.captionText }}
       </p>
       <DibodevSlideshowMarkers
         v-if="hasSeveralSlides"
@@ -106,25 +126,38 @@
 <script setup lang="ts">
 import type { ComputedRef, PropType } from 'vue'
 import type { DibodevPhotoSlideshowNavigation } from '~/core/types/DibodevPhotoSlideshow'
-import type { DibodevTradeToolSlide, DibodevTradeToolSlideshowProps } from '~/core/types/DibodevTradeToolSlideshow'
+import type {
+  DibodevPhotoWithScreenCaptionLayout,
+  DibodevPhotoWithScreenSlide,
+  DibodevPhotoWithScreenSlideshowProps,
+} from '~/core/types/DibodevPhotoWithScreenSlideshow'
 import { computed } from 'vue'
 import DibodevSlideshowMarkers from '~/components/data-displays/DibodevSlideshowMarkers.vue'
+import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { useSlideshow } from '~/composables/useSlideshow'
 
-/** Framed photo of a trade with the software built for it floating over its corner, fading from one slide to the next (auto-play, click or swipe), a caption and progress markers under it. */
-const props: DibodevTradeToolSlideshowProps = defineProps({
+/** Framed photo with a software screen floating over its corner, fading from one slide to the next (auto-play, click or swipe), a caption and progress markers under it. */
+const props: DibodevPhotoWithScreenSlideshowProps = defineProps({
   slides: {
-    type: Array as PropType<DibodevTradeToolSlide[]>,
+    type: Array as PropType<DibodevPhotoWithScreenSlide[]>,
     required: true,
   },
   accessibleName: {
     type: String as PropType<string>,
     required: true,
   },
+  captionLayout: {
+    type: String as PropType<DibodevPhotoWithScreenCaptionLayout>,
+    default: 'inline',
+  },
 })
 
-const emit: (event: 'navigate', navigation: DibodevPhotoSlideshowNavigation) => void = defineEmits<{
+const emit: {
   (event: 'navigate', navigation: DibodevPhotoSlideshowNavigation): void
+  (event: 'captionLinkClick', slide: DibodevPhotoWithScreenSlide): void
+} = defineEmits<{
+  (event: 'navigate', navigation: DibodevPhotoSlideshowNavigation): void
+  (event: 'captionLinkClick', slide: DibodevPhotoWithScreenSlide): void
 }>()
 
 const PHOTO_WIDTH: number = 960
@@ -133,6 +166,8 @@ const PHOTO_SIZES: string =
   '(min-width: 1280px) 480px, (min-width: 1024px) 342px, (min-width: 640px) 470px, calc(100vw - 110px)'
 const SCREENSHOT_WIDTH: number = 1000
 const SCREENSHOT_HEIGHT: number = 625
+const SCREENSHOT_SIZES: string =
+  '(min-width: 1280px) 336px, (min-width: 1024px) 240px, (min-width: 640px) 330px, calc(70vw - 77px)'
 
 const {
   activeIndex,
@@ -150,12 +185,12 @@ const {
   onPointerUp,
   onPointerCancel,
 } = useSlideshow(
-  (): DibodevTradeToolSlide[] => props.slides,
+  (): DibodevPhotoWithScreenSlide[] => props.slides,
   (navigation: DibodevPhotoSlideshowNavigation): void => emit('navigate', navigation),
 )
 
 const slideNames: ComputedRef<string[]> = computed((): string[] =>
-  props.slides.map((slide: DibodevTradeToolSlide): string => slide.tradeLabel),
+  props.slides.map((slide: DibodevPhotoWithScreenSlide): string => slide.name),
 )
 </script>
 
