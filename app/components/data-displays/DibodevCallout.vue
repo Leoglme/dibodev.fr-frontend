@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto grid max-w-3xl gap-2 rounded-2xl border p-5 sm:p-6" :class="toneClasses.frame">
+  <div class="mx-auto grid max-w-3xl gap-4 rounded-2xl border p-5 sm:gap-2 sm:p-6" :class="toneClasses.frame">
     <p class="flow-root text-[15px] leading-6 text-gray-200">
       <span
         class="text-primary-dark float-left -mt-1.5 mr-3 flex h-9 w-9 items-center justify-center rounded-full"

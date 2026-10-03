@@ -5,7 +5,7 @@
     :text="$t('toolTeaserList.text')"
     :tone="props.tone"
   >
-    <ul class="grid gap-1.5">
+    <ul class="grid gap-3 sm:gap-1.5">
       <li v-for="teaser in props.teasers" :key="teaser.toolId">
         <NuxtLink
           :to="localePath({ name: teaser.routeName })"
