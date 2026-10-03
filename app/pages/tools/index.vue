@@ -7,7 +7,7 @@
     :description="t('toolsHubPage.hero.description')"
     :ctaText="t('toolsHubPage.hero.cta')"
     ctaTarget="#free-tools"
-    :secondaryCta="{ text: t('toolsHubPage.hero.ctaSecondary'), to: estimatorPath }"
+    :secondaryCta="{ text: t('toolsHubPage.hero.ctaSecondary'), to: estimatorPath, trackedToolId: 'budget-estimator' }"
     :stats="heroStats"
     :reassurances="reassurances"
     :decorated="true"

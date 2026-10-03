@@ -7,11 +7,13 @@ import type { DibodevStatItemProps } from '~/core/types/DibodevStat'
  * @property {string} text - The button label.
  * @property {string} [target] - CSS selector of the section to scroll to (when no route).
  * @property {string} [to] - Route to navigate to (takes precedence over `target`).
+ * @property {string} [trackedToolId] - Free tool opened by the button, sent with `tool_teaser_clicked` (no event when absent).
  */
 export type DibodevLandingSecondaryCta = {
   text: string
   target?: string
   to?: string
+  trackedToolId?: string
 }
 
 /**

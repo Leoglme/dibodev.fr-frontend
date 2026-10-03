@@ -70,6 +70,7 @@
               :to="props.secondaryCta.to"
               :outlined="true"
               class="w-full sm:w-auto"
+              @click="onSecondaryCtaClick"
             >
               {{ props.secondaryCta.text }}
             </DibodevButton>
@@ -226,6 +227,16 @@ const titleClass: ComputedRef<string> = computed((): string => {
 function onPrimaryCtaClick(): void {
   if (props.ctaPrimaryTo && props.ctaPrimaryTo.includes('/contact')) {
     track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'hero' })
+  }
+}
+
+/**
+ * Track the opening of a free tool when the secondary CTA leads to one.
+ * @returns {void}
+ */
+function onSecondaryCtaClick(): void {
+  if (props.secondaryCta?.trackedToolId) {
+    track(TRACKING_EVENTS.toolTeaserClicked, { tool: props.secondaryCta.trackedToolId, location: 'hero' })
   }
 }
 
