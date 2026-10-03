@@ -1362,7 +1362,7 @@
         "title": "Full-stack and AI developer",
         "organization": "PrePeers",
         "context": "Freelance mission, EdTech startup near Lyon",
-        "description": "PrePeers helps 15 to 25-year-olds find their path with a conversational AI, then connects them with the schools that suit them. I am the lead developer of the platform's interfaces.",
+        "description": "PrePeers helps 15 to 25-year-olds find their path with a conversational AI, then connects them with the schools that suit them. I build the platform's interfaces.",
         "highlights": {
           "platform": "End-to-end student journey: sign-up, profile and conversation with Lola, the guidance AI",
           "schools": "Lily, an AI chat embedded on partner schools' websites, and the schools' management area",
@@ -1376,11 +1376,11 @@
         "context": "Sole proprietorship, near Rennes",
         "description": "I design and build custom business apps, management software, websites and AI automations for small and medium businesses, at a fixed price.",
         "highlights": {
-          "prepeers": "PrePeers: an ongoing engagement with an EdTech startup, as lead developer of its AI guidance platform's interfaces",
-          "lexial": "Lexial, a law firm in Paris, Brussels and Geneva: harmonized email signatures for the firm, and the “Lawyer” title shown under the founding partner's name on Google within 14 days",
-          "a2mOrizonSolution": "A2M Ôrizon Solution: a website with a CMS built from scratch, 4,000 visits since launch",
-          "devleadhunter": "DevLeadHunter: my automated prospecting software (demo websites, email campaigns), with 100% deliverability, about 66% opens and clicks and about 33% conversion",
-          "nightforge": "NightForge: an orchestrator that runs AI coding agents autonomously, controlled from a mobile app"
+          "prepeers": "PrePeers (EdTech): an AI guidance platform built on conversational AI (LLM, RAG). Development of the B2C and B2B interfaces, the embedded chat, the .NET CRM integration and the analytics tracking. Results: about 82% of sign-ups completed and more than 1,100 sign-ups per quarter",
+          "lexial": "LEXIAL (international law firm · Paris, Brussels, Geneva): harmonized email signatures across the firm (custom management tool) and an optimized online presence for the founding partner",
+          "a2mOrizonSolution": "A2M Ôrizon Solution: a complete online presence built from scratch for a social care company (CMS-editable website, professional email, SEO, continuous deployment). Results: 4,000 visits, 1,000 unique visitors and regular contact requests",
+          "devleadhunter": "DevLeadHunter: a prospecting automation chain, designed and built end to end (detection of businesses without a website, AI enrichment, automatic website generation, A/B campaigns with follow-ups, Stripe and Qonto payments). Results: 100% deliverability, about 66% open and click rates, about 33% conversion",
+          "nightforge": "NightForge: an autonomous orchestrator that runs AI coding agents (Claude Code, Cursor) in the background across 2 machines and 8 accounts, controlled remotely from an iOS app, with automatic recovery and quota optimization"
         }
       },
       "izidoor": {

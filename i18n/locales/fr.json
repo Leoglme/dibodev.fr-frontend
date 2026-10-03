@@ -1362,7 +1362,7 @@
         "title": "Développeur full‑stack et IA",
         "organization": "PrePeers",
         "context": "Mission freelance, startup EdTech près de Lyon",
-        "description": "PrePeers aide les 15-25 ans à trouver leur voie grâce à une IA conversationnelle, puis les met en relation avec les écoles qui leur correspondent. J'y suis le développeur principal des interfaces de la plateforme.",
+        "description": "PrePeers aide les 15-25 ans à trouver leur voie grâce à une IA conversationnelle, puis les met en relation avec les écoles qui leur correspondent. J'y développe les interfaces de la plateforme.",
         "highlights": {
           "platform": "Parcours étudiant de bout en bout : inscription, profil et conversation avec Lola, l'IA d'orientation",
           "schools": "Lily, un chat IA intégré aux sites des écoles partenaires, et l'espace de gestion des écoles",
@@ -1376,11 +1376,11 @@
         "context": "Entreprise individuelle, près de Rennes",
         "description": "Je conçois et développe au forfait des applications métier, des logiciels de gestion, des sites web et des automatisations avec l'IA pour les TPE et PME.",
         "highlights": {
-          "prepeers": "PrePeers : mission en cours pour une startup EdTech, comme développeur principal des interfaces de sa plateforme d'orientation par IA",
-          "lexial": "Lexial, cabinet d'avocats à Paris, Bruxelles et Genève : signatures e‑mail du cabinet harmonisées, et « Avocat » affiché en 14 jours sous le nom de l'associé fondateur dans Google",
-          "a2mOrizonSolution": "A2M Ôrizon Solution : site vitrine avec CMS créé de zéro, 4 000 visites depuis son lancement",
-          "devleadhunter": "DevLeadHunter : mon logiciel de prospection automatisée (sites de démonstration, campagnes d'e‑mails), avec 100 % de délivrabilité, environ 66 % d'ouverture et de clic et environ 33 % de conversion",
-          "nightforge": "NightForge : un orchestrateur qui fait travailler des agents de code IA en autonomie, piloté depuis une application mobile"
+          "prepeers": "PrePeers (EdTech) : plateforme d'orientation par IA conversationnelle (LLM, RAG). Développement des interfaces B2C et B2B, du chat embarqué, de l'intégration CRM .NET et du suivi analytique. Résultats : environ 82 % d'inscriptions finalisées et plus de 1 100 inscriptions par trimestre",
+          "lexial": "LEXIAL (cabinet d'avocats international · Paris, Bruxelles, Genève) : harmonisation des signatures e‑mail du cabinet (outil de gestion sur mesure) et optimisation de la présence en ligne de l'associé fondateur",
+          "a2mOrizonSolution": "A2M Ôrizon Solution : présence en ligne complète créée de zéro pour une société d'assistance sociale (site éditable en CMS, e‑mail professionnel, SEO, déploiement continu). Résultats : 4 000 visites, 1 000 visiteurs uniques et des demandes de contact régulières",
+          "devleadhunter": "DevLeadHunter : chaîne d'automatisation de la prospection, conçue et développée de bout en bout (détection d'entreprises sans site, enrichissement par IA, génération automatique de sites, campagnes A/B avec relances, encaissement Stripe et Qonto). Résultats : délivrabilité 100 %, environ 66 % d'ouverture et de clic, environ 33 % de conversion",
+          "nightforge": "NightForge : orchestrateur autonome qui fait tourner des agents de code IA (Claude Code, Cursor) en tâche de fond sur 2 machines et 8 comptes, piloté à distance depuis une app iOS, avec reprise automatique et optimisation des quotas"
         }
       },
       "izidoor": {

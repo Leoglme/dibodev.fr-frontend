@@ -44,7 +44,7 @@ const EXPERIENCE_STEPS: DibodevAboutCareerStepConfig[] = [
     monogram: 'D',
     logoSrc: '/images/about/logos/dibodev.png',
     hasFullTileLogo: true,
-    highlightKeys: ['prepeers', 'lexial', 'a2mOrizonSolution', 'devleadhunter', 'nightforge'],
+    highlightKeys: ['prepeers', 'lexial', 'devleadhunter', 'a2mOrizonSolution', 'nightforge'],
     technologies: ['Nuxt', 'Storyblok', 'Python', 'FastAPI', 'Tauri', 'Stripe'],
     isCurrent: true,
   },
