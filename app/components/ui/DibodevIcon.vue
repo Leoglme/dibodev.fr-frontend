@@ -40,6 +40,7 @@ import ChevronUp from '~/components/icons/ChevronUp.vue'
 import Copy from '~/components/icons/Copy.vue'
 import Disc from '~/components/icons/Disc.vue'
 import DoubleChevronsDown from '~/components/icons/DoubleChevronsDown.vue'
+import Expand from '~/components/icons/Expand.vue'
 import ExternalLink from '~/components/icons/ExternalLink.vue'
 import Eye from '~/components/icons/Eye.vue'
 import EyeOff from '~/components/icons/EyeOff.vue'
@@ -54,7 +55,6 @@ import Linkedin from '~/components/icons/Linkedin.vue'
 import LogOut from '~/components/icons/LogOut.vue'
 import Mail from '~/components/icons/Mail.vue'
 import MapPin from '~/components/icons/MapPin.vue'
-import Maximize2 from '~/components/icons/Maximize2.vue'
 import Menu from '~/components/icons/Menu.vue'
 import MessageCircle from '~/components/icons/MessageCircle.vue'
 import Monitor from '~/components/icons/Monitor.vue'
@@ -135,6 +135,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   Copy,
   Disc,
   DoubleChevronsDown,
+  Expand,
   ExternalLink,
   Eye,
   EyeOff,
@@ -149,7 +150,6 @@ const iconsDictionary: Record<string, IconComponent> = {
   LogOut,
   Mail,
   MapPin,
-  Maximize2,
   Menu,
   MessageCircle,
   Monitor,

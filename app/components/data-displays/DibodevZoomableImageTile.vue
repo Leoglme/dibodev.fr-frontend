@@ -27,10 +27,10 @@
       </div>
     </div>
     <span
-      class="pointer-events-none absolute top-3 right-3 hidden h-9 w-9 items-center justify-center rounded-full bg-white/95 text-gray-100 shadow-md ring-1 ring-black/5 pointer-coarse:flex"
+      class="bg-accent-tint text-primary-dark pointer-events-none absolute top-3 right-3 hidden h-9 w-9 items-center justify-center rounded-full pointer-coarse:flex"
       aria-hidden="true"
     >
-      <DibodevIcon name="Maximize2" mode="stroke" :width="18" :height="18" />
+      <DibodevIcon name="Expand" mode="stroke" :width="18" :height="18" />
     </span>
   </div>
 </template>
