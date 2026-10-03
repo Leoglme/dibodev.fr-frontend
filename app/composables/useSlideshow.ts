@@ -45,7 +45,7 @@ export function useSlideshow<T extends DibodevSlideshowSlide>(
   )
 
   /**
-   * Shows a slide, wrapping around at both ends, and reports the change when the visitor made it.
+   * Shows a slide, wrapping around at both ends, and reports the change when the visitor made it and the slide really changed.
    * @param {number} index - Target slide index (may be out of range).
    * @param {DibodevPhotoSlideshowNavigationMethod | null} [method=null] - How the visitor asked for it, or null for auto-play.
    * @returns {void}
@@ -53,8 +53,9 @@ export function useSlideshow<T extends DibodevSlideshowSlide>(
   function goTo(index: number, method: DibodevPhotoSlideshowNavigationMethod | null = null): void {
     const count: number = getSlides().length
     if (count === 0) return
+    const previousIndex: number = activeIndex.value
     activeIndex.value = ((index % count) + count) % count
-    if (method) onNavigate({ slideId: activeSlide.value.id, method })
+    if (method && activeIndex.value !== previousIndex) onNavigate({ slideId: activeSlide.value.id, method })
   }
 
   /**

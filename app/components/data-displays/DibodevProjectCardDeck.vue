@@ -2,7 +2,7 @@
   <section
     v-if="slides.length > 0"
     class="relative mx-auto w-full max-w-md pt-[18px] sm:max-w-lg lg:max-w-[34rem]"
-    :aria-roledescription="$t('photoSlideshow.roleDescription')"
+    :aria-roledescription="hasSeveralSlides ? $t('photoSlideshow.roleDescription') : undefined"
     :aria-label="props.accessibleName"
     @pointerenter="onPointerEnter"
     @pointerleave="onPointerLeave"
@@ -16,7 +16,8 @@
     />
 
     <div
-      class="relative h-[440px] touch-pan-y sm:h-[470px] lg:h-[460px] xl:h-[500px]"
+      class="relative h-[440px] sm:h-[470px] lg:h-[460px] xl:h-[500px]"
+      :class="hasSeveralSlides ? 'touch-pan-y' : ''"
       @pointerdown="onPointerDown"
       @pointerup="onDeckPointerUp"
       @pointercancel="onPointerCancel"
@@ -70,10 +71,12 @@ import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import DibodevProjectCard from '~/components/cards/DibodevProjectCard.vue'
 import DibodevSlideshowMarkers from '~/components/data-displays/DibodevSlideshowMarkers.vue'
 import { useSlideshow } from '~/composables/useSlideshow'
+import { useTracking } from '~/composables/useTracking'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 import { ColorUtils } from '~/core/utils/ColorUtils'
 import { ProjectUtils } from '~/core/utils/ProjectUtils'
 
-/** Real project cards dealt like a hand of cards: the front one is a link, the next ones wait tilted behind; auto-play, swipe and markers, the backdrop takes the colour of the front project. */
+/** Real project cards dealt like a hand of cards: the front one is a link, the next ones wait tilted behind; auto-play, swipe and markers, the backdrop takes the colour of the front project. A single project shows as one card, without markers. */
 const props: DibodevProjectCardDeckProps = defineProps({
   projects: {
     type: Array as PropType<DibodevProject[]>,
@@ -88,10 +91,6 @@ const props: DibodevProjectCardDeckProps = defineProps({
     default: 'project_card_deck',
   },
 })
-
-const emit: (event: 'navigate', navigation: DibodevPhotoSlideshowNavigation) => void = defineEmits<{
-  (event: 'navigate', navigation: DibodevPhotoSlideshowNavigation): void
-}>()
 
 /** Cards dealt in the deck. */
 const DECK_PROJECT_COUNT: number = 6
@@ -116,6 +115,7 @@ const slides: ComputedRef<DibodevProjectCardDeckSlide[]> = computed((): DibodevP
   ),
 )
 
+const { track } = useTracking()
 const {
   activeIndex,
   activeSlide,
@@ -130,10 +130,7 @@ const {
   onPointerDown,
   onPointerUp,
   onPointerCancel,
-} = useSlideshow(
-  (): DibodevProjectCardDeckSlide[] => slides.value,
-  (navigation: DibodevPhotoSlideshowNavigation): void => emit('navigate', navigation),
-)
+} = useSlideshow((): DibodevProjectCardDeckSlide[] => slides.value, onVisitorNavigation)
 
 const leavingCardIndex: Ref<number | null> = ref<number | null>(null)
 
@@ -158,6 +155,19 @@ function slotOf(index: number): DibodevProjectCardDeckSlot {
   if (offset === 1) return 'right'
   if (offset === 2) return 'left'
   return 'hidden'
+}
+
+/**
+ * Reports a card change made by the visitor, under the deck's tracking source (auto-play is not reported).
+ * @param {DibodevPhotoSlideshowNavigation} navigation - The project now in front and how the visitor brought it.
+ * @returns {void}
+ */
+function onVisitorNavigation(navigation: DibodevPhotoSlideshowNavigation): void {
+  track(TRACKING_EVENTS.photoSlideshowNavigated, {
+    slide: navigation.slideId,
+    method: navigation.method,
+    location: props.trackingSource,
+  })
 }
 
 /**

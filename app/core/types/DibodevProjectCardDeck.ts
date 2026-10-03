@@ -19,7 +19,7 @@ export type DibodevProjectCardDeckSlot = 'front' | 'right' | 'left' | 'hidden' |
  * @type {DibodevProjectCardDeckProps}
  * @property {DibodevProject[]} projects - Projects to deal, in order (the first six are shown).
  * @property {string} accessibleName - Name of the deck read by screen readers.
- * @property {string} trackingSource - Where the deck is shown, sent with the card click event (e.g. "projects_hero").
+ * @property {string} trackingSource - Where the deck is shown, sent with the card click and card change events (e.g. "projects_hero").
  */
 export type DibodevProjectCardDeckProps = {
   projects: DibodevProject[]

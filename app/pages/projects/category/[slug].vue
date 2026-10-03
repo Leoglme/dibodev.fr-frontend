@@ -7,10 +7,14 @@
       :ctaText="$t('projects.landing.cta')"
       ctaTarget="#projects"
       :compactTitle="true"
-      :align="projectsByCategory.length >= MOSAIC_MINIMUM_PROJECTS ? 'left' : 'center'"
+      :align="headerDeckProjects.length > 0 ? 'left' : 'center'"
     >
-      <template v-if="projectsByCategory.length >= MOSAIC_MINIMUM_PROJECTS" #aside>
-        <DibodevProjectLogoMosaic :projects="projectsByCategory" trackingSource="category_hero" />
+      <template v-if="headerDeckProjects.length > 0" #aside>
+        <DibodevProjectCardDeck
+          :projects="headerDeckProjects"
+          :accessibleName="$t('projects.deck.label')"
+          trackingSource="category_hero"
+        />
       </template>
     </DibodevLandingSection>
 
@@ -71,7 +75,7 @@ import DibodevSectorIntroSection from '~/components/sections/DibodevSectorIntroS
 import DibodevProjectsSection from '~/components/sections/DibodevProjectsSection.vue'
 import DibodevProjectTaxonomySection from '~/components/sections/DibodevProjectTaxonomySection.vue'
 import DibodevContactAsideCard from '~/components/cards/DibodevContactAsideCard.vue'
-import DibodevProjectLogoMosaic from '~/components/data-displays/DibodevProjectLogoMosaic.vue'
+import DibodevProjectCardDeck from '~/components/data-displays/DibodevProjectCardDeck.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
@@ -92,10 +96,8 @@ import {
   BUSINESS_SOFTWARE_RELATED_CATEGORY_KEYS,
 } from '~/core/constants/businessSoftwarePageTeaser'
 import { StoryblokRichtextUtils } from '~/core/utils/StoryblokRichtextUtils'
+import { ProjectOrderUtils } from '~/core/utils/ProjectOrderUtils'
 import type { RouteLocationNormalizedLoadedGeneric } from '#vue-router'
-
-/** The header mosaic needs a full first row of three tiles to look intentional. */
-const MOSAIC_MINIMUM_PROJECTS: number = 3
 
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
 const { locale, t } = useI18n()
@@ -179,6 +181,10 @@ const projectsByCategory: ComputedRef<DibodevProject[]> = computed((): DibodevPr
     (p: DibodevProject) => Array.isArray(p.categories) && p.categories.includes(categoryKey),
   )
 })
+/** Same order as the grid below: the home page selection first, then by date. */
+const headerDeckProjects: ComputedRef<DibodevProject[]> = computed((): DibodevProject[] =>
+  ProjectOrderUtils.homePageSelectionFirst(projectsByCategory.value),
+)
 const { listingFacts, listingTechnologies } = useProjectListingFacts(projectsByCategory, 'sectors')
 
 const categoryLabel: string = categoryLabelByLocale(currentLocale, categoryKey)
