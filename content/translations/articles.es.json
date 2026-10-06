@@ -14081,5 +14081,511 @@
         }
       ]
     }
+  },
+  "blog/logiciel-gestion-interventions-techniciens-hors-ligne": {
+    "title": "Software de gestión de intervenciones: una herramienta que sigue a sus técnicos, incluso sin conexión a internet",
+    "excerpt": "Buenos papeles rellenados el viernes, fotos perdidas en los SMS, facturas retrasadas: lo que cambia un software de gestión de intervenciones, incluso sin conexión a internet.",
+    "metaTitle": "Software de gestión de intervenciones: incluso sin conexión a internet",
+    "metaDescription": "Planificación, orden de intervención firmado en el lugar, fotos, repuestos: lo que cambia un software de gestión de intervenciones personalizado para sus técnicos en terreno.",
+    "tags": [
+      "gestión de intervenciones",
+      "orden de intervención digital",
+      "técnicos en terreno",
+      "aplicación offline",
+      "servicio posventa y mantenimiento",
+      "software personalizado para PYMES"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Antes de escribir código, pasé cinco años en la cocina. Así que cuando un congelador falla un viernes por la noche, sé lo que significa: el jefe llamando tres veces, el técnico llegando entre servicio y servicio, y el albarán de intervención garabateado en una esquina de la mesa de trabajo, que habrá que releer el lunes en la oficina. Si es que se puede releer.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Más tarde, en Kodeva, trabajé en una aplicación de atención al cliente para técnicos de campo. Allí entendí algo sencillo: una intervención no es solo una cita en un calendario. Es información que debe volver a la oficina, completa y rápido. Y casi siempre es ahí donde falla.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "El verdadero problema no es el calendario, es el informe posterior.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La mayoría de las empresas que envían técnicos a sus clientes saben hacer un calendario. Una pizarra, una agenda compartida, un archivo Excel: el lunes por la mañana, todos saben adónde van.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ahí es donde se complica. El técnico termina su intervención, rellena un albarán en papel (si se acuerda), anota las piezas usadas en el reverso, toma dos fotos con su teléfono y las envía por SMS a quien quiera leerlas. El viernes, alguien en la oficina vuelve a introducir todo. Falta una firma, una hora de llegada, el código de una pieza. La factura sale con dos semanas de retraso, y a veces ni siquiera sale.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nadie trabaja mal en esta historia. Es la organización la que pierde la información en el camino.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que un software de gestión de intervenciones debe hacer realmente",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No hace falta una solución compleja. Para la mayoría de las Pymes de mantenimiento, servicio postventa o instalación, una buena herramienta se resume en cuatro cosas:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "La planificación y distribución",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " : la oficina asigna las intervenciones, el técnico las ve en su teléfono, con la dirección, el contacto en el lugar y el historial del equipo.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "El albarán de intervención en el teléfono",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " : lo que se ha hecho, el tiempo invertido, las piezas utilizadas, las fotos antes y después, y la firma del cliente directamente en la pantalla.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "La devolución inmediata a la oficina",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " : en cuanto el albarán se valida, está en la oficina. Sin reingresar datos, sin papeles olvidados en el camión.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "La conexión con el resto",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " : el albarán se convierte en factura, las piezas salen del inventario, y el cliente recibe su informe por correo electrónico.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Escrito así, parece evidente. Pero cada empresa tiene sus detalles: una lista de verificación de seguridad obligatoria, registros que anotar, un contrato de mantenimiento que adjuntar. Es ahí donde los software genéricos se vuelven molestos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "El modo offline: el detalle que lo cambia todo",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si hay una lección que retengo de esta aplicación de servicio posventa, es esa: ",
+              "type": "text"
+            },
+            {
+              "text": "si la herramienta no funciona en el sótano, no se usará.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un técnico pasa buena parte de su día en lugares donde no hay red: calderas, sótanos, locales técnicos, aparcamientos, zonas blancas en el campo. Si la aplicación muestra un mensaje de error en ese momento, saca su cuaderno. Y dos semanas después, todos vuelven al papel.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El modo offline significa que todo lo que el técnico necesita ya está en su teléfono cuando sale por la mañana, que puede completar su informe y hacer firmar al cliente sin necesidad de conexión, y que todo se sincroniza automáticamente en cuanto vuelve la red. Para él, nada cambia. Para la oficina, nada se pierde.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Es una de las primeras preguntas que hago cuando hablo de una herramienta para equipos de campo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Un ejemplo concreto: el mantenimiento de cocinas profesionales",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tomemos una PYME que instala y reparte equipos de cocina profesional para restaurantes: hornos, cámaras frigoríficas, lavavajillas. Seis técnicos, una asistente en la oficina y un gerente que hace los presupuestos por la noche.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hoy, las urgencias llegan por teléfono, a menudo en pleno servicio, y la asistente maneja el calendario y las llamadas al mismo tiempo. Los técnicos completan informes en papel. El viernes por la tarde, ella vuelve a ingresar toda la semana en el software de facturación. Cuando un restaurante vuelve a llamar por la misma cámara frigorífica, nadie sabe exactamente qué se cambió la última vez.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Con una herramienta diseñada para ellos, el día transcurre de otra manera. La urgencia se crea en dos clics y se envía al técnico disponible. En el lugar, abre la ficha del equipo: las últimas intervenciones, las piezas ya reemplazadas, las fotos. Anota lo que hace, toma sus fotos y hace firmar al jefe en su teléfono, incluso en el fondo de la cámara frigorífica donde no hay cobertura. Al salir, el informe se envía automáticamente al restaurante, y la factura está lista en la oficina esa misma noche.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El gerente no ha cambiado de oficio. Simplemente dejó de perder tiempo y dinero entre el terreno y la oficina.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Software del mercado o herramienta a medida?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Seamos honestos: existen buenos software de gestión de intervenciones listos para usar. Si uno de ellos se adapta a su forma de trabajar, úselo. Será más económico y rápido, y se lo diré sin rodeos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La personalización se justifica cuando sus órdenes de trabajo tienen particularidades que ningún software gestiona bien, cuando hay que vincularlas a su inventario o a su facturación, o cuando sus técnicos trabajan a menudo sin red y el modo offline del software del mercado no es suficiente. He detallado esta elección en un ",
+              "type": "text"
+            },
+            {
+              "text": "comparativo entre software SaaS y solución a medida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En cuanto al presupuesto, la mayoría de las herramientas para PYMES cuestan entre 5.000 y 15.000 €, más 100 a 300 € por mes de mantenimiento. Los detalles están en mi página ",
+              "type": "text"
+            },
+            {
+              "text": "aplicación a medida para empresas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Mis técnicos no están muy familiarizados con la informática, ¿funcionará?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Justamente es para ellos que lo diseñamos: botones grandes, el menor número de campos posible, fotos tomadas como en cualquier aplicación. Si completar el formulario tarda más que con el papel, es un fracaso.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Qué pasa cuando el teléfono no tiene red?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "El técnico sigue trabajando como si nada hubiera pasado. Todo se guarda en el teléfono y se envía a la oficina en cuanto la red vuelva.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Podemos mantener nuestro software de facturación?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí. La herramienta puede enviarle los formularios validados o exportarlos en el formato que acepte. No es necesario cambiar todo de golpe.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cuánto tiempo para una primera versión?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Unas semanas para una primera herramienta útil: programación, orden de servicio y firma. El resto llega después, una vez que el equipo lo use en la práctica.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Hablamos?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si sus órdenes de servicio siguen siendo ingresadas manualmente los viernes, podemos empezar de forma sencilla: un análisis de su organización actual y un plan de acción escrito, por teléfono o en videollamada. Siempre empiezo por el problema más urgente, les doy una estimación honesta del presupuesto, y si un software existente les basta, se lo haré saber.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "3f36af71-54b5-4c8f-bc17-73922083be87",
+            "body": [
+              {
+                "_uid": "i-dc29b2d5-91e7-469e-b8ce-457edd9ab600",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

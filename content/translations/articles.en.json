@@ -14078,5 +14078,511 @@
         }
       ]
     }
+  },
+  "blog/logiciel-gestion-interventions-techniciens-hors-ligne": {
+    "title": "Field Service Management Software: A Tool That Tracks Your Technicians—Even Without Network Coverage",
+    "excerpt": "No more lost paperwork on Fridays, photos buried in text messages, or delayed invoices. Discover how a field service management tool transforms operations—even offline.",
+    "metaTitle": "Field Service Management Software: Works Offline Too",
+    "metaDescription": "Scheduling, on-site signed work orders, photos, and parts—see how a tailored field service management software revolutionizes your technicians’ daily work, even without connectivity.",
+    "tags": [
+      "field service management",
+      "digital work order",
+      "field technicians",
+      "offline mobile app",
+      "customer service and maintenance",
+      "customized software for SMEs"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Before writing code, I spent five years in a kitchen. So when a walk-in fridge breaks down on a Friday evening, I know what that means: the chef calling three times, the technician arriving between shifts, and the work order scribbled on a corner of the countertop, which will need to be read again on Monday at the office. If we can even read it.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Later, at Kodeva, I worked on a customer service app for field technicians. That’s when I realized something simple: a service call isn’t just an appointment in a schedule. It’s information that needs to get back to the office, complete and quickly. And that’s almost always where it gets stuck.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The real issue isn’t the scheduling—it’s the follow-up.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Most companies that send technicians to their clients know how to schedule. A whiteboard, a shared calendar, an Excel file: by Monday morning, everyone knows where they’re going.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "That’s where it gets complicated. The technician finishes the job, fills out a paper form (when they remember), jots down the parts used on the back, takes two photos with their phone, and sends them via SMS to whoever will bother reading them. On Friday, someone at the office re-enters everything. A signature is missing, an arrival time is wrong, a part number is off. The invoice goes out two weeks late—or sometimes it never goes out at all.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No one is doing this wrong. It’s the organization that loses the information along the way.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What a service call management software should actually do",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No need for an overcomplicated system. For most maintenance, customer service, or installation SMEs, a good tool comes down to four things:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Scheduling and assignment",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " : the office assigns the calls, the technician sees them on their phone, with the address, the on-site contact, and the equipment history.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "The work order on the phone",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " : what was done, the time spent, the parts used, the before-and-after photos, and the client’s signature directly on the screen.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Immediate return to the office",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " : as soon as the work order is validated, it’s back at the office. No re-entry, no forgotten paperwork in the van.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Integration with the rest of the system",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " : the work order becomes an invoice, the parts are deducted from stock, and the client receives their report by email.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Written like this, it seems obvious. But every company has its own specifics: a mandatory safety checklist, records to note, a maintenance contract to attach. It’s often in these details that generic software becomes cumbersome.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Offline mode: the detail that makes all the difference",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If there’s one lesson I’ve learned from this field service app, it’s this: ",
+              "type": "text"
+            },
+            {
+              "text": "if the tool doesn’t work in the basement, it won’t be used.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A technician spends much of their day where the network doesn’t reach: boilers, basements, technical rooms, parking lots, dead zones in the countryside. If the app displays an error message at that moment, they pull out their notebook. And two weeks later, everyone’s back to paper.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Offline mode means everything the technician needs is already on their phone when they leave in the morning, they can fill out the work order and get the client’s signature without any connection, and everything syncs automatically as soon as the network returns. For them, nothing changes. For the office, nothing is lost.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It’s one of the first questions I ask when discussing a tool for field teams.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "A concrete example: professional kitchen repairs",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Take an SME that installs and repairs professional kitchen equipment for restaurants: ovens, walk-in coolers, dishwashers. Six technicians, one office assistant, and a manager who handles quotes in the evenings.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Today, emergencies come in by phone, often during service hours, and the assistant juggles between the schedule and calls. Technicians fill out paper work orders. Every Friday afternoon, she re-enters the week’s data into the billing software. When a restaurant calls back about the same walk-in cooler, no one really knows what was changed last time.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "With a tool tailored to them, the day goes differently. The emergency is created in two clicks and sent to the available technician. On-site, they open the equipment file: past interventions, parts already replaced, photos. They note what they’ve done, take photos, and get the manager’s signature on their phone—even deep inside the walk-in cooler where nothing works. As they leave, the report automatically goes to the restaurant, and the invoice is ready in the office that evening.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The manager hasn’t changed jobs. They’ve just stopped wasting time and money between the field and the office.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Off-the-shelf software or custom tool?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Let’s be honest: there are good off-the-shelf field service management software options. If one fits your workflow, take it. It’ll be cheaper and faster, and I’ll say it straight.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Customization makes sense when your work orders have specific needs no tool handles well, when they need to be linked to your inventory or billing system, or when your technicians often work without network access and the off-the-shelf software’s offline mode isn’t reliable. I’ve detailed this choice in a ",
+              "type": "text"
+            },
+            {
+              "text": "comparison between SaaS software and custom tools",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Budget-wise, most SME tools cost between 5,000 and 15,000 euros upfront, then 100 to 300 euros per month for maintenance. The details are on my ",
+              "type": "text"
+            },
+            {
+              "text": "custom business application page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My technicians aren’t comfortable with computers, will it work?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "That’s exactly who it’s designed for: big buttons, as few fields as possible, photos taken just like in any other app. If filling out the form takes longer than on paper, it’s a failure.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What happens when the phone has no network?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "The technician continues as if nothing happened. Everything is saved on the phone and sent to the office as soon as the network returns.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can we keep our current invoicing software?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Yes. The tool can send validated forms to it, or export them in the format it accepts. No need to change everything at once.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How long for a first version?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "A few weeks for a first useful tool: scheduling, work orders, and signatures. The rest comes later, once the team uses it in real life.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Can we talk about this?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If your work orders still get re-entered every Friday, we can start simply: an audit of your current organization and a written action plan, over the phone or via video call. I always begin with the most painful point, give you an honest budget estimate, and if an existing software solution will suffice, I’ll tell you.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "3f36af71-54b5-4c8f-bc17-73922083be87",
+            "body": [
+              {
+                "_uid": "i-dc29b2d5-91e7-469e-b8ce-457edd9ab600",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
