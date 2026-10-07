@@ -11,6 +11,7 @@ const LEADING_SPACES_REGEX: RegExp = /^\s+/
 const TRAILING_SPACES_REGEX: RegExp = /\s+$/
 /** Markdown asterisks Mistral adds around bold or italic fragments, whose formatting already lives in the rich text marks. */
 const MARKDOWN_ASTERISKS_REGEX: RegExp = /\*+/g
+const SPACES_BEFORE_DOUBLE_PUNCTUATION_REGEX: RegExp = /[ \u00a0\u202f]+(?=[:;!?])/g
 
 export type TranslationTargetLanguage = 'English' | 'Spanish'
 
@@ -85,6 +86,16 @@ function removeAddedAsterisks(source: string, translation: string): string {
 }
 
 /**
+ * Removes the French spaces before « : ; ! ? » that the translation keeps from its source (e.g. a fragment starting with « : »).
+ *
+ * @param {string} translation - The translation with the source's surrounding spaces.
+ * @returns {string} The translation with English and Spanish punctuation spacing.
+ */
+function removeSpacesBeforeDoublePunctuation(translation: string): string {
+  return translation.replace(SPACES_BEFORE_DOUBLE_PUNCTUATION_REGEX, '')
+}
+
+/**
  * Translates one batch and returns its translations only when Mistral answers every id of the batch.
  *
  * @param {TranslateTextSegmentsParams} params - API key, model and target language.
@@ -112,7 +123,9 @@ async function translateBatch(params: TranslateTextSegmentsParams, batch: string
     for (const [index, source] of batch.entries()) {
       const translation: unknown = answer[`s${index}`]
       if (typeof translation !== 'string' || translation.trim() === '') return null
-      translations.push(keepSurroundingSpaces(source, removeAddedAsterisks(source, translation)))
+      translations.push(
+        removeSpacesBeforeDoublePunctuation(keepSurroundingSpaces(source, removeAddedAsterisks(source, translation))),
+      )
     }
     return translations
   } catch {
