@@ -26,12 +26,14 @@ export default `
 
 <mj-section>
   <mj-column>
+    {{#if message}}
     <mj-text padding="0 0 10px" font-size="13px" line-height="18px" font-weight="600" color="#66665f">
       Message
     </mj-text>
     <mj-text padding="0 0 28px">
       <div style="padding:18px 20px;background-color:#f6f6f3;border-radius:12px;font-size:15px;line-height:24px;color:#141414;white-space:pre-line;word-break:break-word;">{{message}}</div>
     </mj-text>
+    {{/if}}
     <mj-text>
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
         {{#each detailRows}}

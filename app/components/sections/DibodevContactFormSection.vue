@@ -49,22 +49,31 @@
             </span>
           </a>
         </li>
-        <li
-          class="contact-channel flex h-full items-start gap-4 rounded-xl border border-gray-300 bg-white p-5 md:flex-col md:p-6"
-        >
-          <span
-            class="contact-channel__icon"
-            :style="{ backgroundColor: getAccentPalette(2).background, color: getAccentPalette(2).color }"
+        <li>
+          <a
+            :href="BOOKING_URL"
+            target="_blank"
+            rel="noopener"
+            class="contact-channel group flex h-full items-start gap-4 rounded-xl border border-gray-300 bg-white p-5 md:flex-col md:p-6"
+            @click="track(TRACKING_EVENTS.bookingLinkClicked, { location: 'contact_channels' })"
           >
-            <DibodevIcon name="MapPin" :width="22" :height="22" mode="stroke" aria-hidden="true" />
-          </span>
-          <span class="grid gap-1">
-            <span class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{
-              $t('contact.channels.addressTitle')
-            }}</span>
-            <span class="text-lg font-medium text-gray-100">{{ $t('contact.sidebar.location') }}</span>
-            <span class="text-sm leading-6 text-gray-200">{{ $t('contact.channels.addressText') }}</span>
-          </span>
+            <span
+              class="contact-channel__icon"
+              :style="{ backgroundColor: getAccentPalette(2).background, color: getAccentPalette(2).color }"
+            >
+              <DibodevIcon name="CalendarCheck" :width="22" :height="22" mode="stroke" aria-hidden="true" />
+            </span>
+            <span class="grid gap-1">
+              <span class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{
+                $t('contact.channels.bookingTitle')
+              }}</span>
+              <span class="text-primary inline-flex items-center gap-1.5 text-lg font-medium">
+                <span class="underline-offset-4 group-hover:underline">{{ BOOKING_URL_DISPLAY }}</span>
+                <DibodevIcon name="ExternalLink" mode="stroke" :width="16" :height="16" aria-hidden="true" />
+              </span>
+              <span class="text-sm leading-6 text-gray-200">{{ $t('contact.channels.bookingText') }}</span>
+            </span>
+          </a>
         </li>
       </ul>
 
@@ -100,12 +109,15 @@
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             />
-            <div class="flex flex-wrap items-center justify-between gap-2 px-2 pb-1">
-              <p class="text-sm font-medium text-gray-100">{{ $t('contact.map.title') }}</p>
-              <DibodevLink :link="GOOGLE_BUSINESS_URL" externalLink class="text-sm">
-                <span>{{ $t('contact.map.openInMaps') }}</span>
-                <DibodevIcon name="ExternalLink" mode="stroke" :width="14" :height="14" aria-hidden="true" />
-              </DibodevLink>
+            <div class="grid gap-1 px-2 pb-1">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <p class="text-sm font-medium text-gray-100">{{ $t('contact.map.title') }}</p>
+                <DibodevLink :link="GOOGLE_BUSINESS_URL" externalLink class="text-sm">
+                  <span>{{ $t('contact.map.openInMaps') }}</span>
+                  <DibodevIcon name="ExternalLink" mode="stroke" :width="14" :height="14" aria-hidden="true" />
+                </DibodevLink>
+              </div>
+              <p class="text-sm leading-6 text-gray-200">{{ $t('contact.map.areaText') }}</p>
             </div>
           </div>
         </aside>
@@ -122,7 +134,14 @@ import DibodevContactForm from '~/forms/DibodevContactForm.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import { getAccentPalette } from '~/core/constants/accentPalettes'
-import { CONTACT_EMAIL, GOOGLE_BUSINESS_URL, PHONE_DISPLAY, PHONE_E164 } from '~/config/contact'
+import {
+  BOOKING_URL,
+  BOOKING_URL_DISPLAY,
+  CONTACT_EMAIL,
+  GOOGLE_BUSINESS_URL,
+  PHONE_DISPLAY,
+  PHONE_E164,
+} from '~/config/contact'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 

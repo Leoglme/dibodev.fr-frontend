@@ -1,5 +1,12 @@
 <template>
-  <Form ref="contactForm" class="flex flex-col gap-10" @submit="onSubmit">
+  <Form
+    ref="contactForm"
+    class="flex flex-col gap-10"
+    @submit="onSubmit"
+    @invalid-submit="onInvalidSubmit"
+    @focusin="onFormFirstInteraction"
+    @click="onFormFirstInteraction"
+  >
     <fieldset class="contact-group grid gap-6">
       <legend class="contact-group__legend">
         {{ $t('contact.form.groups.need') }}
@@ -70,22 +77,16 @@
       </div>
     </fieldset>
 
-    <fieldset class="contact-group grid gap-6">
-      <legend class="contact-group__legend">
-        {{ $t('contact.form.groups.message') }}
-      </legend>
-      <div>
-        <DibodevInput
-          id="message"
-          :label="$t('contact.form.messageLabel')"
-          :placeholder="$t('contact.form.messagePlaceholder')"
-          :rows="6"
-          :value="message"
-          rules="required"
-          @update:value="message = $event.toString()"
-        />
-      </div>
-    </fieldset>
+    <div>
+      <DibodevInput
+        id="message"
+        :label="$t('contact.form.messageLabel')"
+        :placeholder="$t('contact.form.messagePlaceholder')"
+        :rows="6"
+        :value="message"
+        @update:value="message = $event.toString()"
+      />
+    </div>
 
     <DibodevAlert v-if="errorMessage" :message="errorMessage" variant="error" dismissible @hide="errorMessage = null" />
     <DibodevAlert
@@ -114,7 +115,7 @@
 import { ref, computed } from 'vue'
 import type { Ref, ComputedRef } from 'vue'
 import { Form, Field, ErrorMessage } from 'vee-validate'
-import type { FormContext } from 'vee-validate'
+import type { FormContext, InvalidSubmissionContext } from 'vee-validate'
 import DibodevLabel from '~/components/core/DibodevLabel.vue'
 import DibodevInput from '~/components/core/DibodevInput.vue'
 import DibodevButton from '~/components/core/DibodevButton.vue'
@@ -191,6 +192,7 @@ const isSubmitting: Ref<boolean> = ref(false)
 const errorMessage: Ref<string | null> = ref(null)
 const successMessage: Ref<string | null> = ref(null)
 const lastSentIntentKey: Ref<string | null> = ref(null)
+const hasTrackedFormStart: Ref<boolean> = ref(false)
 const contactForm: Ref<FormContext | null> = ref(null)
 
 /** COMPUTED */
@@ -318,6 +320,33 @@ async function onPhoneBlur(): Promise<void> {
 }
 
 /**
+ * Tracks the first interaction with the form (focus or click on a field), once per page view.
+ * @param {Event} event - The focusin or click event bubbled up to the form.
+ * @returns {void}
+ */
+function onFormFirstInteraction(event: Event): void {
+  if (hasTrackedFormStart.value) {
+    return
+  }
+  const target: EventTarget | null = event.target
+  if (!(target instanceof HTMLElement) || !target.closest('input, textarea, button')) {
+    return
+  }
+  hasTrackedFormStart.value = true
+  const field: string = target.closest('[id]')?.id || target.getAttribute('name') || 'unknown'
+  track(TRACKING_EVENTS.contactFormStarted, { field })
+}
+
+/**
+ * Tracks a submit attempt blocked by validation, with the fields in error.
+ * @param {InvalidSubmissionContext} context - The vee-validate context of the failed submission.
+ * @returns {void}
+ */
+function onInvalidSubmit(context: InvalidSubmissionContext): void {
+  track(TRACKING_EVENTS.contactFormInvalid, { fields: Object.keys(context.errors) })
+}
+
+/**
  * Handles form submission (vee-validate only calls it once every rule passes).
  * @returns {Promise<void>} Resolves once the request settles.
  */
@@ -364,6 +393,7 @@ async function onSubmit(): Promise<void> {
         pagesRange: payload.pagesRange,
         budget: payload.budget,
         hasPhone: payload.phone !== null,
+        hasMessage: payload.message !== '',
       })
       successMessage.value = t('contact.form.successMessage')
       resetFormValues()

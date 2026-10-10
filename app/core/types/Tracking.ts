@@ -20,10 +20,14 @@ export type TrackingEventPayloads = {
     pagesRange?: string | null
     budget?: string
     hasPhone?: boolean
+    hasMessage?: boolean
     errorStatus?: number | null
     location?: string
   }
   [TRACKING_EVENTS.contactIntentSubmitted]: { hasEmail: boolean; hasPhone: boolean }
+  [TRACKING_EVENTS.contactFormStarted]: { field: string }
+  [TRACKING_EVENTS.contactFormInvalid]: { fields: string[] }
+  [TRACKING_EVENTS.bookingLinkClicked]: { location: string }
   [TRACKING_EVENTS.projectCardClicked]: { project: string; route: string | null; source?: string }
   [TRACKING_EVENTS.projectSiteVisited]: { project: string; siteUrl: string; location: string }
   [TRACKING_EVENTS.projectRepoVisited]: { repoUrl: string }

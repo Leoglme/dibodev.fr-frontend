@@ -538,7 +538,7 @@
       "phonePlaceholder": "06 12 34 56 78",
       "phoneHelper": "Pour être rappelé plus vite, si vous préférez.",
       "messageLabel": "Parlez-moi de votre projet",
-      "messagePlaceholder": "Votre message...",
+      "messagePlaceholder": "Deux lignes suffisent, même si votre idée n'est pas encore claire.",
       "submit": "Envoyer mon message",
       "submitting": "Envoi en cours...",
       "projectType": {
@@ -568,8 +568,7 @@
       "privacyNote": "Vos coordonnées servent uniquement à vous répondre.",
       "groups": {
         "need": "Votre besoin",
-        "details": "Vos coordonnées",
-        "message": "Votre message"
+        "details": "Vos coordonnées"
       }
     },
     "reassurance": {
@@ -610,13 +609,14 @@
       "emailText": "Réponse sous 24 h, du lundi au vendredi.",
       "phoneTitle": "Par téléphone",
       "phoneText": "Du lundi au vendredi, de 9 h à 18 h.",
-      "addressTitle": "Sur place",
-      "addressText": "À 10 minutes de Rennes. Je me déplace en Ille-et-Vilaine et en Bretagne quand c'est utile."
+      "bookingTitle": "Rendez-vous en ligne",
+      "bookingText": "30 min en visio Google Meet ou par téléphone, à l'horaire de votre choix."
     },
     "map": {
       "title": "Saint-Erblon, près de Rennes",
       "iframeTitle": "Carte de Saint-Erblon, près de Rennes",
-      "openInMaps": "Ouvrir dans Google Maps"
+      "openInMaps": "Ouvrir dans Google Maps",
+      "areaText": "À 10 minutes de Rennes. Je me déplace en Ille-et-Vilaine et en Bretagne quand c'est utile."
     }
   },
   "projects": {

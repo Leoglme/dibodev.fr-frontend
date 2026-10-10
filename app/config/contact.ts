@@ -16,3 +16,7 @@ export const CONTACT_EMAIL: string = 'contact@dibodev.fr'
 export const MALT_PROFILE_URL: string = 'https://www.malt.fr/profile/leoguillaume2'
 /** Google Business listing (map, opening hours and client reviews). */
 export const GOOGLE_BUSINESS_URL: string = 'https://www.google.com/maps?cid=6567115254526097431'
+/** Online booking page (Cal.com): a 30 min first call, by Google Meet or phone, chosen by the visitor. */
+export const BOOKING_URL: string = 'https://cal.com/dibodev/premier-echange'
+/** Short booking address shown as the link text. */
+export const BOOKING_URL_DISPLAY: string = 'cal.com/dibodev'

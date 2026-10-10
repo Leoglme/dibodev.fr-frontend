@@ -63,7 +63,7 @@ export async function sendContactNotificationMail(payload: ContactFormPayload): 
     viewPath: 'contact',
     payload: {
       subject,
-      preheader: payload.message.replace(/\s+/g, ' ').slice(0, 120),
+      preheader: payload.message ? payload.message.replace(/\s+/g, ' ').slice(0, 120) : qualification,
       headerTitle: 'Nouvelle demande',
       headerMeta: MailDateUtils.formatFrenchShortDateAndTime(receivedAt),
       replyDeadline,
@@ -83,9 +83,7 @@ export async function sendContactNotificationMail(payload: ContactFormPayload): 
     qualification,
     `À répondre au plus tard ${replyDeadline}`,
     '',
-    'Message\u00a0:',
-    payload.message,
-    '',
+    ...(payload.message ? ['Message\u00a0:', payload.message, ''] : []),
     ...formatDetailRowsAsText(detailRows),
   ].join('\n')
 

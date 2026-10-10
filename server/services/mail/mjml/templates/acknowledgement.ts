@@ -47,7 +47,9 @@ export default `
         </tr>
         {{/each}}
       </table>
+      {{#if message}}
       <div style="margin:4px 0 0;padding:16px 18px;background-color:#f6f6f3;border-radius:12px;font-size:14px;line-height:22px;color:#141414;white-space:pre-line;word-break:break-word;">{{message}}</div>
+      {{/if}}
     </mj-text>
   </mj-column>
 </mj-section>

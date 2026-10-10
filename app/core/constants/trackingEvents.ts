@@ -10,6 +10,12 @@ export const TRACKING_EVENTS = {
   contactFormSubmitted: 'contact_form_submitted',
   /** Quick contact-intent submission (email blur on the contact form). */
   contactIntentSubmitted: 'contact_intent_submitted',
+  /** First interaction with the contact form (sent once per page view), with the field touched. */
+  contactFormStarted: 'contact_form_started',
+  /** Contact form submit attempt blocked by validation, with the fields in error. */
+  contactFormInvalid: 'contact_form_invalid',
+  /** Click on the online booking link (Cal.com: Google Meet or phone call). */
+  bookingLinkClicked: 'booking_link_clicked',
   /** Click on a project card (to the detail page). */
   projectCardClicked: 'project_card_clicked',
   /** Click on a project "view site" link (external). */
