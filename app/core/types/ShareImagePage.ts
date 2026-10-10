@@ -1,1 +1,9 @@
-export type ShareImagePage = 'home' | 'about' | 'contact' | 'businessSoftware' | 'projects' | 'blog' | 'tools'
+export type ShareImagePage =
+  | 'home'
+  | 'about'
+  | 'contact'
+  | 'businessSoftware'
+  | 'freelanceRennes'
+  | 'projects'
+  | 'blog'
+  | 'tools'

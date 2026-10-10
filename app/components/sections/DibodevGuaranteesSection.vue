@@ -1,9 +1,9 @@
 <template>
-  <section id="guarantees" class="px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
+  <section :id="props.anchorId" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
     <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.intro" />
 
-      <ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <ul class="grid gap-5 sm:grid-cols-2" :class="COLUMNS_CLASSES[props.columns]">
         <li
           v-for="guarantee in props.guarantees"
           :key="guarantee.title"
@@ -28,16 +28,31 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { ComputedRef, PropType } from 'vue'
-import type { DibodevGuarantee, DibodevGuaranteesSectionProps } from '~/core/types/DibodevGuaranteesSection'
+import type {
+  DibodevGuarantee,
+  DibodevGuaranteesColumns,
+  DibodevGuaranteesSectionProps,
+} from '~/core/types/DibodevGuaranteesSection'
 import type { DibodevSectionTone } from '~/core/types/DibodevSectionTone'
 import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { SECTION_TONE_CLASSES } from '~/core/constants/sectionTone'
 
+/** Tailwind class of each large-screen column count (full class names so Tailwind keeps them). */
+const COLUMNS_CLASSES: Record<DibodevGuaranteesColumns, string> = {
+  2: 'lg:grid-cols-2',
+  3: 'lg:grid-cols-3',
+  4: 'lg:grid-cols-4',
+}
+
 /**
  * "What you get" section: concrete guarantees listed with check marks.
  */
 const props: DibodevGuaranteesSectionProps = defineProps({
+  anchorId: {
+    type: String as PropType<string>,
+    default: 'guarantees',
+  },
   eyebrow: {
     type: String as PropType<string>,
     default: '',
@@ -53,6 +68,10 @@ const props: DibodevGuaranteesSectionProps = defineProps({
   guarantees: {
     type: Array as PropType<DibodevGuarantee[]>,
     required: true,
+  },
+  columns: {
+    type: Number as PropType<DibodevGuaranteesColumns>,
+    default: 3,
   },
   tone: {
     type: String as PropType<DibodevSectionTone>,

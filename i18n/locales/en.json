@@ -13,7 +13,8 @@
         "businessSoftware": "Custom business software",
         "projects": "Selected projects",
         "blog": "Blog: web, AI and business apps",
-        "tools": "Free tools by trade"
+        "tools": "Free tools by trade",
+        "freelanceRennes": "Freelance web developer in Rennes"
       }
     },
     "shareLabels": {
@@ -47,6 +48,10 @@
     "businessSoftwarePage": {
       "title": "Custom Business Software in Rennes — Freelance Developer {'|'} Dibodev",
       "description": "Freelance developer near Rennes, France: custom business apps and management software for small businesses. Fixed price, from €5,000 to €15,000 per project."
+    },
+    "freelanceRennesPage": {
+      "title": "Freelance Web Developer in Rennes — Léo Guillaume {'|'} Dibodev",
+      "description": "Freelance web developer near Rennes, France: websites, custom business apps and software for small businesses and freelancers. Fixed price, remote work, reply within 24 hours."
     },
     "toolsHubPage": {
       "title": "Free Tools: Which Software for Your Business? {'|'} Dibodev",
@@ -197,6 +202,7 @@
     "privacy": "Privacy policy",
     "allRightsReserved": "All rights reserved",
     "businessSoftware": "Custom software",
+    "freelanceRennes": "Freelance developer in Rennes",
     "about": "About",
     "description": "Independent developer near Rennes. Management software, websites and AI-powered automations for small and medium businesses.",
     "pagesTitle": "Pages",
@@ -1292,6 +1298,154 @@
           "dibodev": "First deliveries within a few weeks."
         }
       }
+    }
+  },
+  "freelanceRennesPage": {
+    "breadcrumb": "Freelance web developer in Rennes",
+    "hero": {
+      "titlePart1": "Freelance web developer in ",
+      "titleHighlight1": "Rennes",
+      "titlePart2": "",
+      "description": "I'm Léo Guillaume, an independent developer based near Rennes, France. I design websites, business applications and custom software for small businesses, SMEs and freelancers in Ille-et-Vilaine and Brittany, with a single point of contact and a price set before we start.",
+      "cta": "Discuss my project",
+      "ctaSecondary": "See the prices",
+      "portraitAlt": "Léo Guillaume, freelance web developer in Rennes",
+      "portraitCaption": "Independent full-stack developer · Rennes"
+    },
+    "services": {
+      "eyebrow": "What I do",
+      "title": "Websites, apps and software for businesses in Rennes",
+      "intro": "A precise need rather than a catalogue: you describe your business, I suggest the simplest tool that solves the problem, and I build it.",
+      "items": {
+        "website": {
+          "title": "Professional website",
+          "description": "A fast site, well ranked on Google and that you edit yourself, to present your business and receive requests: showcase, blog, online booking or quotes."
+        },
+        "businessApp": {
+          "title": "Custom business application",
+          "description": "Management software built around the way you work: scheduling, quotes and invoices, stock, job or time tracking, online booking. It replaces spreadsheets and double entry."
+        },
+        "mobileApp": {
+          "title": "Mobile application",
+          "description": "An iOS and Android app for your teams or your customers, connected to your back office, that keeps working without network coverage when your trade requires it."
+        },
+        "automation": {
+          "title": "AI and automation",
+          "description": "Assistants and automations plugged into your existing tools: answering requests, sorting documents, follow-ups, reports. Hours saved every week, without changing software."
+        }
+      }
+    },
+    "workingStyle": {
+      "eyebrow": "How I work",
+      "title": "A freelancer in Rennes, without the travel",
+      "intro": "Whether you are in Rennes, elsewhere in Brittany or further away, the project runs the same way: remotely, with short video calls, and a tool you test as it takes shape.",
+      "items": {
+        "remote": {
+          "title": "Everything happens remotely",
+          "description": "A first call on Google Meet or by phone, then a short check-in at every stage. You don't have to block half a day to host me, and the project moves faster."
+        },
+        "singleContact": {
+          "title": "A single point of contact",
+          "description": "You talk to the person who designs and develops your tool, from the first call to maintenance. No sales rep, no project manager in between, no subcontracting."
+        },
+        "ownership": {
+          "title": "The code and the data are yours",
+          "description": "You receive the source code, the hosting access and documentation. If you ever want to change provider, nothing holds you back."
+        }
+      }
+    },
+    "prices": {
+      "eyebrow": "Prices",
+      "title": "Prices known before we start",
+      "intro": "Every project is quoted at a fixed price in a free estimate. Here are the ranges seen on my projects, so you know where you stand before even writing to me.",
+      "productColumnLabel": "Project",
+      "coverageColumnLabel": "What is included",
+      "priceColumnLabel": "Price",
+      "products": {
+        "website": {
+          "name": "Showcase website",
+          "coverage": "Design, pages, SEO, contact form, launch, content you can edit yourself",
+          "price": "From €1,500",
+          "priceCondition": "fixed price"
+        },
+        "mobileApp": {
+          "name": "Mobile application",
+          "coverage": "iOS and Android, user accounts, sync with your back office, publication on the stores",
+          "price": "From €3,500",
+          "priceCondition": "fixed price"
+        },
+        "businessApp": {
+          "name": "Business application",
+          "coverage": "Custom management software: scheduling, quotes, stock, tracking, roles and permissions, onboarding of your teams",
+          "price": "€5,000 to €15,000",
+          "priceCondition": "depending on the number of screens and integrations"
+        },
+        "automation": {
+          "name": "AI and automation",
+          "coverage": "Assistant or automation connected to your tools (email, CRM, invoicing, WhatsApp), with results tracking",
+          "price": "From €2,500",
+          "priceCondition": "fixed price"
+        },
+        "maintenance": {
+          "name": "Maintenance and upgrades",
+          "coverage": "Hosting, backups, updates, fixes and small improvements",
+          "price": "€100 to €300 per month",
+          "priceCondition": "depending on the tool"
+        }
+      },
+      "calloutEmphasizedIntro": "Net prices, VAT not applicable (article 293 B of the French tax code).",
+      "calloutText": "For a business application, the three-question estimator gives you a range in one minute.",
+      "calloutLink": "Estimate the budget of my business software"
+    },
+    "projects": {
+      "eyebrow": "Work",
+      "title": "Projects delivered in Rennes and Brittany",
+      "description": "A booking platform used by around thirty sports and leisure businesses, the website of a services company, two management tools still in production in SMEs, and my own products.",
+      "seeAll": "See all projects"
+    },
+    "faq": {
+      "eyebrow": "Frequently asked questions",
+      "title": "What people ask me before starting",
+      "rate": {
+        "question": "How much does a freelance web developer in Rennes charge?",
+        "answer": "I work at a fixed price: a showcase website starts at €1,500, a mobile app at €3,500, a business application sits between €5,000 and €15,000 and an AI automation starts at €2,500. On a daily rate, I charge €400 per day. Net prices, VAT not applicable (article 293 B of the French tax code)."
+      },
+      "delay": {
+        "question": "How long does a project take?",
+        "answer": "The timeline is set in the quote according to the scope. I deliver in stages: you use a first useful version quickly, then the tool grows with your feedback, without waiting for the end of the project."
+      },
+      "agency": {
+        "question": "Freelancer or web agency in Rennes: what is the difference?",
+        "answer": "With an agency, you talk to a sales rep then a project manager, and development is often subcontracted. With me, you talk directly to the person who designs and codes your tool, for a price without overheads and faster decisions. For a very large project involving several specialities, an agency remains a good choice."
+      },
+      "onSite": {
+        "question": "Can you come to our offices?",
+        "answer": "I work remotely, on Google Meet or by phone, with regular check-ins. It is more efficient for you and for me, and it changes nothing to the quality of the follow-up: you see the tool progress at every stage."
+      },
+      "stack": {
+        "question": "Which technologies do you work with?",
+        "answer": "Nuxt and Vue.js for websites and interfaces, Node.js, Python and .NET on the server side, PostgreSQL for data, Tauri for desktop applications, and the OpenAI, Mistral and Anthropic APIs for AI. I pick widespread technologies, so that any developer can take over the project."
+      },
+      "afterLaunch": {
+        "question": "What happens after the launch?",
+        "answer": "You can stop there: the code and the access are yours. Most clients take a maintenance plan of €100 to €300 per month, which covers hosting, backups, updates and small improvements."
+      },
+      "area": {
+        "question": "Do you only work with businesses in Rennes?",
+        "answer": "No. I'm based near Rennes, in Saint-Erblon, and my clients are in Ille-et-Vilaine, in Brittany and elsewhere in France. Since everything happens remotely, the city changes nothing to how the project runs."
+      }
+    },
+    "articles": {
+      "title": "Further reading",
+      "intro": "Three articles to choose your provider in Rennes and understand what I do on a project."
+    },
+    "cta": {
+      "title": "A web or software project in Rennes?",
+      "description": "Describe your need in a few lines: I reply within 24 hours with first ideas and a budget range.",
+      "button": "Discuss my project"
+    },
+    "schema": {
+      "serviceName": "Freelance web developer in Rennes: websites, applications and custom software"
     }
   },
   "aboutPage": {

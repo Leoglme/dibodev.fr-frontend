@@ -13,6 +13,7 @@
         "businessSoftware": "Applications métier sur mesure",
         "projects": "Projets réalisés",
         "tools": "Outils gratuits par métier",
+        "freelanceRennes": "Développeur web freelance à Rennes",
         "blog": "Le blog : web, IA et outils métier"
       }
     },
@@ -47,6 +48,10 @@
     "businessSoftwarePage": {
       "title": "Application métier sur mesure à Rennes — Développeur freelance {'|'} Dibodev",
       "description": "Développeur freelance près de Rennes : applications métier et logiciels de gestion sur mesure pour TPE et PME. Au forfait, de 5 000 à 15 000 € selon le projet."
+    },
+    "freelanceRennesPage": {
+      "title": "Développeur web freelance à Rennes — Léo Guillaume {'|'} Dibodev",
+      "description": "Développeur web freelance près de Rennes : sites web, applications métier et logiciels sur mesure pour TPE, PME et indépendants. Au forfait, à distance, réponse sous 24 h."
     },
     "toolsHubPage": {
       "title": "Outils gratuits\u202f: quel logiciel pour votre métier\u202f? {'|'} Dibodev",
@@ -197,6 +202,7 @@
     "privacy": "Politique de confidentialité",
     "allRightsReserved": "Tous droits réservés",
     "businessSoftware": "Logiciel sur mesure",
+    "freelanceRennes": "Développeur freelance à Rennes",
     "about": "À propos",
     "description": "Développeur indépendant près de Rennes. Logiciels de gestion, sites web et automatisations avec l'IA pour les TPE et PME.",
     "pagesTitle": "Pages",
@@ -1292,6 +1298,154 @@
           "dibodev": "Premières livraisons en quelques semaines."
         }
       }
+    }
+  },
+  "freelanceRennesPage": {
+    "breadcrumb": "Développeur web freelance à Rennes",
+    "hero": {
+      "titlePart1": "Développeur web freelance à ",
+      "titleHighlight1": "Rennes",
+      "titlePart2": "",
+      "description": "Je suis Léo Guillaume, développeur indépendant installé près de Rennes. Je conçois des sites web, des applications métier et des logiciels sur mesure pour les TPE, PME et indépendants d'Ille-et-Vilaine et de Bretagne, avec un seul interlocuteur et un prix fixé avant de commencer.",
+      "cta": "Discuter de mon projet",
+      "ctaSecondary": "Voir les tarifs",
+      "portraitAlt": "Léo Guillaume, développeur web freelance à Rennes",
+      "portraitCaption": "Développeur full-stack indépendant · Rennes"
+    },
+    "services": {
+      "eyebrow": "Ce que je fais",
+      "title": "Sites, applications et logiciels pour les entreprises de Rennes",
+      "intro": "Un besoin précis plutôt qu'un catalogue : vous décrivez votre activité, je vous propose l'outil le plus simple qui règle le problème, et je le construis.",
+      "items": {
+        "website": {
+          "title": "Site web professionnel",
+          "description": "Un site rapide, bien référencé sur Google et que vous modifiez vous-même, pour présenter votre activité et recevoir des demandes : vitrine, blog, prise de rendez-vous ou devis en ligne."
+        },
+        "businessApp": {
+          "title": "Application métier sur mesure",
+          "description": "Un logiciel de gestion construit autour de votre façon de travailler : planning, devis et factures, stock, suivi des interventions ou des heures, réservation en ligne. Il remplace les fichiers Excel et les ressaisies."
+        },
+        "mobileApp": {
+          "title": "Application mobile",
+          "description": "Une application iOS et Android pour vos équipes ou vos clients, reliée à votre back-office, qui continue de fonctionner sans réseau quand votre métier l'exige."
+        },
+        "automation": {
+          "title": "IA et automatisation",
+          "description": "Des assistants et des automatisations branchés sur vos outils existants : réponses aux demandes, tri de documents, relances, rapports. Du temps gagné chaque semaine, sans changer de logiciel."
+        }
+      }
+    },
+    "workingStyle": {
+      "eyebrow": "Comment je travaille",
+      "title": "Un freelance à Rennes, sans les déplacements",
+      "intro": "Que vous soyez à Rennes, ailleurs en Bretagne ou plus loin, le projet se déroule de la même façon : à distance, avec des points courts en visio, et un outil que vous testez au fur et à mesure.",
+      "items": {
+        "remote": {
+          "title": "Tout se fait à distance",
+          "description": "Premier échange en visio Google Meet ou par téléphone, puis un point à chaque étape. Vous n'avez pas à bloquer une demi-journée pour me recevoir, et le projet avance plus vite."
+        },
+        "singleContact": {
+          "title": "Un seul interlocuteur",
+          "description": "Vous parlez à la personne qui conçoit et développe votre outil, du premier appel à la maintenance. Pas de commercial, pas de chef de projet intermédiaire, pas de sous-traitance."
+        },
+        "ownership": {
+          "title": "Le code et les données sont à vous",
+          "description": "Vous recevez le code source, les accès à l'hébergement et une documentation. Si vous voulez changer de prestataire un jour, rien ne vous retient."
+        }
+      }
+    },
+    "prices": {
+      "eyebrow": "Tarifs",
+      "title": "Des prix connus avant de commencer",
+      "intro": "Chaque projet est chiffré au forfait dans un devis gratuit. Voici les fourchettes constatées sur mes projets, pour vous situer avant même de m'écrire.",
+      "productColumnLabel": "Projet",
+      "coverageColumnLabel": "Ce qui est compris",
+      "priceColumnLabel": "Prix",
+      "products": {
+        "website": {
+          "name": "Site web vitrine",
+          "coverage": "Conception, pages, référencement, formulaire de contact, mise en ligne, contenu modifiable par vous",
+          "price": "À partir de 1 500 €",
+          "priceCondition": "au forfait"
+        },
+        "mobileApp": {
+          "name": "Application mobile",
+          "coverage": "iOS et Android, comptes utilisateurs, synchronisation avec votre back-office, publication sur les stores",
+          "price": "À partir de 3 500 €",
+          "priceCondition": "au forfait"
+        },
+        "businessApp": {
+          "name": "Application métier",
+          "coverage": "Logiciel de gestion sur mesure : planning, devis, stock, suivi, rôles et droits, prise en main de vos équipes",
+          "price": "De 5 000 à 15 000 €",
+          "priceCondition": "selon le nombre d'écrans et de connexions"
+        },
+        "automation": {
+          "name": "IA et automatisation",
+          "coverage": "Assistant ou automatisation reliés à vos outils (mail, CRM, facturation, WhatsApp), avec suivi des résultats",
+          "price": "À partir de 2 500 €",
+          "priceCondition": "au forfait"
+        },
+        "maintenance": {
+          "name": "Maintenance et évolutions",
+          "coverage": "Hébergement, sauvegardes, mises à jour, corrections et petites évolutions",
+          "price": "De 100 à 300 € par mois",
+          "priceCondition": "selon l'outil"
+        }
+      },
+      "calloutEmphasizedIntro": "Prix nets, TVA non applicable (article 293 B du CGI).",
+      "calloutText": "Pour une application métier, l'estimateur en trois questions vous donne une fourchette en une minute.",
+      "calloutLink": "Estimer le budget de mon logiciel métier"
+    },
+    "projects": {
+      "eyebrow": "Réalisations",
+      "title": "Des projets livrés à Rennes et en Bretagne",
+      "description": "Une plateforme de réservation utilisée par une trentaine de structures de sport et de loisirs, le site d'une société de services, deux logiciels de gestion toujours en production dans des PME, et mes propres produits.",
+      "seeAll": "Voir toutes les réalisations"
+    },
+    "faq": {
+      "eyebrow": "Questions fréquentes",
+      "title": "Ce qu'on me demande avant de démarrer",
+      "rate": {
+        "question": "Quel est le tarif d'un développeur web freelance à Rennes ?",
+        "answer": "Je travaille au forfait : un site vitrine démarre à 1 500 €, une application mobile à 3 500 €, une application métier se situe entre 5 000 et 15 000 € et une automatisation avec l'IA démarre à 2 500 €. En régie, mon tarif est de 400 € par jour. Prix nets, TVA non applicable (article 293 B du CGI)."
+      },
+      "delay": {
+        "question": "Combien de temps prend un projet ?",
+        "answer": "Le délai est fixé dans le devis selon le périmètre. Je livre par étapes : vous utilisez une première version utile rapidement, puis l'outil s'enrichit au fil de vos retours, sans attendre la fin du projet."
+      },
+      "agency": {
+        "question": "Freelance ou agence web à Rennes : quelle différence ?",
+        "answer": "Avec une agence, vous parlez à un commercial puis à un chef de projet, et le développement est souvent sous-traité. Avec moi, vous parlez directement à celui qui conçoit et code votre outil, pour un prix sans frais de structure et des décisions plus rapides. Pour un très gros projet qui mobilise plusieurs métiers, une agence reste un bon choix."
+      },
+      "onSite": {
+        "question": "Pouvez-vous venir dans nos locaux ?",
+        "answer": "Je travaille à distance, en visio Google Meet ou par téléphone, avec des points réguliers. C'est plus efficace pour vous comme pour moi, et ça ne change rien à la qualité du suivi : vous voyez l'outil avancer à chaque étape."
+      },
+      "stack": {
+        "question": "Avec quelles technologies travaillez-vous ?",
+        "answer": "Nuxt et Vue.js pour les sites et les interfaces, Node.js, Python et .NET côté serveur, PostgreSQL pour les données, Tauri pour les applications de bureau, et les API d'OpenAI, de Mistral et d'Anthropic pour l'IA. Je choisis des technologies répandues, pour que n'importe quel développeur puisse reprendre le projet."
+      },
+      "afterLaunch": {
+        "question": "Que se passe-t-il après la mise en ligne ?",
+        "answer": "Vous pouvez tout arrêter là : le code et les accès sont à vous. La plupart des clients prennent une maintenance de 100 à 300 € par mois, qui couvre l'hébergement, les sauvegardes, les mises à jour et les petites évolutions."
+      },
+      "area": {
+        "question": "Travaillez-vous seulement avec des entreprises de Rennes ?",
+        "answer": "Non. Je suis installé près de Rennes, à Saint-Erblon, et mes clients sont en Ille-et-Vilaine, en Bretagne et ailleurs en France. Comme tout se fait à distance, la ville ne change rien au déroulement du projet."
+      }
+    },
+    "articles": {
+      "title": "Pour aller plus loin",
+      "intro": "Trois articles pour choisir votre prestataire à Rennes et comprendre ce que je fais sur un projet."
+    },
+    "cta": {
+      "title": "Un projet web ou logiciel à Rennes ?",
+      "description": "Décrivez-moi votre besoin en quelques lignes : je vous réponds sous 24 h avec de premières pistes et une idée de budget.",
+      "button": "Discuter de mon projet"
+    },
+    "schema": {
+      "serviceName": "Développeur web freelance à Rennes : sites, applications et logiciels sur mesure"
     }
   },
   "aboutPage": {

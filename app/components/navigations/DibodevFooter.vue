@@ -206,6 +206,7 @@ const currentYear: number = new Date().getFullYear()
 const footerLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLink[] => [
   { title: t('footer.home'), to: localePath('/') },
   { title: t('footer.businessSoftware'), to: localePath('custom-business-software') },
+  { title: t('footer.freelanceRennes'), to: localePath('freelance-web-developer-rennes') },
   { title: t('footer.myProjects'), to: localePath('projects') },
   { title: t('footer.blog'), to: localePath('/blog') },
   { title: t('footer.about'), to: localePath('about') },

@@ -13,7 +13,8 @@
         "businessSoftware": "Software de gestión a medida",
         "projects": "Proyectos realizados",
         "blog": "El blog: web, IA y software",
-        "tools": "Herramientas gratuitas por oficio"
+        "tools": "Herramientas gratuitas por oficio",
+        "freelanceRennes": "Desarrollador web freelance en Rennes"
       }
     },
     "shareLabels": {
@@ -47,6 +48,10 @@
     "businessSoftwarePage": {
       "title": "Software de gestión a medida en Rennes — Desarrollador freelance {'|'} Dibodev",
       "description": "Desarrollador freelance cerca de Rennes (Francia): aplicaciones de gestión a medida para pymes. Precio cerrado, de 5.000 a 15.000 € según el proyecto."
+    },
+    "freelanceRennesPage": {
+      "title": "Desarrollador web freelance en Rennes — Léo Guillaume {'|'} Dibodev",
+      "description": "Desarrollador web freelance cerca de Rennes (Francia): sitios web, aplicaciones de gestión y software a medida para pymes y autónomos. Precio cerrado, trabajo a distancia, respuesta en 24 h."
     },
     "toolsHubPage": {
       "title": "Herramientas gratuitas: ¿qué software para tu negocio? {'|'} Dibodev",
@@ -197,6 +202,7 @@
     "privacy": "Política de privacidad",
     "allRightsReserved": "Todos los derechos reservados",
     "businessSoftware": "Software a medida",
+    "freelanceRennes": "Desarrollador freelance en Rennes",
     "about": "Sobre mí",
     "description": "Desarrollador independiente cerca de Rennes. Software de gestión, sitios web y automatizaciones con IA para pymes y autónomos.",
     "pagesTitle": "Páginas",
@@ -1292,6 +1298,154 @@
           "dibodev": "Primeras entregas en pocas semanas."
         }
       }
+    }
+  },
+  "freelanceRennesPage": {
+    "breadcrumb": "Desarrollador web freelance en Rennes",
+    "hero": {
+      "titlePart1": "Desarrollador web freelance en ",
+      "titleHighlight1": "Rennes",
+      "titlePart2": "",
+      "description": "Soy Léo Guillaume, desarrollador independiente instalado cerca de Rennes (Francia). Diseño sitios web, aplicaciones de gestión y software a medida para pymes y autónomos de Ille-et-Vilaine y Bretaña, con un único interlocutor y un precio fijado antes de empezar.",
+      "cta": "Hablar de mi proyecto",
+      "ctaSecondary": "Ver los precios",
+      "portraitAlt": "Léo Guillaume, desarrollador web freelance en Rennes",
+      "portraitCaption": "Desarrollador full-stack independiente · Rennes"
+    },
+    "services": {
+      "eyebrow": "Lo que hago",
+      "title": "Sitios, aplicaciones y software para las empresas de Rennes",
+      "intro": "Una necesidad concreta en lugar de un catálogo: me cuentas tu actividad, te propongo la herramienta más sencilla que resuelve el problema, y la construyo.",
+      "items": {
+        "website": {
+          "title": "Sitio web profesional",
+          "description": "Un sitio rápido, bien posicionado en Google y que editas tú mismo, para presentar tu actividad y recibir solicitudes: escaparate, blog, reservas o presupuestos en línea."
+        },
+        "businessApp": {
+          "title": "Aplicación de gestión a medida",
+          "description": "Un software de gestión construido en torno a tu forma de trabajar: planificación, presupuestos y facturas, stock, seguimiento de intervenciones o de horas, reservas en línea. Sustituye los archivos Excel y la doble entrada de datos."
+        },
+        "mobileApp": {
+          "title": "Aplicación móvil",
+          "description": "Una aplicación iOS y Android para tus equipos o tus clientes, conectada a tu back-office, que sigue funcionando sin red cuando tu oficio lo exige."
+        },
+        "automation": {
+          "title": "IA y automatización",
+          "description": "Asistentes y automatizaciones conectados a tus herramientas actuales: respuestas a solicitudes, clasificación de documentos, recordatorios, informes. Horas ganadas cada semana, sin cambiar de software."
+        }
+      }
+    },
+    "workingStyle": {
+      "eyebrow": "Cómo trabajo",
+      "title": "Un freelance en Rennes, sin desplazamientos",
+      "intro": "Estés en Rennes, en otro lugar de Bretaña o más lejos, el proyecto se desarrolla igual: a distancia, con reuniones cortas por videollamada, y una herramienta que pruebas sobre la marcha.",
+      "items": {
+        "remote": {
+          "title": "Todo se hace a distancia",
+          "description": "Una primera llamada por Google Meet o por teléfono, y después un punto breve en cada etapa. No tienes que bloquear media jornada para recibirme, y el proyecto avanza más rápido."
+        },
+        "singleContact": {
+          "title": "Un único interlocutor",
+          "description": "Hablas con la persona que diseña y desarrolla tu herramienta, desde la primera llamada hasta el mantenimiento. Sin comercial, sin jefe de proyecto intermedio, sin subcontratación."
+        },
+        "ownership": {
+          "title": "El código y los datos son tuyos",
+          "description": "Recibes el código fuente, los accesos al alojamiento y una documentación. Si algún día quieres cambiar de proveedor, nada te lo impide."
+        }
+      }
+    },
+    "prices": {
+      "eyebrow": "Precios",
+      "title": "Precios conocidos antes de empezar",
+      "intro": "Cada proyecto se presupuesta a precio cerrado en un presupuesto gratuito. Estos son los rangos vistos en mis proyectos, para situarte antes incluso de escribirme.",
+      "productColumnLabel": "Proyecto",
+      "coverageColumnLabel": "Qué incluye",
+      "priceColumnLabel": "Precio",
+      "products": {
+        "website": {
+          "name": "Sitio web escaparate",
+          "coverage": "Diseño, páginas, posicionamiento, formulario de contacto, puesta en línea, contenido editable por ti",
+          "price": "Desde 1.500 €",
+          "priceCondition": "precio cerrado"
+        },
+        "mobileApp": {
+          "name": "Aplicación móvil",
+          "coverage": "iOS y Android, cuentas de usuario, sincronización con tu back-office, publicación en las tiendas",
+          "price": "Desde 3.500 €",
+          "priceCondition": "precio cerrado"
+        },
+        "businessApp": {
+          "name": "Aplicación de gestión",
+          "coverage": "Software de gestión a medida: planificación, presupuestos, stock, seguimiento, roles y permisos, formación de tus equipos",
+          "price": "De 5.000 a 15.000 €",
+          "priceCondition": "según el número de pantallas y de conexiones"
+        },
+        "automation": {
+          "name": "IA y automatización",
+          "coverage": "Asistente o automatización conectados a tus herramientas (correo, CRM, facturación, WhatsApp), con seguimiento de los resultados",
+          "price": "Desde 2.500 €",
+          "priceCondition": "precio cerrado"
+        },
+        "maintenance": {
+          "name": "Mantenimiento y evoluciones",
+          "coverage": "Alojamiento, copias de seguridad, actualizaciones, correcciones y pequeñas evoluciones",
+          "price": "De 100 a 300 € al mes",
+          "priceCondition": "según la herramienta"
+        }
+      },
+      "calloutEmphasizedIntro": "Precios netos, IVA no aplicable (artículo 293 B del código fiscal francés).",
+      "calloutText": "Para una aplicación de gestión, el estimador en tres preguntas te da un rango en un minuto.",
+      "calloutLink": "Estimar el presupuesto de mi software de gestión"
+    },
+    "projects": {
+      "eyebrow": "Proyectos",
+      "title": "Proyectos entregados en Rennes y en Bretaña",
+      "description": "Una plataforma de reservas utilizada por una treintena de estructuras de deporte y ocio, el sitio de una empresa de servicios, dos herramientas de gestión todavía en producción en pymes, y mis propios productos.",
+      "seeAll": "Ver todos los proyectos"
+    },
+    "faq": {
+      "eyebrow": "Preguntas frecuentes",
+      "title": "Lo que me preguntan antes de empezar",
+      "rate": {
+        "question": "¿Cuánto cobra un desarrollador web freelance en Rennes?",
+        "answer": "Trabajo a precio cerrado: un sitio escaparate empieza en 1.500 €, una aplicación móvil en 3.500 €, una aplicación de gestión se sitúa entre 5.000 y 15.000 € y una automatización con IA empieza en 2.500 €. Por días, mi tarifa es de 400 € al día. Precios netos, IVA no aplicable (artículo 293 B del código fiscal francés)."
+      },
+      "delay": {
+        "question": "¿Cuánto tiempo lleva un proyecto?",
+        "answer": "El plazo se fija en el presupuesto según el alcance. Entrego por etapas: usas rápidamente una primera versión útil, y luego la herramienta crece con tus comentarios, sin esperar al final del proyecto."
+      },
+      "agency": {
+        "question": "¿Freelance o agencia web en Rennes? ¿Cuál es la diferencia?",
+        "answer": "Con una agencia hablas con un comercial y luego con un jefe de proyecto, y el desarrollo suele subcontratarse. Conmigo hablas directamente con quien diseña y programa tu herramienta, por un precio sin gastos de estructura y con decisiones más rápidas. Para un proyecto muy grande que moviliza varios oficios, una agencia sigue siendo una buena opción."
+      },
+      "onSite": {
+        "question": "¿Puedes venir a nuestras oficinas?",
+        "answer": "Trabajo a distancia, por Google Meet o por teléfono, con reuniones regulares. Es más eficaz para ti y para mí, y no cambia nada en la calidad del seguimiento: ves avanzar la herramienta en cada etapa."
+      },
+      "stack": {
+        "question": "¿Con qué tecnologías trabajas?",
+        "answer": "Nuxt y Vue.js para los sitios y las interfaces, Node.js, Python y .NET en el servidor, PostgreSQL para los datos, Tauri para las aplicaciones de escritorio, y las API de OpenAI, Mistral y Anthropic para la IA. Elijo tecnologías extendidas, para que cualquier desarrollador pueda retomar el proyecto."
+      },
+      "afterLaunch": {
+        "question": "¿Qué pasa después de la puesta en línea?",
+        "answer": "Puedes parar ahí: el código y los accesos son tuyos. La mayoría de los clientes contratan un mantenimiento de 100 a 300 € al mes, que cubre el alojamiento, las copias de seguridad, las actualizaciones y las pequeñas evoluciones."
+      },
+      "area": {
+        "question": "¿Solo trabajas con empresas de Rennes?",
+        "answer": "No. Estoy instalado cerca de Rennes, en Saint-Erblon, y mis clientes están en Ille-et-Vilaine, en Bretaña y en otros lugares de Francia. Como todo se hace a distancia, la ciudad no cambia nada en el desarrollo del proyecto."
+      }
+    },
+    "articles": {
+      "title": "Para seguir leyendo",
+      "intro": "Tres artículos para elegir a tu proveedor en Rennes y entender lo que hago en un proyecto."
+    },
+    "cta": {
+      "title": "¿Un proyecto web o de software en Rennes?",
+      "description": "Cuéntame tu necesidad en unas líneas: te respondo en 24 h con primeras ideas y una idea de presupuesto.",
+      "button": "Hablar de mi proyecto"
+    },
+    "schema": {
+      "serviceName": "Desarrollador web freelance en Rennes: sitios web, aplicaciones y software a medida"
     }
   },
   "aboutPage": {
