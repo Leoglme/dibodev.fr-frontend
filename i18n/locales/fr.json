@@ -508,6 +508,10 @@
       "paragraph1": "Après plus de quatre ans en entreprise à concevoir des logiciels de gestion et des plateformes, chez Kodeva puis Izidoor, j'ai créé Dibodev en 2025 pour accompagner directement les TPE et PME.",
       "paragraph2": "Je m'occupe de tout, du cadrage à la maintenance, et je vous explique chaque choix simplement, sans jargon.",
       "facts": {
+        "location": {
+          "label": "Basé à",
+          "value": "Saint-Erblon, près de Rennes"
+        },
         "area": {
           "label": "Interventions",
           "value": "Rennes, l'Ille-et-Vilaine et la Bretagne, et à distance partout en France"
