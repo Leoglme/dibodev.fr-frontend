@@ -33,7 +33,7 @@
     :project="currentProjectComputed"
     :formattedDate="projectDisplayDate"
   />
-  <div v-if="toolTeasers.length" class="grid gap-4 px-6 sm:px-8">
+  <div v-if="toolTeasers.length" class="grid gap-4 px-6 pb-20 sm:px-8 lg:pb-28">
     <DibodevToolTeaser
       v-for="toolTeaser in toolTeasers"
       :key="toolTeaser.toolId"
