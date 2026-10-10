@@ -194,7 +194,6 @@ const ORGANIZATION_SAME_AS: string[] = [
   'https://www.wikidata.org/wiki/Q141592139',
   'https://www.crunchbase.com/organization/dibodev',
   'https://fr.kompass.com/c/m-leo-guillaume/fra0ddqgz/',
-  'https://www.europages.fr/fr/company/dibodev-22420274',
 ]
 
 const schemaAddress: SchemaPostalAddress = {
