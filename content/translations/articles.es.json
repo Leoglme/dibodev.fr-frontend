@@ -591,6 +591,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Es un campo que conozco bien: trabajé casi tres años en "
+            },
+            {
+              "type": "text",
+              "text": "Izidoor",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/project/izidoor",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", una plataforma de reservas para estructuras de deporte y ocio, utilizada por una treintena de ellas, que registran varios miles de reservas por temporada, con la planificación, las reservas y el cobro en línea."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -3334,7 +3363,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/contact",
+                    "href": "/es/contact",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -5372,6 +5401,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Construí este tipo de planificación en "
+            },
+            {
+              "type": "text",
+              "text": "Driving School",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/project/driving-school",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", una aplicación de gestión para autoescuelas realizada en un marco académico: los huecos se crean y se mueven arrastrando y soltando, cada uno asociado a un alumno y a un instructor, y el contador de horas del alumno se actualiza solo."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -5673,7 +5731,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/blog/paysagiste-outil-metier-devis-chantiers-plannings",
+                    "href": "/es/blog/paysagiste-outil-metier-devis-chantiers-plannings",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -5691,7 +5749,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/blog/garagiste-outil-sur-mesure-rendez-vous-devis-suivi-vehicules",
+                    "href": "/es/blog/garagiste-outil-sur-mesure-rendez-vous-devis-suivi-vehicules",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -5709,7 +5767,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/blog/electricien-outil-sur-mesure-devis-interventions-factures",
+                    "href": "/es/blog/electricien-outil-sur-mesure-devis-interventions-factures",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -6021,7 +6079,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/blog/site-vitrine-ou-outil-metier-sur-mesure-que-choisir",
+                    "href": "/es/blog/site-vitrine-ou-outil-metier-sur-mesure-que-choisir",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -6239,6 +6297,55 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Para ver cómo son estas herramientas una vez en marcha, dos ejemplos todavía en producción en pymes: "
+            },
+            {
+              "type": "text",
+              "text": "Gest-Time",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/project/gestion-temps",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " para el control del tiempo de trabajo, y "
+            },
+            {
+              "type": "text",
+              "text": "StockPME",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/project/stockpme",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " para la gestión de stock e inventario."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -6399,7 +6506,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/projets/categorie/application-metier",
+                    "href": "/es/proyectos/categoria/aplicacion-de-negocio",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -6959,7 +7066,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/blog/logiciel-gestion-auto-ecole-planning-eleves-heures",
+                    "href": "/es/blog/logiciel-gestion-auto-ecole-planning-eleves-heures",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -6969,6 +7076,35 @@
             {
               "text": ". Es ahí donde una herramienta pensada para su profesión, en lugar de un agenda genérico de reservas, marca la diferencia: habla su lenguaje (candidatos, paquetes, horas de conducción, exámenes) y no el de una peluquería.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Es el principio de "
+            },
+            {
+              "type": "text",
+              "text": "Driving School",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/project/driving-school",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", una aplicación de gestión para autoescuelas que diseñé en un marco académico: un calendario central donde cada hueco se asocia a un alumno y a un instructor, y donde la herramienta comprueba las horas de conducción restantes antes de aceptar la reserva."
             }
           ]
         },
@@ -7163,7 +7299,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/projets/categorie/application-metier",
+                    "href": "/es/proyectos/categoria/aplicacion-de-negocio",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -8017,7 +8153,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "href": "/es/blog/developpement-logiciel-b2b-sur-mesure-prix",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -8065,7 +8201,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/projets/categorie/application-metier",
+                    "href": "/es/proyectos/categoria/aplicacion-de-negocio",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -8603,6 +8739,35 @@
           "type": "paragraph",
           "content": [
             {
+              "type": "text",
+              "text": "Es lo que construí con "
+            },
+            {
+              "type": "text",
+              "text": "Gest-Time",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/project/gestion-temps",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", un software de gestión del tiempo de trabajo desarrollado para una pyme y todavía en producción: registro de horas, validación semanal por los responsables e informes para RR. HH."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
               "text": "Es exactamente el tipo de necesidad para la que diseño ",
               "type": "text"
             },
@@ -8613,7 +8778,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/projets/categorie/application-metier",
+                    "href": "/es/proyectos/categoria/aplicacion-de-negocio",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -9151,7 +9316,27 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En Izidoor, durante casi tres años, desarrollé con Nuxt un back-office utilizado cada día por clubes deportivos y de ocio: la programación de actividades, los pagos en línea con Stripe, las estadísticas y el módulo de reserva que sus clientes usan para inscribirse.",
+              "text": "En ",
+              "type": "text"
+            },
+            {
+              "type": "text",
+              "text": "Izidoor",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/project/izidoor",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", durante casi tres años, desarrollé con Nuxt un back-office utilizado cada día por clubes deportivos y de ocio: la programación de actividades, los pagos en línea con Stripe, las estadísticas y el módulo de reserva que sus clientes usan para inscribirse.",
               "type": "text"
             }
           ]
@@ -9179,7 +9364,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/application-metier-sur-mesure-rennes",
+                    "href": "/es/software-de-gestion-a-medida-rennes",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -9315,7 +9500,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/a-propos",
+                    "href": "/es/sobre-mi",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -9333,7 +9518,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/projets",
+                    "href": "/es/proyectos",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -9877,7 +10062,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/blog/site-vitrine-ou-outil-metier-sur-mesure-que-choisir",
+                    "href": "/es/blog/site-vitrine-ou-outil-metier-sur-mesure-que-choisir",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -10761,7 +10946,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
+                    "href": "/es/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -10809,7 +10994,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/blog/electricien-outil-sur-mesure-devis-interventions-factures",
+                    "href": "/es/blog/electricien-outil-sur-mesure-devis-interventions-factures",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -14407,7 +14592,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
+                    "href": "/es/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -14434,7 +14619,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/application-metier-sur-mesure-rennes",
+                    "href": "/es/software-de-gestion-a-medida-rennes",
                     "target": "_self",
                     "linktype": "url"
                   }
