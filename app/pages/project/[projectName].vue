@@ -41,6 +41,13 @@
       trackingLocation="project"
     />
   </div>
+  <BlogRelatedArticles
+    :eyebrow="$t('project.relatedArticles.eyebrow')"
+    :title="$t('project.relatedArticles.title')"
+    :intro="$t('project.relatedArticles.intro')"
+    :articles="relatedArticles"
+    source="project_related"
+  />
   <DibodevContactCtaSection
     :title="$t('projects.cta.text')"
     :description="$t('projects.cta.description')"
@@ -54,6 +61,7 @@ import { useRoute, useRouter } from 'vue-router'
 import type { RouteLocationNormalizedLoadedGeneric, Router } from 'vue-router'
 import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
+import type { DibodevArticle } from '~/core/types/DibodevArticle'
 import type { DibodevProject } from '~/core/types/DibodevProject'
 import type { DibodevProjectCaseStudy } from '~/core/types/DibodevProjectCaseStudy'
 import type { SharePreviewDetail } from '~/core/types/SharePreviewDetail'
@@ -65,7 +73,9 @@ import { categoryToSlug } from '~/core/constants/categorySlugs'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { useProjectCaseStudy } from '~/composables/useProjectCaseStudy'
 import { useToolTeasers } from '~/composables/useToolTeasers'
+import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { TOOL_TEASERS_BY_PROJECT_SLUG } from '~/core/constants/tools/toolTeasers'
+import { PROJECT_RELATED_ARTICLES_POOL_SIZE } from '~/core/constants/projectRelatedArticles'
 import {
   BUSINESS_SOFTWARE_CATEGORY_KEY,
   BUSINESS_SOFTWARE_PAGE_TEASER,
@@ -77,9 +87,11 @@ import DibodevProjectDetailsSection from '~/components/sections/DibodevProjectDe
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import DibodevRecommendedProjectSection from '~/components/sections/DibodevRecommendedProjectSection.vue'
 import DibodevToolTeaser from '~/components/data-displays/DibodevToolTeaser.vue'
+import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
 import type { StoryblokVersion } from '~/services/types/storyblok'
 import { StoryblokProjectService } from '~/services/storyblokProjectService'
 import { ProjectUtils } from '~/core/utils/ProjectUtils'
+import { ArticleSelectionUtils } from '~/core/utils/ArticleSelectionUtils'
 import { buildProjectSchemaJson } from '~/config/projectSchema'
 import { buildSharePreviewDetailsMeta } from '~/config/sharePreviewDetails'
 import { usePageShareImage } from '~/composables/usePageShareImage'
@@ -133,6 +145,13 @@ const toolTeasers: ComputedRef<DibodevToolTeaserContent[]> = useToolTeasers((): 
     currentProjectComputed.value?.categories.includes(BUSINESS_SOFTWARE_CATEGORY_KEY) ?? false
   return isBusinessSoftwareProject ? [...projectToolTeasers, BUSINESS_SOFTWARE_PAGE_TEASER] : projectToolTeasers
 })
+
+const { data: articlesPool } = await useArticlesWithTranslations({ perPage: PROJECT_RELATED_ARTICLES_POOL_SIZE })
+
+/** Articles chosen for this project in the current locale (the block is hidden when none is published yet). */
+const relatedArticles: ComputedRef<DibodevArticle[]> = computed((): DibodevArticle[] =>
+  ArticleSelectionUtils.selectForProject(articlesPool.value ?? [], projectName),
+)
 
 /** Trail: home, projects, the first category listing, then the project short name. */
 const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => {

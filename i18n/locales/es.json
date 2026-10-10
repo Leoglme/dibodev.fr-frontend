@@ -749,6 +749,11 @@
       "seeAllProjects": "Ver todos los proyectos",
       "eyebrow": "Proyectos"
     },
+    "relatedArticles": {
+      "eyebrow": "Blog",
+      "title": "Para seguir leyendo",
+      "intro": "Artículos sobre el mismo tema: lo que necesita el oficio, los programas del mercado y lo que cuesta una herramienta a medida."
+    },
     "facts": {
       "title": "Ficha del proyecto",
       "year": "Año",

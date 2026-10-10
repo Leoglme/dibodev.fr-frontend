@@ -14,7 +14,7 @@
           :tags="article.tags"
           :reading-time-minutes="article.readingTimeMinutes"
           :route="article.route"
-          source="related"
+          :source="props.source"
         />
       </div>
     </div>
@@ -54,6 +54,10 @@ const props: BlogRelatedArticlesProps = defineProps({
   tone: {
     type: String as PropType<DibodevSectionTone>,
     default: 'offWhite',
+  },
+  source: {
+    type: String as PropType<string>,
+    default: 'related',
   },
 })
 

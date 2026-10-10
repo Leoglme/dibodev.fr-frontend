@@ -749,6 +749,11 @@
       "seeAllProjects": "See all projects",
       "eyebrow": "Work"
     },
+    "relatedArticles": {
+      "eyebrow": "Blog",
+      "title": "Further reading",
+      "intro": "Articles on the same subject: what the trade needs, the software on the market and what a custom tool costs."
+    },
     "facts": {
       "title": "Project sheet",
       "year": "Year",

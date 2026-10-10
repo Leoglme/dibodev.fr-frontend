@@ -9,6 +9,7 @@ import type { DibodevSectionTone } from '~/core/types/DibodevSectionTone'
  * @property {string} intro - Optional paragraph under the title.
  * @property {DibodevArticle[]} articles - The articles to list (section hidden when empty).
  * @property {DibodevSectionTone} tone - Background tone of the section.
+ * @property {string} source - Where the list sits, sent with each card click (`related` under an article, `project_related` under a project).
  */
 export type BlogRelatedArticlesProps = {
   title: string
@@ -16,4 +17,5 @@ export type BlogRelatedArticlesProps = {
   intro: string
   articles: DibodevArticle[]
   tone: DibodevSectionTone
+  source: string
 }

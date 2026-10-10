@@ -127,6 +127,7 @@ import {
   BUSINESS_SOFTWARE_HERO_SLIDES,
 } from '~/core/constants/businessSoftwareHeroSlides'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
+import { ArticleSelectionUtils } from '~/core/utils/ArticleSelectionUtils'
 
 definePageMeta({
   i18n: {
@@ -241,9 +242,7 @@ const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail(():
 ])
 
 const relatedArticles: ComputedRef<DibodevArticle[]> = computed((): DibodevArticle[] =>
-  RELATED_ARTICLE_SLUGS.map((slug: string): DibodevArticle | undefined =>
-    (articlesPool.value ?? []).find((article: DibodevArticle): boolean => article.slug === slug),
-  ).filter((article: DibodevArticle | undefined): article is DibodevArticle => article !== undefined),
+  ArticleSelectionUtils.selectBySlugs(articlesPool.value ?? [], RELATED_ARTICLE_SLUGS),
 )
 
 const faqQuestions: ComputedRef<DibodevFaqQuestion[]> = computed((): DibodevFaqQuestion[] =>

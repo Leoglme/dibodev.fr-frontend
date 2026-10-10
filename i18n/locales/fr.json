@@ -749,6 +749,11 @@
       "seeAllProjects": "Voir tous les projets",
       "eyebrow": "Réalisations"
     },
+    "relatedArticles": {
+      "eyebrow": "Blog",
+      "title": "À lire aussi",
+      "intro": "Des articles sur le même sujet : les besoins du métier, les logiciels du marché et ce que coûte un outil sur mesure."
+    },
     "facts": {
       "title": "Fiche projet",
       "year": "Année",
