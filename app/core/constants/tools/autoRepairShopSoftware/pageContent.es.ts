@@ -14,9 +14,9 @@ import { NBSP } from '~/core/constants/typography'
 
 export const AUTO_REPAIR_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
   meta: {
-    title: 'Software para talleres mecánicos en Francia: precios 2026 y test',
+    title: 'Software para talleres mecánicos: facturación y precios 2026',
     description:
-      'Programas para talleres mecánicos en Francia: precios 2026 (Gest’Garage, TDV, AutoProGestion, Kwixéo…) y test gratis de 6 preguntas para elegir el tuyo.',
+      'Programas para talleres mecánicos en Francia: facturación, presupuestos, órdenes de reparación, precios (Gest’Garage, AutoProGestion, Kwixéo…) y test gratis.',
     inLanguage: 'es',
     schemaAbout: 'Software de gestión para talleres mecánicos en Francia',
   },
@@ -93,7 +93,7 @@ export const AUTO_REPAIR_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
   rules: {
     anchorId: 'normativa',
     eyebrow: 'Francia en 2026',
-    title: 'Lo que tu programa debe respetar en Francia en 2026',
+    title: 'Presupuestos, órdenes de reparación, facturación: lo que tu programa debe respetar en Francia en 2026',
     intro:
       'En Francia, precios expuestos, presupuestos, órdenes de reparación, piezas de reutilización y facturas: las normas del taller pasan todas por tus documentos. Un buen programa los rellena por ti.',
     facts: [
@@ -227,6 +227,11 @@ export const AUTO_REPAIR_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     eyebrow: 'Preguntas frecuentes',
     title: 'Software para talleres mecánicos: tus preguntas',
     questions: [
+      {
+        question: '¿Qué programa de facturación para un taller mecánico?',
+        answer:
+          'Un programa de facturación genérico no basta para un taller: le falta la orden de reparación, la ficha del vehículo con el kilometraje y el historial de intervenciones. Los programas para talleres vendidos en Francia (Gest’Garage, TDV Solo Complet, AutoProGestion, Kwixéo…) hacen presupuestos, órdenes de reparación y facturas en la misma herramienta, y Gest’Garage ya emite sus facturas en formato Factur-X, útil para la factura electrónica francesa. Un taller con reglas particulares también puede optar por una herramienta a medida.',
+      },
       {
         question: '¿Cuánto cuesta un software para talleres mecánicos en Francia?',
         answer: `Gest’Garage cuesta 19${NBSP}€ al mes, TDV de 19,90 a 24,90${NBSP}€ al mes con IVA, AutoProGestion 29 o 59${NBSP}€ al mes y Kwixéo de 22 a 89${NBSP}€ al mes sin IVA (menos con pago anual). EBP MéCa y GAD Garage funcionan con presupuesto (tarifas consultadas el 29 de septiembre de 2026). Un complemento a medida cuesta de 2500 a 7000${NBSP}€ una sola vez, una herramienta completa de 5000 a 25${NBSP}000${NBSP}€, y luego de 100 a 300${NBSP}€ al mes de mantenimiento.`,

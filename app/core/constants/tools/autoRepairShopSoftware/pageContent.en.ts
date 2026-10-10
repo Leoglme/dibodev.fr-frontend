@@ -13,9 +13,9 @@ import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
 
 export const AUTO_REPAIR_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   meta: {
-    title: 'Auto repair shop software in France: 2026 prices and free test',
+    title: 'Auto repair shop software in France: invoicing, quotes, prices',
     description:
-      'Garage management software sold in France: 2026 prices (Gest’Garage, TDV, AutoProGestion, Kwixéo…) and a free 6-question test to choose yours.',
+      'Garage and mechanic workshop software sold in France: invoicing, quotes, repair orders, 2026 prices (Gest’Garage, AutoProGestion, Kwixéo…) and a free test.',
     inLanguage: 'en',
     schemaAbout: 'Auto repair shop management software in France',
   },
@@ -89,7 +89,7 @@ export const AUTO_REPAIR_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   rules: {
     anchorId: 'rules',
     eyebrow: 'France in 2026',
-    title: 'What your software must respect in France in 2026',
+    title: 'Quotes, repair orders, invoicing: what your software must respect in France in 2026',
     intro:
       'In France, price display, quotes, repair orders, reused parts and invoices: garage rules all go through your documents. Good software fills them in for you.',
     facts: [
@@ -220,6 +220,11 @@ export const AUTO_REPAIR_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     eyebrow: 'Frequently asked questions',
     title: 'Garage software: your questions',
     questions: [
+      {
+        question: 'Which invoicing software for an auto repair shop?',
+        answer:
+          'General invoicing software is not enough for a garage: it lacks the repair order, the vehicle record with mileage and the service history. Garage software sold in France (Gest’Garage, TDV Solo Complet, AutoProGestion, Kwixéo…) handles quotes, repair orders and invoices in one tool, and Gest’Garage already issues Factur-X invoices, useful for French e-invoicing. A mechanic workshop with specific rules can also opt for a custom tool.',
+      },
       {
         question: 'How much does garage software cost in France?',
         answer:

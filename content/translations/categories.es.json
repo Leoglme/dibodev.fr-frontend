@@ -40,10 +40,10 @@
     }
   },
   "categories/application-metier": {
-    "title": "Proyectos de aplicaciones de gestión: herramientas a medida",
-    "description": "Aplicaciones diseñadas para satisfacer necesidades empresariales específicas en empresas.",
-    "metaTitle": "Aplicaciones de gestión a medida: proyectos entregados | Dibodev",
-    "metaDescription": "Planificación, stock, control de horas, reservas: aplicaciones de gestión a medida entregadas a pymes por Léo Guillaume, desarrollador freelance en Rennes.",
+    "title": "Ejemplos de aplicaciones de gestión: herramientas a medida entregadas",
+    "description": "Planificación, stock, reservas, control de horas: ejemplos concretos de aplicaciones de gestión que he diseñado y entregado, con el problema que resuelve cada una.",
+    "metaTitle": "Ejemplos de aplicaciones de gestión a medida | Dibodev",
+    "metaDescription": "Reservas, stock, control de horas, prospección: ejemplos concretos de aplicaciones de gestión a medida, con el problema que resuelve cada una.",
     "intro": {
       "type": "doc",
       "content": [
@@ -51,8 +51,266 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Desarrollo aplicaciones empresariales adaptadas a las necesidades reales de las empresas: gestión, planificación, seguimiento de datos y optimización de procesos internos.",
-              "type": "text"
+              "type": "text",
+              "text": "Una aplicación de gestión a medida es un programa pensado para una actividad concreta: sigue tus pasos, tus reglas y tu vocabulario, en lugar de obligarte a entrar en una herramienta genérica. Planificación, stock, presupuestos, reservas, control de horas: aquí tienes ejemplos concretos que he diseñado y entregado, con el problema que resuelve cada uno."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Para tu propio proyecto, los precios, el método y los plazos están en mi página de "
+            },
+            {
+              "type": "text",
+              "text": "software de gestión a medida",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/software-de-gestion-a-medida-rennes",
+                    "linktype": "url",
+                    "target": "_self"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". Para saber si tu actividad lo necesita, lee la "
+            },
+            {
+              "type": "text",
+              "text": "guía de la aplicación de gestión para pymes",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/blog/application-metier-sur-mesure-guide-tpe-pme",
+                    "linktype": "url",
+                    "target": "_self"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Lo que resuelve cada proyecto"
+            }
+          ]
+        },
+        {
+          "type": "bullet_list",
+          "content": [
+            {
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Izidoor",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "/es/project/izidoor",
+                            "linktype": "url",
+                            "target": "_self"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": las reservas y la gestión de escuelas de vela, surf, kayak y esquí. Un producto inestable convertido en una plataforma que usan una treintena de estructuras, con varios miles de reservas por temporada."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "StockPME",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "/es/project/stockpme",
+                            "linktype": "url",
+                            "target": "_self"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": un stock que ya no coincide con las estanterías. Gestión de stock e inventario en varios almacenes, que siguen usando pymes."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Gest-Time",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "/es/project/gestion-temps",
+                            "linktype": "url",
+                            "target": "_self"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": las hojas de horas en papel y las hojas de cálculo. Fichaje y control de horas por obra, todavía en producción."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "SignDex",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "/es/project/signdex",
+                            "linktype": "url",
+                            "target": "_self"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": firmas de correo y materiales de marca coherentes para los equipos de LEXIAL, despacho de abogados internacional."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "DevLeadHunter",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "/es/project/devleadhunter",
+                            "linktype": "url",
+                            "target": "_self"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": la prospección manual. Encuentra artesanos sin web, prepara una demostración y envía las campañas de correo."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "GoupixDex",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "/es/project/goupixdex",
+                            "linktype": "url",
+                            "target": "_self"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": escanear, tasar y poner a la venta cartas Pokémon en Vinted y eBay, sin volver a escribir nada."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Driving School",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "/es/project/driving-school",
+                            "linktype": "url",
+                            "target": "_self"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": la planificación de clases y el seguimiento de alumnos de una autoescuela (proyecto de formación, 2021)."
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }

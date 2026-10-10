@@ -12,8 +12,8 @@ import { NBSP } from '~/core/constants/typography'
 
 export const AUTO_REPAIR_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   meta: {
-    title: `Logiciel garage automobile${NBSP}: comparatif, prix 2026 et test`,
-    description: `Logiciels de garage automobile${NBSP}: prix 2026 (Gest’Garage, TDV, AutoProGestion, Kwixéo…) et test gratuit en 6 questions pour choisir le vôtre.`,
+    title: `Logiciel garage automobile${NBSP}: facturation, devis et prix 2026`,
+    description: `Logiciel de garage ou d’atelier mécanique${NBSP}: facturation, devis, ordres de réparation, prix 2026 (Gest’Garage, AutoProGestion, Kwixéo…) et test gratuit.`,
     inLanguage: 'fr-FR',
     schemaAbout: 'Logiciel de gestion de garage automobile',
   },
@@ -27,11 +27,11 @@ export const AUTO_REPAIR_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     alt: `Quel logiciel pour votre garage automobile${NBSP}? Test gratuit en 6 questions et prix 2026 des logiciels, sur dibodev.fr`,
   },
   hero: {
-    titleBefore: 'Quel logiciel pour votre ',
+    titleBefore: 'Quel logiciel de ',
     titleHighlight: 'garage',
-    titleAfter: `${NBSP}?`,
+    titleAfter: ` automobile choisir${NBSP}?`,
     description:
-      'Six questions sur votre équipe, vos ateliers et votre activité. Le test vous dit quel type de logiciel choisir pour vos devis, vos ordres de réparation et vos factures, et combien prévoir.',
+      'Six questions sur votre équipe, vos ateliers et votre activité. Garage ou atelier mécanique, le test vous dit quel type de logiciel choisir pour vos devis, vos ordres de réparation et votre facturation, et combien prévoir.',
     reassurances: ['2 minutes', 'Sans inscription ni e-mail', 'Résultat immédiat'],
     authorIntro: 'Test conçu par',
     authorBio:
@@ -43,7 +43,7 @@ export const AUTO_REPAIR_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     eyebrow: 'Prix publics 2026',
     title: 'Comparatif des logiciels de garage automobile et de leurs prix',
     intro:
-      'Les tarifs affichés par les éditeurs sur leur site. Le prix dépend surtout des modules choisis et du nombre d’utilisateurs.',
+      'Les tarifs affichés sur leur site par les éditeurs de logiciels de garage et d’atelier mécanique. Le prix dépend surtout des modules choisis et du nombre d’utilisateurs.',
     productColumnLabel: 'Logiciel',
     coverageColumnLabel: 'Ce qu’il gère',
     priceColumnLabel: 'Prix public',
@@ -87,8 +87,8 @@ export const AUTO_REPAIR_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   rules: {
     anchorId: 'reglementation',
     eyebrow: 'Le point en 2026',
-    title: 'Ce que votre logiciel doit respecter en 2026',
-    intro: `Affichage des prix, devis, ordre de réparation, pièces de réemploi, facture${NBSP}: les règles du garage passent toutes par vos documents. Un bon logiciel les remplit pour vous.`,
+    title: `Devis, ordre de réparation, facturation${NBSP}: ce que votre logiciel doit respecter en 2026`,
+    intro: `Affichage des prix, devis, ordre de réparation, pièces de réemploi, facturation${NBSP}: les règles du garage passent toutes par vos documents. Un bon logiciel de garage les remplit pour vous.`,
     facts: [
       {
         contextLabel: 'Arrêté du 27 mars 1987',
@@ -222,6 +222,10 @@ export const AUTO_REPAIR_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
       {
         question: `Combien coûte un logiciel de garage automobile${NBSP}?`,
         answer: `Gest’Garage coûte 19${NBSP}€ par mois, TDV 19,90 à 24,90${NBSP}€ TTC par mois, AutoProGestion 29 ou 59${NBSP}€ par mois et Kwixéo 22 à 89${NBSP}€ HT par mois (moins à l’année). EBP MéCa et GAD Garage sont sur devis (tarifs relevés le 29 septembre 2026). Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
+      },
+      {
+        question: `Quel logiciel de facturation pour un garage${NBSP}?`,
+        answer: `Un logiciel de facturation généraliste ne suffit pas à un garage${NBSP}: il lui manque l’ordre de réparation, la fiche véhicule avec le kilométrage et l’historique des interventions. Les logiciels de garage (Gest’Garage, TDV en offre Solo Complet, AutoProGestion, Kwixéo…) font les devis, les ordres de réparation et les factures dans le même outil, et Gest’Garage émet déjà ses factures au format Factur-X, utile pour la facture électronique. Un atelier mécanique aux règles particulières peut aussi passer par un outil sur mesure.`,
       },
       {
         question: `Existe-t-il un logiciel de garage gratuit${NBSP}?`,

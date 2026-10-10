@@ -40,10 +40,10 @@
     }
   },
   "categories/application-metier": {
-    "title": "Business application projects: custom management tools",
-    "description": "Applications designed to meet specific business needs in companies.",
-    "metaTitle": "Custom Business Applications: Delivered Projects | Dibodev",
-    "metaDescription": "Scheduling, stock, time tracking, booking: custom business applications delivered to small companies by Léo Guillaume, freelance developer in Rennes.",
+    "title": "Business application examples: custom tools delivered",
+    "description": "Scheduling, stock, bookings, time tracking: concrete examples of business applications I designed and delivered, with the problem each one solves.",
+    "metaTitle": "Business Application Examples: Delivered Projects | Dibodev",
+    "metaDescription": "Bookings, stock, time tracking, prospecting: concrete examples of custom business applications, with the problem each one solves.",
     "intro": {
       "type": "doc",
       "content": [
@@ -51,8 +51,266 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I develop business applications tailored to the real constraints of companies: management, scheduling, data tracking, and optimization of internal processes.",
-              "type": "text"
+              "type": "text",
+              "text": "A business application is software built for one specific activity: it follows your steps, your rules and your vocabulary, instead of forcing you into a generic tool. Scheduling, stock, quotes, bookings, time tracking: here are concrete examples I designed and delivered, with the problem each one solves."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "For your own project, prices, method and timelines are on my "
+            },
+            {
+              "type": "text",
+              "text": "custom business software",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/en/custom-business-software-rennes",
+                    "linktype": "url",
+                    "target": "_self"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " page. To find out whether your business needs one, read the "
+            },
+            {
+              "type": "text",
+              "text": "business application guide for small companies",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/en/blog/application-metier-sur-mesure-guide-tpe-pme",
+                    "linktype": "url",
+                    "target": "_self"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "What each project solves"
+            }
+          ]
+        },
+        {
+          "type": "bullet_list",
+          "content": [
+            {
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Izidoor",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "/en/project/izidoor",
+                            "linktype": "url",
+                            "target": "_self"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": booking and management for sailing, surfing, kayaking and ski schools. An unstable product turned into a platform used by about thirty organisations, handling several thousand bookings per season."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "StockPME",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "/en/project/stockpme",
+                            "linktype": "url",
+                            "target": "_self"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": stock that no longer matches the shelves. Stock and inventory management across several warehouses, still used by small and mid-sized companies."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Gest-Time",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "/en/project/gestion-temps",
+                            "linktype": "url",
+                            "target": "_self"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": paper timesheets and spreadsheets. Time clocking and hours tracked per job site, still in production."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "SignDex",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "/en/project/signdex",
+                            "linktype": "url",
+                            "target": "_self"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": consistent email signatures and brand materials for the teams of LEXIAL, an international law firm."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "DevLeadHunter",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "/en/project/devleadhunter",
+                            "linktype": "url",
+                            "target": "_self"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": manual prospecting. It finds craftspeople without a website, prepares a demo and sends the email campaigns."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "GoupixDex",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "/en/project/goupixdex",
+                            "linktype": "url",
+                            "target": "_self"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": scanning, pricing and listing Pokémon cards on Vinted and eBay, without retyping."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "list_item",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Driving School",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "/en/project/driving-school",
+                            "linktype": "url",
+                            "target": "_self"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": lesson scheduling and student tracking for a driving school (training project, 2021)."
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
