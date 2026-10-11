@@ -1,0 +1,76 @@
+name: 🗜️ Nginx gzip for static assets
+
+# Manual: dibodev.fr only compressed its HTML, so JavaScript, CSS and JSON left the server at full size (580 KB for the entry script). This adds gzip for those types. Dry run unless "apply" is ticked.
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: Write the change and reload nginx (otherwise only show the current state)
+        type: boolean
+        default: false
+
+jobs:
+  gzip-assets:
+    name: 🗜️ Nginx gzip for static assets
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🗜️ Compress JavaScript, CSS and JSON
+        uses: appleboy/ssh-action@master
+        env:
+          APPLY: ${{ inputs.apply }}
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          envs: APPLY
+          script: |
+            set -e
+            conf_file=/etc/nginx/conf.d/gzip-assets.conf
+            echo '--- gzip directives in nginx.conf (http level)'
+            sudo grep -n 'gzip' /etc/nginx/nginx.conf || true
+            echo '--- gzip directives in conf.d and sites-enabled'
+            sudo grep -rn 'gzip' /etc/nginx/conf.d /etc/nginx/sites-enabled || true
+            echo '--- gzip modules'
+            sudo nginx -V 2>&1 | tr ' ' '\n' | grep -E 'gzip|brotli' || true
+            if [ -f "$conf_file" ]; then
+              echo "Already applied: $conf_file"
+              sudo cat "$conf_file"
+              exit 0
+            fi
+            # A directive already set at the http level of nginx.conf must not be repeated (nginx refuses duplicates).
+            http_has() { sudo grep -Eq "^[[:space:]]*$1[[:space:]]" /etc/nginx/nginx.conf; }
+            new_conf=/tmp/gzip-assets.conf
+            echo '# Added by the "Nginx gzip for static assets" workflow: HTML was the only compressed type.' > "$new_conf"
+            http_has gzip || echo 'gzip on;' >> "$new_conf"
+            http_has gzip_vary || echo 'gzip_vary on;' >> "$new_conf"
+            http_has gzip_proxied || echo 'gzip_proxied any;' >> "$new_conf"
+            http_has gzip_comp_level || echo 'gzip_comp_level 6;' >> "$new_conf"
+            http_has gzip_min_length || echo 'gzip_min_length 1024;' >> "$new_conf"
+            echo 'gzip_types text/plain text/css text/xml text/javascript application/javascript application/json application/ld+json application/xml application/manifest+json image/svg+xml;' >> "$new_conf"
+            echo '--- file to write'
+            cat "$new_conf"
+            if [ "$APPLY" != "true" ]; then
+              echo 'Dry run: nothing written.'
+              exit 0
+            fi
+            sudo cp "$new_conf" "$conf_file"
+            if sudo nginx -t; then
+              sudo systemctl reload nginx
+              echo "Applied: $conf_file"
+            else
+              sudo rm -f "$conf_file"
+              echo 'nginx -t failed: file removed, nothing changed.'
+              exit 1
+            fi
+
+      - name: ✅ Check the compression
+        if: inputs.apply
+        run: |
+          html=$(curl -s https://dibodev.fr/)
+          script=$(echo "$html" | grep -o '/_nuxt/[A-Za-z0-9_-]*\.js' | head -1)
+          stylesheet=$(echo "$html" | grep -o '/_nuxt/[A-Za-z0-9_.-]*\.css' | head -1)
+          for path in / "$script" "$stylesheet" /_payload.json /sitemap_index.xml /llms.txt; do
+            encoding=$(curl -sI -H 'Accept-Encoding: gzip' "https://dibodev.fr$path" | grep -i '^content-encoding' | tr -d '\r' || true)
+            echo "$(curl -s -o /dev/null -H 'Accept-Encoding: gzip' -w '%{http_code} %{size_download} B' "https://dibodev.fr$path") ${encoding:-no content-encoding} $path"
+          done

@@ -69,6 +69,19 @@ export type SchemaOfferCatalog = {
   itemListElement: SchemaOffer[]
 }
 
+export type SchemaGeoCoordinates = {
+  '@type': 'GeoCoordinates'
+  latitude: number
+  longitude: number
+}
+
+export type SchemaOpeningHoursSpecification = {
+  '@type': 'OpeningHoursSpecification'
+  dayOfWeek: string[]
+  opens: string
+  closes: string
+}
+
 export type SchemaOrganization = {
   '@type': ['Organization', 'ProfessionalService']
   '@id': string
@@ -85,6 +98,9 @@ export type SchemaOrganization = {
   sameAs: string[]
   areaServed: string[]
   address: SchemaPostalAddress
+  geo: SchemaGeoCoordinates
+  openingHoursSpecification: SchemaOpeningHoursSpecification[]
+  priceRange: string
   vatID: string
   duns: string
   identifier: SchemaPropertyValue
@@ -196,6 +212,16 @@ const ORGANIZATION_SAME_AS: string[] = [
   'https://fr.kompass.com/c/m-leo-guillaume/fra0ddqgz/',
 ]
 
+/** Centre of the commune (geo.api.gouv.fr): the street address is not public. */
+const GEO_LATITUDE: number = 48.02
+const GEO_LONGITUDE: number = -1.6465
+/** Same hours as the Google Business profile and the Cal.com booking page. */
+const OPENING_DAYS: string[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+const OPENING_TIME: string = '09:00'
+const CLOSING_TIME: string = '19:00'
+/** Fixed prices published on the site, from a showcase website to a business application. */
+const PRICE_RANGE: string = '1 500 € - 15 000 €'
+
 const schemaAddress: SchemaPostalAddress = {
   '@type': 'PostalAddress',
   addressLocality: ADDRESS_LOCALITY,
@@ -238,6 +264,11 @@ export const organizationSchema: SchemaOrganization = {
   sameAs: ORGANIZATION_SAME_AS,
   areaServed: AREA_SERVED,
   address: schemaAddress,
+  geo: { '@type': 'GeoCoordinates', latitude: GEO_LATITUDE, longitude: GEO_LONGITUDE },
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: OPENING_DAYS, opens: OPENING_TIME, closes: CLOSING_TIME },
+  ],
+  priceRange: PRICE_RANGE,
   vatID: ORGANIZATION_VAT_ID,
   duns: ORGANIZATION_DUNS,
   identifier: {
