@@ -6,7 +6,7 @@ export const PRICE_BAROMETER_PAGE_CONTENT_ES: DibodevPriceBarometerPageContent =
   meta: {
     title: 'Precio de un software a medida en Francia, barómetro 2026 | Dibodev',
     description:
-      'Los precios publicados por 14 agencias, freelances y plataformas francesas, compilados y fechados: medianas por tamaño de proyecto, tarifas diarias y coste a cinco años.',
+      'Precios publicados por 14 agencias, freelances y plataformas francesas: medianas por tamaño de proyecto, tarifas diarias y coste a cinco años.',
     datasetName: 'Barómetro 2026 de los precios del software a medida en Francia',
     datasetDescription:
       'Horquillas de precios publicadas por 14 agencias, freelances y plataformas francesas para un software a medida, recogidas el 11 de octubre de 2026: herramienta sencilla, aplicación de gestión, plataforma, tarifas diarias y mantenimiento.',
