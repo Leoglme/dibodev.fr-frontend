@@ -157,7 +157,8 @@
     "cta": {
       "title": "Have a project in mind?",
       "description": "Tell me about your needs in a few lines: I will reply within 24 hours with first ideas and a budget estimate.",
-      "ctaText": "Discuss my project"
+      "ctaText": "Discuss my project",
+      "bookingLink": "or book a 30-minute call"
     },
     "card": {
       "readMore": "Read article",
@@ -1319,25 +1320,7 @@
     "services": {
       "eyebrow": "What I do",
       "title": "Websites, apps and software for businesses in Rennes",
-      "intro": "A precise need rather than a catalogue: you describe your business, I suggest the simplest tool that solves the problem, and I build it.",
-      "items": {
-        "website": {
-          "title": "Professional website",
-          "description": "A fast site, well ranked on Google and that you edit yourself, to present your business and receive requests: showcase, blog, online booking or quotes."
-        },
-        "businessApp": {
-          "title": "Custom business application",
-          "description": "Management software built around the way you work: scheduling, quotes and invoices, stock, job or time tracking, online booking. It replaces spreadsheets and double entry."
-        },
-        "mobileApp": {
-          "title": "Mobile application",
-          "description": "An iOS and Android app for your teams or your customers, connected to your back office, that keeps working without network coverage when your trade requires it."
-        },
-        "automation": {
-          "title": "AI and automation",
-          "description": "Assistants and automations plugged into your existing tools: answering requests, sorting documents, follow-ups, reports. Hours saved every week, without changing software."
-        }
-      }
+      "intro": "A precise need rather than a catalogue: you describe your business, I suggest the simplest tool that solves the problem, and I build it."
     },
     "workingStyle": {
       "eyebrow": "How I work",
@@ -1358,54 +1341,15 @@
         }
       }
     },
-    "prices": {
+    "pricing": {
       "eyebrow": "Prices",
       "title": "Prices known before we start",
-      "intro": "Every project is quoted at a fixed price in a free estimate. Here are the ranges seen on my projects, so you know where you stand before even writing to me.",
-      "productColumnLabel": "Project",
-      "coverageColumnLabel": "What is included",
-      "priceColumnLabel": "Price",
-      "products": {
-        "website": {
-          "name": "Showcase website",
-          "coverage": "Design, pages, SEO, contact form, launch, content you can edit yourself",
-          "price": "From €1,500",
-          "priceCondition": "fixed price"
-        },
-        "mobileApp": {
-          "name": "Mobile application",
-          "coverage": "iOS and Android, user accounts, sync with your back office, publication on the stores",
-          "price": "From €3,500",
-          "priceCondition": "fixed price"
-        },
-        "businessApp": {
-          "name": "Business application",
-          "coverage": "Custom management software: scheduling, quotes, stock, tracking, roles and permissions, onboarding of your teams",
-          "price": "€5,000 to €15,000",
-          "priceCondition": "depending on the number of screens and integrations"
-        },
-        "automation": {
-          "name": "AI and automation",
-          "coverage": "Assistant or automation connected to your tools (email, CRM, invoicing, WhatsApp), with results tracking",
-          "price": "From €2,500",
-          "priceCondition": "fixed price"
-        },
-        "maintenance": {
-          "name": "Maintenance and upgrades",
-          "coverage": "Hosting, backups, updates, fixes and small improvements",
-          "price": "€100 to €300 per month",
-          "priceCondition": "depending on the tool"
-        }
-      },
-      "calloutEmphasizedIntro": "Net prices, VAT not applicable (article 293 B of the French tax code).",
-      "calloutText": "For a business application, the three-question estimator gives you a range in one minute.",
-      "calloutLink": "Estimate the budget of my business software"
+      "intro": "Every project is quoted at a fixed price in a free estimate. Here are the ranges seen on my projects, so you know where you stand before even writing to me."
     },
     "projects": {
       "eyebrow": "Work",
       "title": "Projects delivered in Rennes and Brittany",
-      "description": "A booking platform used by around thirty sports and leisure businesses, the website of a services company, two management tools still in production in SMEs, and my own products.",
-      "seeAll": "See all projects"
+      "description": "A booking platform used by around thirty sports and leisure businesses, the website of a services company, two management tools still in production in SMEs, and my own products."
     },
     "faq": {
       "eyebrow": "Frequently asked questions",

@@ -14,14 +14,26 @@
         </p>
       </div>
 
-      <DibodevButton
-        :to="localePath('/contact')"
-        size="lg"
-        class="w-full sm:w-auto"
-        @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'contact_cta_section' })"
-      >
-        {{ displayCtaText }}
-      </DibodevButton>
+      <div class="grid w-full justify-items-center gap-3 sm:w-auto">
+        <DibodevButton
+          :to="localePath('/contact')"
+          size="lg"
+          class="w-full sm:w-auto"
+          @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'contact_cta_section' })"
+        >
+          {{ displayCtaText }}
+        </DibodevButton>
+        <a
+          :href="BOOKING_URL"
+          target="_blank"
+          rel="noopener"
+          class="text-primary hover:text-primary-dark inline-flex items-center gap-1 text-[15px] font-medium transition-colors"
+          @click="track(TRACKING_EVENTS.bookingLinkClicked, { location: 'contact_cta_section' })"
+        >
+          {{ $t('blog.cta.bookingLink') }}
+          <DibodevIcon name="ExternalLink" mode="stroke" :width="16" :height="16" aria-hidden="true" />
+        </a>
+      </div>
 
       <ul class="flex flex-col items-center gap-2 text-[15px] text-gray-200 sm:flex-row sm:flex-wrap sm:justify-center">
         <li>
@@ -56,7 +68,8 @@ import type { ComputedRef, PropType } from 'vue'
 import type { DibodevContactCtaSectionProps } from '~/core/types/DibodevContactCtaSection'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevHyphenSafeText from '~/components/ui/DibodevHyphenSafeText.vue'
-import { CONTACT_EMAIL, PHONE_DISPLAY, PHONE_E164 } from '~/config/contact'
+import DibodevIcon from '~/components/ui/DibodevIcon.vue'
+import { BOOKING_URL, CONTACT_EMAIL, PHONE_DISPLAY, PHONE_E164 } from '~/config/contact'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 

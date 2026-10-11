@@ -157,7 +157,8 @@
     "cta": {
       "title": "¿Tienes un proyecto en mente?",
       "description": "Cuéntame tu necesidad en unas líneas: te respondo en 24 horas con primeras ideas y una estimación de presupuesto.",
-      "ctaText": "Hablar de mi proyecto"
+      "ctaText": "Hablar de mi proyecto",
+      "bookingLink": "o reserva una llamada de 30 min"
     },
     "card": {
       "readMore": "Leer el artículo",
@@ -1319,25 +1320,7 @@
     "services": {
       "eyebrow": "Lo que hago",
       "title": "Sitios, aplicaciones y software para las empresas de Rennes",
-      "intro": "Una necesidad concreta en lugar de un catálogo: me cuentas tu actividad, te propongo la herramienta más sencilla que resuelve el problema, y la construyo.",
-      "items": {
-        "website": {
-          "title": "Sitio web profesional",
-          "description": "Un sitio rápido, bien posicionado en Google y que editas tú mismo, para presentar tu actividad y recibir solicitudes: escaparate, blog, reservas o presupuestos en línea."
-        },
-        "businessApp": {
-          "title": "Aplicación de gestión a medida",
-          "description": "Un software de gestión construido en torno a tu forma de trabajar: planificación, presupuestos y facturas, stock, seguimiento de intervenciones o de horas, reservas en línea. Sustituye los archivos Excel y la doble entrada de datos."
-        },
-        "mobileApp": {
-          "title": "Aplicación móvil",
-          "description": "Una aplicación iOS y Android para tus equipos o tus clientes, conectada a tu back-office, que sigue funcionando sin red cuando tu oficio lo exige."
-        },
-        "automation": {
-          "title": "IA y automatización",
-          "description": "Asistentes y automatizaciones conectados a tus herramientas actuales: respuestas a solicitudes, clasificación de documentos, recordatorios, informes. Horas ganadas cada semana, sin cambiar de software."
-        }
-      }
+      "intro": "Una necesidad concreta en lugar de un catálogo: me cuentas tu actividad, te propongo la herramienta más sencilla que resuelve el problema, y la construyo."
     },
     "workingStyle": {
       "eyebrow": "Cómo trabajo",
@@ -1358,54 +1341,15 @@
         }
       }
     },
-    "prices": {
+    "pricing": {
       "eyebrow": "Precios",
       "title": "Precios conocidos antes de empezar",
-      "intro": "Cada proyecto se presupuesta a precio cerrado en un presupuesto gratuito. Estos son los rangos vistos en mis proyectos, para situarte antes incluso de escribirme.",
-      "productColumnLabel": "Proyecto",
-      "coverageColumnLabel": "Qué incluye",
-      "priceColumnLabel": "Precio",
-      "products": {
-        "website": {
-          "name": "Sitio web escaparate",
-          "coverage": "Diseño, páginas, posicionamiento, formulario de contacto, puesta en línea, contenido editable por ti",
-          "price": "Desde 1.500 €",
-          "priceCondition": "precio cerrado"
-        },
-        "mobileApp": {
-          "name": "Aplicación móvil",
-          "coverage": "iOS y Android, cuentas de usuario, sincronización con tu back-office, publicación en las tiendas",
-          "price": "Desde 3.500 €",
-          "priceCondition": "precio cerrado"
-        },
-        "businessApp": {
-          "name": "Aplicación de gestión",
-          "coverage": "Software de gestión a medida: planificación, presupuestos, stock, seguimiento, roles y permisos, formación de tus equipos",
-          "price": "De 5.000 a 15.000 €",
-          "priceCondition": "según el número de pantallas y de conexiones"
-        },
-        "automation": {
-          "name": "IA y automatización",
-          "coverage": "Asistente o automatización conectados a tus herramientas (correo, CRM, facturación, WhatsApp), con seguimiento de los resultados",
-          "price": "Desde 2.500 €",
-          "priceCondition": "precio cerrado"
-        },
-        "maintenance": {
-          "name": "Mantenimiento y evoluciones",
-          "coverage": "Alojamiento, copias de seguridad, actualizaciones, correcciones y pequeñas evoluciones",
-          "price": "De 100 a 300 € al mes",
-          "priceCondition": "según la herramienta"
-        }
-      },
-      "calloutEmphasizedIntro": "Precios netos, IVA no aplicable (artículo 293 B del código fiscal francés).",
-      "calloutText": "Para una aplicación de gestión, el estimador en tres preguntas te da un rango en un minuto.",
-      "calloutLink": "Estimar el presupuesto de mi software de gestión"
+      "intro": "Cada proyecto se presupuesta a precio cerrado en un presupuesto gratuito. Estos son los rangos vistos en mis proyectos, para situarte antes incluso de escribirme."
     },
     "projects": {
       "eyebrow": "Proyectos",
       "title": "Proyectos entregados en Rennes y en Bretaña",
-      "description": "Una plataforma de reservas utilizada por una treintena de estructuras de deporte y ocio, el sitio de una empresa de servicios, dos herramientas de gestión todavía en producción en pymes, y mis propios productos.",
-      "seeAll": "Ver todos los proyectos"
+      "description": "Una plataforma de reservas utilizada por una treintena de estructuras de deporte y ocio, el sitio de una empresa de servicios, dos herramientas de gestión todavía en producción en pymes, y mis propios productos."
     },
     "faq": {
       "eyebrow": "Preguntas frecuentes",

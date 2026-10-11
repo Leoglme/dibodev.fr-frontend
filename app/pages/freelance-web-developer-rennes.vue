@@ -7,8 +7,8 @@
     :description="t('freelanceRennesPage.hero.description')"
     :ctaText="t('freelanceRennesPage.hero.cta')"
     :ctaPrimaryTo="localePath('/contact')"
-    :ctaTarget="`#${SERVICES_ANCHOR_ID}`"
-    :secondaryCta="{ text: t('freelanceRennesPage.hero.ctaSecondary'), target: `#${PRICES_ANCHOR_ID}` }"
+    ctaTarget="#services"
+    :secondaryCta="{ text: t('freelanceRennesPage.hero.ctaSecondary'), target: '#pricing' }"
     :stats="heroStats"
     :compactTitle="true"
     :reassurances="reassurances"
@@ -27,13 +27,10 @@
       />
     </template>
   </DibodevLandingSection>
-  <DibodevGuaranteesSection
-    :anchorId="SERVICES_ANCHOR_ID"
+  <DibodevServicesSection
     :eyebrow="t('freelanceRennesPage.services.eyebrow')"
     :title="t('freelanceRennesPage.services.title')"
     :intro="t('freelanceRennesPage.services.intro')"
-    :guarantees="services"
-    :columns="2"
   />
   <DibodevGuaranteesSection
     anchorId="working-style"
@@ -43,53 +40,23 @@
     :guarantees="workingStyleItems"
     tone="tint"
   />
-  <DibodevPriceListSection
-    :anchorId="PRICES_ANCHOR_ID"
-    :eyebrow="t('freelanceRennesPage.prices.eyebrow')"
-    :title="t('freelanceRennesPage.prices.title')"
-    :intro="t('freelanceRennesPage.prices.intro')"
-    :productColumnLabel="t('freelanceRennesPage.prices.productColumnLabel')"
-    :coverageColumnLabel="t('freelanceRennesPage.prices.coverageColumnLabel')"
-    :priceColumnLabel="t('freelanceRennesPage.prices.priceColumnLabel')"
-    :products="pricedProducts"
+  <DibodevPricingSection
+    :eyebrow="t('freelanceRennesPage.pricing.eyebrow')"
+    :title="t('freelanceRennesPage.pricing.title')"
+    :intro="t('freelanceRennesPage.pricing.intro')"
+    :offers="pricingOffers"
+    :notes="pricingNotes"
+    :ctaLabel="t('home.pricing.cta')"
+    ctaLocation="freelance_rennes_pricing"
+    :highlightLabel="t('home.pricing.highlightLabel')"
+    :secondaryLink="{ text: t('home.pricing.estimatorLink'), to: estimatorRoute }"
     tone="white"
-  >
-    <template #footer>
-      <DibodevCallout
-        icon="Info"
-        :emphasizedIntro="t('freelanceRennesPage.prices.calloutEmphasizedIntro')"
-        :text="t('freelanceRennesPage.prices.calloutText')"
-        tone="tint"
-      >
-        <NuxtLink
-          :to="localePath('custom-business-software')"
-          class="text-primary hover:text-primary-dark w-fit text-[15px] leading-6 font-medium transition-colors"
-          @click="
-            track(TRACKING_EVENTS.toolTeaserClicked, {
-              tool: 'business-software-page',
-              location: 'freelance_rennes_prices',
-            })
-          "
-        >
-          {{ t('freelanceRennesPage.prices.calloutLink') }}&nbsp;<DibodevIcon
-            name="ArrowRight"
-            mode="stroke"
-            :width="16"
-            :height="16"
-            class="align-[-3px]"
-            aria-hidden="true"
-          />
-        </NuxtLink>
-      </DibodevCallout>
-    </template>
-  </DibodevPriceListSection>
-  <DibodevProjectScreenshotsSection
+  />
+  <DibodevFeaturedProjectsSection
+    :projectSlugs="SHOWCASED_PROJECT_SLUGS"
     :eyebrow="t('freelanceRennesPage.projects.eyebrow')"
     :title="t('freelanceRennesPage.projects.title')"
-    :description="t('freelanceRennesPage.projects.description')"
-    :seeAllLabel="t('freelanceRennesPage.projects.seeAll')"
-    :projectSlugs="SHOWCASED_PROJECT_SLUGS"
-    trackingSource="freelance_rennes_screenshots"
+    :intro="t('freelanceRennesPage.projects.description')"
   />
   <DibodevMethodSection
     :eyebrow="t('method.eyebrow')"
@@ -135,16 +102,15 @@ import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
 import type { DibodevFaqQuestion } from '~/core/types/DibodevFaqSection'
 import type { DibodevGuarantee } from '~/core/types/DibodevGuaranteesSection'
 import type { DibodevMethodStep } from '~/core/types/DibodevMethodSection'
-import type { DibodevPricedProduct } from '~/core/types/DibodevPriceListSection'
+import type { DibodevPricingOffer } from '~/core/types/DibodevPricingSection'
 import type { DibodevStatItemProps } from '~/core/types/DibodevStat'
 import { computed } from 'vue'
 import DibodevLandingSection from '~/components/sections/DibodevLandingSection.vue'
 import DibodevFramedPortrait from '~/components/data-displays/DibodevFramedPortrait.vue'
+import DibodevServicesSection from '~/components/sections/DibodevServicesSection.vue'
 import DibodevGuaranteesSection from '~/components/sections/DibodevGuaranteesSection.vue'
-import DibodevPriceListSection from '~/components/sections/DibodevPriceListSection.vue'
-import DibodevCallout from '~/components/data-displays/DibodevCallout.vue'
-import DibodevIcon from '~/components/ui/DibodevIcon.vue'
-import DibodevProjectScreenshotsSection from '~/components/sections/DibodevProjectScreenshotsSection.vue'
+import DibodevPricingSection from '~/components/sections/DibodevPricingSection.vue'
+import DibodevFeaturedProjectsSection from '~/components/sections/DibodevFeaturedProjectsSection.vue'
 import DibodevMethodSection from '~/components/sections/DibodevMethodSection.vue'
 import DibodevTestimonialSection from '~/components/sections/DibodevTestimonialSection.vue'
 import DibodevFaqSection from '~/components/sections/DibodevFaqSection.vue'
@@ -157,8 +123,6 @@ import { useArticlesWithTranslations } from '~/composables/useArticlesWithTransl
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { useHeroStats } from '~/composables/useHeroStats'
 import { usePageShareImage } from '~/composables/usePageShareImage'
-import { useTracking } from '~/composables/useTracking'
-import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 import { ArticleSelectionUtils } from '~/core/utils/ArticleSelectionUtils'
 
 definePageMeta({
@@ -171,15 +135,13 @@ definePageMeta({
   },
 })
 
-const SERVICES_ANCHOR_ID: string = 'freelance-services'
-const PRICES_ANCHOR_ID: string = 'prices'
 const ARTICLES_POOL_SIZE: number = 100
 const PORTRAIT_SIZE: number = 800
 const PORTRAIT_SRC: string = '/images/about/leo-guillaume-portrait-800.webp'
 const PORTRAIT_SRCSET: string =
   '/images/about/leo-guillaume-portrait-400.webp 400w, /images/about/leo-guillaume-portrait-800.webp 800w'
 const PORTRAIT_SIZES: string = '(min-width: 1280px) 448px, (min-width: 1024px) 384px, (min-width: 640px) 384px, 320px'
-/** Projects shown as screenshots: the ones built for companies of the Rennes area first, then Léo's own products. */
+/** Projects shown as cards: the ones built for companies of the Rennes area first, then Léo's own products. */
 const SHOWCASED_PROJECT_SLUGS: string[] = [
   'izidoor',
   'a2m-orizon-solution',
@@ -193,16 +155,17 @@ const RELATED_ARTICLE_SLUGS: string[] = [
   'freelance-ou-agence-rennes-outil-metier-sur-mesure',
   'developpeur-application-metier-rennes-freelance-local',
 ]
-const SERVICE_KEYS: string[] = ['website', 'businessApp', 'mobileApp', 'automation']
 const WORKING_STYLE_KEYS: string[] = ['remote', 'singleContact', 'ownership']
-const PRICED_PRODUCT_KEYS: string[] = ['website', 'mobileApp', 'businessApp', 'automation', 'maintenance']
+/** Offers of the home pricing texts (`home.pricing.offers.*`), the custom software card being the emphasised one. */
+const PRICING_OFFER_KEYS: string[] = ['website', 'automation', 'software', 'maintenance']
+const HIGHLIGHTED_PRICING_OFFER_KEY: string = 'software'
+const PRICING_NOTE_KEYS: string[] = ['dailyRateNote', 'freeQuoteNote', 'vatNote']
 const FAQ_QUESTION_KEYS: string[] = ['rate', 'delay', 'agency', 'onSite', 'stack', 'afterLaunch', 'area']
 const METHOD_STEP_KEYS: string[] = ['discovery', 'quote', 'build', 'support']
 const REASSURANCE_KEYS: string[] = ['response24h', 'freeQuote', 'noCommitment']
 
 const { t } = useI18n()
 const localePath = useLocalePath()
-const { track } = useTracking()
 usePageShareImage('freelanceRennes')
 const { data: articlesPool } = await useArticlesWithTranslations({ perPage: ARTICLES_POOL_SIZE })
 const heroStats: ComputedRef<DibodevStatItemProps[]> = await useHeroStats()
@@ -215,15 +178,6 @@ const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail(():
   { label: t('freelanceRennesPage.breadcrumb'), to: null },
 ])
 
-const services: ComputedRef<DibodevGuarantee[]> = computed((): DibodevGuarantee[] =>
-  SERVICE_KEYS.map(
-    (key: string): DibodevGuarantee => ({
-      title: t(`freelanceRennesPage.services.items.${key}.title`),
-      description: t(`freelanceRennesPage.services.items.${key}.description`),
-    }),
-  ),
-)
-
 const workingStyleItems: ComputedRef<DibodevGuarantee[]> = computed((): DibodevGuarantee[] =>
   WORKING_STYLE_KEYS.map(
     (key: string): DibodevGuarantee => ({
@@ -233,15 +187,24 @@ const workingStyleItems: ComputedRef<DibodevGuarantee[]> = computed((): DibodevG
   ),
 )
 
-const pricedProducts: ComputedRef<DibodevPricedProduct[]> = computed((): DibodevPricedProduct[] =>
-  PRICED_PRODUCT_KEYS.map(
-    (key: string): DibodevPricedProduct => ({
-      name: t(`freelanceRennesPage.prices.products.${key}.name`),
-      coverage: t(`freelanceRennesPage.prices.products.${key}.coverage`),
-      price: t(`freelanceRennesPage.prices.products.${key}.price`),
-      priceCondition: t(`freelanceRennesPage.prices.products.${key}.priceCondition`),
+const pricingOffers: ComputedRef<DibodevPricingOffer[]> = computed((): DibodevPricingOffer[] =>
+  PRICING_OFFER_KEYS.map(
+    (key: string): DibodevPricingOffer => ({
+      title: t(`home.pricing.offers.${key}.title`),
+      price: t(`home.pricing.offers.${key}.price`),
+      description: t(`home.pricing.offers.${key}.description`),
+      isHighlighted: key === HIGHLIGHTED_PRICING_OFFER_KEY,
     }),
   ),
+)
+
+const pricingNotes: ComputedRef<string[]> = computed((): string[] =>
+  PRICING_NOTE_KEYS.map((key: string): string => t(`home.pricing.${key}`)),
+)
+
+/** Budget estimator of the business software page, where every kind of project gets a price range. */
+const estimatorRoute: ComputedRef<string> = computed(
+  (): string => `${localePath('custom-business-software')}#estimator`,
 )
 
 const methodSteps: ComputedRef<DibodevMethodStep[]> = computed((): DibodevMethodStep[] =>

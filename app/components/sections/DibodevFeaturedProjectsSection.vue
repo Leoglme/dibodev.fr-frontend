@@ -1,11 +1,7 @@
 <template>
   <section id="projects" class="scroll-mt-24 bg-gray-800 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
     <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
-      <DibodevSectionHeading
-        :eyebrow="$t('home.projects.eyebrow')"
-        :title="$t('home.projects.title')"
-        :intro="$t('home.projects.intro')"
-      >
+      <DibodevSectionHeading :eyebrow="displayEyebrow" :title="displayTitle" :intro="displayIntro">
         <template #action>
           <DibodevLink :link="localePath('projects')">
             <span>{{ $t('home.projects.seeAllProjects') }}</span>
@@ -64,7 +60,31 @@ const props: DibodevFeaturedProjectsSectionProps = defineProps({
     type: Array as PropType<string[]>,
     default: (): string[] => HOME_PAGE_CONTENT.featuredProjectSlugs,
   },
+  eyebrow: {
+    type: String as PropType<string>,
+    default: '',
+  },
+  title: {
+    type: String as PropType<string>,
+    default: '',
+  },
+  intro: {
+    type: String as PropType<string>,
+    default: '',
+  },
 })
+
+const { t } = useI18n()
+
+const displayEyebrow: ComputedRef<string> = computed((): string =>
+  props.eyebrow.trim() ? props.eyebrow : t('home.projects.eyebrow'),
+)
+const displayTitle: ComputedRef<string> = computed((): string =>
+  props.title.trim() ? props.title : t('home.projects.title'),
+)
+const displayIntro: ComputedRef<string> = computed((): string =>
+  props.intro.trim() ? props.intro : t('home.projects.intro'),
+)
 
 const HIDDEN_CARD_CLASSES: Record<HomeFeaturedProjectsDevice, string> = {
   phone: 'max-sm:hidden',

@@ -157,7 +157,8 @@
     "cta": {
       "title": "Un projet en tête ?",
       "description": "Décrivez-moi votre besoin en quelques lignes : je vous réponds sous 24 h avec de premières pistes et une idée de budget.",
-      "ctaText": "Discuter de mon projet"
+      "ctaText": "Discuter de mon projet",
+      "bookingLink": "ou réservez un créneau de 30 min"
     },
     "card": {
       "readMore": "Lire l'article",
@@ -1319,25 +1320,7 @@
     "services": {
       "eyebrow": "Ce que je fais",
       "title": "Sites, applications et logiciels pour les entreprises de Rennes",
-      "intro": "Un besoin précis plutôt qu'un catalogue : vous décrivez votre activité, je vous propose l'outil le plus simple qui règle le problème, et je le construis.",
-      "items": {
-        "website": {
-          "title": "Site web professionnel",
-          "description": "Un site rapide, bien référencé sur Google et que vous modifiez vous-même, pour présenter votre activité et recevoir des demandes : vitrine, blog, prise de rendez-vous ou devis en ligne."
-        },
-        "businessApp": {
-          "title": "Application métier sur mesure",
-          "description": "Un logiciel de gestion construit autour de votre façon de travailler : planning, devis et factures, stock, suivi des interventions ou des heures, réservation en ligne. Il remplace les fichiers Excel et les ressaisies."
-        },
-        "mobileApp": {
-          "title": "Application mobile",
-          "description": "Une application iOS et Android pour vos équipes ou vos clients, reliée à votre back-office, qui continue de fonctionner sans réseau quand votre métier l'exige."
-        },
-        "automation": {
-          "title": "IA et automatisation",
-          "description": "Des assistants et des automatisations branchés sur vos outils existants : réponses aux demandes, tri de documents, relances, rapports. Du temps gagné chaque semaine, sans changer de logiciel."
-        }
-      }
+      "intro": "Un besoin précis plutôt qu'un catalogue : vous décrivez votre activité, je vous propose l'outil le plus simple qui règle le problème, et je le construis."
     },
     "workingStyle": {
       "eyebrow": "Comment je travaille",
@@ -1358,54 +1341,15 @@
         }
       }
     },
-    "prices": {
+    "pricing": {
       "eyebrow": "Tarifs",
       "title": "Des prix connus avant de commencer",
-      "intro": "Chaque projet est chiffré au forfait dans un devis gratuit. Voici les fourchettes constatées sur mes projets, pour vous situer avant même de m'écrire.",
-      "productColumnLabel": "Projet",
-      "coverageColumnLabel": "Ce qui est compris",
-      "priceColumnLabel": "Prix",
-      "products": {
-        "website": {
-          "name": "Site web vitrine",
-          "coverage": "Conception, pages, référencement, formulaire de contact, mise en ligne, contenu modifiable par vous",
-          "price": "À partir de 1 500 €",
-          "priceCondition": "au forfait"
-        },
-        "mobileApp": {
-          "name": "Application mobile",
-          "coverage": "iOS et Android, comptes utilisateurs, synchronisation avec votre back-office, publication sur les stores",
-          "price": "À partir de 3 500 €",
-          "priceCondition": "au forfait"
-        },
-        "businessApp": {
-          "name": "Application métier",
-          "coverage": "Logiciel de gestion sur mesure : planning, devis, stock, suivi, rôles et droits, prise en main de vos équipes",
-          "price": "De 5 000 à 15 000 €",
-          "priceCondition": "selon le nombre d'écrans et de connexions"
-        },
-        "automation": {
-          "name": "IA et automatisation",
-          "coverage": "Assistant ou automatisation reliés à vos outils (mail, CRM, facturation, WhatsApp), avec suivi des résultats",
-          "price": "À partir de 2 500 €",
-          "priceCondition": "au forfait"
-        },
-        "maintenance": {
-          "name": "Maintenance et évolutions",
-          "coverage": "Hébergement, sauvegardes, mises à jour, corrections et petites évolutions",
-          "price": "De 100 à 300 € par mois",
-          "priceCondition": "selon l'outil"
-        }
-      },
-      "calloutEmphasizedIntro": "Prix nets, TVA non applicable (article 293 B du CGI).",
-      "calloutText": "Pour une application métier, l'estimateur en trois questions vous donne une fourchette en une minute.",
-      "calloutLink": "Estimer le budget de mon logiciel métier"
+      "intro": "Chaque projet est chiffré au forfait dans un devis gratuit. Voici les fourchettes constatées sur mes projets, pour vous situer avant même de m'écrire."
     },
     "projects": {
       "eyebrow": "Réalisations",
       "title": "Des projets livrés à Rennes et en Bretagne",
-      "description": "Une plateforme de réservation utilisée par une trentaine de structures de sport et de loisirs, le site d'une société de services, deux logiciels de gestion toujours en production dans des PME, et mes propres produits.",
-      "seeAll": "Voir toutes les réalisations"
+      "description": "Une plateforme de réservation utilisée par une trentaine de structures de sport et de loisirs, le site d'une société de services, deux logiciels de gestion toujours en production dans des PME, et mes propres produits."
     },
     "faq": {
       "eyebrow": "Questions fréquentes",

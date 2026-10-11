@@ -1,11 +1,7 @@
 <template>
   <section id="services" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
     <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
-      <DibodevSectionHeading
-        :eyebrow="$t('home.services.eyebrow')"
-        :title="$t('home.services.title')"
-        :intro="$t('home.services.intro')"
-      >
+      <DibodevSectionHeading :eyebrow="displayEyebrow" :title="displayTitle" :intro="displayIntro">
         <template #action>
           <DibodevLink :link="estimatorRoute">
             <span>{{ $t('home.services.estimatorLink') }}</span>
@@ -34,9 +30,10 @@
 </template>
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { ComputedRef } from 'vue'
+import type { ComputedRef, PropType } from 'vue'
 import type { DibodevAccentPalette } from '~/core/types/DibodevAccentPalette'
 import type { DibodevServiceIconName } from '~/core/types/DibodevServiceIcon'
+import type { DibodevServicesSectionProps } from '~/core/types/DibodevServicesSection'
 import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevServiceIcon from '~/components/ui/DibodevServiceIcon.vue'
 import DibodevServiceItem from '~/components/data-displays/DibodevServiceItem.vue'
@@ -66,9 +63,37 @@ const SERVICE_PAGE_ROUTE_NAMES: Record<string, string> = {
   software: 'custom-business-software',
 }
 
+/**
+ * The four service cards of the home page (software, website, mobile app, AI), reusable on a landing page with its own heading.
+ */
+const props: DibodevServicesSectionProps = defineProps({
+  eyebrow: {
+    type: String as PropType<string>,
+    default: '',
+  },
+  title: {
+    type: String as PropType<string>,
+    default: '',
+  },
+  intro: {
+    type: String as PropType<string>,
+    default: '',
+  },
+})
+
 /* I18N */
 const { t } = useI18n()
 const localePath = useLocalePath()
+
+const displayEyebrow: ComputedRef<string> = computed((): string =>
+  props.eyebrow.trim() ? props.eyebrow : t('home.services.eyebrow'),
+)
+const displayTitle: ComputedRef<string> = computed((): string =>
+  props.title.trim() ? props.title : t('home.services.title'),
+)
+const displayIntro: ComputedRef<string> = computed((): string =>
+  props.intro.trim() ? props.intro : t('home.services.intro'),
+)
 
 /* DATAS */
 const services: ComputedRef<HomeService[]> = computed((): HomeService[] =>
