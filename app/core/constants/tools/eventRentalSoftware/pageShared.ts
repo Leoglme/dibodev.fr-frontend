@@ -11,6 +11,7 @@ export const EVENT_RENTAL_PAGE_SCREENSHOT_URL: string = '/images/tools/stockpme-
 
 /** Articles linked at the bottom of the page; the untranslated ones are left out of /en and /es automatically. */
 export const EVENT_RENTAL_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
+  'alternative-rentman-logiciel-location-materiel',
   'developpement-logiciel-b2b-sur-mesure-prix',
   'developpeur-application-metier-rennes-freelance-local',
 ]

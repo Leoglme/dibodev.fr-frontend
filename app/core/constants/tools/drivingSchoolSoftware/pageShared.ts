@@ -15,6 +15,8 @@ export const DRIVING_SCHOOL_PAGE_SCREENSHOT_URL: string =
 export const DRIVING_SCHOOL_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'logiciel-gestion-auto-ecole-planning-eleves-heures',
   'logiciel-rdv-auto-ecole-reservation-en-ligne',
+  'alternative-klaxo-logiciel-auto-ecole',
+  'alternative-drivup-logiciel-auto-ecole',
   'developpement-logiciel-b2b-sur-mesure-prix',
 ]
 
