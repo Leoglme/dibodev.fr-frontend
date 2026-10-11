@@ -3,7 +3,7 @@ import type { DibodevPriceBarometerDataset, DibodevPriceRange } from '~/core/typ
 import rawDataset from '~~/content/data/price-barometer-2026.json'
 
 // Public prices recorded on 11 October 2026 on each provider's own page (see `content/data/price-barometer-2026.json`):
-// check them twice a year, move `checkedAt`, and regenerate the CSV with `node scripts/generate-price-barometer-csv.mjs`.
+// check them twice a year, move `checkedAt`, and regenerate the CSV with `node content/data/generate-price-barometer-csv.mjs`.
 
 /** The recorded prices, typed; the JSON file is the single source for the page and the downloadable CSV. */
 export const PRICE_BAROMETER_DATASET: DibodevPriceBarometerDataset = rawDataset as DibodevPriceBarometerDataset
