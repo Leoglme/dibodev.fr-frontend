@@ -50,6 +50,10 @@ export const TRACKING_EVENTS = {
   toolTeaserClicked: 'tool_teaser_clicked',
   /** Slide changed by the visitor in a photo slideshow (click on the photo, swipe or progress marker). */
   photoSlideshowNavigated: 'photo_slideshow_navigated',
+  /** First answer given in the public aid simulator (sent once per page view). */
+  publicAidSimulatorStarted: 'public_aid_simulator_started',
+  /** Result of the public aid simulator displayed for a commune, with the outcome and the aid. */
+  publicAidSimulated: 'public_aid_simulated',
 } as const
 
 /** Tracking event name (value of the `TRACKING_EVENTS` catalog). */

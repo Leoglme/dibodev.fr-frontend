@@ -58,3 +58,6 @@ content/translations/
 
 # Site content edited from the dashboard (committed via the GitHub API, not formatted locally by prettier)
 content/cms/
+
+# Commune table of Brittany, generated compact by the public aid simulator builder (one row per commune)
+content/data/communes-bretagne.json

@@ -1,0 +1,580 @@
+{
+  "checkedAt": "2026-10-11",
+  "license": "CC BY 4.0",
+  "regionalFrame": {
+    "code": "region-bretagne",
+    "name": "Région Bretagne (cadre du Pass Commerce et Artisanat)",
+    "ratePercent": 30,
+    "floorHt": null,
+    "ceilingHt": 25000,
+    "maxAid": 7500,
+    "maxEmployees": 7,
+    "maxTurnover": 1000000,
+    "sourceUrl": "https://les-aides.fr/aide/UIEv3w/region-bretagne/pass-commerce-et-artisanat.html",
+    "sourceDate": "2025-07-21"
+  },
+  "epcis": [
+    {
+      "code": "243500139",
+      "department": "35",
+      "ratePercent": 30,
+      "floorHt": 6000,
+      "ceilingHt": 20000,
+      "maxAid": 6000,
+      "maxEmployees": 10,
+      "communeRule": "under5000OrQpv",
+      "qpvCommuneCode": "35238",
+      "projects": {
+        "website": "eligible",
+        "onlineSales": "eligible",
+        "software": "unclear"
+      },
+      "status": "verified",
+      "noteKeys": ["rseInvestment", "subscriptionsExcluded", "validUntil2028"],
+      "contact": {
+        "label": "CCI Ille-et-Vilaine ou CMA Ille-et-Vilaine",
+        "phone": "02 99 33 66 66",
+        "email": "",
+        "url": "https://les-aides.fr/aide/doU_3w/rennes-metropole/le-pass-commerce-et-artisanat.html"
+      },
+      "sourceUrl": "https://les-aides.fr/aide/doU_3w/rennes-metropole/le-pass-commerce-et-artisanat.html",
+      "sourceDate": "2026-08-31",
+      "name": "Rennes Métropole",
+      "communeOverrides": [],
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "243500782",
+      "department": "35",
+      "ratePercent": 30,
+      "floorHt": 6000,
+      "ceilingHt": 25000,
+      "maxAid": 7500,
+      "maxEmployees": 7,
+      "communeRule": "regionalCentrality",
+      "projects": {
+        "website": "eligible",
+        "onlineSales": "unclear",
+        "software": "unclear"
+      },
+      "status": "verified",
+      "noteKeys": ["digitalListedWithoutDetail"],
+      "contact": {
+        "label": "Saint-Malo Agglomération, service économie (Sonia De Neymet)",
+        "phone": "02 99 19 29 54",
+        "email": "s.deneymet@stmalo-agglomeration.fr",
+        "url": "https://www.stmalo-agglomeration.fr/vie-economique/aides-aux-entreprises/pass-commerce-et-artisanat/"
+      },
+      "sourceUrl": "https://www.stmalo-agglomeration.fr/vie-economique/aides-aux-entreprises/pass-commerce-et-artisanat/",
+      "sourceDate": "2025-01-31",
+      "name": "Saint-Malo Agglomération",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "200039022",
+      "department": "35",
+      "ratePercent": 30,
+      "floorHt": null,
+      "ceilingHt": 25000,
+      "maxAid": 7500,
+      "maxEmployees": 7,
+      "communeRule": "regionalCentrality",
+      "projects": {
+        "website": "unclear",
+        "onlineSales": "unclear",
+        "software": "unclear"
+      },
+      "status": "partial",
+      "noteKeys": ["noRecentRulesPublished"],
+      "contact": {
+        "label": "Vitré Communauté, développement économique",
+        "phone": "",
+        "email": "",
+        "url": "https://www.vitrecommunaute.org/categorie-actualites/economie/"
+      },
+      "sourceUrl": "https://www.vitrecommunaute.org/medias/2025/10/Rapport-dactivite%CC%81s-2024_VitreCommunaute.pdf",
+      "sourceDate": "2025-10",
+      "name": "Vitré Communauté",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "243500741",
+      "department": "35",
+      "ratePercent": 30,
+      "floorHt": null,
+      "ceilingHt": 25000,
+      "maxAid": 7500,
+      "maxEmployees": 7,
+      "communeRule": "regionalCentrality",
+      "projects": {
+        "website": "eligible",
+        "onlineSales": "unclear",
+        "software": "unclear"
+      },
+      "status": "partial",
+      "noteKeys": ["floorUnknown", "agreementUntil2026"],
+      "contact": {
+        "label": "Redon Agglomération, pôle Entreprise",
+        "phone": "",
+        "email": "",
+        "url": "https://www.redon-agglomeration.bzh/aide-aux-entreprises"
+      },
+      "sourceUrl": "https://www.redon-agglomeration.bzh/pass-commerce-artisanat-bilan",
+      "sourceDate": "2024-12",
+      "name": "Redon Agglomération",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "200072452",
+      "department": "35",
+      "ratePercent": 30,
+      "floorHt": null,
+      "ceilingHt": 25000,
+      "maxAid": 7500,
+      "maxEmployees": 7,
+      "communeRule": "regionalCentrality",
+      "projects": {
+        "website": "eligible",
+        "onlineSales": "unclear",
+        "software": "unclear"
+      },
+      "status": "partial",
+      "noteKeys": ["floorUnknown"],
+      "contact": {
+        "label": "Fougères Agglomération, développement économique",
+        "phone": "02 99 99 92 32",
+        "email": "deveco@fougeres-agglo.bzh",
+        "url": "https://fougeres-agglo.bzh/economie-et-emploi/creer-et-developper-son-entreprise/le-pass-commerce-artisanat/"
+      },
+      "sourceUrl": "https://fougeres-agglo.bzh/economie-et-emploi/creer-et-developper-son-entreprise/le-pass-commerce-artisanat/",
+      "sourceDate": "2023-12",
+      "name": "Fougères Agglomération",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "200043990",
+      "department": "35",
+      "ratePercent": 30,
+      "floorHt": null,
+      "ceilingHt": 25000,
+      "maxAid": 7500,
+      "maxEmployees": 7,
+      "communeRule": "centralityOver2000",
+      "communeOverrides": [
+        {
+          "communeCode": "35126",
+          "ratePercent": 24,
+          "maxAid": 6000
+        },
+        {
+          "communeCode": "35176",
+          "ratePercent": 24,
+          "maxAid": 6000
+        }
+      ],
+      "projects": {
+        "website": "eligible",
+        "onlineSales": "unclear",
+        "software": "unclear"
+      },
+      "status": "verified",
+      "noteKeys": ["floorUnknown", "energyInterviewRequired"],
+      "contact": {
+        "label": "Vallons de Haute-Bretagne Communauté, développement économique",
+        "phone": "02 99 57 03 80",
+        "email": "",
+        "url": "https://entreprendre.vallonsdehautebretagne.fr/le-pass-commerce-artisanat-developpez-votre-activite/"
+      },
+      "sourceUrl": "https://entreprendre.vallonsdehautebretagne.fr/le-pass-commerce-artisanat-developpez-votre-activite/",
+      "sourceDate": "2023-07-01",
+      "name": "Vallons de Haute-Bretagne Communauté",
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "243500667",
+      "department": "35",
+      "ratePercent": 30,
+      "floorHt": null,
+      "ceilingHt": 25000,
+      "maxAid": 7500,
+      "maxEmployees": 7,
+      "communeRule": "regionalCentrality",
+      "projects": {
+        "website": "unclear",
+        "onlineSales": "unclear",
+        "software": "unclear"
+      },
+      "status": "partial",
+      "noteKeys": ["floorUnknown", "rulesInPdfNotRead"],
+      "contact": {
+        "label": "Val d’Ille-Aubigné, via la CCI ou la CMA d’Ille-et-Vilaine",
+        "phone": "02 99 33 66 66",
+        "email": "",
+        "url": "https://www.valdille-aubigne.fr/economie/aides-entreprises/"
+      },
+      "sourceUrl": "https://www.valdille-aubigne.fr/economie/aides-entreprises/",
+      "sourceDate": "2026-02-04",
+      "name": "Val d'Ille-Aubigné",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "243500733",
+      "department": "35",
+      "ratePercent": 30,
+      "floorHt": 6000,
+      "ceilingHt": 25000,
+      "maxAid": 7500,
+      "maxEmployees": 7,
+      "communeRule": "regionalCentrality",
+      "projects": {
+        "website": "eligible",
+        "onlineSales": "eligible",
+        "software": "unclear"
+      },
+      "status": "verified",
+      "noteKeys": [],
+      "contact": {
+        "label": "Bretagne Romantique, développement économique",
+        "phone": "02 23 16 46 46",
+        "email": "entreprendre@bretagneromantique.fr",
+        "url": "https://bretagneromantique.fr/wp-content/uploads/2026/08/WEB-Plaquette-PCA.pdf"
+      },
+      "sourceUrl": "https://bretagneromantique.fr/wp-content/uploads/2026/08/WEB-Plaquette-PCA.pdf",
+      "sourceDate": "2026-08",
+      "name": "Bretagne Romantique",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "200070662",
+      "department": "35",
+      "ratePercent": 50,
+      "floorHt": 2000,
+      "ceilingHt": 15000,
+      "maxAid": 7500,
+      "maxEmployees": 7,
+      "communeRule": "all",
+      "projects": {
+        "website": "eligible",
+        "onlineSales": "eligible",
+        "software": "excluded"
+      },
+      "status": "verified",
+      "noteKeys": ["digitalStrandOnly", "subscriptionsExcluded", "cumulTwoYears"],
+      "contact": {
+        "label": "Bretagne Porte de Loire Communauté, aides économiques",
+        "phone": "",
+        "email": "aideseconomiques@bretagneportedeloire.fr",
+        "url": "https://entreprendre.bretagneportedeloire.fr/pass-commerce-artisanat-volet-numerique/"
+      },
+      "sourceUrl": "https://entreprendre.bretagneportedeloire.fr/pass-commerce-artisanat-volet-numerique/",
+      "sourceDate": "2026-10-11",
+      "name": "Bretagne Porte de Loire Communauté",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "243500725",
+      "department": "35",
+      "ratePercent": 30,
+      "floorHt": 6000,
+      "ceilingHt": 25000,
+      "maxAid": 7500,
+      "maxEmployees": 7,
+      "communeRule": "regionalCentrality",
+      "projects": {
+        "website": "eligible",
+        "onlineSales": "unclear",
+        "software": "unclear"
+      },
+      "status": "verified",
+      "noteKeys": ["twelveMonthsToInvest"],
+      "contact": {
+        "label": "Communauté de communes Côte d’Émeraude, service économie",
+        "phone": "02 23 15 13 15",
+        "email": "",
+        "url": "https://www.cote-emeraude.fr/le-pass-commerce-artisanat/"
+      },
+      "sourceUrl": "https://www.cote-emeraude.fr/le-pass-commerce-artisanat/",
+      "sourceDate": "2023-07-01",
+      "name": "Côte d'Emeraude",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "243500774",
+      "department": "35",
+      "ratePercent": 30,
+      "floorHt": 6000,
+      "ceilingHt": 25000,
+      "maxAid": 7500,
+      "maxEmployees": 7,
+      "communeRule": "regionalCentrality",
+      "projects": {
+        "website": "eligible",
+        "onlineSales": "unclear",
+        "software": "unclear"
+      },
+      "status": "verified",
+      "noteKeys": ["threeYearsBetweenRequests"],
+      "contact": {
+        "label": "Liffré-Cormier Communauté, développement économique",
+        "phone": "02 99 31 68 68",
+        "email": "economie@liffre-cormier.fr",
+        "url": "https://www.liffre-cormier.fr/entreprendre/creer-ou-reprendre-une-entreprise/"
+      },
+      "sourceUrl": "https://www.liffre-cormier.fr/wp-content/uploads/2023/07/Fiche-Pass-Commerce-Artisanat.pdf",
+      "sourceDate": "2023-07-01",
+      "name": "Liffré-Cormier Communauté",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "243500659",
+      "department": "35",
+      "ratePercent": 30,
+      "floorHt": null,
+      "ceilingHt": 25000,
+      "maxAid": 7500,
+      "maxEmployees": 7,
+      "communeRule": "regionalCentrality",
+      "projects": {
+        "website": "unclear",
+        "onlineSales": "unclear",
+        "software": "unclear"
+      },
+      "status": "partial",
+      "noteKeys": ["floorUnknown", "noRecentRulesPublished"],
+      "contact": {
+        "label": "Pays de Châteaugiron Communauté, via la CCI ou la CMA d’Ille-et-Vilaine",
+        "phone": "02 99 33 66 66",
+        "email": "",
+        "url": "https://les-aides.fr/aide/UIEv3w/region-bretagne/pass-commerce-et-artisanat.html"
+      },
+      "sourceUrl": "https://les-aides.fr/aide/UIEv3w/region-bretagne/pass-commerce-et-artisanat.html",
+      "sourceDate": "2025-07-21",
+      "name": "Pays de Châteaugiron Communauté",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "200038990",
+      "department": "35",
+      "ratePercent": 30,
+      "floorHt": null,
+      "ceilingHt": 25000,
+      "maxAid": 7500,
+      "maxEmployees": 7,
+      "communeRule": "regionalCentrality",
+      "projects": {
+        "website": "eligible",
+        "onlineSales": "unclear",
+        "software": "unclear"
+      },
+      "status": "partial",
+      "noteKeys": ["floorUnknown"],
+      "contact": {
+        "label": "Saint-Méen Montauban, développement économique",
+        "phone": "02 99 06 54 92",
+        "email": "economie@stmeen-montauban.fr",
+        "url": "https://stmeen-montauban.fr/laccompagnement-des-entreprises/"
+      },
+      "sourceUrl": "https://stmeen-montauban.fr/laccompagnement-des-entreprises/",
+      "sourceDate": "2026-10-11",
+      "name": "Saint-Méen Montauban",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "243500634",
+      "department": "35",
+      "ratePercent": 50,
+      "floorHt": 2000,
+      "ceilingHt": 15000,
+      "maxAid": 7500,
+      "maxEmployees": 7,
+      "communeRule": "regionalCentrality",
+      "projects": {
+        "website": "eligible",
+        "onlineSales": "eligible",
+        "software": "unclear"
+      },
+      "status": "partial",
+      "noteKeys": ["digitalStrandOnly", "listingNotOfficial"],
+      "contact": {
+        "label": "Roche aux Fées Communauté, Retiers",
+        "phone": "02 99 43 64 87",
+        "email": "",
+        "url": "https://mesaidespubliques.infogreffe.fr/aides/pass-numerique"
+      },
+      "sourceUrl": "https://mesaidespubliques.infogreffe.fr/aides/pass-numerique",
+      "sourceDate": "2026-10-11",
+      "name": "Roche aux Fées Communauté",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "243500550",
+      "department": "35",
+      "ratePercent": 30,
+      "floorHt": null,
+      "ceilingHt": 25000,
+      "maxAid": 7500,
+      "maxEmployees": 7,
+      "communeRule": "regionalCentrality",
+      "projects": {
+        "website": "eligible",
+        "onlineSales": "eligible",
+        "software": "unclear"
+      },
+      "status": "verified",
+      "noteKeys": ["floorUnknown"],
+      "contact": {
+        "label": "Montfort Communauté, Office de commerce",
+        "phone": "02 99 09 88 10",
+        "email": "",
+        "url": "https://entreprendre.montfortcommunaute.bzh/financement/pass-commerce-artisanat/"
+      },
+      "sourceUrl": "https://entreprendre.montfortcommunaute.bzh/financement/pass-commerce-artisanat/",
+      "sourceDate": "2026-10-11",
+      "name": "Montfort Communauté",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "200070670",
+      "department": "35",
+      "ratePercent": 30,
+      "floorHt": 6000,
+      "ceilingHt": 16666,
+      "maxAid": 5000,
+      "maxEmployees": 7,
+      "communeRule": "regionalCentrality",
+      "projects": {
+        "website": "eligible",
+        "onlineSales": "unclear",
+        "software": "unclear"
+      },
+      "status": "verified",
+      "noteKeys": ["creditsConsumed2025", "validUntil2028"],
+      "contact": {
+        "label": "Pays de Dol et de la Baie du Mont-Saint-Michel, développement économique",
+        "phone": "02 99 80 19 77",
+        "email": "entreprendre@ccdol-baiemsm.bzh",
+        "url": "https://www.ccdol-baiemsm.bzh/pass-commerce-et-artisanat/"
+      },
+      "sourceUrl": "https://www.ccdol-baiemsm.bzh/pass-commerce-et-artisanat/",
+      "sourceDate": "2026-10-11",
+      "name": "Pays de Dol et de la Baie du Mont-Saint-Michel",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "200070688",
+      "department": "35",
+      "ratePercent": 30,
+      "floorHt": null,
+      "ceilingHt": 25000,
+      "maxAid": 7500,
+      "maxEmployees": 7,
+      "communeRule": "regionalCentrality",
+      "projects": {
+        "website": "eligible",
+        "onlineSales": "unclear",
+        "software": "unclear"
+      },
+      "status": "partial",
+      "noteKeys": ["floorUnknown"],
+      "contact": {
+        "label": "Couesnon Marches de Bretagne, développement économique",
+        "phone": "",
+        "email": "",
+        "url": "https://www.couesnon-marchesdebretagne.fr/"
+      },
+      "sourceUrl": "https://www.couesnon-marchesdebretagne.fr/wp-content/uploads/2023/11/LE-MAG-N20-BD.pdf",
+      "sourceDate": "2023-11",
+      "name": "Couesnon Marches de Bretagne",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "243500618",
+      "department": "35",
+      "ratePercent": 30,
+      "floorHt": 3000,
+      "ceilingHt": 25000,
+      "maxAid": 7500,
+      "maxEmployees": 7,
+      "communeRule": "regionalCentrality",
+      "projects": {
+        "website": "unclear",
+        "onlineSales": "unclear",
+        "software": "unclear"
+      },
+      "status": "partial",
+      "noteKeys": ["endDateToConfirm"],
+      "contact": {
+        "label": "Brocéliande Communauté, développement économique",
+        "phone": "02 99 06 84 45",
+        "email": "",
+        "url": "https://www.cc-broceliande.bzh/les-services/leconomie/les-aides-aux-entreprises/"
+      },
+      "sourceUrl": "https://www.cc-broceliande.bzh/les-services/leconomie/les-aides-aux-entreprises/",
+      "sourceDate": "2025-11-03",
+      "name": "Brocéliande Communauté",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    },
+    {
+      "code": "242900314",
+      "department": "29",
+      "ratePercent": 30,
+      "floorHt": 6000,
+      "ceilingHt": 16666,
+      "maxAid": 5000,
+      "maxEmployees": 7,
+      "communeRule": "zonesOnly",
+      "projects": {
+        "website": "unclear",
+        "onlineSales": "unclear",
+        "software": "unclear"
+      },
+      "status": "partial",
+      "noteKeys": ["brestZonesOnly"],
+      "contact": {
+        "label": "Brest métropole, relations entreprises",
+        "phone": "02 98 33 50 50",
+        "email": "relations-entreprises@brest-metropole.fr",
+        "url": "https://brest.fr/sites/default/files/medias/brestfr/documents/professionnels/immobilier/Le%20G%C3%A9n%C3%A9rateur%20-%20Pass%20commerce%20et%20artisanat.pdf"
+      },
+      "sourceUrl": "https://brest.fr/sites/default/files/medias/brestfr/documents/professionnels/immobilier/Le%20G%C3%A9n%C3%A9rateur%20-%20Pass%20commerce%20et%20artisanat.pdf",
+      "sourceDate": "2026-10-11",
+      "name": "Brest Métropole",
+      "communeOverrides": [],
+      "qpvCommuneCode": null,
+      "maxTurnover": 1000000
+    }
+  ]
+}

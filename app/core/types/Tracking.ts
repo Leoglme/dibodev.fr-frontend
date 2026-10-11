@@ -4,6 +4,7 @@ import type {
   DibodevEstimatorProjectSize,
 } from '~/core/types/DibodevBudgetEstimator'
 import type { DibodevPhotoSlideshowNavigationMethod } from '~/core/types/DibodevPhotoSlideshow'
+import type { DibodevPublicAidProjectType, DibodevPublicAidStatus } from '~/core/types/DibodevPublicAid'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 /** Status of a contact form submission. */
@@ -61,5 +62,15 @@ export type TrackingEventPayloads = {
     slide: string
     method: DibodevPhotoSlideshowNavigationMethod
     location: string
+  }
+  [TRACKING_EVENTS.publicAidSimulatorStarted]: { location: string }
+  [TRACKING_EVENTS.publicAidSimulated]: {
+    location: string
+    department: string
+    territory: string
+    projectType: DibodevPublicAidProjectType
+    status: DibodevPublicAidStatus
+    amountHt: number
+    aidAmount: number
   }
 }

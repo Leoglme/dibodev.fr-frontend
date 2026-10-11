@@ -156,6 +156,40 @@ const AI_APP_CHECK_TEASER: DibodevToolTeaserContent = {
   },
 }
 
+const PUBLIC_AID_SIMULATOR_TEASER: DibodevToolTeaserContent = {
+  toolId: 'public-aid-simulator',
+  routeName: 'tools-public-aid-simulator',
+  icon: 'MapPin',
+  wording: {
+    fr: {
+      emphasizedIntro: `Votre commune peut financer 30 à 50 % de ce projet${NBSP}?`,
+      text: 'Le simulateur applique les règles du Pass Commerce et Artisanat des 18 intercommunalités d’Ille-et-Vilaine, et le cadre régional ailleurs en Bretagne : montant d’aide, reste à payer, points à confirmer, qui appeler.',
+      linkLabel: 'Simuler l’aide pour mon site ou mon logiciel',
+      listLabel: `Quelles aides pour financer mon site ou mon logiciel${NBSP}?`,
+      hubDescription: `Votre commune, votre projet, son montant${NBSP}: l’aide du Pass Commerce et Artisanat, le reste à payer et les points à confirmer avant de signer.`,
+      hubMeta: '6 réponses · 1 minute',
+    },
+    en: {
+      emphasizedIntro: 'Could your commune fund 30 to 50% of this project?',
+      text: 'The simulator applies the Pass Commerce et Artisanat rules of the 18 intercommunalités of Ille-et-Vilaine, and the regional frame elsewhere in Brittany: aid, what is left to pay, points to confirm, who to call.',
+      linkLabel: 'Simulate the aid for my website or software',
+      listLabel: 'Which aid can fund my website or software?',
+      hubDescription:
+        'Your commune, your project, its amount: the aid of the Pass Commerce et Artisanat, what is left to pay and the points to confirm before signing.',
+      hubMeta: '6 answers · 1 minute',
+    },
+    es: {
+      emphasizedIntro: '¿Tu municipio puede financiar del 30 al 50 % de este proyecto?',
+      text: 'El simulador aplica las reglas del Pass Commerce et Artisanat de las 18 mancomunidades de Ille-et-Vilaine, y el marco regional en el resto de Bretaña: ayuda, lo que queda por pagar, puntos a confirmar, a quién llamar.',
+      linkLabel: 'Simular la ayuda para mi web o mi software',
+      listLabel: '¿Qué ayudas pueden financiar mi web o mi software?',
+      hubDescription:
+        'Tu municipio, tu proyecto, su importe: la ayuda del Pass Commerce et Artisanat, lo que queda por pagar y los puntos a confirmar antes de firmar.',
+      hubMeta: '6 respuestas · 1 minuto',
+    },
+  },
+}
+
 export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserContent> = {
   'reprendre-application-vibe-coding': AI_APP_CHECK_TEASER,
   'application-metier-no-code-ia-limites': AI_APP_CHECK_TEASER,
@@ -163,6 +197,7 @@ export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserConte
   'logiciel-rdv-auto-ecole-reservation-en-ligne': DRIVING_SCHOOL_SOFTWARE_TEASER,
   'site-web-professionnel-atelier-reparation-velos-2026': BIKE_SHOP_SOFTWARE_TEASER,
   'garagiste-outil-sur-mesure-rendez-vous-devis-suivi-vehicules': AUTO_REPAIR_SHOP_SOFTWARE_TEASER,
+  'pass-commerce-artisanat-rennes-site-internet': PUBLIC_AID_SIMULATOR_TEASER,
 }
 
 export const TOOL_TEASERS_BY_PROJECT_SLUG: Record<string, DibodevToolTeaserContent> = {
@@ -177,4 +212,8 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   BIKE_SHOP_SOFTWARE_TEASER,
   AUTO_REPAIR_SHOP_SOFTWARE_TEASER,
   AI_APP_CHECK_TEASER,
+  PUBLIC_AID_SIMULATOR_TEASER,
 ]
+
+/** The public aid simulator, teased under the comparison of every trade tool page. */
+export const PUBLIC_AID_TEASER: DibodevToolTeaserContent = PUBLIC_AID_SIMULATOR_TEASER

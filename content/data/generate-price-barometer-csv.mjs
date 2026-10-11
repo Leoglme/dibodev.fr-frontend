@@ -8,7 +8,13 @@ const REPO = join(dirname(fileURLToPath(import.meta.url)), '..', '..')
 const edition = process.argv[2] ?? '2026'
 const dataset = JSON.parse(readFileSync(join(REPO, 'content', 'data', `price-barometer-${edition}.json`), 'utf8'))
 
-const KIND_LABELS = { agency: 'agence', freelance: 'freelance', platform: 'plateforme', media: 'média', directory: 'annuaire' }
+const KIND_LABELS = {
+  agency: 'agence',
+  freelance: 'freelance',
+  platform: 'plateforme',
+  media: 'média',
+  directory: 'annuaire',
+}
 const RANGE_KEYS = ['simpleTool', 'businessApp', 'platform', 'overall']
 const header = [
   'source',
