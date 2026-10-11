@@ -7309,9 +7309,9 @@
   },
   "blog/developpement-logiciel-b2b-sur-mesure-prix": {
     "title": "Desarrollo de software B2B a medida: ¿cuánto cuesta realmente?",
-    "excerpt": "¿Cuánto cuesta un software empresarial B2B a medida? Los verdaderos factores de precio, rangos concretos y las trampas que inflan la factura.",
+    "excerpt": "Los precios publicados por 14 proveedores franceses, mi posición en el mercado y el cálculo a cinco años frente a una suscripción.",
     "metaTitle": "Software empresarial B2B a medida: ¿cuánto cuesta realmente?",
-    "metaDescription": "Un software B2B a medida cuesta de 5.000 a 15.000 € para la mayoría de las herramientas de pymes. Los 5 factores del precio, las trampas y cómo pagar lo justo.",
+    "metaDescription": "Medianas publicadas por 14 proveedores franceses: 5.000 a 12.500 € para una herramienta sencilla, 13.500 a 50.000 € para una aplicación. Y dónde me sitúo.",
     "tags": [
       "desarrollo de software b2b",
       "software empresarial a medida",
@@ -7326,38 +7326,17 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Desde que desarrollo herramientas empresariales para empresas, la primera pregunta que surge es casi siempre la misma: «¿cuánto cuesta un software a medida?». La respuesta honesta, esa que a nadie le gusta dar, es: «depende». Pero «depende» no ayuda a nadie. Por eso aquí tienes los verdaderos factores que influyen en el precio, rangos concretos y los trampas que inflan la factura.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "heading",
-          "attrs": {
-            "level": 2
-          },
-          "content": [
-            {
-              "text": "¿Por qué no hay un precio fijo?",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "Un software B2B a medida, por definición, se adapta a TU forma de trabajar: tus etapas, tus reglas, tu vocabulario. Dos empresas del mismo sector casi nunca tienen la misma herramienta, y eso es justamente lo que le da valor. También es lo que hace que cada presupuesto sea único —mira la variedad de las ",
+              "text": "Desde que desarrollo herramientas empresariales para empresas, la primera pregunta que surge es casi siempre la misma: «¿cuánto cuesta un software a medida?». Durante mucho tiempo, respondí «depende», como todo el mundo. Ya no es una respuesta aceptable: en octubre de 2026, recopilé los precios que 14 agencias, freelancers y plataformas francesas publican en sus propias páginas, y los mantengo actualizados en un ",
               "type": "text"
             },
             {
-              "text": "aplicaciones empresariales a medida",
+              "text": "barómetro de precios del software a medida",
               "type": "text",
               "marks": [
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/es/proyectos/categoria/aplicacion-de-negocio",
+                    "href": "/prix-logiciel-sur-mesure",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -7365,16 +7344,7 @@
               ]
             },
             {
-              "text": " y verás que ninguna se parece a otra.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "Lo que compras no son líneas de código. Es tiempo: entender tu negocio, diseñar, desarrollar, probar, corregir, desplegar. El precio es ese tiempo multiplicado por una tarifa diaria.",
+              "text": ". Aquí está lo que dice y dónde me ubico dentro de él.",
               "type": "text"
             }
           ]
@@ -7386,7 +7356,177 @@
           },
           "content": [
             {
-              "text": "Los 5 factores que influyen en el precio",
+              "text": "Los tres rangos del mercado",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Los prestadores de servicios que publican sus precios los clasifican casi todos por tamaño del proyecto. Para cada tamaño, tomé la mediana de los precios mínimos y la mediana de los precios máximos, para que una o dos agencias muy caras no distorsionen todo hacia arriba.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Una herramienta sencilla o un MVP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (un calendario, un seguimiento de expedientes, un portal de clientes, una automatización): medianas publicadas de ",
+              "type": "text"
+            },
+            {
+              "text": "5.000 a 12.500 €",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". El precio mínimo más bajo registrado es de 2.500 €, y el máximo más alto, de 50.000 €.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Una aplicación empresarial completa",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (varios roles, un tablero de control, presupuestos o facturas, una o dos integraciones): ",
+              "type": "text"
+            },
+            {
+              "text": "13.500 a 50.000 €",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Una plataforma o un SaaS",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (espacio de clientes, pagos, escalabilidad, a veces una aplicación móvil): ",
+              "type": "text"
+            },
+            {
+              "text": "50.000 a 150.000 €",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", y a menudo más allá.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La fuente más fiable de los datos, La Fabrique du Net, no recopila páginas de precios, sino 184 presupuestos realmente comprometidos. Encuentra una mediana de 30.000 € para todos los proyectos juntos, 20.000 € para una aplicación empresarial, y una diferencia que nadie menciona en la primera reunión: 50.000 € de mediana en la región de Île-de-France frente a 15.000 € en el resto de Francia.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Mis precios, para situarlos",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Estoy dentro de la tabla, con las mismas reglas que los demás. Un sitio web corporativo comienza a 1.500 €, una automatización o una pequeña herramienta a 2.500 €, y la mayoría de los software de gestión que realizo para PYMES y pequeñas empresas se sitúan entre 5.000 y 15.000 € en paquete cerrado. Luego, el mantenimiento cuesta entre 100 y 300 € al mes, incluyendo alojamiento, copias de seguridad y pequeñas evoluciones. En régimen de jornada completa, son 400 € por día.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Por qué más barato que la mediana de las agencias? No porque trabaje rápido y mal. Porque un autónomo no tiene que financiar ni un comercial ni un jefe de proyecto, habla directamente con usted, y entrega por lotes: una primera versión útil en unas pocas semanas, luego el resto. Los tarifas por día trabajado lo confirman: 400 € en mi caso, 500 a 700 € en una agencia según Lonestone, y 800 a 1.000 € en Sokeo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Los cinco factores que influyen en el precio",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las fuentes coinciden en estos factores. Lo que varía es su peso en cada presupuesto.",
               "type": "text"
             }
           ]
@@ -7404,7 +7544,7 @@
               ]
             },
             {
-              "text": " Una herramienta que gestiona una sola cosa (un calendario, un seguimiento de expedientes) cuesta mucho menos que una plataforma que conecta presupuestos, facturación, inventario y clientes. Cada «y también…» añade días.",
+              "text": " Una herramienta que gestiona una sola cosa cuesta mucho menos que una plataforma que conecta presupuestos, facturación, stock y clientes. Cada «y también» añade días.",
               "type": "text"
             }
           ]
@@ -7422,7 +7562,7 @@
               ]
             },
             {
-              "text": " Una herramienta solo para ti es sencilla. En cuanto hay varios roles (administrador, empleado, cliente), permisos y varias personas al mismo tiempo, la complejidad sube un nivel.",
+              "text": " Una herramienta para tres personas es sencilla. Tan pronto como hay roles, permisos y muchas personas al mismo tiempo, la arquitectura pesa: Nocode Factory cuenta un 10 a 50 % más más allá de cien usuarios.",
               "type": "text"
             }
           ]
@@ -7440,7 +7580,7 @@
               ]
             },
             {
-              "text": " Conectarse a tu software de contabilidad, a una herramienta de pago o a una API externa: cada conexión es un proyecto en sí mismo, especialmente si el otro sistema es complicado.",
+              "text": " Contabilidad, pagos, API externa: cada conexión es un proyecto en sí mismo. Una integración sencilla se cuantifica entre 2.000 y 5.000 € en las agencias que la detallan.",
               "type": "text"
             }
           ]
@@ -7458,7 +7598,7 @@
               ]
             },
             {
-              "text": " Reutilizar tus datos actuales —suele ser una pila de archivos Excel— y adaptarlos correctamente al nuevo sistema lleva tiempo, y rara vez se incluye en el primer presupuesto.",
+              "text": " Tomar sus archivos Excel y hacer que entren correctamente en la nueva herramienta toma tiempo, y rara vez se cuantifica en el primer presupuesto. Yo lo incluyo en el mío.",
               "type": "text"
             }
           ]
@@ -7467,7 +7607,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "5. El nivel de acabado.",
+              "text": "5. El nivel de acabado y las pruebas.",
               "type": "text",
               "marks": [
                 {
@@ -7476,7 +7616,7 @@
               ]
             },
             {
-              "text": " Una herramienta interna usada por tres personas tolera algunos detalles ásperos. Una herramienta que verán tus clientes debe ser pulida, rápida e impecable en móvil. «Acabado» tiene su costo.",
+              "text": " Una herramienta interna para tres personas tolera algunas asperezas. Una herramienta que sus clientes utilizan debe estar cuidada y probada. La Fabrique du Net mide la diferencia: 25.000 € de mediana para desarrollo puro, 50.000 € cuando las pruebas están explícitamente previstas.",
               "type": "text"
             }
           ]
@@ -7488,7 +7628,7 @@
           },
           "content": [
             {
-              "text": "Rangos concretos",
+              "text": "¿Abono o a medida en cinco años?",
               "type": "text"
             }
           ]
@@ -7497,116 +7637,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Estas son mis tarifas, a precio cerrado. Órdenes de magnitud, no un presupuesto:",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "bullet_list",
-          "content": [
-            {
-              "type": "list_item",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "Una herramienta de gestión para una pyme",
-                      "type": "text",
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ]
-                    },
-                    {
-                      "text": " (planificación, stock, presupuestos, control horario): ",
-                      "type": "text"
-                    },
-                    {
-                      "text": "entre 5.000 y 15.000 €",
-                      "type": "text",
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ]
-                    },
-                    {
-                      "text": ". Una herramienta sencilla y enfocada (un solo oficio, un tipo de usuario, sin integración compleja) se queda en la parte baja del rango; varios roles, integraciones y un panel de control la hacen subir.",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "list_item",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "Una plataforma B2B",
-                      "type": "text",
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ]
-                    },
-                    {
-                      "text": " (multiusuario, espacio cliente, integraciones, escalabilidad): más allá, y se divide en lotes.",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "list_item",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "El mantenimiento",
-                      "type": "text",
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ]
-                    },
-                    {
-                      "text": ", una vez en marcha la herramienta: ",
-                      "type": "text"
-                    },
-                    {
-                      "text": "de 100 a 300 € al mes",
-                      "type": "text",
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ]
-                    },
-                    {
-                      "text": " según la herramienta.",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "Lo que importa no es la cifra absoluta, sino el retorno. Una herramienta que ahorra cinco horas por semana a tres personas se paga rápido.",
+              "text": "Un abono parece siempre más barato el primer año. En cinco años, los software de los cuatro oficios que he comparado (autoescuela, taller mecánico, taller de bicicletas, alquiler de material) cuestan entre 9 y 249 € al mes, es decir, entre 540 y 14.940 €. Una aplicación empresarial a medida en mi caso cuesta entre 11.000 y 33.000 € en el mismo período, mantenimiento incluido. En una agencia, tomando las medianas publicadas y un mantenimiento del 15 al 25 % anual, se llega a entre 23.600 y 112.500 €.",
               "type": "text"
             }
           ]
@@ -7615,17 +7646,17 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Son precios netos (IVA no aplicable), y el importe exacto se fija en el presupuesto antes de empezar. Para situar un proyecto, todo el detalle está en mi página de ",
+              "text": "La verdadera pregunta no es entonces «cuál es el más barato», sino «cuál se adapta a su forma de trabajar». Si un software del mercado hace el 80 % del trabajo y puede vivir con el 20 % restante, tómalo. Mis ",
               "type": "text"
             },
             {
-              "text": "software de gestión a medida en Rennes",
+              "text": "pruebas por oficio",
               "type": "text",
               "marks": [
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/es/software-de-gestion-a-medida-rennes",
+                    "href": "/outils",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -7633,7 +7664,7 @@
               ]
             },
             {
-              "text": ".",
+              "text": " lo explican en seis preguntas. La solución a medida se justifica cuando sus reglas, documentos u organización no encajan en ningún modelo estándar.",
               "type": "text"
             }
           ]
@@ -7651,76 +7682,64 @@
           ]
         },
         {
-          "type": "bullet_list",
+          "type": "paragraph",
           "content": [
             {
-              "type": "list_item",
-              "content": [
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "El alcance que se infla en el camino.",
+              "type": "text",
+              "marks": [
                 {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "El alcance que se infla en el camino.",
-                      "type": "text",
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ]
-                    },
-                    {
-                      "text": " La funcionalidad «rápido y extra» es el primer concepto de sobrecosto. Un buen proveedor delimita el alcance y pospone el resto para la fase 2.",
-                      "type": "text"
-                    }
-                  ]
+                  "type": "bold"
                 }
               ]
             },
             {
-              "type": "list_item",
-              "content": [
+              "text": " La funcionalidad « hecho rápido de más » es el primer punto de desbordamiento. Un buen proveedor delimita el primer lote y pospone el resto en la fase 2.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "La ambigüedad del inicio.",
+              "type": "text",
+              "marks": [
                 {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "La ambigüedad inicial.",
-                      "type": "text",
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ]
-                    },
-                    {
-                      "text": " Cuanto menos claro esté el besoin desde el principio, más se paga en idas y vueltas. Una breve fase de encuadre ahorra mucho.",
-                      "type": "text"
-                    }
-                  ]
+                  "type": "bold"
                 }
               ]
             },
             {
-              "type": "list_item",
-              "content": [
+              "text": " Cuanto menos claro esté el objetivo desde el principio, más se pagan idas y vueltas. Una breve fase de definición puede ahorrar mucho.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "La personalización donde bastaba con lo estándar.",
+              "type": "text",
+              "marks": [
                 {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "La personalización cuando bastaba con lo estándar.",
-                      "type": "text",
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ]
-                    },
-                    {
-                      "text": " A veces una herramienta existente cubre el 80 % del trabajo. Desarrollar esos 80 % es un desperdicio: solo se programa a medida lo que realmente los diferencia.",
-                      "type": "text"
-                    }
-                  ]
+                  "type": "bold"
                 }
               ]
+            },
+            {
+              "text": " Solo se programa a medida lo que realmente le diferencia.",
+              "type": "text"
             }
           ]
         },
@@ -7731,7 +7750,7 @@
           },
           "content": [
             {
-              "text": "Cómo pagar el precio justo",
+              "text": "Un ejemplo concreto",
               "type": "text"
             }
           ]
@@ -7740,7 +7759,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Cortar. Un primer lote útil y entregado es mejor que un proyecto perfecto que nunca termine. Lanzamos una primera versión que resuelve el problema principal, la usan en la práctica y luego añadimos lo que realmente importa — no lo que imaginamos al principio.",
+              "text": "Imaginemos a Nadia, quien dirige una empresa de limpieza con doce empleados. Ella quiere un calendario de intervenciones, el registro de equipos por teléfono y una exportación para la nómina. Tres pantallas, dos roles, una integración: es una aplicación completa de negocio, pero pequeña. En mi caso, este proyecto oscila entre 6.000 y 9.000 € en precio fijo, entregado en dos partes. Según el barómetro, la mediana de las agencias para este tamaño comienza en 13.500 €. No es que las agencias se equivoquen: ellas venden un equipo, pero Nadia solo necesita un desarrollador que conozca su sector.",
               "type": "text"
             }
           ]
@@ -7761,27 +7780,6 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "¿No es un suscripción SaaS más barata?",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "A menudo, al principio. Pero si la herramienta no se adapta a su actividad, paga una suscripción de por vida por un software que termina esquivando. La solución personalizada es una inversión que es suya.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
               "text": "¿Cuánto tiempo para una primera herramienta?",
               "type": "text",
               "marks": [
@@ -7794,28 +7792,7 @@
               "type": "hard_break"
             },
             {
-              "text": "Una herramienta enfocada suele entregarse en unas pocas semanas a unos meses, según el alcance. Dividir en lotes permite tener algo útil rápidamente.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "¿Hay que definir todo antes de empezar?",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "No. Hay que definir el primer lote con precisión y mantener el resto flexible. Querer congelar todo desde el principio cuesta más, no menos.",
+              "text": "Una herramienta enfocada se entrega en unas semanas, una aplicación de negocio completa en cinco a veinte semanas, por etapas. La primera versión útil llega mucho antes de que termine el proyecto.",
               "type": "text"
             }
           ]
@@ -7836,7 +7813,67 @@
               "type": "hard_break"
             },
             {
-              "text": "Un software evoluciona: correcciones, actualizaciones, mejoras. Hay que contar de 100 a 300 € al mes según la herramienta. Es el precio de una herramienta que sigue siendo confiable con el tiempo.",
+              "text": "Las agencias del barómetro anuncian un 10 a 25 % del precio inicial por año. Yo lo facturo en precio fijo, de 100 a 300 € al mes, y puede suspenderse cuando usted lo desee: el código y los datos son suyos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Hay que definir todo antes de empezar?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. Hay que definir el primer lote con precisión y mantener el resto flexible. Querer definir todo de antemano cuesta más caro, no menos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cómo obtener una estimación para mi proyecto?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "L'",
+              "type": "text"
+            },
+            {
+              "text": "estimador en tres preguntas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes#estimator",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " da un rango de inmediato. Luego, una conversación de treinta minutos, gratuita, lo convierte en un presupuesto fijo.",
               "type": "text"
             }
           ]
@@ -7848,7 +7885,7 @@
           },
           "content": [
             {
-              "text": "En resumen",
+              "text": "El precio justo es aquel que se puede verificar",
               "type": "text"
             }
           ]
@@ -7857,31 +7894,51 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El precio de un software B2B personalizado depende sobre todo del alcance, los usuarios, las integraciones y el nivel de terminación. La verdadera pregunta no es «¿cuánto cuesta?» sino «¿cuánto me hace ganar?». Y el buen reflejo es empezar pequeño, útil, y luego construir sobre eso.",
+              "text": "El precio de un software a medida depende del alcance, de los usuarios, de las integraciones y del acabado, pero también de quién responde y de dónde trabaja. El ",
+              "type": "text"
+            },
+            {
+              "text": "barómetro de precios",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " le da las cifras de 14 proveedores con un enlace a cada uno, para comparar un presupuesto con lo que el mercado realmente muestra. Y si prefiere hablar de su proyecto, le respondo en menos de 24 horas.",
               "type": "text"
             }
           ]
         },
         {
-          "type": "blok",
-          "attrs": {
-            "id": "6527f1c7-b2e0-4134-9dbe-7e945132baaf",
-            "body": [
-              {
-                "_uid": "i-af903619-6227-426f-88bd-5ad8d7f997ab",
-                "link": {
-                  "id": "",
-                  "url": "/contact",
-                  "linktype": "url",
-                  "fieldtype": "multilink",
-                  "cached_url": "/contact"
-                },
-                "label": "Hablar de mi proyecto",
-                "style": "primary",
-                "component": "cta_button"
-              }
-            ]
-          }
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "👉 ",
+              "type": "text"
+            },
+            {
+              "text": "Hablar de mi proyecto",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/contact",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

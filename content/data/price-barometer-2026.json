@@ -1,0 +1,206 @@
+{
+  "edition": 2026,
+  "checkedAt": "2026-10-11",
+  "license": "CC BY 4.0",
+  "currency": "EUR",
+  "sources": [
+    {
+      "key": "la-fabrique-du-net",
+      "name": "La Fabrique du Net",
+      "kind": "directory",
+      "city": "France entière",
+      "sourceUrl": "https://www.lafabriquedunet.fr/agences/pages/agences-developpement-logiciel/tarifs",
+      "publishedAt": "2026-06",
+      "ranges": {
+        "simpleTool": { "min": 8000, "max": 10000 },
+        "businessApp": { "min": 10000, "max": 50000 },
+        "platform": { "min": 25000, "max": 100000 }
+      },
+      "dayRate": null,
+      "maintenancePercentPerYear": null
+    },
+    {
+      "key": "lonestone",
+      "name": "Lonestone",
+      "kind": "agency",
+      "city": "Nantes",
+      "sourceUrl": "https://lonestone.io/blog/developpement-sur-mesure",
+      "publishedAt": "2026-04-13",
+      "ranges": {
+        "simpleTool": { "min": 15000, "max": 50000 },
+        "businessApp": { "min": 40000, "max": 150000 },
+        "platform": { "min": 80000, "max": 250000 }
+      },
+      "dayRate": { "min": 500, "max": 700 },
+      "maintenancePercentPerYear": { "min": 15, "max": 25 }
+    },
+    {
+      "key": "akelio",
+      "name": "Akelio",
+      "kind": "agency",
+      "city": "Le Mans",
+      "sourceUrl": "https://www.akelio.com/combien-coute-un-logiciel-sur-mesure",
+      "publishedAt": "2026",
+      "ranges": {
+        "simpleTool": { "min": 5000, "max": 15000 },
+        "businessApp": { "min": 20000, "max": 60000 },
+        "platform": { "min": 50000, "max": 150000 }
+      },
+      "dayRate": null,
+      "maintenancePercentPerYear": { "min": 15, "max": 25 }
+    },
+    {
+      "key": "anetmo",
+      "name": "Anetmo",
+      "kind": "agency",
+      "city": "Hem (Lille)",
+      "sourceUrl": "https://www.anetmo.com/2026/08/25/combien-coute-un-logiciel-metier-sur-mesure-le-guide-pour-estimer-votre-budget/",
+      "publishedAt": "2026-08-25",
+      "ranges": {
+        "simpleTool": { "min": 3000, "max": 8000 },
+        "businessApp": { "min": 8000, "max": 25000 },
+        "platform": { "min": 20000, "max": null }
+      },
+      "dayRate": null,
+      "maintenancePercentPerYear": null
+    },
+    {
+      "key": "nocode-factory",
+      "name": "Nocode Factory",
+      "kind": "agency",
+      "city": "Paris, Lyon, Marseille",
+      "sourceUrl": "https://www.nocodefactory.fr/blog/combien-coute-developpement-outil-metier-sur-mesure",
+      "publishedAt": "2026-04-21",
+      "ranges": {
+        "simpleTool": { "min": 5000, "max": 15000 },
+        "businessApp": { "min": 20000, "max": 50000 },
+        "platform": { "min": 50000, "max": 100000 }
+      },
+      "dayRate": null,
+      "maintenancePercentPerYear": { "min": 10, "max": 15 }
+    },
+    {
+      "key": "fenxi",
+      "name": "Fenxi",
+      "kind": "agency",
+      "city": "Maisons-Alfort (Paris)",
+      "sourceUrl": "https://fenxi.fr/blog/prix-application-sur-mesure-pme/",
+      "publishedAt": "2026-09-03",
+      "ranges": {
+        "simpleTool": { "min": 10000, "max": 30000 },
+        "businessApp": { "min": 30000, "max": 80000 },
+        "platform": { "min": 60000, "max": 150000 }
+      },
+      "dayRate": null,
+      "maintenancePercentPerYear": { "min": 10, "max": 20 }
+    },
+    {
+      "key": "digitiz",
+      "name": "Digitiz (avec l'agence ID Interactive)",
+      "kind": "media",
+      "city": "France entière",
+      "sourceUrl": "https://digitiz.fr/prix-application-web-sur-mesure-pme/",
+      "publishedAt": "2026-05-27",
+      "ranges": {
+        "simpleTool": { "min": 3000, "max": 10000 },
+        "businessApp": { "min": 10000, "max": 40000 },
+        "platform": { "min": 30000, "max": 300000 }
+      },
+      "dayRate": null,
+      "maintenancePercentPerYear": null
+    },
+    {
+      "key": "sokeo",
+      "name": "Sokeo",
+      "kind": "agency",
+      "city": "Marseille",
+      "sourceUrl": "https://sokeo.fr/logiciel-sur-mesure/",
+      "publishedAt": "2026",
+      "ranges": {
+        "simpleTool": { "min": 9000, "max": 15000 },
+        "businessApp": { "min": 17000, "max": 68000 },
+        "platform": { "min": 69000, "max": 128000 }
+      },
+      "dayRate": { "min": 800, "max": 1000 },
+      "maintenancePercentPerYear": null
+    },
+    {
+      "key": "appminds",
+      "name": "Appminds",
+      "kind": "agency",
+      "city": "Rennes",
+      "sourceUrl": "https://appminds.fr/blog/combien-coute-un-logiciel-metier-sur-mesure",
+      "publishedAt": "2026-08-25",
+      "ranges": {
+        "simpleTool": { "min": 5000, "max": null }
+      },
+      "dayRate": null,
+      "maintenancePercentPerYear": null
+    },
+    {
+      "key": "velyria",
+      "name": "Velyria",
+      "kind": "freelance",
+      "city": "Chartres",
+      "sourceUrl": "https://velyria.fr/blog-prix-logiciel-sur-mesure.html",
+      "publishedAt": "2026-09-29",
+      "ranges": {
+        "simpleTool": { "min": 3746, "max": 3746 },
+        "businessApp": { "min": 7766, "max": 7766 }
+      },
+      "dayRate": null,
+      "maintenancePercentPerYear": null
+    },
+    {
+      "key": "aktislab",
+      "name": "Aktislab",
+      "kind": "agency",
+      "city": "Lyon",
+      "sourceUrl": "https://www.aktislab.fr/articles/combien-coute-logiciel-metier-sur-mesure",
+      "publishedAt": "2026",
+      "ranges": {
+        "overall": { "min": 5000, "max": 200000 }
+      },
+      "dayRate": null,
+      "maintenancePercentPerYear": null
+    },
+    {
+      "key": "codeur",
+      "name": "Codeur.com",
+      "kind": "platform",
+      "city": "France entière",
+      "sourceUrl": "https://www.codeur.com/pages/combien-coute-developpement-logiciel",
+      "publishedAt": "2025",
+      "ranges": {
+        "overall": { "min": 500, "max": 5000 }
+      },
+      "dayRate": { "min": 190, "max": 275 },
+      "maintenancePercentPerYear": null
+    },
+    {
+      "key": "malt",
+      "name": "Malt",
+      "kind": "platform",
+      "city": "France entière",
+      "sourceUrl": "https://www.malt.fr/t/barometre-tarifs/tech",
+      "publishedAt": "2026",
+      "ranges": {},
+      "dayRate": { "min": 317, "max": 672 },
+      "maintenancePercentPerYear": null
+    },
+    {
+      "key": "dibodev",
+      "name": "Dibodev (Léo Guillaume)",
+      "kind": "freelance",
+      "city": "Rennes",
+      "sourceUrl": "https://dibodev.fr/application-metier-sur-mesure-rennes",
+      "publishedAt": "2026-09-30",
+      "ranges": {
+        "simpleTool": { "min": 2500, "max": 5000 },
+        "businessApp": { "min": 5000, "max": 15000 }
+      },
+      "dayRate": { "min": 400, "max": 400 },
+      "maintenancePercentPerYear": null
+    }
+  ]
+}

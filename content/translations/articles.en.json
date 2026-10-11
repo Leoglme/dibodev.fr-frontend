@@ -7309,14 +7309,14 @@
   },
   "blog/developpement-logiciel-b2b-sur-mesure-prix": {
     "title": "Custom B2B Software Development: What Does It Really Cost?",
-    "excerpt": "How much does a custom B2B business software solution actually cost? The real pricing factors, concrete cost ranges, and the pitfalls that drive up the bill.",
+    "excerpt": "Published pricing from 14 French service providers, where I stand in comparison, and a five-year cost calculation versus a subscription model.",
     "metaTitle": "Custom B2B Business Software: What Does It Really Cost?",
-    "metaDescription": "Custom B2B business software costs €5,000 to €15,000 for most SME tools. The 5 price factors, the traps to avoid, and how to pay the right price.",
+    "metaDescription": "Median pricing from 14 French providers: €5,000 to €12,500 for a basic tool, €13,500 to €50,000 for a custom business application. Where I stand—and why.",
     "tags": [
       "custom b2b software development",
       "tailored business software",
       "custom software pricing",
-      "b2b application",
+      "b2b application development",
       "enterprise software"
     ],
     "content": {
@@ -7326,38 +7326,17 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Since I’ve been developing custom business tools for companies, the first question I almost always get is the same: \"How much does a custom software solution cost?\" The honest answer—the one no one likes to give—is: it depends. But \"it depends\" doesn’t help anyone. So here are the real factors that determine the price, concrete ranges, and the pitfalls that can inflate the bill.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "heading",
-          "attrs": {
-            "level": 2
-          },
-          "content": [
-            {
-              "text": "Why there’s no fixed price",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "A custom B2B software solution, by definition, fits YOUR way of working: your processes, your rules, your terminology. Two companies in the same industry almost never end up with the same tool—and that’s exactly what makes it valuable. It’s also what makes every quote unique—just look at the variety of ",
+              "text": "Since I’ve been developing custom business tools for companies, the first question I almost always get is the same: \"How much does a custom software solution cost?\" For a long time, I answered \"it depends,\" just like everyone else. That’s no longer an acceptable answer: in October 2026, I gathered the prices listed by 14 French agencies, freelancers, and platforms on their own websites, and I keep them updated in a ",
               "type": "text"
             },
             {
-              "text": "custom business applications",
+              "text": "custom software pricing benchmark",
               "type": "text",
               "marks": [
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/en/projects/category/business-app",
+                    "href": "/prix-logiciel-sur-mesure",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -7365,16 +7344,7 @@
               ]
             },
             {
-              "text": " , and you’ll see that none of them are alike.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "What you’re buying isn’t lines of code. It’s time: understanding your business, designing, developing, testing, fixing, and deploying. The price is that time multiplied by a daily rate.",
+              "text": ". Here’s what it shows, and where I stand within it.",
               "type": "text"
             }
           ]
@@ -7386,7 +7356,177 @@
           },
           "content": [
             {
-              "text": "The 5 Factors That Determine the Price",
+              "text": "The Three Market Price Ranges",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The service providers who publish their prices almost all categorize them by project size. For each size, I took the median of the lowest prices and the median of the highest prices, so that one or two very expensive agencies don’t skew everything upward.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "A simple tool or an MVP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (a scheduler, a case tracker, a customer portal, an automation): published medians range from ",
+              "type": "text"
+            },
+            {
+              "text": "5,000 to 12,500 €",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". The lowest floor price recorded is 2,500 €, and the highest ceiling is 50,000 €.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "A full-fledged business application",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (multiple roles, a dashboard, quotes or invoices, one or two integrations): ",
+              "type": "text"
+            },
+            {
+              "text": "13,500 to 50,000 €",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "A platform or a SaaS",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (customer space, payments, scalability, sometimes a mobile app): ",
+              "type": "text"
+            },
+            {
+              "text": "50,000 to 150,000 €",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", and often more.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The most reliable source, La Fabrique du Net, does not compile price pages but rather 184 actual budgets. It finds a median cost of €30,000 for all projects combined, €20,000 for a business application, and a gap no one mentions at your first meeting: a median of €50,000 in Île-de-France versus €15,000 in the rest of France.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "My pricing, to give you an idea",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I fit into the table with the same rules as everyone else. A basic website starts at €1,500, automation or a small tool at €2,500, and most of the management software I create for SMEs and small businesses range between €5,000 and €15,000 as a fixed price. After that, maintenance costs between €100 and €300 per month, including hosting, backups, and minor updates. In hourly rates, it’s €400 per day.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why cheaper than the agency median? Not because I work fast and poorly. Because a freelancer doesn’t have to fund a sales team or a project manager, talks directly with you, and delivers in stages: a first useful version in a few weeks, then the rest. Published daily rates confirm this: €400 with me, €500 to €700 for an agency according to Lonestone, and €800 to €1,000 at Sokeo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The five factors that determine the price",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The sources agree on these factors. It’s their weight in each quote that varies.",
               "type": "text"
             }
           ]
@@ -7404,7 +7544,7 @@
               ]
             },
             {
-              "text": " A tool that handles just one thing (a schedule, a case tracker) costs far less than a platform that connects quotes, invoicing, inventory, and customers. Every \"and also…\" adds days.",
+              "text": " A tool that handles one task costs far less than a platform that connects quotes, invoicing, inventory, and clients. Every ‘and also’ adds days.",
               "type": "text"
             }
           ]
@@ -7422,7 +7562,7 @@
               ]
             },
             {
-              "text": " A tool for just you is simple. As soon as there are multiple roles (admin, employee, client), permissions, and several people using it at once, complexity jumps up a notch.",
+              "text": " A tool for three people is simple. As soon as there are roles, permissions, and many people using it at once, the architecture becomes complex: Nocode Factory estimates 10 to 50% more beyond 100 users.",
               "type": "text"
             }
           ]
@@ -7440,7 +7580,7 @@
               ]
             },
             {
-              "text": " Connecting to your accounting software, a payment tool, or an external API: each connection is a project in itself, especially if the other system is finicky.",
+              "text": " Accounting, payments, external APIs: each connection is a project in itself. A simple integration costs €2,000 to €5,000 at agencies that detail it.",
               "type": "text"
             }
           ]
@@ -7458,7 +7598,7 @@
               ]
             },
             {
-              "text": " Taking your current data—often a pile of Excel files—and cleaning it up to fit neatly into the new tool takes time, and it’s rarely factored into the first quote.",
+              "text": " Importing your Excel files cleanly into the new tool takes time and is rarely included in the first quote. I include it in mine.",
               "type": "text"
             }
           ]
@@ -7467,7 +7607,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "5. The level of polish.",
+              "text": "5. Level of polish and testing.",
               "type": "text",
               "marks": [
                 {
@@ -7476,7 +7616,7 @@
               ]
             },
             {
-              "text": " An internal tool used by three people can tolerate a few rough edges. A tool your clients will see must be sleek, fast, and flawless on mobile. \"Finished\" comes at a cost.",
+              "text": " An internal tool for three people can tolerate some rough edges. A tool your clients use must be refined and thoroughly tested. La Fabrique du Net measures the difference: a median of €25,000 for pure development, €50,000 when testing is explicitly planned.",
               "type": "text"
             }
           ]
@@ -7488,7 +7628,7 @@
           },
           "content": [
             {
-              "text": "Concrete Price Ranges",
+              "text": "Over five years: subscription or custom?",
               "type": "text"
             }
           ]
@@ -7497,116 +7637,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Here are my prices, on a fixed-price basis. Ballpark figures, not a quote:",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "bullet_list",
-          "content": [
-            {
-              "type": "list_item",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "A business tool for a small or mid-sized company",
-                      "type": "text",
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ]
-                    },
-                    {
-                      "text": " (scheduling, inventory, quotes, time tracking): ",
-                      "type": "text"
-                    },
-                    {
-                      "text": "between €5,000 and €15,000",
-                      "type": "text",
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ]
-                    },
-                    {
-                      "text": ". A simple, targeted tool (one trade, one type of user, no heavy integration) stays at the low end of the range; several roles, integrations and a dashboard push it up.",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "list_item",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "A B2B platform",
-                      "type": "text",
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ]
-                    },
-                    {
-                      "text": " (multi-user, customer space, integrations, scalability): beyond that, and it’s split into phases.",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "list_item",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "Maintenance",
-                      "type": "text",
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ]
-                    },
-                    {
-                      "text": ", once the tool is live: ",
-                      "type": "text"
-                    },
-                    {
-                      "text": "€100 to €300 per month",
-                      "type": "text",
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ]
-                    },
-                    {
-                      "text": ", depending on the tool.",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "What matters isn’t the absolute number—it’s the return. A tool that saves three people five hours a week pays for itself quickly.",
+              "text": "A subscription always seems cheaper in the first year. Over five years, the software for the four professions I compared (driving school, garage, bike workshop, equipment rental) costs €9 to €249 per month, or €540 to €14,940 in total. A custom business application with me costs €11,000 to €33,000 over the same period, including maintenance. At an agency, using published medians and maintenance costs of 15 to 25% per year, you’re looking at €23,600 to €112,500.",
               "type": "text"
             }
           ]
@@ -7615,17 +7646,17 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "These prices are net (VAT not applicable), and the exact amount is set in the quote before we start. To size your project, everything is explained on my ",
+              "text": "The real question isn’t ‘which is the cheapest’ but ‘which fits your way of working.’ If an off-the-shelf software handles 80% of your needs and you can live with the remaining 20%, take it. My ",
               "type": "text"
             },
             {
-              "text": "custom business software in Rennes",
+              "text": "tests by industry",
               "type": "text",
               "marks": [
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/en/custom-business-software-rennes",
+                    "href": "/outils",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -7633,7 +7664,7 @@
               ]
             },
             {
-              "text": " page.",
+              "text": " They tell you in six questions. Customization is justified when your rules, documents, or organization don’t fit into any standard category.",
               "type": "text"
             }
           ]
@@ -7645,93 +7676,7 @@
           },
           "content": [
             {
-              "text": "The pitfalls that blow up the bill",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "bullet_list",
-          "content": [
-            {
-              "type": "list_item",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "The scope that grows along the way.",
-                      "type": "text",
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ]
-                    },
-                    {
-                      "text": " The ‘quick extra feature’ is the first item to exceed the budget. A good provider defines the scope and pushes the rest to Phase 2.",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "list_item",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "The initial ambiguity.",
-                      "type": "text",
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ]
-                    },
-                    {
-                      "text": " The less clear the need is from the start, the more back-and-forth—and cost—you’ll pay. A short scoping phase saves big.",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "list_item",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "Custom work when off-the-shelf would suffice.",
-                      "type": "text",
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ]
-                    },
-                    {
-                      "text": " Sometimes an existing tool covers 80% of the work. Coding those 80% from scratch is wasteful: you only customize what truly differentiates you.",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "heading",
-          "attrs": {
-            "level": 2
-          },
-          "content": [
-            {
-              "text": "How to pay the right price",
+              "text": "The traps that blow up the bill",
               "type": "text"
             }
           ]
@@ -7740,7 +7685,60 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Ship early. A first useful and delivered batch is better than a perfect project that never finishes. Release an initial version that solves the main problem, use it in real life, and then add what truly matters — not what you initially imagined.",
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "The scope that grows along the way.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The ‘quick extra feature’ is the first cause of budget overruns. A good service provider frames the initial scope and pushes the rest to Phase 2.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "The initial ambiguity.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The less clear the need is from the start, the more you pay for back-and-forth adjustments. A short framing phase saves you a lot.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Custom development where off-the-shelf would suffice.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " You should only develop custom solutions for what truly differentiates you.",
               "type": "text"
             }
           ]
@@ -7752,7 +7750,7 @@
           },
           "content": [
             {
-              "text": "FAQ",
+              "text": "A concrete example",
               "type": "text"
             }
           ]
@@ -7761,7 +7759,28 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Isn’t a SaaS subscription cheaper?",
+              "text": "Let’s imagine Nadia, who runs a cleaning company with twelve employees. She wants a scheduling system for interventions, team check-ins via phone, and an export feature for payroll. Three screens, two user roles, one integration: it’s a complete business application, but small. For me, this project falls between 6,000 and 9,000 euros all-inclusive, delivered in two phases. In the benchmark, the median price from agencies for this size starts at 13,500 euros. It’s not that agencies are wrong: they sell a team, but Nadia only needs a developer who understands her industry.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently asked questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How long does it take to create a first tool?",
               "type": "text",
               "marks": [
                 {
@@ -7773,49 +7792,7 @@
               "type": "hard_break"
             },
             {
-              "text": "Often, at first. But if the tool doesn’t fit your business, you’re paying a lifetime subscription for software you’ll have to work around. Customization is an investment that’s yours to keep.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "How long does it take to get a first tool?",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "A targeted tool is often delivered in a few weeks to a few months, depending on the scope. Breaking the project into batches lets you have something useful quickly.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "Do you need to define everything before starting?",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "type": "hard_break"
-            },
-            {
-              "text": "No. Define the first batch precisely and keep the rest flexible. Trying to lock everything down upfront costs more, not less.",
+              "text": "A targeted tool can be delivered in a few weeks, while a complete business application takes five to twenty weeks, delivered in stages. The first usable version arrives long before the project ends.",
               "type": "text"
             }
           ]
@@ -7836,7 +7813,67 @@
               "type": "hard_break"
             },
             {
-              "text": "Software evolves: fixes, updates, enhancements. Count on €100 to €300 per month, depending on the tool. It’s the cost of keeping your tool reliable over time.",
+              "text": "Agencies in the benchmark charge 10 to 25% of the initial price annually for maintenance. I charge a flat fee of 100 to 300 euros per month, and you can stop whenever you want: the code and data are yours.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Do you need to define everything before starting?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. You should precisely define the first phase and keep the rest flexible. Trying to lock everything down upfront costs more, not less.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How to get a quote for your project?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "The",
+              "type": "text"
+            },
+            {
+              "text": "estimator in three questions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes#estimator",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " gives you an immediate range. Then, a free 30-minute discussion turns it into a fixed-price quote.",
               "type": "text"
             }
           ]
@@ -7848,7 +7885,7 @@
           },
           "content": [
             {
-              "text": "In summary",
+              "text": "The right price is one you can verify.",
               "type": "text"
             }
           ]
@@ -7857,31 +7894,51 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The cost of a custom B2B software depends mainly on the scope, users, integrations, and finish level. The real question isn’t ‘how much does it cost?’ but ‘how much does it save me?’ And the best approach? Start small, stay useful, then build from there.",
+              "text": "The price of a custom software solution depends on the scope, users, integrations, and finish, but also on who responds and where they work. The ",
+              "type": "text"
+            },
+            {
+              "text": "price benchmark",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " gives you the figures from 14 providers, along with a link to each, so you can compare a quote to what the market actually offers. And if you prefer to discuss your project, I’ll get back to you within 24 hours.",
               "type": "text"
             }
           ]
         },
         {
-          "type": "blok",
-          "attrs": {
-            "id": "6527f1c7-b2e0-4134-9dbe-7e945132baaf",
-            "body": [
-              {
-                "_uid": "i-af903619-6227-426f-88bd-5ad8d7f997ab",
-                "link": {
-                  "id": "",
-                  "url": "/contact",
-                  "linktype": "url",
-                  "fieldtype": "multilink",
-                  "cached_url": "/contact"
-                },
-                "label": "Discuss my project",
-                "style": "primary",
-                "component": "cta_button"
-              }
-            ]
-          }
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "→ ",
+              "type": "text"
+            },
+            {
+              "text": "Discuss my project",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/contact",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

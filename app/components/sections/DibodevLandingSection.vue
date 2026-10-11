@@ -22,10 +22,10 @@
       >
         <div
           class="grid max-w-3xl gap-8"
-          :class="isCentered ? 'mx-auto justify-items-center text-center' : ''"
+          :class="isCentered ? 'mx-auto w-full min-w-0 grid-cols-[minmax(0,1fr)] justify-items-center text-center' : ''"
           data-aos="fade-up"
         >
-          <div class="grid gap-5" :class="isCentered ? 'justify-items-center' : ''">
+          <div class="grid gap-5" :class="isCentered ? 'grid-cols-[minmax(0,1fr)] justify-items-center' : ''">
             <DibodevBreadcrumb v-if="props.breadcrumbs.length > 0" :items="props.breadcrumbs" />
             <p v-if="props.eyebrow" class="text-muted text-xs font-medium tracking-[0.08em] uppercase">
               {{ props.eyebrow }}
