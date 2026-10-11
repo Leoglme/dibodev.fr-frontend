@@ -4471,6 +4471,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Los precios de cada tipo de proyecto (sitio web, aplicación móvil, software de gestión, automatización) están en mi página "
+            },
+            {
+              "type": "text",
+              "text": "desarrollador web freelance en Rennes",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/desarrollador-web-freelance-rennes",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -5205,6 +5234,35 @@
             {
               "text": "Rennes tiene un ecosistema tecnológico denso, con buenos freelances y buenas agencias. Tiene opciones —aprovéchalas para conocer a ambos perfiles antes de decidir. Una simple llamada por videollamada le dará más información sobre la persona que construirá su herramienta que tres presupuestos en PDF.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Si quieres ver cómo es del lado freelance, mi página "
+            },
+            {
+              "type": "text",
+              "text": "desarrollador web freelance en Rennes",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/desarrollador-web-freelance-rennes",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " detalla los servicios, los precios y la forma de trabajar."
             }
           ]
         },
@@ -9528,6 +9586,35 @@
             {
               "text": ".",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Mi oferta para las empresas de Rennes, con los precios de cada tipo de proyecto, está detallada en la página "
+            },
+            {
+              "type": "text",
+              "text": "desarrollador web freelance en Rennes",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/desarrollador-web-freelance-rennes",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
             }
           ]
         },

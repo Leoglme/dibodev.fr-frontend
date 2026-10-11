@@ -4471,6 +4471,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "The prices of each kind of project (website, mobile app, management software, automation) are on my "
+            },
+            {
+              "type": "text",
+              "text": "freelance web developer in Rennes",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/en/freelance-web-developer-rennes",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " page."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -5205,6 +5234,35 @@
             {
               "text": "Rennes has a dense tech ecosystem, with great freelancers and solid agencies. You have options—take advantage of them to meet both profiles before deciding. A simple video call will tell you more about the person who will build your tool than three PDF quotes ever could.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "If you want to see what it looks like on the freelance side, my "
+            },
+            {
+              "type": "text",
+              "text": "freelance web developer in Rennes",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/en/freelance-web-developer-rennes",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " page details the services, the prices and the way I work."
             }
           ]
         },
@@ -9528,6 +9586,35 @@
             {
               "text": ".",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "My offer for businesses in Rennes, with the prices of each kind of project, is detailed on the "
+            },
+            {
+              "type": "text",
+              "text": "freelance web developer in Rennes",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/en/freelance-web-developer-rennes",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " page."
             }
           ]
         },
