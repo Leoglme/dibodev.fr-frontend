@@ -13,7 +13,7 @@ import { NBSP } from '~/core/constants/typography'
 export const AUTO_REPAIR_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   meta: {
     title: `Logiciel garage automobile${NBSP}: facturation, devis et prix 2026`,
-    description: `Logiciel de garage ou d’atelier mécanique${NBSP}: facturation, devis, ordres de réparation, prix 2026 (Gest’Garage, AutoProGestion, Kwixéo…) et test gratuit.`,
+    description: `Gest’Garage, AutoProGestion, TDV, Kwixéo${NBSP}: les prix 2026 des logiciels de garage, ce que chacun gère, et un test gratuit en 6 questions pour choisir le vôtre.`,
     inLanguage: 'fr-FR',
     schemaAbout: 'Logiciel de gestion de garage automobile',
   },
