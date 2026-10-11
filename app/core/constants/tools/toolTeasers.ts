@@ -1,4 +1,5 @@
 import type { DibodevToolTeaserContent } from '~/core/types/DibodevToolTeaser'
+import { AI_APP_CHECK_QUIZ_ID } from '~/core/constants/aiAppCheckQuiz'
 import { NBSP } from '~/core/constants/typography'
 
 const DRIVING_SCHOOL_SOFTWARE_TEASER: DibodevToolTeaserContent = {
@@ -122,7 +123,42 @@ const AUTO_REPAIR_SHOP_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
+const AI_APP_CHECK_TEASER: DibodevToolTeaserContent = {
+  toolId: AI_APP_CHECK_QUIZ_ID,
+  routeName: 'ai-app-takeover',
+  icon: 'ShieldCheck',
+  wording: {
+    fr: {
+      emphasizedIntro: `Votre application a été faite avec Lovable, Bolt ou une autre IA${NBSP}?`,
+      text: 'En 8 questions, le test vous dit si elle tient la route : niveau de risque, points à vérifier en premier et formule adaptée, de l’audit gratuit à la reprise.',
+      linkLabel: `Faire le test${NBSP}: mon application IA tient-elle la route${NBSP}?`,
+      listLabel: `Mon application faite avec l’IA tient-elle la route${NBSP}?`,
+      hubDescription: `Données, accès, code, sauvegardes${NBSP}: le niveau de risque de votre application générée par l’IA, et par où commencer.`,
+      hubMeta: '8 questions · 2 minutes',
+    },
+    en: {
+      emphasizedIntro: 'Was your app built with Lovable, Bolt or another AI?',
+      text: 'In 8 questions, the test tells you whether it is solid enough: risk level, points to check first and the right formula, from the free audit to the takeover.',
+      linkLabel: 'Take the test: is my AI-built app solid enough?',
+      listLabel: 'Is my AI-built app solid enough?',
+      hubDescription: 'Data, access, code, backups: the risk level of your AI-generated app, and where to start.',
+      hubMeta: '8 questions · 2 minutes',
+    },
+    es: {
+      emphasizedIntro: '¿Tu aplicación se hizo con Lovable, Bolt u otra IA?',
+      text: 'En 8 preguntas, el test te dice si se sostiene: nivel de riesgo, puntos a revisar primero y fórmula adecuada, de la auditoría gratuita a la recuperación.',
+      linkLabel: 'Hacer el test: ¿mi aplicación hecha con IA se sostiene?',
+      listLabel: '¿Mi aplicación hecha con IA se sostiene?',
+      hubDescription:
+        'Datos, accesos, código, copias de seguridad: el nivel de riesgo de tu aplicación generada por IA, y por dónde empezar.',
+      hubMeta: '8 preguntas · 2 minutos',
+    },
+  },
+}
+
 export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserContent> = {
+  'reprendre-application-vibe-coding': AI_APP_CHECK_TEASER,
+  'application-metier-no-code-ia-limites': AI_APP_CHECK_TEASER,
   'logiciel-gestion-auto-ecole-planning-eleves-heures': DRIVING_SCHOOL_SOFTWARE_TEASER,
   'logiciel-rdv-auto-ecole-reservation-en-ligne': DRIVING_SCHOOL_SOFTWARE_TEASER,
   'site-web-professionnel-atelier-reparation-velos-2026': BIKE_SHOP_SOFTWARE_TEASER,
@@ -134,10 +170,11 @@ export const TOOL_TEASERS_BY_PROJECT_SLUG: Record<string, DibodevToolTeaserConte
   stockpme: EVENT_RENTAL_SOFTWARE_TEASER,
 }
 
-/** Every trade test, listed together on the business software page. */
+/** Every test, listed together on the business software page and the tools hub. */
 export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   DRIVING_SCHOOL_SOFTWARE_TEASER,
   EVENT_RENTAL_SOFTWARE_TEASER,
   BIKE_SHOP_SOFTWARE_TEASER,
   AUTO_REPAIR_SHOP_SOFTWARE_TEASER,
+  AI_APP_CHECK_TEASER,
 ]

@@ -137,7 +137,7 @@ const toolCards: ComputedRef<DibodevFreeToolCard[]> = computed((): DibodevFreeTo
       title: teaser.wording[locale.value as SupportedLocale]?.listLabel ?? '',
       description: teaser.wording[locale.value as SupportedLocale]?.hubDescription ?? '',
       icon: teaser.icon,
-      meta: t('toolsHubPage.cards.test.meta'),
+      meta: teaser.wording[locale.value as SupportedLocale]?.hubMeta ?? t('toolsHubPage.cards.test.meta'),
       linkLabel: t('toolsHubPage.cards.test.link'),
       to: localePath({ name: teaser.routeName }),
       toolId: teaser.toolId,

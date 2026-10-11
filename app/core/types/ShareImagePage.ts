@@ -4,6 +4,7 @@ export type ShareImagePage =
   | 'contact'
   | 'businessSoftware'
   | 'freelanceRennes'
+  | 'aiAppTakeover'
   | 'projects'
   | 'blog'
   | 'tools'

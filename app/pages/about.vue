@@ -14,12 +14,12 @@
   >
     <template #aside>
       <DibodevFramedPortrait
-        :src="PORTRAIT_SRC"
-        :srcset="PORTRAIT_SRCSET"
-        :sizes="PORTRAIT_SIZES"
+        :src="FOUNDER_PORTRAIT_SRC"
+        :srcset="FOUNDER_PORTRAIT_SRCSET"
+        :sizes="FOUNDER_PORTRAIT_SIZES"
         :alt="t('aboutPage.hero.portraitAlt')"
-        :width="PORTRAIT_SIZE"
-        :height="PORTRAIT_SIZE"
+        :width="FOUNDER_PORTRAIT_SIZE"
+        :height="FOUNDER_PORTRAIT_SIZE"
         :name="PERSON_NAME"
         :caption="t('aboutPage.hero.portraitCaption')"
       />
@@ -72,6 +72,12 @@ import { MALT_PROFILE_URL } from '~/config/contact'
 import { buildProfilePageSchemaJson } from '~/config/profilePageSchema'
 import { PERSON_FAMILY_NAME, PERSON_GIVEN_NAME, PERSON_NAME } from '~/config/schema'
 import { usePageShareImage } from '~/composables/usePageShareImage'
+import {
+  FOUNDER_PORTRAIT_SIZE,
+  FOUNDER_PORTRAIT_SIZES,
+  FOUNDER_PORTRAIT_SRC,
+  FOUNDER_PORTRAIT_SRCSET,
+} from '~/core/constants/founderPortrait'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { useHeroStats } from '~/composables/useHeroStats'
 
@@ -94,11 +100,6 @@ const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail(():
 ])
 
 const SITE_URL: string = 'https://dibodev.fr'
-const PORTRAIT_SIZE: number = 800
-const PORTRAIT_SRC: string = '/images/about/leo-guillaume-portrait-800.webp'
-const PORTRAIT_SRCSET: string =
-  '/images/about/leo-guillaume-portrait-400.webp 400w, /images/about/leo-guillaume-portrait-800.webp 800w'
-const PORTRAIT_SIZES: string = '(min-width: 1280px) 448px, (min-width: 1024px) 384px, (min-width: 640px) 384px, 320px'
 const SHOWCASED_PROJECT_SLUGS: string[] = [
   'izidoor',
   'goupixdex',

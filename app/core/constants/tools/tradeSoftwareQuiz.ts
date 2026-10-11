@@ -14,6 +14,7 @@ import type {
   DibodevTradeVerdict,
 } from '~/core/types/DibodevTradeSoftwareQuiz'
 import { ESTIMATOR_BASE_RANGES } from '~/core/constants/budgetEstimator'
+import { QuizTextUtils } from '~/core/utils/QuizTextUtils'
 
 const MAXIMUM_ADVICE_POINTS: number = 4
 const MINIMUM_FEATURES: number = 3
@@ -24,27 +25,6 @@ const CUSTOM_TOOL_SIZE_SCORES: Record<Exclude<DibodevTradeSize, 'solo'>, number>
   small: 0,
   medium: 1,
   large: 2,
-}
-
-/**
- * Replaces the `{name}` placeholders of a template.
- * @param {string} template - The template.
- * @param {Record<string, string>} values - The value of each placeholder.
- * @returns {string} The filled text.
- */
-function fillTemplate(template: string, values: Record<string, string>): string {
-  return template.replace(/\{(\w+)\}/g, (placeholder: string, name: string): string => values[name] ?? placeholder)
-}
-
-/**
- * Joins words with commas and the language's conjunction ("a, b et c").
- * @param {string[]} words - The words.
- * @param {string} conjunction - "et", "and" or "y".
- * @returns {string} The sentence fragment.
- */
-function joinWithConjunction(words: string[], conjunction: string): string {
-  if (words.length <= 1) return words.join('')
-  return `${words.slice(0, -1).join(', ')} ${conjunction} ${words[words.length - 1]}`
 }
 
 /**
@@ -87,7 +67,7 @@ function matchingRuleKeys(rules: DibodevTradeAnswerRule[], answers: DibodevQuizA
  */
 function formatPriceRange(range: DibodevEstimatorBaseRange, wording: DibodevTradeQuizWording): string {
   const numberFormat: Intl.NumberFormat = new Intl.NumberFormat(wording.numberLocale, { maximumFractionDigits: 0 })
-  return fillTemplate(wording.priceRangeTemplate, {
+  return QuizTextUtils.fillTemplate(wording.priceRangeTemplate, {
     min: numberFormat.format(range.minPrice),
     max: numberFormat.format(range.maxPrice),
   })
@@ -175,7 +155,10 @@ function projectPriceCard(
     details: [
       {
         label: wording.project.durationLabel,
-        value: fillTemplate(wording.weeksRangeTemplate, { min: String(range.minWeeks), max: String(range.maxWeeks) }),
+        value: QuizTextUtils.fillTemplate(wording.weeksRangeTemplate, {
+          min: String(range.minWeeks),
+          max: String(range.maxWeeks),
+        }),
       },
       { label: wording.project.maintenanceLabel, value: wording.project.maintenanceValue },
     ],
@@ -243,7 +226,9 @@ function answersSummaryOf(answers: DibodevQuizAnswers, wording: DibodevTradeQuiz
     wording.recapTeamWords[singleAnswerOf(answers, 'team')] ?? '',
     wording.recapSitesWords[singleAnswerOf(answers, 'sites')] ?? '',
     scopeWords.length
-      ? fillTemplate(wording.recapScopeTemplate, { items: joinWithConjunction(scopeWords, wording.conjunction) })
+      ? QuizTextUtils.fillTemplate(wording.recapScopeTemplate, {
+          items: QuizTextUtils.joinWithConjunction(scopeWords, wording.conjunction),
+        })
       : '',
   ]
   return `${parts.filter((part: string): boolean => part !== '').join(', ')}.`
@@ -269,9 +254,14 @@ function resultWordingOf(
   if (verdict === 'complement') {
     const painWords: string[] = textsOf(answers.pains ?? [], wording.complementPainWords)
     const painsText: string = painWords.length
-      ? fillTemplate(complement.painsTemplate, { list: joinWithConjunction(painWords, wording.conjunction) })
+      ? QuizTextUtils.fillTemplate(complement.painsTemplate, {
+          list: QuizTextUtils.joinWithConjunction(painWords, wording.conjunction),
+        })
       : ''
-    return { title: complement.title, explanation: fillTemplate(complement.explanation, { pains: painsText }) }
+    return {
+      title: complement.title,
+      explanation: QuizTextUtils.fillTemplate(complement.explanation, { pains: painsText }),
+    }
   }
   if (size === 'solo') {
     return { title: solo.title, explanation: solo.explanation + (current === 'fit' ? solo.keepCurrentSentence : '') }
@@ -331,7 +321,7 @@ export function buildTradeSoftwareQuiz(
         ctaLabel: wording.project.ctaLabel,
         leadFormTitle: wording.project.leadFormTitle,
         leadFormIntro: wording.project.leadFormIntro,
-        leadBudget: fillTemplate(wording.project.leadBudgetTemplate, {
+        leadBudget: QuizTextUtils.fillTemplate(wording.project.leadBudgetTemplate, {
           range: formatPriceRange(range, wording),
           kind: verdict === 'complement' ? wording.project.complementKind : wording.project.customKind,
         }),

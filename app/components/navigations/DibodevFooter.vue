@@ -207,6 +207,7 @@ const footerLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooter
   { title: t('footer.home'), to: localePath('/') },
   { title: t('footer.businessSoftware'), to: localePath('custom-business-software') },
   { title: t('footer.freelanceRennes'), to: localePath('freelance-web-developer-rennes') },
+  { title: t('footer.aiAppTakeover'), to: localePath('ai-app-takeover') },
   { title: t('footer.myProjects'), to: localePath('projects') },
   { title: t('footer.blog'), to: localePath('/blog') },
   { title: t('footer.about'), to: localePath('about') },

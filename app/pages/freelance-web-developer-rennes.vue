@@ -16,12 +16,12 @@
   >
     <template #aside>
       <DibodevFramedPortrait
-        :src="PORTRAIT_SRC"
-        :srcset="PORTRAIT_SRCSET"
-        :sizes="PORTRAIT_SIZES"
+        :src="FOUNDER_PORTRAIT_SRC"
+        :srcset="FOUNDER_PORTRAIT_SRCSET"
+        :sizes="FOUNDER_PORTRAIT_SIZES"
         :alt="t('freelanceRennesPage.hero.portraitAlt')"
-        :width="PORTRAIT_SIZE"
-        :height="PORTRAIT_SIZE"
+        :width="FOUNDER_PORTRAIT_SIZE"
+        :height="FOUNDER_PORTRAIT_SIZE"
         :name="PERSON_NAME"
         :caption="t('freelanceRennesPage.hero.portraitCaption')"
       />
@@ -118,11 +118,17 @@ import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import { MALT_PROFILE_URL } from '~/config/contact'
 import { PERSON_NAME } from '~/config/schema'
-import { buildFreelanceRennesServiceSchemaJson } from '~/config/freelanceRennesSchema'
+import { buildServiceSchemaJson } from '~/config/serviceSchema'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { useHeroStats } from '~/composables/useHeroStats'
 import { usePageShareImage } from '~/composables/usePageShareImage'
+import {
+  FOUNDER_PORTRAIT_SIZE,
+  FOUNDER_PORTRAIT_SIZES,
+  FOUNDER_PORTRAIT_SRC,
+  FOUNDER_PORTRAIT_SRCSET,
+} from '~/core/constants/founderPortrait'
 import { ArticleSelectionUtils } from '~/core/utils/ArticleSelectionUtils'
 
 definePageMeta({
@@ -136,11 +142,14 @@ definePageMeta({
 })
 
 const ARTICLES_POOL_SIZE: number = 100
-const PORTRAIT_SIZE: number = 800
-const PORTRAIT_SRC: string = '/images/about/leo-guillaume-portrait-800.webp'
-const PORTRAIT_SRCSET: string =
-  '/images/about/leo-guillaume-portrait-400.webp 400w, /images/about/leo-guillaume-portrait-800.webp 800w'
-const PORTRAIT_SIZES: string = '(min-width: 1280px) 448px, (min-width: 1024px) 384px, (min-width: 640px) 384px, 320px'
+const FREELANCE_RENNES_PAGE_PATH: string = '/developpeur-web-freelance-rennes'
+/** Kinds of service declared in the JSON-LD, in English as schema.org readers expect. */
+const FREELANCE_RENNES_SERVICE_TYPES: string[] = [
+  'Web development',
+  'Custom software development',
+  'Mobile app development',
+  'AI integration',
+]
 /** Projects shown as cards: the ones built for companies of the Rennes area first, then Léo's own products. */
 const SHOWCASED_PROJECT_SLUGS: string[] = [
   'izidoor',
@@ -241,10 +250,12 @@ useHead(() => ({
     {
       type: 'application/ld+json',
       key: 'schema-freelance-rennes-service',
-      innerHTML: buildFreelanceRennesServiceSchemaJson(
-        t('freelanceRennesPage.schema.serviceName'),
-        t('meta.freelanceRennesPage.description'),
-      ),
+      innerHTML: buildServiceSchemaJson({
+        pagePath: FREELANCE_RENNES_PAGE_PATH,
+        name: t('freelanceRennesPage.schema.serviceName'),
+        description: t('meta.freelanceRennesPage.description'),
+        serviceType: FREELANCE_RENNES_SERVICE_TYPES,
+      }),
     },
   ],
 }))
