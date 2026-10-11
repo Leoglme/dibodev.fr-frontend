@@ -2,6 +2,7 @@ import type {
   DibodevCommune,
   DibodevCommuneRow,
   DibodevCommunesDataset,
+  DibodevGeoApiCommune,
   DibodevPublicAidCommuneOverride,
   DibodevPublicAidDataset,
   DibodevPublicAidProjectEligibility,
@@ -67,6 +68,34 @@ export class PublicAidUtils {
       population,
       department: code.slice(0, 2),
     }
+  }
+
+  /**
+   * Turns a geo API row into a commune; the intercommunalité name is only known for Brittany.
+   * @param {DibodevGeoApiCommune} row - A row of geo.api.gouv.fr.
+   * @param {Record<string, string>} epciNames - Intercommunalité names by code (Brittany).
+   * @returns {DibodevCommune} The commune.
+   */
+  public static fromGeoApi(row: DibodevGeoApiCommune, epciNames: Record<string, string>): DibodevCommune {
+    const epciCode: string = row.codeEpci ?? ''
+    return {
+      code: row.code,
+      name: row.nom,
+      postcode: row.codesPostaux?.[0] ?? '',
+      epciCode,
+      epciName: PublicAidUtils.cleanEpciName(epciNames[epciCode] ?? ''),
+      population: row.population ?? 0,
+      department: row.codeDepartement ?? row.code.slice(0, 2),
+    }
+  }
+
+  /**
+   * Whether a commune is in Brittany, where the Pass Commerce et Artisanat exists.
+   * @param {DibodevCommune} commune - The commune.
+   * @returns {boolean} True for the four departments of Brittany.
+   */
+  public static isInBrittany(commune: DibodevCommune): boolean {
+    return BRITTANY_DEPARTMENTS.includes(commune.department)
   }
 
   /**
@@ -141,7 +170,6 @@ export class PublicAidUtils {
       contact: null,
       sourceUrl: frame.sourceUrl,
     }
-    if (input.isOutsideBrittany) return { ...empty, status: 'national' }
     if (!input.commune) return empty
     const commune: DibodevCommune = input.commune
     if (!BRITTANY_DEPARTMENTS.includes(commune.department)) return { ...empty, status: 'national' }

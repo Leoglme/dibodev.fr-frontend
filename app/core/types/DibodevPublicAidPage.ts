@@ -23,8 +23,11 @@ export type DibodevPublicAidSimulatorWording = {
   communePlaceholder: string
   communeHint: string
   noMatch: string
-  outsideBrittanyLabel: string
+  searchingLabel: string
+  searchErrorLabel: string
+  outsideBrittanyTag: string
   selectedTemplate: string
+  selectedOutsideTemplate: string
   changeCommune: string
   projectLabel: string
   projectOptions: Record<DibodevPublicAidProjectType, string>

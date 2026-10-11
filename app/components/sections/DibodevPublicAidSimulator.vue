@@ -1,21 +1,20 @@
 <template>
   <div :id="props.anchorId" class="grid scroll-mt-24 items-start gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
     <div class="grid content-start gap-7 rounded-2xl border border-gray-300 bg-white p-6 sm:p-8">
-      <div class="simulator-group">
+      <div class="simulator-group" @keydown.enter.prevent="selectFirstMatch">
         <div v-if="selectedCommune" class="grid gap-3">
           <p class="simulator-group__legend">{{ props.wording.communeLabel }}</p>
           <div class="flex items-start justify-between gap-3 rounded-lg border border-gray-300 bg-gray-50 px-3 py-3">
             <p class="text-[15px] leading-6 text-gray-100">{{ selectedCommuneLabel }}</p>
             <button
               type="button"
-              class="text-primary hover:text-primary-dark shrink-0 cursor-pointer text-sm font-medium transition-colors"
+              class="text-primary hover:text-primary-dark -my-2 -mr-1 inline-flex min-h-11 shrink-0 cursor-pointer items-center rounded-md px-2 text-sm font-medium transition-colors"
               @click="clearCommune"
             >
               {{ props.wording.changeCommune }}
             </button>
           </div>
         </div>
-        <p v-else-if="isOutsideBrittany" class="simulator-group__legend">{{ props.wording.communeLabel }}</p>
         <div v-else class="grid gap-2">
           <DibodevInput
             id="public-aid-commune"
@@ -25,35 +24,29 @@
             :value="communeQuery"
             @update:value="onCommuneInput"
           />
-          <ul
-            v-if="communeMatches.length > 0"
-            class="grid gap-1"
-            role="listbox"
-            :aria-label="props.wording.communeLabel"
-          >
-            <li v-for="commune in communeMatches" :key="commune.code" role="option" :aria-selected="false">
+          <ul v-if="displayedMatches.length > 0" class="grid gap-1">
+            <li v-for="commune in displayedMatches" :key="commune.code">
               <button
                 type="button"
-                class="hover:border-primary flex w-full cursor-pointer items-baseline justify-between gap-3 rounded-lg border border-gray-300 px-3 py-2 text-left transition-colors"
+                class="hover:border-primary focus-visible:border-primary flex min-h-11 w-full cursor-pointer items-baseline justify-between gap-3 rounded-lg border border-gray-300 px-3 py-2 text-left transition-colors focus-visible:outline-none"
                 @click="selectCommune(commune)"
               >
                 <span class="text-[15px] font-medium text-gray-100">{{ commune.name }}</span>
-                <span class="text-muted truncate text-sm">{{ commune.postcode }} · {{ commune.epciName }}</span>
+                <span class="text-muted truncate text-sm">{{ matchDetail(commune) }}</span>
               </button>
             </li>
           </ul>
-          <p v-else-if="hasQueryWithoutMatch" class="text-sm leading-6 text-red-500">{{ props.wording.noMatch }}</p>
+          <p v-if="isSearchingRemote" class="text-muted text-sm leading-6" aria-live="polite" aria-busy="true">
+            {{ props.wording.searchingLabel }}
+          </p>
+          <p v-else-if="hasRemoteError" class="text-sm leading-6 text-red-500" aria-live="polite">
+            {{ props.wording.searchErrorLabel }}
+          </p>
+          <p v-else-if="hasQueryWithoutMatch" class="text-sm leading-6 text-red-500" aria-live="polite">
+            {{ props.wording.noMatch }}
+          </p>
           <p class="text-muted text-sm leading-6">{{ props.wording.communeHint }}</p>
         </div>
-        <label class="mt-3 flex cursor-pointer items-center gap-2.5 text-[15px] leading-6 text-gray-100">
-          <input
-            v-model="isOutsideBrittany"
-            type="checkbox"
-            class="accent-primary h-4 w-4 cursor-pointer"
-            @change="trackSimulatorStart"
-          />
-          {{ props.wording.outsideBrittanyLabel }}
-        </label>
       </div>
 
       <fieldset class="simulator-group">
@@ -69,7 +62,7 @@
             :label="props.wording.amountLabel"
             :min="0"
             :step="100"
-            :value="amountHt"
+            :value="amountText"
             @update:value="onAmountChange"
           />
           <p class="text-muted mt-2 text-sm leading-6">{{ props.wording.amountHint }}</p>
@@ -81,7 +74,7 @@
             :label="props.wording.employeesLabel"
             :min="0"
             :step="1"
-            :value="employees"
+            :value="employeesText"
             @update:value="onEmployeesChange"
           />
           <p class="text-muted mt-2 text-sm leading-6">{{ props.wording.employeesHint }}</p>
@@ -100,7 +93,9 @@
       </fieldset>
     </div>
 
-    <div class="bg-primary-dark relative grid content-start gap-6 overflow-hidden rounded-2xl p-6 text-white sm:p-8">
+    <div
+      class="bg-primary-dark relative grid content-start gap-6 overflow-hidden rounded-2xl p-6 text-white sm:p-8 lg:sticky lg:top-28"
+    >
       <div
         class="pointer-events-none absolute -top-16 -right-12 h-56 w-56 rounded-full bg-white/10 blur-2xl"
         aria-hidden="true"
@@ -250,6 +245,7 @@ import type { Option, PillValue } from '~/components/ui/DibodevTogglePillGroup.v
 import type {
   DibodevCommune,
   DibodevCommunesDataset,
+  DibodevGeoApiCommune,
   DibodevPublicAidDataset,
   DibodevPublicAidProjectType,
   DibodevPublicAidSimulationResult,
@@ -274,10 +270,19 @@ const YES: string = 'yes'
 const NO: string = 'no'
 /** The result is tracked once it has stayed the same for this long, so typing an amount sends one event. */
 const TRACKING_DELAY_MS: number = 1200
+/** Public directory of the French communes, asked when the Brittany table has no match. */
+const GEO_API_URL: string = 'https://geo.api.gouv.fr/communes'
+const GEO_API_FIELDS: string = 'nom,code,codesPostaux,population,codeDepartement,codeEpci'
+/** Typing pause before the directory is asked, so one request goes out per word rather than per letter. */
+const REMOTE_SEARCH_DELAY_MS: number = 300
+const REMOTE_NAME_MIN_LENGTH: number = 3
+const POSTCODE_REGEX: RegExp = /^\d{5}$/
+const DIGITS_REGEX: RegExp = /^\d+$/
 
 /**
  * Public aid simulator: a commune, a kind of project and a few answers give the aid of the Pass Commerce et
  * Artisanat, what is left to pay, the points to confirm and who to call, from the rules read for each intercommunalité.
+ * A commune outside Brittany is found in the national directory and gets the national answer.
  */
 const props: DibodevPublicAidSimulatorProps = defineProps({
   anchorId: {
@@ -312,10 +317,14 @@ const { track } = useTracking()
 /* REFS */
 const communeQuery: Ref<string> = ref<string>('')
 const selectedCommune: Ref<DibodevCommune | null> = ref<DibodevCommune | null>(null)
-const isOutsideBrittany: Ref<boolean> = ref<boolean>(false)
+const remoteMatches: Ref<DibodevCommune[]> = ref<DibodevCommune[]>([])
+const isSearchingRemote: Ref<boolean> = ref<boolean>(false)
+const hasRemoteError: Ref<boolean> = ref<boolean>(false)
+const hasRemoteSearched: Ref<boolean> = ref<boolean>(false)
+const remoteTimer: Ref<ReturnType<typeof setTimeout> | null> = ref<ReturnType<typeof setTimeout> | null>(null)
 const projectType: Ref<DibodevPublicAidProjectType> = ref<DibodevPublicAidProjectType>('website')
-const amountHt: Ref<number> = ref<number>(DEFAULT_PROJECT_AMOUNT_HT)
-const employees: Ref<number> = ref<number>(DEFAULT_EMPLOYEES)
+const amountText: Ref<string> = ref<string>(String(DEFAULT_PROJECT_AMOUNT_HT))
+const employeesText: Ref<string> = ref<string>(String(DEFAULT_EMPLOYEES))
 const turnoverAnswer: Ref<string> = ref<string>(YES)
 const businessAnswer: Ref<string> = ref<string>(YES)
 const hasTrackedStart: Ref<boolean> = ref<boolean>(false)
@@ -333,31 +342,37 @@ const yesNoOptions: ComputedRef<Option[]> = computed((): Option[] => [
   { label: props.wording.no, value: NO },
 ])
 
-const communeMatches: ComputedRef<DibodevCommune[]> = computed((): DibodevCommune[] =>
-  isOutsideBrittany.value
-    ? []
-    : PublicAidUtils.searchCommunes(props.communes, communeQuery.value, COMMUNE_SEARCH_LIMIT),
+const amountHt: ComputedRef<number> = computed((): number => toPositiveInteger(amountText.value))
+const employees: ComputedRef<number> = computed((): number => toPositiveInteger(employeesText.value))
+
+/** Brittany first, from the local table; the national directory only when Brittany has nothing. */
+const localMatches: ComputedRef<DibodevCommune[]> = computed((): DibodevCommune[] =>
+  PublicAidUtils.searchCommunes(props.communes, communeQuery.value, COMMUNE_SEARCH_LIMIT),
+)
+const displayedMatches: ComputedRef<DibodevCommune[]> = computed((): DibodevCommune[] =>
+  localMatches.value.length > 0 ? localMatches.value : remoteMatches.value,
 )
 const hasQueryWithoutMatch: ComputedRef<boolean> = computed(
-  (): boolean => !isOutsideBrittany.value && communeQuery.value.trim().length >= 2 && communeMatches.value.length === 0,
+  (): boolean => hasRemoteSearched.value && !isSearchingRemote.value && displayedMatches.value.length === 0,
 )
 
-const selectedCommuneLabel: ComputedRef<string> = computed((): string =>
-  selectedCommune.value
-    ? QuizTextUtils.fillTemplate(props.wording.selectedTemplate, {
-        commune: selectedCommune.value.name,
-        postcode: selectedCommune.value.postcode,
-        epci: selectedCommune.value.epciName,
-        population: PublicAidUtils.formatPopulation(selectedCommune.value.population, props.numberLocale),
-      })
-    : '',
-)
+const selectedCommuneLabel: ComputedRef<string> = computed((): string => {
+  if (!selectedCommune.value) return ''
+  const template: string = PublicAidUtils.isInBrittany(selectedCommune.value)
+    ? props.wording.selectedTemplate
+    : props.wording.selectedOutsideTemplate
+  return QuizTextUtils.fillTemplate(template, {
+    commune: selectedCommune.value.name,
+    postcode: selectedCommune.value.postcode,
+    epci: selectedCommune.value.epciName,
+    population: PublicAidUtils.formatPopulation(selectedCommune.value.population, props.numberLocale),
+  })
+})
 
 const result: ComputedRef<DibodevPublicAidSimulationResult> = computed(
   (): DibodevPublicAidSimulationResult =>
     PublicAidUtils.simulate(props.schemes, {
       commune: selectedCommune.value,
-      isOutsideBrittany: isOutsideBrittany.value,
       projectType: projectType.value,
       amountHt: amountHt.value,
       employees: employees.value,
@@ -369,6 +384,7 @@ const result: ComputedRef<DibodevPublicAidSimulationResult> = computed(
 /** Values filled into the result templates. */
 const templateValues: ComputedRef<Record<string, string>> = computed(
   (): Record<string, string> => ({
+    commune: selectedCommune.value?.name ?? '',
     territory: result.value.territoryName,
     rate: String(result.value.ratePercent),
     floor: formatAmount(result.value.floorHt ?? 0),
@@ -424,6 +440,16 @@ const contactRoute: ComputedRef<string> = computed((): string => localePath('/co
 
 /* METHODS */
 /**
+ * Reads a field as a positive integer, 0 when empty or invalid.
+ * @param {string} text - The field text.
+ * @returns {number} The integer.
+ */
+function toPositiveInteger(text: string): number {
+  const value: number = Number(text)
+  return Number.isFinite(value) && value > 0 ? Math.round(value) : 0
+}
+
+/**
  * Formats an amount in euros for the page language.
  * @param {number} amount - The amount.
  * @returns {string} The formatted amount.
@@ -439,6 +465,18 @@ function formatAmount(amount: number): string {
  */
 function hostOf(url: string): string {
   return PublicAidUtils.hostOf(url)
+}
+
+/**
+ * Second line of a match: postcode and intercommunalité in Brittany, postcode and "outside Brittany" elsewhere.
+ * @param {DibodevCommune} commune - The match.
+ * @returns {string} The detail.
+ */
+function matchDetail(commune: DibodevCommune): string {
+  const area: string = PublicAidUtils.isInBrittany(commune)
+    ? commune.epciName || commune.department
+    : props.wording.outsideBrittanyTag
+  return `${commune.postcode} · ${area}`
 }
 
 /**
@@ -462,6 +500,44 @@ function onCommuneInput(value: string | number): void {
 }
 
 /**
+ * Whether a query is worth sending to the national directory: a full postcode, or three letters at least.
+ * @param {string} query - The trimmed query.
+ * @returns {boolean} True when the directory can answer it.
+ */
+function isRemoteSearchable(query: string): boolean {
+  return DIGITS_REGEX.test(query) ? POSTCODE_REGEX.test(query) : query.length >= REMOTE_NAME_MIN_LENGTH
+}
+
+/**
+ * Asks the national directory for the communes matching a name or a postcode, and keeps the answer
+ * only if the visitor has not typed anything else since.
+ * @param {string} query - The trimmed query.
+ * @returns {Promise<void>}
+ */
+async function searchRemoteCommunes(query: string): Promise<void> {
+  const params: URLSearchParams = new URLSearchParams({
+    fields: GEO_API_FIELDS,
+    boost: 'population',
+    limit: String(COMMUNE_SEARCH_LIMIT),
+  })
+  params.set(POSTCODE_REGEX.test(query) ? 'codePostal' : 'nom', query)
+  try {
+    const rows: DibodevGeoApiCommune[] = await $fetch<DibodevGeoApiCommune[]>(`${GEO_API_URL}?${params.toString()}`)
+    if (communeQuery.value.trim() !== query) return
+    remoteMatches.value = rows.map(
+      (row: DibodevGeoApiCommune): DibodevCommune => PublicAidUtils.fromGeoApi(row, props.communes.epcis),
+    )
+  } catch {
+    if (communeQuery.value.trim() === query) hasRemoteError.value = true
+  } finally {
+    if (communeQuery.value.trim() === query) {
+      isSearchingRemote.value = false
+      hasRemoteSearched.value = true
+    }
+  }
+}
+
+/**
  * Selects a commune from the matches and closes the list.
  * @param {DibodevCommune} commune - The commune clicked.
  * @returns {void}
@@ -470,6 +546,15 @@ function selectCommune(commune: DibodevCommune): void {
   trackSimulatorStart()
   selectedCommune.value = commune
   communeQuery.value = ''
+}
+
+/**
+ * Selects the first match when the visitor presses Enter in the search field.
+ * @returns {void}
+ */
+function selectFirstMatch(): void {
+  const first: DibodevCommune | undefined = displayedMatches.value[0]
+  if (first && !selectedCommune.value) selectCommune(first)
 }
 
 /**
@@ -494,25 +579,23 @@ function onProjectChange(value: PillValue | PillValue[] | null | undefined): voi
 }
 
 /**
- * Keeps the project amount as a positive number.
+ * Keeps the project amount as typed; the number is read from it.
  * @param {string | number} value - The field value.
  * @returns {void}
  */
 function onAmountChange(value: string | number): void {
   trackSimulatorStart()
-  const amount: number = Number(value)
-  amountHt.value = Number.isFinite(amount) && amount > 0 ? Math.round(amount) : 0
+  amountText.value = String(value)
 }
 
 /**
- * Keeps the number of employees as a positive integer.
+ * Keeps the number of employees as typed; the integer is read from it.
  * @param {string | number} value - The field value.
  * @returns {void}
  */
 function onEmployeesChange(value: string | number): void {
   trackSimulatorStart()
-  const count: number = Number(value)
-  employees.value = Number.isFinite(count) && count > 0 ? Math.round(count) : 0
+  employeesText.value = String(value)
 }
 
 /**
@@ -562,9 +645,27 @@ function scheduleResultTracking(): void {
 /* WATCHERS */
 watch(result, (): void => scheduleResultTracking())
 
+/** Each keystroke resets the directory search; it only runs after a pause, and only when Brittany has no match. */
+watch(communeQuery, (query: string): void => {
+  if (remoteTimer.value) clearTimeout(remoteTimer.value)
+  remoteMatches.value = []
+  hasRemoteError.value = false
+  hasRemoteSearched.value = false
+  const trimmed: string = query.trim()
+  if (localMatches.value.length > 0 || !isRemoteSearchable(trimmed)) {
+    isSearchingRemote.value = false
+    return
+  }
+  isSearchingRemote.value = true
+  remoteTimer.value = setTimeout((): void => {
+    void searchRemoteCommunes(trimmed)
+  }, REMOTE_SEARCH_DELAY_MS)
+})
+
 /* LIFECYCLE */
 onBeforeUnmount((): void => {
   if (trackingTimer.value) clearTimeout(trackingTimer.value)
+  if (remoteTimer.value) clearTimeout(remoteTimer.value)
 })
 </script>
 

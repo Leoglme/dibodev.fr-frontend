@@ -87,6 +87,16 @@ export type DibodevCommunesDataset = {
   communes: DibodevCommuneRow[]
 }
 
+/** A commune as returned by geo.api.gouv.fr (`/communes?nom=` or `?codePostal=`), used outside Brittany. */
+export type DibodevGeoApiCommune = {
+  nom: string
+  code: string
+  codesPostaux?: string[]
+  population?: number
+  codeDepartement?: string
+  codeEpci?: string
+}
+
 export type DibodevCommune = {
   code: string
   name: string
@@ -108,7 +118,6 @@ export type DibodevPublicAidStatus = 'incomplete' | 'eligible' | 'check' | 'notE
 
 export type DibodevPublicAidSimulationInput = {
   commune: DibodevCommune | null
-  isOutsideBrittany: boolean
   projectType: DibodevPublicAidProjectType
   amountHt: number
   employees: number

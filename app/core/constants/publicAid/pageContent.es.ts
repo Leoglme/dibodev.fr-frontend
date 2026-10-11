@@ -32,11 +32,15 @@ export const PUBLIC_AID_PAGE_ES: DibodevPublicAidPageContent = {
   },
   simulator: {
     communeLabel: 'Tu municipio',
-    communePlaceholder: 'Nombre o código postal, por ejemplo Saint-Erblon o 35230',
-    communeHint: 'Todos los municipios de Bretaña. El simulador encuentra tu mancomunidad y aplica sus reglas.',
-    noMatch: 'Ningún municipio bretón coincide. Revisa la ortografía o marca la casilla de abajo.',
-    outsideBrittanyLabel: 'Mi empresa está fuera de Bretaña',
+    communePlaceholder: 'Saint-Erblon o 35230',
+    communeHint:
+      'Nombre o código postal, en toda Francia: en Bretaña, el simulador encuentra tu mancomunidad y aplica sus reglas.',
+    noMatch: 'Ningún municipio coincide. Revisa la ortografía o prueba con el código postal.',
+    searchingLabel: 'Buscando en los municipios de Francia…',
+    searchErrorLabel: 'El directorio de municipios no responde. Inténtalo de nuevo en un momento.',
+    outsideBrittanyTag: 'fuera de Bretaña',
     selectedTemplate: '{commune} ({postcode}) · {epci} · {population} habitantes',
+    selectedOutsideTemplate: '{commune} ({postcode}) · fuera de Bretaña',
     changeCommune: 'Cambiar',
     projectLabel: 'Tu proyecto',
     projectOptions: {
@@ -75,7 +79,7 @@ export const PUBLIC_AID_PAGE_ES: DibodevPublicAidPageContent = {
       frame:
         'Todavía no he leído el reglamento de {territory}. El marco regional prevé el {rate} % de tu proyecto, hasta {maxAid}; tu mancomunidad fija el mínimo y la lista de gastos.',
       national:
-        'En 2026, ninguna subvención nacional financia una web o un software en Francia. El cheque France Num terminó en 2021 y el Préstamo Transformación Digital a finales de 2023. Quedan ayudas locales, préstamos y un crédito fiscal reservado a los productos nuevos.',
+        'Tu municipio está fuera de Bretaña. En 2026, ninguna subvención nacional financia una web o un software en Francia. El cheque France Num terminó en 2021 y el Préstamo Transformación Digital a finales de 2023. Quedan ayudas locales, préstamos y un crédito fiscal reservado a los productos nuevos.',
     },
     aidLabel: 'Ayuda estimada',
     remainingLabel: 'Queda a tu cargo',

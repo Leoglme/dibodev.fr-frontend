@@ -32,11 +32,15 @@ export const PUBLIC_AID_PAGE_EN: DibodevPublicAidPageContent = {
   },
   simulator: {
     communeLabel: 'Your commune',
-    communePlaceholder: 'Name or postcode, for example Saint-Erblon or 35230',
-    communeHint: 'Every commune of Brittany. The simulator finds your intercommunalité and applies its rules.',
-    noMatch: 'No commune of Brittany matches. Check the spelling or tick the box below.',
-    outsideBrittanyLabel: 'My business is outside Brittany',
+    communePlaceholder: 'Saint-Erblon or 35230',
+    communeHint:
+      'Name or postcode, anywhere in France: in Brittany, the simulator finds your intercommunalité and applies its rules.',
+    noMatch: 'No commune matches. Check the spelling or try the postcode.',
+    searchingLabel: 'Searching the communes of France…',
+    searchErrorLabel: 'The commune directory is not responding. Try again in a moment.',
+    outsideBrittanyTag: 'outside Brittany',
     selectedTemplate: '{commune} ({postcode}) · {epci} · {population} inhabitants',
+    selectedOutsideTemplate: '{commune} ({postcode}) · outside Brittany',
     changeCommune: 'Change',
     projectLabel: 'Your project',
     projectOptions: {
@@ -74,7 +78,7 @@ export const PUBLIC_AID_PAGE_EN: DibodevPublicAidPageContent = {
       frame:
         'I have not read the rules of {territory} yet. The regional frame provides {rate}% of your project, up to {maxAid}; your intercommunalité sets the floor and the list of expenses.',
       national:
-        'In 2026, no national grant funds a website or software in France. The France Num voucher ended in 2021 and the Digital Transformation Loan at the end of 2023. Local aid, loans and a tax credit reserved for new products remain.',
+        'Your commune is outside Brittany. In 2026, no national grant funds a website or software in France. The France Num voucher ended in 2021 and the Digital Transformation Loan at the end of 2023. Local aid, loans and a tax credit reserved for new products remain.',
     },
     aidLabel: 'Estimated aid',
     remainingLabel: 'Left to pay',
