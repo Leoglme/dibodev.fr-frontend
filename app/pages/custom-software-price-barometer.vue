@@ -51,9 +51,19 @@
         :footnote="page.sources.csvFootnote"
         tone="tint"
       >
-        <DibodevLink :link="PRICE_BAROMETER_CSV_PATH" :externalLink="true" class="text-[15px] leading-6 font-medium">
-          <span>{{ page.sources.csvLinkLabel }}</span>
-        </DibodevLink>
+        <div class="flex flex-wrap gap-x-6 gap-y-2">
+          <DibodevLink :link="PRICE_BAROMETER_CSV_PATH" :externalLink="true" class="text-[15px] leading-6 font-medium">
+            <span>{{ page.sources.csvLinkLabel }}</span>
+          </DibodevLink>
+          <DibodevLink
+            :link="PRICE_BAROMETER_OPEN_DATA_URL"
+            :externalLink="true"
+            class="text-[15px] leading-6 font-medium"
+          >
+            <span>{{ page.sources.openDataLinkLabel }}</span>
+            <DibodevIcon name="ExternalLink" mode="stroke" :width="16" :height="16" />
+          </DibodevLink>
+        </div>
       </DibodevCallout>
     </template>
   </DibodevSourcedFactsSection>
@@ -127,6 +137,7 @@ import DibodevLandingSection from '~/components/sections/DibodevLandingSection.v
 import DibodevMethodSection from '~/components/sections/DibodevMethodSection.vue'
 import DibodevPriceListSection from '~/components/sections/DibodevPriceListSection.vue'
 import DibodevSourcedFactsSection from '~/components/sections/DibodevSourcedFactsSection.vue'
+import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { buildDatasetSchemaJson } from '~/config/datasetSchema'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
@@ -137,6 +148,7 @@ import {
   DIBODEV_MAINTENANCE_MONTHLY_RANGE,
   PRICE_BAROMETER_CSV_PATH,
   PRICE_BAROMETER_DATASET,
+  PRICE_BAROMETER_OPEN_DATA_URL,
   PRICE_BAROMETER_PAGE_PATHS,
   PRICE_BAROMETER_RELATED_ARTICLE_SLUGS,
   TRADE_SUBSCRIPTION_MONTHLY_RANGE,
@@ -303,6 +315,7 @@ useHead({
         name: page.meta.datasetName,
         description: page.meta.datasetDescription,
         csvPath: PRICE_BAROMETER_CSV_PATH,
+        openDataUrl: PRICE_BAROMETER_OPEN_DATA_URL,
         dateModified: PRICE_BAROMETER_DATASET.checkedAt,
         spatialCoverage: DATASET_SPATIAL_COVERAGE,
         keywords: DATASET_KEYWORDS,

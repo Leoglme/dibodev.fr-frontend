@@ -108,6 +108,7 @@ export const PRICE_BAROMETER_PAGE_CONTENT_EN: DibodevPriceBarometerPageContent =
     csvText:
       'the full record can be downloaded under a CC BY 4.0 licence. Cite "Dibodev, 2026 barometer of custom software prices" with a link to this page.',
     csvLinkLabel: 'Download the record (CSV)',
+    openDataLinkLabel: 'See the record on data.gouv.fr',
     csvFootnote: 'A source is missing or has changed its prices? Write to me, I correct it and date the correction.',
   },
   fiveYears: {

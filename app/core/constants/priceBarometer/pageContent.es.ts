@@ -108,6 +108,7 @@ export const PRICE_BAROMETER_PAGE_CONTENT_ES: DibodevPriceBarometerPageContent =
     csvText:
       'la recogida completa se puede descargar bajo licencia CC BY 4.0. Cita «Dibodev, barómetro 2026 de los precios del software a medida» con un enlace a esta página.',
     csvLinkLabel: 'Descargar la recogida (CSV)',
+    openDataLinkLabel: 'Ver la ficha en data.gouv.fr',
     csvFootnote: '¿Falta una fuente o ha cambiado de precio? Escríbeme, lo corrijo y fecho la corrección.',
   },
   fiveYears: {

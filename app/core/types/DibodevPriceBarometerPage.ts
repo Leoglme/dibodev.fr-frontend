@@ -69,6 +69,7 @@ export type DibodevPriceBarometerPageContent = {
     csvEmphasizedIntro: string
     csvText: string
     csvLinkLabel: string
+    openDataLinkLabel: string
     csvFootnote: string
   }
   fiveYears: DibodevPriceBarometerSectionHeading & {

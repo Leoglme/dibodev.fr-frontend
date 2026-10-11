@@ -18,6 +18,10 @@ export const PRICE_BAROMETER_PAGE_PATHS: Record<SupportedLocale, string> = {
 /** The CSV published next to the page, regenerated from the JSON file. */
 export const PRICE_BAROMETER_CSV_PATH: string = '/data/prix-logiciel-sur-mesure-2026.csv'
 
+/** The same record published on data.gouv.fr (organisation « Dibodev », created on 12 October 2026), linked from the page and from its Dataset JSON-LD. */
+export const PRICE_BAROMETER_OPEN_DATA_URL: string =
+  'https://www.data.gouv.fr/datasets/prix-du-logiciel-sur-mesure-en-france-tarifs-affiches-par-14-prestataires-barometre-2026'
+
 /** Articles linked at the bottom of the page; the untranslated ones are left out of /en and /es automatically. */
 export const PRICE_BAROMETER_RELATED_ARTICLE_SLUGS: string[] = [
   'developpement-logiciel-b2b-sur-mesure-prix',
