@@ -10,7 +10,7 @@ export const AI_APP_TAKEOVER_PAGE_CONTENT_ES: DibodevAiAppTakeoverPageContent = 
   meta: {
     title: 'Recuperar una aplicación Lovable o Bolt bloqueada | Dibodev',
     description:
-      '¿Aplicación hecha con Lovable, Bolt, v0 o Cursor que falla o no llega a producción? Auditoría gratuita, puesta en seguridad y recuperación a precio cerrado, por un freelance.',
+      '¿Aplicación hecha con Lovable, Bolt o v0 que falla o no llega a producción? Auditoría gratuita, puesta en seguridad y recuperación a precio cerrado.',
     serviceName:
       'Recuperación, puesta en seguridad y puesta en producción de aplicaciones generadas por IA (Lovable, Bolt, v0, Cursor)',
   },

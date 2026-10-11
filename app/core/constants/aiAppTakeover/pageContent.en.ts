@@ -10,7 +10,7 @@ export const AI_APP_TAKEOVER_PAGE_CONTENT_EN: DibodevAiAppTakeoverPageContent = 
   meta: {
     title: 'Take over a broken Lovable or Bolt app | Dibodev',
     description:
-      'App built with Lovable, Bolt, v0 or Cursor that breaks or never reaches production? Free audit, security hardening and fixed-price takeover by a freelance developer.',
+      'App built with Lovable, Bolt, v0 or Cursor that breaks or never reaches production? Free audit, security hardening and fixed-price takeover by a freelancer.',
     serviceName:
       'Takeover, security hardening and production release of AI-generated applications (Lovable, Bolt, v0, Cursor)',
   },

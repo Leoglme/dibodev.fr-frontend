@@ -10,7 +10,7 @@ import { NBSP } from '~/core/constants/typography'
 export const AI_APP_TAKEOVER_PAGE_CONTENT_FR: DibodevAiAppTakeoverPageContent = {
   meta: {
     title: 'Reprendre une application Lovable ou Bolt bloquée | Dibodev',
-    description: `Application faite avec Lovable, Bolt, v0 ou Cursor qui bugue ou n’arrive pas en production${NBSP}? Audit gratuit, sécurisation et reprise au forfait, par un freelance.`,
+    description: `Application faite avec Lovable, Bolt ou v0 qui bugue ou n’arrive pas en production${NBSP}? Audit gratuit, sécurisation et reprise au forfait, par un freelance.`,
     serviceName:
       'Reprise, sécurisation et mise en production d’applications générées par l’IA (Lovable, Bolt, v0, Cursor)',
   },
