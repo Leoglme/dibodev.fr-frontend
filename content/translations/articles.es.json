@@ -15478,5 +15478,558 @@
         }
       ]
     }
+  },
+  "blog/alternative-autoprogestion-logiciel-garage": {
+    "title": "Alternativa a AutoProGestion: ¿qué software de taller elegir en 2026?",
+    "excerpt": "AutoProGestion cuesta 29 o 59 € al mes. Para quién es la mejor opción, qué aspectos generan duda, cuatro alternativas con sus precios y el caso en el que la solución personalizada se justifica.",
+    "metaTitle": "Alternativa a AutoProGestion: software para talleres y precios 2026",
+    "metaDescription": "AutoProGestion cuesta 29 o 59 € al mes. Para quién es la mejor opción, sus limitaciones, cuatro alternativas con sus precios en 2026 y la opción personalizada.",
+    "tags": [
+      "autoprogestion",
+      "reseñas autoprogestion",
+      "alternativas autoprogestion",
+      "software taller automovilístico",
+      "software gestión taller",
+      "taller mecánico"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "AutoProGestion suele aparecer cuando un mecánico busca un software de gestión en línea: es uno de los pocos editores del sector que muestra sus precios abiertamente. Antes de recomendar nada, revisé su tabla de precios el 11 de octubre de 2026, así como las de otros programas para talleres que también publican sus tarifas. Aquí te explico para quién AutoProGestion es la mejor opción, qué puede hacer dudar, cuatro alternativas con sus precios, y el caso en el que un software a medida podría justificarse.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cuánto cuesta AutoProGestion en 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El 11 de octubre de 2026, la ",
+              "type": "text"
+            },
+            {
+              "text": "página de precios de AutoProGestion",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.autoprogestion.fr/tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra dos planes y una oferta bajo presupuesto personalizado. Starter cuesta 29 € al mes para un máximo de 100 clientes: presupuestos y facturas ilimitados, programación y citas en línea, seguimiento de intervenciones, órdenes de reparación con informe inicial, portal de cliente en modo consulta, historial de mantenimiento con código QR, asistente de IA limitado a 10 mensajes por hora. Pro cuesta 59 € al mes para un número ilimitado de clientes y añade el portal de cliente con firma remota, recordatorios automáticos por SMS y correo electrónico, gestión de inventario con alertas, un módulo de contabilidad con exportación FEC, gestión de flota de vehículos de segunda mano (Cerfa, libro de policía), inspección por vídeo, lectura de matrículas y soporte prioritario. La oferta Empresa, multi-sitio con API, está bajo presupuesto personalizado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Los dos planes no requieren compromiso y pueden cancelarse en cualquier momento, con 14 días de prueba gratis sin condiciones, sin cargo en la tarjeta durante el período de prueba. Se anuncia un pago anual con un 17 % de descuento, aunque no se especifica el monto. La página no aclara si los precios son sin impuestos (HT) o todo incluido (TTC), y se indica que la aplicación móvil del plan Pro estará «pronto disponible».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Para quién es la mejor opción AutoProGestion?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un taller independiente de una a tres personas que desea hacer presupuestos, órdenes de reparación y facturas en línea, tomar citas desde su sitio web y dar acceso a los clientes, todo por un precio fijo y sin compromiso. Si no necesita gestionar un inventario y tiene menos de 100 clientes activos, Starter a 29 € al mes cubre lo esencial. Si requiere recordatorios automáticos, firma remota, gestión de stock y exportaciones contables, entonces Pro a 59 € es la opción.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que puede hacer dudar",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El límite de 100 clientes.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Un taller en funcionamiento supera rápidamente los 100 registros de clientes. En ese caso, el plan real es Pro, a 59 € al mes, lo que equivale a 708 € al año.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las funciones distribuidas entre los dos planes.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La gestión de stock, los recordatorios por SMS y la firma remota no están incluidos en Starter. Verifique qué plan incluye las funciones que utiliza a diario antes de comparar precios.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lo que aún falta.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La aplicación móvil está anunciada pero no disponible al 11 de octubre de 2026, el multi-sitio está bajo presupuesto personalizado, y la página no especifica si los precios son HT o TTC. Pregunte por estos tres puntos antes de firmar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Pocos comentarios públicos.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Trustpilot muestra una puntuación de 4,2 sobre 5 con 6 reseñas al 11 de octubre de 2026. Ni es una buena ni una mala señal, son demasiados pocos para sacar conclusiones. Pruebe durante los 14 días de prueba.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cuatro alternativas a AutoProGestion, con sus precios",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Precios mostrados en el sitio web de cada editor, verificados el 29 de septiembre de 2026 para mi ",
+              "type": "text"
+            },
+            {
+              "text": "comparativa de software para talleres",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile#logiciels",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", y verificados el 11 de octubre para Gest'Garage.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gest'Garage",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " cuesta 19 € al mes, sin IVA aplicable, hasta 5 colaboradores, sin compromiso, con 14 días de prueba sin tarjeta bancaria y un 20 % de descuento al año. Todo está incluido: presupuestos, órdenes de reparación y facturas ilimitadas, facturas Factur-X, firma electrónica, programación de taller y citas en línea, inventario de piezas con alertas, SMS para clientes. Un taller adicional bajo el mismo SIRET cuesta 10 € al mes. Es la alternativa más económica, y ya anuncia las facturas Factur-X.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "TDV",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " cuesta entre 19,90 y 24,90 € IVA incluido al mes. La oferta de 19,90 € incluye solo agenda y tiempos tarifados; la oferta completa de 24,90 € añade presupuestos, órdenes de reparación, facturas e inventario.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Kwixéo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " cuesta entre 22 y 89 € IVA excluido al mes, o entre 18,33 y 74,17 € IVA excluido si se paga anualmente: vehículos, órdenes de reparación, presupuestos, facturas y el inventario multi-depósitos en la oferta Expert.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "EBP MéCa y GAD Garage",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " son bajo presupuesto. Son suites con contabilidad integrada o exportaciones contables, para talleres que desean todo con un solo editor.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Y si ninguno encaja: la herramienta a medida",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Los programas para talleres hacen bien los presupuestos y las facturas. Donde fallan es en lo propio de tu taller: el registro de horas de los mecánicos, un seguimiento de flota para un cliente profesional, una secuencia de presupuesto, orden de reparación, pieza añadida en el camino y factura sin volver a introducir nada. He desarrollado ",
+              "type": "text"
+            },
+            {
+              "text": "Gest-Time",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/gestion-temps",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", un software de seguimiento de horas, para este tipo de necesidades: una herramienta que hace una sola cosa, exactamente como trabaja la empresa. Lo explico en otro artículo ",
+              "type": "text"
+            },
+            {
+              "text": "qué aporta una herramienta a medida a un taller mecánico",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/garagiste-outil-sur-mesure-rendez-vous-devis-suivi-vehicules",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En cuanto a precios, un complemento conectado junto a tu suscripción cuesta entre 2.500 y 7.000 € una sola vez. Un software de gestión completo oscila entre 5.000 y 15.000 € en pago único en mi caso, más 100 a 300 € al mes de mantenimiento, alojamiento y copias de seguridad incluidas, y el código es de tu propiedad. En tres años, AutoProGestion Pro cuesta 2.124 €. Lo personalizado no gana en esta cifra: gana cuando la suscripción te hace perder una hora al día en reingresos. Mi ",
+              "type": "text"
+            },
+            {
+              "text": "barómetro de precios del software a medida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " da los rangos de 14 proveedores franceses para verificar un presupuesto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cómo elegir en un día",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Haz el ",
+              "type": "text"
+            },
+            {
+              "text": "prueba en seis preguntas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile#test",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " de mi página sobre los programas para talleres. Luego, haz pasar una jornada real al programa durante su período de prueba gratuito: un presupuesto aceptado por teléfono, convertido en una orden de reparación firmada, una pieza añadida en el camino, la factura y el recordatorio de la inspección técnica seis meses después. Si vuelves a introducir algo, tendrás que hacerlo todos los días.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿AutoProGestion ofrece una prueba gratuita?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí, 14 días sin condiciones según su página de tarifas al 11 de octubre de 2026, sin cargo durante la prueba.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cuál es el programa para talleres más económico?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Entre los que muestran sus precios, Gest'Garage a 19 € al mes todo incluido, luego TDV desde 19,90 € IVA incluido solo para la agenda.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Debe un programa para talleres generar facturas electrónicas?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "A partir del 1 de septiembre de 2027, las PYMES deberán emitir sus facturas en formato electrónico. Gest'Garage ya lo anuncia con Factur-X. Para los demás, pregunten por la fecha prevista antes de comprometerse.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Qué debe contener una factura de taller?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Desde 25 € IVA incluido: la fecha, el nombre y la dirección del taller, el nombre del cliente, la fecha y el lugar de la intervención, el detalle de las piezas y de la mano de obra, los totales sin IVA e IVA incluido, y el kilometraje. Es el mínimo que debe verificar en el programa que está probando.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿No sabes cuál elegir?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Descríbeme tu taller en unas líneas: número de personas, lo que aún haces a mano, lo que te molesta. Te respondo en menos de 24 horas, y si una suscripción de 19 € es suficiente, te lo diré.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "bb87bc7b-ce40-4ad9-ab38-3936dabc5305",
+            "body": [
+              {
+                "_uid": "i-a1f71a05-5e4d-4135-a571-19b5e8c36bff",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
