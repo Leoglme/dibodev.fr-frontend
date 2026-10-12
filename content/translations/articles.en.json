@@ -16029,5 +16029,549 @@
         }
       ]
     }
+  },
+  "blog/aides-creation-site-internet-logiciel-2026": {
+    "title": "Grants for Creating a Website or Software in 2026: What Actually Exists and What No Longer Does",
+    "excerpt": "The France Num check is over, and the Bpifrance loan has ended too. What truly funds a website or software in 2026, the three rules that disqualify you from aid, and where to start.",
+    "metaTitle": "Grants for Website and Software Creation in 2026: What’s Available",
+    "metaDescription": "France Num check discontinued, Bpifrance loan ended. What actually funds a website or software in 2026: local grants, Pass Commerce, tax credits.",
+    "tags": [
+      "grant for website creation",
+      "website subsidy",
+      "digitalization aid for businesses 2026",
+      "France Num voucher",
+      "Pass Commerce and Craftsmanship",
+      "innovation tax credit"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "\"Isn’t there a €500 grant to create your website?\" I still hear that question, and the answer has been no since 2021. When a craftsman or a shopkeeper asks me, I prefer to tell them what actually exists in October 2026 rather than let them search for a dead program on outdated pages. I reviewed the guides from France Num, Bpifrance, the Ministry of Economy, and local authorities to write this guide. Here’s what no longer exists, what still does, and how not to miss out on the help you’re entitled to.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What no longer exists, even though many websites still mention it",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The €500 France Num voucher.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Created during the lockdown to help small businesses digitize, it ended in 2021. Well-ranked articles on Google still talk about it in the present tense. If a page promises \"the state’s €500 grant to create your website,\" it’s outdated.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bpifrance’s Digital Transformation Loan.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " This loan of €5,000 to €50,000, co-financed by banks, stopped being offered on December 31, 2023. Bpifrance confirms this on its page.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Free digital diagnostics from the recovery plan.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The Chambers of Commerce and Industry (CCI) and Chambers of Trades and Crafts (CMA) carried out thousands of these in 2021 and 2022. The national program has ended, though some chambers still offer support on their own initiative.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What exists in 2026 at the national level",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "There is no national grant for a website or software. What remains changes in nature.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bpifrance’s Boost Digital Transformation Loan.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " This is the successor to the loan that ended in 2023: a no-guarantee loan of €5,000 to €100,000 over three to five years, reserved for companies over three years old that already have an ongoing bank loan and an accountant. Individual businesses are not eligible. This is money to repay, not a grant.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The innovation tax credit.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The 2025 finance law extended it until December 31, 2027, reducing its rate to 20%. It covers 20% of expenses incurred by an SME to design a prototype for a new product, even if the work is outsourced to an approved provider. It does not cover an internal tool, a showcase website, or a management app: it targets a product you plan to sell. If you’re launching software or a platform, ask your accountant before signing, and check if the provider is approved.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The local aid database.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The aides-entreprises.fr website, managed by CMA France and taken over by France Num, lists over 2,000 aids from regions, departments, and local authorities. This is where the real grants for websites or software are found, and they depend on your address.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The real aids that exist are local",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In Brittany, the Commerce and Crafts Pass.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " This is the most solid program I’ve found for a digital project. The Region and each local authority fund 30% of investments for an independent shop or craftsman, up to €7,500 in aid, with a minimum often set at €6,000 VAT-exclusive per file. Website creation or redesign and online sales modules are almost always accepted; management software may be, depending on the local authority. Rennes Métropole caps aid at €6,000 and only covers towns with fewer than 5,000 inhabitants and priority neighborhoods in Rennes. Bretagne Porte de Loire offers up to 50% funding for digital projects starting at €2,000. I’ve reviewed the 18 regulations of Ille-et-Vilaine and included them in a ",
+              "type": "text"
+            },
+            {
+              "text": "grant simulator for your website or software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/aides-site-internet-logiciel",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": your municipality, your project, its amount, and it provides you with the aid, the remaining amount to be paid, and the points to confirm.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Elsewhere in France, regional or intermunicipal schemes exist.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The published guides show very different aids from one territory to another: from a few hundred euros for a basic website in some rural communities to several thousand euros in regions like Grand Est or Hauts-de-France, often as a percentage of expenses with a minimum and maximum threshold. The conditions are summarized in a few lines: company size, turnover, registration, and a request submitted before starting.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For SMEs in production in Brittany, the PASS Transitions.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The Region reimburses 50% of a consulting service of at least €6,000, providing aid of €3,000 to €10,000, for companies with fewer than 50 employees in production or production-related services. Local shops and artisans are not eligible, and the application deadline must be checked.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The three rules that can disqualify you from aid",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Applications are rarely rejected for the project itself. They are rejected due to the timeline or the amount.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Submit the request before signing.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " In almost all schemes, expenses incurred before submitting the request, or before receiving the acknowledgment of the letter of intent in Brittany, are not eligible. A signed quote from the day before will disqualify you entirely from the aid. Ask first, sign later.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Meeting the minimum threshold.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A basic website costing €1,500 rarely qualifies on its own when the application must reach €6,000 VAT-exclusive. A website with management tools, equipment, or renovations, yes. Bundle your investments into a single application.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Do not include subscriptions.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Hosting, maintenance, monthly software subscriptions, paid advertising, and SEO are never funded. Only development, creation, and training on the tool are eligible. Request a quote that separates these two.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to proceed, in order",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Search for your municipality on aides-entreprises.fr or, in Brittany, use the simulator. Then, call the CCI (Chamber of Commerce and Industry) or CMA (Chamber of Trades and Crafts) in your department: their advisors prepare the applications, know edge cases, and often organize a visit. Submit the request or letter of intent, then only proceed with quotes dated afterward. Allow one to three months for processing, and the aid is paid upon settled invoices, once the project is completed. Plan for cash flow between these steps.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What I do in your file",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I do not submit the request on your behalf—it’s your file and your signature. But I provide what the chamber expects from a service provider: a quote dated after your letter of intent, detailed line by line, without mixed subscriptions and development, and the technical answers for your advisor. To determine the cost of the project itself, my ",
+              "type": "text"
+            },
+            {
+              "text": "custom software pricing barometer",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " provides price ranges from 14 French providers, and my guide to the ",
+              "type": "text"
+            },
+            {
+              "text": "Pass Commerce and Artisanat in Rennes Métropole",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/pass-commerce-artisanat-rennes-site-internet",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " details the scheme town by town.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is the €500 grant to create a website still available?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. The France Num check stopped in 2021. Pages discussing it in the present tense are no longer up to date.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can a micro-entrepreneur receive assistance?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "For local aid, yes in most cases, if they are registered in the commercial register or the national business register and practice an approved trade. The Bpifrance Boost Loan, however, is reserved for companies.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is a custom management software eligible for aid?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "It depends on the region. In Brittany, some intercommunalities mention cash register software or customer relationship tools, while others only cover the website and online sales. Ask for a written response from your advisor before signing.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How much time should I plan for?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "One to three months of processing after submitting the complete file, then the project execution, followed by payment on invoices. From the first step to the money in your account, plan often six months.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Before signing an estimate",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you have a website or software project and want to know what is fundable where you are, write to me with your town and a brief description. I’ll reply within 24 hours with what I’ve found, and a compliant quote if the aid exists.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "330d62ee-faac-41d0-bfa3-200666107ad9",
+            "body": [
+              {
+                "_uid": "i-9a2c2e14-d973-4e69-8605-94c1fa41795a",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
