@@ -17149,5 +17149,549 @@
         }
       ]
     }
+  },
+  "blog/alternative-rentman-logiciel-location-materiel": {
+    "title": "Alternativa a Rentman: ¿qué software de alquiler de equipos elegir en 2026?",
+    "excerpt": "Rentman cuesta 39 € al mes más licencias y módulos por usuario. Su verdadero precio, sus limitaciones, cuatro alternativas como Booqable, y la opción personalizada.",
+    "metaTitle": "Alternativa a Rentman: software de alquiler y precios 2026",
+    "metaDescription": "Rentman cuesta 39 € al mes más licencias y módulos por usuario. Su verdadero precio, sus limitaciones, cuatro alternativas como Booqable y la opción personalizada.",
+    "tags": [
+      "rentman",
+      "opiniones de rentman",
+      "precio de rentman",
+      "alternativa a rentman",
+      "rentman o booqable",
+      "software de alquiler de equipos para eventos"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Rentman es el software que más comparan los alquileres de material para eventos: las búsquedas como «Rentman o Booqable», «Rentman o Current RMS» aparecen una y otra vez. Su precio es público pero se construye por módulos, y ahí es donde sorprenden las cotizaciones. Lo revisé el 11 de octubre de 2026, junto con las tarifas de otros software de alquiler que exhiben sus precios. Aquí te explico para quién Rentman es la mejor opción, qué puede hacer dudar, cuatro alternativas con sus tarifas, y el caso en el que una herramienta personalizada se justifica.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Qué cuesta Rentman en 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El 11 de octubre de 2026, la ",
+              "type": "text"
+            },
+            {
+              "text": "página de precios de Rentman",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://rentman.io/fr/tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " parte de una plataforma base a 39 € por mes, a la que se suman licencias por usuario avanzado y por mes: gestión de inventario Standard a 14 € o Pro a 19 €, planificación de equipos Essential a 14 €, Standard a 19 € o Pro a 24 €, y un módulo de organización a 14 €. Luego vienen los módulos adicionales, también por usuario avanzado y por mes: cotizaciones y facturación a 9 €, registros a 12 €, seguimiento de equipos a 9 €, y almacén adicional a 5 € por almacén. Los usuarios estándar son gratuitos e ilimitados. La prueba dura 30 días sin condiciones, el pago anual ofrece un 8% de descuento, y la página no especifica si los precios son sin impuestos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un ejemplo. Un alquiler con dos personas que gestionan el inventario y hacen las cotizaciones elige la plataforma base, dos licencias de gestión de inventario Standard y dos módulos de cotizaciones y facturación: 39 € más 2 veces 23 €, lo que suma 85 € por mes. Si además planifica equipos técnicos con el módulo Standard, el costo sube a 123 € por mes, es decir, 1.476 € al año. El «desde 53 €» que aparece en los comparadores corresponde a la plataforma base más una sola licencia de gestión de inventario, sin módulos de cotizaciones ni facturación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Para quién es Rentman la mejor opción?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Los proveedores técnicos del sector de eventos: sonido, iluminación, vídeo, estructuras. Ellos necesitan gestionar equipos, planificar técnicos para cada evento, a veces varios almacenes, y quieren cotizaciones, facturas, inventario y planificación de equipos en una sola herramienta. Rentman fue diseñado para ellos, y su puntuación de 4,6 sobre 5 en 243 reseñas en Capterra (al 11 de octubre de 2026) proviene principalmente de este público. Si te encuentras en esta situación con tres usuarios avanzados o más, el precio por módulos se justifica por lo que cada uno aporta.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Qué puede hacer dudar?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El precio se calcula, no se lee.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Cada usuario avanzado paga cada licencia y cada módulo. Antes de comparar Rentman con un software de precio fijo, haz tus propios cálculos con tus usuarios reales.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La planificación de equipos no sirve para todos.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Un alquiler de mesas, sillas, carpas o vajilla entrega material, pero no planifica técnicos. Así paga por una plataforma diseñada para un oficio cercano al suyo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las cotizaciones y facturas son un módulo.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A 9 € por usuario avanzado y por mes, no están incluidos en el precio base, a diferencia de LoKisi o Unipresta, que sí los incluyen en su oferta.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El IVA y el idioma del soporte.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La página de precios está en francés pero no indica si los precios son sin impuestos. Rentman es un editor neerlandés: pregunta en qué idioma y en qué horarios responde el soporte.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cuatro alternativas a Rentman, con sus precios",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Precios mostrados en el sitio web de cada editor, revisados el 29 de septiembre de 2026 para mi ",
+              "type": "text"
+            },
+            {
+              "text": "comparativa de software de alquiler de material",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-location-materiel-evenementiel#logiciels",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Booqable",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " cuesta 29 a 149 dólares por mes, en dólares, con un 20 % de descuento anual: pedidos, inventario y disponibilidad, página de reserva en línea, firma electrónica en el paquete Grow, entregas opcionales. Es la alternativa más comparada con Rentman, con una calificación de 4,8 sobre 5 en 1.175 reseñas en Capterra, y destaca la reserva en línea en lugar de la planificación de equipos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "LoKisi",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " cuesta desde 29 € por mes, sin compromiso: inventario y disponibilidad en tiempo real, cotizaciones, reservas, albaranes de entrega, contratos y facturas. Un editor francés, todo incluido en el precio base.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Current RMS",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " cuesta 69 € por mes para el primer usuario, luego 49 € por usuario adicional: alquiler, inventario, cotizaciones y planificación sin módulos adicionales. Posicionado en el mismo sector técnico que Rentman, con un precio más sencillo de calcular.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Unipresta",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " tiene una versión gratuita con cotizaciones, reservas, inventario, planificación, clientes y sitio web de alquiler en línea; los planes ilimitados no se muestran en su página.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sphinx Manager, Locasyst, Codial, CLE y Utiliz, las suites francesas con albaranes de salida y retorno, daños facturados y stock por depósito, están bajo presupuesto personalizado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Y si ninguno encaja? La herramienta personalizada",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Los software de alquiler gestionan bien un artículo alquilado de una fecha a otra. Se complican con lo que define tu temporada: un kit (mesa, sillas, mantel) en el que falta un elemento al devolverlo, el tiempo de limpieza entre dos eventos consecutivos, un inventario repartido entre dos depósitos con transferencias, tarifas progresivas personalizadas. He desarrollado ",
+              "type": "text"
+            },
+            {
+              "text": "StockPME",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/stockpme",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ",",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "un software de inventario multi-almacén con números de serie y transferencias, para este tipo de reglas que no encajan en ningún modelo estándar. ",
+              "type": "text"
+            },
+            {
+              "text": "Mi",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " barómetro de precios de software personalizado",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cómo elegir en un día",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Haz la ",
+              "type": "text"
+            },
+            {
+              "text": "prueba en seis preguntas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-location-materiel-evenementiel#test",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " de mi página sobre software de alquiler. Luego, hagan que el software pruebe un caso real de su temporada: el mismo artículo alquilado en dos eventos consecutivos, con el tiempo de limpieza entre ambos, y un kit del que falta un elemento al devolverlo. Y calculen el precio con sus usuarios reales, no con el precio de oferta.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Rentman o Booqable?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Rentman para proveedores técnicos que planifican equipos y gestionan equipos en varios almacenes. Booqable para arrendadores que desean una página de reserva en línea y órdenes simples, con precios fijos en dólares.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Rentman está en francés?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Su sitio web y su página de precios lo están. Verifique el idioma del soporte y los horarios antes de firmar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Rentman ofrece una prueba gratuita?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí, 30 días sin condiciones y sin tarjeta hasta el 11 de octubre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cuánto cuesta un software de alquiler de equipos?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Desde gratis hasta aproximadamente 150 € por mes según los usuarios y los módulos, para los softwares que muestran sus precios. Las suites francesas bajo presupuesto no publican sus tarifas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Duda entre suscripción y solución a medida?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Envíeme su funcionamiento en unas líneas: número de personas, depósitos, lo que aún hace en Excel. Le respondo en menos de 24 horas con una opinión honesta, incluso cuando una suscripción de 29 € es suficiente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "a3e8422f-125e-4114-a361-1dd04367253c",
+            "body": [
+              {
+                "_uid": "i-e351b6a4-f6ab-483c-98e8-b25236db6702",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
