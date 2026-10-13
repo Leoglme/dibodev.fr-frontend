@@ -16575,5 +16575,579 @@
         }
       ]
     }
+  },
+  "blog/logiciel-gestion-de-stock-sur-mesure-pme-inventaire": {
+    "title": "Software de gestión de inventario personalizado: inventario, códigos QR y múltiples almacenes",
+    "excerpt": "¿Un inventario en Excel que nunca coincide con los estantes? Lo que un software de gestión de inventario personalizado cambia para una PYME: códigos QR, almacenes, inventario rotativo.",
+    "metaTitle": "Gestión de inventario personalizada para PYME: inventario y códigos QR",
+    "metaDescription": "Inventario en Excel desactualizado, conteo anual engorroso, múltiples almacenes: lo que un software de gestión de inventario personalizado transforma para una PYME, incluyendo etiquetas con códigos QR.",
+    "tags": [
+      "gestión de inventario PYME",
+      "software de inventario",
+      "etiquetas con código QR",
+      "gestión multi-almacenes",
+      "inventario rotativo",
+      "software personalizado PYME"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hay un momento que todos los gerentes de PYME con stock conocen. Un cliente llama por una referencia, el archivo indica «12 en stock». Alguien va a verificar al almacén. Quedan dos, y una caja abierta de la que nadie sabe de dónde viene.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El archivo no es falso por casualidad. Es falso porque depende de decenas de pequeñas entradas que nadie tiene tiempo de hacer en el momento adecuado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Trabajé en este problema durante mi alternancia en Kodeva, en StockPME, un software de gestión de stock e inventario para microempresas y PYME, distribuido junto con su material por la empresa Breizhtic. Sigue utilizándose hoy. Aquí está lo que aprendí.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Por qué un stock en Excel siempre termina siendo falso",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una hoja de cálculo de stock funciona bien mientras solo una persona se encargue, con un solo almacén y pocas referencias. Después, los errores aparecen poco a poco:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- una salida anotada en un post-it, nunca registrada;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- dos personas modificando el archivo al mismo tiempo, y una versión sobrescribiendo a la otra;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- una transferencia entre dos almacenes contabilizada dos veces, o no contabilizada en absoluto;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- devoluciones de clientes puestas de nuevo en el estante sin que nadie las registre.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Pasados unos meses, nadie confía más en el archivo. Se cuenta a mano antes de cada gran pedido, y el inventario de fin de año moviliza a todo el equipo un sábado. Si esto les suena, he listado los ",
+              "type": "text"
+            },
+            {
+              "text": "signos de que es hora de dejar Excel",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-metier-b2b-quitter-excel-signes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que un software de gestión de stock debe hacer para una PYME",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La idea no es copiar el software de un gran grupo. Para una PYME, lo esencial se resume en pocas funcionalidades:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Fichas de producto claras",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": referencia, denominación, proveedor, precio, umbral de alerta, ubicación.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Cada movimiento registrado",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": entrada, salida, devolución, transferencia, con quién lo realizó y cuándo. Es lo que permite entender una discrepancia en lugar de sufrirla.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "El inventario por almacén",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": si tienes un almacén, una camioneta y una tienda, cada uno tiene su inventario, y una transferencia se realiza en un gesto.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Alertas de umbral",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": sabes que un artículo se agotará antes de prometérselo a un cliente.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Un historial",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": lo que salió el mes pasado, lo que lleva un año en los estantes sin moverse.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nada espectacular. Pero cuando todo está en el mismo lugar y actualizado, el inventario vuelve a ser información fiable, y ya no una estimación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Las etiquetas QR: el inventario sin papel",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En StockPME, las etiquetas con código QR estaban en el corazón de la herramienta. Cada producto o ubicación tiene la suya. Se escanea con un teléfono o un lector, y la ficha se abre: se registra una salida, una transferencia o un conteo en segundos, sin buscar la referencia en una lista.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las etiquetas se generan directamente desde la herramienta: se eligen los productos, se imprimen y se pegan. Cuando una etiqueta se daña o llega un nuevo producto, se vuelve a imprimir en dos clics, sin necesidad de recurrir a un proveedor externo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Esto es lo que más cambia el inventario. En lugar de dedicar un día entero una vez al año, se puede contar una zona por semana: es lo que se conoce como inventario rotativo. El stock está siempre actualizado durante todo el año, y el sábado de diciembre vuelve a ser un sábado normal.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Un ejemplo concreto: un alquiler de equipos para eventos",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Imagina una empresa que alquila material para bodas y ferias: carpas, mesas, sillas, vajilla. Dos almacenes, una furgoneta y un stock que sale y regresa cada fin de semana.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hoy, las reservas viven en una agenda, el inventario en una hoja de cálculo, y los devoluciones se verifican a simple vista el lunes por la mañana. Resultado: descubres que faltan veinte vasos al preparar el pedido siguiente, y ya no sabes si es por rotura, un error de conteo o una caja olvidada en el otro almacén.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Con una herramienta adecuada, cada salida se escanea al cargar, cada devolución al descargar. Las roturas se anotan al instante, con una foto si es necesario. El inventario de cada almacén está siempre actualizado, y antes de confirmar una reserva, se ve exactamente qué estará disponible en la fecha solicitada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El equipo no cuenta menos. Cuenta en el momento adecuado, y solo una vez.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Software del mercado o herramienta a medida?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Existen muchos programas de gestión de inventario, y algunos son muy buenos. Si su actividad es clásica (comprar, almacenar, revender), empiece por mirar por ese lado: suele ser la respuesta correcta, y explico cómo decidir en este ",
+              "type": "text"
+            },
+            {
+              "text": "comparativo entre software SaaS y a medida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La opción personalizada se vuelve interesante cuando su forma de trabajar sale del molde: alquiler con salidas y devoluciones, números de serie o lotes que deben seguirse, varios almacenes con transferencias frecuentes, o un inventario que debe comunicarse con su herramienta de cotización o su tienda en línea.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En cuanto al presupuesto, cuente generalmente entre 5.000 y 15.000 € de precio fijo por una herramienta para microempresas o PYMES, y luego entre 100 y 300 € por mes de mantenimiento. Todo está explicado en mi página ",
+              "type": "text"
+            },
+            {
+              "text": "aplicación comercial a medida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", y puede ver la ",
+              "type": "text"
+            },
+            {
+              "text": "ficha del proyecto StockPME",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/stockpme",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Hay que comprar escáneres?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No necesariamente. Un teléfono suele ser suficiente para leer un código QR. Un lector dedicado se vuelve útil cuando se escanea mucho, durante todo el día.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Se puede migrar nuestro archivo Excel actual?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí. Lo importamos para empezar con sus referencias y cantidades, luego hacemos un primer conteo para partir de una base precisa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Y si varias personas lo usan al mismo tiempo?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Justamente, ese es el objetivo: cada uno registra sus movimientos desde su puesto o su teléfono, y todos ven el mismo inventario actualizado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cuánto tiempo para una primera versión?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Unas semanas para una primera herramienta útil: fichas de productos, movimientos y etiquetas. Las alertas, las estadísticas o los enlaces con sus otros programas llegan después.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Hablamos?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si su inventario vive en una hoja de cálculo en la que ya nadie confía realmente, podemos empezar de forma sencilla: un audit de su organización actual y un plan de acción escrito, por teléfono o en videollamada. Siempre empiezo por el punto que más duele, le doy una estimación honesta del presupuesto, y si un software existente le basta, se lo digo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "924f1ffa-ffe8-4788-a200-5b4093c55031",
+            "body": [
+              {
+                "_uid": "i-0b243412-6dea-48d3-8399-3457cabe5c67",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

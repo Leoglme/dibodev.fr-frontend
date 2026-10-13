@@ -16573,5 +16573,579 @@
         }
       ]
     }
+  },
+  "blog/logiciel-gestion-de-stock-sur-mesure-pme-inventaire": {
+    "title": "Custom Inventory Management Software: Inventory, QR Codes, and Multi-Warehouse Solutions",
+    "excerpt": "Is your Excel stock list never matching your shelves? Discover how a custom inventory management software transforms small and medium-sized businesses (SMEs): QR codes, multi-warehouse support, and cycle counting.",
+    "metaTitle": "Custom Inventory Management for SMEs: Streamline with QR Codes and Smart Tracking",
+    "metaDescription": "Frustrated with inaccurate Excel stock records, tedious annual inventories, or managing multiple warehouses? Learn how a custom inventory management solution revolutionizes SME operations—complete with QR labels for seamless tracking.",
+    "tags": [
+      "inventory management for SMEs",
+      "custom inventory software",
+      "QR code labels",
+      "multi-warehouse management",
+      "cycle counting inventory",
+      "tailored SME solutions"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "There’s a moment every small business manager with inventory knows well. A customer calls for a reference, the file says ‘12 in stock.’ Someone goes to check the warehouse. Only two remain, plus an open box no one knows where it came from.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The file isn’t wrong by chance. It’s wrong because it relies on dozens of small entries that no one has time to input at the right moment.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I worked on this problem during my internship at Kodeva, on StockPME, a stock and inventory management software for SMEs and small businesses, distributed with its hardware by the company Breizhtic. It’s still in use today. Here’s what I learned from it.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Why does a stock spreadsheet always end up being wrong?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A stock spreadsheet works fine as long as only one person manages it, with a single warehouse and few references. Then, discrepancies start to creep in gradually:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- an exit noted on a sticky note, never recorded;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- two people editing the file at the same time, with one version overwriting the other;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- a transfer between two warehouses counted twice, or not at all;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- customer returns placed back on the shelf without anyone re-entering them.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "After a few months, no one trusts the file anymore. You recount everything manually before every big order, and the year-end inventory keeps the whole team busy on a Saturday. If that sounds familiar, I’ve listed the ",
+              "type": "text"
+            },
+            {
+              "text": "signs it’s time to leave Excel",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-metier-b2b-quitter-excel-signes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What a stock management software should do for an SME",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The goal isn’t to replicate an ERP from a large corporation. For an SME, the essentials boil down to a few key features:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Clear product sheets",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": reference, description, supplier, price, alert threshold, location.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Every movement tracked",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": entries, exits, returns, transfers, along with who did it and when. That’s what allows you to understand a discrepancy instead of just suffering through it.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Inventory by location",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": if you have a warehouse, a truck, and a store, each has its own inventory, and a transfer happens with a single action.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Threshold alerts",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": you know a product is about to run out before promising it to a customer.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "A history",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": what was used last month, what has been sitting on the shelves for a year.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nothing spectacular. But when everything is in one place and up to date, inventory becomes reliable information, not just an estimate.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "QR code labels: paperless inventory",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On StockPME, QR code labels were at the heart of the tool. Each product or location has its own. You scan it with a phone or a reader, and the record opens: you log an outgoing item, a transfer, or a count in seconds, without searching for the reference in a list.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The labels are generated directly from the tool: you select the products, print, and stick them on. When a label gets damaged or a new product arrives, you reprint one in two clicks, without going through a third party.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is what changes inventory the most. Instead of spending an entire day once a year, you can count one area per week: this is called cycle counting. The inventory stays accurate all year round, and December Saturday becomes a normal one again.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "A concrete example: a rental company for event equipment",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Take a company that rents equipment for weddings and trade shows: tents, tables, chairs, dishes. Two warehouses, a van, and an inventory that goes out and comes back every weekend.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Today, bookings live in a calendar, inventory in a spreadsheet, and returns are checked by eye on Monday morning. Result: you realize twenty glasses are missing when preparing the next order, and you don’t know if it’s breakage, a counting error, or a box left in the other warehouse.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "With the right tool, every outgoing item is scanned when loading, every return when unloading. Breakage is noted immediately, with a photo if needed. Each warehouse’s inventory stays accurate at all times, and before confirming a booking, you see exactly what will be available on the requested date.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The team doesn’t count less. They count at the right time, and only once.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Off-the-shelf software or custom-built tool?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "There are many inventory management software options, and some are excellent. If your business is traditional (buy, store, resell), start by looking in that direction: it’s often the right answer, and I explain how to decide in this ",
+              "type": "text"
+            },
+            {
+              "text": "comparison between SaaS software and custom solutions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Custom solutions become interesting when your way of working goes beyond the standard: rentals with check-outs and returns, serial numbers or batches to track, multiple warehouses with frequent transfers, or inventory that must communicate with your quoting tool or online store.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For the budget, expect between €5,000 and €15,000 upfront for a small business or SME tool, plus €100 to €300 per month for maintenance. Everything is explained on my ",
+              "type": "text"
+            },
+            {
+              "text": "custom business application",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "page, and you can check out the ",
+              "type": "text"
+            },
+            {
+              "text": "StockPME project sheet",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/stockpme",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Do I need to buy scanners?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Not necessarily. A smartphone often suffices to read a QR code. A dedicated reader becomes useful when scanning a lot—all day long.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can we import our current Excel file?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Yes. We import it to start with your references and quantities, then perform an initial count to ensure an accurate baseline.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What if multiple people use it at the same time?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "That’s exactly the point: everyone records their transactions from their workstation or phone, and everyone sees the same up-to-date inventory.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How long for a first version?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "A few weeks for a functional first tool: product sheets, movements, and labels. Alerts, statistics, or integrations with other software come later.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Want to talk?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If your inventory lives in a spreadsheet no one really trusts anymore, we can start simply: an audit of your current organization and a written action plan, over the phone or via video call. I always begin with the most critical issue, give you an honest budget estimate, and if an existing software solution works for you, I’ll tell you.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "924f1ffa-ffe8-4788-a200-5b4093c55031",
+            "body": [
+              {
+                "_uid": "i-0b243412-6dea-48d3-8399-3457cabe5c67",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Talking about my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
