@@ -17693,5 +17693,507 @@
         }
       ]
     }
+  },
+  "blog/lovable-supabase-base-de-donnees-ouverte-verifier-rls": {
+    "title": "Lovable y Supabase: verifica en diez minutos si tu base de datos está abierta a todos",
+    "excerpt": "Una tabla de Supabase sin reglas de acceso se puede leer sin cuenta. Diez minutos para verificar la tuya y lo que yo corrijo cuando la base está abierta.",
+    "metaTitle": "Lovable y Supabase: ¿tu base de datos está abierta a todos?",
+    "metaDescription": "Las aplicaciones Lovable suelen dejar sus tablas de Supabase sin reglas de acceso. Diez minutos para verificarlo y qué corregir si la base está expuesta.",
+    "tags": [
+      "lovable supabase",
+      "seguridad en aplicaciones lovable",
+      "seguridad por nivel de fila",
+      "aplicación generada por IA",
+      "base de datos expuesta",
+      "recuperación de aplicación IA"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "\"¿Mi aplicación Lovable funciona, pero ¿mis datos están protegidos?\" Es la pregunta que hago primero cuando alguien me muestra una aplicación generada por IA, y la respuesta suele ser: nadie lo ha verificado. Lovable, Bolt y la mayoría de las herramientas similares almacenan sus datos en Supabase, una base de datos muy bien diseñada, pero con una particularidad: por defecto, una tabla puede ser legible por cualquiera que conozca la dirección de su aplicación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No es un rumor. En mayo de 2025, se publicó una vulnerabilidad bajo el nombre CVE-2025-48757: sitios generados por Lovable permitían leer y modificar sus tablas sin necesidad de cuenta, debido a reglas de acceso insuficientes. Lovable respondió que la protección de datos sigue siendo responsabilidad de cada cliente. En otras palabras, es usted quien debe verificar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Aquí le explico cómo hacerlo en diez minutos, sin ser desarrollador, y qué hacer si el resultado le preocupa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que hace la Row Level Security, en términos sencillos",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Supabase expone su base de datos directamente a su aplicación a través de una clave llamada «pública», que cualquiera puede ver en el navegador. Es normal, así funciona la herramienta. Lo que impide que un desconocido acceda a los registros de sus clientes no es esa clave, sino las reglas de acceso aplicadas a cada tabla, que Supabase denomina Row Level Security (RLS, por sus siglas en inglés).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Por ejemplo, una regla puede establecer: «un usuario conectado solo ve las filas donde la columna propietario muestra su identificador». Sin reglas, la documentación de Supabase es clara: una tabla expuesta sin RLS es legible y modificable por cualquier rol que tenga acceso, incluyendo el rol público utilizado por su aplicación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El problema de las aplicaciones generadas por IA es que estas reglas suelen olvidarse o configurarse demasiado amplias para que «funcionen» durante la demostración. Todo parece funcionar, las pantallas son atractivas, pero la puerta está abierta.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Verificar en diez minutos",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Necesitará acceso a su proyecto en Supabase (Lovable lo dirige desde la configuración del proyecto, o usted lo creó por su cuenta).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1. ",
+              "type": "text"
+            },
+            {
+              "text": "Abra el panel de control de Supabase",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", luego la sección que lista sus tablas. Cada tabla muestra si la RLS está activada o no. Una tabla marcada como no protegida, que contenga nombres, correos electrónicos o pedidos, es la primera señal de alerta.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "2. ",
+              "type": "text"
+            },
+            {
+              "text": "Revise las reglas de cada tabla protegida.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Activar la RLS no es suficiente: se necesitan reglas. Una regla que permita a todos leer todo, añadida «para que funcione», equivale a no tener ninguna regla.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "3. ",
+              "type": "text"
+            },
+            {
+              "text": "Haga la prueba del desconocido.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Abra su aplicación en una ventana de navegación privada, sin iniciar sesión. Si aparecen datos de otras personas o si se muestra una pantalla restringida sin necesidad, la protección no está en su lugar.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "4. ",
+              "type": "text"
+            },
+            {
+              "text": "Busque claves que no deberían estar ahí.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " En los ajustes de Supabase, existe una clave llamada de servicio que elude todas las reglas. Nunca debe aparecer en el código de la aplicación. Si ves esta clave en un archivo de configuración del lado del navegador, considérala comprometida.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Diez minutos bastan para saber si tienes un problema. Corregirlo requiere un poco más.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que corrijo cuando la base está abierta",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ese mismo día, cierro la puerta: RLS activada en cada tabla, y reglas que solo permiten el paso al propietario de la fila o al rol que lo necesite. Luego, verifico con dos cuentas diferentes que una nunca ve los datos de la otra, y escribo esa prueba para que se ejecute en cada actualización.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si una clave de servicio aparecía en el código, la renuevo y muevo todo lo que la usaba al lado del servidor. Si datos pudieron ser leídos por desconocidos, se lo escribo negro sobre blanco, con lo que el RGPD exige en ese caso: informar a las personas afectadas y, cuando el riesgo es real, declarar el incidente a la CNIL en 72 horas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Es el primer paso de la ",
+              "type": "text"
+            },
+            {
+              "text": "recuperación de una aplicación hecha con IA",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/reprendre-application-lovable-bolt",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": la puesta en seguridad, que suele tomar entre tres y siete días, antes de tocar cualquier error funcional.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Un ejemplo concreto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Imaginemos a Karim, que gestiona una pequeña sala de escalada y construyó con Lovable un espacio de socios: inscripción, reserva de turnos, historial de visitas. Todo funciona. Al hacer la prueba del desconocido, descubre que la lista de socios, con sus correos electrónicos y fechas de nacimiento, se carga incluso sin estar conectado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La corrección se resuelve en un día: reglas de acceso por socio, un rol para recepción que ve a todos, una prueba automática que verifica ambos casos. La aplicación no cambia ni un píxel. Pero el día que un socio pregunte «¿quién puede ver mis datos?», Karim tiene una respuesta.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Y Bolt, v0, Cursor?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El mecanismo es el mismo: estas herramientas también se basan en Supabase o en una base comparable, y las reglas de acceso suelen estar ausentes allí también. La verificación anterior aplica para todos. Solo cambia la forma de llegar al panel de control de la base.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿La clave pública de Supabase visible en mi aplicación es un problema?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No, está hecha para eso. Lo importante es que las tablas detrás tengan reglas de acceso. La clave que nunca debes exponer es la clave de servicio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Lovable puede corregir esto solo si se lo pido?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Puede añadir reglas, pero sin entender tu negocio, a menudo las escribe demasiado amplias, y nada verifica que funcionen después de la siguiente corrección. Es precisamente lo que releo y pruebo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cuánto cuesta asegurar una aplicación Lovable?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "El audit es gratuito. La puesta en seguridad completa (reglas de acceso, claves, copias de seguridad, cuentas y permisos) oscila entre 900 y 1.500 € en paquete, en tres a siete días. Los precios completos están en la ",
+              "type": "text"
+            },
+            {
+              "text": "página de recuperación de la aplicación de IA",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/reprendre-application-lovable-bolt",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Debo detener mi aplicación para verificar?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. Verificar no afecta nada. Si la base está abierta, el cierre tarda unas horas y se realiza sin interrumpir el servicio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Quieren que revise la suya?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si no desea realizar estas verificaciones por sí mismo, envíeme la dirección de su aplicación. Revisaré la base de datos, las reglas y las claves, y recibirá una primera opinión por escrito en menos de 48 horas, de forma gratuita. También puede empezar con la ",
+              "type": "text"
+            },
+            {
+              "text": "prueba de 8 preguntas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/reprendre-application-lovable-bolt#test",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", que le indica en dos minutos en qué punto está.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "👉 ",
+              "type": "text"
+            },
+            {
+              "text": "Solicitar mi auditoría gratuita",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/reprendre-application-lovable-bolt",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "f6272335-87b8-414a-9824-3f08add6b6ab",
+            "body": [
+              {
+                "_uid": "i-2077b911-5d81-4763-bcad-7385f65e958e",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
