@@ -18782,5 +18782,570 @@
         }
       ]
     }
+  },
+  "blog/prix-lovable-credits-quand-passer-a-un-developpeur": {
+    "title": "What Are the True Costs of Lovable Credits, and When to Switch to a Developer?",
+    "excerpt": "The listed price of Lovable doesn’t reveal the true cost of an application that evolves and improves over time. Published figures, a concrete example, and the point at which hiring a developer becomes more cost-effective.",
+    "metaTitle": "Lovable Pricing: Credits, Subscriptions, and When to Hand Over the Reins",
+    "metaDescription": "From $25 to $2,250 per month, 0.50 to 2 credits per request, with corrections billed even if unsuccessful: the real cost of a Lovable AI application, and when it’s time to transition.",
+    "tags": [
+      "lovable pricing",
+      "lovable credits",
+      "lovable subscription",
+      "ai app cost",
+      "budget for ai coding",
+      "handing over an ai application"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "\"I signed up for the $25 plan, and after ten days, I had no credits left.\" If you’ve built an app with Lovable, you’ve probably experienced this. The listed price isn’t wrong, but it doesn’t show how much a living, evolving, and growing app truly costs. Here are the numbers as Lovable publishes them, what they actually deliver for a real project, and when a developer becomes cheaper than credits.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The prices below are those displayed in Lovable’s documentation as of October 11, 2026, in dollars. They change regularly: check them before deciding.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What a Lovable subscription costs",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lovable operates on credits. Each subscription provides a set number per month, and each request consumes them.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Free",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": 5 build credits per day, capped at 30 per month, plus a few credits for hosting and AI features. Enough to try it out, not to progress.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Pro",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": starting at $25 per month for 100 credits ($21 per month if paid annually). The tiers then increase: $50 for 200 credits, $100 for 400, $200 for 800, up to $2,250 per month for 10,000 credits.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Business",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": the same tiers, at double the price, with role management, enterprise connection, and priority support.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Top-ups",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": $15 for 50 credits on Pro, $30 on Business, valid for twelve months.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "One detail that often surprises users: unused monthly credits expire two months after being allocated. What you didn’t use in October is lost by the end of December.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What a request costs",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is where the bill is determined. In build mode, Lovable charges for each message based on the work required. Examples from its own documentation: graying out a button, 0.50 credit; removing the footer, 0.90; adding authentication with signup and login, 1.20; building a homepage with images, 1.70 to 2. In plan mode, each message costs 1 credit.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Two rules heavily impact a buggy project. A request you stop midway is billed for the work already done. And a failed fix costs as much as a successful one. When the AI keeps looping on the same bug, each attempt adds to the total.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What does it look like on a real project?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Let’s take a small management app: clients, quotes, a schedule. The first version is built with 80 to 150 messages, or 100 to 200 credits. With the Pro subscription at 200 credits, $50 per month, it’s doable in one month.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Then comes the phase everyone underestimates: the fixes. A recurring scheduling bug, a failed payment, a screen breaking when fixing another one. It’s not uncommon to spend 40 to 80 credits just on fixes each month. Over six months, including one or two additional tiers and a few top-ups, you easily reach between $400 and $800—not counting your time—for an app that still isn’t stable.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This isn’t a criticism of Lovable: the tool is remarkable for building a prototype in a few days. It’s the model that’s designed for building, not for maintaining an app with users.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The moment when a developer costs less",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I see three recurring signals, and when two of them appear, the math changes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You’re stuck in a loop of paying for fixes.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " If, for two months in a row, most of your credits go toward fixing the same issue, you’re paying the subscription without making progress.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "There are clients or data involved.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " As soon as customer records, payments, or documents pass through the app, the cost of an error far exceeds that of credits. I explain this in the article on ",
+              "type": "text"
+            },
+            {
+              "text": "Supabase access rule verification",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/lovable-supabase-base-de-donnees-ouverte-verifier-rls",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You no longer dare make any changes.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " When every request feels risky, the tool isn’t useful anymore.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In response, my prices are fixed and upfront: the audit is free, a written diagnosis costs €400, securing the app costs €900 to €1,500, and a takeover with deployment costs €2,500 to €6,000. Everything is detailed on the ",
+              "type": "text"
+            },
+            {
+              "text": "AI app takeover page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/reprendre-application-lovable-bolt",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". For an app you use daily, a €3,000 takeover often costs less than a year of tier upgrades and top-ups, and you end up with code you own.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "A concrete example",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Let’s say Sophie runs a vacation rental agency and built a tool with Lovable to track bookings and cleaning schedules. In spring, the $50 subscription was enough. In summer, fixes piled up: she upgraded to the $100 tier, bought two top-ups, and ended the season having spent nearly $500, with a schedule still showing duplicates.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A free audit would have shown in half an hour that the issue came from how bookings were recorded, not the screens. A targeted takeover, a few days of work, and the duplicates were gone for good. Sophie keeps Lovable for designing new ideas and hands production to a developer.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can I keep using Lovable while also hiring a developer?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Yes, and it’s often the best setup. The project is synced with a GitHub repository, where the developer works, while you continue designing in the tool. I outline the process in the article on ",
+              "type": "text"
+            },
+            {
+              "text": "exporting a Lovable project to GitHub",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/exporter-projet-lovable-github-faire-reprendre-developpeur",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What happens if I run out of credits?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "The build stops, but your published site stays online. However, your app’s AI features and some background services may pause.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is the free audit really free?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Yes: thirty minutes of discussion, a code review and access rules check, and a written first opinion within 48 hours. You then decide—or not—how to proceed.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Do I have to start from scratch if I switch to a developer?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Rarely. In most cases, we keep the interface and user flows, and only rebuild the unstable foundations.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Want to know where you stand?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The ",
+              "type": "text"
+            },
+            {
+              "text": "8-question test",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/reprendre-application-lovable-bolt#test",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " gives you a risk level and the right formula in two minutes. If you prefer to talk, send me your app’s address: I’ll review it and tell you honestly whether it’s better to stick with the tool or hand it over.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "→ ",
+              "type": "text"
+            },
+            {
+              "text": "Request my free audit",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/reprendre-application-lovable-bolt",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "3f76b571-2801-47a8-a2dd-ce0316f63251",
+            "body": [
+              {
+                "_uid": "i-be336772-1c1c-41ea-ae80-becc49f766bc",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

@@ -18784,5 +18784,570 @@
         }
       ]
     }
+  },
+  "blog/prix-lovable-credits-quand-passer-a-un-developpeur": {
+    "title": "¿Cuánto cuestan realmente los créditos de Lovable y cuándo contratar a un desarrollador?",
+    "excerpt": "El precio publicado de Lovable no refleja el costo real de una aplicación que se corrige y evoluciona. Los números revelados, un ejemplo cuantificado y el momento en que un desarrollador resulta más económico.",
+    "metaTitle": "Precio de Lovable: créditos, suscripciones y el momento de ceder el control",
+    "metaDescription": "De 25 a 2.250 $ al mes, 0,50 a 2 créditos por solicitud, correcciones pagadas incluso si fallan: el verdadero costo de una aplicación Lovable y cuándo es momento de dar el paso.",
+    "tags": [
+      "precio lovable",
+      "créditos lovable",
+      "suscripción lovable",
+      "costo aplicación IA",
+      "presupuesto vibe coding",
+      "transferencia aplicación IA"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "\"Tomé el plan de 25 dólares y, después de diez días, ya no tenía créditos.\" Si has construido una aplicación con Lovable, probablemente hayas vivido eso. El precio mostrado no es falso, pero no indica cuánto cuesta realmente una aplicación que vive, se corrige y crece. Aquí están los números tal como Lovable los publica, lo que realmente ofrecen en un proyecto y el momento en que un desarrollador sale más económico que los créditos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Los precios a continuación son los mostrados en la documentación de Lovable el 11 de octubre de 2026, en dólares. Estos cambian con frecuencia: verifícalos antes de decidir.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cuánto cuesta una suscripción a Lovable",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lovable funciona con créditos. Cada suscripción otorga una cierta cantidad por mes, y cada solicitud consume algunos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Gratis",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": 5 créditos de construcción por día, con un límite de 30 al mes, más algunos créditos para alojamiento y funciones de IA. Suficiente para probar, pero no para avanzar.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Pro",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": desde 25 dólares por mes para 100 créditos (21 dólares por mes si pagas el año completo). Los niveles suben después: 50 dólares para 200 créditos, 100 para 400, 200 para 800, hasta 2.250 dólares por mes para 10.000 créditos.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Negocios (Business)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": los mismos niveles, al doble de precio, con gestión de roles, conexión de empresa y soporte prioritario.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "Recargas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": 15 dólares por 50 créditos en el plan Pro, 30 dólares en el plan Business, válidos por doce meses.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un detalle que sorprende a menudo: los créditos mensuales no utilizados caducan dos meses después de ser asignados. Lo que no consumiste en octubre se pierde a finales de diciembre.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cuánto cuesta una solicitud",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ahí es donde se define la factura. En modo construcción, Lovable cobra cada mensaje según el trabajo solicitado. Ejemplos de su propia documentación: deshabilitar un botón, 0,50 créditos; eliminar el pie de página, 0,90; añadir una autenticación con registro e inicio de sesión, 1,20; construir una página de inicio con imágenes, entre 1,70 y 2 créditos. En modo plan, cada mensaje cuesta 1 crédito.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Dos reglas pesan mucho en un proyecto con errores. Una solicitud que detienes en medio del proceso se factura por el trabajo ya realizado. Y una corrección que falla cuesta lo mismo que una corrección exitosa. Cuando la IA da vueltas sobre el mismo error, cada intento se suma a la cuenta.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿En un proyecto real, qué resultados se obtienen?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tomemos una pequeña aplicación de gestión: clientes, presupuestos, un calendario. La primera versión se construye con 80 a 150 mensajes, es decir, 100 a 200 créditos. Con el plan Pro a 200 créditos, 50 dólares al mes, es factible en un mes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Luego llega la fase que todos subestiman: las correcciones. Un error en el calendario que vuelve a aparecer, un pago que no se procesa, una pantalla que falla cuando se corrige otra. No es raro gastar 40 a 80 créditos al mes solo en correcciones. En seis meses, contando uno o dos niveles adicionales y algunas recargas, fácilmente se llega entre 400 y 800 dólares, sin contar su tiempo, por una aplicación que sigue sin ser estable.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Esto no es una crítica a Lovable: la herramienta es notable para obtener un prototipo en unos días. Es el modelo que está pensado para la construcción, no para el mantenimiento de una aplicación con usuarios.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "El momento en que un desarrollador sale más económico",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Veo tres señales recurrentes, y cuando dos de ellas están presentes, el cálculo cambia.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Paga correcciones en bucle.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Si, durante dos meses seguidos, la mayoría de sus créditos se van en correcciones del mismo problema, está pagando la suscripción sin avanzar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hay clientes o datos involucrados.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Tan pronto como fichas de clientes, pagos o documentos pasan por la aplicación, el costo de un error supera con creces el de los créditos. Lo explico en el artículo sobre ",
+              "type": "text"
+            },
+            {
+              "text": "la verificación de reglas de acceso de Supabase",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/lovable-supabase-base-de-donnees-ouverte-verifier-rls",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ya no se atreve a modificar nada.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Cuando cada solicitud da miedo, la herramienta ya no le sirve.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ante esto, mis precios son fijos y anunciados de antemano: el audit es gratuito, un diagnóstico escrito cuesta 400 €, una puesta en seguridad cuesta entre 900 y 1.500 €, una recuperación con puesta en producción cuesta entre 2.500 y 6.000 €. Todo está detallado en la ",
+              "type": "text"
+            },
+            {
+              "text": "página de recuperación de aplicaciones con IA",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/reprendre-application-lovable-bolt",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". Para una aplicación que usa todos los días, una recuperación de 3.000 € suele salir más barata que un año de niveles y recargas, y le deja con un código a su nombre.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Un ejemplo concreto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Imaginemos a Sophie, que dirige una agencia de alquileres vacacionales y construyó con Lovable una herramienta para gestionar sus reservas y limpiezas. En primavera, la suscripción de 50 dólares es suficiente. En verano, las correcciones se encadenan: pasa al nivel de 100 dólares, compra dos recargas y termina la temporada habiendo gastado cerca de 500 dólares, con un calendario que aún muestra duplicados.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un audit gratuito habría mostrado en media hora que el problema venía de cómo se registraban las reservas, no de las pantallas. Una recuperación dirigida, unos días de trabajo, y los duplicados desaparecen para siempre. Sophie sigue usando Lovable para diseñar sus próximas ideas y confía a un desarrollador lo que va a producción.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Puedo mantener Lovable y contratar a un desarrollador al mismo tiempo?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí, y suele ser la mejor combinación. El proyecto está sincronizado con un repositorio de GitHub, el desarrollador trabaja allí, y tú continúas diseñando en la herramienta. Detallo el procedimiento en el artículo sobre ",
+              "type": "text"
+            },
+            {
+              "text": "la exportación de un proyecto Lovable a GitHub",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/exporter-projet-lovable-github-faire-reprendre-developpeur",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Qué pasa si ya no tengo créditos?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "La construcción se detiene, pero tu sitio publicado sigue en línea. Sin embargo, las funciones de IA de tu aplicación y algunos servicios de fondo pueden pausarse.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿El audit gratuito es realmente gratis?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí: treinta minutos de intercambio, una revisión del código y de las reglas de acceso, y una primera opinión escrita en menos de 48 horas. Luego decides, o no, cómo continuar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Tendré que rediseñar todo al pasar a un desarrollador?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Rara vez. En la mayoría de los casos, se conserva la interfaz y los flujos, y solo se rehacen las bases que fallan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Quieres saber en qué punto estás?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El ",
+              "type": "text"
+            },
+            {
+              "text": "test en 8 preguntas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/reprendre-application-lovable-bolt#test",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " te da en dos minutos un nivel de riesgo y la fórmula adecuada. Y si prefieres hablar, envíame la dirección de tu aplicación: la reviso y te digo con franqueza si conviene seguir con la herramienta o pasar el relevo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "👉 ",
+              "type": "text"
+            },
+            {
+              "text": "Solicitar mi auditoría gratuita",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/reprendre-application-lovable-bolt",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "3f76b571-2801-47a8-a2dd-ce0316f63251",
+            "body": [
+              {
+                "_uid": "i-be336772-1c1c-41ea-ae80-becc49f766bc",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
