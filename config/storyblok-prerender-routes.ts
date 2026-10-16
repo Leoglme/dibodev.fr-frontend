@@ -1,10 +1,13 @@
 /** Published articles and projects to prerender: crawling misses unlinked pages, which then drop out of the sitemap. */
 
+import { LEGACY_REDIRECTS } from './legacy-redirects'
+
 const STORYBLOK_CDN_BASE_URL: string = 'https://api.storyblok.com/v2/cdn'
 const STORIES_PER_PAGE: number = 100
 const LOCALE_PREFIXES: readonly string[] = ['', '/en', '/es']
 const PRERENDERED_FOLDERS: readonly string[] = ['blog/', 'project/']
-const STORY_PAGE_ROUTE_PATTERN: RegExp = /^((?:\/(?:en|es))?\/(?:blog|project)\/[^/?#]+)\/?(?:[?#].*)?$/
+const STORY_PAGE_ROUTE_PATTERN: RegExp =
+  /^((?:\/(?:en|es))?\/(?:blog|project)\/(?!_payload\.json)[^/?#]+)\/?(?:[?#].*)?$/
 
 let publishedStoryRoutesListedFromStoryblok: Set<string> | null = null
 const reportedUnpublishedRoutes: Set<string> = new Set()
@@ -80,14 +83,15 @@ export async function getStoryblokPrerenderRoutes(token: string | undefined): Pr
  * Tells the crawler to skip a link to an article or project not published yet (an article linking to a scheduled one), instead of failing the whole build on its 404.
  *
  * @param {string} path - Route found by the prerender crawler, e.g. "/en/blog/my-article?x" (checked as "/en/blog/my-article").
- * @returns {boolean} True when the route is an article or project page that Storyblok does not list as published.
+ * @returns {boolean} True when the route is an article or project page that Storyblok does not list as published and that is not a legacy redirect.
  */
 export function isUnpublishedStoryRoute(path: string): boolean {
   const pageRoute: string | undefined = STORY_PAGE_ROUTE_PATTERN.exec(path)?.[1]
   if (
     !publishedStoryRoutesListedFromStoryblok ||
     !pageRoute ||
-    publishedStoryRoutesListedFromStoryblok.has(pageRoute)
+    publishedStoryRoutesListedFromStoryblok.has(pageRoute) ||
+    pageRoute in LEGACY_REDIRECTS
   ) {
     return false
   }
