@@ -17,6 +17,7 @@ import DibodevLink from '~/components/core/DibodevLink.vue'
 import { StoryblokLinkUtils } from '~/core/utils/StoryblokLinkUtils'
 import type { StoryblokLinkField } from '~/core/utils/StoryblokLinkUtils'
 import { useTracking } from '~/composables/useTracking'
+import { useLocalizedInternalHref } from '~/composables/useLocalizedInternalHref'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 type CtaLinkBlok = {
@@ -32,7 +33,10 @@ const props = defineProps<{
 }>()
 
 const { track } = useTracking()
+const localizeInternalHref: (href: string) => string = useLocalizedInternalHref()
 
-const href: ComputedRef<string> = computed((): string => StoryblokLinkUtils.resolveHref(props.blok.link))
+const href: ComputedRef<string> = computed((): string =>
+  localizeInternalHref(StoryblokLinkUtils.resolveHref(props.blok.link)),
+)
 const isExternal: ComputedRef<boolean> = computed((): boolean => StoryblokLinkUtils.isExternal(href.value))
 </script>

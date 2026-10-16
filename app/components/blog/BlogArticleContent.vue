@@ -14,6 +14,8 @@ import type { StoryblokRichTextDocumentNode, StoryblokRichTextResolvers } from '
 import type { BlogArticleContentProps } from '~/core/types/BlogArticleContent'
 import type { DibodevArticleHeading } from '~/core/utils/articleHeadings'
 import { extractArticleHeadings, headingIdFromText, richtextNodeText } from '~/core/utils/articleHeadings'
+import { RichtextLinkUtils } from '~/core/utils/RichtextLinkUtils'
+import { useLocalizedInternalHref } from '~/composables/useLocalizedInternalHref'
 import CtaButton from '~/storyblok/CtaButton.vue'
 import CtaLink from '~/storyblok/CtaLink.vue'
 
@@ -34,13 +36,15 @@ const props: BlogArticleContentProps = defineProps({
   },
 })
 
+const localizeInternalHref: (href: string) => string = useLocalizedInternalHref()
+
 type EmbeddedBlok = { _uid: string; component: string }
 type HeadingNode = { attrs?: { level?: number }; children?: VNode[]; content?: unknown[] }
 
 const richtextDoc: ComputedRef<StoryblokRichTextDocumentNode> = computed(
   (): StoryblokRichTextDocumentNode =>
     props.content && typeof props.content === 'object'
-      ? (props.content as StoryblokRichTextDocumentNode)
+      ? RichtextLinkUtils.mapInternalLinkHrefs(props.content as StoryblokRichTextDocumentNode, localizeInternalHref)
       : ({ type: 'doc', content: [] } as unknown as StoryblokRichTextDocumentNode),
 )
 

@@ -33,4 +33,14 @@ export class StoryblokLinkUtils {
   static isExternal(href: string): boolean {
     return /^https?:\/\//i.test(href)
   }
+
+  /**
+   * Tells whether an href is a path of the site itself ("/contact"), as opposed to an external, protocol-relative or anchor-only link.
+   *
+   * @param {string} href - The href to test.
+   * @returns {boolean} True when the href starts with a single slash.
+   */
+  static isInternalPath(href: string): boolean {
+    return href.startsWith('/') && !href.startsWith('//')
+  }
 }
