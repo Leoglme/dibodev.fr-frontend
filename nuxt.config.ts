@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 import mkcert from 'vite-plugin-mkcert'
 import { getPrerenderSectorIgnoreUrls } from './config/sector-prerender-ignore'
 import { getPrerenderCategoryIgnoreUrls } from './config/category-prerender-ignore'
-import { getStoryblokPrerenderRoutes } from './config/storyblok-prerender-routes'
+import { getStoryblokPrerenderRoutes, isUnpublishedStoryRoute } from './config/storyblok-prerender-routes'
 import {
   LEGACY_REDIRECTS,
   getLegacyRedirectPrerenderIgnoreUrls,
@@ -170,7 +170,12 @@ export default defineNuxtConfig({
     },
     prerender: {
       crawlLinks: true,
-      ignore: [...prerenderSectorIgnore, ...prerenderCategoryIgnore, ...getLegacyRedirectPrerenderIgnoreUrls()],
+      ignore: [
+        ...prerenderSectorIgnore,
+        ...prerenderCategoryIgnore,
+        ...getLegacyRedirectPrerenderIgnoreUrls(),
+        isUnpublishedStoryRoute,
+      ],
     },
     serverAssets: [
       {

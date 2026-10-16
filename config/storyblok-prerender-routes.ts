@@ -4,6 +4,10 @@ const STORYBLOK_CDN_BASE_URL: string = 'https://api.storyblok.com/v2/cdn'
 const STORIES_PER_PAGE: number = 100
 const LOCALE_PREFIXES: readonly string[] = ['', '/en', '/es']
 const PRERENDERED_FOLDERS: readonly string[] = ['blog/', 'project/']
+const STORY_PAGE_ROUTE_PATTERN: RegExp = /^((?:\/(?:en|es))?\/(?:blog|project)\/[^/?#]+)\/?(?:[?#].*)?$/
+
+let publishedStoryRoutesListedFromStoryblok: Set<string> | null = null
+const reportedUnpublishedRoutes: Set<string> = new Set()
 
 type StoryblokStoryReference = {
   full_slug: string
@@ -65,7 +69,33 @@ export async function getStoryblokPrerenderRoutes(token: string | undefined): Pr
   const fullSlugsByFolder: string[][] = await Promise.all(
     PRERENDERED_FOLDERS.map((folder: string): Promise<string[]> => fetchPublishedFullSlugs(token, folder)),
   )
-  return fullSlugsByFolder
+  const routes: string[] = fullSlugsByFolder
     .flat()
     .flatMap((fullSlug: string): string[] => LOCALE_PREFIXES.map((prefix: string): string => `${prefix}/${fullSlug}`))
+  publishedStoryRoutesListedFromStoryblok = new Set(routes)
+  return routes
+}
+
+/**
+ * Tells the crawler to skip a link to an article or project not published yet (an article linking to a scheduled one), instead of failing the whole build on its 404.
+ *
+ * @param {string} path - Route found by the prerender crawler, e.g. "/en/blog/my-article?x" (checked as "/en/blog/my-article").
+ * @returns {boolean} True when the route is an article or project page that Storyblok does not list as published.
+ */
+export function isUnpublishedStoryRoute(path: string): boolean {
+  const pageRoute: string | undefined = STORY_PAGE_ROUTE_PATTERN.exec(path)?.[1]
+  if (
+    !publishedStoryRoutesListedFromStoryblok ||
+    !pageRoute ||
+    publishedStoryRoutesListedFromStoryblok.has(pageRoute)
+  ) {
+    return false
+  }
+  if (!reportedUnpublishedRoutes.has(pageRoute)) {
+    reportedUnpublishedRoutes.add(pageRoute)
+    console.warn(
+      `[prerender] ${pageRoute} is linked but not published in Storyblok yet: skipped (404 until it is published).`,
+    )
+  }
+  return true
 }
