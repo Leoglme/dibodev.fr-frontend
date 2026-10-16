@@ -19349,5 +19349,624 @@
         }
       ]
     }
+  },
+  "blog/reprendre-application-vibe-coding": {
+    "title": "Reanudar una aplicación desarrollada con Vibe Coding: salvar, consolidar o empezar de cero",
+    "excerpt": "¿Tu aplicación creada con Lovable, Bolt o Cursor funciona «más o menos»? ¿Cómo saber si puede salvarse y cómo un desarrollador puede retomarla?",
+    "metaTitle": "Reanudar una aplicación desarrollada con Vibe Coding (Lovable, Bolt)",
+    "metaDescription": "¿Tu aplicación generada con Lovable, Bolt o Cursor falla en cada corrección? Seguridad, datos y pagos: cómo retomarla sin perderlo todo.",
+    "tags": [
+      "vibe coding",
+      "aplicación generada por IA",
+      "reanudación de aplicación",
+      "Lovable y Bolt",
+      "seguridad en Supabase",
+      "auditoría de código"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El mensaje suele empezar de la misma manera: « He creado una app con Lovable, funciona casi. » Ese « casi » esconde todo lo demás. Una página que se bloquea cuando dos personas la usan al mismo tiempo. Un pago que solo funciona una vez cada tres intentos. Una pantalla que la IA corrige diez veces, y que rompe algo más en otro lugar en cada corrección.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No estoy en contra de estas herramientas, al contrario. Lovable, Bolt o Cursor permiten que un gestor vea tomar forma su idea en un fin de semana, sin esperar una cotización. Es una verdadera revolución para probar un proyecto. El problema llega después, el día en que clientes, empleados o dinero pasan por la aplicación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Así es como procedo para retomar una aplicación hecha con vibe coding, y cómo saber si la suya puede ser salvada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Qué es exactamente el vibe coding?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Se habla de vibe coding cuando se construye una aplicación describiendo a una IA lo que se quiere, sin escribir el código uno mismo. Se pide « añade una página de reserva », la herramienta la genera, se prueba, se vuelve a pedir. Las herramientas más conocidas suelen producir una aplicación en React, con una base de datos Supabase detrás.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El resultado parece terminado. La pantalla está limpia, los botones responden. Pero nadie ha revisado realmente lo que hay debajo, y ahí es donde se esconden las sorpresas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Señales de que una aplicación generada por IA llega al límite",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Después de unas semanas, los mismos síntomas reaparecen:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "cada corrección rompe otra",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". La IA solo ve un fragmento del código a la vez, así que repara una pantalla y desajusta otra;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "el mismo código existe en cuatro versiones",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", un poco diferentes, y nadie sabe cuál se está usando;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "funciona para usted, pero no para diez usuarios",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Las páginas se ralentizan, los datos se mezclan cuando varias personas trabajan al mismo tiempo;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "ya no se atreve a modificar nada",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " antes de una reunión con un cliente, por miedo a que todo se desmorone;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "la factura de la herramienta sube",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " a medida que vuelves a solicitar correcciones.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si te identificas con dos o tres de estos puntos, no es un fracaso. Es el momento en que un prototipo debe convertirse en una verdadera aplicación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo primero que reviso: la seguridad y los datos",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Antes de tocar nada, evalúo lo que puede salir caro.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Quién puede leer qué?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " En Supabase, las reglas que impiden a un usuario ver los datos de otro no se configuran solas. A veces, una aplicación generada deja la base abierta a cualquiera que conozca la dirección. Es lo primero que verifico, porque datos de clientes expuestos no es un error, es un problema legal.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las claves expuestas.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Una clave de pago o de envío de correos escrita en claro dentro del código del navegador puede ser recuperada por cualquiera.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las copias de seguridad.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Reviso si existe una copia de seguridad de la base de datos y si se sabe restaurar. A menudo, la respuesta es no.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El pago.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Un pago exitoso es fácil. Un reembolso, un anticipo o un pago abandonado a medio camino es donde las aplicaciones generadas fallan más. En Izidoor, la plataforma de reservas en la que trabajé durante dos años y medio, desarrollé el pago en línea con anticipos y reembolsos: estos son los casos que requieren más atención.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Reanudar, reescribir o empezar de cero?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Es la verdadera pregunta, y la respuesta no siempre es la que uno espera.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Reanudar y consolidar",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " cuando la estructura aguanta: se asegura, se eliminan redundancias, se añaden pruebas en las partes sensibles, y se continúa desde tu código. Es el caso más frecuente cuando la aplicación es reciente y no demasiado grande.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Reescribir una parte",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " cuando un fragmento específico es el problema, por ejemplo, todo el módulo de reserva o de pago. Se conserva el resto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Reiniciar desde cero",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " cuando cada pantalla ha sido montada por separado y los datos están desorganizados. Duele escucharlo, pero a veces es menos costoso que parchear durante meses. Tu versión generada conserva entonces todo su valor: es un documento de especificaciones vivo. Sabemos exactamente lo que quieres, pantalla por pantalla, y eso acorta mucho el proyecto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hago mi trabajo con Nuxt, Vue, TypeScript y Python, y también he trabajado con React en Kodeva y en Izidoor. Una aplicación React generada por Lovable o Bolt no me asusta, y no es necesario cambiar de tecnología para retomarla.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Un ejemplo concreto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Imaginemos a Claire, que gestiona tres salas de deporte. En un mes, con Lovable, construyó una aplicación para que sus socios reservaran sus clases. Al principio, todo funcionaba perfectamente. Luego llegó el inicio del curso escolar: doscientos socios a la vez el lunes por la mañana, clases reservadas dos veces, una sala que mostraba plazas libres cuando estaba llena.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Empezaríamos con una media jornada de auditoría: lectura del código, de la base de datos y de las reglas de acceso, lista de riesgos clasificados del más urgente al menos urgente. Luego corregiríamos primero lo relacionado con las reservas duplicadas y los datos de los socios, antes de añadir cualquier funcionalidad. La aplicación de Claire sigue en línea durante este tiempo: trabajamos en una copia y cambiamos cuando esté listo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cuánto cuesta retomar una aplicación?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Todo depende de lo que revele la auditoría, y por eso siempre empiezo por ella. Consolidar una pequeña aplicación puede requerir solo unos días de trabajo. Reiniciar desde cero se asemeja más a un proyecto clásico: la mayoría de las herramientas para PYMES que realizo oscilan entre 5.000 y 15.000 € en precio fijo, más 100 a 300 € al mes de mantenimiento. Todo está detallado en mi página ",
+              "type": "text"
+            },
+            {
+              "text": "aplicación empresarial a medida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Y si tu necesidad es estándar, también te lo diré: a veces, un software existente hace mejor el trabajo que una aplicación personalizada, generada o no. Explico cómo decidir en este ",
+              "type": "text"
+            },
+            {
+              "text": "comparativo entre software del mercado y a medida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Tengo que dejar de usar Lovable o Bolt?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No necesariamente. Para probar una idea o maquetar una nueva pantalla, es muy bueno. Lo que cambia es que, una vez que la aplicación esté en producción, cada modificación pasa por alguien que revisa el código.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿El código me pertenece?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí, y es un buen hábito recuperarlo ahora mismo en un repositorio GitHub a tu nombre. También es lo que permite que un desarrollador lo retome.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cuánto tiempo toma la auditoría?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Normalmente media jornada a una jornada para una pequeña aplicación. Recibirás una lista escrita de los riesgos y las correcciones previstas, en orden.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Se puede mantener la aplicación en línea durante la reactivación?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí. Trabajamos en una copia, y sus usuarios solo ven la nueva versión cuando esté lista.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Revisamos la suya?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si tiene una aplicación creada con IA que empieza a preocuparle, envíeme la dirección y unas palabras sobre qué falla. Hablamos por teléfono o videollamada, reviso el código y se va con un plan de acción escrito: lo que hay que corregir de inmediato, lo que puede esperar, y un presupuesto estimado. Si su aplicación funciona bien y solo necesita algunos ajustes, también se lo diré.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "e8ab107d-579a-441a-ad66-9cbe5ff49381",
+            "body": [
+              {
+                "_uid": "i-9c7e9b64-4c53-47c1-9d15-f2d5ba159f3c",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

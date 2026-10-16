@@ -19347,5 +19347,624 @@
         }
       ]
     }
+  },
+  "blog/reprendre-application-vibe-coding": {
+    "title": "Reviving a Vibe Coding Application: Save, Strengthen, or Start Over from Scratch?",
+    "excerpt": "Your Lovable-, Bolt-, or Cursor-built app is running ‘almost’ smoothly? How to determine if it can be salvaged—and how a developer can take it over.",
+    "metaTitle": "Reviving a Vibe Coding Application (Lovable, Bolt)",
+    "metaDescription": "An app generated with Lovable, Bolt, or Cursor breaking every time you tweak it? Security, data, payments: how to take it over without losing everything.",
+    "tags": [
+      "vibe coding",
+      "AI-generated application",
+      "application takeover",
+      "Lovable and Bolt",
+      "Supabase security",
+      "code audit"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The message often starts the same way: \"I built an app with Lovable, it works almost. \" The \"almost\" hides everything else. A page that crashes when two people use it at the same time. A payment that goes through one out of three times. A screen that the AI fixes ten times, only to break something else each time.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’m not against these tools—quite the opposite. Lovable, Bolt, or Cursor let a manager see their idea take shape over a weekend, without waiting for a quote. It’s a real revolution for testing a project. The problem comes later, the day when clients, employees, or money start flowing through the app.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Here’s how I approach fixing an app built with vibe coding—and how to tell if yours can still be saved.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What exactly is vibe coding?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Vibe coding refers to building an app by describing what you want to an AI, without writing the code yourself. You say, \"Add a booking page,\" the tool generates it, you test it, and you ask again. The most well-known tools usually produce a React app with a Supabase database in the background.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The result looks finished. The screen is clean, the buttons work. But no one has really reviewed what’s underneath—and that’s where the surprises lie.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Signs that an AI-generated app is reaching its limits",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "After a few weeks, the same issues resurface:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "every fix breaks something else",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". The AI only sees a snippet of the code at a time, so it fixes one screen and breaks another;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "the same code exists in four different versions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", slightly altered, and no one knows which one is actually being used;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "it works for you, but not for ten users",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Pages slow down, data gets mixed up when multiple people work at the same time;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "you’re too afraid to make any changes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " before a client meeting, for fear everything will collapse;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "the bill for the tool rises",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " as you request more corrections.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you recognize yourself in two or three of these points, it’s not a failure. It’s the moment when a prototype should become a real application.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What I look at first: security and data",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Before touching anything, I check what could get expensive.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Who can read what.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " On Supabase, the rules preventing a user from seeing another’s data don’t just set themselves. Sometimes, a generated app leaves the database open to anyone who knows the address. That’s the first thing I check, because exposed customer records aren’t just a bug—they’re a legal issue.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Keys left lying around.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A payment or email-sending key written in plaintext in the browser code can be picked up by anyone.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Backups.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " I check if there’s a backup of the database and if we know how to restore it. Often, the answer is no.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Payments.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A successful payment is easy. A refund, a deposit, a half-abandoned payment—that’s where generated apps go wrong the most. On Izidoor, the booking platform I worked on for two and a half years, I developed online payments with deposits and refunds: those are the cases that require the most attention.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Carry on, rewrite, or start over?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "That’s the real question, and the answer isn’t always the one you hope for.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Carry on and solidify",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " when the structure holds: we secure it, remove duplicates, add tests on critical parts, and keep building from your code. This is the most common case when the app is recent and not too large.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Rewrite a part",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " when a specific section is the issue—for example, the entire booking or payment module. We keep the rest.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Starting from a clean slate",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " when each screen has been pieced together separately and the data is poorly organized. It’s painful to hear, but it’s sometimes cheaper than patching things up for months. Your generated version retains its full value: it’s a living specification. We know exactly what you want, screen by screen, and that cuts the project timeline significantly.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I work with Nuxt, Vue, TypeScript, and Python, and I’ve also worked with React at Kodeva and on Izidoor. So a React application generated by Lovable or Bolt doesn’t scare me, and we don’t have to switch technologies to take it over.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "A concrete example",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Let’s imagine Claire, who manages three gyms. She built an app in one month with Lovable so her members could book classes. At first, it was perfect. Then school started back: two hundred members at once on Monday mornings, double bookings, a room showing available spots when it was full.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "We’d begin with a half-day audit: reviewing the code, database, and access rules, then listing risks from most urgent to least urgent. We’d first fix the double bookings and member data issues before adding any new features. Claire’s app stays online during this process: we work on a copy and switch over when it’s ready.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How much does it cost to take over an application",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It depends entirely on what the audit reveals, which is why I always start with one. Strengthening a small app can take just a few days of work. Starting from a clean slate is closer to a standard project: most of the small business and SME tools I build cost between €5,000 and €15,000 as a fixed price, plus €100 to €300 per month for maintenance. Everything is detailed on my ",
+              "type": "text"
+            },
+            {
+              "text": "custom business application",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "And if your needs are standard, I’ll let you know: sometimes, an existing software solution does the job better than a custom-built app, whether generated or not. I explain how to decide in this ",
+              "type": "text"
+            },
+            {
+              "text": "comparison between off-the-shelf and custom software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Do I have to stop using Lovable or Bolt?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Not necessarily. For testing an idea or designing a new screen, they’re great. The difference is that once the app is live, every change goes through someone reviewing the code.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Do I own the code?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Yes, and it’s a good idea to back it up now on a GitHub repository under your name. That’s also what allows a developer to take it over later.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How long does the audit take?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Usually half a day to a full day for a small app. You’ll receive a written list of risks and fixes, in order of priority.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can you keep the application online during the update?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Yes. We work on a copy, and your users only see the new version when it’s ready.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Want me to take a look at yours?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you have an AI-built app that’s starting to worry you, send me the address and a few words about what’s going wrong. We can discuss it over the phone or video call—I’ll review the code, and you’ll leave with a written action plan: what needs fixing immediately, what can wait, and a rough budget estimate. If your app is solid and just needs minor tweaks, I’ll let you know that too.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "e8ab107d-579a-441a-ad66-9cbe5ff49381",
+            "body": [
+              {
+                "_uid": "i-9c7e9b64-4c53-47c1-9d15-f2d5ba159f3c",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
