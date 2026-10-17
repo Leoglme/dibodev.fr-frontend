@@ -19968,5 +19968,606 @@
         }
       ]
     }
+  },
+  "blog/exporter-projet-lovable-github-faire-reprendre-developpeur": {
+    "title": "Exportar tu proyecto Lovable a GitHub y que un desarrollador lo retome: guía paso a paso",
+    "excerpt": "El código es tuyo y Lovable está listo para salir. Crea el repositorio, otorga los accesos sin compartir las claves, trabaja en equipo sin romper la sincronización.",
+    "metaTitle": "Exportar un proyecto Lovable a GitHub para un desarrollador",
+    "metaDescription": "Tu código de Lovable es de tu propiedad. Aprende cómo crear el repositorio de GitHub a tu nombre, otorgar los accesos correctos a un desarrollador y mantener la sincronización.",
+    "tags": [
+      "exportar lovable a github",
+      "sincronizar lovable con github",
+      "propiedad del código lovable",
+      "retomar proyecto lovable",
+      "desarrollador lovable",
+      "recuperación de aplicación de IA"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La pregunta surge casi siempre en el mismo momento: «Mi código está en Lovable, ¿cómo se lo entrego a un desarrollador?». La buena noticia es que ese código es suyo y que Lovable permite exportarlo. La menos buena es que nadie le explica en qué orden debe actuar ni qué es lo que realmente espera un desarrollador de usted. Aquí tiene la guía paso a paso, tal como la desarrollo con mis clientes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que dice Lovable sobre su código",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lovable sincroniza cada proyecto con un repositorio Git alojado en GitHub, GitLab o Bitbucket, y el repositorio se crea en su propia cuenta. No es una copia estática: la sincronización funciona en ambos sentidos. Lo que modifique en Lovable se guarda en el repositorio, y lo que un desarrollador suba al repositorio vuelve a su proyecto en Lovable.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La sincronización con Git está disponible incluso en la versión gratuita. La descarga del código en un archivo comprimido, en cambio, solo está disponible en las versiones de pago, pero no la necesitará si ya existe el repositorio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Último punto, y el más importante: usted es el propietario del código y del repositorio. Desconectar Lovable no borra nada, ni de un lado ni del otro.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Paso 1: crear el repositorio en GitHub, a su nombre",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si aún no tiene una cuenta en GitHub, créela con el correo electrónico de su empresa, no con el de un proveedor o un pasante. Este será el almacén de su aplicación durante años.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Luego, en Lovable:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1. abra la configuración del proyecto y la sección de GitHub;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "2. conéctese con su cuenta de GitHub y autorice la aplicación Lovable en ella;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "3. vincule el proyecto: Lovable creará el repositorio y enviará todo el código allí.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una regla que nunca debe olvidar: no renombre, no mueva ni elimine ese repositorio una vez conectado. La sincronización se rompería sin posibilidad de volver atrás.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Paso 2: dar acceso al desarrollador, sin entregarle las llaves de la casa",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un desarrollador no necesita su contraseña de Lovable ni la de GitHub. Solo requiere tres accesos, que puede revocar en cualquier momento:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "el repositorio de GitHub",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", en modo de solo lectura para auditoría, o con permisos de escritura para modificaciones;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "el proyecto de Supabase",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (la base de datos), invitándolo como miembro de su organización;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "las variables de configuración",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " de la aplicación: claves de pago, envío de correos electrónicos, IA. Transmítelas mediante un gestor de contraseñas, nunca por correo electrónico.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para que la auditoría sea útil, añada lo que no se ve en el código: lo que la aplicación debe hacer, la lista de errores con la forma de reproducirlos, y las pantallas más importantes para su actividad. Una lista de cinco líneas vale más que una hora de videollamada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Paso 3: dejar que el desarrollador trabaje sin romper la sincronización",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Durante la recuperación, el desarrollador recupera el código en su máquina, lo corrige, lo prueba y lo devuelve al repositorio. Lovable recupera estos cambios automáticamente. Dos precauciones evitan malas sorpresas:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "no modifique el proyecto en Lovable al mismo tiempo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " que un desarrollador esté trabajando en él, o avíselo: dos personas modificando el mismo archivo en paralelo es garantía de conflicto;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "las funciones del lado del servidor",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (lo que Lovable llama Edge Functions) modificadas fuera de la herramienta deben volver a desplegarse desde Lovable o directamente desde la base de datos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una vez finalizada la recuperación, hay dos opciones. Puede mantener Lovable conectado para diseñar nuevas pantallas, y todo lo que se envía a producción pasa por el desarrollador. O desconecta la herramienta y la aplicación continúa su vida desde el repositorio, como cualquier otro software.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Paso 4: verificar que sigas siendo dueño",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Antes de considerar el tema resuelto, verifique estos cuatro puntos:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- el repositorio de GitHub está en una cuenta a su nombre y usted es administrador;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- el proyecto Supabase está en una organización de la que usted es propietario;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- el nombre de dominio y el alojamiento están a su nombre;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- sabe dónde están las claves y puede retirar el acceso de cualquiera en cinco minutos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Esto es lo que entrego al final de cada ",
+              "type": "text"
+            },
+            {
+              "text": "recuperación de aplicación hecha con IA",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/reprendre-application-lovable-bolt",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": un repositorio a tu nombre, documentación que explica cómo iniciar, guardar y restaurar la aplicación, y sin dependencia alguna de una persona o de una herramienta.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Un ejemplo concreto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Imaginemos a Tomás, quien dirige una empresa de limpieza y construyó con Lovable una herramienta de programación para sus seis empleados. La herramienta es útil, pero tiene fallos en los reemplazos. Antes de nuestro primer intercambio, Tomás conecta el proyecto a un repositorio de GitHub creado con la dirección de la empresa, me invita como lector y me envía tres líneas: qué hace la herramienta, el fallo de los reemplazos, y el horario de la mañana del lunes como pantalla prioritaria.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La auditoría toma medio día. El fallo proviene de cómo se registran las ausencias, no de la pantalla. Diez días después, la corrección está en el repositorio, probada, y Lovable la ha recuperado. Tomás sigue diseñando sus siguientes ideas en la herramienta y me las pasa cuando deben ir a producción.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Y Bolt?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bolt también propone enviar el proyecto a GitHub. El principio es el mismo: un repositorio a tu nombre, acceso concedido al desarrollador, y el trabajo se realiza a partir del repositorio. La única diferencia es el camino en los menús.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Pierdo mi proyecto Lovable al exportarlo?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. El proyecto sigue en Lovable, el repositorio es una copia sincronizada. Puedes seguir usándolo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Puede el desarrollador recuperar mi código sin mi permiso?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. El acceso al repositorio se concede y retira desde tu cuenta de GitHub, en unos clics.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Se necesita una suscripción de pago para exportar?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "La sincronización con GitHub está disponible desde el plan gratuito. Solo la descarga del código en archivo requiere un plan de pago.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Qué hacer si ya no tengo acceso a la cuenta que creó el proyecto?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Es el caso más doloroso: un proyecto creado por un antiguo proveedor o un pasante que se fue hace tiempo. Empieza por recuperar el acceso a la cuenta o pide al dueño que transfiera el proyecto. Sin eso, habrá que volver a partir del código que puedas recuperar, y a veces habrá que rehacer parte de él.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Necesitas ayuda para la recuperación?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si has completado los pasos 1 y 2, envíame el enlace del repositorio y tus tres líneas. Leo el código y recibes una primera opinión escrita en 48 horas, gratis. Y si aún dudas, el ",
+              "type": "text"
+            },
+            {
+              "text": "test en 8 preguntas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/reprendre-application-lovable-bolt#test",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " te dice en dos minutos si tu aplicación necesita una recuperación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "👉 ",
+              "type": "text"
+            },
+            {
+              "text": "Solicitar mi auditoría gratuita",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/reprendre-application-lovable-bolt",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "ae3f83f0-0a48-4f3c-8fb5-4b4be26e818d",
+            "body": [
+              {
+                "_uid": "i-7a1f396f-f941-4d4e-871a-1c12e1c8445d",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
