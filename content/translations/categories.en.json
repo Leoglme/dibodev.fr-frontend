@@ -40,10 +40,10 @@
     }
   },
   "categories/application-metier": {
-    "title": "Business application examples: custom tools delivered",
+    "title": "Business application examples: 7 tools delivered to small and medium businesses",
     "description": "Scheduling, stock, bookings, time tracking: concrete examples of business applications I designed and delivered, with the problem each one solves.",
-    "metaTitle": "Business Application Examples: Delivered Projects | Dibodev",
-    "metaDescription": "Bookings, stock, time tracking, prospecting: concrete examples of custom business applications, with the problem each one solves.",
+    "metaTitle": "Business Application Examples: 7 Delivered Projects | Dibodev",
+    "metaDescription": "Seven business applications delivered to small and medium businesses: bookings, stock, scheduling, time tracking. The problem each one solves, the sector and the technologies.",
     "intro": {
       "type": "doc",
       "content": [
@@ -71,26 +71,70 @@
                   "type": "link",
                   "attrs": {
                     "href": "/en/custom-business-software-rennes",
-                    "linktype": "url",
-                    "target": "_self"
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
                   }
                 }
               ]
             },
             {
               "type": "text",
-              "text": " page. To find out whether your business needs one, read the "
+              "text": " page; the prices published by 14 French providers are in the "
             },
             {
               "type": "text",
-              "text": "business application guide for small companies",
+              "text": "custom software price barometer",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/en/custom-software-price-barometer",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". To find out whether your business needs one, read the "
+            },
+            {
+              "type": "text",
+              "text": "business application guide for small and medium businesses",
               "marks": [
                 {
                   "type": "link",
                   "attrs": {
                     "href": "/en/blog/application-metier-sur-mesure-guide-tpe-pme",
-                    "linktype": "url",
-                    "target": "_self"
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". The tools built for the teams and customers of a company are gathered in the "
+            },
+            {
+              "type": "text",
+              "text": "B2B business application projects",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/en/projects/sector/b2b",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
                   }
                 }
               ]

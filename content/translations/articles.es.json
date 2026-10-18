@@ -5488,6 +5488,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "La reserva de clases por los propios alumnos, con sus reglas de cancelación, se detalla en mi artículo sobre la "
+            },
+            {
+              "type": "text",
+              "text": "app de reservas para autoescuelas",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-rdv-auto-ecole-reservation-en-ligne",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -6273,6 +6302,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Para comparar con el mercado, el "
+            },
+            {
+              "type": "text",
+              "text": "barómetro de precios del software a medida",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " recopila los precios publicados por 14 proveedores franceses, por tamaño de proyecto."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -6945,7 +7003,7 @@
     }
   },
   "blog/logiciel-rdv-auto-ecole-reservation-en-ligne": {
-    "title": "Reserva de citas en línea para autoescuelas: ¡adiós al teléfono que no para de sonar!",
+    "title": "App de reservas para autoescuelas: adiós al teléfono que no para de sonar",
     "excerpt": "Sus alumnos reservan sus horas de conducción en línea, visualizan los horarios disponibles y cancelan según sus normas. El teléfono deja de sonar, el calendario se llena.",
     "metaTitle": "App de reservas para autoescuelas y escuelas de conducción",
     "metaDescription": "Que sus alumnos reserven sus clases de conducción en línea: app de reservas, horarios visibles, recordatorios y cancelaciones. ¿Software del mercado o a medida?",
@@ -7308,10 +7366,10 @@
     }
   },
   "blog/developpement-logiciel-b2b-sur-mesure-prix": {
-    "title": "Desarrollo de software B2B a medida: ¿cuánto cuesta realmente?",
+    "title": "Desarrollo de software B2B a medida: precios, plazos y qué hace variar el presupuesto",
     "excerpt": "Los precios publicados por 14 proveedores franceses, mi posición en el mercado y el cálculo a cinco años frente a una suscripción.",
-    "metaTitle": "Software empresarial B2B a medida: ¿cuánto cuesta realmente?",
-    "metaDescription": "Medianas publicadas por 14 proveedores franceses: 5.000 a 12.500 € para una herramienta sencilla, 13.500 a 50.000 € para una aplicación. Y dónde me sitúo.",
+    "metaTitle": "Software B2B a medida: precios, plazos, ¿para qué pyme?",
+    "metaDescription": "Software B2B a medida: las medianas de 14 proveedores (5.000 a 50.000 €), qué hace variar el presupuesto, los plazos y cuándo una pyme sale ganando. Precios netos.",
     "tags": [
       "desarrollo de software b2b",
       "software empresarial a medida",
@@ -7507,6 +7565,55 @@
             {
               "text": "¿Por qué más barato que la mediana de las agencias? No porque trabaje rápido y mal. Porque un autónomo no tiene que financiar ni un comercial ni un jefe de proyecto, habla directamente con usted, y entrega por lotes: una primera versión útil en unas pocas semanas, luego el resto. Los tarifas por día trabajado lo confirman: 400 € en mi caso, 500 a 700 € en una agencia según Lonestone, y 800 a 1.000 € en Sokeo.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Las herramientas de las que hablo aquí son "
+            },
+            {
+              "type": "text",
+              "text": "aplicaciones de gestión B2B",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/projets/secteur/b2b",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ": programas de gestión hechos para una empresa y sus equipos, a veces para sus clientes. El detalle de mi oferta, del método y de los plazos está en la página de "
+            },
+            {
+              "type": "text",
+              "text": "software de gestión a medida",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
             }
           ]
         },
@@ -8316,7 +8423,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/es/proyectos/categoria/aplicacion-de-negocio",
+                    "href": "/application-metier-sur-mesure-rennes",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -15300,6 +15407,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Si tu primera necesidad es la reserva de clases por los alumnos, lee también mi artículo sobre la "
+            },
+            {
+              "type": "text",
+              "text": "app de reservas para autoescuelas",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-rdv-auto-ecole-reservation-en-ligne",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ": lo que debe gestionar y lo que cambia en el mostrador."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -18602,6 +18738,35 @@
             {
               "text": " muestra los rangos de 14 proveedores franceses para comparar.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Si lo que te falta primero es la reserva de clases por los alumnos, mi artículo sobre la "
+            },
+            {
+              "type": "text",
+              "text": "app de reservas para autoescuelas",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-rdv-auto-ecole-reservation-en-ligne",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " detalla lo que debe gestionar."
             }
           ]
         },

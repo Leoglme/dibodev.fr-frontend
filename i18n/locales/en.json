@@ -1026,7 +1026,7 @@
   },
   "businessSoftwarePage": {
     "hero": {
-      "description": "I build management software for small and medium businesses in Rennes and Brittany that replaces Excel files, paperwork and repetitive tasks: scheduling, inventory, quotes, time tracking, bookings.",
+      "description": "Custom business software is management software built around the way you work. I develop it for small and medium businesses in Rennes, Brittany and across France: scheduling, inventory, quotes, time tracking, bookings, instead of Excel files, paperwork and repetitive tasks.",
       "cta": "Discuss my project",
       "ctaSecondary": "See pricing",
       "titlePart1": "",
@@ -1182,6 +1182,9 @@
     "pricing": {
       "title": "How much does custom business software cost?",
       "estimatorIntro": "Most business applications for small and mid-sized companies cost between €5,000 and €15,000. The price depends on the number of screens, users and connections to your software: three questions are enough to size yours.",
+      "marketNote": "To compare with the market, the {barometer} compiles the prices published by 14 French providers. The tools built for the teams and customers of a company are gathered in the {b2b}.",
+      "marketNoteBarometerLink": "custom software price barometer",
+      "marketNoteB2bLink": "B2B business application projects",
       "project": {
         "title": "Business app at a fixed price",
         "price": "€5,000 to €15,000",

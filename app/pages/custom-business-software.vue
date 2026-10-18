@@ -31,8 +31,33 @@
     tone="tint"
     trackingLocation="business_software"
   >
-    <template v-if="toolTeasers.length" #footer>
-      <DibodevToolTeaserList :teasers="toolTeasers" trackingLocation="business_software" tone="white" />
+    <template #footer>
+      <i18n-t
+        keypath="businessSoftwarePage.pricing.marketNote"
+        tag="p"
+        scope="global"
+        class="text-muted mx-auto max-w-3xl text-center text-[15px] leading-7"
+      >
+        <template #barometer>
+          <NuxtLink
+            :to="localePath('custom-software-price-barometer')"
+            class="text-primary font-medium hover:underline"
+          >
+            {{ t('businessSoftwarePage.pricing.marketNoteBarometerLink') }}
+          </NuxtLink>
+        </template>
+        <template #b2b>
+          <NuxtLink :to="b2bSectorPath" class="text-primary font-medium hover:underline">
+            {{ t('businessSoftwarePage.pricing.marketNoteB2bLink') }}
+          </NuxtLink>
+        </template>
+      </i18n-t>
+      <DibodevToolTeaserList
+        v-if="toolTeasers.length"
+        :teasers="toolTeasers"
+        trackingLocation="business_software"
+        tone="white"
+      />
     </template>
   </DibodevBudgetEstimatorSection>
   <DibodevComparisonTableSection
@@ -212,6 +237,10 @@ const heroSlides: ComputedRef<DibodevPhotoWithScreenSlide[]> = computed((): Dibo
 )
 const toolTeasers: ComputedRef<DibodevToolTeaserContent[]> = useToolTeasers(
   (): DibodevToolTeaserContent[] => BUSINESS_SOFTWARE_TOOL_TEASERS,
+)
+/** Localized route of the B2B sector listing, linked from the market note under the estimator. */
+const b2bSectorPath: ComputedRef<string> = computed((): string =>
+  localePath({ name: 'projects-sector-slug', params: { slug: 'b2b' } }),
 )
 
 /**

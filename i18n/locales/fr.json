@@ -1026,7 +1026,7 @@
   },
   "businessSoftwarePage": {
     "hero": {
-      "description": "Je crée pour les TPE et PME de Rennes et de Bretagne des logiciels de gestion qui remplacent les fichiers Excel, les papiers et les tâches répétitives : planning, stocks, devis, suivi du temps, réservations.",
+      "description": "Une application métier sur mesure, c'est un logiciel de gestion conçu pour votre façon de travailler. J'en développe pour les TPE et PME de Rennes, de Bretagne et de toute la France : planning, stocks, devis, suivi du temps, réservations, à la place des fichiers Excel, des papiers et des tâches répétitives.",
       "cta": "Discuter de mon projet",
       "ctaSecondary": "Voir les tarifs",
       "titlePart1": "Développeur d'application métier ",
@@ -1182,6 +1182,9 @@
     "pricing": {
       "title": "Combien coûte une application métier ?",
       "estimatorIntro": "La plupart des applications métier de TPE et PME coûtent entre 5 000 et 15 000 €. Le prix dépend du nombre d'écrans, d'utilisateurs et de connexions à vos logiciels : trois questions suffisent pour situer le vôtre.",
+      "marketNote": "Pour comparer avec le marché, le {barometer} compile les tarifs affichés par 14 prestataires français. Les outils faits pour les équipes et les clients d'une entreprise sont réunis dans les {b2b}.",
+      "marketNoteBarometerLink": "baromètre des prix d'un logiciel sur mesure",
+      "marketNoteB2bLink": "projets d'application métier B2B",
       "project": {
         "title": "Application métier au forfait",
         "price": "De 5 000 à 15 000 €",

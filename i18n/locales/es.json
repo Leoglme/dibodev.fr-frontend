@@ -1026,7 +1026,7 @@
   },
   "businessSoftwarePage": {
     "hero": {
-      "description": "Creo para pequeñas y medianas empresas de Rennes y Bretaña programas de gestión que sustituyen los archivos Excel, el papeleo y las tareas repetitivas: planificación, stock, presupuestos, control horario, reservas.",
+      "description": "Un software de gestión a medida es un programa construido alrededor de tu forma de trabajar. Lo desarrollo para pequeñas y medianas empresas de Rennes, Bretaña y toda Francia: planificación, stock, presupuestos, control horario, reservas, en lugar de archivos Excel, papeleo y tareas repetitivas.",
       "cta": "Hablar de mi proyecto",
       "ctaSecondary": "Ver las tarifas",
       "titlePart1": "Desarrollador de software de gestión ",
@@ -1182,6 +1182,9 @@
     "pricing": {
       "title": "¿Cuánto cuesta un software de gestión a medida?",
       "estimatorIntro": "La mayoría de las aplicaciones de gestión para pymes cuestan entre 5.000 y 15.000 €. El precio depende del número de pantallas, de usuarios y de conexiones con tus programas: tres preguntas bastan para situar el tuyo.",
+      "marketNote": "Para comparar con el mercado, el {barometer} recopila los precios publicados por 14 proveedores franceses. Las herramientas hechas para los equipos y los clientes de una empresa están reunidas en los {b2b}.",
+      "marketNoteBarometerLink": "barómetro de precios del software a medida",
+      "marketNoteB2bLink": "proyectos de aplicaciones de gestión B2B",
       "project": {
         "title": "Aplicación de gestión a precio cerrado",
         "price": "De 5.000 a 15.000 €",

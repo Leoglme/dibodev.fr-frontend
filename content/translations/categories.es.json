@@ -40,10 +40,10 @@
     }
   },
   "categories/application-metier": {
-    "title": "Ejemplos de aplicaciones de gestión: herramientas a medida entregadas",
+    "title": "Ejemplos de aplicaciones de gestión: 7 herramientas entregadas a pymes",
     "description": "Planificación, stock, reservas, control de horas: ejemplos concretos de aplicaciones de gestión que he diseñado y entregado, con el problema que resuelve cada una.",
-    "metaTitle": "Ejemplos de aplicaciones de gestión a medida | Dibodev",
-    "metaDescription": "Reservas, stock, control de horas, prospección: ejemplos concretos de aplicaciones de gestión a medida, con el problema que resuelve cada una.",
+    "metaTitle": "Ejemplos de aplicaciones de gestión: 7 proyectos entregados | Dibodev",
+    "metaDescription": "Siete aplicaciones de gestión entregadas a pymes: reservas, stock, planificación, control de horas. El problema que resuelve cada una, el sector y las tecnologías.",
     "intro": {
       "type": "doc",
       "content": [
@@ -71,8 +71,30 @@
                   "type": "link",
                   "attrs": {
                     "href": "/es/software-de-gestion-a-medida-rennes",
-                    "linktype": "url",
-                    "target": "_self"
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "; los precios publicados por 14 proveedores franceses están en el "
+            },
+            {
+              "type": "text",
+              "text": "barómetro de precios del software a medida",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/precio-software-a-medida",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
                   }
                 }
               ]
@@ -89,8 +111,30 @@
                   "type": "link",
                   "attrs": {
                     "href": "/es/blog/application-metier-sur-mesure-guide-tpe-pme",
-                    "linktype": "url",
-                    "target": "_self"
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". Las herramientas hechas para los equipos y los clientes de una empresa están reunidas en los "
+            },
+            {
+              "type": "text",
+              "text": "proyectos de aplicaciones de gestión B2B",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/proyectos/sector/b2b",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
                   }
                 }
               ]

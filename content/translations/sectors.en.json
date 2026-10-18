@@ -40,7 +40,7 @@
     }
   },
   "sectors/b2b": {
-    "title": "B2B projects: management tools for businesses",
+    "title": "B2B business applications: 6 management tools delivered to companies",
     "description": "SaaS applications and software designed to meet the business needs of SMEs and VSEs.",
     "metaTitle": "Custom B2B Business Software Development | Dibodev",
     "metaDescription": "Custom B2B applications, software and platforms: tools to run and automate your business, built by Léo Guillaume, freelance developer in Rennes.",
@@ -53,6 +53,55 @@
             {
               "text": "I develop customized B2B solutions: internal management, planning, billing, and collaborative tools. Applications designed for performance, scalability, and the real constraints faced by corporate teams.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "These projects are "
+            },
+            {
+              "type": "text",
+              "text": "custom business software",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/en/custom-business-software-rennes",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ": that page details prices, method and timelines, and the article "
+            },
+            {
+              "type": "text",
+              "text": "custom B2B software development: prices and timelines",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/en/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " explains what makes a quote vary."
             }
           ]
         }

@@ -40,7 +40,7 @@
     }
   },
   "sectors/b2b": {
-    "title": "Proyectos B2B: herramientas de gestión para empresas",
+    "title": "Aplicaciones de gestión B2B: 6 herramientas entregadas a empresas",
     "description": "Aplicaciones SaaS y software diseñados para las necesidades de gestión de pymes y microempresas.",
     "metaTitle": "Desarrollo de software de gestión B2B a medida | Dibodev",
     "metaDescription": "Aplicaciones, software y plataformas B2B a medida: herramientas para gestionar y automatizar tu actividad, por Léo Guillaume, freelance en Rennes.",
@@ -53,6 +53,55 @@
             {
               "text": "Desarrollo soluciones B2B a medida: gestión interna, planificación, facturación y herramientas colaborativas. Aplicaciones diseñadas para el rendimiento, la escalabilidad y las restricciones reales de los equipos en la empresa.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Estos proyectos son "
+            },
+            {
+              "type": "text",
+              "text": "software de gestión a medida",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/software-de-gestion-a-medida-rennes",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ": esa página detalla los precios, el método y los plazos, y el artículo "
+            },
+            {
+              "type": "text",
+              "text": "desarrollo de software B2B a medida: precios y plazos",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/es/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " explica qué hace variar un presupuesto."
             }
           ]
         }

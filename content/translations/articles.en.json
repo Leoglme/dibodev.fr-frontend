@@ -5488,6 +5488,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lesson booking by the students themselves, with its cancellation rules, is detailed in my article on the "
+            },
+            {
+              "type": "text",
+              "text": "booking app for driving schools",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-rdv-auto-ecole-reservation-en-ligne",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -6273,6 +6302,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "To compare with the market, the "
+            },
+            {
+              "type": "text",
+              "text": "custom software price barometer",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " compiles the prices published by 14 French providers, by project size."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -6945,7 +7003,7 @@
     }
   },
   "blog/logiciel-rdv-auto-ecole-reservation-en-ligne": {
-    "title": "Online Appointment Booking for Driving Schools: Put an End to the Ringing Phone",
+    "title": "Booking app for driving schools: put an end to the ringing phone",
     "excerpt": "Your students book their driving lessons online, view available slots, and cancel according to your rules. The phone stops ringing, and your schedule fills up.",
     "metaTitle": "Driving School Booking App: Online Lesson Scheduling for Students",
     "metaDescription": "Let your students book driving lessons online: booking app, visible schedule, reminders, managed cancellations. Off-the-shelf software or custom build?",
@@ -7308,10 +7366,10 @@
     }
   },
   "blog/developpement-logiciel-b2b-sur-mesure-prix": {
-    "title": "Custom B2B Software Development: What Does It Really Cost?",
+    "title": "Custom B2B software development: prices, timelines and what makes a quote vary",
     "excerpt": "Published pricing from 14 French service providers, where I stand in comparison, and a five-year cost calculation versus a subscription model.",
-    "metaTitle": "Custom B2B Business Software: What Does It Really Cost?",
-    "metaDescription": "Median pricing from 14 French providers: €5,000 to €12,500 for a basic tool, €13,500 to €50,000 for a custom business application. Where I stand—and why.",
+    "metaTitle": "Custom B2B software: prices, timelines, which SMEs benefit?",
+    "metaDescription": "Custom B2B software: the median prices of 14 French providers (€5,000 to €50,000), what makes a quote vary, the timelines, and when an SME comes out ahead.",
     "tags": [
       "custom b2b software development",
       "tailored business software",
@@ -7507,6 +7565,55 @@
             {
               "text": "Why cheaper than the agency median? Not because I work fast and poorly. Because a freelancer doesn’t have to fund a sales team or a project manager, talks directly with you, and delivers in stages: a first useful version in a few weeks, then the rest. Published daily rates confirm this: €400 with me, €500 to €700 for an agency according to Lonestone, and €800 to €1,000 at Sokeo.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "The tools I am talking about here are "
+            },
+            {
+              "type": "text",
+              "text": "B2B business applications",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/projets/secteur/b2b",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ": management software built for a company and its teams, sometimes for its customers. The details of my offer, method and timelines are on the "
+            },
+            {
+              "type": "text",
+              "text": "custom business software",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " page."
             }
           ]
         },
@@ -8316,7 +8423,7 @@
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/en/projects/category/business-app",
+                    "href": "/application-metier-sur-mesure-rennes",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -15297,6 +15404,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "If your first need is lesson booking by the students, also read my article on the "
+            },
+            {
+              "type": "text",
+              "text": "booking app for driving schools",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-rdv-auto-ecole-reservation-en-ligne",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ": what it has to handle, and what it changes at the front desk."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -18600,6 +18736,35 @@
             {
               "text": " provides price ranges from 14 French service providers for comparison.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "If what you are missing first is lesson booking by the students, my article on the "
+            },
+            {
+              "type": "text",
+              "text": "booking app for driving schools",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-rdv-auto-ecole-reservation-en-ligne",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " details what it has to handle."
             }
           ]
         },
