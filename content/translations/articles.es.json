@@ -5607,6 +5607,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Para comparar los "
+            },
+            {
+              "type": "text",
+              "text": "programas para autoescuelas y sus precios 2026",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-auto-ecole#logiciels",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " antes de decidirte, mi página dedicada los pone uno al lado del otro, con un test gratuito de seis preguntas."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -7221,6 +7250,35 @@
             {
               "type": "text",
               "text": ", una aplicación de gestión para autoescuelas que diseñé en un marco académico: un calendario central donde cada hueco se asocia a un alumno y a un instructor, y donde la herramienta comprueba las horas de conducción restantes antes de aceptar la reserva."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Antes de elegir, mira lo que ofrecen los "
+            },
+            {
+              "type": "text",
+              "text": "programas para autoescuelas del mercado y sus precios 2026",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-auto-ecole#logiciels",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ": varios incluyen la reserva en línea, y mi test de seis preguntas te dice en dos minutos si uno de ellos te basta."
             }
           ]
         },
@@ -13062,6 +13120,35 @@
             {
               "text": "El resto — stock de piezas, recordatorios, contabilidad — se añade solo si realmente lo necesitan. Partimos de su rutina diaria.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Antes de decidir entre una suscripción y una herramienta propia, compara los "
+            },
+            {
+              "type": "text",
+              "text": "programas para talleres mecánicos y sus precios 2026",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile#logiciels",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " en mi página dedicada: un test gratuito de seis preguntas te dice si uno de ellos basta para tu taller."
             }
           ]
         },

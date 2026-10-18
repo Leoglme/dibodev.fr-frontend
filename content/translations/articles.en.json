@@ -5607,6 +5607,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "To compare "
+            },
+            {
+              "type": "text",
+              "text": "driving school software and its 2026 prices",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-auto-ecole#logiciels",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " before deciding, my dedicated page puts them side by side, with a free six-question test."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -7221,6 +7250,35 @@
             {
               "type": "text",
               "text": ", a driving school management application I built as an academic project: a central calendar where every slot is tied to a student and an instructor, and where the tool checks the remaining driving hours before accepting the booking."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Before choosing, look at what the "
+            },
+            {
+              "type": "text",
+              "text": "driving school software on the market and its 2026 prices",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-auto-ecole#logiciels",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " offer: several include online booking, and my six-question test tells you in two minutes whether one of them is enough for you."
             }
           ]
         },
@@ -13057,6 +13115,35 @@
             {
               "text": "The rest—parts inventory, reminders, accounting—we only add if you truly need it. We start from your daily reality.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Before deciding between a subscription and a tool of your own, compare the "
+            },
+            {
+              "type": "text",
+              "text": "garage software and its 2026 prices",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile#logiciels",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " on my dedicated page: a free six-question test tells you whether one of them is enough for your workshop."
             }
           ]
         },
