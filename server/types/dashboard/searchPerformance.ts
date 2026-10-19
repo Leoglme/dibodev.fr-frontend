@@ -26,6 +26,24 @@ export type SearchPerformanceEntry = {
   position: number
 }
 
+export type SearchPerformanceDateRange = {
+  startDate: string
+  endDate: string
+}
+
+export type SearchPerformanceDateRanges = {
+  range: SearchPerformanceDateRange
+  previousRange: SearchPerformanceDateRange
+}
+
+export type SearchPageQueriesResponse = {
+  gscConnected: boolean
+  period: SearchPerformancePeriod
+  range: SearchPerformanceDateRange
+  url: string
+  queries: SearchPerformanceEntry[]
+}
+
 /** Full payload powering the SEO performance dashboard. */
 export type SearchPerformanceResponse = {
   gscConnected: boolean

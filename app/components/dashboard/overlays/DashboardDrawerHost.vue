@@ -28,6 +28,13 @@
         :url="topEntry.url"
         :browse-urls="topEntry.browseUrls"
       />
+      <DashboardSearchPageDrawer
+        v-else-if="topEntry.kind === 'page'"
+        :row-key="topEntry.rowKey"
+        :page-label="topEntry.pageLabel"
+        :page-urls="topEntry.pageUrls"
+        :period="topEntry.period"
+      />
       <DashboardQueryDrawer v-else :query="topEntry.query" :period="topEntry.period" />
     </aside>
   </Transition>
@@ -41,6 +48,7 @@ import DashboardArticleDrawer from '~/components/dashboard/drawers/DashboardArti
 import DashboardIndexingDrawer from '~/components/dashboard/drawers/DashboardIndexingDrawer.vue'
 import DashboardPublishDrawer from '~/components/dashboard/drawers/DashboardPublishDrawer.vue'
 import DashboardQueryDrawer from '~/components/dashboard/drawers/DashboardQueryDrawer.vue'
+import DashboardSearchPageDrawer from '~/components/dashboard/drawers/DashboardSearchPageDrawer.vue'
 import { useDashboardDrawer } from '~/composables/useDashboardDrawer'
 
 const { topEntry, closeDrawer, restoreDrawers }: UseDashboardDrawerReturn = useDashboardDrawer()

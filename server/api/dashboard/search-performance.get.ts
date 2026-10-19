@@ -1,47 +1,17 @@
 import type { H3Event } from 'h3'
 import type {
+  SearchPerformanceDateRanges,
   SearchPerformancePeriod,
   SearchPerformanceResponse,
   SearchPerformanceTrendPoint,
 } from '~~/server/types/dashboard/searchPerformance'
+import type { GscSearchAnalyticsRow, GscSearchAnalyticsRunner } from '~~/server/utils/gscSearchAnalytics'
 import { createError, getQuery } from 'h3'
+import { SearchConsoleService } from '~~/server/services/SearchConsoleService'
 import { requireDashboardAuth } from '~~/server/utils/dashboardAuth'
-import { getGscAccessToken } from '~~/server/utils/gscAuth'
-import {
-  querySearchAnalytics,
-  toSearchEntry,
-  toSearchTotals,
-  type GscSearchAnalyticsRow,
-} from '~~/server/utils/gscSearchAnalytics'
+import { GSC_SITE_PROPERTY, toSearchEntry, toSearchTotals } from '~~/server/utils/gscSearchAnalytics'
 
-const GSC_SITE_PROPERTY = 'sc-domain:dibodev.fr'
-const PERIOD_DAYS: Record<SearchPerformancePeriod, number> = { '7d': 7, '28d': 28, '3m': 90, '6m': 180 }
-const VALID_PERIODS: SearchPerformancePeriod[] = ['7d', '28d', '3m', '6m']
-/** Search Console finalizes data with a ~2-3 day lag; end the window there to avoid partial days. */
-const DATA_LATENCY_DAYS = 3
-
-/**
- * Formats a date as the YYYY-MM-DD string expected by the Search Console API.
- *
- * @param {Date} date - The date to format.
- * @returns {string} The YYYY-MM-DD representation (UTC).
- */
-function formatApiDate(date: Date): string {
-  return date.toISOString().slice(0, 10)
-}
-
-/**
- * Returns a copy of a date shifted by a number of days (UTC).
- *
- * @param {Date} date - The base date.
- * @param {number} days - The number of days to add (negative to subtract).
- * @returns {Date} The shifted date.
- */
-function shiftDays(date: Date, days: number): Date {
-  const copy = new Date(date)
-  copy.setUTCDate(copy.getUTCDate() + days)
-  return copy
-}
+const PAGE_ROW_LIMIT: number = 1000
 
 /**
  * GET /api/dashboard/search-performance?period=28d
@@ -51,20 +21,9 @@ function shiftDays(date: Date, days: number): Date {
  */
 export default defineEventHandler(async (event: H3Event): Promise<SearchPerformanceResponse> => {
   requireDashboardAuth(event)
-  const config = useRuntimeConfig()
 
-  const rawPeriod = String(getQuery(event).period ?? '28d')
-  const period: SearchPerformancePeriod = VALID_PERIODS.includes(rawPeriod as SearchPerformancePeriod)
-    ? (rawPeriod as SearchPerformancePeriod)
-    : '28d'
-  const days = PERIOD_DAYS[period]
-
-  const end = shiftDays(new Date(), -DATA_LATENCY_DAYS)
-  const start = shiftDays(end, -(days - 1))
-  const previousEnd = shiftDays(start, -1)
-  const previousStart = shiftDays(previousEnd, -(days - 1))
-  const range = { startDate: formatApiDate(start), endDate: formatApiDate(end) }
-  const previousRange = { startDate: formatApiDate(previousStart), endDate: formatApiDate(previousEnd) }
+  const period: SearchPerformancePeriod = SearchConsoleService.resolvePeriod(getQuery(event).period)
+  const { range, previousRange }: SearchPerformanceDateRanges = SearchConsoleService.buildDateRanges(period)
 
   const emptyTotals = { clicks: 0, impressions: 0, ctr: 0, position: 0 }
   const emptyResponse = (gscConnected: boolean): SearchPerformanceResponse => ({
@@ -81,21 +40,11 @@ export default defineEventHandler(async (event: H3Event): Promise<SearchPerforma
     devices: [],
   })
 
-  let accessToken: string
-  try {
-    accessToken = await getGscAccessToken({
-      gscServiceAccountJson: config.gscServiceAccountJson as string,
-      googleClientId: config.googleClientId as string,
-      googleClientSecret: config.googleClientSecret as string,
-      gscRefreshToken: config.gscRefreshToken as string,
-    })
-  } catch {
+  const run: GscSearchAnalyticsRunner | null = await SearchConsoleService.createSearchAnalyticsRunner()
+
+  if (!run) {
     return emptyResponse(false)
   }
-
-  const quotaProjectId = (config.gscQuotaProjectId as string | undefined)?.trim() ?? ''
-  const run = (query: Parameters<typeof querySearchAnalytics>[3]): Promise<GscSearchAnalyticsRow[]> =>
-    querySearchAnalytics(GSC_SITE_PROPERTY, accessToken, quotaProjectId, query)
 
   try {
     const [totalsRows, previousTotalsRows, trendRows, queryRows, pageRows, countryRows, deviceRows] = await Promise.all(
@@ -104,7 +53,7 @@ export default defineEventHandler(async (event: H3Event): Promise<SearchPerforma
         run({ ...previousRange }),
         run({ ...range, dimensions: ['date'], rowLimit: 500 }),
         run({ ...range, dimensions: ['query'], rowLimit: 200 }),
-        run({ ...range, dimensions: ['page'], rowLimit: 100 }),
+        run({ ...range, dimensions: ['page'], rowLimit: PAGE_ROW_LIMIT }),
         run({ ...range, dimensions: ['country'], rowLimit: 20 }),
         run({ ...range, dimensions: ['device'], rowLimit: 10 }),
       ],

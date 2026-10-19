@@ -18,7 +18,7 @@ const STORAGE_KEY: string = 'dibodev-dashboard-drawers'
 const MAX_STACK_DEPTH: number = 3
 
 /**
- * Stack of right-hand drawers (article, publication, indexing, query), kept across reloads of the tab.
+ * Stack of right-hand drawers (article, publication, indexing, query, page in Google), kept across reloads of the tab.
  *
  * @returns {UseDashboardDrawerReturn} The stack, the key of the item shown on top and the functions to open, browse and close drawers.
  */
@@ -34,6 +34,9 @@ export function useDashboardDrawer(): UseDashboardDrawerReturn {
     if (entry?.kind === 'article') return entry.articleKey
     if (entry?.kind === 'indexing') return entry.url
     if (entry?.kind === 'query') return entry.query
+    if (entry?.kind === 'page') {
+      return entry.rowKey
+    }
     return null
   })
 

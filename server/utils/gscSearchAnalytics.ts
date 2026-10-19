@@ -3,6 +3,8 @@ import type { SearchPerformanceEntry, SearchPerformanceTotals } from '~~/server/
 const GSC_SEARCH_ANALYTICS_BASE = 'https://searchconsole.googleapis.com/webmasters/v3/sites'
 const REQUEST_TIMEOUT_MS = 15_000
 
+export const GSC_SITE_PROPERTY: string = 'sc-domain:dibodev.fr'
+
 /** A raw Search Analytics row as returned by the Search Console API. */
 export type GscSearchAnalyticsRow = {
   keys?: string[]
@@ -12,13 +14,27 @@ export type GscSearchAnalyticsRow = {
   position?: number
 }
 
+export type GscDimensionFilter = {
+  dimension: 'page' | 'query' | 'country' | 'device'
+  operator?: 'equals' | 'contains' | 'notContains' | 'includingRegex' | 'excludingRegex'
+  expression: string
+}
+
+export type GscDimensionFilterGroup = {
+  groupType?: 'and'
+  filters: GscDimensionFilter[]
+}
+
 /** Parameters of a single Search Analytics query. */
 export type GscSearchAnalyticsQuery = {
   startDate: string
   endDate: string
   dimensions?: string[]
   rowLimit?: number
+  dimensionFilterGroups?: GscDimensionFilterGroup[]
 }
+
+export type GscSearchAnalyticsRunner = (query: GscSearchAnalyticsQuery) => Promise<GscSearchAnalyticsRow[]>
 
 /**
  * Runs one Search Analytics query against the Search Console API for the given site property.

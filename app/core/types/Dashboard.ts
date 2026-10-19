@@ -60,13 +60,14 @@ export type DashboardConfirmOptions = {
   danger?: boolean
 }
 
-export type DashboardDrawerKind = 'article' | 'publish' | 'indexing' | 'query'
+export type DashboardDrawerKind = 'article' | 'publish' | 'indexing' | 'query' | 'page'
 
 export type DashboardDrawerEntry =
   | { kind: 'article'; articleKey: string; browseKeys: string[] }
   | { kind: 'publish'; articleId: string }
   | { kind: 'indexing'; url: string; browseUrls: string[] }
   | { kind: 'query'; query: string; period: SearchPerformancePeriod }
+  | { kind: 'page'; rowKey: string; pageLabel: string; pageUrls: string[]; period: SearchPerformancePeriod }
 
 export type DashboardCommandGroup = 'Pages' | 'Actions' | 'Articles' | 'Pages du site' | 'Requêtes Google'
 

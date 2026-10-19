@@ -119,13 +119,13 @@
           v-model="detailTab"
           :items="detailTabs"
           screen-reader-label="Détail"
-          class="min-w-0 @max-3xl:w-full"
+          class="min-w-0 @max-5xl/page:w-full @max-5xl/page:border-b @max-5xl/page:border-(--dash-line-soft)"
         />
         <DashboardSearchInput
           v-model="filter"
           id="search-performance-filter"
           :placeholder="DETAIL_PLACEHOLDERS[detailTab as DashboardSearchDetailTab]"
-          class="w-full pb-2.5 @3xl:ml-auto @3xl:w-[240px] @3xl:pb-0"
+          class="w-full py-2.5 @5xl/page:ml-auto @5xl/page:w-[240px] @5xl/page:py-0"
         />
       </div>
 
@@ -157,8 +157,7 @@
           <tr
             v-for="row in pagedRows"
             :key="row.key"
-            class="is-clickable"
-            :class="{ 'is-selected': openedItemKey === row.key }"
+            :class="{ 'is-clickable': isDetailRowClickable, 'is-selected': openedItemKey === row.key }"
             @click="openRow(row)"
           >
             <td class="dash-col-main">
@@ -166,7 +165,10 @@
                 class="block truncate font-medium text-gray-100"
                 :class="{ 'dash-mono text-[13px]': detailTab === 'pages' }"
               >
-                {{ rowLabel(row) }}
+                {{ row.label }}
+              </span>
+              <span v-if="row.pathLabel" class="dash-mono text-muted mt-0.5 block truncate text-xs">
+                {{ row.pathLabel }}
               </span>
             </td>
             <td class="is-right tabular-nums">
@@ -201,7 +203,10 @@
               class="block truncate text-sm font-medium text-gray-100"
               :class="{ 'dash-mono text-[13px]': detailTab === 'pages' }"
             >
-              {{ rowLabel(row) }}
+              {{ row.label }}
+            </span>
+            <span v-if="row.pathLabel" class="dash-mono text-muted mt-0.5 block truncate text-xs">
+              {{ row.pathLabel }}
             </span>
             <span class="text-muted mt-0.5 block text-xs tabular-nums">
               {{ DashboardFormatUtils.formatNumber(row.impressions) }} impr. ·
@@ -245,16 +250,23 @@
 <script lang="ts" setup>
 import type { UseDashboardToastReturn } from '~/composables/useDashboardToast'
 import type { UseDashboardSearchPerformanceReturn } from '~/composables/useDashboardSearchPerformance'
-import type { UseDashboardIndexingReturn } from '~/composables/useDashboardIndexing'
 import type { UseDashboardDrawerReturn } from '~/composables/useDashboardDrawer'
 import type { UseDashboardArticlesReturn } from '~/composables/useDashboardArticles'
 import type {
+  DashboardSearchDetailRow,
   DashboardSearchDetailTab,
   DashboardSearchOpportunityGroup,
+  DashboardSearchPageGroup,
   DashboardSearchSortKey,
+  DashboardToolPageRoute,
 } from '~/core/types/DashboardSearchPerformancePage'
 import type { ComputedRef, Ref } from 'vue'
-import type { DashboardKpi, DashboardSegmentOption, DashboardTabItem } from '~/core/types/Dashboard'
+import type {
+  DashboardArticleRow,
+  DashboardKpi,
+  DashboardSegmentOption,
+  DashboardTabItem,
+} from '~/core/types/Dashboard'
 import type { DashboardChartMarker } from '~/core/types/DashboardTrendChart'
 import type { SearchPerformanceCacheEntry } from '~/composables/useDashboardSearchPerformance'
 import type { SearchOpportunities } from '~/core/utils/DashboardSearchUtils'
@@ -264,7 +276,6 @@ import type {
   SearchPerformanceResponse,
   SearchPerformanceTrendPoint,
 } from '~~/server/types/dashboard/searchPerformance'
-import type { IndexingStatusRow } from '~~/server/types/indexing'
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import DashboardPage from '~/components/dashboard/shell/DashboardPage.vue'
 import DashboardTrendChart from '~/components/dashboard/charts/DashboardTrendChart.vue'
@@ -281,11 +292,11 @@ import DashboardTabs from '~/components/dashboard/ui/DashboardTabs.vue'
 import { DASHBOARD_EDITOR_PATH } from '~/core/constants/dashboardNavigation'
 import { DASHBOARD_TONES } from '~/core/constants/dashboardTones'
 import { DashboardFormatUtils } from '~/core/utils/DashboardFormatUtils'
+import { DashboardIndexingUtils } from '~/core/utils/DashboardIndexingUtils'
 import { DashboardSearchUtils } from '~/core/utils/DashboardSearchUtils'
 import { SeoDisplayUtils } from '~/core/utils/SeoDisplayUtils'
 import { useDashboardArticles } from '~/composables/useDashboardArticles'
 import { useDashboardDrawer } from '~/composables/useDashboardDrawer'
-import { useDashboardIndexing } from '~/composables/useDashboardIndexing'
 import { useDashboardSearchPerformance } from '~/composables/useDashboardSearchPerformance'
 import { useDashboardToast } from '~/composables/useDashboardToast'
 
@@ -299,12 +310,12 @@ useHead({
 
 const localePath: ReturnType<typeof useLocalePath> = useLocalePath()
 const route: ReturnType<typeof useRoute> = useRoute()
+const router: ReturnType<typeof useRouter> = useRouter()
 
 const { cache, loadingPeriods, errors, loadSearchPerformance }: UseDashboardSearchPerformanceReturn =
   useDashboardSearchPerformance()
 
 const { rows: articleRows, loadArticles }: UseDashboardArticlesReturn = useDashboardArticles()
-const { payload: indexingPayload, loadIndexing }: UseDashboardIndexingReturn = useDashboardIndexing()
 const { openedItemKey, openDrawer }: UseDashboardDrawerReturn = useDashboardDrawer()
 const { showToast }: UseDashboardToastReturn = useDashboardToast()
 
@@ -326,6 +337,8 @@ const COLUMNS: Array<{ key: DashboardSearchSortKey; label: string }> = [
 const DETAIL_LABELS: Record<DashboardSearchDetailTab, string> = {
   queries: 'Requête',
   pages: 'Page',
+  articles: 'Article',
+  tools: 'Page outil',
   countries: 'Pays',
   devices: 'Appareil',
 }
@@ -333,12 +346,27 @@ const DETAIL_LABELS: Record<DashboardSearchDetailTab, string> = {
 const DETAIL_PLACEHOLDERS: Record<DashboardSearchDetailTab, string> = {
   queries: 'Filtrer les requêtes…',
   pages: 'Filtrer les pages…',
+  articles: 'Filtrer les articles…',
+  tools: 'Filtrer les pages outil…',
   countries: 'Filtrer les pays…',
   devices: 'Filtrer…',
 }
 
 const PAGE_SIZE: number = 12
 const WEEKLY_THRESHOLD: number = 60
+
+const toolPageRoutes: DashboardToolPageRoute[] = DashboardSearchUtils.readToolPageRoutes(router.getRoutes())
+const toolRouteByPath: Map<string, DashboardToolPageRoute> = new Map(
+  toolPageRoutes.map((toolRoute: DashboardToolPageRoute): [string, DashboardToolPageRoute] => [
+    toolRoute.path,
+    toolRoute,
+  ]),
+)
+const toolFrenchPathByRouteName: Map<string, string> = new Map(
+  toolPageRoutes
+    .filter((toolRoute: DashboardToolPageRoute): boolean => toolRoute.locale === 'fr')
+    .map((toolRoute: DashboardToolPageRoute): [string, string] => [toolRoute.routeName, toolRoute.path]),
+)
 
 const period: Ref<string> = ref('28d')
 const detailTab: Ref<string> = ref('queries')
@@ -442,32 +470,104 @@ const opportunityGroups: ComputedRef<DashboardSearchOpportunityGroup[]> = comput
   ],
 )
 
-const detailRows: ComputedRef<SearchPerformanceEntry[]> = computed((): SearchPerformanceEntry[] => {
-  const source: Record<DashboardSearchDetailTab, SearchPerformanceEntry[]> = {
-    queries: data.value?.queries ?? [],
-    pages: data.value?.pages ?? [],
-    countries: data.value?.countries ?? [],
-    devices: data.value?.devices ?? [],
+const articleTitleBySlug: ComputedRef<Map<string, string>> = computed(
+  (): Map<string, string> =>
+    new Map(articleRows.value.map((row: DashboardArticleRow): [string, string] => [row.slug, row.title])),
+)
+
+const pageDetailRows: ComputedRef<DashboardSearchDetailRow[]> = computed((): DashboardSearchDetailRow[] =>
+  (data.value?.pages ?? []).map(
+    (pageEntry: SearchPerformanceEntry): DashboardSearchDetailRow => ({
+      ...pageEntry,
+      label: DashboardIndexingUtils.path(pageEntry.key),
+      pathLabel: null,
+      pageUrls: [pageEntry.key],
+    }),
+  ),
+)
+
+const articleDetailRows: ComputedRef<DashboardSearchDetailRow[]> = computed((): DashboardSearchDetailRow[] =>
+  DashboardSearchUtils.groupPages(data.value?.pages ?? [], DashboardSearchUtils.extractArticleSlug).map(
+    (group: DashboardSearchPageGroup): DashboardSearchDetailRow => ({
+      ...group.entry,
+      label: articleTitleBySlug.value.get(group.key) ?? group.key,
+      pathLabel: `/blog/${group.key}`,
+      pageUrls: group.pageUrls,
+    }),
+  ),
+)
+
+const toolDetailRows: ComputedRef<DashboardSearchDetailRow[]> = computed((): DashboardSearchDetailRow[] =>
+  DashboardSearchUtils.groupPages(
+    data.value?.pages ?? [],
+    (url: string): string | null => toolRouteByPath.get(DashboardIndexingUtils.path(url))?.routeName ?? null,
+  ).map((group: DashboardSearchPageGroup): DashboardSearchDetailRow => {
+    const frenchPath: string | null = toolFrenchPathByRouteName.get(group.key) ?? null
+    return {
+      ...group.entry,
+      label: DashboardSearchUtils.buildToolPageLabel(group.key, frenchPath),
+      pathLabel: frenchPath ?? DashboardIndexingUtils.path(group.pageUrls[0] ?? ''),
+      pageUrls: group.pageUrls,
+    }
+  }),
+)
+
+const detailRows: ComputedRef<DashboardSearchDetailRow[]> = computed((): DashboardSearchDetailRow[] => {
+  const tab: DashboardSearchDetailTab = detailTab.value as DashboardSearchDetailTab
+
+  if (tab === 'pages') {
+    return pageDetailRows.value
   }
-  return source[detailTab.value as DashboardSearchDetailTab]
+  if (tab === 'articles') {
+    return articleDetailRows.value
+  }
+  if (tab === 'tools') {
+    return toolDetailRows.value
+  }
+  if (tab === 'countries') {
+    return (data.value?.countries ?? []).map(
+      (countryEntry: SearchPerformanceEntry): DashboardSearchDetailRow =>
+        buildDetailRow(
+          countryEntry,
+          `${SeoDisplayUtils.countryFlag(countryEntry.key)} ${SeoDisplayUtils.countryName(countryEntry.key)}`,
+        ),
+    )
+  }
+  if (tab === 'devices') {
+    return (data.value?.devices ?? []).map(
+      (deviceEntry: SearchPerformanceEntry): DashboardSearchDetailRow =>
+        buildDetailRow(deviceEntry, SeoDisplayUtils.deviceLabel(deviceEntry.key)),
+    )
+  }
+  return (data.value?.queries ?? []).map(
+    (queryEntry: SearchPerformanceEntry): DashboardSearchDetailRow => buildDetailRow(queryEntry, queryEntry.key),
+  )
 })
 
 const detailTabs: ComputedRef<DashboardTabItem[]> = computed((): DashboardTabItem[] => [
   { value: 'queries', label: 'Requêtes', count: data.value?.queries.length ?? null },
   { value: 'pages', label: 'Pages', count: data.value?.pages.length ?? null },
+  { value: 'articles', label: 'Articles', count: data.value ? articleDetailRows.value.length : null },
+  { value: 'tools', label: 'Pages outil', count: data.value ? toolDetailRows.value.length : null },
   { value: 'countries', label: 'Pays', count: data.value?.countries.length ?? null },
   { value: 'devices', label: 'Appareils', count: data.value?.devices.length ?? null },
 ])
 
-const filteredRows: ComputedRef<SearchPerformanceEntry[]> = computed((): SearchPerformanceEntry[] => {
+const isDetailRowClickable: ComputedRef<boolean> = computed(
+  (): boolean => detailTab.value !== 'countries' && detailTab.value !== 'devices',
+)
+
+const filteredRows: ComputedRef<DashboardSearchDetailRow[]> = computed((): DashboardSearchDetailRow[] => {
   const needle: string = DashboardFormatUtils.toSearchableText(filter.value.trim())
-  const rows: SearchPerformanceEntry[] = needle
-    ? detailRows.value.filter((row: SearchPerformanceEntry): boolean =>
-        DashboardFormatUtils.toSearchableText(rowLabel(row)).includes(needle),
+  const rows: DashboardSearchDetailRow[] = needle
+    ? detailRows.value.filter((row: DashboardSearchDetailRow): boolean =>
+        DashboardFormatUtils.toSearchableText(`${row.label} ${row.pathLabel ?? ''}`).includes(needle),
       )
     : detailRows.value
-  return [...rows].sort((a: SearchPerformanceEntry, b: SearchPerformanceEntry): number => {
-    if (sortKey.value === 'key') return rowLabel(a).localeCompare(rowLabel(b), 'fr') * sortDirection.value
+  return [...rows].sort((a: DashboardSearchDetailRow, b: DashboardSearchDetailRow): number => {
+    if (sortKey.value === 'key') {
+      return a.label.localeCompare(b.label, 'fr') * sortDirection.value
+    }
     return (a[sortKey.value] - b[sortKey.value]) * sortDirection.value
   })
 })
@@ -476,12 +576,12 @@ const pageCount: ComputedRef<number> = computed((): number =>
   Math.max(1, Math.ceil(filteredRows.value.length / PAGE_SIZE)),
 )
 
-const pagedRows: ComputedRef<SearchPerformanceEntry[]> = computed((): SearchPerformanceEntry[] =>
+const pagedRows: ComputedRef<DashboardSearchDetailRow[]> = computed((): DashboardSearchDetailRow[] =>
   filteredRows.value.slice((page.value - 1) * PAGE_SIZE, page.value * PAGE_SIZE),
 )
 
 const maxImpressions: ComputedRef<number> = computed((): number =>
-  Math.max(1, ...detailRows.value.map((row: SearchPerformanceEntry): number => row.impressions)),
+  Math.max(1, ...detailRows.value.map((row: DashboardSearchDetailRow): number => row.impressions)),
 )
 
 const countLabel: ComputedRef<string> = computed((): string => {
@@ -501,23 +601,14 @@ const emptyLabel: ComputedRef<string> = computed((): string =>
 )
 
 /**
- * Readable label of a row (path for pages, country and device names).
+ * Table row of an entry that stands alone (a query, a country, a device): no page URL behind it.
  *
- * @param {SearchPerformanceEntry} row - The row.
- * @returns {string} The label.
+ * @param {SearchPerformanceEntry} rowEntry - The entry.
+ * @param {string} label - Its readable label.
+ * @returns {DashboardSearchDetailRow} The row.
  */
-function rowLabel(row: SearchPerformanceEntry): string {
-  if (detailTab.value === 'pages') {
-    try {
-      return new URL(row.key).pathname
-    } catch {
-      return row.key
-    }
-  }
-  if (detailTab.value === 'countries')
-    return `${SeoDisplayUtils.countryFlag(row.key)} ${SeoDisplayUtils.countryName(row.key)}`
-  if (detailTab.value === 'devices') return SeoDisplayUtils.deviceLabel(row.key)
-  return row.key
+function buildDetailRow(rowEntry: SearchPerformanceEntry, label: string): DashboardSearchDetailRow {
+  return { ...rowEntry, label, pathLabel: null, pageUrls: [] }
 }
 
 /**
@@ -560,22 +651,20 @@ function openQuery(query: string): void {
 }
 
 /**
- * Opens a row: query drawer, indexing drawer for a known page, nothing for countries and devices.
+ * Opens a row: the query drawer for a query, the page drawer for a page, an article or a tool page, nothing for countries and devices.
  *
- * @param {SearchPerformanceEntry} row - The clicked row.
+ * @param {DashboardSearchDetailRow} row - The clicked row.
  * @returns {void}
  */
-function openRow(row: SearchPerformanceEntry): void {
+function openRow(row: DashboardSearchDetailRow): void {
   if (detailTab.value === 'queries') {
     openQuery(row.key)
     return
   }
-  if (detailTab.value !== 'pages') return
-  const known: IndexingStatusRow | undefined = indexingPayload.value?.items.find(
-    (item: IndexingStatusRow): boolean => item.url === row.key,
-  )
-  if (known) openDrawer({ kind: 'indexing', url: known.url, browseUrls: [known.url] })
-  else window.open(row.key, '_blank', 'noopener')
+  if (row.pageUrls.length === 0) {
+    return
+  }
+  openDrawer({ kind: 'page', rowKey: row.key, pageLabel: row.label, pageUrls: row.pageUrls, period: periodKey.value })
 }
 
 /**
@@ -626,6 +715,5 @@ onMounted((): void => {
     })
     .catch((): void => undefined)
   loadArticles().catch((): void => undefined)
-  loadIndexing().catch((): void => undefined)
 })
 </script>
