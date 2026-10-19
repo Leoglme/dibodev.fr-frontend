@@ -108,6 +108,11 @@ const TOOL_ICON_PATHS: Record<DibodevToolShareImageIcon, string[]> = {
   flame: [
     'M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z',
   ],
+  clipboard: [
+    'M9 2h6a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z',
+    'M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2',
+    'm9 14 2 2 4-4',
+  ],
 }
 
 /** Space drawn between the parts of a title line (Satori drops the spaces at the edge of each span). */

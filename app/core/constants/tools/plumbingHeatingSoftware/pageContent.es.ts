@@ -9,10 +9,9 @@ import {
   PLUMBING_HEATING_PAGE_UPDATED_AT,
   PLUMBING_HEATING_TEMPLATE_PDF_PATH,
   PLUMBING_HEATING_TEMPLATE_XLSX_PATH,
-  PLUMBING_QUOTE_RULES_SOURCE,
   REDUCED_VAT_WORKS_SOURCE,
 } from '~/core/constants/tools/plumbingHeatingSoftware/pageShared'
-import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
+import { E_INVOICING_SOURCE, HOME_REPAIR_QUOTE_RULES_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
 
 // The page describes the French market (publishers, VAT, boiler and quote rules): the Spanish text says so instead of adapting it.
@@ -107,15 +106,15 @@ export const PLUMBING_HEATING_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = 
         contextLabel: 'Desde el 1 de abril de 2017',
         title: 'Un presupuesto antes de cualquier intervención',
         text: 'Avería, reparación o mantenimiento en casa de un particular (fontanería, sanitarios, climatización): presupuesto detallado entregado antes de los trabajos, sea cual sea el importe, con la tarifa horaria, los gastos de desplazamiento y su plazo de validez.',
-        sourceName: PLUMBING_QUOTE_RULES_SOURCE.name,
-        sourceUrl: PLUMBING_QUOTE_RULES_SOURCE.url,
+        sourceName: HOME_REPAIR_QUOTE_RULES_SOURCE.name,
+        sourceUrl: HOME_REPAIR_QUOTE_RULES_SOURCE.url,
       },
       {
         contextLabel: `Desde 25${NBSP}€ con IVA`,
         title: 'Una factura por duplicado',
         text: 'Entregada tras los trabajos y antes del pago: fecha, nombre y dirección de la empresa, nombre del cliente, fecha y lugar de la intervención, totales sin y con IVA. El cliente puede quedarse con las piezas sustituidas.',
-        sourceName: PLUMBING_QUOTE_RULES_SOURCE.name,
-        sourceUrl: PLUMBING_QUOTE_RULES_SOURCE.url,
+        sourceName: HOME_REPAIR_QUOTE_RULES_SOURCE.name,
+        sourceUrl: HOME_REPAIR_QUOTE_RULES_SOURCE.url,
       },
       {
         contextLabel: 'Cada año natural',

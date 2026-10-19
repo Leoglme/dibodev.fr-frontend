@@ -58,7 +58,7 @@
     },
     "toolsHubPage": {
       "title": "Free Tools: Which Software for Your Business? {'|'} Dibodev",
-      "description": "Free tests by trade (driving school, event rental, bike shop, garage, plumbing and heating) and a budget estimator: which software to choose in France, and at what price."
+      "description": "Free tests by trade (driving school, event rental, bike shop, garage, plumbing and heating, field service) and a budget estimator: which software to choose in France, and at what price."
     },
     "aboutPage": {
       "title": "About — Léo Guillaume, Freelance Developer in Rennes {'|'} Dibodev",
@@ -224,6 +224,7 @@
       "bikeShopSoftware": "Bike shop software",
       "autoRepairShopSoftware": "Auto repair shop software",
       "plumbingHeatingSoftware": "Plumbing and heating software",
+      "fieldServiceSoftware": "Field service software",
       "budgetEstimator": "Budget estimator"
     }
   },
@@ -232,7 +233,7 @@
       "titlePart1": "Free tools to choose ",
       "titleHighlight1": "the right software",
       "titlePart2": "",
-      "description": "Driving school, event equipment rental, bike shop, garage, plumbing and heating: in 6 questions, each test tells you which software to choose and how much to budget, with the 2026 prices of the software on the French market.",
+      "description": "Driving school, event equipment rental, bike shop, garage, plumbing and heating, field service: in 6 questions, each test tells you which software to choose and how much to budget, with the 2026 prices of the software on the French market.",
       "cta": "Choose a test",
       "ctaSecondary": "Estimate my budget",
       "stats": {

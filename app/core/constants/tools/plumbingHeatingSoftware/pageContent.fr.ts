@@ -9,10 +9,9 @@ import {
   PLUMBING_HEATING_PAGE_UPDATED_AT,
   PLUMBING_HEATING_TEMPLATE_PDF_PATH,
   PLUMBING_HEATING_TEMPLATE_XLSX_PATH,
-  PLUMBING_QUOTE_RULES_SOURCE,
   REDUCED_VAT_WORKS_SOURCE,
 } from '~/core/constants/tools/plumbingHeatingSoftware/pageShared'
-import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
+import { E_INVOICING_SOURCE, HOME_REPAIR_QUOTE_RULES_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
 
 export const PLUMBING_HEATING_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
@@ -99,15 +98,15 @@ export const PLUMBING_HEATING_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = 
         contextLabel: 'Depuis le 1er avril 2017',
         title: 'Un devis avant toute intervention',
         text: `Dépannage, réparation ou entretien chez un particulier (plomberie, sanitaires, génie climatique)${NBSP}: devis détaillé remis avant les travaux, quel que soit le montant, avec le taux horaire, les frais de déplacement et sa durée de validité.`,
-        sourceName: PLUMBING_QUOTE_RULES_SOURCE.name,
-        sourceUrl: PLUMBING_QUOTE_RULES_SOURCE.url,
+        sourceName: HOME_REPAIR_QUOTE_RULES_SOURCE.name,
+        sourceUrl: HOME_REPAIR_QUOTE_RULES_SOURCE.url,
       },
       {
         contextLabel: `Dès 25${NBSP}€ TTC`,
         title: 'Une facture en deux exemplaires',
         text: `Remise après les travaux et avant le paiement${NBSP}: date, nom et adresse de l’entreprise, nom du client, date et lieu de l’intervention, totaux HT et TTC. Le client peut garder les pièces remplacées.`,
-        sourceName: PLUMBING_QUOTE_RULES_SOURCE.name,
-        sourceUrl: PLUMBING_QUOTE_RULES_SOURCE.url,
+        sourceName: HOME_REPAIR_QUOTE_RULES_SOURCE.name,
+        sourceUrl: HOME_REPAIR_QUOTE_RULES_SOURCE.url,
       },
       {
         contextLabel: 'Chaque année civile',

@@ -33,6 +33,7 @@ import CalendarCheck from '~/components/icons/CalendarCheck.vue'
 import Car from '~/components/icons/Car.vue'
 import Check from '~/components/icons/Check.vue'
 import CheckCircle from '~/components/icons/CheckCircle.vue'
+import ClipboardCheck from '~/components/icons/ClipboardCheck.vue'
 import ChevronDown from '~/components/icons/ChevronDown.vue'
 import ChevronLeft from '~/components/icons/ChevronLeft.vue'
 import ChevronRight from '~/components/icons/ChevronRight.vue'
@@ -132,6 +133,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   Car,
   Check,
   CheckCircle,
+  ClipboardCheck,
   ChevronDown,
   ChevronLeft,
   ChevronRight,

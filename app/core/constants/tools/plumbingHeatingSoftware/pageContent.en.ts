@@ -9,10 +9,9 @@ import {
   PLUMBING_HEATING_PAGE_UPDATED_AT,
   PLUMBING_HEATING_TEMPLATE_PDF_PATH,
   PLUMBING_HEATING_TEMPLATE_XLSX_PATH,
-  PLUMBING_QUOTE_RULES_SOURCE,
   REDUCED_VAT_WORKS_SOURCE,
 } from '~/core/constants/tools/plumbingHeatingSoftware/pageShared'
-import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
+import { E_INVOICING_SOURCE, HOME_REPAIR_QUOTE_RULES_SOURCE } from '~/core/constants/tools/officialSources'
 
 // The page describes the French market (publishers, VAT, boiler and quote rules): the English text says so instead of adapting it.
 
@@ -107,15 +106,15 @@ export const PLUMBING_HEATING_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = 
         contextLabel: 'Since 1 April 2017',
         title: 'A quote before any job',
         text: 'Breakdown, repair or maintenance at a private home (plumbing, sanitary, HVAC): a detailed quote handed over before the work, whatever the amount, with the hourly rate, travel costs and its validity period.',
-        sourceName: PLUMBING_QUOTE_RULES_SOURCE.name,
-        sourceUrl: PLUMBING_QUOTE_RULES_SOURCE.url,
+        sourceName: HOME_REPAIR_QUOTE_RULES_SOURCE.name,
+        sourceUrl: HOME_REPAIR_QUOTE_RULES_SOURCE.url,
       },
       {
         contextLabel: 'From €25 incl. VAT',
         title: 'An invoice in two copies',
         text: 'Handed over after the work and before payment: date, company name and address, customer name, date and place of the job, totals excl. and incl. VAT. The customer may keep the replaced parts.',
-        sourceName: PLUMBING_QUOTE_RULES_SOURCE.name,
-        sourceUrl: PLUMBING_QUOTE_RULES_SOURCE.url,
+        sourceName: HOME_REPAIR_QUOTE_RULES_SOURCE.name,
+        sourceUrl: HOME_REPAIR_QUOTE_RULES_SOURCE.url,
       },
       {
         contextLabel: 'Every calendar year',

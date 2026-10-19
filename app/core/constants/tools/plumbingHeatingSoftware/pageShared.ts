@@ -23,12 +23,6 @@ export const PLUMBING_HEATING_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2
 export const PLUMBING_HEATING_TEMPLATE_PDF_PATH: string = '/modeles/devis-bon-intervention-plombier-chauffagiste.pdf'
 export const PLUMBING_HEATING_TEMPLATE_XLSX_PATH: string = '/modeles/devis-bon-intervention-plombier-chauffagiste.xlsx'
 
-/** Quote before any repair, maintenance or breakdown job at home, and invoice from 25 € incl. VAT (order of 24 January 2017). */
-export const PLUMBING_QUOTE_RULES_SOURCE: DibodevSourceReference = {
-  name: 'Institut national de la consommation',
-  url: 'https://www.inc-conso.fr/content/prestations-de-depannage-de-reparation-et-dentretien-une-meilleure-information-sur-les-prix',
-}
-
 /** Yearly maintenance of 4-400 kW boilers and heat pumps, certificate handed over within 15 days and kept 2 years. */
 export const BOILER_MAINTENANCE_SOURCE: DibodevSourceReference = {
   name: 'Service-Public.fr',

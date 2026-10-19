@@ -154,6 +154,37 @@ const PLUMBING_HEATING_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
+const FIELD_SERVICE_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+  toolId: 'field-service-software',
+  routeName: 'tools-field-service-software',
+  icon: 'ClipboardCheck',
+  wording: {
+    fr: {
+      emphasizedIntro: `Vos techniciens interviennent chez les clients${NBSP}?`,
+      text: 'En 6 questions, le test vous dit quel logiciel de gestion d’interventions choisir pour vos tournées, vos bons d’intervention et vos factures, avec les prix 2026 des logiciels du marché et un modèle de bon d’intervention gratuit.',
+      linkLabel: `Faire le test${NBSP}: quel logiciel de gestion d’interventions${NBSP}?`,
+      listLabel: `Quel logiciel de gestion d’interventions${NBSP}?`,
+      hubDescription: `Tournées, bons d’intervention signés sur mobile, pièces et factures${NBSP}: le logiciel qui convient à vos techniciens de terrain, et son prix.`,
+    },
+    en: {
+      emphasizedIntro: 'Do your technicians work at your customers’ sites in France?',
+      text: 'In 6 questions, the test tells you which field service software to choose for your rounds, intervention slips and invoices, with the 2026 prices of the software on the French market.',
+      linkLabel: 'Take the test: which field service software?',
+      listLabel: 'Which field service software?',
+      hubDescription:
+        'Rounds, intervention slips signed on mobile, parts and invoices: the software that fits your field technicians, and its price.',
+    },
+    es: {
+      emphasizedIntro: '¿Tus técnicos intervienen en casa de los clientes, en Francia?',
+      text: 'En 6 preguntas, el test te dice qué programa de gestión de intervenciones elegir para tus rutas, tus partes de intervención y tus facturas, con los precios 2026 de los programas del mercado francés.',
+      linkLabel: 'Hacer el test: ¿qué software de gestión de intervenciones?',
+      listLabel: '¿Qué software de gestión de intervenciones?',
+      hubDescription:
+        'Rutas, partes de intervención firmados en el móvil, piezas y facturas: el programa que encaja con tus técnicos de campo, y su precio.',
+    },
+  },
+}
+
 const AI_APP_CHECK_TEASER: DibodevToolTeaserContent = {
   toolId: AI_APP_CHECK_QUIZ_ID,
   routeName: 'ai-app-takeover',
@@ -230,7 +261,7 @@ export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserConte
   'garagiste-outil-sur-mesure-rendez-vous-devis-suivi-vehicules': AUTO_REPAIR_SHOP_SOFTWARE_TEASER,
   'logiciel-gestion-plombiers-saas-sur-mesure-2026': PLUMBING_HEATING_SOFTWARE_TEASER,
   'chauffagiste-contrats-entretien-outil-sur-mesure': PLUMBING_HEATING_SOFTWARE_TEASER,
-  'logiciel-gestion-interventions-techniciens-hors-ligne': PLUMBING_HEATING_SOFTWARE_TEASER,
+  'logiciel-gestion-interventions-techniciens-hors-ligne': FIELD_SERVICE_SOFTWARE_TEASER,
   'pass-commerce-artisanat-rennes-site-internet': PUBLIC_AID_SIMULATOR_TEASER,
 }
 
@@ -246,6 +277,7 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   BIKE_SHOP_SOFTWARE_TEASER,
   AUTO_REPAIR_SHOP_SOFTWARE_TEASER,
   PLUMBING_HEATING_SOFTWARE_TEASER,
+  FIELD_SERVICE_SOFTWARE_TEASER,
   AI_APP_CHECK_TEASER,
   PUBLIC_AID_SIMULATOR_TEASER,
 ]

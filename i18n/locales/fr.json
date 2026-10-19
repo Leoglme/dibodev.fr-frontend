@@ -58,7 +58,7 @@
     },
     "toolsHubPage": {
       "title": "Outils gratuits\u202f: quel logiciel pour votre métier\u202f? {'|'} Dibodev",
-      "description": "Tests gratuits par métier (auto-école, location de matériel, atelier vélo, garage, plombier-chauffagiste) et estimateur de budget\u202f: quel logiciel choisir, et à quel prix."
+      "description": "Tests gratuits par métier (auto-école, location de matériel, atelier vélo, garage, plombier-chauffagiste, interventions) et estimateur de budget\u202f: quel logiciel choisir, et à quel prix."
     },
     "aboutPage": {
       "title": "À propos — Léo Guillaume, développeur freelance à Rennes {'|'} Dibodev",
@@ -224,6 +224,7 @@
       "bikeShopSoftware": "Logiciel pour atelier vélo",
       "autoRepairShopSoftware": "Logiciel pour garage",
       "plumbingHeatingSoftware": "Logiciel pour plombier-chauffagiste",
+      "fieldServiceSoftware": "Logiciel de gestion d'interventions",
       "budgetEstimator": "Estimateur de budget"
     }
   },
