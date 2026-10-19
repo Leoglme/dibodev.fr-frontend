@@ -6360,6 +6360,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A frequent case in SMEs: a team of technicians on the road. I detailed the choice of "
+            },
+            {
+              "type": "text",
+              "text": "field service software",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-gestion-interventions",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " (scheduling, slips signed on mobile, 2026 publisher prices) on a dedicated page, with a free six-question test."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -8491,6 +8520,35 @@
             {
               "text": " that I develop.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A concrete example of the middle ground: a maintenance company keeps its invoicing software and adds "
+            },
+            {
+              "type": "text",
+              "text": "field service software",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-gestion-interventions",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " that fits its rounds; I compared the publishers’ 2026 prices and the cases where custom pays off on that page."
             }
           ]
         },

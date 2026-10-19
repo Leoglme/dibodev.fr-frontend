@@ -6360,6 +6360,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Un caso frecuente en pymes: un equipo de técnicos en ruta. Detallé la elección del "
+            },
+            {
+              "type": "text",
+              "text": "software de gestión de intervenciones",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-gestion-interventions",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " (planificación, partes firmados en el móvil, precios 2026 de los editores) en una página dedicada, con un test gratuito de seis preguntas."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -8491,6 +8520,35 @@
             {
               "text": " que desarrollo.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Un ejemplo concreto del término medio: una empresa de mantenimiento conserva su programa de facturación y añade un "
+            },
+            {
+              "type": "text",
+              "text": "software de gestión de intervenciones",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-gestion-interventions",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " adaptado a sus rutas; comparé los precios 2026 de los editores y los casos en que lo a medida compensa en esa página."
             }
           ]
         },
