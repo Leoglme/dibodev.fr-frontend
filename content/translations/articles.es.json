@@ -219,6 +219,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Si eres electricista, mi página "
+            },
+            {
+              "type": "text",
+              "text": "software para electricistas",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-electricien",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " compara los precios 2026 de los programas de presupuestos y seguimiento de obras, y ofrece una plantilla gratuita de presupuesto y de acta de puesta en servicio."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -566,6 +595,35 @@
             {
               "text": "Uno de tus clientes habituales, acostumbrado a cancelar en el último momento, recibe un recordatorio automático la víspera de su sesión. Se da cuenta de que ha olvidado su cita y cancela a tiempo, liberando el horario para otro cliente. Tú, ganas un tiempo valioso y evitas los huecos en tu agenda.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Para comparar los precios 2026 de los programas de coaching y de reservas (Harbiz, Hexfit, Eversports, Trafft) y saber si una herramienta a medida compensa con tu tamaño, haz el test gratuito de mi página "
+            },
+            {
+              "type": "text",
+              "text": "software para entrenadores personales",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-coach-sportif",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", que también ofrece una plantilla de valoración inicial y de cuaderno de sesiones para descargar."
             }
           ]
         },
@@ -2903,6 +2961,35 @@
             {
               "text": "Hazte la pregunta real: en el último mes, ¿cuántas horas has trabajado realmente y cuántas has facturado? Si no tienes la respuesta en tres segundos, es probable que sean varios cientos de euros al mes los que se te escapan — no porque trabajes mal, sino porque no hay nada que relacione «hice la intervención» con «la facturé».",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Para comparar los precios 2026 de los editores (Tolteck, Obat, Batappli, Organilog) y saber si una herramienta a medida compensa con tu tamaño, haz el test gratuito de mi página "
+            },
+            {
+              "type": "text",
+              "text": "software para electricistas",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-electricien",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", que también ofrece una plantilla de presupuesto y de acta de puesta en servicio para descargar."
             }
           ]
         },
@@ -11233,6 +11320,35 @@
             {
               "text": "Empiece ya a anotar el SIREN de sus clientes profesionales en su archivo. Es un trabajo sin interés, pero es típicamente lo que bloquea el día en que todo debe salir.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Para un electricista, comparé los precios 2026 de los programas de presupuestos y facturación preparados para la factura electrónica (Tolteck, Obat, Batappli) en mi página "
+            },
+            {
+              "type": "text",
+              "text": "software para electricistas",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-electricien",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", con un test gratuito de seis preguntas."
             }
           ]
         },

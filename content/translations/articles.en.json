@@ -219,6 +219,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "If you are an electrician, my "
+            },
+            {
+              "type": "text",
+              "text": "electrician software",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-electricien",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " page compares the 2026 prices of quoting and job-tracking software, and offers a free quote and commissioning report template."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -566,6 +595,35 @@
             {
               "text": "One of your regular clients, used to canceling at the last minute, receives an automatic reminder the day before their session. They realize they forgot their appointment and cancel in time, freeing up the slot for another client. You, on the other hand, save precious time and avoid gaps in your schedule.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "To compare the 2026 prices of coaching and booking software (Harbiz, Hexfit, Eversports, Trafft) and find out whether a custom tool pays off at your size, take the free test on my "
+            },
+            {
+              "type": "text",
+              "text": "personal trainer software",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-coach-sportif",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " page, which also offers a client assessment and training log template to download."
             }
           ]
         },
@@ -2903,6 +2961,35 @@
             {
               "text": "Ask yourself the real question: Over the last month, how many hours did you actually work, and how many did you invoice? If you can’t answer in three seconds, it’s probably hundreds of euros slipping through your fingers every month—not because you’re doing a bad job, but because there’s no connection between ‘I did the work’ and ‘I billed for it.’",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "To compare the publishers’ 2026 prices (Tolteck, Obat, Batappli, Organilog) and find out whether a custom tool pays off at your size, take the free test on my "
+            },
+            {
+              "type": "text",
+              "text": "electrician software",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-electricien",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " page, which also offers a quote and commissioning report template to download."
             }
           ]
         },
@@ -11233,6 +11320,35 @@
             {
               "text": "Start now by recording your professional clients' SIREN numbers in your files. It’s tedious work, but it’s exactly the kind of thing that can hold you up when everything needs to go out on time.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "For an electrician, I compared the 2026 prices of quoting and invoicing software ready for e-invoicing (Tolteck, Obat, Batappli) on my "
+            },
+            {
+              "type": "text",
+              "text": "electrician software",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-electricien",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " page, with a free six-question test."
             }
           ]
         },
