@@ -22,6 +22,7 @@
       />
     </template>
   </DibodevLandingSection>
+  <DibodevBusinessSoftwareVariantsSection />
   <DibodevBusinessSoftwareToolsSection />
   <DibodevBusinessSoftwareProjectsSection />
   <DibodevBudgetEstimatorSection
@@ -128,6 +129,7 @@ import type { DibodevToolTeaserContent } from '~/core/types/DibodevToolTeaser'
 import { computed } from 'vue'
 import DibodevLandingSection from '~/components/sections/DibodevLandingSection.vue'
 import DibodevBusinessSoftwareToolsSection from '~/components/sections/DibodevBusinessSoftwareToolsSection.vue'
+import DibodevBusinessSoftwareVariantsSection from '~/components/sections/DibodevBusinessSoftwareVariantsSection.vue'
 import DibodevGuaranteesSection from '~/components/sections/DibodevGuaranteesSection.vue'
 import DibodevMethodSection from '~/components/sections/DibodevMethodSection.vue'
 import DibodevBusinessSoftwareProjectsSection from '~/components/sections/DibodevBusinessSoftwareProjectsSection.vue'

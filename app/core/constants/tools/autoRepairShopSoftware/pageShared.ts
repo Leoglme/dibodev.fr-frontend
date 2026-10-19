@@ -11,6 +11,7 @@ export const AUTO_REPAIR_PAGE_SCREENSHOT_URL: string = '/images/tools/gest-time-
 
 /** Articles linked at the bottom of the page (not the B2B pricing one: its cover is the Gest-Time screen shown above). */
 export const AUTO_REPAIR_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
+  'meilleur-logiciel-garage-automobile-comparatif-2026',
   'logiciel-facturation-garage-devis-ordre-de-reparation-facture',
   'garagiste-outil-sur-mesure-rendez-vous-devis-suivi-vehicules',
   'alternative-autoprogestion-logiciel-garage',

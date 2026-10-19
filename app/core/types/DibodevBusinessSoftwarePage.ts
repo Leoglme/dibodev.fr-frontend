@@ -40,6 +40,38 @@ export type DibodevBusinessSoftwareTool = {
 }
 
 /**
+ * Static configuration of a way the request is phrased (web app, custom tool, redesign) on the business software page.
+ * @type {DibodevBusinessSoftwareVariantConfig}
+ * @property {string} key - Translation key under `businessSoftwarePage.variants.items`.
+ * @property {DibodevServiceIconName} icon - The service icon displayed on the card.
+ * @property {string} link - Next step of the card: an anchor of the page, a route name or a path.
+ */
+export type DibodevBusinessSoftwareVariantConfig = {
+  key: string
+  icon: DibodevServiceIconName
+  link: string
+}
+
+/**
+ * Way the request is phrased, as displayed on the business software page.
+ * @type {DibodevBusinessSoftwareVariant}
+ * @property {string} key - Translation key of the variant.
+ * @property {DibodevServiceIconName} icon - The service icon displayed on the card.
+ * @property {string} title - The phrasing (e.g. "Business web app").
+ * @property {string} description - What it means in practice.
+ * @property {string} linkLabel - Label of the next step.
+ * @property {string} to - Destination of the next step, localized.
+ */
+export type DibodevBusinessSoftwareVariant = {
+  key: string
+  icon: DibodevServiceIconName
+  title: string
+  description: string
+  linkLabel: string
+  to: string
+}
+
+/**
  * Display settings of a service the tools connect to.
  * @type {DibodevBusinessSoftwareIntegrationConfig}
  * @property {string} key - Translation key under `businessSoftwarePage.tools.integrations.items`.

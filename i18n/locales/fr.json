@@ -1098,6 +1098,28 @@
         }
       }
     },
+    "variants": {
+      "eyebrow": "Trois façons de le demander",
+      "title": "Application web métier, outil métier personnalisé ou refonte d'un outil existant\u202f: trois demandes, une même façon de faire",
+      "intro": "Selon le métier, on me demande une «\u202fapplication web métier\u202f», un «\u202foutil métier personnalisé\u202f» ou la «\u202frefonte\u202f» d'un logiciel qui ne suit plus. Derrière ces mots, le même travail\u202f: partir de votre organisation, livrer un outil qui vous appartient, par étapes.",
+      "items": {
+        "webApp": {
+          "title": "Application web métier",
+          "description": "Un logiciel qui tourne dans le navigateur, sur ordinateur, tablette et téléphone, sans rien installer. Vos équipes y accèdent partout, les données sont au même endroit et les mises à jour arrivent pour tout le monde en même temps.",
+          "link": "Voir les tests par métier"
+        },
+        "customTool": {
+          "title": "Outil métier personnalisé",
+          "description": "Un outil qui suit vos règles (vos forfaits, vos tournées, vos étapes de validation) plutôt que l'inverse. On part de votre façon de travailler, pas d'un logiciel du marché à tordre, et l'outil évolue avec l'activité.",
+          "link": "Estimer mon budget"
+        },
+        "redesign": {
+          "title": "Refonte d'un outil métier existant",
+          "description": "Votre logiciel tourne sur Access, Excel, un vieux PHP ou une application que personne ne maintient plus. Je reprends les données et les règles qui marchent, et je le remplace par étapes, sans arrêter l'activité.",
+          "link": "Décrire mon outil actuel"
+        }
+      }
+    },
     "tools": {
       "title": "Les outils que je développe",
       "intro": "Chaque outil est pensé pour votre façon de travailler et pour les personnes qui l'utilisent tous les jours. Il évolue ensuite avec votre activité.",

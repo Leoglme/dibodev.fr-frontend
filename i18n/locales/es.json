@@ -1098,6 +1098,28 @@
         }
       }
     },
+    "variants": {
+      "eyebrow": "Tres formas de pedirlo",
+      "title": "Aplicación web de gestión, herramienta a medida o rediseño de una herramienta existente: tres peticiones, una misma forma de trabajar",
+      "intro": "Según el oficio, me piden una «aplicación web de gestión», una «herramienta a medida» o el «rediseño» de un programa que ya no sigue el ritmo. Detrás de las palabras, el mismo trabajo: partir de tu organización, entregar una herramienta que es tuya, por etapas.",
+      "items": {
+        "webApp": {
+          "title": "Aplicación web de gestión",
+          "description": "Un programa que funciona en el navegador, en ordenador, tableta y móvil, sin instalar nada. Tus equipos acceden desde cualquier sitio, los datos están en un solo lugar y las actualizaciones llegan a todos a la vez.",
+          "link": "Ver los tests por oficio"
+        },
+        "customTool": {
+          "title": "Herramienta de gestión a medida",
+          "description": "Una herramienta que sigue tus reglas (tus tarifas, tus rutas, tus pasos de validación) y no al revés. Partimos de tu forma de trabajar, no de un programa del mercado que retorcer, y la herramienta evoluciona con la actividad.",
+          "link": "Estimar mi presupuesto"
+        },
+        "redesign": {
+          "title": "Rediseño de una herramienta existente",
+          "description": "Tu programa funciona en Access, Excel, un PHP antiguo o una aplicación que ya nadie mantiene. Recupero los datos y las reglas que funcionan, y lo sustituyo por etapas, sin parar la actividad.",
+          "link": "Describir mi herramienta actual"
+        }
+      }
+    },
     "tools": {
       "title": "Las herramientas que desarrollo",
       "intro": "Cada herramienta se diseña según tu forma de trabajar y para las personas que la usan a diario. Después evoluciona con tu actividad.",

@@ -1098,6 +1098,28 @@
         }
       }
     },
+    "variants": {
+      "eyebrow": "Three ways to ask for it",
+      "title": "Business web app, custom business tool or redesign of an existing tool: three requests, one way of working",
+      "intro": "Depending on the trade, people ask me for a “business web app”, a “custom business tool” or the “redesign” of software that no longer keeps up. Behind the words, the same work: start from your organisation, deliver a tool you own, in stages.",
+      "items": {
+        "webApp": {
+          "title": "Business web app",
+          "description": "Software that runs in the browser, on desktop, tablet and phone, with nothing to install. Your teams reach it anywhere, the data lives in one place and updates reach everyone at once.",
+          "link": "See the tests by trade"
+        },
+        "customTool": {
+          "title": "Custom business tool",
+          "description": "A tool that follows your rules (your packages, your rounds, your approval steps) rather than the other way round. We start from the way you work, not from off-the-shelf software to bend, and the tool grows with the business.",
+          "link": "Estimate my budget"
+        },
+        "redesign": {
+          "title": "Redesign of an existing business tool",
+          "description": "Your software runs on Access, Excel, old PHP or an app nobody maintains any more. I keep the data and the rules that work, and replace it in stages, without stopping the business.",
+          "link": "Describe my current tool"
+        }
+      }
+    },
     "tools": {
       "title": "The tools I build",
       "intro": "Each tool is designed around the way you work and the people who use it every day. It then grows with your business.",
