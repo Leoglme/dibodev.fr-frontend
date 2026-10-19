@@ -239,6 +239,11 @@ const toolLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLi
     to: localePath('tools-auto-repair-shop-software'),
   },
   {
+    key: 'plumbingHeatingSoftware',
+    title: t('footer.tools.plumbingHeatingSoftware'),
+    to: localePath('tools-plumbing-heating-software'),
+  },
+  {
     key: 'budgetEstimator',
     title: t('footer.tools.budgetEstimator'),
     to: `${localePath('custom-business-software')}#estimator`,

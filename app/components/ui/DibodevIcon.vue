@@ -40,12 +40,15 @@ import ChevronUp from '~/components/icons/ChevronUp.vue'
 import Copy from '~/components/icons/Copy.vue'
 import Disc from '~/components/icons/Disc.vue'
 import DoubleChevronsDown from '~/components/icons/DoubleChevronsDown.vue'
+import Download from '~/components/icons/Download.vue'
+import Droplets from '~/components/icons/Droplets.vue'
 import Expand from '~/components/icons/Expand.vue'
 import ExternalLink from '~/components/icons/ExternalLink.vue'
 import Eye from '~/components/icons/Eye.vue'
 import EyeOff from '~/components/icons/EyeOff.vue'
 import FileSpreadsheet from '~/components/icons/FileSpreadsheet.vue'
 import Flag from '~/components/icons/Flag.vue'
+import Flame from '~/components/icons/Flame.vue'
 import Github from '~/components/icons/Github.vue'
 import Globe from '~/components/icons/Globe.vue'
 import Info from '~/components/icons/Info.vue'
@@ -68,6 +71,7 @@ import ShieldCheck from '~/components/icons/ShieldCheck.vue'
 import SlidersHorizontal from '~/components/icons/SlidersHorizontal.vue'
 import Smartphone from '~/components/icons/Smartphone.vue'
 import Smile from '~/components/icons/Smile.vue'
+import Snowflake from '~/components/icons/Snowflake.vue'
 import Speaker from '~/components/icons/Speaker.vue'
 import SprayCan from '~/components/icons/SprayCan.vue'
 import Star from '~/components/icons/Star.vue'
@@ -135,12 +139,15 @@ const iconsDictionary: Record<string, IconComponent> = {
   Copy,
   Disc,
   DoubleChevronsDown,
+  Download,
+  Droplets,
   Expand,
   ExternalLink,
   Eye,
   EyeOff,
   FileSpreadsheet,
   Flag,
+  Flame,
   Github,
   Globe,
   Info,
@@ -163,6 +170,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   SlidersHorizontal,
   Smartphone,
   Smile,
+  Snowflake,
   Speaker,
   SprayCan,
   Star,

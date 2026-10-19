@@ -1,6 +1,7 @@
 import type { DibodevQuizDefinition } from '~/core/types/DibodevQuiz'
 import type { DibodevComparisonRow } from '~/core/types/DibodevComparisonTableSection'
 import type { DibodevFaqQuestion } from '~/core/types/DibodevFaqSection'
+import type { DibodevFreeTemplateSectionContent } from '~/core/types/DibodevFreeTemplateSection'
 import type { DibodevPricedProduct } from '~/core/types/DibodevPriceListSection'
 import type { DibodevSourcedFact } from '~/core/types/DibodevSourcedFactsSection'
 import type { DibodevToolShareImageIcon } from '~/core/types/DibodevToolShareImage'
@@ -18,7 +19,7 @@ export type DibodevDrivingSchoolRuleSourceKey =
   | 'payments'
   | 'accompaniedDriving'
 
-/** Content of a trade tool page in one language, kept out of the i18n files because only this page loads it. */
+/** Content of a trade tool page in one language, kept out of the i18n files because only this page loads it; `freeTemplate` only on the pages that offer documents to download. */
 export type DibodevSoftwareToolPageContent = {
   meta: {
     title: string
@@ -67,6 +68,7 @@ export type DibodevSoftwareToolPageContent = {
     calloutEmphasizedIntro: string
     calloutText: string
   }
+  freeTemplate?: DibodevFreeTemplateSectionContent
   comparison: {
     eyebrow: string
     title: string

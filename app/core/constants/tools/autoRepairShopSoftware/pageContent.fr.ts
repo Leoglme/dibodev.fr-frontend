@@ -6,6 +6,8 @@ import {
   AUTO_REPAIR_PAGE_SCREENSHOT_URL,
   AUTO_REPAIR_PAGE_UPDATED_AT,
   AUTO_REPAIR_RULES_SOURCE,
+  AUTO_REPAIR_TEMPLATE_PDF_PATH,
+  AUTO_REPAIR_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/autoRepairShopSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
@@ -136,6 +138,26 @@ export const AUTO_REPAIR_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     calloutEmphasizedIntro: `Ce que l’outil sur mesure ne remplace pas${NBSP}:`,
     calloutText:
       'votre logiciel comptable, ni les bases de pièces et de temps des éditeurs spécialisés. Les factures partent vers votre comptabilité (export ou Factur-X), et l’outil se connecte aux bases que vous utilisez déjà.',
+  },
+  freeTemplate: {
+    anchorId: 'modele',
+    eyebrow: 'Modèle gratuit',
+    title: 'Un ordre de réparation et un devis prêts à remplir',
+    description: `L’ordre de réparation en deux exemplaires et le devis de garage, avec les mentions du code de la consommation${NBSP}: kilométrage, pièces de réemploi, pièces remplacées, devis gratuit ou payant. En PDF à remplir à la main, ou en Excel avec les totaux calculés.`,
+    items: [
+      `Ordre de réparation${NBSP}: client, véhicule, kilométrage, travaux demandés, estimation TTC, accords du client`,
+      `Devis${NBSP}: pièces et main-d’œuvre, TVA, conditions, acceptation « bon pour accord »`,
+      'Totaux calculés automatiquement dans la version Excel',
+    ],
+    downloads: [
+      { label: 'Télécharger le modèle PDF', href: AUTO_REPAIR_TEMPLATE_PDF_PATH, format: 'PDF, 2 pages, à imprimer' },
+      {
+        label: 'Télécharger la version Excel',
+        href: AUTO_REPAIR_TEMPLATE_XLSX_PATH,
+        format: 'Excel, 2 feuilles, totaux calculés',
+      },
+    ],
+    footnote: 'Modèle libre d’utilisation, à adapter à votre atelier. Il ne remplace pas l’avis de votre comptable.',
   },
   comparison: {
     eyebrow: 'Les trois options',

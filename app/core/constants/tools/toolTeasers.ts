@@ -123,6 +123,37 @@ const AUTO_REPAIR_SHOP_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
+const PLUMBING_HEATING_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+  toolId: 'plumbing-heating-software',
+  routeName: 'tools-plumbing-heating-software',
+  icon: 'Flame',
+  wording: {
+    fr: {
+      emphasizedIntro: `Vous êtes plombier ou chauffagiste${NBSP}?`,
+      text: 'En 6 questions, le test vous dit quel logiciel choisir pour vos devis, vos interventions et vos contrats d’entretien, avec les prix 2026 des logiciels du marché et un modèle de devis gratuit.',
+      linkLabel: `Faire le test${NBSP}: quel logiciel pour mon entreprise de plomberie-chauffage${NBSP}?`,
+      listLabel: `Quel logiciel pour mon entreprise de plomberie-chauffage${NBSP}?`,
+      hubDescription: `Devis, interventions, contrats d’entretien et factures${NBSP}: le logiciel qui convient à votre entreprise de plomberie ou de chauffage, et son prix.`,
+    },
+    en: {
+      emphasizedIntro: 'Running a plumbing or heating business in France?',
+      text: 'In 6 questions, the test tells you which software to choose for your quotes, call-outs and maintenance contracts, with the 2026 prices of the software on the French market.',
+      linkLabel: 'Take the test: which software for my plumbing and heating business?',
+      listLabel: 'Which software for my plumbing and heating business?',
+      hubDescription:
+        'Quotes, call-outs, maintenance contracts and invoices: the software that fits your plumbing or heating business, and its price.',
+    },
+    es: {
+      emphasizedIntro: '¿Tienes una empresa de fontanería o calefacción en Francia?',
+      text: 'En 6 preguntas, el test te dice qué programa elegir para tus presupuestos, tus intervenciones y tus contratos de mantenimiento, con los precios 2026 de los programas del mercado francés.',
+      linkLabel: 'Hacer el test: ¿qué software para mi empresa de fontanería y calefacción?',
+      listLabel: '¿Qué software para mi empresa de fontanería y calefacción?',
+      hubDescription:
+        'Presupuestos, intervenciones, contratos de mantenimiento y facturas: el programa que encaja con tu empresa de fontanería o calefacción, y su precio.',
+    },
+  },
+}
+
 const AI_APP_CHECK_TEASER: DibodevToolTeaserContent = {
   toolId: AI_APP_CHECK_QUIZ_ID,
   routeName: 'ai-app-takeover',
@@ -197,6 +228,9 @@ export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserConte
   'logiciel-rdv-auto-ecole-reservation-en-ligne': DRIVING_SCHOOL_SOFTWARE_TEASER,
   'site-web-professionnel-atelier-reparation-velos-2026': BIKE_SHOP_SOFTWARE_TEASER,
   'garagiste-outil-sur-mesure-rendez-vous-devis-suivi-vehicules': AUTO_REPAIR_SHOP_SOFTWARE_TEASER,
+  'logiciel-gestion-plombiers-saas-sur-mesure-2026': PLUMBING_HEATING_SOFTWARE_TEASER,
+  'chauffagiste-contrats-entretien-outil-sur-mesure': PLUMBING_HEATING_SOFTWARE_TEASER,
+  'logiciel-gestion-interventions-techniciens-hors-ligne': PLUMBING_HEATING_SOFTWARE_TEASER,
   'pass-commerce-artisanat-rennes-site-internet': PUBLIC_AID_SIMULATOR_TEASER,
 }
 
@@ -211,6 +245,7 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   EVENT_RENTAL_SOFTWARE_TEASER,
   BIKE_SHOP_SOFTWARE_TEASER,
   AUTO_REPAIR_SHOP_SOFTWARE_TEASER,
+  PLUMBING_HEATING_SOFTWARE_TEASER,
   AI_APP_CHECK_TEASER,
   PUBLIC_AID_SIMULATOR_TEASER,
 ]

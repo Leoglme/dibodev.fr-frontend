@@ -6,6 +6,8 @@ import {
   AUTO_REPAIR_PAGE_SCREENSHOT_URL,
   AUTO_REPAIR_PAGE_UPDATED_AT,
   AUTO_REPAIR_RULES_SOURCE,
+  AUTO_REPAIR_TEMPLATE_PDF_PATH,
+  AUTO_REPAIR_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/autoRepairShopSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
 
@@ -139,6 +141,27 @@ export const AUTO_REPAIR_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     calloutEmphasizedIntro: 'What a custom tool does not replace:',
     calloutText:
       'your accounting software, nor the parts and labour time databases of specialist publishers. Invoices go to your accounts (export or Factur-X), and the tool connects to the databases you already use.',
+  },
+  freeTemplate: {
+    anchorId: 'template',
+    eyebrow: 'Free template',
+    title: 'A repair order and a quote ready to fill in',
+    description:
+      'The repair order in two copies and the garage quote, with the wording required by the French consumer code: mileage, reused parts, replaced parts, free or charged quote. In French, as a PDF to fill in by hand or an Excel file with calculated totals.',
+    items: [
+      'Repair order: customer, vehicle, mileage, requested work, estimate incl. VAT, customer agreements',
+      'Quote: parts and labour, VAT, conditions, “bon pour accord” acceptance',
+      'Totals calculated automatically in the Excel version',
+    ],
+    downloads: [
+      { label: 'Download the PDF template', href: AUTO_REPAIR_TEMPLATE_PDF_PATH, format: 'PDF, 2 pages, in French' },
+      {
+        label: 'Download the Excel version',
+        href: AUTO_REPAIR_TEMPLATE_XLSX_PATH,
+        format: 'Excel, 2 sheets, calculated totals, in French',
+      },
+    ],
+    footnote: 'Free to use, to adapt to your workshop. It does not replace your accountant’s advice.',
   },
   comparison: {
     eyebrow: 'The three options',

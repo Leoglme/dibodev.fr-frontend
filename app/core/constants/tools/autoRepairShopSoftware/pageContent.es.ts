@@ -6,6 +6,8 @@ import {
   AUTO_REPAIR_PAGE_SCREENSHOT_URL,
   AUTO_REPAIR_PAGE_UPDATED_AT,
   AUTO_REPAIR_RULES_SOURCE,
+  AUTO_REPAIR_TEMPLATE_PDF_PATH,
+  AUTO_REPAIR_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/autoRepairShopSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
@@ -143,6 +145,31 @@ export const AUTO_REPAIR_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     calloutEmphasizedIntro: 'Lo que la herramienta a medida no sustituye:',
     calloutText:
       'tu programa de contabilidad, ni las bases de piezas y tiempos de los editores especializados. Las facturas van a tu contabilidad (exportación o Factur-X), y la herramienta se conecta a las bases que ya usas.',
+  },
+  freeTemplate: {
+    anchorId: 'plantilla',
+    eyebrow: 'Plantilla gratuita',
+    title: 'Una orden de reparación y un presupuesto listos para rellenar',
+    description:
+      'La orden de reparación por duplicado y el presupuesto de taller, con las menciones del código de consumo francés: kilometraje, piezas de reutilización, piezas sustituidas, presupuesto gratuito o de pago. En francés, en PDF para rellenar a mano o en Excel con los totales calculados.',
+    items: [
+      'Orden de reparación: cliente, vehículo, kilometraje, trabajos solicitados, estimación con IVA, acuerdos del cliente',
+      'Presupuesto: piezas y mano de obra, IVA, condiciones, aceptación «bon pour accord»',
+      'Totales calculados automáticamente en la versión Excel',
+    ],
+    downloads: [
+      {
+        label: 'Descargar la plantilla PDF',
+        href: AUTO_REPAIR_TEMPLATE_PDF_PATH,
+        format: 'PDF, 2 páginas, en francés',
+      },
+      {
+        label: 'Descargar la versión Excel',
+        href: AUTO_REPAIR_TEMPLATE_XLSX_PATH,
+        format: 'Excel, 2 hojas, totales calculados, en francés',
+      },
+    ],
+    footnote: 'De uso libre, para adaptar a tu taller. No sustituye el consejo de tu contable.',
   },
   comparison: {
     eyebrow: 'Las tres opciones',

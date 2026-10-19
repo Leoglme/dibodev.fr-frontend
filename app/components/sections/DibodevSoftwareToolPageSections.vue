@@ -55,6 +55,19 @@
     </template>
   </DibodevSourcedFactsSection>
 
+  <DibodevFreeTemplateSection
+    v-if="props.page.freeTemplate"
+    :anchorId="props.page.freeTemplate.anchorId"
+    :eyebrow="props.page.freeTemplate.eyebrow"
+    :title="props.page.freeTemplate.title"
+    :description="props.page.freeTemplate.description"
+    :items="props.page.freeTemplate.items"
+    :downloads="props.page.freeTemplate.downloads"
+    :footnote="props.page.freeTemplate.footnote"
+    tone="tint"
+    :trackingLocation="props.trackingLocation"
+  />
+
   <DibodevComparisonTableSection
     :eyebrow="props.page.comparison.eyebrow"
     :title="props.page.comparison.title"
@@ -125,6 +138,7 @@ import DibodevQuizTunnel from '~/components/quiz/DibodevQuizTunnel.vue'
 import DibodevComparisonTableSection from '~/components/sections/DibodevComparisonTableSection.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import DibodevFaqSection from '~/components/sections/DibodevFaqSection.vue'
+import DibodevFreeTemplateSection from '~/components/sections/DibodevFreeTemplateSection.vue'
 import DibodevPriceListSection from '~/components/sections/DibodevPriceListSection.vue'
 import DibodevProjectSpotlightSection from '~/components/sections/DibodevProjectSpotlightSection.vue'
 import DibodevSourcedFactsSection from '~/components/sections/DibodevSourcedFactsSection.vue'
@@ -144,8 +158,8 @@ const SCREENSHOT_WIDTHS: number[] = [600, 900, 1200]
 const SCREENSHOT_FALLBACK_WIDTH: number = 1200
 
 /**
- * Every section of a free trade tool page (test, market prices, rules, comparison, project, FAQ, articles, contact),
- * with its head: meta tags, share image and WebPage JSON-LD.
+ * Every section of a free trade tool page (test, market prices, rules, free template when the page offers one,
+ * comparison, project, FAQ, articles, contact), with its head: meta tags, share image and WebPage JSON-LD.
  */
 const props: DibodevSoftwareToolPageSectionsProps = defineProps({
   page: {

@@ -18,6 +18,10 @@ export const AUTO_REPAIR_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
 
 export const AUTO_REPAIR_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2
 
+/** Free repair order and quote template, in French only (French garage rules). */
+export const AUTO_REPAIR_TEMPLATE_PDF_PATH: string = '/modeles/ordre-de-reparation-devis-garage.pdf'
+export const AUTO_REPAIR_TEMPLATE_XLSX_PATH: string = '/modeles/ordre-de-reparation-devis-garage.xlsx'
+
 /** Garage rules (prices, quote, repair order, circular economy parts, invoice), updated on 31 July 2025. */
 export const AUTO_REPAIR_RULES_SOURCE: DibodevSourceReference = {
   name: 'Institut national de la consommation',
