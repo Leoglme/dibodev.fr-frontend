@@ -185,6 +185,68 @@ const FIELD_SERVICE_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
+const ELECTRICIAN_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+  toolId: 'electrician-software',
+  routeName: 'tools-electrician-software',
+  icon: 'Zap',
+  wording: {
+    fr: {
+      emphasizedIntro: `Vous êtes électricien${NBSP}?`,
+      text: 'En 6 questions, le test vous dit quel logiciel choisir pour vos devis, vos chantiers et vos PV de mise en service, avec les prix 2026 des logiciels du marché et un modèle de devis et de PV gratuit.',
+      linkLabel: `Faire le test${NBSP}: quel logiciel pour mon entreprise d’électricité${NBSP}?`,
+      listLabel: `Quel logiciel pour mon entreprise d’électricité${NBSP}?`,
+      hubDescription: `Devis, chantiers, PV de mise en service et attestations Consuel${NBSP}: le logiciel qui convient à votre entreprise d’électricité, et son prix.`,
+    },
+    en: {
+      emphasizedIntro: 'Running an electrical business in France?',
+      text: 'In 6 questions, the test tells you which software to choose for your quotes, jobs and commissioning reports, with the 2026 prices of the software on the French market.',
+      linkLabel: 'Take the test: which software for my electrical business?',
+      listLabel: 'Which software for my electrical business?',
+      hubDescription:
+        'Quotes, jobs, commissioning reports and Consuel certificates: the software that fits your electrical business, and its price.',
+    },
+    es: {
+      emphasizedIntro: '¿Tienes una empresa de electricidad en Francia?',
+      text: 'En 6 preguntas, el test te dice qué programa elegir para tus presupuestos, tus obras y tus actas de puesta en servicio, con los precios 2026 de los programas del mercado francés.',
+      linkLabel: 'Hacer el test: ¿qué software para mi empresa de electricidad?',
+      listLabel: '¿Qué software para mi empresa de electricidad?',
+      hubDescription:
+        'Presupuestos, obras, actas de puesta en servicio y certificados Consuel: el programa que encaja con tu empresa de electricidad, y su precio.',
+    },
+  },
+}
+
+const PERSONAL_TRAINER_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+  toolId: 'personal-trainer-software',
+  routeName: 'tools-personal-trainer-software',
+  icon: 'Dumbbell',
+  wording: {
+    fr: {
+      emphasizedIntro: `Vous êtes coach sportif ou vous gérez une salle${NBSP}?`,
+      text: 'En 6 questions, le test vous dit quel logiciel choisir pour vos réservations, vos programmes et vos encaissements, avec les prix 2026 des logiciels du marché et un modèle de bilan client et de carnet de séances gratuit.',
+      linkLabel: `Faire le test${NBSP}: quel logiciel pour mon coaching${NBSP}?`,
+      listLabel: `Quel logiciel pour mon coaching ou ma salle de musculation${NBSP}?`,
+      hubDescription: `Réservations, programmes, abonnements et suivi des progrès${NBSP}: le logiciel qui convient à votre coaching ou à votre salle, et son prix.`,
+    },
+    en: {
+      emphasizedIntro: 'Personal trainer or gym owner in France?',
+      text: 'In 6 questions, the test tells you which software to choose for your bookings, programmes and payments, with the 2026 prices of the software on the French market.',
+      linkLabel: 'Take the test: which software for my coaching?',
+      listLabel: 'Which software for my coaching or my gym?',
+      hubDescription:
+        'Bookings, programmes, memberships and progress tracking: the software that fits your coaching or your gym, and its price.',
+    },
+    es: {
+      emphasizedIntro: '¿Eres entrenador personal o gestionas un gimnasio en Francia?',
+      text: 'En 6 preguntas, el test te dice qué programa elegir para tus reservas, tus programas y tus cobros, con los precios 2026 de los programas del mercado francés.',
+      linkLabel: 'Hacer el test: ¿qué software para mi coaching?',
+      listLabel: '¿Qué software para mi coaching o mi gimnasio?',
+      hubDescription:
+        'Reservas, programas, abonos y seguimiento de los progresos: el programa que encaja con tu coaching o tu gimnasio, y su precio.',
+    },
+  },
+}
+
 const AI_APP_CHECK_TEASER: DibodevToolTeaserContent = {
   toolId: AI_APP_CHECK_QUIZ_ID,
   routeName: 'ai-app-takeover',
@@ -262,12 +324,16 @@ export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserConte
   'logiciel-gestion-plombiers-saas-sur-mesure-2026': PLUMBING_HEATING_SOFTWARE_TEASER,
   'chauffagiste-contrats-entretien-outil-sur-mesure': PLUMBING_HEATING_SOFTWARE_TEASER,
   'logiciel-gestion-interventions-techniciens-hors-ligne': FIELD_SERVICE_SOFTWARE_TEASER,
+  'electricien-outil-sur-mesure-devis-interventions-factures': ELECTRICIAN_SOFTWARE_TEASER,
+  'artisan-btp-gerer-ses-chantiers-sans-excel-avec-un-outil-dedie': ELECTRICIAN_SOFTWARE_TEASER,
+  'coach-sportif-limiter-les-annulations-avec-un-outil-de-reservation-en-ligne': PERSONAL_TRAINER_SOFTWARE_TEASER,
   'pass-commerce-artisanat-rennes-site-internet': PUBLIC_AID_SIMULATOR_TEASER,
 }
 
 export const TOOL_TEASERS_BY_PROJECT_SLUG: Record<string, DibodevToolTeaserContent> = {
   'driving-school': DRIVING_SCHOOL_SOFTWARE_TEASER,
   stockpme: EVENT_RENTAL_SOFTWARE_TEASER,
+  izidoor: PERSONAL_TRAINER_SOFTWARE_TEASER,
 }
 
 /** Every test, listed together on the business software page and the tools hub. */
@@ -278,6 +344,8 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   AUTO_REPAIR_SHOP_SOFTWARE_TEASER,
   PLUMBING_HEATING_SOFTWARE_TEASER,
   FIELD_SERVICE_SOFTWARE_TEASER,
+  ELECTRICIAN_SOFTWARE_TEASER,
+  PERSONAL_TRAINER_SOFTWARE_TEASER,
   AI_APP_CHECK_TEASER,
   PUBLIC_AID_SIMULATOR_TEASER,
 ]

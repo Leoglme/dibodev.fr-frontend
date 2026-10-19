@@ -113,6 +113,10 @@ const TOOL_ICON_PATHS: Record<DibodevToolShareImageIcon, string[]> = {
     'M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2',
     'm9 14 2 2 4-4',
   ],
+  zap: [
+    'M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z',
+  ],
+  dumbbell: ['m6.5 6.5 11 11', 'm21 21-1-1', 'm3 3 1 1', 'm18 22 4-4', 'm2 6 4-4', 'm3 10 7-7', 'm14 21 7-7'],
 }
 
 /** Space drawn between the parts of a title line (Satori drops the spaces at the edge of each span). */

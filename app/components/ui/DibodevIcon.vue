@@ -43,6 +43,7 @@ import Disc from '~/components/icons/Disc.vue'
 import DoubleChevronsDown from '~/components/icons/DoubleChevronsDown.vue'
 import Download from '~/components/icons/Download.vue'
 import Droplets from '~/components/icons/Droplets.vue'
+import Dumbbell from '~/components/icons/Dumbbell.vue'
 import Expand from '~/components/icons/Expand.vue'
 import ExternalLink from '~/components/icons/ExternalLink.vue'
 import Eye from '~/components/icons/Eye.vue'
@@ -143,6 +144,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   DoubleChevronsDown,
   Download,
   Droplets,
+  Dumbbell,
   Expand,
   ExternalLink,
   Eye,

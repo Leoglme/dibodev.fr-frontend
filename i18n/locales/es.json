@@ -58,7 +58,7 @@
     },
     "toolsHubPage": {
       "title": "Herramientas gratuitas: ¿qué software para tu negocio? {'|'} Dibodev",
-      "description": "Tests gratuitos por oficio (autoescuela, alquiler para eventos, taller de bicicletas o mecánico, fontanería y calefacción, gestión de intervenciones) y estimador: qué software elegir y a qué precio."
+      "description": "Tests gratuitos por oficio (autoescuela, alquiler para eventos, taller de bicicletas o mecánico, fontanería y calefacción, electricista, gestión de intervenciones, entrenador personal) y estimador: qué software elegir y a qué precio."
     },
     "aboutPage": {
       "title": "Sobre mí — Léo Guillaume, desarrollador freelance en Rennes {'|'} Dibodev",
@@ -225,6 +225,8 @@
       "autoRepairShopSoftware": "Software para taller mecánico",
       "plumbingHeatingSoftware": "Software para fontanería y calefacción",
       "fieldServiceSoftware": "Software de gestión de intervenciones",
+      "electricianSoftware": "Software para electricistas",
+      "personalTrainerSoftware": "Software para entrenadores personales",
       "budgetEstimator": "Estimador de presupuesto"
     }
   },
@@ -233,7 +235,7 @@
       "titlePart1": "Herramientas gratuitas para elegir ",
       "titleHighlight1": "tu software",
       "titlePart2": "",
-      "description": "Autoescuela, alquiler de material para eventos, taller de bicicletas, taller mecánico, fontanería y calefacción, gestión de intervenciones: en 6 preguntas, cada test te dice qué programa elegir y cuánto prever, con los precios 2026 de los programas del mercado francés.",
+      "description": "Autoescuela, alquiler de material para eventos, taller de bicicletas, taller mecánico, fontanería y calefacción, electricista, gestión de intervenciones, entrenador personal: en 6 preguntas, cada test te dice qué programa elegir y cuánto prever, con los precios 2026 de los programas del mercado francés.",
       "cta": "Elegir un test",
       "ctaSecondary": "Estimar mi presupuesto",
       "stats": {
