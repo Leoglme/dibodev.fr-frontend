@@ -1,5 +1,5 @@
 <template>
-  <div v-if="hasContent" class="blog-article-content max-w-none py-6" :class="props.proseClass">
+  <div v-if="hasContent" class="blog-article-content max-w-none py-6" :class="props.proseClass" @click="onContentClick">
     <div class="blog-article-content__inner">
       <StoryblokRichText :doc="richtextDoc" :resolvers="blokResolvers" />
     </div>
@@ -16,10 +16,14 @@ import type { DibodevArticleHeading } from '~/core/utils/articleHeadings'
 import { extractArticleHeadings, headingIdFromText, richtextNodeText } from '~/core/utils/articleHeadings'
 import { RichtextLinkUtils } from '~/core/utils/RichtextLinkUtils'
 import { useLocalizedInternalHref } from '~/composables/useLocalizedInternalHref'
+import { useTracking } from '~/composables/useTracking'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 import CtaButton from '~/storyblok/CtaButton.vue'
 import CtaLink from '~/storyblok/CtaLink.vue'
 
 const TOC_HEADING_LEVEL: number = 2
+/** File extensions whose links count as a download when clicked inside an article. */
+const DOWNLOADABLE_FILE_EXTENSIONS: string[] = ['pdf', 'xlsx', 'csv', 'docx']
 
 /**
  * Renders the Storyblok richtext of an article, including the embedded CTA blocks,
@@ -37,6 +41,7 @@ const props: BlogArticleContentProps = defineProps({
 })
 
 const localizeInternalHref: (href: string) => string = useLocalizedInternalHref()
+const { track } = useTracking()
 
 type EmbeddedBlok = { _uid: string; component: string }
 type HeadingNode = { attrs?: { level?: number }; children?: VNode[]; content?: unknown[] }
@@ -101,6 +106,20 @@ const blokResolvers: StoryblokRichTextResolvers<VNode> = {
       level === TOC_HEADING_LEVEL && text ? (queuedId ?? headingIdFromText(text)) : undefined
     return h(`h${level}`, id ? { id } : {}, headingNode.children)
   },
+}
+
+/**
+ * Sends the download event when the click lands on a link to a downloadable file (PDF, Excel, CSV).
+ * @param {MouseEvent} event - The click received by the article content.
+ * @returns {void}
+ */
+function onContentClick(event: MouseEvent): void {
+  const anchor: HTMLAnchorElement | null = (event.target as HTMLElement | null)?.closest('a[href]') ?? null
+  if (!anchor) return
+  const pathname: string = new URL(anchor.href, window.location.origin).pathname
+  const extension: string = pathname.split('.').pop()?.toLowerCase() ?? ''
+  if (!DOWNLOADABLE_FILE_EXTENSIONS.includes(extension)) return
+  track(TRACKING_EVENTS.fileDownloadClicked, { file: pathname, location: 'article_content' })
 }
 
 /** Headings exposed for the table of contents of the parent page. */

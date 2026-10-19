@@ -512,7 +512,8 @@
     "founder": {
       "eyebrow": "Qui est derrière Dibodev",
       "title": "Léo Guillaume, développeur depuis {years} ans, près de Rennes",
-      "paragraph1": "Après plus de quatre ans en entreprise à concevoir des logiciels de gestion et des plateformes, chez Kodeva puis Izidoor, j'ai créé Dibodev en 2025 pour accompagner directement les TPE et PME.",
+      "paragraph1": "Après plus de quatre ans en entreprise à concevoir des logiciels de gestion et des plateformes, chez Kodeva puis Izidoor, j'ai créé Dibodev en 2025 pour accompagner directement les TPE et PME : {link}, sites web et automatisations avec l'IA.",
+      "businessSoftwareLink": "application métier sur mesure",
       "paragraph2": "Je m'occupe de tout, du cadrage à la maintenance, et je vous explique chaque choix simplement, sans jargon.",
       "facts": {
         "location": {

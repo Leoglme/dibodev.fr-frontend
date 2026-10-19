@@ -27,7 +27,13 @@
             {{ $t('home.founder.title', { years: YEARS_OF_EXPERIENCE }) }}
           </h2>
         </div>
-        <p class="text-[17px] leading-7 text-gray-200">{{ $t('home.founder.paragraph1') }}</p>
+        <i18n-t keypath="home.founder.paragraph1" tag="p" scope="global" class="text-[17px] leading-7 text-gray-200">
+          <template #link>
+            <NuxtLink :to="localePath('custom-business-software')" class="text-primary font-medium hover:underline">
+              {{ $t('home.founder.businessSoftwareLink') }}
+            </NuxtLink>
+          </template>
+        </i18n-t>
         <p class="text-[17px] leading-7 text-gray-200">{{ $t('home.founder.paragraph2') }}</p>
 
         <dl class="grid gap-8 border-t border-gray-300 pt-7 sm:gap-6 lg:gap-4">

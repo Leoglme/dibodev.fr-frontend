@@ -52,9 +52,15 @@
         tone="tint"
       >
         <div class="flex flex-wrap gap-x-6 gap-y-2">
-          <DibodevLink :link="PRICE_BAROMETER_CSV_PATH" :externalLink="true" class="text-[15px] leading-6 font-medium">
-            <span>{{ page.sources.csvLinkLabel }}</span>
-          </DibodevLink>
+          <span class="contents" @click="onCsvDownloadClick">
+            <DibodevLink
+              :link="PRICE_BAROMETER_CSV_PATH"
+              :externalLink="true"
+              class="text-[15px] leading-6 font-medium"
+            >
+              <span>{{ page.sources.csvLinkLabel }}</span>
+            </DibodevLink>
+          </span>
           <DibodevLink
             :link="PRICE_BAROMETER_OPEN_DATA_URL"
             :externalLink="true"
@@ -142,6 +148,8 @@ import { buildDatasetSchemaJson } from '~/config/datasetSchema'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { usePageShareImage } from '~/composables/usePageShareImage'
+import { useTracking } from '~/composables/useTracking'
+import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 import {
   AGENCY_MAINTENANCE_PERCENT_RANGE,
   COMPARISON_YEARS,
@@ -184,6 +192,7 @@ const DATASET_KEYWORDS: string[] = [
 
 const { locale } = useI18n()
 const localePath = useLocalePath()
+const { track } = useTracking()
 const pageLocale: SupportedLocale = (locale.value as SupportedLocale) || 'fr'
 const page: DibodevPriceBarometerPageContent = PRICE_BAROMETER_PAGES[pageLocale] ?? PRICE_BAROMETER_PAGES.fr
 usePageShareImage('priceBarometer')
@@ -297,6 +306,14 @@ const relatedArticles: ComputedRef<DibodevArticle[]> = computed((): DibodevArtic
  */
 function formatRange(range: DibodevPriceRange): string {
   return PriceBarometerUtils.formatRange(range, page.rangeTemplate, page.numberLocale)
+}
+
+/**
+ * Sends the download event when the visitor opens the public CSV of the barometer.
+ * @returns {void}
+ */
+function onCsvDownloadClick(): void {
+  track(TRACKING_EVENTS.fileDownloadClicked, { file: PRICE_BAROMETER_CSV_PATH, location: 'price_barometer' })
 }
 
 useHead({

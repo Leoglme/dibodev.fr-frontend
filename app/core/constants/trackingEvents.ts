@@ -28,6 +28,8 @@ export const TRACKING_EVENTS = {
   articleCardClicked: 'article_card_clicked',
   /** Click on an in-article CTA block (button or link) toward contact. */
   articleCtaClicked: 'article_cta_clicked',
+  /** Click on a downloadable file link (PDF, Excel, CSV) in an article or a page, with the file path. */
+  fileDownloadClicked: 'file_download_clicked',
   /** Language change via the switcher. */
   localeSwitched: 'locale_switched',
   /** Quote requested from the budget estimator, with the estimated range. */

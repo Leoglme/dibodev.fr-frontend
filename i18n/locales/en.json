@@ -512,7 +512,8 @@
     "founder": {
       "eyebrow": "Who is behind Dibodev",
       "title": "Léo Guillaume, developer for {years} years, near Rennes",
-      "paragraph1": "After more than four years in-house building management software and platforms, at Kodeva then Izidoor, I founded Dibodev in 2025 to work directly with small and medium businesses.",
+      "paragraph1": "After more than four years in-house building management software and platforms, at Kodeva then Izidoor, I founded Dibodev in 2025 to work directly with small and medium businesses: {link}, websites and AI automations.",
+      "businessSoftwareLink": "custom business software",
       "paragraph2": "I take care of everything, from scoping to maintenance, and I explain every choice in plain language, without jargon.",
       "facts": {
         "location": {
