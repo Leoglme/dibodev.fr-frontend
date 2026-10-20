@@ -3,12 +3,13 @@ import type { DashboardKpi } from '~/core/types/Dashboard'
 import type { DashboardSearchPageGroup, DashboardToolPageRoute } from '~/core/types/DashboardSearchPerformancePage'
 import type { IndexingLocale } from '~/core/utils/DashboardIndexingUtils'
 import type {
+  SearchPerformanceDateRange,
   SearchPerformanceEntry,
   SearchPerformancePeriod,
   SearchPerformanceResponse,
   SearchPerformanceTrendPoint,
 } from '~~/server/types/dashboard/searchPerformance'
-import { DASHBOARD_TOOL_HUB_ROUTE_NAME, DASHBOARD_TOOL_PAGE_LABELS } from '~/core/constants/dashboardToolPages'
+import { DASHBOARD_TOOL_HUB_ROUTE_NAME, DASHBOARD_TOOL_PAGES } from '~/core/constants/dashboardToolPages'
 import { DashboardFormatUtils } from '~/core/utils/DashboardFormatUtils'
 import { DashboardIndexingUtils } from '~/core/utils/DashboardIndexingUtils'
 
@@ -242,7 +243,7 @@ export class DashboardSearchUtils {
    * @returns {string} The label.
    */
   public static buildToolPageLabel(routeName: string, frenchPath: string | null): string {
-    const known: string | undefined = DASHBOARD_TOOL_PAGE_LABELS[routeName]
+    const known: string | undefined = DASHBOARD_TOOL_PAGES[routeName]?.label
 
     if (known) {
       return known
@@ -254,6 +255,25 @@ export class DashboardSearchUtils {
         .pop() ?? routeName
     const words: string = slug.replace(/-/g, ' ')
     return words.charAt(0).toUpperCase() + words.slice(1)
+  }
+
+  /**
+   * Warns when a page went online during or after the period, so its figures cover only part of it.
+   *
+   * @param {string} onlineDay - Day the page went online (YYYY-MM-DD).
+   * @param {SearchPerformanceDateRange} range - Dates of the period.
+   * @returns {string | null} The warning, or null when the page was online for the whole period.
+   */
+  public static buildPeriodCoverageNote(onlineDay: string, range: SearchPerformanceDateRange): string | null {
+    if (onlineDay > range.endDate) {
+      return `En ligne après le ${DashboardFormatUtils.formatShortDate(range.endDate)}, dernier jour finalisé par Google : pas encore de chiffres sur cette période.`
+    }
+    if (onlineDay <= range.startDate) {
+      return null
+    }
+    const coveredDays: number = DashboardFormatUtils.countDaysBetween(onlineDay, range.endDate) + 1
+    const periodDays: number = DashboardFormatUtils.countDaysBetween(range.startDate, range.endDate) + 1
+    return `En ligne pendant une partie de la période seulement : les chiffres couvrent ${DashboardFormatUtils.plural(coveredDays, 'jour')} sur ${periodDays}.`
   }
 
   /**

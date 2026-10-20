@@ -13,6 +13,12 @@ export type DashboardSearchDetailRow = SearchPerformanceEntry & {
   pageUrls: string[]
 }
 
+/** `onlineSince` is the day of the first deployment that shipped the page (YYYY-MM-DD). */
+export type DashboardToolPage = {
+  label: string
+  onlineSince: string
+}
+
 /** `routeName` has no locale suffix: `tools` for the hub, `tools-<tool>` for each test. */
 export type DashboardToolPageRoute = {
   routeName: string

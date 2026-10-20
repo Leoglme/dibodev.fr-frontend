@@ -23,6 +23,18 @@
       </li>
     </ul>
 
+    <div v-if="onlineDay" class="flex gap-2.5 rounded-xl bg-gray-800 p-3.5 text-[13.5px] leading-relaxed">
+      <DashboardIcon name="calendar" :size="16" class="text-muted mt-0.5 shrink-0" />
+      <div class="min-w-0">
+        <p class="text-gray-200">
+          En ligne depuis le
+          <span class="font-medium text-gray-100">{{ DashboardFormatUtils.formatLongDate(onlineDay) }}</span>
+          · {{ onlineAgeLabel }}
+        </p>
+        <p v-if="periodCoverageNote" class="text-muted mt-1">{{ periodCoverageNote }}</p>
+      </div>
+    </div>
+
     <div class="grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-gray-300 bg-gray-300">
       <div class="bg-white p-4">
         <p class="dash-label">Impressions</p>
@@ -115,14 +127,20 @@ import type { UseDashboardSearchPerformanceReturn } from '~/composables/useDashb
 import type { ComputedRef, PropType } from 'vue'
 import type { DashboardArticleRow } from '~/core/types/Dashboard'
 import type { DashboardSearchPageDrawerProps, DashboardSearchPageVersion } from '~/core/types/DashboardSearchPageDrawer'
+import type { DashboardToolPage, DashboardToolPageRoute } from '~/core/types/DashboardSearchPerformancePage'
 import type { IndexingLocale } from '~/core/utils/DashboardIndexingUtils'
-import type { SearchPerformanceEntry, SearchPerformancePeriod } from '~~/server/types/dashboard/searchPerformance'
+import type {
+  SearchPerformanceDateRange,
+  SearchPerformanceEntry,
+  SearchPerformancePeriod,
+} from '~~/server/types/dashboard/searchPerformance'
 import type { IndexingStatusRow } from '~~/server/types/indexing'
 import { computed, onMounted, watch } from 'vue'
 import DashboardButton from '~/components/dashboard/ui/DashboardButton.vue'
 import DashboardIcon from '~/components/dashboard/ui/DashboardIcon.vue'
 import DashboardPositionBadge from '~/components/dashboard/ui/DashboardPositionBadge.vue'
 import DashboardDrawerFrame from '~/components/dashboard/overlays/DashboardDrawerFrame.vue'
+import { DASHBOARD_TOOL_PAGES } from '~/core/constants/dashboardToolPages'
 import { DashboardFormatUtils } from '~/core/utils/DashboardFormatUtils'
 import { DashboardIndexingUtils } from '~/core/utils/DashboardIndexingUtils'
 import { DashboardSearchUtils } from '~/core/utils/DashboardSearchUtils'
@@ -161,9 +179,11 @@ const {
 const { rows: articleRows, loadArticles }: UseDashboardArticlesReturn = useDashboardArticles()
 const { payload: indexingPayload, loadIndexing }: UseDashboardIndexingReturn = useDashboardIndexing()
 const { openDrawer, closeDrawer }: UseDashboardDrawerReturn = useDashboardDrawer()
+const router: ReturnType<typeof useRouter> = useRouter()
 
 const LOCALE_LABELS: Record<IndexingLocale, string> = { fr: 'française', en: 'anglaise', es: 'espagnole' }
 const QUERY_DISPLAY_LIMIT: number = 50
+const toolPageRoutes: DashboardToolPageRoute[] = DashboardSearchUtils.readToolPageRoutes(router.getRoutes())
 
 const periodLabel: ComputedRef<string> = computed((): string => DashboardSearchUtils.PERIOD_LABELS[props.period])
 
@@ -229,6 +249,44 @@ const articleRow: ComputedRef<DashboardArticleRow | null> = computed((): Dashboa
     return null
   }
   return articleRows.value.find((row: DashboardArticleRow): boolean => row.slug === slug) ?? null
+})
+
+const toolPage: ComputedRef<DashboardToolPage | null> = computed((): DashboardToolPage | null => {
+  const versionPaths: string[] = versions.value.map((version: DashboardSearchPageVersion): string => version.path)
+  const toolPageRoute: DashboardToolPageRoute | undefined = toolPageRoutes.find(
+    (toolRoute: DashboardToolPageRoute): boolean => versionPaths.includes(toolRoute.path),
+  )
+  return toolPageRoute ? (DASHBOARD_TOOL_PAGES[toolPageRoute.routeName] ?? null) : null
+})
+
+const onlineDay: ComputedRef<string | null> = computed((): string | null => {
+  if (articleRow.value?.status === 'published') {
+    return DashboardFormatUtils.extractLocalDay(articleRow.value.dateIso)
+  }
+  return toolPage.value?.onlineSince ?? null
+})
+
+const onlineAgeLabel: ComputedRef<string> = computed((): string => {
+  const daysOnline: number = onlineDay.value
+    ? DashboardFormatUtils.countDaysBetween(onlineDay.value, DashboardFormatUtils.todayIso())
+    : 0
+
+  if (daysOnline <= 0) {
+    return 'aujourd’hui'
+  }
+  if (daysOnline === 1) {
+    return 'hier'
+  }
+  return DashboardFormatUtils.plural(daysOnline, 'jour')
+})
+
+const periodCoverageNote: ComputedRef<string | null> = computed((): string | null => {
+  const range: SearchPerformanceDateRange | undefined = performanceCache.value[props.period]?.data.range
+
+  if (!onlineDay.value || !range) {
+    return null
+  }
+  return DashboardSearchUtils.buildPeriodCoverageNote(onlineDay.value, range)
 })
 
 const indexingRow: ComputedRef<IndexingStatusRow | null> = computed((): IndexingStatusRow | null => {

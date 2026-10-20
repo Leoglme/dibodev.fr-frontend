@@ -5,6 +5,7 @@ export class DashboardFormatUtils {
   private static readonly MINUTE_MS: number = 60_000
   private static readonly HOUR_MS: number = 3_600_000
   private static readonly DAY_MS: number = 86_400_000
+  private static readonly DAY_ONLY_PATTERN: RegExp = /^\d{4}-\d{2}-\d{2}$/
 
   /**
    * Formats a number the French way (thin spaces for thousands, comma for decimals).
@@ -129,6 +130,35 @@ export class DashboardFormatUtils {
   public static todayIso(): string {
     const now: Date = new Date()
     return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`
+  }
+
+  /**
+   * Day of a date or datetime as YYYY-MM-DD in local time ("2026-10-12" stays as is, a UTC datetime gets its French day).
+   *
+   * @param {string | null | undefined} iso - An ISO date or datetime.
+   * @returns {string | null} The day, or null when missing or invalid.
+   */
+  public static extractLocalDay(iso: string | null | undefined): string | null {
+    if (iso && DashboardFormatUtils.DAY_ONLY_PATTERN.test(iso)) {
+      return iso
+    }
+    const date: Date | null = DashboardFormatUtils.parseDate(iso)
+
+    if (!date) {
+      return null
+    }
+    return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`
+  }
+
+  /**
+   * Number of calendar days from one day to another ("2026-10-12" to "2026-10-20" gives 8).
+   *
+   * @param {string} startDay - First day (YYYY-MM-DD).
+   * @param {string} endDay - Last day (YYYY-MM-DD).
+   * @returns {number} The number of days, negative when the end comes first.
+   */
+  public static countDaysBetween(startDay: string, endDay: string): number {
+    return Math.round((Date.parse(endDay) - Date.parse(startDay)) / DashboardFormatUtils.DAY_MS)
   }
 
   /**
