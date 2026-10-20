@@ -21550,5 +21550,516 @@
         }
       ]
     }
+  },
+  "blog/alternative-gad-garage-logiciel-garage": {
+    "title": "Alternativa a GAD Garage: ¿qué software de taller elegir en 2026?",
+    "excerpt": "GAD Garage: versión 12 para Windows, una versión gratuita limitada y una suscripción desde 85 € por trimestre. ¿Para quién es la mejor opción, qué hace dudar, tres alternativas en línea con sus precios y el caso de la solución personalizada.",
+    "metaTitle": "Alternativa a GAD Garage: precios, limitaciones y software de taller en 2026",
+    "metaDescription": "GAD Garage: versión 12 para Windows, versión gratuita limitada, desde 85 € por trimestre. ¿Para quién está hecho, qué genera dudas, 3 alternativas en línea y sus precios.",
+    "tags": [
+      "gad garage",
+      "opiniones gad garage",
+      "alternativa gad garage",
+      "software taller automoción",
+      "software gestión taller",
+      "taller mecánico"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "GAD Garage es uno de los programas de taller más antiguos instalados en PC en Francia: lo encuentras en los talleres desde hace más de diez años, y varios mecánicos que me escriben aún lo utilizan. Antes de escribir nada, releí su sitio web el 20 de octubre de 2026 (versión 12, tienda, opiniones), así como las tablas comparativas de los programas de taller en línea que muestran sus precios. Aquí tienes para quién GAD Garage sigue siendo la mejor opción, qué hace dudar en 2026, tres alternativas con sus precios, y el caso en el que una herramienta a medida se justifica.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Qué es GAD Garage en 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El 20 de octubre de 2026, el sitio web de GAD Garage presenta la versión 12: un software de gestión de taller instalado en Windows (Vista, 7, 8, 10 y 11), en un solo puesto o en red con un servidor. La tienda muestra dos productos: una versión «Software de Taller – Limitado», gratuita, y el «Software de Taller V12 (trimestral)» a partir de 85 €, sin detalles sobre qué incluye ese precio, el número de puestos ni si está exento de impuestos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las funciones anunciadas: presupuestos convertidos en órdenes de reparación o en facturas, gestión de marcas, modelos y versiones de vehículos, artículos e inventario con reaprovisionamiento, pedidos a un solo o varios proveedores, seguimiento de pagos y calendario de vencimientos para clientes y proveedores, citas y programación de carga por empleado con rentabilidad, envío de SMS, publicación de anuncios web, importación y exportación de datos. La versión 12 añade un módulo de asistencia en carretera, seguimiento visual del avance de las operaciones en el vehículo, cesión de créditos y rotura de lunas, e interfaces con bases de datos del sector (DAT, GTmotive Estimate, AutoData, FFC, Car-Pass), cada una de las cuales requiere una suscripción con el proveedor correspondiente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Para quién GAD Garage es la mejor opción?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un taller o carrocería equipado con PCs fijos, que trabaja con expertos y aseguradoras (cesión de créditos, rotura de lunas), que cotiza con bases de datos de fabricantes y que desea un software en sus propias máquinas, sin depender de una conexión. Las opiniones publicadas en el sitio del editor (135 mensajes el 20 de octubre de 2026, sin calificación numérica y sin verificación por terceros) destacan dos puntos: un soporte considerado reactivo y una versión gratuita que sus usuarios describen como realmente gratuita. Si se ajusta a su caso y sus puestos siguen en el taller, GAD Garage lleva años funcionando.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que hace dudar",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Solo para Windows, en local.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " El sitio no menciona Mac, ni aplicación móvil, ni acceso desde un navegador. Un presupuesto que hacer en casa del cliente, un calendario que consultar desde el teléfono, un segundo taller: todo depende de un PC del taller o de una instalación en servidor.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un precio que comienza en 85 € por trimestre, sin detalles.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La tienda indica «a partir de», sin especificar qué está incluido, para cuántos puestos ni si el importe es exento de impuestos. Pida un presupuesto completo antes de comparar con una suscripción en línea con precios mostrados.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Interfaces adicionales con costo.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Las bases de datos de cotización y datos técnicos (DAT, GTmotive, AutoData) son suscripciones separadas con sus respectivos editores. Son valiosas en carrocería, pero innecesarias para un taller de mecánica básica.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una versión gratuita «limitada», sin lista de limitaciones.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " El sitio no especifica qué falta. Pruébela sabiendo que cambiará de versión el día en que una función falle.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Tres alternativas a GAD Garage, con sus precios",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Precios mostrados en el sitio web de cada editor, revisados el 20 de octubre de 2026. Los tres son programas en línea: nada que instalar, accesibles desde el taller, la casa o el teléfono.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gest'Garage, 19 € por mes.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " El importe mostrado es lo que paga, sin IVA adicional, hasta cinco colaboradores, sin compromiso, 14 días de prueba sin tarjeta bancaria y 20% de descuento al año. Todo está incluido: presupuestos, órdenes de reparación y facturas ilimitadas en formato Factur-X, firma electrónica, programación y citas en línea, fichas de vehículos por matrícula, inventario con alertas, SMS a clientes, vehículos de segunda mano, exportación contable FEC. Un segundo taller cuesta 10 € adicionales por mes. Es la alternativa más económica.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "AutoProGestion, 29 o 59 € IVA no incluido por mes.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Plan Starter a 29 € IVA (24 € IVA al año), hasta 100 clientes y dos usuarios: presupuestos, facturas, programación y citas en línea, órdenes de reparación con informe previo. Plan Pro a 59 € IVA (49 € IVA al año) elimina estos límites y añade firma remota, recordatorios por SMS y correo electrónico, gestión de stock, contabilidad (FEC, conector Pennylane) y flota de vehículos de ocasión con libro de policía. Sin compromiso, 14 días de prueba. La aplicación móvil sigue en desarrollo hasta el 20 de octubre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Kwixéo, de 22 a 89 € por mes.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Planes Esencial, Pro y Experto a 18,33, 49,17 y 74,17 € IVA por mes pagados anualmente (22, 59 y 89 € al mes), 14 días de prueba sin tarjeta. Vehículos y órdenes de reparación desde el primer plan, gestión de stock y enlaces de pago en Pro, stock multialmacén en Experto. Es un software de gestión generalista con un módulo para talleres: útil si también vendes o alquilas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para comparar estos softwares en una misma tabla y saber cuál se adapta a tu taller, visita mi página ",
+              "type": "text"
+            },
+            {
+              "text": "software para taller de automóviles",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": una prueba gratuita en seis preguntas, las normas a cumplir en 2026 y un modelo de orden de reparación y presupuesto para descargar. También he detallado el caso de",
+              "type": "text"
+            },
+            {
+              "text": "AutoProGestion",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-autoprogestion-logiciel-garage",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " en otro artículo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Y si ninguno encaja: la herramienta personalizada",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lo que GAD Garage hace bien, un software en línea también lo hace. Donde ambos fallan es en lo específico de tu taller: paquetes por tipo de intervención con tarifas distintas según el vehículo, registro de horas de los mecánicos, seguimiento de flota para clientes profesionales, gestión de citas y solicitud de presupuestos en tu propia web, con tu identidad visual. Desarrollé Gest-Time, un software de seguimiento de horas aún usado por PYMES, para este tipo de necesidades: una herramienta que hace una sola cosa, exactamente como trabaja la empresa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En cuanto a precios, un complemento adicional conectado a tu suscripción cuesta entre 2.500 y 7.000 € una sola vez. Un software de gestión completo oscila entre 5.000 y 15.000 € en pago único en mi caso, más 100 a 300 € por mes de mantenimiento, alojamiento y copias de seguridad incluidas, y el código es tuyo. En tres años, GAD Garage a 85 € por trimestre cuesta al menos 1.020 €, Gest'Garage 684 €. La solución personalizada no gana en este aspecto: gana cuando el software te hace perder una hora al día en reingresos o contorneos. Mi ",
+              "type": "text"
+            },
+            {
+              "text": "barómetro de precios de software personalizado",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " ofrece los rangos de 14 proveedores franceses para verificar un presupuesto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cómo elegir en un día",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Realiza la prueba de seis preguntas en mi página sobre softwares para talleres. Luego, somete a prueba el software durante un día completo: un presupuesto aceptado por teléfono, convertido en orden de reparación firmado, una pieza añadida en el camino, la factura, y el recordatorio de la revisión técnica seis meses después. Si reingresas algo, lo harás todos los días.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿GAD Garage es gratuito?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Una versión «Software para Taller – Limitado» se ofrece gratuitamente en la tienda del editor hasta el 20 de octubre de 2026, sin lista pública de sus limitaciones. La versión completa 12 se vende a partir de 85 € por trimestre.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿GAD Garage funciona en Mac o en móvil?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "El sitio del editor solo anuncia compatibilidad con Windows (Vista a 11), en estación única o en red. Para acceso desde teléfono o Mac, revisa los softwares en línea mencionados anteriormente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cuánto cuesta GAD Garage?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "\"Desde 85 €\" por trimestre para la versión 12 según la tienda, sin detalles sobre los conceptos ni sobre el IVA; las interfaces con las bases técnicas son suscripciones separadas. Pida un presupuesto escrito con el detalle.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Qué software de taller online es el más económico?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Entre los que muestran sus precios, Gest'Garage a 19 € al mes todo incluido, luego Kwixéo Essencial a 22 € y AutoProGestion Starter a 29 € IVA no incluido.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Se pueden recuperar los datos de GAD Garage?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "El software anuncia la importación y exportación de datos. Exporte clientes, vehículos y facturas antes de cambiar, y verifique que la nueva herramienta sepa importarlos; en una herramienta personalizada, la recuperación de datos forma parte del presupuesto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿No sabe cuál elegir?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Descríbame su taller en pocas líneas: número de personas, lo que aún hace a mano, lo que le molesta. Le respondo en menos de 24 horas, y si GAD Garage o una suscripción de 19 € son suficientes, se lo diré.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "07c4c334-f95e-4c5a-8706-d0a4696fb2b7",
+            "body": [
+              {
+                "_uid": "i-f943ac91-f636-404d-8b1c-b9fa1089256e",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
