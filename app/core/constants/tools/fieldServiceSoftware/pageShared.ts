@@ -12,9 +12,9 @@ export const FIELD_SERVICE_PAGE_SCREENSHOT_URL: string = '/images/tools/gest-tim
 /** Articles linked at the bottom of the page; the untranslated ones are left out of /en and /es automatically. */
 export const FIELD_SERVICE_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'logiciel-gestion-interventions-techniciens-hors-ligne',
+  'alternative-organilog-logiciel-gestion-interventions',
   'chauffagiste-contrats-entretien-outil-sur-mesure',
   'logiciel-gestion-plombiers-saas-sur-mesure-2026',
-  'developpement-logiciel-b2b-sur-mesure-prix',
 ]
 
 export const FIELD_SERVICE_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2

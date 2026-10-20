@@ -12,7 +12,7 @@ export const ELECTRICIAN_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'electricien-outil-sur-mesure-devis-interventions-factures',
   'facture-electronique-artisan-ce-qui-change',
   'artisan-btp-gerer-ses-chantiers-sans-excel-avec-un-outil-dedie',
-  'logiciel-gestion-plombiers-saas-sur-mesure-2026',
+  'alternative-tolteck-logiciel-devis-artisan',
 ]
 
 export const ELECTRICIAN_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2

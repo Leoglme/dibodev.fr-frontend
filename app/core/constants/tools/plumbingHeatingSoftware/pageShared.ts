@@ -13,7 +13,7 @@ export const PLUMBING_HEATING_PAGE_SCREENSHOT_URL: string = '/images/tools/gest-
 export const PLUMBING_HEATING_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'logiciel-gestion-plombiers-saas-sur-mesure-2026',
   'chauffagiste-contrats-entretien-outil-sur-mesure',
-  'logiciel-gestion-interventions-techniciens-hors-ligne',
+  'alternative-tolteck-logiciel-devis-artisan',
   'facture-electronique-artisan-ce-qui-change',
 ]
 
