@@ -20995,5 +20995,560 @@
         }
       ]
     }
+  },
+  "blog/logiciel-reservation-en-ligne-sur-mesure-loisirs": {
+    "title": "Software de reserva en línea personalizado: lo que aprendí con Izidoor",
+    "excerpt": "Prácticas, horarios, equipo, señales, clima: lo que un software de reserva debe gestionar realmente para una estructura de ocio, con retorno de experiencia incluido.",
+    "metaTitle": "Software de reserva en línea personalizado: experiencia de usuario",
+    "metaDescription": "Escuelas de vela, surf, kayak, centros de ocio: lo que un software de reserva en línea debe gestionar (disponibilidad, señales, cancelaciones) y su precio.",
+    "tags": [
+      "software de reserva",
+      "reserva en línea",
+      "plataforma de reserva",
+      "estructura de ocio",
+      "pago en línea con señal",
+      "horario de monitores"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un sábado de julio, en una escuela de vela. El viento se levanta a las 9 horas, los cursos de la tarde están completos, y tres familias llaman al mismo tiempo para saber si queda lugar mañana. Mientras tanto, alguien busca en un archivador quién pagó el anticipo y quién aún debe regularizar el pago.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Pasé dos años y medio en días así, del otro lado de la pantalla. En Izidoor, trabajé en una plataforma de reserva y gestión para escuelas de vela, surf, kayak, esquí e incluso museos. Cuando llegué, el producto era inestable y casi sin usuarios. Cuando me fui, lo usaban unas treinta estructuras y gestionaba varias miles de reservas por temporada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lo que sigue es lo que aprendí sobre lo que un software de reservas debe saber hacer realmente, y cuándo lo personalizado se vuelve útil.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Un software de reservas no es solo un calendario",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Visto desde fuera, reservar una actividad parece sencillo: una fecha, una hora, un botón «reservar». En realidad, cada estructura tiene sus propias reglas, y ahí es donde los softwares genéricos fallan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una clase de surf tiene un número de plazas, pero también un nivel mínimo, una edad, y material que prever para cada uno. Un curso de vela dura cinco días, y no se reserva solo el miércoles. Un alquiler de kayak se cuenta por hora, con embarcaciones para una o dos personas. Un museo vende horarios de visita con un precio diferente para los grupos escolares.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Eso es lo que se llama el motor de disponibilidad: la parte que decide, en cada momento, qué puede reservarse aún. En Izidoor, era el corazón del producto y tenía en cuenta varios criterios a la vez. Si ese motor falla, vendes dos veces el mismo lugar o, por el contrario, rechazas clientes cuando aún quedaba espacio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Las funciones de una plataforma de reservas en línea que realmente importan",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Con el paso de las temporadas, vi qué ahorra tiempo a los equipos y qué sigue siendo un adorno. Esto es lo que importa:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "la reserva directamente en tu sitio web",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", no en una plataforma donde el cliente ya no ve tu nombre. En Izidoor, el módulo de reserva se integraba en los sitios de los clientes;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "el pago en línea con anticipo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", y sobre todo los reembolsos cuando el clima cancela una sesión. Es el punto que más daños causa cuando no se gestiona bien;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "una caja registradora en el lugar",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " para quienes pagan en recepción, conectada a las mismas reservas, para no llevar dos contabilidades;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "recordatorios automáticos",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " por correo electrónico o por SMS, lo que reduce los olvidos;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "un calendario legible para los monitores",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", que saben por la mañana a quién supervisan y con qué material;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "estadísticas sencillas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": llenado por actividad, ingresos por semana, para decidir los horarios de la próxima temporada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Por el contrario, muchas funciones vendidas como opciones nunca se utilizan. Es mejor una herramienta que haga perfectamente seis cosas que una herramienta que haga treinta a medias.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "El ejemplo de un centro acuático",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tomemos un centro acuático que ofrece clases colectivas, cursos de una semana y alquiler de paddles.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El cliente llega al sitio web del centro, elige «curso infantil, semana del 14 de julio», indica la edad y el nivel de su hijo. El software solo le propone los cursos adecuados, con las plazas realmente disponibles. Paga un anticipo en línea y recibe una confirmación al instante.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La víspera del curso, un SMS recuerda la hora y qué llevar. Por la mañana, el monitor abre su calendario en su teléfono y ve la lista de los niños, su nivel y las tallas de los trajes. Si el viento es demasiado fuerte, la recepción cancela la sesión en dos clics, y las familias son notificadas y reembolsadas o reprogramadas automáticamente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Al final del mes, el gerente ve qué cursos se llenan en tres días y cuáles quedan medio vacíos. Ajusta el año siguiente con cifras, no por sensación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Software de reserva del mercado o herramienta personalizada?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Existen muy buenos programas de reserva, y para muchas actividades, es la respuesta correcta. Si ofrece horarios simples (un entrenador, una consulta, una sala), empiece por mirar por ese lado. También hablo de esto para los ",
+              "type": "text"
+            },
+            {
+              "text": "entrenadores deportivos",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/coach-sportif-limiter-les-annulations-avec-un-outil-de-reservation-en-ligne",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " y para las ",
+              "type": "text"
+            },
+            {
+              "text": "autoescuelas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-rdv-auto-ecole-reservation-en-ligne",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La personalización se vuelve interesante cuando sus reglas van más allá de lo estándar: cursos de varios días, material a asignar, tarifas que cambian según la temporada o el número de participantes, varios sitios, una herramienta federal con la que intercambiar información, o simplemente el deseo de dejar de pagar una comisión por cada reserva. En Izidoor, por ejemplo, la plataforma estaba conectada a la Federación Francesa de Vela y a servicios de envío de correos electrónicos y SMS.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Otra ventaja es que la herramienta es suya. Sus datos de clientes permanecen con usted, y no depende de un cambio de tarifas decidido en otro lugar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cuánto cuesta un software de reserva personalizado",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para una estructura de ocio o una pequeña empresa, la mayoría de las herramientas que desarrollo oscilan entre 5.000 y 15.000 € en precio fijo, según el número de actividades, las reglas de reserva y las conexiones con otros software. El mantenimiento cuesta luego entre 100 y 300 € al mes. El precio exacto se fija en el presupuesto, antes de empezar. Todo está detallado en mi página ",
+              "type": "text"
+            },
+            {
+              "text": "aplicación empresarial personalizada",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", y puede ver la ",
+              "type": "text"
+            },
+            {
+              "text": "ficha del proyecto Izidoor",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/izidoor",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Se puede mantener nuestro sitio web actual?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí. El módulo de reserva se añade a su sitio web existente, como un bloque. Sus clientes reservan sin salir de su página.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Qué pasa cuando el clima cancela una sesión?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Se prevé este caso desde el principio: el equipo cancela con un clic, los clientes son notificados, y el software propone un aplazamiento o activa el reembolso según sus reglas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Es necesario que los monitores instalen una aplicación?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No necesariamente. Un calendario consultable desde el teléfono, a través del navegador, suele ser suficiente en la mayoría de los casos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Se puede empezar antes de la temporada?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "De hecho, es aconsejable. Una primera versión con las actividades principales puede estar lista en unas semanas, luego se completa según los comentarios del equipo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Hablamos?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si sus reservas aún pasan por teléfono, una libreta o tres herramientas que no se comunican, cuénteme cómo transcurre un día ocupado en su lugar. Hablamos por teléfono o en videollamada, y le propongo un plan de acción escrito: qué automatizar en primer lugar y un orden de magnitud del presupuesto. Si un software del mercado ya se adapta a su actividad, se lo diré.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "31f01de3-d0d3-4eee-9d8c-dc21671c653c",
+            "body": [
+              {
+                "_uid": "i-e9aab4b5-33b1-4fb2-ae80-05c29f3608be",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

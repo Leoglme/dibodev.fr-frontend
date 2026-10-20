@@ -20993,5 +20993,560 @@
         }
       ]
     }
+  },
+  "blog/logiciel-reservation-en-ligne-sur-mesure-loisirs": {
+    "title": "Custom Online Booking Software: What I Learned with Izidoor",
+    "excerpt": "Internships, time slots, equipment, deposits, weather: what an online booking system must truly handle for a leisure facility, backed by real-world experience.",
+    "metaTitle": "Custom Online Booking Software: A Hands-On Experience",
+    "metaDescription": "Sailing schools, surfing, kayaking, leisure centers: what an online booking system needs to manage (availability, deposits, cancellations) and its cost.",
+    "tags": [
+      "booking software",
+      "online booking system",
+      "booking platform",
+      "leisure facility",
+      "online payment with deposit",
+      "instructor scheduling"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "One Saturday in July, at a sailing school. The wind picks up at 9 AM, the afternoon sessions are fully booked, and three families call at the same time to ask if there’s still room tomorrow. Meanwhile, someone is searching through a file to see who paid the deposit and still needs to settle the balance.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I spent two and a half years on days like this, on the other side of the screen. At Izidoor, I worked on a booking and management platform for sailing schools, surf schools, kayak centers, ski resorts, and even museums. When I joined, the product was unstable and had almost no users. When I left, it served around thirty organizations and handled thousands of bookings per season.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What follows is what I learned about what a booking software must truly do—and when customization becomes useful.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "A booking software isn’t just a calendar",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "From the outside, booking an activity seems simple: a date, a time slot, a ‘book’ button. In reality, each organization has its own rules, and that’s where generic software falls short.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A surf session has a set number of spots, but also a minimum skill level, an age requirement, and equipment to prepare for each participant. A sailing course lasts five days, and you don’t book just a Wednesday. A kayak rental is charged by the hour, with boats for one or two people. A museum sells time slots with different pricing for school groups.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is what’s called the availability engine: the part that decides, in real time, what can still be booked. On Izidoor, it was the core of the product, accounting for multiple criteria at once. If this engine fails, you’ll double-book a spot or, worse, turn away customers when space was still available.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The real features of an online booking platform",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Over the seasons, I saw what saves teams time—and what remains a gimmick. Here’s what matters:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "booking directly on your own website",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", not on a third-party platform where customers no longer see your name. On Izidoor, the booking module integrated with clients’ websites;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "online payments with deposits",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", and especially refunds when bad weather cancels a session. This is the part that causes the most damage when mismanaged;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "an on-site cash register",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " for those paying at reception, linked to the same bookings to avoid keeping two separate records;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "automatic reminders",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " by email or SMS, which reduce forgetfulness;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "a readable schedule for instructors",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", who know in the morning whom they are supervising and with what equipment;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "simple statistics",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": filled by activity, weekly revenue figures, to decide on the time slots for the following season.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Conversely, many functions sold as add-ons are never used. It’s better to have a tool that perfectly handles six things than one that handles thirty half-heartedly.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The example of an aquatic center",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Let’s take an aquatic center that offers group classes, week-long camps, and paddle rentals.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The customer visits the center’s website, selects ‘children’s camp, week of July 14th,’ enters their child’s age and skill level. The software only offers suitable camps with actual available spots. They pay a deposit online and receive immediate confirmation.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The day before the camp, an SMS reminds them of the time and what to bring. In the morning, the instructor opens their schedule on their phone and sees the list of children, their levels, and the sizes of their wetsuits. If the wind is too strong, reception cancels the session in two clicks, and families are automatically notified and refunded or rescheduled.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "At the end of the month, the manager sees which camps fill up in three days and which remain half-empty. They adjust the following year based on data, not just intuition.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Off-the-shelf reservation software or custom-built tool?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "There are excellent off-the-shelf reservation software options, and for many activities, that’s the right choice. If you offer simple time slots (a coach, a studio, a room), start by looking into those. I also recommend this for ",
+              "type": "text"
+            },
+            {
+              "text": "sports coaches",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/coach-sportif-limiter-les-annulations-avec-un-outil-de-reservation-en-ligne",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " and for ",
+              "type": "text"
+            },
+            {
+              "text": "driving schools",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-rdv-auto-ecole-reservation-en-ligne",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Custom solutions become interesting when your rules go beyond the standard: multi-day camps, equipment assignments, pricing that changes by season or participant count, multiple locations, a federal tool to exchange information, or simply the desire to stop paying a commission on every booking. For example, on Izidoor, the platform was connected to the French Sailing Federation and email/SMS services.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Another advantage is that you own the tool. Your customer data stays with you, and you don’t rely on price changes decided elsewhere.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How much does a custom booking software cost?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For a leisure facility or small business, most of the tools I create range between €5,000 and €15,000 as a fixed price, depending on the number of activities, booking rules, and connections to your other software. Maintenance then costs €100 to €300 per month. The exact price is set in the quote before we start. Everything is detailed on my ",
+              "type": "text"
+            },
+            {
+              "text": "custom business application",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "page, and you can see the ",
+              "type": "text"
+            },
+            {
+              "text": "Izidoor project brief",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/izidoor",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can we keep our current website?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Yes. The booking module integrates with your existing site as a standalone block. Customers book without leaving your page.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What happens if the weather cancels a session?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "We plan for this from the start: the team cancels with one click, customers are notified, and the software offers a reschedule or triggers a refund based on your rules.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Do monitors need to install an app?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Not necessarily. A phone-accessible schedule via a browser usually suffices in most cases.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can we start before the season?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "It’s actually recommended. A first version with the main activities can be ready in a few weeks, then we refine it based on team feedback.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Let’s talk?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If your bookings still go through phone calls, a spreadsheet, or three disconnected tools, tell me how a busy day goes for you. We can discuss it over the phone or video call, and I’ll provide a written action plan: what to automate first and a rough budget estimate. If an off-the-shelf software already fits your needs, I’ll let you know.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "31f01de3-d0d3-4eee-9d8c-dc21671c653c",
+            "body": [
+              {
+                "_uid": "i-e9aab4b5-33b1-4fb2-ae80-05c29f3608be",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
