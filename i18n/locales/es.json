@@ -588,6 +588,18 @@
       "groups": {
         "need": "Tu necesidad",
         "details": "Tus datos de contacto"
+      },
+      "phpVulnerability": {
+        "messageWithSite": "Hola,\nmi web {site} funciona con PHP. La herramienta de comprobación indica: «{verdict}».\n¿Puedes confirmarme si está afectada por el fallo del 21 de octubre de 2026 y decirme qué hacer?",
+        "messageWithoutSite": "Hola,\ntengo dudas sobre mi web tras el fallo de PHP de octubre de 2026. ¿Puedes decirme si está afectada y qué hacer?\nSu dirección: ",
+        "verdicts": {
+          "unpatched": "versión de PHP sin parche",
+          "endOfLife": "versión de PHP sin parche oficial",
+          "patched": "parche instalado",
+          "phpHidden": "web en PHP, versión oculta",
+          "notPhp": "web sin PHP",
+          "unknown": "sin señales visibles de PHP"
+        }
       }
     },
     "reassurance": {

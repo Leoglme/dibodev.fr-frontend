@@ -588,6 +588,18 @@
       "groups": {
         "need": "Votre besoin",
         "details": "Vos coordonnées"
+      },
+      "phpVulnerability": {
+        "messageWithSite": "Bonjour,\nmon site {site} tourne sur PHP. L'outil de vérification indique : « {verdict} ».\nPouvez-vous me confirmer s'il est concerné par la faille du 21 octobre 2026 et me dire quoi faire ?",
+        "messageWithoutSite": "Bonjour,\nj'ai un doute sur mon site après la faille PHP du 21 octobre 2026. Pouvez-vous me dire s'il est concerné et quoi faire ?\nSon adresse : ",
+        "verdicts": {
+          "unpatched": "version PHP non corrigée",
+          "endOfLife": "version PHP sans correctif officiel",
+          "patched": "correctif installé",
+          "phpHidden": "site en PHP, version masquée",
+          "notPhp": "site pas en PHP",
+          "unknown": "aucun signe de PHP visible"
+        }
       }
     },
     "reassurance": {

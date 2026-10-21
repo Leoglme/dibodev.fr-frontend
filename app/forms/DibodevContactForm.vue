@@ -124,6 +124,8 @@ import DibodevAlert from '~/components/feedback/DibodevAlert.vue'
 import type { Option } from '~/components/ui/DibodevTogglePillGroup.vue'
 import { debounce } from 'lodash-es'
 import type { ContactFormPayload } from '~~/server/types/mail/contact'
+import type { DibodevPhpVulnerabilityContactPrefill } from '~/core/types/DibodevPhpVulnerabilityContact'
+import { PhpVulnerabilityContactUtils } from '~/core/utils/PhpVulnerabilityContactUtils'
 import { useTracking } from '~/composables/useTracking'
 import { useLeadSource } from '~/composables/useLeadSource'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
@@ -180,6 +182,10 @@ const prefilledProjectType: ProjectTypeKey | null =
   PROJECT_TYPE_KEYS.find((key: ProjectTypeKey): boolean => key === String(route.query.type ?? '')) ?? null
 const prefilledBudgetRange: BudgetRangeKey | null =
   BUDGET_RANGE_KEYS.find((key: BudgetRangeKey): boolean => key === String(route.query.budget ?? '')) ?? null
+/** `?topic=php-vulnerability` comes from the PHP vulnerability pages, with the site and the verdict when a check was run. */
+const phpVulnerabilityPrefill: DibodevPhpVulnerabilityContactPrefill | null = PhpVulnerabilityContactUtils.readPrefill(
+  route.query,
+)
 
 const projectType: Ref<ProjectTypeKey | null> = ref<ProjectTypeKey | null>(prefilledProjectType ?? DEFAULT_PROJECT_TYPE)
 const pagesRange: Ref<PagesRangeKey | null> = ref<PagesRangeKey | null>(null)
@@ -187,7 +193,7 @@ const budgetRange: Ref<BudgetRangeKey | null> = ref<BudgetRangeKey | null>(prefi
 const fullName: Ref<string> = ref('')
 const email: Ref<string> = ref('')
 const phone: Ref<string> = ref('')
-const message: Ref<string> = ref('')
+const message: Ref<string> = ref(buildPrefilledMessage())
 const isSubmitting: Ref<boolean> = ref(false)
 const errorMessage: Ref<string | null> = ref(null)
 const successMessage: Ref<string | null> = ref(null)
@@ -199,6 +205,23 @@ const contactForm: Ref<FormContext | null> = ref(null)
 const isWebsiteProject: ComputedRef<boolean> = computed((): boolean => projectType.value === WEBSITE_PROJECT_TYPE)
 
 /** METHODS */
+/**
+ * Writes the message of a visitor coming from the PHP vulnerability pages, with the site and the verdict when known.
+ * @returns {string} The message, or an empty string for every other visitor.
+ */
+function buildPrefilledMessage(): string {
+  if (!phpVulnerabilityPrefill) {
+    return ''
+  }
+  if (!phpVulnerabilityPrefill.site) {
+    return t('contact.form.phpVulnerability.messageWithoutSite')
+  }
+  return t('contact.form.phpVulnerability.messageWithSite', {
+    site: phpVulnerabilityPrefill.site,
+    verdict: t(`contact.form.phpVulnerability.verdicts.${phpVulnerabilityPrefill.verdict ?? 'unknown'}`),
+  })
+}
+
 /**
  * Validates email format client-side.
  * @param {string} emailValue - The email to test.

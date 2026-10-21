@@ -39,7 +39,19 @@
 
           <BlogArticleToc v-if="hasTableOfContents" :headings="headings" class="mb-6 lg:hidden" />
 
-          <BlogArticleContent :content="article.content" />
+          <template v-if="contactPromptWording && contentAroundIntro">
+            <BlogArticleContent :content="contentAroundIntro.intro" />
+            <DibodevContactPrompt
+              :icon="contactPromptIcon"
+              :emphasizedIntro="contactPromptWording.emphasizedIntro"
+              :text="contactPromptWording.text"
+              :linkLabel="contactPromptWording.linkLabel"
+              :to="contactPromptRoute"
+              trackingLocation="article_intro"
+            />
+            <BlogArticleContent :content="contentAroundIntro.body" />
+          </template>
+          <BlogArticleContent v-else :content="article.content" />
 
           <DibodevToolTeaser :teaser="BUSINESS_SOFTWARE_PAGE_TEASER" trackingLocation="article_end" class="mt-10" />
 
@@ -63,6 +75,14 @@
     <BlogRelatedArticles :title="$t('blog.related.title')" :articles="relatedArticles" />
 
     <DibodevContactCtaSection />
+
+    <DibodevMobileContactBar
+      v-if="contactPromptWording"
+      :text="contactPromptWording.barText"
+      :buttonLabel="contactPromptWording.barButtonLabel"
+      :to="contactPromptRoute"
+      trackingLocation="article_mobile_bar"
+    />
   </div>
 </template>
 
@@ -76,6 +96,8 @@ import DibodevAuthorCard from '~/components/cards/DibodevAuthorCard.vue'
 import DibodevBreadcrumb from '~/components/navigations/DibodevBreadcrumb.vue'
 import DibodevContactAsideCard from '~/components/cards/DibodevContactAsideCard.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
+import DibodevContactPrompt from '~/components/data-displays/DibodevContactPrompt.vue'
+import DibodevMobileContactBar from '~/components/data-displays/DibodevMobileContactBar.vue'
 import DibodevToolTeaser from '~/components/data-displays/DibodevToolTeaser.vue'
 import DibodevBadge from '~/components/ui/DibodevBadge.vue'
 import type { ArticleTranslationLocale, DibodevArticle, DibodevLocalizedArticle } from '~/core/types/DibodevArticle'
@@ -86,12 +108,15 @@ import type { SeoMetaTag } from '~/core/types/SeoMetaTag'
 import type { SharePreviewDetail } from '~/core/types/SharePreviewDetail'
 import type { StoryblokVersion } from '~/services/types/storyblok'
 import type { DibodevArticleHeading } from '~/core/utils/articleHeadings'
+import type { DibodevContactPromptContent, DibodevContactPromptWording } from '~/core/types/DibodevContactPrompt'
 import type { DibodevToolTeaserContent } from '~/core/types/DibodevToolTeaser'
 import { StoryblokArticleService } from '~/services/storyblokArticleService'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { useToolTeasers } from '~/composables/useToolTeasers'
+import { CONTACT_PROMPTS_BY_ARTICLE_SLUG } from '~/core/constants/articleContactPrompts'
 import { TOOL_TEASERS_BY_ARTICLE_SLUG } from '~/core/constants/tools/toolTeasers'
+import { ArticleIntroUtils } from '~/core/utils/ArticleIntroUtils'
 import { BUSINESS_SOFTWARE_PAGE_TEASER } from '~/core/constants/businessSoftwarePageTeaser'
 import { buildArticleSchemaJson } from '~/config/articleSchema'
 import { buildShareImageMeta } from '~/config/shareImage'
@@ -187,6 +212,21 @@ const headings: ComputedRef<DibodevArticleHeading[]> = computed((): DibodevArtic
 const hasTableOfContents: ComputedRef<boolean> = computed((): boolean => headings.value.length >= MIN_HEADINGS_FOR_TOC)
 const toolTeasers: ComputedRef<DibodevToolTeaserContent[]> = useToolTeasers((): DibodevToolTeaserContent[] =>
   TOOL_TEASERS_BY_ARTICLE_SLUG[slug] ? [TOOL_TEASERS_BY_ARTICLE_SLUG[slug]] : [],
+)
+
+/** The contact prompt of the article subject, in the page language; nothing for most articles. */
+const contactPrompt: DibodevContactPromptContent | null = CONTACT_PROMPTS_BY_ARTICLE_SLUG[slug] ?? null
+const contactPromptWording: ComputedRef<DibodevContactPromptWording | null> = computed(
+  (): DibodevContactPromptWording | null => contactPrompt?.wording[locale.value as SupportedLocale] ?? null,
+)
+const contactPromptIcon: string = contactPrompt?.icon ?? 'MessageCircle'
+const contactPromptRoute: ComputedRef<string> = computed((): string =>
+  localePath({ path: '/contact', query: contactPrompt?.contactQuery ?? {} }),
+)
+/** The article split around its introduction, so the prompt sits before the first section. */
+const contentAroundIntro: ComputedRef<{ intro: unknown; body: unknown } | null> = computed(
+  (): { intro: unknown; body: unknown } | null =>
+    contactPrompt && article.value ? ArticleIntroUtils.splitBeforeFirstSection(article.value.content) : null,
 )
 
 const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => [

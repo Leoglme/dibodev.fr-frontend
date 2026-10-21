@@ -588,6 +588,18 @@
       "groups": {
         "need": "Your need",
         "details": "Your contact details"
+      },
+      "phpVulnerability": {
+        "messageWithSite": "Hello,\nmy site {site} runs on PHP. The check tool says: “{verdict}”.\nCan you confirm whether it is affected by the 21 October 2026 vulnerability and tell me what to do?",
+        "messageWithoutSite": "Hello,\nI have doubts about my site after the October 2026 PHP vulnerability. Can you tell me whether it is affected and what to do?\nIts address: ",
+        "verdicts": {
+          "unpatched": "PHP version not patched",
+          "endOfLife": "PHP version without an official fix",
+          "patched": "fix installed",
+          "phpHidden": "PHP site, version hidden",
+          "notPhp": "site not on PHP",
+          "unknown": "no visible sign of PHP"
+        }
       }
     },
     "reassurance": {
