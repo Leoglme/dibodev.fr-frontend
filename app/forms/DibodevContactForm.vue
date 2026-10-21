@@ -112,7 +112,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import type { Ref, ComputedRef } from 'vue'
 import { Form, Field, ErrorMessage } from 'vee-validate'
 import type { FormContext, InvalidSubmissionContext } from 'vee-validate'
@@ -193,7 +193,7 @@ const budgetRange: Ref<BudgetRangeKey | null> = ref<BudgetRangeKey | null>(prefi
 const fullName: Ref<string> = ref('')
 const email: Ref<string> = ref('')
 const phone: Ref<string> = ref('')
-const message: Ref<string> = ref(buildPrefilledMessage())
+const message: Ref<string> = ref('')
 const isSubmitting: Ref<boolean> = ref(false)
 const errorMessage: Ref<string | null> = ref(null)
 const successMessage: Ref<string | null> = ref(null)
@@ -428,6 +428,14 @@ async function onSubmit(): Promise<void> {
     isSubmitting.value = false
   }
 }
+
+/** LIFECYCLE */
+/** Set after hydration: the page is prerendered without its query, and a value given during setup would be lost in the static HTML. */
+onMounted((): void => {
+  if (phpVulnerabilityPrefill) {
+    message.value = buildPrefilledMessage()
+  }
+})
 </script>
 
 <style scoped>
