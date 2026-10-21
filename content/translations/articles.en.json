@@ -24952,5 +24952,625 @@
         }
       ]
     }
+  },
+  "blog/changer-version-php-ionos-faille-octobre-2026": {
+    "title": "Changing the PHP Version at IONOS After the October 21, 2026 Vulnerability: Customer Portal and PHP Extended Support",
+    "excerpt": "At IONOS, the PHP version is set per domain through the customer portal. Where to click, which version to choose after the October 21, 2026 vulnerability, and the value of PHP Extended Support.",
+    "metaTitle": "Changing PHP Version at IONOS After the 2026 PHP Vulnerability",
+    "metaDescription": "PHP vulnerability of October 21, 2026: where to change the PHP version in the IONOS customer portal, which version to choose, and the benefits of PHP Extended Support.",
+    "tags": [
+      "PHP",
+      "IONOS",
+      "hosting",
+      "security",
+      "WordPress"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Since October 21, 2026, two critical vulnerabilities in PHP allow taking control of a server without a password, and patches only exist for branches 8.2 to 8.5. At IONOS, the PHP version is set per domain from the customer portal, and the host has a unique feature: an « Extended PHP Support » that allows staying on older versions. Here’s where to click, which version to choose, and what this support is worth in the current situation.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Before we begin:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "the verification tool",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/faille-php-verifier-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " reads the PHP version when the server displays it and recognizes IONOS as the host. The full context of the vulnerability is in ",
+              "type": "text"
+            },
+            {
+              "text": "the main article",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/faille-php-octobre-2026-site-boutique-logiciel-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What IONOS said on October 21",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On the evening of October 21, I found no public announcement from IONOS regarding these vulnerabilities, neither on its support page nor in the press, unlike o2switch, OVHcloud, or Infomaniak. This doesn’t mean nothing is being done: in shared hosting, IONOS itself installs new PHP versions on its servers for maintained branches. This means you must check for yourself, and the only reliable answer is from support in writing: which PHP version is my site using, and is the October 21 patch installed?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Where to change the PHP version in the IONOS customer portal",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Log in to your customer portal and select ",
+              "type": "text"
+            },
+            {
+              "text": "Hosting",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " to open the overview of your web project. Locate the ",
+              "type": "text"
+            },
+            {
+              "text": "PHP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " section and click on ",
+              "type": "text"
+            },
+            {
+              "text": "Open",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Check the box for the affected domain(s), then click on ",
+              "type": "text"
+            },
+            {
+              "text": "Modify PHP Version",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Select the desired version and save. IONOS states that the update « may take some time »: usually a few minutes, the time it takes for the setting to propagate.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The key detail not to miss: at IONOS, the setting is ",
+              "type": "text"
+            },
+            {
+              "text": "per domain",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". If you have a showcase website and a store on two domains under the same contract, you must check both. A forgotten subdomain remains on the old version.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "PHP Extended Support: what it is, and what it does not guarantee",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "IONOS offers a service called PHP Extended Support: its own teams fix security vulnerabilities in PHP versions that the PHP project no longer maintains, such as 7.2 or 7.3, to allow an old site to continue running. The IONOS guide does not specify whether this service is charged: check your contract.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In the situation of October 21, two things to know. On the one hand, this support fixes vulnerabilities « after the fact, » once IONOS has produced its own patch: nothing guarantees that your old version is protected on the same day. On the other hand, a site still running PHP 7.x or 8.0 in 2026 has a broader issue than this vulnerability. The proper solution is to switch to a maintained branch. To cancel extended support, the process is the same: ",
+              "type": "text"
+            },
+            {
+              "text": "Hosting",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "PHP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "Open",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", select the domain, choose a current version, ",
+              "type": "text"
+            },
+            {
+              "text": "Save",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", then click on the link ",
+              "type": "text"
+            },
+            {
+              "text": "Cancel PHP Extended Support",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " in the following window.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Which version to choose",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.3 or 8.4:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " the safe choice for WordPress, WooCommerce, or a recent tool. The patched versions are 8.3.36 and 8.4.27, with security fixes until 2027 and 2028.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.2:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " patched in 8.2.35, but the branch ends on December 31, 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.1 and older:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " No official corrected version is available. If your site is affected, upgrading isn’t just about comfort—it’s a security update. Before proceeding, check that your CMS, theme, and extensions support the target version: WordPress runs from 7.4 to 8.5, PrestaShop depends on its own version, and it’s almost always an outdated extension that causes the block.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Verify that the patch is properly installed",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The client area menu displays the branch. The exact number can be found on your site’s phpinfo page or, for WordPress, in ",
+              "type": "text"
+            },
+            {
+              "text": "Tools",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", then ",
+              "type": "text"
+            },
+            {
+              "text": "Site Health",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", tab ",
+              "type": "text"
+            },
+            {
+              "text": "Info",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", section ",
+              "type": "text"
+            },
+            {
+              "text": "Server",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". The numbers to look for are 8.2.35, 8.3.36, 8.4.27, or 8.5.12. If you see a lower number after selecting the correct branch, IONOS hasn’t yet received the update—that’s when a written request to support makes all the difference. ",
+              "type": "text"
+            },
+            {
+              "text": "The verification tool",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/faille-php-verifier-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " reads the number once the server displays it.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "If the site breaks after the upgrade",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "IONOS states it in their guide: back up the project beforehand, check the site afterward, and if something breaks, revert to the previous version using the same menu. Common errors after an upgrade have their own help page at IONOS, but in practice, it’s usually an outdated extension or theme, and the fix is to update or replace it before upgrading again.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "And if you don’t want to handle it yourself",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I perform this intervention remotely: backup, testing on a copy, version upgrade for each domain, patch verification, testing of the homepage, admin panel, and a payment process, followed by a written report. I respond within 24 hours. The same guides apply for ",
+              "type": "text"
+            },
+            {
+              "text": "OVHcloud",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-ovh-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " and ",
+              "type": "text"
+            },
+            {
+              "text": "o2switch",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-o2switch-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sources:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "IONOS guide « Update PHP version and cancel PHP Extended Support »",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.ionos.com/digitalguide/websites/web-development/update-php-version-and-cancel-php-extended-support/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "list of hosts compiled by Clubic on October 21 at 6:25 PM",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.clubic.com/actualite-635374-failles-php-les-correctifs-sont-disponibles-mais-votre-hebergeur-protege-t-il-vraiment-votre-site.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "corrected versions on php.net",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.php.net/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "69d4d880-f360-437d-827c-85191ccd12a4",
+            "body": [
+              {
+                "_uid": "i-506bc9b0-5275-4bc6-a477-0a391280a5bf",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Write to me with your website address",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

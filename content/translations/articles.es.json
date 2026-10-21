@@ -24952,5 +24952,625 @@
         }
       ]
     }
+  },
+  "blog/changer-version-php-ionos-faille-octobre-2026": {
+    "title": "Cambiar la versión de PHP en IONOS tras la vulnerabilidad del 21 de octubre de 2026: panel de cliente y soporte extendido de PHP",
+    "excerpt": "En IONOS, la versión de PHP se configura por dominio desde el panel de cliente. ¿Dónde hacer clic, qué versión elegir tras la vulnerabilidad del 21 de octubre de 2026, y qué ofrece el soporte extendido de PHP (PHP Extended Support).",
+    "metaTitle": "Cambiar la versión de PHP en IONOS tras la vulnerabilidad de PHP 2026",
+    "metaDescription": "Vulnerabilidad de PHP del 21 de octubre de 2026: dónde cambiar la versión de PHP en el panel de cliente de IONOS, qué versión elegir y qué ofrece el soporte extendido de PHP (PHP Extended Support).",
+    "tags": [
+      "PHP",
+      "IONOS",
+      "alojamiento web",
+      "seguridad informática",
+      "WordPress"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña, y los parches solo existen para las ramas 8.2 a 8.5. En IONOS, la versión de PHP se configura por dominio desde el espacio del cliente, y el alojamiento tiene una particularidad: un « PHP Extended Support » que permite mantener versiones antiguas. Aquí está dónde hacer clic, qué versión elegir y qué valor tiene este soporte en la situación actual.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Antes de empezar:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "la herramienta de verificación",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/faille-php-verifier-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " lee la versión de PHP cuando el servidor la muestra y reconoce a IONOS como proveedor de alojamiento. El contexto completo de la vulnerabilidad está en ",
+              "type": "text"
+            },
+            {
+              "text": "el artículo principal",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/faille-php-octobre-2026-site-boutique-logiciel-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que IONOS dijo el 21 de octubre",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Al caer el 21 de octubre, no encontré ningún anuncio público de IONOS sobre estas vulnerabilidades, ni en su página de asistencia, ni en la prensa, a diferencia de o2switch, OVHcloud o Infomaniak. Esto no significa que no se esté haciendo nada: en alojamiento compartido, IONOS instala automáticamente las nuevas versiones de PHP en sus servidores para las ramas mantenidas. Esto significa que debe verificar por sí mismo, y que la única respuesta fiable es la del soporte, por escrito: ¿qué versión de PHP usa mi sitio, y si se ha instalado el parche del 21 de octubre?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Dónde cambiar la versión de PHP en el espacio del cliente de IONOS",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Inicie sesión en su espacio del cliente y seleccione ",
+              "type": "text"
+            },
+            {
+              "text": "Alojamiento",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " para abrir el resumen de su proyecto web. Localice la sección ",
+              "type": "text"
+            },
+            {
+              "text": "PHP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " y haga clic en ",
+              "type": "text"
+            },
+            {
+              "text": "Abrir",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Marque la casilla del o los dominios afectados y luego haga clic en ",
+              "type": "text"
+            },
+            {
+              "text": "Modificar la versión de PHP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Seleccione la versión deseada y guarde los cambios. IONOS indica que la actualización «puede tomar un tiempo»: generalmente unos minutos, el tiempo que tarda en aplicarse el cambio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El detalle que no debe perderse: en IONOS, la configuración es ",
+              "type": "text"
+            },
+            {
+              "text": "por dominio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Si tiene un sitio web informativo y una tienda en dos dominios del mismo contrato, debe marcar ambos. Un subdominio olvidado sigue en la versión antigua.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Soporte Extendido de PHP: qué es y qué no garantiza",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "IONOS ofrece un servicio llamado Soporte Extendido de PHP: sus propios equipos corrigen vulnerabilidades de seguridad en versiones de PHP que el proyecto PHP ya no mantiene, como 7.2 o 7.3, para permitir seguir ejecutando un sitio antiguo. La guía de IONOS no especifica si este servicio tiene costo: revise su contrato.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En la situación del 21 de octubre, dos cosas a saber. Por un lado, este soporte corrige las vulnerabilidades « a posteriori », una vez que IONOS haya desarrollado su propio parche: no hay garantía de que su versión antigua esté protegida el mismo día. Por otro lado, un sitio que siga en PHP 7.x o 8.0 en 2026 tiene de todos modos un problema más amplio que esta vulnerabilidad. La solución limpia es migrar a una rama mantenida. Para cancelar el soporte extendido, el procedimiento es el mismo: ",
+              "type": "text"
+            },
+            {
+              "text": "Alojamiento",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "PHP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "Abrir",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", seleccione el dominio, elija una versión actualizada, ",
+              "type": "text"
+            },
+            {
+              "text": "Guardar",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", y luego haga clic en el enlace ",
+              "type": "text"
+            },
+            {
+              "text": "Cancelar Soporte Extendido de PHP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " en la ventana que aparece.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Qué versión elegir",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.3 o 8.4:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " la opción segura para WordPress, WooCommerce o una herramienta reciente. Las versiones corregidas son 8.3.36 y 8.4.27, con parches de seguridad hasta 2027 y 2028.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.2:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " corregida en 8.2.35, pero la rama finaliza el 31 de diciembre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.1 y versiones anteriores:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ninguna versión oficial corregida. Si tu sitio está allí, el cambio de versión no es una opción de comodidad, es una actualización de seguridad. Antes de actualizar, verifica que tu CMS, tu tema y tus extensiones sean compatibles con la versión objetivo: WordPress funciona desde la 7.4 hasta la 8.5, PrestaShop depende de su propia versión, y casi siempre es una extensión antigua la que bloquea el cambio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Verificar que el parche esté correctamente instalado",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El menú del espacio del cliente muestra la rama. El número exacto se lee en la página phpinfo de tu sitio o, en WordPress, en ",
+              "type": "text"
+            },
+            {
+              "text": "Herramientas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", luego en ",
+              "type": "text"
+            },
+            {
+              "text": "Estado del sitio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", pestaña ",
+              "type": "text"
+            },
+            {
+              "text": "Información",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", sección ",
+              "type": "text"
+            },
+            {
+              "text": "Servidor",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Los números que deben aparecer son 8.2.35, 8.3.36, 8.4.27 o 8.5.12. Si lees un número inferior después de seleccionar la rama correcta, el servidor IONOS aún no ha recibido la actualización: ahí es donde cobra sentido la solicitud escrita al soporte. ",
+              "type": "text"
+            },
+            {
+              "text": "La herramienta de verificación",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/faille-php-verifier-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " lee el número cuando el servidor lo muestra.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Si el sitio falla después del cambio",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "IONOS lo dice claramente en su guía: haz una copia de seguridad del proyecto antes, verifica el sitio después, y si algo falla, vuelve a la versión anterior por el mismo menú. Los errores frecuentes después de un cambio de versión tienen su propia página de ayuda en IONOS, pero en la práctica suele ser una extensión o un tema desactualizado, y la solución consiste en actualizarlo o reemplazarlo antes de subir de versión.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Y si no quieres manejarlo tú",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "yo realizo esta intervención a distancia: copia de seguridad, prueba en una copia, cambio de versión para cada dominio, verificación del parche, prueba del inicio, de la administración y de un pago, y luego un informe escrito. Respondo en menos de 24 horas. Los mismos guías existen para ",
+              "type": "text"
+            },
+            {
+              "text": "OVHcloud",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-ovh-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " y ",
+              "type": "text"
+            },
+            {
+              "text": "o2switch",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-o2switch-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Fuentes:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "guía de IONOS «Actualizar la versión de PHP y cancelar el soporte extendido de PHP»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.ionos.com/digitalguide/websites/web-development/update-php-version-and-cancel-php-extended-support/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "relevamiento de alojamientos por Clubic el 21 de octubre a las 18:25",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.clubic.com/actualite-635374-failles-php-les-correctifs-sont-disponibles-mais-votre-hebergeur-protege-t-il-vraiment-votre-site.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "versiones corregidas en php.net",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.php.net/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "69d4d880-f360-437d-827c-85191ccd12a4",
+            "body": [
+              {
+                "_uid": "i-506bc9b0-5275-4bc6-a477-0a391280a5bf",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Escríbame con la dirección de su sitio",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
