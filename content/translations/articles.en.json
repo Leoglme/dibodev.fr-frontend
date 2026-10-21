@@ -26941,5 +26941,769 @@
         }
       ]
     }
+  },
+  "blog/changer-version-php-planethoster-faille-octobre-2026": {
+    "title": "Changing the PHP Version on PlanetHoster After the October 21, 2026 Vulnerability: N0C, cPanel, and WHM",
+    "excerpt": "PlanetHoster deploys patches and temporarily blocks file uploads. Where to change the PHP version in N0C, cPanel, or WHM depending on your account, which version to choose, and the pitfall of the dropdown menu that goes all the way down to PHP 4.4.",
+    "metaTitle": "Changing Your PHP Version on PlanetHoster After the 2026 Vulnerability",
+    "metaDescription": "PHP vulnerability of October 21, 2026: where to change your PHP version on PlanetHoster (N0C, cPanel, WHM), which version to select, and what the host announced.",
+    "tags": [
+      "PHP",
+      "PlanetHoster",
+      "hosting",
+      "security",
+      "WordPress"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Since October 21, 2026, two critical vulnerabilities in PHP have allowed servers to be taken over without a password, and patches exist only for branches 8.2 to 8.5. PlanetHoster published a dedicated notice on the same day and deployed the fixes on its servers. However, with this host, three control panels coexist depending on the age of your account, and the version menu goes down to PHP 4.4 without a single warning. Here’s what they announced, how to change the version in N0C, cPanel, or WHM, and which version to choose.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Before you begin:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "the verification tool",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/faille-php-verifier-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " reads the PHP version as displayed by the server and recognizes PlanetHoster as the host. The full context of the vulnerability is in ",
+              "type": "text"
+            },
+            {
+              "text": "the main article",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/faille-php-octobre-2026-site-boutique-logiciel-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What PlanetHoster said on October 21",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PlanetHoster published a dedicated advisory page about the vulnerability, available in French and English. At 4 PM Paris time, the patches released by the PHP project were being deployed « across all our servers. » By 6:50 PM, the deployment was still ongoing. At 10:10 PM, they reported monitoring a potential additional vulnerability affecting version 8.5.12 as well and maintained their protections. In the meantime, two emergency measures were taken: the session.upload_progress functionality was disabled, and multipart/form-data requests were blocked, which may return a 403 error to your forms with attachments and file uploads as long as the measure remains active. The page concludes: « no action is required on your part, » and support responds to questions by citing « PHP2Shell. »",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Two caveats, the same as with other hosts. The emergency measures do not replace the corrected version, and a site remaining on a branch no longer supported by the PHP project, such as 8.1 or older, will not receive a patch unless PlanetHoster announces a custom fix, which the page does not mention.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Where to change the PHP version depending on your control panel",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On N0C, the current panel:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " in the menu, open ",
+              "type": "text"
+            },
+            {
+              "text": "Languages",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", then ",
+              "type": "text"
+            },
+            {
+              "text": "PHP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". The list ",
+              "type": "text"
+            },
+            {
+              "text": "PHP Versions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " displays the current version; select another one and click on ",
+              "type": "text"
+            },
+            {
+              "text": "Apply",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". ",
+              "type": "text"
+            },
+            {
+              "text": "PHP Extensions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " and ",
+              "type": "text"
+            },
+            {
+              "text": "Options",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " are used to enable extensions and configure php.ini, and the ",
+              "type": "text"
+            },
+            {
+              "text": "Reset",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " button restores default values. The setting applies to the entire N0C web project: two sites requiring different versions must be in separate projects.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On an old cPanel account, the pre-N0C",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " tool ",
+              "type": "text"
+            },
+            {
+              "text": "Select PHP Version",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", choose the version, then ",
+              "type": "text"
+            },
+            {
+              "text": "Set as current",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "; extensions are managed via ",
+              "type": "text"
+            },
+            {
+              "text": "Switch to PHP extensions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", and the setting applies to the entire cPanel account.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On HybridCloud, with WHM:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "MultiPHP Manager",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", under ",
+              "type": "text"
+            },
+            {
+              "text": "Set PHP Version per Domain",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", select the domain, choose the version, ",
+              "type": "text"
+            },
+            {
+              "text": "Apply",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "The update takes about one minute.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Which version to choose",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.3 or 8.4:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " the safest choice for WordPress, WooCommerce, or a recent tool. The patched versions are 8.3.36 and 8.4.27, with security fixes until 2027 and 2028. N0C offers both, as well as 8.5.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.2:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " patched in 8.2.35, but the branch ends on December 31, 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.1 and older:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " N0C lets you choose all versions from 4.4 to 8.1 without warning. No official patched version exists for these branches. If your site is on one of these, upgrading versions is not an option—it’s the security update itself. Check beforehand that your theme and plugins support the target version: WordPress works from 7.4 to 8.5; it’s old extensions that break things.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Check that the patch is properly installed",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The dashboard displays the branch, not the exact patch number. The full number appears on a phpinfo page or, on WordPress, in ",
+              "type": "text"
+            },
+            {
+              "text": "Tools",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", then ",
+              "type": "text"
+            },
+            {
+              "text": "Site Health",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", tab ",
+              "type": "text"
+            },
+            {
+              "text": "Info",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", section ",
+              "type": "text"
+            },
+            {
+              "text": "Server",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". The numbers to appear are 8.2.35, 8.3.36, 8.4.27, or 8.5.12. If you see a lower number, the deployment hasn’t reached your server yet: the PlanetHoster notice page shows the progress, and ",
+              "type": "text"
+            },
+            {
+              "text": "the verification tool",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/faille-php-verifier-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " reads the number once the server displays it.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "If the site breaks after the update",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The first reflex: go back to the previous version via the same menu, long enough to update the faulty extension or theme, then roll back. Before any action, back up off the server and test on a copy. A blank page or a 500 error right after the change almost always comes from a missing PHP extension in the Extensions tab or a function removed between branches. And if your forms return a 403 error tonight, it’s not your version change: it’s the temporary blocking of multipart uploads decided by your host.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "And if you don’t want to handle it yourself",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I perform this intervention remotely: backup, testing on a copy, version update, extension verification, patch control, testing of the homepage, admin panel, and a payment, followed by a written report. I respond within 24 hours. The same guides exist for ",
+              "type": "text"
+            },
+            {
+              "text": "OVHcloud",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-ovh-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "o2switch",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-o2switch-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "IONOS",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-ionos-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "Hostinger",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-hostinger-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " and ",
+              "type": "text"
+            },
+            {
+              "text": "Infomaniak",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-infomaniak-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sources:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "N0C knowledge base « PHP »",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://kb.n0c.com/knowledge-base/php/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "PlanetHoster cPanel guide « Modify PHP Values »",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://kb.planethoster.com/en/guide/control-panel/cpanel/how-to-modify-php-value-s-on-a-shared-hosting/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "PlanetHoster HybridCloud guide « Manage PHP »",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://kb.planethoster.com/en/guide/hybridcloud/hybridcloud-how-to/hybridcloud-manage-php-and-its-multiple-options/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "PlanetHoster review dated October 21, 2026",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://php-21oct.planethoster.live/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "corrected versions on php.net",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.php.net/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "27595521-e32f-4c8e-a455-6ac36f114c09",
+            "body": [
+              {
+                "_uid": "i-75654509-3a0e-4584-a9b1-8555125c5196",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Write to me with your website address",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
