@@ -26366,5 +26366,580 @@
         }
       ]
     }
+  },
+  "blog/changer-version-php-infomaniak-faille-octobre-2026": {
+    "title": "Changing the PHP Version at Infomaniak After the October 21, 2026 Vulnerability: Manager, Step-by-Step Guide",
+    "excerpt": "Infomaniak self-patches PHP 7.4, 8.0, and 8.1—something nearly no other host does. Here’s what they rolled out hour by hour on October 21st, how to update your PHP version in Manager, and why you should upgrade even if you’re not directly affected.",
+    "metaTitle": "Changing Your PHP Version at Infomaniak After the 2026 Vulnerability",
+    "metaDescription": "The October 21, 2026 PHP vulnerability: what Infomaniak deployed hour by hour, how to update your PHP version in Manager, and which version to choose for optimal security.",
+    "tags": [
+      "PHP",
+      "Infomaniak",
+      "hosting",
+      "security",
+      "WordPress"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Since October 21, 2026, two critical vulnerabilities in PHP allow taking control of a server without a password. Infomaniak is among the hosts that communicated as early as the afternoon, and it is one of the few to fix outdated PHP branches that the PHP project no longer supports. Here’s what they did, how to change the PHP version in the Manager, and why it’s still better to upgrade.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Before we begin:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "the verification tool",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/faille-php-verifier-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " reads the PHP version as displayed by the server and recognizes Infomaniak as the host. The full context of the vulnerability is in ",
+              "type": "text"
+            },
+            {
+              "text": "the main article",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/faille-php-octobre-2026-site-boutique-logiciel-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Infomaniak did on October 21",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On its status page, Infomaniak opened maintenance at 3 PM titled « Critical PHP Vulnerabilities, » scheduled until October 22 at 3 AM. The opening message: mitigation measures and fixes were deployed by their teams, no action was required from clients except migrating a site still running an unsupported PHP version. Then, hour by hour: at 4:29 PM, phpMyAdmin went into maintenance; at 4:53 PM, the function involved in one of the two vulnerabilities, session.upload_progress, was disabled across the entire platform, freezing the progress bar for some file uploads without preventing the upload; at 5:04 PM, deployment of the fixed versions for PHP 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, and 8.5 began; at 9:09 PM, deployment was still ongoing; at 11:21 PM, ongoing infrastructure migrations were paused to avoid disrupting the operation. A second notice, at 5:20 PM, temporarily limited file uploads on kSuite, SwissTransfer, and ticketing.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The notable point: Infomaniak announced fixes for 7.4, 8.0, and 8.1, branches for which the PHP project no longer releases updates. These are backported fixes by their teams. It’s genuine protection, but it applies only to this host, and their own message still recommends upgrading.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Where to check and change the PHP version in the Manager",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In the Infomaniak Manager, open the ",
+              "type": "text"
+            },
+            {
+              "text": "hosting and site management",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", click on the name of the site in question, then on ",
+              "type": "text"
+            },
+            {
+              "text": "More information",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". In the PHP section, click on ",
+              "type": "text"
+            },
+            {
+              "text": "Edit",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", select the version, then ",
+              "type": "text"
+            },
+            {
+              "text": "Save",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". The setting is per site, and the change is immediate.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Two key details to note. First, Infomaniak prevents reverting to an older version once the change is made: test on a backup first if your site is outdated, as you won’t be able to undo it with a single click. Second, for long-standing hosting, the Manager may require updating the hosting itself before offering newer PHP versions: a banner indicates this if applicable, and tonight this update may be paused while the fixes are deployed.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Which version to choose",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.3 or 8.4:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " the safe choice for WordPress, WooCommerce, or a newer tool. The patched versions are 8.3.36 and 8.4.27, with security fixes until 2027 and 2028.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.2:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " patched up to 8.2.35, but the branch ends on December 31, 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.1, 8.0, 7.4:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " at Infomaniak, these branches receive a custom patch for this vulnerability, which is not the case with most hosting providers. This gives you time to properly prepare for the version upgrade, without postponing it until next year: these branches no longer have official fixes for subsequent vulnerabilities. Check that your theme and plugins support the target version, then upgrade.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Check that the patch is properly installed",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The Manager displays the branch. The exact patch number can be read on a phpinfo page or, on WordPress, in ",
+              "type": "text"
+            },
+            {
+              "text": "Tools",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", then ",
+              "type": "text"
+            },
+            {
+              "text": "Site Health",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", tab ",
+              "type": "text"
+            },
+            {
+              "text": "Info",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", section ",
+              "type": "text"
+            },
+            {
+              "text": "Server",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". For branches 8.2 to 8.5, the numbers to look for are 8.2.35, 8.3.36, 8.4.27, and 8.5.12. For 7.4, 8.0, and 8.1, the patch backported by Infomaniak does not always change the displayed number: it is the status page and a written response from support that are authoritative. ",
+              "type": "text"
+            },
+            {
+              "text": "The verification tool",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/faille-php-verifier-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " reads the number when the server displays it and reflects the hosting provider's status.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "If the site breaks after the change",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Since rolling back is blocked at Infomaniak, extra caution is advised: back up outside the server, test on a site copy, update the theme and extensions before upgrading. A blank page or a 500 error right after almost always comes from an incompatible extension or a deprecated function between branches, and the PHP error log of the site—accessible in the Manager—will reveal which one.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "And if you don’t want to handle it yourself",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I perform this intervention remotely: backup, testing on a copy, updating extensions, version change, patch verification, testing the homepage, admin panel, and a payment process, followed by a written report. I respond within 24 hours. The same guides apply for ",
+              "type": "text"
+            },
+            {
+              "text": "OVHcloud",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-ovh-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "o2switch",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-o2switch-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "IONOS",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-ionos-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "Hostinger",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-hostinger-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " and ",
+              "type": "text"
+            },
+            {
+              "text": "PlanetHoster",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-planethoster-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sources:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "Infomaniak guide ‘Modify the PHP version of a site’",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.infomaniak.com/fr/support/faq/2053/modifier-la-version-de-php-dun-site",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "Infomaniak status page, maintenance note ‘Critical PHP vulnerabilities’ from October 21, 2026",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://infomaniakstatus.com/p7jX3ML9E1/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "fixed versions on php.net",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.php.net/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "5cfe710d-b04a-4264-8f40-d2d92503115d",
+            "body": [
+              {
+                "_uid": "i-27fc0e09-3680-481c-9842-43ac72bf3013",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Write to me with your website address",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
