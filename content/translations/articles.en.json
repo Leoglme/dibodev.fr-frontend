@@ -22592,17 +22592,17 @@
     }
   },
   "blog/faille-php-octobre-2026-site-boutique-logiciel-que-faire": {
-    "title": "October 2026 PHP Vulnerabilities: Is Your Website, Store, or Software Affected, and What Should You Do?",
+    "title": "October 2026 PHP Vulnerability: Is Your Website, Store, or Software Affected, and What Should You Do?",
     "excerpt": "Two critical vulnerabilities in PHP were patched on October 21, 2026. Are your WordPress sites, PrestaShop or WooCommerce stores, custom business software, or internal networks at risk? Learn who is impacted, what your hosting provider is doing, and what actions you should take today.",
     "metaTitle": "October 2026 PHP Vulnerability: Is Your Site at Risk?",
-    "metaDescription": "Two critical PHP vulnerabilities were patched on 21 October 2026. WordPress sites, PrestaShop stores, business software: who is affected and what to do today.",
+    "metaDescription": "Two critical PHP vulnerabilities were patched on October 21, 2026. Learn if your WordPress sites, PrestaShop stores, or custom business software are affected—and what steps you should take now.",
     "tags": [
       "security",
       "PHP",
       "WordPress",
       "hosting",
       "website",
-      "business software"
+      "enterprise software"
     ],
     "content": {
       "type": "doc",
@@ -22611,7 +22611,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "On October 21, 2026, just before 4 PM, the PHP team released four patched versions to fix two critical vulnerabilities that allow taking control of a server without a password. PHP is the language that powers WordPress, PrestaShop, WooCommerce, Joomla, Drupal, Magento, and a large portion of custom business software, intranets, and customer portals built by agencies or freelancers. In other words: if you have a website, an online store, or a management tool accessible over the internet, there’s a good chance it’s affected.",
+              "text": "On October 21, 2026, just before 4 PM, the PHP team released four patched versions to fix two critical vulnerabilities that allow taking control of a server without a password. PHP is the language powering WordPress, PrestaShop, WooCommerce, Joomla, Drupal, Magento, and a large portion of custom business software, intranets, and customer portals built by agencies or freelancers. In other words: if you have a website, an online store, or an internet-accessible management tool, there’s a good chance it’s affected.",
               "type": "text"
             }
           ]
@@ -22629,7 +22629,7 @@
               ]
             },
             {
-              "text": " the fix is applied on the server, not in WordPress or a plugin. In shared hosting (OVHcloud, o2switch, IONOS, Hostinger, Infomaniak, PlanetHoster…), it’s the hosting provider that installs the new PHP version, but it’s up to you to check if they’ve done it, and to switch versions yourself if your site is still running PHP 8.1 or an older version. To check your status in ten seconds, I’ve put online a ",
+              "text": " the fix is applied on the server, not in WordPress or a plugin. In shared hosting (OVHcloud, o2switch, IONOS, Hostinger, Infomaniak, PlanetHoster…), it’s the hosting provider that installs the new PHP version, but it’s up to you to check if they did, and to switch versions yourself if your site is still running PHP 8.1 or older. To check your status in ten seconds, I’ve put online a ",
               "type": "text"
             },
             {
@@ -22668,7 +22668,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The two vulnerabilities are referenced as CVE-2026-109618 and CVE-2026-109619, with the nickname PHP2Shell. They are rated 9.2 out of 10. In concrete terms, a well-formed web request is enough to execute code on the server before the site or application even launches. No account, no password, no need for the site to have a bug: the flaw is in PHP itself.",
+              "text": "The two vulnerabilities are listed as CVE-2026-109618 and CVE-2026-109619, with the nickname PHP2Shell. They are rated 9.2 out of 10. In practice, a well-crafted web request is enough to execute code on the server before the site or application even loads. No account, no password, no need for the site to have a bug: the flaw is in PHP itself.",
               "type": "text"
             }
           ]
@@ -22677,7 +22677,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The story began with a leak. On Monday, October 20, a post on Hacker News announced two critical vulnerabilities under embargo. The company watchTowr confirmed that evening that they were real, and PHP announced a patch for the following day at 2 PM UTC. In the meantime, pages claiming to publish an exploit circulated, Cloudflare activated firewall rules for all its clients starting at 3:02 AM UTC, and saw attackers modifying their payloads to bypass them. The patches were released on Wednesday with a slight lead: PHP 8.5.12, 8.4.27, 8.3.36, and 8.2.35.",
+              "text": "The story began with a leak. On Monday, October 20, a post on Hacker News announced two critical vulnerabilities under embargo. The company watchTowr confirmed that night that they were real, and PHP announced a patch for the following day at 2 PM UTC. In the meantime, pages claiming to publish an exploit circulated, Cloudflare activated firewall rules for all its clients as early as 3:02 AM UTC, and saw attackers modifying their payloads to bypass them. The patches were released on Wednesday with a slight lead: PHP 8.5.12, 8.4.27, 8.3.36, and 8.2.35.",
               "type": "text"
             }
           ]
@@ -22695,7 +22695,7 @@
               ]
             },
             {
-              "text": " in the afternoon, the French Ministry of the Interior took all prefecture websites offline at the request of ANSSI, citing « preventive maintenance of all its internet sites exposed to a critical security vulnerability, » and Météo-France closed its forecast and alert sites on its own initiative. Part of the tax authority’s portal was also taken down according to the press. The Netherlands shut down DigiD and MijnOverheid, Finland its online public services, British local councils and Danish services did the same. None of these sites reported any breaches: it was a precautionary measure, exactly what CERT-FR recommends when you can’t patch immediately. If the government shuts down its own sites rather than take the risk, a business site running on PHP has no reason to think it’s safe.",
+              "text": " in the afternoon, the French Ministry of the Interior took all prefecture websites offline at the request of ANSSI, citing « preventive maintenance of all its internet sites exposed to a critical security vulnerability, » and Météo-France closed its forecast and alert sites on its own initiative. Part of the tax authority’s portal was also taken down, according to the press. The Netherlands shut down DigiD and MijnOverheid, Finland its online public services, British local councils and Danish services did the same. None of these sites reported any breaches: it was a precautionary measure, exactly what CERT-FR recommends when you can’t patch immediately. If the government shuts down its own sites rather than risk it, a business website running on PHP has no reason to think it’s safe.",
               "type": "text"
             }
           ]
@@ -22704,7 +22704,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The game-changer:",
+              "text": "The game-changing detail:",
               "type": "text",
               "marks": [
                 {
@@ -22713,7 +22713,7 @@
               ]
             },
             {
-              "text": " PHP 8.1, 8.0, 7.4, and older versions will no longer receive updates. The project released source patches for 7.4, 8.0, and 8.1, which users must compile themselves or obtain from their hosting provider, but no official version will be automatically installed. According to W3Techs, about one in four PHP sites still runs on PHP 7. If that’s yours, no one will fix it for you.",
+              "text": " PHP 8.1, 8.0, 7.4, and older versions will not receive new updates. The project released source patches for 7.4, 8.0, and 8.1, which users must compile themselves or obtain from their host, but no official version will be automatically installed. According to W3Techs, about one in four PHP sites still runs on PHP 7. If that’s yours, no one will fix it for you.",
               "type": "text"
             }
           ]
@@ -22722,7 +22722,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "CERT-FR, the ANSSI team, issued the same-day alert CERTFR-2026-ALE-014: isolate affected systems, then switch to a maintained and patched version. Workarounds circulating—like disabling session.upload_progress or blocking file uploads—reduce the attack surface for one of the two flaws. They do not replace the update.",
+              "text": "CERT-FR, ANSSI’s team, issued the same-day alert CERTFR-2026-ALE-014: isolate affected systems, then switch to a maintained and patched version. Workarounds circulating—like disabling session.upload_progress or blocking file uploads—reduce the attack surface for one of the two flaws. They do not replace the update.",
               "type": "text"
             }
           ]
@@ -22740,7 +22740,7 @@
               ]
             },
             {
-              "text": " The nickname given to the two flaws: a specially crafted web request allows executing commands on the server—a « shell »—through PHP, without an account or password. There is no PHP2Shell virus to hunt for on your computer. It’s a flaw in the PHP engine itself, on the server, and it’s fixed by the October 21 versions.",
+              "text": " The nickname for the two vulnerabilities: a specially crafted web request allows executing commands on the server—a « shell »—through PHP, without an account or password. There is no PHP2Shell virus to hunt for on your computer. It’s a flaw in the PHP engine itself, on the server, and it’s fixed by the October 21 versions.",
               "type": "text"
             }
           ]
@@ -22813,7 +22813,7 @@
               ]
             },
             {
-              "text": " in 8.2.35, and it's the last corrected branch: it ends on December 31, 2026, so switching to 8.3 or 8.4 is inevitable before the end of the year. ",
+              "text": " in 8.2.35, and it's the last corrected branch: it ends on December 31, 2026, so switching to 8.3 or 8.4 is unavoidable before the end of the year. ",
               "type": "text"
             },
             {
@@ -22839,7 +22839,7 @@
               ]
             },
             {
-              "text": " have been unsupported for even longer: for these three, PHP has released source patches to compile yourself, and some hosts or Linux distributions include them in their packages. ",
+              "text": " for much longer: for these three, PHP has released source fixes to compile yourself, and some hosts or Linux distributions include them in their packages. ",
               "type": "text"
             },
             {
@@ -22852,7 +22852,7 @@
               ]
             },
             {
-              "text": ": nothing, and watchTowr considers all versions since PHP 5.4 as affected. Switching branches is the only solution.",
+              "text": ": nothing, and watchTowr considers all versions since PHP 5.4 as affected. Changing branches is the only solution.",
               "type": "text"
             }
           ]
@@ -22909,7 +22909,7 @@
               ]
             },
             {
-              "text": " in cPanel, under Software, the tool « Select PHP Version » displays the current version in a dropdown menu. Choose 8.3 or 8.4, then « Apply », keeping the default extensions checked. Note that the default « native » version is PHP 8.1, which has no patches: the full step-by-step guide and what o2switch did on October 21 is in ",
+              "text": " in cPanel, under Software, the tool « Select a PHP version » displays the current version in a dropdown menu. Choose 8.3 or 8.4, then « Apply », keeping the default extensions checked. Note that the default « native » version is PHP 8.1, which has no patches: the full step-by-step guide and what o2switch did on October 21 is in ",
               "type": "text"
             },
             {
@@ -22945,7 +22945,7 @@
               ]
             },
             {
-              "text": " customer space, Web Cloud, Hosting, your hosting, General Information tab, « Global PHP version » line. To change, under Configuration, click the « … » button then « Edit Configuration ». Those comfortable with it can also modify the app.engine.version line in the .ovhconfig file at the root of the FTP. The details, including the greyed-out button and the .ovhconfig file, are in ",
+              "text": " customer space, Web Cloud, Hosting, your hosting, General Information tab, line « Global PHP version ». To change, under Configuration, click the « … » button, then « Edit Configuration ». Those more comfortable can also modify the app.engine.version line in the .ovhconfig file at the root of the FTP. The details, including the grayed-out button and the .ovhconfig file, are in ",
               "type": "text"
             },
             {
@@ -22981,7 +22981,7 @@
               ]
             },
             {
-              "text": " customer space, Hosting section, PHP menu, « Open », select the domain, « Change PHP version », choose and save. The switch takes a few minutes, and the setting is per domain. The details, and what the « PHP Extended Support » from IONOS is, are in ",
+              "text": " customer space, Hosting section, PHP menu, « Open », select the domain, « Change PHP version », choose and save. The switch takes a few minutes, and the setting applies per domain. The details, including what the « PHP Extended Support » from IONOS means, are in ",
               "type": "text"
             },
             {
@@ -23017,7 +23017,97 @@
               ]
             },
             {
-              "text": " Manager, Web Hosting, click on the product name, « More Information », « Edit », choose the version, « Save ». The change is immediate, and reverting to a vulnerable version is then blocked.",
+              "text": " Manager, Web Hosting, click on the product name, « More Information », « Edit », choose the version, « Save ». The change is immediate, and reverting to a vulnerable version is then blocked. Infomaniak also patches PHP 7.4, 8.0, and 8.1 on its own, which almost no other host does: the hourly breakdown is in ",
+              "type": "text"
+            },
+            {
+              "text": "the Infomaniak guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-infomaniak-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "At Hostinger:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " hPanel, Websites, « Manage », then « PHP Configuration » under « Advanced », choose the version, « Update ». The version applies to all sites on the plan, and Hostinger states « no action required », which doesn’t cover a site stuck on 8.1: ",
+              "type": "text"
+            },
+            {
+              "text": "the Hostinger guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-hostinger-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " explains why.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "At PlanetHoster:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " in N0C, « Languages », « PHP », choose the version, then « Apply »; on an older cPanel account or on HybridCloud, the path changes, and file uploads may return a 403 error tonight due to the host’s emergency measures: everything is in ",
+              "type": "text"
+            },
+            {
+              "text": "the PlanetHoster guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-planethoster-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
               "type": "text"
             }
           ]
@@ -23035,7 +23125,7 @@
               ]
             },
             {
-              "text": " in Plesk, Websites & Domains, PHP section for each site. On a server, php -v displays the version via command line, but it’s the phpinfo() page or the X-Powered-By header that shows which version actually serves the site. Then use apt or dnf to update, followed by a restart of PHP-FPM or Apache.",
+              "text": " In Plesk, under Websites & Domains, go to the PHP section for each site. On a server, running `php -v` shows the command-line version, but it's the `phpinfo()` page or the X-Powered-By header that reveals which version actually serves the site. Then use `apt` or `dnf` to update, followed by restarting PHP-FPM or Apache.",
               "type": "text"
             }
           ]
@@ -23044,7 +23134,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "In all cases, 8.2.35, 8.3.36, 8.4.27, and 8.5.12 are the numbers you should see appearing. ",
+              "text": "In any case, you should see versions 8.2.35, 8.3.36, 8.4.27, and 8.5.12 appearing. ",
               "type": "text"
             },
             {
@@ -23062,7 +23152,7 @@
               ]
             },
             {
-              "text": " reads the number when the server displays it and recognizes the host to guide you through the correct steps.",
+              "text": " reads the version number when the server displays it and identifies the hosting provider to guide you to the correct path.",
               "type": "text"
             }
           ]
@@ -23083,7 +23173,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "We often talk about « websites », but the vulnerability doesn’t care about the name you give it. It looks at what’s running on the server.",
+              "text": "We often talk about « websites, » but the vulnerability doesn’t care what you call it. It matters what’s running on the server.",
               "type": "text"
             }
           ]
@@ -23092,7 +23182,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Your showcase site",
+              "text": "Your brochure website",
               "type": "text",
               "marks": [
                 {
@@ -23101,7 +23191,7 @@
               ]
             },
             {
-              "text": " running WordPress, Joomla, Drupal, SPIP, or TYPO3 uses PHP. Affected.",
+              "text": " running on WordPress, Joomla, Drupal, SPIP, or TYPO3 uses PHP. Affected.",
               "type": "text"
             }
           ]
@@ -23119,7 +23209,7 @@
               ]
             },
             {
-              "text": " running PrestaShop, WooCommerce, Magento, or Thelia uses PHP. Affected, and it’s the most appealing target for an attacker: there are payments and addresses involved.",
+              "text": " running on PrestaShop, WooCommerce, Magento, or Thelia uses PHP. Affected—and it’s the most appealing target for an attacker: there are payments and addresses involved.",
               "type": "text"
             }
           ]
@@ -23128,7 +23218,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Your business software, your intranet, your extranet, your customer portal",
+              "text": "Your business software, intranet, extranet, or customer portal",
               "type": "text",
               "marks": [
                 {
@@ -23137,7 +23227,7 @@
               ]
             },
             {
-              "text": ", if they were developed in PHP (Laravel, Symfony, or custom code), are affected even if they are password-protected. The vulnerability occurs before the login page. An internal tool used only by your employees but accessible via the internet is exposed like a public site.",
+              "text": ", if developed in PHP (Laravel, Symfony, or custom code), are affected even if they’re password-protected. The vulnerability triggers before the login page. An internal tool used only by your employees but accessible over the internet is exposed like a public site.",
               "type": "text"
             }
           ]
@@ -23173,7 +23263,7 @@
               ]
             },
             {
-              "text": " website builders like Wix, Squarespace, Shopify, Webflow, Jimdo, or Google Sites. They do not run PHP for you, and they manage their own servers. An application developed in Node.js, Python, or .NET is also unaffected by this vulnerability. One caveat: Node.js released its own security patches on the same day, October 21st. Same reflex, same day.",
+              "text": " website builders like Wix, Squarespace, Shopify, Webflow, Jimdo, or Google Sites. They don’t run PHP for you, and they manage their own servers. An application built in Node.js, Python, or .NET isn’t affected by this vulnerability either. One caveat: Node.js released its own security patches the same day, October 21. Same reflex, same timing.",
               "type": "text"
             }
           ]
@@ -23200,7 +23290,7 @@
               ]
             },
             {
-              "text": " will scan your homepage: it identifies the platform, the PHP version when displayed, and often the hosting provider. Otherwise, the question to ask your service provider is simple: « what PHP version does this site use, and has it been updated since October 21st? »",
+              "text": " reads it from your homepage: it detects the platform, the PHP version if displayed, and often the hosting provider. Otherwise, the question to ask your provider is simple: « Which PHP version does this site use, and has it been updated since October 21? »",
               "type": "text"
             }
           ]
@@ -23212,7 +23302,7 @@
           },
           "content": [
             {
-              "text": "What your hosting provider does, and what they don’t",
+              "text": "What your host does—and what they don’t",
               "type": "text"
             }
           ]
@@ -23221,7 +23311,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "In shared hosting, PHP belongs to the provider. You can’t install it yourself; you only choose a branch (8.1, 8.2, 8.3…) in your account. The provider, however, installs corrected versions on their servers for maintained branches, from 8.2 to 8.5.",
+              "text": "In shared hosting, PHP is managed by the hosting provider. You cannot install it yourself; you only choose a branch (8.1, 8.2, 8.3…) from your account. The provider, however, installs the patched versions on their servers for maintained branches, from 8.2 to 8.5.",
               "type": "text"
             }
           ]
@@ -23230,7 +23320,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "As of October 21st in the evening, here’s what I observed. o2switch disabled the affected functionality as early as 8:07 AM, but at 4:40 PM, its servers were still running versions from October 6th, awaiting CloudLinux packages scheduled for the evening. OVHcloud announced firewall rules on its shared clusters and a maintenance campaign. Infomaniak opened a maintenance window from 3:00 PM to 3:00 AM the next day, deploying fixes by its teams and requiring no action, except for sites still on an older PHP version. For IONOS, Hostinger, PlanetHoster, LWS, or Gandi, I found no public announcement at that time.",
+              "text": "On the evening of October 21st, here’s what I could gather. o2switch disabled the feature in question as early as 8:07 AM, but at 4:40 PM, its servers were still running the October 6th versions, waiting for CloudLinux packages scheduled for that evening. OVHcloud announced firewall rules on its shared clusters and a maintenance campaign. Infomaniak opened a maintenance window from 3:00 PM to 3:00 AM the next day, with fixes deployed by its teams and no action required, except for sites still running an older PHP version. For IONOS, Hostinger, PlanetHoster, LWS, or Gandi, I found no public announcement at that time.",
               "type": "text"
             }
           ]
@@ -23248,7 +23338,7 @@
               ]
             },
             {
-              "text": " check in a day or two whether the version has actually changed. An announced patch is not necessarily an installed patch. And if your site is on PHP 8.1 or earlier, your host won’t update it: you’ll need to upgrade to 8.3 or 8.4 via cPanel, Plesk, or your client area, after backing up and testing, because an old theme or extension may not be compatible.",
+              "text": " check in a day or two that the version has actually changed. An announced patch is not necessarily an installed patch. And if your site is running PHP 8.1 or earlier, the host won’t touch it: it’s up to you to upgrade to 8.3 or 8.4 via cPanel, Plesk, or your client area, after a backup and testing, because an old theme or extension may not be compatible.",
               "type": "text"
             }
           ]
@@ -23260,7 +23350,7 @@
           },
           "content": [
             {
-              "text": "The three questions to ask your service provider",
+              "text": "The three questions to ask your provider",
               "type": "text"
             }
           ]
@@ -23269,7 +23359,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Many websites and tools were built three, five, or eight years ago by an agency or freelancer you no longer see. Now is the time to reach out to them via email to keep a record.",
+              "text": "Many websites and tools were created three, five, or even eight years ago by an agency or freelancer you no longer see. Now is the time to reach out to them via email to keep a record.",
               "type": "text"
             }
           ]
@@ -23287,7 +23377,7 @@
               ]
             },
             {
-              "text": " what PHP version is currently running the site or application? The answer should be a specific number, like 8.3.36, not ‘it’s up to date.’",
+              "text": " what PHP version is currently running the site or application? The answer should be a precise number, like 8.3.36, not just ‘it’s up to date.’",
               "type": "text"
             }
           ]
@@ -23323,7 +23413,7 @@
               ]
             },
             {
-              "text": " Have the server logs been checked since October 20th? Look for large multipart POST requests targeting pages that never receive them.",
+              "text": " have the server logs been reviewed since October 20? Large multipart POST requests targeting pages that don’t normally receive them are the red flag to look for.",
               "type": "text"
             }
           ]
@@ -23332,7 +23422,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "If no one responds within the day, or if the service provider no longer exists, that’s exactly the kind of situation I handle: I regain access, update everything, test it, and let you know what was done.",
+              "text": "If no one responds within the day, or if the provider no longer exists, that’s exactly the kind of situation I take over: I retrieve access, update, test, and let you know what’s been done.",
               "type": "text"
             }
           ]
@@ -23344,7 +23434,7 @@
           },
           "content": [
             {
-              "text": "What if your site is still running on PHP 7 or 8.1?",
+              "text": "And if your site is still running PHP 7 or 8.1?",
               "type": "text"
             }
           ]
@@ -23353,7 +23443,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "This is the trickiest and most common case among small businesses. Two options.",
+              "text": "This is the trickiest and most common scenario among small businesses. Two options.",
               "type": "text"
             }
           ]
@@ -23362,7 +23452,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The backported package:",
+              "text": "Backported package:",
               "type": "text",
               "marks": [
                 {
@@ -23371,7 +23461,7 @@
               ]
             },
             {
-              "text": " Some hosting providers and Linux distributions (Debian, Ubuntu) integrate fixes into older versions without changing the version number. You should ask them, in writing, if they’ve done so. An old version number doesn’t prove the vulnerability on its own, but in doubt, you need confirmation.",
+              "text": " some hosting providers and Linux distributions (Debian, Ubuntu) integrate patches into older versions without changing the version number. You must ask them, in writing, if this has been done. An old version number doesn’t prove the vulnerability on its own, but in doubt, you need confirmation.",
               "type": "text"
             }
           ]
@@ -23380,7 +23470,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Switching branches:",
+              "text": "Branch upgrade:",
               "type": "text",
               "marks": [
                 {
@@ -23389,7 +23479,7 @@
               ]
             },
             {
-              "text": " Upgrading to PHP 8.3 or 8.4. That’s the real solution—and it’s what you’ll have to do anyway, since PHP 8.2 support ends on December 31, 2026. You’ll need to check if your CMS, theme, and plugins support the new version, back up your data off the server, and test on a copy before switching. An hour for a simple site, half a day for a shop with many modules.",
+              "text": " switching to PHP 8.3 or 8.4. This is the real solution, and it’s also what you’ll eventually have to do, since PHP 8.2 support ends on December 31, 2026. It requires verifying that your CMS, theme, and extensions support the new version, backing up off-server, and testing on a copy before switching. An hour for a simple site, half a day for a store with many modules.",
               "type": "text"
             }
           ]
@@ -23398,7 +23488,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "If neither option is possible today, the CERT-FR’s recommendation is clear: take your application offline or place it behind an application firewall until the necessary steps are taken.",
+              "text": "If neither option is possible today, the CERT-FR recommendation is clear: take the application offline or place it behind an application firewall until the necessary steps are taken.",
               "type": "text"
             }
           ]
@@ -23410,7 +23500,7 @@
           },
           "content": [
             {
-              "text": "Tax authorities, prefectures, Météo-France: When will they be back, and should we worry?",
+              "text": "Taxes, prefectures, Météo-France: when will they be back, and should we be worried?",
               "type": "text"
             }
           ]
@@ -23419,7 +23509,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "If you’re here because impots.gouv.fr displays ‘under maintenance’ or your prefecture’s website isn’t responding: that’s this vulnerability, and it’s intentional. The Ministry of the Interior refers to ‘preventive maintenance’ and ‘better timelines’ for restoration, while Météo-France says the update is published but verifications must finish before reopening. No date was announced by October 21st evening—expect hours, not weeks. Your data isn’t at risk, no breach has been announced, and there’s nothing you need to do for these sites.",
+              "text": "If you landed here because impots.gouv.fr displays 'under maintenance' or your prefecture’s website isn’t responding: that’s the issue, and it’s intentional. The Ministry of the Interior refers to 'preventive maintenance' and 'better response times' for restoring services, while Météo-France states that the update is published but verifications must be completed before reopening. No date was announced by the evening of October 21st—expect hours, not weeks. Your data is not at risk, no breach has been announced, and there’s nothing you need to do for these sites.",
               "type": "text"
             }
           ]
@@ -23428,7 +23518,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "One precaution: emails and SMS claiming to be from the tax office, your host, or ‘ANSSI’ asking you to ‘verify your credentials’ will flood in over the coming days. Scams always follow this kind of news.",
+              "text": "One precaution: emails and SMS claiming to be from the tax office, your hosting provider, or 'ANSSI' asking you to 'verify your credentials' will flood in over the coming days. Scams always follow this kind of news.",
               "type": "text"
             }
           ]
@@ -23449,7 +23539,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "This is the most common misunderstanding I hear. ‘I did the updates, everything’s green.’ WordPress, PrestaShop, or plugin updates don’t touch PHP, which runs underneath. A security plugin might block some requests, not all, and attackers have already modified their payloads to bypass Cloudflare rules. The only real fix is updating PHP on the server.",
+              "text": "That’s the confusion I hear most often. 'I did the updates, everything’s green.' WordPress, PrestaShop, or plugin updates don’t touch PHP, which runs underneath. A security plugin may block some requests—not all—and attackers have already tweaked their payloads to bypass Cloudflare rules. The only real fix is updating PHP on the server.",
               "type": "text"
             }
           ]
@@ -23479,7 +23569,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "In the server access logs, look for unusual multipart POST requests since October 20th. In file upload directories (uploads, cache, tmp), check for recent .php files you didn’t place there. In the admin panel, look for unknown admin accounts and new scheduled tasks. If in doubt: immediate backup, change all admin passwords, and if customer personal data is involved, notify the CNIL within 72 hours.",
+              "text": "In your server access logs, look for unusual multipart POST requests since October 20th. In your file upload folders (uploads, cache, tmp), check for recent .php files you didn’t place there. In your admin panel, look for unknown admin accounts and new scheduled tasks. If in doubt: immediate backup, reset all admin passwords, and if customer data is involved, notify the CNIL within 72 hours.",
               "type": "text"
             }
           ]
@@ -23500,7 +23590,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I’m a freelance developer near Rennes and work remotely across France. For this vulnerability, I do one thing: check the actual PHP version running on your site, shop, or tool, update PHP or switch branches, verify everything still works, and let you know what was done. If your provider isn’t responding, I’ll regain access and take over.",
+              "text": "I’m a freelance developer near Rennes and work remotely across France. For this vulnerability, I do one thing: check the actual PHP version running on your site, shop, or tool, update PHP or switch branches, verify everything still works, and send you a report of what was done. If your provider isn’t responding, I can regain access and take over.",
               "type": "text"
             }
           ]
@@ -23527,7 +23617,7 @@
               ]
             },
             {
-              "text": ", it takes ten seconds. And if the result isn’t what you expected, ",
+              "text": ", it takes ten seconds. And if the result isn’t what you hoped for, ",
               "type": "text"
             },
             {
@@ -23603,7 +23693,7 @@
               "type": "text"
             },
             {
-              "text": "prefectures and Météo-France offline, France 3 on October 21 at 6:56 PM",
+              "text": "prefectures and Météo-France offline, France 3 at 6:56 PM on October 21st",
               "type": "text",
               "marks": [
                 {
@@ -23657,7 +23747,7 @@
               "type": "text"
             },
             {
-              "text": "hosting provider roundup by Clubic on October 21 at 6:25 PM",
+              "text": "hosting providers listed by Clubic at 6:25 PM on October 21st",
               "type": "text",
               "marks": [
                 {
@@ -23693,7 +23783,7 @@
               "type": "text"
             },
             {
-              "text": "Node.js security updates from October 21, 2026",
+              "text": "Node.js security patches from October 21, 2026",
               "type": "text",
               "marks": [
                 {
