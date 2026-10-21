@@ -53,7 +53,7 @@
           </template>
           <BlogArticleContent v-else :content="article.content" />
 
-          <DibodevToolTeaser :teaser="BUSINESS_SOFTWARE_PAGE_TEASER" trackingLocation="article_end" class="mt-10" />
+          <DibodevToolTeaser :teaser="articleEndTeaser" trackingLocation="article_end" class="mt-10" />
 
           <DibodevAuthorCard variant="inline" class="mt-12" />
         </div>
@@ -115,6 +115,7 @@ import { useArticlesWithTranslations } from '~/composables/useArticlesWithTransl
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { useToolTeasers } from '~/composables/useToolTeasers'
 import { CONTACT_PROMPTS_BY_ARTICLE_SLUG } from '~/core/constants/articleContactPrompts'
+import { ARTICLE_END_TEASERS_BY_SLUG } from '~/core/constants/articleEndTeasers'
 import { TOOL_TEASERS_BY_ARTICLE_SLUG } from '~/core/constants/tools/toolTeasers'
 import { ArticleIntroUtils } from '~/core/utils/ArticleIntroUtils'
 import { BUSINESS_SOFTWARE_PAGE_TEASER } from '~/core/constants/businessSoftwarePageTeaser'
@@ -213,6 +214,9 @@ const hasTableOfContents: ComputedRef<boolean> = computed((): boolean => heading
 const toolTeasers: ComputedRef<DibodevToolTeaserContent[]> = useToolTeasers((): DibodevToolTeaserContent[] =>
   TOOL_TEASERS_BY_ARTICLE_SLUG[slug] ? [TOOL_TEASERS_BY_ARTICLE_SLUG[slug]] : [],
 )
+
+/** The teaser closing the article: the one of its subject when it has one, the business software page otherwise. */
+const articleEndTeaser: DibodevToolTeaserContent = ARTICLE_END_TEASERS_BY_SLUG[slug] ?? BUSINESS_SOFTWARE_PAGE_TEASER
 
 /** The contact prompt of the article subject, in the page language; nothing for most articles. */
 const contactPrompt: DibodevContactPromptContent | null = CONTACT_PROMPTS_BY_ARTICLE_SLUG[slug] ?? null

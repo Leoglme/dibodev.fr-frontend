@@ -6,12 +6,27 @@ const CONTACT_PAGE_URL: string = 'https://dibodev.fr/contact'
 const SERVICE_AREAS: string[] = ['Rennes', 'Ille-et-Vilaine', 'Bretagne', 'France']
 const AVAILABLE_LANGUAGES: string[] = ['fr', 'en', 'es']
 
-/** What a service page declares: its French path (the `@id` of the service) and its texts in the page language. */
+/** A priced offer of a service page, in euros; a zero price declares a free offer. */
+export type SchemaServiceOfferDefinition = {
+  name: string
+  price: number
+}
+
+/** What a service page declares: its French path (the `@id` of the service), its texts in the page language and its priced offers when it shows prices. */
 export type SchemaServiceDefinition = {
   pagePath: string
   name: string
   description: string
   serviceType: string[]
+  offers?: SchemaServiceOfferDefinition[]
+}
+
+export type SchemaServiceOffer = {
+  '@type': 'Offer'
+  name: string
+  price: number
+  priceCurrency: 'EUR'
+  url: string
 }
 
 export type SchemaService = {
@@ -25,6 +40,7 @@ export type SchemaService = {
   provider: { '@id': string }
   areaServed: string[]
   availableChannel: { '@type': 'ServiceChannel'; serviceUrl: string; availableLanguage: string[] }
+  offers?: SchemaServiceOffer[]
 }
 
 /**
@@ -49,6 +65,18 @@ export function buildServiceSchemaJson(definition: SchemaServiceDefinition): str
       serviceUrl: CONTACT_PAGE_URL,
       availableLanguage: AVAILABLE_LANGUAGES,
     },
+  }
+
+  if (definition.offers && definition.offers.length > 0) {
+    serviceSchema.offers = definition.offers.map(
+      (offer: SchemaServiceOfferDefinition): SchemaServiceOffer => ({
+        '@type': 'Offer',
+        name: offer.name,
+        price: offer.price,
+        priceCurrency: 'EUR',
+        url: pageUrl,
+      }),
+    )
   }
   return JSON.stringify(serviceSchema)
 }

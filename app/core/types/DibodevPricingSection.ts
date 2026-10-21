@@ -26,6 +26,7 @@ export type DibodevPricingOffer = {
  * @property {string[]} notes - Small print displayed under the cards (daily rate, VAT, free quote…).
  * @property {string} ctaLabel - Optional button label (no button when empty).
  * @property {string} ctaLocation - PostHog `location` property sent when the button is clicked.
+ * @property {string} ctaTo - Route of the button; the contact page when empty.
  * @property {string} highlightLabel - Small label displayed on the highlighted card (e.g. "Most requested").
  * @property {DibodevSectionTone} tone - Background tone of the section.
  * @property {DibodevLandingSecondaryCta | null} secondaryLink - Optional text link next to the button (e.g. the budget estimator).
@@ -38,6 +39,7 @@ export type DibodevPricingSectionProps = {
   notes: string[]
   ctaLabel: string
   ctaLocation: string
+  ctaTo: string
   highlightLabel: string
   tone: DibodevSectionTone
   secondaryLink: DibodevLandingSecondaryCta | null

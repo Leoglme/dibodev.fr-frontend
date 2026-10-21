@@ -5,7 +5,7 @@
       class="fixed inset-x-0 bottom-0 z-40 border-t border-gray-300 bg-white/95 px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(17,17,17,0.08)] backdrop-blur lg:hidden"
     >
       <div class="mx-auto flex max-w-xl items-center justify-between gap-3 pr-[4.75rem]">
-        <p class="min-w-0 text-sm leading-5 font-medium text-gray-100">{{ props.text }}</p>
+        <p class="line-clamp-2 min-w-0 flex-1 text-sm leading-5 font-medium text-gray-100">{{ props.text }}</p>
         <NuxtLink
           :to="props.to"
           class="bg-primary hover:bg-primary-dark inline-flex shrink-0 items-center gap-1.5 rounded-lg px-4 py-2.5 text-sm leading-5 font-medium text-white transition-colors"

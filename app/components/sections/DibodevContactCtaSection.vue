@@ -16,7 +16,7 @@
 
       <div class="grid w-full justify-items-center gap-3 sm:w-auto">
         <DibodevButton
-          :to="localePath('/contact')"
+          :to="props.ctaTo || localePath('/contact')"
           size="lg"
           class="w-full sm:w-auto"
           @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'contact_cta_section' })"
@@ -86,6 +86,10 @@ const props: DibodevContactCtaSectionProps = defineProps({
     default: '',
   },
   ctaText: {
+    type: String as PropType<string>,
+    default: '',
+  },
+  ctaTo: {
     type: String as PropType<string>,
     default: '',
   },

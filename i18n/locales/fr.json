@@ -211,6 +211,7 @@
     "priceBarometer": "Prix d’un logiciel sur mesure",
     "publicAid": "Aides pour votre site ou logiciel",
     "phpCheck": "Faille PHP : vérifier mon site",
+    "phpUpdate": "Mise à jour PHP de votre site",
     "about": "À propos",
     "description": "Développeur indépendant près de Rennes. Logiciels de gestion, sites web et automatisations avec l'IA pour les TPE et PME.",
     "pagesTitle": "Pages",
@@ -600,6 +601,9 @@
           "notPhp": "site pas en PHP",
           "unknown": "aucun signe de PHP visible"
         }
+      },
+      "phpUpdate": {
+        "message": "Bonjour,\nje souhaite faire mettre à jour la version de PHP de mon site (et WordPress, le thème et les extensions si besoin).\nSon adresse : \nMon hébergeur, si je le connais : "
       }
     },
     "reassurance": {

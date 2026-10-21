@@ -210,6 +210,7 @@
     "priceBarometer": "Precio de un software a medida",
     "publicAid": "Ayudas para tu web o software",
     "phpCheck": "Fallo de PHP: comprobar mi web",
+    "phpUpdate": "Actualización de PHP de tu web",
     "freelanceRennes": "Desarrollador freelance en Rennes",
     "about": "Sobre mí",
     "description": "Desarrollador independiente cerca de Rennes. Software de gestión, sitios web y automatizaciones con IA para pymes y autónomos.",
@@ -600,6 +601,9 @@
           "notPhp": "web sin PHP",
           "unknown": "sin señales visibles de PHP"
         }
+      },
+      "phpUpdate": {
+        "message": "Hola,\nquiero que actualicen la versión de PHP de mi web (y WordPress, el tema y los plugins si hace falta).\nSu dirección: \nMi hosting, si lo conozco: "
       }
     },
     "reassurance": {

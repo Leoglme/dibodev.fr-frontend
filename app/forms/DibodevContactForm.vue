@@ -213,6 +213,9 @@ function buildPrefilledMessage(): string {
   if (!phpVulnerabilityPrefill) {
     return ''
   }
+  if (phpVulnerabilityPrefill.topic === 'php-update') {
+    return t('contact.form.phpUpdate.message')
+  }
   if (!phpVulnerabilityPrefill.site) {
     return t('contact.form.phpVulnerability.messageWithoutSite')
   }

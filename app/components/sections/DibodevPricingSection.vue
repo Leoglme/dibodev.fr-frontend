@@ -42,7 +42,7 @@
 
       <div v-if="props.ctaLabel" class="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
         <DibodevButton
-          :to="localePath('/contact')"
+          :to="props.ctaTo || localePath('/contact')"
           size="lg"
           class="w-full sm:w-auto"
           @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: props.ctaLocation })"
@@ -110,6 +110,10 @@ const props: DibodevPricingSectionProps = defineProps({
   ctaLocation: {
     type: String as PropType<string>,
     default: 'pricing',
+  },
+  ctaTo: {
+    type: String as PropType<string>,
+    default: '',
   },
   highlightLabel: {
     type: String as PropType<string>,

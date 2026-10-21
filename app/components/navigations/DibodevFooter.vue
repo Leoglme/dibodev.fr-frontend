@@ -211,6 +211,7 @@ const footerLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooter
   { title: t('footer.priceBarometer'), to: localePath('custom-software-price-barometer') },
   { title: t('footer.publicAid'), to: localePath('tools-public-aid-simulator') },
   { title: t('footer.phpCheck'), to: localePath('tools-php-vulnerability-check') },
+  { title: t('footer.phpUpdate'), to: localePath('php-update-service') },
   { title: t('footer.myProjects'), to: localePath('projects') },
   { title: t('footer.blog'), to: localePath('/blog') },
   { title: t('footer.about'), to: localePath('about') },
