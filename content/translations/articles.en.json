@@ -22593,9 +22593,9 @@
   },
   "blog/faille-php-octobre-2026-site-boutique-logiciel-que-faire": {
     "title": "October 2026 PHP Vulnerability: Is Your Website, Store, or Software Affected, and What Should You Do?",
-    "excerpt": "Two critical vulnerabilities in PHP were patched on October 21, 2026. Are your WordPress sites, PrestaShop or WooCommerce stores, custom business software, or internal networks at risk? Learn who is impacted, what your hosting provider is doing, and what actions you should take today.",
-    "metaTitle": "October 2026 PHP Vulnerability: Is Your Site at Risk?",
-    "metaDescription": "Two critical PHP vulnerabilities were patched on October 21, 2026. Learn which WordPress sites, PrestaShop stores, and business applications are affected—and what steps you should take now.",
+    "excerpt": "Two critical vulnerabilities in PHP were patched on October 21, 2026. WordPress sites, PrestaShop or WooCommerce stores, custom business software, and internal networks: who is affected, what your hosting provider is doing, and what actions you should take today.",
+    "metaTitle": "October 2026 PHP Vulnerability: Is Your Site Affected?",
+    "metaDescription": "Two critical PHP vulnerabilities were patched on October 21, 2026. WordPress sites, PrestaShop stores, and custom business software: who is impacted and what you should do.",
     "tags": [
       "security",
       "PHP",
@@ -22611,7 +22611,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "On October 21, 2026, just before 4 PM, the PHP team released four patched versions to fix two critical vulnerabilities that allow taking control of a server without a password. PHP is the language powering WordPress, PrestaShop, WooCommerce, Joomla, Drupal, Magento, and a significant portion of custom business software, intranets, and customer portals developed by agencies or freelancers. In other words: if you have a website, an online store, or an internet-accessible management tool, there’s a good chance it’s affected.",
+              "text": "On October 21, 2026, just before 4 PM, the PHP team released four patched versions to fix two critical vulnerabilities that allow taking control of a server without a password. PHP is the language that powers WordPress, PrestaShop, WooCommerce, Joomla, Drupal, Magento, and a significant portion of custom business software, intranets, and customer portals developed by agencies or freelancers. In other words: if you have a website, an online store, or a management tool accessible over the internet, there’s a good chance it’s affected.",
               "type": "text"
             }
           ]
@@ -22620,7 +22620,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "If you read only one paragraph:",
+              "text": "If you only read one paragraph:",
               "type": "text",
               "marks": [
                 {
@@ -22629,7 +22629,7 @@
               ]
             },
             {
-              "text": " the fix is applied on the server, not in WordPress or a plugin. In shared hosting (OVHcloud, o2switch, IONOS, Hostinger, Infomaniak, PlanetHoster…), it’s the hosting provider that installs the new PHP version, but it’s up to you to check if they’ve done it and to switch versions yourself if your site is still running PHP 8.1 or an older version. To check your status in ten seconds, I’ve put online a ",
+              "text": " the fix is applied on the server, not in WordPress or any plugin. In shared hosting (OVHcloud, o2switch, IONOS, Hostinger, Infomaniak, PlanetHoster…), it’s the hosting provider that installs the new PHP version, but it’s up to you to check if they did, and to switch versions yourself if your site is still running PHP 8.1 or older. To check your status in ten seconds, I’ve put online a ",
               "type": "text"
             },
             {
@@ -22659,7 +22659,7 @@
           },
           "content": [
             {
-              "text": "What happened on October 21,",
+              "text": "What happened on October 21",
               "type": "text"
             }
           ]
@@ -22668,7 +22668,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The two vulnerabilities are listed as CVE-2026-109618 and CVE-2026-109619, with the nickname PHP2Shell. They are rated 9.2 out of 10. In practice, a well-formed web request is enough to execute code on the server before the website or application even loads. No account, no password, no need for the site to have a bug: the flaw is in PHP itself.",
+              "text": "The two vulnerabilities are referenced as CVE-2026-109618 and CVE-2026-109619, with the nickname PHP2Shell. They are rated 9.2 out of 10. In practice, a well-formed web request is enough to execute code on the server before the site or application even launches. No account, no password, no need for the site to have a bug: the flaw is in PHP itself.",
               "type": "text"
             }
           ]
@@ -22677,7 +22677,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The issue began with a leak. On Monday, October 20, a post on Hacker News announced two critical vulnerabilities under embargo. The company watchTowr confirmed that evening that they were real, and PHP announced a patch for the following day at 2 PM UTC. In the meantime, pages claiming to publish an exploit circulated, Cloudflare activated firewall rules for all its clients as early as 3:02 AM UTC, and saw attackers modifying their payloads to bypass them. The patches were released Wednesday with a slight lead: PHP 8.5.12, 8.4.27, 8.3.36, and 8.2.35.",
+              "text": "The story began with a leak. On Monday, October 20, a post on Hacker News announced two critical vulnerabilities under embargo. The company watchTowr confirmed that night that they were real, and PHP announced a patch for the following day at 2 PM UTC. In the meantime, pages claiming to publish an exploit circulated, Cloudflare activated firewall rules for all its clients starting at 3:02 AM UTC, and saw attackers modifying their payloads to bypass them. The patches were released Wednesday with a slight lead: PHP 8.5.12, 8.4.27, 8.3.36, and 8.2.35.",
               "type": "text"
             }
           ]
@@ -22686,7 +22686,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The game-changing detail:",
+              "text": "The most telling signal:",
               "type": "text",
               "marks": [
                 {
@@ -22695,7 +22695,7 @@
               ]
             },
             {
-              "text": " PHP 8.1, 8.0, 7.4, and older versions will not receive new updates. The project published source fixes for 7.4, 8.0, and 8.1, which users can compile themselves or obtain from their hosting provider, but no official version will be automatically installed. According to W3Techs, about one in four PHP sites still runs on PHP 7. If that’s your case, no one will fix it for you.",
+              "text": " in the afternoon, the French Ministry of the Interior took all prefecture websites offline at the request of ANSSI, citing « preventive maintenance of all internet sites exposed to a critical security vulnerability, » and Météo-France closed its forecast and alert sites on its own initiative. Part of the tax authority’s portal was also taken down, according to the press. The Netherlands shut down DigiD and MijnOverheid, Finland its online public services, British local councils and Danish services did the same. None of these sites reported any breaches: it was a precautionary measure, exactly what CERT-FR recommends when you can’t patch immediately. If the government shuts down its own sites rather than take the risk, a business site running on PHP has no reason to think it’s safe.",
               "type": "text"
             }
           ]
@@ -22704,7 +22704,25 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The CERT-FR, the ANSSI team, released the same day the alert CERTFR-2026-ALE-014: isolate affected systems, then switch to a maintained and patched version. Workarounds circulating, like disabling session.upload_progress or blocking file uploads, reduce the attack surface for one of the two flaws. They do not replace the update.",
+              "text": "The game-changer:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " PHP 8.1, 8.0, 7.4, and older versions will no longer receive updates. The project released source patches for 7.4, 8.0, and 8.1, which users must compile themselves or obtain from their hosting provider, but no official version will be automatically installed. According to W3Techs, about one in four PHP sites still runs on PHP 7. If that’s yours, no one will fix it for you.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "CERT-FR, ANSSI’s team, issued alert CERTFR-2026-ALE-014 the same day: isolate affected systems, then switch to a maintained and patched version. Workarounds circulating—like disabling session.upload_progress or blocking file uploads—reduce the attack surface for one of the two flaws. They do not replace the update.",
               "type": "text"
             }
           ]
@@ -22725,7 +22743,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "We often talk about « websites, » but the flaw doesn’t care what you call it. It targets what’s running on the server.",
+              "text": "We often talk about « websites, » but the vulnerability doesn’t care what you call it. It targets what runs on the server.",
               "type": "text"
             }
           ]
@@ -22761,7 +22779,7 @@
               ]
             },
             {
-              "text": " running on PrestaShop, WooCommerce, Magento, or Thelia uses PHP. Affected—and it’s the most appealing target for attackers: there are payments and addresses involved.",
+              "text": " running on PrestaShop, WooCommerce, Magento, or Thelia uses PHP. Affected—and it’s the most tempting target for attackers: there are payments and addresses there.",
               "type": "text"
             }
           ]
@@ -22779,7 +22797,7 @@
               ]
             },
             {
-              "text": ", if they were developed in PHP (Laravel, Symfony, or custom code), are affected even if they’re password-protected. The flaw exploits the system before the login page loads. An internal tool used only by your employees but accessible over the internet is exposed like a public site.",
+              "text": "if they were developed in PHP (Laravel, Symfony, or custom code), they are affected even if they are password-protected. The vulnerability occurs before the login page. An internal tool used only by your employees but accessible from the internet is exposed like a public site.",
               "type": "text"
             }
           ]
@@ -22797,7 +22815,7 @@
               ]
             },
             {
-              "text": ", Dolibarr, GLPI, Nextcloud, Moodle, a phpBB forum, a wiki, a ticketing tool, are in the same situation.",
+              "text": ", such as Dolibarr, GLPI, Nextcloud, Moodle, a phpBB forum, a wiki, or a ticketing tool, are in the same situation.",
               "type": "text"
             }
           ]
@@ -22815,7 +22833,7 @@
               ]
             },
             {
-              "text": " site builders like Wix, Squarespace, Shopify, Webflow, Jimdo, or Google Sites. They don’t run PHP for you, and they manage their own servers. An application developed in Node.js, Python, or .NET is also unaffected by this vulnerability. A small caveat: Node.js released its own security patches on the same day, October 21st. Same timing, same response.",
+              "text": " website builders like Wix, Squarespace, Shopify, Webflow, Jimdo, or Google Sites. They do not run PHP for you, and they manage their own servers. An application developed in Node.js, Python, or .NET is also unaffected by this vulnerability. One caveat: Node.js released its own security patches the same day, October 21st. Same reflex, same day.",
               "type": "text"
             }
           ]
@@ -22842,7 +22860,7 @@
               ]
             },
             {
-              "text": " reads it from your homepage: it detects the platform, the PHP version when displayed, and often the hosting provider. Otherwise, the question to ask your service provider boils down to this: « Which PHP version does this site use, and has it been updated since October 21st? »",
+              "text": " reads it from your homepage: it detects the platform, the PHP version when displayed, and often the hosting provider. Otherwise, the question to ask your service provider boils down to this: « which PHP version does this site use, and has it been updated since October 21st? »",
               "type": "text"
             }
           ]
@@ -22854,7 +22872,7 @@
           },
           "content": [
             {
-              "text": "What your host does, and what they don’t do",
+              "text": "What your host does, and what they don’t",
               "type": "text"
             }
           ]
@@ -22863,7 +22881,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "In shared hosting, PHP belongs to the host. You can’t install it yourself; you only choose a branch (8.1, 8.2, 8.3…) in your account. The host, however, installs the patched versions on their servers for maintained branches, from 8.2 to 8.5.",
+              "text": "In shared hosting, PHP belongs to the host. You can’t install it yourself; you only choose a branch (8.1, 8.2, 8.3…) in your account. The host, however, installs patched versions on their servers for supported branches, from 8.2 to 8.5.",
               "type": "text"
             }
           ]
@@ -22872,7 +22890,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "As of the evening of October 21st, here’s what I could gather. o2switch disabled the affected feature as early as 8:07 AM, but at 4:40 PM, its servers were still running versions from October 6th, awaiting CloudLinux packages scheduled for that evening. OVHcloud announced firewall rules on its shared clusters and a maintenance campaign. Infomaniak opened a maintenance window from 3:00 PM to 3:00 AM the next day, deploying fixes by its teams and requiring no action, except for sites still on a more outdated PHP version. For IONOS, Hostinger, PlanetHoster, LWS, or Gandi, I found no public announcement at that time.",
+              "text": "As of October 21st in the evening, here’s what I could find. o2switch disabled the affected feature as early as 8:07 AM, but at 4:40 PM, its servers were still running versions from October 6th, awaiting CloudLinux packages scheduled for that evening. OVHcloud announced firewall rules on its shared hosting clusters and a maintenance campaign. Infomaniak opened a maintenance window from 3:00 PM until 3:00 AM the next day, with patches deployed by its teams and no action required, except for sites still running an outdated PHP version. For IONOS, Hostinger, PlanetHoster, LWS, or Gandi, I found no public announcement at that time.",
               "type": "text"
             }
           ]
@@ -22890,7 +22908,7 @@
               ]
             },
             {
-              "text": " check in a day or two whether the version has actually changed. An announced patch isn’t necessarily an installed one. And if your site is on PHP 8.1 or earlier, the host won’t touch it: it’s up to you to upgrade to 8.3 or 8.4 from cPanel, Plesk, or your client area, after backing up and testing, because an old theme or plugin might not be compatible.",
+              "text": " check in a day or two whether the version has actually changed. An announced patch is not necessarily an installed patch. And if your site runs PHP 8.1 or earlier, your host won’t touch it: it’s up to you to upgrade to 8.3 or 8.4 via cPanel, Plesk, or your client portal, after backing up and testing, because an old theme or plugin might not be compatible.",
               "type": "text"
             }
           ]
@@ -22911,7 +22929,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Many sites and tools were built three, five, or eight years ago by an agency or freelancer you no longer see. Now is the time to reach out to them via email to keep a record.",
+              "text": "Many websites and tools were built three, five, or even eight years ago by an agency or freelancer you no longer see. Now is the time to reach out to them via email to keep a record.",
               "type": "text"
             }
           ]
@@ -22929,7 +22947,7 @@
               ]
             },
             {
-              "text": " what PHP version is the site or application currently running? The answer should be a precise number, like 8.3.36, not ‘it’s up to date.’",
+              "text": " what PHP version is currently running the site or application? The answer should be a precise number, like 8.3.36, not ‘it’s up to date.’",
               "type": "text"
             }
           ]
@@ -22965,7 +22983,7 @@
               ]
             },
             {
-              "text": " have the server logs been checked since October 20th? Large multipart POST requests targeting pages that don’t normally receive them are the red flag to look for.",
+              "text": " Have the server logs been checked since October 20th? Large multipart POST requests sent to pages that never receive them are the sign to look for.",
               "type": "text"
             }
           ]
@@ -22974,7 +22992,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "If no one responds within the day, or if the provider no longer exists, that’s exactly the kind of situation I handle: I take over access, update, test, and let you know what was done.",
+              "text": "If no one responds within the day, or if the service provider no longer exists, that’s exactly the kind of situation I take over: I retrieve the access, update it, test it, and let you know what’s been done.",
               "type": "text"
             }
           ]
@@ -22995,7 +23013,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "This is the trickiest and most common case among small businesses. You have two options.",
+              "text": "This is the trickiest and most common case among small businesses. Two options.",
               "type": "text"
             }
           ]
@@ -23013,7 +23031,7 @@
               ]
             },
             {
-              "text": " Some hosting providers and Linux distributions (Debian, Ubuntu) integrate fixes into their older versions without changing the version number. You need to ask them, in writing, if this has been done. An old version number does not prove the vulnerability on its own, but in case of doubt, you need confirmation.",
+              "text": " Some hosting providers and Linux distributions (Debian, Ubuntu) include patches in their older versions without changing the version number. You should ask them, in writing, if this has been done. An old version number does not prove the vulnerability on its own, but in case of doubt, you need confirmation.",
               "type": "text"
             }
           ]
@@ -23031,7 +23049,7 @@
               ]
             },
             {
-              "text": " Moving to PHP 8.3 or 8.4. This is the real solution, and it’s also what you’ll have to do anyway, since PHP 8.2 support ends on December 31, 2026. It requires checking that your CMS, theme, and extensions support the new version, making a backup outside the server, and testing on a copy before switching. An hour for a simple site, half a day for a store with many modules.",
+              "text": " Upgrading to PHP 8.3 or 8.4. That’s the real solution, and it’s also what you’ll have to do eventually, since PHP 8.2 ends on December 31, 2026. It requires checking that your CMS, theme, and extensions support the new version, backing up data off the server, and testing on a copy before switching. An hour for a simple site, half a day for a store with many modules.",
               "type": "text"
             }
           ]
@@ -23040,7 +23058,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "If neither option is possible today, the CERT-FR recommendation is clear: take the application offline or place it behind an application firewall until the necessary steps are taken.",
+              "text": "If neither option is possible today, the CERT-FR recommendation is clear: take your application offline or place it behind an application firewall until the necessary steps are taken.",
               "type": "text"
             }
           ]
@@ -23061,7 +23079,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "This is the confusion I hear most often. ‘I did the updates, everything’s green.’ WordPress, PrestaShop, or plugin updates don’t touch PHP, which runs underneath. A security plugin may block some requests, but not all, and attackers have already modified their payloads to bypass Cloudflare rules. The only real door that closes is the patched PHP version on the server.",
+              "text": "This is the most common confusion I hear. ‘I’ve done the updates, everything’s green.’ WordPress, PrestaShop, or plugin updates don’t touch PHP, which runs underneath. A security plugin may block some requests, not all, and attackers have already modified their payloads to bypass Cloudflare rules. The only door that truly closes is the patched PHP version on the server.",
               "type": "text"
             }
           ]
@@ -23082,7 +23100,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The first attack attempts were observed in the morning of October 21, even before the patch was released. If your site remained exposed all day, you need to check.",
+              "text": "The first attack attempts were observed in the morning of October 21st, even before the patch was released. If your site remained exposed all day, you need to check.",
               "type": "text"
             }
           ]
@@ -23091,7 +23109,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "In your server access logs, look for unusual multipart POST requests since October 20. In your file upload folders (uploads, cache, tmp), check for recent .php files you didn’t place there. In the admin panel, look for unknown administrator accounts and new scheduled tasks. If in doubt: immediate backup, change all admin passwords, and if customer personal data is involved, notify the CNIL within 72 hours.",
+              "text": "In the server access logs, look for unusual multipart POST requests since October 20th. In the file upload directories (uploads, cache, tmp), look for recent .php files you didn’t place there. In the admin panel, look for unknown admin accounts and new scheduled tasks. If in doubt: immediate backup, change all admin passwords, and if customer personal data is involved, notify the CNIL within 72 hours.",
               "type": "text"
             }
           ]
@@ -23112,7 +23130,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I’m a freelance developer near Rennes and work remotely across France. For this vulnerability, I do something simple: I check the actual PHP version served by your site, store, or tool, update PHP or switch branches, verify everything still works, and write you a report of what was done. If your provider isn’t responding, I can recover access and take over.",
+              "text": "I’m a freelance developer near Rennes and work remotely across France. For this vulnerability, I do something simple: I check the actual PHP version served by your site, store, or tool, update PHP or switch branches, verify everything still works, and let you know what’s been done. If your service provider isn’t responding, I retrieve the access and take over.",
               "type": "text"
             }
           ]
@@ -23139,7 +23157,25 @@
               ]
             },
             {
-              "text": ", it takes ten seconds. And if the result isn’t what you expected,",
+              "text": ", it takes ten seconds. And if the result isn’t what you expected, ",
+              "type": "text"
+            },
+            {
+              "text": "write to me",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/contact",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": I respond within 24 hours.",
               "type": "text"
             }
           ]
@@ -23179,13 +23215,49 @@
               "type": "text"
             },
             {
-              "text": "CERT-FR alert CERTFR-2026-ALE-014",
+              "text": "CERTFR-2026-ALE-014 alert from CERT-FR",
               "type": "text",
               "marks": [
                 {
                   "type": "link",
                   "attrs": {
                     "href": "https://cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-014/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "prefectures and Météo-France offline, France 3 at 6:56 PM on October 21st",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://france3-regions.franceinfo.fr/occitanie/haute-garonne/toulouse/prefectures-meteo-france-impots-pourquoi-de-nombreux-sites-internet-sont-inaccessibles-depuis-plusieurs-heures-3437253.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "public sites down in the Netherlands, Finland, and the United Kingdom, The Record",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://therecord.media/php-script-vulnerabilities-warnings",
                     "target": "_blank",
                     "linktype": "url"
                   }
@@ -23215,7 +23287,7 @@
               "type": "text"
             },
             {
-              "text": "hosting providers listed by Clubic on October 21 at 6:25 PM",
+              "text": "hosting provider report by Clubic at 6:25 PM on October 21st",
               "type": "text",
               "marks": [
                 {
@@ -23269,27 +23341,6 @@
               "type": "text"
             }
           ]
-        },
-        {
-          "type": "blok",
-          "attrs": {
-            "id": "9c266c9e-55a9-4ff4-9c5a-d1a37c5bfb45",
-            "body": [
-              {
-                "_uid": "i-45596291-b64d-4322-bc59-d66065e16a03",
-                "link": {
-                  "id": "",
-                  "url": "/contact",
-                  "linktype": "url",
-                  "fieldtype": "multilink",
-                  "cached_url": "/contact"
-                },
-                "label": "write to me",
-                "style": "primary",
-                "component": "cta_button"
-              }
-            ]
-          }
         }
       ]
     }
