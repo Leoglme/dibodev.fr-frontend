@@ -22594,8 +22594,8 @@
   "blog/faille-php-octobre-2026-site-boutique-logiciel-que-faire": {
     "title": "Vulnerabilidad de PHP de octubre de 2026: ¿afecta a tu sitio web, tienda o software y qué hacer?",
     "excerpt": "Dos vulnerabilidades críticas en PHP fueron corregidas el 21 de octubre de 2026. Sitios web en WordPress, tiendas en PrestaShop o WooCommerce, software empresarial, intranets: ¿quién está afectado, qué hace tu proveedor de hosting y qué debes hacer hoy.",
-    "metaTitle": "Vulnerabilidad de PHP de octubre 2026: ¿tu sitio está afectado?",
-    "metaDescription": "Dos vulnerabilidades críticas en PHP corregidas el 21 de octubre de 2026. Sitios WordPress, tiendas PrestaShop, software empresarial: ¿quién está afectado y qué acciones tomar.",
+    "metaTitle": "Fallo de PHP de octubre de 2026: ¿tu sitio está afectado?",
+    "metaDescription": "Dos fallos críticos de PHP corregidos el 21 de octubre de 2026. Sitios WordPress, tiendas PrestaShop, software de gestión: quién está afectado y qué hacer hoy.",
     "tags": [
       "seguridad",
       "PHP",
