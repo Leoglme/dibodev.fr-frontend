@@ -22594,8 +22594,8 @@
   "blog/faille-php-octobre-2026-site-boutique-logiciel-que-faire": {
     "title": "Vulnerabilidad de PHP de octubre de 2026: ¿afecta a tu sitio web, tienda o software y qué hacer?",
     "excerpt": "Dos vulnerabilidades críticas en PHP fueron corregidas el 21 de octubre de 2026. Sitios web en WordPress, tiendas en PrestaShop o WooCommerce, software empresarial, intranets: ¿a quién afecta, qué hace tu proveedor de hosting y qué acciones tomar hoy.",
-    "metaTitle": "Vulnerabilidad de PHP de octubre 2026: ¿tu sitio está afectado?",
-    "metaDescription": "Dos vulnerabilidades críticas en PHP corregidas el 21 de octubre de 2026. Sitios WordPress, tiendas PrestaShop, software empresarial: ¿quién está afectado y qué hacer.",
+    "metaTitle": "Fallo de PHP de octubre de 2026: ¿tu sitio está afectado?",
+    "metaDescription": "Dos fallos críticos de PHP corregidos el 21 de octubre de 2026. Sitios WordPress, tiendas PrestaShop, software de gestión: quién está afectado y qué hacer hoy.",
     "tags": [
       "seguridad",
       "PHP",
@@ -25720,8 +25720,8 @@
   "blog/changer-version-php-hostinger-faille-octobre-2026": {
     "title": "Cambiar la versión de PHP en Hostinger tras la vulnerabilidad del 21 de octubre de 2026: guía paso a paso en hPanel",
     "excerpt": "Hostinger afirma que «no se requiere acción alguna», pero un sitio que permanezca en PHP 8.1 no recibirá parches. Dónde y cómo cambiar la versión de PHP en hPanel, qué versión elegir, y lo que Hostinger anunció el 21 de octubre.",
-    "metaTitle": "Cambiar la versión de PHP en Hostinger tras la vulnerabilidad de 2026",
-    "metaDescription": "Vulnerabilidad de PHP del 21 de octubre de 2026: dónde cambiar la versión de PHP en hPanel de Hostinger, qué versión elegir y lo que Hostinger anunció al respecto.",
+    "metaTitle": "Cambiar la versión de PHP en Hostinger tras el fallo 2026",
+    "metaDescription": "Fallo de PHP del 21 de octubre de 2026: dónde cambiar la versión de PHP en el hPanel de Hostinger, qué versión elegir y qué anunció Hostinger.",
     "tags": [
       "PHP",
       "Hostinger",
@@ -26460,8 +26460,8 @@
   "blog/changer-version-php-infomaniak-faille-octobre-2026": {
     "title": "Cambiar la versión de PHP en Infomaniak tras la vulnerabilidad del 21 de octubre de 2026: Guía paso a paso en Manager",
     "excerpt": "Infomaniak corrige por sí mismo PHP 7.4, 8.0 y 8.1, algo que casi ningún proveedor de hosting hace. Lo que desplegó hora a hora el 21 de octubre, cómo cambiar la versión de PHP en el Manager y por qué actualizar igual.",
-    "metaTitle": "Cambiar la versión de PHP en Infomaniak tras la vulnerabilidad de 2026",
-    "metaDescription": "Vulnerabilidad de PHP del 21 de octubre de 2026: lo que Infomaniak desplegó hora a hora, dónde cambiar la versión de PHP en el Manager y qué versión elegir para mantener tu sitio seguro.",
+    "metaTitle": "Cambiar la versión de PHP en Infomaniak tras el fallo 2026",
+    "metaDescription": "Fallo de PHP del 21 de octubre de 2026: qué desplegó Infomaniak hora a hora, dónde cambiar la versión de PHP en el Manager y qué versión elegir.",
     "tags": [
       "PHP",
       "Infomaniak",
@@ -27035,8 +27035,8 @@
   "blog/changer-version-php-planethoster-faille-octobre-2026": {
     "title": "Cambiar la versión de PHP en PlanetHoster tras la vulnerabilidad del 21 de octubre de 2026: N0C, cPanel y WHM",
     "excerpt": "PlanetHoster implementa parches y bloquea temporalmente el envío de archivos. ¿Dónde cambiar la versión de PHP en N0C, cPanel o WHM según tu cuenta, qué versión elegir y el engaño del menú que llega hasta PHP 4.4.",
-    "metaTitle": "Cambiar la versión de PHP en PlanetHoster tras la vulnerabilidad de 2026",
-    "metaDescription": "Vulnerabilidad de PHP del 21 de octubre de 2026: dónde cambiar la versión de PHP en PlanetHoster (N0C, cPanel, WHM), qué versión elegir y lo que el proveedor de alojamiento anunció.",
+    "metaTitle": "Cambiar la versión de PHP en PlanetHoster tras el fallo 2026",
+    "metaDescription": "Fallo de PHP del 21 de octubre de 2026: dónde cambiar la versión de PHP en PlanetHoster (N0C, cPanel, WHM), qué versión elegir y qué anunció el hosting.",
     "tags": [
       "PHP",
       "PlanetHoster",

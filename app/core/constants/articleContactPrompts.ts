@@ -36,4 +36,7 @@ export const CONTACT_PROMPTS_BY_ARTICLE_SLUG: Record<string, DibodevContactPromp
   'changer-version-php-ovh-faille-octobre-2026': PHP_VULNERABILITY_CONTACT_PROMPT,
   'changer-version-php-o2switch-faille-octobre-2026': PHP_VULNERABILITY_CONTACT_PROMPT,
   'changer-version-php-ionos-faille-octobre-2026': PHP_VULNERABILITY_CONTACT_PROMPT,
+  'changer-version-php-hostinger-faille-octobre-2026': PHP_VULNERABILITY_CONTACT_PROMPT,
+  'changer-version-php-infomaniak-faille-octobre-2026': PHP_VULNERABILITY_CONTACT_PROMPT,
+  'changer-version-php-planethoster-faille-octobre-2026': PHP_VULNERABILITY_CONTACT_PROMPT,
 }
