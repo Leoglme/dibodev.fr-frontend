@@ -1,4 +1,13 @@
-export type DibodevToolShareImageIcon = 'car' | 'truck' | 'bike' | 'wrench' | 'flame' | 'clipboard' | 'zap' | 'dumbbell'
+export type DibodevToolShareImageIcon =
+  | 'car'
+  | 'truck'
+  | 'bike'
+  | 'wrench'
+  | 'flame'
+  | 'clipboard'
+  | 'zap'
+  | 'dumbbell'
+  | 'shield'
 
 /** `highlight` is drawn in violet wherever it appears in `titleLines`. */
 export type DibodevToolShareImageProps = {

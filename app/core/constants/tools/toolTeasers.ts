@@ -314,7 +314,44 @@ const PUBLIC_AID_SIMULATOR_TEASER: DibodevToolTeaserContent = {
   },
 }
 
+const PHP_VULNERABILITY_CHECK_TEASER: DibodevToolTeaserContent = {
+  toolId: 'php-vulnerability-check',
+  routeName: 'tools-php-vulnerability-check',
+  icon: 'ShieldCheck',
+  wording: {
+    fr: {
+      emphasizedIntro: `Votre site ou votre logiciel tourne sur PHP${NBSP}?`,
+      text: 'Deux failles critiques ont été corrigées le 21 octobre 2026. L’outil lit votre page d’accueil, repère PHP, sa version et votre hébergeur, et dit s’il faut mettre à jour aujourd’hui.',
+      linkLabel: `Vérifier mon site${NBSP}: faille PHP d’octobre 2026`,
+      listLabel: `Faille PHP${NBSP}: mon site est-il concerné${NBSP}?`,
+      hubDescription: `Site internet, boutique, logiciel métier ou intranet${NBSP}: PHP, sa version et votre hébergeur lus depuis votre page d’accueil, et ce qu’il faut faire.`,
+      hubMeta: '1 adresse · 10 secondes',
+    },
+    en: {
+      emphasizedIntro: 'Does your website or software run on PHP?',
+      text: 'Two critical flaws were fixed on 21 October 2026. The tool reads your home page, spots PHP, its version and your host, and says whether you must update today.',
+      linkLabel: 'Check my site: October 2026 PHP vulnerability',
+      listLabel: 'PHP vulnerability: is my website affected?',
+      hubDescription:
+        'Website, store, business software or intranet: PHP, its version and your host read from your home page, and what to do.',
+      hubMeta: '1 address · 10 seconds',
+    },
+    es: {
+      emphasizedIntro: '¿Tu web o tu software funciona con PHP?',
+      text: 'Dos fallos críticos se corrigieron el 21 de octubre de 2026. La herramienta lee tu página de inicio, detecta PHP, su versión y tu hosting, y dice si hay que actualizar hoy.',
+      linkLabel: 'Comprobar mi web: fallo de PHP de octubre de 2026',
+      listLabel: 'Fallo de PHP: ¿mi web está afectada?',
+      hubDescription:
+        'Web, tienda, software de gestión o intranet: PHP, su versión y tu hosting leídos desde tu página de inicio, y qué hacer.',
+      hubMeta: '1 dirección · 10 segundos',
+    },
+  },
+}
+
 export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserContent> = {
+  'faille-php-octobre-2026-site-boutique-logiciel-que-faire': PHP_VULNERABILITY_CHECK_TEASER,
+  'site-web-artisans-attirer-clients-locaux': PHP_VULNERABILITY_CHECK_TEASER,
+  'site-web-commerce-proximite-2026': PHP_VULNERABILITY_CHECK_TEASER,
   'reprendre-application-vibe-coding': AI_APP_CHECK_TEASER,
   'application-metier-no-code-ia-limites': AI_APP_CHECK_TEASER,
   'logiciel-gestion-auto-ecole-planning-eleves-heures': DRIVING_SCHOOL_SOFTWARE_TEASER,
@@ -348,6 +385,7 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   PERSONAL_TRAINER_SOFTWARE_TEASER,
   AI_APP_CHECK_TEASER,
   PUBLIC_AID_SIMULATOR_TEASER,
+  PHP_VULNERABILITY_CHECK_TEASER,
 ]
 
 /** The public aid simulator, teased under the comparison of every trade tool page. */

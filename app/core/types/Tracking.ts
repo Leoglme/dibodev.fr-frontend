@@ -4,6 +4,12 @@ import type {
   DibodevEstimatorProjectSize,
 } from '~/core/types/DibodevBudgetEstimator'
 import type { DibodevPhotoSlideshowNavigationMethod } from '~/core/types/DibodevPhotoSlideshow'
+import type {
+  DibodevPhpVulnerabilityCheckErrorKind,
+  DibodevPhpVulnerabilityHostingKey,
+  DibodevPhpVulnerabilityPlatformKey,
+  DibodevPhpVulnerabilityVerdict,
+} from '~/core/types/DibodevPhpVulnerabilityCheck'
 import type { DibodevPublicAidProjectType, DibodevPublicAidStatus } from '~/core/types/DibodevPublicAid'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
@@ -73,5 +79,15 @@ export type TrackingEventPayloads = {
     status: DibodevPublicAidStatus
     amountHt: number
     aidAmount: number
+  }
+  [TRACKING_EVENTS.phpVulnerabilityCheckStarted]: { location: string }
+  [TRACKING_EVENTS.phpVulnerabilityChecked]: {
+    location: string
+    outcome: 'result' | 'error'
+    verdict: DibodevPhpVulnerabilityVerdict | null
+    platform: DibodevPhpVulnerabilityPlatformKey | null
+    hostingProvider: DibodevPhpVulnerabilityHostingKey | null
+    phpBranch: string | null
+    errorKind: DibodevPhpVulnerabilityCheckErrorKind | null
   }
 }

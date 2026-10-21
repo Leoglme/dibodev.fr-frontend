@@ -56,6 +56,10 @@ export const TRACKING_EVENTS = {
   publicAidSimulatorStarted: 'public_aid_simulator_started',
   /** Result of the public aid simulator displayed for a commune, with the outcome and the aid. */
   publicAidSimulated: 'public_aid_simulated',
+  /** First address typed in the PHP vulnerability checker (sent once per page view). */
+  phpVulnerabilityCheckStarted: 'php_vulnerability_check_started',
+  /** A site checked by the PHP vulnerability checker, with the verdict (or the error), never the address. */
+  phpVulnerabilityChecked: 'php_vulnerability_checked',
 } as const
 
 /** Tracking event name (value of the `TRACKING_EVENTS` catalog). */
