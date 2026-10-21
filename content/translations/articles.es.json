@@ -25626,5 +25626,745 @@
         }
       ]
     }
+  },
+  "blog/changer-version-php-hostinger-faille-octobre-2026": {
+    "title": "Cambiar la versión de PHP en Hostinger tras la vulnerabilidad del 21 de octubre de 2026: guía paso a paso en hPanel",
+    "excerpt": "Hostinger afirma que «no se requiere acción alguna», pero un sitio que permanezca en PHP 8.1 no recibirá parches. Dónde y cómo cambiar la versión de PHP en hPanel, qué versión elegir, y lo que Hostinger anunció el 21 de octubre.",
+    "metaTitle": "Cambiar la versión de PHP en Hostinger tras la vulnerabilidad de 2026",
+    "metaDescription": "Vulnerabilidad de PHP del 21 de octubre de 2026: dónde cambiar la versión de PHP en hPanel de Hostinger, qué versión elegir y lo que Hostinger anunció al respecto.",
+    "tags": [
+      "PHP",
+      "Hostinger",
+      "alojamiento web",
+      "seguridad informática",
+      "WordPress"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña, y los parches solo existen para las ramas 8.2 a 8.5. Hostinger reaccionó rápido y públicamente, lo cual es de su mérito. Pero su mensaje «no es necesario que actúes» tiene un límite: un sitio que permanezca en PHP 8.1 o versiones anteriores no recibirá ninguna versión corregida, ya sea en Hostinger o en cualquier otro lugar. Aquí te explicamos dónde ver y cambiar la versión de PHP en hPanel, qué versión elegir y lo que Hostinger anunció el 21 de octubre.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Antes de empezar:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "la herramienta de verificación",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/faille-php-verifier-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " lee la versión de PHP cuando el servidor la muestra y reconoce a Hostinger como proveedor de alojamiento. El contexto completo de la vulnerabilidad está en ",
+              "type": "text"
+            },
+            {
+              "text": "el artículo principal",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/faille-php-octobre-2026-site-boutique-logiciel-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que Hostinger dijo el 21 de octubre",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En su página de estado, Hostinger abrió un incidente titulado «PHP Security Update Across Managed Hosting Plans» a las 19:44, hora de París: sus equipos probaron la vulnerabilidad PHP2Shell en sus servidores, afirman que no permite tomar el control de los sitios alojados en ellos, incluyendo WordPress, añadieron una capa de protección y desplegaron de todos modos las versiones corregidas de PHP. Conclusión mostrada: «no se requiere ninguna acción por parte del cliente». A las 21:12, el despliegue había finalizado en la oferta Agency y estaba en curso en los demás servidores. El mismo mensaje fue publicado en su cuenta de X.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Esta es la comunicación más clara del día entre los proveedores de alojamiento. Con dos reservas, sin embargo. Hostinger utiliza LiteSpeed, y la protección anunciada no ha sido detallada. Y sobre todo, «no se requiere ninguna acción» aplica solo a las ramas que el proyecto PHP sigue corrigiendo: si tu sitio está en PHP 8.1 o versiones anteriores, no existe una versión corregida para instalar, y solo un cambio de versión te protegerá realmente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Dónde ver la versión de PHP en hPanel",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En hPanel, abre ",
+              "type": "text"
+            },
+            {
+              "text": "Sitios web",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", haz clic en ",
+              "type": "text"
+            },
+            {
+              "text": "Gestionar",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " junto al sitio, luego, en la barra lateral, bajo ",
+              "type": "text"
+            },
+            {
+              "text": "Avanzado",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", elige ",
+              "type": "text"
+            },
+            {
+              "text": "Configuración de PHP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". La versión actual se muestra en la parte superior de la página. Las pestañas ",
+              "type": "text"
+            },
+            {
+              "text": "Extensiones de PHP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " y ",
+              "type": "text"
+            },
+            {
+              "text": "Opciones de PHP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " en la misma página permiten activar extensiones y ajustar los límites de memoria o envío.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El detalle que importa en Hostinger: la versión seleccionada aquí se aplica a ",
+              "type": "text"
+            },
+            {
+              "text": "todos los sitios del plan de alojamiento",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", excepto los sitios creados con su AI Builder. Si tienes un sitio web corporativo y una tienda en el mismo plan y deseas versiones diferentes, es el archivo `.htaccess` de la carpeta correspondiente el que decide, con una línea como `SetHandler application/x-lsphp83`, donde el número varía según la versión deseada. Hostinger documenta este método en su centro de ayuda.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cambiar la versión",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Siempre en ",
+              "type": "text"
+            },
+            {
+              "text": "Configuración de PHP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", selecciona la versión deseada y haz clic en ",
+              "type": "text"
+            },
+            {
+              "text": "Actualizar",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Hostinger indica que la nueva versión se aplica « en unos minutos ». Tras el cambio, vuelve al apartado ",
+              "type": "text"
+            },
+            {
+              "text": "Extensiones de PHP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": la lista de extensiones disponibles varía según la versión, y una extensión que tu sitio necesite puede haberse desactivado. Es la primera causa de página en blanco justo después de un cambio de versión en su servicio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En los planes antiguos que aún usan cPanel, el camino es el de cPanel: sección ",
+              "type": "text"
+            },
+            {
+              "text": "Software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", herramienta ",
+              "type": "text"
+            },
+            {
+              "text": "Seleccionar versión de PHP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", elegir la versión y luego ",
+              "type": "text"
+            },
+            {
+              "text": "Establecer como actual",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Qué versión elegir",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.3 o 8.4:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " la mejor opción para WordPress, WooCommerce o una herramienta reciente. Las versiones corregidas son 8.3.36 y 8.4.27, con parches de seguridad hasta 2027 y 2028. En Hostinger, 8.3 es la versión predeterminada para nuevos sitios, y el menú abarca desde 8.2 hasta 8.5.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.2:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " corregida en 8.2.35, pero esta rama finaliza el 31 de diciembre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.1 y versiones anteriores:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Hostinger ha eliminado estas versiones del menú, pero un sitio ya configurado en alguna de ellas permanece así hasta que alguien lo modifique. No existen versiones oficiales corregidas para estas ramas. Si su sitio está en una de ellas, cambiar de versión no es una opción de comodidad, es la actualización de seguridad en sí. Verifique antes que su tema y extensiones sean compatibles con la versión objetivo: WordPress funciona desde 7.4 hasta 8.5, son las extensiones antiguas las que fallan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Verificar que el parche esté correctamente instalado",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El menú de hPanel muestra la rama, no el número exacto del parche. El número completo se encuentra en una página phpinfo o, en WordPress, dentro de ",
+              "type": "text"
+            },
+            {
+              "text": "Herramientas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", luego ",
+              "type": "text"
+            },
+            {
+              "text": "Estado del sitio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", pestaña ",
+              "type": "text"
+            },
+            {
+              "text": "Información",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", sección ",
+              "type": "text"
+            },
+            {
+              "text": "Servidor",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Los números que deben aparecer son 8.2.35, 8.3.36, 8.4.27 o 8.5.12. Si ve un número inferior, el despliegue anunciado el 21 de octubre aún no se ha aplicado en su servidor: la página de estado de Hostinger muestra el avance, y ",
+              "type": "text"
+            },
+            {
+              "text": "la herramienta de verificación",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/faille-php-verifier-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " lee el número cuando el servidor lo muestra.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Si el sitio web falla después del cambio",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El reflejo: volver a la versión anterior mediante el mismo menú, el tiempo necesario para actualizar la extensión o el tema culpable, y luego volver a subir. Antes de cualquier operación, un respaldo fuera del servidor, y, idealmente, una prueba en una copia del sitio. Una página en blanco o un error 500 justo después del cambio suele deberse a una extensión PHP desactivada o a una función eliminada entre dos ramas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Y si no quieres tocar nada",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Realizo esta intervención a distancia: respaldo, prueba en una copia, cambio de versión, verificación de extensiones, control del parche, prueba de la página de inicio, de la administración y de un pago, y luego un informe escrito. Respondo en menos de 24 horas. Los mismos guías existen para ",
+              "type": "text"
+            },
+            {
+              "text": "OVHcloud",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-ovh-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "o2switch",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-o2switch-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "IONOS",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-ionos-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "Infomaniak",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-infomaniak-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " y ",
+              "type": "text"
+            },
+            {
+              "text": "PlanetHoster",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-planethoster-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Fuentes:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "ayuda de Hostinger « Cómo cambiar la versión de PHP »",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/fr/support/1575755",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "ayuda de Hostinger « versión de PHP por subcarpeta »",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/fr/support/4047803",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "página de estado de Hostinger, incidente del 21 de octubre de 2026",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://statuspage.hostinger.com/incidents/pj2zs1lx3n9d",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "versiones corregidas en php.net",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.php.net/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "d1a3501b-f881-4e7f-ac48-fa146105daaa",
+            "body": [
+              {
+                "_uid": "i-0020cab1-b63d-4c25-8459-a85eb9253f41",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Escríbame con la dirección de su sitio",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
