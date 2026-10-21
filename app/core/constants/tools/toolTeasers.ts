@@ -350,6 +350,9 @@ const PHP_VULNERABILITY_CHECK_TEASER: DibodevToolTeaserContent = {
 
 export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserContent> = {
   'faille-php-octobre-2026-site-boutique-logiciel-que-faire': PHP_VULNERABILITY_CHECK_TEASER,
+  'changer-version-php-ovh-faille-octobre-2026': PHP_VULNERABILITY_CHECK_TEASER,
+  'changer-version-php-o2switch-faille-octobre-2026': PHP_VULNERABILITY_CHECK_TEASER,
+  'changer-version-php-ionos-faille-octobre-2026': PHP_VULNERABILITY_CHECK_TEASER,
   'site-web-artisans-attirer-clients-locaux': PHP_VULNERABILITY_CHECK_TEASER,
   'site-web-commerce-proximite-2026': PHP_VULNERABILITY_CHECK_TEASER,
   'reprendre-application-vibe-coding': AI_APP_CHECK_TEASER,

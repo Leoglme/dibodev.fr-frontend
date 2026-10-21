@@ -22594,8 +22594,8 @@
   "blog/faille-php-octobre-2026-site-boutique-logiciel-que-faire": {
     "title": "Vulnerabilidad de PHP de octubre de 2026: ¿afecta a tu sitio web, tienda o software y qué hacer?",
     "excerpt": "Dos vulnerabilidades críticas en PHP fueron corregidas el 21 de octubre de 2026. Sitios web con WordPress, tiendas en PrestaShop o WooCommerce, software empresarial, intranets: ¿quién está afectado, qué hace tu proveedor de hosting y qué acciones tomar hoy.",
-    "metaTitle": "Vulnerabilidad de PHP de octubre 2026: ¿tu sitio está afectado?",
-    "metaDescription": "Dos vulnerabilidades críticas en PHP corregidas el 21 de octubre de 2026. Sitios WordPress, tiendas PrestaShop, software empresarial: ¿quién está afectado y qué hacer.",
+    "metaTitle": "Fallo de PHP de octubre de 2026: ¿tu sitio está afectado?",
+    "metaDescription": "Dos fallos críticos de PHP corregidos el 21 de octubre de 2026. Sitios WordPress, tiendas PrestaShop, software de gestión: quién está afectado y qué hacer hoy.",
     "tags": [
       "seguridad",
       "PHP",
@@ -23718,8 +23718,8 @@
   "blog/changer-version-php-ovh-faille-octobre-2026": {
     "title": "Cambiar la versión de PHP en OVH tras la vulnerabilidad del 21 de octubre de 2026: dónde hacer clic y qué versión elegir",
     "excerpt": "Alojamiento web OVHcloud: dónde encontrar la versión de PHP, cómo actualizarla a la 8.3 o 8.4 desde el espacio cliente o el archivo .ovhconfig, qué versión elegir y lo que OVH anunció el 21 de octubre.",
-    "metaTitle": "Cambiar la versión de PHP en OVH tras la vulnerabilidad de PHP de 2026",
-    "metaDescription": "Vulnerabilidad de PHP del 21 de octubre de 2026: dónde consultar y cambiar la versión de PHP de tu alojamiento web en OVHcloud, qué versión elegir y qué medidas tomó OVH.",
+    "metaTitle": "Cambiar la versión de PHP en OVH tras el fallo PHP 2026",
+    "metaDescription": "Fallo de PHP del 21 de octubre de 2026: dónde ver y cambiar la versión de PHP de tu alojamiento web OVHcloud, qué versión elegir y qué hizo OVH.",
     "tags": [
       "PHP",
       "OVH",
@@ -24398,8 +24398,8 @@
   "blog/changer-version-php-o2switch-faille-octobre-2026": {
     "title": "Cambiar la versión de PHP en o2switch tras la vulnerabilidad del 21 de octubre de 2026: guía paso a paso con cPanel",
     "excerpt": "En o2switch, la versión « nativa » de cPanel es PHP 8.1, que ya no recibe parches oficiales. ¿Dónde hacer clic para actualizar a la 8.3 o 8.4, qué versión elegir y qué hizo o2switch el 21 de octubre?",
-    "metaTitle": "Cambiar la versión de PHP en o2switch tras la vulnerabilidad de 2026",
-    "metaDescription": "Vulnerabilidad de PHP del 21 de octubre de 2026: en o2switch, la versión nativa es PHP 8.1, sin parches. ¿Dónde clicar en cPanel para pasar a la 8.3 o 8.4 y qué acciones tomó o2switch?",
+    "metaTitle": "Cambiar la versión de PHP en o2switch tras el fallo PHP 2026",
+    "metaDescription": "Fallo de PHP del 21 de octubre de 2026: en o2switch, la versión nativa es PHP 8.1, sin parche. Dónde clicar en cPanel para pasar a 8.3 u 8.4.",
     "tags": [
       "PHP",
       "o2switch",
@@ -25010,8 +25010,8 @@
   "blog/changer-version-php-ionos-faille-octobre-2026": {
     "title": "Cambiar la versión de PHP en IONOS tras la vulnerabilidad del 21 de octubre de 2026: panel de cliente y soporte extendido de PHP",
     "excerpt": "En IONOS, la versión de PHP se configura por dominio desde el panel de cliente. ¿Dónde hacer clic, qué versión elegir tras la vulnerabilidad del 21 de octubre de 2026, y qué ofrece el soporte extendido de PHP (PHP Extended Support).",
-    "metaTitle": "Cambiar la versión de PHP en IONOS tras la vulnerabilidad de PHP 2026",
-    "metaDescription": "Vulnerabilidad de PHP del 21 de octubre de 2026: dónde cambiar la versión de PHP en el panel de cliente de IONOS, qué versión elegir y qué ofrece el soporte extendido de PHP (PHP Extended Support).",
+    "metaTitle": "Cambiar la versión de PHP en IONOS tras el fallo PHP 2026",
+    "metaDescription": "Fallo de PHP del 21 de octubre de 2026: dónde cambiar la versión de PHP en el panel de IONOS, qué versión elegir y qué vale el PHP Extended Support.",
     "tags": [
       "PHP",
       "IONOS",
