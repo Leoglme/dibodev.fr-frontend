@@ -6,6 +6,7 @@ import type {
 import type { DibodevPhotoSlideshowNavigationMethod } from '~/core/types/DibodevPhotoSlideshow'
 import type {
   DibodevPhpVulnerabilityCheckErrorKind,
+  DibodevPhpVulnerabilityHostGuideKey,
   DibodevPhpVulnerabilityHostingKey,
   DibodevPhpVulnerabilityPlatformKey,
   DibodevPhpVulnerabilityVerdict,
@@ -89,5 +90,11 @@ export type TrackingEventPayloads = {
     hostingProvider: DibodevPhpVulnerabilityHostingKey | null
     phpBranch: string | null
     errorKind: DibodevPhpVulnerabilityCheckErrorKind | null
+  }
+  [TRACKING_EVENTS.phpVulnerabilityGuideClicked]: {
+    location: string
+    guide: DibodevPhpVulnerabilityHostGuideKey
+    verdict: DibodevPhpVulnerabilityVerdict
+    hostingProvider: DibodevPhpVulnerabilityHostingKey | null
   }
 }

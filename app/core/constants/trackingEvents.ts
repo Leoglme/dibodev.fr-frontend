@@ -60,6 +60,8 @@ export const TRACKING_EVENTS = {
   phpVulnerabilityCheckStarted: 'php_vulnerability_check_started',
   /** A site checked by the PHP vulnerability checker, with the verdict (or the error), never the address. */
   phpVulnerabilityChecked: 'php_vulnerability_checked',
+  /** A hosting guide opened from the result card of the PHP vulnerability checker. */
+  phpVulnerabilityGuideClicked: 'php_vulnerability_guide_clicked',
 } as const
 
 /** Tracking event name (value of the `TRACKING_EVENTS` catalog). */
