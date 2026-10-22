@@ -21,7 +21,7 @@ export const PHP_UPDATE_SERVICE_PAGE_EN: DibodevPhpUpdateServicePageContent = {
     titlePart2: ' within 24 h',
     description:
       'Your host says “no action required”, your provider does not answer, or your site is still on PHP 8.1 or older with no fix to receive. I handle it remotely: free diagnosis within 24 hours, backup, test on a copy, update, written report. Prices are announced up front.',
-    ctaText: 'Send my address',
+    ctaText: 'Send my website link',
     secondaryCtaText: 'See the prices',
     reassurances: ['Reply within 24 h', 'Backup first', 'Fixed prices, announced up front'],
   },
@@ -36,7 +36,7 @@ export const PHP_UPDATE_SERVICE_PAGE_EN: DibodevPhpUpdateServicePageContent = {
         title: 'Diagnosis',
         price: 'Free',
         description:
-          'You send me the address of the site. Within 24 hours I tell you in writing whether it is affected by the 21 October 2026 vulnerability, which PHP version it serves and what to do. No commitment.',
+          'You send me the link to the site. Within 24 hours I tell you in writing whether it is affected by the 21 October 2026 vulnerability, which PHP version it serves and what to do. No commitment.',
         isHighlighted: false,
       },
       {
@@ -65,7 +65,7 @@ export const PHP_UPDATE_SERVICE_PAGE_EN: DibodevPhpUpdateServicePageContent = {
       'Follow-up: monthly updates and monitoring for €100 a month, no minimum term.',
       'Net prices, VAT not applicable (French art. 293 B). Remote work, anywhere in France and Europe.',
     ],
-    ctaLabel: 'Send my address',
+    ctaLabel: 'Send my website link',
     highlightLabel: 'Most requested',
     toolLinkText: 'Check my site for free first',
   },
@@ -133,8 +133,8 @@ export const PHP_UPDATE_SERVICE_PAGE_EN: DibodevPhpUpdateServicePageContent = {
       'Nothing to install on your side. Access to the hosting is enough, and you take it back at the end if you wish.',
     steps: [
       {
-        label: 'Address',
-        title: 'You send me the address of the site',
+        label: 'Link',
+        title: 'You send me the link to the site',
         description: 'Through the form, with your host if you know it. Otherwise I find it.',
       },
       {
@@ -191,7 +191,7 @@ export const PHP_UPDATE_SERVICE_PAGE_EN: DibodevPhpUpdateServicePageContent = {
       {
         question: 'I do not know my PHP version or my host.',
         answer:
-          'Not a problem. The free check tool reads the version when the server shows it and recognises the host, and the diagnosis does the rest. All you need is the address of the site.',
+          'Not a problem. The free check tool reads the version when the server shows it and recognises the host, and the diagnosis does the rest. All you need is the link to the site.',
       },
       {
         question: 'Do you also update WordPress, the theme and the plugins?',
@@ -210,12 +210,12 @@ export const PHP_UPDATE_SERVICE_PAGE_EN: DibodevPhpUpdateServicePageContent = {
     intro: 'The 21 October 2026 vulnerability explained, and the step by step at each host.',
   },
   contactCta: {
-    title: 'Send me the address of your site',
+    title: 'Send me the link to your site',
     description: 'Free diagnosis within 24 hours, then a fixed price announced before any work.',
-    button: 'Send my address',
+    button: 'Send my website link',
   },
   mobileContactBar: {
     text: 'Need an update?',
-    buttonLabel: 'Send my address',
+    buttonLabel: 'Send my website link',
   },
 }

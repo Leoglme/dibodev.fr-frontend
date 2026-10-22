@@ -592,7 +592,7 @@
       },
       "phpVulnerability": {
         "messageWithSite": "Hello,\nmy site {site} runs on PHP. The check tool says: “{verdict}”.\nCan you confirm whether it is affected by the 21 October 2026 vulnerability and tell me what to do?",
-        "messageWithoutSite": "Hello,\nI have doubts about my site after the October 2026 PHP vulnerability. Can you tell me whether it is affected and what to do?\nIts address: ",
+        "messageWithoutSite": "Hello,\nI have doubts about my site after the October 2026 PHP vulnerability. Can you tell me whether it is affected and what to do?\nMy website link: ",
         "verdicts": {
           "unpatched": "PHP version not patched",
           "endOfLife": "PHP version without an official fix",
@@ -603,7 +603,7 @@
         }
       },
       "phpUpdate": {
-        "message": "Hello,\nI would like to have the PHP version of my site updated (and WordPress, the theme and the plugins if needed).\nIts address: \nMy host, if I know it: "
+        "message": "Hello,\nI would like to have the PHP version of my site updated (and WordPress, the theme and the plugins if needed).\nMy website link: \nMy host, if I know it: "
       }
     },
     "reassurance": {

@@ -21,7 +21,7 @@ export const PHP_UPDATE_SERVICE_PAGE_ES: DibodevPhpUpdateServicePageContent = {
     titlePart2: ' en 24 h',
     description:
       'Tu hosting dice «no se requiere ninguna acción», tu proveedor no responde, o tu web sigue en PHP 8.1 o anterior y no tiene ningún parche que recibir. Me ocupo a distancia: diagnóstico gratuito en 24 h, copia de seguridad, prueba en una copia, actualización, informe escrito. Los precios se anuncian de antemano.',
-    ctaText: 'Enviar mi dirección',
+    ctaText: 'Enviar el enlace de mi web',
     secondaryCtaText: 'Ver los precios',
     reassurances: ['Respuesta en 24 h', 'Copia de seguridad primero', 'Precios fijos, anunciados de antemano'],
   },
@@ -36,7 +36,7 @@ export const PHP_UPDATE_SERVICE_PAGE_ES: DibodevPhpUpdateServicePageContent = {
         title: 'Diagnóstico',
         price: 'Gratis',
         description:
-          'Me envías la dirección de la web. En 24 h te digo por escrito si está afectada por el fallo del 21 de octubre de 2026, qué versión de PHP sirve y qué hacer. Sin compromiso.',
+          'Me envías el enlace de la web. En 24 h te digo por escrito si está afectada por el fallo del 21 de octubre de 2026, qué versión de PHP sirve y qué hacer. Sin compromiso.',
         isHighlighted: false,
       },
       {
@@ -65,7 +65,7 @@ export const PHP_UPDATE_SERVICE_PAGE_ES: DibodevPhpUpdateServicePageContent = {
       'Seguimiento: actualizaciones mensuales y vigilancia por 100 € al mes, sin permanencia.',
       'Precios netos, IVA no aplicable (art. 293 B del CGI francés). Intervención a distancia, en toda Francia y Europa.',
     ],
-    ctaLabel: 'Enviar mi dirección',
+    ctaLabel: 'Enviar el enlace de mi web',
     highlightLabel: 'El más solicitado',
     toolLinkText: 'Comprobar primero mi web gratis',
   },
@@ -134,8 +134,8 @@ export const PHP_UPDATE_SERVICE_PAGE_ES: DibodevPhpUpdateServicePageContent = {
     intro: 'Nada que instalar por tu parte. Basta un acceso al hosting, que recuperas al final si lo deseas.',
     steps: [
       {
-        label: 'Dirección',
-        title: 'Me envías la dirección de la web',
+        label: 'Enlace',
+        title: 'Me envías el enlace de la web',
         description: 'Por el formulario, con tu hosting si lo conoces. Si no, lo averiguo yo.',
       },
       {
@@ -192,7 +192,7 @@ export const PHP_UPDATE_SERVICE_PAGE_ES: DibodevPhpUpdateServicePageContent = {
       {
         question: 'No conozco mi versión de PHP ni mi hosting.',
         answer:
-          'No es un problema. La herramienta de comprobación gratuita lee la versión cuando el servidor la muestra y reconoce el hosting, y el diagnóstico hace el resto. Solo necesitas la dirección de la web.',
+          'No es un problema. La herramienta de comprobación gratuita lee la versión cuando el servidor la muestra y reconoce el hosting, y el diagnóstico hace el resto. Solo necesitas el enlace de la web.',
       },
       {
         question: '¿También actualizas WordPress, el tema y los plugins?',
@@ -211,12 +211,12 @@ export const PHP_UPDATE_SERVICE_PAGE_ES: DibodevPhpUpdateServicePageContent = {
     intro: 'El fallo del 21 de octubre de 2026 explicado, y el paso a paso en cada hosting.',
   },
   contactCta: {
-    title: 'Envíame la dirección de tu web',
+    title: 'Envíame el enlace de tu web',
     description: 'Diagnóstico gratuito en 24 h, y luego un precio fijo anunciado antes de cualquier intervención.',
-    button: 'Enviar mi dirección',
+    button: 'Enviar el enlace de mi web',
   },
   mobileContactBar: {
     text: '¿Necesitas una actualización?',
-    buttonLabel: 'Enviar mi dirección',
+    buttonLabel: 'Enviar el enlace de mi web',
   },
 }

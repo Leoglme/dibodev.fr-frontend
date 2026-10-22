@@ -8,24 +8,24 @@ const PHP_VULNERABILITY_CONTACT_PROMPT: DibodevContactPromptContent = {
   wording: {
     fr: {
       emphasizedIntro: `Pas le temps de tout lire${NBSP}?`,
-      text: `Envoyez-moi l’adresse de votre site, je vous dis sous 24${NBSP}h s’il est concerné et quoi faire. Gratuit, sans engagement.`,
-      linkLabel: 'Envoyer mon adresse',
+      text: `Envoyez-moi le lien de votre site, je vous dis sous 24${NBSP}h s’il est concerné et quoi faire. Gratuit, sans engagement.`,
+      linkLabel: 'Envoyer le lien de mon site',
       barText: `Un doute sur votre site${NBSP}?`,
-      barButtonLabel: 'Envoyer mon adresse',
+      barButtonLabel: 'Envoyer le lien de mon site',
     },
     en: {
       emphasizedIntro: 'No time to read it all?',
-      text: 'Send me your site’s address and I’ll tell you within 24 hours whether it is affected and what to do. Free, no commitment.',
-      linkLabel: 'Send my address',
+      text: 'Send me the link to your site and I’ll tell you within 24 hours whether it is affected and what to do. Free, no commitment.',
+      linkLabel: 'Send my website link',
       barText: 'Worried about your site?',
-      barButtonLabel: 'Send my address',
+      barButtonLabel: 'Send my website link',
     },
     es: {
       emphasizedIntro: '¿Sin tiempo para leerlo todo?',
-      text: 'Envíame la dirección de tu web y te digo en 24 h si está afectada y qué hacer. Gratis, sin compromiso.',
-      linkLabel: 'Enviar mi dirección',
+      text: 'Envíame el enlace de tu web y te digo en 24 h si está afectada y qué hacer. Gratis, sin compromiso.',
+      linkLabel: 'Enviar el enlace de mi web',
       barText: '¿Dudas sobre tu web?',
-      barButtonLabel: 'Enviar mi dirección',
+      barButtonLabel: 'Enviar el enlace de mi web',
     },
   },
 }

@@ -4,11 +4,11 @@
       v-if="isShown"
       class="fixed inset-x-0 bottom-0 z-40 border-t border-gray-300 bg-white/95 px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(17,17,17,0.08)] backdrop-blur lg:hidden"
     >
-      <div class="mx-auto flex max-w-xl items-center justify-between gap-3 pr-[4.75rem]">
-        <p class="line-clamp-2 min-w-0 flex-1 text-sm leading-5 font-medium text-gray-100">{{ props.text }}</p>
+      <div class="mx-auto grid max-w-xl gap-2 pr-[4.75rem]">
+        <p class="text-sm leading-5 font-medium text-gray-100">{{ props.text }}</p>
         <NuxtLink
           :to="props.to"
-          class="bg-primary hover:bg-primary-dark inline-flex shrink-0 items-center gap-1.5 rounded-lg px-4 py-2.5 text-sm leading-5 font-medium text-white transition-colors"
+          class="bg-primary hover:bg-primary-dark inline-flex min-h-11 items-center justify-center gap-1.5 rounded-lg px-4 py-2.5 text-sm leading-5 font-medium text-white transition-colors"
           @click="trackClick"
         >
           {{ props.buttonLabel }}
@@ -29,7 +29,7 @@ import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 /**
- * Small screens only: a question and a contact button that stay at the bottom while the visitor reads.
+ * Small screens only: a question above a full-width contact button, fixed at the bottom while the visitor reads.
  * The right padding leaves the corner to the assistant bubble loaded in production.
  */
 const props: DibodevMobileContactBarProps = defineProps({

@@ -592,7 +592,7 @@
       },
       "phpVulnerability": {
         "messageWithSite": "Hola,\nmi web {site} funciona con PHP. La herramienta de comprobación indica: «{verdict}».\n¿Puedes confirmarme si está afectada por el fallo del 21 de octubre de 2026 y decirme qué hacer?",
-        "messageWithoutSite": "Hola,\ntengo dudas sobre mi web tras el fallo de PHP de octubre de 2026. ¿Puedes decirme si está afectada y qué hacer?\nSu dirección: ",
+        "messageWithoutSite": "Hola,\ntengo dudas sobre mi web tras el fallo de PHP de octubre de 2026. ¿Puedes decirme si está afectada y qué hacer?\nEl enlace de mi web: ",
         "verdicts": {
           "unpatched": "versión de PHP sin parche",
           "endOfLife": "versión de PHP sin parche oficial",
@@ -603,7 +603,7 @@
         }
       },
       "phpUpdate": {
-        "message": "Hola,\nquiero que actualicen la versión de PHP de mi web (y WordPress, el tema y los plugins si hace falta).\nSu dirección: \nMi hosting, si lo conozco: "
+        "message": "Hola,\nquiero que actualicen la versión de PHP de mi web (y WordPress, el tema y los plugins si hace falta).\nEl enlace de mi web: \nMi hosting, si lo conozco: "
       }
     },
     "reassurance": {

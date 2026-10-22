@@ -21,7 +21,7 @@ export const PHP_UPDATE_SERVICE_PAGE_FR: DibodevPhpUpdateServicePageContent = {
     titleHighlight1: 'intervention à distance',
     titlePart2: ' sous 24 h',
     description: `Votre hébergeur dit « aucune action requise », votre prestataire ne répond pas, ou votre site est resté en PHP 8.1 ou plus ancien et n’a aucun correctif à recevoir. Je m’en occupe à distance${NBSP}: diagnostic gratuit sous 24${NBSP}h, sauvegarde, test sur une copie, mise à jour, compte rendu écrit. Les prix sont annoncés d’avance.`,
-    ctaText: 'Envoyer mon adresse',
+    ctaText: 'Envoyer le lien de mon site',
     secondaryCtaText: 'Voir les prix',
     reassurances: ['Réponse sous 24 h', 'Sauvegarde avant tout', 'Prix fixes, annoncés d’avance'],
   },
@@ -34,7 +34,7 @@ export const PHP_UPDATE_SERVICE_PAGE_FR: DibodevPhpUpdateServicePageContent = {
       {
         title: 'Diagnostic',
         price: 'Gratuit',
-        description: `Vous m’envoyez l’adresse du site. Je vous dis par écrit sous 24${NBSP}h s’il est concerné par la faille du 21 octobre 2026, quelle version de PHP il sert et quoi faire. Sans engagement.`,
+        description: `Vous m’envoyez le lien du site. Je vous dis par écrit sous 24${NBSP}h s’il est concerné par la faille du 21 octobre 2026, quelle version de PHP il sert et quoi faire. Sans engagement.`,
         isHighlighted: false,
       },
       {
@@ -60,7 +60,7 @@ export const PHP_UPDATE_SERVICE_PAGE_FR: DibodevPhpUpdateServicePageContent = {
       `Suivi${NBSP}: mises à jour mensuelles et surveillance pour 100 € par mois, sans engagement de durée.`,
       'Prix nets, TVA non applicable (art. 293 B du CGI). Intervention à distance, partout en France.',
     ],
-    ctaLabel: 'Envoyer mon adresse',
+    ctaLabel: 'Envoyer le lien de mon site',
     highlightLabel: 'Le plus demandé',
     toolLinkText: 'Vérifier d’abord mon site gratuitement',
   },
@@ -133,8 +133,8 @@ export const PHP_UPDATE_SERVICE_PAGE_FR: DibodevPhpUpdateServicePageContent = {
       'Rien à installer de votre côté. Un accès à l’hébergement suffit, que vous reprenez à la fin si vous le souhaitez.',
     steps: [
       {
-        label: 'Adresse',
-        title: 'Vous m’envoyez l’adresse du site',
+        label: 'Lien',
+        title: 'Vous m’envoyez le lien du site',
         description: 'Par le formulaire, avec votre hébergeur si vous le connaissez. Sinon, je le retrouve.',
       },
       {
@@ -191,7 +191,7 @@ export const PHP_UPDATE_SERVICE_PAGE_FR: DibodevPhpUpdateServicePageContent = {
       {
         question: 'Je ne connais pas ma version de PHP ni mon hébergeur.',
         answer:
-          'Ce n’est pas un problème. L’outil de vérification gratuit lit la version quand le serveur l’affiche et reconnaît l’hébergeur, et le diagnostic fait le reste. Vous n’avez besoin que de l’adresse du site.',
+          'Ce n’est pas un problème. L’outil de vérification gratuit lit la version quand le serveur l’affiche et reconnaît l’hébergeur, et le diagnostic fait le reste. Vous n’avez besoin que du lien du site.',
       },
       {
         question: 'Mettez-vous aussi à jour WordPress, le thème et les extensions ?',
@@ -210,12 +210,12 @@ export const PHP_UPDATE_SERVICE_PAGE_FR: DibodevPhpUpdateServicePageContent = {
     intro: 'La faille du 21 octobre 2026 expliquée, et le pas à pas chez chaque hébergeur.',
   },
   contactCta: {
-    title: 'Envoyez-moi l’adresse de votre site',
+    title: 'Envoyez-moi le lien de votre site',
     description: `Diagnostic gratuit sous 24${NBSP}h, puis un prix fixe annoncé avant toute intervention.`,
-    button: 'Envoyer mon adresse',
+    button: 'Envoyer le lien de mon site',
   },
   mobileContactBar: {
     text: `Besoin d’une mise à jour${NBSP}?`,
-    buttonLabel: 'Envoyer mon adresse',
+    buttonLabel: 'Envoyer le lien de mon site',
   },
 }
