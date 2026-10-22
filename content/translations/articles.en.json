@@ -25709,14 +25709,14 @@
     }
   },
   "blog/changer-version-php-hostinger-faille-octobre-2026": {
-    "title": "Changing the PHP Version on Hostinger After the October 21, 2026 Vulnerability: A Step-by-Step Guide Using hPanel",
+    "title": "Changing the PHP Version on Hostinger After the October 21, 2026 Vulnerability: A Step-by-Step Guide for hPanel",
     "excerpt": "Hostinger claims 'no action required,' but a site stuck on PHP 8.1 will receive no security updates. Where to find and change the PHP version in hPanel, which version to choose, and what Hostinger announced on October 21.",
-    "metaTitle": "Change the PHP Version at Hostinger After the 2026 Flaw",
-    "metaDescription": "October 21, 2026 PHP flaw: where to change the PHP version in Hostinger’s hPanel, which version to choose, and what Hostinger announced.",
+    "metaTitle": "How to Change Your PHP Version on Hostinger After the 2026 Vulnerability",
+    "metaDescription": "PHP vulnerability on October 21, 2026: Where to update your PHP version in Hostinger’s hPanel, which version to select, and what Hostinger revealed.",
     "tags": [
       "PHP",
       "Hostinger",
-      "web hosting",
+      "hosting",
       "security",
       "WordPress"
     ],
@@ -25727,7 +25727,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Since October 21, 2026, two critical vulnerabilities in PHP have allowed servers to be taken over without a password, and patches exist only for branches 8.2 to 8.5. Hostinger responded quickly and publicly, which is commendable. However, their message ‘no action required on your part’ has a limitation: a site still running PHP 8.1 or an older version has no patched version available to receive, whether with Hostinger or elsewhere. Here’s where to check and change the PHP version in hPanel, which version to choose, and what Hostinger announced on October 21.",
+              "text": "Since October 21, 2026, two critical vulnerabilities in PHP have allowed servers to be taken over without a password, and patches only exist for branches 8.2 to 8.5. Hostinger responded quickly and publicly, which is commendable. However, their message ‘no action required on your part’ has a limitation: a site still running PHP 8.1 or an older version has no patched version available to install, whether with Hostinger or elsewhere. Here’s where to check and change the PHP version in hPanel, which version to choose, and what Hostinger announced on October 21.",
               "type": "text"
             }
           ]
@@ -25811,7 +25811,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "This is the clearest communication of the day among hosting providers. Two reservations remain, however. Hostinger operates on LiteSpeed, and the announced protection has not been detailed. Most importantly, ‘no action’ applies only to the branches that the PHP project still patches: if your site runs on 8.1 or an older version, there is no patched version available to install, and only a version change truly protects you.",
+              "text": "This is the clearest communication of the day among hosting providers. Two caveats remain, however. Hostinger runs on LiteSpeed, and the announced protection has not been detailed. Most importantly, ‘no action required’ applies only to the PHP branches that are still being patched: if your site is on 8.1 or an older version, there is no patched version available to install, and only a version change truly protects you.",
               "type": "text"
             }
           ]
@@ -25919,7 +25919,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The detail that matters with Hostinger: the version chosen here applies to ",
+              "text": "The detail that matters at Hostinger: the version chosen here applies to ",
               "type": "text"
             },
             {
@@ -25932,7 +25932,7 @@
               ]
             },
             {
-              "text": ", except for sites created with their AI Builder. If you have a portfolio site and an online store on the same plan and you want different versions, it’s the `.htaccess` file in the relevant folder that decides, with a line like `SetHandler application/x-lsphp83`, the number changing depending on the desired version. Hostinger documents this method in its help center.",
+              "text": ", except for sites created with their AI Builder. If you have a portfolio site and a store on the same plan and want different versions, it’s the `.htaccess` file in the relevant folder that decides, with a line like `SetHandler application/x-lsphp83`, the number changing depending on the desired version. Hostinger documents this method in its help center.",
               "type": "text"
             }
           ]
@@ -25966,7 +25966,7 @@
               ]
             },
             {
-              "text": ", select the desired version and then click on ",
+              "text": ", select the desired version and click on ",
               "type": "text"
             },
             {
@@ -26001,7 +26001,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "On older plans that still use cPanel, the path is through cPanel: under the ",
+              "text": "On older plans that still use cPanel, the path is through cPanel: section ",
               "type": "text"
             },
             {
@@ -26014,7 +26014,7 @@
               ]
             },
             {
-              "text": "section, use the ",
+              "text": ", tool ",
               "type": "text"
             },
             {
@@ -26027,7 +26027,7 @@
               ]
             },
             {
-              "text": "tool, choose the version, and then ",
+              "text": ", choose the version, then ",
               "type": "text"
             },
             {
@@ -26179,7 +26179,7 @@
               ]
             },
             {
-              "text": ". The numbers to look for are 8.2.35, 8.3.36, 8.4.27, or 8.5.12. If you see a lower number, the update announced on October 21 hasn’t rolled out to your server yet: Hostinger’s status page shows the progress, and ",
+              "text": ". The numbers to look for are 8.2.35, 8.3.36, 8.4.27, or 8.5.12. If you see a lower number, the deployment announced on October 21 hasn’t reached your server yet: Hostinger’s status page shows the progress, and ",
               "type": "text"
             },
             {
@@ -26218,7 +26218,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The reflex: go back to the previous version through the same menu, long enough to update the faulty extension or theme, then revert. Before any action, back up outside the server, and ideally test on a site copy. A blank page or a 500 error right after the change almost always comes from a PHP extension that was unchecked or a function removed between branches.",
+              "text": "The reflex: go back to the previous version through the same menu, long enough to update the faulty extension or theme, then go back up. Before any action, make a backup outside the server, and ideally test it on a copy of the site. A blank page or a 500 error right after the change almost always comes from a PHP extension that was unchecked or a function removed between branches.",
               "type": "text"
             }
           ]
@@ -26239,7 +26239,25 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I perform this intervention remotely: backup, testing on a copy, version change, extension verification, patch control, testing the homepage, admin panel, and a payment, then a written report. I respond within 24 hours. The same guides apply for ",
+              "text": "I perform this intervention remotely: backup, testing on a copy, version change, extension verification, patch control, testing of the homepage, the admin panel, and a payment, followed by a written report. ",
+              "type": "text"
+            },
+            {
+              "text": "Write to me with the link to your site",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/contact",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", I’ll reply within 24 hours. The same guides exist for ",
               "type": "text"
             },
             {
@@ -26351,7 +26369,7 @@
               "type": "text"
             },
             {
-              "text": "Hostinger help: « How to Change PHP Version »",
+              "text": "Hostinger help: « How to change the PHP version »",
               "type": "text",
               "marks": [
                 {
@@ -26369,7 +26387,7 @@
               "type": "text"
             },
             {
-              "text": "Hostinger help: « PHP Version per Subfolder »",
+              "text": "Hostinger help: « PHP version per subfolder »",
               "type": "text",
               "marks": [
                 {
@@ -26387,7 +26405,7 @@
               "type": "text"
             },
             {
-              "text": "Hostinger status page, incident from October 21, 2026",
+              "text": "Hostinger status page, October 21, 2026 incident",
               "type": "text",
               "marks": [
                 {
@@ -26405,7 +26423,7 @@
               "type": "text"
             },
             {
-              "text": "corrected versions on php.net",
+              "text": "fixed versions on php.net",
               "type": "text",
               "marks": [
                 {
@@ -26423,27 +26441,6 @@
               "type": "text"
             }
           ]
-        },
-        {
-          "type": "blok",
-          "attrs": {
-            "id": "d1a3501b-f881-4e7f-ac48-fa146105daaa",
-            "body": [
-              {
-                "_uid": "i-0020cab1-b63d-4c25-8459-a85eb9253f41",
-                "link": {
-                  "id": "",
-                  "url": "/contact",
-                  "linktype": "url",
-                  "fieldtype": "multilink",
-                  "cached_url": "/contact"
-                },
-                "label": "Write to me with your website address",
-                "style": "primary",
-                "component": "cta_button"
-              }
-            ]
-          }
         }
       ]
     }

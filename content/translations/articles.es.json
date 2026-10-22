@@ -25713,8 +25713,8 @@
   "blog/changer-version-php-hostinger-faille-octobre-2026": {
     "title": "Cambiar la versión de PHP en Hostinger tras la vulnerabilidad del 21 de octubre de 2026: guía paso a paso en hPanel",
     "excerpt": "Hostinger afirma que «no se requiere acción alguna», pero un sitio que permanezca en PHP 8.1 no recibirá parches. Dónde y cómo cambiar la versión de PHP en hPanel, qué versión elegir, y lo que Hostinger anunció el 21 de octubre.",
-    "metaTitle": "Cambiar la versión de PHP en Hostinger tras el fallo 2026",
-    "metaDescription": "Fallo de PHP del 21 de octubre de 2026: dónde cambiar la versión de PHP en el hPanel de Hostinger, qué versión elegir y qué anunció Hostinger.",
+    "metaTitle": "Cambiar la versión de PHP en Hostinger tras la vulnerabilidad de 2026",
+    "metaDescription": "Vulnerabilidad de PHP del 21 de octubre de 2026: dónde cambiar la versión de PHP en hPanel de Hostinger, qué versión elegir y lo que Hostinger anunció al respecto.",
     "tags": [
       "PHP",
       "Hostinger",
@@ -25729,7 +25729,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña, y los parches solo existen para las ramas 8.2 a 8.5. Hostinger reaccionó rápido y públicamente, lo cual es de su mérito. Pero su mensaje «no es necesario que actúes» tiene un límite: un sitio que permanezca en PHP 8.1 o versiones anteriores no recibirá ninguna versión corregida, ya sea en Hostinger o en cualquier otro lugar. Aquí te explicamos dónde ver y cambiar la versión de PHP en hPanel, qué versión elegir y lo que Hostinger anunció el 21 de octubre.",
+              "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña, y los parches solo existen para las ramas 8.2 a 8.5. Hostinger reaccionó rápido y públicamente, lo que es de su honor. Pero su mensaje «no es necesario que actúes» tiene un límite: un sitio que permanezca en PHP 8.1 o versiones anteriores no recibirá ninguna versión corregida, ya sea en Hostinger o en cualquier otro lugar. Aquí te explicamos dónde ver y cambiar la versión de PHP en hPanel, qué versión elegir y lo que Hostinger anunció el 21 de octubre.",
               "type": "text"
             }
           ]
@@ -25804,7 +25804,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En su página de estado, Hostinger abrió un incidente titulado «PHP Security Update Across Managed Hosting Plans» a las 19:44, hora de París: sus equipos probaron la vulnerabilidad PHP2Shell en sus servidores, afirman que no permite tomar el control de los sitios alojados en ellos, incluyendo WordPress, añadieron una capa de protección y desplegaron de todos modos las versiones corregidas de PHP. Conclusión mostrada: «no se requiere ninguna acción por parte del cliente». A las 21:12, el despliegue había finalizado en la oferta Agency y estaba en curso en los demás servidores. El mismo mensaje fue publicado en su cuenta de X.",
+              "text": "En su página de estado, Hostinger abrió un incidente titulado «Actualización de seguridad de PHP en todos los planes de alojamiento gestionado» a las 19:44, hora de París: sus equipos probaron la vulnerabilidad PHP2Shell en sus servidores, afirmaron que no permite tomar el control de los sitios alojados en ellos, incluyendo WordPress, añadieron una capa de protección y desplegaron, de todos modos, las versiones corregidas de PHP. Conclusión mostrada: «no se requiere ninguna acción por parte del cliente». A las 21:12, el despliegue había finalizado en la oferta Agency y estaba en curso en los demás servidores. El mismo mensaje fue publicado en su cuenta de X.",
               "type": "text"
             }
           ]
@@ -25934,7 +25934,7 @@
               ]
             },
             {
-              "text": ", excepto los sitios creados con su AI Builder. Si tienes un sitio web corporativo y una tienda en el mismo plan y deseas versiones diferentes, es el archivo `.htaccess` de la carpeta correspondiente el que decide, con una línea como `SetHandler application/x-lsphp83`, donde el número varía según la versión deseada. Hostinger documenta este método en su centro de ayuda.",
+              "text": ", excepto los sitios creados con su AI Builder. Si tienes una página web y una tienda en el mismo plan y deseas versiones diferentes, es el archivo `.htaccess` de la carpeta correspondiente el que decide, con una línea como `SetHandler application/x-lsphp83`, donde el número varía según la versión deseada. Hostinger documenta este método en su centro de ayuda.",
               "type": "text"
             }
           ]
@@ -25994,7 +25994,7 @@
               ]
             },
             {
-              "text": ": la lista de extensiones disponibles varía según la versión, y una extensión que tu sitio necesite puede haberse desactivado. Es la primera causa de página en blanco justo después de un cambio de versión en su servicio.",
+              "text": ": la lista de extensiones disponibles varía según la versión, y una extensión que tu sitio necesite puede haberse desactivado durante el proceso. Es la primera causa de página en blanco justo después de un cambio de versión en su servicio.",
               "type": "text"
             }
           ]
@@ -26063,7 +26063,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "PHP 8.3 o 8.4:",
+              "text": ": PHP 8.3 o 8.4",
               "type": "text",
               "marks": [
                 {
@@ -26090,7 +26090,7 @@
               ]
             },
             {
-              "text": " corregida en 8.2.35, pero esta rama finaliza el 31 de diciembre de 2026.",
+              "text": " corregida en 8.2.35, pero la rama finaliza el 31 de diciembre de 2026.",
               "type": "text"
             }
           ]
@@ -26108,7 +26108,7 @@
               ]
             },
             {
-              "text": " Hostinger ha eliminado estas versiones del menú, pero un sitio ya configurado en alguna de ellas permanece así hasta que alguien lo modifique. No existen versiones oficiales corregidas para estas ramas. Si su sitio está en una de ellas, cambiar de versión no es una opción de comodidad, es la actualización de seguridad en sí. Verifique antes que su tema y extensiones sean compatibles con la versión objetivo: WordPress funciona desde 7.4 hasta 8.5, son las extensiones antiguas las que fallan.",
+              "text": " Hostinger ha eliminado estas versiones del menú, pero un sitio ya configurado en alguna de ellas permanece así hasta que alguien lo modifique. No existen versiones oficiales corregidas para estas ramas. Si su sitio está en una de ellas, cambiar de versión no es una opción de comodidad, sino la actualización de seguridad en sí. Verifique antes que su tema y extensiones sean compatibles con la versión objetivo: WordPress funciona desde 7.4 hasta 8.5, son las extensiones antiguas las que fallan.",
               "type": "text"
             }
           ]
@@ -26129,7 +26129,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El menú de hPanel muestra la rama, no el número exacto del parche. El número completo se encuentra en una página phpinfo o, en WordPress, dentro de ",
+              "text": "El menú de hPanel muestra la rama, no el número exacto del parche. El número completo se lee en una página phpinfo o, en WordPress, en ",
               "type": "text"
             },
             {
@@ -26142,11 +26142,11 @@
               ]
             },
             {
-              "text": ", luego ",
+              "text": ", luego en ",
               "type": "text"
             },
             {
-              "text": "Estado del sitio",
+              "text": "Salud del sitio",
               "type": "text",
               "marks": [
                 {
@@ -26211,7 +26211,7 @@
           },
           "content": [
             {
-              "text": "Si el sitio web falla después del cambio",
+              "text": "Si el sitio se rompe después del cambio",
               "type": "text"
             }
           ]
@@ -26220,7 +26220,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El reflejo: volver a la versión anterior mediante el mismo menú, el tiempo necesario para actualizar la extensión o el tema culpable, y luego volver a subir. Antes de cualquier operación, un respaldo fuera del servidor, y, idealmente, una prueba en una copia del sitio. Una página en blanco o un error 500 justo después del cambio suele deberse a una extensión PHP desactivada o a una función eliminada entre dos ramas.",
+              "text": "El reflejo: volver a la versión anterior por el mismo menú, el tiempo de actualizar la extensión o el tema culpable, luego volver a subir. Antes de cualquier maniobra, una copia de seguridad fuera del servidor, y idealmente una prueba en una copia del sitio. Una página en blanco o un error 500 justo después del cambio proviene casi siempre de una extensión PHP desactivada o de una función eliminada entre dos ramas.",
               "type": "text"
             }
           ]
@@ -26241,7 +26241,25 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Realizo esta intervención a distancia: respaldo, prueba en una copia, cambio de versión, verificación de extensiones, control del parche, prueba de la página de inicio, de la administración y de un pago, y luego un informe escrito. Respondo en menos de 24 horas. Los mismos guías existen para ",
+              "text": "Hago esta intervención a distancia: copia de seguridad, prueba en una copia, cambio de versión, verificación de las extensiones, control de la corrección, prueba de la página de inicio, de la administración y de un pago, y luego un informe escrito. ",
+              "type": "text"
+            },
+            {
+              "text": "Escríbeme con el enlace de tu sitio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/contact",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", te respondo en menos de 24 horas. Los mismos guías existen para ",
               "type": "text"
             },
             {
@@ -26425,27 +26443,6 @@
               "type": "text"
             }
           ]
-        },
-        {
-          "type": "blok",
-          "attrs": {
-            "id": "d1a3501b-f881-4e7f-ac48-fa146105daaa",
-            "body": [
-              {
-                "_uid": "i-0020cab1-b63d-4c25-8459-a85eb9253f41",
-                "link": {
-                  "id": "",
-                  "url": "/contact",
-                  "linktype": "url",
-                  "fieldtype": "multilink",
-                  "cached_url": "/contact"
-                },
-                "label": "Escríbame con la dirección de su sitio",
-                "style": "primary",
-                "component": "cta_button"
-              }
-            ]
-          }
         }
       ]
     }
