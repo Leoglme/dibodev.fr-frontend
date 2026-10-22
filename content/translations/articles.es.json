@@ -27022,8 +27022,8 @@
   "blog/changer-version-php-planethoster-faille-octobre-2026": {
     "title": "Cambiar la versión de PHP en PlanetHoster tras la vulnerabilidad del 21 de octubre de 2026: N0C, cPanel y WHM",
     "excerpt": "PlanetHoster implementa parches y bloquea temporalmente el envío de archivos. ¿Dónde cambiar la versión de PHP en N0C, cPanel o WHM según tu cuenta, qué versión elegir y el engaño del menú que llega hasta PHP 4.4.",
-    "metaTitle": "Cambiar la versión de PHP en PlanetHoster tras el fallo 2026",
-    "metaDescription": "Fallo de PHP del 21 de octubre de 2026: dónde cambiar la versión de PHP en PlanetHoster (N0C, cPanel, WHM), qué versión elegir y qué anunció el hosting.",
+    "metaTitle": "Cambiar la versión de PHP en PlanetHoster tras la vulnerabilidad de 2026",
+    "metaDescription": "Vulnerabilidad de PHP del 21 de octubre de 2026: dónde cambiar la versión de PHP en PlanetHoster (N0C, cPanel, WHM), qué versión elegir y lo que el proveedor de alojamiento ha anunciado.",
     "tags": [
       "PHP",
       "PlanetHoster",
@@ -27038,7 +27038,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña, y las correcciones solo existen para las ramas 8.2 a 8.5. PlanetHoster publicó un aviso dedicado el mismo día y despliega las correcciones en sus servidores. Pero en este proveedor de alojamiento, tres paneles coexisten según la antigüedad de tu cuenta, y el menú de versiones desciende hasta PHP 4.4 sin ninguna advertencia. Aquí está lo que anunciaron, cómo cambiar la versión en N0C, cPanel o WHM, y qué versión elegir.",
+              "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña, y los parches solo existen para las ramas 8.2 a 8.5. PlanetHoster publicó un aviso dedicado el mismo día y desplegó las correcciones en sus servidores. Pero en este proveedor de alojamiento, tres paneles coexisten según la antigüedad de tu cuenta, y el menú de versiones desciende hasta PHP 4.4 sin ninguna advertencia. Aquí está lo que anunciaron, cómo cambiar la versión en N0C, cPanel o WHM, y qué versión elegir.",
               "type": "text"
             }
           ]
@@ -27113,7 +27113,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "PlanetHoster publicó una página de aviso dedicada a la vulnerabilidad, en francés e inglés. A las 16:00, hora de París, las correcciones publicadas por el proyecto PHP estaban en proceso de implementación « en todos nuestros servidores ». A las 18:50, el despliegue seguía en curso. A las 22:10, indicaban que vigilaban una posible vulnerabilidad adicional que también afectaba a la versión 8.5.12 y mantenían sus protecciones. Mientras tanto, dos medidas de emergencia: la funcionalidad session.upload_progress desactivada, y las solicitudes multipart/form-data bloqueadas, lo que puede devolver un error 403 a tus formularios con archivo adjunto y a tus envíos de archivos mientras la medida esté activa. Conclusión de la página: « no se requiere ninguna acción por tu parte », y el soporte responde a las preguntas citando « PHP2Shell ».",
+              "text": "PlanetHoster publicó una página de aviso dedicada a la vulnerabilidad, en francés e inglés. A las 16:00, hora de París, los parches publicados por el proyecto PHP estaban en proceso de implementación « en todos nuestros servidores ». A las 18:50, el despliegue seguía en curso. A las 22:10, indicaban que vigilaban una posible vulnerabilidad adicional que también afectaba a la versión 8.5.12 y mantenían sus protecciones. Mientras tanto, dos medidas de emergencia: la funcionalidad session.upload_progress desactivada, y las solicitudes multipart/form-data bloqueadas, lo que puede devolver un error 403 a tus formularios con archivos adjuntos y a tus envíos de archivos mientras la medida esté activa. Conclusión de la página: « no se requiere ninguna acción por tu parte », y el soporte responde a las preguntas citando « PHP2Shell ».",
               "type": "text"
             }
           ]
@@ -27122,7 +27122,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Dos reservas, las mismas que para otros proveedores de alojamiento. Las medidas de emergencia no reemplazan a la versión corregida, y un sitio que permanezca en una rama que el proyecto PHP ya no mantiene, como la 8.1 o versiones anteriores, no recibirá ninguna corrección, a menos que PlanetHoster anuncie una corrección propia, algo que la página no menciona.",
+              "text": "Dos reservas, las mismas que para otros proveedores de alojamiento. Las medidas de emergencia no reemplazan la versión corregida, y un sitio que permanezca en una rama que el proyecto PHP ya no soporta, como la 8.1 o versiones anteriores, no recibirá ningún parche, a menos que PlanetHoster anuncie un parche propio, algo que la página no menciona.",
               "type": "text"
             }
           ]
@@ -27252,7 +27252,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En una antigua cuenta cPanel, ofrece la opción de la era pre-N0C:",
+              "text": "En una antigua cuenta cPanel, la oferta 'The World' de antes de N0C:",
               "type": "text",
               "marks": [
                 {
@@ -27261,7 +27261,7 @@
               ]
             },
             {
-              "text": " la herramienta ",
+              "text": " herramienta ",
               "type": "text"
             },
             {
@@ -27344,7 +27344,7 @@
               ]
             },
             {
-              "text": ", selecciona el dominio, elige la versión y ",
+              "text": ", marca el dominio, elige la versión y ",
               "type": "text"
             },
             {
@@ -27357,7 +27357,7 @@
               ]
             },
             {
-              "text": ". La configuración tarda aproximadamente un minuto.",
+              "text": "La actualización tarda aproximadamente un minuto.",
               "type": "text"
             }
           ]
@@ -27435,7 +27435,7 @@
           },
           "content": [
             {
-              "text": "Verificar que el parche esté correctamente instalado",
+              "text": "Verificar que el parche esté bien instalado",
               "type": "text"
             }
           ]
@@ -27444,7 +27444,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El panel muestra la rama, no el número exacto del parche. El número completo se lee en una página phpinfo o, en WordPress, dentro de ",
+              "text": "El panel muestra la rama, no el número exacto del parche. El número completo se lee en una página phpinfo o, en WordPress, en ",
               "type": "text"
             },
             {
@@ -27461,7 +27461,7 @@
               "type": "text"
             },
             {
-              "text": "Estado del sitio",
+              "text": "Salud del sitio",
               "type": "text",
               "marks": [
                 {
@@ -27496,7 +27496,7 @@
               ]
             },
             {
-              "text": ". Los números que deben aparecer son 8.2.35, 8.3.36, 8.4.27 o 8.5.12. Si ve un número inferior, el despliegue aún no se ha completado en su servidor: la página de aviso de PlanetHoster muestra el avance, y ",
+              "text": ". Los números que deben aparecer son 8.2.35, 8.3.36, 8.4.27 o 8.5.12. Si ve un número inferior, el despliegue aún no se ha aplicado en su servidor: la página de aviso de PlanetHoster muestra el avance, y ",
               "type": "text"
             },
             {
@@ -27526,7 +27526,7 @@
           },
           "content": [
             {
-              "text": "Si el sitio se rompe después del cambio",
+              "text": "Si el sitio web se rompe después del cambio",
               "type": "text"
             }
           ]
@@ -27535,7 +27535,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El reflejo: volver a la versión anterior por el mismo menú, el tiempo de actualizar la extensión o el tema culpable, y luego volver a subir. Antes de cualquier maniobra, una copia de seguridad fuera del servidor y una prueba en una copia. Una página en blanco o un error 500 justo después del cambio proviene casi siempre de una extensión PHP faltante en la pestaña Extensiones o de una función eliminada entre dos ramas. Y si sus formularios devuelven un error 403 esta noche, no es su cambio de versión: es el bloqueo temporal de los envíos multipart decidido por el proveedor de alojamiento.",
+              "text": "El reflejo: volver a la versión anterior a través del mismo menú, el tiempo necesario para actualizar la extensión o el tema culpable, y luego volver a subir. Antes de cualquier maniobra, una copia de seguridad fuera del servidor y una prueba en una copia. Una página en blanco o un error 500 justo después del cambio suele deberse a una extensión PHP faltante en la pestaña Extensiones o a una función eliminada entre dos ramas. Y si sus formularios devuelven un error 403 esta noche, no es su cambio de versión: es el bloqueo temporal de los envíos multipart decidido por el proveedor de alojamiento.",
               "type": "text"
             }
           ]
@@ -27556,7 +27556,25 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Realizo esta intervención a distancia: copia de seguridad, prueba en una copia, cambio de versión, verificación de las extensiones, control de la corrección, prueba de la página de inicio, de la administración y de un pago, y luego un informe escrito. Respondo en menos de 24 horas. Los mismos guías existen para ",
+              "text": "Realizo esta intervención a distancia: copia de seguridad, prueba en una copia, cambio de versión, verificación de extensiones, control de la corrección, prueba de la página de inicio, de la administración y de un pago, y luego un informe escrito. ",
+              "type": "text"
+            },
+            {
+              "text": "Escríbame con el enlace de su sitio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/contact",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", le respondo en menos de 24 horas. Los mismos guías existen para ",
               "type": "text"
             },
             {
@@ -27686,7 +27704,7 @@
               "type": "text"
             },
             {
-              "text": "guía PlanetHoster cPanel « Modificar los valores PHP »",
+              "text": "guía de PlanetHoster cPanel « Modificar los valores PHP »",
               "type": "text",
               "marks": [
                 {
@@ -27758,27 +27776,6 @@
               "type": "text"
             }
           ]
-        },
-        {
-          "type": "blok",
-          "attrs": {
-            "id": "27595521-e32f-4c8e-a455-6ac36f114c09",
-            "body": [
-              {
-                "_uid": "i-75654509-3a0e-4584-a9b1-8555125c5196",
-                "link": {
-                  "id": "",
-                  "url": "/contact",
-                  "linktype": "url",
-                  "fieldtype": "multilink",
-                  "cached_url": "/contact"
-                },
-                "label": "Escríbame con la dirección de su sitio",
-                "style": "primary",
-                "component": "cta_button"
-              }
-            ]
-          }
         }
       ]
     }
