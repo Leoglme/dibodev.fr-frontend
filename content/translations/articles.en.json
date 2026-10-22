@@ -23807,9 +23807,9 @@
   },
   "blog/changer-version-php-ovh-faille-octobre-2026": {
     "title": "Changing the PHP Version on OVH After the October 21, 2026 Vulnerability: Where to Click and Which Version to Choose",
-    "excerpt": "OVHcloud web hosting: Where to find your PHP version, how to switch to 8.3 or 8.4 from the customer portal or the .ovhconfig file, which version to choose, and what OVH announced on October 21st.",
-    "metaTitle": "Change the PHP Version on OVH After the 2026 PHP Flaw",
-    "metaDescription": "October 21, 2026 PHP flaw: where to read and change the PHP version of your OVHcloud web hosting, which version to choose, and what OVH did.",
+    "excerpt": "OVHcloud web hosting: Where to find your PHP version, how to switch to 8.3 or 8.4 from the customer portal or the .ovhconfig file, which version to select, and what OVH announced on October 21st.",
+    "metaTitle": "Changing Your PHP Version on OVH After the 2026 PHP Vulnerability",
+    "metaDescription": "October 21, 2026 PHP vulnerability: Where to check and update your OVHcloud web hosting PHP version, which version to choose, and OVH’s response.",
     "tags": [
       "PHP",
       "OVH",
@@ -23824,7 +23824,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Since October 21, 2026, two critical vulnerabilities in PHP allow taking control of a server without a password, and patches exist only for PHP 8.2, 8.3, 8.4, and 8.5. On an OVHcloud web hosting service, it is OVH that installs these patches on its servers. However, if your site still runs on PHP 8.1, 8.0, or 7.4—which is common on open hosting set up a few years ago—nothing will happen until you manually upgrade the version yourself. Here’s where to click, which version to choose, and how to verify it’s done.",
+              "text": "Since October 21, 2026, two critical vulnerabilities in PHP allow taking control of a server without a password, and patches are only available for PHP 8.2, 8.3, 8.4, and 8.5. On an OVHcloud web hosting service, it is OVH that installs these patches on its servers. However, if your site still runs on PHP 8.1, 8.0, or 7.4—which is common on open hosting set up a few years ago—nothing will happen until you manually update the version yourself. Here’s where to click, which version to choose, and how to verify it’s done.",
               "type": "text"
             }
           ]
@@ -23899,7 +23899,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "On the evening of October 21, OVHcloud announced on its status page that application firewall rules had been deployed across its shared hosting clusters, along with an ongoing maintenance campaign, according to Clubic’s report at 6:25 PM. This is a temporary protection: it filters some malicious requests but does not fix PHP. A message from the OVHcloud community also noted that one site was still on PHP 8.5.7 when 8.5.12 was available. In other words, server updates happen in waves, and you’ll only know it’s been done by checking the version number of your own hosting.",
+              "text": "On the evening of October 21, OVHcloud announced on its status page that application firewall rules had been deployed across its shared hosting clusters, along with an ongoing maintenance campaign, according to Clubic’s report at 6:25 PM. This is a temporary protection: it filters some malicious requests but does not fix PHP. A message from the OVHcloud community also noted a site still running PHP 8.5.7 when 8.5.12 was available. In other words, server updates happen in waves, and you’ll only know it’s been done by checking the version number of your own hosting.",
               "type": "text"
             }
           ]
@@ -23946,7 +23946,7 @@
               ]
             },
             {
-              "text": ", and select your hosting. In the ",
+              "text": ", and select your hosting plan. In the ",
               "type": "text"
             },
             {
@@ -23972,7 +23972,7 @@
               ]
             },
             {
-              "text": " indicates the version selected for the entire hosting.",
+              "text": " indicates the version selected for the entire hosting account.",
               "type": "text"
             }
           ]
@@ -23981,7 +23981,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Two important details. First, this ‘global’ version can be overridden folder by folder by a `.ovhconfig` file placed in a subfolder: if your site is in a subdirectory, the version in that file applies. Second, the displayed number is a branch, like 8.1 or 8.3, not the exact patch number. On WordPress, the exact number can be found in ",
+              "text": "Two important details. First, this ‘global’ version can be overridden folder by folder by placing a `.ovhconfig` file in a subfolder: if your site is in a subdirectory, the version in that file applies. Second, the displayed number is a branch, such as 8.1 or 8.3, not the exact patch number. On WordPress, the exact number can be found in ",
               "type": "text"
             },
             {
@@ -24045,7 +24045,7 @@
           },
           "content": [
             {
-              "text": "Change the version from the customer portal",
+              "text": "Change the version from the client area",
               "type": "text"
             }
           ]
@@ -24149,7 +24149,7 @@
               "type": "text"
             },
             {
-              "text": "Validate",
+              "text": "Confirm",
               "type": "text",
               "marks": [
                 {
@@ -24158,7 +24158,7 @@
               ]
             },
             {
-              "text": ". The change will propagate within a few minutes.",
+              "text": ". The change will propagate in a few minutes.",
               "type": "text"
             }
           ]
@@ -24180,7 +24180,7 @@
               ]
             },
             {
-              "text": " button is grayed out, a version check is currently being performed on their end. This is the case during maintenance campaigns, such as the one on October 21: wait a few minutes and try again—no need to reload ten times.",
+              "text": " button is grayed out, a version check is being performed on their end. This is the case during maintenance campaigns like the one on October 21: wait a few minutes and try again—no need to reload ten times.",
               "type": "text"
             }
           ]
@@ -24201,7 +24201,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "For those who prefer FTP: the `.ovhconfig` file is present by default at the root of your hosting storage space. The line `app.engine.version=8.1` sets the PHP version, provided that `app.engine=php` is present. For PHP 7.4 and all higher versions, the environment must be `container.image=stable64`. Replace the number with 8.3 or 8.4, save, and the result will be the same as changing it from the client space. Be cautious with older hostings that have accumulated multiple `.ovhconfig` files in subfolders: conflicting files can lead to unpredictable behavior, and it’s the first thing I check when a client tells me that ‘the change does nothing.’",
+              "text": "For those who prefer FTP: the `.ovhconfig` file is present by default at the root of your hosting storage space. The line `app.engine.version=8.1` sets the PHP version, provided that `app.engine=php` is present. For PHP 7.4 and all higher versions, the environment must be `container.image=stable64`. Replace the number with 8.3 or 8.4, save, and the result will be the same as changing it from the client space. Be cautious with older hostings that have accumulated multiple `.ovhconfig` files in subfolders: conflicting files can cause unpredictable behavior, and that’s the first thing I check when a client tells me that ‘nothing is changing.’",
               "type": "text"
             }
           ]
@@ -24231,7 +24231,7 @@
               ]
             },
             {
-              "text": " the best choice for a WordPress, WooCommerce site, or a recent tool. The patched versions are 8.3.36 and 8.4.27, and these branches receive security fixes until 2027 and 2028. OVH offers both in the Stable64 environment, along with 8.5.",
+              "text": " the best choice for a WordPress, WooCommerce, or a modern tool. The patched versions are 8.3.36 and 8.4.27, and these branches will receive security patches until 2027 and 2028. OVH offers both in the Stable64 environment, along with 8.5.",
               "type": "text"
             }
           ]
@@ -24249,7 +24249,7 @@
               ]
             },
             {
-              "text": " also patched, up to 8.2.35, but the branch ends on December 31, 2026. You’ll need to repeat the process in two months.",
+              "text": " also patched, up to 8.2.35, but the branch ends on December 31, 2026. You’ll have to repeat the process in two months.",
               "type": "text"
             }
           ]
@@ -24267,7 +24267,7 @@
               ]
             },
             {
-              "text": " no officially patched versions available. If your site is still on these, switching branches is no longer an option—it’s the security update itself. Before upgrading, check if your CMS supports the target version: WordPress works from 7.4 to 8.5, with 8.3 recommended, PrestaShop depends on its own version, and it’s often an old extension or theme causing the issue, not the CMS itself.",
+              "text": " no officially patched versions available. If your site is still on these, switching branches is no longer an option—it’s the security update itself. Before upgrading, check that your CMS supports the target version: WordPress works from 7.4 to 8.5, with 8.3 recommended, PrestaShop depends on its own version, and it’s often an old extension or theme causing the issue, not the CMS itself.",
               "type": "text"
             }
           ]
@@ -24288,7 +24288,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Switching branches isn’t enough: the full version number must match the patched level. The numbers to look for are 8.2.35, 8.3.36, 8.4.27, or 8.5.12. If your hosting shows 8.3 but phpinfo or the WordPress Site Health page indicates 8.3.35, OVH’s update campaign hasn’t reached your server yet. Refresh ",
+              "text": "Switching branches isn’t enough: the full number must match the patched level. The numbers to appear are 8.2.35, 8.3.36, 8.4.27, or 8.5.12. If your hosting shows 8.3 but the phpinfo page or WordPress Site Health indicates 8.3.35, OVH’s campaign hasn’t yet reached your server. Restart ",
               "type": "text"
             },
             {
@@ -24306,7 +24306,7 @@
               ]
             },
             {
-              "text": " the next day, or check the X-Powered-By header when it is displayed. And an old number does not prove the vulnerability on its own: in doubt, ask OVH in writing if the patch has been applied to your cluster.",
+              "text": " the next day, or check the X-Powered-By header when it is displayed. And an old number does not prove the vulnerability on its own: in case of doubt, ask OVH in writing whether the patch has been applied to your cluster.",
               "type": "text"
             }
           ]
@@ -24327,7 +24327,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "It happens, especially when moving from 7.4 or 8.0 to 8.3: an extension using a deprecated function, a theme that hasn’t been updated in years. The reflex: revert to the previous version through the same menu, long enough to update the faulty extension or theme, then go back up. Better yet: first test on a site copy, and make a backup outside the server before touching anything. A blank page after the change can be read in the hosting error logs, in the customer portal.",
+              "text": "It happens, especially when moving from 7.4 or 8.0 to 8.3: an extension using a deprecated function, a theme that hasn’t been updated in years. The reflex: revert to the previous version via the same menu, long enough to update the faulty extension or theme, then go back up. Better yet: first test on a site copy, and make a backup outside the server before touching anything. A blank page after the change can be read in the hosting error logs, in the customer portal.",
               "type": "text"
             }
           ]
@@ -24348,7 +24348,25 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "This is the kind of intervention I perform remotely in one hour for a simple site, half a day for a store with many modules: backup, testing on a copy, version change, patch verification, testing the homepage, the admin panel, and a payment, then a written report. I respond within 24 hours. The same guides exist for ",
+              "text": "This is the kind of remote intervention I perform in one hour for a simple site, half a day for a shop with many modules: backup, testing on a copy, version change, patch verification, testing of the homepage, admin panel, and a payment, then a written report. ",
+              "type": "text"
+            },
+            {
+              "text": "Write to me with your site’s link",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/contact",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", I’ll reply within 24 hours. The same guides exist for ",
               "type": "text"
             },
             {
@@ -24424,7 +24442,7 @@
               "type": "text"
             },
             {
-              "text": "hosting providers overview by Clubic on October 21 at 6:25 PM",
+              "text": "hosting provider overview by Clubic on October 21 at 6:25 PM",
               "type": "text",
               "marks": [
                 {
@@ -24460,27 +24478,6 @@
               "type": "text"
             }
           ]
-        },
-        {
-          "type": "blok",
-          "attrs": {
-            "id": "4a92872c-3e1f-445c-be88-8cad837924a1",
-            "body": [
-              {
-                "_uid": "i-cd681617-cf05-4cab-92f0-42b21df5d05f",
-                "link": {
-                  "id": "",
-                  "url": "/contact",
-                  "linktype": "url",
-                  "fieldtype": "multilink",
-                  "cached_url": "/contact"
-                },
-                "label": "Write to me with your site’s address",
-                "style": "primary",
-                "component": "cta_button"
-              }
-            ]
-          }
         }
       ]
     }

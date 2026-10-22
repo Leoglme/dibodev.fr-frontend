@@ -23807,15 +23807,17 @@
   },
   "blog/changer-version-php-ovh-faille-octobre-2026": {
     "title": "Cambiar la versión de PHP en OVH tras la vulnerabilidad del 21 de octubre de 2026: dónde hacer clic y qué versión elegir",
-    "excerpt": "Alojamiento web OVHcloud: dónde encontrar la versión de PHP, cómo actualizarla a la 8.3 o 8.4 desde el espacio cliente o el archivo .ovhconfig, qué versión elegir y lo que OVH anunció el 21 de octubre.",
-    "metaTitle": "Cambiar la versión de PHP en OVH tras el fallo PHP 2026",
-    "metaDescription": "Fallo de PHP del 21 de octubre de 2026: dónde ver y cambiar la versión de PHP de tu alojamiento web OVHcloud, qué versión elegir y qué hizo OVH.",
+    "excerpt": "Alojamiento web en OVHcloud: dónde encontrar la versión de PHP, cómo actualizarla a la 8.3 o 8.4 desde el espacio cliente o el archivo .ovhconfig, qué versión elegir y lo que anunció OVH el 21 de octubre. Tras la falla de seguridad, aquí te explicamos los pasos clave para proteger tu sitio.",
+    "metaTitle": "Cambiar la versión de PHP en OVH tras la vulnerabilidad de PHP del 2026",
+    "metaDescription": "Vulnerabilidad de PHP del 21 de octubre de 2026: dónde consultar y actualizar la versión de PHP en tu alojamiento web de OVHcloud, qué versión elegir y las medidas tomadas por OVH tras el incidente de seguridad.",
     "tags": [
       "PHP",
       "OVH",
       "alojamiento web",
       "seguridad informática",
-      "WordPress"
+      "WordPress",
+      "actualización de software",
+      "protección de datos"
     ],
     "content": {
       "type": "doc",
@@ -23824,7 +23826,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña, y los parches solo existen para PHP 8.2, 8.3, 8.4 y 8.5. En un alojamiento web de OVHcloud, es OVH quien instala estos parches en sus servidores. Pero si tu sitio aún funciona con PHP 8.1, 8.0 o 7.4, lo cual es frecuente en alojamientos abiertos hace unos años, nada ocurrirá hasta que tú mismo cambies la versión. Aquí te indicamos dónde hacer clic, qué versión elegir y cómo verificar que se ha realizado el cambio.",
+              "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña, y los parches solo existen para PHP 8.2, 8.3, 8.4 y 8.5. En un alojamiento web de OVHcloud, es OVH quien instala estos parches en sus servidores. Pero si tu sitio aún funciona con PHP 8.1, 8.0 o 7.4, algo frecuente en alojamientos abiertos hace unos años, no pasará nada hasta que tú mismo cambies la versión. Aquí te explicamos dónde hacer clic, qué versión elegir y cómo verificar que se ha hecho.",
               "type": "text"
             }
           ]
@@ -23899,7 +23901,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Al anochecer del 21 de octubre, OVHcloud anunció en su página de estado reglas de firewall aplicativo desplegadas en sus clústeres de alojamiento compartido y una campaña de mantenimiento en curso, según el informe de Clubic a las 18:25. Es una protección provisional: filtra parte de las solicitudes maliciosas, pero no corrige PHP. Un mensaje de la comunidad OVHcloud señalaba el mismo día un sitio aún en PHP 8.5.7 cuando ya estaba disponible la 8.5.12. En otras palabras, la actualización de los servidores se realiza por oleadas, y solo sabrás que ha pasado revisando el número de versión de tu propio alojamiento.",
+              "text": "Al anochecer del 21 de octubre, OVHcloud anunció en su página de estado reglas de firewall aplicativo desplegadas en sus clústeres de alojamiento compartido y una campaña de mantenimiento en curso, según el registro de Clubic a las 18:25. Es una protección provisional: filtra parte de las solicitudes maliciosas, pero no corrige PHP. Un mensaje de la comunidad OVHcloud señalaba el mismo día un sitio aún en PHP 8.5.7 cuando ya estaba disponible la 8.5.12. En otras palabras, la actualización de los servidores se realiza por oleadas, y solo sabrás que ha pasado revisando el número de versión de tu propio alojamiento.",
               "type": "text"
             }
           ]
@@ -23981,7 +23983,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Dos aclaraciones importantes. Primero, esta versión « global » puede ser sobrescrita por carpeta mediante un archivo `.ovhconfig` colocado en una subcarpeta: si tu sitio está en una subcarpeta, es la versión de ese archivo la que se aplica. Además, el número mostrado es una rama, como 8.1 o 8.3, no el número exacto del parche. En WordPress, el número exacto se lee en ",
+              "text": "Dos aclaraciones importantes. En primer lugar, esta versión « global » puede ser anulada carpeta por carpeta mediante un archivo `.ovhconfig` colocado en una subcarpeta: si tu sitio está en un subdirectorio, es la versión de ese archivo la que se aplica. Además, el número mostrado es una rama, como 8.1 o 8.3, no el número exacto del parche. En WordPress, el número exacto se lee en ",
               "type": "text"
             },
             {
@@ -24045,7 +24047,7 @@
           },
           "content": [
             {
-              "text": "Cambiar la versión desde el espacio del cliente",
+              "text": "Cambiar la versión desde el espacio cliente",
               "type": "text"
             }
           ]
@@ -24067,7 +24069,7 @@
               ]
             },
             {
-              "text": ", localiza el cuadro ",
+              "text": ", localiza el recuadro ",
               "type": "text"
             },
             {
@@ -24119,7 +24121,7 @@
               ]
             },
             {
-              "text": ". Selecciona ",
+              "text": ". Elige ",
               "type": "text"
             },
             {
@@ -24180,7 +24182,7 @@
               ]
             },
             {
-              "text": " está deshabilitado, se está verificando la versión desde su lado. Esto ocurre durante campañas de mantenimiento, como la del 21 de octubre: espere unos minutos y vuelva a intentarlo, no es necesario recargar la página diez veces.",
+              "text": " está deshabilitado, se está verificando la versión desde su lado. Esto ocurre durante campañas de mantenimiento, como la del 21 de octubre: espere unos minutos y vuelva a intentarlo, no es necesario recargar diez veces.",
               "type": "text"
             }
           ]
@@ -24201,7 +24203,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Para quienes prefieren FTP: el archivo `.ovhconfig` está presente por defecto en la raíz del espacio de almacenamiento de su alojamiento. La línea `app.engine.version=8.1` fija la versión de PHP, siempre que `app.engine=php` esté presente. Para PHP 7.4 y todas las versiones superiores, el entorno debe ser `container.image=stable64`. Reemplace el número por 8.3 o 8.4, guarde los cambios, y el resultado será el mismo que un cambio realizado desde el espacio cliente. Tenga cuidado con los alojamientos antiguos que han acumulado varios archivos `.ovhconfig` en subcarpetas: los archivos en conflicto generan comportamientos difíciles de entender, y es lo primero que reviso cuando un cliente me dice que «el cambio no hace nada».",
+              "text": "Para quienes prefieren FTP: el archivo `.ovhconfig` está presente por defecto en la raíz del espacio de almacenamiento de su alojamiento. La línea `app.engine.version=8.1` fija la versión de PHP, siempre que `app.engine=php` esté presente. Para PHP 7.4 y todas las versiones superiores, el entorno debe ser `container.image=stable64`. Reemplace el número por 8.3 o 8.4, guarde los cambios, y el resultado será el mismo que un cambio realizado desde el espacio cliente. Tenga cuidado con los alojamientos antiguos que han acumulado varios archivos `.ovhconfig` en subcarpetas: archivos en conflicto generan comportamientos difíciles de entender, y es lo primero que reviso cuando un cliente me dice que «el cambio no hace nada».",
               "type": "text"
             }
           ]
@@ -24267,7 +24269,7 @@
               ]
             },
             {
-              "text": " no tienen versiones oficiales corregidas. Si su sitio aún usa estas versiones, cambiar de rama ya no es una opción; es necesario realizar la actualización de seguridad en sí. Antes de proceder, verifique que su CMS admita la versión objetivo: WordPress funciona desde 7.4 hasta 8.5, con 8.3 recomendado; PrestaShop depende de su propia versión, y suele ser una antigua extensión o un viejo tema lo que bloquea, no el CMS.",
+              "text": " no tienen versiones oficiales corregidas. Si su sitio aún usa estas versiones, cambiar de rama ya no es una opción; es necesario realizar la actualización de seguridad directamente. Antes de proceder, verifique que su CMS acepte la versión objetivo: WordPress funciona desde 7.4 hasta 8.5, con 8.3 recomendado, PrestaShop depende de su propia versión, y suele ser una antigua extensión o un viejo tema lo que bloquea, no el CMS.",
               "type": "text"
             }
           ]
@@ -24306,7 +24308,7 @@
               ]
             },
             {
-              "text": " al día siguiente, o revisa el encabezado X-Powered-By cuando esté disponible. Y un número antiguo no prueba por sí solo la vulnerabilidad: en caso de duda, pregunta por escrito a OVH si el parche se ha aplicado en tu clúster.",
+              "text": " al día siguiente, o revisa el encabezado X-Powered-By cuando esté disponible. Y un número antiguo no demuestra por sí solo la vulnerabilidad: en caso de duda, pregunta por escrito a OVH si el parche se ha aplicado en tu clúster.",
               "type": "text"
             }
           ]
@@ -24318,7 +24320,7 @@
           },
           "content": [
             {
-              "text": "Si el sitio web falla después del cambio",
+              "text": "Si el sitio falla después del cambio",
               "type": "text"
             }
           ]
@@ -24327,7 +24329,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Puede pasar, especialmente al actualizar de 7.4 o 8.0 a 8.3: una extensión que use una función eliminada, un tema que no se haya actualizado en años. La solución: volver a la versión anterior mediante el mismo menú, el tiempo necesario para actualizar la extensión o el tema problemático, y luego volver a subir. Mejor aún: prueba primero en una copia del sitio y haz una copia de seguridad fuera del servidor antes de modificar nada. Una página en blanco después del cambio se puede revisar en los registros de errores del alojamiento, en el espacio del cliente.",
+              "text": "Puede pasar, especialmente al pasar de la versión 7.4 o 8.0 a la 8.3: una extensión que use una función eliminada, un tema que no se haya actualizado en años. La solución: volver a la versión anterior mediante el mismo menú, el tiempo necesario para actualizar la extensión o el tema problemático, y luego volver a subir. Mejor aún: prueba primero en una copia del sitio y haz una copia de seguridad fuera del servidor antes de tocar nada. Una página en blanco después del cambio se detecta en los registros de error del alojamiento, en el espacio del cliente.",
               "type": "text"
             }
           ]
@@ -24348,7 +24350,25 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Es el tipo de intervención que realizo a distancia en una hora para un sitio sencillo, medio día para una tienda con muchos módulos: copia de seguridad, prueba en una copia, cambio de versión, verificación del parche, prueba de la página de inicio, del panel de administración y de un pago, y luego un informe escrito. Respondo en menos de 24 horas. Las mismas guías existen para ",
+              "text": "Es el tipo de intervención que realizo a distancia en una hora para un sitio sencillo, o medio día para una tienda con muchos módulos: copia de seguridad, prueba en una copia, cambio de versión, verificación del parche, prueba del inicio de sesión, administración y un pago, y luego un informe escrito. ",
+              "type": "text"
+            },
+            {
+              "text": "Escríbeme con el enlace de tu sitio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/contact",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", te respondo en menos de 24 horas. Las mismas guías existen para ",
               "type": "text"
             },
             {
@@ -24424,7 +24444,7 @@
               "type": "text"
             },
             {
-              "text": "lista de alojamientos por Clubic el 21 de octubre a las 18:25",
+              "text": "informe de alojamientos por Clubic el 21 de octubre a las 18:25",
               "type": "text",
               "marks": [
                 {
@@ -24460,27 +24480,6 @@
               "type": "text"
             }
           ]
-        },
-        {
-          "type": "blok",
-          "attrs": {
-            "id": "4a92872c-3e1f-445c-be88-8cad837924a1",
-            "body": [
-              {
-                "_uid": "i-cd681617-cf05-4cab-92f0-42b21df5d05f",
-                "link": {
-                  "id": "",
-                  "url": "/contact",
-                  "linktype": "url",
-                  "fieldtype": "multilink",
-                  "cached_url": "/contact"
-                },
-                "label": "Escríbeme con la dirección de tu sitio web",
-                "style": "primary",
-                "component": "cta_button"
-              }
-            ]
-          }
         }
       ]
     }
