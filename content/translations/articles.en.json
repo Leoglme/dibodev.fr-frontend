@@ -22595,7 +22595,7 @@
     "title": "October 2026 PHP Vulnerability: Is Your Website, Store, or Software Affected, and What Should You Do?",
     "excerpt": "Two critical vulnerabilities in PHP were patched on October 21, 2026. Are your WordPress sites, PrestaShop or WooCommerce stores, custom applications, or internal networks at risk? Learn who is impacted, what your hosting provider is doing, and what actions you should take today.",
     "metaTitle": "October 2026 PHP Vulnerability: Is Your Site at Risk?",
-    "metaDescription": "Two critical PHP vulnerabilities were patched on October 21, 2026. Learn if your WordPress sites, PrestaShop stores, or custom software are affected—and what steps you should take now.",
+    "metaDescription": "Two critical PHP vulnerabilities were patched on 21 October 2026. WordPress sites, PrestaShop stores, business software: who is affected and what to do today.",
     "tags": [
       "security",
       "PHP",
@@ -23808,8 +23808,8 @@
   "blog/changer-version-php-ovh-faille-octobre-2026": {
     "title": "Changing the PHP Version on OVH After the October 21, 2026 Vulnerability: Where to Click and Which Version to Choose",
     "excerpt": "OVHcloud web hosting: Where to find your PHP version, how to switch to 8.3 or 8.4 from the customer portal or the .ovhconfig file, which version to select, and what OVH announced on October 21st.",
-    "metaTitle": "Changing Your PHP Version on OVH After the 2026 PHP Vulnerability",
-    "metaDescription": "October 21, 2026 PHP vulnerability: Where to check and update your OVHcloud web hosting PHP version, which version to choose, and OVH’s response.",
+    "metaTitle": "Change the PHP Version on OVH After the 2026 PHP Flaw",
+    "metaDescription": "October 21, 2026 PHP flaw: where to read and change the PHP version of your OVHcloud web hosting, which version to choose, and what OVH did.",
     "tags": [
       "PHP",
       "OVH",
@@ -24485,8 +24485,8 @@
   "blog/changer-version-php-o2switch-faille-octobre-2026": {
     "title": "Changing the PHP Version at o2switch After the October 21, 2026 Vulnerability: A Step-by-Step Guide for cPanel",
     "excerpt": "At o2switch, the default cPanel PHP version is 8.1, which no longer receives official patches. Where to navigate to switch to 8.3 or 8.4, which version to choose, and what o2switch did on October 21st.",
-    "metaTitle": "Update PHP Version at o2switch Post-October 2026 Vulnerability",
-    "metaDescription": "PHP vulnerability on October 21, 2026: o2switch’s default version, PHP 8.1, lacks patches. Learn where to update to PHP 8.3 or 8.4 via cPanel for enhanced security.",
+    "metaTitle": "Change the PHP Version on o2switch After the 2026 Flaw",
+    "metaDescription": "October 21, 2026 PHP flaw: o2switch’s default PHP 8.1 has no patch. Where to click in cPanel to switch to PHP 8.3 or 8.4, and what o2switch did.",
     "tags": [
       "PHP",
       "o2switch",
@@ -25094,8 +25094,8 @@
   "blog/changer-version-php-ionos-faille-octobre-2026": {
     "title": "Changing the PHP Version at IONOS After the October 21, 2026 Vulnerability: Customer Portal and PHP Extended Support",
     "excerpt": "At IONOS, the PHP version is set per domain through the customer portal. Where to click, which version to choose after the October 21, 2026 vulnerability, and what PHP Extended Support offers.",
-    "metaTitle": "Changing the PHP Version at IONOS After the 2026 PHP Vulnerability",
-    "metaDescription": "PHP vulnerability of October 21, 2026: where to change the PHP version in the IONOS customer portal, which version to choose, and what PHP Extended Support provides.",
+    "metaTitle": "Change the PHP Version at IONOS After the 2026 PHP Flaw",
+    "metaDescription": "October 21, 2026 PHP flaw: where to change the PHP version in the IONOS customer portal, which version to choose, and what PHP Extended Support is worth.",
     "tags": [
       "PHP",
       "IONOS",
@@ -25711,8 +25711,8 @@
   "blog/changer-version-php-hostinger-faille-octobre-2026": {
     "title": "Changing the PHP Version on Hostinger After the October 21, 2026 Vulnerability: A Step-by-Step Guide for hPanel",
     "excerpt": "Hostinger claims 'no action required,' but a site stuck on PHP 8.1 will receive no security updates. Where to find and change the PHP version in hPanel, which version to choose, and what Hostinger announced on October 21.",
-    "metaTitle": "How to Change Your PHP Version on Hostinger After the 2026 Vulnerability",
-    "metaDescription": "PHP vulnerability on October 21, 2026: Where to update your PHP version in Hostinger’s hPanel, which version to select, and what Hostinger revealed.",
+    "metaTitle": "Change the PHP Version at Hostinger After the 2026 Flaw",
+    "metaDescription": "October 21, 2026 PHP flaw: where to change the PHP version in Hostinger’s hPanel, which version to choose, and what Hostinger announced.",
     "tags": [
       "PHP",
       "Hostinger",
@@ -26448,8 +26448,8 @@
   "blog/changer-version-php-infomaniak-faille-octobre-2026": {
     "title": "Changing the PHP Version at Infomaniak After the October 21, 2026 Vulnerability: Manager, Step-by-Step Guide",
     "excerpt": "Infomaniak proactively patched PHP 7.4, 8.0, and 8.1—something few hosting providers do. Here’s what they rolled out hour by hour on October 21st, how to update your PHP version in the Manager, and why you should upgrade even if you’re not directly affected.",
-    "metaTitle": "Updating PHP at Infomaniak After the 2026 Security Breach",
-    "metaDescription": "Learn what Infomaniak deployed hour by hour following the October 21, 2026 PHP vulnerability, how to change your PHP version in the Manager, and which version to choose for optimal security and performance.",
+    "metaTitle": "Change the PHP Version at Infomaniak After the 2026 Flaw",
+    "metaDescription": "October 21, 2026 PHP flaw: what Infomaniak deployed hour by hour, where to change the PHP version in the Manager, and which version to choose.",
     "tags": [
       "PHP",
       "Infomaniak",
@@ -27020,8 +27020,8 @@
   "blog/changer-version-php-planethoster-faille-octobre-2026": {
     "title": "Changing the PHP Version on PlanetHoster After the October 21, 2026 Vulnerability: N0C, cPanel, and WHM",
     "excerpt": "PlanetHoster deploys patches and temporarily blocks file uploads. Where to change the PHP version in N0C, cPanel, or WHM depending on your account, which version to choose, and the pitfall of the dropdown menu that goes all the way down to PHP 4.4.",
-    "metaTitle": "Changing Your PHP Version on PlanetHoster After the 2026 Vulnerability",
-    "metaDescription": "PHP vulnerability of October 21, 2026: where to change your PHP version on PlanetHoster (N0C, cPanel, WHM), which version to select, and what the hosting provider has announced.",
+    "metaTitle": "Change the PHP Version at PlanetHoster After the 2026 Flaw",
+    "metaDescription": "October 21, 2026 PHP flaw: where to change the PHP version at PlanetHoster (N0C, cPanel, WHM), which version to choose, and what the host announced.",
     "tags": [
       "PHP",
       "PlanetHoster",
