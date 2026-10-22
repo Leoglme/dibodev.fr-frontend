@@ -24487,8 +24487,8 @@
   "blog/changer-version-php-o2switch-faille-octobre-2026": {
     "title": "Cambiar la versión de PHP en o2switch tras la vulnerabilidad del 21 de octubre de 2026: guía paso a paso con cPanel",
     "excerpt": "En o2switch, la versión « nativa » de cPanel es PHP 8.1, que ya no recibe parches oficiales. ¿Dónde hacer clic para actualizar a la 8.3 o 8.4, qué versión elegir y qué hizo o2switch el 21 de octubre?",
-    "metaTitle": "Cambiar la versión de PHP en o2switch tras el fallo PHP 2026",
-    "metaDescription": "Fallo de PHP del 21 de octubre de 2026: en o2switch, la versión nativa es PHP 8.1, sin parche. Dónde clicar en cPanel para pasar a 8.3 u 8.4.",
+    "metaTitle": "Cambiar la versión de PHP en o2switch tras la vulnerabilidad de 2026",
+    "metaDescription": "Vulnerabilidad de PHP del 21 de octubre de 2026: en o2switch, la versión nativa es PHP 8.1, sin parches. ¿Dónde clicar en cPanel para migrar a la 8.3 o 8.4?",
     "tags": [
       "PHP",
       "o2switch",
@@ -24503,7 +24503,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña. En o2switch, como en cualquier proveedor de alojamiento compartido, es el propio proveedor quien instala las versiones corregidas de PHP en sus servidores, pero solo para las ramas aún mantenidas, desde la 8.2 hasta la 8.5. Sin embargo, la versión « nativa » propuesta por defecto en cPanel en o2switch es PHP 8.1, y PHP 8.1 ya no tiene versiones oficiales corregidas. Si nunca has modificado la configuración, es probable que tu sitio esté en esa versión. Aquí te indicamos dónde hacer clic y qué elegir.",
+              "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña. En o2switch, como en cualquier proveedor de alojamiento compartido, es el propio proveedor quien instala las versiones corregidas de PHP en sus servidores, pero solo para las ramas aún mantenidas, desde la 8.2 hasta la 8.5. Sin embargo, la versión « nativa » propuesta por defecto en cPanel en o2switch es PHP 8.1, y PHP 8.1 ya no tiene versiones oficiales corregidas. Si nunca has ajustado la configuración, es probable que tu sitio web esté en esa versión. Aquí te indicamos dónde hacer clic y qué elegir.",
               "type": "text"
             }
           ]
@@ -24578,7 +24578,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Según el informe de Clubic publicado a las 18:25, o2switch reaccionó temprano: desde las 8:07 de la mañana, la funcionalidad afectada por una de las dos vulnerabilidades, session.upload_progress, estaba desactivada en la configuración de PHP de sus servidores, seguida de un reinicio de los procesos. Es una protección provisional que solo cubre una de las dos vulnerabilidades según el CERT-FR. A las 16:40, los binarios de PHP instalados aún databan del 6 de octubre, en versiones 8.3.35 y 8.4.26, mientras que las versiones corregidas 8.3.36 y 8.4.27 acababan de salir. A las 17:30, el soporte explicaba estar esperando los paquetes de CloudLinux, editor del sistema de sus servidores, anunciados para esa noche, y prometía un despliegue « en los mejores plazos » una vez validados esos paquetes. En los detalles que pude leer yo mismo al final del día, los servidores de o2switch ocultan la versión de PHP, lo cual es una buena práctica, pero obliga a revisar en cPanel.",
+              "text": "Según el informe de Clubic publicado a las 18:25, o2switch reaccionó temprano: desde las 8:07 de la mañana, la funcionalidad afectada por una de las dos vulnerabilidades, session.upload_progress, estaba desactivada en la configuración de PHP de sus servidores, seguida de un reinicio de los procesos. Es una protección provisional que solo cubre una de las dos vulnerabilidades según el CERT-FR. A las 16:40, los binarios de PHP instalados seguían siendo del 6 de octubre, en versiones 8.3.35 y 8.4.26, mientras que las versiones corregidas 8.3.36 y 8.4.27 acababan de salir. A las 17:30, el soporte explicaba que esperaban los paquetes de CloudLinux, editor del sistema de sus servidores, anunciados para esa noche, y prometía un despliegue « en los mejores plazos posibles » una vez validados esos paquetes. En los detalles que pude leer yo mismo al final del día, los servidores de o2switch ocultan la versión de PHP, lo cual es una buena práctica, pero obliga a revisar en cPanel.",
               "type": "text"
             }
           ]
@@ -24599,7 +24599,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En la herramienta de cPanel « Seleccionar una versión de PHP », la versión marcada por defecto es la llamada versión nativa, y la FAQ de o2switch indica que se trata de PHP 8.1. Muchos sitios creados en los últimos dos años nunca han cambiado esta configuración. El problema: PHP 8.1 está en fin de vida desde el 31 de diciembre de 2025, y el proyecto PHP no ha publicado versiones corregidas para esta rama, solo un parche de código fuente para compilar.",
+              "text": "En la herramienta de cPanel « Seleccionar una versión de PHP », la versión marcada por defecto es la llamada versión nativa, y la FAQ de o2switch indica que se trata de PHP 8.1. Muchos sitios creados en los últimos dos años nunca han modificado esta configuración. El problema: PHP 8.1 está en fin de vida desde el 31 de diciembre de 2025, y el proyecto PHP no ha publicado versiones corregidas para esta rama, solo un parche de código fuente para compilar.",
               "type": "text"
             }
           ]
@@ -24608,7 +24608,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Existe una matización: CloudLinux, del cual o2switch utiliza el sistema, a veces retroactiva parches de seguridad en ramas antiguas de PHP. o2switch confirmará si es el caso para la versión 8.1 y cuándo. Mientras tanto, pasar a la 8.3 o 8.4 es la única certeza, y eso toma solo dos minutos.",
+              "text": "Existe una matices: CloudLinux, del cual o2switch utiliza el sistema, a veces retroactiva parches de seguridad en ramas antiguas de PHP. o2switch confirmará si es el caso para la versión 8.1 y cuándo. Mientras tanto, pasar a la versión 8.3 o 8.4 es la única certeza, y eso toma solo dos minutos.",
               "type": "text"
             }
           ]
@@ -24629,7 +24629,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Conéctate a cPanel, sección ",
+              "text": "Conéctate a cPanel, en la sección ",
               "type": "text"
             },
             {
@@ -24745,7 +24745,7 @@
           },
           "content": [
             {
-              "text": "¿Qué versión elegir?",
+              "text": "¿Qué versión elegir",
               "type": "text"
             }
           ]
@@ -24781,7 +24781,7 @@
               ]
             },
             {
-              "text": " corregida en 8.2.35, pero esta rama finaliza el 31 de diciembre de 2026: tendrá que repetir el proceso antes de fin de año.",
+              "text": " corregida en 8.2.35, pero la rama finaliza el 31 de diciembre de 2026: tendrá que repetir el proceso antes de fin de año.",
               "type": "text"
             }
           ]
@@ -24920,7 +24920,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El reflejo es el mismo que en cualquier otro lugar: volver a la versión anterior en el mismo menú, el tiempo necesario para actualizar la extensión o el tema culpable, y luego volver a subir. Una página en blanco o un error 500 justo después del cambio suele deberse a una extensión PHP faltante en la tabla o a una función eliminada entre dos ramas. La copia de seguridad fuera del servidor antes de cualquier acción no es opcional, y cPanel ofrece una herramienta de copia de seguridad para ello.",
+              "text": "El reflejo es el mismo que en cualquier otro lugar: volver a la versión anterior en el mismo menú, el tiempo necesario para actualizar la extensión o el tema culpable, y luego volver a subir. Una página en blanco o un error 500 justo después del cambio casi siempre se debe a una extensión PHP faltante en la tabla o a una función eliminada entre dos ramas. La copia de seguridad fuera del servidor antes de cualquier acción no es opcional, y cPanel ofrece una herramienta de copia de seguridad para este fin.",
               "type": "text"
             }
           ]
@@ -24941,7 +24941,25 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Realizo esta intervención a distancia: copia de seguridad, prueba en una copia, cambio de versión, verificación del parche, prueba del inicio, de la administración y de un pago, y luego un informe escrito. Una hora para un sitio sencillo, medio día para una tienda compleja. Respondo en menos de 24 horas. Los mismos guías existen para ",
+              "text": "Hago esta intervención a distancia: copia de seguridad, prueba en una copia, cambio de versión, verificación del parche, prueba de la página de inicio, de la administración y de un pago, y luego un informe escrito. Una hora para un sitio sencillo, medio día para una tienda compleja. ",
+              "type": "text"
+            },
+            {
+              "text": "Escríbeme con el enlace de tu sitio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/contact",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", te respondo en menos de 24 horas. Las mismas guías existen para ",
               "type": "text"
             },
             {
@@ -24999,7 +25017,7 @@
               "type": "text"
             },
             {
-              "text": "FAQ de o2switch « Seleccionar una versión de PHP »",
+              "text": "FAQ o2switch « Seleccionar una versión de PHP »",
               "type": "text",
               "marks": [
                 {
@@ -25017,7 +25035,7 @@
               "type": "text"
             },
             {
-              "text": "relevamiento de Clubic el 21 de octubre a las 18:25",
+              "text": "según el relevamiento de Clubic del 21 de octubre a las 18:25",
               "type": "text",
               "marks": [
                 {
@@ -25071,27 +25089,6 @@
               "type": "text"
             }
           ]
-        },
-        {
-          "type": "blok",
-          "attrs": {
-            "id": "39ea8b1f-359d-4f74-96c1-5cd693dab6a3",
-            "body": [
-              {
-                "_uid": "i-4c62c118-3481-4c54-8dfe-91f4f6f0683d",
-                "link": {
-                  "id": "",
-                  "url": "/contact",
-                  "linktype": "url",
-                  "fieldtype": "multilink",
-                  "cached_url": "/contact"
-                },
-                "label": "Escríbame con la dirección de su sitio",
-                "style": "primary",
-                "component": "cta_button"
-              }
-            ]
-          }
         }
       ]
     }

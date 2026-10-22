@@ -24483,14 +24483,14 @@
     }
   },
   "blog/changer-version-php-o2switch-faille-octobre-2026": {
-    "title": "Changing the PHP Version on o2switch After the October 21, 2026 Vulnerability: A Step-by-Step cPanel Guide",
-    "excerpt": "At o2switch, the default cPanel PHP version is 8.1, which no longer receives official patches. Learn where to navigate to upgrade to 8.3 or 8.4, which version to choose, and what o2switch did on October 21st to address the issue.",
-    "metaTitle": "Change the PHP Version on o2switch After the 2026 Flaw",
-    "metaDescription": "October 21, 2026 PHP flaw: o2switch’s default PHP 8.1 has no patch. Where to click in cPanel to switch to PHP 8.3 or 8.4, and what o2switch did.",
+    "title": "Changing the PHP Version at o2switch After the October 21, 2026 Vulnerability: A Step-by-Step Guide for cPanel",
+    "excerpt": "At o2switch, the default cPanel PHP version is 8.1, which no longer receives official patches. Where to navigate to switch to 8.3 or 8.4, which version to choose, and what o2switch did on October 21st.",
+    "metaTitle": "Update PHP Version at o2switch Post-October 2026 Vulnerability",
+    "metaDescription": "PHP vulnerability on October 21, 2026: o2switch’s default version, PHP 8.1, lacks patches. Learn where to update to PHP 8.3 or 8.4 via cPanel for enhanced security.",
     "tags": [
       "PHP",
       "o2switch",
-      "web hosting",
+      "hosting",
       "security",
       "WordPress"
     ],
@@ -24501,7 +24501,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Since October 21, 2026, two critical vulnerabilities in PHP allow taking control of a server without a password. At o2switch, as with any shared hosting provider, it is the host that installs corrected versions of PHP on its servers, but only for maintained branches, from 8.2 to 8.5. However, the default “native” version offered in cPanel at o2switch is PHP 8.1, and PHP 8.1 no longer has an officially corrected version. If you have never adjusted the settings, there’s a good chance your site is running on it. Here’s where to click and what to choose.",
+              "text": "Since October 21, 2026, two critical vulnerabilities in PHP allow taking control of a server without a password. At o2switch, as with any shared hosting provider, it is the hosting company that installs corrected versions of PHP on its servers, but only for maintained branches, from 8.2 to 8.5. However, the default 'native' version offered in cPanel at o2switch is PHP 8.1, and PHP 8.1 no longer has an officially corrected version. If you have never adjusted the settings, there’s a good chance your site is running on it. Here’s where to click and what to choose.",
               "type": "text"
             }
           ]
@@ -24537,7 +24537,7 @@
               ]
             },
             {
-              "text": " recognizes sites hosted by o2switch thanks to the « Server » header of their servers and tells you what the host has announced. The full context of the vulnerability is in ",
+              "text": " recognizes sites hosted by o2switch thanks to the 'Server' header of their servers and tells you what the host has announced. The full context of the vulnerability is in ",
               "type": "text"
             },
             {
@@ -24576,7 +24576,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "According to Clubic’s report published at 6:25 PM, o2switch acted quickly: as early as 8:07 AM, the functionality involved in one of the two vulnerabilities, session.upload_progress, was disabled in the PHP configuration of its servers, followed by a process restart. This is a temporary fix that only covers one of the two vulnerabilities, according to CERT-FR. At 4:40 PM, the installed PHP binaries still dated back to October 6, in versions 8.3.35 and 8.4.26, while the corrected versions 8.3.36 and 8.4.27 had just been released. At 5:30 PM, support explained they were waiting for CloudLinux packages, the editor of their server system, announced for that evening, and promised deployment « as soon as possible » once these packages were validated. In the details I could read myself by the end of the day, o2switch servers hide the PHP version, which is a good practice but requires checking cPanel.",
+              "text": "According to Clubic’s report published at 6:25 PM, o2switch acted quickly: as early as 8:07 AM, the functionality involved in one of the two vulnerabilities, session.upload_progress, was disabled in the PHP configuration of its servers, followed by a process restart. This is a temporary fix that only covers one of the two vulnerabilities, according to CERT-FR. At 4:40 PM, the installed PHP binaries still dated back to October 6, in versions 8.3.35 and 8.4.26, while the patched versions 8.3.36 and 8.4.27 had just been released. At 5:30 PM, support explained they were waiting for CloudLinux packages, the editor of their server system, announced for the evening, and promised deployment 'as soon as possible' once these packages were validated. In the details I could read myself by the end of the day, o2switch servers hide the PHP version, which is a good practice but requires checking cPanel.",
               "type": "text"
             }
           ]
@@ -24588,7 +24588,7 @@
           },
           "content": [
             {
-              "text": "The trap of the « native » version",
+              "text": "The trap of the 'native' version",
               "type": "text"
             }
           ]
@@ -24597,7 +24597,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "In the cPanel tool « Select PHP Version », the default checked version is the so-called native version, and o2switch’s FAQ states it is PHP 8.1. Many sites created over the past two years have never changed this setting. The issue: PHP 8.1 has been end-of-life since December 31, 2025, and the PHP project has not released a corrected version for this branch, only a source patch to compile.",
+              "text": "In the cPanel tool 'Select PHP Version,' the default checked version is the so-called native version, and o2switch’s FAQ states it is PHP 8.1. Many sites created over the past two years have never changed this setting. The issue: PHP 8.1 has been end-of-life since December 31, 2025, and the PHP project has not released a corrected version for this branch, only a source patch to compile.",
               "type": "text"
             }
           ]
@@ -24606,7 +24606,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "There is a nuance: CloudLinux, whose system o2switch uses, sometimes backports security fixes to older PHP branches. o2switch will confirm if this applies to 8.1 and when. Until an official response, switching to 8.3 or 8.4 is the only certainty, and it takes two minutes.",
+              "text": "There is a nuance: CloudLinux, whose system o2switch uses, sometimes backports security fixes to older PHP branches. o2switch will confirm if this applies to 8.1 and when. Until a written response, switching to 8.3 or 8.4 is the only certainty, and it takes two minutes.",
               "type": "text"
             }
           ]
@@ -24627,7 +24627,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Log in to cPanel, under the « ",
+              "text": "Log in to cPanel, under the section ",
               "type": "text"
             },
             {
@@ -24640,7 +24640,7 @@
               ]
             },
             {
-              "text": "» section, then open the tool « ",
+              "text": ", then open the tool ",
               "type": "text"
             },
             {
@@ -24653,7 +24653,7 @@
               ]
             },
             {
-              "text": ". The dropdown menu displays the current version. Choose « ",
+              "text": ". The dropdown menu displays the current version. Choose ",
               "type": "text"
             },
             {
@@ -24666,7 +24666,7 @@
               ]
             },
             {
-              "text": " » or « ",
+              "text": " or ",
               "type": "text"
             },
             {
@@ -24779,7 +24779,7 @@
               ]
             },
             {
-              "text": " patched up to 8.2.35, but the branch ends on December 31, 2026: you’ll need to repeat the process before the end of the year.",
+              "text": " patched up to 8.2.35, but the branch ends on December 31, 2026: you’ll need to perform the update again before the end of the year.",
               "type": "text"
             }
           ]
@@ -24797,7 +24797,7 @@
               ]
             },
             {
-              "text": " patched up to 8.5.12 and available at o2switch, but it’s the newest branch, and some WordPress or PrestaShop extensions haven’t been updated yet. For a production site, 8.3 or 8.4 are the best balance.",
+              "text": " patched up to 8.5.12 and available at o2switch, but it’s the newest branch, and some WordPress or PrestaShop extensions haven’t been updated yet. For a production site, 8.3 or 8.4 is the best balance.",
               "type": "text"
             }
           ]
@@ -24818,7 +24818,7 @@
           },
           "content": [
             {
-              "text": "Check that the patch is properly installed",
+              "text": "Verify that the patch is properly installed",
               "type": "text"
             }
           ]
@@ -24827,7 +24827,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The cPanel menu displays the branch, not the exact patch number. To see that number, go to the phpinfo page, or in WordPress ",
+              "text": "The cPanel menu displays the branch, not the exact patch number. To see that number, check the phpinfo page or in WordPress ",
               "type": "text"
             },
             {
@@ -24879,7 +24879,7 @@
               ]
             },
             {
-              "text": ". The numbers to appear are 8.2.35, 8.3.36, 8.4.27, or 8.5.12. As long as you're reading 8.3.35 or 8.4.26, the CloudLinux packages haven't been migrated to your server yet: o2switch communicates through its usual channels, and ",
+              "text": ". The numbers to appear are 8.2.35, 8.3.36, 8.4.27, or 8.5.12. As long as you see 8.3.35 or 8.4.26, the CloudLinux packages haven’t been applied to your server yet: o2switch communicates through its usual channels, and ",
               "type": "text"
             },
             {
@@ -24897,7 +24897,7 @@
               ]
             },
             {
-              "text": " updates the hosting provider's status as this page is updated.",
+              "text": " updates the hosting provider’s status as this page is refreshed.",
               "type": "text"
             }
           ]
@@ -24918,7 +24918,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "the reflex is the same as everywhere: revert to the previous version in the same menu, long enough to update the faulty extension or theme, then go back. A blank page or a 500 error right after the change almost always comes from a missing PHP extension in the list, or a function removed between branches. Backing up outside the server before any action is not optional, and cPanel offers a backup tool for this purpose.",
+              "text": "the reflex is the same as everywhere: revert to the previous version in the same menu, long enough to update the faulty extension or theme, then roll back. A blank page or a 500 error right after the change almost always comes from a missing PHP extension in the list or a removed function between branches. Backing up outside the server before any action is not optional, and cPanel offers a backup tool for this purpose.",
               "type": "text"
             }
           ]
@@ -24939,7 +24939,25 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I perform this intervention remotely: backup, testing on a copy, version change, patch verification, testing of the homepage, administration, and a payment, followed by a written report. One hour for a simple site, half a day for a busy store. I respond within 24 hours. The same guides exist for ",
+              "text": "I perform this intervention remotely: backup, testing on a copy, version change, patch verification, testing of the homepage, administration, and a payment, followed by a written report. One hour for a simple site, half a day for a busy store. ",
+              "type": "text"
+            },
+            {
+              "text": "Write to me with your site’s link",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/contact",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", I’ll respond within 24 hours. The same guides exist for ",
               "type": "text"
             },
             {
@@ -24997,7 +25015,7 @@
               "type": "text"
             },
             {
-              "text": "o2switch FAQ « Select a PHP version »",
+              "text": "FAQ o2switch « Select a PHP version »",
               "type": "text",
               "marks": [
                 {
@@ -25015,7 +25033,7 @@
               "type": "text"
             },
             {
-              "text": "listed by Clubic on October 21 at 6:25 PM",
+              "text": "ranking of hosting providers by Clubic on October 21 at 6:25 PM",
               "type": "text",
               "marks": [
                 {
@@ -25033,7 +25051,7 @@
               "type": "text"
             },
             {
-              "text": "CERTFR-2026-ALE-014 alert",
+              "text": "alert CERTFR-2026-ALE-014",
               "type": "text",
               "marks": [
                 {
@@ -25051,7 +25069,7 @@
               "type": "text"
             },
             {
-              "text": "fixed versions available on php.net",
+              "text": "fixed versions on php.net",
               "type": "text",
               "marks": [
                 {
@@ -25069,27 +25087,6 @@
               "type": "text"
             }
           ]
-        },
-        {
-          "type": "blok",
-          "attrs": {
-            "id": "39ea8b1f-359d-4f74-96c1-5cd693dab6a3",
-            "body": [
-              {
-                "_uid": "i-4c62c118-3481-4c54-8dfe-91f4f6f0683d",
-                "link": {
-                  "id": "",
-                  "url": "/contact",
-                  "linktype": "url",
-                  "fieldtype": "multilink",
-                  "cached_url": "/contact"
-                },
-                "label": "Write to me with your website address",
-                "style": "primary",
-                "component": "cta_button"
-              }
-            ]
-          }
         }
       ]
     }
