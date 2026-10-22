@@ -152,7 +152,7 @@ if (slug.length === 0) {
 }
 
 // Keep this in useAsyncData: a browser-side Storyblok refetch can fail and replace the article with a 404 page.
-const { data: localizedArticle } = await useAsyncData<DibodevLocalizedArticle | null>(
+const { data: localizedArticle, execute: loadLocalizedArticle } = await useAsyncData<DibodevLocalizedArticle | null>(
   `blog-article-${locale.value}-${storyblokVersion}-${slug}`,
   (): Promise<DibodevLocalizedArticle | null> =>
     slug.length === 0
@@ -164,6 +164,12 @@ const { data: localizedArticle } = await useAsyncData<DibodevLocalizedArticle | 
           storyblokLanguage.value,
         ),
 )
+
+const isArticleFetchPostponedUntilMount: boolean = import.meta.client && localizedArticle.value === undefined
+
+if (isArticleFetchPostponedUntilMount) {
+  await loadLocalizedArticle()
+}
 
 const article: ComputedRef<DibodevArticle | null> = computed(
   (): DibodevArticle | null => localizedArticle.value?.article ?? null,
