@@ -26450,13 +26450,13 @@
   "blog/changer-version-php-infomaniak-faille-octobre-2026": {
     "title": "Cambiar la versión de PHP en Infomaniak tras la vulnerabilidad del 21 de octubre de 2026: Guía paso a paso en Manager",
     "excerpt": "Infomaniak corrige por sí mismo PHP 7.4, 8.0 y 8.1, algo que casi ningún proveedor de hosting hace. Lo que desplegó hora a hora el 21 de octubre, cómo cambiar la versión de PHP en el Manager y por qué actualizar igual.",
-    "metaTitle": "Cambiar la versión de PHP en Infomaniak tras el fallo 2026",
-    "metaDescription": "Fallo de PHP del 21 de octubre de 2026: qué desplegó Infomaniak hora a hora, dónde cambiar la versión de PHP en el Manager y qué versión elegir.",
+    "metaTitle": "Cambiar la versión de PHP en Infomaniak tras la vulnerabilidad de 2026",
+    "metaDescription": "Vulnerabilidad de PHP del 21 de octubre de 2026: lo que Infomaniak desplegó hora a hora, dónde cambiar la versión de PHP en el Manager y qué versión elegir.",
     "tags": [
       "PHP",
       "Infomaniak",
       "alojamiento web",
-      "seguridad informática",
+      "seguridad",
       "WordPress"
     ],
     "content": {
@@ -26466,7 +26466,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña. Infomaniak forma parte de los proveedores de alojamiento que comunicaron el problema desde la tarde, y es uno de los pocos que corrige por sí mismo las ramas antiguas de PHP que el proyecto PHP ya no mantiene. Aquí está lo que hicieron, cómo cambiar la versión de PHP en el Manager, y por qué, de todos modos, conviene actualizar.",
+              "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña. Infomaniak es uno de los proveedores de alojamiento que comunicó el problema desde la tarde, y es uno de los pocos que corrige por sí mismo las ramas antiguas de PHP que el proyecto PHP ya no mantiene. Aquí está lo que hizo, cómo cambiar la versión de PHP en el Manager, y por qué, de todos modos, es mejor actualizar la versión.",
               "type": "text"
             }
           ]
@@ -26541,7 +26541,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En su página de estado, Infomaniak abrió a las 15:00 horas una mantenimiento titulado «Vulnerabilidades críticas de PHP», programado hasta el 22 de octubre a las 3:00 horas de la madrugada. El mensaje inicial decía: las medidas de mitigación y las correcciones están siendo implementadas por sus equipos, no se requiere ninguna acción por parte de los clientes, excepto migrar un sitio que siga usando una versión de PHP que ya no se mantiene. Luego, hora por hora: a las 16:29, phpMyAdmin en mantenimiento; a las 16:53, la funcionalidad afectada por una de las dos vulnerabilidades, session.upload_progress, desactivada en toda la plataforma, lo que congela la barra de progreso de algunos envíos de archivos sin impedir el envío; a las 17:04, inicio del despliegue de las versiones corregidas para PHP 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 y 8.5; a las 21:09, despliegue aún en curso; a las 23:21, las migraciones de infraestructura en curso se suspendieron para no interferir con la operación. Un segundo aviso, a las 17:20, limitó temporalmente el envío de archivos en kSuite, SwissTransfer y la taquilla.",
+              "text": "En su página de estado, Infomaniak abrió a las 15:00 una mantenimiento titulado «Vulnerabilidades críticas de PHP», programado hasta el 22 de octubre a las 3:00 de la madrugada. El mensaje inicial decía: las medidas de mitigación y los parches han sido implementados por sus equipos, no se requiere ninguna acción por parte de los clientes, excepto migrar un sitio que siga usando una versión de PHP que ya no se mantiene. Luego, hora por hora: a las 16:29, phpMyAdmin en mantenimiento; a las 16:53, la funcionalidad afectada por una de las dos vulnerabilidades, session.upload_progress, desactivada en toda la plataforma, lo que congela la barra de progreso de algunos envíos de archivos sin impedir el envío; a las 17:04, inicio del despliegue de las versiones corregidas para PHP 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 y 8.5; a las 21:09, despliegue aún en curso; a las 23:21, las migraciones de infraestructura en curso se suspendieron para no interferir con la operación. Un segundo aviso, a las 17:20, limitó temporalmente el envío de archivos en kSuite, SwissTransfer y la taquilla.",
               "type": "text"
             }
           ]
@@ -26550,7 +26550,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El detalle notable: Infomaniak anuncia parches para las versiones 7.4, 8.0 y 8.1, ramas para las cuales el proyecto PHP ya no publica nada. Son parches retroactivos aplicados por sus equipos. Es una verdadera protección, pero sigue siendo exclusiva de este proveedor de alojamiento, y su propio mensaje recomienda actualizar de versión.",
+              "text": "El detalle notable: Infomaniak anuncia parches para las versiones 7.4, 8.0 y 8.1, ramas para las cuales el proyecto PHP ya no publica nada. Son parches retroactivos aplicados por sus equipos. Es una verdadera protección, pero sigue siendo exclusiva de este proveedor de alojamiento, y su propio mensaje recomienda actualizar la versión.",
               "type": "text"
             }
           ]
@@ -26584,7 +26584,7 @@
               ]
             },
             {
-              "text": ", haz clic en el nombre del sitio correspondiente y luego en ",
+              "text": ", haz clic en el nombre del sitio correspondiente, luego en ",
               "type": "text"
             },
             {
@@ -26610,7 +26610,7 @@
               ]
             },
             {
-              "text": ", elige la versión y luego ",
+              "text": ", elige la versión, luego ",
               "type": "text"
             },
             {
@@ -26623,7 +26623,7 @@
               ]
             },
             {
-              "text": ". El ajuste es por sitio y el cambio es inmediato.",
+              "text": ". El ajuste es por sitio, y el cambio es inmediato.",
               "type": "text"
             }
           ]
@@ -26632,7 +26632,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Dos particularidades que debes conocer. En primer lugar, Infomaniak bloquea el regreso a una versión más antigua una vez realizado el cambio: prueba en una copia si tu sitio es antiguo, porque no podrás deshacer el cambio con un clic. Además, en un alojamiento abierto hace mucho tiempo, el Manager puede pedir actualizar el alojamiento en sí antes de ofrecer las versiones recientes de PHP: una barra indica esto si es necesario, y esta noche esa actualización puede estar en pausa mientras se despliegan los parches.",
+              "text": "Dos particularidades que debes conocer. En primer lugar, Infomaniak bloquea el regreso a una versión más antigua una vez realizado el cambio: prueba en una copia si tu sitio es antiguo, porque no podrás deshacer el cambio con un clic. Además, en un alojamiento abierto hace mucho tiempo, el Manager puede pedirte actualizar el alojamiento en sí antes de ofrecerte las versiones recientes de PHP: una barra indica esto si es necesario, y esta noche esta actualización puede estar en pausa mientras se despliegan los parches.",
               "type": "text"
             }
           ]
@@ -26680,7 +26680,7 @@
               ]
             },
             {
-              "text": " corregida en 8.2.35, pero la rama termina el 31 de diciembre de 2026.",
+              "text": " corregida en 8.2.35, pero la rama finaliza el 31 de diciembre de 2026.",
               "type": "text"
             }
           ]
@@ -26710,7 +26710,7 @@
           },
           "content": [
             {
-              "text": "Verificar que el parche esté bien instalado",
+              "text": "Verificar que el parche esté correctamente instalado",
               "type": "text"
             }
           ]
@@ -26810,7 +26810,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Como el retroceso está bloqueado en Infomaniak, la precaución vale el doble: copia de seguridad fuera del servidor, prueba en una copia del sitio, actualización del tema y de las extensiones antes de subir la versión. Una página en blanco o un error 500 justo después casi siempre proviene de una extensión incompatible o de una función eliminada entre dos ramas, y el registro de errores de PHP del sitio, accesible en el Manager, indica cuál.",
+              "text": "Como el retroceso está bloqueado en Infomaniak, la precaución vale el doble: copia de seguridad fuera del servidor, prueba en una copia del sitio, actualización del tema y de las extensiones antes del cambio de versión. Una página en blanco o un error 500 justo después casi siempre proviene de una extensión incompatible o de una función eliminada entre dos ramas, y el registro de errores de PHP del sitio, accesible en el Manager, indica cuál es.",
               "type": "text"
             }
           ]
@@ -26822,7 +26822,7 @@
           },
           "content": [
             {
-              "text": "Y si no quieres tocarlo",
+              "text": "Y si no quieres tocar nada",
               "type": "text"
             }
           ]
@@ -26831,7 +26831,25 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Hago esta intervención a distancia: copia de seguridad, prueba en una copia, actualización de las extensiones, cambio de versión, verificación del parche, prueba de la página de inicio, de la administración y de un pago, y luego un informe escrito. Respondo en menos de 24 horas. Los mismos guías existen para ",
+              "text": "Realizo esta intervención a distancia: copia de seguridad, prueba en una copia, actualización de las extensiones, cambio de versión, verificación del parche, prueba de la página de inicio, de la administración y de un pago, y luego un informe escrito. ",
+              "type": "text"
+            },
+            {
+              "text": "Escríbeme con el enlace de tu sitio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/contact",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", te respondo en menos de 24 horas. Las mismas guías existen para ",
               "type": "text"
             },
             {
@@ -26997,27 +27015,6 @@
               "type": "text"
             }
           ]
-        },
-        {
-          "type": "blok",
-          "attrs": {
-            "id": "5cfe710d-b04a-4264-8f40-d2d92503115d",
-            "body": [
-              {
-                "_uid": "i-27fc0e09-3680-481c-9842-43ac72bf3013",
-                "link": {
-                  "id": "",
-                  "url": "/contact",
-                  "linktype": "url",
-                  "fieldtype": "multilink",
-                  "cached_url": "/contact"
-                },
-                "label": "Escríbeme con la dirección de tu sitio",
-                "style": "primary",
-                "component": "cta_button"
-              }
-            ]
-          }
         }
       ]
     }

@@ -26447,9 +26447,9 @@
   },
   "blog/changer-version-php-infomaniak-faille-octobre-2026": {
     "title": "Changing the PHP Version at Infomaniak After the October 21, 2026 Vulnerability: Manager, Step-by-Step Guide",
-    "excerpt": "Infomaniak self-patches PHP 7.4, 8.0, and 8.1—something nearly no other host does. Here’s what they rolled out hour by hour on October 21st, how to update your PHP version in Manager, and why you should upgrade even if you’re not directly affected.",
-    "metaTitle": "Change the PHP Version at Infomaniak After the 2026 Flaw",
-    "metaDescription": "October 21, 2026 PHP flaw: what Infomaniak deployed hour by hour, where to change the PHP version in the Manager, and which version to choose.",
+    "excerpt": "Infomaniak proactively patched PHP 7.4, 8.0, and 8.1—something few hosting providers do. Here’s what they rolled out hour by hour on October 21st, how to update your PHP version in the Manager, and why you should upgrade even if you’re not directly affected.",
+    "metaTitle": "Updating PHP at Infomaniak After the 2026 Security Breach",
+    "metaDescription": "Learn what Infomaniak deployed hour by hour following the October 21, 2026 PHP vulnerability, how to change your PHP version in the Manager, and which version to choose for optimal security and performance.",
     "tags": [
       "PHP",
       "Infomaniak",
@@ -26539,7 +26539,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "On its status page, Infomaniak opened maintenance at 3 PM titled « Critical PHP Vulnerabilities, » scheduled until October 22 at 3 AM. The opening message: mitigation measures and fixes were deployed by their teams, no action was required from clients except migrating a site still running an unsupported PHP version. Then, hour by hour: at 4:29 PM, phpMyAdmin went into maintenance; at 4:53 PM, the function involved in one of the two vulnerabilities, session.upload_progress, was disabled across the entire platform, freezing the progress bar for some file uploads without preventing the upload; at 5:04 PM, deployment of the fixed versions for PHP 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, and 8.5 began; at 9:09 PM, deployment was still ongoing; at 11:21 PM, ongoing infrastructure migrations were paused to avoid disrupting the operation. A second notice, at 5:20 PM, temporarily limited file uploads on kSuite, SwissTransfer, and ticketing.",
+              "text": "On its status page, Infomaniak opened a maintenance window at 3 PM titled « Critical PHP Vulnerabilities, » scheduled until October 22 at 3 AM. The opening message: mitigation measures and fixes were deployed by their teams, and no action was required from clients, except migrating a site still running an unsupported PHP version. Hour by hour: at 4:29 PM, phpMyAdmin went into maintenance; at 4:53 PM, the function involved in one of the two vulnerabilities, session.upload_progress, was disabled across the entire platform, freezing the progress bar for some file uploads without preventing the upload; at 5:04 PM, deployment of fixed versions for PHP 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, and 8.5 began; at 9:09 PM, deployment was still ongoing; at 11:21 PM, ongoing infrastructure migrations were paused to avoid disrupting the operation. A second notice, at 5:20 PM, temporarily limited file uploads on kSuite, SwissTransfer, and ticketing.",
               "type": "text"
             }
           ]
@@ -26582,7 +26582,7 @@
               ]
             },
             {
-              "text": ", click on the name of the site in question, then on ",
+              "text": ", click on the name of the relevant site, then on ",
               "type": "text"
             },
             {
@@ -26621,7 +26621,7 @@
               ]
             },
             {
-              "text": ". The setting is per site, and the change is immediate.",
+              "text": ". The setting is per site, and the change takes effect immediately.",
               "type": "text"
             }
           ]
@@ -26630,7 +26630,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Two key details to note. First, Infomaniak prevents reverting to an older version once the change is made: test on a backup first if your site is outdated, as you won’t be able to undo it with a single click. Second, for long-standing hosting, the Manager may require updating the hosting itself before offering newer PHP versions: a banner indicates this if applicable, and tonight this update may be paused while the fixes are deployed.",
+              "text": "Two key details to note. First, Infomaniak prevents reverting to an older version once the change is made: test on a backup first if your site is outdated, as you won’t be able to undo it with a single click. Second, for long-standing hosting, the Manager may require updating the hosting itself before offering newer PHP versions: a banner indicates this if applicable, and tonight, this update may be paused while the fixes are deployed.",
               "type": "text"
             }
           ]
@@ -26696,7 +26696,7 @@
               ]
             },
             {
-              "text": " at Infomaniak, these branches receive a custom patch for this vulnerability, which is not the case with most hosting providers. This gives you time to properly prepare for the version upgrade, without postponing it until next year: these branches no longer have official fixes for subsequent vulnerabilities. Check that your theme and plugins support the target version, then upgrade.",
+              "text": " at Infomaniak, these branches receive a custom patch for this vulnerability, which is not the case with most hosting providers. This gives you time to properly prepare the version upgrade, without postponing it until next year: these branches no longer have official fixes for subsequent vulnerabilities. Check that your theme and plugins support the target version, then upgrade.",
               "type": "text"
             }
           ]
@@ -26769,7 +26769,7 @@
               ]
             },
             {
-              "text": ". For branches 8.2 to 8.5, the numbers to look for are 8.2.35, 8.3.36, 8.4.27, and 8.5.12. For 7.4, 8.0, and 8.1, the patch backported by Infomaniak does not always change the displayed number: it is the status page and a written response from support that are authoritative. ",
+              "text": ". For branches 8.2 to 8.5, the numbers to look for are 8.2.35, 8.3.36, 8.4.27, and 8.5.12. For 7.4, 8.0, and 8.1, the patch backported by Infomaniak may not always change the displayed number: the status page and a written response from support are what matter. ",
               "type": "text"
             },
             {
@@ -26787,7 +26787,7 @@
               ]
             },
             {
-              "text": " reads the number when the server displays it and reflects the hosting provider's status.",
+              "text": " reads the number when the server displays it and reflects the hosting provider’s status.",
               "type": "text"
             }
           ]
@@ -26808,7 +26808,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Since rolling back is blocked at Infomaniak, extra caution is advised: back up outside the server, test on a site copy, update the theme and extensions before upgrading. A blank page or a 500 error right after almost always comes from an incompatible extension or a deprecated function between branches, and the PHP error log of the site—accessible in the Manager—will reveal which one.",
+              "text": "Since rolling back is blocked at Infomaniak, extra caution is advised: back up outside the server, test on a site copy, update the theme and plugins before upgrading. A blank page or a 500 error right after almost always comes from an incompatible plugin or a removed function between branches, and the PHP error log of the site, accessible in the Manager, will tell you which one.",
               "type": "text"
             }
           ]
@@ -26829,7 +26829,25 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I perform this intervention remotely: backup, testing on a copy, updating extensions, version change, patch verification, testing the homepage, admin panel, and a payment process, followed by a written report. I respond within 24 hours. The same guides apply for ",
+              "text": "I’ll perform this intervention remotely: backup, testing on a copy, updating plugins, version change, patch verification, testing the homepage, administration, and a payment, followed by a written report. ",
+              "type": "text"
+            },
+            {
+              "text": "Write to me with your site’s link",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/contact",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", I’ll respond within 24 hours. The same guides apply for ",
               "type": "text"
             },
             {
@@ -26941,7 +26959,7 @@
               "type": "text"
             },
             {
-              "text": "Infomaniak guide ‘Modify the PHP version of a site’",
+              "text": "Infomaniak guide ‘Changing the PHP version of a site’",
               "type": "text",
               "marks": [
                 {
@@ -26959,7 +26977,7 @@
               "type": "text"
             },
             {
-              "text": "Infomaniak status page, maintenance note ‘Critical PHP vulnerabilities’ from October 21, 2026",
+              "text": "Infomaniak status page, maintenance ‘Critical PHP vulnerabilities’ from October 21, 2026",
               "type": "text",
               "marks": [
                 {
@@ -26977,7 +26995,7 @@
               "type": "text"
             },
             {
-              "text": "fixed versions on php.net",
+              "text": "corrected versions on php.net",
               "type": "text",
               "marks": [
                 {
@@ -26995,27 +27013,6 @@
               "type": "text"
             }
           ]
-        },
-        {
-          "type": "blok",
-          "attrs": {
-            "id": "5cfe710d-b04a-4264-8f40-d2d92503115d",
-            "body": [
-              {
-                "_uid": "i-27fc0e09-3680-481c-9842-43ac72bf3013",
-                "link": {
-                  "id": "",
-                  "url": "/contact",
-                  "linktype": "url",
-                  "fieldtype": "multilink",
-                  "cached_url": "/contact"
-                },
-                "label": "Write to me with your website address",
-                "style": "primary",
-                "component": "cta_button"
-              }
-            ]
-          }
         }
       ]
     }
