@@ -98,6 +98,10 @@ export default defineNuxtConfig({
     host: POSTHOG_EU_API_HOST,
     clientConfig: POSTHOG_CLIENT_CONFIG,
   },
+  experimental: {
+    // Off: when /_nuxt/builds/meta/<build>.json failed to load (Googlebot render, deploy), Nuxt replaced the page with the noindex error page.
+    appManifest: false,
+  },
   // Cast needed: 'robots' is provided by @nuxtjs/robots and not in core Nuxt routeRules typings
   routeRules: {
     '/dashboard': { robots: false },

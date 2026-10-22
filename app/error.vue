@@ -61,9 +61,14 @@ const errorDetails: ComputedRef<string> = computed((): string =>
   [props.error.statusMessage, props.error.message, props.error.stack].filter(Boolean).join('\n\n'),
 )
 
+/** Read once: true when the error replaces a static page while it starts in the browser (a failed request, not a missing page). */
+const isBrowserStartupError: boolean = import.meta.client && useNuxtApp().isHydrating === true
+/** A real 404 or a static-render error is kept out of Google; a browser startup crash must not deindex a valid page. */
+const shouldBlockIndexing: ComputedRef<boolean> = computed((): boolean => isNotFound.value || !isBrowserStartupError)
+
 useHead(() => ({
   title: isNotFound.value ? t('error.notFound.title') : t('error.generic.title'),
-  meta: [{ name: 'robots', content: 'noindex' }],
+  meta: shouldBlockIndexing.value ? [{ name: 'robots', content: 'noindex' }] : [],
 }))
 
 /**
