@@ -25093,9 +25093,9 @@
   },
   "blog/changer-version-php-ionos-faille-octobre-2026": {
     "title": "Changing the PHP Version at IONOS After the October 21, 2026 Vulnerability: Customer Portal and PHP Extended Support",
-    "excerpt": "At IONOS, the PHP version is set per domain through the customer portal. Where to click, which version to choose after the October 21, 2026 vulnerability, and the value of PHP Extended Support.",
-    "metaTitle": "Change the PHP Version at IONOS After the 2026 PHP Flaw",
-    "metaDescription": "October 21, 2026 PHP flaw: where to change the PHP version in the IONOS customer portal, which version to choose, and what PHP Extended Support is worth.",
+    "excerpt": "At IONOS, the PHP version is set per domain through the customer portal. Where to click, which version to choose after the October 21, 2026 vulnerability, and what PHP Extended Support offers.",
+    "metaTitle": "Changing the PHP Version at IONOS After the 2026 PHP Vulnerability",
+    "metaDescription": "PHP vulnerability of October 21, 2026: where to change the PHP version in the IONOS customer portal, which version to choose, and what PHP Extended Support provides.",
     "tags": [
       "PHP",
       "IONOS",
@@ -25185,7 +25185,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "On the evening of October 21, I found no public announcement from IONOS regarding these vulnerabilities, neither on its support page nor in the press, unlike o2switch, OVHcloud, or Infomaniak. This doesn’t mean nothing is being done: in shared hosting, IONOS itself installs new PHP versions on its servers for maintained branches. This means you must check for yourself, and the only reliable answer is from support in writing: which PHP version is my site using, and is the October 21 patch installed?",
+              "text": "On the evening of October 21, I found no public announcement from IONOS regarding these vulnerabilities, neither on its support page nor in the press, unlike o2switch, OVHcloud, or Infomaniak. This doesn’t mean nothing is being done: in shared hosting, IONOS itself installs new PHP versions on its servers for maintained branches. This means you must check for yourself, and the only reliable answer is from support, in writing: which PHP version is my site using, and is the October 21 patch installed?",
               "type": "text"
             }
           ]
@@ -25258,7 +25258,7 @@
               ]
             },
             {
-              "text": ". Select the desired version and save. IONOS states that the update « may take some time »: usually a few minutes, the time it takes for the setting to propagate.",
+              "text": ". Select the desired version and save. IONOS notes that the update « may take some time »: usually a few minutes, the time it takes for the setting to propagate.",
               "type": "text"
             }
           ]
@@ -25267,7 +25267,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The key detail not to miss: at IONOS, the setting is ",
+              "text": "The detail not to miss: at IONOS, the setting is ",
               "type": "text"
             },
             {
@@ -25292,7 +25292,7 @@
           },
           "content": [
             {
-              "text": "PHP Extended Support: what it is, and what it does not guarantee",
+              "text": "PHP Extended Support: what it is and what it does not guarantee",
               "type": "text"
             }
           ]
@@ -25301,7 +25301,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "IONOS offers a service called PHP Extended Support: its own teams fix security vulnerabilities in PHP versions that the PHP project no longer maintains, such as 7.2 or 7.3, to allow an old site to continue running. The IONOS guide does not specify whether this service is charged: check your contract.",
+              "text": "IONOS offers a service called PHP Extended Support: its own teams fix security vulnerabilities in PHP versions that the PHP project no longer maintains, such as 7.2 or 7.3, to allow old websites to continue running. The IONOS guide does not specify whether this service is charged: check your contract.",
               "type": "text"
             }
           ]
@@ -25310,7 +25310,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "In the situation of October 21, two things to know. On the one hand, this support fixes vulnerabilities « after the fact, » once IONOS has produced its own patch: nothing guarantees that your old version is protected on the same day. On the other hand, a site still running PHP 7.x or 8.0 in 2026 has a broader issue than this vulnerability. The proper solution is to switch to a maintained branch. To cancel extended support, the process is the same: ",
+              "text": "In the situation of October 21, two things to know. On the one hand, this support fixes vulnerabilities ‘after the fact,’ once IONOS has produced its own patch: nothing guarantees that your old version is protected on the same day. On the other hand, a site still running PHP 7.x or 8.0 in 2026 has a broader issue than just this vulnerability. The clean solution is to switch to a maintained branch. To cancel extended support, the process is the same: ",
               "type": "text"
             },
             {
@@ -25441,7 +25441,7 @@
               ]
             },
             {
-              "text": " No official corrected version is available. If your site is affected, upgrading isn’t just about comfort—it’s a security update. Before proceeding, check that your CMS, theme, and extensions support the target version: WordPress runs from 7.4 to 8.5, PrestaShop depends on its own version, and it’s almost always an outdated extension that causes the block.",
+              "text": " No official corrected version exists. If your site is affected, upgrading isn’t just about comfort—it’s a security update. Before proceeding, check that your CMS, theme, and extensions support the target version: WordPress runs from 7.4 to 8.5, PrestaShop depends on its own version, and it’s almost always an outdated extension that causes the block.",
               "type": "text"
             }
           ]
@@ -25462,7 +25462,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The client area menu displays the branch. The exact number can be found on your site’s phpinfo page or, for WordPress, in ",
+              "text": "The client area menu displays the branch. The exact number appears on your site’s phpinfo page or, on WordPress, in ",
               "type": "text"
             },
             {
@@ -25514,7 +25514,7 @@
               ]
             },
             {
-              "text": ". The numbers to look for are 8.2.35, 8.3.36, 8.4.27, or 8.5.12. If you see a lower number after selecting the correct branch, IONOS hasn’t yet received the update—that’s when a written request to support makes all the difference. ",
+              "text": ". The numbers to look for are 8.2.35, 8.3.36, 8.4.27, or 8.5.12. If you see a lower number after selecting the correct branch, IONOS hasn’t yet received the update—that’s when a written request to support becomes meaningful. ",
               "type": "text"
             },
             {
@@ -25553,7 +25553,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "IONOS states it in their guide: back up the project beforehand, check the site afterward, and if something breaks, revert to the previous version using the same menu. Common errors after an upgrade have their own help page at IONOS, but in practice, it’s usually an outdated extension or theme, and the fix is to update or replace it before upgrading again.",
+              "text": "IONOS states it in its guide: back up the project beforehand, check the site afterward, and if something breaks, revert to the previous version using the same menu. Common errors after an upgrade have their own help page at IONOS, but in practice, it’s usually an outdated extension or theme, and the fix is to update or replace it before upgrading again.",
               "type": "text"
             }
           ]
@@ -25574,7 +25574,25 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I perform this intervention remotely: backup, testing on a copy, version upgrade for each domain, patch verification, testing of the homepage, admin panel, and a payment process, followed by a written report. I respond within 24 hours. The same guides apply for ",
+              "text": "I perform this remotely: backup, testing on a copy, version change for each domain, patch verification, testing the homepage, admin panel, and a payment, followed by a written report. ",
+              "type": "text"
+            },
+            {
+              "text": "Send me your site’s link",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/contact",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", and I’ll reply within 24 hours. The same guides apply for ",
               "type": "text"
             },
             {
@@ -25650,7 +25668,7 @@
               "type": "text"
             },
             {
-              "text": "list of hosts compiled by Clubic on October 21 at 6:25 PM",
+              "text": "hosting providers review by Clubic on October 21 at 6:25 PM",
               "type": "text",
               "marks": [
                 {
@@ -25668,7 +25686,7 @@
               "type": "text"
             },
             {
-              "text": "corrected versions on php.net",
+              "text": "fixed versions on php.net",
               "type": "text",
               "marks": [
                 {
@@ -25686,27 +25704,6 @@
               "type": "text"
             }
           ]
-        },
-        {
-          "type": "blok",
-          "attrs": {
-            "id": "69d4d880-f360-437d-827c-85191ccd12a4",
-            "body": [
-              {
-                "_uid": "i-506bc9b0-5275-4bc6-a477-0a391280a5bf",
-                "link": {
-                  "id": "",
-                  "url": "/contact",
-                  "linktype": "url",
-                  "fieldtype": "multilink",
-                  "cached_url": "/contact"
-                },
-                "label": "Write to me with your website address",
-                "style": "primary",
-                "component": "cta_button"
-              }
-            ]
-          }
         }
       ]
     }

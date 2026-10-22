@@ -25094,10 +25094,10 @@
     }
   },
   "blog/changer-version-php-ionos-faille-octobre-2026": {
-    "title": "Cambiar la versión de PHP en IONOS tras la vulnerabilidad del 21 de octubre de 2026: panel de cliente y soporte extendido de PHP",
-    "excerpt": "En IONOS, la versión de PHP se configura por dominio desde el panel de cliente. ¿Dónde hacer clic, qué versión elegir tras la vulnerabilidad del 21 de octubre de 2026, y qué ofrece el soporte extendido de PHP (PHP Extended Support).",
-    "metaTitle": "Cambiar la versión de PHP en IONOS tras el fallo PHP 2026",
-    "metaDescription": "Fallo de PHP del 21 de octubre de 2026: dónde cambiar la versión de PHP en el panel de IONOS, qué versión elegir y qué vale el PHP Extended Support.",
+    "title": "Cambiar la versión de PHP en IONOS tras la vulnerabilidad del 21 de octubre de 2026: panel de cliente y PHP Extended Support",
+    "excerpt": "En IONOS, la versión de PHP se configura por dominio desde el espacio del cliente. ¿Dónde hacer clic, qué versión elegir tras la vulnerabilidad del 21 de octubre de 2026, y qué ofrece el PHP Extended Support?",
+    "metaTitle": "Cambiar la versión de PHP en IONOS tras la vulnerabilidad de PHP 2026",
+    "metaDescription": "Vulnerabilidad de PHP del 21 de octubre de 2026: dónde cambiar la versión de PHP en el espacio del cliente de IONOS, qué versión elegir y qué ofrece el PHP Extended Support.",
     "tags": [
       "PHP",
       "IONOS",
@@ -25112,7 +25112,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña, y los parches solo existen para las ramas 8.2 a 8.5. En IONOS, la versión de PHP se configura por dominio desde el espacio del cliente, y el alojamiento tiene una particularidad: un « PHP Extended Support » que permite mantener versiones antiguas. Aquí está dónde hacer clic, qué versión elegir y qué valor tiene este soporte en la situación actual.",
+              "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña, y los parches solo existen para las ramas 8.2 a 8.5. En IONOS, la versión de PHP se configura por dominio desde el espacio del cliente, y el proveedor de alojamiento tiene una particularidad: un « PHP Extended Support » que permite mantener versiones antiguas. Aquí está dónde hacer clic, qué versión elegir y qué valor tiene este soporte en la situación actual.",
               "type": "text"
             }
           ]
@@ -25187,7 +25187,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Al caer el 21 de octubre, no encontré ningún anuncio público de IONOS sobre estas vulnerabilidades, ni en su página de asistencia, ni en la prensa, a diferencia de o2switch, OVHcloud o Infomaniak. Esto no significa que no se esté haciendo nada: en alojamiento compartido, IONOS instala automáticamente las nuevas versiones de PHP en sus servidores para las ramas mantenidas. Esto significa que debe verificar por sí mismo, y que la única respuesta fiable es la del soporte, por escrito: ¿qué versión de PHP usa mi sitio, y si se ha instalado el parche del 21 de octubre?",
+              "text": "Al caer el 21 de octubre, no encontré ningún anuncio público de IONOS sobre estas vulnerabilidades, ni en su página de asistencia, ni en la prensa, a diferencia de o2switch, OVHcloud o Infomaniak. Esto no significa que no se esté haciendo nada: en alojamiento compartido, IONOS instala automáticamente las nuevas versiones de PHP en sus servidores para las ramas mantenidas. Esto significa que debe verificar por sí mismo, y que la única respuesta confiable es la del soporte, por escrito: ¿qué versión de PHP usa mi sitio y está instalado el parche del 21 de octubre?",
               "type": "text"
             }
           ]
@@ -25260,7 +25260,7 @@
               ]
             },
             {
-              "text": ". Seleccione la versión deseada y guarde los cambios. IONOS indica que la actualización «puede tomar un tiempo»: generalmente unos minutos, el tiempo que tarda en aplicarse el cambio.",
+              "text": ". Seleccione la versión deseada y guarde los cambios. IONOS indica que la actualización «puede tomar un tiempo»: generalmente son unos minutos, el tiempo que tarda en propagarse el ajuste.",
               "type": "text"
             }
           ]
@@ -25269,7 +25269,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El detalle que no debe perderse: en IONOS, la configuración es ",
+              "text": "El detalle que no debe perderse: en IONOS, el ajuste es ",
               "type": "text"
             },
             {
@@ -25312,7 +25312,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En la situación del 21 de octubre, dos cosas a saber. Por un lado, este soporte corrige las vulnerabilidades « a posteriori », una vez que IONOS haya desarrollado su propio parche: no hay garantía de que su versión antigua esté protegida el mismo día. Por otro lado, un sitio que siga en PHP 7.x o 8.0 en 2026 tiene de todos modos un problema más amplio que esta vulnerabilidad. La solución limpia es migrar a una rama mantenida. Para cancelar el soporte extendido, el procedimiento es el mismo: ",
+              "text": "En la situación del 21 de octubre, dos cosas que saber. Por un lado, este soporte corrige las vulnerabilidades « a posteriori », una vez que IONOS ha desarrollado su propio parche: no hay garantía de que su versión antigua esté protegida el mismo día. Por otro lado, un sitio que permanezca en PHP 7.x o 8.0 en 2026 tiene, de todos modos, un problema más amplio que esta vulnerabilidad. La solución adecuada es migrar a una rama mantenida. Para cancelar el soporte extendido, el proceso es el mismo: ",
               "type": "text"
             },
             {
@@ -25377,7 +25377,7 @@
               ]
             },
             {
-              "text": " en la ventana que aparece.",
+              "text": " en la ventana que sigue.",
               "type": "text"
             }
           ]
@@ -25443,7 +25443,7 @@
               ]
             },
             {
-              "text": " ninguna versión oficial corregida. Si tu sitio está allí, el cambio de versión no es una opción de comodidad, es una actualización de seguridad. Antes de actualizar, verifica que tu CMS, tu tema y tus extensiones sean compatibles con la versión objetivo: WordPress funciona desde la 7.4 hasta la 8.5, PrestaShop depende de su propia versión, y casi siempre es una extensión antigua la que bloquea el cambio.",
+              "text": " ninguna versión oficial corregida. Si tu sitio está allí, el cambio de versión no es una opción de comodidad, es una actualización de seguridad. Antes de subir, verifica que tu CMS, tu tema y tus extensiones admitan la versión objetivo: WordPress funciona de la 7.4 a la 8.5, PrestaShop depende de su propia versión, y casi siempre es una extensión antigua la que bloquea.",
               "type": "text"
             }
           ]
@@ -25477,11 +25477,11 @@
               ]
             },
             {
-              "text": ", luego en ",
+              "text": ", luego ",
               "type": "text"
             },
             {
-              "text": "Estado del sitio",
+              "text": "Salud del sitio",
               "type": "text",
               "marks": [
                 {
@@ -25516,7 +25516,7 @@
               ]
             },
             {
-              "text": ". Los números que deben aparecer son 8.2.35, 8.3.36, 8.4.27 o 8.5.12. Si lees un número inferior después de seleccionar la rama correcta, el servidor IONOS aún no ha recibido la actualización: ahí es donde cobra sentido la solicitud escrita al soporte. ",
+              "text": ". Los números que deben aparecer son 8.2.35, 8.3.36, 8.4.27 o 8.5.12. Si lees un número inferior después de elegir la rama correcta, el servidor IONOS aún no ha recibido la actualización: ahí es donde la solicitud escrita al soporte adquiere todo su sentido. ",
               "type": "text"
             },
             {
@@ -25567,7 +25567,7 @@
           },
           "content": [
             {
-              "text": "Y si no quieres manejarlo tú",
+              "text": "Y si no quieres tocar nada",
               "type": "text"
             }
           ]
@@ -25576,7 +25576,25 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "yo realizo esta intervención a distancia: copia de seguridad, prueba en una copia, cambio de versión para cada dominio, verificación del parche, prueba del inicio, de la administración y de un pago, y luego un informe escrito. Respondo en menos de 24 horas. Los mismos guías existen para ",
+              "text": "yo realizo esta intervención a distancia: copia de seguridad, prueba en una copia, cambio de versión para cada dominio, verificación del parche, prueba del inicio de sesión, de la administración y de un pago, y luego un informe escrito. ",
+              "type": "text"
+            },
+            {
+              "text": "Escríbeme con el enlace de tu sitio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/contact",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", te respondo en menos de 24 horas. Las mismas guías existen para ",
               "type": "text"
             },
             {
@@ -25634,7 +25652,7 @@
               "type": "text"
             },
             {
-              "text": "guía de IONOS «Actualizar la versión de PHP y cancelar el soporte extendido de PHP»",
+              "text": "guía de IONOS « Actualizar la versión de PHP y cancelar el soporte extendido de PHP »",
               "type": "text",
               "marks": [
                 {
@@ -25688,27 +25706,6 @@
               "type": "text"
             }
           ]
-        },
-        {
-          "type": "blok",
-          "attrs": {
-            "id": "69d4d880-f360-437d-827c-85191ccd12a4",
-            "body": [
-              {
-                "_uid": "i-506bc9b0-5275-4bc6-a477-0a391280a5bf",
-                "link": {
-                  "id": "",
-                  "url": "/contact",
-                  "linktype": "url",
-                  "fieldtype": "multilink",
-                  "cached_url": "/contact"
-                },
-                "label": "Escríbame con la dirección de su sitio",
-                "style": "primary",
-                "component": "cta_button"
-              }
-            ]
-          }
         }
       ]
     }
