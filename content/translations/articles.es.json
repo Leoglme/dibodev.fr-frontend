@@ -22593,9 +22593,9 @@
   },
   "blog/faille-php-octobre-2026-site-boutique-logiciel-que-faire": {
     "title": "Vulnerabilidad de PHP de octubre de 2026: ¿afecta a tu sitio web, tienda o software y qué hacer?",
-    "excerpt": "Dos vulnerabilidades críticas en PHP fueron corregidas el 21 de octubre de 2026. Sitios web en WordPress, tiendas en PrestaShop o WooCommerce, software empresarial, intranets: ¿a quién afecta, qué hace tu proveedor de hosting y qué acciones tomar hoy.",
-    "metaTitle": "Fallo de PHP de octubre de 2026: ¿tu sitio está afectado?",
-    "metaDescription": "Dos fallos críticos de PHP corregidos el 21 de octubre de 2026. Sitios WordPress, tiendas PrestaShop, software de gestión: quién está afectado y qué hacer hoy.",
+    "excerpt": "Dos vulnerabilidades críticas en PHP fueron corregidas el 21 de octubre de 2026. Sitios web en WordPress, tiendas en PrestaShop o WooCommerce, software empresarial, intranets: ¿quién está afectado, qué hace tu proveedor de alojamiento y qué acciones tomar hoy.",
+    "metaTitle": "Vulnerabilidad de PHP de octubre 2026: ¿tu sitio está afectado?",
+    "metaDescription": "Dos vulnerabilidades críticas en PHP corregidas el 21 de octubre de 2026. Sitios WordPress, tiendas PrestaShop, software empresarial: ¿quién está afectado y qué hacer?",
     "tags": [
       "seguridad",
       "PHP",
@@ -22611,7 +22611,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El 21 de octubre de 2026, poco antes de las 16:00, el equipo de PHP publicó cuatro versiones corregidas para dos fallos críticos que permiten tomar el control de un servidor sin contraseña. PHP es el lenguaje que hace funcionar WordPress, PrestaShop, WooCommerce, Joomla, Drupal, Magento y gran parte de los software empresariales, intranets y espacios de clientes creados por agencias o freelancers. En otras palabras: si tienes un sitio web, una tienda en línea o una herramienta de gestión accesible por internet, es muy probable que esté afectado.",
+              "text": "El 21 de octubre de 2026, poco antes de las 16:00, el equipo de PHP publicó cuatro versiones corregidas para dos fallos críticos que permiten tomar el control de un servidor sin contraseña. PHP es el lenguaje que hace funcionar WordPress, PrestaShop, WooCommerce, Joomla, Drupal, Magento y una gran parte de los software empresariales, intranets y espacios de clientes creados por agencias o freelancers. En otras palabras: si tienes un sitio web, una tienda en línea o una herramienta de gestión accesible por internet, es muy probable que esté afectado.",
               "type": "text"
             }
           ]
@@ -22629,7 +22629,7 @@
               ]
             },
             {
-              "text": " la actualización se realiza en el servidor, no en WordPress ni en un plugin. En alojamiento compartido (OVHcloud, o2switch, IONOS, Hostinger, Infomaniak, PlanetHoster…), es el proveedor de alojamiento quien instala la nueva versión de PHP, pero es tu responsabilidad verificar que lo haya hecho y cambiar de versión tú mismo si tu sitio sigue en PHP 8.1 o una versión más antigua. Para saber tu situación en diez segundos, he publicado una ",
+              "text": " la actualización se realiza en el servidor, no en WordPress ni en un plugin. En alojamiento compartido (OVHcloud, o2switch, IONOS, Hostinger, Infomaniak, PlanetHoster…), es el proveedor de alojamiento quien instala la nueva versión de PHP, pero es tu responsabilidad verificar que lo haya hecho y cambiar de versión tú mismo si tu sitio sigue en PHP 8.1 o versiones más antiguas. Para saber tu situación en diez segundos, he publicado una ",
               "type": "text"
             },
             {
@@ -22668,7 +22668,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Las dos fallas tienen las referencias CVE-2026-109618 y CVE-2026-109619, y el apodo PHP2Shell. Están calificadas con 9,2 sobre 10. En la práctica, una solicitud web bien estructurada es suficiente para ejecutar código en el servidor, incluso antes de que el sitio o la aplicación se inicie. No se necesita cuenta, contraseña ni que el sitio tenga un error: la falla está en PHP en sí mismo.",
+              "text": "Las dos vulnerabilidades tienen las referencias CVE-2026-109618 y CVE-2026-109619, y el sobrenombre PHP2Shell. Están calificadas con un 9,2 sobre 10. En la práctica, una solicitud web bien estructurada es suficiente para ejecutar código en el servidor, incluso antes de que el sitio o la aplicación se inicie. No se necesita cuenta, ni contraseña, ni que el sitio tenga un error: la falla está en PHP en sí mismo.",
               "type": "text"
             }
           ]
@@ -22677,7 +22677,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El incidente comenzó con una filtración. El lunes 20 de octubre, un mensaje en Hacker News anunció dos vulnerabilidades críticas bajo embargo. La empresa watchTowr confirmó esa misma noche que eran reales, y PHP anunció un parche para al día siguiente a las 14:00 UTC. Mientras tanto, circularon páginas que afirmaban publicar un exploit, Cloudflare activó reglas de firewall para todos sus clientes desde las 3:02 UTC y observó cómo los atacantes modificaban sus cargas para esquivarlas. Los parches se publicaron el miércoles con un poco de antelación: PHP 8.5.12, 8.4.27, 8.3.36 y 8.2.35.",
+              "text": "El incidente comenzó con una filtración. El lunes 20 de octubre, un mensaje en Hacker News anunció dos vulnerabilidades críticas bajo embargo. La empresa watchTowr confirmó esa misma noche que eran reales, y PHP anunció un parche para al día siguiente a las 14:00 UTC. Mientras tanto, circularon páginas que pretendían publicar un exploit, Cloudflare activó reglas de firewall para todos sus clientes desde las 3:02 UTC y observó cómo los atacantes modificaban sus cargas para esquivarlas. Los parches se publicaron el miércoles con un poco de anticipación: PHP 8.5.12, 8.4.27, 8.3.36 y 8.2.35.",
               "type": "text"
             }
           ]
@@ -22695,7 +22695,7 @@
               ]
             },
             {
-              "text": " por la tarde, el Ministerio del Interior desconectó los sitios de todas las prefecturas a petición de la ANSSI, « mantenimiento preventivo de todos sus sitios web expuestos a una vulnerabilidad crítica de seguridad », y Météo-France cerró sus sitios de predicciones y alertas por su propia iniciativa. Parte del portal de impuestos también fue desconectada según la prensa. Países Bajos apagó DigiD y MijnOverheid, Finlandia sus servicios públicos en línea, consejos municipales británicos y servicios daneses hicieron lo mismo. Ninguno de estos sitios reportó intrusiones: fue una medida de precaución, exactamente la que recomienda el CERT-FR cuando no se puede corregir de inmediato. Si el Estado corta sus propios sitios en lugar de asumir el riesgo, un sitio empresarial que funcione con PHP no tiene razón para creerse a salvo.",
+              "text": " por la tarde, el Ministerio del Interior desconectó los sitios de todas las prefecturas a petición de la ANSSI, « mantenimiento preventivo de todos sus sitios web expuestos a una vulnerabilidad crítica de seguridad », y Météo-France cerró sus sitios de predicciones y alertas por su propia iniciativa. Parte del portal de impuestos también fue desconectada según la prensa. Países Bajos apagó DigiD y MijnOverheid, Finlandia sus servicios públicos en línea, consejos municipales británicos y servicios daneses hicieron lo mismo. Ninguno de estos sitios reportó intrusiones: es una medida de precaución, exactamente la que recomienda el CERT-FR cuando no se puede corregir de inmediato. Si el Estado corta sus propios sitios en lugar de asumir el riesgo, un sitio empresarial que funcione con PHP no tiene razón para creerse a salvo.",
               "type": "text"
             }
           ]
@@ -22713,7 +22713,7 @@
               ]
             },
             {
-              "text": " PHP 8.1, 8.0, 7.4 y versiones anteriores no recibirán nuevas versiones. El proyecto publicó parches de código fuente para 7.4, 8.0 y 8.1, que deben compilarse manualmente o obtenerse del proveedor de alojamiento, pero nada se instalará automáticamente. Según W3Techs, aproximadamente un sitio PHP de cada cuatro sigue usando PHP 7. Si es tu caso, nadie lo corregirá por ti.",
+              "text": " PHP 8.1, 8.0, 7.4 y versiones anteriores no recibirán nuevas versiones. El proyecto publicó parches de código fuente para 7.4, 8.0 y 8.1, que deben compilarse manualmente o obtenerse del proveedor de alojamiento, pero no habrá actualizaciones oficiales automáticas. Según W3Techs, aproximadamente uno de cada cuatro sitios en PHP aún funciona con PHP 7. Si ese es tu caso, nadie lo corregirá por ti.",
               "type": "text"
             }
           ]
@@ -22722,7 +22722,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El CERT-FR, el equipo de la ANSSI, publicó ese mismo día la alerta CERTFR-2026-ALE-014: aislar los sistemas afectados, luego migrar a una versión mantenida y corregida. Las soluciones alternativas que circulan, como desactivar session.upload_progress o bloquear envíos de archivos, reducen la superficie de ataque para una de las dos fallas. No sustituyen la actualización.",
+              "text": "El CERT-FR, el equipo de la ANSSI, publicó ese mismo día la alerta CERTFR-2026-ALE-014: aislar los sistemas afectados y luego migrar a una versión mantenida y corregida. Las soluciones alternativas que circulan, como desactivar session.upload_progress o bloquear el envío de archivos, reducen la superficie de ataque para una de las dos fallas. No sustituyen la actualización.",
               "type": "text"
             }
           ]
@@ -22740,7 +22740,7 @@
               ]
             },
             {
-              "text": " El apodo dado a las dos fallas: una solicitud web especialmente estructurada permite ejecutar comandos en el servidor, un « shell », a través de PHP, sin necesidad de cuenta ni contraseña. No hay un virus llamado PHP2Shell que buscar en tu computadora. Es un defecto del motor PHP en sí mismo, en el servidor, y se corrige con las versiones del 21 de octubre.",
+              "text": " El sobrenombre dado a las dos fallas: una solicitud web especialmente estructurada permite ejecutar comandos en el servidor, un « shell », a través de PHP, sin necesidad de cuenta ni contraseña. No hay un virus llamado PHP2Shell que debas buscar en tu computadora. Es un defecto del motor PHP en sí, en el servidor, y se corrige con las versiones del 21 de octubre.",
               "type": "text"
             }
           ]
@@ -22826,7 +22826,7 @@
               ]
             },
             {
-              "text": " ya está en fin de vida desde el 31 de diciembre de 2025, ",
+              "text": " está en fin de vida desde el 31 de diciembre de 2025, ",
               "type": "text"
             },
             {
@@ -22945,7 +22945,7 @@
               ]
             },
             {
-              "text": " espacio del cliente, Web Cloud, Alojamientos, su alojamiento, pestaña Información general, línea « Versión global de PHP ». Para cambiar, dentro de Configuración, el botón « … » y luego « Modificar la configuración ». Los más avanzados también pueden modificar la línea app.engine.version del archivo .ovhconfig en la raíz del FTP. El detalle, botón deshabilitado y archivo .ovhconfig incluido, está en ",
+              "text": " espacio del cliente, Web Cloud, Alojamientos, su alojamiento, pestaña Información general, línea « Versión global de PHP ». Para cambiar, en el apartado Configuración, el botón « … » y luego « Modificar la configuración ». Los más avanzados también pueden modificar la línea app.engine.version del archivo .ovhconfig en la raíz del FTP. El detalle, botón grisado y archivo .ovhconfig incluido, está en ",
               "type": "text"
             },
             {
@@ -23071,7 +23071,7 @@
               ]
             },
             {
-              "text": " explica por qué.",
+              "text": " lo explica.",
               "type": "text"
             }
           ]
@@ -23125,7 +23125,7 @@
               ]
             },
             {
-              "text": " En Plesk, en la sección Sitios web y dominios, dentro del apartado PHP de cada sitio. En un servidor, el comando php -v muestra la versión en línea de comandos, pero es la página phpinfo() o el encabezado X-Powered-By la que indica cuál es la versión que realmente sirve al sitio. Luego, con apt o dnf para actualizar, y reiniciar PHP-FPM o Apache.",
+              "text": " En Plesk, en la sección Sitios web y dominios, dentro del apartado PHP de cada sitio. En un servidor, el comando php -v muestra la versión en la línea de comandos, pero es la página phpinfo() o el encabezado X-Powered-By la que indica cuál es la versión que realmente sirve al sitio. Luego, con apt o dnf para actualizar, y reiniciar PHP-FPM o Apache.",
               "type": "text"
             }
           ]
@@ -23152,7 +23152,7 @@
               ]
             },
             {
-              "text": " lee el número cuando el servidor lo muestra, y reconoce al proveedor de alojamiento para indicarte el camino correcto.",
+              "text": " lee el número cuando el servidor lo muestra, y reconoce al proveedor de alojamiento para indicarte la ruta correcta.",
               "type": "text"
             }
           ]
@@ -23191,7 +23191,7 @@
               ]
             },
             {
-              "text": " bajo WordPress, Joomla, Drupal, SPIP o TYPO3, funciona con PHP. Afectado.",
+              "text": " bajo WordPress, Joomla, Drupal, SPIP o TYPO3 funciona con PHP. Afectado.",
               "type": "text"
             }
           ]
@@ -23209,7 +23209,7 @@
               ]
             },
             {
-              "text": " bajo PrestaShop, WooCommerce, Magento o Thelia, funciona con PHP. Afectada, y es el objetivo más interesante para un atacante: hay pagos y direcciones involucradas.",
+              "text": " bajo PrestaShop, WooCommerce, Magento o Thelia funciona con PHP. Afectada, y es el objetivo más interesante para un atacante: hay pagos y direcciones involucradas.",
               "type": "text"
             }
           ]
@@ -23218,7 +23218,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Su software empresarial, intranet, extranet, espacio de cliente",
+              "text": "Su software empresarial, su intranet, su extranet, su espacio cliente",
               "type": "text",
               "marks": [
                 {
@@ -23227,7 +23227,7 @@
               ]
             },
             {
-              "text": ", si han sido desarrollados en PHP (Laravel, Symfony o código propio), están afectados incluso si están protegidos por contraseña. La vulnerabilidad actúa antes de la página de conexión. Una herramienta interna que solo usan sus empleados, pero que es accesible desde internet, está expuesta como un sitio público.",
+              "text": ", si han sido desarrollados en PHP (Laravel, Symfony o código propio), están afectados incluso si están protegidos con contraseña. La vulnerabilidad actúa antes de la página de conexión. Una herramienta interna que solo usan sus empleados, pero que es accesible desde internet, está expuesta como un sitio público.",
               "type": "text"
             }
           ]
@@ -23245,7 +23245,7 @@
               ]
             },
             {
-              "text": ", como Dolibarr, GLPI, Nextcloud, Moodle, un foro phpBB, una wiki, una herramienta de tickets, están en la misma situación.",
+              "text": ", como Dolibarr, GLPI, Nextcloud, Moodle, un foro phpBB, un wiki, una herramienta de tickets, están en la misma situación.",
               "type": "text"
             }
           ]
@@ -23302,7 +23302,7 @@
           },
           "content": [
             {
-              "text": "Lo que su proveedor de alojamiento hace y lo que no hace",
+              "text": "Lo que su proveedor de alojamiento hace, y lo que no hace",
               "type": "text"
             }
           ]
@@ -23311,7 +23311,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En alojamiento compartido, PHP pertenece al proveedor de hosting. No puede instalarlo usted mismo; solo elige una rama (8.1, 8.2, 8.3…) en su espacio. El proveedor, por su parte, instala las versiones corregidas en sus servidores para las ramas que aún se mantienen, desde la 8.2 hasta la 8.5.",
+              "text": "En alojamiento compartido (shared hosting), PHP pertenece al proveedor de alojamiento. No puedes instalarlo tú mismo; solo eliges una rama (8.1, 8.2, 8.3…) en tu espacio. El proveedor, por su parte, instala las versiones corregidas en sus servidores para las ramas aún mantenidas, desde 8.2 hasta 8.5.",
               "type": "text"
             }
           ]
@@ -23320,7 +23320,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El 21 de octubre por la noche, esto es lo que pude constatar. o2switch desactivó la funcionalidad en cuestión desde las 8:07 de la mañana, pero a las 16:40 sus servidores aún funcionaban con las versiones del 6 de octubre, esperando los paquetes de CloudLinux previstos para esa noche. OVHcloud anuncia reglas de firewall en sus clústeres compartidos y una campaña de mantenimiento. Infomaniak abrió una mantenimiento de 15:00 hasta las 3:00 del día siguiente, con los parches desplegados por sus equipos y sin acción requerida, excepto para los sitios que aún usaban una versión de PHP menos mantenida. Para IONOS, Hostinger, PlanetHoster, LWS o Gandi, no encontré ningún anuncio público a esa hora.",
+              "text": "El 21 de octubre por la noche, esto es lo que pude constatar. o2switch desactivó la funcionalidad en cuestión desde las 8:07 de la mañana, pero a las 16:40 sus servidores aún funcionaban con las versiones del 6 de octubre, esperando los paquetes de CloudLinux previstos para esa noche. OVHcloud anuncia reglas de firewall en sus clústeres compartidos y una campaña de mantenimiento. Infomaniak abrió una ventana de mantenimiento desde las 15:00 hasta las 3:00 del día siguiente, con los parches desplegados por sus equipos y sin acción adicional, excepto para los sitios que aún usaban una versión de PHP menos mantenida. Para IONOS, Hostinger, PlanetHoster, LWS o Gandi, no encontré ningún anuncio público a esa hora.",
               "type": "text"
             }
           ]
@@ -23338,7 +23338,7 @@
               ]
             },
             {
-              "text": " verificar en uno o dos días si la versión realmente ha cambiado. Un parche anunciado no es un parche instalado. Y si su sitio está en PHP 8.1 o inferior, el proveedor no lo actualizará: le corresponde a usted pasar a la 8.3 o 8.4 desde cPanel, Plesk o el espacio de cliente, después de hacer una copia de seguridad y una prueba, porque un tema antiguo o una extensión antigua puede no ser compatible.",
+              "text": " verificar en uno o dos días si la versión realmente ha cambiado. Un parche anunciado no es un parche instalado. Y si tu sitio usa PHP 8.1 o una versión anterior, el proveedor no lo actualizará: será tu responsabilidad pasar a 8.3 o 8.4 desde cPanel, Plesk o el espacio de cliente, después de hacer una copia de seguridad y probar, porque un tema antiguo o una extensión antigua podría no ser compatible.",
               "type": "text"
             }
           ]
@@ -23359,7 +23359,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Muchos sitios y herramientas fueron creados hace tres, cinco u ocho años por una agencia o un freelance que ya no se ve. Es el momento de contactarlos por correo electrónico para dejar constancia.",
+              "text": "Muchos sitios y herramientas fueron creados hace tres, cinco u ocho años por una agencia o un freelance con el que ya no se tiene contacto. Es el momento de escribirles, por correo electrónico, para dejar constancia.",
               "type": "text"
             }
           ]
@@ -23377,7 +23377,7 @@
               ]
             },
             {
-              "text": " ¿qué versión de PHP usa actualmente el sitio o la aplicación? La respuesta debe ser un número preciso, como 8.3.36, no «está actualizado».",
+              "text": " ¿qué versión de PHP usa actualmente el sitio o la aplicación? La respuesta debe ser un número exacto, como 8.3.36, no «está actualizado».",
               "type": "text"
             }
           ]
@@ -23413,7 +23413,7 @@
               ]
             },
             {
-              "text": " ¿han sido revisados los registros del servidor desde el 20 de octubre? Solicitudes POST masivas de tipo multipart hacia páginas que no las reciben nunca son la señal a buscar.",
+              "text": " ¿se han revisado los registros del servidor desde el 20 de octubre? Solicitudes POST masivas de tipo multipart hacia páginas que no las manejan son la señal a buscar.",
               "type": "text"
             }
           ]
@@ -23422,7 +23422,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si nadie responde en el día, o si el proveedor ya no existe, es exactamente el tipo de situación que yo manejo: recupero los accesos, actualizo, pruebo y le escribo lo que se ha hecho.",
+              "text": "Si nadie responde en el día o si el proveedor ya no existe, es exactamente el tipo de situación que yo manejo: recupero los accesos, actualizo, pruebo y le escribo sobre lo realizado.",
               "type": "text"
             }
           ]
@@ -23434,7 +23434,7 @@
           },
           "content": [
             {
-              "text": "Y si su sitio sigue funcionando con PHP 7 u 8.1?",
+              "text": "¿Y si su sitio sigue funcionando con PHP 7 u 8.1?",
               "type": "text"
             }
           ]
@@ -23443,7 +23443,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Es el caso más delicado y el más frecuente entre las PYMES. Dos opciones.",
+              "text": "Es el caso más delicado y el más frecuente entre las pequeñas y medianas empresas. Dos opciones.",
               "type": "text"
             }
           ]
@@ -23452,7 +23452,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El paquete retroportado:",
+              "text": "El parche retroactivo:",
               "type": "text",
               "marks": [
                 {
@@ -23461,7 +23461,7 @@
               ]
             },
             {
-              "text": " algunos proveedores de hosting y distribuciones Linux (Debian, Ubuntu) integran los parches en sus versiones antiguas sin cambiar el número. Debe preguntarles por escrito si lo han hecho. Un número antiguo no prueba la vulnerabilidad por sí solo, pero ante la duda, se necesita confirmación.",
+              "text": " algunos proveedores de alojamiento y distribuciones Linux (Debian, Ubuntu) integran los parches en versiones antiguas sin cambiar el número. Hay que preguntarles, por escrito, si lo han hecho. Un número antiguo no prueba por sí solo la existencia de la vulnerabilidad, pero en caso de duda, se necesita confirmación.",
               "type": "text"
             }
           ]
@@ -23470,7 +23470,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El cambio de rama:",
+              "text": "Cambiar de rama:",
               "type": "text",
               "marks": [
                 {
@@ -23479,7 +23479,7 @@
               ]
             },
             {
-              "text": " pasar a PHP 8.3 o 8.4. Es la verdadera solución, y también es lo que habrá que hacer de todos modos, ya que PHP 8.2 dejará de mantenerse el 31 de diciembre de 2026. Requiere verificar que el CMS, el tema y las extensiones sean compatibles con la nueva versión, hacer una copia de seguridad fuera del servidor y probar en una copia antes de migrar. Una hora para un sitio sencillo, medio día para una tienda con muchos módulos.",
+              "text": " pasar a PHP 8.3 o 8.4. Es la solución real, y también lo que habrá que hacer de todos modos, ya que PHP 8.2 dejará de recibir soporte el 31 de diciembre de 2026. Requiere verificar que el CMS, el tema y las extensiones sean compatibles con la nueva versión, hacer una copia de seguridad fuera del servidor y probar en una copia antes de migrar. Una hora para un sitio sencillo, medio día para una tienda con muchos módulos.",
               "type": "text"
             }
           ]
@@ -23488,7 +23488,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si ninguna de las dos opciones es posible hoy, la recomendación del CERT-FR es clara: ponga la aplicación fuera de línea o detrás de un firewall aplicativo, el tiempo necesario para realizar lo necesario.",
+              "text": "Si ninguna de las dos opciones es posible hoy, la recomendación del CERT-FR es clara: ponga la aplicación fuera de línea o detrás de un firewall aplicativo, mientras se toman las medidas necesarias.",
               "type": "text"
             }
           ]
@@ -23509,7 +23509,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si llegó aquí porque impots.gouv.fr muestra «en mantenimiento» o el sitio de su prefectura no responde: es esta falla, y es intencional. El Ministerio del Interior habla de una «puesta en mantenimiento preventivo» y de «mejores plazos» para el reinicio, mientras que Météo-France indica que la actualización está publicada, pero que sus verificaciones deben terminarse antes de la reapertura. No se anunciaba ninguna fecha el 21 de octubre por la noche, cuente horas en lugar de semanas. Sus datos no están en riesgo, no se ha anunciado ninguna intrusión, y no hay nada que hacer con estos sitios.",
+              "text": "Si llegó aquí porque impots.gouv.fr muestra «en mantenimiento» o porque el sitio de su prefectura no responde: es esta falla, y es intencional. El Ministerio del Interior habla de una «puesta en mantenimiento preventivo» y de «mejores plazos» para el reinicio, mientras que Météo-France indica que la actualización está publicada, pero que sus verificaciones deben terminarse antes de la reapertura. No se anunciaba ninguna fecha el 21 de octubre por la noche, cuente horas en lugar de semanas. Sus datos no están en riesgo, no se ha anunciado ninguna intrusión, y no hay nada que hacer con estos sitios.",
               "type": "text"
             }
           ]
@@ -23518,7 +23518,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Una sola precaución: los correos electrónicos y SMS que pretenden provenir de los impuestos, de su proveedor de alojamiento o de «ANSSI» para hacerle «verificar sus credenciales» florecerán en los próximos días. Las estafas siempre siguen este tipo de noticias.",
+              "text": "Solo una precaución: los correos electrónicos y SMS que afirman provenir de los impuestos, de su proveedor de alojamiento o de «ANSSI» para «verificar sus credenciales» florecerán en los próximos días. Las estafas siempre siguen este tipo de noticias.",
               "type": "text"
             }
           ]
@@ -23539,7 +23539,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Es la confusión que escucho con más frecuencia. «Hice las actualizaciones, todo está en verde». Las actualizaciones de WordPress, PrestaShop o los complementos no afectan a PHP, que funciona en segundo plano. Un complemento de seguridad puede bloquear ciertas solicitudes, pero no todas, y los atacantes ya han modificado sus cargas para pasar las reglas de Cloudflare. La única puerta que realmente se cierra es la versión corregida de PHP en el servidor.",
+              "text": "Es la confusión que escucho con más frecuencia. «Hice las actualizaciones, todo está en verde». Las actualizaciones de WordPress, PrestaShop o los complementos no afectan a PHP, que funciona en segundo plano. Un complemento de seguridad puede bloquear ciertas solicitudes, pero no todas, y los atacantes ya han modificado sus cargas para pasar las reglas de Cloudflare. La única puerta que realmente cierra es la versión corregida de PHP en el servidor.",
               "type": "text"
             }
           ]
@@ -23569,7 +23569,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En los registros de acceso del servidor, busque desde el 20 de octubre solicitudes POST de tipo multipart inusuales. En las carpetas de envío de archivos (uploads, caché, tmp), busque archivos .php recientes que no haya colocado allí. En la administración, busque cuentas administradoras desconocidas y tareas programadas nuevas. En caso de duda: copia de seguridad inmediata, cambio de todas las contraseñas de administración, y si se ven afectados datos personales de clientes, notificación a la CNIL en 72 horas.",
+              "text": "En los registros de acceso del servidor, busque desde el 20 de octubre solicitudes POST de tipo multipart inusuales. En las carpetas de envío de archivos (uploads, cache, tmp), busque archivos .php recientes que no haya colocado allí. En la administración, busque cuentas administradoras desconocidas y tareas programadas nuevas. En caso de duda: copia de seguridad inmediata, cambio de todas las contraseñas de administración, y si se ven afectados datos personales de clientes, notificación a la CNIL en 72 horas.",
               "type": "text"
             }
           ]
@@ -23590,7 +23590,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Soy desarrollador freelance cerca de Rennes y trabajo de forma remota en toda Francia. Para esta falla, hago algo sencillo: leo la versión de PHP realmente servida por su sitio, su tienda o su herramienta, actualizo PHP o cambio de rama, verifico que todo funcione aún, y le escribo lo que se ha hecho. Si su proveedor de servicios no responde, recupero los accesos y retomo el trabajo.",
+              "text": "Soy desarrollador freelance cerca de Rennes y trabajo a distancia en toda Francia. Para esta falla, hago algo sencillo: leo la versión de PHP realmente servida por su sitio, su tienda o su herramienta, actualizo PHP o cambio de rama, verifico que todo siga funcionando y le escribo lo que se ha hecho. Si su proveedor de servicios no responde, recupero los accesos y retomo el trabajo.",
               "type": "text"
             }
           ]
@@ -23599,7 +23599,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Empiece por ",
+              "text": "Comience por ",
               "type": "text"
             },
             {
@@ -23711,7 +23711,7 @@
               "type": "text"
             },
             {
-              "text": "sitios públicos caídos en Países Bajos, Finlandia y Reino Unido, The Record",
+              "text": "sitios públicos caídos en Países Bajos, Finlandia y Reino Unido, según The Record",
               "type": "text",
               "marks": [
                 {
