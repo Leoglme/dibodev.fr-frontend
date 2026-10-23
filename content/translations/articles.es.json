@@ -28326,5 +28326,856 @@
         }
       ]
     }
+  },
+  "blog/logiciel-facturation-garage-devis-ordre-de-reparation-facture": {
+    "title": "Software de facturación para taller automovilístico: qué debe hacer y cuánto cuesta",
+    "excerpt": "Qué debe hacer un software de facturación para taller, desde el presupuesto hasta la factura electrónica, los precios de los editores en 2026 y un modelo gratuito de orden de reparación y presupuesto.",
+    "metaTitle": "Software de facturación para taller: presupuestos, OR, facturas, precios 2026",
+    "metaDescription": "Presupuestos, órdenes de reparación, facturas, Factur-X: qué debe hacer un software de facturación para taller, precios de los editores en 2026 y un modelo gratuito.",
+    "tags": [
+      "software facturación taller",
+      "software presupuesto taller",
+      "orden reparación taller",
+      "factura taller automovilístico",
+      "software taller mecánico",
+      "facturación taller mecánico",
+      "modelo orden reparación"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nunca he cambiado una correa de distribución, y la última vez que abrí el capó fue para revisar el líquido limpiaparabrisas. Pero desde que construyo software de gestión, he pasado mucho tiempo observando cómo un taller factura. Y casi cada vez, parece esto: un cuaderno de órdenes de reparación con anotaciones a mano, un software de facturación « genérico » elegido porque era gratuito, y una hoja de Excel que conecta ambos. El presupuesto se teclea una vez, la factura se vuelve a teclear, y los kilómetros del coche terminan en un post-it.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un software de facturación para un taller automovilístico no es un software de facturación común con un campo « matrícula » adicional. Aquí está lo que debe hacer, lo que la ley exige en sus documentos, los costos de los softwares que muestran sus precios en 2026, y un modelo gratuito de orden de reparación y presupuesto para descargar mientras tanto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Por qué un software de facturación « clásico » no es suficiente para un taller?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Falta la orden de reparación.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " En un taller, el documento central no es la factura, sino la orden de reparación: el cliente entrega su coche, describe la avería, usted estima el costo probable, él firma, y usted tiene derecho a trabajar. Un software de facturación diseñado para un consultor o una tienda no incluye este documento. Comienza con el presupuesto y termina con la factura, sin la pieza que prueba el acuerdo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Falta la ficha del vehículo.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Un cliente puede tener dos coches, y un coche puede cambiar de propietario. Lo que necesita recuperar en dos clics es el historial por matrícula: las intervenciones pasadas, los kilómetros en cada visita, las piezas instaladas. Una herramienta genérica organiza todo por cliente, y pierde el historial del vehículo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Falta el kilometraje.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Es un detalle que no lo es: el kilometraje debe figurar en todos los documentos entregados al cliente, incluyendo presupuesto, orden de reparación y factura. Una herramienta que no lo solicita puede hacer que lo olvide.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Faltan las piezas de reutilización y las piezas reemplazadas.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Ofrecer una pieza de economía circular, anotar que el cliente la rechaza, especificar que desea recuperar las piezas reemplazadas: todo esto se gestiona en la orden de reparación, no en una factura genérica.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Presupuesto, orden de reparación, factura: lo que la ley exige a un taller",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No soy jurista, y lo siguiente resume la ficha « Los talleres en 20 preguntas-respuestas » del Instituto Nacional del Consumo, verificada el 31 de julio de 2025. Está escrita para sus clientes, lo que la convierte en una buena lista de lo que ellos podrían reprocharle.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Los precios están exhibidos, IVA incluido.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Las tarifas de servicios comunes y las tasas horarias de mano de obra, todas las tasas incluidas y por tipo de trabajo (mecánica, chapa, pintura), deben estar exhibidas en la entrada del establecimiento y en el local de recepción. Esto está establecido por el decreto del 27 de marzo de 1987. Un software no muestra nada por usted, pero debe aplicar estas mismas tasas en sus presupuestos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El presupuesto no es obligatorio, pero no puede negarse a hacerlo.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Puede cobrarlo, siempre que informe al cliente antes. En la práctica, su importe se deduce de la factura final. Los precios son libres.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La orden de reparación no tiene una forma impuesta.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Ningún texto le obliga a establecerla, pero es la prueba del contrato, y el INC recomienda que se firme en dos ejemplares. Para ser útil, debe incluir la fecha, la identidad del cliente, el vehículo y su kilometraje, la naturaleza exacta de los trabajos solicitados, su costo probable, el plazo de inmovilización, y el estado del vehículo al llegar. Todo trabajo no previsto requiere el acuerdo del cliente antes de ser realizado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La factura, o el recibo, es obligatoria desde 25 € IVA incluido.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " En doble ejemplar, con la fecha, sus coordenadas, el nombre del cliente salvo si se opone, el detalle de los servicios y las piezas, las cantidades y los precios, y el total IVA incluido. Y el kilometraje del cuentakilómetros, aún él, en todos los documentos (decreto del 4 de octubre de 1978).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las piezas de reutilización se proponen.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Desde 2017, el profesional debe permitir al cliente optar por piezas procedentes de la economía circular (artículo L. 224-67 del código de consumo), salvo en los casos previstos por el código, como un plazo de suministro incompatible con la inmovilización prevista o trabajos bajo garantía. El cliente sigue siendo libre de rechazar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La factura electrónica llega.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Desde el 1 de septiembre de 2026, todas las empresas deberán poder recibir facturas electrónicas; a partir del 1 de septiembre de 2027, las Pymes y microempresas también deberán emitirlas. Para un taller que factura principalmente a particulares, la obligación de emisión concierne a las facturas entre empresas, pero los datos de sus ventas deberán ser transmitidos a la administración. He detallado quién está afectado y cómo prepararse en mi artículo sobre ",
+              "type": "text"
+            },
+            {
+              "text": "la factura electrónica para artesanos",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/facture-electronique-artisan-ce-qui-change",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Un modelo gratuito de orden de reparación y presupuesto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si aún factura a mano o en una hoja de cálculo, he diseñado un modelo que incluye todo lo anterior: un orden de reparación en la página 1 (referencias, cliente, vehículo con kilometraje y nivel de combustible, trabajos solicitados con estimación, estado del vehículo al llegar, acuerdos del cliente sobre piezas de reutilización y trabajos adicionales, firmas) y un presupuesto en la página 2 (líneas de piezas y mano de obra, IVA, condiciones, aceptación).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Existe en dos versiones: ",
+              "type": "text"
+            },
+            {
+              "text": "el PDF para imprimir y completar a mano",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/modeles/ordre-de-reparation-devis-garage.pdf",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", y ",
+              "type": "text"
+            },
+            {
+              "text": "el archivo Excel",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/modeles/ordre-de-reparation-devis-garage.xlsx",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " con los totales calculados, para adaptar con su encabezado. Sin inscripción, sin correo electrónico solicitado. Es una solución honesta de emergencia, no un software: tan pronto como maneje una decena de vehículos por semana, la verdadera ganancia está en una herramienta que vincula el presupuesto, el orden de reparación, la factura y el historial.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que un buen software de facturación para talleres hace además",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Convierte el presupuesto en orden de reparación y luego en factura, sin necesidad de volver a introducir los datos.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " El cliente acepta el presupuesto, usted lo convierte en OR, el mecánico añade la pieza descubierta durante el trabajo, usted contacta al cliente para su aprobación, y la factura recoge todo. Un solo documento que cambia de estado, no tres documentos para copiar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Conoce sus piezas y sus tiempos.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Un catálogo de piezas con sus precios de compra y venta, tiempos tarifados por operación, una tarifa horaria por tipo de trabajo: el presupuesto se construye seleccionando, no escribiendo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Guarda el historial por vehículo.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Matrícula, kilometraje en cada paso, intervenciones, piezas montadas, próximos mantenimientos. También es lo que le permite recordar a un cliente para su revisión, algo que un libro de registro nunca podrá hacer.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Prepara la factura electrónica.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Un formato legible por plataformas aprobadas, como Factur-X, y un envío que no depende de un PDF adjunto en un correo electrónico.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Mantiene la agenda y el taller.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Citas, vehículos presentes, puente ocupado o libre, devolución prevista: la facturación es solo el final de la cadena.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Los precios 2026 de los softwares de taller que los muestran",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Revisé las páginas de tarifas de los editores el 18 de octubre de 2026. Los precios cambian, verifíquelos antes de firmar; y los softwares diseñados para talleres son todos de pago, con una prueba gratuita de catorce días en la mayoría.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gest'Garage",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " cuesta ",
+              "type": "text"
+            },
+            {
+              "text": "19 € por mes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.gestgarage.fr/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", sin IVA adicional (el editor está exento de IVA), sin compromiso, hasta cinco colaboradores, con presupuestos, órdenes de reparación, facturas, agenda y facturas de proveedores. Un taller adicional cuesta 10 € por mes, y el editor anuncia que sus facturas están listas para la reforma de la facturación electrónica. Prueba de catorce días sin tarjeta bancaria.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "TDV Agent",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", del grupo Asttas, ofrece ",
+              "type": "text"
+            },
+            {
+              "text": "cuatro planes todo incluido",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://groupe-asttas.fr/solutions/tdv-agent",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": Solo Esencial a 19,90 € por mes para la agenda de un mecánico independiente, Solo Completo a 24,90 € con presupuestos, facturas y stock, Esencial a 39 € para un taller con un equipo en un sitio, y Multi-sitios Pro a 79 €. La facturación Factur-X está incluida, con fotos con marca de tiempo y la firma del cliente en la orden de reparación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "AutoProGestion",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " factura ",
+              "type": "text"
+            },
+            {
+              "text": "29 € sin IVA por mes en Starter",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://autoprogestion.fr/tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " (100 clientes, dos usuarios, 24 € sin IVA al año) y 59 € sin IVA en Pro (clientes y usuarios ilimitados, flota de vehículos de segunda mano, 49 € sin IVA al año), sin compromiso, con una oferta Empresa bajo presupuesto. Hablo más extensamente sobre esto en mi artículo sobre ",
+              "type": "text"
+            },
+            {
+              "text": "las alternativas a AutoProGestion",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-autoprogestion-logiciel-garage",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Kwixéo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " no está reservado solo para talleres, pero su oferta Essencial a ",
+              "type": "text"
+            },
+            {
+              "text": "22 € IVA no incluido por mes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.kwixeo.fr/tarifs-logiciel-facturation",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " (18,33 € al año) incluye presupuestos, facturas, órdenes de reparación y facturación electrónica; las ofertas Pro a 59 € IVA no incluido y Expert a 89 € IVA no incluido añaden sincronización bancaria y gestión de múltiples depósitos. Un usuario adicional cuesta entre 6 y 10 € IVA no incluido por mes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "EBP MéCa y GAD Garage",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " no publican sus precios: cuenta con un presupuesto y, a menudo, una instalación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para comparar estos programas según lo que gestionan y saber en dos minutos si alguno de ellos es suficiente para tu taller, ",
+              "type": "text"
+            },
+            {
+              "text": "la prueba gratuita de mi página sobre los software para talleres",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile#test",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " plantea seis preguntas y te da una respuesta cuantificada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Y si ninguno encaja: la facturación a medida",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una suscripción de 19 o 59 € por mes es imbatible para un taller que trabaja como todo el mundo. Pero es mucho menos adecuada para aquel que tiene sus propias reglas: paquetes personalizados, actividad de venta de vehículos de segunda mano combinada con el taller, varios sitios con una contabilidad común, una asociación con un arrendador o una flota de empresa que facturar al final del mes. Allí, terminas adaptando el software y volviendo a ingresar en Excel lo que no sabe hacer.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En este caso, un complemento personalizado conectado junto a tu software cuesta entre 2.500 y 7.000 € una sola vez, y una herramienta completa de facturación y taller oscila entre 5.000 y 15.000 € para la mayoría de los talleres, más para un multi-sitio, y luego entre 100 y 300 € por mes de mantenimiento. Estos son mis precios, netos, y puedes compararlos con los de catorce proveedores franceses en mi ",
+              "type": "text"
+            },
+            {
+              "text": "barómetro de precios de un software a medida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". El primer intercambio y el presupuesto son gratuitos, y si un software del mercado te es suficiente, te lo digo desde la primera llamada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Existe un software de facturación para talleres gratuito?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No entre los diseñados para talleres: Gest'Garage, TDV, AutoProGestion y Kwixéo son de pago, con una prueba gratuita de catorce días. Un software de facturación gratuito generalista puede servir de solución temporal, pero no incluye órdenes de reparación ni historial por vehículo. Mientras tanto, mi modelo gratuito de orden de reparación y presupuesto cubre el formato en papel.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Qué menciones son obligatorias en una factura de taller?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "La fecha, tus coordenadas, el nombre del cliente salvo oposición de su parte, el detalle de las piezas y de la mano de obra con las cantidades y los precios, el total IVA incluido, y el kilometraje del cuentakilómetros. La factura es obligatoria desde 25 € IVA incluido, en dos ejemplares.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Es obligatorio el orden de reparación?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No, ningún texto lo exige. Pero es la prueba de lo que el cliente ha solicitado y aceptado, y la INC recomienda que lo firme en dos ejemplares, con el kilometraje, el coste probable y el plazo de inmovilización.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Está afectado un taller por la factura electrónica?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí. Desde el 1 de septiembre de 2026, deberá poder recibir facturas electrónicas de sus proveedores; a partir del 1 de septiembre de 2027, deberá emitirlas para sus clientes profesionales y transmitir los datos de sus ventas a particulares. Gest'Garage, TDV y Kwixéo ya anuncian facturas en el formato esperado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Le hace perder tiempo la facturación?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Descríbame su taller en unas líneas: ¿cuántos vehículos por semana, quién hace los presupuestos, qué rellena a mano. Le diré por teléfono o en videollamada si un software de 20 € al mes soluciona el problema, o si su forma de trabajar merece una herramienta propia, con un orden de magnitud del presupuesto. En ambos casos, se irá con un plan de acción escrito, y si le basta con un software existente, se lo indicaré.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "86712c99-a179-49de-ae37-c5720ca43953",
+            "body": [
+              {
+                "_uid": "i-00701b76-c5f4-4b28-a8f8-19454a139c77",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablemos de su proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

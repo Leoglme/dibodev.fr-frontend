@@ -28324,5 +28324,856 @@
         }
       ]
     }
+  },
+  "blog/logiciel-facturation-garage-devis-ordre-de-reparation-facture": {
+    "title": "Automotive Garage Billing Software: What It Should Do and Its Cost",
+    "excerpt": "What an automotive garage billing software should handle—from quotes to electronic invoices—the 2026 pricing from providers, and a free template for repair orders and quotes.",
+    "metaTitle": "Garage Billing Software: Quotes, Repair Orders, Invoices, 2026 Pricing",
+    "metaDescription": "Quotes, repair orders, invoices, and Factur-X: What garage billing software should include, 2026 provider pricing, and a free template for seamless workflows.",
+    "tags": [
+      "garage billing software",
+      "garage quote software",
+      "automotive repair order template",
+      "garage invoice software",
+      "mechanic shop management software",
+      "auto repair shop billing",
+      "free repair order template"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’ve never replaced a timing belt, and the last time I opened a hood, it was to check the windshield washer fluid. But since I’ve been building management software, I’ve spent a lot of time looking at how a garage bills its customers. And almost every time, it looks like this: a repair order notebook with a stub, a generic invoicing software picked because it was free, and an Excel file bridging the two. The estimate is typed once, the invoice is retyped, and the car’s mileage ends up on a Post-it note.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "An invoicing software for an auto garage isn’t just a regular invoicing tool with an extra ‘registration’ field. Here’s what it should do, what the law requires for your documents, what these software solutions cost in 2026, and a free template for a repair order and estimate you can download in the meantime.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Why a ‘classic’ invoicing software isn’t enough for a garage",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It lacks the repair order.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " In a garage, the central document isn’t the invoice—it’s the repair order: the customer drops off their car, describes the issue, you estimate the likely cost, they sign, and you’re authorized to work. A software designed for a consultant or a shop doesn’t include this document. It starts with the estimate and ends with the invoice, without the piece that proves the agreement.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It lacks the vehicle record.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A customer may own two cars, and a car may change owners. What you need to retrieve in two clicks is the history by registration: past interventions, mileage at each visit, and installed parts. A generic tool organizes everything by customer, and you lose the vehicle’s history.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It lacks the mileage.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " It’s a detail that isn’t one: mileage must appear on all documents given to the customer, including estimates, repair orders, and invoices. A tool that doesn’t ask for it lets you forget it.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It lacks reused parts and replaced parts.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Offering a part from the circular economy, noting that the customer refuses it, specifying that they want to retrieve the replaced parts—all of this happens on the repair order, not on a generic invoice.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Estimate, repair order, invoice: what the law requires from a garage",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’m not a lawyer, and what follows is based on the ‘Garagistes en 20 questions-réponses’ (Garages in 20 Questions and Answers) sheet from the Institut national de la consommation (National Institute for Consumption), verified on July 31, 2025. It’s written for your customers, making it a good checklist of what they might hold you accountable for.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Prices are displayed, including tax.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The rates for common services and hourly labor rates, all taxes included and by type of work (mechanics, bodywork, painting), must be displayed at the entrance of the establishment and in the reception area. This is per the March 27, 1987 decree. A software doesn’t display these for you, but it must apply the same rates to your estimates.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "An estimate isn’t mandatory, but you can’t refuse to provide one.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " You can charge for it, provided you inform the customer beforehand. In practice, its amount is deducted from the final invoice. Prices are free.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The repair order has no set format.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " No law requires you to create one, but it serves as proof of the contract, and the INC (National Institute for Consumption) advises having it signed in two copies. To be useful, it should include the date, the customer’s identity, the vehicle and its mileage, the exact nature of the requested work, the likely cost, the immobilization time, and the vehicle’s condition upon arrival. Any work not initially agreed upon requires the customer’s consent before starting.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The invoice, or receipt, is mandatory for amounts of 25 € TTC or more.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " In duplicate, with the date, your contact details, the client’s name unless they object, the details of the services and parts, quantities and prices, and the total VAT-inclusive. And, once again, the mileage on all documents (decree of October 4, 1978).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Reused parts are offered.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Since 2017, the professional must allow the customer to opt for parts from the circular economy (Article L. 224-67 of the Consumer Code), except in cases provided for by the code, such as a delivery time incompatible with the planned downtime or work under warranty. The customer remains free to refuse.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Electronic invoicing is coming.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " From September 1, 2026, all businesses must be able to receive electronic invoices; from September 1, 2027, SMEs and micro-enterprises will also have to issue them. For a garage that mostly invoices private individuals, the obligation to issue invoices applies to business-to-business transactions, but the data from your sales must be reported to the authorities. I detailed who is affected and how to prepare in my article on ",
+              "type": "text"
+            },
+            {
+              "text": "electronic invoicing for artisans",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/facture-electronique-artisan-ce-qui-change",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "A free repair order and quote template",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you still invoice by hand or on a spreadsheet, I’ve formatted a template that covers everything mentioned above: a repair order on page 1 (references, customer, vehicle with mileage and fuel level, requested work with estimate, vehicle condition upon entry, customer agreement on reused parts and additional work, signatures) and a quote on page 2 (lines for parts and labor, VAT, terms, approval for agreement).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It comes in two versions: ",
+              "type": "text"
+            },
+            {
+              "text": "the PDF to print and fill out by hand",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/modeles/ordre-de-reparation-devis-garage.pdf",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", and ",
+              "type": "text"
+            },
+            {
+              "text": "the Excel file",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/modeles/ordre-de-reparation-devis-garage.xlsx",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " with calculated totals, to adapt with your header. No registration, no email required. It’s honest troubleshooting, not software: as soon as you handle a dozen vehicles per week, the real gain lies in a tool that connects the quote, repair order, invoice, and history.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What a good garage invoicing software does extra",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It converts the quote into a repair order, then into an invoice, without re-entering data.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The customer approves the quote, you convert it to a repair order, the mechanic adds any parts discovered along the way, you call the customer for approval, and the invoice includes everything. One document that changes state, not three separate documents to copy.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It tracks your parts and labor times.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A parts catalog with your purchase and selling prices, time standards per operation, and hourly rates by type of work: the quote is built by selecting, not by typing.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It keeps a history per vehicle.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Registration, mileage at each visit, interventions, fitted parts, upcoming maintenance. It’s also what allows you to remind a customer for their service, something a carbon copy booklet can never do.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It prepares the electronic invoice.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A format readable by approved platforms, such as Factur-X, and a delivery that doesn’t rely on a PDF attached to an email.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It manages the schedule and the workshop.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Appointments, vehicles present, bay occupied or free, expected return: invoicing is just the end of the chain.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The 2026 prices of garage software that displays them",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I reviewed the pricing pages from the publishers on October 18, 2026. Prices change, so check them before signing; and all software designed for garages is paid, with a fourteen-day free trial at most.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gest'Garage",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " costs ",
+              "type": "text"
+            },
+            {
+              "text": "19 € per month",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.gestgarage.fr/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", with no VAT added (the publisher is VAT-exempt), no commitment, up to five collaborators, with quotes, repair orders, invoices, the schedule, and supplier invoices. An additional garage costs 10 € per month, and the publisher states its invoices are ready for the electronic invoicing reform. Fourteen-day trial without a credit card.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "TDV Agent",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", from the Asttas group, offers ",
+              "type": "text"
+            },
+            {
+              "text": "four TTC offers",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://groupe-asttas.fr/solutions/tdv-agent",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": Solo Essentiel at 19.90 € per month for an independent mechanic’s schedule, Solo Complet at 24.90 € with quotes, invoices, and inventory, Essentiel at 39 € for a garage with a team on one site, and Multi-sites Pro at 79 €. Factur-X invoicing is included, with timestamped photos and the customer’s signature on the repair order.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "AutoProGestion",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " invoices ",
+              "type": "text"
+            },
+            {
+              "text": "29 € HT per month in Starter",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://autoprogestion.fr/tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " (100 clients, two users, 24 € HT per year) and 59 € HT in Pro (unlimited clients and users, used vehicle fleet, 49 € HT per year), with no commitment, and an Enterprise offer available upon request. I discuss this in more detail in my article on ",
+              "type": "text"
+            },
+            {
+              "text": "alternatives to AutoProGestion",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-autoprogestion-logiciel-garage",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Kwixéo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " is not limited to garages, but its Essentiel plan at ",
+              "type": "text"
+            },
+            {
+              "text": "22 € HT per month",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.kwixeo.fr/tarifs-logiciel-facturation",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " (18.33 € per year) includes quotes, invoices, repair orders, and electronic billing; the Pro plans at 59 € HT and Expert at 89 € HT add bank synchronization and multi-deposit management. An additional user costs between 6 and 10 € HT per month.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "EBP MéCa and GAD Garage",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " do not publish their prices: expect a quote and, often, an installation fee.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To compare these software solutions based on their features and determine in two minutes whether one meets your workshop’s needs, ",
+              "type": "text"
+            },
+            {
+              "text": "the free test on my garage software page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile#test",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " asks six questions and provides a quantified answer.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "And if none fit: custom billing solutions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A monthly subscription of 19 or 59 € is unbeatable for a garage operating like any other. It’s far less suitable for one with its own rules: custom flat-rate packages, a mix of used vehicle sales and workshop services, multiple sites with shared accounting, a partnership with a rental company, or a corporate fleet to be billed at month-end. In such cases, you end up tweaking the software and manually re-entering data into Excel for what it can’t handle.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In this scenario, a one-time custom add-on integrated with your software costs between 2,500 and 7,000 €, while a complete billing and workshop tool ranges from 5,000 to 15,000 € for most garages, more for multi-site operations, plus 100 to 300 € per month for maintenance. These are my net prices, and you can compare them with those of fourteen French providers in my ",
+              "type": "text"
+            },
+            {
+              "text": "custom software pricing benchmark",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". The first consultation and quote are free, and if an off-the-shelf solution meets your needs, I’ll let you know during the first call.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is there a free garage billing software?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Not among those designed for garages: Gest'Garage, TDV, AutoProGestion, and Kwixéo are paid, with a 14-day free trial. A free general-purpose billing software can be a temporary fix, but it lacks repair orders and vehicle history tracking. In the meantime, my free repair order and quote templates cover the basics on paper.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What are the mandatory details on a garage invoice?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "The date, your contact details, the client’s name unless they object, the breakdown of parts and labor with quantities and prices, the TTC total, and the odometer reading. An invoice is mandatory for amounts of 25 € TTC or more, provided in two copies.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is a repair order mandatory?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No, no text requires it. But it’s proof of what the customer requested and accepted, and the INC recommends having it signed in two copies, including mileage, estimated cost, and downtime duration.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is a garage subject to electronic invoicing?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Yes. As of September 1, 2026, you must be able to receive electronic invoices from your suppliers; starting September 1, 2027, you will need to issue them for your professional clients and transmit sales data for private individuals. Gest'Garage, TDV, and Kwixéo already offer invoices in the required format.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Is invoicing taking up too much of your time?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Describe your workshop in a few lines: how many vehicles per week, who prepares the quotes, and what you still type manually. I’ll tell you over the phone or in a video call whether a €20/month software solves the issue or if your workflow needs a custom tool, along with a rough budget estimate. In both cases, you’ll leave with a written action plan—and if an existing software works for you, I’ll let you know.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "86712c99-a179-49de-ae37-c5720ca43953",
+            "body": [
+              {
+                "_uid": "i-00701b76-c5f4-4b28-a8f8-19454a139c77",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
