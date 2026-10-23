@@ -13395,6 +13395,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "On quotes, repair orders and invoices, I detailed what the law requires and what the market software costs in my article on "
+            },
+            {
+              "type": "text",
+              "text": "invoicing software for garages",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-facturation-garage-devis-ordre-de-reparation-facture",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", with a free repair order template to download."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -16244,6 +16273,35 @@
             {
               "text": " provides price ranges from 14 French providers to verify a quote.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "If invoicing is your main concern, my article on "
+            },
+            {
+              "type": "text",
+              "text": "invoicing software for garages",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-facturation-garage-devis-ordre-de-reparation-facture",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " covers what your quotes, repair orders and invoices must contain, and compares the publishers’ prices on that point."
             }
           ]
         },

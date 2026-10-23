@@ -13400,6 +13400,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Sobre presupuestos, órdenes de reparación y facturas, detallé lo que exige la ley y lo que cuestan los programas del mercado en mi artículo sobre el "
+            },
+            {
+              "type": "text",
+              "text": "software de facturación para talleres",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-facturation-garage-devis-ordre-de-reparation-facture",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", con una plantilla gratuita de orden de reparación para descargar."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -16246,6 +16275,35 @@
             {
               "text": " da los rangos de 14 proveedores franceses para verificar un presupuesto.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Si lo que más te ocupa es la facturación, mi artículo sobre el "
+            },
+            {
+              "type": "text",
+              "text": "software de facturación para talleres",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-facturation-garage-devis-ordre-de-reparation-facture",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " recoge lo que deben contener tus presupuestos, órdenes de reparación y facturas, y compara los precios de los editores en ese punto."
             }
           ]
         },
