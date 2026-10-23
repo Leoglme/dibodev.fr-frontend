@@ -121,6 +121,11 @@ const TOOL_ICON_PATHS: Record<DibodevToolShareImageIcon, string[]> = {
     'M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z',
     'm9 12 2 2 4-4',
   ],
+  receipt: [
+    'M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z',
+    'M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8',
+    'M12 17.5v-11',
+  ],
 }
 
 /** Space drawn between the parts of a title line (Satori drops the spaces at the edge of each span). */

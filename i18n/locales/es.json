@@ -210,6 +210,7 @@
     "priceBarometer": "Precio de un software a medida",
     "publicAid": "Ayudas para tu web o software",
     "phpCheck": "Fallo de PHP: comprobar mi web",
+    "eInvoicingCheck": "Factura electrónica: ¿mi software está homologado?",
     "phpUpdate": "Actualización de PHP de tu web",
     "freelanceRennes": "Desarrollador freelance en Rennes",
     "about": "Sobre mí",
@@ -604,6 +605,21 @@
       },
       "phpUpdate": {
         "message": "Hola,\nquiero que actualicen la versión de PHP de mi web (y WordPress, el tema y los plugins si hace falta).\nEl enlace de mi web: \nMi hosting, si lo conozco: "
+      },
+      "eInvoicing": {
+        "messageWithSoftware": "Hola,\nmi software de facturación es {software}. Su comprobador indica: «{verdict}».\n¿Puede decirme qué me queda por hacer para recibir y emitir mis facturas electrónicas, y si mi herramienta se puede conectar?",
+        "messageWithoutSoftware": "Hola,\nno sé si mi herramienta de facturación está lista para la factura electrónica (recepción obligatoria desde septiembre de 2026, emisión en 2027).\nMi software o herramienta: \nMi actividad: ",
+        "verdicts": {
+          "accredited": "plataforma homologada",
+          "pending": "expediente pendiente de registro",
+          "connected": "solución compatible conectada a una plataforma homologada",
+          "compatibleUnnamed": "solución compatible, plataforma sin nombrar",
+          "announced": "anunciado, ausente de la lista oficial",
+          "none": "sin software de factura electrónica",
+          "publicSector": "solo Chorus Pro",
+          "ppf": "portal público",
+          "unknown": "no encontrado en la lista oficial"
+        }
       }
     },
     "reassurance": {

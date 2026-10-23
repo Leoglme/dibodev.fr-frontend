@@ -210,6 +210,7 @@
     "priceBarometer": "Custom software prices",
     "publicAid": "Aid for your website or software",
     "phpCheck": "PHP vulnerability: check my site",
+    "eInvoicingCheck": "E-invoicing: is my software accredited?",
     "phpUpdate": "PHP update for your site",
     "freelanceRennes": "Freelance developer in Rennes",
     "about": "About",
@@ -604,6 +605,21 @@
       },
       "phpUpdate": {
         "message": "Hello,\nI would like to have the PHP version of my site updated (and WordPress, the theme and the plugins if needed).\nMy website link: \nMy host, if I know it: "
+      },
+      "eInvoicing": {
+        "messageWithSoftware": "Hello,\nmy invoicing software is {software}. Your checker says: “{verdict}”.\nCould you tell me what is left to do to receive and issue my electronic invoices, and whether my tool can be connected?",
+        "messageWithoutSoftware": "Hello,\nI do not know whether my invoicing tool is ready for French e-invoicing (reception mandatory since September 2026, issuing in 2027).\nMy software or tool: \nMy business: ",
+        "verdicts": {
+          "accredited": "accredited platform",
+          "pending": "file pending registration",
+          "connected": "compatible solution connected to an accredited platform",
+          "compatibleUnnamed": "compatible solution, platform not named",
+          "announced": "announced, not on the official list",
+          "none": "no e-invoicing software",
+          "publicSector": "Chorus Pro only",
+          "ppf": "public portal",
+          "unknown": "not found in the official list"
+        }
       }
     },
     "reassurance": {

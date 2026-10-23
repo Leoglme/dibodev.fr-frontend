@@ -1,0 +1,1767 @@
+{
+  "officialList": {
+    "name": "Liste des plateformes agréées, DGFiP",
+    "url": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+    "updatedAt": "2026-10-13",
+    "readAt": "2026-10-23",
+    "readThrough": "https://web.archive.org/web/20261016203320/https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+    "registeredCount": 142,
+    "pendingCount": 14
+  },
+  "publishersReadAt": "2026-10-23",
+  "platforms": [
+    {
+      "name": "A-CUBE",
+      "status": "pendingInterop",
+      "registrationDate": null,
+      "city": "Milan 20124 (Italie)",
+      "website": "https://www.acubeapi.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "ABBY",
+      "status": "registered",
+      "registrationDate": "2026-01-29",
+      "city": "Nancy",
+      "website": "https://abby.fr/",
+      "smallBusiness": true,
+      "freeOffer": true
+    },
+    {
+      "name": "ACCENTURE",
+      "status": "registered",
+      "registrationDate": "2025-12-22",
+      "city": "Paris",
+      "website": "https://www.accenture.com/fr-fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "ADEMICO SOFTWARE",
+      "status": "registered",
+      "registrationDate": "2026-01-16",
+      "city": "Louvain (Belgique)",
+      "website": "https://ademico-software.com/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "AGENA 3000",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Cholet",
+      "website": "https://www.agena3000.com/fr/nos-solutions/a3-e-facture",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "AGICAP",
+      "status": "registered",
+      "registrationDate": "2026-01-20",
+      "city": "Lyon",
+      "website": "https://agicap.com/fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "AGS RECORDS MANAGEMENT",
+      "status": "registered",
+      "registrationDate": "2026-07-15",
+      "city": "La Chevrolière",
+      "website": "https://www.ags-recordsmanagement.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "Arratech",
+      "status": "registered",
+      "registrationDate": "2026-07-03",
+      "city": "Stockholm (Suède)",
+      "website": "https://www.arratech.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "ARTEVA",
+      "status": "registered",
+      "registrationDate": "2025-12-18",
+      "city": "Limonest",
+      "website": "https://www.arteva.fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "Aruba S.p.A.",
+      "status": "pendingInterop",
+      "registrationDate": null,
+      "city": "(Italie)",
+      "website": "https://www.arubaonesuite.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "ATGP",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Montélier",
+      "website": "https://www.atgp.net/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "AVALARA",
+      "status": "registered",
+      "registrationDate": "2025-12-18",
+      "city": "Paris",
+      "website": "https://www.avalara.com/eu/fr",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "AXELOR",
+      "status": "registered",
+      "registrationDate": "2026-04-13",
+      "city": "Champs-sur-Marne",
+      "website": "https://axelor.com/fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "AXONAUT",
+      "status": "registered",
+      "registrationDate": "2026-01-08",
+      "city": "Balma",
+      "website": "https://axonaut.com/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "AXWAY SOFTWARE",
+      "status": "registered",
+      "registrationDate": "2026-04-14",
+      "city": "Paris La Défense Cedex",
+      "website": "https://www.axway.com/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "AZOPIO",
+      "status": "registered",
+      "registrationDate": "2025-12-22",
+      "city": "Paris",
+      "website": "https://www.azopio.com/fr/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "B2BRouter",
+      "status": "registered",
+      "registrationDate": "2025-12-12",
+      "city": "Barcelona (Espagne)",
+      "website": "https://www.b2brouter.net/fr",
+      "smallBusiness": true,
+      "freeOffer": true
+    },
+    {
+      "name": "B4VALUE.NET",
+      "status": "registered",
+      "registrationDate": "2026-03-04",
+      "city": "Kaiserslautern (Allemagne)",
+      "website": "https://www.b4value.net/en/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "BASWARE",
+      "status": "registered",
+      "registrationDate": "2025-12-18",
+      "city": "Espoo (Finlande)",
+      "website": "https://www.basware.com/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "BC SOLUTIONS",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "Aix-en-Provence",
+      "website": "https://bcsolutions.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "BILLIT",
+      "status": "registered",
+      "registrationDate": "2025-12-19",
+      "city": "Gent (Belgique)",
+      "website": "https://www.billit.eu/fr-be/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "BLG",
+      "status": "pendingInterop",
+      "registrationDate": null,
+      "city": "Compiègne",
+      "website": "https://www.blgcloud.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "CBS Corporate Business Solutions",
+      "status": "registered",
+      "registrationDate": "2026-02-25",
+      "city": "Heidelberg (Allemagne)",
+      "website": "https://www.cbs-consulting.com/en/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "CECURITY",
+      "status": "registered",
+      "registrationDate": "2025-12-18",
+      "city": "Paris",
+      "website": "https://www.cecurity.com",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "CEGEDIM",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Boulogne-Billancourt",
+      "website": "https://www.cegedim.fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "CEGI ALFA",
+      "status": "registered",
+      "registrationDate": "2026-04-14",
+      "city": "Clermont-Ferrand",
+      "website": "https://www.cegi.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "CEGID",
+      "status": "registered",
+      "registrationDate": "2025-12-18",
+      "city": "Lyon Cedex 09",
+      "website": "https://www.cegid.com/fr",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "CHAINTRUST by Visma",
+      "status": "registered",
+      "registrationDate": "2025-12-18",
+      "city": "Paris",
+      "website": "https://www.chaintrust.io",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "CLEARTAX",
+      "status": "registered",
+      "registrationDate": "2026-04-24",
+      "city": "PARIS",
+      "website": "https://www.cleartax.com/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "COMARCH SA",
+      "status": "registered",
+      "registrationDate": "2025-12-18",
+      "city": "Kraków (Pologne)",
+      "website": "https://www.comarch.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "CYCLOPE",
+      "status": "pendingInterop",
+      "registrationDate": null,
+      "city": "Lyon",
+      "website": "https://cyclope.digital/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "DARVA",
+      "status": "registered",
+      "registrationDate": "2025-12-18",
+      "city": "Chauray",
+      "website": "https://www.darva.com",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "DEXT",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Paris",
+      "website": "https://dext.com/fr/produits/logiciel-facturation",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "DIGIPHARMACIE",
+      "status": "registered",
+      "registrationDate": "2025-12-23",
+      "city": "Paris",
+      "website": "https://digipharmacie.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "DIGITAL TECHNOLOGIES",
+      "status": "registered",
+      "registrationDate": "2025-12-15",
+      "city": "Milan (Italie)",
+      "website": "https://digtechs.com/?lang=fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "Docnova, MELASOFT GmbH",
+      "status": "registered",
+      "registrationDate": "2026-05-13",
+      "city": "(Allemagne)",
+      "website": "https://www.melasoft.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "DOCOON",
+      "status": "registered",
+      "registrationDate": "2025-12-15",
+      "city": "Paris",
+      "website": "https://docoon.com",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "DOCOON IMMO / FREEDZ",
+      "status": "registered",
+      "registrationDate": "2025-12-23",
+      "city": "Marseille",
+      "website": "https://docoon.immo/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "DOCPROCESS",
+      "status": "registered",
+      "registrationDate": "2025-12-15",
+      "city": "Meylan",
+      "website": "https://doc-process.com/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "DOCUWARE",
+      "status": "registered",
+      "registrationDate": "2025-12-22",
+      "city": "Paris",
+      "website": "https://start.docuware.com/fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "DOKAPI",
+      "status": "registered",
+      "registrationDate": "2026-07-08",
+      "city": "Malines (Belgique)",
+      "website": "https://www.dokapi.io/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "Dougs Facturation gratuite",
+      "status": "registered",
+      "registrationDate": "2025-12-12",
+      "city": "Fay-aux-Loges",
+      "website": "https://www.dougs.fr/logiciel-facturation-gratuit/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "DOXALLIA",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Bozouls",
+      "website": "https://www.doxallia.com",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "ECOSIO",
+      "status": "registered",
+      "registrationDate": "2026-01-12",
+      "city": "Vienne (Autriche)",
+      "website": "https://ecosio.com",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "ecosio InterCom, a Vertex Company",
+      "status": "registered",
+      "registrationDate": "2026-04-30",
+      "city": "(Allemagne)",
+      "website": "https://ecosio.com/fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "EDICOM France",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Paris",
+      "website": "https://edicomgroup.fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "EDICOM Group",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Valencia (Espagne)",
+      "website": "https://edicomgroup.com",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "EDICS France",
+      "status": "registered",
+      "registrationDate": "2026-01-08",
+      "city": "Écully",
+      "website": "https://edics.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "EdiEyes Vision Care",
+      "status": "registered",
+      "registrationDate": "2026-06-01",
+      "city": "Angers",
+      "website": "https://www.edieyes.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "EDT",
+      "status": "registered",
+      "registrationDate": "2026-01-08",
+      "city": "Montbonnot-Saint-Martin",
+      "website": "https://www.group-edt.fr/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "EEZI powered by VAT IT",
+      "status": "registered",
+      "registrationDate": "2026-01-13",
+      "city": "SaintGermain-en-Laye",
+      "website": "https://eezi.io/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "Effinum by SPEE",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Paris",
+      "website": "https://www.effinum.fr/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "ENERJ",
+      "status": "registered",
+      "registrationDate": "2025-12-18",
+      "city": "Dardilly",
+      "website": "https://www.enerj.fr/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "ENTROPICS",
+      "status": "registered",
+      "registrationDate": "2026-01-13",
+      "city": "Lyon",
+      "website": "https://entropics.fr",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "ESALINK",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Bezannes",
+      "website": "https://www.esalink.com",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "ESI",
+      "status": "registered",
+      "registrationDate": "2026-01-13",
+      "city": "Saint-Priest",
+      "website": "https://www.esi-groupe.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "ESKER",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Villeurbanne",
+      "website": "https://www.esker.fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "EURO INFORMATION",
+      "status": "registered",
+      "registrationDate": "2025-12-22",
+      "city": "Strasbourg",
+      "website": "https://www.e-i.com/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "EY Expertises & Transactions",
+      "status": "pendingInterop",
+      "registrationDate": null,
+      "city": "Courbevoie",
+      "website": "https://www.ey.com/fr_fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "FACNOTE PDP",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "MARSEILLE",
+      "website": "https://www.facnote.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "FIDUCIAL CLOUD",
+      "status": "registered",
+      "registrationDate": "2026-01-08",
+      "city": "Courbevoie",
+      "website": "https://www.fiducial.fr",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "FISKALTRUST",
+      "status": "pendingInterop",
+      "registrationDate": null,
+      "city": "Lyon",
+      "website": "https://fiskaltrust.eu/fr-fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "FLOWIE",
+      "status": "registered",
+      "registrationDate": "2026-01-07",
+      "city": "Paris",
+      "website": "https://www.get-flowie.com/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "Fonoa Technologies Limited",
+      "status": "registered",
+      "registrationDate": "2026-04-29",
+      "city": "Irlande",
+      "website": "https://www.fonoa.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "FULLL",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "Lyon",
+      "website": "https://www.fulll.fr/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "GENERIX Group",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Paris La Défense",
+      "website": "https://www.generixgroup.com/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "GEP",
+      "status": "registered",
+      "registrationDate": "2026-06-17",
+      "city": "Espoo (Finlande)",
+      "website": "https://www.gep.com/software/e-invoicing",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "GESTAV",
+      "status": "registered",
+      "registrationDate": "2025-12-19",
+      "city": "Saint Quentin",
+      "website": "https://gestav.com/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "GROUPE SIGMA",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "La Chapelle-sur-Erdre",
+      "website": "https://www.sigma.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "GURUSOFT",
+      "status": "registered",
+      "registrationDate": "2026-03-31",
+      "city": "MADRID (Espagne)",
+      "website": "https://guru-soft.com/home-espana/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "IAF",
+      "status": "registered",
+      "registrationDate": "2026-06-15",
+      "city": "Champs-sur-Marne",
+      "website": "https://www.assistances.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "ICD International",
+      "status": "registered",
+      "registrationDate": "2025-12-22",
+      "city": "Meudon",
+      "website": "https://icdint.fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "iEDI ApS",
+      "status": "registered",
+      "registrationDate": "2026-02-11",
+      "city": "Espergærde (Danemark)",
+      "website": "https://www.iedi.com/",
+      "smallBusiness": false,
+      "freeOffer": true
+    },
+    {
+      "name": "IGA ASSURANCE",
+      "status": "registered",
+      "registrationDate": "2026-03-03",
+      "city": "Malakoff",
+      "website": "https://www.iga-assurance.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "In.Te.S.A. spa",
+      "status": "pendingInterop",
+      "registrationDate": null,
+      "city": "Torino (Italie)",
+      "website": "https://www.intesa.it/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "INDICOM",
+      "status": "registered",
+      "registrationDate": "2026-01-13",
+      "city": "MILANO (Italie)",
+      "website": "https://www.indicom.eu/en/idc-home",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "INDY",
+      "status": "registered",
+      "registrationDate": "2026-01-09",
+      "city": "LYON",
+      "website": "https://www.indy.fr/",
+      "smallBusiness": true,
+      "freeOffer": true
+    },
+    {
+      "name": "INFOLOGIC",
+      "status": "registered",
+      "registrationDate": "2026-01-28",
+      "city": "Bourg-lès-Valence",
+      "website": "https://www.infologic-copilote.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "INVOPOP",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "Madrid (ESPAGNE)",
+      "website": "https://www.invopop.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "IOPOLE",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Pérols",
+      "website": "https://www.iopole.com",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "iPaidThat",
+      "status": "registered",
+      "registrationDate": "2026-01-06",
+      "city": "Saint-Grégoire",
+      "website": "https://ipaidthat.io/fr",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "ITESOFT",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "Aimargues",
+      "website": "https://www.itesoft.com/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "jefacture.com",
+      "status": "registered",
+      "registrationDate": "2025-12-18",
+      "city": "Paris",
+      "website": "https://www.ecma-solutions.com",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "KALANDA",
+      "status": "pendingInterop",
+      "registrationDate": null,
+      "city": "La Ciotat",
+      "website": "https://www.kalanda.net/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "KLEKOON",
+      "status": "registered",
+      "registrationDate": "2026-01-16",
+      "city": "Sevran",
+      "website": "https://www.klekoon.com/",
+      "smallBusiness": true,
+      "freeOffer": true
+    },
+    {
+      "name": "KOLECTO PA",
+      "status": "registered",
+      "registrationDate": "2026-04-22",
+      "city": "Paris",
+      "website": "https://www.kolecto.fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "KOLECTO PDP",
+      "status": "registered",
+      "registrationDate": "2025-12-18",
+      "city": "Paris",
+      "website": "https://www.kolecto.fr",
+      "smallBusiness": true,
+      "freeOffer": true
+    },
+    {
+      "name": "LE VILLAGE CONNECTE",
+      "status": "registered",
+      "registrationDate": "2026-01-08",
+      "city": "FAUGUEROLLES",
+      "website": "https://village-connecte.fr/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "Legalinvoice by Tinexta Infocert",
+      "status": "registered",
+      "registrationDate": "2026-04-13",
+      "city": "Rome (Italie)",
+      "website": "https://www.infocert.it/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "LOGILEC",
+      "status": "registered",
+      "registrationDate": "2026-01-06",
+      "city": "Le Relecq-Kerhuon",
+      "website": "https://www.logilec.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "LUCCA",
+      "status": "registered",
+      "registrationDate": "2026-04-24",
+      "city": "Paris",
+      "website": "https://www.lucca.fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "MACOMPTA.FR",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "Lagord",
+      "website": "https://www.macompta.fr/",
+      "smallBusiness": true,
+      "freeOffer": true
+    },
+    {
+      "name": "MAROSA",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "Pontevedra (Espagne)",
+      "website": "https://marosavat.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "MEDIUS",
+      "status": "registered",
+      "registrationDate": "2026-01-08",
+      "city": "Paris",
+      "website": "https://www.medius.com/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "MY FITECO",
+      "status": "registered",
+      "registrationDate": "2026-05-12",
+      "city": "Changé",
+      "website": "https://myfiteco.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "MY UNISOFT",
+      "status": "registered",
+      "registrationDate": "2026-04-15",
+      "city": "Montigny-le-Bretonneux",
+      "website": "https://myunisoft.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "MyKinexo PDP",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "Rennes",
+      "website": "https://www.kinexo.fr/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "MySupply Aps",
+      "status": "registered",
+      "registrationDate": "2026-03-03",
+      "city": "Nørresundby (Danemark)",
+      "website": "https://mysupply.dk/en",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "N2F PDP",
+      "status": "registered",
+      "registrationDate": "2025-12-19",
+      "city": "Montagnat",
+      "website": "https://www.n2f.com/fr/note-de-frais/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "NEOTIMO",
+      "status": "registered",
+      "registrationDate": "2026-04-13",
+      "city": "Amilly",
+      "website": "https://neotimo.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "NTT DATA Business Solutions",
+      "status": "registered",
+      "registrationDate": "2026-05-13",
+      "city": "(Allemagne)",
+      "website": "https://fr.nttdata.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "NUMERIA",
+      "status": "pendingInterop",
+      "registrationDate": null,
+      "city": "Eragny",
+      "website": "https://www.numeria.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "ODOO",
+      "status": "registered",
+      "registrationDate": "2026-04-15",
+      "city": "(Belgique)",
+      "website": "https://www.odoo.com/fr_FR",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "OfficeIn",
+      "status": "registered",
+      "registrationDate": "2026-07-09",
+      "city": "Paris",
+      "website": "https://officein.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "ONE UP",
+      "status": "registered",
+      "registrationDate": "2026-01-08",
+      "city": "Paris",
+      "website": "https://smallbusiness.oneup.com/fr/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "OPEN BEE",
+      "status": "registered",
+      "registrationDate": "2026-01-13",
+      "city": "Epagny Metz-Tessy",
+      "website": "https://www.openbee.com",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "OPENTEXT",
+      "status": "registered",
+      "registrationDate": "2025-12-12",
+      "city": "(Pays-Bas)",
+      "website": "https://www.opentext.fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "PAGERO",
+      "status": "registered",
+      "registrationDate": "2025-12-19",
+      "city": "Göteborg, Suède",
+      "website": "https://www.pagero.com/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "PARAGON",
+      "status": "registered",
+      "registrationDate": "2025-12-22",
+      "city": "Marcq-en-Barœul",
+      "website": "https://www.paragon.world/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "PAYFLOWS",
+      "status": "registered",
+      "registrationDate": "2026-04-15",
+      "city": "Paris",
+      "website": "https://payflows.io",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "PENNYLANE",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Paris",
+      "website": "https://www.pennylane.com/fr",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "PITNEY BOWES",
+      "status": "registered",
+      "registrationDate": "2026-01-13",
+      "city": "Saint-Denis",
+      "website": "https://www.pitneybowes.com/fr",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "QONTO",
+      "status": "registered",
+      "registrationDate": "2025-12-18",
+      "city": "Paris",
+      "website": "https://qonto.com/fr",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "QWEEBY",
+      "status": "registered",
+      "registrationDate": "2025-12-22",
+      "city": "Saint-Étienne",
+      "website": "https://www.qweeby.fr/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "RATIOO",
+      "status": "pendingInterop",
+      "registrationDate": null,
+      "city": "Cappelle-en-Pévèle",
+      "website": "https://ratioo.fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "SAGE",
+      "status": "registered",
+      "registrationDate": "2025-12-22",
+      "city": "La Garenne-Colombes",
+      "website": "https://www.sage.com/fr-fr/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "SAP",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "Walldorf, Allemagne",
+      "website": "https://www.sap.com/france/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "SCRIBEE",
+      "status": "registered",
+      "registrationDate": "2025-12-22",
+      "city": "Paris",
+      "website": "https://www.scribee.tech/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "SEEBURGER",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "BRETTEN (Allemagne)",
+      "website": "https://www.seeburger.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "SEPTEO",
+      "status": "registered",
+      "registrationDate": "2026-01-09",
+      "city": "Lattes",
+      "website": "https://www.septeopdp.com",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "SEQINO",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "Gif-sur-Yvette",
+      "website": "https://seqino.com",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "SERENSIA by Quadient",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Paris",
+      "website": "https://www.serensia.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "SERES",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Ivry-sur-Seine",
+      "website": "https://www.seres.fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "Shine",
+      "status": "registered",
+      "registrationDate": "2026-05-21",
+      "city": "København (Danemark)",
+      "website": "https://www.shine.fr/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "SNI",
+      "status": "registered",
+      "registrationDate": "2026-04-13",
+      "city": "Ljubljana (Slovénie)",
+      "website": "https://snitechnology.net/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "SOLO",
+      "status": "registered",
+      "registrationDate": "2026-02-16",
+      "city": "Stockholm (Suède)",
+      "website": "https://www.solo.fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "SOVOS",
+      "status": "registered",
+      "registrationDate": "2025-12-18",
+      "city": "Lisbonne (Portugal)",
+      "website": "https://www.saphety.com/fr",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "SPENDESK",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "Paris",
+      "website": "https://www.spendesk.com/fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "SPS COMMERCE",
+      "status": "registered",
+      "registrationDate": "2025-12-18",
+      "city": "ZA Breukelen (Pays-Bas)",
+      "website": "https://tiekinetix.com/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "SRCI",
+      "status": "registered",
+      "registrationDate": "2026-01-19",
+      "city": "Chartres",
+      "website": "https://solutions.srci.fr/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "STORECOVE",
+      "status": "registered",
+      "registrationDate": "2026-04-28",
+      "city": "Hilversum (Pays-Bas)",
+      "website": "https://www.storecove.com/fr/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "SUPER PDP",
+      "status": "registered",
+      "registrationDate": "2025-12-22",
+      "city": "Paris",
+      "website": "https://www.superpdp.tech/",
+      "smallBusiness": true,
+      "freeOffer": true
+    },
+    {
+      "name": "SWILE",
+      "status": "pendingInterop",
+      "registrationDate": null,
+      "city": "Montpellier",
+      "website": "https://www.swile.co/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "SYMTRAX",
+      "status": "registered",
+      "registrationDate": "2025-12-18",
+      "city": "Nîmes",
+      "website": "https://www.symtrax.com/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "TAXERA",
+      "status": "registered",
+      "registrationDate": "2026-06-04",
+      "city": "Paris",
+      "website": "https://taxera.tech/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "TeamSystem Sellsy",
+      "status": "registered",
+      "registrationDate": "2025-12-24",
+      "city": "La Rochelle",
+      "website": "https://go.sellsy.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "TENOR",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "Oullins",
+      "website": "https://tenorsolutions.com",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "TESISQUARE SPA",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "Bra CN (Italie)",
+      "website": "https://www.tesisquare.com/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "TESSI Technologies",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Le Haillan",
+      "website": "https://www.tessi.eu/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "TIIME PDP",
+      "status": "registered",
+      "registrationDate": "2025-12-18",
+      "city": "PARIS",
+      "website": "https://www.tiime.fr",
+      "smallBusiness": true,
+      "freeOffer": true
+    },
+    {
+      "name": "TRADESHIFT BABELWAY",
+      "status": "registered",
+      "registrationDate": "2026-01-06",
+      "city": "Ottignies-Louvain-la-Neuve (Belgique)",
+      "website": "https://tradeshift.com/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "Transalis Limited",
+      "status": "registered",
+      "registrationDate": "2026-01-19",
+      "city": "Nicosie (Chypre)",
+      "website": "https://www.transalis.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "TRESO2",
+      "status": "registered",
+      "registrationDate": "2026-01-08",
+      "city": "Paris",
+      "website": "http://www.treso2.com",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "TUNGSTEN AUTOMATION FRANCE",
+      "status": "registered",
+      "registrationDate": "2025-12-23",
+      "city": "Paris",
+      "website": "https://www.tungstenautomation.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "TX2 Concept",
+      "status": "registered",
+      "registrationDate": "2026-01-14",
+      "city": "Olivet",
+      "website": "https://tx2.fr",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "VENTYA",
+      "status": "registered",
+      "registrationDate": null,
+      "city": "Nanterre",
+      "website": "https://www.ventya.fr",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "VERYSWING",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "Versailles",
+      "website": "https://veryswing.com/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "VosFactures",
+      "status": "registered",
+      "registrationDate": "2026-04-15",
+      "city": "Nice",
+      "website": "https://vosfactures.fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "VOXEL, an Amadeus company",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "Barcelone (Espagne)",
+      "website": "https://www.voxelgroup.net/facture-electronique/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "WAKASTELLAR",
+      "status": "pendingInterop",
+      "registrationDate": null,
+      "city": "La Chevrolière",
+      "website": "https://www.wakastellar.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "WEPROC",
+      "status": "registered",
+      "registrationDate": "2025-12-23",
+      "city": "Toulon",
+      "website": "https://www.weproc.com/fr/",
+      "smallBusiness": true,
+      "freeOffer": false
+    },
+    {
+      "name": "WiseTech GLOBAL",
+      "status": "registered",
+      "registrationDate": "2026-01-15",
+      "city": "Alexandria NSW (Australie)",
+      "website": "https://www.wisetechglobal.com/fr-fr/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "XELYA",
+      "status": "registered",
+      "registrationDate": "2026-05-13",
+      "city": "Saint-Cloud",
+      "website": "https://www.xelya.com/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "YOOZ PDP",
+      "status": "registered",
+      "registrationDate": "2025-12-11",
+      "city": "Aimargues",
+      "website": "https://www.getyooz.com/fr",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "YTEMS",
+      "status": "pendingInterop",
+      "registrationDate": null,
+      "city": "Paris",
+      "website": "https://com.ytems.app/",
+      "smallBusiness": false,
+      "freeOffer": false
+    },
+    {
+      "name": "YUMAN",
+      "status": "pendingInterop",
+      "registrationDate": null,
+      "city": "Bruxelles (Belgique)",
+      "website": "https://www.yuman.io/",
+      "smallBusiness": false,
+      "freeOffer": false
+    }
+  ],
+  "software": [
+    {
+      "id": "pennylane",
+      "name": "Pennylane",
+      "editor": "Pennylane",
+      "aliases": ["penny lane"],
+      "status": "accredited",
+      "platformName": "PENNYLANE"
+    },
+    {
+      "id": "qonto",
+      "name": "Qonto",
+      "editor": "Qonto",
+      "aliases": ["qonto facturation"],
+      "status": "accredited",
+      "platformName": "QONTO"
+    },
+    {
+      "id": "tiime",
+      "name": "Tiime",
+      "editor": "Tiime",
+      "aliases": ["tiime invoice", "tiime pdp", "time"],
+      "status": "accredited",
+      "platformName": "TIIME PDP"
+    },
+    {
+      "id": "abby",
+      "name": "Abby",
+      "editor": "Abby",
+      "aliases": [],
+      "status": "accredited",
+      "platformName": "ABBY"
+    },
+    {
+      "id": "indy",
+      "name": "Indy",
+      "editor": "Indy",
+      "aliases": ["indy facturation"],
+      "status": "accredited",
+      "platformName": "INDY"
+    },
+    {
+      "id": "shine",
+      "name": "Shine",
+      "editor": "Shine (Cegid)",
+      "aliases": ["shine facturation"],
+      "status": "accredited",
+      "platformName": "Shine"
+    },
+    {
+      "id": "sellsy",
+      "name": "Sellsy",
+      "editor": "TeamSystem",
+      "aliases": ["teamsystem sellsy"],
+      "status": "accredited",
+      "platformName": "TeamSystem Sellsy"
+    },
+    {
+      "id": "axonaut",
+      "name": "Axonaut",
+      "editor": "Axonaut",
+      "aliases": [],
+      "status": "accredited",
+      "platformName": "AXONAUT"
+    },
+    {
+      "id": "sage",
+      "name": "Sage",
+      "editor": "Sage",
+      "aliases": ["sage 50", "sage 100", "sage business cloud", "ciel"],
+      "status": "accredited",
+      "platformName": "SAGE"
+    },
+    {
+      "id": "cegid",
+      "name": "Cegid",
+      "editor": "Cegid",
+      "aliases": ["cegid loop", "quadra", "quadratus", "cegid xrp flex"],
+      "status": "accredited",
+      "platformName": "CEGID"
+    },
+    {
+      "id": "odoo",
+      "name": "Odoo",
+      "editor": "Odoo",
+      "aliases": [],
+      "status": "accredited",
+      "platformName": "ODOO"
+    },
+    {
+      "id": "vosfactures",
+      "name": "VosFactures",
+      "editor": "VosFactures",
+      "aliases": ["vos factures"],
+      "status": "accredited",
+      "platformName": "VosFactures"
+    },
+    {
+      "id": "dougs",
+      "name": "Dougs",
+      "editor": "Dougs",
+      "aliases": ["dougs facturation"],
+      "status": "accredited",
+      "platformName": "Dougs Facturation gratuite"
+    },
+    {
+      "id": "macompta",
+      "name": "Macompta.fr",
+      "editor": "Macompta.fr",
+      "aliases": ["ma compta", "macompta"],
+      "status": "accredited",
+      "platformName": "MACOMPTA.FR"
+    },
+    {
+      "id": "dext",
+      "name": "Dext",
+      "editor": "Dext",
+      "aliases": ["receipt bank"],
+      "status": "accredited",
+      "platformName": "DEXT"
+    },
+    {
+      "id": "yooz",
+      "name": "Yooz",
+      "editor": "Yooz",
+      "aliases": [],
+      "status": "accredited",
+      "platformName": "YOOZ PDP"
+    },
+    {
+      "id": "jefacture",
+      "name": "jefacture.com",
+      "editor": "ECMA",
+      "aliases": ["je facture", "jefacture"],
+      "status": "accredited",
+      "platformName": "jefacture.com"
+    },
+    {
+      "id": "agicap",
+      "name": "Agicap",
+      "editor": "Agicap",
+      "aliases": [],
+      "status": "accredited",
+      "platformName": "AGICAP"
+    },
+    {
+      "id": "ebp",
+      "name": "EBP",
+      "editor": "EBP (groupe Cegid)",
+      "aliases": ["ebp gestion commerciale", "ebp open line", "ebp devis facturation", "ebp compta"],
+      "status": "connected",
+      "platformName": "Shine",
+      "includedInPrice": false,
+      "note": {
+        "fr": "L’inscription et l’accès à la plateforme agréée Shine sont gratuits pour les clients EBP ; la synchronisation automatique des factures demande la version « Plus », vendue à part. À ce jour, EBP ne se raccorde qu’à Shine.",
+        "en": "Registration with and access to the Shine accredited platform are free for EBP customers; automatic invoice synchronisation requires the separately sold “Plus” edition. For now, EBP connects to Shine only.",
+        "es": "La inscripción y el acceso a la plataforma homologada Shine son gratuitos para los clientes de EBP; la sincronización automática de facturas exige la versión «Plus», vendida aparte. Por ahora, EBP solo se conecta a Shine."
+      },
+      "sourceUrl": "https://support.ebp.com/hc/fr/articles/37858547802653-FAQ-R%C3%A9forme-de-la-facturation-%C3%A9lectronique",
+      "sourceDate": null
+    },
+    {
+      "id": "evoliz",
+      "name": "Evoliz",
+      "editor": "Evoliz (groupe Visma)",
+      "aliases": [],
+      "status": "connected",
+      "platformName": "CHAINTRUST by Visma",
+      "includedInPrice": true,
+      "note": {
+        "fr": "Evoliz est une solution compatible : la partie réglementaire passe par Chaintrust, plateforme agréée du groupe Visma, incluse dans toutes les formules sans frais par facture. Aucune autre plateforme ne peut être branchée pour l’instant.",
+        "en": "Evoliz is a compatible solution: the regulatory part goes through Chaintrust, the Visma group’s accredited platform, included in every plan with no per-invoice fee. No other platform can be connected for now.",
+        "es": "Evoliz es una solución compatible: la parte reglamentaria pasa por Chaintrust, plataforma homologada del grupo Visma, incluida en todos los planes sin coste por factura. Por ahora no se puede conectar otra plataforma."
+      },
+      "sourceUrl": "https://www.evoliz.com/guides-pratiques/facturation-electronique-vos-questions-nos-reponses/",
+      "sourceDate": null
+    },
+    {
+      "id": "henrri",
+      "name": "Henrri",
+      "editor": "Groupe Rivalis",
+      "aliases": ["henri"],
+      "status": "compatibleUnnamed",
+      "platformName": null,
+      "includedInPrice": true,
+      "note": {
+        "fr": "Henrri se présente comme une solution compatible qui travaille avec plusieurs plateformes agréées, choisies automatiquement à l’inscription dans l’annuaire ; la facturation électronique est annoncée gratuite. Ni Henrri ni Rivalis ne figurent dans la liste officielle.",
+        "en": "Henrri presents itself as a compatible solution working with several accredited platforms, picked automatically when registering in the directory; e-invoicing is announced as free. Neither Henrri nor Rivalis is on the official list.",
+        "es": "Henrri se presenta como una solución compatible que trabaja con varias plataformas homologadas, elegidas automáticamente al inscribirse en el directorio; la facturación electrónica se anuncia gratuita. Ni Henrri ni Rivalis figuran en la lista oficial."
+      },
+      "sourceUrl": "https://www.henrri.com/henrri-suffit-il-pour-etre-conforme-a-la-reforme-e-facture-2026/",
+      "sourceDate": null
+    },
+    {
+      "id": "facture-net",
+      "name": "Facture.net",
+      "editor": "Codeur.com",
+      "aliases": ["facture net", "facturenet"],
+      "status": "compatibleUnnamed",
+      "platformName": null,
+      "includedInPrice": null,
+      "note": {
+        "fr": "Facture.net se dit compatible avec la facturation électronique « grâce à sa plateforme agréée », sans la nommer sur son blog.",
+        "en": "Facture.net says it is compatible with e-invoicing “thanks to its accredited platform”, without naming it on its blog.",
+        "es": "Facture.net se declara compatible con la facturación electrónica «gracias a su plataforma homologada», sin nombrarla en su blog."
+      },
+      "sourceUrl": "https://www.facture.net/blog/reforme-facture-electronique/",
+      "sourceDate": null
+    },
+    {
+      "id": "zervant",
+      "name": "Zervant",
+      "editor": "Zervant",
+      "aliases": [],
+      "status": "announced",
+      "platformName": null,
+      "includedInPrice": null,
+      "note": {
+        "fr": "Zervant annonçait en septembre 2025 devenir plateforme agréée « à partir de septembre 2026 » ; le nom n’apparaît pas dans la liste DGFiP du 13 octobre 2026, ni dans les dossiers en attente.",
+        "en": "In September 2025 Zervant announced it would become an accredited platform “from September 2026”; the name is on neither the DGFiP list of 13 October 2026 nor the pending files.",
+        "es": "En septiembre de 2025 Zervant anunció que sería plataforma homologada «a partir de septiembre de 2026»; el nombre no aparece en la lista de la DGFiP del 13 de octubre de 2026 ni en los expedientes pendientes."
+      },
+      "sourceUrl": "https://www.zervant.com/fr/blog/plateforme-dematerialisation-partenaire-role/",
+      "sourceDate": "2025-09-22"
+    },
+    {
+      "id": "tolteck",
+      "name": "Tolteck",
+      "editor": "Tolteck",
+      "aliases": [],
+      "status": "compatibleUnnamed",
+      "platformName": null,
+      "includedInPrice": null,
+      "note": {
+        "fr": "Tolteck émet des factures électroniques « grâce à sa connexion avec une plateforme agréée », qu’il ne nomme pas ; pour la réception, il propose une offre avec Pennylane.",
+        "en": "Tolteck issues e-invoices “through its connection with an accredited platform”, which it does not name; for reception it offers a bundle with Pennylane.",
+        "es": "Tolteck emite facturas electrónicas «gracias a su conexión con una plataforma homologada», que no nombra; para la recepción propone una oferta con Pennylane."
+      },
+      "sourceUrl": "https://www.tolteck.com/fr-fr/etes-vous-pret-pour-la-facturation-electronique-decouvrez-loffre-de-reception-tolteck-pennylane/",
+      "sourceDate": null
+    },
+    {
+      "id": "obat",
+      "name": "Obat",
+      "editor": "Obat",
+      "aliases": [],
+      "status": "connected",
+      "platformName": "IOPOLE",
+      "includedInPrice": true,
+      "note": {
+        "fr": "Obat passe par Iopole, plateforme agréée, et annonce la facturation électronique intégrée sans surcoût.",
+        "en": "Obat goes through Iopole, an accredited platform, and announces built-in e-invoicing at no extra cost.",
+        "es": "Obat pasa por Iopole, plataforma homologada, y anuncia la facturación electrónica integrada sin coste adicional."
+      },
+      "sourceUrl": "https://www.obat.fr/devis-factures/facturation-electronique/",
+      "sourceDate": null
+    },
+    {
+      "id": "batappli",
+      "name": "Batappli",
+      "editor": "Batappli",
+      "aliases": ["bat appli"],
+      "status": "connected",
+      "platformName": "CECURITY",
+      "includedInPrice": true,
+      "note": {
+        "fr": "Batappli intègre eFacture, plateforme agréée opérée par Cecurity (groupe Isagri), incluse pour tous les clients en abonnement en ligne ou sous contrat d’assistance.",
+        "en": "Batappli embeds eFacture, an accredited platform run by Cecurity (Isagri group), included for every customer on an online subscription or a support contract.",
+        "es": "Batappli integra eFacture, plataforma homologada operada por Cecurity (grupo Isagri), incluida para todos los clientes con suscripción en línea o contrato de asistencia."
+      },
+      "sourceUrl": "https://www.batappli.fr/blog-du-logiciel-batiment/facture-electronique-btp-2026-gratuite-clients-batappli",
+      "sourceDate": null
+    },
+    {
+      "id": "organilog",
+      "name": "Organilog",
+      "editor": "Organilog",
+      "aliases": [],
+      "status": "compatibleUnnamed",
+      "platformName": null,
+      "includedInPrice": null,
+      "note": {
+        "fr": "Organilog se présente comme une solution compatible : il prépare les factures au format électronique (UBL) et les transmet par une plateforme agréée partenaire, non nommée sur sa page.",
+        "en": "Organilog presents itself as a compatible solution: it prepares invoices in the electronic format (UBL) and sends them through a partner accredited platform, not named on its page.",
+        "es": "Organilog se presenta como solución compatible: prepara las facturas en formato electrónico (UBL) y las envía a través de una plataforma homologada asociada, no nombrada en su página."
+      },
+      "sourceUrl": "https://fr.organilog.com/logiciel-facturation-electronique/",
+      "sourceDate": null
+    },
+    {
+      "id": "kwixeo",
+      "name": "Kwixéo",
+      "editor": "Kwixéo",
+      "aliases": ["kwixeo"],
+      "status": "compatibleUnnamed",
+      "platformName": null,
+      "includedInPrice": null,
+      "note": {
+        "fr": "Kwixéo indique que l’émission et la réception passent « via une plateforme agréée, intégrée à Kwixéo », sans la nommer.",
+        "en": "Kwixéo states that issuing and receiving go “through an accredited platform integrated into Kwixéo”, without naming it.",
+        "es": "Kwixéo indica que la emisión y la recepción pasan «a través de una plataforma homologada integrada en Kwixéo», sin nombrarla."
+      },
+      "sourceUrl": "https://www.kwixeo.fr/dossier/facture-electronique/faq/",
+      "sourceDate": "2026-09-10"
+    },
+    {
+      "id": "excel",
+      "name": "Excel, Word ou un modèle PDF",
+      "editor": null,
+      "aliases": [
+        "excel",
+        "word",
+        "google sheets",
+        "google docs",
+        "libreoffice",
+        "openoffice",
+        "canva",
+        "pdf",
+        "papier",
+        "carnet",
+        "modèle",
+        "modele",
+        "mail",
+        "e-mail",
+        "email",
+        "aucun",
+        "rien",
+        "pas de logiciel"
+      ],
+      "status": "none",
+      "platformName": null
+    },
+    {
+      "id": "chorus-pro",
+      "name": "Chorus Pro",
+      "editor": "AIFE (État)",
+      "aliases": ["chorus", "chorus pro"],
+      "status": "publicSector",
+      "platformName": null
+    },
+    {
+      "id": "ppf",
+      "name": "Portail public de facturation",
+      "editor": "DGFiP",
+      "aliases": ["ppf", "portail public", "portail public de facturation", "impots.gouv"],
+      "status": "ppf",
+      "platformName": null
+    }
+  ]
+}

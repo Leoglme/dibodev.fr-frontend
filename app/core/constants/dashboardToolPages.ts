@@ -15,4 +15,5 @@ export const DASHBOARD_TOOL_PAGES: Record<string, DashboardToolPage> = {
   'tools-electrician-software': { label: 'Logiciel électricien', onlineSince: '2026-10-19' },
   'tools-personal-trainer-software': { label: 'Logiciel coach sportif', onlineSince: '2026-10-19' },
   'tools-php-vulnerability-check': { label: 'Faille PHP : vérifier mon site', onlineSince: '2026-10-21' },
+  'tools-e-invoicing-software-check': { label: 'Facture électronique : mon logiciel', onlineSince: '2026-10-23' },
 }

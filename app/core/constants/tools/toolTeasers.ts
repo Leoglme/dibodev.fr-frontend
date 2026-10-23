@@ -348,6 +348,40 @@ const PHP_VULNERABILITY_CHECK_TEASER: DibodevToolTeaserContent = {
   },
 }
 
+const E_INVOICING_CHECK_TEASER: DibodevToolTeaserContent = {
+  toolId: 'e-invoicing-software-check',
+  routeName: 'tools-e-invoicing-software-check',
+  icon: 'ClipboardCheck',
+  wording: {
+    fr: {
+      emphasizedIntro: `Votre logiciel de facturation est-il prêt pour la facture électronique${NBSP}?`,
+      text: 'Tapez son nom : plateforme agréée, raccordé à une plateforme, ou rien. Liste officielle DGFiP du 13 octobre 2026 et 24 logiciels relus.',
+      linkLabel: `Vérifier mon logiciel${NBSP}: facture électronique`,
+      listLabel: `Facture électronique${NBSP}: mon logiciel est-il agréé${NBSP}?`,
+      hubDescription: `EBP, Henrri, Pennylane, Excel…${NBSP}: plateforme agréée, raccordé à une plateforme, ou rien, d’après la liste officielle et les pages des éditeurs, et ce qu’il reste à faire avant 2027.`,
+      hubMeta: '1 nom · 5 secondes',
+    },
+    en: {
+      emphasizedIntro: 'Is your invoicing software ready for French e-invoicing?',
+      text: 'Type its name: accredited platform, connected to one, or nothing. Official DGFiP list of 13 October 2026 and 24 tools re-read.',
+      linkLabel: 'Check my software: e-invoicing',
+      listLabel: 'E-invoicing: is my software accredited?',
+      hubDescription:
+        'EBP, Henrri, Pennylane, Excel…: accredited platform, connected to one, or nothing, from the official list and the publishers’ pages, and what is left to do before 2027.',
+      hubMeta: '1 name · 5 seconds',
+    },
+    es: {
+      emphasizedIntro: '¿Tu software de facturación está listo para la factura electrónica?',
+      text: 'Escribe su nombre: plataforma homologada, conectado a una, o nada. Lista oficial de la DGFiP del 13 de octubre de 2026 y 24 programas revisados.',
+      linkLabel: 'Comprobar mi software: factura electrónica',
+      listLabel: 'Factura electrónica: ¿mi software está homologado?',
+      hubDescription:
+        'EBP, Henrri, Pennylane, Excel…: plataforma homologada, conectado a una, o nada, según la lista oficial y las páginas de los editores, y lo que queda por hacer antes de 2027.',
+      hubMeta: '1 nombre · 5 segundos',
+    },
+  },
+}
+
 export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserContent> = {
   'faille-php-octobre-2026-site-boutique-logiciel-que-faire': PHP_VULNERABILITY_CHECK_TEASER,
   'changer-version-php-ovh-faille-octobre-2026': PHP_VULNERABILITY_CHECK_TEASER,
@@ -358,6 +392,8 @@ export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserConte
   'changer-version-php-planethoster-faille-octobre-2026': PHP_VULNERABILITY_CHECK_TEASER,
   'site-web-artisans-attirer-clients-locaux': PHP_VULNERABILITY_CHECK_TEASER,
   'site-web-commerce-proximite-2026': PHP_VULNERABILITY_CHECK_TEASER,
+  'facture-electronique-artisan-ce-qui-change': E_INVOICING_CHECK_TEASER,
+  'logiciel-facturation-garage-devis-ordre-de-reparation-facture': E_INVOICING_CHECK_TEASER,
   'reprendre-application-vibe-coding': AI_APP_CHECK_TEASER,
   'application-metier-no-code-ia-limites': AI_APP_CHECK_TEASER,
   'logiciel-gestion-auto-ecole-planning-eleves-heures': DRIVING_SCHOOL_SOFTWARE_TEASER,
@@ -392,6 +428,7 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   AI_APP_CHECK_TEASER,
   PUBLIC_AID_SIMULATOR_TEASER,
   PHP_VULNERABILITY_CHECK_TEASER,
+  E_INVOICING_CHECK_TEASER,
 ]
 
 /** The public aid simulator, teased under the comparison of every trade tool page. */

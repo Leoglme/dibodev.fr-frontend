@@ -3,6 +3,7 @@ import type {
   DibodevEstimatorProjectKind,
   DibodevEstimatorProjectSize,
 } from '~/core/types/DibodevBudgetEstimator'
+import type { DibodevEInvoicingVerdict } from '~/core/types/DibodevEInvoicingCheck'
 import type { DibodevPhotoSlideshowNavigationMethod } from '~/core/types/DibodevPhotoSlideshow'
 import type {
   DibodevPhpVulnerabilityCheckErrorKind,
@@ -96,5 +97,13 @@ export type TrackingEventPayloads = {
     guide: DibodevPhpVulnerabilityHostGuideKey
     verdict: DibodevPhpVulnerabilityVerdict
     hostingProvider: DibodevPhpVulnerabilityHostingKey | null
+  }
+  [TRACKING_EVENTS.eInvoicingSoftwareCheckStarted]: { location: string }
+  [TRACKING_EVENTS.eInvoicingSoftwareChecked]: {
+    location: string
+    verdict: DibodevEInvoicingVerdict
+    software: string | null
+    platform: string | null
+    method: 'suggestion' | 'submit'
   }
 }

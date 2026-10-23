@@ -62,6 +62,10 @@ export const TRACKING_EVENTS = {
   phpVulnerabilityChecked: 'php_vulnerability_checked',
   /** A hosting guide opened from the result card of the PHP vulnerability checker. */
   phpVulnerabilityGuideClicked: 'php_vulnerability_guide_clicked',
+  /** First name typed in the e-invoicing software checker (sent once per page view). */
+  eInvoicingSoftwareCheckStarted: 'e_invoicing_software_check_started',
+  /** A tool checked by the e-invoicing software checker, with the verdict and the tool matched, never the text typed. */
+  eInvoicingSoftwareChecked: 'e_invoicing_software_checked',
 } as const
 
 /** Tracking event name (value of the `TRACKING_EVENTS` catalog). */

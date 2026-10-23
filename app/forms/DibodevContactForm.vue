@@ -124,7 +124,9 @@ import DibodevAlert from '~/components/feedback/DibodevAlert.vue'
 import type { Option } from '~/components/ui/DibodevTogglePillGroup.vue'
 import { debounce } from 'lodash-es'
 import type { ContactFormPayload } from '~~/server/types/mail/contact'
+import type { DibodevEInvoicingContactPrefill } from '~/core/types/DibodevEInvoicingContact'
 import type { DibodevPhpVulnerabilityContactPrefill } from '~/core/types/DibodevPhpVulnerabilityContact'
+import { EInvoicingContactUtils } from '~/core/utils/EInvoicingContactUtils'
 import { PhpVulnerabilityContactUtils } from '~/core/utils/PhpVulnerabilityContactUtils'
 import { useTracking } from '~/composables/useTracking'
 import { useLeadSource } from '~/composables/useLeadSource'
@@ -186,6 +188,8 @@ const prefilledBudgetRange: BudgetRangeKey | null =
 const phpVulnerabilityPrefill: DibodevPhpVulnerabilityContactPrefill | null = PhpVulnerabilityContactUtils.readPrefill(
   route.query,
 )
+/** `?topic=e-invoicing` comes from the e-invoicing software checker, with the tool and the verdict when a check was run. */
+const eInvoicingPrefill: DibodevEInvoicingContactPrefill | null = EInvoicingContactUtils.readPrefill(route.query)
 
 const projectType: Ref<ProjectTypeKey | null> = ref<ProjectTypeKey | null>(prefilledProjectType ?? DEFAULT_PROJECT_TYPE)
 const pagesRange: Ref<PagesRangeKey | null> = ref<PagesRangeKey | null>(null)
@@ -206,10 +210,18 @@ const isWebsiteProject: ComputedRef<boolean> = computed((): boolean => projectTy
 
 /** METHODS */
 /**
- * Writes the message of a visitor coming from the PHP vulnerability pages, with the site and the verdict when known.
+ * Writes the message of a visitor coming from the PHP pages or the e-invoicing checker, with the check when known.
  * @returns {string} The message, or an empty string for every other visitor.
  */
 function buildPrefilledMessage(): string {
+  if (eInvoicingPrefill) {
+    return eInvoicingPrefill.softwareName
+      ? t('contact.form.eInvoicing.messageWithSoftware', {
+          software: eInvoicingPrefill.softwareName,
+          verdict: t(`contact.form.eInvoicing.verdicts.${eInvoicingPrefill.verdict ?? 'unknown'}`),
+        })
+      : t('contact.form.eInvoicing.messageWithoutSoftware')
+  }
   if (!phpVulnerabilityPrefill) {
     return ''
   }
@@ -435,7 +447,7 @@ async function onSubmit(): Promise<void> {
 /** LIFECYCLE */
 /** Set after hydration: the page is prerendered without its query, and a value given during setup would be lost in the static HTML. */
 onMounted((): void => {
-  if (phpVulnerabilityPrefill) {
+  if (phpVulnerabilityPrefill || eInvoicingPrefill) {
     message.value = buildPrefilledMessage()
   }
 })

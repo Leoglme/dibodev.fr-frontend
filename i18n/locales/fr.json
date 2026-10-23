@@ -211,6 +211,7 @@
     "priceBarometer": "Prix d’un logiciel sur mesure",
     "publicAid": "Aides pour votre site ou logiciel",
     "phpCheck": "Faille PHP : vérifier mon site",
+    "eInvoicingCheck": "Facture électronique : mon logiciel est-il agréé ?",
     "phpUpdate": "Mise à jour PHP de votre site",
     "about": "À propos",
     "description": "Développeur indépendant près de Rennes. Logiciels de gestion, sites web et automatisations avec l'IA pour les TPE et PME.",
@@ -604,6 +605,21 @@
       },
       "phpUpdate": {
         "message": "Bonjour,\nje souhaite faire mettre à jour la version de PHP de mon site (et WordPress, le thème et les extensions si besoin).\nLe lien de mon site : \nMon hébergeur, si je le connais : "
+      },
+      "eInvoicing": {
+        "messageWithSoftware": "Bonjour,\nmon logiciel de facturation est {software}. Votre vérificateur indique : « {verdict} ».\nPouvez-vous me dire ce qu'il me reste à faire pour recevoir et émettre mes factures électroniques, et si mon outil peut être raccordé ?",
+        "messageWithoutSoftware": "Bonjour,\nje ne sais pas si mon outil de facturation est prêt pour la facture électronique (réception obligatoire depuis septembre 2026, émission en 2027).\nMon logiciel ou mon outil : \nMon activité : ",
+        "verdicts": {
+          "accredited": "plateforme agréée",
+          "pending": "dossier en attente d'immatriculation",
+          "connected": "solution compatible raccordée à une plateforme agréée",
+          "compatibleUnnamed": "solution compatible, plateforme non nommée",
+          "announced": "annoncé, absent de la liste officielle",
+          "none": "pas de logiciel de facturation électronique",
+          "publicSector": "Chorus Pro seulement",
+          "ppf": "portail public",
+          "unknown": "introuvable dans la liste officielle"
+        }
       }
     },
     "reassurance": {
