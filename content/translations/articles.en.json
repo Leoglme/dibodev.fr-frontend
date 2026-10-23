@@ -22735,8 +22735,8 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The story began with a leak. On Monday, October 20, a post on Hacker News announced two critical vulnerabilities under embargo. The company watchTowr confirmed that night that they were real, and PHP announced a patch for the following day at 2 PM UTC. In the meantime, pages claiming to publish an exploit circulated, Cloudflare activated firewall rules for all its clients starting at 3:02 AM UTC, and saw attackers modifying their payloads to bypass them. The patches were released Wednesday with a slight lead: PHP 8.5.12, 8.4.27, 8.3.36, and 8.2.35.",
-              "type": "text"
+              "type": "text",
+              "text": "The story began with a leak. On Tuesday, October 20, in the late afternoon, a post on Hacker News announced two critical vulnerabilities under embargo. The company watchTowr confirmed that night that they were real, and PHP announced a patch for the following day at 2 PM UTC. In the meantime, pages claiming to publish an exploit circulated, Cloudflare activated firewall rules for all its clients starting at 3:02 AM UTC, and saw attackers modifying their payloads to bypass them. We have since learned that Amazon’s honeypots had received a first exploitation attempt as early as October 17, four days before the patches. The patches were released Wednesday with a slight lead: PHP 8.5.12, 8.4.27, 8.3.36, and 8.2.35."
             }
           ]
         },
@@ -22744,8 +22744,8 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The most telling signal:",
               "type": "text",
+              "text": "The most telling signal:",
               "marks": [
                 {
                   "type": "bold"
@@ -22753,8 +22753,8 @@
               ]
             },
             {
-              "text": " in the afternoon, the French Ministry of the Interior took all prefecture websites offline at the request of ANSSI, citing « preventive maintenance of all its internet sites exposed to a critical security vulnerability, » and Météo-France closed its forecast and alert sites on its own initiative. Part of the tax authority’s portal was also taken down, according to the press. The Netherlands shut down DigiD and MijnOverheid, Finland its online public services, British local councils and Danish services did the same. None of these sites reported any breaches: it was a precautionary measure, exactly what CERT-FR recommends when you can’t patch immediately. If the government shuts down its own sites rather than risk it, a PHP-powered business site has no reason to think it’s safe.",
-              "type": "text"
+              "type": "text",
+              "text": " in the afternoon, the French Ministry of the Interior took all prefecture websites offline at the request of ANSSI, citing « preventive maintenance of all its internet sites exposed to a critical security vulnerability, » and Météo-France closed its forecast and alert sites on its own initiative. Part of the tax authority’s portal was also taken down, according to the press, and the next day the CAF (family benefits), Ameli (health insurance), URSSAF and CNES went into maintenance in turn, while Orange suspended a few sites and apps of its subsidiaries. The Netherlands shut down DigiD and MijnOverheid, Finland its online public services, British local councils and Danish services did the same. None of these sites reported any breaches: it was a precautionary measure, exactly what CERT-FR recommends when you can’t patch immediately. If the government shuts down its own sites rather than risk it, a PHP-powered business site has no reason to think it’s safe."
             }
           ]
         },
@@ -23558,8 +23558,8 @@
           },
           "content": [
             {
-              "text": "Taxes, prefectures, Météo-France: when will they be back, and should we be worried?",
-              "type": "text"
+              "type": "text",
+              "text": "Taxes, CAF, Ameli, prefectures: when will they be back, and should we be worried?"
             }
           ]
         },
@@ -23567,8 +23567,8 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "If you landed here because impots.gouv.fr displays ‘under maintenance’ or your prefecture’s website isn’t responding: it’s this vulnerability, and it’s intentional. The Ministry of the Interior refers to ‘preventive maintenance’ and ‘better response times’ for bringing the sites back online, while Météo-France states that the update has been published but that its checks must be completed before reopening. No date was announced by the evening of October 21st, so expect it to take hours rather than weeks. Your data is not at risk, no breach has been announced, and there’s nothing you need to do for these sites.",
-              "type": "text"
+              "type": "text",
+              "text": "If you landed here because impots.gouv.fr or caf.fr displays ‘under maintenance’, your Ameli account won’t open or your prefecture’s website isn’t responding: it’s this vulnerability, and it’s intentional. The Ministry of the Interior refers to ‘preventive maintenance’ and ‘as soon as possible’ for bringing the sites back online; the CAF speaks of maintenance and keeps its usual filing deadlines. Services come back one by one: Météo-France reopened on the morning of October 22, ameli.fr and urssaf.fr were answering on the 23rd at 11:40 Paris time, and at the same time caf.fr, impots.gouv.fr and the prefecture websites still showed a maintenance page. Your data is not at risk, no breach has been announced, and there’s nothing you need to do for these sites."
             }
           ]
         },
@@ -23618,8 +23618,8 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The first attack attempts were observed in the morning of October 21st, even before the patch was released. If your site was exposed all day, you need to check it.",
-              "type": "text"
+              "type": "text",
+              "text": "The first attack attempts were seen by Amazon on its honeypots as early as October 17, four days before the patch, then continuously from the morning of the 21st. On the 22nd, Wordfence saw the attacks continue with no known compromise through this flaw: reassuring, but if your site stayed exposed, you need to check it."
             }
           ]
         },
@@ -23627,8 +23627,8 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "In your server access logs, look for unusual multipart POST requests since October 20th. In your file upload directories (uploads, cache, tmp), check for recent .php files you didn’t place there. In your admin panel, look for unknown admin accounts and new scheduled tasks. If in doubt: immediate backup, change all admin passwords, and if customer personal data is involved, notify the CNIL within 72 hours.",
-              "type": "text"
+              "type": "text",
+              "text": "In your server access logs, look for unusual multipart POST requests since October 17. In your file upload directories (uploads, cache, tmp), check for recent .php files you didn’t place there. In your admin panel, look for unknown admin accounts and new scheduled tasks. If in doubt: immediate backup, change all admin passwords, and if customer personal data is involved, notify the CNIL within 72 hours."
             }
           ]
         },
@@ -23855,8 +23855,68 @@
               ]
             },
             {
-              "text": ".",
-              "type": "text"
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "text",
+              "text": "October 17 exploitation attempt seen by Amazon",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "text",
+              "text": "Ameli, CAF, tax portal and URSSAF down, Clubic on October 22 at 10:53 AM",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.clubic.com/actualite-635455-ameli-caf-impots-urssaf-pourquoi-tant-de-sites-publics-sont-hors-service-on-vous-explique-les-failles-php.html",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "text",
+              "text": "attacks continue with no known compromise, Wordfence on October 22",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.wordfence.com/blog/2026/10/attacks-on-php2shell-continue-but-no-known-compromises-as-a-result-yet/",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
             }
           ]
         }

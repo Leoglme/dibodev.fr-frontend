@@ -22735,8 +22735,8 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El incidente comenzó con una filtración. El lunes 20 de octubre, un mensaje en Hacker News anunció dos vulnerabilidades críticas bajo embargo. La empresa watchTowr confirmó esa misma noche que eran reales, y PHP anunció un parche para al día siguiente a las 14:00 UTC. Mientras tanto, circularon páginas que pretendían publicar un exploit, Cloudflare activó reglas de firewall para todos sus clientes desde las 3:02 UTC y observó cómo los atacantes modificaban sus cargas para esquivarlas. Los parches se publicaron el miércoles con un poco de anticipación: PHP 8.5.12, 8.4.27, 8.3.36 y 8.2.35.",
-              "type": "text"
+              "type": "text",
+              "text": "El incidente comenzó con una filtración. El martes 20 de octubre, a última hora de la tarde, un mensaje en Hacker News anunció dos vulnerabilidades críticas bajo embargo. La empresa watchTowr confirmó esa misma noche que eran reales, y PHP anunció un parche para el día siguiente a las 14:00 UTC. Mientras tanto, circularon páginas que pretendían publicar un exploit, Cloudflare activó reglas de firewall para todos sus clientes desde las 3:02 UTC y observó cómo los atacantes modificaban sus cargas para esquivarlas. Desde entonces se sabe que los señuelos de Amazon habían recibido un primer intento de explotación ya el 17 de octubre, cuatro días antes de los parches. Los parches se publicaron el miércoles con un poco de anticipación: PHP 8.5.12, 8.4.27, 8.3.36 y 8.2.35."
             }
           ]
         },
@@ -22744,8 +22744,8 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "La señal más elocuente:",
               "type": "text",
+              "text": "La señal más elocuente:",
               "marks": [
                 {
                   "type": "bold"
@@ -22753,8 +22753,8 @@
               ]
             },
             {
-              "text": " por la tarde, el Ministerio del Interior desconectó los sitios de todas las prefecturas a petición de la ANSSI, « mantenimiento preventivo de todos sus sitios web expuestos a una vulnerabilidad crítica de seguridad », y Météo-France cerró sus sitios de predicciones y alertas por su propia iniciativa. Parte del portal de impuestos también fue desconectada según la prensa. Países Bajos apagó DigiD y MijnOverheid, Finlandia sus servicios públicos en línea, consejos municipales británicos y servicios daneses hicieron lo mismo. Ninguno de estos sitios reportó intrusiones: es una medida de precaución, exactamente la que recomienda el CERT-FR cuando no se puede corregir de inmediato. Si el Estado corta sus propios sitios en lugar de asumir el riesgo, un sitio empresarial que funcione con PHP no tiene razón para creerse a salvo.",
-              "type": "text"
+              "type": "text",
+              "text": " por la tarde, el Ministerio del Interior desconectó los sitios de todas las prefecturas a petición de la ANSSI, « mantenimiento preventivo de todos sus sitios web expuestos a una vulnerabilidad crítica de seguridad », y Météo-France cerró sus sitios de predicciones y alertas por su propia iniciativa. Parte del portal de impuestos también fue desconectada según la prensa, y al día siguiente la CAF (prestaciones familiares), Ameli (seguro de salud), la URSSAF y el CNES pasaron a mantenimiento a su vez, mientras Orange suspendía algunos sitios y aplicaciones de sus filiales. Países Bajos apagó DigiD y MijnOverheid, Finlandia sus servicios públicos en línea, consejos municipales británicos y servicios daneses hicieron lo mismo. Ninguno de estos sitios reportó intrusiones: es una medida de precaución, exactamente la que recomienda el CERT-FR cuando no se puede corregir de inmediato. Si el Estado corta sus propios sitios en lugar de asumir el riesgo, un sitio empresarial que funcione con PHP no tiene razón para creerse a salvo."
             }
           ]
         },
@@ -23558,8 +23558,8 @@
           },
           "content": [
             {
-              "text": "Impuestos, prefecturas, Météo-France: ¿cuándo volverán y hay que preocuparse?",
-              "type": "text"
+              "type": "text",
+              "text": "Impuestos, CAF, Ameli, prefecturas: ¿cuándo volverán y hay que preocuparse?"
             }
           ]
         },
@@ -23567,8 +23567,8 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si llegó aquí porque impots.gouv.fr muestra «en mantenimiento» o porque el sitio de su prefectura no responde: es esta falla, y es intencional. El Ministerio del Interior habla de una «puesta en mantenimiento preventivo» y de «mejores plazos» para el reinicio, mientras que Météo-France indica que la actualización está publicada, pero que sus verificaciones deben terminarse antes de la reapertura. No se anunciaba ninguna fecha el 21 de octubre por la noche, cuente horas en lugar de semanas. Sus datos no están en riesgo, no se ha anunciado ninguna intrusión, y no hay nada que hacer con estos sitios.",
-              "type": "text"
+              "type": "text",
+              "text": "Si llegó aquí porque impots.gouv.fr o caf.fr muestra «en mantenimiento», porque su cuenta de Ameli no se abre o porque el sitio de su prefectura no responde: es esta falla, y es intencional. El Ministerio del Interior habla de una «puesta en mantenimiento preventivo» y de «lo antes posible» para el reinicio; la CAF habla de mantenimiento y mantiene sus plazos habituales de declaración. La vuelta se hace servicio a servicio: Météo-France reabrió el 22 de octubre por la mañana, ameli.fr y urssaf.fr respondían el 23 a las 11:40 (hora de París), y a la misma hora caf.fr, impots.gouv.fr y los sitios de las prefecturas seguían mostrando una página de mantenimiento. Sus datos no están en riesgo, no se ha anunciado ninguna intrusión, y no hay nada que hacer con estos sitios."
             }
           ]
         },
@@ -23618,8 +23618,8 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Los primeros intentos de ataque se observaron por la mañana del 21 de octubre, incluso antes de la salida del parche. Si su sitio permaneció expuesto todo el día, debe revisarlo.",
-              "type": "text"
+              "type": "text",
+              "text": "Los primeros intentos de ataque los vio Amazon en sus señuelos ya el 17 de octubre, cuatro días antes del parche, y después de forma continua desde la mañana del 21. El 22, Wordfence veía los ataques continuar sin ninguna intrusión conocida por esta falla: tranquilizador, pero si su sitio permaneció expuesto, debe revisarlo."
             }
           ]
         },
@@ -23627,8 +23627,8 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En los registros de acceso del servidor, busque desde el 20 de octubre solicitudes POST de tipo multipart inusuales. En las carpetas de envío de archivos (uploads, cache, tmp), busque archivos .php recientes que no haya colocado allí. En la administración, busque cuentas administradoras desconocidas y tareas programadas nuevas. En caso de duda: copia de seguridad inmediata, cambio de todas las contraseñas de administración, y si se ven afectados datos personales de clientes, notificación a la CNIL en 72 horas.",
-              "type": "text"
+              "type": "text",
+              "text": "En los registros de acceso del servidor, busque desde el 17 de octubre solicitudes POST de tipo multipart inusuales. En las carpetas de envío de archivos (uploads, cache, tmp), busque archivos .php recientes que no haya colocado allí. En la administración, busque cuentas administradoras desconocidas y tareas programadas nuevas. En caso de duda: copia de seguridad inmediata, cambio de todas las contraseñas de administración, y si se ven afectados datos personales de clientes, notificación a la CNIL en 72 horas."
             }
           ]
         },
@@ -23855,8 +23855,68 @@
               ]
             },
             {
-              "text": ".",
-              "type": "text"
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "text",
+              "text": "intento de explotación del 17 de octubre visto por Amazon",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "text",
+              "text": "Ameli, CAF, impuestos y URSSAF fuera de servicio, Clubic el 22 de octubre a las 10:53",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.clubic.com/actualite-635455-ameli-caf-impots-urssaf-pourquoi-tant-de-sites-publics-sont-hors-service-on-vous-explique-les-failles-php.html",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "text",
+              "text": "ataques en curso sin intrusión conocida, Wordfence el 22 de octubre",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.wordfence.com/blog/2026/10/attacks-on-php2shell-continue-but-no-known-compromises-as-a-result-yet/",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
             }
           ]
         }
