@@ -16,4 +16,5 @@ export const DASHBOARD_TOOL_PAGES: Record<string, DashboardToolPage> = {
   'tools-personal-trainer-software': { label: 'Logiciel coach sportif', onlineSince: '2026-10-19' },
   'tools-php-vulnerability-check': { label: 'Faille PHP : vérifier mon site', onlineSince: '2026-10-21' },
   'tools-e-invoicing-software-check': { label: 'Facture électronique : mon logiciel', onlineSince: '2026-10-23' },
+  'tools-e-invoicing-scope-check': { label: 'Facture électronique : suis-je concerné ?', onlineSince: '2026-10-25' },
 }

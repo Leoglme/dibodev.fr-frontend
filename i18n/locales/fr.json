@@ -230,6 +230,7 @@
       "fieldServiceSoftware": "Logiciel de gestion d'interventions",
       "electricianSoftware": "Logiciel pour électricien",
       "personalTrainerSoftware": "Logiciel pour coach sportif",
+      "eInvoicingScope": "Facture électronique : suis-je concerné ?",
       "budgetEstimator": "Estimateur de budget"
     }
   },

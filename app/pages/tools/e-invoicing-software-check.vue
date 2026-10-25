@@ -16,6 +16,12 @@
         :wording="page.checker"
         :trackingLocation="TRACKING_LOCATION"
       />
+      <DibodevToolTeaser
+        :teaser="E_INVOICING_SCOPE_TEASER"
+        :trackingLocation="`${TRACKING_LOCATION}_hero`"
+        tone="white"
+        class="mt-6"
+      />
     </template>
   </DibodevToolLandingSection>
 
@@ -143,6 +149,7 @@ import { computed } from 'vue'
 import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
 import DibodevCallout from '~/components/data-displays/DibodevCallout.vue'
 import DibodevMobileContactBar from '~/components/data-displays/DibodevMobileContactBar.vue'
+import DibodevToolTeaser from '~/components/data-displays/DibodevToolTeaser.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import DibodevEInvoicingSoftwareChecker from '~/components/sections/DibodevEInvoicingSoftwareChecker.vue'
 import DibodevFaqSection from '~/components/sections/DibodevFaqSection.vue'
@@ -163,6 +170,7 @@ import {
   E_INVOICING_TABLE_SOFTWARE_IDS,
 } from '~/core/constants/eInvoicingCheck/pageShared'
 import { E_INVOICING_CHECK_PAGES } from '~/core/constants/eInvoicingCheckPage'
+import { E_INVOICING_SCOPE_TEASER } from '~/core/constants/tools/toolTeasers'
 import { ArticleSelectionUtils } from '~/core/utils/ArticleSelectionUtils'
 import { EInvoicingContactUtils } from '~/core/utils/EInvoicingContactUtils'
 import { EInvoicingSoftwareUtils } from '~/core/utils/EInvoicingSoftwareUtils'

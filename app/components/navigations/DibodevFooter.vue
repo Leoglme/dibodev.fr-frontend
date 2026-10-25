@@ -262,6 +262,11 @@ const toolLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLi
     to: localePath('tools-personal-trainer-software'),
   },
   {
+    key: 'eInvoicingScope',
+    title: t('footer.tools.eInvoicingScope'),
+    to: localePath('tools-e-invoicing-scope-check'),
+  },
+  {
     key: 'budgetEstimator',
     title: t('footer.tools.budgetEstimator'),
     to: `${localePath('custom-business-software')}#estimator`,

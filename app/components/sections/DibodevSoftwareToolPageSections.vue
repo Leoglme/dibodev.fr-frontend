@@ -88,6 +88,7 @@
           tone="white"
         />
         <DibodevToolTeaser :teaser="PUBLIC_AID_TEASER" :trackingLocation="props.trackingLocation" tone="white" />
+        <DibodevToolTeaser :teaser="E_INVOICING_SCOPE_TEASER" :trackingLocation="props.trackingLocation" tone="white" />
       </div>
     </template>
   </DibodevComparisonTableSection>
@@ -149,7 +150,7 @@ import { PERSON_ID, ORGANIZATION_ID } from '~/config/schema'
 import { StoryblokImageUtils } from '~/core/utils/StoryblokImageUtils'
 import DibodevToolTeaser from '~/components/data-displays/DibodevToolTeaser.vue'
 import { BUSINESS_SOFTWARE_PAGE_TEASER } from '~/core/constants/businessSoftwarePageTeaser'
-import { PUBLIC_AID_TEASER } from '~/core/constants/tools/toolTeasers'
+import { E_INVOICING_SCOPE_TEASER, PUBLIC_AID_TEASER } from '~/core/constants/tools/toolTeasers'
 
 const SITE_URL: string = 'https://dibodev.fr'
 const STORYBLOK_ASSET_HOST: string = 'a.storyblok.com'

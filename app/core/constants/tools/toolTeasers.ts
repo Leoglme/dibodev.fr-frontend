@@ -1,5 +1,6 @@
 import type { DibodevToolTeaserContent } from '~/core/types/DibodevToolTeaser'
 import { AI_APP_CHECK_QUIZ_ID } from '~/core/constants/aiAppCheckQuiz'
+import { E_INVOICING_SCOPE_QUIZ_ID } from '~/core/constants/eInvoicingScopeQuiz'
 import { NBSP } from '~/core/constants/typography'
 
 const DRIVING_SCHOOL_SOFTWARE_TEASER: DibodevToolTeaserContent = {
@@ -348,7 +349,8 @@ const PHP_VULNERABILITY_CHECK_TEASER: DibodevToolTeaserContent = {
   },
 }
 
-const E_INVOICING_CHECK_TEASER: DibodevToolTeaserContent = {
+/** The e-invoicing software checker, also teased under the scope test. */
+export const E_INVOICING_CHECK_TEASER: DibodevToolTeaserContent = {
   toolId: 'e-invoicing-software-check',
   routeName: 'tools-e-invoicing-software-check',
   icon: 'ClipboardCheck',
@@ -378,6 +380,40 @@ const E_INVOICING_CHECK_TEASER: DibodevToolTeaserContent = {
       hubDescription:
         'EBP, Henrri, Pennylane, Excel…: plataforma homologada, conectado a una, o nada, según la lista oficial y las páginas de los editores, y lo que queda por hacer antes de 2027.',
       hubMeta: '1 nombre · 5 segundos',
+    },
+  },
+}
+
+/** The e-invoicing scope test, teased on the software checker and under the comparison of every trade tool page. */
+export const E_INVOICING_SCOPE_TEASER: DibodevToolTeaserContent = {
+  toolId: E_INVOICING_SCOPE_QUIZ_ID,
+  routeName: 'tools-e-invoicing-scope-check',
+  icon: 'CalendarCheck',
+  wording: {
+    fr: {
+      emphasizedIntro: `Vous ne savez pas si la facture électronique vous concerne${NBSP}?`,
+      text: `Micro-entrepreneur, franchise de TVA, loueur en meublé, association${NBSP}: en 5 questions, le test vous dit si vous devez recevoir, émettre, ou rien, et à quelle date.`,
+      linkLabel: `Faire le test${NBSP}: suis-je concerné, et quand${NBSP}?`,
+      listLabel: `Facture électronique${NBSP}: suis-je concerné, et quand${NBSP}?`,
+      hubDescription: `Statut, TVA, taille, clients${NBSP}: si la réforme vous concerne, ce que vous devez faire, et vos dates.`,
+      hubMeta: '5 questions · 1 minute',
+    },
+    en: {
+      emphasizedIntro: 'Not sure whether French e-invoicing applies to you?',
+      text: 'Micro-entrepreneur, VAT franchise, furnished rental, association: in 5 questions, the test tells you whether you must receive, issue, or nothing, and from which date.',
+      linkLabel: 'Take the test: does it apply to me, and when?',
+      listLabel: 'French e-invoicing: does it apply to me, and when?',
+      hubDescription:
+        'Status, VAT, size, customers: whether the reform applies to you, what you have to do, and your dates.',
+      hubMeta: '5 questions · 1 minute',
+    },
+    es: {
+      emphasizedIntro: '¿No sabes si la factura electrónica te afecta?',
+      text: 'Microempresario, franquicia de IVA, alquiler amueblado, asociación: en 5 preguntas, el test te dice si debes recibir, emitir, o nada, y desde qué fecha.',
+      linkLabel: 'Hacer el test: ¿me afecta, y cuándo?',
+      listLabel: 'Factura electrónica en Francia: ¿me afecta, y cuándo?',
+      hubDescription: 'Estatus, IVA, tamaño, clientes: si la reforma te afecta, lo que tienes que hacer, y tus fechas.',
+      hubMeta: '5 preguntas · 1 minuto',
     },
   },
 }
@@ -429,6 +465,7 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   PUBLIC_AID_SIMULATOR_TEASER,
   PHP_VULNERABILITY_CHECK_TEASER,
   E_INVOICING_CHECK_TEASER,
+  E_INVOICING_SCOPE_TEASER,
 ]
 
 /** The public aid simulator, teased under the comparison of every trade tool page. */

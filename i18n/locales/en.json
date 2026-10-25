@@ -230,6 +230,7 @@
       "fieldServiceSoftware": "Field service software",
       "electricianSoftware": "Electrician software",
       "personalTrainerSoftware": "Personal trainer software",
+      "eInvoicingScope": "E-invoicing: does it apply to me?",
       "budgetEstimator": "Budget estimator"
     }
   },
