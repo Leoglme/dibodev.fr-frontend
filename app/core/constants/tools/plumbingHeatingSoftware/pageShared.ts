@@ -14,6 +14,7 @@ export const PLUMBING_HEATING_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'logiciel-gestion-plombiers-saas-sur-mesure-2026',
   'chauffagiste-contrats-entretien-outil-sur-mesure',
   'alternative-tolteck-logiciel-devis-artisan',
+  'alternative-obat-logiciel-devis-batiment',
   'facture-electronique-artisan-ce-qui-change',
 ]
 
