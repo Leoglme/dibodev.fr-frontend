@@ -1,7 +1,7 @@
 <template>
   <footer class="border-t border-gray-300 bg-gray-800 px-6 sm:px-8">
     <div
-      class="max-w-site mx-auto grid w-full gap-x-8 gap-y-12 py-16 sm:grid-cols-2 lg:grid-cols-[minmax(17.5rem,1fr)_repeat(3,max-content)] lg:grid-rows-[auto_1fr] lg:gap-x-[clamp(2.5rem,21.875vw_-_11.5rem,7rem)] lg:gap-y-7 lg:py-22"
+      class="max-w-site mx-auto grid w-full gap-x-8 gap-y-12 py-16 sm:grid-cols-2 lg:grid-cols-[minmax(17.5rem,1fr)_repeat(3,auto)] lg:grid-rows-[auto_1fr] lg:gap-x-[clamp(2.5rem,21.875vw_-_11.5rem,7rem)] lg:gap-y-7 lg:py-22"
     >
       <div class="grid content-start gap-6 sm:col-span-2 lg:col-span-1">
         <DibodevLogo :large="true" :size="30" />
