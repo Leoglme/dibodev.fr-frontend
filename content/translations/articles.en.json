@@ -30351,5 +30351,2459 @@
         }
       ]
     }
+  },
+  "blog/restaurer-site-wordpress-apres-piratage": {
+    "title": "Restoring a Hacked WordPress Site Without Reintroducing the Problem",
+    "excerpt": "Restoring a backup isn’t enough: if done too late, it may still contain the backdoor; if restored without patching the vulnerability, the site will likely be compromised again within days. Here’s how to select the right backup, restore it properly, and seal the breach immediately afterward.",
+    "metaTitle": "Restoring a Hacked WordPress Site Without Reintroducing the Problem",
+    "metaDescription": "Select the right backup, restore securely, and close the breach right away: the proven method to bring a hacked WordPress site back online—without recurrence.",
+    "tags": [
+      "restore hacked wordpress site",
+      "wordpress site hacked recovery",
+      "clean hacked wordpress",
+      "wordpress backup restoration",
+      "hacked wordpress fix",
+      "wordpress security best practices"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "When a WordPress site is hacked, the first instinct is to restore the latest backup. This is often a mistake: if done too late, it already contains the backdoor; if restored without closing the vulnerability, the site will be compromised again within days. This guide follows the recommended order from WordPress.org, Cybermalveillance.gouv.fr (the national assistance program for victims), and the Sucuri team, including the specific case of UpdraftCentral keys stolen in October 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Before restoring: four actions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Take the site offline.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Cybermalveillance.gouv.fr advises first disconnecting what is compromised: ask your host to put the site in maintenance mode or block access during the cleanup.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Preserve evidence.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Server logs, screenshots, timestamps of what you observed, and the last actions taken on the site: document everything. These details help determine the intrusion timeline and support a police report if needed.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Make a copy of the current state.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Files and database, off the server, before making any changes. This is for evidence, not for restoration.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Change access credentials.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Administrator passwords, FTP or SFTP credentials, database access, and hosting panel passwords, then the secret keys in wp-config.php, which log everyone out. WordPress.org recommends redoing this after cleanup.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Choose the right backup",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Determine the intrusion date.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " This is the key question. Four clues help: the creation date of unknown accounts, the modification date of recently altered files (your host’s file manager sorts them by date), the first suspicious request in access logs, and the appearance date of spam pages in Search Console.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Known dates from autumn 2026.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " For UpdraftCentral, use a backup from before October 17; for the Ninja Forms campaign, from before October 4; for Bricksforge, from before October 7; for the exploited core vulnerability (since September 22), from before that date if the site lacked the patch.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Verify the backup before using it.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Open it and check the plugins list and the wp-content/uploads folder: a backup already containing the suspicious plugin or a .php file in uploads is useless.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If no backup is old enough.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " You must clean up manually: it takes longer, but the following steps still apply.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Restore cleanly",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The heart of WordPress, refreshed.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " WordPress.org advises reinstalling the same version of WordPress via FTP or SFTP, not using the admin reinstallation button, which only overwrites existing files and leaves added files in place. The wp-admin and wp-includes folders are completely replaced with a clean copy.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Plugins and the theme, from their source.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Sucuri recommends reinstalling them from wordpress.org or from the editor’s website, rather than restoring them from a backup. Do not blindly replace the wp-content folder or the wp-config.php file: they contain your content and settings.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Files to review.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " WordPress.org mentions .htaccess and index.php, and in the theme, header.php, footer.php, and functions.php: these are where redirects often hide. In the database, Sucuri advises searching for eval, base64_decode, gzinflate, and shell_exec, which have no place in page content.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Just after: close the door.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Update immediately.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A backup also restores old versions, meaning the vulnerability through which the attacker gained access. Update WordPress (to 7.1.3 or the latest version of your branch), the theme, all plugins, and the PHP version with your host, before putting the site back online.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Remove the UpdraftCentral key again.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A backup from before October 17 still contains the old key: WP Staging recommends removing it right after restoration, then resetting passwords and secret keys again. The procedure is in ",
+              "type": "text"
+            },
+            {
+              "text": "my UpdraftPlus guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/updraftplus-revoquer-updraftcentral-verifier-sauvegardes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Change passwords a second time.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " All of them, including the database, as WordPress.org recommends.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Clear the alerts.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " In the Search Console, once the site is clean, request a review from the Security Issues report. If the host had suspended the site, inform them of the actions taken.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "After bringing the site back online",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Understand how the attacker gained access.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Without an answer to this question, the same door remains open: outdated plugin, reused password, UpdraftCentral key, forgotten FTP account. WordPress.org places this analysis right before site hardening.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A routine.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A backup off the server every week, checked occasionally by performing a real restoration on a copy; updates every month; two-factor authentication for every administrator; unused extensions removed.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The steps.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " If the site holds personal data, notification to the CNIL must be made within 72 hours as soon as there is a risk to individuals. The Cybermalveillance.gouv.fr guide states that the CNIL considers website defacement as a breach of personal data and also advises filing a complaint and seeking professional help.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My last backup was made after the hack: what should I do?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Clean up on-site, using the same method: core reinstalled from scratch, extensions and theme from their original source, unknown accounts and files removed, database reviewed. It takes longer than a restoration, and the outcome depends on what was found: a new check within the following weeks is essential.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How long does it take?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "For a showcase site with a good backup, plan for half a day of work. For an online store, or a site without usable backups, more time will be needed.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How much does professional restoration cost?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "For me, updating a site starts at 190 €; cleaning and restoration are priced after a free diagnosis, as they depend on the site’s condition and backups. The details are on ",
+              "type": "text"
+            },
+            {
+              "text": "the remote intervention page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/mise-a-jour-php-site-logiciel",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Should I notify my clients?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "If their data could have been accessed and the risk to them is high, yes: it’s a requirement, in addition to notifying the CNIL. A showcase site with no recorded data has nothing to report.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Need a hand?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Start by ",
+              "type": "text"
+            },
+            {
+              "text": "checking your site for free",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/site-wordpress-pirate-verifier",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", then follow ",
+              "type": "text"
+            },
+            {
+              "text": "today’s verification steps",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/site-wordpress-pirate-verifications-a-faire-aujourd-hui",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". If the result worries you, or if you don’t know which backup to choose, I’ll take a look within 24 hours and tell you what I see, for free. If you entrust me with the restoration, I’ll write down exactly what was done, step by step.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sources:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "FAQ « My site was hacked », WordPress.org",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://wordpress.org/documentation/article/faq-my-site-was-hacked/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "quick-reference guide on website defacement, Cybermalveillance.gouv.fr",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/defiguration-de-site-internet",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "7 steps to remove malware from WordPress, Sucuri",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://blog.sucuri.net/2024/09/7-steps-to-remove-malware-from-wordpress.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "cleaning a hacked WordPress site, Sucuri",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://sucuri.net/guides/how-to-clean-hacked-wordpress/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "UpdraftCentral incident, guide by WP Staging",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://wp-staging.com/updraftplus-updraftcentral-security-incident-october-2026/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "October 2026 incident, TeamUpdraft",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://teamupdraft.com/blog/security-incident-october-2026/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "reporting a personal data breach, CNIL",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.cnil.fr/fr/notifier-une-violation-de-donnees-personnelles",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "118017a8-49c8-4c3d-bef4-d17352fe9c9f",
+            "body": [
+              {
+                "_uid": "i-25ccd865-0e2c-4040-b115-d1ba90380b8e",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "send me the link to the site",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/updraftplus-revoquer-updraftcentral-verifier-sauvegardes": {
+    "title": "UpdraftPlus: Revoking UpdraftCentral, Changing Keys, and Checking Backups After the October 2026 Breach",
+    "excerpt": "Over the weekend of October 17–18, 2026, UpdraftCentral’s encryption keys were exposed by the publisher of UpdraftPlus. Who is affected, which version to install, how to remove the compromised key, which passwords to change, and how to verify the integrity of your backups.",
+    "metaTitle": "UpdraftPlus & UpdraftCentral: What to Do After the Key Breach",
+    "metaDescription": "UpdraftCentral keys compromised on October 17–18, 2026: who is at risk, the secure version to install (1.26.13), the key to revoke, and backups to verify for integrity.",
+    "tags": [
+      "updraftplus",
+      "updraftcentral",
+      "updraftplus vulnerability",
+      "updraftplus breach",
+      "wordpress backup",
+      "wordpress security"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "UpdraftPlus is the most widely used WordPress backup plugin. Over the weekend of October 17-18, 2026, its developer, TeamUpdraft, suffered a breach, and the connection keys for UpdraftCentral, its remote site management tool, were leaked. Since October 18, these keys have been used to install fake extensions on WordPress sites, including up-to-date ones. This guide summarizes what the developer and security teams analyzing the attack have said, and outlines the steps to secure your site and check if your backups are intact.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To check in ten seconds if your site displays a version of UpdraftPlus prior to the patch, run it through ",
+              "type": "text"
+            },
+            {
+              "text": "my free checker",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/site-wordpress-pirate-verifier",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What happened",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A data leak, not a code vulnerability.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " TeamUpdraft detected unauthorized access to its site over the weekend of October 17-18. The customer database was compromised: names, email addresses, billing addresses, order history, hashed passwords, two-factor authentication settings, and the connection keys for UpdraftCentral, UpdraftVault, and UpdraftClone. No credit card data was stored. With these keys, the attacker sends commands to sites as if they came from you, including installing an extension. Patchstack and Nethemba confirm: this is not a flaw in UpdraftPlus code, and no CVE number has been assigned.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Timeline.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Patchstack detected the first attack on October 18 at 15:32 UTC. On October 19 at 07:17, the IT-Connect site, running UpdraftPlus Premium 2.26.11, received a command to install a fake extension. The same day, TeamUpdraft released version 1.26.12, then 1.26.13 shortly after 22:00 London time. On October 22, the developer added a recommendation: check your TeamUpdraft account for sites listed under UpdraftCentral that you haven’t connected yourself since October 19.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What was not affected, according to the developer.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The extension’s code and downloads, backups stored in your own storage (Google Drive, Dropbox, S3…), and self-hosted UpdraftCentral installations.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Who is exposed",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Any site with an active UpdraftCentral key, regardless of its version.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Free or Premium: TeamUpdraft, Patchstack, and Nethemba confirm both are affected. The option to add a site to UpdraftCentral is checked by default when linking UpdraftPlus to a TeamUpdraft account, and these keys never expire: Patchstack observed a key created in November 2025 still working. BleepingComputer estimates around 10% of UpdraftPlus sites have an UpdraftCentral or migration key, roughly 400,000 sites, without citing a source.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How to check.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Settings, UpdraftPlus, Advanced Tools tab, UpdraftCentral: if a key is listed, the site is exposed. With command-line access, the command `wp option get updraft_central_localkeys` will return a result in the same case.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Steps to take, in order",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1. A copy of the current state.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Files and database, off the server. It serves as evidence, not a restoration point: if the site is compromised, this copy is too.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "2. Connect directly and update.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Log in to your site’s administration panel (not from UpdraftCentral) and install version 1.26.13, or 2.26.13 if you have Premium, or a newer version. Avoid 1.26.12: due to a bug, it revoked no keys. Version 1.26.13 revokes keys created before the incident.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "3. Delete the key, all keys.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " In the UpdraftCentral tab under Advanced Tools, remove each key from the list of existing keys. Simply removing the site from your UpdraftCentral dashboard is not enough. Nethemba reports that keys created on October 18 between 12:07 and 21:00 UTC may not have been revoked by the update, which the editor has not confirmed: to be safe, delete them manually. Also delete the migration key if you’re not using it. In the command line, these are the options updraft_central_localkeys and updraft_migrator_localkeys.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "4. If a fake plugin is present, remove the key first.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The attacker reuses the keys: as long as the key exists, they can reinstall the plugin after your cleanup. Delete the key, then disable the suspicious plugin and move its folder outside the site (without deleting it from the admin panel—its uninstall script removes its traces—and without fixing its code if it causes errors). The identification of fake plugins and hidden accounts is detailed in ",
+              "type": "text"
+            },
+            {
+              "text": "my verification guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/site-wordpress-pirate-verifications-a-faire-aujourd-hui",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "5. Delete unknown accounts.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Fake plugins create an Editor who can install plugins, named in the format data-ops43, displayed as « Site Tools », with an @example.org email. It remains even after the plugin is deleted.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "6. Change passwords and secret keys.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The teamupdraft.com account, by typing the address yourself rather than clicking a link received via email, every reused password, and those of all administrators. Then the secret keys in wp-config.php, which close all open sessions, and the two-factor authentication, which must be reset. In Premium, Nethemba also advises removing the saved teamupdraft.com password from the plugin.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Are your backups healthy?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Those in your storage are unaffected by the breach.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " TeamUpdraft confirms this for backups stored on Google Drive, Dropbox, or S3. But if UpdraftCentral accessed your site, the editor asks you to reauthorize remote storage and change its access keys.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A backup made after the intrusion may contain the backdoor.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " If a fake plugin was installed on October 19, the automatic backup the next day copied it. To restore, use a backup from before October 17.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A backup from before October 17 still contains the old key.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " WP Staging reminds you: after restoration, delete the UpdraftCentral key again and redo the password and secret key changes. The step-by-step guide is in ",
+              "type": "text"
+            },
+            {
+              "text": "my restoration guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/restaurer-site-wordpress-apres-piratage",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "UpdraftVault: log in again.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " All sites have been logged out. In the UpdraftPlus settings, under the UpdraftVault section, log in with the new password, save, then run a manual backup to ensure everything is back up and running.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Should UpdraftCentral be reconnected?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Not yet.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Patchstack advises waiting for the editor to explain the source of the leak; in the latest update to their post, TeamUpdraft indicated that the investigation is still ongoing. If you manage multiple sites and remote management is essential, create the new key under an account that cannot install plugins. For further steps, Nethemba suggests blocking any request containing udrpc_message and preventing PHP from writing to the plugins directory—this should be handled by your hosting administrator.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is the free version of UpdraftPlus affected?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Yes, as soon as an UpdraftCentral key is active. On the morning of October 19th, before the patches, IT-Connect thought not; since then, the editor, Patchstack, and Nethemba have stated that both versions are affected.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Should UpdraftPlus be uninstalled?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No: the plugin’s code is not at fault. Update it, remove the UpdraftCentral key, and keep your backups. If you don’t use remote management, simply don’t reactivate it.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is this the same as the CVE-2026-10795 vulnerability?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. That vulnerability, fixed in June 2026 in versions 1.26.5 and 2.26.5, allowed commands to be forged without a key. It is unrelated to the October leak but affects the same sites—another reason to update.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My site received a fake plugin: have my customer data leaked?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "The plugin grants full access to the site: everything the site contains could have been read. If customer accounts, orders, or forms are stored, notification to the CNIL must be made within 72 hours if there is a risk to individuals.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Need help?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you prefer to delegate: I’ll remove the keys, check accounts, plugins, and files, verify your backups, and write up what’s been done. Free diagnosis within 24 hours, quote provided before any action.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sources:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "TeamUpdraft’s incident post, updated as of October 22nd",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://teamupdraft.com/blog/security-incident-october-2026/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "Patchstack’s analysis",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://patchstack.com/articles/updraftcentral-key-compromise-wordpress-backdoors/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "analysis by Nethemba",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://nethemba.com/updraftcentral-backdoor-analysis/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "BleepingComputer, October 20",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "IT-Connect, October 19",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.it-connect.fr/updraftplus-updraftcentral-porte-derobee-it-connect/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "CSO Online, October 21",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.csoonline.com/article/4238422/wordpress-sites-compromised-after-teamupdraft-credential-exposure.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "WP Staging guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://wp-staging.com/updraftplus-updraftcentral-security-incident-october-2026/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "UpdraftPlus page and changelog on WordPress.org",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://wordpress.org/plugins/updraftplus/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "6c96c9d4-3718-4493-ace1-08c9db0ffcb3",
+            "body": [
+              {
+                "_uid": "i-8f6ada4b-2c91-4483-afd8-981a9e642d1c",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "write to me",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/site-wordpress-pirate-verifications-a-faire-aujourd-hui": {
+    "title": "Hacked WordPress Site: 7 Checks to Perform Today, in Order",
+    "excerpt": "Since October 18, 2026, stolen UpdraftCentral keys have been used to install fake plugins and hidden accounts on WordPress sites—even those kept up to date. Here are the seven checks to perform today, in the exact order I follow them on a client’s site.",
+    "metaTitle": "Hacked WordPress Site: 7 Checks to Perform Today",
+    "metaDescription": "Fake plugins, hidden accounts, UpdraftCentral keys, suspicious .php files in uploads: the seven checks to perform today on a WordPress site.",
+    "tags": [
+      "hacked wordpress site",
+      "wordpress security breach",
+      "wordpress security",
+      "updraftplus",
+      "updraftcentral",
+      "check wordpress site"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Since October 18, 2026, stolen UpdraftCentral connection keys from the UpdraftPlus publisher have been used to install fake extensions and hidden accounts on WordPress sites. Updated sites were affected just like the others: the entry point was a valid key, not an outdated version. That same autumn, one campaign targeted Ninja Forms extension starting October 4, another Bricksforge starting October 7, and a WordPress core vulnerability was exploited the same day as its patch, September 22. If you have a WordPress site, here are the seven checks I perform on a client site, in order. Plan for about an hour if everything goes smoothly.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Before starting, run the site through ",
+              "type": "text"
+            },
+            {
+              "text": "my free scanner",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/site-wordpress-pirate-verifier",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": it scans the homepage and a few public files, and detects an extension stuck on an outdated version, an outdated WordPress installation, or visible signs of external injection. What it doesn’t see, these seven checks will uncover.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "First: a full backup, off the server",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A record, not a restore point.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Download the files and database to your computer, or send them to external storage, before touching anything. If the site is hacked, this backup is too: it won’t help you roll back, but it will help you compare, date the intrusion, and show your host or a provider what was found. Don’t delete anything before you’ve finished inspecting.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "1. Update directly by logging in",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Log in to each site’s admin panel directly, not through UpdraftCentral.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " That’s the first rule from TeamUpdraft, the publisher. Then, after backing up, update in this order.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "WordPress.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The latest version is 7.1.3, released October 6, 2026, with seven security fixes. If your site is still on an older branch, take at least its latest version—for example, 7.0.7, 6.9.10, or 6.8.11—which also received the same fixes. A site that hasn’t applied the September 22 patch (7.1.2, 7.0.6, 6.9.9, or 6.8.10, depending on the branch) remains exposed to the core vulnerability exploited since that day.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "UpdraftPlus.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Update to 1.26.13, or 2.26.13 for the Premium version, released on the evening of October 19. Avoid 1.26.12, published the same day: due to a bug, it didn’t revoke the keys.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Other extensions and the theme.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Apply all available updates. If you use Ninja Forms, check you’re at least on 3.15.4; Bricksforge, 3.1.8.10; Elementor Pro, 4.2.2.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " On October 21, PHP patched two critical vulnerabilities that WordPress updates don’t address. Ask your host for a fixed version (8.5.12, 8.4.27, 8.3.36, or 8.2.35), or check yours with ",
+              "type": "text"
+            },
+            {
+              "text": "my dedicated tool",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/faille-php-verifier-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Update and close the door securely. This doesn’t remove anything already entered: that’s the purpose of the six checks that follow.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "2. Accounts that can install extensions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Don’t just look at administrators.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The fake October 2026 extensions create an Editor account and grant it two permissions: manage settings and install extensions. In the list of accounts, it appears as a simple Editor. The names identified by Patchstack, Nethemba, and IT-Connect follow the same pattern: two words and two or three numbers (data-ops43, media-staff96, content-ops71), with « Site Tools » as the displayed name and an address at @example.org or @example.com.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What you need to do.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Open Accounts, All Accounts, and review each Editor and each Administrator: who created it, when, and with which address. Delete any account that no one recognizes, after changing your own password. Warning: some variants log in with the first existing administrator instead of creating an account, and the hidden account remains in place even after the extension is removed.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "3. Extensions, including the « Must-Use » tab",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In the admin panel.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Extensions, Installed Extensions: look for an extension you didn’t install. The descriptions found resemble maintenance tasks (« Small maintenance toolkit: keeps option storage tidy », « Maintenance helper »), with names like « Site Health Cache » or folders with random suffixes (load-stack-35c, site-health-364f, type-stack-285). Patchstack identified 99 different names. Also check the « Must-Use » tab (Must-Use in English), which is almost always overlooked.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On the server.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Some variants hide from the list. Open your hosting file manager or an FTP client, and check three folders: wp-content/plugins, wp-content/mu-plugins, and wp-content/upgrade. The latter keeps a copy of installed packages, even if the installation failed. A recent folder you don’t recognize is suspicious.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Don’t delete it from the admin panel.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Nethemba, who discovered the attack, advises disabling the extension and then moving its folder outside the site: deleting it from the admin panel triggers its uninstall script, which erases its traces. And if a page displays an « Undefined constant » error, don’t fix the code: the first variant was broken, and repairing it would reopen the backdoor.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "4. The UpdraftCentral key",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Where to find it.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Settings, UpdraftPlus, Advanced Tools tab, UpdraftCentral. If a key appears there, the site can receive remote commands. Remove all keys from the list of existing keys, not just the site in your UpdraftCentral dashboard: removing the site from the dashboard doesn’t delete the key.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You never activated it?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Check anyway. The box that adds the site to UpdraftCentral is checked by default when linking UpdraftPlus to a TeamUpdraft account, and these keys never expire. With command-line access, the command `wp option get updraft_central_localkeys` returns something if a key exists. The full procedure, including backups, is in ",
+              "type": "text"
+            },
+            {
+              "text": "my UpdraftPlus guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/updraftplus-revoquer-updraftcentral-verifier-sauvegardes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "5. The .php files in wp-content/uploads",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This folder should only contain images and documents.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Sucuri reminds us in its guides: a .php, .js, or .ico file in uploads is suspicious. Fall campaigns left them in specific places: wp-content/uploads/elementor/forms for Elementor Pro, wp-content/uploads/bricksforge/tmp for Bricksforge. In your hosting file manager, search for « .php » in the uploads folder; via command line, `find wp-content/uploads -name \"",
+              "type": "text"
+            },
+            {
+              "text": ".php\"` lists them.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "6. Google Search Console",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Three screens to check.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Security & Manual Actions, Security Issues: Google flags a hacked site here. Settings, Users & Permissions: an unknown owner is a classic sign of Japanese keyword hacking, which also adds its own sitemaps. Pages: a sudden spike in indexed pages. And in Google, a search `site:yourdomain.fr` reveals pages you didn’t write.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "7. Your hosting access logs",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What to look for.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Your host provides server logs. For UpdraftCentral, Nethemba spotted POST requests to the homepage with the user agent « WordPress/6.4; class-udrpc.php ». For secret link logins, requests to the homepage with a 32-character parameter: a 302 response likely means a successful login, a 500 response indicates a broken variant still installed. UpdraftPlus logs also track received commands, like « Command received: plugin.upload_plugin ». IPs aren’t reliable filters: Patchstack saw attackers switch infrastructure in under a day.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "If you find anything",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Change everything—twice.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " All admin passwords, FTP, database, hosting, and TeamUpdraft account passwords (type them manually, never click a link in an email). Then update the secret keys in wp-config.php, which closes all open sessions. Repeat after cleanup and reset two-factor authentication.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Restore if in doubt.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A backup from before October 17, then the UpdraftCentral key deleted again—a copy from that date still contains it. The steps are in ",
+              "type": "text"
+            },
+            {
+              "text": "my restoration guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/restaurer-site-wordpress-apres-piratage",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Think about personal data.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " If the site holds customer accounts, orders, or forms, report the breach to the CNIL within 72 hours if it risks harming individuals.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Don’t reconnect UpdraftCentral right away.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Patchstack advises waiting for the editor to explain the origin of the leak.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My site is up to date: am I affected?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "For UpdraftCentral, yes, if the site had an active key: the IT-Connect site, in UpdraftPlus Premium 2.26.11, received the command on October 19 at 7:17 AM. For Ninja Forms or Bricksforge, a patched version closes the door but does not remove an already created account.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How long do these checks take?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "About an hour on a healthy site, with access to the admin panel and hosting. If cleaning or restoring is needed, count more time.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Do I need to be a developer?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No for the first six checks: the WordPress admin, the hosting file manager, and Search Console are sufficient. Logs and the command line require more familiarity.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Would a security extension have been enough?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Wordfence or Sucuri help detect modified files and block part of the attacks, but a command signed with a real UpdraftCentral key is seen as a legitimate command.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Would you prefer me to handle it?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I perform these checks from the inside, clean if necessary, change keys and passwords, update everything, and write down what has been done: free diagnosis within 24 hours, quote before any intervention. The process and update prices are on ",
+              "type": "text"
+            },
+            {
+              "text": "the remote intervention page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/mise-a-jour-php-site-logiciel",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sources:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "October 2026 security incident, TeamUpdraft",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://teamupdraft.com/blog/security-incident-october-2026/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "compromised UpdraftCentral keys and backdoors, Patchstack",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://patchstack.com/articles/updraftcentral-key-compromise-wordpress-backdoors/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "backdoor analysis, Nethemba",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://nethemba.com/updraftcentral-backdoor-analysis/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "the IT-Connect site was hit on October 19th",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.it-connect.fr/updraftplus-updraftcentral-porte-derobee-it-connect/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "XSS campaign by Ninja Forms, Patchstack",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://patchstack.com/articles/four-ways-back-in-the-wordpress-xss-campaign-that-hides-its-own-admin-account/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "Bricksforge vulnerability exploited, Patchstack",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://patchstack.com/articles/critical-unauthenticated-arbitrary-file-upload-vulnerability-exploited-in-bricksforge-plugin/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "Heartbleed-like flaw CVE-2026-87902, Patchstack",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://patchstack.com/articles/cve-2026-87902-attackers-started-probing-wordpress-sites-hours-after-the-patch/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "WordPress 7.1.3, WordPress.org",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://wordpress.org/news/2026/10/wordpress-7-1-3-maintenance-and-security-release/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "PHP vulnerabilities from October 21st, Sucuri",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://blog.sucuri.net/2026/10/critical-php-security-update-two-rce-flaws-cve-2026-109618-cve-2026-109619.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "Japanese keyword spam, Sucuri",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://blog.sucuri.net/2023/09/how-to-find-fix-japanese-seo-spam.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "8c848123-465c-4ed5-91e3-3cd701970865",
+            "body": [
+              {
+                "_uid": "i-dca87896-c309-4caa-a2e6-fbfafc40b1ef",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Send me the site link",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
