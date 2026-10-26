@@ -280,6 +280,37 @@ const LANDSCAPING_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
+const CLEANING_BUSINESS_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+  toolId: 'cleaning-business-software',
+  routeName: 'tools-cleaning-business-software',
+  icon: 'SprayCan',
+  wording: {
+    fr: {
+      emphasizedIntro: `Vous dirigez une entreprise de nettoyage${NBSP}?`,
+      text: 'En 6 questions, le test vous dit quel logiciel choisir pour le planning, le pointage de vos agents et le contrôle qualité, avec les prix 2026 des logiciels du marché et un modèle de planning des passages gratuit.',
+      linkLabel: `Faire le test${NBSP}: quel logiciel pour mon entreprise de nettoyage${NBSP}?`,
+      listLabel: `Quel logiciel pour mon entreprise de nettoyage${NBSP}?`,
+      hubDescription: `Planning des agents, pointage sur site, contrôle qualité et reprise de marché${NBSP}: le logiciel qui convient à votre entreprise de propreté, et son prix.`,
+    },
+    en: {
+      emphasizedIntro: 'Running a cleaning business in France?',
+      text: 'In 6 questions, the test tells you which software to choose for scheduling, clocking your cleaners in and out and quality inspections, with the 2026 prices of the software on the French market.',
+      linkLabel: 'Take the test: which software for my cleaning business?',
+      listLabel: 'Which software for my cleaning business?',
+      hubDescription:
+        'Cleaner schedules, on-site clocking, quality inspections and contract takeovers: the software that fits your cleaning business, and its price.',
+    },
+    es: {
+      emphasizedIntro: '¿Diriges una empresa de limpieza en Francia?',
+      text: 'En 6 preguntas, el test te dice qué programa elegir para la planificación, el fichaje de tu personal y el control de calidad, con los precios 2026 de los programas del mercado francés.',
+      linkLabel: 'Hacer el test: ¿qué software para mi empresa de limpieza?',
+      listLabel: '¿Qué software para mi empresa de limpieza?',
+      hubDescription:
+        'Planificación del personal, fichaje en el sitio, control de calidad y subrogaciones: el programa que encaja con tu empresa de limpieza, y su precio.',
+    },
+  },
+}
+
 const AI_APP_CHECK_TEASER: DibodevToolTeaserContent = {
   toolId: AI_APP_CHECK_QUIZ_ID,
   routeName: 'ai-app-takeover',
@@ -498,6 +529,7 @@ export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserConte
   'updraftplus-revoquer-updraftcentral-verifier-sauvegardes': WORDPRESS_HACK_CHECK_TEASER,
   'restaurer-site-wordpress-apres-piratage': WORDPRESS_HACK_CHECK_TEASER,
   'facture-electronique-artisan-ce-qui-change': E_INVOICING_CHECK_TEASER,
+  'logiciel-gestion-des-temps-feuilles-heures-excel': CLEANING_BUSINESS_SOFTWARE_TEASER,
   'paysagiste-outil-metier-devis-chantiers-plannings': LANDSCAPING_SOFTWARE_TEASER,
   'logiciel-facturation-garage-devis-ordre-de-reparation-facture': E_INVOICING_CHECK_TEASER,
   'reprendre-application-vibe-coding': AI_APP_CHECK_TEASER,
@@ -532,6 +564,7 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   ELECTRICIAN_SOFTWARE_TEASER,
   PERSONAL_TRAINER_SOFTWARE_TEASER,
   LANDSCAPING_SOFTWARE_TEASER,
+  CLEANING_BUSINESS_SOFTWARE_TEASER,
   AI_APP_CHECK_TEASER,
   PUBLIC_AID_SIMULATOR_TEASER,
   PHP_VULNERABILITY_CHECK_TEASER,

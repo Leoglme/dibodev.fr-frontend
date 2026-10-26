@@ -1,0 +1,236 @@
+import type { DibodevTradeQuizWording } from '~/core/types/DibodevTradeSoftwareQuiz'
+
+export const CLEANING_BUSINESS_QUIZ_WORDING_EN: DibodevTradeQuizWording = {
+  numberLocale: 'en-GB',
+  quizName: 'Which software for your cleaning business?',
+  questions: [
+    {
+      id: 'team',
+      title: 'How many people work in the company?',
+      helpText: 'Cleaners, team leaders, office staff and you included.',
+      leadMessageLabel: 'Team',
+      display: 'tiles',
+      selection: 'single',
+      maxSelected: null,
+      options: [
+        { id: '1', label: '1', unit: 'person', icon: null },
+        { id: '2-4', label: '2 to 4', unit: 'people', icon: null },
+        { id: '5-10', label: '5 to 10', unit: 'people', icon: null },
+        { id: '10+', label: '10+', unit: 'people', icon: null },
+      ],
+    },
+    {
+      id: 'sites',
+      title: 'From how many branches or offices?',
+      helpText: 'Each address you manage teams from, not counting your customers’ sites.',
+      leadMessageLabel: 'Branches',
+      display: 'tiles',
+      selection: 'single',
+      maxSelected: null,
+      options: [
+        { id: '1', label: '1', unit: 'branch', icon: null },
+        { id: '2-3', label: '2 or 3', unit: 'branches', icon: null },
+        { id: '4+', label: '4+', unit: 'branches', icon: null },
+      ],
+    },
+    {
+      id: 'scope',
+      title: 'Where do you work?',
+      helpText: '',
+      leadMessageLabel: 'Services',
+      display: 'cards',
+      selection: 'multiple',
+      maxSelected: null,
+      options: [
+        { id: 'offices', label: 'Offices, shops and business premises', unit: '', icon: 'Store' },
+        { id: 'condo', label: 'Apartment buildings and common areas', unit: '', icon: 'KeyRound' },
+        { id: 'homes', label: 'Cleaning at private homes', unit: '', icon: 'Armchair' },
+        { id: 'sensitive', label: 'Healthcare, food industry and sensitive sites', unit: '', icon: 'ShieldCheck' },
+      ],
+    },
+    {
+      id: 'pains',
+      title: 'What takes up most of your time?',
+      helpText: '',
+      leadMessageLabel: 'Time-consuming tasks',
+      display: 'list',
+      selection: 'multiple',
+      maxSelected: 3,
+      options: [
+        { id: 'planning', label: 'Building the schedule and covering absences', unit: '', icon: null },
+        { id: 'timesheets', label: 'Checking hours on site (arrivals, departures, late starts)', unit: '', icon: null },
+        { id: 'quality', label: 'Proving quality to customers (inspections, photos, reports)', unit: '', icon: null },
+        { id: 'payroll', label: 'Preparing payroll from the hours actually worked', unit: '', icon: null },
+        { id: 'quotes', label: 'Pricing quotes (surface areas, frequencies, time on site)', unit: '', icon: null },
+        { id: 'invoices', label: 'Invoicing contracts every month and chasing payments', unit: '', icon: null },
+        { id: 'transfers', label: 'Taking over the staff of a contract you win (article 7)', unit: '', icon: null },
+        { id: 'safety', label: 'Tracking products and prevention plans', unit: '', icon: null },
+      ],
+    },
+    {
+      id: 'current',
+      title: 'Do you already use management software?',
+      helpText: '',
+      leadMessageLabel: 'Current software',
+      display: 'cards',
+      selection: 'single',
+      maxSelected: null,
+      options: [
+        { id: 'none', label: 'No, paper, Excel or messages', unit: '', icon: 'FileSpreadsheet' },
+        { id: 'unfit', label: 'Yes, but it does not fit the way we work', unit: '', icon: 'AlertCircle' },
+        { id: 'fit', label: 'Yes, and it suits us', unit: '', icon: 'CheckCircle' },
+      ],
+    },
+    {
+      id: 'priority',
+      title: 'What matters most to you?',
+      helpText: '',
+      leadMessageLabel: 'Priority',
+      display: 'cards',
+      selection: 'single',
+      maxSelected: null,
+      options: [
+        { id: 'budget', label: 'Starting fast, on a small budget', unit: '', icon: 'Zap' },
+        { id: 'simple', label: 'A simple tool for the cleaners', unit: '', icon: 'Smile' },
+        {
+          id: 'rules',
+          label: 'A tool that follows our sites, shifts and contracts',
+          unit: '',
+          icon: 'SlidersHorizontal',
+        },
+        {
+          id: 'ownership',
+          label: 'No more subscription, and keeping our data',
+          unit: '',
+          icon: 'KeyRound',
+        },
+      ],
+    },
+  ],
+  conjunction: 'and',
+  priceRangeTemplate: '€{min} to €{max}',
+  weeksRangeTemplate: '{min} to {max} weeks',
+  recapTeamWords: {
+    '1': 'a single person',
+    '2-4': '2 to 4 people',
+    '5-10': '5 to 10 people',
+    '10+': 'more than 10 people',
+  },
+  recapSitesWords: { '1': 'a single branch', '2-3': '2 or 3 branches', '4+': '4 branches or more' },
+  recapScopeWords: {
+    offices: 'business premises',
+    condo: 'apartment buildings',
+    homes: 'private homes',
+    sensitive: 'sensitive sites',
+  },
+  recapScopeTemplate: '{items}',
+  complementPainWords: {
+    planning: 'the schedule',
+    timesheets: 'checking hours',
+    quality: 'quality inspections',
+    payroll: 'payroll preparation',
+    quotes: 'quotes',
+    invoices: 'invoices',
+    transfers: 'staff takeovers',
+    safety: 'safety (products, prevention plans)',
+  },
+  features: {
+    planning:
+      'The schedule of each site and each cleaner, with a replacement suggested from availability and contract hours',
+    timesheets:
+      'On-site clock-in and clock-out (QR code, NFC or GPS), compared with the schedule, with an alert when someone is missing',
+    quality: 'Area-by-area inspection grids, scored and photographed on the phone, and a report sent to the customer',
+    payroll: 'The month’s actual hours, by cleaner and by site, ready to go to your payroll software',
+    quotes: 'Quotes calculated from the surface areas, frequencies and time on site of each location',
+    invoices:
+      'Contracts invoiced every month with nothing retyped, with payment reminders and invoices ready for French e-invoicing',
+    transfers:
+      'The staff list of each contract (contract type, seniority, hours on site) ready to hand over or take over when the contract changes provider',
+    safety:
+      'The safety data sheets of the products used on each site, and an alert when a customer nears 400 hours over 12 months (written prevention plan)',
+    homeServices: 'The quote for private customers and the right VAT rate on each invoice, 10% or 20%',
+    protocols:
+      'A protocol per area (frequency, product, method) and a record of each visit, for the most demanding customers',
+    keys: 'The keys, badges and access codes each customer hands over, and which cleaner has them',
+    multiSite: 'The schedule of each branch, and cleaners lent from one branch to another to cover absences',
+  },
+  checks: {
+    primary: 'Does on-site clocking feed the schedule, payroll and invoices, with nothing retyped?',
+    planning: 'Can you replace an absent cleaner in a few clicks, seeing who is available?',
+    timesheets: 'Does clocking work in a basement with no network, by QR code or NFC tag?',
+    quality: 'Can you build your own area-by-area inspection grids, with photos and customer signature?',
+    payroll: 'Can the month’s hours be exported to your payroll software?',
+    quotes: 'Is the quote calculated from surface areas and visit frequencies?',
+    invoices: 'Are invoices ready for French e-invoicing (Factur-X)?',
+    transfers: 'Can you pull the staff list of a contract, with contract type, seniority and hours, for a takeover?',
+    safety: 'Can you attach safety data sheets to the products used on each site?',
+    homeServices:
+      'Does the software handle the 10% VAT of personal services, and the quote required from €100 incl. VAT per month?',
+    protocols: 'Can you describe a protocol per area and prove each visit to the customer?',
+    keys: 'Does the software keep track of the keys and badges each customer hands over?',
+    export: 'Can you export your data (sites, cleaners, contracts, hours) if you change software?',
+  },
+  market: {
+    eyebrow: 'Budget to plan',
+    priceRange: '€29 to €399',
+    priceSuffix: 'excl. VAT per month, depending on the number of users or cleaners',
+    priceExamples: [
+      { label: 'PROPRET', value: '€29.99 to €99.99/month' },
+      { label: 'PROGESTI', value: '€59 to €399/month' },
+      { label: 'CleanPlus', value: 'from €29/month' },
+      { label: 'MyClic Propreté', value: '€169/month' },
+    ],
+    footnote:
+      'CleanPlus adds €3.40 to €4.40 excl. VAT per cleaner per month, MyClic Propreté includes 3 staff. Experhygia starts at €30 excl. VAT per month, Organilog costs €19 to €64 per user per month. Penbase MOZAIK Clean, Teleric, Progiclean and 2BePragma are on quote.',
+    footnoteLink: { label: 'See all prices', href: '#software' },
+    adviceTitle: 'Check before choosing',
+    disclaimer: 'Public prices checked on 26 October 2026.',
+    ctaLabel: 'Ask for free advice',
+    leadFormTitle: 'Free advice to choose your software',
+    leadFormIntro:
+      'I reply within 24 hours to talk it through, by phone or video call. Your test answers are attached to your message.',
+    leadBudget: 'Off-the-shelf software, €29 to €399 excl. VAT per month',
+  },
+  project: {
+    eyebrow: 'Price range, fixed price',
+    durationLabel: 'Timeline',
+    maintenanceLabel: 'Maintenance',
+    maintenanceValue: '€100 to €300/month',
+    complementFootnote: 'Paid once, on top of your current subscription.',
+    customFootnote: 'Paid once: the tool and its code belong to you.',
+    adviceTitle: 'To plan first',
+    disclaimer: 'Indicative result. The final price is set in the quote.',
+    ctaLabel: 'Get my estimate',
+    leadFormTitle: 'Get my detailed estimate',
+    leadFormIntro:
+      'I reply within 24 hours with first ideas and a more precise budget. Your test answers are attached to your message.',
+    leadBudgetTemplate: '{range} ({kind})',
+    complementKind: 'custom extension',
+    customKind: 'custom tool',
+  },
+  results: {
+    custom: {
+      title: 'A custom tool for your cleaning business',
+      explanation:
+        'At your size and with your own rules (sites, shifts, contracts, contract takeovers), off-the-shelf software makes you adapt to it. A tool designed for you follows the way you work and belongs to you. Your payroll and accounts stay in your software, connected to the tool.',
+    },
+    complement: {
+      title: 'Keep your software, add a custom extension',
+      explanation:
+        'Your software does the basic work, no need to change it. A small tool plugged into it can fix what still takes up your time{pains}.',
+      painsTemplate: ': {list}',
+    },
+    solo: {
+      title: 'Off-the-shelf software is enough for you',
+      explanation:
+        'Working alone, cleaning software at around €30 excl. VAT per month covers the essentials: schedule, clocking, contracts and invoices. A custom tool would not pay off.',
+      keepCurrentSentence: ' If yours suits you, keep it.',
+    },
+    market: {
+      title: 'Off-the-shelf software is enough for now',
+      explanation:
+        'At your size, off-the-shelf cleaning software covers the essentials: schedule, on-site clocking, quality inspections, contracts and invoices. A custom tool would cost you more than it would earn you today.',
+      unfitSentence: ' If yours does not suit you, compare two or three with the points below before changing.',
+    },
+  },
+}

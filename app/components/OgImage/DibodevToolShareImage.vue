@@ -130,6 +130,13 @@ const TOOL_ICON_PATHS: Record<DibodevToolShareImageIcon, string[]> = {
     'M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z',
     'M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12',
   ],
+  sparkles: [
+    'm12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z',
+    'M5 3v4',
+    'M19 17v4',
+    'M3 5h4',
+    'M17 19h4',
+  ],
 }
 
 /** Space drawn between the parts of a title line (Satori drops the spaces at the edge of each span). */
