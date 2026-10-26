@@ -249,6 +249,37 @@ const PERSONAL_TRAINER_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
+const LANDSCAPING_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+  toolId: 'landscaping-software',
+  routeName: 'tools-landscaping-software',
+  icon: 'Sprout',
+  wording: {
+    fr: {
+      emphasizedIntro: `Vous êtes paysagiste${NBSP}?`,
+      text: 'En 6 questions, le test vous dit quel logiciel choisir pour vos devis, vos contrats d’entretien et vos chantiers, avec les prix 2026 des logiciels du marché et un modèle de devis et de contrat d’entretien gratuit.',
+      linkLabel: `Faire le test${NBSP}: quel logiciel pour mon entreprise de paysage${NBSP}?`,
+      listLabel: `Quel logiciel pour mon entreprise de paysage${NBSP}?`,
+      hubDescription: `Devis d’aménagement, contrats d’entretien, planning des équipes et attestations fiscales${NBSP}: le logiciel qui convient à votre entreprise de paysage, et son prix.`,
+    },
+    en: {
+      emphasizedIntro: 'Running a landscaping business in France?',
+      text: 'In 6 questions, the test tells you which software to choose for your quotes, maintenance contracts and job sites, with the 2026 prices of the software on the French market.',
+      linkLabel: 'Take the test: which software for my landscaping business?',
+      listLabel: 'Which software for my landscaping business?',
+      hubDescription:
+        'Landscaping quotes, maintenance contracts, team schedules and tax certificates: the software that fits your landscaping business, and its price.',
+    },
+    es: {
+      emphasizedIntro: '¿Tienes una empresa de paisajismo en Francia?',
+      text: 'En 6 preguntas, el test te dice qué programa elegir para tus presupuestos, tus contratos de mantenimiento y tus obras, con los precios 2026 de los programas del mercado francés.',
+      linkLabel: 'Hacer el test: ¿qué software para mi empresa de paisajismo?',
+      listLabel: '¿Qué software para mi empresa de paisajismo?',
+      hubDescription:
+        'Presupuestos de paisajismo, contratos de mantenimiento, planificación de los equipos y certificados fiscales: el programa que encaja con tu empresa de paisajismo, y su precio.',
+    },
+  },
+}
+
 const AI_APP_CHECK_TEASER: DibodevToolTeaserContent = {
   toolId: AI_APP_CHECK_QUIZ_ID,
   routeName: 'ai-app-takeover',
@@ -467,6 +498,7 @@ export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserConte
   'updraftplus-revoquer-updraftcentral-verifier-sauvegardes': WORDPRESS_HACK_CHECK_TEASER,
   'restaurer-site-wordpress-apres-piratage': WORDPRESS_HACK_CHECK_TEASER,
   'facture-electronique-artisan-ce-qui-change': E_INVOICING_CHECK_TEASER,
+  'paysagiste-outil-metier-devis-chantiers-plannings': LANDSCAPING_SOFTWARE_TEASER,
   'logiciel-facturation-garage-devis-ordre-de-reparation-facture': E_INVOICING_CHECK_TEASER,
   'reprendre-application-vibe-coding': AI_APP_CHECK_TEASER,
   'application-metier-no-code-ia-limites': AI_APP_CHECK_TEASER,
@@ -499,6 +531,7 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   FIELD_SERVICE_SOFTWARE_TEASER,
   ELECTRICIAN_SOFTWARE_TEASER,
   PERSONAL_TRAINER_SOFTWARE_TEASER,
+  LANDSCAPING_SOFTWARE_TEASER,
   AI_APP_CHECK_TEASER,
   PUBLIC_AID_SIMULATOR_TEASER,
   PHP_VULNERABILITY_CHECK_TEASER,

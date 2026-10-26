@@ -76,6 +76,7 @@ import Smile from '~/components/icons/Smile.vue'
 import Snowflake from '~/components/icons/Snowflake.vue'
 import Speaker from '~/components/icons/Speaker.vue'
 import SprayCan from '~/components/icons/SprayCan.vue'
+import Sprout from '~/components/icons/Sprout.vue'
 import Star from '~/components/icons/Star.vue'
 import Store from '~/components/icons/Store.vue'
 import Tent from '~/components/icons/Tent.vue'
@@ -177,6 +178,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   Snowflake,
   Speaker,
   SprayCan,
+  Sprout,
   Star,
   Store,
   Tent,
