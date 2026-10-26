@@ -1,5 +1,7 @@
 import type { DibodevToolTeaserContent } from '~/core/types/DibodevToolTeaser'
 import { AI_APP_CHECK_QUIZ_ID } from '~/core/constants/aiAppCheckQuiz'
+import { COLD_CALLING_CHECK_ROUTE_NAME } from '~/core/constants/coldCallingCheck/pageShared'
+import { COLD_CALLING_CHECK_QUIZ_ID } from '~/core/constants/coldCallingCheckQuiz'
 import { WORDPRESS_HACK_CHECK_ROUTE_NAME } from '~/core/constants/wordpressHackCheck/pageShared'
 import { E_INVOICING_SCOPE_QUIZ_ID } from '~/core/constants/eInvoicingScopeQuiz'
 import { NBSP } from '~/core/constants/typography'
@@ -515,7 +517,43 @@ export const E_INVOICING_SCOPE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
+const COLD_CALLING_CHECK_TEASER: DibodevToolTeaserContent = {
+  toolId: COLD_CALLING_CHECK_QUIZ_ID,
+  routeName: COLD_CALLING_CHECK_ROUTE_NAME,
+  icon: 'Phone',
+  wording: {
+    fr: {
+      emphasizedIntro: `Vous appelez encore vos prospects${NBSP}?`,
+      text: 'Depuis le 11 août 2026, appeler un particulier sans son accord est interdit. En 5 questions, le test vous dit qui vous pouvez encore appeler, et comment trouver des clients autrement.',
+      linkLabel: `Faire le test${NBSP}: puis-je encore appeler${NBSP}?`,
+      listLabel: `Démarchage téléphonique interdit${NBSP}: puis-je encore appeler${NBSP}?`,
+      hubDescription: `Particuliers ou entreprises, secteur, clients, accord${NBSP}: ce qui reste permis depuis la fin de Bloctel, et comment faire venir les demandes.`,
+      hubMeta: '5 questions · 1 minute',
+    },
+    en: {
+      emphasizedIntro: 'Still cold calling prospects in France?',
+      text: 'Since 11 August 2026, calling a private individual without their consent is banned in France. In 5 questions, the test tells you who you can still call, and how to find customers another way.',
+      linkLabel: 'Take the test: can I still call?',
+      listLabel: 'Cold calling ban in France: can I still call?',
+      hubDescription:
+        'Private individuals or businesses, sector, customers, consent: what is still allowed since the end of Bloctel, and how to bring the requests in.',
+      hubMeta: '5 questions · 1 minute',
+    },
+    es: {
+      emphasizedIntro: '¿Sigues llamando a tus clientes potenciales en Francia?',
+      text: 'Desde el 11 de agosto de 2026, llamar a un particular sin su consentimiento está prohibido en Francia. En 5 preguntas, el test te dice a quién puedes seguir llamando, y cómo encontrar clientes de otra forma.',
+      linkLabel: 'Hacer el test: ¿puedo seguir llamando?',
+      listLabel: 'Prospección telefónica prohibida en Francia: ¿puedo seguir llamando?',
+      hubDescription:
+        'Particulares o empresas, sector, clientes, consentimiento: lo que sigue permitido desde el fin de Bloctel, y cómo hacer que te lleguen las solicitudes.',
+      hubMeta: '5 preguntas · 1 minuto',
+    },
+  },
+}
+
 export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserContent> = {
+  'artisan-tpe-rennes-site-web-outil-metier-sur-mesure': COLD_CALLING_CHECK_TEASER,
+  'site-web-sur-mesure-menuiserie-2026': COLD_CALLING_CHECK_TEASER,
   'faille-php-octobre-2026-site-boutique-logiciel-que-faire': PHP_VULNERABILITY_CHECK_TEASER,
   'changer-version-php-ovh-faille-octobre-2026': PHP_VULNERABILITY_CHECK_TEASER,
   'changer-version-php-o2switch-faille-octobre-2026': PHP_VULNERABILITY_CHECK_TEASER,
@@ -571,6 +609,7 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   WORDPRESS_HACK_CHECK_TEASER,
   E_INVOICING_CHECK_TEASER,
   E_INVOICING_SCOPE_TEASER,
+  COLD_CALLING_CHECK_TEASER,
 ]
 
 /** The public aid simulator, teased under the comparison of every trade tool page. */

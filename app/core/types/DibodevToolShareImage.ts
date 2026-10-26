@@ -11,6 +11,7 @@ export type DibodevToolShareImageIcon =
   | 'receipt'
   | 'leaf'
   | 'sparkles'
+  | 'phone'
 
 /** `highlight` is drawn in violet wherever it appears in `titleLines`. */
 export type DibodevToolShareImageProps = {
