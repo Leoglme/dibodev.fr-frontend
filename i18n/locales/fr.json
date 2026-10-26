@@ -231,6 +231,7 @@
       "electricianSoftware": "Logiciel pour électricien",
       "personalTrainerSoftware": "Logiciel pour coach sportif",
       "eInvoicingScope": "Facture électronique : suis-je concerné ?",
+      "wordpressHackCheck": "Site WordPress piraté : vérifier",
       "budgetEstimator": "Estimateur de budget"
     }
   },
@@ -602,6 +603,18 @@
           "phpHidden": "site en PHP, version masquée",
           "notPhp": "site pas en PHP",
           "unknown": "aucun signe de PHP visible"
+        }
+      },
+      "wordpressHack": {
+        "messageWithSite": "Bonjour,\nmon site WordPress {site} vient de passer l'outil de vérification. Résultat : « {verdict} ».\nPouvez-vous me dire s'il est piraté ou vulnérable, et quoi faire ?",
+        "messageWithoutSite": "Bonjour,\nj'ai un doute sur mon site WordPress (extension vulnérable, piratage, mise à jour). Pouvez-vous me dire s'il est touché et quoi faire ?\nLe lien de mon site : ",
+        "verdicts": {
+          "suspiciousSignals": "signes suspects sur la page d'accueil",
+          "vulnerablePlugin": "extension vulnérable",
+          "outdatedCore": "WordPress trop ancien",
+          "cleanSurface": "rien de visible de l'extérieur",
+          "notWordPress": "site pas sous WordPress",
+          "unknown": "aucun signe lisible"
         }
       },
       "phpUpdate": {

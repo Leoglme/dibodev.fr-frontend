@@ -62,6 +62,12 @@ export const TRACKING_EVENTS = {
   phpVulnerabilityChecked: 'php_vulnerability_checked',
   /** A hosting guide opened from the result card of the PHP vulnerability checker. */
   phpVulnerabilityGuideClicked: 'php_vulnerability_guide_clicked',
+  /** First address typed in the WordPress hack checker (sent once per page view). */
+  wordpressHackCheckStarted: 'wordpress_hack_check_started',
+  /** A site checked by the WordPress hack checker, with the verdict (or the error), never the address. */
+  wordpressHackChecked: 'wordpress_hack_checked',
+  /** A guide opened from the result card of the WordPress hack checker. */
+  wordpressHackGuideClicked: 'wordpress_hack_guide_clicked',
   /** First name typed in the e-invoicing software checker (sent once per page view). */
   eInvoicingSoftwareCheckStarted: 'e_invoicing_software_check_started',
   /** A tool checked by the e-invoicing software checker, with the verdict and the tool matched, never the text typed. */

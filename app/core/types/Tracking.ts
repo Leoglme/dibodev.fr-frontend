@@ -13,6 +13,12 @@ import type {
   DibodevPhpVulnerabilityVerdict,
 } from '~/core/types/DibodevPhpVulnerabilityCheck'
 import type { DibodevPublicAidProjectType, DibodevPublicAidStatus } from '~/core/types/DibodevPublicAid'
+import type { DibodevSiteCheckErrorKind } from '~/core/types/DibodevSiteCheck'
+import type {
+  DibodevWordPressHackGuideKey,
+  DibodevWordPressHackSignalKey,
+  DibodevWordPressHackVerdict,
+} from '~/core/types/DibodevWordPressHackCheck'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 /** Status of a contact form submission. */
@@ -97,6 +103,22 @@ export type TrackingEventPayloads = {
     guide: DibodevPhpVulnerabilityHostGuideKey
     verdict: DibodevPhpVulnerabilityVerdict
     hostingProvider: DibodevPhpVulnerabilityHostingKey | null
+  }
+  [TRACKING_EVENTS.wordpressHackCheckStarted]: { location: string }
+  [TRACKING_EVENTS.wordpressHackChecked]: {
+    location: string
+    outcome: 'result' | 'error'
+    verdict: DibodevWordPressHackVerdict | null
+    platform: DibodevPhpVulnerabilityPlatformKey | null
+    vulnerablePlugin: string | null
+    coreVersion: string | null
+    signals: DibodevWordPressHackSignalKey[]
+    errorKind: DibodevSiteCheckErrorKind | null
+  }
+  [TRACKING_EVENTS.wordpressHackGuideClicked]: {
+    location: string
+    guide: DibodevWordPressHackGuideKey
+    verdict: DibodevWordPressHackVerdict
   }
   [TRACKING_EVENTS.eInvoicingSoftwareCheckStarted]: { location: string }
   [TRACKING_EVENTS.eInvoicingSoftwareChecked]: {

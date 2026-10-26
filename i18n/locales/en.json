@@ -231,6 +231,7 @@
       "electricianSoftware": "Electrician software",
       "personalTrainerSoftware": "Personal trainer software",
       "eInvoicingScope": "E-invoicing: does it apply to me?",
+      "wordpressHackCheck": "Hacked WordPress site: check",
       "budgetEstimator": "Budget estimator"
     }
   },
@@ -602,6 +603,18 @@
           "phpHidden": "PHP site, version hidden",
           "notPhp": "site not on PHP",
           "unknown": "no visible sign of PHP"
+        }
+      },
+      "wordpressHack": {
+        "messageWithSite": "Hello,\nmy WordPress site {site} just went through the checker. Result: “{verdict}”.\nCan you tell me whether it is hacked or vulnerable, and what to do?",
+        "messageWithoutSite": "Hello,\nI have doubts about my WordPress site (vulnerable extension, hacking, update). Can you tell me whether it is affected and what to do?\nMy website link: ",
+        "verdicts": {
+          "suspiciousSignals": "suspicious signs on the home page",
+          "vulnerablePlugin": "vulnerable extension",
+          "outdatedCore": "outdated WordPress",
+          "cleanSurface": "nothing visible from outside",
+          "notWordPress": "site not on WordPress",
+          "unknown": "no readable sign"
         }
       },
       "phpUpdate": {

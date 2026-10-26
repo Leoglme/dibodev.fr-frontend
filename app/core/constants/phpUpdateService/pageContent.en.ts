@@ -113,6 +113,10 @@ export const PHP_UPDATE_SERVICE_PAGE_EN: DibodevPhpUpdateServicePageContent = {
         description: 'Themes and plugins updated along with PHP, and an old plugin replaced when it blocks.',
       },
       {
+        title: 'Hacked WordPress site',
+        description: `Clean-up and hardening after a hack (extensions, accounts, files, backups), quoted after the free diagnosis: I tell you first what I see.`,
+      },
+      {
         title: 'PrestaShop, Magento, Joomla, Drupal',
         description: 'PHP upgrade compatible with the CMS version, payment modules tested.',
       },
@@ -163,6 +167,10 @@ export const PHP_UPDATE_SERVICE_PAGE_EN: DibodevPhpUpdateServicePageContent = {
     eyebrow: 'Frequently asked questions',
     title: 'Before you write',
     questions: [
+      {
+        question: `My WordPress site looks hacked: is it the same job?`,
+        answer: `No, and not at the same price. I start with the free diagnosis (the “Has my WordPress site been hacked?” tool, plus a look from the inside if you give me access), then I send a quote for the clean-up: extensions and accounts checked, unknown files removed, passwords and keys changed, a clean backup restored when needed, then PHP, WordPress and the extensions updated. The price depends on what the diagnosis finds.`,
+      },
       {
         question: 'My host says no action is required. Why do anything?',
         answer:

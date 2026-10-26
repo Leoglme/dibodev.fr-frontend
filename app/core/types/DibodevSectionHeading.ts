@@ -12,3 +12,9 @@ export type DibodevSectionHeadingProps = {
   intro: string
   align: 'left' | 'center'
 }
+
+export type DibodevSectionHeadingContent = {
+  eyebrow: string
+  title: string
+  intro: string
+}

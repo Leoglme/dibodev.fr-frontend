@@ -267,6 +267,11 @@ const toolLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLi
     to: localePath('tools-e-invoicing-scope-check'),
   },
   {
+    key: 'wordpressHackCheck',
+    title: t('footer.tools.wordpressHackCheck'),
+    to: localePath('tools-wordpress-hack-check'),
+  },
+  {
     key: 'budgetEstimator',
     title: t('footer.tools.budgetEstimator'),
     to: `${localePath('custom-business-software')}#estimator`,

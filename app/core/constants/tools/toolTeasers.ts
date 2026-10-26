@@ -1,5 +1,6 @@
 import type { DibodevToolTeaserContent } from '~/core/types/DibodevToolTeaser'
 import { AI_APP_CHECK_QUIZ_ID } from '~/core/constants/aiAppCheckQuiz'
+import { WORDPRESS_HACK_CHECK_ROUTE_NAME } from '~/core/constants/wordpressHackCheck/pageShared'
 import { E_INVOICING_SCOPE_QUIZ_ID } from '~/core/constants/eInvoicingScopeQuiz'
 import { NBSP } from '~/core/constants/typography'
 
@@ -349,6 +350,40 @@ const PHP_VULNERABILITY_CHECK_TEASER: DibodevToolTeaserContent = {
   },
 }
 
+const WORDPRESS_HACK_CHECK_TEASER: DibodevToolTeaserContent = {
+  toolId: 'wordpress-hack-check',
+  routeName: WORDPRESS_HACK_CHECK_ROUTE_NAME,
+  icon: 'ShieldCheck',
+  wording: {
+    fr: {
+      emphasizedIntro: `Votre site tourne sur WordPress${NBSP}?`,
+      text: 'L’outil lit votre page d’accueil et quelques fichiers publics, repère une extension vulnérable, un cœur trop ancien ou des signes d’injection, et dit quoi faire aujourd’hui.',
+      linkLabel: `Vérifier mon site WordPress${NBSP}: est-il piraté${NBSP}?`,
+      listLabel: `Site WordPress piraté${NBSP}: vérifier mon site`,
+      hubDescription: `Extension vulnérable (UpdraftPlus…), WordPress trop ancien, liens cachés ou redirection${NBSP}: ce qu’un visiteur peut voir depuis l’extérieur, et les trois guides pour réagir.`,
+      hubMeta: '1 adresse · 10 secondes',
+    },
+    en: {
+      emphasizedIntro: 'Does your website run on WordPress?',
+      text: 'The tool reads your home page and a few public files, spots a vulnerable extension, an outdated core or signs of injection, and says what to do today.',
+      linkLabel: 'Check my WordPress site: has it been hacked?',
+      listLabel: 'Hacked WordPress site: check my site',
+      hubDescription:
+        'Vulnerable extension (UpdraftPlus…), outdated WordPress, hidden links or redirection: what a visitor can see from outside, and three guides to react.',
+      hubMeta: '1 address · 10 seconds',
+    },
+    es: {
+      emphasizedIntro: '¿Tu web funciona con WordPress?',
+      text: 'La herramienta lee tu página de inicio y algunos archivos públicos, detecta una extensión vulnerable, un núcleo demasiado antiguo o señales de inyección, y dice qué hacer hoy.',
+      linkLabel: 'Comprobar mi web WordPress: ¿está hackeada?',
+      listLabel: 'Web WordPress hackeada: comprobar mi web',
+      hubDescription:
+        'Extensión vulnerable (UpdraftPlus…), WordPress antiguo, enlaces ocultos o redirección: lo que un visitante puede ver desde fuera, y tres guías para reaccionar.',
+      hubMeta: '1 dirección · 10 segundos',
+    },
+  },
+}
+
 /** The e-invoicing software checker, also teased under the scope test. */
 export const E_INVOICING_CHECK_TEASER: DibodevToolTeaserContent = {
   toolId: 'e-invoicing-software-check',
@@ -428,6 +463,9 @@ export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserConte
   'changer-version-php-planethoster-faille-octobre-2026': PHP_VULNERABILITY_CHECK_TEASER,
   'site-web-artisans-attirer-clients-locaux': PHP_VULNERABILITY_CHECK_TEASER,
   'site-web-commerce-proximite-2026': PHP_VULNERABILITY_CHECK_TEASER,
+  'site-wordpress-pirate-verifications-a-faire-aujourd-hui': WORDPRESS_HACK_CHECK_TEASER,
+  'updraftplus-revoquer-updraftcentral-verifier-sauvegardes': WORDPRESS_HACK_CHECK_TEASER,
+  'restaurer-site-wordpress-apres-piratage': WORDPRESS_HACK_CHECK_TEASER,
   'facture-electronique-artisan-ce-qui-change': E_INVOICING_CHECK_TEASER,
   'logiciel-facturation-garage-devis-ordre-de-reparation-facture': E_INVOICING_CHECK_TEASER,
   'reprendre-application-vibe-coding': AI_APP_CHECK_TEASER,
@@ -464,6 +502,7 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   AI_APP_CHECK_TEASER,
   PUBLIC_AID_SIMULATOR_TEASER,
   PHP_VULNERABILITY_CHECK_TEASER,
+  WORDPRESS_HACK_CHECK_TEASER,
   E_INVOICING_CHECK_TEASER,
   E_INVOICING_SCOPE_TEASER,
 ]

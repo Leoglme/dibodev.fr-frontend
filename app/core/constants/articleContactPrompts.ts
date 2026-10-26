@@ -1,6 +1,7 @@
 import type { DibodevContactPromptContent } from '~/core/types/DibodevContactPrompt'
 import { E_INVOICING_CONTACT_TOPIC } from '~/core/constants/eInvoicingCheck/pageShared'
 import { PHP_VULNERABILITY_CONTACT_TOPIC } from '~/core/constants/phpVulnerabilityCheck/pageShared'
+import { WORDPRESS_HACK_CONTACT_TOPIC } from '~/core/constants/wordpressHackCheck/pageShared'
 import { NBSP } from '~/core/constants/typography'
 
 const PHP_VULNERABILITY_CONTACT_PROMPT: DibodevContactPromptContent = {
@@ -59,6 +60,34 @@ const E_INVOICING_CONTACT_PROMPT: DibodevContactPromptContent = {
   },
 }
 
+const WORDPRESS_HACK_CONTACT_PROMPT: DibodevContactPromptContent = {
+  icon: 'MessageCircle',
+  contactQuery: { topic: WORDPRESS_HACK_CONTACT_TOPIC },
+  wording: {
+    fr: {
+      emphasizedIntro: `Pas le temps de tout vérifier${NBSP}?`,
+      text: `Envoyez-moi le lien de votre site WordPress, je vous dis sous 24${NBSP}h s’il présente des signes de piratage et quoi faire. Gratuit, sans engagement.`,
+      linkLabel: 'Envoyer le lien de mon site',
+      barText: `Un doute sur votre WordPress${NBSP}?`,
+      barButtonLabel: 'Envoyer le lien de mon site',
+    },
+    en: {
+      emphasizedIntro: 'No time to check everything?',
+      text: 'Send me the link to your WordPress site and I’ll tell you within 24 hours whether it shows signs of hacking and what to do. Free, no commitment.',
+      linkLabel: 'Send my website link',
+      barText: 'Worried about your WordPress?',
+      barButtonLabel: 'Send my website link',
+    },
+    es: {
+      emphasizedIntro: '¿Sin tiempo para comprobarlo todo?',
+      text: 'Envíame el enlace de tu web WordPress y te digo en 24 h si muestra señales de hackeo y qué hacer. Gratis, sin compromiso.',
+      linkLabel: 'Enviar el enlace de mi web',
+      barText: '¿Dudas sobre tu WordPress?',
+      barButtonLabel: 'Enviar el enlace de mi web',
+    },
+  },
+}
+
 /** Articles that carry a contact prompt after their introduction and a contact bar on small screens. */
 export const CONTACT_PROMPTS_BY_ARTICLE_SLUG: Record<string, DibodevContactPromptContent> = {
   'faille-php-octobre-2026-site-boutique-logiciel-que-faire': PHP_VULNERABILITY_CONTACT_PROMPT,
@@ -69,4 +98,7 @@ export const CONTACT_PROMPTS_BY_ARTICLE_SLUG: Record<string, DibodevContactPromp
   'changer-version-php-infomaniak-faille-octobre-2026': PHP_VULNERABILITY_CONTACT_PROMPT,
   'changer-version-php-planethoster-faille-octobre-2026': PHP_VULNERABILITY_CONTACT_PROMPT,
   'facture-electronique-artisan-ce-qui-change': E_INVOICING_CONTACT_PROMPT,
+  'site-wordpress-pirate-verifications-a-faire-aujourd-hui': WORDPRESS_HACK_CONTACT_PROMPT,
+  'updraftplus-revoquer-updraftcentral-verifier-sauvegardes': WORDPRESS_HACK_CONTACT_PROMPT,
+  'restaurer-site-wordpress-apres-piratage': WORDPRESS_HACK_CONTACT_PROMPT,
 }

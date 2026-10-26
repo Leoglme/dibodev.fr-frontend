@@ -231,6 +231,7 @@
       "electricianSoftware": "Software para electricistas",
       "personalTrainerSoftware": "Software para entrenadores personales",
       "eInvoicingScope": "Factura electrónica: ¿me afecta?",
+      "wordpressHackCheck": "Web WordPress hackeada: comprobar",
       "budgetEstimator": "Estimador de presupuesto"
     }
   },
@@ -602,6 +603,18 @@
           "phpHidden": "web en PHP, versión oculta",
           "notPhp": "web sin PHP",
           "unknown": "sin señales visibles de PHP"
+        }
+      },
+      "wordpressHack": {
+        "messageWithSite": "Hola,\nmi web WordPress {site} acaba de pasar por la herramienta de comprobación. Resultado: «{verdict}».\n¿Puedes decirme si está hackeada o es vulnerable, y qué hacer?",
+        "messageWithoutSite": "Hola,\ntengo dudas sobre mi web WordPress (extensión vulnerable, hackeo, actualización). ¿Puedes decirme si está afectada y qué hacer?\nEl enlace de mi web: ",
+        "verdicts": {
+          "suspiciousSignals": "señales sospechosas en la página de inicio",
+          "vulnerablePlugin": "extensión vulnerable",
+          "outdatedCore": "WordPress demasiado antiguo",
+          "cleanSurface": "nada visible desde fuera",
+          "notWordPress": "web no hecha con WordPress",
+          "unknown": "ninguna señal legible"
         }
       },
       "phpUpdate": {

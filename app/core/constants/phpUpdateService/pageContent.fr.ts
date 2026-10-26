@@ -112,6 +112,10 @@ export const PHP_UPDATE_SERVICE_PAGE_FR: DibodevPhpUpdateServicePageContent = {
         description: 'Thèmes et extensions mis à jour avec PHP, et une vieille extension remplacée quand elle bloque.',
       },
       {
+        title: 'Site WordPress piraté',
+        description: `Nettoyage et remise en sécurité après un piratage (extensions, comptes, fichiers, sauvegardes), sur devis après le diagnostic gratuit${NBSP}: je vous dis d’abord ce que je vois.`,
+      },
+      {
         title: 'PrestaShop, Magento, Joomla, Drupal',
         description: 'Montée de version de PHP compatible avec la version du CMS, modules de paiement testés.',
       },
@@ -164,6 +168,10 @@ export const PHP_UPDATE_SERVICE_PAGE_FR: DibodevPhpUpdateServicePageContent = {
     eyebrow: 'Questions fréquentes',
     title: 'Avant de m’écrire',
     questions: [
+      {
+        question: `Mon site WordPress semble piraté${NBSP}: est-ce la même intervention${NBSP}?`,
+        answer: `Non, et ce n’est pas au même prix. Je commence par le diagnostic gratuit (l’outil « Mon site WordPress est-il piraté${NBSP}? » et une lecture de l’intérieur si vous me donnez un accès), puis je vous envoie un devis pour le nettoyage${NBSP}: extensions et comptes vérifiés, fichiers inconnus retirés, mots de passe et clés changés, sauvegarde saine restaurée si besoin, puis mise à jour de PHP, de WordPress et des extensions. Le prix dépend de ce que le diagnostic trouve.`,
+      },
       {
         question: 'Mon hébergeur dit qu’aucune action n’est requise. Pourquoi faire quelque chose ?',
         answer: `Parce que ce message vaut pour les branches de PHP que le projet PHP corrige encore, de 8.2 à 8.5. Un site resté en PHP 8.1, 8.0 ou 7.4 n’a aucune version corrigée à recevoir, chez aucun hébergeur, à l’exception d’Infomaniak qui rétroporte un correctif maison. Le diagnostic gratuit vous dit en 24${NBSP}h dans quel cas vous êtes.`,

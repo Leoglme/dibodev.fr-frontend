@@ -115,6 +115,10 @@ export const PHP_UPDATE_SERVICE_PAGE_ES: DibodevPhpUpdateServicePageContent = {
         description: 'Temas y plugins actualizados junto con PHP, y un plugin antiguo sustituido cuando bloquea.',
       },
       {
+        title: 'Web WordPress hackeada',
+        description: `Limpieza y refuerzo tras un hackeo (extensiones, cuentas, archivos, copias de seguridad), con presupuesto tras el diagnóstico gratuito: primero te digo lo que veo.`,
+      },
+      {
         title: 'PrestaShop, Magento, Joomla, Drupal',
         description: 'Subida de versión de PHP compatible con la versión del CMS, módulos de pago probados.',
       },
@@ -164,6 +168,10 @@ export const PHP_UPDATE_SERVICE_PAGE_ES: DibodevPhpUpdateServicePageContent = {
     eyebrow: 'Preguntas frecuentes',
     title: 'Antes de escribirme',
     questions: [
+      {
+        question: `Mi web WordPress parece hackeada: ¿es la misma intervención?`,
+        answer: `No, y no al mismo precio. Empiezo por el diagnóstico gratuito (la herramienta «¿Mi web WordPress está hackeada?» y una lectura desde dentro si me das acceso), y luego te envío un presupuesto para la limpieza: extensiones y cuentas revisadas, archivos desconocidos eliminados, contraseñas y claves cambiadas, copia de seguridad limpia restaurada si hace falta, y después actualización de PHP, WordPress y las extensiones. El precio depende de lo que encuentre el diagnóstico.`,
+      },
       {
         question: 'Mi hosting dice que no se requiere ninguna acción. ¿Por qué hacer algo?',
         answer:
