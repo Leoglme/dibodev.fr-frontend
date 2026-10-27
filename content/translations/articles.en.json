@@ -32805,5 +32805,709 @@
         }
       ]
     }
+  },
+  "blog/application-metier-no-code-ia-limites": {
+    "title": "Custom Business Apps with No-Code or AI: How Far Can They Go?",
+    "excerpt": "Airtable, Bubble, Glide, or Lovable: where no-code and AI deliver exceptional results—and the warning signs that a business application needs a custom solution.",
+    "metaTitle": "No-Code or AI Business Apps: Limits and the Right Time to Use Them",
+    "metaDescription": "Airtable, Bubble, Glide, Lovable: When a no-code business app is enough, the 5 signs it’s hitting its limits, and when to switch to a custom solution.",
+    "tags": [
+      "no-code business applications",
+      "no-code tools",
+      "Airtable and Bubble",
+      "limitations of no-code",
+      "AI-generated applications",
+      "transitioning to custom development"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ten years ago, a manager wanting their own tool had only two options: a spreadsheet or a developer. Today, they can open Airtable, Bubble, or Glide, or describe their application to an AI like Lovable, and have something functional by the end of the week.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is very good news, including for me. More and more projects start with a prototype made by the client themselves. You immediately know what they want, and you save weeks.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "But these tools have limits, and it’s best to know them before putting the whole company into them. Here’s where no-code and AI work very well, and where they start to cost more than they bring in.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "No-code, low-code, AI: what are we talking about?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Three families often blend together:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "no-code",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": you assemble the application with blocks, without writing any code. Airtable for databases, Glide or Softr for small applications, Bubble for more ambitious projects;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "low-code",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": same principle, but a developer can add code where the blocks aren’t enough;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "AI generation",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": you describe the application in French, and the tool writes the code for you. Lovable and Bolt are the most well-known. This is called vibe coding.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The key difference: with no-code, the application lives on the tool’s editor’s platform. With AI generation, you get real code, but no one has reviewed it.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Where no-code and AI do the job very well",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’ll say it straight: for many needs, these tools are the right choice.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Testing an idea.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Before spending several thousand euros, building a simple version in a few days allows you to check if the team actually uses it. It’s unbeatable.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A small internal tool.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A request tracking system, a supplier directory, a list of borrowed equipment: for five people and a few hundred lines, a no-code tool is perfectly adequate.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A form linked to a spreadsheet.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Collecting requests, organizing them, notifying the right person: that’s exactly what these tools are designed for.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If your needs fit into one of these cases, don’t pay for custom development. I’ll say it right away.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The five signs that a no-code application is reaching its limits",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Over time, the same limitations keep appearing among the companies that reach out to me.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1. The logic becomes a maze.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Business rules pile up: if the customer is a professional and the order exceeds a certain amount, except in December… In a no-code tool, these rules end up scattered across dozens of automations that no one dares to touch.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "2. The price rises with the team.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Most of these tools charge per user or by volume. At three users, it’s affordable. At thirty, with thousands of records, the subscription can exceed what a custom tool would have cost you.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "3. It slows down.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Beyond a certain volume of data, pages take several seconds to load. The team starts keeping an Excel file ‘on the side’ because it’s faster.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "4. You depend on an editor.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Your data and logic belong to them. If they change their prices, terms, or shut down a feature, you suffer the consequences. And recovering the application to run it elsewhere is often impossible.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "5. It needs to connect to your real software.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Accounting, electronic invoicing, ERP, business tool: as soon as the application needs to properly exchange data with other systems, pre-built connectors show their limitations.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For AI-generated applications, the signs are slightly different (fixes that break other things, data security to review): I detail them in the article on ",
+              "type": "text"
+            },
+            {
+              "text": "taking over an application built with vibe coding",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/reprendre-application-vibe-coding",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Example: the workshop that put everything in Airtable",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Imagine a workshop with ten people. The manager built his own order management system in Airtable: customer files, quotes, production tracking, and deliveries. For two years, it worked perfectly.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Then the workshop grew. Quotes now need to be sent out as branded PDFs, invoices must be in electronic format, and two salespeople want to access orders on their phones while visiting clients. Each new request adds a costly automation, and the database slows down.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In this case, I wouldn’t advise scrapping everything. The work done in Airtable is valuable: it perfectly describes how the workshop operates. We use it as a specification document, extract the data, and build a tool that does the same thing better—without per-user subscriptions. Meanwhile, the workshop keeps working on its old tool, and we switch over once the new one is ready.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Custom or no-code business application: how to choose",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A simple rule that works in most cases:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "few users, simple rules, need to test",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": no-code or AI, without hesitation;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "core tool for your business, custom rules, multiple software systems to connect, growing team",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": custom development becomes cost-effective, often within one or two years;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "in between",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": start with no-code, with the plan to switch to custom when limitations arise. Nothing is lost.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I explain in more detail how to choose between an off-the-shelf software and custom development in this ",
+              "type": "text"
+            },
+            {
+              "text": "comparison",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", and what a business application is in this ",
+              "type": "text"
+            },
+            {
+              "text": "guide for SMEs",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/application-metier-sur-mesure-guide-tpe-pme",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How much does transitioning to custom cost?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Most of the SME tools I develop range between €5,000 and €15,000 as a one-time fee, plus €100 to €300 per month for maintenance. Compared to a no-code subscription that grows with each user, the cost comparison becomes clear over two or three years. Everything is detailed on my ",
+              "type": "text"
+            },
+            {
+              "text": "custom business application",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can we retrieve our data from a no-code tool?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Almost always, at least in export format. We can then import them into the new tool to start with your existing history.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Should we abandon the no-code tool all at once?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. You can replace parts one by one, starting with the most problematic one, and keep the rest as long as it’s still useful.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is custom development always longer?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Longer than a prototype, yes. But a first usable version can be delivered in a few weeks, and your no-code prototype significantly shortens the planning phase.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What if I still want to modify the tool myself?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "That’s possible: we can design admin screens so you can update lists, pricing, or text content yourself—no developer needed.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Want to review your tool?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you’ve built your tool with no-code or AI and feel it’s reaching its limits, show it to me. We can discuss it over the phone or video call, and I’ll provide a written action plan: what can stay as-is, what needs rebuilding, and a rough budget estimate. If your current tool still meets your needs for a while, I’ll let you know.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "f75e4a85-d7bd-427b-aaa4-adafe2c0a558",
+            "body": [
+              {
+                "_uid": "i-977519f6-f3aa-419a-8207-985a66e51f09",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
