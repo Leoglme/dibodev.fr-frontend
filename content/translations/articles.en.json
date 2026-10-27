@@ -30351,5 +30351,3814 @@
         }
       ]
     }
+  },
+  "blog/restaurer-site-wordpress-apres-piratage": {
+    "title": "Restoring a Hacked WordPress Site Without Reintroducing the Problem",
+    "excerpt": "Restoring a backup isn’t enough: if done too late, it may still contain the backdoor; if restored without patching the vulnerability, the site will likely be compromised again within days. Here’s how to select the right backup, restore it properly, and seal the breach immediately afterward.",
+    "metaTitle": "Restoring a Hacked WordPress Site Without Reintroducing the Problem",
+    "metaDescription": "Select the right backup, restore securely, and close the breach right away: the proven method to bring a hacked WordPress site back online—without recurrence.",
+    "tags": [
+      "restore hacked wordpress site",
+      "wordpress site hacked recovery",
+      "clean hacked wordpress",
+      "wordpress backup restoration",
+      "hacked wordpress fix",
+      "wordpress security best practices"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "When a WordPress site is hacked, the first instinct is to restore the latest backup. This is often a mistake: if done too late, it already contains the backdoor; if restored without closing the vulnerability, the site will be compromised again within days. This guide follows the recommended order from WordPress.org, Cybermalveillance.gouv.fr (the national assistance program for victims), and the Sucuri team, including the specific case of UpdraftCentral keys stolen in October 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Before restoring: four actions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Take the site offline.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Cybermalveillance.gouv.fr advises first disconnecting what is compromised: ask your host to put the site in maintenance mode or block access during the cleanup.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Preserve evidence.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Server logs, screenshots, timestamps of what you observed, and the last actions taken on the site: document everything. These details help determine the intrusion timeline and support a police report if needed.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Make a copy of the current state.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Files and database, off the server, before making any changes. This is for evidence, not for restoration.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Change access credentials.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Administrator passwords, FTP or SFTP credentials, database access, and hosting panel passwords, then the secret keys in wp-config.php, which log everyone out. WordPress.org recommends redoing this after cleanup.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Choose the right backup",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Determine the intrusion date.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " This is the key question. Four clues help: the creation date of unknown accounts, the modification date of recently altered files (your host’s file manager sorts them by date), the first suspicious request in access logs, and the appearance date of spam pages in Search Console.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Known dates from autumn 2026.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " For UpdraftCentral, use a backup from before October 17; for the Ninja Forms campaign, from before October 4; for Bricksforge, from before October 7; for the exploited core vulnerability (since September 22), from before that date if the site lacked the patch.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Verify the backup before using it.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Open it and check the plugins list and the wp-content/uploads folder: a backup already containing the suspicious plugin or a .php file in uploads is useless.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If no backup is old enough.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " You must clean up manually: it takes longer, but the following steps still apply.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Restore cleanly",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The heart of WordPress, refreshed.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " WordPress.org advises reinstalling the same version of WordPress via FTP or SFTP, not using the admin reinstallation button, which only overwrites existing files and leaves added files in place. The wp-admin and wp-includes folders are completely replaced with a clean copy.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Plugins and the theme, from their source.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Sucuri recommends reinstalling them from wordpress.org or from the editor’s website, rather than restoring them from a backup. Do not blindly replace the wp-content folder or the wp-config.php file: they contain your content and settings.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Files to review.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " WordPress.org mentions .htaccess and index.php, and in the theme, header.php, footer.php, and functions.php: these are where redirects often hide. In the database, Sucuri advises searching for eval, base64_decode, gzinflate, and shell_exec, which have no place in page content.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Just after: close the door.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Update immediately.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A backup also restores old versions, meaning the vulnerability through which the attacker gained access. Update WordPress (to 7.1.3 or the latest version of your branch), the theme, all plugins, and the PHP version with your host, before putting the site back online.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Remove the UpdraftCentral key again.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A backup from before October 17 still contains the old key: WP Staging recommends removing it right after restoration, then resetting passwords and secret keys again. The procedure is in ",
+              "type": "text"
+            },
+            {
+              "text": "my UpdraftPlus guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/updraftplus-revoquer-updraftcentral-verifier-sauvegardes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Change passwords a second time.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " All of them, including the database, as WordPress.org recommends.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Clear the alerts.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " In the Search Console, once the site is clean, request a review from the Security Issues report. If the host had suspended the site, inform them of the actions taken.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "After bringing the site back online",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Understand how the attacker gained access.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Without an answer to this question, the same door remains open: outdated plugin, reused password, UpdraftCentral key, forgotten FTP account. WordPress.org places this analysis right before site hardening.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A routine.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A backup off the server every week, checked occasionally by performing a real restoration on a copy; updates every month; two-factor authentication for every administrator; unused extensions removed.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The steps.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " If the site holds personal data, notification to the CNIL must be made within 72 hours as soon as there is a risk to individuals. The Cybermalveillance.gouv.fr guide states that the CNIL considers website defacement as a breach of personal data and also advises filing a complaint and seeking professional help.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My last backup was made after the hack: what should I do?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Clean up on-site, using the same method: core reinstalled from scratch, extensions and theme from their original source, unknown accounts and files removed, database reviewed. It takes longer than a restoration, and the outcome depends on what was found: a new check within the following weeks is essential.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How long does it take?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "For a showcase site with a good backup, plan for half a day of work. For an online store, or a site without usable backups, more time will be needed.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How much does professional restoration cost?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "For me, updating a site starts at 190 €; cleaning and restoration are priced after a free diagnosis, as they depend on the site’s condition and backups. The details are on ",
+              "type": "text"
+            },
+            {
+              "text": "the remote intervention page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/mise-a-jour-php-site-logiciel",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Should I notify my clients?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "If their data could have been accessed and the risk to them is high, yes: it’s a requirement, in addition to notifying the CNIL. A showcase site with no recorded data has nothing to report.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Need a hand?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Start by ",
+              "type": "text"
+            },
+            {
+              "text": "checking your site for free",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/site-wordpress-pirate-verifier",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", then follow ",
+              "type": "text"
+            },
+            {
+              "text": "today’s verification steps",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/site-wordpress-pirate-verifications-a-faire-aujourd-hui",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". If the result worries you, or if you don’t know which backup to choose, I’ll take a look within 24 hours and tell you what I see, for free. If you entrust me with the restoration, I’ll write down exactly what was done, step by step.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sources:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "FAQ « My site was hacked », WordPress.org",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://wordpress.org/documentation/article/faq-my-site-was-hacked/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "quick-reference guide on website defacement, Cybermalveillance.gouv.fr",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/defiguration-de-site-internet",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "7 steps to remove malware from WordPress, Sucuri",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://blog.sucuri.net/2024/09/7-steps-to-remove-malware-from-wordpress.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "cleaning a hacked WordPress site, Sucuri",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://sucuri.net/guides/how-to-clean-hacked-wordpress/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "UpdraftCentral incident, guide by WP Staging",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://wp-staging.com/updraftplus-updraftcentral-security-incident-october-2026/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "October 2026 incident, TeamUpdraft",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://teamupdraft.com/blog/security-incident-october-2026/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "reporting a personal data breach, CNIL",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.cnil.fr/fr/notifier-une-violation-de-donnees-personnelles",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "118017a8-49c8-4c3d-bef4-d17352fe9c9f",
+            "body": [
+              {
+                "_uid": "i-25ccd865-0e2c-4040-b115-d1ba90380b8e",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "send me the link to the site",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/updraftplus-revoquer-updraftcentral-verifier-sauvegardes": {
+    "title": "UpdraftPlus: Revoking UpdraftCentral, Changing Keys, and Checking Backups After the October 2026 Breach",
+    "excerpt": "Over the weekend of October 17–18, 2026, UpdraftCentral’s encryption keys were exposed by the publisher of UpdraftPlus. Who is affected, which version to install, how to remove the compromised key, which passwords to change, and how to verify the integrity of your backups.",
+    "metaTitle": "UpdraftPlus & UpdraftCentral: What to Do After the Key Breach",
+    "metaDescription": "UpdraftCentral keys compromised on October 17–18, 2026: who is at risk, the secure version to install (1.26.13), the key to revoke, and backups to verify for integrity.",
+    "tags": [
+      "updraftplus",
+      "updraftcentral",
+      "updraftplus vulnerability",
+      "updraftplus breach",
+      "wordpress backup",
+      "wordpress security"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "UpdraftPlus is the most widely used WordPress backup plugin. Over the weekend of October 17-18, 2026, its developer, TeamUpdraft, suffered a breach, and the connection keys for UpdraftCentral, its remote site management tool, were leaked. Since October 18, these keys have been used to install fake extensions on WordPress sites, including up-to-date ones. This guide summarizes what the developer and security teams analyzing the attack have said, and outlines the steps to secure your site and check if your backups are intact.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To check in ten seconds if your site displays a version of UpdraftPlus prior to the patch, run it through ",
+              "type": "text"
+            },
+            {
+              "text": "my free checker",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/site-wordpress-pirate-verifier",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What happened",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A data leak, not a code vulnerability.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " TeamUpdraft detected unauthorized access to its site over the weekend of October 17-18. The customer database was compromised: names, email addresses, billing addresses, order history, hashed passwords, two-factor authentication settings, and the connection keys for UpdraftCentral, UpdraftVault, and UpdraftClone. No credit card data was stored. With these keys, the attacker sends commands to sites as if they came from you, including installing an extension. Patchstack and Nethemba confirm: this is not a flaw in UpdraftPlus code, and no CVE number has been assigned.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Timeline.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Patchstack detected the first attack on October 18 at 15:32 UTC. On October 19 at 07:17, the IT-Connect site, running UpdraftPlus Premium 2.26.11, received a command to install a fake extension. The same day, TeamUpdraft released version 1.26.12, then 1.26.13 shortly after 22:00 London time. On October 22, the developer added a recommendation: check your TeamUpdraft account for sites listed under UpdraftCentral that you haven’t connected yourself since October 19.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What was not affected, according to the developer.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The extension’s code and downloads, backups stored in your own storage (Google Drive, Dropbox, S3…), and self-hosted UpdraftCentral installations.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Who is exposed",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Any site with an active UpdraftCentral key, regardless of its version.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Free or Premium: TeamUpdraft, Patchstack, and Nethemba confirm both are affected. The option to add a site to UpdraftCentral is checked by default when linking UpdraftPlus to a TeamUpdraft account, and these keys never expire: Patchstack observed a key created in November 2025 still working. BleepingComputer estimates around 10% of UpdraftPlus sites have an UpdraftCentral or migration key, roughly 400,000 sites, without citing a source.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How to check.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Settings, UpdraftPlus, Advanced Tools tab, UpdraftCentral: if a key is listed, the site is exposed. With command-line access, the command `wp option get updraft_central_localkeys` will return a result in the same case.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Steps to take, in order",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1. A copy of the current state.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Files and database, off the server. It serves as evidence, not a restoration point: if the site is compromised, this copy is too.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "2. Connect directly and update.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Log in to your site’s administration panel (not from UpdraftCentral) and install version 1.26.13, or 2.26.13 if you have Premium, or a newer version. Avoid 1.26.12: due to a bug, it revoked no keys. Version 1.26.13 revokes keys created before the incident.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "3. Delete the key, all keys.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " In the UpdraftCentral tab under Advanced Tools, remove each key from the list of existing keys. Simply removing the site from your UpdraftCentral dashboard is not enough. Nethemba reports that keys created on October 18 between 12:07 and 21:00 UTC may not have been revoked by the update, which the editor has not confirmed: to be safe, delete them manually. Also delete the migration key if you’re not using it. In the command line, these are the options updraft_central_localkeys and updraft_migrator_localkeys.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "4. If a fake plugin is present, remove the key first.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The attacker reuses the keys: as long as the key exists, they can reinstall the plugin after your cleanup. Delete the key, then disable the suspicious plugin and move its folder outside the site (without deleting it from the admin panel—its uninstall script removes its traces—and without fixing its code if it causes errors). The identification of fake plugins and hidden accounts is detailed in ",
+              "type": "text"
+            },
+            {
+              "text": "my verification guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/site-wordpress-pirate-verifications-a-faire-aujourd-hui",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "5. Delete unknown accounts.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Fake plugins create an Editor who can install plugins, named in the format data-ops43, displayed as « Site Tools », with an @example.org email. It remains even after the plugin is deleted.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "6. Change passwords and secret keys.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The teamupdraft.com account, by typing the address yourself rather than clicking a link received via email, every reused password, and those of all administrators. Then the secret keys in wp-config.php, which close all open sessions, and the two-factor authentication, which must be reset. In Premium, Nethemba also advises removing the saved teamupdraft.com password from the plugin.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Are your backups healthy?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Those in your storage are unaffected by the breach.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " TeamUpdraft confirms this for backups stored on Google Drive, Dropbox, or S3. But if UpdraftCentral accessed your site, the editor asks you to reauthorize remote storage and change its access keys.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A backup made after the intrusion may contain the backdoor.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " If a fake plugin was installed on October 19, the automatic backup the next day copied it. To restore, use a backup from before October 17.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A backup from before October 17 still contains the old key.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " WP Staging reminds you: after restoration, delete the UpdraftCentral key again and redo the password and secret key changes. The step-by-step guide is in ",
+              "type": "text"
+            },
+            {
+              "text": "my restoration guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/restaurer-site-wordpress-apres-piratage",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "UpdraftVault: log in again.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " All sites have been logged out. In the UpdraftPlus settings, under the UpdraftVault section, log in with the new password, save, then run a manual backup to ensure everything is back up and running.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Should UpdraftCentral be reconnected?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Not yet.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Patchstack advises waiting for the editor to explain the source of the leak; in the latest update to their post, TeamUpdraft indicated that the investigation is still ongoing. If you manage multiple sites and remote management is essential, create the new key under an account that cannot install plugins. For further steps, Nethemba suggests blocking any request containing udrpc_message and preventing PHP from writing to the plugins directory—this should be handled by your hosting administrator.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is the free version of UpdraftPlus affected?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Yes, as soon as an UpdraftCentral key is active. On the morning of October 19th, before the patches, IT-Connect thought not; since then, the editor, Patchstack, and Nethemba have stated that both versions are affected.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Should UpdraftPlus be uninstalled?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No: the plugin’s code is not at fault. Update it, remove the UpdraftCentral key, and keep your backups. If you don’t use remote management, simply don’t reactivate it.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is this the same as the CVE-2026-10795 vulnerability?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. That vulnerability, fixed in June 2026 in versions 1.26.5 and 2.26.5, allowed commands to be forged without a key. It is unrelated to the October leak but affects the same sites—another reason to update.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My site received a fake plugin: have my customer data leaked?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "The plugin grants full access to the site: everything the site contains could have been read. If customer accounts, orders, or forms are stored, notification to the CNIL must be made within 72 hours if there is a risk to individuals.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Need help?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you prefer to delegate: I’ll remove the keys, check accounts, plugins, and files, verify your backups, and write up what’s been done. Free diagnosis within 24 hours, quote provided before any action.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sources:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "TeamUpdraft’s incident post, updated as of October 22nd",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://teamupdraft.com/blog/security-incident-october-2026/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "Patchstack’s analysis",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://patchstack.com/articles/updraftcentral-key-compromise-wordpress-backdoors/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "analysis by Nethemba",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://nethemba.com/updraftcentral-backdoor-analysis/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "BleepingComputer, October 20",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "IT-Connect, October 19",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.it-connect.fr/updraftplus-updraftcentral-porte-derobee-it-connect/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "CSO Online, October 21",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.csoonline.com/article/4238422/wordpress-sites-compromised-after-teamupdraft-credential-exposure.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "WP Staging guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://wp-staging.com/updraftplus-updraftcentral-security-incident-october-2026/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "UpdraftPlus page and changelog on WordPress.org",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://wordpress.org/plugins/updraftplus/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "6c96c9d4-3718-4493-ace1-08c9db0ffcb3",
+            "body": [
+              {
+                "_uid": "i-8f6ada4b-2c91-4483-afd8-981a9e642d1c",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "write to me",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/site-wordpress-pirate-verifications-a-faire-aujourd-hui": {
+    "title": "Hacked WordPress Site: 7 Checks to Perform Today, in Order",
+    "excerpt": "Since October 18, 2026, stolen UpdraftCentral keys have been used to install fake plugins and hidden accounts on WordPress sites—even those kept up to date. Here are the seven checks to perform today, in the exact order I follow them on a client’s site.",
+    "metaTitle": "Hacked WordPress Site: 7 Checks to Perform Today",
+    "metaDescription": "Fake plugins, hidden accounts, UpdraftCentral keys, suspicious .php files in uploads: the seven checks to perform today on a WordPress site.",
+    "tags": [
+      "hacked wordpress site",
+      "wordpress security breach",
+      "wordpress security",
+      "updraftplus",
+      "updraftcentral",
+      "check wordpress site"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Since October 18, 2026, stolen UpdraftCentral connection keys from the UpdraftPlus publisher have been used to install fake extensions and hidden accounts on WordPress sites. Updated sites were affected just like the others: the entry point was a valid key, not an outdated version. That same autumn, one campaign targeted Ninja Forms extension starting October 4, another Bricksforge starting October 7, and a WordPress core vulnerability was exploited the same day as its patch, September 22. If you have a WordPress site, here are the seven checks I perform on a client site, in order. Plan for about an hour if everything goes smoothly.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Before starting, run the site through ",
+              "type": "text"
+            },
+            {
+              "text": "my free scanner",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/site-wordpress-pirate-verifier",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": it scans the homepage and a few public files, and detects an extension stuck on an outdated version, an outdated WordPress installation, or visible signs of external injection. What it doesn’t see, these seven checks will uncover.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "First: a full backup, off the server",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A record, not a restore point.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Download the files and database to your computer, or send them to external storage, before touching anything. If the site is hacked, this backup is too: it won’t help you roll back, but it will help you compare, date the intrusion, and show your host or a provider what was found. Don’t delete anything before you’ve finished inspecting.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "1. Update directly by logging in",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Log in to each site’s admin panel directly, not through UpdraftCentral.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " That’s the first rule from TeamUpdraft, the publisher. Then, after backing up, update in this order.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "WordPress.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The latest version is 7.1.3, released October 6, 2026, with seven security fixes. If your site is still on an older branch, take at least its latest version—for example, 7.0.7, 6.9.10, or 6.8.11—which also received the same fixes. A site that hasn’t applied the September 22 patch (7.1.2, 7.0.6, 6.9.9, or 6.8.10, depending on the branch) remains exposed to the core vulnerability exploited since that day.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "UpdraftPlus.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Update to 1.26.13, or 2.26.13 for the Premium version, released on the evening of October 19. Avoid 1.26.12, published the same day: due to a bug, it didn’t revoke the keys.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Other extensions and the theme.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Apply all available updates. If you use Ninja Forms, check you’re at least on 3.15.4; Bricksforge, 3.1.8.10; Elementor Pro, 4.2.2.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " On October 21, PHP patched two critical vulnerabilities that WordPress updates don’t address. Ask your host for a fixed version (8.5.12, 8.4.27, 8.3.36, or 8.2.35), or check yours with ",
+              "type": "text"
+            },
+            {
+              "text": "my dedicated tool",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/faille-php-verifier-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Update and close the door securely. This doesn’t remove anything already entered: that’s the purpose of the six checks that follow.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "2. Accounts that can install extensions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Don’t just look at administrators.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The fake October 2026 extensions create an Editor account and grant it two permissions: manage settings and install extensions. In the list of accounts, it appears as a simple Editor. The names identified by Patchstack, Nethemba, and IT-Connect follow the same pattern: two words and two or three numbers (data-ops43, media-staff96, content-ops71), with « Site Tools » as the displayed name and an address at @example.org or @example.com.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What you need to do.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Open Accounts, All Accounts, and review each Editor and each Administrator: who created it, when, and with which address. Delete any account that no one recognizes, after changing your own password. Warning: some variants log in with the first existing administrator instead of creating an account, and the hidden account remains in place even after the extension is removed.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "3. Extensions, including the « Must-Use » tab",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In the admin panel.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Extensions, Installed Extensions: look for an extension you didn’t install. The descriptions found resemble maintenance tasks (« Small maintenance toolkit: keeps option storage tidy », « Maintenance helper »), with names like « Site Health Cache » or folders with random suffixes (load-stack-35c, site-health-364f, type-stack-285). Patchstack identified 99 different names. Also check the « Must-Use » tab (Must-Use in English), which is almost always overlooked.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On the server.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Some variants hide from the list. Open your hosting file manager or an FTP client, and check three folders: wp-content/plugins, wp-content/mu-plugins, and wp-content/upgrade. The latter keeps a copy of installed packages, even if the installation failed. A recent folder you don’t recognize is suspicious.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Don’t delete it from the admin panel.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Nethemba, who discovered the attack, advises disabling the extension and then moving its folder outside the site: deleting it from the admin panel triggers its uninstall script, which erases its traces. And if a page displays an « Undefined constant » error, don’t fix the code: the first variant was broken, and repairing it would reopen the backdoor.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "4. The UpdraftCentral key",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Where to find it.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Settings, UpdraftPlus, Advanced Tools tab, UpdraftCentral. If a key appears there, the site can receive remote commands. Remove all keys from the list of existing keys, not just the site in your UpdraftCentral dashboard: removing the site from the dashboard doesn’t delete the key.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You never activated it?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Check anyway. The box that adds the site to UpdraftCentral is checked by default when linking UpdraftPlus to a TeamUpdraft account, and these keys never expire. With command-line access, the command `wp option get updraft_central_localkeys` returns something if a key exists. The full procedure, including backups, is in ",
+              "type": "text"
+            },
+            {
+              "text": "my UpdraftPlus guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/updraftplus-revoquer-updraftcentral-verifier-sauvegardes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "5. The .php files in wp-content/uploads",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This folder should only contain images and documents.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Sucuri reminds us in its guides: a .php, .js, or .ico file in uploads is suspicious. Fall campaigns left them in specific places: wp-content/uploads/elementor/forms for Elementor Pro, wp-content/uploads/bricksforge/tmp for Bricksforge. In your hosting file manager, search for « .php » in the uploads folder; via command line, `find wp-content/uploads -name \"",
+              "type": "text"
+            },
+            {
+              "text": ".php\"` lists them.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "6. Google Search Console",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Three screens to check.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Security & Manual Actions, Security Issues: Google flags a hacked site here. Settings, Users & Permissions: an unknown owner is a classic sign of Japanese keyword hacking, which also adds its own sitemaps. Pages: a sudden spike in indexed pages. And in Google, a search `site:yourdomain.fr` reveals pages you didn’t write.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "7. Your hosting access logs",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What to look for.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Your host provides server logs. For UpdraftCentral, Nethemba spotted POST requests to the homepage with the user agent « WordPress/6.4; class-udrpc.php ». For secret link logins, requests to the homepage with a 32-character parameter: a 302 response likely means a successful login, a 500 response indicates a broken variant still installed. UpdraftPlus logs also track received commands, like « Command received: plugin.upload_plugin ». IPs aren’t reliable filters: Patchstack saw attackers switch infrastructure in under a day.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "If you find anything",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Change everything—twice.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " All admin passwords, FTP, database, hosting, and TeamUpdraft account passwords (type them manually, never click a link in an email). Then update the secret keys in wp-config.php, which closes all open sessions. Repeat after cleanup and reset two-factor authentication.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Restore if in doubt.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A backup from before October 17, then the UpdraftCentral key deleted again—a copy from that date still contains it. The steps are in ",
+              "type": "text"
+            },
+            {
+              "text": "my restoration guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/restaurer-site-wordpress-apres-piratage",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Think about personal data.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " If the site holds customer accounts, orders, or forms, report the breach to the CNIL within 72 hours if it risks harming individuals.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Don’t reconnect UpdraftCentral right away.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Patchstack advises waiting for the editor to explain the origin of the leak.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My site is up to date: am I affected?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "For UpdraftCentral, yes, if the site had an active key: the IT-Connect site, in UpdraftPlus Premium 2.26.11, received the command on October 19 at 7:17 AM. For Ninja Forms or Bricksforge, a patched version closes the door but does not remove an already created account.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How long do these checks take?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "About an hour on a healthy site, with access to the admin panel and hosting. If cleaning or restoring is needed, count more time.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Do I need to be a developer?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No for the first six checks: the WordPress admin, the hosting file manager, and Search Console are sufficient. Logs and the command line require more familiarity.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Would a security extension have been enough?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Wordfence or Sucuri help detect modified files and block part of the attacks, but a command signed with a real UpdraftCentral key is seen as a legitimate command.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Would you prefer me to handle it?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I perform these checks from the inside, clean if necessary, change keys and passwords, update everything, and write down what has been done: free diagnosis within 24 hours, quote before any intervention. The process and update prices are on ",
+              "type": "text"
+            },
+            {
+              "text": "the remote intervention page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/mise-a-jour-php-site-logiciel",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sources:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "October 2026 security incident, TeamUpdraft",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://teamupdraft.com/blog/security-incident-october-2026/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "compromised UpdraftCentral keys and backdoors, Patchstack",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://patchstack.com/articles/updraftcentral-key-compromise-wordpress-backdoors/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "backdoor analysis, Nethemba",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://nethemba.com/updraftcentral-backdoor-analysis/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "the IT-Connect site was hit on October 19th",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.it-connect.fr/updraftplus-updraftcentral-porte-derobee-it-connect/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "XSS campaign by Ninja Forms, Patchstack",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://patchstack.com/articles/four-ways-back-in-the-wordpress-xss-campaign-that-hides-its-own-admin-account/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "Bricksforge vulnerability exploited, Patchstack",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://patchstack.com/articles/critical-unauthenticated-arbitrary-file-upload-vulnerability-exploited-in-bricksforge-plugin/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "Heartbleed-like flaw CVE-2026-87902, Patchstack",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://patchstack.com/articles/cve-2026-87902-attackers-started-probing-wordpress-sites-hours-after-the-patch/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "WordPress 7.1.3, WordPress.org",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://wordpress.org/news/2026/10/wordpress-7-1-3-maintenance-and-security-release/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "PHP vulnerabilities from October 21st, Sucuri",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://blog.sucuri.net/2026/10/critical-php-security-update-two-rce-flaws-cve-2026-109618-cve-2026-109619.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "Japanese keyword spam, Sucuri",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://blog.sucuri.net/2023/09/how-to-find-fix-japanese-seo-spam.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "8c848123-465c-4ed5-91e3-3cd701970865",
+            "body": [
+              {
+                "_uid": "i-dca87896-c309-4caa-a2e6-fbfafc40b1ef",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Send me the site link",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/application-metier-no-code-ia-limites": {
+    "title": "Custom Business Apps with No-Code or AI: How Far Can They Go?",
+    "excerpt": "Airtable, Bubble, Glide, or Lovable: where no-code and AI deliver exceptional results—and the warning signs that a business application needs a custom solution.",
+    "metaTitle": "No-Code or AI Business Apps: Limits and the Right Time to Use Them",
+    "metaDescription": "Airtable, Bubble, Glide, Lovable: When a no-code business app is enough, the 5 signs it’s hitting its limits, and when to switch to a custom solution.",
+    "tags": [
+      "no-code business applications",
+      "no-code tools",
+      "Airtable and Bubble",
+      "limitations of no-code",
+      "AI-generated applications",
+      "transitioning to custom development"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ten years ago, a manager wanting their own tool had only two options: a spreadsheet or a developer. Today, they can open Airtable, Bubble, or Glide, or describe their application to an AI like Lovable, and have something functional by the end of the week.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is very good news, including for me. More and more projects start with a prototype made by the client themselves. You immediately know what they want, and you save weeks.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "But these tools have limits, and it’s best to know them before putting the whole company into them. Here’s where no-code and AI work very well, and where they start to cost more than they bring in.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "No-code, low-code, AI: what are we talking about?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Three families often blend together:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "no-code",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": you assemble the application with blocks, without writing any code. Airtable for databases, Glide or Softr for small applications, Bubble for more ambitious projects;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "low-code",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": same principle, but a developer can add code where the blocks aren’t enough;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "AI generation",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": you describe the application in French, and the tool writes the code for you. Lovable and Bolt are the most well-known. This is called vibe coding.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The key difference: with no-code, the application lives on the tool’s editor’s platform. With AI generation, you get real code, but no one has reviewed it.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Where no-code and AI do the job very well",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’ll say it straight: for many needs, these tools are the right choice.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Testing an idea.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Before spending several thousand euros, building a simple version in a few days allows you to check if the team actually uses it. It’s unbeatable.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A small internal tool.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A request tracking system, a supplier directory, a list of borrowed equipment: for five people and a few hundred lines, a no-code tool is perfectly adequate.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A form linked to a spreadsheet.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Collecting requests, organizing them, notifying the right person: that’s exactly what these tools are designed for.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If your needs fit into one of these cases, don’t pay for custom development. I’ll say it right away.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The five signs that a no-code application is reaching its limits",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Over time, the same limitations keep appearing among the companies that reach out to me.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1. The logic becomes a maze.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Business rules pile up: if the customer is a professional and the order exceeds a certain amount, except in December… In a no-code tool, these rules end up scattered across dozens of automations that no one dares to touch.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "2. The price rises with the team.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Most of these tools charge per user or by volume. At three users, it’s affordable. At thirty, with thousands of records, the subscription can exceed what a custom tool would have cost you.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "3. It slows down.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Beyond a certain volume of data, pages take several seconds to load. The team starts keeping an Excel file ‘on the side’ because it’s faster.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "4. You depend on an editor.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Your data and logic belong to them. If they change their prices, terms, or shut down a feature, you suffer the consequences. And recovering the application to run it elsewhere is often impossible.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "5. It needs to connect to your real software.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Accounting, electronic invoicing, ERP, business tool: as soon as the application needs to properly exchange data with other systems, pre-built connectors show their limitations.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For AI-generated applications, the signs are slightly different (fixes that break other things, data security to review): I detail them in the article on ",
+              "type": "text"
+            },
+            {
+              "text": "taking over an application built with vibe coding",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/reprendre-application-vibe-coding",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Example: the workshop that put everything in Airtable",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Imagine a workshop with ten people. The manager built his own order management system in Airtable: customer files, quotes, production tracking, and deliveries. For two years, it worked perfectly.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Then the workshop grew. Quotes now need to be sent out as branded PDFs, invoices must be in electronic format, and two salespeople want to access orders on their phones while visiting clients. Each new request adds a costly automation, and the database slows down.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In this case, I wouldn’t advise scrapping everything. The work done in Airtable is valuable: it perfectly describes how the workshop operates. We use it as a specification document, extract the data, and build a tool that does the same thing better—without per-user subscriptions. Meanwhile, the workshop keeps working on its old tool, and we switch over once the new one is ready.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Custom or no-code business application: how to choose",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A simple rule that works in most cases:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "few users, simple rules, need to test",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": no-code or AI, without hesitation;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "core tool for your business, custom rules, multiple software systems to connect, growing team",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": custom development becomes cost-effective, often within one or two years;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- ",
+              "type": "text"
+            },
+            {
+              "text": "in between",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ": start with no-code, with the plan to switch to custom when limitations arise. Nothing is lost.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I explain in more detail how to choose between an off-the-shelf software and custom development in this ",
+              "type": "text"
+            },
+            {
+              "text": "comparison",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", and what a business application is in this ",
+              "type": "text"
+            },
+            {
+              "text": "guide for SMEs",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/application-metier-sur-mesure-guide-tpe-pme",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How much does transitioning to custom cost?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Most of the SME tools I develop range between €5,000 and €15,000 as a one-time fee, plus €100 to €300 per month for maintenance. Compared to a no-code subscription that grows with each user, the cost comparison becomes clear over two or three years. Everything is detailed on my ",
+              "type": "text"
+            },
+            {
+              "text": "custom business application",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can we retrieve our data from a no-code tool?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Almost always, at least in export format. We can then import them into the new tool to start with your existing history.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Should we abandon the no-code tool all at once?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. You can replace parts one by one, starting with the most problematic one, and keep the rest as long as it’s still useful.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is custom development always longer?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Longer than a prototype, yes. But a first usable version can be delivered in a few weeks, and your no-code prototype significantly shortens the planning phase.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What if I still want to modify the tool myself?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "That’s possible: we can design admin screens so you can update lists, pricing, or text content yourself—no developer needed.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Want to review your tool?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you’ve built your tool with no-code or AI and feel it’s reaching its limits, show it to me. We can discuss it over the phone or video call, and I’ll provide a written action plan: what can stay as-is, what needs rebuilding, and a rough budget estimate. If your current tool still meets your needs for a while, I’ll let you know.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "f75e4a85-d7bd-427b-aaa4-adafe2c0a558",
+            "body": [
+              {
+                "_uid": "i-977519f6-f3aa-419a-8207-985a66e51f09",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/meilleur-logiciel-garage-automobile-comparatif-2026": {
+    "title": "Best Garage Software 2026: Price Comparison, Free Versions, and Key Considerations",
+    "excerpt": "There is no single best garage software—only the one that fits your workshop perfectly. Discover the 2026 pricing for the five most popular options, what’s genuinely free, and the critical points to check before committing.",
+    "metaTitle": "Best Garage Software 2026: Comparison, Pricing, Free Options",
+    "metaDescription": "Gest'Garage, TDV, AutoProGestion, Kwixéo, EBP: 2026 pricing for garage management software, truly free options, and the five key points to verify before signing up.",
+    "tags": [
+      "best garage software",
+      "free garage management software",
+      "garage automotive software",
+      "garage software comparison",
+      "garage invoicing software",
+      "automotive garage management software"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "\"What is the best garage software?\" This is the question asked by garage owners who write to me, and it’s the first thing a workshop manager types into Google. The honest answer comes down to one sentence: there is no single best garage software—only the one that fits your workshop, your size, and your rules. To help you find it, I’ve gathered the public prices of the most common garage software solutions, what each one handles, and what it leaves out, and I’ve added what you’ll actually find when searching for free garage software.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What really matters in garage software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Before comparing prices, you need to know what you expect from the tool. A garage has four interconnected documents: booking, quote, signed repair order, and invoice. The right software connects them without re-entering data, keeps each vehicle’s record with its mileage and history, and generates invoices compliant with garage regulations. Everything else (parts inventory, SMS reminders, used vehicles, multi-workshop scheduling) depends on your business. A solo mechanic doesn’t need fleet management; an eight-person workshop across two sites can’t rely on just a calendar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The five most common garage software solutions and their 2026 prices",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The prices below are those displayed on the publishers’ websites, recorded on October 19, 2026 (as of September 29). They change regularly: verify before signing.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gest'Garage, 19 € per month.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The listed price is what you pay, with no VAT added, for up to five collaborators, including a 14-day trial without a credit card. It’s the simplest offer on the market to understand: a single package with quotes, repair orders, Factur-X-compliant invoices, scheduling, electronic signatures, inventory, and SMS reminders. For a one- to five-person garage looking for a complete tool without worrying about modules, this is the first to try.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "TDV, 19.90 to 24.90 € TTC per month.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The 19.90 € offer includes only the calendar and bar-timed entries; you need the Solo Complete package at 24.90 € for quotes, repair orders, invoices, and inventory. Interesting if manufacturer bar-timed rates are central to your pricing.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "AutoProGestion, 29 or 59 € HT per month.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The Starter package at 29 € HT per month (24 € HT paid annually) is limited to 100 clients and two users; the Pro package at 59 € HT (49 € annually) removes these limits. An Enterprise package, available on request, adds multi-site management, vehicle rentals, and API access. No monthly commitment, with a 14-day trial. This is the natural choice for a growing garage that wants flexibility to switch between plans.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Kwixéo, 22 to 89 € HT per month.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Three packages—Essential, Pro, and Expert—at 18.33, 49.17, and 74.17 € HT per month when paid annually (22, 59, and 89 € monthly). Vehicle and repair order management are included in the first package; inventory and payment links arrive in Pro, multi-depot inventory in Expert. Kwixéo is a general management software with a garage module, making it relevant if you also have sales or rental activities.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "EBP MéCa and GAD Garage, on request.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " These two historical publishers do not disclose their prices. They cover quotes, invoices, repair orders, inventory, and accounting exports, along with parts and time databases that smaller publishers can’t match. Request a demo if your workshop relies on these databases daily.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To compare these five software solutions in one table and determine, in six questions, which one suits your workshop, visit my page ",
+              "type": "text"
+            },
+            {
+              "text": "car garage software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": it includes these prices, the 2026 compliance rules, and a free trial.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Free garage software: what actually exists",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "There is no truly free garage software in the sense of a complete, unlimited tool designed for a workshop. What you’ll find instead are three different things.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Free trials.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Gest'Garage, AutoProGestion, and Kwixéo offer 14 days of trial without a credit card, with all features included. It's the best way to test a real workflow: a quote accepted over the phone, turned into a signed repair order, then billed—without having to re-enter anything.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Free invoicing software.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Facture.net, published by Codeur.com, is free with no limits on invoices or clients: quotes, invoices, payment tracking, and it promises electronic invoicing. It helps a lone mechanic invoice neatly, but it lacks a repair order, vehicle record with mileage, or intervention history by license plate. You’ll need to keep those separately, on paper or in a spreadsheet.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The spreadsheet.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Excel or Google Sheets can handle quotes and vehicle tracking for the first few months. But the moment two people work on it at once, or a customer asks for their car’s history over the phone, it’s a sign you need real software.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My advice: if budget is the issue, start with a garage software under €20 per month instead of a free general tool. The price difference pays off the first time you avoid a late payment follow-up.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Best invoicing software for garages: five key points to check",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A general invoicing software isn’t enough for a garage, because the invoice is just the end of the process. Before choosing, verify these five points during a demo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The quote becomes a repair order, then an invoice, without re-entering data.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " This is the top priority. If you retype every line at each step, you’ll waste more time than with your notebooks.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Mileage and license plate appear on all documents.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The mileage is listed on the quote, repair order, and invoice, and a vehicle’s history is retrievable by its license plate.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Invoices are ready for electronic billing.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " All businesses must be able to receive electronic invoices from September 1, 2026, and SMEs must issue them starting September 1, 2027. Gest'Garage already supports Factur-X format; ask other providers about their timeline.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Used parts are suggested from the quote.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Since 2017, garages must offer parts from the circular economy for certain repairs. A good software includes this in the quote instead of making you write it manually.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Your data exports.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Customers, vehicles, invoices: if you switch software in two years, you should be able to take your data with you in Excel or CSV format. Check this before signing, not afterward.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’ve detailed what the law requires for these three documents in my article on the ",
+              "type": "text"
+            },
+            {
+              "text": "garage billing software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-facturation-garage-devis-ordre-de-reparation-facture",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", with a free repair order and estimate template to download.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "When an off-the-shelf software solution is no longer enough",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The five software solutions above cover the essentials for a garage with one to ten employees. Three situations expose their limitations.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Your package rates and hourly rates don’t fit their settings.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A workshop that bills by flat rate per service type, with different rates depending on the vehicle, constantly finds workarounds for the tool.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You have multiple workshops.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The scheduling for each location, the inventory for each workshop, and the transfers of parts between them require an organization that entry-level solutions don’t account for—or charge dearly for.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You want your customers to book appointments and request quotes on your website.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Most publishers offer a form or page in their branding, not yours.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In these cases, you have two options: Keep your software and add a custom add-on (appointment booking on your site, multi-workshop scheduling, flat-rate quotes), costing between €2,500 and €7,000 once. Or switch to a fully custom tool, costing between €5,000 and €25,000 once, plus €100 to €300 per month for maintenance, which you own with its source code. Your accounting remains in your accounting software, linked to the tool. The test of my page ",
+              "type": "text"
+            },
+            {
+              "text": "automotive garage software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " tells you in two minutes which category you fall into.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What is the best free garage software?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No complete garage software is free. The 14-day trials of Gest'Garage, AutoProGestion, and Kwixéo let you test a real garage software for free; Facture.net, free and unlimited, handles quotes and invoices but not repair orders or vehicle history.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What garage software is best for a solo mechanic?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "A software solution under €25 per month is enough: Gest'Garage at €19 or TDV Solo Complet at €24.90 VAT covers quotes, repair orders, invoices, and vehicle history. A custom tool wouldn’t be cost-effective for a single person.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How much does garage software cost in 2026?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "From €19 to €89 per month, depending on the publisher, modules, and number of users: Gest'Garage at €19, TDV at €19.90 to €24.90 VAT, AutoProGestion at €29 or €59 excl. tax, Kwixéo at €22 to €89 excl. tax (cheaper when paid annually). EBP MéCa and GAD Garage are available on quote.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Are these software programs suitable for a motorcycle garage?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Many are designed for cars. Check during the demo that the vehicle file supports motorcycles and that your packages can be adjusted freely. A custom tool starts directly from your packages and your vehicle categories.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can you switch garage software without losing your history?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Yes, if your current software exports your customers, vehicles, and invoices in Excel or CSV format. Request this export before canceling, and ensure the new tool can import it; in a custom tool, data migration is included in the quote.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "e84d73aa-657d-4dec-9ac9-f537fcdd7290",
+            "body": [
+              {
+                "_uid": "i-5b243245-3deb-44f2-8b39-4af06e6ca333",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
