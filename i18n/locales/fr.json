@@ -210,11 +210,12 @@
     "aiAppTakeover": "Reprise d’application IA",
     "priceBarometer": "Prix d’un logiciel sur mesure",
     "publicAid": "Aides pour votre site ou logiciel",
-    "phpCheck": "Faille PHP : vérifier mon site",
-    "eInvoicingCheck": "Facture électronique : mon logiciel est-il agréé ?",
+    "phpCheck": "Faille PHP : vérifier mon site",
+    "eInvoicingCheck": "Facture électronique : mon logiciel est-il agréé ?",
     "phpUpdate": "Mise à jour PHP de votre site",
     "about": "À propos",
     "description": "Développeur indépendant près de Rennes. Logiciels de gestion, sites web et automatisations avec l'IA pour les TPE et PME.",
+    "franceNum": "Référencé Activateur France Num",
     "pagesTitle": "Pages",
     "contactTitle": "Contact",
     "location": "Saint-Erblon, près de Rennes",
@@ -232,9 +233,9 @@
       "personalTrainerSoftware": "Logiciel pour coach sportif",
       "landscapingSoftware": "Logiciel pour paysagiste",
       "cleaningBusinessSoftware": "Logiciel pour entreprise de nettoyage",
-      "eInvoicingScope": "Facture électronique : suis-je concerné ?",
-      "wordpressHackCheck": "Site WordPress piraté : vérifier",
-      "coldCallingCheck": "Démarchage téléphonique interdit ?",
+      "eInvoicingScope": "Facture électronique : suis-je concerné ?",
+      "wordpressHackCheck": "Site WordPress piraté : vérifier",
+      "coldCallingCheck": "Démarchage téléphonique interdit ?",
       "budgetEstimator": "Estimateur de budget"
     }
   },
@@ -1539,6 +1540,14 @@
     },
     "profiles": {
       "title": "Me retrouver ailleurs"
+    },
+    "franceNum": {
+      "title": "Référencé Activateur France Num",
+      "joined": "J'ai rejoint France Num en octobre 2026 : mon offre figure dans l'annuaire des Activateurs, sur francenum.gouv.fr. Je vous informe aussi des dispositifs de France Num et, si je ne peux pas répondre à votre demande, je vous oriente vers un autre Activateur France Num.",
+      "program": "France Num est l'initiative de l'État pour la transformation numérique des TPE et PME. Coordonnée par la Direction générale des entreprises avec les Régions, les chambres de commerce, les chambres de métiers et les organisations professionnelles, elle réunit guides, diagnostics, formations et aides financières.",
+      "logoAlt": "Logo Activateur France Num",
+      "profileLink": "Ma fiche sur francenum.gouv.fr",
+      "infoLink": "Pourquoi faire appel à un Activateur France Num ?"
     },
     "path": {
       "title": "Mon parcours",

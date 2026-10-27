@@ -215,6 +215,7 @@
     "freelanceRennes": "Desarrollador freelance en Rennes",
     "about": "Sobre mí",
     "description": "Desarrollador independiente cerca de Rennes. Software de gestión, sitios web y automatizaciones con IA para pymes y autónomos.",
+    "franceNum": "Referenciado como Activateur France Num",
     "pagesTitle": "Páginas",
     "contactTitle": "Contacto",
     "location": "Saint-Erblon, cerca de Rennes",
@@ -1539,6 +1540,14 @@
     },
     "profiles": {
       "title": "Encuéntrame en otras plataformas"
+    },
+    "franceNum": {
+      "title": "Referenciado como Activateur France Num",
+      "joined": "Me uní a France Num en octubre de 2026: mi oferta figura en su directorio de Activateurs, en francenum.gouv.fr. También te informo de los dispositivos de France Num y, si no puedo responder a tu solicitud, te oriento hacia otro Activateur France Num.",
+      "program": "France Num es la iniciativa del Estado francés para la transformación digital de las pymes. Coordinada por la Dirección General de Empresas con las regiones, las cámaras de comercio, las cámaras de oficios y las organizaciones profesionales, reúne guías, diagnósticos, formaciones y ayudas económicas.",
+      "logoAlt": "Logo Activateur France Num",
+      "profileLink": "Mi ficha en francenum.gouv.fr",
+      "infoLink": "¿Por qué recurrir a un Activateur France Num? (en francés)"
     },
     "path": {
       "title": "Mi trayectoria",

@@ -20,3 +20,11 @@ export const GOOGLE_BUSINESS_URL: string = 'https://www.google.com/maps?cid=6567
 export const BOOKING_URL: string = 'https://cal.com/dibodev/premier-echange'
 /** Short booking address shown as the link text. */
 export const BOOKING_URL_DISPLAY: string = 'cal.com/dibodev'
+
+/** Dibodev's listing in the France Num directory of the State (DGE), live since 26 October 2026. */
+export const FRANCE_NUM_PROFILE_URL: string = 'https://www.francenum.gouv.fr/activateurs/dibodev'
+/** France Num page that the brand guide asks activators to link from their website. */
+export const FRANCE_NUM_ACTIVATOR_INFO_URL: string =
+  'https://www.francenum.gouv.fr/experts-du-numerique/pourquoi-faire-appel-un-expert-du-numerique-reference-par-france-num'
+/** Official "Activateur France Num" logo, shown as it is: the brand guide forbids any change to it. */
+export const FRANCE_NUM_ACTIVATOR_LOGO_SRC: string = '/images/badges/logo-activateur-france-num.jpg'

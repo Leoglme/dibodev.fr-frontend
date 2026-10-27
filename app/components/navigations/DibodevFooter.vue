@@ -6,6 +6,26 @@
       <div class="grid content-start gap-6 sm:col-span-2 lg:col-span-1">
         <DibodevLogo :large="true" :size="30" />
         <p class="max-w-xs text-[15px] leading-6 text-gray-200 lg:max-w-84">{{ $t('footer.description') }}</p>
+        <a
+          :href="FRANCE_NUM_PROFILE_URL"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group focus-visible:outline-primary inline-flex w-fit items-center gap-3.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4"
+          @click="track(TRACKING_EVENTS.externalProfileClicked, { platform: 'France Num', location: 'footer' })"
+        >
+          <img
+            :src="FRANCE_NUM_ACTIVATOR_LOGO_SRC"
+            alt=""
+            class="h-14 w-auto shrink-0"
+            width="400"
+            height="364"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="max-w-40 text-[13px] leading-5 text-gray-200 transition-colors group-hover:text-gray-100">
+            {{ $t('footer.franceNum') }}
+          </span>
+        </a>
       </div>
 
       <nav class="grid content-start gap-5 lg:row-span-2 lg:pt-1.25" :aria-label="$t('footer.pagesTitle')">
@@ -178,7 +198,12 @@ import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import PhoneLink from '~/components/core/PhoneLink.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevLanguageSwitcher from '~/components/core/DibodevLanguageSwitcher.vue'
-import { CONTACT_EMAIL, MALT_PROFILE_URL } from '~/config/contact'
+import {
+  CONTACT_EMAIL,
+  FRANCE_NUM_ACTIVATOR_LOGO_SRC,
+  FRANCE_NUM_PROFILE_URL,
+  MALT_PROFILE_URL,
+} from '~/config/contact'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 

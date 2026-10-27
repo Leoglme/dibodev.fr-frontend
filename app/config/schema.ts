@@ -1,4 +1,4 @@
-import { GOOGLE_BUSINESS_URL } from '~/config/contact'
+import { FRANCE_NUM_PROFILE_URL, GOOGLE_BUSINESS_URL } from '~/config/contact'
 
 /**
  * Schema.org structured data (JSON-LD) for the site: a Person (Léo Guillaume)
@@ -82,6 +82,19 @@ export type SchemaOpeningHoursSpecification = {
   closes: string
 }
 
+export type SchemaGovernmentOrganization = {
+  '@type': 'GovernmentOrganization'
+  name: string
+  url: string
+}
+
+export type SchemaProgramMembership = {
+  '@type': 'ProgramMembership'
+  programName: string
+  url: string
+  hostingOrganization: SchemaGovernmentOrganization
+}
+
 export type SchemaOrganization = {
   '@type': ['Organization', 'ProfessionalService']
   '@id': string
@@ -96,6 +109,7 @@ export type SchemaOrganization = {
   foundingDate: string
   founder: SchemaEntityReference
   sameAs: string[]
+  memberOf: SchemaProgramMembership[]
   areaServed: string[]
   address: SchemaPostalAddress
   geo: SchemaGeoCoordinates
@@ -211,6 +225,21 @@ const ORGANIZATION_SAME_AS: string[] = [
   'https://www.crunchbase.com/organization/dibodev',
   'https://fr.kompass.com/c/m-leo-guillaume/fra0ddqgz/',
   'https://www.europages.fr/fr/company/leo-guillaume-22424130',
+  FRANCE_NUM_PROFILE_URL,
+]
+
+/** Listing in the France Num directory, the State programme run by the DGE for the digital shift of small businesses. */
+const ORGANIZATION_MEMBER_OF: SchemaProgramMembership[] = [
+  {
+    '@type': 'ProgramMembership',
+    programName: 'Activateurs France Num',
+    url: FRANCE_NUM_PROFILE_URL,
+    hostingOrganization: {
+      '@type': 'GovernmentOrganization',
+      name: 'France Num (Direction générale des entreprises)',
+      url: 'https://www.francenum.gouv.fr',
+    },
+  },
 ]
 
 /** Centre of the commune (geo.api.gouv.fr): the street address is not public. */
@@ -263,6 +292,7 @@ export const organizationSchema: SchemaOrganization = {
   foundingDate: ORGANIZATION_FOUNDING_DATE,
   founder: { '@id': PERSON_ID },
   sameAs: ORGANIZATION_SAME_AS,
+  memberOf: ORGANIZATION_MEMBER_OF,
   areaServed: AREA_SERVED,
   address: schemaAddress,
   geo: { '@type': 'GeoCoordinates', latitude: GEO_LATITUDE, longitude: GEO_LONGITUDE },
