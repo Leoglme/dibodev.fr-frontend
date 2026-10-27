@@ -51,43 +51,7 @@
 
       <div class="grid gap-7">
         <h3 class="text-2xl font-medium text-gray-100">{{ t('aboutPage.franceNum.title') }}</h3>
-        <div class="grid items-start gap-6 sm:grid-cols-[auto_minmax(0,42rem)] sm:justify-start sm:gap-10">
-          <img
-            :src="FRANCE_NUM_ACTIVATOR_LOGO_SRC"
-            :alt="t('aboutPage.franceNum.logoAlt')"
-            class="h-28 w-auto justify-self-start"
-            width="400"
-            height="364"
-            loading="lazy"
-            decoding="async"
-          />
-          <div class="grid gap-5">
-            <p class="text-[17px] leading-7 text-gray-200 lg:text-lg lg:leading-8">
-              {{ t('aboutPage.franceNum.joined') }}
-            </p>
-            <p class="text-[17px] leading-7 text-gray-200 lg:text-lg lg:leading-8">
-              {{ t('aboutPage.franceNum.program') }}
-            </p>
-            <ul class="flex flex-wrap gap-x-8 gap-y-3 text-[15px] leading-6">
-              <li>
-                <DibodevLink
-                  :external-link="true"
-                  :link="FRANCE_NUM_PROFILE_URL"
-                  @click="track(TRACKING_EVENTS.externalProfileClicked, { platform: 'France Num', location: 'about' })"
-                >
-                  <span>{{ t('aboutPage.franceNum.profileLink') }}</span>
-                  <DibodevIcon name="ExternalLink" mode="stroke" :width="14" :height="14" aria-hidden="true" />
-                </DibodevLink>
-              </li>
-              <li>
-                <DibodevLink :external-link="true" :link="FRANCE_NUM_ACTIVATOR_INFO_URL">
-                  <span>{{ t('aboutPage.franceNum.infoLink') }}</span>
-                  <DibodevIcon name="ExternalLink" mode="stroke" :width="14" :height="14" aria-hidden="true" />
-                </DibodevLink>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <DibodevFranceNumCard tracking-location="about" />
       </div>
 
       <div class="grid gap-7">
@@ -132,9 +96,8 @@ import type { ComputedRef } from 'vue'
 import type { DibodevAboutKeyFact, DibodevAboutStoryBlock } from '~/core/types/DibodevAboutPage'
 import { computed } from 'vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
-import DibodevLink from '~/components/core/DibodevLink.vue'
+import DibodevFranceNumCard from '~/components/cards/DibodevFranceNumCard.vue'
 import { ABOUT_PROFILE_LINKS } from '~/core/constants/aboutProfileLinks'
-import { FRANCE_NUM_ACTIVATOR_INFO_URL, FRANCE_NUM_ACTIVATOR_LOGO_SRC, FRANCE_NUM_PROFILE_URL } from '~/config/contact'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 import { CareerUtils } from '~/core/utils/CareerUtils'

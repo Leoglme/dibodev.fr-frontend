@@ -1483,6 +1483,20 @@
       "serviceName": "Freelance web developer in Rennes: websites, applications and custom software"
     }
   },
+  "franceNumCard": {
+    "logoAlt": "Activateur France Num logo",
+    "since": "Since October 2026",
+    "profileLink": "See my listing",
+    "profileLinkAriaLabel": "See my listing on francenum.gouv.fr",
+    "lead": "My services are listed in the directory of Activateurs France Num, the French government's initiative to help small and medium businesses go digital. By joining the network, I made these commitments to businesses:",
+    "commitments": {
+      "firstMeeting": "The first meeting is free, to understand your needs before any quote.",
+      "publicSchemes": "I tell you about the France Num aid and schemes that apply to you.",
+      "otherActivator": "If I'm not the right person, I point you to another Activateur."
+    },
+    "program": "France Num is coordinated by the Directorate-General for Enterprise with the regions, the chambers of commerce, the chambers of trades and professional organisations.",
+    "infoLink": "Why work with an Activateur France Num? (in French)"
+  },
   "aboutPage": {
     "hero": {
       "titlePart1": "Léo Guillaume, full‑stack and AI ",
@@ -1542,12 +1556,7 @@
       "title": "Find me elsewhere"
     },
     "franceNum": {
-      "title": "Listed as an Activateur France Num",
-      "joined": "I joined France Num in October 2026: my services are listed in its directory of Activateurs, on francenum.gouv.fr. I also tell you about France Num's schemes and, if I can't handle your request, I point you to another Activateur France Num.",
-      "program": "France Num is the French government's initiative to help small and medium businesses go digital. Coordinated by the Directorate-General for Enterprise with the regions, the chambers of commerce, the chambers of trades and professional organisations, it brings together guides, diagnostics, training and financial aid.",
-      "logoAlt": "Activateur France Num logo",
-      "profileLink": "My listing on francenum.gouv.fr",
-      "infoLink": "Why work with an Activateur France Num? (in French)"
+      "title": "Listed as an Activateur France Num"
     },
     "path": {
       "title": "My background",

@@ -1483,6 +1483,20 @@
       "serviceName": "Desarrollador web freelance en Rennes: sitios web, aplicaciones y software a medida"
     }
   },
+  "franceNumCard": {
+    "logoAlt": "Logo Activateur France Num",
+    "since": "Desde octubre de 2026",
+    "profileLink": "Ver mi ficha",
+    "profileLinkAriaLabel": "Ver mi ficha en francenum.gouv.fr",
+    "lead": "Mi oferta figura en el directorio de Activateurs France Num, la iniciativa del Estado francés para la transformación digital de las pymes. Al unirme a la red, asumí estos compromisos con las empresas:",
+    "commitments": {
+      "firstMeeting": "La primera reunión es gratuita, para entender tu necesidad antes de cualquier presupuesto.",
+      "publicSchemes": "Te informo de las ayudas y los dispositivos de France Num que te afectan.",
+      "otherActivator": "Si no soy la persona adecuada, te oriento hacia otro Activateur."
+    },
+    "program": "France Num está coordinada por la Dirección General de Empresas con las regiones, las cámaras de comercio, las cámaras de oficios y las organizaciones profesionales.",
+    "infoLink": "¿Por qué recurrir a un Activateur France Num? (en francés)"
+  },
   "aboutPage": {
     "hero": {
       "titlePart1": "Léo Guillaume, ",
@@ -1542,12 +1556,7 @@
       "title": "Encuéntrame en otras plataformas"
     },
     "franceNum": {
-      "title": "Referenciado como Activateur France Num",
-      "joined": "Me uní a France Num en octubre de 2026: mi oferta figura en su directorio de Activateurs, en francenum.gouv.fr. También te informo de los dispositivos de France Num y, si no puedo responder a tu solicitud, te oriento hacia otro Activateur France Num.",
-      "program": "France Num es la iniciativa del Estado francés para la transformación digital de las pymes. Coordinada por la Dirección General de Empresas con las regiones, las cámaras de comercio, las cámaras de oficios y las organizaciones profesionales, reúne guías, diagnósticos, formaciones y ayudas económicas.",
-      "logoAlt": "Logo Activateur France Num",
-      "profileLink": "Mi ficha en francenum.gouv.fr",
-      "infoLink": "¿Por qué recurrir a un Activateur France Num? (en francés)"
+      "title": "Referenciado como Activateur France Num"
     },
     "path": {
       "title": "Mi trayectoria",

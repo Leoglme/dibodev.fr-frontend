@@ -1,4 +1,4 @@
-import { FRANCE_NUM_PROFILE_URL, GOOGLE_BUSINESS_URL } from '~/config/contact'
+import { FRANCE_NUM_PROFILE_URL, GOOGLE_BUSINESS_URL, GOOGLE_KNOWLEDGE_GRAPH_URL } from '~/config/contact'
 
 /**
  * Schema.org structured data (JSON-LD) for the site: a Person (Léo Guillaume)
@@ -41,6 +41,8 @@ export type SchemaPerson = {
   givenName: string
   familyName: string
   jobTitle: string
+  description: string
+  disambiguatingDescription: string
   email: string
   telephone: string
   url: string
@@ -50,6 +52,7 @@ export type SchemaPerson = {
   worksFor: SchemaEntityReference
   alumniOf: SchemaEducationalOrganization
   knowsAbout: string[]
+  knowsLanguage: string[]
 }
 
 export type SchemaService = {
@@ -99,6 +102,7 @@ export type SchemaOrganization = {
   '@type': ['Organization', 'ProfessionalService']
   '@id': string
   name: string
+  alternateName: string[]
   legalName: string
   description: string
   url: string
@@ -134,7 +138,15 @@ export const PERSON_GIVEN_NAME: string = 'Léo'
 export const PERSON_FAMILY_NAME: string = 'Guillaume'
 export const PERSON_NAME: string = `${PERSON_GIVEN_NAME} ${PERSON_FAMILY_NAME}`
 const JOB_TITLE: string = 'Développeur freelance full-stack et IA'
+const PERSON_DESCRIPTION: string =
+  "Développeur freelance full-stack et IA près de Rennes, fondateur de Dibodev : applications métier, logiciels de gestion, sites web et automatisations avec l'IA pour les TPE et PME."
+/** Same wording as the Wikidata description, to keep Léo apart from his namesakes (an actor among them). */
+const PERSON_DISAMBIGUATING_DESCRIPTION: string =
+  'Développeur logiciel français, fondateur de Dibodev, à Saint-Erblon près de Rennes.'
+/** The About page is Léo's own page, as declared on Wikidata (official website of Q141592129). */
+const PERSON_URL: string = `${SITE_URL}/a-propos`
 const PERSON_IMAGE: string = `${SITE_URL}/images/about/leo-guillaume-portrait-800.webp`
+const PERSON_LANGUAGES: string[] = ['fr', 'en']
 const EMAIL: string = 'contact@dibodev.fr'
 const TELEPHONE: string = '+33642193812'
 
@@ -144,6 +156,8 @@ const ADDRESS_REGION: string = 'Bretagne'
 const ADDRESS_COUNTRY: string = 'FR'
 
 const ORGANIZATION_NAME: string = 'Dibodev'
+/** Name used by the directories that follow the business register (Europages, Kompass, France Num contact). */
+const ORGANIZATION_ALTERNATE_NAMES: string[] = ['Léo Guillaume (Dibodev)']
 const ORGANIZATION_LEGAL_NAME: string = 'EI - GUILLAUME LEO'
 const ORGANIZATION_DESCRIPTION: string =
   'Studio de développement web, mobile et IA de Léo Guillaume : sites web, applications mobiles, SaaS et outils métier sur mesure pour TPE et PME.'
@@ -214,6 +228,8 @@ const PERSON_SAME_AS: string[] = [
   'https://zestedesavoir.com/@dibodevcode',
   'https://www.wikidata.org/wiki/Q141592129',
   'https://www.crunchbase.com/person/l%C3%A9o-guillaume',
+  'https://www.data.gouv.fr/users/leo-guillaume-1',
+  'https://claudepartners.fr/prestataires/leo-guillaume-dibodev-4cd67/',
 ]
 
 const ORGANIZATION_SAME_AS: string[] = [
@@ -226,6 +242,11 @@ const ORGANIZATION_SAME_AS: string[] = [
   'https://fr.kompass.com/c/m-leo-guillaume/fra0ddqgz/',
   'https://www.europages.fr/fr/company/leo-guillaume-22424130',
   FRANCE_NUM_PROFILE_URL,
+  'https://www.data.gouv.fr/organizations/dibodev',
+  'https://annuaire-entreprises.data.gouv.fr/entreprise/leo-guillaume-988307906',
+  'https://www.pappers.fr/entreprise/guillaume-leo-988307906',
+  'https://fr.mappy.com/poi/69003bc22464ff66b9b84b30',
+  GOOGLE_KNOWLEDGE_GRAPH_URL,
 ]
 
 /** Listing in the France Num directory, the State programme run by the DGE for the digital shift of small businesses. */
@@ -267,21 +288,25 @@ export const personSchema: SchemaPerson = {
   givenName: PERSON_GIVEN_NAME,
   familyName: PERSON_FAMILY_NAME,
   jobTitle: JOB_TITLE,
+  description: PERSON_DESCRIPTION,
+  disambiguatingDescription: PERSON_DISAMBIGUATING_DESCRIPTION,
   email: EMAIL,
   telephone: TELEPHONE,
-  url: SITE_URL,
+  url: PERSON_URL,
   image: PERSON_IMAGE,
   sameAs: PERSON_SAME_AS,
   address: schemaAddress,
   worksFor: { '@id': ORGANIZATION_ID },
   alumniOf: PERSON_ALUMNI_OF,
   knowsAbout: PERSON_KNOWS_ABOUT,
+  knowsLanguage: PERSON_LANGUAGES,
 }
 
 export const organizationSchema: SchemaOrganization = {
   '@type': ['Organization', 'ProfessionalService'],
   '@id': ORGANIZATION_ID,
   name: ORGANIZATION_NAME,
+  alternateName: ORGANIZATION_ALTERNATE_NAMES,
   legalName: ORGANIZATION_LEGAL_NAME,
   description: ORGANIZATION_DESCRIPTION,
   url: SITE_URL,
