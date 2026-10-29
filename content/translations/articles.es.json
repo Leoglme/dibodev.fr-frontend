@@ -35301,5 +35301,1213 @@
         }
       ]
     }
+  },
+  "blog/php-82-fin-de-vie-31-decembre-2026-que-faire": {
+    "title": "PHP 8.2: fin de soporte el 31 de diciembre de 2026, ¿qué hacer antes?",
+    "excerpt": "A partir del 31 de diciembre de 2026, PHP 8.2 ya no recibirá parches. Fechas verificadas en php.net, versiones ofrecidas por 8 proveedores de alojamiento y 4 pasos para migrar.",
+    "metaTitle": "PHP 8.2 fin de soporte el 31 de diciembre de 2026: ¿qué hacer?",
+    "metaDescription": "PHP 8.2 no recibirá más parches de seguridad después del 31 de diciembre de 2026. Fechas en php.net, versiones en OVHcloud, o2switch, IONOS, Hostinger… y 4 pasos para migrar.",
+    "tags": [
+      "php 8.2",
+      "fin de soporte php",
+      "actualización php",
+      "wordpress",
+      "prestashop",
+      "alojamiento web",
+      "seguridad informática"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El 31 de diciembre de 2026, PHP 8.2 dejará de recibir parches de seguridad. No es un error ni una falla: es el calendario del proyecto PHP, publicado durante años en php.net. Pero después de ",
+              "type": "text"
+            },
+            {
+              "text": "la vulnerabilidad de PHP de octubre de 2026",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/faille-php-octobre-2026-site-boutique-logiciel-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", esta fecha adquiere otro significado: hemos visto lo que ocurre con las versiones que ya no son soportadas. Nada. Sin parches, y un sitio web que sigue expuesto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si solo lee un párrafo:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " si su sitio web, tienda o software funciona con PHP 8.2 o una versión más antigua, planee migrar a PHP 8.3, 8.4 o 8.5 antes de fin de año, tras hacer una copia de seguridad y probar en un entorno de prueba. Comience por ",
+              "type": "text"
+            },
+            {
+              "text": "verificar la versión de PHP de su sitio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/faille-php-verifier-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", el resto le indicará qué hacer con su proveedor de alojamiento.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Qué significa «fin de vida », en la práctica",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Cada versión de PHP sigue el mismo ciclo, descrito en la ",
+              "type": "text"
+            },
+            {
+              "text": "página de versiones soportadas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.php.net/supported-versions.php",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": dos años de soporte completo, donde se corrigen errores y vulnerabilidades, seguidos de otros dos años de soporte de seguridad, donde solo se parchan vulnerabilidades críticas. Después de cuatro años, la versión ya no es soportada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El 21 de octubre de 2026, dos vulnerabilidades críticas fueron corregidas en PHP 8.5.12, 8.4.27, 8.3.36 y 8.2.35. PHP 8.1, que alcanzó su fin de vida el 31 de diciembre de 2025, no recibió una versión corregida: el proyecto publicó parches en su código fuente, dejando a cada proveedor de alojamiento la decisión de aplicarlos o no. A partir del 1 de enero de 2027, PHP 8.2 estará en esa misma situación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El peligro es que un fin de vida no se nota. El sitio no se detiene, no aparece ningún mensaje, las órdenes siguen llegando. Un sitio en PHP 8.2 funcionará el 2 de enero de 2027 igual que el día anterior, simplemente sin protección.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Está afectado? ¿Cómo saber su versión",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La herramienta que publiqué durante la vulnerabilidad de octubre lee el encabezado de su página de inicio y le indica qué versión anuncia su servidor: ",
+              "type": "text"
+            },
+            {
+              "text": "verificar la versión de PHP de su sitio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/faille-php-verifier-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". No mostrará nada si su proveedor oculta esa información, pero es el primer paso a intentar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si usa WordPress, abra Herramientas, luego Salud del sitio, pestaña Información, sección Servidor: la línea «Versión de PHP» muestra la versión realmente utilizada por su sitio, no la que su proveedor muestra para toda la cuenta. Finalmente, el panel de cliente de su proveedor de alojamiento muestra la versión activa por dominio; las guías paso a paso están más abajo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "El calendario de versiones, verificado el 28 de octubre de 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "fechas leídas el 28 de octubre de 2026 en la ",
+              "type": "text"
+            },
+            {
+              "text": "página de versiones soportadas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.php.net/supported-versions.php",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " de php.net y su ",
+              "type": "text"
+            },
+            {
+              "text": "página de fin de vida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.php.net/eol.php",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.1 y versiones anteriores: fin de vida.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " PHP 8.1 ya no recibe soporte desde el 31 de diciembre de 2025 (última versión 8.1.34), PHP 8.0 desde el 26 de noviembre de 2023, PHP 7.4 desde el 28 de noviembre de 2022. Si su sitio funciona con alguna de estas versiones, no anticipa un plazo: ya no recibe parches.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.2: soporte de seguridad hasta el 31 de diciembre de 2026.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Lanzada el 8 de diciembre de 2022, fuera de soporte completo desde el 31 de diciembre de 2024. Recibió el parche de octubre; será uno de los últimos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.3: soporte de seguridad hasta el 31 de diciembre de 2027.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Lanzada el 23 de noviembre de 2023, soporte completo terminado el 31 de diciembre de 2025. Pasar a 8.3 da un año de tranquilidad, nada más.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.4: soporte completo hasta el 31 de diciembre de 2026, luego seguridad hasta el 31 de diciembre de 2028.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Lanzada el 21 de noviembre de 2024. WordPress recomienda 8.3 o superior, PrestaShop 9.0 y Joomla 6 recomiendan 8.4: el equilibrio ideal entre compatibilidad de extensiones y tiempo restante.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP 8.5: soporte completo hasta el 31 de diciembre de 2027, luego seguridad hasta el 31 de diciembre de 2029.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Lanzada el 20 de noviembre de 2025. La más duradera, pero también la menos probada con extensiones y temas. PrestaShop 9.1 la recomienda; WordPress la soporta desde la versión 6.9.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A partir del 1 de enero de 2027, solo quedarán tres versiones soportadas: 8.3, 8.4 y 8.5.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que ofrecen los proveedores de alojamiento",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Revisé el 28 de octubre de 2026 la documentación pública de ocho proveedores de alojamiento. Aquí está lo que dice y lo que no dice.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "OVHcloud.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La ",
+              "type": "text"
+            },
+            {
+              "text": "guía de versiones disponibles",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://docs.ovhcloud.com/fr/guides/web-cloud/web-hosting/web-hosting-main-info",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", actualizado el 27 de octubre de 2026, lista PHP 5.3 a 8.5 con sus propias fechas de finalización: 30 de junio de 2029 para PHP 8.4, 30 de junio de 2030 para PHP 8.5, « por determinar » para 8.2 y 8.3, « migración recomendada » para 8.1 y versiones anteriores. No se mencionan costos. Ver la ",
+              "type": "text"
+            },
+            {
+              "text": "guía de OVHcloud",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-ovh-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "o2switch.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La ",
+              "type": "text"
+            },
+            {
+              "text": "página del selector de versión de PHP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://faq.o2switch.fr/hebergement-mutualise/tutoriels-cpanel/selecteur-version-php",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", fechada el 23 de junio de 2026, lista PHP 4.4 a 8.5; la versión « nativa », aplicada por defecto, es PHP 8.1. No se mencionan costos ni fechas de finalización. Ver la ",
+              "type": "text"
+            },
+            {
+              "text": "guía de o2switch",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-o2switch-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "IONOS.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Es el caso particular. Las versiones recientes son gratuitas y la ",
+              "type": "text"
+            },
+            {
+              "text": "página de cambio de versión",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.ionos.fr/assistance/hebergement/gerer-la-version-php-dans-le-espace-client/afficher-ou-changer-la-version-de-php/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " recomienda PHP 8.4. Pero las versiones abandonadas por el proyecto PHP, desde 5.6 hasta 8.1, pasan a ",
+              "type": "text"
+            },
+            {
+              "text": "« Soporte Extendido PHP »",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.ionos.fr/assistance/hebergement/depannage-pour-php/support-prolonge-php/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", facturado cada mes después de un período de transición gratuito; el monto no está publicado. PHP 8.1 entró el 31 de diciembre de 2025; salvo cambios en la política, PHP 8.2 seguirá el 31 de diciembre de 2026. Después de la migración, la opción debe cancelarse explícitamente. Ver la ",
+              "type": "text"
+            },
+            {
+              "text": "guía de IONOS",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-ionos-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hostinger.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " El",
+              "type": "text"
+            },
+            {
+              "text": "artículo de ayuda",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/support/1575755-how-to-change-the-php-version-of-your-hostinger-hosting-plan/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", actualizado el 27 de octubre de 2026, solo ofrece PHP 8.2 a 8.5; las versiones 8.1 y anteriores han desaparecido del selector, y 8.3 es la versión por defecto. Ver la ",
+              "type": "text"
+            },
+            {
+              "text": "guía de Hostinger",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-hostinger-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Infomaniak.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La ",
+              "type": "text"
+            },
+            {
+              "text": "FAQ sobre el cambio de versión",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.infomaniak.com/fr/support/faq/2053/modifier-la-version-de-php-dun-site",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", actualizada el 27 de octubre de 2026, indica que los parches de octubre se han desplegado para PHP 7.4 a 8.5, sin cambios en el número: Infomaniak ha aplicado el parche a las versiones antiguas. Lista por oferta y costos: no publicados. Ver la ",
+              "type": "text"
+            },
+            {
+              "text": "guía de Infomaniak",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-infomaniak-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PlanetHoster.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La base de conocimientos explica cómo elegir la versión en un menú desplegable de N0C, pero no publica ni la lista de versiones, ni fecha de retiro, ni costos. El ",
+              "type": "text"
+            },
+            {
+              "text": "guía de PlanetHoster",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/changer-version-php-planethoster-faille-octobre-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra dónde hacer clic.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gandi.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La ",
+              "type": "text"
+            },
+            {
+              "text": "documentación de PHP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://docs.gandi.net/fr/hebergement_web/langages/php.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " indica solo que la instalación automática de WordPress funciona en PHP 8.1, 8.2 y 8.3; la lista completa no está publicada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "LWS.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " El",
+              "type": "text"
+            },
+            {
+              "text": "artículo de ayuda sobre cPanel",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://aide.lws.fr/base/cPanel/Configuration-PHP-avec-cPanel/Comment-changer-de-version-PHP-sur-votre-hebergement-cPanel",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", fechado el 30 de diciembre de 2025, lista PHP 5.6 a 8.5 como « actualmente disponibles ». Sin costos ni retiros anunciados.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En resumen: solo IONOS cobra por mantener una versión en fin de vida, Hostinger ha retirado las versiones antiguas de la selección, y los demás las dejan accesibles sin comprometerse a corregirlas. Mantener PHP 8.2 después del 31 de diciembre sigue siendo tu decisión y tu riesgo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Qué hacer antes del 31 de diciembre: cuatro pasos",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "1. Hacer una copia de seguridad",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Archivos y base de datos, ambos, en una copia de seguridad que sepas restaurar. La copia del proveedor de alojamiento cuenta, si sabes dónde está y cómo restaurarla.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "2. Probar en una copia",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En la mayoría de los proveedores de alojamiento, puedes crear un subdominio, copiar el sitio allí y asignarle otra versión de PHP sin tocar el sitio principal. En la copia, pasa a PHP 8.4 y revisa las páginas clave: página de inicio, formulario de contacto, ficha de producto, carrito, pago, espacio de cliente, exportación contable. Anota lo que falle.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "3. Cambiar de versión",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una vez validada la copia, cambia la versión en el sitio real, desde el espacio de cliente del proveedor de alojamiento, en un momento de baja actividad. Si vienes de PHP 7, no saltes directamente a 8.5: la mayoría de las incompatibilidades están entre 7.4 y 8.0, trata ese paso por separado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "4. Verificar",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Revisa nuevamente las páginas clave, asegúrate de que las órdenes de prueba, los correos electrónicos y las tareas programadas funcionen, y monitorea el registro de errores de PHP durante unos días. Si el sitio deja de responder del todo, vuelve a la versión anterior y asegúrate de que el problema no provenga de tu lado: ",
+              "type": "text"
+            },
+            {
+              "text": "¿tu proveedor de alojamiento está caído?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/hebergeur-en-panne",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " él te lo dirá antes de contactar al soporte.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que suele fallar",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una extensión o tema abandonado.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Una extensión de WordPress sin actualización desde hace dos años rara vez ha sido probada en PHP 8.4. Revisa la fecha de la última actualización de cada extensión activa; las que están desactualizadas deben reemplazarse, no esperes a que funcionen.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El paso de PHP 7 a PHP 8.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " PHP 8 es más estricto: operaciones permitidas en 7.4 generan errores fatales, y varias funciones antiguas han desaparecido. Un software empresarial escrito en 2018 y nunca modificado casi siempre requiere algunas correcciones. Esto se hace, pero en una copia.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El software en sí tiene una versión máxima.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " PrestaShop 8 se detiene en PHP 8.1: una tienda PrestaShop 8 no puede pasar a 8.2 o superior sin migrar a PrestaShop 9, que acepta de 8.1 a 8.4 y recomienda 8.5 en su versión 9.1. Joomla 6 exige PHP 8.3 como mínimo, Laravel 12 requiere PHP 8.2 o superior. Verifica la versión de tu aplicación antes que la de PHP.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Mi sitio sigue funcionando, ¿por qué cambiar?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Porque también funcionará el día en que se publique una vulnerabilidad y nadie la corrija. En octubre, los sitios en PHP 8.1 esperaron un parche que solo algunos proveedores de alojamiento aplicaron; después del 31 de diciembre, PHP 8.2 está en esa situación. Un sitio que funciona y un sitio protegido son dos cosas distintas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿PHP 8.3, 8.4 o 8.5?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para un sitio o tienda clásica, PHP 8.4: soportado hasta el 31 de diciembre de 2028, aceptado por WordPress, PrestaShop 9 y Joomla 6, con dos años de retroalimentación sobre las extensiones. PHP 8.3 es una opción transitoria cuando una extensión bloquea el proceso, para reevaluar a finales de 2027. PHP 8.5 se justifica cuando dominas el código de la aplicación o cuando tu software lo recomienda, como PrestaShop 9.1.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Mi proveedor de alojamiento no ofrece PHP 8.4",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Entre los proveedores de alojamiento que he revisado, OVHcloud, o2switch, Hostinger, Infomaniak y LWS ofrecen PHP 8.4 y 8.5, y IONOS recomienda 8.4; PlanetHoster y Gandi no publican sus listas. Si la versión no aparece en tu espacio de cliente, pregunta por escrito al soporte si está prevista y cuándo. Si la respuesta es negativa o ambigua, un proveedor sin PHP 8.4 a finales de 2026 no te acompañará en los próximos plazos: es mejor planificar una mudanza ahora que hacerlo con urgencia.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cuánto cuesta?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tú mismo: medio día para un sitio web sencillo sin complicaciones, incluyendo copias de seguridad y verificaciones. Si prefieres delegar, mis precios están en la página de ",
+              "type": "text"
+            },
+            {
+              "text": "actualización de PHP de tu sitio, tienda o software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/mise-a-jour-php-site-logiciel",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": diagnóstico gratuito, 190 € por un sitio web de WordPress, 390 € por una tienda o un sitio con muchas extensiones, a partir de 690 € para un software especializado que requiera correcciones en el código, y 100 € al mes para que yo supervise las versiones por ti. Precios netos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿WordPress y PHP 8.4 son compatibles?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí. La ",
+              "type": "text"
+            },
+            {
+              "text": "página de requisitos previos",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://wordpress.org/about/requirements/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " de WordPress recomienda «PHP 8.3 o superior», y la ",
+              "type": "text"
+            },
+            {
+              "text": "tabla de compatibilidad",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " del equipo de WordPress, actualizada el 19 de agosto de 2026, indica que PHP 8.4 es compatible desde WordPress 6.7 y PHP 8.5 desde WordPress 6.9. La pregunta no es WordPress, sino tus extensiones y tu tema.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Antes de fin de año",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El 31 de diciembre de 2026 no es una sorpresa: la fecha se publicó en php.net desde el lanzamiento de PHP 8.2. Lo que cambió con la vulnerabilidad de octubre es la comprensión de sus implicaciones. Dos meses son suficientes para hacer una copia de seguridad, probar en una copia, cambiar de versión y verificar, sin prisas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Empieza por ",
+              "type": "text"
+            },
+            {
+              "text": "verificar la versión de PHP de tu sitio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/faille-php-verifier-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". Y si prefieres que alguien se encargue, desde la copia de seguridad hasta el informe, ",
+              "type": "text"
+            },
+            {
+              "text": "la actualización de PHP de tu sitio, tienda o software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/mise-a-jour-php-site-logiciel",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " empieza con un diagnóstico gratuito: envíame la dirección de tu sitio, te digo qué veo y qué propongo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "639458be-d1db-4c21-80ce-2b65d7f4b05f",
+            "body": [
+              {
+                "_uid": "i-e9a9d22a-947e-4cd3-b22a-6d20e544dc3b",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
