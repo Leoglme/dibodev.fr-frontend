@@ -36158,25 +36158,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Go through the key pages again, check that test orders, emails, and scheduled tasks go through, and monitor the PHP error log for a few days. If the site stops responding entirely, revert to the previous version, and make sure the issue isn’t on your end: ",
-              "type": "text"
-            },
-            {
-              "text": "Is your host down?",
-              "type": "text",
-              "marks": [
-                {
-                  "type": "link",
-                  "attrs": {
-                    "href": "/outils/hebergeur-en-panne",
-                    "target": "_self",
-                    "linktype": "url"
-                  }
-                }
-              ]
-            },
-            {
-              "text": " They’ll tell you before you call support.",
+              "text": "Go through the key pages again, check that test orders, emails, and scheduled tasks go through, and monitor the PHP error log for a few days. If the site stops responding entirely, revert to the previous version, and make sure the problem really is on your side: your host’s status page shows whether it has an outage in progress. Check it before you call support.",
               "type": "text"
             }
           ]
