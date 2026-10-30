@@ -36509,5 +36509,614 @@
         }
       ]
     }
+  },
+  "blog/creer-application-mobile-rennes-etapes-prix": {
+    "title": "Crear una aplicación móvil en Rennes: pasos, plazos y precios",
+    "excerpt": "Aplicación web instalable, multiplataforma o nativa, para sus clientes o su equipo: cómo crear una aplicación móvil, en cuánto tiempo y a qué precio.",
+    "metaTitle": "Crear una aplicación móvil en Rennes: pasos, plazos y precios",
+    "metaDescription": "¿PWA, multiplataforma o nativa? Los pasos para crear una aplicación móvil para su empresa cerca de Rennes, los plazos y un presupuesto honesto.",
+    "tags": [
+      "aplicación móvil Rennes",
+      "crear una aplicación móvil",
+      "precio de una aplicación",
+      "aplicación web instalable",
+      "aplicación para técnicos",
+      "desarrollador móvil freelance"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "\"Nosotros necesitaríamos una app.\" Lo escucho a menudo, y casi siempre es una buena intuición mal expresada. Detrás hay una necesidad real: técnicos que rellenan sus fichas en papel dentro de la furgoneta, clientes que querrían reservar desde su teléfono, un equipo que quiere ver el planning sin encender una computadora.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La pregunta no es realmente «¿hace falta una app?». Es «¿qué tipo de app, para quién y cuánto cuesta?». Soy desarrollador independiente en Saint-Erblon, justo al sur de Rennes, y así es como planteo el tema con las empresas que me contactan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Las tres formas de crear una aplicación móvil",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Antes de hablar de precios, hay que saber qué se va a construir. Existen tres grandes familias, y la elección lo cambia todo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La aplicación web instalable",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (también se dice PWA). Es un sitio que se comporta como una aplicación: se añade a la pantalla de inicio del teléfono, se abre en pantalla completa y puede funcionar con una conexión débil. No requiere pasar por la App Store ni por Google Play, y hay una sola versión para iPhone, Android y computadora. El panel de administración de mi propio sitio funciona así: se instala en un iPhone o iPad como cualquier otra aplicación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La aplicación multiplataforma.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Un solo código, publicado en las dos tiendas. Accede mejor a las funciones del teléfono (cámara, notificaciones, modo offline avanzado). Utilizo mucho Tauri, que permite sacar el mismo código como aplicación para Windows, Mac, iOS y Android.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La aplicación nativa.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Una aplicación escrita específicamente para el iPhone y otra para Android. Es la más potente, pero también la más cara, ya que se desarrolla y mantiene dos veces.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para la mayoría de las PYMES, la primera o la segunda opción son más que suficientes. La aplicación nativa solo se justifica para usos muy exigentes, rara vez para una herramienta de empresa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Aplicación para sus clientes o para su equipo?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Es la segunda pregunta, y cuenta tanto como la técnica.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una aplicación para sus clientes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " debe ser impecable: la comparan con las que usan todos los días. También hay que darla a conocer, de lo contrario nadie la descargará. A menudo, un buen sitio web que se muestra perfectamente en el teléfono, con reserva o espacio de cliente, hace el mismo trabajo sin necesidad de instalación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una aplicación para su equipo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " suele ser la mejor inversión. Sus empleados la instalan una vez, la usan todos los días, y cada minuto ganado se repite cientos de veces. Fichas de intervención, registro de horas, inventario, fotos del chantier, firma del cliente en la pantalla: ahí es donde una app cambia realmente el día a día.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En Kodeva, trabajé en una aplicación de servicio postventa para técnicos, con un modo offline para zonas sin red. Hablo de ello en detalle en este artículo sobre ",
+              "type": "text"
+            },
+            {
+              "text": "el seguimiento de intervenciones incluso sin red",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-gestion-interventions-techniciens-hors-ligne",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Los pasos para crear una aplicación móvil",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un proyecto siempre sigue más o menos la misma dinámica, y dividirlo evita malas sorpresas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1. ",
+              "type": "text"
+            },
+            {
+              "text": "Entender la necesidad.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Partimos del día a día de quienes la van a usar, no de una lista de funciones. Una conversación por teléfono o videollamada es suficiente para empezar.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "2. ",
+              "type": "text"
+            },
+            {
+              "text": "Diseñar el prototipo (maquetar).",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Dibujo las pantallas principales antes de escribir una sola línea de código. Se corrige en el prototipo, es gratis en esta etapa.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "3. ",
+              "type": "text"
+            },
+            {
+              "text": "Desarrollar una primera versión.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Empezamos por lo que se usa a diario. El resto esperará los primeros comentarios.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "4. ",
+              "type": "text"
+            },
+            {
+              "text": "Probar con usuarios reales.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Dos o tres personas de su equipo la usan durante una semana. Es ahí donde descubrimos el botón demasiado pequeño para dedos con guantes.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "5. ",
+              "type": "text"
+            },
+            {
+              "text": "Publicar.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " En las tiendas si es necesario, o simplemente como enlace para instalar una aplicación web.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "6. ",
+              "type": "text"
+            },
+            {
+              "text": "Hacerla evolucionar.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Una aplicación vive: nuevas versiones de teléfono, nuevas demandas del equipo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cuánto cuesta una aplicación móvil en Rennes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El precio depende sobre todo del número de pantallas, de las conexiones con sus otros programas y del tipo de aplicación elegida. Para darles una referencia honesta: una aplicación móvil sencilla comienza a 3.500 € en paquete, y una herramienta profesional completa, con su back-office, suele situarse entre 5.000 y 15.000 €. El mantenimiento cuesta luego entre 100 y 300 € al mes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "También hay que prever los gastos de las tiendas si la aplicación se publica allí: Apple cobra una cuenta de desarrollador anual, Google pide un pago único al registro. Una aplicación web instalable no tiene estos gastos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Puede estimar su presupuesto con algunas preguntas en mi página ",
+              "type": "text"
+            },
+            {
+              "text": "aplicación profesional a medida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". El precio exacto siempre se fija en el presupuesto, antes de empezar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Por qué un desarrollador cerca de Rennes, si todo se hace a distancia?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sinceramente, trabajo a distancia con todos mis clientes, de Rennes o de cualquier otro lugar: llamadas, videollamadas y compartición de pantalla son suficientes. Lo importante es tener un solo interlocutor, el que escribe el código, desde el primer intercambio hasta el mantenimiento. No hay un jefe de proyecto entre usted y el desarrollador, ni mensajes que se pierdan en el camino. Si duda entre un freelance y una agencia, he escrito un artículo sobre ",
+              "type": "text"
+            },
+            {
+              "text": "cómo elegir entre freelance y agencia en Rennes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/freelance-ou-agence-rennes-outil-metier-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Los proyectos de este tipo que he llevado a cabo están visibles en la categoría ",
+              "type": "text"
+            },
+            {
+              "text": "aplicaciones móviles",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/projets/categorie/application-mobile",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " de mis realizaciones.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Es obligatorio pasar por la App Store?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. Una aplicación web instalable se añade a la pantalla de inicio sin pasar por las tiendas. Suele ser lo más sencillo para una aplicación reservada a su equipo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Puede la aplicación funcionar sin conexión a internet?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Sí, si se prevé desde el principio. Los datos se guardan en el teléfono y se envían en cuanto vuelve la conexión.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cuánto tiempo para una primera versión?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Unas semanas para una herramienta sencilla y útil. Luego se añaden las funciones según los comentarios.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿A quién pertenece la aplicación?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "A usted: el código fuente, las cuentas de las tiendas y los datos están a su nombre.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Hablamos de ello?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si cree que una aplicación podría ahorrar tiempo a su equipo o a sus clientes, cuénteme quién la usaría y en qué momento del día. Podemos hablar por teléfono o por videollamada, y le propongo un plan de acción por escrito: el tipo de aplicación adecuada, qué hay que hacer en primer lugar y un presupuesto aproximado. Si con un buen sitio móvil es suficiente, se lo diré.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "82d33651-0e2c-43fc-9753-56ec572951da",
+            "body": [
+              {
+                "_uid": "i-e89811a5-2a3c-4d61-9424-735f80afad1f",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

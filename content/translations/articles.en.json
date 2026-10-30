@@ -36507,5 +36507,614 @@
         }
       ]
     }
+  },
+  "blog/creer-application-mobile-rennes-etapes-prix": {
+    "title": "Developing a Mobile App in Rennes: Steps, Timeline, and Cost",
+    "excerpt": "Whether you need a web-installable app, a multi-platform solution, or a native app for your clients or team, discover how to create a mobile application, how long it takes, and what it costs.",
+    "metaTitle": "Develop a Mobile App in Rennes: Steps, Timeline, and Cost",
+    "metaDescription": "PWA, multi-platform, or native? Learn the steps to create a mobile app for your business near Rennes, the timelines involved, and get an honest pricing estimate.",
+    "tags": [
+      "mobile app development in Rennes",
+      "how to create a mobile app",
+      "cost of a mobile app",
+      "web-installable app",
+      "app for technicians",
+      "freelance mobile developer"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "\"We need an app.\" I hear this often, and it’s almost always a good intuition poorly expressed. Behind it lies a real need: technicians filling out forms on paper in their van, customers who would like to book via their phone, a team that wants to see the schedule without turning on a computer.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The question isn’t really \"Do we need an app?\" It’s \"What kind of app, for whom, and how much will it cost?\" I’m an independent developer in Saint-Erblon, just south of Rennes, and here’s how I frame the discussion with the businesses that reach out to me.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The three ways to create a mobile application",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Before talking price, we need to know what we’re building. There are three main categories, and the choice determines everything else.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The installable web app",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (also called a PWA). It’s a website that behaves like an app: you add it to your phone’s home screen, it opens in full-screen mode, and it can work with a weak connection. No need for the App Store or Google Play, and just one version for iPhone, Android, and computers. The backend of my own website works this way: it installs on an iPhone or iPad like any other app.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The multiplatform app.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " One codebase, published in both stores. It accesses phone features better (camera, notifications, advanced offline mode). I often use Tauri, which lets me release the same code as a Windows, Mac, iOS, and Android app.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The native app.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " An app written specifically for the iPhone and another for Android. It’s the most performant, but also the most expensive, since you develop and maintain two versions.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For most SMEs, the first or second option is more than enough. A native app only makes sense for highly demanding use cases, rarely for a business tool.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "App for your customers or for your team?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is the second question—and it matters just as much as the technical choice.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "An app for your customers",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " must be flawless: they’ll compare it to the apps they use every day. You’ll also need to promote it, or no one will download it. Often, a well-designed website that works perfectly on mobile—with booking or a customer portal—does the same job without requiring installation.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "An app for your team",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " is often the best investment. Your employees install it once, use it daily, and every minute saved adds up hundreds of times. Work orders, time tracking, inventory, construction site photos, client signatures on screen—this is where an app truly transforms daily life.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "At Kodeva, I worked on a customer service app for technicians, with offline mode for areas with no network. I discuss it in detail in this article on ",
+              "type": "text"
+            },
+            {
+              "text": "tracking service calls even without network",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-gestion-interventions-techniciens-hors-ligne",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The steps to create a mobile app",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A project always unfolds roughly in the same way, and breaking it down prevents unpleasant surprises.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1. ",
+              "type": "text"
+            },
+            {
+              "text": "Understand the need.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " We start from the real daily life of those who will use it, not from a list of features. A phone or video call exchange is enough to get started.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "2. ",
+              "type": "text"
+            },
+            {
+              "text": "Design the layout.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " I sketch the main screens before writing a single line of code. We refine the layout—it’s free at this stage.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "3. ",
+              "type": "text"
+            },
+            {
+              "text": "Develop an initial version.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " We start with what’s used daily. The rest can wait for the first feedback.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "4. ",
+              "type": "text"
+            },
+            {
+              "text": "Test with real users.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Two or three people from your team use it for a week. That’s when you discover buttons too small for gloved fingers.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "5. ",
+              "type": "text"
+            },
+            {
+              "text": "Publish.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " On app stores if needed, or as a simple download link for a web app.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "6. ",
+              "type": "text"
+            },
+            {
+              "text": "Evolve it.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " An app lives on: new phone versions, new team requests.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How much does a mobile app cost in Rennes?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The price mainly depends on the number of screens, connections to your other software, and the type of app you choose. To give you an honest benchmark: a simple mobile app starts at €3,500 as a package, while a full-fledged business tool, including its backend, usually ranges between €5,000 and €15,000. Maintenance then costs between €100 and €300 per month.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You also need to budget for store fees if the app is published there: Apple charges an annual developer account fee, while Google requires a one-time payment upon registration. A web-based installable app does not incur these fees.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You can estimate your budget with a few questions on my page ",
+              "type": "text"
+            },
+            {
+              "text": "custom business application",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/application-metier-sur-mesure-rennes",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". The exact price is always set in the quote before we begin.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Why hire a developer near Rennes if everything can be done remotely?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Honestly, I work remotely with all my clients, whether they're based in Rennes or elsewhere: calls, video conferencing, and screen sharing are enough. What matters is having a single point of contact—the person who writes the code—from the first exchange to maintenance. No project manager between you and the developer, no lost messages along the way. If you're torn between hiring a freelancer or an agency, I’ve written an article on ",
+              "type": "text"
+            },
+            {
+              "text": "how to choose between a freelancer and an agency in Rennes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/freelance-ou-agence-rennes-outil-metier-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You can see examples of similar projects I’ve completed in the ",
+              "type": "text"
+            },
+            {
+              "text": "mobile apps",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/projets/categorie/application-mobile",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " section of my portfolio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Do I have to go through the App Store?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. A web-based installable app can be added to your home screen without going through the stores. This is often the simplest solution for an app meant only for your team.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can the app work offline?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "Yes, if we plan for it from the start. Data is stored on the phone and sent when the connection is restored.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How long does it take to deliver a first version?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "A few weeks for a simple but useful tool. Additional features are added based on feedback afterward.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Who owns the app?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "You do: the source code, store accounts, and data are in your name.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Let’s talk about it?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you think an app could save your team or your clients time, tell me who would use it and when in the day. We can discuss it over the phone or video call, and I’ll provide a written action plan: the right type of app, what to prioritize, and a rough budget estimate. If a mobile-friendly website would suffice, I’ll let you know.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "82d33651-0e2c-43fc-9753-56ec572951da",
+            "body": [
+              {
+                "_uid": "i-e89811a5-2a3c-4d61-9424-735f80afad1f",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
