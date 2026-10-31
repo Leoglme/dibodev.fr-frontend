@@ -1021,7 +1021,8 @@
     "contactFormData": {
       "title": "Données collectées via le formulaire de contact",
       "paragraph1": "Lorsque vous m'écrivez via le formulaire, je reçois : type de projet, fourchette de pages, budget, nom et prénom, adresse email et message. Ces informations sont utilisées uniquement pour traiter votre demande et vous répondre.",
-      "paragraph2": "Je ne stocke pas ces données dans une base de données. Elles sont transmises par email (via le prestataire Mailjet) et figurent dans ma messagerie le temps de notre échange. Je m'engage à supprimer les données personnelles contenues dans ces échanges dans un délai de 2 ans après le dernier contact, sauf obligation légale de conservation."
+      "paragraph2": "Je ne stocke pas ces données dans une base de données. Elles sont transmises par email (via le prestataire Mailjet) et figurent dans ma messagerie le temps de notre échange. Je m'engage à supprimer les données personnelles contenues dans ces échanges dans un délai de 2 ans après le dernier contact, sauf obligation légale de conservation.",
+      "paragraph3": "Dès que vous saisissez votre adresse e-mail ou votre téléphone dans un formulaire du site, ils me sont transmis par e-mail, même si vous n'envoyez pas le formulaire. Pour le récapitulatif que je reçois chaque matin, seuls la page du formulaire, la langue, la source de la visite et la date sont gardées 7 jours au plus dans un fichier sur mon serveur, puis effacées ; l'adresse et le téléphone, eux, ne figurent que dans ces e-mails."
     },
     "subcontractor": {
       "title": "Sous-traitant pour l'envoi d'emails",
@@ -1034,6 +1035,11 @@
       "contentBefore": "Le site utilise ",
       "contentBold": "Umami",
       "contentAfter": ", hébergé sur umami.dibodev.fr, pour mesurer l'audience (nombre de visites, pages vues). Umami est configuré sans cookies. Aucune revente de données, aucun cookie publicitaire. Les données servent uniquement à comprendre l'usage du site de manière agrégée."
+    },
+    "securityAlerts": {
+      "title": "Alertes par e-mail : failles et pannes d'hébergeur",
+      "paragraph1": "Quand vous demandez une alerte depuis un outil du site (nouvelle faille PHP ou WordPress, panne de votre hébergeur), je conserve votre adresse e-mail, le sujet de l'alerte, le nom de domaine que vous avez indiqué le cas échéant, la langue et la date, dans un fichier sur mon serveur, uniquement pour envoyer cette alerte et pour me signaler votre demande dans un récapitulatif quotidien. L'alerte n'est activée qu'après votre clic sur le lien de confirmation reçu par e-mail ; sans ce clic, rien n'est envoyé.",
+      "paragraph2": "Chaque message contient un lien de désinscription qui arrête l'envoi immédiatement. Les adresses non confirmées sous trente jours et les adresses désinscrites depuis plus de trente jours sont effacées. Les e-mails partent par le prestataire Mailjet (serveurs dans l'Union européenne). Aucune adresse n'est transmise à un tiers ni utilisée pour de la publicité."
     },
     "rights": {
       "title": "Vos droits",

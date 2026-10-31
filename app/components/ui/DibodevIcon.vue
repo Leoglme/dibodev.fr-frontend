@@ -28,6 +28,7 @@ import Armchair from '~/components/icons/Armchair.vue'
 import ArrowLeft from '~/components/icons/ArrowLeft.vue'
 import ArrowRight from '~/components/icons/ArrowRight.vue'
 import BatteryCharging from '~/components/icons/BatteryCharging.vue'
+import Bell from '~/components/icons/Bell.vue'
 import Bike from '~/components/icons/Bike.vue'
 import CalendarCheck from '~/components/icons/CalendarCheck.vue'
 import Car from '~/components/icons/Car.vue'
@@ -130,6 +131,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   ArrowLeft,
   ArrowRight,
   BatteryCharging,
+  Bell,
   Bike,
   CalendarCheck,
   Car,

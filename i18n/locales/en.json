@@ -1021,7 +1021,8 @@
     "contactFormData": {
       "title": "Data collected via the contact form",
       "paragraph1": "When you contact me via the form, I receive: project type, page range, budget, first and last name, email address and message. This information is used only to process your request and reply to you.",
-      "paragraph2": "I do not store this data in a database. It is sent by email (via Mailjet) and remains in my inbox for the duration of our exchange. I undertake to delete personal data from these exchanges within 2 years of the last contact, unless required by law to retain it."
+      "paragraph2": "I do not store this data in a database. It is sent by email (via Mailjet) and remains in my inbox for the duration of our exchange. I undertake to delete personal data from these exchanges within 2 years of the last contact, unless required by law to retain it.",
+      "paragraph3": "As soon as you type your e-mail address or phone number in a form of the site, they are sent to me by e-mail, even if you do not submit the form. For the summary I receive every morning, only the page of the form, the language, the source of the visit and the date are kept for 7 days at most in a file on my server, then deleted; the address and the phone number appear only in those e-mails."
     },
     "subcontractor": {
       "title": "Subcontractor for email sending",
@@ -1034,6 +1035,11 @@
       "contentBefore": "The site uses ",
       "contentBold": "Umami",
       "contentAfter": ", hosted at umami.dibodev.fr, to measure traffic (visits, page views). Umami is configured without cookies. No data resale, no advertising cookies. Data is used only to understand site usage in aggregate."
+    },
+    "securityAlerts": {
+      "title": "E-mail alerts: vulnerabilities and web host outages",
+      "paragraph1": "When you ask for an alert from a tool of the site (a new PHP or WordPress vulnerability, an outage of your web host), I keep your e-mail address, the subject of the alert, the domain name you gave when there is one, the language and the date, in a file on my server, only to send that alert and to tell me about your request in a daily summary. The alert is active only after you click the confirmation link received by e-mail; without that click, nothing is sent.",
+      "paragraph2": "Every message carries an unsubscribe link that stops the sending at once. Addresses not confirmed within thirty days and addresses unsubscribed for more than thirty days are deleted. The e-mails leave through the provider Mailjet (servers in the European Union). No address is passed on to a third party or used for advertising."
     },
     "rights": {
       "title": "Your rights",

@@ -48,6 +48,7 @@ export async function sendContactIntentNotificationMail(contact: ContactIntentPa
     email: contact.email,
     phone: contact.phone,
     source: contact.source,
+    pagePath: contact.pagePath,
     locale,
     receivedAt,
   })

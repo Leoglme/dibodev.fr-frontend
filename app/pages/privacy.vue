@@ -28,6 +28,7 @@
           <h2 class="text-xl font-medium text-gray-100">{{ $t('privacy.contactFormData.title') }}</h2>
           <p class="text-gray-200">{{ $t('privacy.contactFormData.paragraph1') }}</p>
           <p class="text-gray-200">{{ $t('privacy.contactFormData.paragraph2') }}</p>
+          <p class="text-gray-200">{{ $t('privacy.contactFormData.paragraph3') }}</p>
         </section>
 
         <section
@@ -48,6 +49,15 @@
             {{ $t('privacy.umami.contentBefore') }}<strong>{{ $t('privacy.umami.contentBold') }}</strong
             >{{ $t('privacy.umami.contentAfter') }}
           </p>
+        </section>
+
+        <section
+          :id="SECURITY_ALERT_PRIVACY_ANCHOR_ID"
+          class="grid scroll-mt-24 gap-4 rounded-xl border border-gray-300 bg-white p-6 text-left text-base leading-relaxed sm:p-8"
+        >
+          <h2 class="text-xl font-medium text-gray-100">{{ $t('privacy.securityAlerts.title') }}</h2>
+          <p class="text-gray-200">{{ $t('privacy.securityAlerts.paragraph1') }}</p>
+          <p class="text-gray-200">{{ $t('privacy.securityAlerts.paragraph2') }}</p>
         </section>
 
         <section
@@ -85,6 +95,7 @@ import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
 import DibodevBreadcrumb from '~/components/navigations/DibodevBreadcrumb.vue'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { usePageShareImage } from '~/composables/usePageShareImage'
+import { SECURITY_ALERT_PRIVACY_ANCHOR_ID } from '~/core/constants/securityAlerts/wording'
 
 const { t } = useI18n()
 usePageShareImage('home')

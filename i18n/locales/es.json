@@ -1021,7 +1021,8 @@
     "contactFormData": {
       "title": "Datos recogidos mediante el formulario de contacto",
       "paragraph1": "Cuando me escribes a través del formulario, recibo: tipo de proyecto, rango de páginas, presupuesto, nombre y apellidos, correo electrónico y mensaje. Esta información se utiliza únicamente para tratar tu solicitud y responderte.",
-      "paragraph2": "No almaceno estos datos en una base de datos. Se envían por correo electrónico (a través de Mailjet) y figuran en mi bandeja de entrada durante el tiempo de nuestro intercambio. Me comprometo a eliminar los datos personales contenidos en estos intercambios en un plazo de 2 años tras el último contacto, salvo obligación legal de conservación."
+      "paragraph2": "No almaceno estos datos en una base de datos. Se envían por correo electrónico (a través de Mailjet) y figuran en mi bandeja de entrada durante el tiempo de nuestro intercambio. Me comprometo a eliminar los datos personales contenidos en estos intercambios en un plazo de 2 años tras el último contacto, salvo obligación legal de conservación.",
+      "paragraph3": "En cuanto escribes tu correo o tu teléfono en un formulario del sitio, me llegan por correo, aunque no envíes el formulario. Para el resumen que recibo cada mañana, solo la página del formulario, el idioma, la fuente de la visita y la fecha se guardan 7 días como máximo en un archivo en mi servidor, y después se borran; el correo y el teléfono solo figuran en esos mensajes."
     },
     "subcontractor": {
       "title": "Subcontratista para el envío de correos",
@@ -1034,6 +1035,11 @@
       "contentBefore": "El sitio utiliza ",
       "contentBold": "Umami",
       "contentAfter": ", alojado en umami.dibodev.fr, para medir la audiencia (número de visitas, páginas vistas). Umami está configurado sin cookies. Sin reventa de datos, sin cookies publicitarias. Los datos sirven únicamente para entender el uso del sitio de forma agregada."
+    },
+    "securityAlerts": {
+      "title": "Alertas por correo: vulnerabilidades y caídas de hosting",
+      "paragraph1": "Cuando pides una alerta desde una herramienta del sitio (nueva vulnerabilidad PHP o WordPress, caída de tu hosting), guardo tu dirección de correo, el tema de la alerta, el nombre de dominio que hayas indicado si procede, el idioma y la fecha, en un archivo en mi servidor, únicamente para enviar esa alerta y avisarme de tu solicitud en un resumen diario. La alerta solo se activa tras tu clic en el enlace de confirmación recibido por correo; sin ese clic no se envía nada.",
+      "paragraph2": "Cada mensaje lleva un enlace de baja que detiene el envío de inmediato. Las direcciones no confirmadas en treinta días y las direcciones dadas de baja desde hace más de treinta días se borran. Los correos salen por el proveedor Mailjet (servidores en la Unión Europea). Ninguna dirección se transmite a terceros ni se usa para publicidad."
     },
     "rights": {
       "title": "Tus derechos",

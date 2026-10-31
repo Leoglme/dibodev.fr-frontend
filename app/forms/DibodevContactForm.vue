@@ -332,7 +332,13 @@ async function sendContactIntent(): Promise<void> {
   try {
     const { data, error } = await useFetch<{ message: string }>('/api/mail/contact-intent', {
       method: 'POST',
-      body: { email: currentEmail, phone: currentPhone, source: getLeadSource(), locale: locale.value },
+      body: {
+        email: currentEmail,
+        phone: currentPhone,
+        source: getLeadSource(),
+        locale: locale.value,
+        pagePath: route.path,
+      },
     })
 
     if (error.value) {
@@ -417,6 +423,7 @@ async function onSubmit(): Promise<void> {
     message: message.value.trim(),
     source: getLeadSource(),
     locale: locale.value,
+    pagePath: route.path,
   }
 
   try {

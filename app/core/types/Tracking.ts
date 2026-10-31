@@ -4,6 +4,7 @@ import type {
   DibodevEstimatorProjectSize,
 } from '~/core/types/DibodevBudgetEstimator'
 import type { DibodevEInvoicingVerdict } from '~/core/types/DibodevEInvoicingCheck'
+import type { DibodevSecurityAlertSubscribeOutcome, DibodevSecurityAlertTopic } from '~/core/types/DibodevSecurityAlert'
 import type { DibodevPhotoSlideshowNavigationMethod } from '~/core/types/DibodevPhotoSlideshow'
 import type {
   DibodevPhpVulnerabilityCheckErrorKind,
@@ -119,6 +120,12 @@ export type TrackingEventPayloads = {
     location: string
     guide: DibodevWordPressHackGuideKey
     verdict: DibodevWordPressHackVerdict
+  }
+  [TRACKING_EVENTS.securityAlertSubscribed]: {
+    location: string
+    topic: DibodevSecurityAlertTopic
+    outcome: DibodevSecurityAlertSubscribeOutcome | 'error'
+    hasSite: boolean
   }
   [TRACKING_EVENTS.eInvoicingSoftwareCheckStarted]: { location: string }
   [TRACKING_EVENTS.eInvoicingSoftwareChecked]: {

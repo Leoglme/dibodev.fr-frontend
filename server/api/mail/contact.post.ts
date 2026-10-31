@@ -3,11 +3,16 @@ import { createError } from 'h3'
 import { sendContactNotificationMail } from '~~/server/services/mail/sendContactNotificationMail'
 import { sendContactAcknowledgementMail } from '~~/server/services/mail/sendContactAcknowledgementMail'
 import type { ContactFormPayload } from '~~/server/types/mail/contact'
+import { EmailCaptureDigestService } from '~~/server/services/EmailCaptureDigestService'
+import { resolveMailLocale } from '~~/server/services/mail/contactMailTexts'
+import { formatAcquisitionSource } from '~~/server/services/mail/formatLeadSource'
+import { PagePathUtils } from '~~/server/utils/PagePathUtils'
 
 /**
  * Handles POST requests for full contact form submission.
  *
- * Validates the payload, sends a notification email to the owner, and an acknowledgement email to the client.
+ * Validates the payload, records it for the owner's daily recap, sends a notification email to the owner,
+ * and an acknowledgement email to the client.
  *
  * @param {H3Event} event - The H3 event object containing the request.
  * @returns {Promise<{ message: string }>} - A promise resolving to a success message.
@@ -52,6 +57,19 @@ export default defineEventHandler(async (event: H3Event) => {
       statusMessage: 'Invalid email format.',
     })
   }
+
+  body.pagePath = PagePathUtils.normalize(body.pagePath)
+  await EmailCaptureDigestService.record({
+    kind: 'contactForm',
+    email: null,
+    site: null,
+    alertTopic: null,
+    projectType: typeof body.projectType === 'string' && body.projectType !== '' ? body.projectType : null,
+    pagePath: body.pagePath,
+    landingPagePath: PagePathUtils.normalize(body.source?.landingPage),
+    locale: resolveMailLocale(body.locale),
+    acquisitionSource: formatAcquisitionSource(body.source) || null,
+  })
 
   try {
     // Send notification to an owner

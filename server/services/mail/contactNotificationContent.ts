@@ -3,9 +3,10 @@ import { CONTACT_LOCALE_NAMES } from '~~/server/services/mail/contactMailTexts'
 import { formatAcquisitionSource } from '~~/server/services/mail/formatLeadSource'
 import { ContactUtils } from '~~/server/utils/ContactUtils'
 import { MailDateUtils } from '~~/server/utils/MailDateUtils'
+import { PagePathUtils } from '~~/server/utils/PagePathUtils'
 
 /** Non-breaking hyphen, so the label never breaks as "E-" / "mail". */
-const EMAIL_LABEL: string = 'E\u2011mail'
+export const EMAIL_LABEL: string = 'E\u2011mail'
 
 /**
  * Builds the buttons of a notification e-mail: write back first, then call and WhatsApp when a phone number was given.
@@ -38,7 +39,7 @@ export function buildOwnerActions(
 }
 
 /**
- * Builds the details table of a notification e-mail: contact, acquisition source, landing page, form language and date.
+ * Builds the details table of a notification e-mail: contact, source, landing and form pages, language and date.
  *
  * @param {OwnerNotificationContact} contact - Contact details of the visitor.
  * @returns {ContactMailDetailRow[]} The rows, without the empty ones.
@@ -61,6 +62,13 @@ export function buildOwnerDetailRows(contact: OwnerNotificationContact): Contact
   if (landingPage) {
     const landingPageUrl: string | null = landingPage.startsWith('/') ? `https://dibodev.fr${landingPage}` : null
     rows.push({ label: 'Page d’entrée', value: landingPage, href: landingPageUrl })
+  }
+  if (contact.pagePath) {
+    rows.push({
+      label: 'Page du formulaire',
+      value: contact.pagePath,
+      href: PagePathUtils.buildSiteUrl(contact.pagePath),
+    })
   }
 
   rows.push({ label: 'Langue', value: CONTACT_LOCALE_NAMES[contact.locale], href: null })

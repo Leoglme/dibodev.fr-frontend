@@ -113,7 +113,7 @@ export default defineNuxtConfig({
     ...getLegacyRedirectRouteRules(),
   } as Record<string, object>,
   robots: {
-    disallow: ['/dashboard', '/en/dashboard', '/es/dashboard'],
+    disallow: ['/dashboard', '/en/dashboard', '/es/dashboard', '/alertes', '/en/alerts', '/es/alertas'],
   },
   sitemap: {
     exclude: [
@@ -123,6 +123,10 @@ export default defineNuxtConfig({
       '/en/dashboard/**',
       '/es/dashboard',
       '/es/dashboard/**',
+      // Landing pages of the alert e-mails: noindex, reached by link only.
+      '/alertes/**',
+      '/en/alerts/**',
+      '/es/alertas/**',
       ...Object.keys(LEGACY_REDIRECTS),
     ],
   },
@@ -161,6 +165,8 @@ export default defineNuxtConfig({
     scheduledTasks: {
       // Drip queue: publish scheduled articles whose time has come (hourly, at minute 5).
       '5 * * * *': ['articles:process-queue'],
+      // Daily recap of the addresses left in the forms: the first run from 8:00 (Paris) sends it, only when there is one.
+      '0 * * * *': ['email-captures:daily-digest'],
     },
     output: {
       publicDir: '.output/public',

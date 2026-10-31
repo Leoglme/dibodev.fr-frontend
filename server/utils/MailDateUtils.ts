@@ -15,6 +15,16 @@ export class MailDateUtils {
   }
 
   /**
+   * Reads an ISO date and returns it in the Paris time zone.
+   *
+   * @param {string} isoDate - The date, in ISO 8601.
+   * @returns {DateTime} The same instant, in the Europe/Paris time zone.
+   */
+  public static fromIsoInParis(isoDate: string): DateTime {
+    return DateTime.fromISO(isoDate).setZone(MailDateUtils.TIME_ZONE)
+  }
+
+  /**
    * Returns the next business day: the following day from Monday to Thursday, the next Monday from Friday to Sunday.
    *
    * @param {DateTime} date - Starting date.
@@ -71,7 +81,7 @@ export class MailDateUtils {
    * @param {DateTime} date - Date whose time is formatted.
    * @returns {string} The formatted time.
    */
-  private static formatFrenchTime(date: DateTime): string {
+  public static formatFrenchTime(date: DateTime): string {
     return `${date.toFormat('HH')}\u00a0h\u00a0${date.toFormat('mm')}`
   }
 }

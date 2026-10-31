@@ -120,6 +120,7 @@ const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const { track } = useTracking()
 const { getLeadSource } = useLeadSource()
+const route: ReturnType<typeof useRoute> = useRoute()
 
 let lastSentIntentKey: string | null = null
 
@@ -159,6 +160,7 @@ async function sendContactIntent(): Promise<void> {
     phone: currentPhone,
     source: getLeadSource(),
     locale: locale.value,
+    pagePath: route.path,
   }
   try {
     await $fetch('/api/mail/contact-intent', { method: 'POST', body: payload })
@@ -185,6 +187,7 @@ async function onSubmit(): Promise<void> {
     message: props.leadMessage,
     source: getLeadSource(),
     locale: locale.value,
+    pagePath: route.path,
   }
 
   try {

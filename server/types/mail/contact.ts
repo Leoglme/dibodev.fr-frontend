@@ -18,6 +18,7 @@ export type MailLocale = 'fr' | 'en' | 'es'
  * Phone is optional (raw string as typed, or null if not provided).
  * Source is the first-touch acquisition source, or null when unavailable.
  * Locale is the site language the form was filled in; the server falls back to French for any other value.
+ * Page path is the page the form was filled on, or null when unknown.
  */
 export type ContactFormPayload = {
   projectType: string | null
@@ -29,18 +30,21 @@ export type ContactFormPayload = {
   message: string
   source: LeadSource | null
   locale: string | null
+  pagePath: string | null
 }
 
 /**
  * Contact intent captured when a user starts filling the form without submitting: email and/or phone, at least one present.
  * Source is the first-touch acquisition source, or null when unavailable.
  * Locale is the site language the form was filled in, or null when unknown.
+ * Page path is the page the form was filled on, or null when unknown.
  */
 export type ContactIntentPayload = {
   email: string | null
   phone: string | null
   source: LeadSource | null
   locale: string | null
+  pagePath: string | null
 }
 
 export type ContactMailDetailRow = {
@@ -99,6 +103,7 @@ export type OwnerNotificationContact = {
   email: string | null
   phone: string | null
   source: LeadSource | null
+  pagePath: string | null
   locale: MailLocale
   receivedAt: DateTime
 }

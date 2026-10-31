@@ -72,6 +72,8 @@ export const TRACKING_EVENTS = {
   eInvoicingSoftwareCheckStarted: 'e_invoicing_software_check_started',
   /** A tool checked by the e-invoicing software checker, with the verdict and the tool matched, never the text typed. */
   eInvoicingSoftwareChecked: 'e_invoicing_software_checked',
+  /** An alert requested from a tool card (vulnerability or hosting outage), with the outcome, never the address. */
+  securityAlertSubscribed: 'security_alert_subscribed',
 } as const
 
 /** Tracking event name (value of the `TRACKING_EVENTS` catalog). */

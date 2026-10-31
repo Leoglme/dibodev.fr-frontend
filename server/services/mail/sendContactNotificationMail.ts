@@ -55,6 +55,7 @@ export async function sendContactNotificationMail(payload: ContactFormPayload): 
     email: payload.email,
     phone: payload.phone,
     source: payload.source,
+    pagePath: payload.pagePath,
     locale,
     receivedAt,
   })

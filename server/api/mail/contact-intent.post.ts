@@ -2,11 +2,16 @@ import type { H3Event } from 'h3'
 import { createError } from 'h3'
 import { sendContactIntentNotificationMail } from '~~/server/services/mail/sendContactIntentNotificationMail'
 import type { ContactIntentPayload } from '~~/server/types/mail/contact'
+import { EmailCaptureDigestService } from '~~/server/services/EmailCaptureDigestService'
+import { resolveMailLocale } from '~~/server/services/mail/contactMailTexts'
+import { formatAcquisitionSource } from '~~/server/services/mail/formatLeadSource'
+import { PagePathUtils } from '~~/server/utils/PagePathUtils'
 
 /**
  * Handles POST requests for contact intent (when a user starts the form with an email and/or a phone).
  *
- * Requires at least one of email or phone, validates the email format when present, and notifies the owner.
+ * Requires at least one of email or phone, validates the email format when present, records it for the owner's
+ * daily recap, and notifies the owner.
  *
  * @param {H3Event} event - The H3 event object containing the request.
  * @returns {Promise<{ message: string }>} - A promise resolving to a success message.
@@ -39,12 +44,26 @@ export default defineEventHandler(async (event: H3Event) => {
     })
   }
 
+  const pagePath: string | null = PagePathUtils.normalize(body.pagePath)
+  await EmailCaptureDigestService.record({
+    kind: 'contactIntent',
+    email: null,
+    site: null,
+    alertTopic: null,
+    projectType: null,
+    pagePath,
+    landingPagePath: PagePathUtils.normalize(body.source?.landingPage),
+    locale: resolveMailLocale(body.locale),
+    acquisitionSource: formatAcquisitionSource(body.source ?? null) || null,
+  })
+
   try {
     await sendContactIntentNotificationMail({
       email: body.email ?? null,
       phone: body.phone ?? null,
       source: body.source ?? null,
       locale: body.locale ?? null,
+      pagePath,
     })
     return { message: 'Contact intent notification sent successfully.' }
   } catch (error) {

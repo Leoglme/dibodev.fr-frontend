@@ -106,6 +106,14 @@
         <p v-if="result" class="text-sm leading-6 text-white/70">{{ props.wording.disclaimer }}</p>
       </div>
 
+      <DibodevAlertSubscriptionForm
+        topic="security"
+        :site="result?.host ?? null"
+        :trackingLocation="props.trackingLocation"
+        tone="dark"
+        class="relative"
+      />
+
       <div class="relative grid gap-3">
         <p class="text-[15px] leading-6 text-white/85">
           {{ result ? props.wording.ctaIntro : props.wording.idleCtaIntro }}
@@ -149,6 +157,7 @@ import type { UseTrackingReturn } from '~/composables/useTracking'
 import { computed, ref } from 'vue'
 import DibodevInput from '~/components/core/DibodevInput.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
+import DibodevAlertSubscriptionForm from '~/forms/DibodevAlertSubscriptionForm.vue'
 import { useTracking } from '~/composables/useTracking'
 import { PHP_UPDATE_SERVICE_ROUTE_NAME, PHP_UPDATE_SERVICE_TEASER } from '~/core/constants/phpUpdateService/pageShared'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
