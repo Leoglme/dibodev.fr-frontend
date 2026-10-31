@@ -37098,5 +37098,644 @@
         }
       ]
     }
+  },
+  "blog/alternative-kizeo-forms-logiciel-interventions": {
+    "title": "Kizeo Forms Alternatives: Which Field Service Management Software to Choose in 2026?",
+    "excerpt": "Kizeo Forms pricing as of October 28, 2026, its limitations, three alternatives (Organilog, Synchroteam, Praxedo), and the case for custom solutions.",
+    "metaTitle": "Kizeo Forms Alternatives: 3 Top Field Service Software Options for 2026",
+    "metaDescription": "Kizeo Forms costs between €15 to €37 HT per user. Pricing as of October 28, 2026, its limitations, three alternatives with their pricing, and the custom solution option.",
+    "tags": [
+      "kizeo forms",
+      "kizeo forms review",
+      "kizeo forms alternatives",
+      "field service management software",
+      "mobile service report app",
+      "software for technicians"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Kizeo Forms steps in whenever a company wants to move its technicians away from paper: intervention reports, inspection sheets, acceptance minutes, safety records—everything goes through the phone. It’s also one of the few players in the industry to openly display its pricing. I reviewed its pricing grid on October 28, 2026, along with those of three field service management software providers that also publish their rates. Here’s who Kizeo Forms is right for, what might make you hesitate, three alternatives with their prices, and when a custom-built tool makes sense.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Kizeo Forms Costs in 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As of October 28, 2026, the ",
+              "type": "text"
+            },
+            {
+              "text": "Kizeo Forms pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.kizeo-forms.com/fr/tarifs/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " lists two plans, billed per user and per month, excluding taxes. Smart costs 15 € HT per user per month with annual billing, or 22 € HT with monthly billing. Business costs 25 € HT per user per month annually, or 37 € HT monthly. The page summarizes the difference with the note ‘Annual -33 %’.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Smart includes customizable forms, unlimited forms and data, reports and personalized emails, offline mode, standard automations and integrations, an API, a multilingual app, 24-hour support, and data hosted in France. Business adds voice input, document scanning from photos, native integration with over 200 apps, advanced automations, a connector for reporting tools, and an assistant linked to your data.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The free trial lasts 15 days, with full access, no credit card required, and no commitment, for up to 10 users. You can switch from Smart to Business at any time, but all users on the same account must be on the same plan. The page does not specify a minimum number of users or a contract length for paid plans.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Who Kizeo Forms Is Right For",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A company that already has its scheduling and invoicing handled elsewhere—in an ERP, management software, or a spreadsheet—and whose issue is the paperwork coming back from the field: the hastily scribbled intervention report, the lost photo on a phone, the inspection sheet that needs to be retyped in the evening. Kizeo Forms replaces that paper with a form you design yourself, filled out on-site even without network access, then converted into a PDF report emailed to the client and pushed to your software via the API. At 15 € HT per user per month with annual billing, five technicians on Smart cost 75 € HT per month, or 900 € HT per year. If you want voice input, scanned document reading, or native connections to your other apps, go for Business, at 125 € HT per month for five.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Might Make You Hesitate",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A form tool, not a full field service management software.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The pricing page mentions forms, reports, automations, and integrations—but doesn’t cover scheduling, quotes, or invoicing. Kizeo Forms plugs into a tool that already handles the rest. If you’re looking for scheduling, signed reports, and invoicing all in one place, compare the three alternatives below instead.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The Per-User Pricing.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Every technician filling out a form counts. Ten people on Business monthly costs 370 € HT per month, or 4,440 € HT per year; annually, that’s 3,000 € HT. Count real users before comparing with fixed-price providers.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The Monthly vs. Annual Difference.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Smart jumps from 15 to 22 € HT depending on billing, and Business from 25 to 37 € HT—the monthly option is about 47% more expensive. The highlighted price assumes paying a year upfront.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "One Plan for the Entire Account.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " You can’t mix two users on Business and the rest on Smart. If even one manager wants voice input or a reporting connector, everyone upgrades to 25 € HT.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The Form Still Needs to Be Built.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Kizeo Forms provides the editor; your checkpoints, required fields, and PDF layout are up to you. Budget for setup days, and use the 15-day trial to build a real form—not just a demo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Three alternatives to Kizeo Forms, with their prices",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Prices displayed on each publisher's website, recorded on October 28, 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Organilog, from 0 to 64 € per user and per month.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The ",
+              "type": "text"
+            },
+            {
+              "text": "Organilog offers page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://fr.organilog.com/offre/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " displays five plans: Basic at 0 €, Pro at 19 €, Business at 35 €, Premium at 59 €, and Premium + Card at 64 € per month and per user. The mobile app with offline mode is available from Pro, invoicing and quote signing from Business, and PDF reports can be customized with your sections and header. Annual payment is said to be cheaper, though no amount is displayed, and the page does not specify whether prices are tax-exclusive. This is the alternative when you want scheduling, reporting, and invoicing in a single tool; I detail the plans in my article on the ",
+              "type": "text"
+            },
+            {
+              "text": "alternatives to Organilog",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/alternative-organilog-logiciel-gestion-interventions",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Synchroteam, 39.49 or 64.79 € per user and per month.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The ",
+              "type": "text"
+            },
+            {
+              "text": "Synchroteam pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.synchroteam.fr/tarif.php",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " displays two subscriptions: Standard at 39.49 € and Premium at 64.79 € per user and per month, with the price per user access, a technician license including access from a mobile terminal. Standard includes all features except route optimization, while Premium includes all of them. The first admin license is free, as are Zoho CRM, Sage, Xero, and QuickBooks Online connectors, setup, and training; no commitment, 14-day trial without a credit card. The page does not specify whether prices are tax-exclusive. More expensive per head than Kizeo Forms, but scheduling and intervention distribution are included.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Praxedo, 35 to 129 € per user and per month, starting with five users.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The ",
+              "type": "text"
+            },
+            {
+              "text": "Praxedo pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.praxedo.fr/tarifs/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " displays four plans: Basic at 35 €, Advanced at 59 €, Optimized at 89 €, and Automated at 129 € per month and per user, plus a custom enterprise offer. All offers are available from five users, meaning a Basic entry ticket of 175 € per month. The page does not specify VAT, commitment, or setup fees, and connectors for Microsoft Business Central, Sage 100, EBP, or Salesforce are listed without pricing. This is the tool for teams of five technicians or more who want advanced scheduling; I discuss it in my article on the ",
+              "type": "text"
+            },
+            {
+              "text": "alternatives to Praxedo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/alternative-praxedo-logiciel-gestion-interventions",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To compare these software solutions in one table and determine which suits your team, visit my ",
+              "type": "text"
+            },
+            {
+              "text": "intervention management software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/outils/logiciel-gestion-interventions",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": a free test with six questions, the rules to follow in 2026, and downloadable templates for an intervention voucher and a route sheet.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "And if none of them fit: a custom-built tool",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Kizeo Forms does forms well, and its competitors do scheduling and invoicing well. Where everyone falls short is on what’s unique to your business: a report with checkpoints that change depending on the client’s contract, on-site hours that must go straight into payroll and invoicing, a maintenance contract that automatically triggers visits, or a part taken from the van that gets deducted from stock without re-entry. I built Gest-Time, a time and intervention tracking software for an SME: each employee logs their hours per intervention on their phone, the manager sees the day’s progress in real-time and generates reports without re-entering data. Nothing groundbreaking, but exactly how the company operates.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As for pricing, a tool like this costs me between €5,000 and €15,000 upfront, plus €100 to €300 per month for maintenance, hosting, and backups included—net prices, VAT non-applicable—and you own the code. Over three years, ten users on Kizeo Forms Business paid annually cost €9,000 HT, the same in Organilog Business €12,600, and in Praxedo Basic €12,600: that’s when custom solutions start to compare, especially as the team grows. My benchmark for ",
+              "type": "text"
+            },
+            {
+              "text": "the price of a custom software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/prix-logiciel-sur-mesure",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " provides the price ranges of French providers to verify a quote, and my page on ",
+              "type": "text"
+            },
+            {
+              "text": "custom business applications",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/application-metier-sur-mesure-rennes",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " describes the process, from the first exchange to going live.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to Choose in One Day",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Take the six-question test on my page about intervention management software. Then put the software through its paces during the trial: build your intervention report with your own checkpoints, fill it out in a basement with no network, add two photos, finish it at the client’s site, and check where the PDF ends up: in your schedule, in your invoice, or in an email inbox where someone will have to re-enter it. If you’re re-entering data once, you’ll be doing it every day.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Does Kizeo Forms offer a free trial?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes, 15 days with full access, no credit card or commitment required, up to 10 users, according to its pricing page as of October 28, 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "How much does Kizeo Forms cost for five technicians?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Five users on Smart cost €75 HT per month paid annually, €110 HT monthly; on Business, €125 HT per month annually, €185 HT monthly. All users on an account must be on the same plan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Does Kizeo Forms handle scheduling, quotes, and invoices?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Its pricing page as of October 28, 2026, describes forms, reports, automations, and integrations, with no mention of scheduling, quotes, or invoices. For those features, you’ll need another connected software via API or integrations, or one of the alternatives listed above.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Does Kizeo Forms work offline?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes, offline mode is included from the Smart plan onward. Test it during the trial in a technical room or basement, then check that the form syncs properly when the network returns.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Not sure which one to pick?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Describe your team to me in a few lines: number of technicians, what is still done on paper, the software that already manages scheduling or invoicing, what annoys you. I’ll reply within 24 hours, and if Kizeo Forms at €15 HT per user is enough, I’ll let you know. ",
+              "type": "text"
+            },
+            {
+              "text": "Discuss my project",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/contact",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "be2ed3c0-7bdb-43a8-b4c1-ea9b605d157e",
+            "body": [
+              {
+                "_uid": "i-745d3d6c-a914-4bdd-bff7-fe58435d9bba",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

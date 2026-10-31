@@ -37100,5 +37100,644 @@
         }
       ]
     }
+  },
+  "blog/alternative-kizeo-forms-logiciel-interventions": {
+    "title": "Alternativa a Kizeo Forms: ¿qué software de gestión de intervenciones elegir en 2026?",
+    "excerpt": "Precios de Kizeo Forms registrados el 28 de octubre de 2026, sus limitaciones, tres alternativas (Organilog, Synchroteam, Praxedo) y el caso del desarrollo a medida.",
+    "metaTitle": "Alternativa a Kizeo Forms: 3 software de intervenciones para 2026",
+    "metaDescription": "Kizeo Forms cuesta entre 15 y 37 € IVA por usuario. Precios actualizados el 28 de octubre de 2026, limitaciones, tres alternativas con sus tarifas y la opción de solución personalizada.",
+    "tags": [
+      "kizeo forms",
+      "opiniones de kizeo forms",
+      "alternativa a kizeo forms",
+      "software de gestión de intervenciones",
+      "informe de intervención móvil",
+      "software para técnicos"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Kizeo Forms aparece en escena cuando una empresa quiere sacar a sus técnicos del papel: informe de intervención, ficha de control, acta de recepción, registro de seguridad, todo se gestiona desde el teléfono. Además, es uno de los pocos editores del sector que muestra sus precios abiertamente. Revisé su tabla de precios el 28 de octubre de 2026, junto con las de tres programas de gestión de intervenciones que también publican sus tarifas. Aquí te explico para quién Kizeo Forms es la mejor opción, qué puede hacer dudar, tres alternativas con sus precios, y el caso en el que una herramienta personalizada podría justificarse.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cuánto cuesta Kizeo Forms en 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El 28 de octubre de 2026, la ",
+              "type": "text"
+            },
+            {
+              "text": "página de precios de Kizeo Forms",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.kizeo-forms.com/fr/tarifs/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra dos opciones, facturadas por usuario y por mes, sin impuestos incluidos. Smart cuesta 15 € IVA no incluido por usuario y por mes en facturación anual, y 22 € IVA no incluido en facturación mensual. Business cuesta 25 € IVA no incluido por usuario y por mes en anual, y 37 € IVA no incluido en mensual. La página resume la diferencia con la mención « Anual -33 % ».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Smart incluye formularios personalizados, número ilimitado de formularios y datos, informes y correos electrónicos personalizados, modo sin conexión, automatizaciones e integraciones estándar, API, aplicación en varios idiomas, soporte en menos de 24 horas y datos alojados en Francia. Business añade la entrada de voz, la lectura de documentos fotografiados, integración nativa con más de 200 aplicaciones, automatizaciones avanzadas, un conector hacia herramientas de reportes y un asistente conectado a tus datos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La prueba gratuita dura 15 días, con acceso completo, sin necesidad de tarjeta bancaria ni compromiso, hasta para 10 usuarios. Se puede pasar de Smart a Business en cualquier momento, pero todos los usuarios de una misma cuenta deben estar en la misma fórmula. La página no especifica ni el número mínimo de usuarios ni la duración del compromiso para las fórmulas de pago.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Para quién Kizeo Forms es la mejor opción?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una empresa que ya tiene su programación y facturación en otro lugar, como un ERP, un software de gestión o una hoja de cálculo, y cuyo problema es el papel que llega del terreno: el informe de intervención garabateado, la foto perdida en un teléfono, la ficha de control que hay que volver a teclear por la noche. Kizeo Forms reemplaza ese papel por un formulario que tú mismo diseñas, que se llena en el lugar incluso sin red, y luego se convierte en un informe PDF enviado por correo electrónico al cliente y enviado a tu software mediante la API. A 15 € IVA no incluido por usuario y por mes en anual, cinco técnicos en Smart cuestan 75 € IVA no incluido por mes, 900 € IVA no incluido por año. Si quieres entrada de voz, lectura de documentos fotografiados o conexión nativa con otras aplicaciones, es Business, 125 € IVA no incluido por mes para cinco.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que puede hacer dudar",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una herramienta de formularios, no un software completo de gestión de intervenciones.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La página de precios habla de formularios, informes, automatizaciones e integraciones; no menciona programación, presupuesto ni factura. Kizeo Forms se conecta a una herramienta que ya gestiona el resto. Si buscas programación, informe firmado y factura en un mismo lugar, son las tres alternativas de abajo las que debes comparar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El precio por usuario.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Cada técnico que complete un formulario cuenta. Diez personas en Business al mes, son 370 € IVA no incluido por mes, 4 440 € IVA no incluido por año; en anual, 3 000 € IVA no incluido. Cuenta los usuarios reales antes de comparar con un editor de precio fijo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La diferencia entre mensualidad y anualidad.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Smart pasa de 15 a 22 € IVA no incluido según la facturación, Business de 25 a 37 € IVA no incluido: lo mensual cuesta aproximadamente un 47 % más. El precio destacado supone pagar un año por adelantado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una sola fórmula para toda la cuenta.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " No es posible poner a dos personas en Business y al resto en Smart. Si un único gestor quiere entrada de voz o el conector de reportes, todos pasan a 25 € IVA no incluido.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El formulario sigue sin estar construido.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Kizeo Forms proporciona el editor; tus puntos de control, tus campos obligatorios y el diseño del PDF son responsabilidad tuya. Cuenta con días de configuración, y aprovecha los 15 días de prueba para construir un formulario real, no una demostración.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Tres alternativas a Kizeo Forms, con sus precios",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Precios mostrados en el sitio web de cada editor, registrados el 28 de octubre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Organilog, de 0 a 64 € por usuario y por mes.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La ",
+              "type": "text"
+            },
+            {
+              "text": "página de ofertas de Organilog",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://fr.organilog.com/offre/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra cinco planes: Básico a 0 €, Pro a 19 €, Empresa a 35 €, Premium a 59 € y Premium + Tarjeta a 64 € por mes y por usuario. La aplicación móvil con modo offline está disponible desde el plan Pro, la facturación y la firma de presupuestos desde Empresa, y los informes PDF se personalizan con sus secciones y encabezado. El pago anual se anuncia como más económico, sin mostrar el importe, y la página no especifica si los precios son sin impuestos. Es la alternativa cuando deseas el calendario, el informe y la factura en una sola herramienta; detallo sus planes en mi artículo sobre las ",
+              "type": "text"
+            },
+            {
+              "text": "alternativas a Organilog",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/alternative-organilog-logiciel-gestion-interventions",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Synchroteam, 39,49 o 64,79 € por usuario y por mes.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La ",
+              "type": "text"
+            },
+            {
+              "text": "página de tarifas de Synchroteam",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.synchroteam.fr/tarif.php",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra dos suscripciones: Estándar a 39,49 € y Premium a 64,79 € por usuario y por mes, con el precio por acceso de usuario, incluyendo la licencia de un técnico desde un terminal móvil. Estándar incluye todas las funciones excepto la optimización de rutas, mientras que Premium las incluye todas. La primera licencia de administrador es gratuita, al igual que los conectores Zoho CRM, Sage, Xero y QuickBooks Online, la configuración y la formación; sin compromiso, con 14 días de prueba sin tarjeta bancaria. La página no especifica si los precios son sin impuestos. Más caro por cabeza que Kizeo Forms, pero incluye la planificación y la distribución de intervenciones.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Praxedo, de 35 a 129 € por usuario y por mes, a partir de cinco usuarios.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La ",
+              "type": "text"
+            },
+            {
+              "text": "página de tarifas de Praxedo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.praxedo.fr/tarifs/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra cuatro planes: Básico a 35 €, Avanzado a 59 €, Optimizado a 89 € y Automatizado a 129 € por mes y por usuario, además de una oferta personalizada para grandes cuentas. Todas las ofertas están disponibles desde cinco usuarios, lo que equivale a un costo inicial de 175 € por mes en el plan Básico. La página no especifica ni el IVA, ni el compromiso, ni los costos de implementación, y los conectores a Microsoft Business Central, Sage 100, EBP o Salesforce se presentan sin tarifas. Es la herramienta para equipos de cinco técnicos o más que buscan una planificación avanzada; hablo de ello en mi artículo sobre las ",
+              "type": "text"
+            },
+            {
+              "text": "alternativas a Praxedo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/alternative-praxedo-logiciel-gestion-interventions",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para comparar estos software en una misma tabla y saber cuál conviene a tu equipo, visita mi página de ",
+              "type": "text"
+            },
+            {
+              "text": "software de gestión de intervenciones",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/outils/logiciel-gestion-interventions",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": una prueba gratuita con seis preguntas, las reglas a seguir en 2026 y un modelo de orden de intervención y hoja de ruta para descargar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Y si ninguno encaja: la herramienta a medida",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Kizeo Forms hace muy bien los formularios, y sus competidores hacen bien la planificación y la factura. Donde todos fallan es en lo propio de su empresa: un informe cuyos puntos de control cambian según el contrato del cliente, horas registradas en el lugar que deben caer directamente en la nómina y en la factura, un contrato de mantenimiento que desencadena las visitas por sí mismo, una pieza tomada del camión que se descuenta del inventario sin reingreso. He construido Gest-Time, un software de seguimiento de tiempo e intervenciones para una PYME: cada empleado registra sus horas por intervención en su teléfono, el gerente ve el día en tiempo real y genera sus informes sin tener que volver a teclear nada. Nada espectacular, pero exactamente como funciona la empresa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En cuanto a precios, una herramienta de este tipo en mi caso oscila entre 5.000 y 15.000 € en pago único, más 100 a 300 € por mes de mantenimiento, alojamiento y copias de seguridad incluidas, precios netos, sin IVA aplicable, y el código es de su propiedad. En tres años, diez usuarios en Kizeo Forms Business pagado anualmente cuestan 9.000 € sin impuestos, los mismos en Organilog Business 12.600 €, en Praxedo Basic 12.600 €: es a partir de ahí que el desarrollo a medida se compara, especialmente cuando el equipo crece. Mi barómetro del ",
+              "type": "text"
+            },
+            {
+              "text": "precio de un software a medida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/prix-logiciel-sur-mesure",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " da los rangos de precios de proveedores franceses para verificar un presupuesto, y mi página ",
+              "type": "text"
+            },
+            {
+              "text": "aplicación empresarial a medida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/application-metier-sur-mesure-rennes",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " describe el método, desde el primer intercambio hasta la puesta en línea.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cómo elegir en un día",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Haga la prueba con seis preguntas de mi página sobre los software de gestión de intervenciones. Luego someta a prueba una jornada real con el software durante su período de prueba: construya su informe de intervención con sus propios puntos de control, llénelo en un sótano sin conexión, agregue dos fotos, termínelo en casa del cliente y revise dónde termina el PDF: en su programación, en su factura, o en una bandeja de entrada de correo electrónico desde donde alguien deberá volver a ingresarlo. Si tiene que volver a ingresar algo, lo hará todos los días.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Kizeo Forms ofrece una prueba gratuita?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, 15 días con acceso completo, sin tarjeta bancaria ni compromiso, hasta 10 usuarios, según su página de tarifas al 28 de octubre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cuánto cuesta Kizeo Forms para cinco técnicos?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Cinco usuarios en Smart, 75 € sin impuestos por mes pagados anualmente, 110 € sin impuestos al mes; en Business, 125 € sin impuestos por mes anuales, 185 € sin impuestos al mes. Todos los usuarios de una cuenta deben estar en la misma fórmula.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Kizeo Forms hace la programación, los presupuestos y las facturas?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Su página de tarifas al 28 de octubre de 2026 describe formularios, informes, automatizaciones e integraciones, sin mención de programación, presupuesto ni factura. Para estas funciones, se necesita otro software conectado por la API o las integraciones, o una de las alternativas mencionadas anteriormente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Funciona Kizeo Forms sin conexión a internet?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, el modo sin conexión está incluido desde la fórmula Smart. Pruébelo durante la prueba en un local técnico o un sótano, luego verifique que el formulario se envíe correctamente al recuperar la conexión.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿No sabe cuál elegir?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Descríbame a su equipo en pocas líneas: número de técnicos, qué aún se hace en papel, el software que ya gestiona la programación o la factura, y qué es lo que le molesta. Le respondo en 24 horas, y si Kizeo Forms a 15 € IVA (sin impuestos) por usuario es suficiente, se lo haré saber. ",
+              "type": "text"
+            },
+            {
+              "text": "Hablar de mi proyecto",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/contact",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "be2ed3c0-7bdb-43a8-b4c1-ea9b605d157e",
+            "body": [
+              {
+                "_uid": "i-745d3d6c-a914-4bdd-bff7-fe58435d9bba",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
