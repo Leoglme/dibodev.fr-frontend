@@ -12,7 +12,7 @@ import { NBSP } from '~/core/constants/typography'
 
 export const EVENT_RENTAL_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   meta: {
-    title: `Logiciel location matériel événementiel${NBSP}: prix 2026 et test`,
+    title: `Logiciel de location de matériel${NBSP}: prix 2026, test gratuit`,
     description: `Logiciels de location de matériel événementiel${NBSP}: prix 2026 (Unipresta gratuit, LoKisi, Rentman, Booqable…) et test gratuit en 6 questions pour choisir le vôtre.`,
     inLanguage: 'fr-FR',
     schemaAbout: 'Logiciel de gestion de location de matériel événementiel',

@@ -5112,7 +5112,7 @@
   "blog/freelance-ou-agence-rennes-outil-metier-sur-mesure": {
     "title": "Freelancer or Agency in Rennes: Which to Choose for Your Custom Business Tool?",
     "excerpt": "Hiring a freelancer or an agency in Rennes for your custom software solution? A local developer gives an honest comparison of both options and explains when each makes the most sense.",
-    "metaTitle": "Freelancer or Agency in Rennes for Your Custom Business Tool | Dibodev",
+    "metaTitle": "Freelancer or agency in Rennes for your business tool?",
     "metaDescription": "Looking for a freelancer or web agency in Rennes to develop a custom business tool? The real decision criteria for SMEs and startups—no fluff, just facts.",
     "tags": [
       "freelance developer rennes",
@@ -5291,6 +5291,35 @@
             {
               "text": "If you’re still unsure, a good indicator: can you describe your need in one clear sentence? If yes, a freelancer will likely be faster and cheaper. If your need is vague and sprawling, a scoping phase — which I also offer — is better than rushing to the biggest option.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Before comparing quotes, read my article on the "
+            },
+            {
+              "type": "text",
+              "text": "price of custom software",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ": the ranges published by 14 providers, agencies and freelancers, and what moves the price."
             }
           ]
         },
@@ -6476,6 +6505,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "To put a quote in perspective, I compiled the prices published by 14 French providers in my article on the "
+            },
+            {
+              "type": "text",
+              "text": "price of custom software",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ": ranges by project size, timelines, and what moves the bill."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -7540,10 +7598,10 @@
     }
   },
   "blog/developpement-logiciel-b2b-sur-mesure-prix": {
-    "title": "Custom B2B software development: prices, timelines and what makes a quote vary",
-    "excerpt": "Published pricing from 14 French service providers, where I stand in comparison, and a five-year cost calculation versus a subscription model.",
-    "metaTitle": "Custom B2B software: prices, timelines, which SMEs benefit?",
-    "metaDescription": "Custom B2B software: the median prices of 14 French providers (€5,000 to €50,000), what makes a quote vary, the timelines, and when an SME comes out ahead.",
+    "title": "Price of custom software in 2026: what it costs and what moves the quote",
+    "excerpt": "How much does custom software cost for an SME? The prices of 14 French providers, mine, and the five-year calculation against a subscription.",
+    "metaTitle": "Price of custom software in 2026: €5,000 to €50,000",
+    "metaDescription": "How much does custom software cost? The prices of 14 French providers (€5,000 to €50,000), what moves the quote, the timelines and my net rates.",
     "tags": [
       "custom b2b software development",
       "tailored business software",
@@ -7578,6 +7636,15 @@
             {
               "text": ". Here’s what it shows, and where I stand within it.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "In short, the price of custom software in 2026: €5,000 to €12,500 for a simple tool, €13,500 to €50,000 for a business application, over €50,000 for a platform, according to the 14 providers that publish their prices. With me, a complete management software for an SME sits between €5,000 and €15,000 as a fixed price, net."
             }
           ]
         },
@@ -8061,6 +8128,27 @@
           "type": "paragraph",
           "content": [
             {
+              "type": "text",
+              "text": "How much does custom software cost?",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "type": "text",
+              "text": "Between €5,000 and €12,500 for a simple tool and between €13,500 and €50,000 for a complete business application, according to the prices published by 14 French providers in 2026. With me, a complete management software for an SME sits between €5,000 and €15,000 as a fixed price, then €100 to €300 a month for maintenance."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
               "text": "How long does it take to create a first tool?",
               "type": "text",
               "marks": [
@@ -8227,8 +8315,8 @@
   "blog/logiciel-metier-saas-etagere-ou-sur-mesure": {
     "title": "Business Software: Off-the-Shelf SaaS or Custom Development?",
     "excerpt": "Off-the-shelf SaaS or custom software? An honest comparison to help you decide, highlighting when ready-made solutions excel and when tailored development is essential.",
-    "metaTitle": "Business Software: Off-the-Shelf SaaS vs. Custom – The Honest Comparison",
-    "metaDescription": "Choosing between off-the-shelf SaaS and custom development for your business software? Discover the real decision criteria and when each option truly wins—no fluff, just facts.",
+    "metaTitle": "Business software: off-the-shelf SaaS or custom? Comparison",
+    "metaDescription": "Off-the-shelf SaaS or custom development for your business software? The real decision criteria and the cases where each one wins, without the fluff.",
     "tags": [
       "business software",
       "saas vs custom",
@@ -15314,8 +15402,8 @@
   "blog/alternative-klaxo-logiciel-auto-ecole": {
     "title": "Klaxo Alternative: Which Driving School Software to Choose in 2026?",
     "excerpt": "Klaxo costs between €99 and €249 (excluding tax) per month, depending on your enrollments. Who should choose it, what makes people hesitate, and five alternatives with their pricing and custom options.",
-    "metaTitle": "Klaxo Alternative: Driving School Software Options and Pricing for 2026",
-    "metaDescription": "Klaxo ranges from €99 to €249 (excluding tax) per month based on enrollments. Its limitations, five alternatives with 2026 pricing, and when custom solutions prove more cost-effective.",
+    "metaTitle": "Klaxo alternatives 2026: driving school software and prices",
+    "metaDescription": "Klaxo costs €99 to €249 a month before tax, by enrolments. Its limits, five alternatives with 2026 prices, and when custom software costs less.",
     "tags": [
       "klaxo",
       "klaxo review",
@@ -15905,7 +15993,7 @@
   "blog/alternative-autoprogestion-logiciel-garage": {
     "title": "AutoProGestion Alternative: Which Garage Software to Choose in 2026?",
     "excerpt": "AutoProGestion costs €29 or €59 per month. Who is it right for, what makes people hesitate, four alternatives with their pricing, and when custom solutions make sense.",
-    "metaTitle": "AutoProGestion Alternative: Garage Software Options and Pricing for 2026",
+    "metaTitle": "AutoProGestion alternatives 2026: garage software and prices",
     "metaDescription": "AutoProGestion costs €29 or €59 per month. Who it’s best for, its limitations, four alternatives with 2026 pricing, and the case for custom solutions.",
     "tags": [
       "autoprogestion",
@@ -17606,8 +17694,8 @@
   "blog/alternative-rentman-logiciel-location-materiel": {
     "title": "Rentman Alternatives: Which Equipment Rental Software to Choose in 2026?",
     "excerpt": "Rentman costs €39 per month plus per-user licenses and modules. Its true cost, limitations, four alternatives including Booqable, and the custom option.",
-    "metaTitle": "Rentman Alternatives: Rental Software Options and Pricing for 2026",
-    "metaDescription": "Rentman costs €39 per month plus per-user licenses and modules. Discover its true cost, limitations, and four alternatives, including Booqable and custom solutions.",
+    "metaTitle": "Rentman alternatives 2026: rental software and prices",
+    "metaDescription": "Rentman costs €39 a month plus per-user licences and modules. Its real cost, its limits, four alternatives with 2026 prices (Booqable included) and custom software.",
     "tags": [
       "rentman",
       "rentman review",
@@ -18652,8 +18740,8 @@
   "blog/alternative-drivup-logiciel-auto-ecole": {
     "title": "Drivup Alternatives: Which Driving School Software to Choose in 2026?",
     "excerpt": "Drivup costs €45 or €69 HT per month per agency, plus the student handbook, SMS services, and card payments. Discover its true cost, five alternatives with their pricing, and tailored solutions.",
-    "metaTitle": "Drivup Alternatives: Driving School Software and Pricing for 2026",
-    "metaDescription": "Drivup costs €45 or €69 HT per month per agency, plus the student handbook, SMS services, and card payments. Explore its real cost, five alternatives, and custom solutions.",
+    "metaTitle": "Drivup alternatives: driving school software, prices 2026",
+    "metaDescription": "Drivup costs €45 or €69 per month per agency before tax, plus the handbook, SMS and card payments. Its real cost, five alternatives and custom software.",
     "tags": [
       "drivup",
       "drivup review",
@@ -19270,8 +19358,8 @@
   "blog/prix-lovable-credits-quand-passer-a-un-developpeur": {
     "title": "What Are the True Costs of Lovable Credits, and When to Switch to a Developer?",
     "excerpt": "The listed price of Lovable doesn’t reveal the true cost of an application that evolves and improves over time. Published figures, a concrete example, and the point at which hiring a developer becomes more cost-effective.",
-    "metaTitle": "Lovable Pricing: Credits, Subscriptions, and When to Hand Over the Reins",
-    "metaDescription": "From $25 to $2,250 per month, 0.50 to 2 credits per request, with corrections billed even if unsuccessful: the real cost of a Lovable AI application, and when it’s time to transition.",
+    "metaTitle": "Lovable pricing: credits, plans and when to hire a developer",
+    "metaDescription": "From $25 to $2,250 a month, 0.5 to 2 credits per request, corrections billed even when they fail: the real cost of a Lovable app, and when to hand over.",
     "tags": [
       "lovable pricing",
       "lovable credits",
@@ -20455,7 +20543,7 @@
     "title": "How to Export Your Lovable Project to GitHub and Hand It Over to a Developer: Step-by-Step Guide",
     "excerpt": "The code is yours, and Lovable is ready for release. Create the repository, grant access without sharing the keys, and collaborate seamlessly without breaking synchronization.",
     "metaTitle": "Exporting a Lovable Project to GitHub for Developers",
-    "metaDescription": "Your Lovable code is yours to own. Learn how to create a GitHub repository in your name, grant proper access to a developer, and maintain synchronization effortlessly.",
+    "metaDescription": "Your Lovable code is yours. How to create the GitHub repository in your name, give a developer the right access and keep the sync working.",
     "tags": [
       "export lovable to github",
       "lovable github synchronization",
@@ -21610,8 +21698,8 @@
   "blog/alternative-gad-garage-logiciel-garage": {
     "title": "GAD Garage Alternative: Which Garage Software to Choose in 2026?",
     "excerpt": "GAD Garage: Windows version 12, a limited free version, and a subscription starting at €85 per quarter. Who is it the right choice for, what makes users hesitate, three online alternatives with their pricing, and the case for custom solutions.",
-    "metaTitle": "GAD Garage Alternative: Pricing, Limitations, and Garage Software Options for 2026",
-    "metaDescription": "GAD Garage: Windows version 12, limited free version, starting at €85 per quarter. Who it’s for, what holds users back, and three online alternatives with their pricing.",
+    "metaTitle": "GAD Garage alternatives: prices, limits, garage software 2026",
+    "metaDescription": "GAD Garage: Windows version 12, a limited free version, from €85 per quarter. Who it suits, what holds people back, three online alternatives and their prices.",
     "tags": [
       "gad garage",
       "gad garage review",
@@ -22122,8 +22210,8 @@
   "blog/alternative-gestgarage-logiciel-garage": {
     "title": "Gest'Garage Alternative: Which Garage Software to Choose in 2026?",
     "excerpt": "Gest'Garage costs €19 per month, all-inclusive. Who should choose it, what makes people hesitate, and three alternatives with their prices as of October 20, 2026, along with cases where custom solutions may be justified.",
-    "metaTitle": "Gest'Garage Alternative: Pricing, Limitations, and Other Software Options in 2026",
-    "metaDescription": "Gest'Garage costs €19 per month, all-inclusive. Who should choose it, what makes people hesitate, three alternatives with their 2026 prices, and when custom solutions make sense.",
+    "metaTitle": "Gest'Garage alternatives: prices, limits, other software 2026",
+    "metaDescription": "Gest'Garage costs €19 a month, all inclusive. Who it suits, what makes people hesitate, three alternatives with 2026 prices and the custom option.",
     "tags": [
       "gestgarage",
       "gest garage review",
@@ -27899,8 +27987,8 @@
   "blog/alternative-organilog-logiciel-gestion-interventions": {
     "title": "Organilog Alternatives: Which Field Service Management Software to Choose in 2026?",
     "excerpt": "Organilog costs between €19 and €64 per month per user, with quotes starting at €35. Who is it right for, what makes users hesitate, and three alternatives with their pricing—plus the case for custom solutions.",
-    "metaTitle": "Organilog Alternatives: 2026 Pricing & Field Service Management Software",
-    "metaDescription": "Organilog costs €19 to €64 per month per user, with quotes and invoices starting at €35. Who it suits, what makes users hesitate, three alternatives with 2026 pricing, and the custom solution option.",
+    "metaTitle": "Organilog alternatives: 2026 prices, field service software",
+    "metaDescription": "Organilog costs €19 to €64 per user per month, quotes from €35. Who it suits, its limits, three alternatives with 2026 prices and the custom option.",
     "tags": [
       "organilog",
       "organilog review",
@@ -29844,8 +29932,8 @@
   "blog/alternative-harbiz-logiciel-coach-sportif": {
     "title": "Harbiz Alternative: Which Fitness Coach Software to Choose in 2026?",
     "excerpt": "Harbiz costs between €14 and €199 HT per month, depending on the plan and number of clients. Who is it right for, what makes people hesitate, and three alternatives with their updated prices as of October 20, 2026, including the option for custom solutions.",
-    "metaTitle": "Harbiz Alternative: 2026 Pricing & Fitness Coach Software Options",
-    "metaDescription": "Harbiz ranges from €14 to €199 HT per month. Who it’s for, why people hesitate, and three alternatives (Hexfit, Eversports, free Trafft) with their 2026 pricing, plus custom solutions.",
+    "metaTitle": "Harbiz alternatives: 2026 prices and fitness coach software",
+    "metaDescription": "Harbiz costs €14 to €199 a month before tax. Who it suits, its limits, three alternatives (Hexfit, Eversports, Trafft) with 2026 prices and the custom option.",
     "tags": [
       "harbiz",
       "harbiz review",
@@ -33370,6 +33458,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "To put a figure on moving to custom software, my article on the "
+            },
+            {
+              "type": "text",
+              "text": "price of custom software",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " compiles the ranges of 14 providers and explains what moves a quote."
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -36494,7 +36611,7 @@
     "title": "Developing a Mobile App in Rennes: Steps, Timeline, and Cost",
     "excerpt": "Whether you need a web-installable app, a multi-platform solution, or a native app for your clients or team, discover how to create a mobile application, how long it takes, and what it costs.",
     "metaTitle": "Develop a Mobile App in Rennes: Steps, Timeline, and Cost",
-    "metaDescription": "PWA, multi-platform, or native? Learn the steps to create a mobile app for your business near Rennes, the timelines involved, and get an honest pricing estimate.",
+    "metaDescription": "PWA, multi-platform or native? The steps to create a mobile app for your business near Rennes, the timelines, and an honest price range.",
     "tags": [
       "mobile app development in Rennes",
       "how to create a mobile app",
@@ -36889,6 +37006,35 @@
             {
               "text": ". The exact price is always set in the quote before we begin.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "For the server side and the back office that often come with a mobile app, my article on the "
+            },
+            {
+              "type": "text",
+              "text": "price of custom software",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " gives the ranges of 14 providers."
             }
           ]
         },

@@ -5112,8 +5112,8 @@
   "blog/freelance-ou-agence-rennes-outil-metier-sur-mesure": {
     "title": "Freelance o agencia en Rennes: ¿cuál elegir para su herramienta profesional?",
     "excerpt": "¿Freelance o agencia en Rennes para su software a medida? Un desarrollador local compara con honestidad ambas opciones y explica en qué casos cada una tiene razón.",
-    "metaTitle": "Freelance o agencia en Rennes para su herramienta profesional | Dibodev",
-    "metaDescription": "¿Freelance o agencia web en Rennes para desarrollar una herramienta profesional a medida? Los criterios reales de elección para una PYME o microempresa, sin rodeos.",
+    "metaTitle": "¿Freelance o agencia en Rennes para tu herramienta a medida?",
+    "metaDescription": "¿Freelance o agencia web en Rennes para desarrollar una herramienta a medida? Los criterios reales de elección para una pyme, sin rodeos.",
     "tags": [
       "desarrollador freelance rennes",
       "agencia desarrollo rennes",
@@ -5291,6 +5291,35 @@
             {
               "text": "Si aún duda, un buen indicador: ¿puede describir su necesidad en una frase clara? Si es así, un freelance probablemente será más rápido y económico. Si su necesidad es confusa y compleja, una fase de definición — que también ofrezco — vale más que lanzarse con el proveedor más grande.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Antes de comparar presupuestos, lee mi artículo sobre el "
+            },
+            {
+              "type": "text",
+              "text": "precio de un software a medida",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ": las horquillas publicadas por 14 proveedores, agencias y freelances, y lo que hace variar el precio."
             }
           ]
         },
@@ -5854,7 +5883,7 @@
   "blog/application-metier-sur-mesure-guide-tpe-pme": {
     "title": "Aplicación profesional a medida: la guía completa para pymes y autónomos",
     "excerpt": "Excel que se desborda, software que nunca termina de adaptarse a tu forma de trabajar: el análisis completo sobre la aplicación profesional a medida, sin tecnicismos.",
-    "metaTitle": "Aplicación profesional a medida: la guía para pymes y autónomos",
+    "metaTitle": "Aplicación a medida: la guía para pymes y autónomos",
     "metaDescription": "¿Para qué sirve una aplicación profesional a medida, cómo saber si tu actividad la necesita, cuánto cuesta y cómo se desarrolla un proyecto. La guía clara.",
     "tags": [
       "aplicación profesional a medida",
@@ -6472,6 +6501,35 @@
             {
               "type": "text",
               "text": " (planificación, partes firmados en el móvil, precios 2026 de los editores) en una página dedicada, con un test gratuito de seis preguntas."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Para situar un presupuesto, recopilé los precios publicados por 14 proveedores franceses en mi artículo sobre el "
+            },
+            {
+              "type": "text",
+              "text": "precio de un software a medida",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ": horquillas por tamaño de proyecto, plazos y lo que hace variar la factura."
             }
           ]
         },
@@ -7540,10 +7598,10 @@
     }
   },
   "blog/developpement-logiciel-b2b-sur-mesure-prix": {
-    "title": "Desarrollo de software B2B a medida: precios, plazos y qué hace variar el presupuesto",
-    "excerpt": "Los precios publicados por 14 proveedores franceses, mi posición en el mercado y el cálculo a cinco años frente a una suscripción.",
-    "metaTitle": "Software B2B a medida: precios, plazos, ¿para qué pyme?",
-    "metaDescription": "Software B2B a medida: las medianas de 14 proveedores (5.000 a 50.000 €), qué hace variar el presupuesto, los plazos y cuándo una pyme sale ganando. Precios netos.",
+    "title": "Precio de un software a medida en 2026: cuánto cuesta y qué hace variar el presupuesto",
+    "excerpt": "¿Cuánto cuesta un software a medida para una pyme? Los precios de 14 proveedores franceses, los míos y el cálculo a cinco años frente a una suscripción.",
+    "metaTitle": "Precio de un software a medida 2026: de 5000 a 50 000 €",
+    "metaDescription": "¿Cuánto cuesta un software a medida? Los precios de 14 proveedores franceses (5000 a 50 000 €), qué hace variar el presupuesto, los plazos y mis tarifas.",
     "tags": [
       "desarrollo de software b2b",
       "software empresarial a medida",
@@ -7578,6 +7636,15 @@
             {
               "text": ". Aquí está lo que dice y dónde me ubico dentro de él.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "En resumen, el precio de un software a medida en 2026: de 5000 a 12 500 € para una herramienta sencilla, de 13 500 a 50 000 € para una aplicación de gestión, más de 50 000 € para una plataforma, según los 14 proveedores que publican sus precios. Conmigo, un software de gestión completo para una pyme se sitúa entre 5000 y 15 000 € a precio cerrado, netos."
             }
           ]
         },
@@ -8061,6 +8128,27 @@
           "type": "paragraph",
           "content": [
             {
+              "type": "text",
+              "text": "¿Cuánto cuesta un software a medida?",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "type": "text",
+              "text": "Entre 5000 y 12 500 € para una herramienta sencilla y entre 13 500 y 50 000 € para una aplicación de gestión completa, según los precios publicados por 14 proveedores franceses en 2026. Conmigo, un software de gestión completo para una pyme se sitúa entre 5000 y 15 000 € a precio cerrado, y después de 100 a 300 € al mes de mantenimiento."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
               "text": "¿Cuánto tiempo para una primera herramienta?",
               "type": "text",
               "marks": [
@@ -8227,8 +8315,8 @@
   "blog/logiciel-metier-saas-etagere-ou-sur-mesure": {
     "title": "Software empresarial: ¿SaaS listo para usar o desarrollo a medida?",
     "excerpt": "¿SaaS del mercado o software a medida? Un comparativo honesto para decidir, con los casos en los que el listo para usar gana y aquellos en los que el desarrollo personalizado es imprescindible.",
-    "metaTitle": "Software empresarial: ¿SaaS listo para usar o desarrollo a medida? Comparativa real",
-    "metaDescription": "¿SaaS listo para usar o desarrollo a medida para su software empresarial? Los criterios reales de elección, los casos en los que cada opción triunfa, sin rodeos.",
+    "metaTitle": "Software de gestión: ¿SaaS o a medida? Comparativa real",
+    "metaDescription": "¿SaaS listo para usar o desarrollo a medida para tu software de gestión? Los criterios reales de elección y los casos en los que gana cada opción, sin rodeos.",
     "tags": [
       "software empresarial",
       "saas o desarrollo a medida",
@@ -15317,8 +15405,8 @@
   "blog/alternative-klaxo-logiciel-auto-ecole": {
     "title": "Alternativa a Klaxo: ¿qué software de autoescuela elegir en 2026?",
     "excerpt": "Klaxo cuesta entre 99 y 249 € (IVA no incluido) al mes según tus inscripciones. Para quién es la mejor opción, qué aspectos generan dudas, cinco alternativas con sus precios y la opción personalizada a medida.",
-    "metaTitle": "Alternativa a Klaxo: software para autoescuelas y precios 2026",
-    "metaDescription": "Klaxo tiene un coste de 99 a 249 € (IVA no incluido) al mes según tus inscripciones. Sus limitaciones, cinco alternativas con sus precios en 2026 y cuándo la opción personalizada sale más económica.",
+    "metaTitle": "Klaxo: precios 2026, límites y 5 alternativas para autoescuelas",
+    "metaDescription": "Klaxo cuesta de 99 a 249 € al mes sin IVA. Sus límites, cinco alternativas con precios 2026 y cuándo el software a medida sale más barato.",
     "tags": [
       "klaxo",
       "opiniones klaxo",
@@ -15908,7 +15996,7 @@
   "blog/alternative-autoprogestion-logiciel-garage": {
     "title": "Alternativa a AutoProGestion: ¿qué software de taller elegir en 2026?",
     "excerpt": "AutoProGestion cuesta 29 o 59 € al mes. Para quién es la mejor opción, qué aspectos generan duda, cuatro alternativas con sus precios y el caso en el que la solución personalizada se justifica.",
-    "metaTitle": "Alternativa a AutoProGestion: software para talleres y precios 2026",
+    "metaTitle": "Alternativa a AutoProGestion: software de taller y precios",
     "metaDescription": "AutoProGestion cuesta 29 o 59 € al mes. Para quién es la mejor opción, sus limitaciones, cuatro alternativas con sus precios en 2026 y la opción personalizada.",
     "tags": [
       "autoprogestion",
@@ -17609,7 +17697,7 @@
     "title": "Alternativa a Rentman: ¿qué software de alquiler de equipos elegir en 2026?",
     "excerpt": "Rentman cuesta 39 € al mes más licencias y módulos por usuario. Su verdadero precio, sus limitaciones, cuatro alternativas como Booqable, y la opción personalizada.",
     "metaTitle": "Alternativa a Rentman: software de alquiler y precios 2026",
-    "metaDescription": "Rentman cuesta 39 € al mes más licencias y módulos por usuario. Su verdadero precio, sus limitaciones, cuatro alternativas como Booqable y la opción personalizada.",
+    "metaDescription": "Rentman cuesta 39 € al mes más licencias y módulos por usuario. Su precio real, sus límites, cuatro alternativas como Booqable y la opción a medida.",
     "tags": [
       "rentman",
       "opiniones de rentman",
@@ -18654,8 +18742,8 @@
   "blog/alternative-drivup-logiciel-auto-ecole": {
     "title": "Alternativa a Drivup: ¿qué software de autoescuela elegir en 2026?",
     "excerpt": "Drivup cuesta 45 o 69 € (IVA no incluido) por mes y por agencia, además del cuaderno, los SMS y el pago con tarjeta. Su verdadero coste, cinco alternativas con sus precios y opciones personalizadas.",
-    "metaTitle": "Alternativa a Drivup: software para autoescuelas y precios 2026",
-    "metaDescription": "Drivup cuesta 45 o 69 € (IVA no incluido) por mes y por agencia, además del cuaderno, los SMS y el pago con tarjeta. Su verdadero coste, cinco alternativas y opciones personalizadas.",
+    "metaTitle": "Alternativa a Drivup: software para autoescuelas, precios",
+    "metaDescription": "Drivup cuesta 45 o 69 € al mes por agencia sin IVA, más el cuaderno, los SMS y el pago con tarjeta. Su coste real, cinco alternativas y el software a medida.",
     "tags": [
       "drivup",
       "opiniones drivup",
@@ -19272,8 +19360,8 @@
   "blog/prix-lovable-credits-quand-passer-a-un-developpeur": {
     "title": "¿Cuánto cuestan realmente los créditos de Lovable y cuándo contratar a un desarrollador?",
     "excerpt": "El precio publicado de Lovable no refleja el costo real de una aplicación que se corrige y evoluciona. Los números revelados, un ejemplo cuantificado y el momento en que un desarrollador resulta más económico.",
-    "metaTitle": "Precio de Lovable: créditos, suscripciones y el momento de ceder el control",
-    "metaDescription": "De 25 a 2.250 $ al mes, 0,50 a 2 créditos por solicitud, correcciones pagadas incluso si fallan: el verdadero costo de una aplicación Lovable y cuándo es momento de dar el paso.",
+    "metaTitle": "Precio de Lovable: créditos, planes y cuándo pasar a un dev",
+    "metaDescription": "De 25 a 2250 $ al mes, de 0,5 a 2 créditos por petición, correcciones pagadas aunque fallen: el coste real de una app Lovable y cuándo pasar a un desarrollador.",
     "tags": [
       "precio lovable",
       "créditos lovable",
@@ -20457,7 +20545,7 @@
     "title": "Exportar tu proyecto Lovable a GitHub y que un desarrollador lo retome: guía paso a paso",
     "excerpt": "El código es tuyo y Lovable está listo para salir. Crea el repositorio, otorga los accesos sin compartir las claves, trabaja en equipo sin romper la sincronización.",
     "metaTitle": "Exportar un proyecto Lovable a GitHub para un desarrollador",
-    "metaDescription": "Tu código de Lovable es de tu propiedad. Aprende cómo crear el repositorio de GitHub a tu nombre, otorgar los accesos correctos a un desarrollador y mantener la sincronización.",
+    "metaDescription": "Tu código de Lovable es tuyo. Cómo crear el repositorio de GitHub a tu nombre, dar los accesos correctos a un desarrollador y mantener la sincronización.",
     "tags": [
       "exportar lovable a github",
       "sincronizar lovable con github",
@@ -21612,8 +21700,8 @@
   "blog/alternative-gad-garage-logiciel-garage": {
     "title": "Alternativa a GAD Garage: ¿qué software de taller elegir en 2026?",
     "excerpt": "GAD Garage: versión 12 para Windows, una versión gratuita limitada y una suscripción desde 85 € por trimestre. ¿Para quién es la mejor opción, qué hace dudar, tres alternativas en línea con sus precios y el caso de la solución personalizada.",
-    "metaTitle": "Alternativa a GAD Garage: precios, limitaciones y software de taller en 2026",
-    "metaDescription": "GAD Garage: versión 12 para Windows, versión gratuita limitada, desde 85 € por trimestre. ¿Para quién está hecho, qué genera dudas, 3 alternativas en línea y sus precios.",
+    "metaTitle": "GAD Garage: precios, límites y alternativas de software 2026",
+    "metaDescription": "GAD Garage: versión 12 para Windows, versión gratuita limitada, desde 85 € al trimestre. Para quién es, qué hace dudar, tres alternativas y sus precios.",
     "tags": [
       "gad garage",
       "opiniones gad garage",
@@ -22123,8 +22211,8 @@
   "blog/alternative-gestgarage-logiciel-garage": {
     "title": "Alternativa a Gest'Garage: ¿qué software de taller elegir en 2026?",
     "excerpt": "Gest'Garage cuesta 19 € al mes, todo incluido. Para quién es la mejor opción, qué puede hacer dudar, tres alternativas con sus precios actualizados al 20 de octubre de 2026 y el caso en el que la solución a medida se justifica.",
-    "metaTitle": "Alternativa a Gest'Garage: precios, limitaciones y otros programas en 2026",
-    "metaDescription": "Gest'Garage cuesta 19 € al mes, todo incluido. Para quién es la mejor opción, qué puede hacer dudar, tres alternativas con sus precios en 2026 y el caso de la solución personalizada.",
+    "metaTitle": "Gest'Garage: precios, límites y otras alternativas 2026",
+    "metaDescription": "Gest'Garage cuesta 19 € al mes, todo incluido. Para quién es, qué hace dudar, tres alternativas con precios 2026 y cuándo tiene sentido el software a medida.",
     "tags": [
       "gestgarage",
       "gest garage opiniones",
@@ -27901,8 +27989,8 @@
   "blog/alternative-organilog-logiciel-gestion-interventions": {
     "title": "Alternativa a Organilog: ¿qué software de gestión de intervenciones elegir en 2026?",
     "excerpt": "Organilog cuesta entre 19 y 64 € por mes y por usuario, con presupuestos desde 35 €. Para quién es la mejor opción, qué puede hacer dudar, tres alternativas con sus precios y el caso de la solución a medida.",
-    "metaTitle": "Alternativa a Organilog: precios 2026 y software de intervenciones",
-    "metaDescription": "Organilog cuesta entre 19 y 64 € por mes y por usuario, presupuestos y facturas desde 35 €. Para quién es ideal, qué puede generar dudas, tres alternativas con sus precios en 2026 y el caso de la solución personalizada.",
+    "metaTitle": "Alternativa a Organilog: precios 2026 y software de campo",
+    "metaDescription": "Organilog cuesta de 19 a 64 € por usuario al mes, presupuestos desde 35 €. Para quién es, sus límites, tres alternativas con precios 2026 y la opción a medida.",
     "tags": [
       "organilog",
       "organilog opinión",
@@ -29846,8 +29934,8 @@
   "blog/alternative-harbiz-logiciel-coach-sportif": {
     "title": "Alternativa a Harbiz: ¿qué software para entrenador personal elegir en 2026?",
     "excerpt": "Harbiz cuesta entre 14 y 199 € (IVA no incluido) al mes según la fórmula y el número de clientes. Para quién es la mejor opción, qué puede hacer dudar y tres alternativas con sus precios actualizados al 20 de octubre de 2026, además del caso de las soluciones personalizadas.",
-    "metaTitle": "Alternativa a Harbiz: precios 2026 y software para entrenadores personales",
-    "metaDescription": "Harbiz cuesta entre 14 y 199 € (IVA no incluido) al mes. Para quién es adecuado, qué puede generar dudas y tres alternativas (Hexfit, Eversports, Trafft gratis) con sus precios en 2026, además del caso de las soluciones personalizadas.",
+    "metaTitle": "Alternativa a Harbiz: precios 2026 y software para coach",
+    "metaDescription": "Harbiz cuesta de 14 a 199 € al mes sin IVA. Para quién es, sus límites y tres alternativas (Hexfit, Eversports, Trafft gratis) con precios 2026 y la opción a medida.",
     "tags": [
       "harbiz",
       "opiniones harbiz",
@@ -32811,8 +32899,8 @@
   "blog/application-metier-no-code-ia-limites": {
     "title": "Aplicación empresarial sin código o con IA: ¿hasta dónde llega?",
     "excerpt": "Airtable, Bubble, Glide o Lovable: donde el *no-code* y la IA hacen un trabajo excepcional, y las señales de que una aplicación empresarial necesita evolucionar hacia una solución personalizada.",
-    "metaTitle": "Aplicaciones empresariales sin código o con IA: límites y el momento ideal para usarlas",
-    "metaDescription": "Airtable, Bubble, Glide, Lovable: cuándo una aplicación empresarial *no-code* es suficiente, los 5 indicios de que ha llegado a su límite, y cuándo optar por una solución personalizada.",
+    "metaTitle": "Aplicación sin código o con IA: límites y cuándo cambiar",
+    "metaDescription": "Airtable, Bubble, Glide, Lovable: cuándo basta una aplicación sin código, las 5 señales de que llega a su límite y cuándo pasar al software a medida.",
     "tags": [
       "aplicación empresarial sin código",
       "herramientas sin código",
@@ -33368,6 +33456,35 @@
             {
               "text": ".",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Para cifrar el paso al software a medida, mi artículo sobre el "
+            },
+            {
+              "type": "text",
+              "text": "precio de un software a medida",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " recopila las horquillas de 14 proveedores y explica qué hace variar un presupuesto."
             }
           ]
         },
@@ -36891,6 +37008,35 @@
             {
               "text": ". El precio exacto siempre se fija en el presupuesto, antes de empezar.",
               "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Para la parte servidor y el panel de gestión que suelen acompañar a una aplicación móvil, mi artículo sobre el "
+            },
+            {
+              "type": "text",
+              "text": "precio de un software a medida",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " da las horquillas de 14 proveedores."
             }
           ]
         },
