@@ -70,7 +70,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent =
         name: 'CleanPlus',
         coverage: `Pointage GPS, portail client, grilles de contrôle qualité avec photos et scores, rapports, alertes sur les titres de séjour${NBSP}; lien avec Pennylane`,
         price: `29${NBSP}€ HT par mois`,
-        priceCondition: `Plus 3,40 à 4,40${NBSP}€ par agent selon le palier${NBSP}; un administrateur inclus (289${NBSP}€ HT à l’année)${NBSP}; options Factur-X 14${NBSP}€ par mois, assistant IA 9${NBSP}€, signature 7${NBSP}€${NBSP}; essai 7 jours`,
+        priceCondition: `Plus 3,40 à 4,40${NBSP}€ par agent selon le palier${NBSP}; un administrateur inclus (290${NBSP}€ HT à l’année)${NBSP}; options Factur-X 14${NBSP}€ par mois, assistant IA 9${NBSP}€, signature 7${NBSP}€${NBSP}; essai 7 jours`,
       },
       {
         name: 'MyClic Propreté',

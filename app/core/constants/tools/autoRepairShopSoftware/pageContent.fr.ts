@@ -58,9 +58,9 @@ export const AUTO_REPAIR_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
       },
       {
         name: 'TDV',
-        coverage: 'Agenda et temps barémés, puis devis, ordres de réparation, factures et stock (Solo Complet)',
-        price: `19,90 à 24,90${NBSP}€ TTC par mois`,
-        priceCondition: `L’offre à 19,90${NBSP}€ ne comprend que l’agenda et les temps`,
+        coverage: `Agenda et clients, puis devis, factures et stock (Solo Complet)${NBSP}; photos de prise en charge et signature du client en Essentiel`,
+        price: `19,90 à 79${NBSP}€ TTC par mois`,
+        priceCondition: `Solo 19,90 ou 24,90${NBSP}€ (1 site, 2 utilisateurs, sans TVA), Essentiel 39${NBSP}€ en utilisateurs illimités, Pro 79${NBSP}€ jusqu’à 3 sites${NBSP}; relevé le 1er novembre 2026`,
       },
       {
         name: 'AutoProGestion',
@@ -243,7 +243,7 @@ export const AUTO_REPAIR_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     questions: [
       {
         question: `Combien coûte un logiciel de garage automobile${NBSP}?`,
-        answer: `Gest’Garage coûte 19${NBSP}€ par mois, TDV 19,90 à 24,90${NBSP}€ TTC par mois, AutoProGestion 29 ou 59${NBSP}€ par mois et Kwixéo 22 à 89${NBSP}€ HT par mois (moins à l’année). EBP MéCa et GAD Garage sont sur devis (tarifs relevés le 29 septembre 2026). Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
+        answer: `Gest’Garage coûte 19${NBSP}€ par mois, TDV 19,90 à 79${NBSP}€ TTC par mois, AutoProGestion 29 ou 59${NBSP}€ par mois et Kwixéo 22 à 89${NBSP}€ HT par mois (moins à l’année). EBP MéCa et GAD Garage sont sur devis (tarifs relevés le 29 septembre 2026). Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
       },
       {
         question: `Quel logiciel de facturation pour un garage${NBSP}?`,

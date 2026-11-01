@@ -75,7 +75,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent =
         coverage:
           'Fichaje por GPS, portal de cliente, plantillas de control de calidad con fotos y puntuaciones, informes, alertas sobre permisos de residencia; conexión con Pennylane',
         price: `29${NBSP}€ al mes sin IVA`,
-        priceCondition: `Más 3,40 a 4,40${NBSP}€ por operario según el tramo; un administrador incluido (289${NBSP}€ sin IVA al año); opciones Factur-X 14${NBSP}€ al mes, asistente IA 9${NBSP}€, firma 7${NBSP}€; prueba de 7 días`,
+        priceCondition: `Más 3,40 a 4,40${NBSP}€ por operario según el tramo; un administrador incluido (290${NBSP}€ sin IVA al año); opciones Factur-X 14${NBSP}€ al mes, asistente IA 9${NBSP}€, firma 7${NBSP}€; prueba de 7 días`,
       },
       {
         name: 'MyClic Propreté',

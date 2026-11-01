@@ -75,7 +75,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent =
           'GPS clocking, customer portal, quality inspection grids with photos and scores, reports, residence permit alerts; Pennylane link',
         price: '€29 per month excl. VAT',
         priceCondition:
-          'Plus €3.40 to €4.40 per cleaner depending on the tier; one admin included (€289 excl. VAT a year); options Factur-X €14 per month, AI assistant €9, signature €7; 7-day trial',
+          'Plus €3.40 to €4.40 per cleaner depending on the tier; one admin included (€290 excl. VAT a year); options Factur-X €14 per month, AI assistant €9, signature €7; 7-day trial',
       },
       {
         name: 'MyClic Propreté',

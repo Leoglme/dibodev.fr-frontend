@@ -60,9 +60,11 @@ export const AUTO_REPAIR_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       },
       {
         name: 'TDV',
-        coverage: 'Diary and labour times, then quotes, repair orders, invoices and stock (Solo Complet)',
-        price: '€19.90 to €24.90 per month incl. VAT',
-        priceCondition: 'The €19.90 plan only covers the diary and labour times',
+        coverage:
+          'Diary and customers, then quotes, invoices and stock (Solo Complet); check-in photos and customer signature in Essentiel',
+        price: '€19.90 to €79 per month incl. VAT',
+        priceCondition:
+          'Solo €19.90 or €24.90 (1 site, 2 users, no VAT), Essentiel €39 with unlimited users, Pro €79 for up to 3 sites; read on 1 November 2026',
       },
       {
         name: 'AutoProGestion',
@@ -251,7 +253,7 @@ export const AUTO_REPAIR_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       {
         question: 'How much does garage software cost in France?',
         answer:
-          'Gest’Garage costs €19 per month, TDV €19.90 to €24.90 incl. VAT per month, AutoProGestion €29 or €59 per month and Kwixéo €22 to €89 excl. VAT per month (less when paid yearly). EBP MéCa and GAD Garage are on quote (prices checked on 29 September 2026). A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
+          'Gest’Garage costs €19 per month, TDV €19.90 to €79 incl. VAT per month, AutoProGestion €29 or €59 per month and Kwixéo €22 to €89 excl. VAT per month (less when paid yearly). EBP MéCa and GAD Garage are on quote (prices checked on 29 September 2026). A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
       },
       {
         question: 'Is there free garage software?',

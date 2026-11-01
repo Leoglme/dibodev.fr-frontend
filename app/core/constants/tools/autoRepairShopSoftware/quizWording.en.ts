@@ -150,7 +150,7 @@ export const AUTO_REPAIR_QUIZ_WORDING_EN: DibodevTradeQuizWording = {
     priceSuffix: 'per month, depending on modules and users',
     priceExamples: [
       { label: 'Gest’Garage', value: '€19/month' },
-      { label: 'TDV', value: '€19.90 to €24.90/month incl. VAT' },
+      { label: 'TDV', value: '€19.90 to €79/month incl. VAT' },
       { label: 'AutoProGestion', value: '€29 or €59/month' },
       { label: 'Kwixéo', value: '€22 to €89/month excl. VAT' },
     ],

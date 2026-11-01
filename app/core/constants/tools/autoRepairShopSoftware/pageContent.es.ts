@@ -63,9 +63,9 @@ export const AUTO_REPAIR_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
       {
         name: 'TDV',
         coverage:
-          'Agenda y tiempos de baremo, luego presupuestos, órdenes de reparación, facturas y stock (Solo Complet)',
-        price: `19,90 a 24,90${NBSP}€ al mes con IVA`,
-        priceCondition: `El plan de 19,90${NBSP}€ solo incluye la agenda y los tiempos`,
+          'Agenda y clientes, luego presupuestos, facturas y stock (Solo Complet); fotos de recepción y firma del cliente en Essentiel',
+        price: `19,90 a 79${NBSP}€ al mes con IVA`,
+        priceCondition: `Solo 19,90 o 24,90${NBSP}€ (1 taller, 2 usuarios, sin IVA), Essentiel 39${NBSP}€ con usuarios ilimitados, Pro 79${NBSP}€ hasta 3 talleres; consultado el 1 de noviembre de 2026`,
       },
       {
         name: 'AutoProGestion',
@@ -261,7 +261,7 @@ export const AUTO_REPAIR_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
       },
       {
         question: '¿Cuánto cuesta un software para talleres mecánicos en Francia?',
-        answer: `Gest’Garage cuesta 19${NBSP}€ al mes, TDV de 19,90 a 24,90${NBSP}€ al mes con IVA, AutoProGestion 29 o 59${NBSP}€ al mes y Kwixéo de 22 a 89${NBSP}€ al mes sin IVA (menos con pago anual). EBP MéCa y GAD Garage funcionan con presupuesto (tarifas consultadas el 29 de septiembre de 2026). Un complemento a medida cuesta de 2500 a 7000${NBSP}€ una sola vez, una herramienta completa de 5000 a 25${NBSP}000${NBSP}€, y luego de 100 a 300${NBSP}€ al mes de mantenimiento.`,
+        answer: `Gest’Garage cuesta 19${NBSP}€ al mes, TDV de 19,90 a 79${NBSP}€ al mes con IVA, AutoProGestion 29 o 59${NBSP}€ al mes y Kwixéo de 22 a 89${NBSP}€ al mes sin IVA (menos con pago anual). EBP MéCa y GAD Garage funcionan con presupuesto (tarifas consultadas el 29 de septiembre de 2026). Un complemento a medida cuesta de 2500 a 7000${NBSP}€ una sola vez, una herramienta completa de 5000 a 25${NBSP}000${NBSP}€, y luego de 100 a 300${NBSP}€ al mes de mantenimiento.`,
       },
       {
         question: '¿Existe un software gratuito para talleres mecánicos?',

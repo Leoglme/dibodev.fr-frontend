@@ -1709,16 +1709,16 @@
       "name": "Kwixéo",
       "editor": "Kwixéo",
       "aliases": ["kwixeo"],
-      "status": "compatibleUnnamed",
-      "platformName": null,
-      "includedInPrice": null,
+      "status": "connected",
+      "platformName": "SUPER PDP",
+      "includedInPrice": true,
       "note": {
-        "fr": "Kwixéo indique que l’émission et la réception passent « via une plateforme agréée, intégrée à Kwixéo », sans la nommer.",
-        "en": "Kwixéo states that issuing and receiving go “through an accredited platform integrated into Kwixéo”, without naming it.",
-        "es": "Kwixéo indica que la emisión y la recepción pasan «a través de una plataforma homologada integrada en Kwixéo», sin nombrarla."
+        "fr": "Kwixéo est raccordé nativement à la plateforme agréée SuperPDP : l’émission et la réception sont incluses dans toutes les offres, sans supplément à l’abonnement.",
+        "en": "Kwixéo is natively connected to the SuperPDP accredited platform: issuing and receiving are included in every plan, at no extra cost on top of the subscription.",
+        "es": "Kwixéo está conectado de forma nativa a la plataforma homologada SuperPDP: la emisión y la recepción están incluidas en todos los planes, sin coste añadido a la suscripción."
       },
-      "sourceUrl": "https://www.kwixeo.fr/dossier/facture-electronique/faq/",
-      "sourceDate": "2026-09-10"
+      "sourceUrl": "https://www.kwixeo.fr/logiciel-garage/",
+      "sourceDate": "2026-11-01"
     },
     {
       "id": "excel",

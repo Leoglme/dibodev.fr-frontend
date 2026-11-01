@@ -14,6 +14,7 @@ export const CLEANING_BUSINESS_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'logiciel-metier-saas-etagere-ou-sur-mesure',
   'logiciel-gestion-interventions-techniciens-hors-ligne',
   'alternative-organilog-logiciel-gestion-interventions',
+  'alternative-progesti-logiciel-nettoyage',
   'facture-electronique-artisan-ce-qui-change',
 ]
 
