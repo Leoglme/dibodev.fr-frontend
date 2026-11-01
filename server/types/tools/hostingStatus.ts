@@ -10,7 +10,7 @@ export type HostingProviderKey =
 
 export type HostingStatusState = 'operational' | 'degraded' | 'incident' | 'maintenance' | 'unknown'
 
-export type HostingStatusSourceKind = 'statuspage' | 'rss' | 'atom' | 'infomaniak' | 'lws' | 'x'
+export type HostingStatusSourceKind = 'statuspage' | 'infomaniak' | 'lws' | 'none'
 
 export type HostingIncidentImpact = 'none' | 'minor' | 'major' | 'critical' | 'maintenance' | 'unknown'
 
@@ -61,13 +61,6 @@ export type HostingStatuspageSource = {
   excludeMaintenancePattern: string
 }
 
-export type HostingFeedSource = {
-  kind: 'rss' | 'atom'
-  url: string
-  resolvedMarkers: string[]
-  maintenanceMarkers: string[]
-}
-
 export type HostingInfomaniakSource = {
   kind: 'infomaniak'
   url: string
@@ -78,26 +71,20 @@ export type HostingLwsSource = {
   url: string
 }
 
-export type HostingXSource = {
-  kind: 'x'
-  screenName: string
-  incidentMarkers: string[]
-  resolvedMarkers: string[]
-  maintenanceMarkers: string[]
+export type HostingNoStatusPageSource = {
+  kind: 'none'
 }
 
 export type HostingStatusSource =
   | HostingStatuspageSource
-  | HostingFeedSource
   | HostingInfomaniakSource
   | HostingLwsSource
-  | HostingXSource
+  | HostingNoStatusPageSource
 
 export type HostingProviderConfig = {
   key: HostingProviderKey
   name: string
   statusPageUrl: string
-  minIntervalMs: number
   source: HostingStatusSource
 }
 
@@ -113,16 +100,16 @@ export type HostingStatuspageCurrentState = {
   activeIncidents: HostingIncident[]
 }
 
-export type HostingFeedItem = {
-  title: string
-  link: string | null
-  publishedAt: string | null
-  body: string
-}
-
 export type StatuspageSummary = {
+  status?: StatuspageGlobalStatus
   incidents?: StatuspageIncident[]
   scheduled_maintenances?: StatuspageMaintenance[]
+}
+
+/** Overall indicator the provider sets on its whole page (`none`, `minor`, `major`, `critical`, `maintenance`). */
+export type StatuspageGlobalStatus = {
+  indicator?: string
+  description?: string
 }
 
 export type StatuspageAffectedComponent = {
@@ -157,28 +144,6 @@ export type StatuspageMaintenance = {
 
 export type StatuspageIncidentsPayload = {
   incidents?: StatuspageIncident[]
-}
-
-export type XSyndicationPagePayload = {
-  props?: {
-    pageProps?: {
-      timeline?: {
-        entries?: XSyndicationEntry[]
-      }
-    }
-  }
-}
-
-export type XSyndicationEntry = {
-  content?: {
-    tweet?: XSyndicationTweet
-  }
-}
-
-export type XSyndicationTweet = {
-  id_str?: string
-  created_at?: string
-  full_text?: string
 }
 
 export type HostingStatusQuery = {

@@ -4,6 +4,7 @@ import type {
   DibodevEstimatorProjectSize,
 } from '~/core/types/DibodevBudgetEstimator'
 import type { DibodevEInvoicingVerdict } from '~/core/types/DibodevEInvoicingCheck'
+import type { DibodevHostingProviderKey, DibodevHostingStatusState } from '~/core/types/DibodevHostingStatus'
 import type { DibodevSecurityAlertSubscribeOutcome, DibodevSecurityAlertTopic } from '~/core/types/DibodevSecurityAlert'
 import type { DibodevPhotoSlideshowNavigationMethod } from '~/core/types/DibodevPhotoSlideshow'
 import type {
@@ -121,6 +122,17 @@ export type TrackingEventPayloads = {
     guide: DibodevWordPressHackGuideKey
     verdict: DibodevWordPressHackVerdict
   }
+  [TRACKING_EVENTS.hostingStatusLoaded]: {
+    location: string
+    provider: DibodevHostingProviderKey
+    state: DibodevHostingStatusState
+  }
+  [TRACKING_EVENTS.hostingStatusProviderClicked]: {
+    location: string
+    provider: DibodevHostingProviderKey
+    state: DibodevHostingStatusState | null
+  }
+  [TRACKING_EVENTS.hostingStatusRefreshed]: { location: string; provider: DibodevHostingProviderKey | null }
   [TRACKING_EVENTS.securityAlertSubscribed]: {
     location: string
     topic: DibodevSecurityAlertTopic

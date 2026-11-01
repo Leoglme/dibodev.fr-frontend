@@ -21,4 +21,6 @@ export const DASHBOARD_TOOL_PAGES: Record<string, DashboardToolPage> = {
   'tools-landscaping-software': { label: 'Logiciel paysagiste', onlineSince: '2026-10-26' },
   'tools-cleaning-business-software': { label: 'Logiciel entreprise de nettoyage', onlineSince: '2026-10-26' },
   'tools-cold-calling-check': { label: 'Démarchage téléphonique : puis-je appeler ?', onlineSince: '2026-10-26' },
+  'tools-web-host-status': { label: 'Hébergeur en panne (hub)', onlineSince: '2026-11-01' },
+  'tools-web-host-status-provider': { label: 'Hébergeur en panne : pages par hébergeur', onlineSince: '2026-11-01' },
 }

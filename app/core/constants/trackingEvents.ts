@@ -72,6 +72,12 @@ export const TRACKING_EVENTS = {
   eInvoicingSoftwareCheckStarted: 'e_invoicing_software_check_started',
   /** A tool checked by the e-invoicing software checker, with the verdict and the tool matched, never the text typed. */
   eInvoicingSoftwareChecked: 'e_invoicing_software_checked',
+  /** The live status of a hosting provider shown on its page (sent once per load, with the state read). */
+  hostingStatusLoaded: 'hosting_status_loaded',
+  /** A provider card opened from the hosting status hub. */
+  hostingStatusProviderClicked: 'hosting_status_provider_clicked',
+  /** The "refresh" button of a hosting status card pressed. */
+  hostingStatusRefreshed: 'hosting_status_refreshed',
   /** An alert requested from a tool card (vulnerability or hosting outage), with the outcome, never the address. */
   securityAlertSubscribed: 'security_alert_subscribed',
 } as const

@@ -236,6 +236,7 @@
       "eInvoicingScope": "E-invoicing: does it apply to me?",
       "wordpressHackCheck": "Hacked WordPress site: check",
       "coldCallingCheck": "Cold calling ban: can I still call?",
+      "hostingStatus": "Is my web host down?",
       "budgetEstimator": "Budget estimator"
     }
   },
@@ -619,6 +620,17 @@
           "cleanSurface": "nothing visible from outside",
           "notWordPress": "site not on WordPress",
           "unknown": "no readable sign"
+        }
+      },
+      "siteDown": {
+        "messageWithProvider": "Hello,\nmy site hosted at {provider} is unreachable. The host's status page says: \"{state}\".\nCan you look into where the outage comes from and tell me what to do?\nMy website link: ",
+        "messageWithoutProvider": "Hello,\nmy site is unreachable and I don't know whether the outage comes from the host or from the site.\nCan you look into it and tell me what to do?\nMy website link: ",
+        "states": {
+          "operational": "everything is working at the host",
+          "degraded": "degraded service at the host",
+          "incident": "incident in progress at the host",
+          "maintenance": "maintenance in progress at the host",
+          "unknown": "unknown state"
         }
       },
       "phpUpdate": {

@@ -312,6 +312,11 @@ const toolLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLi
     to: localePath('tools-cold-calling-check'),
   },
   {
+    key: 'hostingStatus',
+    title: t('footer.tools.hostingStatus'),
+    to: localePath('tools-web-host-status'),
+  },
+  {
     key: 'budgetEstimator',
     title: t('footer.tools.budgetEstimator'),
     to: `${localePath('custom-business-software')}#estimator`,

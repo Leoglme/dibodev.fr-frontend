@@ -270,7 +270,7 @@ export class SecurityAlertService {
   }
 
   /**
-   * Reads a topic, which is `security` or `hosting:<provider>` for a watched provider.
+   * Reads a topic, which is `security` or `hosting:<provider>` for a provider whose status page is read.
    * @param {unknown} value - The raw value.
    * @returns {SecurityAlertTopic | null} The topic, or null.
    */
@@ -283,7 +283,10 @@ export class SecurityAlertService {
     if (topic.startsWith('hosting:')) {
       const provider: string = topic.slice('hosting:'.length)
 
-      if ((HOSTING_PROVIDER_KEYS as string[]).includes(provider)) {
+      if (
+        (HOSTING_PROVIDER_KEYS as string[]).includes(provider) &&
+        HOSTING_PROVIDERS[provider as HostingProviderKey].source.kind !== 'none'
+      ) {
         return `hosting:${provider as HostingProviderKey}`
       }
     }

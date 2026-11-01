@@ -23,6 +23,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import type { PropType, ComputedRef } from 'vue'
+import Activity from '~/components/icons/Activity.vue'
 import AlertCircle from '~/components/icons/AlertCircle.vue'
 import Armchair from '~/components/icons/Armchair.vue'
 import ArrowLeft from '~/components/icons/ArrowLeft.vue'
@@ -70,6 +71,7 @@ import Phone from '~/components/icons/Phone.vue'
 import RotateCcw from '~/components/icons/RotateCcw.vue'
 import Search from '~/components/icons/Search.vue'
 import Send from '~/components/icons/Send.vue'
+import Server from '~/components/icons/Server.vue'
 import ShieldCheck from '~/components/icons/ShieldCheck.vue'
 import SlidersHorizontal from '~/components/icons/SlidersHorizontal.vue'
 import Smartphone from '~/components/icons/Smartphone.vue'
@@ -126,6 +128,7 @@ const props: DibodevIconProps = defineProps({
  * @constant {Record<string, IconComponent>}
  */
 const iconsDictionary: Record<string, IconComponent> = {
+  Activity,
   AlertCircle,
   Armchair,
   ArrowLeft,
@@ -173,6 +176,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   RotateCcw,
   Search,
   Send,
+  Server,
   ShieldCheck,
   SlidersHorizontal,
   Smartphone,

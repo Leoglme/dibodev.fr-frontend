@@ -11,7 +11,7 @@ export type DibodevHostingProviderKey =
 
 export type DibodevHostingStatusState = 'operational' | 'degraded' | 'incident' | 'maintenance' | 'unknown'
 
-export type DibodevHostingStatusSourceKind = 'statuspage' | 'rss' | 'atom' | 'infomaniak' | 'lws' | 'x'
+export type DibodevHostingStatusSourceKind = 'statuspage' | 'infomaniak' | 'lws' | 'none'
 
 export type DibodevHostingIncidentImpact = 'none' | 'minor' | 'major' | 'critical' | 'maintenance' | 'unknown'
 
@@ -26,7 +26,7 @@ export type DibodevHostingIncident = {
   isResolved: boolean
 }
 
-/** The status of one provider as the API returns it; `isOfficial` is false when it is read from X. */
+/** The status of one provider as the API returns it; `isOfficial` is false for a provider without a readable status page. */
 export type DibodevHostingProviderStatus = {
   provider: DibodevHostingProviderKey
   state: DibodevHostingStatusState

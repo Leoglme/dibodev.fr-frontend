@@ -236,6 +236,7 @@
       "eInvoicingScope": "Facture électronique : suis-je concerné ?",
       "wordpressHackCheck": "Site WordPress piraté : vérifier",
       "coldCallingCheck": "Démarchage téléphonique interdit ?",
+      "hostingStatus": "Mon hébergeur est-il en panne ?",
       "budgetEstimator": "Estimateur de budget"
     }
   },
@@ -619,6 +620,17 @@
           "cleanSurface": "rien de visible de l'extérieur",
           "notWordPress": "site pas sous WordPress",
           "unknown": "aucun signe lisible"
+        }
+      },
+      "siteDown": {
+        "messageWithProvider": "Bonjour,\nmon site hébergé chez {provider} est inaccessible. La page de statut de l'hébergeur dit : « {state} ».\nPouvez-vous regarder d'où vient la panne et me dire quoi faire ?\nLe lien de mon site : ",
+        "messageWithoutProvider": "Bonjour,\nmon site est inaccessible et je ne sais pas si la panne vient de l'hébergeur ou du site.\nPouvez-vous regarder d'où ça vient et me dire quoi faire ?\nLe lien de mon site : ",
+        "states": {
+          "operational": "tout fonctionne chez l'hébergeur",
+          "degraded": "service dégradé chez l'hébergeur",
+          "incident": "incident en cours chez l'hébergeur",
+          "maintenance": "maintenance en cours chez l'hébergeur",
+          "unknown": "état inconnu"
         }
       },
       "phpUpdate": {

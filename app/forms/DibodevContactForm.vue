@@ -128,9 +128,11 @@ import type { DibodevEInvoicingContactPrefill } from '~/core/types/DibodevEInvoi
 import type { DibodevPhpVulnerabilityContactPrefill } from '~/core/types/DibodevPhpVulnerabilityContact'
 import type { DibodevSiteCheckContactPrefill } from '~/core/types/DibodevSiteCheck'
 import type { DibodevWordPressHackVerdict } from '~/core/types/DibodevWordPressHackCheck'
+import type { DibodevHostingStatusContactPrefill } from '~/core/types/DibodevHostingStatusContact'
 import { EInvoicingContactUtils } from '~/core/utils/EInvoicingContactUtils'
 import { PhpVulnerabilityContactUtils } from '~/core/utils/PhpVulnerabilityContactUtils'
 import { SiteCheckContactUtils } from '~/core/utils/SiteCheckContactUtils'
+import { HostingStatusContactUtils } from '~/core/utils/HostingStatusContactUtils'
 import { WORDPRESS_HACK_CONTACT_TOPIC, WORDPRESS_HACK_VERDICTS } from '~/core/constants/wordpressHackCheck/pageShared'
 import { useTracking } from '~/composables/useTracking'
 import { useLeadSource } from '~/composables/useLeadSource'
@@ -196,6 +198,8 @@ const phpVulnerabilityPrefill: DibodevPhpVulnerabilityContactPrefill | null = Ph
 const eInvoicingPrefill: DibodevEInvoicingContactPrefill | null = EInvoicingContactUtils.readPrefill(route.query)
 const wordpressHackPrefill: DibodevSiteCheckContactPrefill<DibodevWordPressHackVerdict> | null =
   SiteCheckContactUtils.readSitePrefill(route.query, WORDPRESS_HACK_CONTACT_TOPIC, WORDPRESS_HACK_VERDICTS)
+/** `?topic=site-down` comes from the hosting status pages, with the provider and the state read when known. */
+const siteDownPrefill: DibodevHostingStatusContactPrefill | null = HostingStatusContactUtils.readPrefill(route.query)
 
 const projectType: Ref<ProjectTypeKey | null> = ref<ProjectTypeKey | null>(prefilledProjectType ?? DEFAULT_PROJECT_TYPE)
 const pagesRange: Ref<PagesRangeKey | null> = ref<PagesRangeKey | null>(null)
@@ -216,10 +220,18 @@ const isWebsiteProject: ComputedRef<boolean> = computed((): boolean => projectTy
 
 /** METHODS */
 /**
- * Writes the message of a visitor coming from the PHP pages, the WordPress checker or the e-invoicing checker, with the check when known.
+ * Writes the message of a visitor coming from a checker, a PHP page or a hosting status page, with the check when known.
  * @returns {string} The message, or an empty string for every other visitor.
  */
 function buildPrefilledMessage(): string {
+  if (siteDownPrefill) {
+    return siteDownPrefill.providerName
+      ? t('contact.form.siteDown.messageWithProvider', {
+          provider: siteDownPrefill.providerName,
+          state: t(`contact.form.siteDown.states.${siteDownPrefill.state ?? 'unknown'}`),
+        })
+      : t('contact.form.siteDown.messageWithoutProvider')
+  }
   if (eInvoicingPrefill) {
     return eInvoicingPrefill.softwareName
       ? t('contact.form.eInvoicing.messageWithSoftware', {
@@ -468,7 +480,7 @@ async function onSubmit(): Promise<void> {
 /** LIFECYCLE */
 /** Set after hydration: the page is prerendered without its query, and a value given during setup would be lost in the static HTML. */
 onMounted((): void => {
-  if (phpVulnerabilityPrefill || eInvoicingPrefill || wordpressHackPrefill) {
+  if (phpVulnerabilityPrefill || eInvoicingPrefill || wordpressHackPrefill || siteDownPrefill) {
     message.value = buildPrefilledMessage()
   }
 })

@@ -236,6 +236,7 @@
       "eInvoicingScope": "Factura electrónica: ¿me afecta?",
       "wordpressHackCheck": "Web WordPress hackeada: comprobar",
       "coldCallingCheck": "Prospección telefónica: ¿puedo llamar?",
+      "hostingStatus": "¿Mi hosting está caído?",
       "budgetEstimator": "Estimador de presupuesto"
     }
   },
@@ -619,6 +620,17 @@
           "cleanSurface": "nada visible desde fuera",
           "notWordPress": "web no hecha con WordPress",
           "unknown": "ninguna señal legible"
+        }
+      },
+      "siteDown": {
+        "messageWithProvider": "Hola,\nmi web alojada en {provider} no responde. La página de estado del hosting dice: «{state}».\n¿Puedes mirar de dónde viene la caída y decirme qué hacer?\nEl enlace de mi web: ",
+        "messageWithoutProvider": "Hola,\nmi web no responde y no sé si la caída viene del hosting o de la web.\n¿Puedes mirar de dónde viene y decirme qué hacer?\nEl enlace de mi web: ",
+        "states": {
+          "operational": "todo funciona en el hosting",
+          "degraded": "servicio degradado en el hosting",
+          "incident": "incidencia en curso en el hosting",
+          "maintenance": "mantenimiento en curso en el hosting",
+          "unknown": "estado desconocido"
         }
       },
       "phpUpdate": {

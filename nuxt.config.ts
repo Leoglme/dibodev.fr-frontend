@@ -165,6 +165,8 @@ export default defineNuxtConfig({
     scheduledTasks: {
       // Drip queue: publish scheduled articles whose time has come (hourly, at minute 5).
       '5 * * * *': ['articles:process-queue'],
+      // Hosting status: read the status pages of the watched providers every five minutes.
+      '*/5 * * * *': ['hosting:refresh-status'],
       // Daily recap of the addresses left in the forms: the first run from 8:00 (Paris) sends it, only when there is one.
       '0 * * * *': ['email-captures:daily-digest'],
     },
