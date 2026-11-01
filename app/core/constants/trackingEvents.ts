@@ -80,6 +80,10 @@ export const TRACKING_EVENTS = {
   hostingStatusRefreshed: 'hosting_status_refreshed',
   /** An alert requested from a tool card (vulnerability or hosting outage), with the outcome, never the address. */
   securityAlertSubscribed: 'security_alert_subscribed',
+  /** First domain typed in the e-mail deliverability checker (sent once per page view). */
+  emailDeliverabilityCheckStarted: 'email_deliverability_check_started',
+  /** A domain checked by the e-mail deliverability checker, with the verdict, the provider and the findings (or the error), never the domain. */
+  emailDeliverabilityChecked: 'email_deliverability_checked',
 } as const
 
 /** Tracking event name (value of the `TRACKING_EVENTS` catalog). */

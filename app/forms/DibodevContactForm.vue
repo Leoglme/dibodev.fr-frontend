@@ -129,10 +129,15 @@ import type { DibodevPhpVulnerabilityContactPrefill } from '~/core/types/Dibodev
 import type { DibodevSiteCheckContactPrefill } from '~/core/types/DibodevSiteCheck'
 import type { DibodevWordPressHackVerdict } from '~/core/types/DibodevWordPressHackCheck'
 import type { DibodevHostingStatusContactPrefill } from '~/core/types/DibodevHostingStatusContact'
+import type { DibodevEmailDeliverabilityVerdict } from '~/core/types/DibodevEmailDeliverabilityCheck'
 import { EInvoicingContactUtils } from '~/core/utils/EInvoicingContactUtils'
 import { PhpVulnerabilityContactUtils } from '~/core/utils/PhpVulnerabilityContactUtils'
 import { SiteCheckContactUtils } from '~/core/utils/SiteCheckContactUtils'
 import { HostingStatusContactUtils } from '~/core/utils/HostingStatusContactUtils'
+import {
+  EMAIL_DELIVERABILITY_CONTACT_TOPIC,
+  EMAIL_DELIVERABILITY_VERDICTS,
+} from '~/core/constants/emailDeliverabilityCheck/pageShared'
 import { WORDPRESS_HACK_CONTACT_TOPIC, WORDPRESS_HACK_VERDICTS } from '~/core/constants/wordpressHackCheck/pageShared'
 import { useTracking } from '~/composables/useTracking'
 import { useLeadSource } from '~/composables/useLeadSource'
@@ -200,6 +205,9 @@ const wordpressHackPrefill: DibodevSiteCheckContactPrefill<DibodevWordPressHackV
   SiteCheckContactUtils.readSitePrefill(route.query, WORDPRESS_HACK_CONTACT_TOPIC, WORDPRESS_HACK_VERDICTS)
 /** `?topic=site-down` comes from the hosting status pages, with the provider and the state read when known. */
 const siteDownPrefill: DibodevHostingStatusContactPrefill | null = HostingStatusContactUtils.readPrefill(route.query)
+/** `?topic=email-deliverability` comes from the e-mail deliverability checker, with the domain and the verdict when a check was run. */
+const emailDeliverabilityPrefill: DibodevSiteCheckContactPrefill<DibodevEmailDeliverabilityVerdict> | null =
+  SiteCheckContactUtils.readSitePrefill(route.query, EMAIL_DELIVERABILITY_CONTACT_TOPIC, EMAIL_DELIVERABILITY_VERDICTS)
 
 const projectType: Ref<ProjectTypeKey | null> = ref<ProjectTypeKey | null>(prefilledProjectType ?? DEFAULT_PROJECT_TYPE)
 const pagesRange: Ref<PagesRangeKey | null> = ref<PagesRangeKey | null>(null)
@@ -224,6 +232,14 @@ const isWebsiteProject: ComputedRef<boolean> = computed((): boolean => projectTy
  * @returns {string} The message, or an empty string for every other visitor.
  */
 function buildPrefilledMessage(): string {
+  if (emailDeliverabilityPrefill) {
+    return emailDeliverabilityPrefill.site
+      ? t('contact.form.emailDeliverability.messageWithDomain', {
+          domain: emailDeliverabilityPrefill.site,
+          verdict: t(`contact.form.emailDeliverability.verdicts.${emailDeliverabilityPrefill.verdict ?? 'unknown'}`),
+        })
+      : t('contact.form.emailDeliverability.messageWithoutDomain')
+  }
   if (siteDownPrefill) {
     return siteDownPrefill.providerName
       ? t('contact.form.siteDown.messageWithProvider', {
@@ -480,7 +496,13 @@ async function onSubmit(): Promise<void> {
 /** LIFECYCLE */
 /** Set after hydration: the page is prerendered without its query, and a value given during setup would be lost in the static HTML. */
 onMounted((): void => {
-  if (phpVulnerabilityPrefill || eInvoicingPrefill || wordpressHackPrefill || siteDownPrefill) {
+  if (
+    phpVulnerabilityPrefill ||
+    eInvoicingPrefill ||
+    wordpressHackPrefill ||
+    siteDownPrefill ||
+    emailDeliverabilityPrefill
+  ) {
     message.value = buildPrefilledMessage()
   }
 })

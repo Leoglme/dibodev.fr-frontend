@@ -235,6 +235,7 @@
       "cleaningBusinessSoftware": "Cleaning business software",
       "eInvoicingScope": "E-invoicing: does it apply to me?",
       "wordpressHackCheck": "Hacked WordPress site: check",
+      "emailDeliverabilityCheck": "Emails in spam: check SPF, DKIM, DMARC",
       "coldCallingCheck": "Cold calling ban: can I still call?",
       "hostingStatus": "Is my web host down?",
       "budgetEstimator": "Budget estimator"
@@ -631,6 +632,24 @@
           "incident": "incident in progress at the host",
           "maintenance": "maintenance in progress at the host",
           "unknown": "unknown state"
+        }
+      },
+      "emailDeliverability": {
+        "messageWithDomain": "Hello,\nmy domain {domain} just went through the email checker. Result: “{verdict}”.\nCan you set up SPF, DKIM and DMARC (or fix them) so that my emails get through?",
+        "messageWithoutDomain": "Hello,\nmy emails land in spam (or I want to make sure they do not). Can you check and set up SPF, DKIM and DMARC on my domain?\nMy domain name: \nMy mail provider, if I know it: ",
+        "verdicts": {
+          "allGood": "SPF, DKIM and DMARC in place",
+          "dmarcMissing": "DMARC missing",
+          "dmarcNone": "DMARC at p=none only",
+          "dkimNotFound": "no usable DKIM key found",
+          "spfMissing": "no valid SPF record",
+          "spfTooPermissive": "SPF too permissive",
+          "spfTooManyLookups": "SPF above 10 DNS lookups",
+          "multipleSpf": "several SPF records",
+          "noMailSetup": "no mail set up on the domain",
+          "invalidDomain": "domain not found",
+          "consumerMailbox": "free webmail address",
+          "unknown": "unreadable result"
         }
       },
       "phpUpdate": {

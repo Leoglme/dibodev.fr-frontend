@@ -235,6 +235,7 @@
       "cleaningBusinessSoftware": "Logiciel pour entreprise de nettoyage",
       "eInvoicingScope": "Facture électronique : suis-je concerné ?",
       "wordpressHackCheck": "Site WordPress piraté : vérifier",
+      "emailDeliverabilityCheck": "E-mails en spam : vérifier SPF, DKIM, DMARC",
       "coldCallingCheck": "Démarchage téléphonique interdit ?",
       "hostingStatus": "Mon hébergeur est-il en panne ?",
       "budgetEstimator": "Estimateur de budget"
@@ -631,6 +632,24 @@
           "incident": "incident en cours chez l'hébergeur",
           "maintenance": "maintenance en cours chez l'hébergeur",
           "unknown": "état inconnu"
+        }
+      },
+      "emailDeliverability": {
+        "messageWithDomain": "Bonjour,\nmon domaine {domain} vient de passer l'outil de vérification des e-mails. Résultat : « {verdict} ».\nPouvez-vous mettre SPF, DKIM et DMARC en place (ou les corriger) pour que mes mails arrivent bien ?",
+        "messageWithoutDomain": "Bonjour,\nmes e-mails arrivent en spam (ou je veux m'en assurer). Pouvez-vous vérifier et configurer SPF, DKIM et DMARC sur mon domaine ?\nMon nom de domaine : \nMon hébergeur mail, si je le connais : ",
+        "verdicts": {
+          "allGood": "SPF, DKIM et DMARC en place",
+          "dmarcMissing": "DMARC absent",
+          "dmarcNone": "DMARC en p=none seulement",
+          "dkimNotFound": "aucune clé DKIM utilisable trouvée",
+          "spfMissing": "pas de SPF valide",
+          "spfTooPermissive": "SPF trop permissif",
+          "spfTooManyLookups": "SPF au-delà de 10 consultations DNS",
+          "multipleSpf": "plusieurs enregistrements SPF",
+          "noMailSetup": "aucune configuration mail sur le domaine",
+          "invalidDomain": "domaine introuvable",
+          "consumerMailbox": "messagerie gratuite",
+          "unknown": "résultat non lisible"
         }
       },
       "phpUpdate": {

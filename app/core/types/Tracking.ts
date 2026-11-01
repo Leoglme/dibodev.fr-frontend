@@ -4,6 +4,11 @@ import type {
   DibodevEstimatorProjectSize,
 } from '~/core/types/DibodevBudgetEstimator'
 import type { DibodevEInvoicingVerdict } from '~/core/types/DibodevEInvoicingCheck'
+import type {
+  DibodevEmailDeliverabilityFindingKey,
+  DibodevEmailDeliverabilityVerdict,
+  DibodevEmailProviderKey,
+} from '~/core/types/DibodevEmailDeliverabilityCheck'
 import type { DibodevHostingProviderKey, DibodevHostingStatusState } from '~/core/types/DibodevHostingStatus'
 import type { DibodevSecurityAlertSubscribeOutcome, DibodevSecurityAlertTopic } from '~/core/types/DibodevSecurityAlert'
 import type { DibodevPhotoSlideshowNavigationMethod } from '~/core/types/DibodevPhotoSlideshow'
@@ -146,5 +151,14 @@ export type TrackingEventPayloads = {
     software: string | null
     platform: string | null
     method: 'suggestion' | 'submit'
+  }
+  [TRACKING_EVENTS.emailDeliverabilityCheckStarted]: { location: string }
+  [TRACKING_EVENTS.emailDeliverabilityChecked]: {
+    location: string
+    outcome: 'result' | 'error'
+    verdict: DibodevEmailDeliverabilityVerdict | null
+    provider: DibodevEmailProviderKey | null
+    findings: DibodevEmailDeliverabilityFindingKey[]
+    errorKind: DibodevSiteCheckErrorKind | null
   }
 }

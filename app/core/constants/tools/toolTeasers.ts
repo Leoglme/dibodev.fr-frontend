@@ -4,6 +4,7 @@ import { COLD_CALLING_CHECK_ROUTE_NAME } from '~/core/constants/coldCallingCheck
 import { COLD_CALLING_CHECK_QUIZ_ID } from '~/core/constants/coldCallingCheckQuiz'
 import { WORDPRESS_HACK_CHECK_ROUTE_NAME } from '~/core/constants/wordpressHackCheck/pageShared'
 import { HOSTING_STATUS_TEASER } from '~/core/constants/hostingStatus/pageShared'
+import { EMAIL_DELIVERABILITY_CHECK_ROUTE_NAME } from '~/core/constants/emailDeliverabilityCheck/pageShared'
 import { E_INVOICING_SCOPE_QUIZ_ID } from '~/core/constants/eInvoicingScopeQuiz'
 import { NBSP } from '~/core/constants/typography'
 
@@ -592,6 +593,40 @@ export const TOOL_TEASERS_BY_PROJECT_SLUG: Record<string, DibodevToolTeaserConte
   izidoor: PERSONAL_TRAINER_SOFTWARE_TEASER,
 }
 
+const EMAIL_DELIVERABILITY_CHECK_TEASER: DibodevToolTeaserContent = {
+  toolId: 'email-deliverability-check',
+  routeName: EMAIL_DELIVERABILITY_CHECK_ROUTE_NAME,
+  icon: 'Mail',
+  wording: {
+    fr: {
+      emphasizedIntro: `Vos devis arrivent en spam${NBSP}?`,
+      text: 'L’outil lit le SPF, la clé DKIM et la politique DMARC de votre domaine, reconnaît votre hébergeur mail et liste les corrections dans l’ordre, avec le guide officiel.',
+      linkLabel: 'Vérifier SPF, DKIM et DMARC de mon domaine',
+      listLabel: `E-mails en spam${NBSP}: vérifier SPF, DKIM, DMARC`,
+      hubDescription: `Orange exige SPF, DKIM et DMARC de tous depuis le 1er septembre 2026, laposte.net et iCloud aussi${NBSP}: l’outil lit les trois enregistrements de votre domaine, reconnaît votre fournisseur et dit quoi corriger.`,
+      hubMeta: '1 domaine · 10 secondes',
+    },
+    en: {
+      emphasizedIntro: 'Do your quotes land in spam?',
+      text: 'The tool reads the SPF record, the DKIM key and the DMARC policy of your domain, recognises your mail provider and lists the fixes in order, with the official guide.',
+      linkLabel: 'Check SPF, DKIM and DMARC of my domain',
+      listLabel: 'Emails in spam: check SPF, DKIM, DMARC',
+      hubDescription:
+        'Orange requires SPF, DKIM and DMARC from everyone since 1 September 2026, laposte.net and iCloud too: the tool reads the three records of your domain, recognises your provider and says what to fix.',
+      hubMeta: '1 domain · 10 seconds',
+    },
+    es: {
+      emphasizedIntro: '¿Tus presupuestos llegan a spam?',
+      text: 'La herramienta lee el SPF, la clave DKIM y la política DMARC de tu dominio, reconoce tu proveedor de correo y lista las correcciones en orden, con la guía oficial.',
+      linkLabel: 'Comprobar SPF, DKIM y DMARC de mi dominio',
+      listLabel: 'Correos en spam: comprobar SPF, DKIM, DMARC',
+      hubDescription:
+        'Orange exige SPF, DKIM y DMARC a todos desde el 1 de septiembre de 2026, laposte.net e iCloud también: la herramienta lee los tres registros de tu dominio, reconoce tu proveedor y dice qué corregir.',
+      hubMeta: '1 dominio · 10 segundos',
+    },
+  },
+}
+
 /** Every test, listed together on the business software page and the tools hub. */
 export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   DRIVING_SCHOOL_SOFTWARE_TEASER,
@@ -609,6 +644,7 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   PHP_VULNERABILITY_CHECK_TEASER,
   WORDPRESS_HACK_CHECK_TEASER,
   HOSTING_STATUS_TEASER,
+  EMAIL_DELIVERABILITY_CHECK_TEASER,
   E_INVOICING_CHECK_TEASER,
   E_INVOICING_SCOPE_TEASER,
   COLD_CALLING_CHECK_TEASER,

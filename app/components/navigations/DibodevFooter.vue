@@ -307,6 +307,11 @@ const toolLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLi
     to: localePath('tools-wordpress-hack-check'),
   },
   {
+    key: 'emailDeliverabilityCheck',
+    title: t('footer.tools.emailDeliverabilityCheck'),
+    to: localePath('tools-email-deliverability-check'),
+  },
+  {
     key: 'coldCallingCheck',
     title: t('footer.tools.coldCallingCheck'),
     to: localePath('tools-cold-calling-check'),

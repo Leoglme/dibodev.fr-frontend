@@ -235,6 +235,7 @@
       "cleaningBusinessSoftware": "Software para empresas de limpieza",
       "eInvoicingScope": "Factura electrónica: ¿me afecta?",
       "wordpressHackCheck": "Web WordPress hackeada: comprobar",
+      "emailDeliverabilityCheck": "Correos en spam: comprobar SPF, DKIM, DMARC",
       "coldCallingCheck": "Prospección telefónica: ¿puedo llamar?",
       "hostingStatus": "¿Mi hosting está caído?",
       "budgetEstimator": "Estimador de presupuesto"
@@ -631,6 +632,24 @@
           "incident": "incidencia en curso en el hosting",
           "maintenance": "mantenimiento en curso en el hosting",
           "unknown": "estado desconocido"
+        }
+      },
+      "emailDeliverability": {
+        "messageWithDomain": "Hola,\nmi dominio {domain} acaba de pasar por la herramienta de comprobación de correos. Resultado: «{verdict}».\n¿Puedes configurar SPF, DKIM y DMARC (o corregirlos) para que mis correos lleguen bien?",
+        "messageWithoutDomain": "Hola,\nmis correos llegan a spam (o quiero asegurarme de que no). ¿Puedes comprobar y configurar SPF, DKIM y DMARC en mi dominio?\nMi nombre de dominio: \nMi proveedor de correo, si lo conozco: ",
+        "verdicts": {
+          "allGood": "SPF, DKIM y DMARC en su sitio",
+          "dmarcMissing": "DMARC ausente",
+          "dmarcNone": "DMARC solo en p=none",
+          "dkimNotFound": "ninguna clave DKIM utilizable encontrada",
+          "spfMissing": "sin SPF válido",
+          "spfTooPermissive": "SPF demasiado permisivo",
+          "spfTooManyLookups": "SPF por encima de 10 consultas DNS",
+          "multipleSpf": "varios registros SPF",
+          "noMailSetup": "ninguna configuración de correo en el dominio",
+          "invalidDomain": "dominio no encontrado",
+          "consumerMailbox": "correo gratuito",
+          "unknown": "resultado ilegible"
         }
       },
       "phpUpdate": {
