@@ -14,6 +14,7 @@ import {
   USE_BY_DATE_SOURCE,
 } from '~/core/constants/tools/inventoryManagementSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
+import { INVENTORY_SHEET_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/inventorySheet/pageShared'
 
 export const INVENTORY_MANAGEMENT_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   meta: {
@@ -209,6 +210,8 @@ export const INVENTORY_MANAGEMENT_PAGE_CONTENT_EN: DibodevSoftwareToolPageConten
       },
     ],
     footnote: 'Free to use, to adapt to your company and your products.',
+    pageLinkLabel: 'See the template page',
+    pageLinkRouteName: INVENTORY_SHEET_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'The three options',

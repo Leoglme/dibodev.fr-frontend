@@ -15,6 +15,7 @@ import {
   VEHICLE_APPRAISAL_SOURCE,
 } from '~/core/constants/tools/bodyShopSoftware/pageShared'
 import { NBSP } from '~/core/constants/typography'
+import { BODY_SHOP_CLAIM_TRACKING_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/bodyShopClaimTracking/pageShared'
 
 export const BODY_SHOP_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
   meta: {
@@ -198,6 +199,8 @@ export const BODY_SHOP_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
       },
     ],
     footnote: 'De uso libre, para adaptar a tu taller. No sustituye ni al valorador ni a la opinión de tu contable.',
+    pageLinkLabel: 'Ver la página de la plantilla',
+    pageLinkRouteName: BODY_SHOP_CLAIM_TRACKING_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Las tres opciones',

@@ -205,6 +205,7 @@ import {
   MALT_PROFILE_URL,
 } from '~/config/contact'
 import { useTracking } from '~/composables/useTracking'
+import { FREE_TEMPLATES_HUB_ROUTE_NAME } from '~/core/constants/freeTemplates/freeTemplateCatalog'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 /* I18N */
@@ -350,6 +351,11 @@ const toolLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLi
     key: 'budgetEstimator',
     title: t('footer.tools.budgetEstimator'),
     to: `${localePath('custom-business-software')}#estimator`,
+  },
+  {
+    key: 'freeTemplates',
+    title: t('footer.tools.freeTemplates'),
+    to: localePath({ name: FREE_TEMPLATES_HUB_ROUTE_NAME }),
   },
 ])
 

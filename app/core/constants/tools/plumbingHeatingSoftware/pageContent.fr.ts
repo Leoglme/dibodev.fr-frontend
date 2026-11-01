@@ -13,6 +13,7 @@ import {
 } from '~/core/constants/tools/plumbingHeatingSoftware/pageShared'
 import { E_INVOICING_SOURCE, HOME_REPAIR_QUOTE_RULES_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
+import { PLUMBER_QUOTE_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/plumberQuote/pageShared'
 
 export const PLUMBING_HEATING_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   meta: {
@@ -164,6 +165,8 @@ export const PLUMBING_HEATING_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = 
       },
     ],
     footnote: 'Modèle libre d’utilisation, à adapter à votre entreprise. Il ne remplace pas l’avis de votre comptable.',
+    pageLinkLabel: 'Voir la page du modèle',
+    pageLinkRouteName: PLUMBER_QUOTE_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Les trois options',

@@ -11,6 +11,7 @@ import {
 } from '~/core/constants/tools/autoRepairShopSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
+import { GARAGE_REPAIR_ORDER_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/garageRepairOrder/pageShared'
 
 export const AUTO_REPAIR_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   meta: {
@@ -158,6 +159,8 @@ export const AUTO_REPAIR_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
       },
     ],
     footnote: 'Modèle libre d’utilisation, à adapter à votre atelier. Il ne remplace pas l’avis de votre comptable.',
+    pageLinkLabel: 'Voir la page du modèle',
+    pageLinkRouteName: GARAGE_REPAIR_ORDER_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Les trois options',

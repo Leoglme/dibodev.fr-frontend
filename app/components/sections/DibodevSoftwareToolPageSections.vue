@@ -64,6 +64,8 @@
     :items="props.page.freeTemplate.items"
     :downloads="props.page.freeTemplate.downloads"
     :footnote="props.page.freeTemplate.footnote"
+    :pageLinkLabel="props.page.freeTemplate.pageLinkLabel"
+    :pageLinkRouteName="props.page.freeTemplate.pageLinkRouteName"
     tone="tint"
     :trackingLocation="props.trackingLocation"
   />

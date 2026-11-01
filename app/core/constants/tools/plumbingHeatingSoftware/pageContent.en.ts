@@ -12,6 +12,7 @@ import {
   REDUCED_VAT_WORKS_SOURCE,
 } from '~/core/constants/tools/plumbingHeatingSoftware/pageShared'
 import { E_INVOICING_SOURCE, HOME_REPAIR_QUOTE_RULES_SOURCE } from '~/core/constants/tools/officialSources'
+import { PLUMBER_QUOTE_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/plumberQuote/pageShared'
 
 // The page describes the French market (publishers, VAT, boiler and quote rules): the English text says so instead of adapting it.
 
@@ -173,6 +174,8 @@ export const PLUMBING_HEATING_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = 
       },
     ],
     footnote: 'Free to use, to adapt to your company. It does not replace your accountant’s advice.',
+    pageLinkLabel: 'See the template page',
+    pageLinkRouteName: PLUMBER_QUOTE_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'The three options',

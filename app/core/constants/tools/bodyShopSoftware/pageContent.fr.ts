@@ -15,6 +15,7 @@ import {
   VEHICLE_APPRAISAL_SOURCE,
 } from '~/core/constants/tools/bodyShopSoftware/pageShared'
 import { NBSP } from '~/core/constants/typography'
+import { BODY_SHOP_CLAIM_TRACKING_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/bodyShopClaimTracking/pageShared'
 
 export const BODY_SHOP_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   meta: {
@@ -186,6 +187,8 @@ export const BODY_SHOP_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     ],
     footnote:
       'Modèle libre d’utilisation, à adapter à votre atelier. Il ne remplace ni le chiffreur ni l’avis de votre comptable.',
+    pageLinkLabel: 'Voir la page du modèle',
+    pageLinkRouteName: BODY_SHOP_CLAIM_TRACKING_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Les trois options',

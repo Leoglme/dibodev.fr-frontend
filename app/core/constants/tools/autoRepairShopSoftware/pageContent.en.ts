@@ -10,6 +10,7 @@ import {
   AUTO_REPAIR_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/autoRepairShopSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
+import { GARAGE_REPAIR_ORDER_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/garageRepairOrder/pageShared'
 
 // The page describes the French market (publishers, garage rules, e-invoicing): the English text says so instead of adapting it.
 
@@ -164,6 +165,8 @@ export const AUTO_REPAIR_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       },
     ],
     footnote: 'Free to use, to adapt to your workshop. It does not replace your accountant’s advice.',
+    pageLinkLabel: 'See the template page',
+    pageLinkRouteName: GARAGE_REPAIR_ORDER_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'The three options',

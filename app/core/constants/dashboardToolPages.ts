@@ -29,4 +29,41 @@ export const DASHBOARD_TOOL_PAGES: Record<string, DashboardToolPage> = {
   'tools-email-deliverability-check': { label: 'E-mails en spam : SPF, DKIM, DMARC', onlineSince: '2026-11-01' },
   'tools-web-host-status': { label: 'Hébergeur en panne (hub)', onlineSince: '2026-11-01' },
   'tools-web-host-status-provider': { label: 'Hébergeur en panne : pages par hébergeur', onlineSince: '2026-11-01' },
+  'tools-free-templates': { label: 'Modèles gratuits (hub)', onlineSince: '2026-11-01' },
+  'tools-free-templates-plumber-quote': { label: 'Modèle devis plombier-chauffagiste', onlineSince: '2026-11-01' },
+  'tools-free-templates-intervention-slip': { label: 'Modèle bon d’intervention', onlineSince: '2026-11-01' },
+  'tools-free-templates-garage-repair-order': { label: 'Modèle ordre de réparation garage', onlineSince: '2026-11-01' },
+  'tools-free-templates-electrician-commissioning-report': {
+    label: 'Modèle PV de mise en service électricien',
+    onlineSince: '2026-11-01',
+  },
+  'tools-free-templates-personal-trainer-client-review': {
+    label: 'Modèle bilan client coach sportif',
+    onlineSince: '2026-11-01',
+  },
+  'tools-free-templates-landscaping-maintenance-contract': {
+    label: 'Modèle contrat d’entretien espaces verts',
+    onlineSince: '2026-11-01',
+  },
+  'tools-free-templates-cleaning-schedule': {
+    label: 'Modèle planning de passages nettoyage',
+    onlineSince: '2026-11-01',
+  },
+  'tools-free-templates-inventory-sheet': { label: 'Modèle fiche d’inventaire', onlineSince: '2026-11-01' },
+  'tools-free-templates-body-shop-claim-tracking': {
+    label: 'Modèle suivi de sinistre carrosserie',
+    onlineSince: '2026-11-01',
+  },
+  'tools-free-templates-carpentry-cutting-list': {
+    label: 'Modèle fiche de débit menuiserie',
+    onlineSince: '2026-11-01',
+  },
+  'tools-free-templates-training-attendance-sheet': {
+    label: 'Modèle feuille d’émargement formation',
+    onlineSince: '2026-11-01',
+  },
+  'tools-free-templates-booking-schedule': {
+    label: 'Modèle planning de réservations loisirs',
+    onlineSince: '2026-11-01',
+  },
 }

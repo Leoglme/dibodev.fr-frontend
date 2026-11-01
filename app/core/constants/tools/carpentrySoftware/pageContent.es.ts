@@ -14,6 +14,7 @@ import {
 } from '~/core/constants/tools/carpentrySoftware/pageShared'
 import { E_INVOICING_SOURCE, HOME_REPAIR_QUOTE_RULES_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
+import { CARPENTRY_CUTTING_LIST_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/carpentryCuttingList/pageShared'
 
 export const CARPENTRY_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
   meta: {
@@ -197,6 +198,8 @@ export const CARPENTRY_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     ],
     footnote:
       'De uso libre, para adaptar a tu empresa. No sustituye ni a tu programa de CAD ni al consejo de tu asesor contable.',
+    pageLinkLabel: 'Ver la página de la plantilla',
+    pageLinkRouteName: CARPENTRY_CUTTING_LIST_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Las tres opciones',

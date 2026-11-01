@@ -13,6 +13,7 @@ import {
 } from '~/core/constants/tools/plumbingHeatingSoftware/pageShared'
 import { E_INVOICING_SOURCE, HOME_REPAIR_QUOTE_RULES_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
+import { PLUMBER_QUOTE_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/plumberQuote/pageShared'
 
 // The page describes the French market (publishers, VAT, boiler and quote rules): the Spanish text says so instead of adapting it.
 
@@ -172,6 +173,8 @@ export const PLUMBING_HEATING_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = 
       },
     ],
     footnote: 'De uso libre, para adaptar a tu empresa. No sustituye el consejo de tu contable.',
+    pageLinkLabel: 'Ver la página de la plantilla',
+    pageLinkRouteName: PLUMBER_QUOTE_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Las tres opciones',

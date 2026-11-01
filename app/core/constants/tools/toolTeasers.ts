@@ -99,7 +99,7 @@ const BIKE_SHOP_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
-const AUTO_REPAIR_SHOP_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+export const AUTO_REPAIR_SHOP_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   toolId: 'auto-repair-shop-software',
   routeName: 'tools-auto-repair-shop-software',
   icon: 'Wrench',
@@ -129,7 +129,7 @@ const AUTO_REPAIR_SHOP_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
-const PLUMBING_HEATING_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+export const PLUMBING_HEATING_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   toolId: 'plumbing-heating-software',
   routeName: 'tools-plumbing-heating-software',
   icon: 'Flame',
@@ -160,7 +160,7 @@ const PLUMBING_HEATING_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
-const FIELD_SERVICE_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+export const FIELD_SERVICE_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   toolId: 'field-service-software',
   routeName: 'tools-field-service-software',
   icon: 'ClipboardCheck',
@@ -191,7 +191,7 @@ const FIELD_SERVICE_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
-const ELECTRICIAN_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+export const ELECTRICIAN_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   toolId: 'electrician-software',
   routeName: 'tools-electrician-software',
   icon: 'Zap',
@@ -222,7 +222,7 @@ const ELECTRICIAN_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
-const PERSONAL_TRAINER_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+export const PERSONAL_TRAINER_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   toolId: 'personal-trainer-software',
   routeName: 'tools-personal-trainer-software',
   icon: 'Dumbbell',
@@ -253,7 +253,7 @@ const PERSONAL_TRAINER_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
-const LANDSCAPING_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+export const LANDSCAPING_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   toolId: 'landscaping-software',
   routeName: 'tools-landscaping-software',
   icon: 'Sprout',
@@ -284,7 +284,7 @@ const LANDSCAPING_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
-const CLEANING_BUSINESS_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+export const CLEANING_BUSINESS_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   toolId: 'cleaning-business-software',
   routeName: 'tools-cleaning-business-software',
   icon: 'SprayCan',
@@ -315,7 +315,7 @@ const CLEANING_BUSINESS_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
-const BODY_SHOP_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+export const BODY_SHOP_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   toolId: 'body-shop-software',
   routeName: 'tools-body-shop-software',
   icon: 'SprayCan',
@@ -346,7 +346,7 @@ const BODY_SHOP_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
-const INVENTORY_MANAGEMENT_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+export const INVENTORY_MANAGEMENT_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   toolId: 'inventory-management-software',
   routeName: 'tools-inventory-management-software',
   icon: 'ClipboardCheck',
@@ -377,7 +377,7 @@ const INVENTORY_MANAGEMENT_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
-const CARPENTRY_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+export const CARPENTRY_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   toolId: 'carpentry-software',
   routeName: 'tools-carpentry-software',
   icon: 'Wrench',
@@ -408,7 +408,7 @@ const CARPENTRY_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
-const TRAINING_CENTER_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+export const TRAINING_CENTER_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   toolId: 'training-center-software',
   routeName: 'tools-training-center-software',
   icon: 'CalendarCheck',
@@ -439,7 +439,7 @@ const TRAINING_CENTER_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
-const LEISURE_BOOKING_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+export const LEISURE_BOOKING_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   toolId: 'leisure-booking-software',
   routeName: 'tools-leisure-booking-software',
   icon: 'Tent',

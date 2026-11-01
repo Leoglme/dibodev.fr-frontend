@@ -15,20 +15,37 @@
       </div>
 
       <div class="grid w-full justify-items-center gap-3 sm:w-auto">
-        <DibodevButton
-          :to="props.ctaTo || localePath('/contact')"
-          size="lg"
-          class="w-full sm:w-auto"
-          @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: 'contact_cta_section' })"
-        >
-          {{ displayCtaText }}
-        </DibodevButton>
+        <div class="flex w-full min-w-0 flex-col gap-3 sm:w-auto sm:flex-row sm:items-center sm:justify-center">
+          <DibodevButton
+            :to="props.ctaTo || localePath('/contact')"
+            size="lg"
+            class="w-full sm:w-auto"
+            @click="track(TRACKING_EVENTS.ctaProjectDiscussion, { location: props.trackingLocation })"
+          >
+            {{ displayCtaText }}
+          </DibodevButton>
+          <DibodevButton
+            v-if="props.secondaryLink"
+            :to="props.secondaryLink.to"
+            size="lg"
+            :outlined="true"
+            class="w-full text-center whitespace-normal! sm:w-auto"
+            @click="
+              track(TRACKING_EVENTS.toolTeaserClicked, {
+                tool: props.secondaryLink.toolId,
+                location: props.trackingLocation,
+              })
+            "
+          >
+            {{ props.secondaryLink.label }}
+          </DibodevButton>
+        </div>
         <a
           :href="BOOKING_URL"
           target="_blank"
           rel="noopener"
           class="text-primary hover:text-primary-dark inline-flex items-center gap-1 text-[15px] font-medium transition-colors"
-          @click="track(TRACKING_EVENTS.bookingLinkClicked, { location: 'contact_cta_section' })"
+          @click="track(TRACKING_EVENTS.bookingLinkClicked, { location: props.trackingLocation })"
         >
           {{ $t('blog.cta.bookingLink') }}
           <DibodevIcon name="ExternalLink" mode="stroke" :width="16" :height="16" aria-hidden="true" />
@@ -40,7 +57,7 @@
           <a
             :href="`mailto:${CONTACT_EMAIL}`"
             class="hover:text-primary font-medium text-gray-100 transition-colors"
-            @click="track(TRACKING_EVENTS.contactEmail, { location: 'contact_cta_section' })"
+            @click="track(TRACKING_EVENTS.contactEmail, { location: props.trackingLocation })"
           >
             {{ CONTACT_EMAIL }}
           </a>
@@ -50,7 +67,7 @@
           <a
             :href="`tel:${PHONE_E164}`"
             class="hover:text-primary font-medium text-gray-100 transition-colors"
-            @click="track(TRACKING_EVENTS.contactPhone, { location: 'contact_cta_section' })"
+            @click="track(TRACKING_EVENTS.contactPhone, { location: props.trackingLocation })"
           >
             {{ PHONE_DISPLAY }}
           </a>
@@ -65,7 +82,10 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import type { ComputedRef, PropType } from 'vue'
-import type { DibodevContactCtaSectionProps } from '~/core/types/DibodevContactCtaSection'
+import type {
+  DibodevContactCtaSecondaryLink,
+  DibodevContactCtaSectionProps,
+} from '~/core/types/DibodevContactCtaSection'
 import DibodevButton from '~/components/core/DibodevButton.vue'
 import DibodevHyphenSafeText from '~/components/ui/DibodevHyphenSafeText.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
@@ -92,6 +112,14 @@ const props: DibodevContactCtaSectionProps = defineProps({
   ctaTo: {
     type: String as PropType<string>,
     default: '',
+  },
+  secondaryLink: {
+    type: Object as PropType<DibodevContactCtaSecondaryLink | null>,
+    default: null,
+  },
+  trackingLocation: {
+    type: String as PropType<string>,
+    default: 'contact_cta_section',
   },
 })
 

@@ -14,6 +14,7 @@ import {
   SPORTS_FACILITY_DISPLAY_SOURCE,
 } from '~/core/constants/tools/leisureBookingSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
+import { BOOKING_SCHEDULE_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/bookingSchedule/pageShared'
 
 export const LEISURE_BOOKING_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   meta: {
@@ -200,6 +201,8 @@ export const LEISURE_BOOKING_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       },
     ],
     footnote: 'Free to use, to adapt with your sports federation and your insurer.',
+    pageLinkLabel: 'See the template page',
+    pageLinkRouteName: BOOKING_SCHEDULE_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'The three options',

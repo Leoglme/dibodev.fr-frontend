@@ -14,6 +14,7 @@ import {
   VAT_EXEMPT_E_INVOICING_SOURCE,
 } from '~/core/constants/tools/trainingCenterSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
+import { TRAINING_ATTENDANCE_SHEET_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/trainingAttendanceSheet/pageShared'
 
 export const TRAINING_CENTER_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   meta: {
@@ -203,6 +204,8 @@ export const TRAINING_CENTER_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       },
     ],
     footnote: 'Free to use, to adapt to your organisation and your funders.',
+    pageLinkLabel: 'See the template page',
+    pageLinkRouteName: TRAINING_ATTENDANCE_SHEET_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'The three options',

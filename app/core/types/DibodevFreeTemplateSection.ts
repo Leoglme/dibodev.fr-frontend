@@ -7,7 +7,7 @@ export type DibodevFreeTemplateDownload = {
   format: string
 }
 
-/** Texts of the free template offered on a trade tool page, in one language. */
+/** Texts of the free template offered on a trade tool page, in one language; `pageLink*` point to the page of the template when it has one. */
 export type DibodevFreeTemplateSectionContent = {
   anchorId: string
   eyebrow: string
@@ -16,9 +16,26 @@ export type DibodevFreeTemplateSectionContent = {
   items: string[]
   downloads: DibodevFreeTemplateDownload[]
   footnote: string
+  pageLinkLabel?: string
+  pageLinkRouteName?: string
 }
 
-export type DibodevFreeTemplateSectionProps = DibodevFreeTemplateSectionContent & {
+export type DibodevFreeTemplateSectionProps = {
+  anchorId: string
+  eyebrow: string
+  title: string
+  description: string
+  items: string[]
+  downloads: DibodevFreeTemplateDownload[]
+  footnote: string
+  pageLinkLabel: string
+  pageLinkRouteName: string
   tone: DibodevSectionTone
+  trackingLocation: string
+}
+
+/** Download buttons of a free template: the first file is the main one, every click is sent to PostHog with `trackingLocation`. */
+export type DibodevFreeTemplateDownloadLinksProps = {
+  downloads: DibodevFreeTemplateDownload[]
   trackingLocation: string
 }

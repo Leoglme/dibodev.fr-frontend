@@ -14,6 +14,7 @@ import {
 } from '~/core/constants/tools/carpentrySoftware/pageShared'
 import { E_INVOICING_SOURCE, HOME_REPAIR_QUOTE_RULES_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
+import { CARPENTRY_CUTTING_LIST_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/carpentryCuttingList/pageShared'
 
 export const CARPENTRY_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   meta: {
@@ -185,6 +186,8 @@ export const CARPENTRY_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     ],
     footnote:
       'Modèle libre d’utilisation, à adapter à votre entreprise. Il ne remplace ni votre logiciel de CAO ni l’avis de votre comptable.',
+    pageLinkLabel: 'Voir la page du modèle',
+    pageLinkRouteName: CARPENTRY_CUTTING_LIST_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Les trois options',

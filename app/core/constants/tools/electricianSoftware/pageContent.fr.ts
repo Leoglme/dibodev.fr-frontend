@@ -16,6 +16,7 @@ import {
   REDUCED_VAT_WORKS_SOURCE,
 } from '~/core/constants/tools/plumbingHeatingSoftware/pageShared'
 import { NBSP } from '~/core/constants/typography'
+import { ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/electricianCommissioningReport/pageShared'
 
 export const ELECTRICIAN_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   meta: {
@@ -164,6 +165,8 @@ export const ELECTRICIAN_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     ],
     footnote:
       'Modèle libre d’utilisation, à adapter à votre entreprise. Il ne remplace pas l’avis de votre comptable ni les formulaires officiels du Consuel.',
+    pageLinkLabel: 'Voir la page du modèle',
+    pageLinkRouteName: ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Les trois options',

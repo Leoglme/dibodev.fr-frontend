@@ -13,6 +13,7 @@ import {
   VEHICLE_GEOLOCATION_SOURCE,
 } from '~/core/constants/tools/fieldServiceSoftware/pageShared'
 import { E_INVOICING_SOURCE, HOME_REPAIR_QUOTE_RULES_SOURCE } from '~/core/constants/tools/officialSources'
+import { INTERVENTION_SLIP_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/interventionSlip/pageShared'
 
 // The page describes the French market (publishers, working-time and invoicing rules): the English text says so instead of adapting it.
 
@@ -171,6 +172,8 @@ export const FIELD_SERVICE_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       },
     ],
     footnote: 'Free to use, to adapt to your company. It does not replace your accountant’s advice.',
+    pageLinkLabel: 'See the template page',
+    pageLinkRouteName: INTERVENTION_SLIP_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'The three options',

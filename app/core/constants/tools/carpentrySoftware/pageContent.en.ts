@@ -13,6 +13,7 @@ import {
   REDUCED_VAT_CUSTOMER_STATEMENT_SOURCE,
 } from '~/core/constants/tools/carpentrySoftware/pageShared'
 import { E_INVOICING_SOURCE, HOME_REPAIR_QUOTE_RULES_SOURCE } from '~/core/constants/tools/officialSources'
+import { CARPENTRY_CUTTING_LIST_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/carpentryCuttingList/pageShared'
 
 export const CARPENTRY_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   meta: {
@@ -198,6 +199,8 @@ export const CARPENTRY_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     ],
     footnote:
       'Free to use, to adapt to your company. It replaces neither your CAD software nor your accountant’s advice.',
+    pageLinkLabel: 'See the template page',
+    pageLinkRouteName: CARPENTRY_CUTTING_LIST_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'The three options',

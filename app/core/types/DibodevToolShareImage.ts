@@ -16,6 +16,8 @@ export type DibodevToolShareImageIcon =
   | 'tent'
   | 'graduation'
   | 'hammer'
+  | 'fileText'
+  | 'download'
 
 /** `highlight` is drawn in violet wherever it appears in `titleLines`. */
 export type DibodevToolShareImageProps = {

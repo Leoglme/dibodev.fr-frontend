@@ -243,7 +243,8 @@
       "emailDeliverabilityCheck": "Emails in spam: check SPF, DKIM, DMARC",
       "coldCallingCheck": "Cold calling ban: can I still call?",
       "hostingStatus": "Is my web host down?",
-      "budgetEstimator": "Budget estimator"
+      "budgetEstimator": "Budget estimator",
+      "freeTemplates": "Free templates: quotes, slips, schedules"
     }
   },
   "toolsHubPage": {
@@ -281,6 +282,12 @@
         "description": "Project type, size, options: in three questions, the estimator gives you a price range for custom software.",
         "meta": "3 questions",
         "link": "Estimate my budget"
+      },
+      "freeTemplates": {
+        "title": "12 free French templates by trade",
+        "description": "Quotes, intervention slips, schedules, attendance sheets: the PDF prints, the Excel file calculates, no sign-up.",
+        "meta": "PDF + Excel",
+        "link": "See the templates"
       },
       "contact": {
         "title": "Your trade isn't listed?",

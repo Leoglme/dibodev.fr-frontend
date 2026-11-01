@@ -15,6 +15,7 @@ import {
 } from '~/core/constants/tools/leisureBookingSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
+import { BOOKING_SCHEDULE_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/bookingSchedule/pageShared'
 
 export const LEISURE_BOOKING_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
   meta: {
@@ -193,6 +194,8 @@ export const LEISURE_BOOKING_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
       },
     ],
     footnote: 'De uso libre, para adaptar con tu federación y tu aseguradora.',
+    pageLinkLabel: 'Ver la página de la plantilla',
+    pageLinkRouteName: BOOKING_SCHEDULE_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Las tres opciones',

@@ -13,6 +13,7 @@ import {
 } from '~/core/constants/tools/personalTrainerSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
+import { PERSONAL_TRAINER_CLIENT_REVIEW_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/personalTrainerClientReview/pageShared'
 
 export const PERSONAL_TRAINER_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
   meta: {
@@ -175,6 +176,8 @@ export const PERSONAL_TRAINER_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = 
       },
     ],
     footnote: 'De uso libre, para adaptar a tu práctica. No sustituye un consejo médico.',
+    pageLinkLabel: 'Ver la página de la plantilla',
+    pageLinkRouteName: PERSONAL_TRAINER_CLIENT_REVIEW_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Las tres opciones',

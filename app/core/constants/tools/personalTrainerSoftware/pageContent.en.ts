@@ -12,6 +12,7 @@ import {
   SPORTS_EDUCATOR_DECLARATION_SOURCE,
 } from '~/core/constants/tools/personalTrainerSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
+import { PERSONAL_TRAINER_CLIENT_REVIEW_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/personalTrainerClientReview/pageShared'
 
 export const PERSONAL_TRAINER_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   meta: {
@@ -173,6 +174,8 @@ export const PERSONAL_TRAINER_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = 
       },
     ],
     footnote: 'Free to use, to adapt to your practice. It does not replace medical advice.',
+    pageLinkLabel: 'See the template page',
+    pageLinkRouteName: PERSONAL_TRAINER_CLIENT_REVIEW_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'The three options',

@@ -45,7 +45,7 @@
 
       <div class="grid gap-8 border-t border-gray-300 px-2 pt-8 sm:px-0 lg:gap-5">
         <div class="grid gap-3 lg:gap-2">
-          <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ t('toolPage.aboutTitle') }}</h2>
+          <h2 class="text-muted text-xs font-medium tracking-[0.08em] uppercase">{{ displayAboutTitle }}</h2>
           <p class="max-w-3xl text-base leading-7 text-gray-200 sm:text-[17px]">{{ props.description }}</p>
         </div>
         <div
@@ -115,6 +115,10 @@ const props: DibodevToolLandingSectionProps = defineProps({
     type: String as PropType<string>,
     default: '',
   },
+  aboutTitle: {
+    type: String as PropType<string>,
+    default: '',
+  },
   description: {
     type: String as PropType<string>,
     required: true,
@@ -139,6 +143,11 @@ const props: DibodevToolLandingSectionProps = defineProps({
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
+
+/** Heading of the description: the one given by the page, or the shared "about the test" one. */
+const displayAboutTitle: ComputedRef<string> = computed((): string =>
+  props.aboutTitle.trim() ? props.aboutTitle : t('toolPage.aboutTitle'),
+)
 
 /** Update date in words ("29 septembre 2026"), read in UTC so the server and the browser agree. */
 const updatedAtLabel: ComputedRef<string> = computed((): string =>

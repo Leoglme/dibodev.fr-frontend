@@ -61,6 +61,7 @@ import { usePageShareImage } from '~/composables/usePageShareImage'
 import { useQuizResultExamples } from '~/composables/useQuizResultExamples'
 import { useToolTeasers } from '~/composables/useToolTeasers'
 import { PERSON_ID, ORGANIZATION_ID } from '~/config/schema'
+import { FREE_TEMPLATES_HUB_ROUTE_NAME } from '~/core/constants/freeTemplates/freeTemplateCatalog'
 import { TOOLS_HUB_HEADER_RESULT_EXAMPLE, TOOLS_HUB_RESULT_EXAMPLES } from '~/core/constants/tools/quizResultExamples'
 import { BUSINESS_SOFTWARE_TOOL_TEASERS } from '~/core/constants/tools/toolTeasers'
 
@@ -129,7 +130,7 @@ const faqQuestions: ComputedRef<DibodevFaqQuestion[]> = computed((): DibodevFaqQ
   ),
 )
 
-/** Trade tests first, then the budget estimator, then a way out for the trades without a test. */
+/** Trade tests first, then the budget estimator and the free templates, then a way out for the trades without a test. */
 const toolCards: ComputedRef<DibodevFreeToolCard[]> = computed((): DibodevFreeToolCard[] => [
   ...toolTeasers.value.map(
     (teaser: DibodevToolTeaserContent): DibodevFreeToolCard => ({
@@ -152,6 +153,16 @@ const toolCards: ComputedRef<DibodevFreeToolCard[]> = computed((): DibodevFreeTo
     linkLabel: t('toolsHubPage.cards.estimator.link'),
     to: estimatorPath.value,
     toolId: 'budget-estimator',
+  },
+  {
+    key: 'free-templates',
+    title: t('toolsHubPage.cards.freeTemplates.title'),
+    description: t('toolsHubPage.cards.freeTemplates.description'),
+    icon: 'FileSpreadsheet',
+    meta: t('toolsHubPage.cards.freeTemplates.meta'),
+    linkLabel: t('toolsHubPage.cards.freeTemplates.link'),
+    to: localePath({ name: FREE_TEMPLATES_HUB_ROUTE_NAME }),
+    toolId: FREE_TEMPLATES_HUB_ROUTE_NAME,
   },
   {
     key: 'contact',

@@ -15,6 +15,7 @@ import {
 } from '~/core/constants/tools/trainingCenterSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
+import { TRAINING_ATTENDANCE_SHEET_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/trainingAttendanceSheet/pageShared'
 
 export const TRAINING_CENTER_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   meta: {
@@ -182,6 +183,8 @@ export const TRAINING_CENTER_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
       },
     ],
     footnote: 'Modèle libre d’utilisation, à adapter à votre organisme et à vos financeurs.',
+    pageLinkLabel: 'Voir la page du modèle',
+    pageLinkRouteName: TRAINING_ATTENDANCE_SHEET_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Les trois options',

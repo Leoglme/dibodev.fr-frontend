@@ -243,7 +243,8 @@
       "emailDeliverabilityCheck": "E-mails en spam : vérifier SPF, DKIM, DMARC",
       "coldCallingCheck": "Démarchage téléphonique interdit ?",
       "hostingStatus": "Mon hébergeur est-il en panne ?",
-      "budgetEstimator": "Estimateur de budget"
+      "budgetEstimator": "Estimateur de budget",
+      "freeTemplates": "Modèles gratuits : devis, bons, plannings"
     }
   },
   "toolsHubPage": {
@@ -281,6 +282,12 @@
         "description": "Type de projet, taille, options\u202f: en trois questions, l'estimateur vous donne une fourchette de prix pour un outil sur mesure.",
         "meta": "3 questions",
         "link": "Estimer mon budget"
+      },
+      "freeTemplates": {
+        "title": "12 modèles gratuits par métier",
+        "description": "Devis, bons d'intervention, plannings, feuilles d'émargement : le PDF s'imprime, l'Excel calcule, sans inscription.",
+        "meta": "PDF + Excel",
+        "link": "Voir les modèles"
       },
       "contact": {
         "title": "Votre métier n'est pas dans la liste\u202f?",

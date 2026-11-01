@@ -243,7 +243,8 @@
       "emailDeliverabilityCheck": "Correos en spam: comprobar SPF, DKIM, DMARC",
       "coldCallingCheck": "Prospección telefónica: ¿puedo llamar?",
       "hostingStatus": "¿Mi hosting está caído?",
-      "budgetEstimator": "Estimador de presupuesto"
+      "budgetEstimator": "Estimador de presupuesto",
+      "freeTemplates": "Plantillas gratis: presupuestos, partes, plannings"
     }
   },
   "toolsHubPage": {
@@ -281,6 +282,12 @@
         "description": "Tipo de proyecto, tamaño, opciones: en tres preguntas, el estimador te da una horquilla de precio para una herramienta a medida.",
         "meta": "3 preguntas",
         "link": "Estimar mi presupuesto"
+      },
+      "freeTemplates": {
+        "title": "12 plantillas francesas gratis por oficio",
+        "description": "Presupuestos, partes de intervención, plannings, hojas de firmas: el PDF se imprime, el Excel calcula, sin registro.",
+        "meta": "PDF + Excel",
+        "link": "Ver las plantillas"
       },
       "contact": {
         "title": "¿Tu oficio no está en la lista?",

@@ -14,6 +14,7 @@ import {
   PAINT_BOOTH_ICPE_SOURCE,
   VEHICLE_APPRAISAL_SOURCE,
 } from '~/core/constants/tools/bodyShopSoftware/pageShared'
+import { BODY_SHOP_CLAIM_TRACKING_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/bodyShopClaimTracking/pageShared'
 
 export const BODY_SHOP_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   meta: {
@@ -201,6 +202,8 @@ export const BODY_SHOP_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     ],
     footnote:
       'Free to use, to adapt to your workshop. It replaces neither the estimating tool nor your accountant’s advice.',
+    pageLinkLabel: 'See the template page',
+    pageLinkRouteName: BODY_SHOP_CLAIM_TRACKING_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'The three options',

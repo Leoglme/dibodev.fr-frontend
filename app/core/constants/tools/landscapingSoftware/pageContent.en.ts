@@ -14,6 +14,7 @@ import {
   PESTICIDE_BAN_SOURCE,
 } from '~/core/constants/tools/landscapingSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
+import { LANDSCAPER_MAINTENANCE_CONTRACT_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/landscaperMaintenanceContract/pageShared'
 
 export const LANDSCAPING_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   meta: {
@@ -181,6 +182,8 @@ export const LANDSCAPING_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     ],
     footnote:
       'Free to use, to adapt to your company. It does not replace your accountant’s advice, nor checking that you are eligible for home services.',
+    pageLinkLabel: 'See the template page',
+    pageLinkRouteName: LANDSCAPER_MAINTENANCE_CONTRACT_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'The three options',

@@ -24,21 +24,27 @@
       </div>
 
       <div class="grid gap-4 rounded-2xl border border-gray-300 p-6 sm:p-7" :class="cardClass">
-        <a
-          v-for="(download, index) in props.downloads"
-          :key="download.href"
-          :href="download.href"
-          download
-          class="focus-visible:ring-primary flex items-center gap-4 rounded-lg border px-5 py-3.5 transition duration-150 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-          :class="index === 0 ? PRIMARY_DOWNLOAD_CLASSES : SECONDARY_DOWNLOAD_CLASSES"
-          @click="onDownloadClick(download)"
+        <DibodevFreeTemplateDownloadLinks :downloads="props.downloads" :trackingLocation="props.trackingLocation" />
+        <NuxtLink
+          v-if="props.pageLinkLabel && props.pageLinkRouteName"
+          :to="localePath({ name: props.pageLinkRouteName })"
+          class="text-primary hover:text-primary-dark w-fit text-[15px] leading-6 font-medium transition-colors"
+          @click="
+            track(TRACKING_EVENTS.toolTeaserClicked, {
+              tool: props.pageLinkRouteName,
+              location: props.trackingLocation,
+            })
+          "
         >
-          <DibodevIcon name="Download" mode="stroke" :width="20" :height="20" class="shrink-0" aria-hidden="true" />
-          <span class="grid gap-0.5">
-            <span class="text-[15px] leading-6 font-medium">{{ download.label }}</span>
-            <span class="text-xs leading-5 opacity-80">{{ download.format }}</span>
-          </span>
-        </a>
+          {{ props.pageLinkLabel }}&nbsp;<DibodevIcon
+            name="ArrowRight"
+            mode="stroke"
+            :width="16"
+            :height="16"
+            class="align-[-3px]"
+            aria-hidden="true"
+          />
+        </NuxtLink>
         <p class="text-muted text-sm leading-6">{{ props.footnote }}</p>
       </div>
     </div>
@@ -53,19 +59,16 @@ import type {
 } from '~/core/types/DibodevFreeTemplateSection'
 import type { DibodevSectionTone } from '~/core/types/DibodevSectionTone'
 import { computed } from 'vue'
+import DibodevFreeTemplateDownloadLinks from '~/components/data-displays/DibodevFreeTemplateDownloadLinks.vue'
 import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { useTracking } from '~/composables/useTracking'
 import { SECTION_TONE_CARD_CLASSES, SECTION_TONE_CLASSES } from '~/core/constants/sectionTone'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
-/** The first file is the main one (violet button), the others are outlined. */
-const PRIMARY_DOWNLOAD_CLASSES: string = 'bg-primary hover:bg-primary-dark border-transparent text-white'
-const SECONDARY_DOWNLOAD_CLASSES: string = 'border-gray-400 bg-transparent text-gray-100 hover:bg-gray-800'
-
 /**
  * Free documents offered on a trade tool page (quote, repair order, intervention slip…): what they contain,
- * and one download button per file, each click sent to PostHog.
+ * one download button per file, and a link to the page of the template when it has one.
  */
 const props: DibodevFreeTemplateSectionProps = defineProps({
   anchorId: {
@@ -96,6 +99,14 @@ const props: DibodevFreeTemplateSectionProps = defineProps({
     type: String as PropType<string>,
     default: '',
   },
+  pageLinkLabel: {
+    type: String as PropType<string>,
+    default: '',
+  },
+  pageLinkRouteName: {
+    type: String as PropType<string>,
+    default: '',
+  },
   tone: {
     type: String as PropType<DibodevSectionTone>,
     default: 'tint',
@@ -106,6 +117,7 @@ const props: DibodevFreeTemplateSectionProps = defineProps({
   },
 })
 
+const localePath = useLocalePath()
 const { track } = useTracking()
 
 const toneClass: ComputedRef<string> = computed((): string => SECTION_TONE_CLASSES[props.tone])
@@ -114,13 +126,4 @@ const cardClass: ComputedRef<string> = computed((): string => SECTION_TONE_CARD_
 const checkBadgeClass: ComputedRef<string> = computed((): string =>
   props.tone === 'white' ? 'bg-accent-tint' : 'bg-white',
 )
-
-/**
- * Sends the download event of a file of the template.
- * @param {DibodevFreeTemplateDownload} download - The file clicked.
- * @returns {void}
- */
-function onDownloadClick(download: DibodevFreeTemplateDownload): void {
-  track(TRACKING_EVENTS.fileDownloadClicked, { file: download.href, location: props.trackingLocation })
-}
 </script>

@@ -14,6 +14,7 @@ import {
 } from '~/core/constants/tools/cleaningBusinessSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
+import { CLEANING_SCHEDULE_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/cleaningSchedule/pageShared'
 
 export const CLEANING_BUSINESS_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
   meta: {
@@ -190,6 +191,8 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent =
       },
     ],
     footnote: 'De uso libre, para adaptar a tu empresa y a tus contratos.',
+    pageLinkLabel: 'Ver la página de la plantilla',
+    pageLinkRouteName: CLEANING_SCHEDULE_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Las tres opciones',

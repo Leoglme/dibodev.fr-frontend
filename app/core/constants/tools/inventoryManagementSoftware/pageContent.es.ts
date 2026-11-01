@@ -15,6 +15,7 @@ import {
 } from '~/core/constants/tools/inventoryManagementSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
+import { INVENTORY_SHEET_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/inventorySheet/pageShared'
 
 export const INVENTORY_MANAGEMENT_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
   meta: {
@@ -203,6 +204,8 @@ export const INVENTORY_MANAGEMENT_PAGE_CONTENT_ES: DibodevSoftwareToolPageConten
       },
     ],
     footnote: 'De uso libre, para adaptar a tu empresa y a tus productos.',
+    pageLinkLabel: 'Ver la página de la plantilla',
+    pageLinkRouteName: INVENTORY_SHEET_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Las tres opciones',

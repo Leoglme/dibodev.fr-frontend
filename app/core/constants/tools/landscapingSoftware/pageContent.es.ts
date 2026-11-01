@@ -15,6 +15,7 @@ import {
 } from '~/core/constants/tools/landscapingSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
+import { LANDSCAPER_MAINTENANCE_CONTRACT_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/landscaperMaintenanceContract/pageShared'
 
 export const LANDSCAPING_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
   meta: {
@@ -181,6 +182,8 @@ export const LANDSCAPING_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     ],
     footnote:
       'De uso libre, para adaptar a tu empresa. No sustituye el consejo de tu contable ni la comprobación de que puedes acogerte a los servicios a domicilio.',
+    pageLinkLabel: 'Ver la página de la plantilla',
+    pageLinkRouteName: LANDSCAPER_MAINTENANCE_CONTRACT_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Las tres opciones',

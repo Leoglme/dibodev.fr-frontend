@@ -15,6 +15,7 @@ import {
   DECENNIAL_INSURANCE_SOURCE,
   REDUCED_VAT_WORKS_SOURCE,
 } from '~/core/constants/tools/plumbingHeatingSoftware/pageShared'
+import { ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/electricianCommissioningReport/pageShared'
 
 export const ELECTRICIAN_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   meta: {
@@ -172,6 +173,8 @@ export const ELECTRICIAN_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     ],
     footnote:
       'Free to use, to adapt to your company. It does not replace your accountant’s advice nor the official Consuel forms.',
+    pageLinkLabel: 'See the template page',
+    pageLinkRouteName: ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'The three options',
