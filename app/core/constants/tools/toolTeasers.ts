@@ -315,6 +315,68 @@ const CLEANING_BUSINESS_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
+const BODY_SHOP_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+  toolId: 'body-shop-software',
+  routeName: 'tools-body-shop-software',
+  icon: 'SprayCan',
+  wording: {
+    fr: {
+      emphasizedIntro: `Vous dirigez une carrosserie${NBSP}?`,
+      text: 'En 6 questions, le test vous dit quel logiciel choisir pour chiffrer, suivre vos dossiers sinistre et faire tourner la cabine, avec les prix 2026 des logiciels du marché et un modèle gratuit de devis carrosserie et de fiche de suivi de sinistre.',
+      linkLabel: `Faire le test${NBSP}: quel logiciel pour ma carrosserie${NBSP}?`,
+      listLabel: `Quel logiciel pour ma carrosserie${NBSP}?`,
+      hubDescription: `Chiffrage, dossiers sinistre, expert, cabine et véhicules de prêt${NBSP}: le logiciel qui convient à votre carrosserie, et son prix.`,
+    },
+    en: {
+      emphasizedIntro: 'Running a body shop in France?',
+      text: 'In 6 questions, the test tells you which software to choose to estimate, follow your insurance claims and keep the paint booth running, with the 2026 prices of the software on the French market.',
+      linkLabel: 'Take the test: which software for my body shop?',
+      listLabel: 'Which software for my body shop?',
+      hubDescription:
+        'Estimating, insurance claims, appraiser, paint booth and courtesy cars: the software that fits your body shop, and its price.',
+    },
+    es: {
+      emphasizedIntro: '¿Diriges un taller de carrocería en Francia?',
+      text: 'En 6 preguntas, el test te dice qué programa elegir para valorar, seguir tus siniestros y mantener la cabina en marcha, con los precios 2026 de los programas del mercado francés.',
+      linkLabel: 'Hacer el test: ¿qué software para mi taller de carrocería?',
+      listLabel: '¿Qué software para mi taller de carrocería?',
+      hubDescription:
+        'Valoración, siniestros, perito, cabina y vehículos de cortesía: el programa que encaja con tu taller de carrocería, y su precio.',
+    },
+  },
+}
+
+const INVENTORY_MANAGEMENT_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+  toolId: 'inventory-management-software',
+  routeName: 'tools-inventory-management-software',
+  icon: 'ClipboardCheck',
+  wording: {
+    fr: {
+      emphasizedIntro: `Votre stock ne tombe jamais juste${NBSP}?`,
+      text: 'En 6 questions, le test vous dit quel logiciel choisir pour vos entrées, vos sorties et vos inventaires, avec les prix 2026 des logiciels de gestion de stock et une fiche d’inventaire tournant gratuite.',
+      linkLabel: `Faire le test${NBSP}: quel logiciel pour gérer mon stock${NBSP}?`,
+      listLabel: `Quel logiciel pour gérer mon stock${NBSP}?`,
+      hubDescription: `Dépôts et camion, étiquettes QR, lots et dates limites, inventaire tournant${NBSP}: le logiciel qui convient à votre stock, et son prix pour votre équipe.`,
+    },
+    en: {
+      emphasizedIntro: 'Does your stock count never add up?',
+      text: 'In 6 questions, the test tells you which software to choose for your receipts, issues and stock counts, with the 2026 prices of the inventory software sold in France.',
+      linkLabel: 'Take the test: which software to manage my inventory?',
+      listLabel: 'Which software to manage my inventory?',
+      hubDescription:
+        'Warehouses and van, QR labels, lots and use-by dates, cycle counting: the software that fits your inventory, and its price for your team.',
+    },
+    es: {
+      emphasizedIntro: '¿Tu inventario nunca cuadra?',
+      text: 'En 6 preguntas, el test te dice qué programa elegir para tus entradas, tus salidas y tus inventarios, con los precios 2026 de los programas de gestión de stock del mercado francés.',
+      linkLabel: 'Hacer el test: ¿qué software para gestionar mi stock?',
+      listLabel: '¿Qué software para gestionar mi stock?',
+      hubDescription:
+        'Almacenes y furgoneta, etiquetas QR, lotes y fechas de caducidad, inventario rotativo: el programa que encaja con tu stock, y su precio para tu equipo.',
+    },
+  },
+}
+
 const AI_APP_CHECK_TEASER: DibodevToolTeaserContent = {
   toolId: AI_APP_CHECK_QUIZ_ID,
   routeName: 'ai-app-takeover',
@@ -570,6 +632,12 @@ export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserConte
   'restaurer-site-wordpress-apres-piratage': WORDPRESS_HACK_CHECK_TEASER,
   'facture-electronique-artisan-ce-qui-change': E_INVOICING_CHECK_TEASER,
   'logiciel-gestion-des-temps-feuilles-heures-excel': CLEANING_BUSINESS_SOFTWARE_TEASER,
+  'meilleur-logiciel-garage-automobile-comparatif-2026': BODY_SHOP_SOFTWARE_TEASER,
+  'alternative-gad-garage-logiciel-garage': BODY_SHOP_SOFTWARE_TEASER,
+  'alternative-gestgarage-logiciel-garage': BODY_SHOP_SOFTWARE_TEASER,
+  'logiciel-gestion-de-stock-sur-mesure-pme-inventaire': INVENTORY_MANAGEMENT_SOFTWARE_TEASER,
+  'logiciel-metier-b2b-quitter-excel-signes': INVENTORY_MANAGEMENT_SOFTWARE_TEASER,
+  'alternative-rentman-logiciel-location-materiel': EVENT_RENTAL_SOFTWARE_TEASER,
   'paysagiste-outil-metier-devis-chantiers-plannings': LANDSCAPING_SOFTWARE_TEASER,
   'logiciel-facturation-garage-devis-ordre-de-reparation-facture': E_INVOICING_CHECK_TEASER,
   'reprendre-application-vibe-coding': AI_APP_CHECK_TEASER,
@@ -589,7 +657,7 @@ export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserConte
 
 export const TOOL_TEASERS_BY_PROJECT_SLUG: Record<string, DibodevToolTeaserContent> = {
   'driving-school': DRIVING_SCHOOL_SOFTWARE_TEASER,
-  stockpme: EVENT_RENTAL_SOFTWARE_TEASER,
+  stockpme: INVENTORY_MANAGEMENT_SOFTWARE_TEASER,
   izidoor: PERSONAL_TRAINER_SOFTWARE_TEASER,
 }
 
@@ -639,6 +707,8 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   PERSONAL_TRAINER_SOFTWARE_TEASER,
   LANDSCAPING_SOFTWARE_TEASER,
   CLEANING_BUSINESS_SOFTWARE_TEASER,
+  BODY_SHOP_SOFTWARE_TEASER,
+  INVENTORY_MANAGEMENT_SOFTWARE_TEASER,
   AI_APP_CHECK_TEASER,
   PUBLIC_AID_SIMULATOR_TEASER,
   PHP_VULNERABILITY_CHECK_TEASER,

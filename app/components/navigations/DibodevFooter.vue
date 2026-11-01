@@ -297,6 +297,16 @@ const toolLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLi
     to: localePath('tools-cleaning-business-software'),
   },
   {
+    key: 'bodyShopSoftware',
+    title: t('footer.tools.bodyShopSoftware'),
+    to: localePath('tools-body-shop-software'),
+  },
+  {
+    key: 'inventoryManagementSoftware',
+    title: t('footer.tools.inventoryManagementSoftware'),
+    to: localePath('tools-inventory-management-software'),
+  },
+  {
     key: 'eInvoicingScope',
     title: t('footer.tools.eInvoicingScope'),
     to: localePath('tools-e-invoicing-scope-check'),

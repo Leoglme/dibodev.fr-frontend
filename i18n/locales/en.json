@@ -233,6 +233,8 @@
       "personalTrainerSoftware": "Personal trainer software",
       "landscapingSoftware": "Landscaping software",
       "cleaningBusinessSoftware": "Cleaning business software",
+      "bodyShopSoftware": "Auto body shop software",
+      "inventoryManagementSoftware": "Inventory management software",
       "eInvoicingScope": "E-invoicing: does it apply to me?",
       "wordpressHackCheck": "Hacked WordPress site: check",
       "emailDeliverabilityCheck": "Emails in spam: check SPF, DKIM, DMARC",
