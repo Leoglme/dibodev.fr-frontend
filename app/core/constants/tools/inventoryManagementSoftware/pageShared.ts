@@ -11,6 +11,7 @@ export const INVENTORY_MANAGEMENT_PAGE_SCREENSHOT_URL: string = '/images/tools/s
 /** Articles linked at the bottom of the page; the untranslated ones are left out of /en and /es automatically. */
 export const INVENTORY_MANAGEMENT_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'logiciel-gestion-de-stock-sur-mesure-pme-inventaire',
+  'alternative-erplain-logiciel-gestion-de-stock',
   'logiciel-metier-saas-etagere-ou-sur-mesure',
   'alternative-rentman-logiciel-location-materiel',
   'logiciel-metier-b2b-quitter-excel-signes',
