@@ -267,7 +267,7 @@ export const FIELD_SERVICE_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     questions: [
       {
         question: '¿Cuánto cuesta un programa de gestión de intervenciones en Francia?',
-        answer: `Organilog cuesta 19 a 59${NBSP}€ al mes por usuario (oferta Basique gratuita y limitada), Kizeo Forms 15 a 37${NBSP}€ sin IVA por usuario al mes, Synchroteam 39,49 o 64,79${NBSP}€ por usuario al mes, Batappli 79${NBSP}€ sin IVA al mes en la oferta Artisan. Praxedo va bajo presupuesto (tarifas consultadas el 19 de octubre de 2026). Para cinco técnicos, cuenta de 75 a 325${NBSP}€ al mes según el editor. Un complemento a medida cuesta de 2.500 a 7.000${NBSP}€ una sola vez, una herramienta completa de 5.000 a 25.000${NBSP}€, y luego 100 a 300${NBSP}€ al mes de mantenimiento.`,
+        answer: `Organilog cuesta 19 a 59${NBSP}€ al mes por usuario (oferta Basique gratuita y limitada), Kizeo Forms 15 a 37${NBSP}€ sin IVA por usuario al mes, Synchroteam 39 o 64${NBSP}€ por usuario al mes en el plan anual (49 o 79${NBSP}€ al mes), Batappli 79${NBSP}€ sin IVA al mes en la oferta Artisan. Praxedo va bajo presupuesto (tarifas consultadas el 19 de octubre de 2026). Para cinco técnicos, cuenta de 75 a 325${NBSP}€ al mes según el editor. Un complemento a medida cuesta de 2.500 a 7.000${NBSP}€ una sola vez, una herramienta completa de 5.000 a 25.000${NBSP}€, y luego 100 a 300${NBSP}€ al mes de mantenimiento.`,
       },
       {
         question: '¿Qué programa para técnicos que trabajan sin cobertura?',

@@ -166,7 +166,7 @@ export const FIELD_SERVICE_QUIZ_WORDING_EN: DibodevTradeQuizWording = {
     priceExamples: [
       { label: 'Organilog', value: '€19 to €59/month/user' },
       { label: 'Kizeo Forms', value: '€15 to €37 excl. VAT/user/month' },
-      { label: 'Synchroteam', value: '€39.49 or €64.79/user/month' },
+      { label: 'Synchroteam', value: '€39 or €64/user/month (annual)' },
       { label: 'Batappli', value: '€79 excl. VAT/month' },
     ],
     footnote: 'First admin licence free at Synchroteam, free Basique plan at Organilog. Praxedo is on quote.',

@@ -252,7 +252,7 @@ export const FIELD_SERVICE_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     questions: [
       {
         question: `Combien coûte un logiciel de gestion d’interventions${NBSP}?`,
-        answer: `Organilog coûte 19 à 59${NBSP}€ par mois et par utilisateur (offre Basique gratuite et limitée), Kizeo Forms 15 à 37${NBSP}€ HT par utilisateur et par mois, Synchroteam 39,49 ou 64,79${NBSP}€ par utilisateur et par mois, Batappli 79${NBSP}€ HT par mois en offre Artisan. Praxedo est sur devis (tarifs relevés le 19 octobre 2026). Pour cinq techniciens, comptez de 75 à 325${NBSP}€ par mois selon l’éditeur. Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
+        answer: `Organilog coûte 19 à 59${NBSP}€ par mois et par utilisateur (offre Basique gratuite et limitée), Kizeo Forms 15 à 37${NBSP}€ HT par utilisateur et par mois, Synchroteam 39 ou 64${NBSP}€ par utilisateur et par mois à l'année (49 ou 79${NBSP}€ au mois), Batappli 79${NBSP}€ HT par mois en offre Artisan. Praxedo est sur devis (tarifs relevés le 19 octobre 2026). Pour cinq techniciens, comptez de 75 à 325${NBSP}€ par mois selon l’éditeur. Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
       },
       {
         question: `Quel logiciel pour des techniciens qui travaillent sans réseau${NBSP}?`,

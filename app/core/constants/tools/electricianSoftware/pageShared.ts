@@ -14,6 +14,7 @@ export const ELECTRICIAN_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'artisan-btp-gerer-ses-chantiers-sans-excel-avec-un-outil-dedie',
   'alternative-tolteck-logiciel-devis-artisan',
   'alternative-obat-logiciel-devis-batiment',
+  'alternative-batappli-logiciel-batiment',
 ]
 
 export const ELECTRICIAN_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2

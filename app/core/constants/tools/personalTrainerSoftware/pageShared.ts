@@ -12,6 +12,7 @@ export const PERSONAL_TRAINER_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'coach-sportif-limiter-les-annulations-avec-un-outil-de-reservation-en-ligne',
   'alternative-harbiz-logiciel-coach-sportif',
   'alternative-hexfit-logiciel-coach-sportif',
+  'alternative-eversports-manager-logiciel-salle-de-sport',
   'site-vitrine-ou-outil-metier-sur-mesure-que-choisir',
   'developpement-logiciel-b2b-sur-mesure-prix',
 ]

@@ -11,6 +11,9 @@ export const LANDSCAPING_PAGE_SCREENSHOT_URL: string = '/images/tools/gest-time-
 /** Articles linked at the bottom of the page; the unpublished or untranslated ones are left out automatically. */
 export const LANDSCAPING_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'paysagiste-outil-metier-devis-chantiers-plannings',
+  'alternative-extrabat-logiciel-paysagiste',
+  'alternative-robbin-logiciel-paysagiste',
+  'alternative-batappli-logiciel-batiment',
   'facture-electronique-artisan-ce-qui-change',
   'artisan-btp-gerer-ses-chantiers-sans-excel-avec-un-outil-dedie',
   'alternative-obat-logiciel-devis-batiment',

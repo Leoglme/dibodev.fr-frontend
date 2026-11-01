@@ -14,6 +14,8 @@ export const FIELD_SERVICE_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'logiciel-gestion-interventions-techniciens-hors-ligne',
   'alternative-organilog-logiciel-gestion-interventions',
   'alternative-praxedo-logiciel-gestion-interventions',
+  'alternative-synchroteam-logiciel-gestion-interventions',
+  'alternative-kizeo-forms-logiciel-interventions',
   'chauffagiste-contrats-entretien-outil-sur-mesure',
   'logiciel-gestion-plombiers-saas-sur-mesure-2026',
 ]

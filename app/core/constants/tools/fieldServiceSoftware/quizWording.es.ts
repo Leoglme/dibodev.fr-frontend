@@ -167,7 +167,7 @@ export const FIELD_SERVICE_QUIZ_WORDING_ES: DibodevTradeQuizWording = {
     priceExamples: [
       { label: 'Organilog', value: `19 a 59${NBSP}€/mes/usuario` },
       { label: 'Kizeo Forms', value: `15 a 37${NBSP}€ sin IVA/usuario/mes` },
-      { label: 'Synchroteam', value: `39,49 o 64,79${NBSP}€/usuario/mes` },
+      { label: 'Synchroteam', value: `39 o 64${NBSP}€/usuario/mes (anual)` },
       { label: 'Batappli', value: `79${NBSP}€ sin IVA/mes` },
     ],
     footnote:

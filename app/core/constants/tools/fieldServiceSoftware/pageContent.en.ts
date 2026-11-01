@@ -255,7 +255,7 @@ export const FIELD_SERVICE_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       {
         question: 'How much does field service software cost in France?',
         answer:
-          'Organilog costs €19 to €59 per month per user (free, limited Basique plan), Kizeo Forms €15 to €37 excl. VAT per user per month, Synchroteam €39.49 or €64.79 per user per month, Batappli €79 excl. VAT per month on the Artisan plan. Praxedo is on quote (prices checked on 19 October 2026). For five technicians, expect €75 to €325 per month depending on the publisher. A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
+          'Organilog costs €19 to €59 per month per user (free, limited Basique plan), Kizeo Forms €15 to €37 excl. VAT per user per month, Synchroteam €39 or €64 per user per month on the annual plan (€49 or €79 monthly), Batappli €79 excl. VAT per month on the Artisan plan. Praxedo is on quote (prices checked on 19 October 2026). For five technicians, expect €75 to €325 per month depending on the publisher. A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
       },
       {
         question: 'Which software for technicians who work without network?',
