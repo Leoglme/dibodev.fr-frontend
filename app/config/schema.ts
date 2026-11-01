@@ -1,4 +1,9 @@
-import { FRANCE_NUM_PROFILE_URL, GOOGLE_BUSINESS_URL, GOOGLE_KNOWLEDGE_GRAPH_URL } from '~/config/contact'
+import {
+  FRANCE_NUM_PROFILE_URL,
+  GOOGLE_BUSINESS_URL,
+  GOOGLE_KNOWLEDGE_GRAPH_URL,
+  PERSON_GOOGLE_KNOWLEDGE_GRAPH_URL,
+} from '~/config/contact'
 
 /**
  * Schema.org structured data (JSON-LD) for the site: a Person (Léo Guillaume)
@@ -230,6 +235,7 @@ const PERSON_SAME_AS: string[] = [
   'https://www.crunchbase.com/person/l%C3%A9o-guillaume',
   'https://www.data.gouv.fr/users/leo-guillaume-1',
   'https://claudepartners.fr/prestataires/leo-guillaume-dibodev-4cd67/',
+  PERSON_GOOGLE_KNOWLEDGE_GRAPH_URL,
 ]
 
 const ORGANIZATION_SAME_AS: string[] = [

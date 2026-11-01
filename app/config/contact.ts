@@ -18,6 +18,8 @@ export const MALT_PROFILE_URL: string = 'https://www.malt.fr/profile/leoguillaum
 export const GOOGLE_BUSINESS_URL: string = 'https://www.google.com/maps?cid=6567115254526097431'
 /** Google Knowledge Graph entity of that listing (kgmid read on its Google panel on 27 October 2026). */
 export const GOOGLE_KNOWLEDGE_GRAPH_URL: string = 'https://www.google.com/search?kgmid=/g/11zxfsxt6r'
+/** Google Knowledge Graph entity of Léo himself (kgmid read on his person panel on 1 November 2026). */
+export const PERSON_GOOGLE_KNOWLEDGE_GRAPH_URL: string = 'https://www.google.com/search?kgmid=/g/11p1cz5mnt'
 /** Online booking page (Cal.com): a 30 min first call, by Google Meet or phone, chosen by the visitor. */
 export const BOOKING_URL: string = 'https://cal.com/dibodev/premier-echange'
 /** Short booking address shown as the link text. */
