@@ -377,6 +377,99 @@ const INVENTORY_MANAGEMENT_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
+const CARPENTRY_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+  toolId: 'carpentry-software',
+  routeName: 'tools-carpentry-software',
+  icon: 'Wrench',
+  wording: {
+    fr: {
+      emphasizedIntro: `Vous êtes menuisier ou agenceur${NBSP}?`,
+      text: 'En 6 questions, le test vous dit quel logiciel choisir pour vos devis, vos fiches de débit et le planning des poses, avec les prix 2026 des logiciels de menuiserie et un modèle gratuit de devis avec métré et fiche de débit.',
+      linkLabel: `Faire le test${NBSP}: quel logiciel pour ma menuiserie${NBSP}?`,
+      listLabel: `Quel logiciel pour ma menuiserie${NBSP}?`,
+      hubDescription: `Devis et métré, tarifs fabricants, fiches de débit, poses et marge par chantier${NBSP}: le logiciel qui convient à votre menuiserie, et son prix.`,
+    },
+    en: {
+      emphasizedIntro: 'Running a joinery or carpentry business in France?',
+      text: 'In 6 questions, the test tells you which software to choose for your quotes, cutting lists and installation schedule, with the 2026 prices of the joinery software on the French market.',
+      linkLabel: 'Take the test: which software for my joinery business?',
+      listLabel: 'Which software for my joinery business?',
+      hubDescription:
+        'Quotes and measurements, manufacturer price lists, cutting lists, installations and margin per job: the software that fits your joinery business, and its price.',
+    },
+    es: {
+      emphasizedIntro: '¿Tienes una carpintería en Francia?',
+      text: 'En 6 preguntas, el test te dice qué programa elegir para tus presupuestos, tus listas de corte y la planificación de las instalaciones, con los precios 2026 de los programas de carpintería del mercado francés.',
+      linkLabel: 'Hacer el test: ¿qué software para mi carpintería?',
+      listLabel: '¿Qué software para mi carpintería?',
+      hubDescription:
+        'Presupuestos y mediciones, tarifas de fabricantes, listas de corte, instalaciones y margen por obra: el programa que encaja con tu carpintería, y su precio.',
+    },
+  },
+}
+
+const TRAINING_CENTER_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+  toolId: 'training-center-software',
+  routeName: 'tools-training-center-software',
+  icon: 'CalendarCheck',
+  wording: {
+    fr: {
+      emphasizedIntro: `Vous donnez des formations ou des cours${NBSP}?`,
+      text: 'En 6 questions, le test vous dit quel logiciel choisir pour le planning, les émargements et le suivi des heures, selon qui paie vos cours, avec les prix 2026 des logiciels du marché et une feuille d’émargement gratuite.',
+      linkLabel: `Faire le test${NBSP}: quel logiciel pour mon organisme de formation${NBSP}?`,
+      listLabel: `Quel logiciel pour mon organisme de formation${NBSP}?`,
+      hubDescription: `Planning des cours, émargements, Qualiopi et BPF, avance immédiate, forfaits d’heures${NBSP}: le logiciel qui convient à votre organisme de formation ou à votre centre de soutien scolaire, et son prix.`,
+    },
+    en: {
+      emphasizedIntro: 'Running a training centre or tutoring school in France?',
+      text: 'In 6 questions, the test tells you which software to choose for scheduling, attendance sheets and hour tracking, depending on who pays for your courses, with the 2026 prices of the software on the French market.',
+      linkLabel: 'Take the test: which software for my training centre?',
+      listLabel: 'Which software for my training centre?',
+      hubDescription:
+        'Course schedules, attendance sheets, Qualiopi and annual reports, tax credit paid upfront, hour packages: the software that fits your training or tutoring centre, and its price.',
+    },
+    es: {
+      emphasizedIntro: '¿Diriges un centro de formación o de clases particulares en Francia?',
+      text: 'En 6 preguntas, el test te dice qué programa elegir para la planificación, las hojas de firmas y el seguimiento de las horas, según quién paga tus cursos, con los precios 2026 de los programas del mercado francés.',
+      linkLabel: 'Hacer el test: ¿qué software para mi centro de formación?',
+      listLabel: '¿Qué software para mi centro de formación?',
+      hubDescription:
+        'Planificación de clases, hojas de firmas, Qualiopi y balance anual, crédito fiscal anticipado, bonos de horas: el programa que encaja con tu centro de formación o de refuerzo escolar, y su precio.',
+    },
+  },
+}
+
+const LEISURE_BOOKING_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+  toolId: 'leisure-booking-software',
+  routeName: 'tools-leisure-booking-software',
+  icon: 'Tent',
+  wording: {
+    fr: {
+      emphasizedIntro: `Vous gérez une activité de loisirs${NBSP}?`,
+      text: 'En 6 questions, le test vous dit quel logiciel de réservation choisir pour vos créneaux, vos moniteurs et vos acomptes, avec les prix 2026 commissions comprises et un modèle gratuit de planning des réservations.',
+      linkLabel: `Faire le test${NBSP}: quel logiciel de réservation pour mon activité${NBSP}?`,
+      listLabel: `Quel logiciel de réservation pour mon activité de loisirs${NBSP}?`,
+      hubDescription: `Accrobranche, escape game, base nautique, centre équestre, karting${NBSP}: le logiciel de réservation qui convient à votre activité, et ce qu’il coûte commissions comprises.`,
+    },
+    en: {
+      emphasizedIntro: 'Running a leisure activity in France?',
+      text: 'In 6 questions, the test tells you which booking software to choose for your time slots, instructors and deposits, with the 2026 prices of the software on the French market, commissions included.',
+      linkLabel: 'Take the test: which booking software for my activity?',
+      listLabel: 'Which booking software for my leisure activity?',
+      hubDescription:
+        'Treetop adventure, escape game, water sports centre, riding centre, karting: the booking software that fits your activity, and what it costs with commissions.',
+    },
+    es: {
+      emphasizedIntro: '¿Gestionas una actividad de ocio en Francia?',
+      text: 'En 6 preguntas, el test te dice qué programa de reservas elegir para tus franjas horarias, tus monitores y tus anticipos, con los precios 2026 del mercado francés, comisiones incluidas.',
+      linkLabel: 'Hacer el test: ¿qué software de reservas para mi actividad?',
+      listLabel: '¿Qué software de reservas para mi actividad de ocio?',
+      hubDescription:
+        'Parque de aventura, escape room, base náutica, centro ecuestre, karting: el programa de reservas que encaja con tu actividad, y lo que cuesta con las comisiones.',
+    },
+  },
+}
+
 const AI_APP_CHECK_TEASER: DibodevToolTeaserContent = {
   toolId: AI_APP_CHECK_QUIZ_ID,
   routeName: 'ai-app-takeover',
@@ -617,7 +710,7 @@ const COLD_CALLING_CHECK_TEASER: DibodevToolTeaserContent = {
 
 export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserContent> = {
   'artisan-tpe-rennes-site-web-outil-metier-sur-mesure': COLD_CALLING_CHECK_TEASER,
-  'site-web-sur-mesure-menuiserie-2026': COLD_CALLING_CHECK_TEASER,
+  'site-web-sur-mesure-menuiserie-2026': CARPENTRY_SOFTWARE_TEASER,
   'faille-php-octobre-2026-site-boutique-logiciel-que-faire': PHP_VULNERABILITY_CHECK_TEASER,
   'changer-version-php-ovh-faille-octobre-2026': PHP_VULNERABILITY_CHECK_TEASER,
   'changer-version-php-o2switch-faille-octobre-2026': PHP_VULNERABILITY_CHECK_TEASER,
@@ -652,13 +745,14 @@ export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserConte
   'electricien-outil-sur-mesure-devis-interventions-factures': ELECTRICIAN_SOFTWARE_TEASER,
   'artisan-btp-gerer-ses-chantiers-sans-excel-avec-un-outil-dedie': ELECTRICIAN_SOFTWARE_TEASER,
   'coach-sportif-limiter-les-annulations-avec-un-outil-de-reservation-en-ligne': PERSONAL_TRAINER_SOFTWARE_TEASER,
+  'logiciel-reservation-en-ligne-sur-mesure-loisirs': LEISURE_BOOKING_SOFTWARE_TEASER,
   'pass-commerce-artisanat-rennes-site-internet': PUBLIC_AID_SIMULATOR_TEASER,
 }
 
 export const TOOL_TEASERS_BY_PROJECT_SLUG: Record<string, DibodevToolTeaserContent> = {
   'driving-school': DRIVING_SCHOOL_SOFTWARE_TEASER,
   stockpme: INVENTORY_MANAGEMENT_SOFTWARE_TEASER,
-  izidoor: PERSONAL_TRAINER_SOFTWARE_TEASER,
+  izidoor: LEISURE_BOOKING_SOFTWARE_TEASER,
 }
 
 const EMAIL_DELIVERABILITY_CHECK_TEASER: DibodevToolTeaserContent = {
@@ -709,6 +803,9 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   CLEANING_BUSINESS_SOFTWARE_TEASER,
   BODY_SHOP_SOFTWARE_TEASER,
   INVENTORY_MANAGEMENT_SOFTWARE_TEASER,
+  CARPENTRY_SOFTWARE_TEASER,
+  TRAINING_CENTER_SOFTWARE_TEASER,
+  LEISURE_BOOKING_SOFTWARE_TEASER,
   AI_APP_CHECK_TEASER,
   PUBLIC_AID_SIMULATOR_TEASER,
   PHP_VULNERABILITY_CHECK_TEASER,
