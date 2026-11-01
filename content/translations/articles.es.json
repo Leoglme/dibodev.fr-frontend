@@ -36277,7 +36277,25 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Revisa nuevamente las páginas clave, asegúrate de que las órdenes de prueba, los correos electrónicos y las tareas programadas funcionen, y monitorea el registro de errores de PHP durante unos días. Si el sitio deja de responder del todo, vuelve a la versión anterior y asegúrate de que el problema realmente venga de tu lado: la página de estado de tu proveedor de alojamiento indica si hay una incidencia en curso. Consúltala antes de contactar al soporte.",
+              "text": "Revisa nuevamente las páginas clave, asegúrate de que las órdenes de prueba, los correos electrónicos y las tareas programadas funcionen, y monitorea el registro de errores de PHP durante unos días. Si el sitio deja de responder del todo, vuelve a la versión anterior y asegúrate de que el problema realmente venga de tu lado: ",
+              "type": "text"
+            },
+            {
+              "text": "¿tu hosting está caído?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/hebergeur-en-panne",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " Esta página muestra en directo el estado de los principales hostings: consúltala antes de contactar al soporte.",
               "type": "text"
             }
           ]
