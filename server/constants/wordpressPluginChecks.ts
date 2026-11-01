@@ -1,6 +1,6 @@
 import type { WordPressPluginCheck } from '~~/server/types/tools/wordpressHackCheck'
 
-export const WORDPRESS_LATEST_CORE_VERSION: string = '7.1.3'
+export const WORDPRESS_LATEST_CORE_VERSION: string = '7.1.4'
 
 export const WORDPRESS_PLUGIN_CHECKS: WordPressPluginCheck[] = [
   {

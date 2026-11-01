@@ -25,7 +25,11 @@
     :highlightLabel="page.offers.highlightLabel"
     :secondaryLink="{ text: page.offers.toolLinkText, to: toolRoute, trackedToolId: PHP_VULNERABILITY_CHECK_TOOL_ID }"
     tone="white"
-  />
+  >
+    <template #footer>
+      <DibodevWebsiteRedesignPrompt :trackingLocation="`${TRACKING_LOCATION}_redesign`" />
+    </template>
+  </DibodevPricingSection>
 
   <DibodevGuaranteesSection
     :anchorId="page.included.anchorId"
@@ -91,6 +95,7 @@ import type { DibodevPricingOffer } from '~/core/types/DibodevPricingSection'
 import { computed } from 'vue'
 import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
 import DibodevMobileContactBar from '~/components/data-displays/DibodevMobileContactBar.vue'
+import DibodevWebsiteRedesignPrompt from '~/components/data-displays/DibodevWebsiteRedesignPrompt.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import DibodevFaqSection from '~/components/sections/DibodevFaqSection.vue'
 import DibodevGuaranteesSection from '~/components/sections/DibodevGuaranteesSection.vue'

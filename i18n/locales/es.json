@@ -622,6 +622,7 @@
         "verdicts": {
           "suspiciousSignals": "señales sospechosas en la página de inicio",
           "vulnerablePlugin": "extensión vulnerable",
+          "closedPlugin": "extensión retirada de WordPress.org por un fallo",
           "outdatedCore": "WordPress demasiado antiguo",
           "cleanSurface": "nada visible desde fuera",
           "notWordPress": "web no hecha con WordPress",
@@ -659,6 +660,9 @@
       },
       "phpUpdate": {
         "message": "Hola,\nquiero que actualicen la versión de PHP de mi web (y WordPress, el tema y los plugins si hace falta).\nEl enlace de mi web: \nMi hosting, si lo conozco: "
+      },
+      "websiteRedesign": {
+        "message": "Hola,\nmi web se ha quedado anticuada y me gustaría rehacerla.\nEl enlace de mi web actual: \nLo que me gustaría cambiar: "
       },
       "eInvoicing": {
         "messageWithSoftware": "Hola,\nmi software de facturación es {software}. Su comprobador indica: «{verdict}».\n¿Puede decirme qué me queda por hacer para recibir y emitir mis facturas electrónicas, y si mi herramienta se puede conectar?",

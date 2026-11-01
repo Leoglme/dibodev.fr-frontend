@@ -54,6 +54,8 @@
           <DibodevIcon name="ArrowRight" mode="stroke" :width="18" :height="18" aria-hidden="true" />
         </DibodevLink>
       </div>
+
+      <slot name="footer" />
     </div>
   </section>
 </template>

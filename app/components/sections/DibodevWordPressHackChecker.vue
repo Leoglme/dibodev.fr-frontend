@@ -49,6 +49,15 @@
           </ul>
         </div>
 
+        <div v-if="result && injectedContentLines.length > 0" class="grid gap-2 rounded-xl bg-white/10 p-4">
+          <p class="text-xs font-medium text-white/85">{{ props.wording.injectedContentTitle }}</p>
+          <ul class="grid gap-1.5">
+            <li v-for="line in injectedContentLines" :key="line" class="text-[15px] leading-6 break-words">
+              {{ line }}
+            </li>
+          </ul>
+        </div>
+
         <div v-if="result && detailTexts.length > 0" class="grid gap-2.5">
           <p class="text-xs font-medium tracking-[0.08em] text-white/85 uppercase">{{ props.wording.detailsTitle }}</p>
           <ul class="grid gap-2.5">
@@ -139,13 +148,16 @@
 </template>
 
 <script lang="ts" setup>
-import type { ComputedRef, PropType, Ref } from 'vue'
+import type { ComputedRef, PropType, Ref, WritableComputedRef } from 'vue'
 import type { DibodevPhpVulnerabilityPlatformKey } from '~/core/types/DibodevPhpVulnerabilityCheck'
 import type { DibodevSiteCheckErrorKind } from '~/core/types/DibodevSiteCheck'
 import type {
+  DibodevWordPressClosedPlugin,
   DibodevWordPressHackCheckResult,
   DibodevWordPressHackGuideKey,
   DibodevWordPressHackSignalKey,
+  DibodevWordPressInjectedContentItem,
+  DibodevWordPressInjectedContentReason,
   DibodevWordPressPluginResult,
 } from '~/core/types/DibodevWordPressHackCheck'
 import type {
@@ -170,6 +182,7 @@ import {
 } from '~/core/constants/wordpressHackCheck/pageShared'
 import { QuizTextUtils } from '~/core/utils/QuizTextUtils'
 import { SiteCheckContactUtils } from '~/core/utils/SiteCheckContactUtils'
+import { formatArticleDate } from '~/core/utils/formatArticleDate'
 
 /** The site address never leaves the page: the PostHog events carry the verdict and the extension, not the host. */
 const props: DibodevWordPressHackCheckerProps = defineProps({
@@ -192,6 +205,7 @@ const props: DibodevWordPressHackCheckerProps = defineProps({
 })
 
 const localePath: ReturnType<typeof useLocalePath> = useLocalePath()
+const { locale }: { locale: WritableComputedRef<string> } = useI18n()
 const { track }: UseTrackingReturn = useTracking()
 
 const MAX_PLATFORMS_NAMED: number = 3
@@ -233,6 +247,10 @@ const highlightedPlugin: ComputedRef<DibodevWordPressPluginResult | null> = comp
   },
 )
 
+const firstClosedPlugin: ComputedRef<DibodevWordPressClosedPlugin | null> = computed(
+  (): DibodevWordPressClosedPlugin | null => result.value?.closedPlugins[0] ?? null,
+)
+
 const templateValues: ComputedRef<Record<string, string>> = computed(
   (): Record<string, string> => ({
     host: result.value?.host ?? checkedHost.value,
@@ -242,6 +260,8 @@ const templateValues: ComputedRef<Record<string, string>> = computed(
     plugin: highlightedPlugin.value?.name ?? '',
     pluginVersion: highlightedPlugin.value?.versionFound ?? '',
     fixedVersion: highlightedPlugin.value?.fixedVersion ?? '',
+    closedPlugin: firstClosedPlugin.value?.name ?? '',
+    closedYear: firstClosedPlugin.value?.closedDate.slice(0, 4) ?? '',
     domains: result.value?.externalScriptDomains.join(', ') ?? '',
     users: String(result.value?.usernamesExposed ?? 0),
   }),
@@ -273,12 +293,37 @@ const cardText: ComputedRef<string> = computed((): string => {
   return props.wording.idleText
 })
 
-const pluginLines: ComputedRef<string[]> = computed((): string[] =>
-  (result.value?.plugins ?? []).map((plugin: DibodevWordPressPluginResult): string =>
+const pluginLines: ComputedRef<string[]> = computed((): string[] => [
+  ...(result.value?.plugins ?? []).map((plugin: DibodevWordPressPluginResult): string =>
     QuizTextUtils.fillTemplate(props.wording.pluginStatusTexts[plugin.status], {
       plugin: plugin.name,
       pluginVersion: plugin.versionFound ?? '',
       fixedVersion: plugin.fixedVersion,
+    }),
+  ),
+  ...(result.value?.closedPlugins ?? []).map((plugin: DibodevWordPressClosedPlugin): string =>
+    QuizTextUtils.fillTemplate(props.wording.closedPluginText, {
+      plugin: plugin.name,
+      closedYear: plugin.closedDate.slice(0, 4),
+    }),
+  ),
+])
+
+const injectedContentLines: ComputedRef<string[]> = computed((): string[] =>
+  (result.value?.injectedContent ?? []).map((item: DibodevWordPressInjectedContentItem): string =>
+    QuizTextUtils.fillTemplate(props.wording.injectedContentLine, {
+      title: item.title,
+      kind: props.wording.injectedContentKindLabels[item.kind],
+      path: item.path,
+      reasons: item.reasons
+        .map((reason: DibodevWordPressInjectedContentReason): string =>
+          QuizTextUtils.fillTemplate(props.wording.injectedContentReasonTexts[reason], {
+            domains: item.spamDomains.join(', '),
+            language: readLanguageName(item.language),
+            date: formatArticleDate(item.displayedDate, locale.value),
+          }),
+        )
+        .join(', '),
     }),
   ),
 )
@@ -333,6 +378,22 @@ const contactRoute: ComputedRef<string> = computed((): string =>
  */
 function fillResultTemplate(template: string): string {
   return QuizTextUtils.fillTemplate(template, templateValues.value)
+}
+
+/**
+ * Names a language in the language of the page (`tr` reads « turc », "Turkish" or « turco »).
+ * @param {string | null} languageCode - The language code found by the check.
+ * @returns {string} The language name, or the code when the browser cannot name it.
+ */
+function readLanguageName(languageCode: string | null): string {
+  if (!languageCode) {
+    return ''
+  }
+  try {
+    return new Intl.DisplayNames([locale.value], { type: 'language' }).of(languageCode) ?? languageCode
+  } catch {
+    return languageCode
+  }
 }
 
 /**
@@ -412,6 +473,7 @@ async function checkSite(): Promise<void> {
       verdict: result.value.verdict,
       platform: result.value.platforms[0] ?? null,
       vulnerablePlugin: highlightedPlugin.value?.status === 'vulnerable' ? highlightedPlugin.value.slug : null,
+      closedPlugin: firstClosedPlugin.value?.slug ?? null,
       coreVersion: result.value.coreVersion,
       signals: result.value.signals,
       errorKind: null,
@@ -426,6 +488,7 @@ async function checkSite(): Promise<void> {
       verdict: null,
       platform: null,
       vulnerablePlugin: null,
+      closedPlugin: null,
       coreVersion: null,
       signals: [],
       errorKind: kind,

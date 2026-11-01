@@ -139,6 +139,7 @@ import {
   EMAIL_DELIVERABILITY_VERDICTS,
 } from '~/core/constants/emailDeliverabilityCheck/pageShared'
 import { WORDPRESS_HACK_CONTACT_TOPIC, WORDPRESS_HACK_VERDICTS } from '~/core/constants/wordpressHackCheck/pageShared'
+import { WEBSITE_REDESIGN_CONTACT_TOPIC } from '~/core/constants/websiteRedesignPrompt'
 import { useTracking } from '~/composables/useTracking'
 import { useLeadSource } from '~/composables/useLeadSource'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
@@ -208,6 +209,8 @@ const siteDownPrefill: DibodevHostingStatusContactPrefill | null = HostingStatus
 /** `?topic=email-deliverability` comes from the e-mail deliverability checker, with the domain and the verdict when a check was run. */
 const emailDeliverabilityPrefill: DibodevSiteCheckContactPrefill<DibodevEmailDeliverabilityVerdict> | null =
   SiteCheckContactUtils.readSitePrefill(route.query, EMAIL_DELIVERABILITY_CONTACT_TOPIC, EMAIL_DELIVERABILITY_VERDICTS)
+/** `?topic=website-redesign` comes from the redesign prompt of the PHP and WordPress pages. */
+const isWebsiteRedesignVisit: boolean = String(route.query.topic ?? '') === WEBSITE_REDESIGN_CONTACT_TOPIC
 
 const projectType: Ref<ProjectTypeKey | null> = ref<ProjectTypeKey | null>(prefilledProjectType ?? DEFAULT_PROJECT_TYPE)
 const pagesRange: Ref<PagesRangeKey | null> = ref<PagesRangeKey | null>(null)
@@ -228,10 +231,13 @@ const isWebsiteProject: ComputedRef<boolean> = computed((): boolean => projectTy
 
 /** METHODS */
 /**
- * Writes the message of a visitor coming from a checker, a PHP page or a hosting status page, with the check when known.
+ * Writes the message of a visitor coming from a checker, a PHP page, a hosting status page or the redesign prompt, with the check when known.
  * @returns {string} The message, or an empty string for every other visitor.
  */
 function buildPrefilledMessage(): string {
+  if (isWebsiteRedesignVisit) {
+    return t('contact.form.websiteRedesign.message')
+  }
   if (emailDeliverabilityPrefill) {
     return emailDeliverabilityPrefill.site
       ? t('contact.form.emailDeliverability.messageWithDomain', {
@@ -501,7 +507,8 @@ onMounted((): void => {
     eInvoicingPrefill ||
     wordpressHackPrefill ||
     siteDownPrefill ||
-    emailDeliverabilityPrefill
+    emailDeliverabilityPrefill ||
+    isWebsiteRedesignVisit
   ) {
     message.value = buildPrefilledMessage()
   }

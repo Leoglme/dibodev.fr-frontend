@@ -118,6 +118,7 @@ export type TrackingEventPayloads = {
     verdict: DibodevWordPressHackVerdict | null
     platform: DibodevPhpVulnerabilityPlatformKey | null
     vulnerablePlugin: string | null
+    closedPlugin: string | null
     coreVersion: string | null
     signals: DibodevWordPressHackSignalKey[]
     errorKind: DibodevSiteCheckErrorKind | null

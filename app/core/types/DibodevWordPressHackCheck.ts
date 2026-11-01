@@ -5,6 +5,7 @@ import type { DibodevPhpVulnerabilityPlatformKey } from '~/core/types/DibodevPhp
 export type DibodevWordPressHackVerdict =
   | 'suspiciousSignals'
   | 'vulnerablePlugin'
+  | 'closedPlugin'
   | 'outdatedCore'
   | 'cleanSurface'
   | 'notWordPress'
@@ -26,6 +27,8 @@ export type DibodevWordPressHackSignalKey =
   | 'criticalError'
   | 'coreOutdated'
   | 'cloudflare'
+  | 'injectedContent'
+  | 'closedPlugin'
 
 export type DibodevWordPressPluginStatus = 'vulnerable' | 'fixed' | 'unknownVersion'
 
@@ -39,6 +42,26 @@ export type DibodevWordPressPluginResult = {
   status: DibodevWordPressPluginStatus
 }
 
+export type DibodevWordPressClosedPlugin = {
+  slug: string
+  name: string
+  closedDate: string
+}
+
+export type DibodevWordPressInjectedContentReason = 'spamLinks' | 'foreignLanguage' | 'backdated' | 'emptyShortPost'
+
+export type DibodevWordPressPublicEntryKind = 'page' | 'post'
+
+export type DibodevWordPressInjectedContentItem = {
+  kind: DibodevWordPressPublicEntryKind
+  title: string
+  path: string
+  reasons: DibodevWordPressInjectedContentReason[]
+  spamDomains: string[]
+  language: string | null
+  displayedDate: string
+}
+
 export type DibodevWordPressHackCheckResult = {
   host: string
   finalUrl: string
@@ -48,6 +71,8 @@ export type DibodevWordPressHackCheckResult = {
   latestCoreVersion: string
   platforms: DibodevPhpVulnerabilityPlatformKey[]
   plugins: DibodevWordPressPluginResult[]
+  closedPlugins: DibodevWordPressClosedPlugin[]
+  injectedContent: DibodevWordPressInjectedContentItem[]
   pluginsSeen: string[]
   externalScriptDomains: string[]
   usernamesExposed: number

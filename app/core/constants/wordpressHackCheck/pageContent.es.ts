@@ -32,16 +32,16 @@ export const WORDPRESS_HACK_CHECK_PAGE_ES: DibodevWordPressHackCheckPageContent 
     siteLabel: 'Dirección de tu web WordPress',
     sitePlaceholder: 'miempresa.es',
     siteHint:
-      'Basta con el nombre de dominio. Se leen la página de inicio y como mucho siete pequeños archivos públicos, como lo haría un navegador: no se escanea nada, no se guarda nada.',
+      'Basta con el nombre de dominio. Se leen la página de inicio y como mucho nueve pequeños archivos públicos, como lo haría un navegador: no se escanea nada, no se guarda nada.',
     submit: 'Comprobar',
     checking: 'Comprobando…',
     resultLabel: 'Tu resultado',
     idleTitle: 'Introduce la dirección de tu web para empezar',
     idleText:
-      'El resultado dice si la web funciona con WordPress, qué versión muestra, si un plugin vigilado sigue siendo vulnerable, y lo que un visitante puede ver de anormal.',
+      'El resultado dice si la web funciona con WordPress, qué versión muestra, si un plugin es vulnerable o fue retirado por un fallo, si se coló una página, y lo que un visitante puede ver de anormal.',
     loadingTitle: 'Leyendo la web…',
     loadingText:
-      'Leo la página de inicio, luego el feed RSS, los plugins vigilados y la lista pública de autores. Unos segundos.',
+      'Leo la página de inicio, luego el feed RSS, los plugins, la lista pública de autores y las últimas páginas publicadas. Unos segundos.',
     errorTitles: {
       invalid: 'Dirección que corregir',
       unreachable: 'Web inaccesible',
@@ -58,6 +58,7 @@ export const WORDPRESS_HACK_CHECK_PAGE_ES: DibodevWordPressHackCheckPageContent 
     verdictTitles: {
       suspiciousSignals: 'Señales sospechosas: revisar hoy',
       vulnerablePlugin: '{plugin} {pluginVersion}: plugin vulnerable',
+      closedPlugin: '{closedPlugin}: plugin retirado por un fallo',
       outdatedCore: 'WordPress {coreVersion}: no está al día',
       cleanSurface: 'Nada anormal visible desde fuera',
       notWordPress: 'Esta web no funciona con WordPress',
@@ -65,9 +66,11 @@ export const WORDPRESS_HACK_CHECK_PAGE_ES: DibodevWordPressHackCheckPageContent 
     },
     verdictTexts: {
       suspiciousSignals:
-        'La página de inicio de {host} muestra una o varias señales que aparecen en webs hackeadas. No prueba un hackeo, pero hay que revisarlo de cerca, ahora.',
+        '{host} muestra una o varias señales que aparecen en webs hackeadas. No prueba un hackeo, pero hay que revisarlo de cerca, ahora.',
       vulnerablePlugin:
         '{host} usa {plugin} en la versión {pluginVersion}, cuando el fallo conocido está corregido a partir de la {fixedVersion}. Mientras el plugin no se actualice, la puerta sigue abierta.',
+      closedPlugin:
+        '{host} carga {closedPlugin}, un plugin que WordPress.org retiró en {closedYear} por un fallo de seguridad. Ya no recibe ninguna corrección: el fallo sigue abierto mientras el plugin esté instalado.',
       outdatedCore:
         '{host} muestra WordPress {coreVersion}, cuando la última versión es la {latestCoreVersion}. Las ramas antiguas siguen recibiendo parches «por cortesía», pero solo la última versión tiene soporte oficial.',
       cleanSurface:
@@ -104,6 +107,10 @@ export const WORDPRESS_HACK_CHECK_PAGE_ES: DibodevWordPressHackCheckPageContent 
       coreOutdated: 'La versión mostrada ({coreVersion}) es más antigua que la última publicada ({latestCoreVersion}).',
       cloudflare:
         'Cloudflare está delante de la web: su cortafuegos filtra parte de los ataques, sin sustituir a las actualizaciones.',
+      injectedContent:
+        'Las últimas páginas y entradas publicadas, leídas con la API pública de WordPress, muestran un contenido sospechoso (detalle arriba): es la huella más común de un hackeo de SEO, una página colada a escondidas y a menudo con una fecha antigua falsa.',
+      closedPlugin:
+        'WordPress.org retiró {closedPlugin} de su catálogo en {closedYear} por un fallo de seguridad: ninguna actualización lo corregirá.',
     },
     coreVersionHiddenLine: 'Versión de WordPress oculta: es una buena práctica, y no dice si la web está al día.',
     pluginsTitle: 'Plugins vigilados leídos en la web',
@@ -111,6 +118,19 @@ export const WORDPRESS_HACK_CHECK_PAGE_ES: DibodevWordPressHackCheckPageContent 
       vulnerable: '{plugin} {pluginVersion}: vulnerable, corregido a partir de la {fixedVersion}',
       fixed: '{plugin} {pluginVersion}: al día (parche {fixedVersion} o posterior)',
       unknownVersion: '{plugin}: presente, versión no legible desde fuera',
+    },
+    closedPluginText: '{plugin}: retirado de WordPress.org en {closedYear} por un fallo de seguridad, sin corrección',
+    injectedContentTitle: 'Páginas y entradas sospechosas',
+    injectedContentLine: '«{title}» ({kind}, {path}): {reasons}',
+    injectedContentKindLabels: {
+      page: 'página',
+      post: 'entrada',
+    },
+    injectedContentReasonTexts: {
+      spamLinks: 'enlaces a webs de juego, apuestas o farmacia ({domains})',
+      foreignLanguage: 'texto en {language}',
+      backdated: 'fechada el {date}, mucho antes que los contenidos creados justo antes',
+      emptyShortPost: 'entrada vacía con un título de una o dos letras',
     },
     stepsTitle: 'Qué hacer',
     steps: {
@@ -125,6 +145,12 @@ export const WORDPRESS_HACK_CHECK_PAGE_ES: DibodevWordPressHackCheckPageContent 
         'Si se trata de UpdraftPlus: borra también la clave en Ajustes, UpdraftPlus, pestaña Herramientas avanzadas, UpdraftCentral. La actualización no elimina un plugin falso ya instalado.',
         'Revisa las cuentas, los plugins y los archivos recientes con la guía de abajo.',
         'Activa las actualizaciones automáticas de los plugins, o reserva una cita mensual para hacerlas.',
+      ],
+      closedPlugin: [
+        'Haz una copia de seguridad completa de la web fuera del servidor, y luego localiza qué hace {closedPlugin} en tus páginas (maquetación, formulario, galería…).',
+        'Sustitúyelo por un plugin mantenido que haga lo mismo y luego bórralo: desactivarlo no basta, sus archivos siguen siendo atacables.',
+        'Revisa las cuentas, los plugins y los archivos recientes con la guía de abajo: el fallo pudo usarse antes de que llegaras.',
+        'Si toda la maquetación depende de él (un constructor de páginas como KingComposer), compara su sustitución con un rediseño de la web: presupuesto las dos opciones.',
       ],
       outdatedCore: [
         'Actualiza WordPress desde Escritorio, Actualizaciones, tras una copia completa fuera del servidor.',
@@ -164,6 +190,7 @@ export const WORDPRESS_HACK_CHECK_PAGE_ES: DibodevWordPressHackCheckPageContent 
     ctaLabels: {
       suspiciousSignals: 'Revisar y limpiar mi web',
       vulnerablePlugin: 'Asegurar mi web',
+      closedPlugin: 'Sustituir este plugin',
       outdatedCore: 'Actualizar mi web',
       cleanSurface: 'Revisar mi web desde dentro',
       notWordPress: 'Revisar mis otras herramientas',
@@ -417,7 +444,7 @@ export const WORDPRESS_HACK_CHECK_PAGE_ES: DibodevWordPressHackCheckPageContent 
       {
         question: '¿Qué hace exactamente esta herramienta, y qué no ve?',
         answer:
-          'Lee la página de inicio una vez, como un navegador, y luego como mucho siete pequeños archivos públicos: el feed RSS cuando la página oculta su versión, el readme.txt de los plugins vigilados, y la lista pública de autores. Reconoce WordPress, su versión si se muestra, un plugin de la lista por debajo de su versión corregida, enlaces ocultos, una redirección, un script codificado, palabras de spam, archivos .php en las subidas y un error crítico. No escanea nada, no envía ninguna carga y guarda el resultado diez minutos en caché, no más. No ve un plugin falso que no carga nada en la página, ni un hackeo que solo afecta a algunos visitantes: solo una revisión desde dentro lo resuelve.',
+          'Lee la página de inicio una vez, como un navegador, y luego como mucho nueve pequeños archivos públicos: el feed RSS cuando la página oculta su versión, el readme.txt de los plugins vigilados, la lista pública de autores y las veinte últimas páginas y entradas publicadas. También pregunta a WordPress.org si un plugin visto en la página fue retirado por un fallo. Reconoce WordPress, su versión si se muestra, un plugin de la lista por debajo de su versión corregida, una página colada (enlaces a casinos o farmacias, texto en un idioma ajeno a la web, fecha antigua falsa), enlaces ocultos, una redirección, un script codificado, palabras de spam, archivos .php en las subidas y un error crítico. No escanea nada, no envía ninguna carga y guarda el resultado diez minutos en caché, no más. No ve un plugin falso que no carga nada en la página, ni un hackeo que solo afecta a algunos visitantes: solo una revisión desde dentro lo resuelve.',
       },
     ],
   },

@@ -6,7 +6,7 @@ import type {
 } from '~/core/types/DibodevWordPressHackCheck'
 import { PHP_UPDATE_SERVICE_ROUTE_NAME, PHP_UPDATE_SERVICE_TEASER } from '~/core/constants/phpUpdateService/pageShared'
 
-export const WORDPRESS_HACK_CHECK_PAGE_UPDATED_AT: string = '2026-10-26'
+export const WORDPRESS_HACK_CHECK_PAGE_UPDATED_AT: string = '2026-11-01'
 
 export const WORDPRESS_HACK_CHECK_API_PATH: string = '/api/tools/wordpress-hack-check'
 
@@ -19,6 +19,7 @@ export const WORDPRESS_HACK_CONTACT_TOPIC: string = 'wordpress-hack'
 export const WORDPRESS_HACK_VERDICTS: DibodevWordPressHackVerdict[] = [
   'suspiciousSignals',
   'vulnerablePlugin',
+  'closedPlugin',
   'outdatedCore',
   'cleanSurface',
   'notWordPress',
@@ -36,6 +37,7 @@ export const WORDPRESS_HACK_GUIDE_SLUGS: Record<DibodevWordPressHackGuideKey, st
 export const WORDPRESS_HACK_VERDICTS_WITH_GUIDES: DibodevWordPressHackVerdict[] = [
   'suspiciousSignals',
   'vulnerablePlugin',
+  'closedPlugin',
   'outdatedCore',
   'cleanSurface',
 ]
@@ -44,6 +46,7 @@ export const WORDPRESS_HACK_CHECK_RELATED_ARTICLE_SLUGS: string[] = [
   WORDPRESS_HACK_GUIDE_SLUGS.checks,
   WORDPRESS_HACK_GUIDE_SLUGS.updraftplus,
   WORDPRESS_HACK_GUIDE_SLUGS.restore,
+  'php-82-fin-de-vie-31-decembre-2026-que-faire',
   'faille-php-octobre-2026-site-boutique-logiciel-que-faire',
   'reprendre-application-vibe-coding',
 ]

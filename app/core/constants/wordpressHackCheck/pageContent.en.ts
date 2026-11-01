@@ -32,16 +32,16 @@ export const WORDPRESS_HACK_CHECK_PAGE_EN: DibodevWordPressHackCheckPageContent 
     siteLabel: 'Address of your WordPress site',
     sitePlaceholder: 'mycompany.com',
     siteHint:
-      'A domain name is enough. The home page and at most seven small public files are read, as a browser would: nothing is scanned, nothing is stored.',
+      'A domain name is enough. The home page and at most nine small public files are read, as a browser would: nothing is scanned, nothing is stored.',
     submit: 'Check',
     checking: 'Checking…',
     resultLabel: 'Your result',
     idleTitle: 'Enter your site address to start',
     idleText:
-      'The result says whether the site runs on WordPress, which version it shows, whether a watched plugin is still vulnerable, and what a visitor can see that looks wrong.',
+      'The result says whether the site runs on WordPress, which version it shows, whether a plugin is vulnerable or was closed for a flaw, whether a page was slipped in, and what a visitor can see that looks wrong.',
     loadingTitle: 'Reading the site…',
     loadingText:
-      'I read the home page, then the RSS feed, the watched plugins and the public list of authors. A few seconds.',
+      'I read the home page, then the RSS feed, the plugins, the public list of authors and the latest published pages. A few seconds.',
     errorTitles: {
       invalid: 'Address to correct',
       unreachable: 'Site unreachable',
@@ -58,6 +58,7 @@ export const WORDPRESS_HACK_CHECK_PAGE_EN: DibodevWordPressHackCheckPageContent 
     verdictTitles: {
       suspiciousSignals: 'Suspicious signs: check today',
       vulnerablePlugin: '{plugin} {pluginVersion}: vulnerable plugin',
+      closedPlugin: '{closedPlugin}: plugin closed for a flaw',
       outdatedCore: 'WordPress {coreVersion}: not up to date',
       cleanSurface: 'Nothing wrong visible from outside',
       notWordPress: 'This site does not run on WordPress',
@@ -65,9 +66,11 @@ export const WORDPRESS_HACK_CHECK_PAGE_EN: DibodevWordPressHackCheckPageContent 
     },
     verdictTexts: {
       suspiciousSignals:
-        'The home page of {host} shows one or more signs found on hacked sites. It does not prove a hack, but it needs a close look, now.',
+        '{host} shows one or more signs found on hacked sites. It does not prove a hack, but it needs a close look, now.',
       vulnerablePlugin:
         '{host} runs {plugin} version {pluginVersion}, while the known vulnerability is fixed from {fixedVersion}. Until the plugin is updated, the door stays open.',
+      closedPlugin:
+        '{host} loads {closedPlugin}, a plugin that WordPress.org closed in {closedYear} for a security issue. It no longer gets any fix: the flaw stays open as long as the plugin is installed.',
       outdatedCore:
         '{host} shows WordPress {coreVersion}, while the latest version is {latestCoreVersion}. Older branches still get fixes "as a courtesy", but only the latest version is officially supported.',
       cleanSurface:
@@ -104,6 +107,10 @@ export const WORDPRESS_HACK_CHECK_PAGE_EN: DibodevWordPressHackCheckPageContent 
       coreOutdated: 'The version shown ({coreVersion}) is older than the latest release ({latestCoreVersion}).',
       cloudflare:
         'Cloudflare sits in front of the site: its firewall filters part of the attacks, without replacing updates.',
+      injectedContent:
+        'The latest published pages and posts, read through the public WordPress API, show suspicious content (details above): the most common trace of an SEO hack, a page slipped in and often backdated.',
+      closedPlugin:
+        'WordPress.org removed {closedPlugin} from its directory in {closedYear} for a security issue: no update will fix it.',
     },
     coreVersionHiddenLine:
       'WordPress version hidden: that is good practice, and it does not say whether the site is up to date.',
@@ -112,6 +119,19 @@ export const WORDPRESS_HACK_CHECK_PAGE_EN: DibodevWordPressHackCheckPageContent 
       vulnerable: '{plugin} {pluginVersion}: vulnerable, fixed from {fixedVersion}',
       fixed: '{plugin} {pluginVersion}: up to date (fix {fixedVersion} or later)',
       unknownVersion: '{plugin}: present, version not readable from outside',
+    },
+    closedPluginText: '{plugin}: closed on WordPress.org in {closedYear} for a security issue, no fix',
+    injectedContentTitle: 'Suspicious pages and posts',
+    injectedContentLine: '“{title}” ({kind}, {path}): {reasons}',
+    injectedContentKindLabels: {
+      page: 'page',
+      post: 'post',
+    },
+    injectedContentReasonTexts: {
+      spamLinks: 'links to gambling, betting or pharmacy sites ({domains})',
+      foreignLanguage: 'text in {language}',
+      backdated: 'dated {date}, well before the content created just before it',
+      emptyShortPost: 'empty post with a one- or two-letter title',
     },
     stepsTitle: 'To do',
     steps: {
@@ -126,6 +146,12 @@ export const WORDPRESS_HACK_CHECK_PAGE_EN: DibodevWordPressHackCheckPageContent 
         'If it is UpdraftPlus: also delete the key in Settings, UpdraftPlus, Advanced Tools tab, UpdraftCentral. The update does not remove a fake plugin already installed.',
         'Check the accounts, the plugins and the recent files with the guide below.',
         'Turn on automatic plugin updates, or plan a monthly slot to do them.',
+      ],
+      closedPlugin: [
+        'Make a full backup of the site off the server, then find out what {closedPlugin} does on your pages (layout, form, gallery…).',
+        'Replace it with a maintained plugin that does the same job, then delete it: deactivating it is not enough, its files can still be attacked.',
+        'Check the accounts, the plugins and the recent files with the guide below: the flaw may have been used before you got there.',
+        'If the whole layout relies on it (a page builder like KingComposer), compare replacing it with a redesign of the site: I quote both options.',
       ],
       outdatedCore: [
         'Update WordPress from Dashboard, Updates, after a full backup off the server.',
@@ -165,6 +191,7 @@ export const WORDPRESS_HACK_CHECK_PAGE_EN: DibodevWordPressHackCheckPageContent 
     ctaLabels: {
       suspiciousSignals: 'Have my site checked and cleaned',
       vulnerablePlugin: 'Have my site secured',
+      closedPlugin: 'Have this plugin replaced',
       outdatedCore: 'Have my site updated',
       cleanSurface: 'Have my site checked from the inside',
       notWordPress: 'Check my other tools',
@@ -417,7 +444,7 @@ export const WORDPRESS_HACK_CHECK_PAGE_EN: DibodevWordPressHackCheckPageContent 
       {
         question: 'What exactly does this tool do, and what can it not see?',
         answer:
-          'It reads the home page once, as a browser would, then at most seven small public files: the RSS feed when the page hides its version, the readme.txt of the watched plugins, and the public list of authors. It recognises WordPress, its version when shown, a listed plugin below its fixed version, hidden links, a redirection, an encoded script, spam words, .php files in the uploads and a critical error. It scans nothing, sends no payload and keeps the result ten minutes in cache, no more. It cannot see a fake plugin that loads nothing on the page, nor a hack that only targets some visitors: only a check from the inside settles it.',
+          'It reads the home page once, as a browser would, then at most nine small public files: the RSS feed when the page hides its version, the readme.txt of the watched plugins, the public list of authors and the twenty latest published pages and posts. It also asks WordPress.org whether a plugin seen on the page was closed for a flaw. It recognises WordPress, its version when shown, a listed plugin below its fixed version, a page slipped in (links to casinos or pharmacies, text in a language foreign to the site, backdating), hidden links, a redirection, an encoded script, spam words, .php files in the uploads and a critical error. It scans nothing, sends no payload and keeps the result ten minutes in cache, no more. It cannot see a fake plugin that loads nothing on the page, nor a hack that only targets some visitors: only a check from the inside settles it.',
       },
     ],
   },

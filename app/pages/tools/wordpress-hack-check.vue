@@ -23,6 +23,7 @@
         tone="white"
         class="mt-6"
       />
+      <DibodevWebsiteRedesignPrompt :trackingLocation="`${TRACKING_LOCATION}_redesign`" tone="white" class="mt-4" />
     </template>
   </DibodevToolLandingSection>
 
@@ -119,6 +120,7 @@ import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
 import DibodevCallout from '~/components/data-displays/DibodevCallout.vue'
 import DibodevMobileContactBar from '~/components/data-displays/DibodevMobileContactBar.vue'
 import DibodevToolTeaser from '~/components/data-displays/DibodevToolTeaser.vue'
+import DibodevWebsiteRedesignPrompt from '~/components/data-displays/DibodevWebsiteRedesignPrompt.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import DibodevFaqSection from '~/components/sections/DibodevFaqSection.vue'
 import DibodevGuaranteesSection from '~/components/sections/DibodevGuaranteesSection.vue'

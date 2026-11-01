@@ -22,6 +22,7 @@ export const PHP_UPDATE_SERVICE_OFFER_PRICES_EUR: number[] = [0, 190, 390, 690]
 
 /** Articles listed at the bottom of the page; the untranslated or unpublished ones are left out automatically. */
 export const PHP_UPDATE_SERVICE_RELATED_ARTICLE_SLUGS: string[] = [
+  'php-82-fin-de-vie-31-decembre-2026-que-faire',
   'faille-php-octobre-2026-site-boutique-logiciel-que-faire',
   'changer-version-php-ovh-faille-octobre-2026',
   'changer-version-php-o2switch-faille-octobre-2026',

@@ -3,27 +3,42 @@ import type {
   PhpVulnerabilitySignalKey,
 } from '~~/server/types/tools/phpVulnerabilityCheck'
 import type {
+  WordPressClosedPlugin,
+  WordPressClosureCacheEntry,
   WordPressFetchedPage,
   WordPressHackCacheEntry,
   WordPressHackCheckResult,
   WordPressHackSignalKey,
   WordPressHackVerdict,
+  WordPressInjectedContentItem,
   WordPressPluginCheck,
+  WordPressPluginDirectoryAnswer,
   WordPressPluginResult,
   WordPressPluginStatus,
   WordPressProbeOutcome,
+  WordPressPublicEntryKind,
+  WordPressPublicEntryList,
 } from '~~/server/types/tools/wordpressHackCheck'
 import {
   WORDPRESS_KNOWN_BACKDOOR_PLUGIN_SLUGS,
   WORDPRESS_LATEST_CORE_VERSION,
   WORDPRESS_PLUGIN_CHECKS,
 } from '~~/server/constants/wordpressPluginChecks'
+import { WORDPRESS_SPAM_WORDS_REGEX } from '~~/server/constants/wordpressInjectedContent'
 import { PhpVulnerabilityCheckService } from '~~/server/services/PhpVulnerabilityCheckService'
+import { WordPressInjectedContentService } from '~~/server/services/WordPressInjectedContentService'
 
 const CACHE_TTL_MS: number = 10 * 60 * 1000
 const CACHE_MAX_ENTRIES: number = 500
 const PROBE_TIMEOUT_MS: number = 5000
 const MAX_PLUGINS_PROBED: number = 5
+const RECENT_ENTRIES_PER_TYPE: number = 20
+const PLUGIN_DIRECTORY_INFO_URL: string = 'https://api.wordpress.org/plugins/info/1.2/'
+const CLOSURE_CACHE_TTL_MS: number = 24 * 60 * 60 * 1000
+const MAX_CLOSURE_LOOKUPS: number = 12
+const SECURITY_CLOSURE_REASON: string = 'security-issue'
+const MAX_PLUGIN_NAME_LENGTH: number = 60
+const PLUGIN_NAME_TAGLINE_REGEX: RegExp = /\s[–—|-]\s/
 const MAX_EXTERNAL_DOMAINS: number = 3
 const MIN_HIDDEN_EXTERNAL_LINKS: number = 3
 const MAX_HIDDEN_BLOCK_LENGTH: number = 6000
@@ -56,9 +71,6 @@ const CRITICAL_ERROR_REGEX: RegExp =
 const TITLE_REGEX: RegExp = /<title[^>]*>([\s\S]{0,300}?)<\/title>/i
 const DESCRIPTION_REGEX: RegExp = /<meta[^>]+name=["']description["'][^>]+content=["']([^"']{0,400})["']/i
 const HTML_LANG_REGEX: RegExp = /<html[^>]+lang=["']([a-z]{2})/i
-/** Whole words bounded by any letter, accented ones included, so « spécialisée » never reads as « cialis ». */
-const SPAM_WORDS_REGEX: RegExp =
-  /(?<![\p{L}\p{N}])(?:viagra|cialis|levitra|kamagra|online casino|casino online|casino en ligne|bonus casino|online poker|poker en ligne|slot gacor|judi online|togel|replica watches|payday loan|crypto giveaway)(?![\p{L}\p{N}])/iu
 const JAPANESE_CHINESE_KOREAN_CHARACTER_REGEX: RegExp = /[぀-ヿ一-鿿가-힯]/g
 const JAPANESE_CHINESE_KOREAN_LANGS: string[] = ['ja', 'zh', 'ko']
 
@@ -178,6 +190,7 @@ const FAMILIAR_DOMAIN_MARKERS: string[] = [
 ]
 
 const resultCache: Map<string, WordPressHackCacheEntry> = new Map()
+const closureCache: Map<string, WordPressClosureCacheEntry> = new Map()
 
 /** Reads a public WordPress site from outside, as a browser would, and says what a visitor can see. */
 export class WordPressHackCheckService {
@@ -242,6 +255,8 @@ export class WordPressHackCheckService {
         latestCoreVersion: WORDPRESS_LATEST_CORE_VERSION,
         platforms: orderedPlatforms,
         plugins: [],
+        closedPlugins: [],
+        injectedContent: [],
         pluginsSeen: [],
         externalScriptDomains: [],
         usernamesExposed: 0,
@@ -265,14 +280,36 @@ export class WordPressHackCheckService {
     }
     WordPressHackCheckService.detectInjectionSignals(html, siteDomain, signals)
 
-    const [feed, users, pluginResults]: [WordPressProbeOutcome | null, WordPressProbeOutcome, WordPressPluginResult[]] =
-      await Promise.all([
-        coreVersion
-          ? Promise.resolve(null)
-          : WordPressHackCheckService.probe(new URL('/feed/', page.finalUrl).toString()),
-        WordPressHackCheckService.probe(new URL('/wp-json/wp/v2/users?per_page=10', page.finalUrl).toString()),
-        WordPressHackCheckService.readWatchedPlugins(page.finalUrl, pluginsSeen),
-      ])
+    const [feed, users, pluginResults, recentPages, recentPosts, closedPlugins]: [
+      WordPressProbeOutcome | null,
+      WordPressProbeOutcome,
+      WordPressPluginResult[],
+      WordPressPublicEntryList,
+      WordPressPublicEntryList,
+      WordPressClosedPlugin[],
+    ] = await Promise.all([
+      coreVersion
+        ? Promise.resolve(null)
+        : WordPressHackCheckService.probe(new URL('/feed/', page.finalUrl).toString()),
+      WordPressHackCheckService.probe(new URL('/wp-json/wp/v2/users?per_page=10', page.finalUrl).toString()),
+      WordPressHackCheckService.readWatchedPlugins(page.finalUrl, pluginsSeen),
+      WordPressHackCheckService.readPublicEntries(page.finalUrl, 'page'),
+      WordPressHackCheckService.readPublicEntries(page.finalUrl, 'post'),
+      WordPressHackCheckService.readClosedPlugins(pluginsSeen),
+    ])
+    const siteLanguage: string | null = (HTML_LANG_REGEX.exec(html)?.[1] ?? '').toLowerCase() || null
+    const injectedContent: WordPressInjectedContentItem[] = WordPressInjectedContentService.findInjectedContent(
+      [recentPages, recentPosts],
+      siteLanguage,
+      siteDomain,
+    )
+
+    if (injectedContent.length > 0) {
+      signals.add('injectedContent')
+    }
+    if (closedPlugins.length > 0) {
+      signals.add('closedPlugin')
+    }
     const feedVersion: string | null = feed?.ok ? (FEED_VERSION_REGEX.exec(feed.body)?.[1] ?? null) : null
 
     if (!coreVersion && feedVersion) {
@@ -293,12 +330,14 @@ export class WordPressHackCheckService {
     return {
       host,
       finalUrl: page.finalUrl,
-      verdict: WordPressHackCheckService.decideVerdict(signals, pluginResults, isCoreOutdated),
+      verdict: WordPressHackCheckService.decideVerdict(signals, pluginResults, closedPlugins, isCoreOutdated),
       isWordPress: true,
       coreVersion,
       latestCoreVersion: WORDPRESS_LATEST_CORE_VERSION,
       platforms: orderedPlatforms,
       plugins: pluginResults,
+      closedPlugins,
+      injectedContent,
       pluginsSeen,
       externalScriptDomains,
       usernamesExposed,
@@ -308,15 +347,17 @@ export class WordPressHackCheckService {
   }
 
   /**
-   * Decides the verdict: an injection sign wins, then a vulnerable extension, then an outdated core.
+   * Decides the verdict: an injection sign wins, then a vulnerable extension, then one closed for a flaw, then an outdated core.
    * @param {Set<WordPressHackSignalKey>} signals - The signals found.
    * @param {WordPressPluginResult[]} plugins - The watched extensions read on the site.
+   * @param {WordPressClosedPlugin[]} closedPlugins - The extensions of the site closed by WordPress.org for a security issue.
    * @param {boolean} isCoreOutdated - Whether the core is older than the last release.
    * @returns {WordPressHackVerdict} The verdict.
    */
   static decideVerdict(
     signals: Set<WordPressHackSignalKey>,
     plugins: WordPressPluginResult[],
+    closedPlugins: WordPressClosedPlugin[],
     isCoreOutdated: boolean,
   ): WordPressHackVerdict {
     const injectionSignals: WordPressHackSignalKey[] = [
@@ -327,6 +368,7 @@ export class WordPressHackCheckService {
       'phpInUploads',
       'knownBackdoorPlugin',
       'criticalError',
+      'injectedContent',
     ]
 
     if (injectionSignals.some((signal: WordPressHackSignalKey): boolean => signals.has(signal))) {
@@ -334,6 +376,9 @@ export class WordPressHackCheckService {
     }
     if (plugins.some((plugin: WordPressPluginResult): boolean => plugin.status === 'vulnerable')) {
       return 'vulnerablePlugin'
+    }
+    if (closedPlugins.length > 0) {
+      return 'closedPlugin'
     }
     if (isCoreOutdated) {
       return 'outdatedCore'
@@ -496,7 +541,7 @@ export class WordPressHackCheckService {
       foreignCharacters >= MIN_JAPANESE_CHINESE_KOREAN_CHARACTERS_IN_HEAD &&
       !JAPANESE_CHINESE_KOREAN_LANGS.includes(lang)
 
-    return SPAM_WORDS_REGEX.test(headText) || hasForeignScript
+    return WORDPRESS_SPAM_WORDS_REGEX.test(headText) || hasForeignScript
   }
 
   /**
@@ -580,6 +625,143 @@ export class WordPressHackCheckService {
       return 'unknownVersion'
     }
     return WordPressHackCheckService.compareVersions(versionFound, fixedVersion) < 0 ? 'vulnerable' : 'fixed'
+  }
+
+  /**
+   * Reads the latest pages or posts from the public REST API, with their content, or without it when the answer is too long.
+   * @param {string} finalUrl - The address of the home page finally served.
+   * @param {WordPressPublicEntryKind} kind - Pages or posts.
+   * @returns {Promise<WordPressPublicEntryList>} The entries, empty when the API is closed or unreadable.
+   */
+  static async readPublicEntries(finalUrl: string, kind: WordPressPublicEntryKind): Promise<WordPressPublicEntryList> {
+    const routePath: string = `/wp-json/wp/v2/${kind === 'page' ? 'pages' : 'posts'}?per_page=${RECENT_ENTRIES_PER_TYPE}&orderby=id&order=desc&_fields=id,date_gmt,link,title,excerpt`
+    const withContent: WordPressProbeOutcome = await WordPressHackCheckService.probe(
+      new URL(`${routePath},content`, finalUrl).toString(),
+    )
+
+    if (!withContent.ok) {
+      return { entries: [], completeFromId: 0 }
+    }
+    const fullList: WordPressPublicEntryList | null = WordPressInjectedContentService.parseEntries(
+      withContent.body,
+      kind,
+      RECENT_ENTRIES_PER_TYPE,
+    )
+
+    if (fullList) {
+      return fullList
+    }
+    const withoutContent: WordPressProbeOutcome = await WordPressHackCheckService.probe(
+      new URL(routePath, finalUrl).toString(),
+    )
+    const lightList: WordPressPublicEntryList | null = withoutContent.ok
+      ? WordPressInjectedContentService.parseEntries(withoutContent.body, kind, RECENT_ENTRIES_PER_TYPE)
+      : null
+
+    return lightList ?? { entries: [], completeFromId: 0 }
+  }
+
+  /**
+   * Looks up, on WordPress.org, the extensions seen on the home page, and keeps those closed for a security issue.
+   * @param {string[]} pluginsSeen - The extension slugs referenced by the home page.
+   * @returns {Promise<WordPressClosedPlugin[]>} The extensions closed for a security issue.
+   */
+  static async readClosedPlugins(pluginsSeen: string[]): Promise<WordPressClosedPlugin[]> {
+    const closures: (WordPressClosedPlugin | null)[] = await Promise.all(
+      pluginsSeen
+        .slice(0, MAX_CLOSURE_LOOKUPS)
+        .map(
+          (slug: string): Promise<WordPressClosedPlugin | null> => WordPressHackCheckService.readPluginClosure(slug),
+        ),
+    )
+
+    return closures.filter(
+      (closure: WordPressClosedPlugin | null): closure is WordPressClosedPlugin => closure !== null,
+    )
+  }
+
+  /**
+   * Reads the directory page of one extension through the WordPress.org API, from a cache kept a day; never throws.
+   * @param {string} slug - The extension folder name.
+   * @returns {Promise<WordPressClosedPlugin | null>} The closure when the extension was closed for a security issue, else null.
+   */
+  static async readPluginClosure(slug: string): Promise<WordPressClosedPlugin | null> {
+    const now: number = Date.now()
+    const cached: WordPressClosureCacheEntry | undefined = closureCache.get(slug)
+
+    if (cached && cached.expiresAt > now) {
+      return cached.closure
+    }
+    const url: URL = new URL(PLUGIN_DIRECTORY_INFO_URL)
+
+    url.searchParams.set('action', 'plugin_information')
+    url.searchParams.set('request[slug]', slug)
+    url.searchParams.set('request[fields][sections]', '0')
+    url.searchParams.set('request[fields][description]', '0')
+    url.searchParams.set('request[fields][reviews]', '0')
+    url.searchParams.set('request[fields][screenshots]', '0')
+    try {
+      const response: Response = await fetch(url, {
+        signal: AbortSignal.timeout(PROBE_TIMEOUT_MS),
+        headers: { 'user-agent': USER_AGENT, accept: 'application/json' },
+      })
+
+      if (response.status !== 200 && response.status !== 404) {
+        return null
+      }
+      const closure: WordPressClosedPlugin | null = WordPressHackCheckService.parsePluginClosure(
+        slug,
+        await PhpVulnerabilityCheckService.readBodyStart(response),
+      )
+
+      if (closureCache.size >= CACHE_MAX_ENTRIES) {
+        closureCache.clear()
+      }
+      closureCache.set(slug, { closure, expiresAt: now + CLOSURE_CACHE_TTL_MS })
+      return closure
+    } catch {
+      return null
+    }
+  }
+
+  /**
+   * Reads the answer of the WordPress.org extension API: a closed extension answers `closed: true` with the reason.
+   * @param {string} slug - The extension folder name.
+   * @param {string} body - The JSON answer.
+   * @returns {WordPressClosedPlugin | null} The closure when the reason is a security issue, else null.
+   */
+  static parsePluginClosure(slug: string, body: string): WordPressClosedPlugin | null {
+    let parsed: unknown
+
+    try {
+      parsed = JSON.parse(body)
+    } catch {
+      return null
+    }
+    if (typeof parsed !== 'object' || parsed === null) {
+      return null
+    }
+    const answer: WordPressPluginDirectoryAnswer = parsed
+
+    if (answer.closed !== true || answer.reason !== SECURITY_CLOSURE_REASON) {
+      return null
+    }
+    return {
+      slug,
+      name: WordPressHackCheckService.shortenPluginName(typeof answer.name === 'string' ? answer.name : slug),
+      closedDate: typeof answer.closed_date === 'string' ? answer.closed_date : '',
+    }
+  }
+
+  /**
+   * Keeps the name of an extension without its tagline (« Page Builder: KingComposer – Free Drag and Drop… »).
+   * @param {string} name - The name given by WordPress.org, with HTML entities.
+   * @returns {string} A short readable name.
+   */
+  static shortenPluginName(name: string): string {
+    const plainName: string = WordPressInjectedContentService.toPlainText(name)
+
+    return (plainName.split(PLUGIN_NAME_TAGLINE_REGEX)[0] ?? plainName).slice(0, MAX_PLUGIN_NAME_LENGTH)
   }
 
   /**

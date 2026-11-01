@@ -9,7 +9,9 @@ import type {
   DibodevWordPressHackGuideKey,
   DibodevWordPressHackSignalKey,
   DibodevWordPressHackVerdict,
+  DibodevWordPressInjectedContentReason,
   DibodevWordPressPluginStatus,
+  DibodevWordPressPublicEntryKind,
 } from '~/core/types/DibodevWordPressHackCheck'
 
 /** Texts of the checker in one language; templates use the `{placeholders}` filled by the checker. */
@@ -33,6 +35,11 @@ export type DibodevWordPressHackCheckerWording = {
   coreVersionHiddenLine: string
   pluginsTitle: string
   pluginStatusTexts: Record<DibodevWordPressPluginStatus, string>
+  closedPluginText: string
+  injectedContentTitle: string
+  injectedContentLine: string
+  injectedContentKindLabels: Record<DibodevWordPressPublicEntryKind, string>
+  injectedContentReasonTexts: Record<DibodevWordPressInjectedContentReason, string>
   stepsTitle: string
   steps: Record<DibodevWordPressHackVerdict, string[]>
   disclaimer: string
