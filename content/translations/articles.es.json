@@ -24113,6 +24113,33 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si tu web deja de responder del todo, comprueba primero si la caída viene de OVHcloud: ",
+              "type": "text"
+            },
+            {
+              "text": "el estado de OVHcloud en directo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/hebergeur-en-panne/ovh",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " lee su página de estado oficial cada cinco minutos y muestra las incidencias en curso.",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -24790,6 +24817,33 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si tu web deja de responder del todo, comprueba primero si la caída viene de tu hosting: o2switch no publica página de estado, pero ",
+              "type": "text"
+            },
+            {
+              "text": "la página «¿o2switch caído?»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/hebergeur-en-panne/o2switch",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " te dice dónde seguir sus avisos y qué hacer durante la caída.",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -25394,6 +25448,33 @@
           "content": [
             {
               "text": "Al caer el 21 de octubre, no encontré ningún anuncio público de IONOS sobre estas vulnerabilidades, ni en su página de asistencia, ni en la prensa, a diferencia de o2switch, OVHcloud o Infomaniak. Esto no significa que no se esté haciendo nada: en alojamiento compartido, IONOS instala automáticamente las nuevas versiones de PHP en sus servidores para las ramas mantenidas. Esto significa que debe verificar por sí mismo, y que la única respuesta confiable es la del soporte, por escrito: ¿qué versión de PHP usa mi sitio y está instalado el parche del 21 de octubre?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si tu web deja de responder del todo, comprueba primero si la caída viene de IONOS: ",
+              "type": "text"
+            },
+            {
+              "text": "el estado de IONOS en directo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/hebergeur-en-panne/ionos",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " lee su página de estado oficial cada cinco minutos y muestra las incidencias en curso.",
               "type": "text"
             }
           ]
@@ -26020,6 +26101,33 @@
           "content": [
             {
               "text": "Esta es la comunicación más clara del día entre los proveedores de alojamiento. Con dos reservas, sin embargo. Hostinger utiliza LiteSpeed, y la protección anunciada no ha sido detallada. Y sobre todo, «no se requiere ninguna acción» aplica solo a las ramas que el proyecto PHP sigue corrigiendo: si tu sitio está en PHP 8.1 o versiones anteriores, no existe una versión corregida para instalar, y solo un cambio de versión te protegerá realmente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si tu web deja de responder del todo, comprueba primero si la caída viene de Hostinger: ",
+              "type": "text"
+            },
+            {
+              "text": "el estado de Hostinger en directo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/hebergeur-en-panne/hostinger",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " lee su página de estado oficial cada cinco minutos y muestra las incidencias en curso.",
               "type": "text"
             }
           ]
@@ -26762,6 +26870,33 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si tu web deja de responder del todo, comprueba primero si la caída viene de Infomaniak: ",
+              "type": "text"
+            },
+            {
+              "text": "el estado de Infomaniak en directo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/hebergeur-en-panne/infomaniak",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " lee su página de estado oficial cada cinco minutos y muestra las incidencias en curso.",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -27329,6 +27464,33 @@
           "content": [
             {
               "text": "Dos reservas, las mismas que para otros proveedores de alojamiento. Las medidas de emergencia no reemplazan la versión corregida, y un sitio que permanezca en una rama que el proyecto PHP ya no soporta, como la 8.1 o versiones anteriores, no recibirá ningún parche, a menos que PlanetHoster anuncie un parche propio, algo que la página no menciona.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si tu web deja de responder del todo, comprueba primero si la caída viene de tu hosting: PlanetHoster no publica página de estado, pero ",
+              "type": "text"
+            },
+            {
+              "text": "la página «¿PlanetHoster caído?»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/hebergeur-en-panne/planethoster",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " te dice dónde seguir sus avisos y qué hacer durante la caída.",
               "type": "text"
             }
           ]

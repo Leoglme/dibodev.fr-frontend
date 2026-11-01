@@ -24111,6 +24111,33 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If your site stops responding altogether, first check whether the outage comes from OVHcloud: ",
+              "type": "text"
+            },
+            {
+              "text": "OVHcloud's live status",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/hebergeur-en-panne/ovh",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " reads its official status page every five minutes and lists the ongoing incidents.",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -24788,6 +24815,33 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If your site stops responding altogether, first check whether the outage comes from your host: o2switch publishes no status page, but ",
+              "type": "text"
+            },
+            {
+              "text": "the “o2switch down?” page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/hebergeur-en-panne/o2switch",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " tells you where to follow its announcements and what to do during the outage.",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -25392,6 +25446,33 @@
           "content": [
             {
               "text": "On the evening of October 21, I found no public announcement from IONOS regarding these vulnerabilities, neither on its support page nor in the press, unlike o2switch, OVHcloud, or Infomaniak. This doesn’t mean nothing is being done: in shared hosting, IONOS itself installs new PHP versions on its servers for maintained branches. This means you must check for yourself, and the only reliable answer is from support, in writing: which PHP version is my site using, and is the October 21 patch installed?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If your site stops responding altogether, first check whether the outage comes from IONOS: ",
+              "type": "text"
+            },
+            {
+              "text": "IONOS's live status",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/hebergeur-en-panne/ionos",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " reads its official status page every five minutes and lists the ongoing incidents.",
               "type": "text"
             }
           ]
@@ -26018,6 +26099,33 @@
           "content": [
             {
               "text": "This is the clearest communication of the day among hosting providers. Two caveats remain, however. Hostinger runs on LiteSpeed, and the announced protection has not been detailed. Most importantly, ‘no action required’ applies only to the PHP branches that are still being patched: if your site is on 8.1 or an older version, there is no patched version available to install, and only a version change truly protects you.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If your site stops responding altogether, first check whether the outage comes from Hostinger: ",
+              "type": "text"
+            },
+            {
+              "text": "Hostinger's live status",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/hebergeur-en-panne/hostinger",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " reads its official status page every five minutes and lists the ongoing incidents.",
               "type": "text"
             }
           ]
@@ -26760,6 +26868,33 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If your site stops responding altogether, first check whether the outage comes from Infomaniak: ",
+              "type": "text"
+            },
+            {
+              "text": "Infomaniak's live status",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/hebergeur-en-panne/infomaniak",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " reads its official status page every five minutes and lists the ongoing incidents.",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -27327,6 +27462,33 @@
           "content": [
             {
               "text": "Two caveats, the same as with other hosts. Emergency measures do not replace the corrected version, and a site remaining on a branch no longer maintained by the PHP project, such as 8.1 or older, will not receive a fix unless PlanetHoster announces a custom fix, which the page does not mention.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If your site stops responding altogether, first check whether the outage comes from your host: PlanetHoster publishes no status page, but ",
+              "type": "text"
+            },
+            {
+              "text": "the “PlanetHoster down?” page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/hebergeur-en-panne/planethoster",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " tells you where to follow its announcements and what to do during the outage.",
               "type": "text"
             }
           ]
