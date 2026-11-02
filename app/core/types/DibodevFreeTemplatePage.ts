@@ -80,9 +80,10 @@ export type DibodevFreeTemplatePageContent = {
   }
 }
 
-/** `teaser` is the trade test linked under the rules and from the closing call to action (its route is the trade tool page). */
+/** `teaser` is the trade test linked under the rules and from the closing call to action (its route is the trade tool page); `tradeWebsiteTeaser` the website page of the trade, under the rules too. */
 export type DibodevFreeTemplatePageSectionsProps = {
   page: DibodevFreeTemplatePageContent
   teaser: DibodevToolTeaserContent
   trackingLocation: string
+  tradeWebsiteTeaser: DibodevToolTeaserContent | null
 }

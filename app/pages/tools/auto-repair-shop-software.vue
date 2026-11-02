@@ -1,5 +1,10 @@
 <template>
-  <DibodevSoftwareToolPageSections :page="page" :quiz="quiz" trackingLocation="auto_repair_shop_software" />
+  <DibodevSoftwareToolPageSections
+    :page="page"
+    :quiz="quiz"
+    trackingLocation="auto_repair_shop_software"
+    :tradeWebsiteTeaser="GARAGE_WEBSITE_TEASER"
+  />
 </template>
 
 <script lang="ts" setup>
@@ -9,6 +14,7 @@ import type { DibodevSoftwareToolPageContent } from '~/core/types/DibodevSoftwar
 import DibodevSoftwareToolPageSections from '~/components/sections/DibodevSoftwareToolPageSections.vue'
 import { AUTO_REPAIR_SHOP_SOFTWARE_PAGES } from '~/core/constants/tools/autoRepairShopSoftwarePage'
 import { AUTO_REPAIR_SHOP_SOFTWARE_QUIZZES } from '~/core/constants/tools/autoRepairShopSoftwareQuiz'
+import { GARAGE_WEBSITE_TEASER } from '~/core/constants/tradeWebsites/tradeWebsiteTeasers'
 
 // The English and Spanish pages describe the French market too, and say so (publishers and garage rules are French).
 definePageMeta({

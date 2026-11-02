@@ -2,6 +2,7 @@
   <DibodevFreeTemplatePageSections
     :page="page"
     :teaser="CARPENTRY_SOFTWARE_TEASER"
+    :tradeWebsiteTeaser="CARPENTER_WEBSITE_TEASER"
     :trackingLocation="FREE_TEMPLATE_PAGE_TRACKING_LOCATION"
   />
 </template>
@@ -14,6 +15,7 @@ import DibodevFreeTemplatePageSections from '~/components/sections/DibodevFreeTe
 import { FREE_TEMPLATE_PAGE_TRACKING_LOCATION } from '~/core/constants/freeTemplates/freeTemplateCatalog'
 import { CARPENTRY_CUTTING_LIST_TEMPLATE_PAGES } from '~/core/constants/freeTemplates/carpentryCuttingListPage'
 import { CARPENTRY_SOFTWARE_TEASER } from '~/core/constants/tools/toolTeasers'
+import { CARPENTER_WEBSITE_TEASER } from '~/core/constants/tradeWebsites/tradeWebsiteTeasers'
 
 definePageMeta({
   i18n: {

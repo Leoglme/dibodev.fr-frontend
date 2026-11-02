@@ -85,6 +85,12 @@
     <template #footer>
       <div class="grid gap-4">
         <DibodevToolTeaser
+          v-if="props.tradeWebsiteTeaser"
+          :teaser="props.tradeWebsiteTeaser"
+          :trackingLocation="props.trackingLocation"
+          tone="white"
+        />
+        <DibodevToolTeaser
           :teaser="BUSINESS_SOFTWARE_PAGE_TEASER"
           :trackingLocation="props.trackingLocation"
           tone="white"
@@ -134,6 +140,7 @@ import type {
   DibodevSoftwareToolPageContent,
   DibodevSoftwareToolPageSectionsProps,
 } from '~/core/types/DibodevSoftwareToolPage'
+import type { DibodevToolTeaserContent } from '~/core/types/DibodevToolTeaser'
 import { computed } from 'vue'
 import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
 import DibodevCallout from '~/components/data-displays/DibodevCallout.vue'
@@ -176,6 +183,10 @@ const props: DibodevSoftwareToolPageSectionsProps = defineProps({
   trackingLocation: {
     type: String as PropType<string>,
     required: true,
+  },
+  tradeWebsiteTeaser: {
+    type: Object as PropType<DibodevToolTeaserContent | null>,
+    default: null,
   },
 })
 

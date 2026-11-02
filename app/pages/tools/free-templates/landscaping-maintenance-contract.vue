@@ -2,6 +2,7 @@
   <DibodevFreeTemplatePageSections
     :page="page"
     :teaser="LANDSCAPING_SOFTWARE_TEASER"
+    :tradeWebsiteTeaser="LANDSCAPER_WEBSITE_TEASER"
     :trackingLocation="FREE_TEMPLATE_PAGE_TRACKING_LOCATION"
   />
 </template>
@@ -14,6 +15,7 @@ import DibodevFreeTemplatePageSections from '~/components/sections/DibodevFreeTe
 import { FREE_TEMPLATE_PAGE_TRACKING_LOCATION } from '~/core/constants/freeTemplates/freeTemplateCatalog'
 import { LANDSCAPER_MAINTENANCE_CONTRACT_TEMPLATE_PAGES } from '~/core/constants/freeTemplates/landscaperMaintenanceContractPage'
 import { LANDSCAPING_SOFTWARE_TEASER } from '~/core/constants/tools/toolTeasers'
+import { LANDSCAPER_WEBSITE_TEASER } from '~/core/constants/tradeWebsites/tradeWebsiteTeasers'
 
 definePageMeta({
   i18n: {

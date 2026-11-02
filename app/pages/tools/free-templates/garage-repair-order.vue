@@ -2,6 +2,7 @@
   <DibodevFreeTemplatePageSections
     :page="page"
     :teaser="AUTO_REPAIR_SHOP_SOFTWARE_TEASER"
+    :tradeWebsiteTeaser="GARAGE_WEBSITE_TEASER"
     :trackingLocation="FREE_TEMPLATE_PAGE_TRACKING_LOCATION"
   />
 </template>
@@ -14,6 +15,7 @@ import DibodevFreeTemplatePageSections from '~/components/sections/DibodevFreeTe
 import { FREE_TEMPLATE_PAGE_TRACKING_LOCATION } from '~/core/constants/freeTemplates/freeTemplateCatalog'
 import { GARAGE_REPAIR_ORDER_TEMPLATE_PAGES } from '~/core/constants/freeTemplates/garageRepairOrderPage'
 import { AUTO_REPAIR_SHOP_SOFTWARE_TEASER } from '~/core/constants/tools/toolTeasers'
+import { GARAGE_WEBSITE_TEASER } from '~/core/constants/tradeWebsites/tradeWebsiteTeasers'
 
 definePageMeta({
   i18n: {

@@ -1,5 +1,10 @@
 <template>
-  <DibodevSoftwareToolPageSections :page="page" :quiz="quiz" trackingLocation="landscaping_software" />
+  <DibodevSoftwareToolPageSections
+    :page="page"
+    :quiz="quiz"
+    trackingLocation="landscaping_software"
+    :tradeWebsiteTeaser="LANDSCAPER_WEBSITE_TEASER"
+  />
 </template>
 
 <script lang="ts" setup>
@@ -10,6 +15,7 @@ import type { DibodevSoftwareToolPageContent } from '~/core/types/DibodevSoftwar
 import DibodevSoftwareToolPageSections from '~/components/sections/DibodevSoftwareToolPageSections.vue'
 import { LANDSCAPING_SOFTWARE_PAGES } from '~/core/constants/tools/landscapingSoftwarePage'
 import { LANDSCAPING_SOFTWARE_QUIZZES } from '~/core/constants/tools/landscapingSoftwareQuiz'
+import { LANDSCAPER_WEBSITE_TEASER } from '~/core/constants/tradeWebsites/tradeWebsiteTeasers'
 
 definePageMeta({
   i18n: {

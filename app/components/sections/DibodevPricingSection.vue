@@ -19,6 +19,20 @@
           <h3 class="text-base font-medium text-gray-200">{{ offer.title }}</h3>
           <p class="text-2xl font-medium text-gray-100 sm:text-[26px]">{{ offer.price }}</p>
           <p class="text-[15px] leading-6 text-gray-200">{{ offer.description }}</p>
+          <NuxtLink
+            v-if="offer.link"
+            :to="offer.link.to"
+            class="text-primary hover:text-primary-dark tap-area w-fit text-[15px] leading-6 font-medium transition-colors"
+          >
+            {{ offer.link.label }}&nbsp;<DibodevIcon
+              name="ArrowRight"
+              mode="stroke"
+              :width="16"
+              :height="16"
+              class="align-[-3px]"
+              aria-hidden="true"
+            />
+          </NuxtLink>
         </li>
       </ul>
 

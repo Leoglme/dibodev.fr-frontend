@@ -57,7 +57,15 @@
     tone="tint"
   >
     <template #footer>
-      <DibodevToolTeaser :teaser="props.teaser" :trackingLocation="props.trackingLocation" tone="white" />
+      <div class="grid gap-4">
+        <DibodevToolTeaser :teaser="props.teaser" :trackingLocation="props.trackingLocation" tone="white" />
+        <DibodevToolTeaser
+          v-if="props.tradeWebsiteTeaser"
+          :teaser="props.tradeWebsiteTeaser"
+          :trackingLocation="props.trackingLocation"
+          tone="white"
+        />
+      </div>
     </template>
   </DibodevSourcedFactsSection>
 
@@ -119,6 +127,10 @@ const props: DibodevFreeTemplatePageSectionsProps = defineProps({
   trackingLocation: {
     type: String as PropType<string>,
     required: true,
+  },
+  tradeWebsiteTeaser: {
+    type: Object as PropType<DibodevToolTeaserContent | null>,
+    default: null,
   },
 })
 

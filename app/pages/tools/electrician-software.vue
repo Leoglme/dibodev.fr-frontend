@@ -1,5 +1,10 @@
 <template>
-  <DibodevSoftwareToolPageSections :page="page" :quiz="quiz" trackingLocation="electrician_software" />
+  <DibodevSoftwareToolPageSections
+    :page="page"
+    :quiz="quiz"
+    trackingLocation="electrician_software"
+    :tradeWebsiteTeaser="ELECTRICIAN_WEBSITE_TEASER"
+  />
 </template>
 
 <script lang="ts" setup>
@@ -9,6 +14,7 @@ import type { DibodevSoftwareToolPageContent } from '~/core/types/DibodevSoftwar
 import DibodevSoftwareToolPageSections from '~/components/sections/DibodevSoftwareToolPageSections.vue'
 import { ELECTRICIAN_SOFTWARE_PAGES } from '~/core/constants/tools/electricianSoftwarePage'
 import { ELECTRICIAN_SOFTWARE_QUIZZES } from '~/core/constants/tools/electricianSoftwareQuiz'
+import { ELECTRICIAN_WEBSITE_TEASER } from '~/core/constants/tradeWebsites/tradeWebsiteTeasers'
 
 definePageMeta({
   i18n: {

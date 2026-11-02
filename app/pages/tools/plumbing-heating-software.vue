@@ -1,5 +1,10 @@
 <template>
-  <DibodevSoftwareToolPageSections :page="page" :quiz="quiz" trackingLocation="plumbing_heating_software" />
+  <DibodevSoftwareToolPageSections
+    :page="page"
+    :quiz="quiz"
+    trackingLocation="plumbing_heating_software"
+    :tradeWebsiteTeaser="PLUMBER_WEBSITE_TEASER"
+  />
 </template>
 
 <script lang="ts" setup>
@@ -9,6 +14,7 @@ import type { DibodevSoftwareToolPageContent } from '~/core/types/DibodevSoftwar
 import DibodevSoftwareToolPageSections from '~/components/sections/DibodevSoftwareToolPageSections.vue'
 import { PLUMBING_HEATING_SOFTWARE_PAGES } from '~/core/constants/tools/plumbingHeatingSoftwarePage'
 import { PLUMBING_HEATING_SOFTWARE_QUIZZES } from '~/core/constants/tools/plumbingHeatingSoftwareQuiz'
+import { PLUMBER_WEBSITE_TEASER } from '~/core/constants/tradeWebsites/tradeWebsiteTeasers'
 
 // The English and Spanish pages describe the French market too, and say so (publishers, VAT and boiler rules are French).
 definePageMeta({

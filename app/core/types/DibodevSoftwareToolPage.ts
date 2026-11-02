@@ -5,6 +5,7 @@ import type { DibodevFreeTemplateSectionContent } from '~/core/types/DibodevFree
 import type { DibodevPricedProduct } from '~/core/types/DibodevPriceListSection'
 import type { DibodevSourcedFact } from '~/core/types/DibodevSourcedFactsSection'
 import type { DibodevToolShareImageIcon } from '~/core/types/DibodevToolShareImage'
+import type { DibodevToolTeaserContent } from '~/core/types/DibodevToolTeaser'
 
 export type DibodevSourceReference = {
   name: string
@@ -110,4 +111,5 @@ export type DibodevSoftwareToolPageSectionsProps = {
   page: DibodevSoftwareToolPageContent
   quiz: DibodevQuizDefinition
   trackingLocation: string
+  tradeWebsiteTeaser: DibodevToolTeaserContent | null
 }

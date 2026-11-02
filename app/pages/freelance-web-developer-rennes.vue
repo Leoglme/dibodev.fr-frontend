@@ -117,7 +117,7 @@ import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
 import type { DibodevFaqQuestion } from '~/core/types/DibodevFaqSection'
 import type { DibodevGuarantee } from '~/core/types/DibodevGuaranteesSection'
 import type { DibodevMethodStep } from '~/core/types/DibodevMethodSection'
-import type { DibodevPricingOffer } from '~/core/types/DibodevPricingSection'
+import type { DibodevPricingOffer, DibodevPricingOfferLink } from '~/core/types/DibodevPricingSection'
 import type { DibodevStatItemProps } from '~/core/types/DibodevStat'
 import { computed } from 'vue'
 import DibodevLandingSection from '~/components/sections/DibodevLandingSection.vue'
@@ -144,6 +144,7 @@ import {
   FOUNDER_PORTRAIT_SRC,
   FOUNDER_PORTRAIT_SRCSET,
 } from '~/core/constants/founderPortrait'
+import { TRADE_WEBSITES_HUB_ROUTE_NAME } from '~/core/constants/tradeWebsites/tradeWebsiteCatalog'
 import { ArticleSelectionUtils } from '~/core/utils/ArticleSelectionUtils'
 
 definePageMeta({
@@ -183,6 +184,7 @@ const WORKING_STYLE_KEYS: string[] = ['remote', 'singleContact', 'ownership']
 /** Offers of the home pricing texts (`home.pricing.offers.*`), the custom software card being the emphasised one. */
 const PRICING_OFFER_KEYS: string[] = ['website', 'automation', 'software', 'maintenance']
 const HIGHLIGHTED_PRICING_OFFER_KEY: string = 'software'
+const TRADE_WEBSITES_PRICING_OFFER_KEY: string = 'website'
 const PRICING_NOTE_KEYS: string[] = ['dailyRateNote', 'freeQuoteNote', 'vatNote']
 const FAQ_QUESTION_KEYS: string[] = ['rate', 'delay', 'agency', 'onSite', 'stack', 'afterLaunch', 'area']
 const METHOD_STEP_KEYS: string[] = ['discovery', 'quote', 'build', 'support']
@@ -211,6 +213,13 @@ const workingStyleItems: ComputedRef<DibodevGuarantee[]> = computed((): DibodevG
   ),
 )
 
+const tradeWebsitesLink: ComputedRef<DibodevPricingOfferLink> = computed(
+  (): DibodevPricingOfferLink => ({
+    label: t('freelanceRennesPage.pricing.tradeWebsitesLink'),
+    to: localePath({ name: TRADE_WEBSITES_HUB_ROUTE_NAME }),
+  }),
+)
+
 const pricingOffers: ComputedRef<DibodevPricingOffer[]> = computed((): DibodevPricingOffer[] =>
   PRICING_OFFER_KEYS.map(
     (key: string): DibodevPricingOffer => ({
@@ -218,6 +227,7 @@ const pricingOffers: ComputedRef<DibodevPricingOffer[]> = computed((): DibodevPr
       price: t(`home.pricing.offers.${key}.price`),
       description: t(`home.pricing.offers.${key}.description`),
       isHighlighted: key === HIGHLIGHTED_PRICING_OFFER_KEY,
+      link: key === TRADE_WEBSITES_PRICING_OFFER_KEY ? tradeWebsitesLink.value : null,
     }),
   ),
 )

@@ -1495,7 +1495,8 @@
       "title": "Precios conocidos antes de empezar",
       "intro": "Cada proyecto se presupuesta a precio cerrado en un presupuesto gratuito. Estos son los rangos vistos en mis proyectos, para situarte antes incluso de escribirme.",
       "marketNote": "Para comparar, el barómetro «{barometer}» recoge los precios publicados por freelances, agencias y creadores de webs franceses.",
-      "marketNoteLink": "precio de una página web"
+      "marketNoteLink": "precio de una página web",
+      "tradeWebsitesLink": "O una web con plantilla por 290 €, por oficio"
     },
     "projects": {
       "eyebrow": "Proyectos",

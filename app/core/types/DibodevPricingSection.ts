@@ -1,6 +1,11 @@
 import type { DibodevLandingSecondaryCta } from '~/core/types/DibodevLandingSection'
 import type { DibodevSectionTone } from '~/core/types/DibodevSectionTone'
 
+export type DibodevPricingOfferLink = {
+  label: string
+  to: string
+}
+
 /**
  * One pricing offer displayed as a card.
  * @type {DibodevPricingOffer}
@@ -8,12 +13,14 @@ import type { DibodevSectionTone } from '~/core/types/DibodevSectionTone'
  * @property {string} price - Price or price range, already formatted.
  * @property {string} description - What is included and what makes the price vary.
  * @property {boolean} isHighlighted - Whether the card gets the emphasised (violet) border.
+ * @property {DibodevPricingOfferLink | null} link - Optional link under the description, towards a related page.
  */
 export type DibodevPricingOffer = {
   title: string
   price: string
   description: string
   isHighlighted: boolean
+  link?: DibodevPricingOfferLink | null
 }
 
 /**

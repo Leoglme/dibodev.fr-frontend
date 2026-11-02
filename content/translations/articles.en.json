@@ -1295,6 +1295,30 @@
             {
               "text": "A custom website allows you to showcase your work, demonstrate your expertise, and stand out from the competition. It can also help you generate leads and increase your sales.",
               "type": "text"
+            },
+            {
+              "text": " To see what yours would look like, open the ",
+              "type": "text"
+            },
+            {
+              "text": "website for carpenters",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/site-internet-menuisier",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " page: build it in 2 minutes on a real template, €290 paid once, online within 48 hours, or custom-made from €1,500.",
+              "type": "text"
             }
           ]
         },
@@ -2039,6 +2063,30 @@
             {
               "text": "As a freelance developer based in Rennes, I offer custom solutions for tradespeople and SMEs. I can help you design a management software tailored to your specific needs, to optimize your business and provide flawless service to your customers.",
               "type": "text"
+            },
+            {
+              "text": " To get found, see my ",
+              "type": "text"
+            },
+            {
+              "text": "website for plumbers",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/site-internet-plombier",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " page: build your site in 2 minutes on a real template, online within 48 hours for €290 paid once.",
+              "type": "text"
             }
           ]
         },
@@ -2542,6 +2590,30 @@
           "content": [
             {
               "text": "And those same details help beyond the job site: when the accountant asks for documents, when a client disputes an invoice, when you want to show a successful project to a potential client. Everything’s there, clean and retrievable.",
+              "type": "text"
+            },
+            {
+              "text": " To show your best gardens before the first meeting, see the ",
+              "type": "text"
+            },
+            {
+              "text": "website for landscapers",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/site-internet-paysagiste",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " page: yours in 2 minutes on a real template, for €290 paid once.",
               "type": "text"
             }
           ]
@@ -3216,6 +3288,30 @@
           "content": [
             {
               "text": "The rest—accounting, inventory, team scheduling—we only add it if you genuinely need it. We start with your daily reality, not a checklist of features.",
+              "type": "text"
+            },
+            {
+              "text": " And if what you need first is a website, see the ",
+              "type": "text"
+            },
+            {
+              "text": "website for electricians",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/site-internet-electricien",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " page: yours in 2 minutes on a real template, €290 paid once, online within 48 hours.",
               "type": "text"
             }
           ]
@@ -13401,6 +13497,30 @@
             {
               "text": "The rest—parts inventory, reminders, accounting—we only add if you truly need it. We start from your daily reality.",
               "type": "text"
+            },
+            {
+              "text": " And if what you lack most is a website, see the ",
+              "type": "text"
+            },
+            {
+              "text": "website for auto repair shops",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/site-internet-garage",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " page: yours in 2 minutes on a real template, €290 paid once, online within 48 hours.",
+              "type": "text"
             }
           ]
         },
@@ -14024,6 +14144,30 @@
           "content": [
             {
               "text": "I’ll give you some tips to optimize your website and attract more local customers.",
+              "type": "text"
+            },
+            {
+              "text": " And if your restaurant has no website yet, see the ",
+              "type": "text"
+            },
+            {
+              "text": "website for restaurants",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/site-internet-restaurant",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " page: yours in 2 minutes on a real template, for €290 paid once.",
               "type": "text"
             }
           ]
@@ -14795,6 +14939,30 @@
           "content": [
             {
               "text": "Optimizing your website to attract more local customers is essential for the success of your craft business. By following these tips, you can improve your visibility, credibility, and accessibility, and thus attract more local clients.",
+              "type": "text"
+            },
+            {
+              "text": " To see yours before deciding, the ",
+              "type": "text"
+            },
+            {
+              "text": "websites by trade",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/site-internet-par-metier",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " page builds a real site under your name in 2 minutes, for eight trades.",
               "type": "text"
             }
           ]
