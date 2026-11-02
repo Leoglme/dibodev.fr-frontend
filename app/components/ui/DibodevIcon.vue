@@ -32,6 +32,7 @@ import BatteryCharging from '~/components/icons/BatteryCharging.vue'
 import Bell from '~/components/icons/Bell.vue'
 import Bike from '~/components/icons/Bike.vue'
 import CalendarCheck from '~/components/icons/CalendarCheck.vue'
+import Camera from '~/components/icons/Camera.vue'
 import Car from '~/components/icons/Car.vue'
 import Check from '~/components/icons/Check.vue'
 import CheckCircle from '~/components/icons/CheckCircle.vue'
@@ -44,6 +45,7 @@ import Copy from '~/components/icons/Copy.vue'
 import Disc from '~/components/icons/Disc.vue'
 import DoubleChevronsDown from '~/components/icons/DoubleChevronsDown.vue'
 import Download from '~/components/icons/Download.vue'
+import Euro from '~/components/icons/Euro.vue'
 import Droplets from '~/components/icons/Droplets.vue'
 import Dumbbell from '~/components/icons/Dumbbell.vue'
 import Expand from '~/components/icons/Expand.vue'
@@ -54,7 +56,9 @@ import FileSpreadsheet from '~/components/icons/FileSpreadsheet.vue'
 import Flag from '~/components/icons/Flag.vue'
 import Flame from '~/components/icons/Flame.vue'
 import Github from '~/components/icons/Github.vue'
+import Image from '~/components/icons/Image.vue'
 import Globe from '~/components/icons/Globe.vue'
+import Hammer from '~/components/icons/Hammer.vue'
 import Info from '~/components/icons/Info.vue'
 import KeyRound from '~/components/icons/KeyRound.vue'
 import Laptop from '~/components/icons/Laptop.vue'
@@ -66,9 +70,11 @@ import Menu from '~/components/icons/Menu.vue'
 import MessageCircle from '~/components/icons/MessageCircle.vue'
 import Monitor from '~/components/icons/Monitor.vue'
 import Moon from '~/components/icons/Moon.vue'
+import Palette from '~/components/icons/Palette.vue'
 import PartyPopper from '~/components/icons/PartyPopper.vue'
 import Phone from '~/components/icons/Phone.vue'
 import RotateCcw from '~/components/icons/RotateCcw.vue'
+import Scissors from '~/components/icons/Scissors.vue'
 import Search from '~/components/icons/Search.vue'
 import Send from '~/components/icons/Send.vue'
 import Server from '~/components/icons/Server.vue'
@@ -84,6 +90,7 @@ import Star from '~/components/icons/Star.vue'
 import Store from '~/components/icons/Store.vue'
 import Tent from '~/components/icons/Tent.vue'
 import Truck from '~/components/icons/Truck.vue'
+import Utensils from '~/components/icons/Utensils.vue'
 import Wrench from '~/components/icons/Wrench.vue'
 import X from '~/components/icons/X.vue'
 import XCircle from '~/components/icons/XCircle.vue'
@@ -137,6 +144,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   Bell,
   Bike,
   CalendarCheck,
+  Camera,
   Car,
   Check,
   CheckCircle,
@@ -149,6 +157,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   Disc,
   DoubleChevronsDown,
   Download,
+  Euro,
   Droplets,
   Dumbbell,
   Expand,
@@ -159,7 +168,9 @@ const iconsDictionary: Record<string, IconComponent> = {
   Flag,
   Flame,
   Github,
+  Image,
   Globe,
+  Hammer,
   Info,
   KeyRound,
   Laptop,
@@ -171,9 +182,11 @@ const iconsDictionary: Record<string, IconComponent> = {
   MessageCircle,
   Monitor,
   Moon,
+  Palette,
   PartyPopper,
   Phone,
   RotateCcw,
+  Scissors,
   Search,
   Send,
   Server,
@@ -189,6 +202,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   Store,
   Tent,
   Truck,
+  Utensils,
   Wrench,
   X,
   XCircle,

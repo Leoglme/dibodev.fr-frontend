@@ -63,6 +63,14 @@
         <section
           class="grid gap-4 rounded-xl border border-gray-300 bg-white p-6 text-left text-base leading-relaxed sm:p-8"
         >
+          <h2 class="text-xl font-medium text-gray-100">{{ $t('privacy.siteDemoRequests.title') }}</h2>
+          <p class="text-gray-200">{{ $t('privacy.siteDemoRequests.paragraph1') }}</p>
+          <p class="text-gray-200">{{ $t('privacy.siteDemoRequests.paragraph2') }}</p>
+        </section>
+
+        <section
+          class="grid gap-4 rounded-xl border border-gray-300 bg-white p-6 text-left text-base leading-relaxed sm:p-8"
+        >
           <h2 class="text-xl font-medium text-gray-100">{{ $t('privacy.rights.title') }}</h2>
           <p class="text-gray-200">
             {{ $t('privacy.rights.content') }}

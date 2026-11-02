@@ -11,3 +11,15 @@ export const HOME_REPAIR_QUOTE_RULES_SOURCE: DibodevSourceReference = {
   name: 'Institut national de la consommation',
   url: 'https://www.inc-conso.fr/content/prestations-de-depannage-de-reparation-et-dentretien-une-meilleure-information-sur-les-prix',
 }
+
+/** Prices of home repair jobs: hourly rate, flat rates and travel costs posted at the premises and easy to find online (order of 24 January 2017, articles 2 and 3). */
+export const HOME_REPAIR_PRICE_DISPLAY_SOURCE: DibodevSourceReference = {
+  name: 'Légifrance',
+  url: 'https://www.legifrance.gouv.fr/jorf/id/JORFSCTA000033935539',
+}
+
+/** Consumer mediation: every business selling to consumers names a mediator and shows its details on its website. */
+export const CONSUMER_MEDIATION_SOURCE: DibodevSourceReference = {
+  name: 'Entreprendre.Service-Public.fr',
+  url: 'https://entreprendre.service-public.gouv.fr/vosdroits/F33338',
+}

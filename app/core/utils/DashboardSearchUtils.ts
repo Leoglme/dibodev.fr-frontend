@@ -9,7 +9,7 @@ import type {
   SearchPerformanceResponse,
   SearchPerformanceTrendPoint,
 } from '~~/server/types/dashboard/searchPerformance'
-import { DASHBOARD_TOOL_HUB_ROUTE_NAME, DASHBOARD_TOOL_PAGES } from '~/core/constants/dashboardToolPages'
+import { DASHBOARD_TOOL_PAGES, DASHBOARD_TOOL_ROUTE_FAMILIES } from '~/core/constants/dashboardToolPages'
 import { DashboardFormatUtils } from '~/core/utils/DashboardFormatUtils'
 import { DashboardIndexingUtils } from '~/core/utils/DashboardIndexingUtils'
 
@@ -211,7 +211,7 @@ export class DashboardSearchUtils {
   }
 
   /**
-   * Localized routes of the tool pages read from the router, whose names end with `___<locale>` (`tools` is the hub, `tools-<tool>` each test).
+   * Localized routes of the tool pages read from the router, whose names end with `___<locale>` (`tools` is the hub, `tools-<tool>` each test, the same for the trade websites).
    *
    * @param {RouteRecordNormalized[]} routes - Every route of the app.
    * @returns {DashboardToolPageRoute[]} One entry per tool page and language.
@@ -223,9 +223,9 @@ export class DashboardSearchUtils {
         continue
       }
       const [routeName, locale]: string[] = route.name.split(DashboardSearchUtils.ROUTE_LOCALE_SEPARATOR)
-      const isToolRoute: boolean =
-        routeName === DASHBOARD_TOOL_HUB_ROUTE_NAME ||
-        (routeName?.startsWith(`${DASHBOARD_TOOL_HUB_ROUTE_NAME}-`) ?? false)
+      const isToolRoute: boolean = DASHBOARD_TOOL_ROUTE_FAMILIES.some(
+        (family: string): boolean => routeName === family || (routeName?.startsWith(`${family}-`) ?? false),
+      )
 
       if (!routeName || !isToolRoute || !DashboardSearchUtils.isSiteLocale(locale)) {
         continue

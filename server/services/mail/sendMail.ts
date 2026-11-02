@@ -6,6 +6,12 @@ export type MailAddress = {
   Name?: string
 }
 
+export type MailAttachment = {
+  fileName: string
+  contentType: string
+  base64Content: string
+}
+
 /**
  * Parameters for sending an email.
  */
@@ -18,6 +24,7 @@ export interface SendMailParams {
   fromName?: string
   replyTo?: MailAddress
   cc?: MailAddress[]
+  attachments?: MailAttachment[]
 }
 
 /**
@@ -37,6 +44,7 @@ export async function sendMail({
   fromName,
   replyTo,
   cc,
+  attachments,
 }: SendMailParams): Promise<void> {
   let receiver: string = toEmail
   let finalCc: MailAddress[] | undefined = cc
@@ -71,6 +79,13 @@ export async function sendMail({
         Subject: subject,
         HTMLPart: htmlContent,
         TextPart: textContent,
+        Attachments: attachments?.map(
+          (attachment: MailAttachment): { Filename: string; ContentType: string; Base64Content: string } => ({
+            Filename: attachment.fileName,
+            ContentType: attachment.contentType,
+            Base64Content: attachment.base64Content,
+          }),
+        ),
       },
     ],
   }

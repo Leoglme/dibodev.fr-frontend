@@ -211,6 +211,7 @@
     "aiAppTakeover": "Reprise d’application IA",
     "priceBarometer": "Prix d’un logiciel sur mesure",
     "websitePriceBarometer": "Prix d’un site internet",
+    "tradeWebsites": "Site internet par métier",
     "publicAid": "Aides pour votre site ou logiciel",
     "phpCheck": "Faille PHP : vérifier mon site",
     "eInvoicingCheck": "Facture électronique : mon logiciel est-il agréé ?",
@@ -1090,6 +1091,11 @@
       "title": "Alertes par e-mail : failles et pannes d'hébergeur",
       "paragraph1": "Quand vous demandez une alerte depuis un outil du site (nouvelle faille PHP ou WordPress, panne de votre hébergeur), je conserve votre adresse e-mail, le sujet de l'alerte, le nom de domaine que vous avez indiqué le cas échéant, la langue et la date, dans un fichier sur mon serveur, uniquement pour envoyer cette alerte et pour me signaler votre demande dans un récapitulatif quotidien. L'alerte n'est activée qu'après votre clic sur le lien de confirmation reçu par e-mail ; sans ce clic, rien n'est envoyé.",
       "paragraph2": "Chaque message contient un lien de désinscription qui arrête l'envoi immédiatement. Les adresses non confirmées sous trente jours et les adresses désinscrites depuis plus de trente jours sont effacées. Les e-mails partent par le prestataire Mailjet (serveurs dans l'Union européenne). Aucune adresse n'est transmise à un tiers ni utilisée pour de la publicité."
+    },
+    "siteDemoRequests": {
+      "title": "Demandes de démo de site internet",
+      "paragraph1": "Quand vous composez votre site dans l’atelier d’une page « site internet pour un métier », l’aperçu reste dans votre navigateur : rien n’est enregistré tant que vous ne demandez pas la démo. Si vous la demandez, je reçois par e-mail vos réponses (métier, style, couleur, nom, ville et téléphone de l’entreprise, prestations, fiche Google si vous l’avez choisie), votre logo et deux photos au plus, votre adresse e-mail et votre téléphone si vous l’avez donné, uniquement pour préparer votre démo et vous l’envoyer.",
+      "paragraph2": "Une copie de la demande, sans les images, est conservée dans un fichier sur mon serveur pour suivre les démos envoyées, et effacée un an après la demande. Les e-mails partent par le prestataire Mailjet (serveurs dans l’Union européenne). Rien n’est transmis à un tiers ni utilisé pour de la publicité."
     },
     "rights": {
       "title": "Vos droits",

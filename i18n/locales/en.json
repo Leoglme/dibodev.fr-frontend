@@ -210,6 +210,7 @@
     "aiAppTakeover": "AI app takeover",
     "priceBarometer": "Custom software prices",
     "websitePriceBarometer": "Website prices",
+    "tradeWebsites": "Websites by trade",
     "publicAid": "Aid for your website or software",
     "phpCheck": "PHP vulnerability: check my site",
     "eInvoicingCheck": "E-invoicing: is my software accredited?",
@@ -1090,6 +1091,11 @@
       "title": "E-mail alerts: vulnerabilities and web host outages",
       "paragraph1": "When you ask for an alert from a tool of the site (a new PHP or WordPress vulnerability, an outage of your web host), I keep your e-mail address, the subject of the alert, the domain name you gave when there is one, the language and the date, in a file on my server, only to send that alert and to tell me about your request in a daily summary. The alert is active only after you click the confirmation link received by e-mail; without that click, nothing is sent.",
       "paragraph2": "Every message carries an unsubscribe link that stops the sending at once. Addresses not confirmed within thirty days and addresses unsubscribed for more than thirty days are deleted. The e-mails leave through the provider Mailjet (servers in the European Union). No address is passed on to a third party or used for advertising."
+    },
+    "siteDemoRequests": {
+      "title": "Website demo requests",
+      "paragraph1": "When you build your website in the workshop of a “website for a trade” page, the preview stays in your browser: nothing is stored until you ask for the demo. If you ask for it, I receive by e-mail your answers (trade, style, colour, name, town and phone of the business, services, Google Business profile if you picked one), your logo and two photos at most, your e-mail address and your phone if you gave it, only to prepare your demo and send it to you.",
+      "paragraph2": "A copy of the request, without the images, is kept in a file on my server to follow the demos sent, and erased one year after the request. E-mails are sent through the Mailjet service (servers in the European Union). Nothing is passed on to a third party or used for advertising."
     },
     "rights": {
       "title": "Your rights",

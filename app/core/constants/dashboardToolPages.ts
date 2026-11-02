@@ -2,6 +2,9 @@ import type { DashboardToolPage } from '~/core/types/DashboardSearchPerformanceP
 
 export const DASHBOARD_TOOL_HUB_ROUTE_NAME: string = 'tools'
 
+/** Route families shown in the tool pages tab: a hub named after the family, and its pages named `<family>-<page>`. */
+export const DASHBOARD_TOOL_ROUTE_FAMILIES: string[] = [DASHBOARD_TOOL_HUB_ROUTE_NAME, 'trade-websites']
+
 /** By route name without its locale suffix; a tool page missing here is labelled from its French slug and shows no online date. */
 export const DASHBOARD_TOOL_PAGES: Record<string, DashboardToolPage> = {
   tools: { label: 'Page « Outils » (hub)', onlineSince: '2026-10-01' },
@@ -67,4 +70,6 @@ export const DASHBOARD_TOOL_PAGES: Record<string, DashboardToolPage> = {
     label: 'Modèle planning de réservations loisirs',
     onlineSince: '2026-11-01',
   },
+  'trade-websites': { label: 'Sites internet par métier (hub)', onlineSince: '2026-11-02' },
+  'trade-websites-plumber': { label: 'Site internet pour plombier', onlineSince: '2026-11-02' },
 }

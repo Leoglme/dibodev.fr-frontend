@@ -80,6 +80,7 @@ import type {
 } from '~/core/types/DibodevToolShareImage'
 import { computed } from 'vue'
 import DibodevLogo from '~/components/branding/DibodevLogo.vue'
+import { ShareImageTitleUtils } from '~/core/utils/ShareImageTitleUtils'
 
 /** Lucide icons (ISC licence), written as paths only: the renderer draws <path> elements. */
 const TOOL_ICON_PATHS: Record<DibodevToolShareImageIcon, string[]> = {
@@ -202,16 +203,6 @@ const props: DibodevToolShareImageProps = defineProps({
 
 /** Spaces around the highlight become margins, only where the title has one ("auto-école ?" but "autoescuela?"). */
 const titleLineParts: ComputedRef<DibodevToolShareImageLineParts[]> = computed((): DibodevToolShareImageLineParts[] =>
-  props.titleLines.map((line: string): DibodevToolShareImageLineParts => {
-    const highlightIndex: number = props.highlight ? line.indexOf(props.highlight) : -1
-    if (highlightIndex === -1) return { before: line, highlight: '', after: '', isAfterSpaced: false }
-    const rawAfter: string = line.slice(highlightIndex + props.highlight.length)
-    return {
-      before: line.slice(0, highlightIndex).trim(),
-      highlight: props.highlight,
-      after: rawAfter.trim(),
-      isAfterSpaced: /^\s/.test(rawAfter),
-    }
-  }),
+  ShareImageTitleUtils.splitLines(props.titleLines, props.highlight),
 )
 </script>

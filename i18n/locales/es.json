@@ -210,6 +210,7 @@
     "aiAppTakeover": "Recuperación de aplicación IA",
     "priceBarometer": "Precio de un software a medida",
     "websitePriceBarometer": "Precio de una página web",
+    "tradeWebsites": "Páginas web por oficio",
     "publicAid": "Ayudas para tu web o software",
     "phpCheck": "Fallo de PHP: comprobar mi web",
     "eInvoicingCheck": "Factura electrónica: ¿mi software está homologado?",
@@ -1090,6 +1091,11 @@
       "title": "Alertas por correo: vulnerabilidades y caídas de hosting",
       "paragraph1": "Cuando pides una alerta desde una herramienta del sitio (nueva vulnerabilidad PHP o WordPress, caída de tu hosting), guardo tu dirección de correo, el tema de la alerta, el nombre de dominio que hayas indicado si procede, el idioma y la fecha, en un archivo en mi servidor, únicamente para enviar esa alerta y avisarme de tu solicitud en un resumen diario. La alerta solo se activa tras tu clic en el enlace de confirmación recibido por correo; sin ese clic no se envía nada.",
       "paragraph2": "Cada mensaje lleva un enlace de baja que detiene el envío de inmediato. Las direcciones no confirmadas en treinta días y las direcciones dadas de baja desde hace más de treinta días se borran. Los correos salen por el proveedor Mailjet (servidores en la Unión Europea). Ninguna dirección se transmite a terceros ni se usa para publicidad."
+    },
+    "siteDemoRequests": {
+      "title": "Solicitudes de demo de página web",
+      "paragraph1": "Cuando compones tu web en el taller de una página « página web para un oficio », la vista previa se queda en tu navegador: no se guarda nada hasta que pides la demo. Si la pides, recibo por correo tus respuestas (oficio, estilo, color, nombre, ciudad y teléfono de la empresa, servicios, ficha de Google si la elegiste), tu logo y dos fotos como máximo, tu correo y tu teléfono si lo diste, solo para preparar tu demo y enviártela.",
+      "paragraph2": "Una copia de la solicitud, sin las imágenes, se guarda en un archivo de mi servidor para seguir las demos enviadas, y se borra un año después de la solicitud. Los correos salen por el proveedor Mailjet (servidores en la Unión Europea). Nada se transmite a terceros ni se usa para publicidad."
     },
     "rights": {
       "title": "Tus derechos",

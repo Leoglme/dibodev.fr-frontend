@@ -9,7 +9,7 @@
       aria-hidden="true"
     />
 
-    <div class="relative mx-auto grid w-full max-w-5xl gap-8 sm:gap-10">
+    <div class="relative mx-auto grid w-full gap-8 sm:gap-10" :class="CONTENT_WIDTH_CLASSES[props.contentWidth]">
       <div
         class="grid justify-items-start gap-4 px-2 text-left sm:justify-items-center sm:gap-5 sm:px-0 sm:text-center"
       >
@@ -21,6 +21,7 @@
             ><DibodevHyphenSafeText :text="props.titleHighlight" /></span
           ><DibodevHyphenSafeText :text="props.titleAfter" />
         </h1>
+        <p v-if="props.intro" class="max-w-[640px] text-[17px] leading-7 text-gray-200">{{ props.intro }}</p>
         <ul
           v-if="props.reassurances.length"
           class="flex flex-col items-start gap-2 text-[15px] text-gray-200 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-2"
@@ -88,7 +89,10 @@
 <script lang="ts" setup>
 import type { ComputedRef, PropType } from 'vue'
 import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
-import type { DibodevToolLandingSectionProps } from '~/core/types/DibodevToolLandingSection'
+import type {
+  DibodevToolLandingContentWidth,
+  DibodevToolLandingSectionProps,
+} from '~/core/types/DibodevToolLandingSection'
 import { computed } from 'vue'
 import DibodevBreadcrumb from '~/components/navigations/DibodevBreadcrumb.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
@@ -97,6 +101,10 @@ import { PERSON_NAME } from '~/config/schema'
 
 const PORTRAIT_SRC: string = '/images/about/leo-guillaume-portrait-400.webp'
 const PORTRAIT_SIZE: number = 48
+const CONTENT_WIDTH_CLASSES: Record<DibodevToolLandingContentWidth, string> = {
+  default: 'max-w-5xl',
+  wide: 'max-w-site',
+}
 
 const props: DibodevToolLandingSectionProps = defineProps({
   breadcrumbs: {
@@ -114,6 +122,14 @@ const props: DibodevToolLandingSectionProps = defineProps({
   titleAfter: {
     type: String as PropType<string>,
     default: '',
+  },
+  intro: {
+    type: String as PropType<string>,
+    default: '',
+  },
+  contentWidth: {
+    type: String as PropType<DibodevToolLandingContentWidth>,
+    default: 'default',
   },
   aboutTitle: {
     type: String as PropType<string>,

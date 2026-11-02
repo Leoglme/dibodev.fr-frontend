@@ -20,7 +20,9 @@ import type {
   DibodevPhpVulnerabilityVerdict,
 } from '~/core/types/DibodevPhpVulnerabilityCheck'
 import type { DibodevPublicAidProjectType, DibodevPublicAidStatus } from '~/core/types/DibodevPublicAid'
+import type { DibodevSiteAtelierDevice } from '~/core/types/DibodevSiteAtelier'
 import type { DibodevSiteCheckErrorKind } from '~/core/types/DibodevSiteCheck'
+import type { DibodevTradeWebsiteKey } from '~/core/types/DibodevTradeWebsite'
 import type {
   DibodevWebsiteHealthCheckKey,
   DibodevWebsiteHealthOverallVerdict,
@@ -175,5 +177,23 @@ export type TrackingEventPayloads = {
     warningChecks: DibodevWebsiteHealthCheckKey[]
     isWordPress: boolean | null
     errorKind: DibodevSiteCheckErrorKind | null
+  }
+  [TRACKING_EVENTS.siteDemoRequested]: {
+    tunnel: string
+    trade: DibodevTradeWebsiteKey
+    template: string
+    status: ContactFormSubmissionStatus
+    hasLogo: boolean
+    photoCount: number
+    usedGooglePlace: boolean
+    hasPhone: boolean
+    serviceCount: number
+    errorStatus?: number | null
+  }
+  [TRACKING_EVENTS.siteDemoOpened]: {
+    tunnel: string
+    trade: DibodevTradeWebsiteKey
+    template: string
+    device: DibodevSiteAtelierDevice
   }
 }

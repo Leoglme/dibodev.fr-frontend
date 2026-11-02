@@ -85,6 +85,7 @@ export default defineNuxtConfig({
     indexingSiteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://dibodev.fr',
     /** Optionnel : clé API Google PageSpeed Insights (quota plus élevé). */
     psiApiKey: process.env.PSI_API_KEY || '',
+    googlePlacesApiKey: process.env.GOOGLE_PLACES_API_KEY || '',
     public: {
       storyblok: {
         accessToken: process.env.NUXT_PUBLIC_STORYBLOK_ACCESS_TOKEN || '',

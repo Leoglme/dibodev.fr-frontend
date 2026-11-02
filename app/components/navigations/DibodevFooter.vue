@@ -206,6 +206,7 @@ import {
 } from '~/config/contact'
 import { useTracking } from '~/composables/useTracking'
 import { FREE_TEMPLATES_HUB_ROUTE_NAME } from '~/core/constants/freeTemplates/freeTemplateCatalog'
+import { TRADE_WEBSITES_HUB_ROUTE_NAME } from '~/core/constants/tradeWebsites/tradeWebsiteCatalog'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 /* I18N */
@@ -236,6 +237,7 @@ const footerLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooter
   { title: t('footer.aiAppTakeover'), to: localePath('ai-app-takeover') },
   { title: t('footer.priceBarometer'), to: localePath('custom-software-price-barometer') },
   { title: t('footer.websitePriceBarometer'), to: localePath('website-price-barometer') },
+  { title: t('footer.tradeWebsites'), to: localePath({ name: TRADE_WEBSITES_HUB_ROUTE_NAME }) },
   { title: t('footer.publicAid'), to: localePath('tools-public-aid-simulator') },
   { title: t('footer.phpCheck'), to: localePath('tools-php-vulnerability-check') },
   { title: t('footer.phpUpdate'), to: localePath('php-update-service') },
