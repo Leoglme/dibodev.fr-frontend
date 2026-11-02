@@ -27,6 +27,7 @@ export const DASHBOARD_TOOL_PAGES: Record<string, DashboardToolPage> = {
   'tools-body-shop-software': { label: 'Logiciel carrosserie', onlineSince: '2026-11-01' },
   'tools-inventory-management-software': { label: 'Logiciel de gestion de stock', onlineSince: '2026-11-01' },
   'tools-email-deliverability-check': { label: 'E-mails en spam : SPF, DKIM, DMARC', onlineSince: '2026-11-01' },
+  'tools-website-health-check': { label: 'Tester mon site : 8 vérifications', onlineSince: '2026-11-02' },
   'tools-web-host-status': { label: 'Hébergeur en panne (hub)', onlineSince: '2026-11-01' },
   'tools-web-host-status-provider': { label: 'Hébergeur en panne : pages par hébergeur', onlineSince: '2026-11-01' },
   'tools-free-templates': { label: 'Modèles gratuits (hub)', onlineSince: '2026-11-01' },

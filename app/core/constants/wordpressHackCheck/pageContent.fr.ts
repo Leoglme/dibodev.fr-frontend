@@ -169,6 +169,7 @@ export const WORDPRESS_HACK_CHECK_PAGE_FR: DibodevWordPressHackCheckPageContent 
       unknown: 'Faire vérifier mon site',
     },
     serviceLinkLabel: 'Déroulé et prix de l’intervention à distance',
+    healthCheckLinkLabel: 'Vérifier aussi HTTPS, mobile, e-mails et mentions légales : tester mon site',
   },
   mobileContactBar: {
     text: `Un doute sur votre WordPress${NBSP}?`,

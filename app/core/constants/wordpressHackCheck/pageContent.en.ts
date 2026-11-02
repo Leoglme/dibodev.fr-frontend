@@ -198,6 +198,7 @@ export const WORDPRESS_HACK_CHECK_PAGE_EN: DibodevWordPressHackCheckPageContent 
       unknown: 'Have my site checked',
     },
     serviceLinkLabel: 'How the remote work goes, and its prices',
+    healthCheckLinkLabel: 'Also check HTTPS, mobile, e-mails and legal notice: test my website',
   },
   mobileContactBar: {
     text: 'Unsure about your WordPress?',

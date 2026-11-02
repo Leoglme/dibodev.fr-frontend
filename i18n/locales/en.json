@@ -243,6 +243,7 @@
       "eInvoicingScope": "E-invoicing: does it apply to me?",
       "wordpressHackCheck": "Hacked WordPress site: check",
       "emailDeliverabilityCheck": "Emails in spam: check SPF, DKIM, DMARC",
+      "websiteHealthCheck": "Test my website: 8 checks",
       "coldCallingCheck": "Cold calling ban: can I still call?",
       "hostingStatus": "Is my web host down?",
       "budgetEstimator": "Budget estimator",

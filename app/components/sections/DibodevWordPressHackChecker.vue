@@ -142,6 +142,13 @@
         >
           {{ props.wording.serviceLinkLabel }}
         </NuxtLink>
+        <NuxtLink
+          :to="healthCheckRoute"
+          class="text-center text-sm leading-6 text-white/85 underline-offset-4 transition-colors hover:text-white hover:underline"
+          @click="trackHealthCheckClick"
+        >
+          {{ props.wording.healthCheckLinkLabel }}
+        </NuxtLink>
       </div>
     </div>
   </div>
@@ -172,6 +179,10 @@ import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import DibodevAlertSubscriptionForm from '~/forms/DibodevAlertSubscriptionForm.vue'
 import { useTracking } from '~/composables/useTracking'
 import { PHP_UPDATE_SERVICE_ROUTE_NAME, PHP_UPDATE_SERVICE_TEASER } from '~/core/constants/phpUpdateService/pageShared'
+import {
+  WEBSITE_HEALTH_CHECK_ROUTE_NAME,
+  WEBSITE_HEALTH_CHECK_TEASER,
+} from '~/core/constants/websiteHealthCheck/pageShared'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 import {
   WORDPRESS_HACK_CHECK_API_PATH,
@@ -211,6 +222,8 @@ const { track }: UseTrackingReturn = useTracking()
 const MAX_PLATFORMS_NAMED: number = 3
 const URL_SCHEME_REGEX: RegExp = /^[a-z]+:\/\//i
 const serviceRoute: string = localePath({ name: PHP_UPDATE_SERVICE_ROUTE_NAME })
+/** The eight-point site check, linked under the contact button whatever the verdict. */
+const healthCheckRoute: string = localePath({ name: WEBSITE_HEALTH_CHECK_ROUTE_NAME })
 let hasTrackedStart: boolean = false
 
 /* REFS */
@@ -515,6 +528,17 @@ function trackContactClick(): void {
 function trackServiceClick(): void {
   track(TRACKING_EVENTS.toolTeaserClicked, {
     tool: PHP_UPDATE_SERVICE_TEASER.toolId,
+    location: result.value ? props.trackingLocation : `${props.trackingLocation}_idle`,
+  })
+}
+
+/**
+ * Tracks the opening of the eight-point site check from the result card.
+ * @returns {void}
+ */
+function trackHealthCheckClick(): void {
+  track(TRACKING_EVENTS.toolTeaserClicked, {
+    tool: WEBSITE_HEALTH_CHECK_TEASER.toolId,
     location: result.value ? props.trackingLocation : `${props.trackingLocation}_idle`,
   })
 }

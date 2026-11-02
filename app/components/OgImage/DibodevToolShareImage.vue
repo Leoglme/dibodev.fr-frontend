@@ -165,6 +165,13 @@ const TOOL_ICON_PATHS: Record<DibodevToolShareImageIcon, string[]> = {
     'M16 17H8',
   ],
   download: ['M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4', 'm7 10 5 5 5-5', 'M12 15V3'],
+  stethoscope: [
+    'M11 2v2',
+    'M5 2v2',
+    'M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1',
+    'M8 15a6 6 0 0 0 12 0v-3',
+    'M22 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0',
+  ],
 }
 
 /** Space drawn between the parts of a title line (Satori drops the spaces at the edge of each span). */

@@ -4,6 +4,7 @@ import { COLD_CALLING_CHECK_ROUTE_NAME } from '~/core/constants/coldCallingCheck
 import { COLD_CALLING_CHECK_QUIZ_ID } from '~/core/constants/coldCallingCheckQuiz'
 import { WORDPRESS_HACK_CHECK_ROUTE_NAME } from '~/core/constants/wordpressHackCheck/pageShared'
 import { HOSTING_STATUS_TEASER } from '~/core/constants/hostingStatus/pageShared'
+import { WEBSITE_HEALTH_CHECK_TEASER } from '~/core/constants/websiteHealthCheck/pageShared'
 import { EMAIL_DELIVERABILITY_CHECK_ROUTE_NAME } from '~/core/constants/emailDeliverabilityCheck/pageShared'
 import { E_INVOICING_SCOPE_QUIZ_ID } from '~/core/constants/eInvoicingScopeQuiz'
 import { NBSP } from '~/core/constants/typography'
@@ -810,6 +811,7 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   PUBLIC_AID_SIMULATOR_TEASER,
   PHP_VULNERABILITY_CHECK_TEASER,
   WORDPRESS_HACK_CHECK_TEASER,
+  WEBSITE_HEALTH_CHECK_TEASER,
   HOSTING_STATUS_TEASER,
   EMAIL_DELIVERABILITY_CHECK_TEASER,
   E_INVOICING_CHECK_TEASER,

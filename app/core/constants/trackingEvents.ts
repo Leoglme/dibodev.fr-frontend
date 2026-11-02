@@ -84,6 +84,10 @@ export const TRACKING_EVENTS = {
   emailDeliverabilityCheckStarted: 'email_deliverability_check_started',
   /** A domain checked by the e-mail deliverability checker, with the verdict, the provider and the findings (or the error), never the domain. */
   emailDeliverabilityChecked: 'email_deliverability_checked',
+  /** First address typed in the website health checker (sent once per page view). */
+  websiteHealthCheckStarted: 'website_health_check_started',
+  /** A site checked by the website health checker, with the overall verdict and the failing checks (or the error), never the address. */
+  websiteHealthChecked: 'website_health_checked',
 } as const
 
 /** Tracking event name (value of the `TRACKING_EVENTS` catalog). */

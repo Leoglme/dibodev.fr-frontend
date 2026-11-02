@@ -50,6 +50,7 @@ export type DibodevWordPressHackCheckerWording = {
   ctaIntro: string
   ctaLabels: Record<DibodevWordPressHackVerdict, string>
   serviceLinkLabel: string
+  healthCheckLinkLabel: string
 }
 
 /** Content of the WordPress hack check page in one language, kept out of the i18n files because only this page loads it. */

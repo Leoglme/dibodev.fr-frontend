@@ -197,6 +197,7 @@ export const WORDPRESS_HACK_CHECK_PAGE_ES: DibodevWordPressHackCheckPageContent 
       unknown: 'Revisar mi web',
     },
     serviceLinkLabel: 'Cómo es la intervención a distancia, y sus precios',
+    healthCheckLinkLabel: 'Comprobar también HTTPS, móvil, correos y aviso legal: probar mi web',
   },
   mobileContactBar: {
     text: '¿Dudas sobre tu WordPress?',

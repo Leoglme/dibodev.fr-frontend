@@ -22,6 +22,10 @@ import type {
 import type { DibodevPublicAidProjectType, DibodevPublicAidStatus } from '~/core/types/DibodevPublicAid'
 import type { DibodevSiteCheckErrorKind } from '~/core/types/DibodevSiteCheck'
 import type {
+  DibodevWebsiteHealthCheckKey,
+  DibodevWebsiteHealthOverallVerdict,
+} from '~/core/types/DibodevWebsiteHealthCheck'
+import type {
   DibodevWordPressHackGuideKey,
   DibodevWordPressHackSignalKey,
   DibodevWordPressHackVerdict,
@@ -160,6 +164,16 @@ export type TrackingEventPayloads = {
     verdict: DibodevEmailDeliverabilityVerdict | null
     provider: DibodevEmailProviderKey | null
     findings: DibodevEmailDeliverabilityFindingKey[]
+    errorKind: DibodevSiteCheckErrorKind | null
+  }
+  [TRACKING_EVENTS.websiteHealthCheckStarted]: { location: string }
+  [TRACKING_EVENTS.websiteHealthChecked]: {
+    location: string
+    outcome: 'result' | 'error'
+    overall: DibodevWebsiteHealthOverallVerdict | null
+    criticalChecks: DibodevWebsiteHealthCheckKey[]
+    warningChecks: DibodevWebsiteHealthCheckKey[]
+    isWordPress: boolean | null
     errorKind: DibodevSiteCheckErrorKind | null
   }
 }
