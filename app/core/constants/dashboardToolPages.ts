@@ -72,4 +72,11 @@ export const DASHBOARD_TOOL_PAGES: Record<string, DashboardToolPage> = {
   },
   'trade-websites': { label: 'Sites internet par métier (hub)', onlineSince: '2026-11-02' },
   'trade-websites-plumber': { label: 'Site internet pour plombier', onlineSince: '2026-11-02' },
+  'trade-websites-electrician': { label: 'Site internet pour électricien', onlineSince: '2026-11-02' },
+  'trade-websites-garage': { label: 'Site internet pour garage', onlineSince: '2026-11-02' },
+  'trade-websites-landscaper': { label: 'Site internet pour paysagiste', onlineSince: '2026-11-02' },
+  'trade-websites-carpenter': { label: 'Site internet pour menuisier', onlineSince: '2026-11-02' },
+  'trade-websites-restaurant': { label: 'Site internet pour restaurant', onlineSince: '2026-11-02' },
+  'trade-websites-hair-salon': { label: 'Site internet pour coiffeur', onlineSince: '2026-11-02' },
+  'trade-websites-dentist': { label: 'Site internet pour dentiste', onlineSince: '2026-11-02' },
 }
