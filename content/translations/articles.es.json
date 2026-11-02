@@ -39326,5 +39326,754 @@
         }
       ]
     }
+  },
+  "blog/alternative-kwixeo-logiciel-garage": {
+    "title": "Alternativa a Kwixéo: ¿qué software de taller elegir en 2026?",
+    "excerpt": "Kwixéo gestiona vehículos y órdenes de reparación desde 22 € IVA (sin impuestos) al mes, con un solo usuario incluido. Precios actualizados al 1 de noviembre de 2026, limitaciones y tres alternativas de software para talleres a comparar.",
+    "metaTitle": "Kwixéo: precios 2026, limitaciones y 3 alternativas para talleres",
+    "metaDescription": "Kwixéo cuesta entre 22 y 89 € IVA al mes, desde 18,33 € IVA al año (datos actualizados al 1 de noviembre de 2026). Razones para dudar y tres alternativas con precios detallados para talleres.",
+    "tags": [
+      "opiniones kwixéo",
+      "alternativas a kwixéo",
+      "precio kwixéo",
+      "kwixéo para talleres",
+      "software para talleres",
+      "software gestión taller automoción",
+      "programa gestión taller"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En su página de taller, Kwixéo muestra un orden de reparación de ejemplo: un Peugeot 308 con 112.480 km, una distribución que toma 4,5 horas a 75 € IVA no incluido, el kit, el cambio de aceite, con un total de 810,48 € IVA incluido. Lo que el ejemplo no muestra: el mismo software se presenta en doce oficios, desde el fontanero hasta la agencia web. Kwixéo es un software de gestión y facturación, y el taller es un módulo incluido en sus tres opciones. He releído su página de precios y su página de taller el 1 de noviembre de 2026, así como las tablas de tres softwares diseñados para el taller. Aquí está para quién es Kwixéo adecuado, lo que puede hacer dudar, tres alternativas con sus precios, y el caso de la solución personalizada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cuánto cuesta Kwixéo en 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El 1 de noviembre de 2026, la ",
+              "type": "text"
+            },
+            {
+              "text": "página de precios de Kwixéo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.kwixeo.fr/tarifs-logiciel-facturation/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra tres opciones sin impuestos, sin compromiso, con un solo usuario incluido. Al mes: Esencial por 22 € IVA no incluido, Pro por 59 € IVA no incluido, Experto por 89 € IVA no incluido, más 6, 8 o 10 € IVA no incluido por usuario adicional. Pago anual, en una sola vez: 18,33, 49,17 y 74,17 € IVA no incluido por mes, y 5, 6,67 o 8,33 € IVA no incluido por usuario. Estos montos incluyen dos meses gratis, uno para cualquier suscripción anual y otro para el primer año: Pro cuesta 590 € IVA no incluido el primer año, y 649 € IVA no incluido en los siguientes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Esencial incluye presupuestos, facturas, vehículos y órdenes de reparación, el escaneo de códigos de barras desde el teléfono y una cuenta bancaria sincronizada. Pro añade el inventario, pedidos a proveedores, lectura de facturas de compra, enlaces de pago y domiciliación SEPA. Experto añade múltiples depósitos, interfaz para técnicos y funciones de otros oficios: proyectos, retenciones de garantía, gestión de tickets.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La factura electrónica, tanto emisión como recepción, está incluida en las tres opciones. La prueba dura 14 días sin necesidad de tarjeta bancaria, con todas las funciones activas. El soporte escrito responde desde Francia en semana, de 9 a 18 horas; formación, importación de datos y configuración son servicios de pago, sin tarifas publicadas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Para quién Kwixéo es la mejor opción?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un taller donde una persona gestiona la oficina, vende también repuestos en el mostrador o accesorios, y mantiene los vehículos utilitarios de algunas empresas. Kwixéo vincula el orden de reparación con la gestión comercial: recordatorios y banca desde Esencial, compras e inventario en Pro. Su página de taller menciona coches, vehículos utilitarios y motos, con varios vehículos por cliente. Sin necesidad de gestionar inventario, Esencial por 22 € IVA no incluido es suficiente. Si su principal preocupación es la facturación, mi artículo sobre el ",
+              "type": "text"
+            },
+            {
+              "text": "software de facturación para talleres",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-facturation-garage-devis-ordre-de-reparation-facture",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " repasa qué deben incluir sus presupuestos, órdenes de reparación y facturas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que puede hacer dudar",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un solo usuario incluido.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " El gerente y dos mecánicos pagan 75 € IVA no incluido al mes en Pro (59 € más dos accesos a 8 €), 109 € IVA no incluido en Experto, la opción con interfaz para técnicos. La página no especifica si un mecánico que solo consulta sus intervenciones cuenta como usuario: pregunten.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El inventario desde Pro.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Esencial no incluye ni inventario de piezas ni pedidos a proveedores. Para un taller que almacena filtros y pastillas, el precio a comparar es 59 € IVA no incluido, no 22 €.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lo que la página de taller no menciona.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Ni lectura de la matrícula o tarjeta de circulación, ni tiempos tarifados, ni vehículos de segunda mano o prestados, ni recordatorio de la próxima revisión. El módulo de citas en línea envía recordatorios por correo electrónico y SMS, pero ni su página ni la de precios indican en qué opción está incluido, ni si los SMS tienen un costo adicional. La carrocería no está mencionada: si es su oficio, consulte mi página sobre ",
+              "type": "text"
+            },
+            {
+              "text": "software de carrocería",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-carrosserie",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Tres alternativas a Kwixéo, con sus precios",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Precios mostrados en el sitio web de cada editor, registrados el 1 de noviembre de 2026: tres programas diseñados para el taller.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gest'Garage, 19 € por mes.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La ",
+              "type": "text"
+            },
+            {
+              "text": "página de Gest'Garage",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://gestgarage.fr/#tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra una fórmula única a 19 € por mes sin compromiso, o 180 € por año. El editor está exento de IVA: el importe mostrado es el que usted paga. Hasta cinco colaboradores están incluidos, y todo está incluido: presupuestos, órdenes de reparación y facturas ilimitadas, Factur-X y recepción por plataforma autorizada, firma electrónica, citas en línea, fichas de vehículos ingresadas por la matrícula, inventario, vehículos de segunda mano, SMS a clientes, exportación FEC. Catorce días de prueba sin tarjeta. Para tres personas con inventario: 19 € por mes, frente a 75 € HT en Kwixéo Pro.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "AutoProGestion, 29 o 59 € HT por mes.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La ",
+              "type": "text"
+            },
+            {
+              "text": "página de tarifas de AutoProGestion",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.autoprogestion.fr/tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra Starter a 29 € HT, o 24 € HT por mes al año (288 € HT), para 100 clientes y hasta dos usuarios: presupuestos, facturas, citas en línea, órdenes de reparación con informe de estado. Pro, a 59 € HT, o 49 € HT por mes al año (588 € HT), elimina estos límites y añade los recordatorios por SMS, la firma a distancia, el inventario, la contabilidad con conector Pennylane, los vehículos de segunda mano con libro de policía, la lectura de la matrícula y del certificado de registro. Catorce días de prueba; la tarjeta registrada solo se cobra al final; la aplicación móvil sigue en desarrollo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "TDV Agent, 19,90 a 79 € TTC por mes.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La ",
+              "type": "text"
+            },
+            {
+              "text": "página de TDV Agent",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://groupe-asttas.fr/solutions/tdv-agent",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra dos ofertas Solo para independientes exentos de IVA, a 19,90 € TTC (agenda y clientes) y 24,90 € TTC (con presupuestos, facturas e inventario). Para un equipo, Essentiel cuesta 39 € TTC por mes, usuarios ilimitados: fotos de recepción y firma del cliente, mapa de daños, agenda, presupuestos, facturas Factur-X, inventario, y un enlace que muestra al cliente el estado de su vehículo. Pro, a 79 € TTC, cubre hasta tres sitios. Catorce días de prueba sin tarjeta. A 1 de noviembre de 2026, TDV recibe las facturas de proveedores por una plataforma autorizada, pero aún no envía las suyas por ese canal.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para compararlos con otros y saber en seis preguntas cuál conviene a su taller, pase por mi página ",
+              "type": "text"
+            },
+            {
+              "text": "software para taller",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". ",
+              "type": "text"
+            },
+            {
+              "text": "Gest'Garage",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-gestgarage-logiciel-garage",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "AutoProGestion",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-autoprogestion-logiciel-garage",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " y ",
+              "type": "text"
+            },
+            {
+              "text": "GAD Garage",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-gad-garage-logiciel-garage",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", instalado en PC, tienen cada uno su artículo, y mi ",
+              "type": "text"
+            },
+            {
+              "text": "comparativa de software para talleres",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/meilleur-logiciel-garage-automobile-comparatif-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " también habla de las versiones gratuitas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Y si ninguno encaja: la herramienta a medida",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Volvamos al orden de reparación del ejemplo: una distribución facturada por 4,5 horas. ¿Cuánto tiempo realmente pasó el mecánico? Si fueron cinco horas y media, la hora extra no se factura a nadie, y se suma a cada distribución. La página de taller de Kwixéo no menciona el tiempo invertido por orden de reparación; en su caso, el registro de horas aparece en el módulo de proyectos, diseñado para la construcción, en la oferta Expert. Las páginas de precios de las tres alternativas tampoco lo indican.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Es el tipo de necesidad que sé tratar. Durante mi alternancia en Kodeva, de octubre de 2020 a agosto de 2022, creé desde cero ",
+              "type": "text"
+            },
+            {
+              "text": "Gest-Time",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/gestion-temps",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", un software de seguimiento de tiempo: cada usuario registra sus horas diarias por proyecto, tarea o obra, desde una tableta o teléfono, la validación se hace cada semana, y los informes se exportan en Excel y PDF. Sigue funcionando en Pymes de 20 a 200 empleados. No es un software para talleres, pero el principio es transferible: las horas dedicadas por vehículo o por orden de reparación, junto al tiempo facturado, para cobrar con precisión.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En cuanto a precios, un complemento adicional conectado a su software cuesta entre 2.500 y 7.000 € de forma única; una herramienta completa, entre 5.000 y 15.000 € en pago único, más 100 a 300 € al mes por mantenimiento, alojamiento y copias de seguridad incluidas, sin IVA aplicable, y el código es de su propiedad. En pago mensual, tres personas pagan 2.700 € IVA no incluido durante tres años en Kwixéo Pro. La solución a medida no compite en esa cifra: gana cuando la hora perdida se repite en cada factura. Para ver un presupuesto, consulte mi artículo sobre el ",
+              "type": "text"
+            },
+            {
+              "text": "precio de un software a medida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " y mi ",
+              "type": "text"
+            },
+            {
+              "text": "barómetro de precios del software a medida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cómo elegir en un día",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Haga primero la prueba con las seis preguntas de mi página sobre software para talleres. Luego, pase el mismo día con Kwixéo y la alternativa que le interese: un artesano que le confíe sus tres utilitarios, un presupuesto aceptado convertido en orden de reparación, folletos escaneados con código de barras desde el teléfono, una pieza pedida al proveedor, la factura electrónica enviada a su empresa, y la exportación para su contador. Anote el tiempo real invertido en cada vehículo. Si tiene que volver a ingresar algo, lo hará todos los días.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Kwixéo ofrece una prueba gratuita?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, 14 días sin tarjeta de crédito hasta el 1 de noviembre de 2026, con las funciones de Pro y Expert. No existe una oferta gratuita permanente; sus datos se conservan si luego se suscribe.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cuánto cuesta Kwixéo para un taller de tres personas?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Con dos usuarios adicionales, al mes: 34 € HT en Esencial, 75 € HT en Pro, 109 € HT en Experto. Pagado anualmente, el primer año cuesta 340, 750 y 1 090 € HT respectivamente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Kwixéo gestiona la factura electrónica?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, tanto en emisión como en recepción, en las tres ofertas. Su página de taller indica que está conectado a SuperPDP, plataforma autorizada inscrita el 22 de diciembre de 2025 según la lista de la DGFiP: Kwixéo no es una plataforma autorizada por sí mismo, sino que utiliza una plataforma que sí lo está. Las Pymes deberán emitir facturas electrónicas a partir del 1 de septiembre de 2027. Para otro software, ",
+              "type": "text"
+            },
+            {
+              "text": "verifique si está autorizado o conectado",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/facture-electronique-logiciel-agree",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Qué dicen las opiniones sobre Kwixéo?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A 1 de noviembre de 2026, Trustpilot muestra dos opiniones con cinco estrellas, la más reciente de agosto de 2024, con un TrustScore de 3,8 sobre 5. La página de opiniones del editor incluye reseñas de Google, varias de profesionales del sector automovilístico. Hay demasiadas pocas opiniones independientes para sacar conclusiones: la prueba con sus propias órdenes de reparación lo aclarará.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cuál es la alternativa más económica a Kwixéo?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gest'Garage, 19 € al mes sin IVA adicional, o 180 € al año, hasta cinco colaboradores. Para un equipo sujeto a IVA, TDV Esencial cuesta 39 € IVA incluido por mes, con usuarios ilimitados.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Se puede abandonar Kwixéo sin perder el historial?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Kwixéo anuncia la exportación de sus datos y una cancelación sin costes ni preaviso, manteniendo el acceso hasta el final del período pagado. Exporte todo desde el primer mes para ver qué se incluye; en una herramienta personalizada, la recuperación de datos forma parte del presupuesto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿No sabe cuál elegir?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Descríbame su taller en unas líneas: cuántos son, qué más venden además de reparaciones, qué les molesta. Le responderé en menos de 24 horas, y si Kwixéo Esencial a 22 € HT o Gest'Garage a 19 € es suficiente, se lo diré.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "361d7b25-079b-4a28-a00e-8803530e70e4",
+            "body": [
+              {
+                "_uid": "i-2465a5db-015b-4b6a-a574-fc2ae5da8ed7",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

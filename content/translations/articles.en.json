@@ -39324,5 +39324,754 @@
         }
       ]
     }
+  },
+  "blog/alternative-kwixeo-logiciel-garage": {
+    "title": "Kwixéo Alternative: Which Garage Software to Choose in 2026?",
+    "excerpt": "Kwixéo manages vehicles and repair orders starting at €22 HT per month, including a single user. Pricing as of November 1, 2026, limitations, and three garage software options to compare.",
+    "metaTitle": "Kwixéo: 2026 Pricing, Limitations, and 3 Garage Alternatives",
+    "metaDescription": "Kwixéo costs €22 to €89 HT per month, or as low as €18.33 HT annually (as of November 1, 2026). What makes a garage hesitate, and three costed alternatives.",
+    "tags": [
+      "kwixéo review",
+      "kwixéo alternative",
+      "kwixéo pricing",
+      "kwixéo for garages",
+      "garage software",
+      "automotive garage software",
+      "garage management software"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On its garage page, Kwixéo shows an example repair order: a Peugeot 308 with 112,480 km, a distribution counted at 4.5 hours for 75 € VAT-exclusive, the kit, the oil change, totaling 810.48 € VAT-inclusive. What the example doesn’t show: the same software is offered across twelve trades, from plumbers to web agencies. Kwixéo is a management and invoicing software, and the garage is just one module included in its three plans. I reviewed its pricing page and garage page on November 1st, 2026, then compared it with three other software solutions designed for workshops. Here’s who Kwixéo suits, what might make you hesitate, three alternatives with their prices, and the case for custom solutions.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Kwixéo costs in 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As of November 1st, 2026, the ",
+              "type": "text"
+            },
+            {
+              "text": "pricing page of Kwixéo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.kwixeo.fr/tarifs-logiciel-facturation/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " lists three tax-exclusive offers, with no commitment and including a single user. Monthly rates are: Essentiel at 22 € VAT-exclusive, Pro at 59 € VAT-exclusive, and Expert at 89 € VAT-exclusive, plus 6, 8, or 10 € VAT-exclusive per additional user. Paid annually in one go: 18.33, 49.17, and 74.17 € VAT-exclusive per month, with 5, 6.67, or 8.33 € VAT-exclusive per additional user. These amounts include two free months: one for any annual subscription and one for the first year. Pro costs 590 € VAT-exclusive the first year, then 649 € VAT-exclusive in subsequent years.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Essentiel covers quotes, invoices, vehicles, and repair orders, barcode scanning via phone, and a synchronized bank account. Pro adds inventory, supplier orders, purchase invoice reading, payment links, and SEPA direct debits. Expert adds multi-depots, technician interfaces, and features from other trades: job sites, warranty withholdings, and ticketing.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Electronic invoicing—both sending and receiving—is included in all three plans. A 14-day trial is available with no credit card required, and all features are unlocked. Written support responds from France Monday to Friday, 9 AM to 6 PM; training, data import, and setup are paid services with no published rates.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Who Kwixéo is right for",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A garage where one person handles the office, sells parts at the counter or accessories, and maintains utility vehicles for a few companies. Kwixéo links repair orders to commercial management: reminders and banking start with Essentiel, while purchases and inventory are in Pro. Its garage page mentions cars, utility vehicles, and motorcycles, with multiple vehicles per customer. If you don’t track inventory, Essentiel at 22 € VAT-exclusive is enough. If invoicing is your main concern, my article on the ",
+              "type": "text"
+            },
+            {
+              "text": "invoicing software for garages",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-facturation-garage-devis-ordre-de-reparation-facture",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " covers what your quotes, repair orders, and invoices should include.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What might make you hesitate",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Only one user is included.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The manager and two mechanics pay 75 € VAT-exclusive per month for Pro (59 € plus two additional users at 8 € each), or 109 € VAT-exclusive for Expert, which includes the technician interface. The page doesn’t clarify whether a mechanic who only checks their own interventions counts as a user—ask the question.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Inventory management starts with Pro.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Essentiel lacks parts inventory and supplier orders. For a workshop stocking filters and brake pads, the comparable price is 59 € VAT-exclusive, not 22 €.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What the garage page doesn’t mention.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " It doesn’t include license plate or registration reading, timed billing, used or loaned vehicles, or next-service reminders. The online appointment module sends email and SMS reminders, but neither its page nor the pricing page specifies which plan includes it or whether SMS are charged. Bodywork isn’t mentioned: if that’s your trade, see my page on ",
+              "type": "text"
+            },
+            {
+              "text": "bodywork software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-carrosserie",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Three alternatives to Kwixéo, with their prices",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Prices listed on each publisher's website, recorded on November 1, 2026: three software solutions designed for the workshop.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gest'Garage, 19 € per month.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The ",
+              "type": "text"
+            },
+            {
+              "text": "Gest'Garage page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://gestgarage.fr/#tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " displays a single plan at 19 € per month with no commitment, or 180 € per year. The publisher is VAT-exempt: the displayed amount is what you pay. Up to five collaborators are included, and everything is covered: unlimited quotes, repair orders, and invoices, Factur-X and receipt via an approved platform, electronic signature, online appointments, vehicle records entered by license plate, inventory, used vehicles, customer SMS, and FEC export. Fourteen days trial without a card. For three people with inventory: 19 € per month, compared to 75 € HT in Kwixéo Pro.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "AutoProGestion, 29 or 59 € HT per month.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The ",
+              "type": "text"
+            },
+            {
+              "text": "AutoProGestion pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.autoprogestion.fr/tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " shows Starter at 29 € HT, or 24 € HT per month annually (288 € HT), for up to 100 clients and two users: quotes, invoices, online appointments, and repair orders with condition reports. Pro, at 59 € HT, or 49 € HT per month annually (588 € HT), removes these limits and adds SMS reminders, remote signature, inventory, accounting with Pennylane connector, used vehicles with police records, license plate and registration card reading. Fourteen days trial; the registered card is only charged at the end; the mobile app is still under development.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "TDV Agent, 19.90 to 79 € TTC per month.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The ",
+              "type": "text"
+            },
+            {
+              "text": "TDV Agent page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://groupe-asttas.fr/solutions/tdv-agent",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " displays two Solo offers for VAT-exempt self-employed individuals, at 19.90 € TTC (schedule and clients) and 24.90 € TTC (with quotes, invoices, and inventory). For a team, Essentiel costs 39 € TTC per month, with unlimited users: intake photos and customer signatures, damage maps, schedule, quotes, Factur-X invoices, inventory, and a link showing customers their vehicle’s status. Pro, at 79 € TTC, covers up to three locations. Fourteen days trial without a card. As of November 1, 2026, TDV receives supplier invoices via an approved platform but does not yet send yours through that channel.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To compare them with others and determine in six questions which one suits your workshop, go to my ",
+              "type": "text"
+            },
+            {
+              "text": "garage software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". ",
+              "type": "text"
+            },
+            {
+              "text": "Gest'Garage",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-gestgarage-logiciel-garage",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "AutoProGestion",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-autoprogestion-logiciel-garage",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " and ",
+              "type": "text"
+            },
+            {
+              "text": "GAD Garage",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-gad-garage-logiciel-garage",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", installed on PC, each have their own article, and my ",
+              "type": "text"
+            },
+            {
+              "text": "comparison of garage software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/meilleur-logiciel-garage-automobile-comparatif-2026",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " also covers free versions.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "And if none fit: the custom tool",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Let’s return to the repair order example: a distribution billed at 4.5 hours. How much time did the mechanic actually spend? If it’s five and a half hours, the extra hour isn’t billed to anyone, and it adds up with every distribution. The Kwixéo garage page doesn’t mention time spent per repair order; in his system, time tracking is shown in the ‘chantiers’ (projects) module, designed for construction, in the Expert package. The pricing pages of the three alternatives don’t mention it either.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is the kind of need I know how to address. During my apprenticeship at Kodeva, from October 2020 to August 2022, I built from scratch ",
+              "type": "text"
+            },
+            {
+              "text": "Gest-Time",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/gestion-temps",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", a time-tracking software: each user logs their hours daily and per project, task, or job site, via tablet or phone; validation happens weekly, and exports are available in Excel and PDF. It’s still in use in SMEs with 20 to 200 employees. It’s not a garage software, but the principle applies: tracking actual hours spent per vehicle or repair order alongside billed time, to charge fairly.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On pricing, an add-on module next to your existing software costs €2,500 to €7,000 one-time; a full tool runs €5,000 to €15,000 upfront, plus €100 to €300 monthly for maintenance, hosting, and backups included, VAT non-applicable, and you own the code. With monthly payments, three users pay €2,700 HT over three years for Kwixéo Pro. Custom solutions don’t save on this figure: they pay off when lost hours repeat across every invoice. To see a quote, check my article on the ",
+              "type": "text"
+            },
+            {
+              "text": "price of custom software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " and my ",
+              "type": "text"
+            },
+            {
+              "text": "custom software pricing benchmark",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to choose in one day",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "First, take my six-question quiz on garage software. Then, run the same day’s workflows in Kwixéo and your preferred alternative: a tradesperson entrusting you with their three utility vehicles, an accepted quote turned into a repair order, service sheets scanned via barcode from a phone, a part ordered from a supplier, an electronic invoice sent to their company, and the export for your accountant. Track the actual time spent on each vehicle. If you re-enter something, you’ll do it daily.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently asked questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Does Kwixéo offer a free trial?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes, 14 days without a credit card as of November 1, 2026, with Pro and Expert features. There is no permanent free plan; your data is retained if you subscribe afterward.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "How much does Kwixéo cost for a garage with three people?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "With two additional users per month: 34 € HT in Essentiel, 75 € HT in Pro, 109 € HT in Expert. Paid annually, the first year costs 340, 750, and 1,090 € HT respectively.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Does Kwixéo handle electronic invoicing?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes, both for sending and receiving, across all three plans. Its garage page states it is connected to SuperPDP, an approved platform registered on December 22, 2025, according to the DGFiP list: Kwixéo itself is not an approved platform; it uses an approved one. SMEs will need to issue electronic invoices starting September 1, 2027. For another software, ",
+              "type": "text"
+            },
+            {
+              "text": "check if it is approved or connected",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/facture-electronique-logiciel-agree",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "What do reviews say about Kwixéo?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As of November 1, 2026, Trustpilot shows two five-star reviews, the most recent from August 2024, for a TrustScore of 3.8 out of 5. The editor’s review page includes Google reviews, several from automotive professionals. Too few independent reviews to draw conclusions: testing it with your own repair orders will tell you more.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "What is the cheapest alternative to Kwixéo?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gest'Garage, at 19 € per month without VAT, or 180 € per year, for up to five collaborators. For a team subject to VAT, TDV Essentiel costs 39 € TTC per month with unlimited users.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Can you leave Kwixéo without losing your history?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Kwixéo promises data export and cancellation without fees or notice, with access until the end of the paid period. Export everything from the first month to see what comes out; in a custom tool, data recovery is part of the quote.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "You don’t know which one to choose?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Describe your workshop in a few lines: how many of you there are, what else you sell besides repairs, and what annoys you. I’ll reply within 24 hours, and if Kwixéo Essentiel at 22 € HT or Gest'Garage at 19 € suffices, I’ll let you know.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "361d7b25-079b-4a28-a00e-8803530e70e4",
+            "body": [
+              {
+                "_uid": "i-2465a5db-015b-4b6a-a574-fc2ae5da8ed7",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
