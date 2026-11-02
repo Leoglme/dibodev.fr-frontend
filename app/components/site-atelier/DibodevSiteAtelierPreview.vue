@@ -32,11 +32,7 @@
     <div ref="stageElement" class="flex w-full min-w-0 justify-center">
       <div
         class="relative overflow-hidden bg-white shadow-[0_24px_60px_-30px_rgba(20,20,20,0.45)] transition-[width,height] duration-300 motion-reduce:transition-none"
-        :class="
-          props.device === 'mobile'
-            ? 'rounded-[34px] border-[6px] border-gray-100'
-            : 'rounded-xl border border-gray-300'
-        "
+        :class="isPhoneFrame ? 'rounded-[34px] border-[6px] border-gray-100' : 'rounded-xl border border-gray-300'"
         :style="{ width: `${scaledWidth}px`, height: `${scaledHeight}px` }"
       >
         <iframe
@@ -45,13 +41,30 @@
           ref="frameElement"
           :src="frameUrl"
           :title="props.wording.preview.frameTitle"
-          class="absolute top-0 left-0 origin-top-left border-0 bg-white"
+          class="absolute left-0 origin-top-left border-0 bg-white"
           :style="{
+            top: `${scaledViewportTop}px`,
             width: `${screenSize.width}px`,
-            height: `${screenSize.height}px`,
+            height: `${screenViewportHeight}px`,
             transform: `scale(${screenScale})`,
           }"
         />
+        <template v-if="isPhoneFrame">
+          <span
+            class="absolute inset-x-0 top-0 flex items-center justify-center bg-gray-100"
+            :style="{ height: `${scaledPhoneStatusBarHeight}px` }"
+            aria-hidden="true"
+          >
+            <span class="h-2/5 w-1/4 rounded-full bg-black" />
+          </span>
+          <span
+            class="absolute inset-x-0 bottom-0 flex items-center justify-center bg-gray-100"
+            :style="{ height: `${scaledPhoneHomeBarHeight}px` }"
+            aria-hidden="true"
+          >
+            <span class="h-1/5 w-1/3 rounded-full bg-white/60" />
+          </span>
+        </template>
         <Transition
           leave-active-class="transition-opacity duration-[250ms] ease-[ease] motion-reduce:transition-none"
           leave-to-class="opacity-0"
@@ -121,6 +134,8 @@ import {
   SITE_ATELIER_DEMO_ORIGIN,
   SITE_ATELIER_FRAME_MAX_HEIGHT_RATIOS,
   SITE_ATELIER_FRAME_MAX_HEIGHTS_PX,
+  SITE_ATELIER_PHONE_HOME_BAR_HEIGHT_PX,
+  SITE_ATELIER_PHONE_STATUS_BAR_HEIGHT_PX,
   SITE_ATELIER_PREVIEW_DEBOUNCE_MS,
   SITE_ATELIER_PREVIEW_READY_MESSAGE_TYPE,
   SITE_ATELIER_PREVIEW_READY_TIMEOUT_MS,
@@ -201,6 +216,21 @@ const screenScale: ComputedRef<number> = computed((): number => {
 const scaledWidth: ComputedRef<number> = computed((): number => Math.round(screenSize.value.width * screenScale.value))
 const scaledHeight: ComputedRef<number> = computed((): number =>
   Math.round(screenSize.value.height * screenScale.value),
+)
+const isPhoneFrame: ComputedRef<boolean> = computed((): boolean => props.device === 'mobile')
+const scaledPhoneStatusBarHeight: ComputedRef<number> = computed(
+  (): number => SITE_ATELIER_PHONE_STATUS_BAR_HEIGHT_PX * screenScale.value,
+)
+const scaledPhoneHomeBarHeight: ComputedRef<number> = computed(
+  (): number => SITE_ATELIER_PHONE_HOME_BAR_HEIGHT_PX * screenScale.value,
+)
+const scaledViewportTop: ComputedRef<number> = computed((): number =>
+  isPhoneFrame.value ? scaledPhoneStatusBarHeight.value : 0,
+)
+const screenViewportHeight: ComputedRef<number> = computed((): number =>
+  isPhoneFrame.value
+    ? screenSize.value.height - SITE_ATELIER_PHONE_STATUS_BAR_HEIGHT_PX - SITE_ATELIER_PHONE_HOME_BAR_HEIGHT_PX
+    : screenSize.value.height,
 )
 
 /* METHODS */

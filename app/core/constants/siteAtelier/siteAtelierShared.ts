@@ -32,6 +32,9 @@ export const SITE_ATELIER_SCREEN_SIZES: Record<DibodevSiteAtelierDevice, Dibodev
   mobile: { width: 390, height: 844 },
 }
 
+export const SITE_ATELIER_PHONE_STATUS_BAR_HEIGHT_PX: number = 30
+export const SITE_ATELIER_PHONE_HOME_BAR_HEIGHT_PX: number = 20
+
 export const SITE_ATELIER_FRAME_MAX_HEIGHT_RATIOS: Record<DibodevSiteAtelierDevice, number> = {
   desktop: 0.58,
   mobile: 0.62,
