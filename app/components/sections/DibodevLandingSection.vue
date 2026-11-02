@@ -87,7 +87,7 @@
           <DibodevKeyFiguresLine
             v-if="props.stats.length > 0"
             :figures="props.stats"
-            :class="isCentered ? 'items-center sm:justify-center' : ''"
+            :class="isCentered ? 'items-center justify-center' : ''"
           />
 
           <ul

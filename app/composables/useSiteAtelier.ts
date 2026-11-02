@@ -309,15 +309,16 @@ export function useSiteAtelier(
   }
 
   /**
-   * Sets or removes the logo, and reads its dominant colour for the colour step.
+   * Sets or removes the logo and reads its colour, painted at once unless the visitor picked a colour of his own.
    * @param {DibodevSiteAtelierPicture | null} logo - The logo, or null to remove it.
    * @returns {Promise<void>} Resolves once the colour is read.
    */
   async function setLogo(logo: DibodevSiteAtelierPicture | null): Promise<void> {
     noteFirstInteraction()
+    const shouldPaintLogoColor: boolean = state.usesLogoColor || state.chosenColor === null
     state.logo = logo
     state.logoColor = logo ? await DominantColorUtils.fromImage(logo.dataUrl) : null
-    state.usesLogoColor = state.logoColor !== null
+    state.usesLogoColor = state.logoColor !== null && shouldPaintLogoColor
   }
 
   /**
