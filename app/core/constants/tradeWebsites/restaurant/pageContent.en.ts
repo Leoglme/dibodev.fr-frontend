@@ -61,6 +61,10 @@ export const RESTAURANT_WEBSITE_PAGE_EN: DibodevTradeWebsitePageContent = {
     serviceDescription: 'Information and bookings by phone.',
     requestTitle: 'Your restaurant website, under your name',
   },
+  examples: {
+    title: 'An example of a restaurant website',
+    imageAlt: 'Example of a restaurant website, {name} template',
+  },
   contents: {
     eyebrow: 'What makes people book',
     title: 'What a restaurant’s website should contain',

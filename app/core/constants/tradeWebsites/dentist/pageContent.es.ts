@@ -61,6 +61,10 @@ export const DENTIST_WEBSITE_PAGE_ES: DibodevTradeWebsitePageContent = {
     serviceDescription: 'Explicaciones claras y honorarios anunciados antes del tratamiento.',
     requestTitle: 'Tu web de clínica dental, a tu nombre',
   },
+  examples: {
+    title: 'Un ejemplo de página web para dentista',
+    imageAlt: 'Ejemplo de página web para dentista, plantilla {name}',
+  },
   contents: {
     eyebrow: 'Lo que buscan los pacientes',
     title: 'Lo que debe tener la web de un dentista',

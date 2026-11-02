@@ -59,6 +59,10 @@ export const CARPENTER_WEBSITE_PAGE_EN: DibodevTradeWebsitePageContent = {
     serviceDescription: 'Measured on site, free quote.',
     requestTitle: 'Your carpentry website, under your name',
   },
+  examples: {
+    title: 'An example of a carpenter website',
+    imageAlt: 'Example of a carpenter website, {name} template',
+  },
   contents: {
     eyebrow: 'What brings in quote requests',
     title: 'What a carpenter’s website should contain',

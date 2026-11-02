@@ -10,7 +10,7 @@ export const SITE_ATELIER_WORDING_FR: DibodevSiteAtelierWording = {
   seeMyDemo: 'Voir ma démo',
   hintDefault: 'Vous pouvez tout changer ensuite.',
   hintLastStep: 'Dernière étape avant votre démo.',
-  hintFinal: `Tout reste modifiable${NBSP}: revenez en arrière quand vous voulez.`,
+  hintMedia: 'Vos photos restent sur votre appareil tant que vous ne demandez pas le lien.',
   business: {
     title: 'Votre entreprise',
     intro: 'Le site se met à jour pendant que vous tapez.',
@@ -86,7 +86,10 @@ export const SITE_ATELIER_WORDING_FR: DibodevSiteAtelierWording = {
     error: 'L’envoi n’a pas abouti. Réessayez, ou écrivez-moi à contact@dibodev.fr.',
     rateLimited: 'Vous avez envoyé plusieurs demandes en peu de temps. Réessayez dans quelques minutes.',
     priceTitle: `Ça vous plaît${NBSP}?`,
-    priceText: `Ce site, à votre nom, avec votre nom de domaine et l’hébergement${NBSP}: 290${NBSP}€ une seule fois, en ligne sous 48${NBSP}h. Besoin de plus (prise de rendez-vous, devis en ligne)${NBSP}: sur mesure à partir de 1${NBSP}500${NBSP}€.`,
+    templateOfferPrice: `290${NBSP}€ une seule fois`,
+    templateOfferText: `Ce site à votre nom, domaine et hébergement compris, en ligne sous 48${NBSP}h.`,
+    customOfferPrice: `Sur mesure dès 1${NBSP}500${NBSP}€`,
+    customOfferText: 'Avec prise de rendez-vous ou devis en ligne.',
     priceLink: 'Voir les deux offres',
   },
   preview: {
@@ -98,8 +101,9 @@ export const SITE_ATELIER_WORDING_FR: DibodevSiteAtelierWording = {
     loading: 'Chargement de votre site…',
     frameTitle: 'Votre site, en direct',
     captureAlt: 'Capture du modèle de site choisi',
-    openFullScreen: 'Ouvrir la démo en plein écran',
+    openFullScreen: 'Plein écran',
+    closeFullScreen: 'Fermer',
+    fullScreenTitle: 'Votre site en plein écran',
     captureNote: `L’aperçu en direct n’est pas disponible pour le moment${NBSP}: voici le modèle. Votre démo à votre nom arrive par e-mail.`,
-    note: 'C’est le vrai modèle qui s’affiche, avec votre nom, vos couleurs et vos photos. Rien n’est enregistré tant que vous ne demandez pas le lien.',
   },
 }

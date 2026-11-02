@@ -58,6 +58,10 @@ export const GARAGE_WEBSITE_PAGE_EN: DibodevTradeWebsitePageContent = {
     serviceDescription: 'Price given before the job, nothing done without your approval.',
     requestTitle: 'Your auto repair shop website, under your name',
   },
+  examples: {
+    title: 'An example of an auto repair shop website',
+    imageAlt: 'Example of an auto repair shop website, {name} template',
+  },
   contents: {
     eyebrow: 'What makes people book',
     title: 'What an auto repair shop’s website should contain',

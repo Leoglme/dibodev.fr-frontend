@@ -74,7 +74,7 @@ export type DibodevSiteAtelierWording = {
   seeMyDemo: string
   hintDefault: string
   hintLastStep: string
-  hintFinal: string
+  hintMedia: string
   business: {
     title: string
     intro: string
@@ -143,7 +143,10 @@ export type DibodevSiteAtelierWording = {
     error: string
     rateLimited: string
     priceTitle: string
-    priceText: string
+    templateOfferPrice: string
+    templateOfferText: string
+    customOfferPrice: string
+    customOfferText: string
     priceLink: string
   }
   preview: {
@@ -156,8 +159,9 @@ export type DibodevSiteAtelierWording = {
     frameTitle: string
     captureAlt: string
     openFullScreen: string
+    closeFullScreen: string
+    fullScreenTitle: string
     captureNote: string
-    note: string
   }
 }
 

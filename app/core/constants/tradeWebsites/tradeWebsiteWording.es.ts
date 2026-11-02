@@ -47,6 +47,16 @@ export const TRADE_WEBSITE_WORDING_ES: DibodevTradeWebsiteSharedWording = {
         'Los precios que muestran freelancers, agencias y creadores de webs franceses, anotados el mismo día.',
     },
   },
+  examples: {
+    eyebrow: 'Ejemplos',
+    introOne: 'Una web real en línea, para una empresa ficticia: ábrela y pruébala con tu nombre en el taller.',
+    introMany:
+      'Webs reales en línea, para empresas ficticias: ábrelas y prueba la que te guste con tu nombre en el taller.',
+    nameTemplate: 'Plantilla {name}',
+    liveLinkLabel: 'Ver el ejemplo en línea',
+    ctaLabel: 'Probar con tu nombre',
+    hubImageAlt: 'Ejemplo de {title}',
+  },
   otherTradesTitle: 'Una página web para otro oficio',
   allTradesLabel: 'Todos los oficios',
   faqEyebrow: 'Preguntas frecuentes',

@@ -25,6 +25,19 @@
     </template>
   </DibodevToolLandingSection>
 
+  <DibodevWebsiteExamplesSection
+    :anchorId="TRADE_WEBSITE_EXAMPLES_ANCHOR_ID"
+    :eyebrow="sharedWording.examples.eyebrow"
+    :title="props.page.examples.title"
+    :intro="trade.templates.length === 1 ? sharedWording.examples.introOne : sharedWording.examples.introMany"
+    :examples="websiteExamples"
+    :liveLinkLabel="sharedWording.examples.liveLinkLabel"
+    :ctaLabel="sharedWording.examples.ctaLabel"
+    :ctaTo="atelierHash"
+    tone="offWhite"
+    :trackingLocation="`${trackingLocation}_examples`"
+  />
+
   <DibodevFeatureCardsSection
     :anchorId="TRADE_WEBSITE_CONTENTS_ANCHOR_ID"
     :eyebrow="props.page.contents.eyebrow"
@@ -116,12 +129,17 @@ import type {
   DibodevResourcePill,
 } from '~/core/types/DibodevResourceCardsSection'
 import type { DibodevSiteAtelierWording } from '~/core/types/DibodevSiteAtelier'
-import type { DibodevTradeWebsiteDefinition, DibodevTradeWebsiteKey } from '~/core/types/DibodevTradeWebsite'
+import type {
+  DibodevTradeWebsiteDefinition,
+  DibodevTradeWebsiteKey,
+  DibodevTradeWebsiteTemplate,
+} from '~/core/types/DibodevTradeWebsite'
 import type {
   DibodevTradeWebsitePageContent,
   DibodevTradeWebsiteSharedWording,
 } from '~/core/types/DibodevTradeWebsitePage'
 import type { DibodevTradeWebsitePageSectionsProps } from '~/core/types/DibodevTradeWebsitePageSections'
+import type { DibodevWebsiteExample } from '~/core/types/DibodevWebsiteExamplesSection'
 import { computed } from 'vue'
 import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
 import DibodevMobileContactBar from '~/components/data-displays/DibodevMobileContactBar.vue'
@@ -132,6 +150,7 @@ import DibodevPricingSection from '~/components/sections/DibodevPricingSection.v
 import DibodevResourceCardsSection from '~/components/sections/DibodevResourceCardsSection.vue'
 import DibodevSourcedFactsSection from '~/components/sections/DibodevSourcedFactsSection.vue'
 import DibodevToolLandingSection from '~/components/sections/DibodevToolLandingSection.vue'
+import DibodevWebsiteExamplesSection from '~/components/sections/DibodevWebsiteExamplesSection.vue'
 import DibodevSiteAtelier from '~/components/site-atelier/DibodevSiteAtelier.vue'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
@@ -143,6 +162,7 @@ import {
   TRADE_WEBSITE_ATELIER_ANCHOR_ID,
   TRADE_WEBSITE_CATALOG,
   TRADE_WEBSITE_CONTENTS_ANCHOR_ID,
+  TRADE_WEBSITE_EXAMPLES_ANCHOR_ID,
   TRADE_WEBSITE_PRICING_ANCHOR_ID,
   TRADE_WEBSITE_RESOURCES_ANCHOR_ID,
   TRADE_WEBSITE_RULES_ANCHOR_ID,
@@ -152,6 +172,8 @@ import {
 } from '~/core/constants/tradeWebsites/tradeWebsiteCatalog'
 import { TRADE_WEBSITE_WORDINGS } from '~/core/constants/tradeWebsites/tradeWebsiteWording'
 import { ArticleSelectionUtils } from '~/core/utils/ArticleSelectionUtils'
+import { QuizTextUtils } from '~/core/utils/QuizTextUtils'
+import { SiteAtelierPreviewUtils } from '~/core/utils/SiteAtelierPreviewUtils'
 
 const SITE_URL: string = 'https://dibodev.fr'
 const ARTICLES_POOL_SIZE: number = 100
@@ -212,6 +234,21 @@ const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail(():
   { label: sharedWording.hubBreadcrumbLabel, to: localePath({ name: TRADE_WEBSITES_HUB_ROUTE_NAME }) },
   { label: props.page.breadcrumbLabel, to: null },
 ])
+
+const websiteExamples: ComputedRef<DibodevWebsiteExample[]> = computed((): DibodevWebsiteExample[] =>
+  trade.templates.map((template: DibodevTradeWebsiteTemplate): DibodevWebsiteExample => {
+    const templateTexts: { name: string; description: string } | undefined = props.page.atelier.templates[template.id]
+    const templateName: string = templateTexts?.name ?? template.id
+    return {
+      key: template.id,
+      name: QuizTextUtils.fillTemplate(sharedWording.examples.nameTemplate, { name: templateName }),
+      description: templateTexts?.description ?? '',
+      imageSrc: template.thumbnailSrc,
+      imageAlt: QuizTextUtils.fillTemplate(props.page.examples.imageAlt, { name: templateName }),
+      liveUrl: SiteAtelierPreviewUtils.demoUrlOf(template, false),
+    }
+  }),
+)
 
 const pricingOffers: ComputedRef<DibodevPricingOffer[]> = computed((): DibodevPricingOffer[] => [
   {

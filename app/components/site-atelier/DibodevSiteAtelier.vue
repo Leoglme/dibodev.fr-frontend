@@ -94,15 +94,9 @@
 
       <p class="sr-only" aria-live="polite">{{ statusAnnouncement }}</p>
 
-      <div class="grid gap-4 border-t border-gray-300 pt-5">
+      <div v-if="!atelier.isFinalStep.value" class="grid gap-4 border-t border-gray-300 pt-5">
         <p class="text-muted text-sm leading-6">{{ hint }}</p>
-        <DibodevButton
-          v-if="!atelier.isFinalStep.value"
-          icon="ArrowRight"
-          iconPosition="right"
-          class="w-full"
-          @click="onNext"
-        >
+        <DibodevButton icon="ArrowRight" iconPosition="right" class="w-full" @click="onNext">
           {{ atelier.isLastQuestionStep.value ? props.wording.seeMyDemo : props.wording.next }}
         </DibodevButton>
       </div>
@@ -203,11 +197,11 @@ const stepCountLabel: ComputedRef<string> = computed((): string =>
       }),
 )
 const hint: ComputedRef<string> = computed((): string => {
-  if (atelier.isFinalStep.value) {
-    return props.wording.hintFinal
-  }
   if (atelier.isLastQuestionStep.value) {
     return props.wording.hintLastStep
+  }
+  if (atelier.currentStep.value === 'media') {
+    return props.wording.hintMedia
   }
   return props.wording.hintDefault
 })

@@ -61,6 +61,10 @@ export const LANDSCAPER_WEBSITE_PAGE_ES: DibodevTradeWebsitePageContent = {
     serviceDescription: 'Visita del terreno y presupuesto detallado antes de los trabajos.',
     requestTitle: 'Tu web de paisajista, a tu nombre',
   },
+  examples: {
+    title: 'Un ejemplo de página web para paisajista',
+    imageAlt: 'Ejemplo de página web para paisajista, plantilla {name}',
+  },
   contents: {
     eyebrow: 'Lo que trae solicitudes de presupuesto',
     title: 'Lo que debe tener la web de un paisajista',

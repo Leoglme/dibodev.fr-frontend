@@ -63,6 +63,10 @@ export const ELECTRICIAN_WEBSITE_PAGE_EN: DibodevTradeWebsitePageContent = {
     serviceDescription: 'Free quote, installation to French standard NF C 15-100.',
     requestTitle: 'Your electrician website, under your name',
   },
+  examples: {
+    title: 'Two examples of electrician websites',
+    imageAlt: 'Example of an electrician website, {name} template',
+  },
   contents: {
     eyebrow: 'What makes people call',
     title: 'What an electrician’s website should contain',

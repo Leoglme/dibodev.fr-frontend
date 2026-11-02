@@ -30,7 +30,7 @@ export const CARPENTER_WEBSITE_PAGE_FR: DibodevTradeWebsitePageContent = {
     reassurances: ['2 minutes', 'Sans inscription', 'Résultat immédiat'],
   },
   summary: {
-    text: `Un site de menuisier, d’agenceur ou de poseur de fenêtres coûte 290${NBSP}€ une seule fois chez Dibodev, nom de domaine et hébergement compris, sur le modèle Édito de cette page, en ligne sous 48${NBSP}h. Un site sur mesure, avec galerie de réalisations par type d’ouvrage et demande de devis en ligne, commence à 1${NBSP}500${NBSP}€. Dans les deux cas, la galerie de vos réalisations, votre zone de pose, votre assurance décennale et les mentions légales obligatoires sont prévues.`,
+    text: `La création d’un site internet de menuisier, d’agenceur ou de poseur de fenêtres coûte 290${NBSP}€ une seule fois chez Dibodev, nom de domaine et hébergement compris, sur le modèle Édito de cette page, en ligne sous 48${NBSP}h. Un site sur mesure, avec galerie de réalisations par type d’ouvrage et demande de devis en ligne, commence à 1${NBSP}500${NBSP}€. Dans les deux cas, la galerie de vos réalisations, votre zone de pose, votre assurance décennale et les mentions légales obligatoires sont prévues.`,
     authorBio:
       'développeur indépendant près de Rennes. Je crée des sites et des logiciels pour les artisans, et j’ai conçu le modèle Édito ci-dessus.',
   },
@@ -55,6 +55,10 @@ export const CARPENTER_WEBSITE_PAGE_FR: DibodevTradeWebsitePageContent = {
     ],
     serviceDescription: 'Prise de cotes sur place, devis gratuit.',
     requestTitle: 'Votre site de menuisier, à votre nom',
+  },
+  examples: {
+    title: 'Un exemple de site internet pour menuisier',
+    imageAlt: 'Exemple de site internet pour menuisier, modèle {name}',
   },
   contents: {
     eyebrow: 'Ce qui fait demander un devis',

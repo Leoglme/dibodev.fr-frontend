@@ -135,14 +135,18 @@ const catalogCards: ComputedRef<DibodevTradeWebsiteCatalogCard[]> = computed(():
       trade.templates.length === 1
         ? page.catalog.stylesCountOne
         : QuizTextUtils.fillTemplate(page.catalog.stylesCountMany, { count: String(trade.templates.length) })
+    const title: string = card?.title ?? ''
     return {
       key: trade.key,
       icon: trade.icon,
       tradeLabel: sharedWording.tradeLabels[trade.key],
-      title: card?.title ?? '',
+      title,
       description: card?.description ?? '',
       stylesCountLabel,
       thumbnailSrc: trade.templates[0]?.thumbnailSrc ?? '',
+      thumbnailAlt: QuizTextUtils.fillTemplate(sharedWording.examples.hubImageAlt, {
+        title: `${title.charAt(0).toLocaleLowerCase(pageLocale)}${title.slice(1)}`,
+      }),
       routeName: trade.routeName,
     }
   }),

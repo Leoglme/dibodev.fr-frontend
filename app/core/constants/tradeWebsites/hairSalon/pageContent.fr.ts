@@ -33,7 +33,7 @@ export const HAIR_SALON_WEBSITE_PAGE_FR: DibodevTradeWebsitePageContent = {
     reassurances: ['2 minutes', 'Sans inscription', 'Résultat immédiat'],
   },
   summary: {
-    text: `Un site de coiffeur, de coiffeuse ou de barbier coûte 290${NBSP}€ une seule fois chez Dibodev, nom de domaine et hébergement compris, sur le modèle de cette page, en ligne sous 48${NBSP}h. Un site sur mesure, avec prise de rendez-vous en ligne, commence à 1${NBSP}500${NBSP}€. Dans les deux cas, la carte des prix, les horaires, l’adresse du salon et les mentions légales obligatoires sont prévus.`,
+    text: `La création d’un site internet de coiffeur, de coiffeuse ou de barbier coûte 290${NBSP}€ une seule fois chez Dibodev, nom de domaine et hébergement compris, sur le modèle de cette page, en ligne sous 48${NBSP}h. Un site sur mesure, avec prise de rendez-vous en ligne, commence à 1${NBSP}500${NBSP}€. Dans les deux cas, la carte des prix, les horaires, l’adresse du salon et les mentions légales obligatoires sont prévus.`,
     authorBio:
       'développeur indépendant près de Rennes. Je crée des sites et des logiciels pour les artisans et les commerces de proximité, et j’ai développé le modèle de salon ci-dessus.',
   },
@@ -57,6 +57,10 @@ export const HAIR_SALON_WEBSITE_PAGE_FR: DibodevTradeWebsitePageContent = {
     ],
     serviceDescription: 'Conseil personnalisé, prix annoncé avant de commencer.',
     requestTitle: 'Votre site de coiffeur, à votre nom',
+  },
+  examples: {
+    title: 'Un exemple de site internet pour salon de coiffure',
+    imageAlt: 'Exemple de site internet pour salon de coiffure, modèle {name}',
   },
   contents: {
     eyebrow: 'Ce qui fait réserver',

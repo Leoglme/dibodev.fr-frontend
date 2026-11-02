@@ -31,7 +31,7 @@ export const GARAGE_WEBSITE_PAGE_FR: DibodevTradeWebsitePageContent = {
     reassurances: ['2 minutes', 'Sans inscription', 'Résultat immédiat'],
   },
   summary: {
-    text: `Un site pour un garage ou un mécanicien indépendant coûte 290${NBSP}€ une seule fois chez Dibodev, nom de domaine et hébergement compris, sur le modèle de cette page, en ligne sous 48${NBSP}h. Un site sur mesure, avec prise de rendez-vous en ligne reliée à votre agenda ou devis en ligne, commence à 1${NBSP}500${NBSP}€. Dans les deux cas, la demande de rendez-vous, vos tarifs, l’information sur les pièces issues de l’économie circulaire et les mentions légales obligatoires sont prévus.`,
+    text: `La création d’un site internet pour un garage ou un mécanicien indépendant coûte 290${NBSP}€ une seule fois chez Dibodev, nom de domaine et hébergement compris, sur le modèle de cette page, en ligne sous 48${NBSP}h. Un site sur mesure, avec prise de rendez-vous en ligne reliée à votre agenda ou devis en ligne, commence à 1${NBSP}500${NBSP}€. Dans les deux cas, la demande de rendez-vous, vos tarifs, l’information sur les pièces issues de l’économie circulaire et les mentions légales obligatoires sont prévus.`,
     authorBio:
       'développeur indépendant près de Rennes. Je crée des sites et des logiciels pour les artisans, et j’ai conçu le modèle de garage ci-dessus.',
   },
@@ -57,6 +57,10 @@ export const GARAGE_WEBSITE_PAGE_FR: DibodevTradeWebsitePageContent = {
     ],
     serviceDescription: 'Prix annoncé avant l’intervention, rien n’est fait sans votre accord.',
     requestTitle: 'Votre site de garage, à votre nom',
+  },
+  examples: {
+    title: 'Un exemple de site internet pour garage automobile',
+    imageAlt: 'Exemple de site internet pour garage automobile, modèle {name}',
   },
   contents: {
     eyebrow: 'Ce qui fait prendre rendez-vous',

@@ -35,6 +35,10 @@ export type DibodevTradeWebsitePageContent = {
     authorBio: string
   }
   atelier: DibodevSiteAtelierTradeWording
+  examples: {
+    title: string
+    imageAlt: string
+  }
   contents: {
     eyebrow: string
     title: string
@@ -91,6 +95,15 @@ export type DibodevTradeWebsiteSharedWording = {
   fallbackResourceCards: {
     websiteHealthCheck: DibodevResourceCard
     websitePriceBarometer: DibodevResourceCard
+  }
+  examples: {
+    eyebrow: string
+    introOne: string
+    introMany: string
+    nameTemplate: string
+    liveLinkLabel: string
+    ctaLabel: string
+    hubImageAlt: string
   }
   otherTradesTitle: string
   allTradesLabel: string

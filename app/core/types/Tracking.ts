@@ -202,6 +202,7 @@ export type TrackingEventPayloads = {
     template: string
     device: DibodevSiteAtelierDevice
   }
+  [TRACKING_EVENTS.siteExampleOpened]: { example: string; location: string }
   [TRACKING_EVENTS.projectSpecificationStarted]: {
     projectType: DibodevProjectSpecificationProjectType
     location: string

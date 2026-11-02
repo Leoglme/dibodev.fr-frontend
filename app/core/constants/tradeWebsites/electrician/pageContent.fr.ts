@@ -30,7 +30,7 @@ export const ELECTRICIAN_WEBSITE_PAGE_FR: DibodevTradeWebsitePageContent = {
     reassurances: ['2 minutes', 'Sans inscription', 'Résultat immédiat'],
   },
   summary: {
-    text: `Un site d’électricien coûte 290${NBSP}€ une seule fois chez Dibodev, nom de domaine et hébergement compris, sur l’un des deux modèles de cette page, en ligne sous 48${NBSP}h. Un site sur mesure, avec demande de dépannage ou de devis en ligne, commence à 1${NBSP}500${NBSP}€. Dans les deux cas, le bouton d’appel pour les dépannages, vos tarifs, votre zone d’intervention, vos qualifications et les mentions légales obligatoires sont prévus.`,
+    text: `La création d’un site internet d’électricien coûte 290${NBSP}€ une seule fois chez Dibodev, nom de domaine et hébergement compris, sur l’un des deux modèles de cette page, en ligne sous 48${NBSP}h. Un site sur mesure, avec demande de dépannage ou de devis en ligne, commence à 1${NBSP}500${NBSP}€. Dans les deux cas, le bouton d’appel pour les dépannages, vos tarifs, votre zone d’intervention, vos qualifications et les mentions légales obligatoires sont prévus.`,
     authorBio:
       'développeur indépendant près de Rennes. Je crée des sites et des logiciels pour les artisans, et j’ai conçu les deux modèles d’électricien ci-dessus.',
   },
@@ -59,6 +59,10 @@ export const ELECTRICIAN_WEBSITE_PAGE_FR: DibodevTradeWebsitePageContent = {
     ],
     serviceDescription: `Devis gratuit, installation aux normes NF${NBSP}C${NBSP}15-100.`,
     requestTitle: 'Votre site d’électricien, à votre nom',
+  },
+  examples: {
+    title: 'Deux exemples de sites internet pour électricien',
+    imageAlt: 'Exemple de site internet pour électricien, modèle {name}',
   },
   contents: {
     eyebrow: 'Ce qui fait appeler',

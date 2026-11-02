@@ -59,6 +59,10 @@ export const CARPENTER_WEBSITE_PAGE_ES: DibodevTradeWebsitePageContent = {
     serviceDescription: 'Medición en casa y presupuesto gratis.',
     requestTitle: 'Tu web de carpintero, a tu nombre',
   },
+  examples: {
+    title: 'Un ejemplo de página web para carpintero',
+    imageAlt: 'Ejemplo de página web para carpintero, plantilla {name}',
+  },
   contents: {
     eyebrow: 'Lo que hace pedir presupuesto',
     title: 'Lo que debe tener la web de un carpintero',

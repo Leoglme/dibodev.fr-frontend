@@ -9,7 +9,7 @@ export const SITE_ATELIER_WORDING_ES: DibodevSiteAtelierWording = {
   seeMyDemo: 'Ver mi demo',
   hintDefault: 'Puedes cambiarlo todo después.',
   hintLastStep: 'Último paso antes de tu demo.',
-  hintFinal: 'Todo sigue siendo modificable: vuelve atrás cuando quieras.',
+  hintMedia: 'Tus fotos se quedan en tu dispositivo hasta que pidas el enlace.',
   business: {
     title: 'Tu empresa',
     intro: 'La web se actualiza mientras escribes.',
@@ -87,8 +87,10 @@ export const SITE_ATELIER_WORDING_ES: DibodevSiteAtelierWording = {
     error: 'El envío no ha funcionado. Vuelve a intentarlo o escríbeme a contact@dibodev.fr.',
     rateLimited: 'Has enviado varias solicitudes en poco tiempo. Vuelve a intentarlo en unos minutos.',
     priceTitle: '¿Te gusta?',
-    priceText:
-      'Esta web, a tu nombre, con tu dominio y el alojamiento: 290 € en un solo pago, en línea en 48 horas. ¿Necesitas más (reservas o presupuestos en línea)? A medida desde 1500 €.',
+    templateOfferPrice: '290 € en un solo pago',
+    templateOfferText: 'Esta web a tu nombre, con dominio y alojamiento incluidos, en línea en 48 horas.',
+    customOfferPrice: 'A medida desde 1500 €',
+    customOfferText: 'Con reservas o presupuestos en línea.',
     priceLink: 'Ver las dos ofertas',
   },
   preview: {
@@ -100,9 +102,10 @@ export const SITE_ATELIER_WORDING_ES: DibodevSiteAtelierWording = {
     loading: 'Cargando tu web…',
     frameTitle: 'Tu web, en directo',
     captureAlt: 'Captura de la plantilla de web elegida',
-    openFullScreen: 'Abrir la demo a pantalla completa',
+    openFullScreen: 'Pantalla completa',
+    closeFullScreen: 'Cerrar',
+    fullScreenTitle: 'Tu web a pantalla completa',
     captureNote:
       'La vista previa en directo no está disponible ahora mismo: aquí tienes la plantilla. Tu demo a tu nombre llega por correo.',
-    note: 'Es la plantilla real, con tu nombre, tus colores y tus fotos. No se guarda nada hasta que pides el enlace.',
   },
 }

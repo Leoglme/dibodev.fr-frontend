@@ -9,7 +9,7 @@ export const SITE_ATELIER_WORDING_EN: DibodevSiteAtelierWording = {
   seeMyDemo: 'See my demo',
   hintDefault: 'You can change everything later.',
   hintLastStep: 'Last step before your demo.',
-  hintFinal: 'Everything stays editable: go back whenever you like.',
+  hintMedia: 'Your photos stay on your device until you ask for the link.',
   business: {
     title: 'Your business',
     intro: 'The website updates while you type.',
@@ -87,8 +87,10 @@ export const SITE_ATELIER_WORDING_EN: DibodevSiteAtelierWording = {
     error: 'The request did not go through. Try again, or write to contact@dibodev.fr.',
     rateLimited: 'You sent several requests in a short time. Try again in a few minutes.',
     priceTitle: 'Like it?',
-    priceText:
-      'This website, under your name, with your domain name and hosting: €290, paid once, online within 48 hours. Need more (online booking, online quotes)? Custom-made from €1,500.',
+    templateOfferPrice: '€290, paid once',
+    templateOfferText: 'This website under your name, domain name and hosting included, online within 48 hours.',
+    customOfferPrice: 'Custom-made from €1,500',
+    customOfferText: 'With online booking or online quotes.',
     priceLink: 'See both offers',
   },
   preview: {
@@ -100,9 +102,10 @@ export const SITE_ATELIER_WORDING_EN: DibodevSiteAtelierWording = {
     loading: 'Loading your website…',
     frameTitle: 'Your website, live',
     captureAlt: 'Screenshot of the chosen website template',
-    openFullScreen: 'Open the demo in full screen',
+    openFullScreen: 'Full screen',
+    closeFullScreen: 'Close',
+    fullScreenTitle: 'Your website in full screen',
     captureNote:
       'The live preview is not available right now: here is the template. Your demo under your name arrives by e-mail.',
-    note: 'This is the real template, with your name, your colours and your photos. Nothing is stored until you ask for the link.',
   },
 }

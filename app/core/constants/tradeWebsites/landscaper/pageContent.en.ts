@@ -61,6 +61,10 @@ export const LANDSCAPER_WEBSITE_PAGE_EN: DibodevTradeWebsitePageContent = {
     serviceDescription: 'Site visit and detailed quote before the work.',
     requestTitle: 'Your landscaper website, under your name',
   },
+  examples: {
+    title: 'An example of a landscaper website',
+    imageAlt: 'Example of a landscaper website, {name} template',
+  },
   contents: {
     eyebrow: 'What brings in quote requests',
     title: 'What a landscaper’s website should contain',

@@ -102,6 +102,13 @@ h3 {
   text-wrap: balance;
 }
 
+/* The chat widget injected on every page stays off the site workshop's full screen demo. */
+body:has(.site-atelier-full-screen) #dlh-assistant-launcher,
+body:has(.site-atelier-full-screen) #dlh-assistant-frame,
+body:has(.site-atelier-full-screen) .dlh-sheet {
+  display: none !important;
+}
+
 /* Firefox */
 input[type='number'] {
   -moz-appearance: textfield;

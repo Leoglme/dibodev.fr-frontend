@@ -33,7 +33,7 @@ export const LANDSCAPER_WEBSITE_PAGE_FR: DibodevTradeWebsitePageContent = {
     reassurances: ['2 minutes', 'Sans inscription', 'Résultat immédiat'],
   },
   summary: {
-    text: `Un site de paysagiste coûte 290${NBSP}€ une seule fois chez Dibodev, nom de domaine et hébergement compris, sur le modèle Verdure de cette page, en ligne sous 48${NBSP}h. Un site sur mesure, avec demande de devis en ligne et une page par commune, commence à 1${NBSP}500${NBSP}€. Dans les deux cas, vos prestations, votre zone d’intervention et les mentions légales obligatoires sont prévues, avec l’encart crédit d’impôt si vous êtes déclaré en services à la personne.`,
+    text: `La création d’un site internet de paysagiste coûte 290${NBSP}€ une seule fois chez Dibodev, nom de domaine et hébergement compris, sur le modèle Verdure de cette page, en ligne sous 48${NBSP}h. Un site sur mesure, avec demande de devis en ligne et une page par commune, commence à 1${NBSP}500${NBSP}€. Dans les deux cas, vos prestations, votre zone d’intervention et les mentions légales obligatoires sont prévues, avec l’encart crédit d’impôt si vous êtes déclaré en services à la personne.`,
     authorBio:
       'développeur indépendant près de Rennes. Je crée des sites et des logiciels pour les artisans, et j’ai conçu le modèle de paysagiste ci-dessus.',
   },
@@ -58,6 +58,10 @@ export const LANDSCAPER_WEBSITE_PAGE_FR: DibodevTradeWebsitePageContent = {
     ],
     serviceDescription: 'Visite du terrain et devis détaillé avant les travaux.',
     requestTitle: 'Votre site de paysagiste, à votre nom',
+  },
+  examples: {
+    title: 'Un exemple de site internet pour paysagiste',
+    imageAlt: 'Exemple de site internet pour paysagiste, modèle {name}',
   },
   contents: {
     eyebrow: 'Ce qui fait demander un devis',

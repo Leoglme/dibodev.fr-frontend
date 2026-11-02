@@ -62,6 +62,10 @@ export const HAIR_SALON_WEBSITE_PAGE_ES: DibodevTradeWebsitePageContent = {
     serviceDescription: 'Consejo personalizado, precio anunciado antes de empezar.',
     requestTitle: 'Tu web de peluquería, a tu nombre',
   },
+  examples: {
+    title: 'Un ejemplo de página web para peluquería',
+    imageAlt: 'Ejemplo de página web para peluquería, plantilla {name}',
+  },
   contents: {
     eyebrow: 'Lo que hace reservar',
     title: 'Lo que debe tener la web de una peluquería',

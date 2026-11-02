@@ -33,7 +33,7 @@ export const DENTIST_WEBSITE_PAGE_FR: DibodevTradeWebsitePageContent = {
     reassurances: ['2 minutes', 'Sans inscription', 'Résultat immédiat'],
   },
   summary: {
-    text: `Un site de cabinet dentaire coûte 290${NBSP}€ une seule fois chez Dibodev, nom de domaine et hébergement compris, sur le modèle de cette page, en ligne sous 48${NBSP}h. Un site sur mesure, avec prise de rendez-vous en ligne, commence à 1${NBSP}500${NBSP}€. Dans les deux cas, la page d’honoraires, les urgences et les mentions légales sont prévues, dans le cadre fixé par le code de déontologie des chirurgiens-dentistes.`,
+    text: `La création d’un site internet de cabinet dentaire coûte 290${NBSP}€ une seule fois chez Dibodev, nom de domaine et hébergement compris, sur le modèle de cette page, en ligne sous 48${NBSP}h. Un site sur mesure, avec prise de rendez-vous en ligne, commence à 1${NBSP}500${NBSP}€. Dans les deux cas, la page d’honoraires, les urgences et les mentions légales sont prévues, dans le cadre fixé par le code de déontologie des chirurgiens-dentistes.`,
     authorBio:
       'développeur indépendant près de Rennes. Je crée des sites et des logiciels pour les indépendants et les petites entreprises, et j’ai conçu le modèle de cabinet dentaire ci-dessus.',
   },
@@ -58,6 +58,10 @@ export const DENTIST_WEBSITE_PAGE_FR: DibodevTradeWebsitePageContent = {
     ],
     serviceDescription: 'Explications claires et honoraires annoncés avant les soins.',
     requestTitle: 'Votre site de cabinet dentaire, à votre nom',
+  },
+  examples: {
+    title: 'Un exemple de site internet pour cabinet dentaire',
+    imageAlt: 'Exemple de site internet pour cabinet dentaire, modèle {name}',
   },
   contents: {
     eyebrow: 'Ce que cherchent les patients',

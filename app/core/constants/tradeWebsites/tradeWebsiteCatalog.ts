@@ -16,6 +16,7 @@ export const TRADE_WEBSITE_TRACKING_LOCATION_PREFIX: string = 'trade_website_'
 export const TRADE_WEBSITES_HUB_TRACKING_LOCATION: string = 'trade_websites_hub'
 
 export const TRADE_WEBSITE_ATELIER_ANCHOR_ID: string = 'atelier'
+export const TRADE_WEBSITE_EXAMPLES_ANCHOR_ID: string = 'exemples'
 export const TRADE_WEBSITE_CONTENTS_ANCHOR_ID: string = 'contenu'
 export const TRADE_WEBSITE_RULES_ANCHOR_ID: string = 'reglementation'
 export const TRADE_WEBSITE_PRICING_ANCHOR_ID: string = 'pricing'

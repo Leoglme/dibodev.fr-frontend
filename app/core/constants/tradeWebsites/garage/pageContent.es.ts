@@ -59,6 +59,10 @@ export const GARAGE_WEBSITE_PAGE_ES: DibodevTradeWebsitePageContent = {
     serviceDescription: 'Precio anunciado antes de intervenir, ningún trabajo sin acuerdo previo.',
     requestTitle: 'Tu web de taller mecánico, a tu nombre',
   },
+  examples: {
+    title: 'Un ejemplo de página web para taller mecánico',
+    imageAlt: 'Ejemplo de página web para taller mecánico, plantilla {name}',
+  },
   contents: {
     eyebrow: 'Lo que hace pedir cita',
     title: 'Lo que debe tener la web de un taller mecánico',

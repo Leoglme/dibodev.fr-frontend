@@ -61,6 +61,10 @@ export const DENTIST_WEBSITE_PAGE_EN: DibodevTradeWebsitePageContent = {
     serviceDescription: 'Clear explanations and fees given before treatment.',
     requestTitle: 'Your dental practice website, under your name',
   },
+  examples: {
+    title: 'An example of a dentist website',
+    imageAlt: 'Example of a dentist website, {name} template',
+  },
   contents: {
     eyebrow: 'What patients look for',
     title: 'What a dentist’s website should contain',

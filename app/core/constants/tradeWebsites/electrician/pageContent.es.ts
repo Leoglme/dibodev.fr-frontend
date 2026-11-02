@@ -63,6 +63,10 @@ export const ELECTRICIAN_WEBSITE_PAGE_ES: DibodevTradeWebsitePageContent = {
     serviceDescription: 'Presupuesto gratis, instalación conforme a la norma NF C 15-100.',
     requestTitle: 'Tu web de electricista, a tu nombre',
   },
+  examples: {
+    title: 'Dos ejemplos de páginas web para electricista',
+    imageAlt: 'Ejemplo de página web para electricista, plantilla {name}',
+  },
   contents: {
     eyebrow: 'Lo que hace llamar',
     title: 'Lo que debe tener la web de un electricista',

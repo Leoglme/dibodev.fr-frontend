@@ -33,7 +33,7 @@ export const RESTAURANT_WEBSITE_PAGE_FR: DibodevTradeWebsitePageContent = {
     reassurances: ['2 minutes', 'Sans inscription', 'Résultat immédiat'],
   },
   summary: {
-    text: `Un site pour un restaurant, un bistrot ou un food truck coûte 290${NBSP}€ une seule fois chez Dibodev, nom de domaine et hébergement compris, sur le modèle de cette page, en ligne sous 48${NBSP}h. Un site sur mesure, avec réservation de table ou commande en ligne, commence à 1${NBSP}500${NBSP}€. Dans les deux cas, la carte, les horaires, l’accès et les mentions obligatoires sont prévus.`,
+    text: `La création d’un site internet pour un restaurant, un bistrot ou un food truck coûte 290${NBSP}€ une seule fois chez Dibodev, nom de domaine et hébergement compris, sur le modèle de cette page, en ligne sous 48${NBSP}h. Un site sur mesure, avec réservation de table ou commande en ligne, commence à 1${NBSP}500${NBSP}€. Dans les deux cas, la carte, les horaires, l’accès et les mentions obligatoires sont prévus.`,
     authorBio:
       'développeur indépendant près de Rennes. Je crée des sites et des logiciels pour les artisans et les commerçants, et j’ai développé le modèle de restaurant ci-dessus.',
   },
@@ -59,6 +59,10 @@ export const RESTAURANT_WEBSITE_PAGE_FR: DibodevTradeWebsitePageContent = {
     ],
     serviceDescription: 'Renseignements et réservations par téléphone.',
     requestTitle: 'Votre site de restaurant, à votre nom',
+  },
+  examples: {
+    title: 'Un exemple de site internet pour restaurant',
+    imageAlt: 'Exemple de site internet pour restaurant, modèle {name}',
   },
   contents: {
     eyebrow: 'Ce qui fait réserver',

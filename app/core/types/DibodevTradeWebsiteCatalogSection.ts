@@ -10,6 +10,7 @@ export type DibodevTradeWebsiteCatalogCard = {
   description: string
   stylesCountLabel: string
   thumbnailSrc: string
+  thumbnailAlt: string
   routeName: string
 }
 

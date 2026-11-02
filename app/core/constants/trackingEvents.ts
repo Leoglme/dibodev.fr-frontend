@@ -90,8 +90,10 @@ export const TRACKING_EVENTS = {
   websiteHealthChecked: 'website_health_checked',
   /** A demo asked from the site workshop of a trade page, with the choices made (never the e-mail nor the phone). */
   siteDemoRequested: 'site_demo_requested',
-  /** The live demo of the site workshop opened in full screen, in a new tab. */
+  /** The live demo of the site workshop opened in full screen over the page, with the visitor's choices. */
   siteDemoOpened: 'site_demo_opened',
+  /** An example website of a trade page opened in a new tab, with the template shown. */
+  siteExampleOpened: 'site_example_opened',
   /** First answer given in the specification generator (sent once per page view), with the project type. */
   projectSpecificationStarted: 'project_specification_started',
   /** A step of the specification generator completed, with its number and the project type. */

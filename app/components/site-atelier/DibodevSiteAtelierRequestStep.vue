@@ -77,9 +77,18 @@
       </p>
     </form>
 
-    <div class="bg-surface-tint grid gap-3 rounded-xl p-5">
+    <div class="bg-surface-tint grid gap-4 rounded-xl p-5">
       <p class="text-[15px] font-medium text-gray-100">{{ props.wording.request.priceTitle }}</p>
-      <p class="text-sm leading-6 text-gray-200">{{ props.wording.request.priceText }}</p>
+      <dl class="grid gap-3 text-sm leading-6">
+        <div>
+          <dt class="font-medium text-gray-100">{{ props.wording.request.templateOfferPrice }}</dt>
+          <dd class="text-gray-200">{{ props.wording.request.templateOfferText }}</dd>
+        </div>
+        <div>
+          <dt class="font-medium text-gray-100">{{ props.wording.request.customOfferPrice }}</dt>
+          <dd class="text-gray-200">{{ props.wording.request.customOfferText }}</dd>
+        </div>
+      </dl>
       <DibodevLink :link="`#${props.pricingAnchorId}`">
         <span>{{ props.wording.request.priceLink }}</span>
         <DibodevIcon name="ArrowRight" mode="stroke" :width="18" :height="18" aria-hidden="true" />

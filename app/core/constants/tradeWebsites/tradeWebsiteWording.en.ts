@@ -46,6 +46,16 @@ export const TRADE_WEBSITE_WORDING_EN: DibodevTradeWebsiteSharedWording = {
       description: 'The prices shown by French freelancers, agencies and website builders, recorded on the same day.',
     },
   },
+  examples: {
+    eyebrow: 'Examples',
+    introOne: 'A real website online, for a fictional business: open it, then try it with your name in the workshop.',
+    introMany:
+      'Real websites online, for fictional businesses: open them, then try the one you like with your name in the workshop.',
+    nameTemplate: 'The {name} template',
+    liveLinkLabel: 'See the example online',
+    ctaLabel: 'Try it with your name',
+    hubImageAlt: 'Example of a {title}',
+  },
   otherTradesTitle: 'A website for another trade',
   allTradesLabel: 'All trades',
   faqEyebrow: 'Frequently asked questions',

@@ -61,6 +61,10 @@ export const RESTAURANT_WEBSITE_PAGE_ES: DibodevTradeWebsitePageContent = {
     serviceDescription: 'Información y reservas por teléfono.',
     requestTitle: 'Tu web de restaurante, a tu nombre',
   },
+  examples: {
+    title: 'Un ejemplo de página web para restaurante',
+    imageAlt: 'Ejemplo de página web para restaurante, plantilla {name}',
+  },
   contents: {
     eyebrow: 'Lo que hace reservar',
     title: 'Lo que debe tener la web de un restaurante',

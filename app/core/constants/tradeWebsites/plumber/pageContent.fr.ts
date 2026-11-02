@@ -33,7 +33,7 @@ export const PLUMBER_WEBSITE_PAGE_FR: DibodevTradeWebsitePageContent = {
     reassurances: ['2 minutes', 'Sans inscription', 'Résultat immédiat'],
   },
   summary: {
-    text: `Un site de plombier chauffagiste coûte 290${NBSP}€ une seule fois chez Dibodev, nom de domaine et hébergement compris, sur l’un des trois modèles de cette page, en ligne sous 48${NBSP}h. Un site sur mesure, avec prise de rendez-vous ou devis en ligne, commence à 1${NBSP}500${NBSP}€. Dans les deux cas, je mets en place avec vous les tarifs de dépannage, la zone d’intervention et les mentions légales obligatoires.`,
+    text: `La création d’un site internet de plombier chauffagiste coûte 290${NBSP}€ une seule fois chez Dibodev, nom de domaine et hébergement compris, sur l’un des trois modèles de cette page, en ligne sous 48${NBSP}h. Un site sur mesure, avec prise de rendez-vous ou devis en ligne, commence à 1${NBSP}500${NBSP}€. Dans les deux cas, je mets en place avec vous les tarifs de dépannage, la zone d’intervention et les mentions légales obligatoires.`,
     authorBio:
       'développeur indépendant près de Rennes. Je crée des sites et des logiciels pour les artisans, et j’ai conçu les trois modèles de plombier ci-dessus.',
   },
@@ -66,6 +66,10 @@ export const PLUMBER_WEBSITE_PAGE_FR: DibodevTradeWebsitePageContent = {
     ],
     serviceDescription: 'Devis gratuit, tarifs annoncés avant l’intervention.',
     requestTitle: 'Votre site de plombier, à votre nom',
+  },
+  examples: {
+    title: 'Trois exemples de sites internet pour plombier',
+    imageAlt: 'Exemple de site internet pour plombier chauffagiste, modèle {name}',
   },
   contents: {
     eyebrow: 'Ce qui fait appeler',

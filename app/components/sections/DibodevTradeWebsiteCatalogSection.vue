@@ -19,7 +19,7 @@
           >
             <img
               :src="card.thumbnailSrc"
-              alt=""
+              :alt="card.thumbnailAlt"
               width="1200"
               height="750"
               loading="lazy"

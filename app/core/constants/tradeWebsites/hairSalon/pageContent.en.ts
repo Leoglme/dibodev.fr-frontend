@@ -61,6 +61,10 @@ export const HAIR_SALON_WEBSITE_PAGE_EN: DibodevTradeWebsitePageContent = {
     serviceDescription: 'Personal advice, price given before we start.',
     requestTitle: 'Your hair salon website, under your name',
   },
+  examples: {
+    title: 'An example of a hair salon website',
+    imageAlt: 'Example of a hair salon website, {name} template',
+  },
   contents: {
     eyebrow: 'What makes people book',
     title: 'What a hair salon’s website should contain',

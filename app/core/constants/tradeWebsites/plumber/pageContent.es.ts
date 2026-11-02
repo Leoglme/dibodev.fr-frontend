@@ -70,6 +70,10 @@ export const PLUMBER_WEBSITE_PAGE_ES: DibodevTradeWebsitePageContent = {
     serviceDescription: 'Presupuesto gratis, tarifas anunciadas antes de la intervención.',
     requestTitle: 'Tu web de fontanero, a tu nombre',
   },
+  examples: {
+    title: 'Tres ejemplos de páginas web para fontanero',
+    imageAlt: 'Ejemplo de página web para fontanero, plantilla {name}',
+  },
   contents: {
     eyebrow: 'Lo que hace llamar',
     title: 'Lo que debe tener la web de un fontanero',

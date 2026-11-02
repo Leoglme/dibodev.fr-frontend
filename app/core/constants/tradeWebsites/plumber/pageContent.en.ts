@@ -69,6 +69,10 @@ export const PLUMBER_WEBSITE_PAGE_EN: DibodevTradeWebsitePageContent = {
     serviceDescription: 'Free quote, prices given before the job.',
     requestTitle: 'Your plumber website, under your name',
   },
+  examples: {
+    title: 'Three examples of plumber websites',
+    imageAlt: 'Example of a plumber website, {name} template',
+  },
   contents: {
     eyebrow: 'What makes people call',
     title: 'What a plumber’s website should contain',
