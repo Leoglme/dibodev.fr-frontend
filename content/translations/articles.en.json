@@ -12906,6 +12906,30 @@
             {
               "text": "It depends on where you’re losing the most time or customers. We’ll look together, and I’ll tell you straight—maybe you should focus on just one thing.",
               "type": "text"
+            },
+            {
+              "text": " For the website, my “",
+              "type": "text"
+            },
+            {
+              "text": "price of a website in France",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-site-internet",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "” barometer gives the prices displayed by twenty sources, mine included.",
+              "type": "text"
             }
           ]
         },
@@ -16876,6 +16900,30 @@
             },
             {
               "text": " A basic website costing €1,500 rarely qualifies on its own when the application must reach €6,000 VAT-exclusive. A website with management tools, equipment, or renovations, yes. Bundle your investments into a single application.",
+              "type": "text"
+            },
+            {
+              "text": " To position a quote, the “",
+              "type": "text"
+            },
+            {
+              "text": "price of a website in France",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-site-internet",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "” barometer compiles the prices displayed by twenty French sources, recorded the same day.",
               "type": "text"
             }
           ]

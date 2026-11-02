@@ -12911,6 +12911,30 @@
             {
               "text": "Depende de dónde pierda más tiempo o clientes. Lo miramos juntos, y se lo digo con franqueza — incluso si le recomiendo hacer solo una de las dos cosas.",
               "type": "text"
+            },
+            {
+              "text": " Para la web, mi barómetro «",
+              "type": "text"
+            },
+            {
+              "text": "precio de una página web",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-site-internet",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "» da los precios publicados por veinte fuentes, los míos incluidos.",
+              "type": "text"
             }
           ]
         },
@@ -16878,6 +16902,30 @@
             },
             {
               "text": " Una página web básica de 1 500 € rara vez pasa sola cuando el expediente debe alcanzar 6 000 € IVA excluido. Una página con una herramienta de gestión, un equipo o trabajos, sí. Agrupe sus inversiones en un solo expediente.",
+              "type": "text"
+            },
+            {
+              "text": " Para situar un presupuesto, el barómetro «",
+              "type": "text"
+            },
+            {
+              "text": "precio de una página web",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-site-internet",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "» recoge los precios publicados por veinte fuentes francesas, recogidos el mismo día.",
               "type": "text"
             }
           ]
