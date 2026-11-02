@@ -40,6 +40,7 @@ import DibodevServiceItem from '~/components/data-displays/DibodevServiceItem.vu
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { getAccentPalette } from '~/core/constants/accentPalettes'
+import { TRADE_WEBSITES_HUB_ROUTE_NAME } from '~/core/constants/tradeWebsites/tradeWebsiteCatalog'
 
 type HomeService = {
   key: string
@@ -61,6 +62,7 @@ const SERVICE_ICONS: Record<string, DibodevServiceIconName> = {
 /** Services presented on a page of their own: the card title links to it. */
 const SERVICE_PAGE_ROUTE_NAMES: Record<string, string> = {
   software: 'custom-business-software',
+  website: TRADE_WEBSITES_HUB_ROUTE_NAME,
 }
 
 /**
