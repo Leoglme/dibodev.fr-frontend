@@ -2,7 +2,7 @@
   <div
     :id="props.anchorId"
     ref="atelierCard"
-    class="grid scroll-mt-24 overflow-clip rounded-2xl border border-gray-300 bg-white shadow-[0_32px_80px_-44px_rgba(91,75,208,0.4)] lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]"
+    class="grid scroll-mt-24 rounded-2xl border border-gray-300 bg-white shadow-[0_32px_80px_-44px_rgba(91,75,208,0.4)] lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]"
   >
     <div
       class="order-2 grid min-w-0 grid-cols-[minmax(0,1fr)] content-start gap-6 border-t border-gray-300 p-5 sm:p-7 lg:order-1 lg:border-t-0 lg:border-r"
@@ -102,7 +102,7 @@
       </div>
     </div>
 
-    <div class="order-1 min-w-0 bg-gray-800 lg:order-2">
+    <div class="order-1 min-w-0 rounded-t-[15px] bg-gray-800 lg:order-2 lg:rounded-tl-none lg:rounded-br-[15px]">
       <div class="p-4 sm:p-6 lg:sticky lg:top-[110px]">
         <DibodevSiteAtelierPreview
           :wording="props.wording"

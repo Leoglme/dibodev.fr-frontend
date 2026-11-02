@@ -37,6 +37,7 @@ export type DibodevPricingOffer = {
  * @property {string} highlightLabel - Small label displayed on the highlighted card (e.g. "Most requested").
  * @property {DibodevSectionTone} tone - Background tone of the section.
  * @property {DibodevLandingSecondaryCta | null} secondaryLink - Optional text link next to the button (e.g. the budget estimator).
+ * @property {boolean} hasStackedActions - Whether the text link sits under the button on every screen instead of beside it.
  */
 export type DibodevPricingSectionProps = {
   eyebrow: string
@@ -50,4 +51,5 @@ export type DibodevPricingSectionProps = {
   highlightLabel: string
   tone: DibodevSectionTone
   secondaryLink: DibodevLandingSecondaryCta | null
+  hasStackedActions: boolean
 }

@@ -54,7 +54,11 @@
         </li>
       </ul>
 
-      <div v-if="props.ctaLabel" class="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+      <div
+        v-if="props.ctaLabel"
+        class="flex flex-col items-center justify-center gap-4"
+        :class="{ 'sm:flex-row sm:gap-6': !props.hasStackedActions }"
+      >
         <DibodevButton
           :to="props.ctaTo || localePath('/contact')"
           size="lg"
@@ -142,6 +146,10 @@ const props: DibodevPricingSectionProps = defineProps({
   secondaryLink: {
     type: Object as PropType<DibodevLandingSecondaryCta | null>,
     default: null,
+  },
+  hasStackedActions: {
+    type: Boolean as PropType<boolean>,
+    default: false,
   },
 })
 

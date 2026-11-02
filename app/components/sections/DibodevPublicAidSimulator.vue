@@ -261,6 +261,7 @@ import {
   DEFAULT_EMPLOYEES,
   DEFAULT_PROJECT_AMOUNT_HT,
 } from '~/core/constants/publicAid/pageShared'
+import { GEO_API_COMMUNES_URL } from '~/core/constants/geoApi'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 import { PublicAidUtils } from '~/core/utils/PublicAidUtils'
 import { QuizTextUtils } from '~/core/utils/QuizTextUtils'
@@ -270,8 +271,6 @@ const YES: string = 'yes'
 const NO: string = 'no'
 /** The result is tracked once it has stayed the same for this long, so typing an amount sends one event. */
 const TRACKING_DELAY_MS: number = 1200
-/** Public directory of the French communes, asked when the Brittany table has no match. */
-const GEO_API_URL: string = 'https://geo.api.gouv.fr/communes'
 const GEO_API_FIELDS: string = 'nom,code,codesPostaux,population,codeDepartement,codeEpci'
 /** Typing pause before the directory is asked, so one request goes out per word rather than per letter. */
 const REMOTE_SEARCH_DELAY_MS: number = 300
@@ -522,7 +521,9 @@ async function searchRemoteCommunes(query: string): Promise<void> {
   })
   params.set(POSTCODE_REGEX.test(query) ? 'codePostal' : 'nom', query)
   try {
-    const rows: DibodevGeoApiCommune[] = await $fetch<DibodevGeoApiCommune[]>(`${GEO_API_URL}?${params.toString()}`)
+    const rows: DibodevGeoApiCommune[] = await $fetch<DibodevGeoApiCommune[]>(
+      `${GEO_API_COMMUNES_URL}?${params.toString()}`,
+    )
     if (communeQuery.value.trim() !== query) return
     remoteMatches.value = rows.map(
       (row: DibodevGeoApiCommune): DibodevCommune => PublicAidUtils.fromGeoApi(row, props.communes.epcis),

@@ -20,19 +20,14 @@
           @input="emit('update:business-name', readValue($event))"
         />
       </div>
-      <div class="relative flex flex-col gap-3">
-        <label :for="CITY_ID" class="text-base font-medium text-gray-100">{{ props.wording.business.cityLabel }}</label>
-        <input
-          :id="CITY_ID"
-          type="text"
-          autocomplete="address-level2"
-          :maxlength="SITE_ATELIER_CITY_MAX_LENGTH"
-          :value="props.state.city"
-          :placeholder="props.wording.business.cityPlaceholder"
-          :class="SITE_ATELIER_TEXT_FIELD_CLASS"
-          @input="emit('update:city', readValue($event))"
-        />
-      </div>
+      <DibodevTownSearchInput
+        :id="CITY_ID"
+        :label="props.wording.business.cityLabel"
+        :value="props.state.city"
+        :placeholder="props.wording.business.cityPlaceholder"
+        :maxLength="SITE_ATELIER_CITY_MAX_LENGTH"
+        @update:value="emit('update:city', $event)"
+      />
       <div class="relative flex flex-col gap-3">
         <label :for="PHONE_ID" class="text-base font-medium text-gray-100">{{
           props.wording.business.phoneLabel
@@ -58,6 +53,7 @@ import type { SiteAtelierGooglePlace } from '~~/server/types/tools/siteAtelier'
 import type { DibodevSiteAtelierState, DibodevSiteAtelierWording } from '~/core/types/DibodevSiteAtelier'
 import type { DibodevSiteAtelierBusinessStepProps } from '~/core/types/DibodevSiteAtelierBusinessStep'
 import { ref } from 'vue'
+import DibodevTownSearchInput from '~/components/inputs/DibodevTownSearchInput.vue'
 import DibodevSiteAtelierGooglePlaceSearch from '~/components/site-atelier/DibodevSiteAtelierGooglePlaceSearch.vue'
 import DibodevSiteAtelierStepHeading from '~/components/site-atelier/DibodevSiteAtelierStepHeading.vue'
 import {
@@ -72,7 +68,7 @@ const CITY_ID: string = 'site-atelier-city'
 const PHONE_ID: string = 'site-atelier-phone'
 
 /**
- * First step: the business name, city and phone shown on the site, with the optional Google profile search above.
+ * First step: the business name, city (with commune suggestions) and phone shown on the site, with the optional Google profile search above.
  */
 const props: DibodevSiteAtelierBusinessStepProps = defineProps({
   wording: {
