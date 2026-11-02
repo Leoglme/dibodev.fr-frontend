@@ -245,6 +245,7 @@
       "wordpressHackCheck": "Web WordPress hackeada: comprobar",
       "emailDeliverabilityCheck": "Correos en spam: comprobar SPF, DKIM, DMARC",
       "websiteHealthCheck": "Probar mi web: 8 comprobaciones",
+      "projectSpecification": "Pliego de condiciones: generador y plantillas",
       "coldCallingCheck": "Prospección telefónica: ¿puedo llamar?",
       "hostingStatus": "¿Mi hosting está caído?",
       "budgetEstimator": "Estimador de presupuesto",

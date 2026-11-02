@@ -8,6 +8,7 @@ import { WEBSITE_HEALTH_CHECK_TEASER } from '~/core/constants/websiteHealthCheck
 import { EMAIL_DELIVERABILITY_CHECK_ROUTE_NAME } from '~/core/constants/emailDeliverabilityCheck/pageShared'
 import { E_INVOICING_SCOPE_QUIZ_ID } from '~/core/constants/eInvoicingScopeQuiz'
 import { NBSP } from '~/core/constants/typography'
+import { PROJECT_SPECIFICATION_TEASER } from '~/core/constants/projectSpecification/pageShared'
 
 const DRIVING_SCHOOL_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   toolId: 'driving-school-software',
@@ -748,6 +749,12 @@ export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserConte
   'coach-sportif-limiter-les-annulations-avec-un-outil-de-reservation-en-ligne': PERSONAL_TRAINER_SOFTWARE_TEASER,
   'logiciel-reservation-en-ligne-sur-mesure-loisirs': LEISURE_BOOKING_SOFTWARE_TEASER,
   'pass-commerce-artisanat-rennes-site-internet': PUBLIC_AID_SIMULATOR_TEASER,
+  'application-metier-sur-mesure-guide-tpe-pme': PROJECT_SPECIFICATION_TEASER,
+  'developpement-logiciel-b2b-sur-mesure-prix': PROJECT_SPECIFICATION_TEASER,
+  'site-vitrine-ou-outil-metier-sur-mesure-que-choisir': PROJECT_SPECIFICATION_TEASER,
+  'freelance-ou-agence-rennes-outil-metier-sur-mesure': PROJECT_SPECIFICATION_TEASER,
+  'developpeur-application-metier-rennes-freelance-local': PROJECT_SPECIFICATION_TEASER,
+  'creer-application-mobile-rennes-etapes-prix': PROJECT_SPECIFICATION_TEASER,
 }
 
 export const TOOL_TEASERS_BY_PROJECT_SLUG: Record<string, DibodevToolTeaserContent> = {
@@ -813,6 +820,7 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   WORDPRESS_HACK_CHECK_TEASER,
   WEBSITE_HEALTH_CHECK_TEASER,
   HOSTING_STATUS_TEASER,
+  PROJECT_SPECIFICATION_TEASER,
   EMAIL_DELIVERABILITY_CHECK_TEASER,
   E_INVOICING_CHECK_TEASER,
   E_INVOICING_SCOPE_TEASER,

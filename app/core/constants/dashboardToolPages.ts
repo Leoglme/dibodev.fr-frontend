@@ -31,6 +31,23 @@ export const DASHBOARD_TOOL_PAGES: Record<string, DashboardToolPage> = {
   'tools-inventory-management-software': { label: 'Logiciel de gestion de stock', onlineSince: '2026-11-01' },
   'tools-email-deliverability-check': { label: 'E-mails en spam : SPF, DKIM, DMARC', onlineSince: '2026-11-01' },
   'tools-website-health-check': { label: 'Tester mon site : 8 vérifications', onlineSince: '2026-11-02' },
+  'tools-project-specification': { label: 'Générateur de cahier des charges', onlineSince: '2026-11-02' },
+  'tools-project-specification-showcase-website': {
+    label: 'Modèle cahier des charges site vitrine',
+    onlineSince: '2026-11-02',
+  },
+  'tools-project-specification-online-store': {
+    label: 'Modèle cahier des charges e-commerce',
+    onlineSince: '2026-11-02',
+  },
+  'tools-project-specification-business-software': {
+    label: 'Modèle cahier des charges application métier',
+    onlineSince: '2026-11-02',
+  },
+  'tools-project-specification-mobile-app': {
+    label: 'Modèle cahier des charges application mobile',
+    onlineSince: '2026-11-02',
+  },
   'tools-web-host-status': { label: 'Hébergeur en panne (hub)', onlineSince: '2026-11-01' },
   'tools-web-host-status-provider': { label: 'Hébergeur en panne : pages par hébergeur', onlineSince: '2026-11-01' },
   'tools-free-templates': { label: 'Modèles gratuits (hub)', onlineSince: '2026-11-01' },

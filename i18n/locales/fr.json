@@ -245,6 +245,7 @@
       "wordpressHackCheck": "Site WordPress piraté : vérifier",
       "emailDeliverabilityCheck": "E-mails en spam : vérifier SPF, DKIM, DMARC",
       "websiteHealthCheck": "Tester mon site : 8 vérifications",
+      "projectSpecification": "Cahier des charges : générateur et modèles",
       "coldCallingCheck": "Démarchage téléphonique interdit ?",
       "hostingStatus": "Mon hébergeur est-il en panne ?",
       "budgetEstimator": "Estimateur de budget",

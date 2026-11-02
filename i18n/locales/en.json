@@ -245,6 +245,7 @@
       "wordpressHackCheck": "Hacked WordPress site: check",
       "emailDeliverabilityCheck": "Emails in spam: check SPF, DKIM, DMARC",
       "websiteHealthCheck": "Test my website: 8 checks",
+      "projectSpecification": "Project brief: generator and templates",
       "coldCallingCheck": "Cold calling ban: can I still call?",
       "hostingStatus": "Is my web host down?",
       "budgetEstimator": "Budget estimator",

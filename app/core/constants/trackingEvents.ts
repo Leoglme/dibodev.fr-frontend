@@ -92,6 +92,16 @@ export const TRACKING_EVENTS = {
   siteDemoRequested: 'site_demo_requested',
   /** The live demo of the site workshop opened in full screen, in a new tab. */
   siteDemoOpened: 'site_demo_opened',
+  /** First answer given in the specification generator (sent once per page view), with the project type. */
+  projectSpecificationStarted: 'project_specification_started',
+  /** A step of the specification generator completed, with its number and the project type. */
+  projectSpecificationStepCompleted: 'project_specification_step_completed',
+  /** The last step of the specification generator completed: the choices that shape the document, never the texts typed. */
+  projectSpecificationCompleted: 'project_specification_completed',
+  /** The specification saved from the generator, as a Word file or as a PDF (print window). */
+  projectSpecificationDownloaded: 'project_specification_downloaded',
+  /** A quote asked with the specification, with the outcome, never the contact details. */
+  projectSpecificationQuoteRequested: 'project_specification_quote_requested',
 } as const
 
 /** Tracking event name (value of the `TRACKING_EVENTS` catalog). */

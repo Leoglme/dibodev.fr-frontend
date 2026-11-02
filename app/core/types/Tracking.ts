@@ -19,6 +19,12 @@ import type {
   DibodevPhpVulnerabilityPlatformKey,
   DibodevPhpVulnerabilityVerdict,
 } from '~/core/types/DibodevPhpVulnerabilityCheck'
+import type {
+  DibodevProjectSpecificationBudget,
+  DibodevProjectSpecificationKind,
+  DibodevProjectSpecificationLaunchDate,
+  DibodevProjectSpecificationProjectType,
+} from '~/core/types/DibodevProjectSpecification'
 import type { DibodevPublicAidProjectType, DibodevPublicAidStatus } from '~/core/types/DibodevPublicAid'
 import type { DibodevSiteAtelierDevice } from '~/core/types/DibodevSiteAtelier'
 import type { DibodevSiteCheckErrorKind } from '~/core/types/DibodevSiteCheck'
@@ -195,5 +201,35 @@ export type TrackingEventPayloads = {
     trade: DibodevTradeWebsiteKey
     template: string
     device: DibodevSiteAtelierDevice
+  }
+  [TRACKING_EVENTS.projectSpecificationStarted]: {
+    projectType: DibodevProjectSpecificationProjectType
+    location: string
+  }
+  [TRACKING_EVENTS.projectSpecificationStepCompleted]: {
+    step: number
+    projectType: DibodevProjectSpecificationProjectType
+    location: string
+  }
+  [TRACKING_EVENTS.projectSpecificationCompleted]: {
+    projectType: DibodevProjectSpecificationProjectType
+    kind: DibodevProjectSpecificationKind
+    budget: DibodevProjectSpecificationBudget | null
+    launchDate: DibodevProjectSpecificationLaunchDate | null
+    goalCount: number
+    featureCount: number
+    location: string
+  }
+  [TRACKING_EVENTS.projectSpecificationDownloaded]: {
+    format: 'docx' | 'pdf'
+    projectType: DibodevProjectSpecificationProjectType
+    location: string
+  }
+  [TRACKING_EVENTS.projectSpecificationQuoteRequested]: {
+    projectType: DibodevProjectSpecificationProjectType
+    budget: DibodevProjectSpecificationBudget | null
+    status: ContactFormSubmissionStatus
+    hasPhone: boolean
+    errorStatus?: number | null
   }
 }
