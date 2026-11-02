@@ -16,6 +16,7 @@
         "freelanceRennes": "Développeur web freelance à Rennes",
         "aiAppTakeover": "Reprise d’application IA",
         "priceBarometer": "Prix d’un logiciel sur mesure",
+        "websitePriceBarometer": "Prix d’un site internet",
         "publicAid": "Aides pour votre site ou logiciel",
         "blog": "Le blog : web, IA et outils métier"
       }
@@ -209,6 +210,7 @@
     "freelanceRennes": "Développeur freelance à Rennes",
     "aiAppTakeover": "Reprise d’application IA",
     "priceBarometer": "Prix d’un logiciel sur mesure",
+    "websitePriceBarometer": "Prix d’un site internet",
     "publicAid": "Aides pour votre site ou logiciel",
     "phpCheck": "Faille PHP : vérifier mon site",
     "eInvoicingCheck": "Facture électronique : mon logiciel est-il agréé ?",
@@ -1484,7 +1486,9 @@
     "pricing": {
       "eyebrow": "Tarifs",
       "title": "Des prix connus avant de commencer",
-      "intro": "Chaque projet est chiffré au forfait dans un devis gratuit. Voici les fourchettes constatées sur mes projets, pour vous situer avant même de m'écrire."
+      "intro": "Chaque projet est chiffré au forfait dans un devis gratuit. Voici les fourchettes constatées sur mes projets, pour vous situer avant même de m'écrire.",
+      "marketNote": "Pour situer ce tarif, le baromètre « {barometer} » compile les prix affichés par des freelances, des agences et des créateurs de sites français.",
+      "marketNoteLink": "prix d'un site internet"
     },
     "projects": {
       "eyebrow": "Réalisations",

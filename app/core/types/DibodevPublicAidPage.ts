@@ -102,6 +102,7 @@ export type DibodevPublicAidPageContent = {
     calloutEmphasizedIntro: string
     calloutText: string
     calloutFootnote: string
+    websitePriceLinkLabel: string
   }
   beyond: DibodevPublicAidSectionHeading & {
     anchorId: string

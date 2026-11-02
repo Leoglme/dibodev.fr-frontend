@@ -224,6 +224,7 @@ export const PUBLIC_AID_PAGE_ES: DibodevPublicAidPageContent = {
       'el reglamento publicado no menciona este tipo de proyecto. No es una negativa. Pide una respuesta escrita a tu asesor de la CCI o de la CMA antes de firmar, y adjunta el presupuesto.',
     calloutFootnote:
       'Fuentes: páginas y fichas de las mancomunidades, ficha de la Región de Bretaña en les-aides.fr, nota de Rennes Métropole. Lista no exhaustiva de condiciones: cada mancomunidad decide expediente por expediente.',
+    websitePriceLinkLabel: 'Para cifrar la web antes del expediente, ver el barómetro del precio de una página web',
   },
   beyond: {
     anchorId: 'fuera',

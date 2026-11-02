@@ -16,6 +16,7 @@
         "tools": "Herramientas gratuitas por oficio",
         "aiAppTakeover": "Recuperación de aplicación IA",
         "priceBarometer": "Precio de un software a medida",
+        "websitePriceBarometer": "Precio de una página web",
         "publicAid": "Ayudas para tu web o software",
         "freelanceRennes": "Desarrollador web freelance en Rennes"
       }
@@ -208,6 +209,7 @@
     "businessSoftware": "Software a medida",
     "aiAppTakeover": "Recuperación de aplicación IA",
     "priceBarometer": "Precio de un software a medida",
+    "websitePriceBarometer": "Precio de una página web",
     "publicAid": "Ayudas para tu web o software",
     "phpCheck": "Fallo de PHP: comprobar mi web",
     "eInvoicingCheck": "Factura electrónica: ¿mi software está homologado?",
@@ -1484,7 +1486,9 @@
     "pricing": {
       "eyebrow": "Precios",
       "title": "Precios conocidos antes de empezar",
-      "intro": "Cada proyecto se presupuesta a precio cerrado en un presupuesto gratuito. Estos son los rangos vistos en mis proyectos, para situarte antes incluso de escribirme."
+      "intro": "Cada proyecto se presupuesta a precio cerrado en un presupuesto gratuito. Estos son los rangos vistos en mis proyectos, para situarte antes incluso de escribirme.",
+      "marketNote": "Para comparar, el barómetro «{barometer}» recoge los precios publicados por freelances, agencias y creadores de webs franceses.",
+      "marketNoteLink": "precio de una página web"
     },
     "projects": {
       "eyebrow": "Proyectos",

@@ -63,6 +63,7 @@ export const PRICE_BAROMETER_PAGE_CONTENT_FR: DibodevPriceBarometerPageContent =
     calloutText:
       'une agence parisienne de vingt personnes et un indépendant ne vendent pas le même périmètre ni la même structure. La Fabrique du Net, qui mesure des budgets réellement engagés, trouve une médiane de 50 000 € en Île-de-France contre 15 000 € dans le reste de la France.',
     calloutFootnote: 'Médianes calculées sur les sources qui chiffrent la taille de projet, Dibodev compris.',
+    websiteBarometerLinkLabel: 'Pour un site vitrine, voir le baromètre « prix d’un site internet »',
   },
   sources: {
     eyebrow: 'Le tableau',

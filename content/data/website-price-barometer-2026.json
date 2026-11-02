@@ -1,0 +1,273 @@
+{
+  "edition": 2026,
+  "checkedAt": "2026-11-01",
+  "license": "CC BY 4.0",
+  "currency": "EUR",
+  "sources": [
+    {
+      "key": "la-fabrique-du-net",
+      "name": "La Fabrique du Net",
+      "kind": "guide",
+      "city": "France entière",
+      "sourceUrl": "https://www.lafabriquedunet.fr/agences/pages/agences-site-internet/tarifs",
+      "publishedAt": "2026-11-01",
+      "taxLabel": "unspecified",
+      "ranges": {
+        "showcase": { "min": 2500, "max": 4000 },
+        "fullShowcase": { "min": 5000, "max": 8000 }
+      },
+      "maintenanceMonthly": null
+    },
+    {
+      "key": "codeur",
+      "name": "Codeur.com",
+      "kind": "guide",
+      "city": "France entière",
+      "sourceUrl": "https://www.codeur.com/pages/prix-site-internet",
+      "publishedAt": "2025-03-18",
+      "taxLabel": "unspecified",
+      "ranges": {
+        "onePage": { "min": 300, "max": 1500 },
+        "showcase": { "min": 500, "max": 2000 },
+        "fullShowcase": { "min": 1000, "max": 5000 }
+      },
+      "maintenanceMonthly": { "min": 17, "max": 42 }
+    },
+    {
+      "key": "kolonell",
+      "name": "Kolonell",
+      "kind": "guide",
+      "city": "Dakar (grille France)",
+      "sourceUrl": "https://kolonell.com/fr/blog/combien-coute-site-web-professionnel-2026",
+      "publishedAt": "2026-05-21",
+      "taxLabel": "excludingTax",
+      "ranges": {
+        "onePage": { "min": 400, "max": 950 },
+        "showcase": { "min": 950, "max": 2300 },
+        "fullShowcase": { "min": 1850, "max": 4600 }
+      },
+      "maintenanceMonthly": null
+    },
+    {
+      "key": "independant-io",
+      "name": "independant.io",
+      "kind": "guide",
+      "city": "France entière",
+      "sourceUrl": "https://independant.io/prix-site-vitrine/",
+      "publishedAt": "2026-09-25",
+      "taxLabel": "unspecified",
+      "ranges": {
+        "showcase": { "min": 1000, "max": 10000 }
+      },
+      "maintenanceMonthly": { "min": 50, "max": 500 }
+    },
+    {
+      "key": "sk-web",
+      "name": "SK Web",
+      "kind": "freelance",
+      "city": "Saclay (Essonne)",
+      "sourceUrl": "https://sk-web.fr/site-vitrine/prix",
+      "publishedAt": "2026",
+      "taxLabel": "net",
+      "ranges": {
+        "onePage": { "min": 440, "max": null },
+        "showcase": { "min": 690, "max": 1590 }
+      },
+      "maintenanceMonthly": { "min": 9, "max": 32 }
+    },
+    {
+      "key": "lucas-fonseque",
+      "name": "Lucas Fonseque",
+      "kind": "freelance",
+      "city": "Quint-Fonsegrives (Toulouse)",
+      "sourceUrl": "https://lucasfonseque.fr/?p=8046",
+      "publishedAt": "2026-10-30",
+      "taxLabel": "excludingTax",
+      "ranges": {
+        "onePage": { "min": 800, "max": null },
+        "showcase": { "min": 1500, "max": null },
+        "fullShowcase": { "min": 2500, "max": null }
+      },
+      "maintenanceMonthly": { "min": 60, "max": 60 }
+    },
+    {
+      "key": "vorlyx-studio",
+      "name": "Vorlyx Studio",
+      "kind": "freelance",
+      "city": "Île-de-France",
+      "sourceUrl": "https://vorlyxstudio.fr/tarifs-creation-site-internet",
+      "publishedAt": "2026",
+      "taxLabel": "net",
+      "ranges": {
+        "onePage": { "min": 350, "max": 500 },
+        "showcase": { "min": 700, "max": 2000 }
+      },
+      "maintenanceMonthly": { "min": 12.5, "max": 15 }
+    },
+    {
+      "key": "adekoite",
+      "name": "Adekoite (Julien Zitoli)",
+      "kind": "freelance",
+      "city": "Paris",
+      "sourceUrl": "https://adekoite.fr/combien-coute-creation-site-vitrine/",
+      "publishedAt": "2026-10-09",
+      "taxLabel": "excludingTax",
+      "ranges": {
+        "showcase": { "min": 1500, "max": 2500 },
+        "fullShowcase": { "min": 2500, "max": 4500 }
+      },
+      "maintenanceMonthly": { "min": 70, "max": null }
+    },
+    {
+      "key": "fsweb",
+      "name": "FSWeb (Fabrice Stoller)",
+      "kind": "freelance",
+      "city": "Paris",
+      "sourceUrl": "https://fsweb.fr/tarifs",
+      "publishedAt": "2026",
+      "taxLabel": "excludingTax",
+      "ranges": {
+        "showcase": { "min": 990, "max": 1990 },
+        "fullShowcase": { "min": 1990, "max": 3990 }
+      },
+      "maintenanceMonthly": { "min": 39, "max": 89 }
+    },
+    {
+      "key": "marine-et-mots",
+      "name": "Marine & Mots",
+      "kind": "freelance",
+      "city": "Aubers (Lille)",
+      "sourceUrl": "https://marine-et-mots.com/prix-site-vitrine/",
+      "publishedAt": "non datée",
+      "taxLabel": "excludingTax",
+      "ranges": {
+        "showcase": { "min": 2000, "max": 3500 }
+      },
+      "maintenanceMonthly": null
+    },
+    {
+      "key": "dibodev",
+      "name": "Dibodev (Léo Guillaume)",
+      "kind": "freelance",
+      "city": "Saint-Erblon (Rennes)",
+      "sourceUrl": "https://dibodev.fr/developpeur-web-freelance-rennes",
+      "publishedAt": "2026-11-01",
+      "taxLabel": "net",
+      "ranges": {
+        "showcase": { "min": 290, "max": 1500 },
+        "fullShowcase": { "min": 1500, "max": null }
+      },
+      "maintenanceMonthly": { "min": 100, "max": 300 }
+    },
+    {
+      "key": "fenxi",
+      "name": "Fenxi Technologies",
+      "kind": "agency",
+      "city": "Maisons-Alfort (Paris)",
+      "sourceUrl": "https://fenxi.fr/blog/combien-coute-site-internet-2026-prix-delais/",
+      "publishedAt": "2026-11-01",
+      "taxLabel": "excludingTax",
+      "ranges": {
+        "showcase": { "min": 2000, "max": null }
+      },
+      "maintenanceMonthly": null
+    },
+    {
+      "key": "la-taniere-numerique",
+      "name": "La Tanière Numérique",
+      "kind": "agency",
+      "city": "Paris",
+      "sourceUrl": "https://www.latanierenumerique.fr/en/blog/combien-coute-site-vitrine",
+      "publishedAt": "2026-04-28",
+      "taxLabel": "excludingTax",
+      "ranges": {
+        "showcase": { "min": 2500, "max": null },
+        "fullShowcase": { "min": 4500, "max": null }
+      },
+      "maintenanceMonthly": null
+    },
+    {
+      "key": "e-cybercom",
+      "name": "E-Cybercom",
+      "kind": "agency",
+      "city": "Nantes",
+      "sourceUrl": "https://e-cybercom.fr/blog/cout-creation-site-web-2026/",
+      "publishedAt": "2026-05-18",
+      "taxLabel": "excludingTax",
+      "ranges": {
+        "onePage": { "min": 1000, "max": null },
+        "showcase": { "min": 2000, "max": null },
+        "fullShowcase": { "min": 3500, "max": null }
+      },
+      "maintenanceMonthly": null
+    },
+    {
+      "key": "simplebo",
+      "name": "Simplébo",
+      "kind": "builder",
+      "city": "Paris",
+      "sourceUrl": "https://www.simplebo.fr/tarifs",
+      "publishedAt": "non datée",
+      "taxLabel": "excludingTax",
+      "ranges": {
+        "showcase": { "min": 400, "max": 800 }
+      },
+      "maintenanceMonthly": { "min": 60, "max": 150 }
+    },
+    {
+      "key": "solocal",
+      "name": "Solocal",
+      "kind": "builder",
+      "city": "France entière",
+      "sourceUrl": "https://www.solocal.com/solutions-pour-tpme/solution-site-internet/offres-et-tarifs",
+      "publishedAt": "2026",
+      "taxLabel": "excludingTax",
+      "ranges": {},
+      "maintenanceMonthly": { "min": 64, "max": 209 }
+    },
+    {
+      "key": "wix",
+      "name": "Wix",
+      "kind": "builder",
+      "city": "France entière",
+      "sourceUrl": "https://fr.wix.com/pricing",
+      "publishedAt": "2026",
+      "taxLabel": "includingTax",
+      "ranges": {},
+      "maintenanceMonthly": { "min": 16.8, "max": 178.8 }
+    },
+    {
+      "key": "jimdo",
+      "name": "Jimdo",
+      "kind": "builder",
+      "city": "France entière",
+      "sourceUrl": "https://www.jimdo.com/fr/offres/site/",
+      "publishedAt": "non datée",
+      "taxLabel": "includingTax",
+      "ranges": {},
+      "maintenanceMonthly": { "min": 12.1, "max": 50.42 }
+    },
+    {
+      "key": "webnode",
+      "name": "Webnode",
+      "kind": "builder",
+      "city": "France entière",
+      "sourceUrl": "https://www.webnode.com/fr/tarifs-w2/",
+      "publishedAt": "2026",
+      "taxLabel": "excludingTax",
+      "ranges": {},
+      "maintenanceMonthly": { "min": 3.9, "max": 17.9 }
+    },
+    {
+      "key": "ionos",
+      "name": "IONOS (MyWebsite)",
+      "kind": "builder",
+      "city": "France entière",
+      "sourceUrl": "https://www.ionos.fr/site-internet/acheter-un-site-internet",
+      "publishedAt": "2026",
+      "taxLabel": "excludingTax",
+      "ranges": {},
+      "maintenanceMonthly": { "min": 10, "max": 30 }
+    }
+  ]
+}

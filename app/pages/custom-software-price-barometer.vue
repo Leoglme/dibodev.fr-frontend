@@ -32,7 +32,12 @@
         :text="page.tiers.calloutText"
         :footnote="page.tiers.calloutFootnote"
         tone="white"
-      />
+      >
+        <DibodevLink :link="localePath('website-price-barometer')" class="text-[15px] leading-6 font-medium">
+          <span>{{ page.tiers.websiteBarometerLinkLabel }}</span>
+          <DibodevIcon name="ArrowRight" mode="stroke" :width="16" :height="16" aria-hidden="true" />
+        </DibodevLink>
+      </DibodevCallout>
     </template>
   </DibodevPriceListSection>
   <DibodevSourcedFactsSection

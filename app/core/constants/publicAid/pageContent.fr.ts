@@ -192,6 +192,7 @@ export const PUBLIC_AID_PAGE_FR: DibodevPublicAidPageContent = {
     calloutEmphasizedIntro: `« À confirmer » veut dire${NBSP}:`,
     calloutText: `le règlement publié ne cite pas ce type de projet. Ce n’est pas un refus. Demandez une réponse écrite à votre conseiller CCI ou CMA avant de signer, et joignez le devis.`,
     calloutFootnote: `Sources${NBSP}: pages et fiches des intercommunalités, fiche de la Région Bretagne sur les-aides.fr, notice de Rennes Métropole. Liste non exhaustive des conditions${NBSP}: chaque intercommunalité décide dossier par dossier.`,
+    websitePriceLinkLabel: 'Pour chiffrer le site avant le dossier, voir le baromètre « prix d’un site internet »',
   },
   beyond: {
     anchorId: 'ailleurs',

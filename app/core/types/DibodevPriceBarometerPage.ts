@@ -63,6 +63,7 @@ export type DibodevPriceBarometerPageContent = {
     calloutEmphasizedIntro: string
     calloutText: string
     calloutFootnote: string
+    websiteBarometerLinkLabel: string
   }
   sources: DibodevPriceBarometerSectionHeading & {
     wording: DibodevPriceBarometerSourceWording

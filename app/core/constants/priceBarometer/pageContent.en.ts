@@ -63,6 +63,7 @@ export const PRICE_BAROMETER_PAGE_CONTENT_EN: DibodevPriceBarometerPageContent =
     calloutText:
       'a twenty-person Paris agency and an independent developer do not sell the same scope nor the same structure. La Fabrique du Net, which measures budgets actually committed, finds a median of €50,000 in the Paris region against €15,000 in the rest of France.',
     calloutFootnote: 'Medians computed on the sources that price the project size, Dibodev included.',
+    websiteBarometerLinkLabel: 'For a showcase website, see the website price barometer',
   },
   sources: {
     eyebrow: 'The table',

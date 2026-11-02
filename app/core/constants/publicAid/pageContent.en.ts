@@ -220,6 +220,7 @@ export const PUBLIC_AID_PAGE_EN: DibodevPublicAidPageContent = {
       'the published rules do not mention this kind of project. It is not a refusal. Ask your CCI or CMA adviser for a written answer before signing, and attach the quote.',
     calloutFootnote:
       'Sources: pages and sheets of the intercommunalités, the Région Bretagne sheet on les-aides.fr, the Rennes Métropole notice. Non-exhaustive list of conditions: each intercommunalité decides file by file.',
+    websitePriceLinkLabel: 'To price the website before the application, see the website price barometer',
   },
   beyond: {
     anchorId: 'elsewhere',

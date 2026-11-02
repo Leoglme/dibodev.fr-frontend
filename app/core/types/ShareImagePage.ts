@@ -6,7 +6,7 @@ export type ShareImagePage =
   | 'freelanceRennes'
   | 'aiAppTakeover'
   | 'priceBarometer'
-  | 'publicAid'
+  | 'websitePriceBarometer'
   | 'publicAid'
   | 'projects'
   | 'blog'

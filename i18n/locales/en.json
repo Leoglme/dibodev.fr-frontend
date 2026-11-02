@@ -16,6 +16,7 @@
         "tools": "Free tools by trade",
         "aiAppTakeover": "AI app takeover",
         "priceBarometer": "Custom software prices",
+        "websitePriceBarometer": "Website prices in France",
         "publicAid": "Aid for your website or software",
         "freelanceRennes": "Freelance web developer in Rennes"
       }
@@ -208,6 +209,7 @@
     "businessSoftware": "Custom software",
     "aiAppTakeover": "AI app takeover",
     "priceBarometer": "Custom software prices",
+    "websitePriceBarometer": "Website prices",
     "publicAid": "Aid for your website or software",
     "phpCheck": "PHP vulnerability: check my site",
     "eInvoicingCheck": "E-invoicing: is my software accredited?",
@@ -1484,7 +1486,9 @@
     "pricing": {
       "eyebrow": "Prices",
       "title": "Prices known before we start",
-      "intro": "Every project is quoted at a fixed price in a free estimate. Here are the ranges seen on my projects, so you know where you stand before even writing to me."
+      "intro": "Every project is quoted at a fixed price in a free estimate. Here are the ranges seen on my projects, so you know where you stand before even writing to me.",
+      "marketNote": "To compare, the “{barometer}” barometer compiles the prices displayed by French freelancers, agencies and website builders.",
+      "marketNoteLink": "price of a website in France"
     },
     "projects": {
       "eyebrow": "Work",

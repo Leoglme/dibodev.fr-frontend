@@ -51,7 +51,22 @@
     :highlightLabel="t('home.pricing.highlightLabel')"
     :secondaryLink="{ text: t('home.pricing.estimatorLink'), to: estimatorRoute }"
     tone="white"
-  />
+  >
+    <template #footer>
+      <i18n-t
+        keypath="freelanceRennesPage.pricing.marketNote"
+        tag="p"
+        scope="global"
+        class="text-muted mx-auto max-w-3xl text-center text-[15px] leading-7"
+      >
+        <template #barometer>
+          <NuxtLink :to="localePath('website-price-barometer')" class="text-primary font-medium hover:underline">
+            {{ t('freelanceRennesPage.pricing.marketNoteLink') }}
+          </NuxtLink>
+        </template>
+      </i18n-t>
+    </template>
+  </DibodevPricingSection>
   <DibodevFeaturedProjectsSection
     :projectSlugs="SHOWCASED_PROJECT_SLUGS"
     :eyebrow="t('freelanceRennesPage.projects.eyebrow')"

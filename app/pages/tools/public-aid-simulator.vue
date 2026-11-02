@@ -58,7 +58,12 @@
         :text="page.territories.calloutText"
         :footnote="page.territories.calloutFootnote"
         tone="tint"
-      />
+      >
+        <DibodevLink :link="localePath('website-price-barometer')" class="text-[15px] leading-6 font-medium">
+          <span>{{ page.territories.websitePriceLinkLabel }}</span>
+          <DibodevIcon name="ArrowRight" mode="stroke" :width="16" :height="16" aria-hidden="true" />
+        </DibodevLink>
+      </DibodevCallout>
     </template>
   </DibodevPriceListSection>
 
@@ -106,6 +111,7 @@ import type { DibodevPublicAidScheme } from '~/core/types/DibodevPublicAid'
 import type { DibodevPublicAidPageContent } from '~/core/types/DibodevPublicAidPage'
 import { computed } from 'vue'
 import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
+import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevCallout from '~/components/data-displays/DibodevCallout.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import DibodevFaqSection from '~/components/sections/DibodevFaqSection.vue'
@@ -115,6 +121,7 @@ import DibodevPriceListSection from '~/components/sections/DibodevPriceListSecti
 import DibodevPublicAidSimulator from '~/components/sections/DibodevPublicAidSimulator.vue'
 import DibodevSourcedFactsSection from '~/components/sections/DibodevSourcedFactsSection.vue'
 import DibodevToolLandingSection from '~/components/sections/DibodevToolLandingSection.vue'
+import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { usePageShareImage } from '~/composables/usePageShareImage'
