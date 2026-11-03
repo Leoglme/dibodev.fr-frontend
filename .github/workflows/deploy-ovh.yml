@@ -55,11 +55,13 @@ jobs:
           echo "GSC_SERVICE_ACCOUNT_JSON=$(jq -c . /tmp/gsc.json)" >> .env
           rm -f /tmp/gsc.json
 
+      # Each build prerenders ~1,500 pages, near the default Node heap of about 4 GB (the server build ran out of memory); the runner has 16 GB.
       - name: 🛠️ Generate Static Site (Frontend)
         run: npm run generate
         env:
           NITRO_PRESET: static
           NUXT_BUILD_COMMIT: ${{ github.sha }}
+          NODE_OPTIONS: --max-old-space-size=6144
 
       - name: 📂 Save static site output
         run: |
@@ -77,6 +79,7 @@ jobs:
         env:
           NITRO_PRESET: node-server
           NUXT_BUILD_COMMIT: ${{ github.sha }}
+          NODE_OPTIONS: --max-old-space-size=6144
 
       - name: 📂 Copy MJML templates to server output
         run: |
