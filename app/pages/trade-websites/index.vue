@@ -36,7 +36,6 @@
     :ctaTo="`#${page.catalog.anchorId}`"
     :ctaLocation="`${TRADE_WEBSITES_HUB_TRACKING_LOCATION}_pricing`"
     :secondaryLink="quoteLink"
-    hasStackedActions
     tone="white"
   />
   <DibodevFaqSection

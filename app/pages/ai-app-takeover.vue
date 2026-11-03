@@ -66,7 +66,7 @@
     :ctaLabel="page.pricing.cta"
     ctaLocation="ai_app_takeover_pricing"
     :highlightLabel="page.pricing.highlightLabel"
-    :secondaryLink="{ text: page.pricing.secondaryLink, target: TEST_ANCHOR }"
+    :secondaryLink="{ text: page.pricing.secondaryLink, to: TEST_ANCHOR, trackedToolId: TEST_TOOL_ID }"
     tone="tint"
   />
   <DibodevGuaranteesSection

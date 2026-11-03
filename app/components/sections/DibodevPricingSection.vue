@@ -54,11 +54,7 @@
         </li>
       </ul>
 
-      <div
-        v-if="props.ctaLabel"
-        class="flex flex-col items-center justify-center gap-4"
-        :class="{ 'sm:flex-row sm:gap-6': !props.hasStackedActions }"
-      >
+      <div v-if="props.ctaLabel" class="flex flex-col items-center justify-center gap-4">
         <DibodevButton
           :to="props.ctaTo || localePath('/contact')"
           size="lg"
@@ -67,7 +63,11 @@
         >
           {{ props.ctaLabel }}
         </DibodevButton>
-        <DibodevLink v-if="props.secondaryLink && props.secondaryLink.to" :link="props.secondaryLink.to">
+        <DibodevLink
+          v-if="props.secondaryLink && props.secondaryLink.to"
+          :link="props.secondaryLink.to"
+          @click="onSecondaryLinkClick"
+        >
           <span>{{ props.secondaryLink.text }}</span>
           <DibodevIcon name="ArrowRight" mode="stroke" :width="18" :height="18" aria-hidden="true" />
         </DibodevLink>
@@ -147,10 +147,6 @@ const props: DibodevPricingSectionProps = defineProps({
     type: Object as PropType<DibodevLandingSecondaryCta | null>,
     default: null,
   },
-  hasStackedActions: {
-    type: Boolean as PropType<boolean>,
-    default: false,
-  },
 })
 
 const localePath = useLocalePath()
@@ -164,4 +160,14 @@ const toneClass: ComputedRef<string> = computed((): string => SECTION_TONE_CLASS
 const notesClass: ComputedRef<string> = computed((): string =>
   props.tone === 'white' ? 'bg-surface-tint' : 'border border-gray-300 bg-white',
 )
+
+/**
+ * Tracks the opening of a free tool when the text link leads to one.
+ * @returns {void}
+ */
+function onSecondaryLinkClick(): void {
+  if (props.secondaryLink?.trackedToolId) {
+    track(TRACKING_EVENTS.toolTeaserClicked, { tool: props.secondaryLink.trackedToolId, location: props.ctaLocation })
+  }
+}
 </script>

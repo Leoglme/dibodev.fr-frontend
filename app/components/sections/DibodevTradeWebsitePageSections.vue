@@ -71,7 +71,6 @@
     :ctaTo="atelierHash"
     :ctaLocation="`${trackingLocation}_pricing`"
     :secondaryLink="quoteLink"
-    hasStackedActions
     tone="white"
   />
 
