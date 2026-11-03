@@ -1,7 +1,7 @@
 <template>
   <div
     ref="tunnelCard"
-    class="quiz-tunnel grid scroll-mt-24 gap-6 rounded-2xl border border-gray-300 bg-white p-4 shadow-[0_32px_80px_-44px_rgba(91,75,208,0.4)] sm:p-8 lg:p-10"
+    class="quiz-tunnel grid gap-6 rounded-2xl border border-gray-300 bg-white p-4 shadow-[0_32px_80px_-44px_rgba(91,75,208,0.4)] sm:p-8 lg:p-10"
   >
     <div class="grid gap-3">
       <div class="flex min-h-11 items-center justify-between gap-4">

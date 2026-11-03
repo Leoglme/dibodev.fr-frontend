@@ -1,5 +1,5 @@
 <template>
-  <section id="comparison" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
+  <section id="comparison" class="px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
     <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <DibodevSectionHeading
         :eyebrow="props.eyebrow"

@@ -1,5 +1,5 @@
 <template>
-  <section id="faq" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
+  <section id="faq" class="px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
     <div class="mx-auto grid w-full max-w-3xl gap-10 lg:gap-12">
       <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" align="center" />
 

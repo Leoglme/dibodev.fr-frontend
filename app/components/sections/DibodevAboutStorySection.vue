@@ -1,5 +1,5 @@
 <template>
-  <section id="about-story" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
+  <section id="about-story" class="px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
     <div class="max-w-site mx-auto grid w-full gap-20 lg:gap-32">
       <div class="grid gap-14 lg:gap-20">
         <div class="grid gap-7">

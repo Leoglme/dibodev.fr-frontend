@@ -2,7 +2,7 @@
   <div
     :id="props.anchorId"
     ref="atelierCard"
-    class="grid scroll-mt-24 rounded-2xl border border-gray-300 bg-white shadow-[0_32px_80px_-44px_rgba(91,75,208,0.4)] lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]"
+    class="grid rounded-2xl border border-gray-300 bg-white shadow-[0_32px_80px_-44px_rgba(91,75,208,0.4)] lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]"
   >
     <div
       class="order-2 grid min-w-0 grid-cols-[minmax(0,1fr)] content-start gap-6 border-t border-gray-300 p-5 sm:p-7 lg:order-1 lg:border-t-0 lg:border-r"

@@ -53,7 +53,7 @@
 
         <section
           :id="SECURITY_ALERT_PRIVACY_ANCHOR_ID"
-          class="grid scroll-mt-24 gap-4 rounded-xl border border-gray-300 bg-white p-6 text-left text-base leading-relaxed sm:p-8"
+          class="grid gap-4 rounded-xl border border-gray-300 bg-white p-6 text-left text-base leading-relaxed sm:p-8"
         >
           <h2 class="text-xl font-medium text-gray-100">{{ $t('privacy.securityAlerts.title') }}</h2>
           <p class="text-gray-200">{{ $t('privacy.securityAlerts.paragraph1') }}</p>

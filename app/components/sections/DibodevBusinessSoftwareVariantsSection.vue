@@ -1,5 +1,5 @@
 <template>
-  <section id="business-software-variants" class="scroll-mt-24 bg-white px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
+  <section id="business-software-variants" class="bg-white px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
     <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <DibodevSectionHeading
         :eyebrow="t('businessSoftwarePage.variants.eyebrow')"

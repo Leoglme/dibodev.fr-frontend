@@ -11,7 +11,7 @@
     :updatedAt="COLD_CALLING_CHECK_PAGE_UPDATED_AT"
   >
     <template #tool>
-      <div :id="COLD_CALLING_CHECK_QUIZ_ANCHOR_ID" class="scroll-mt-24">
+      <div :id="COLD_CALLING_CHECK_QUIZ_ANCHOR_ID">
         <DibodevQuizTunnel :quiz="quiz" />
       </div>
     </template>

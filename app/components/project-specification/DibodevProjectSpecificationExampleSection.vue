@@ -1,5 +1,5 @@
 <template>
-  <section :id="props.anchorId" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" :class="toneClass">
+  <section :id="props.anchorId" class="px-6 py-20 sm:px-8 lg:py-28" :class="toneClass">
     <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.intro" align="center" />
       <div class="grid justify-items-center gap-6">

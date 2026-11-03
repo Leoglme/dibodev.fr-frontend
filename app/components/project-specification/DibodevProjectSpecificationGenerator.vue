@@ -2,12 +2,9 @@
   <div
     :id="props.anchorId"
     ref="generatorElement"
-    class="grid scroll-mt-24 overflow-clip rounded-2xl border border-gray-300 bg-white shadow-[0_32px_80px_-44px_rgba(91,75,208,0.4)] lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)]"
+    class="grid overflow-clip rounded-2xl border border-gray-300 bg-white shadow-[0_32px_80px_-44px_rgba(91,75,208,0.4)] lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)]"
   >
-    <div
-      ref="panelElement"
-      class="grid min-w-0 scroll-mt-28 content-start gap-6 p-5 sm:p-7 lg:border-r lg:border-gray-300"
-    >
+    <div ref="panelElement" class="grid min-w-0 content-start gap-6 p-5 sm:p-7 lg:border-r lg:border-gray-300">
       <div class="grid gap-3">
         <div class="flex min-h-11 items-center justify-between gap-4">
           <button
@@ -113,7 +110,7 @@
     </div>
 
     <div class="min-w-0 border-t border-gray-300 bg-gray-800 lg:border-t-0">
-      <div ref="previewElement" class="grid scroll-mt-28 content-start gap-3.5 p-4 sm:p-6 lg:sticky lg:top-24">
+      <div ref="previewElement" class="grid content-start gap-3.5 p-4 sm:p-6 lg:sticky lg:top-24">
         <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
           <p class="flex items-center gap-2 text-sm font-medium text-gray-100">
             <span class="specification-live-dot h-2 w-2 rounded-full bg-[#1f7a4d]" aria-hidden="true" />

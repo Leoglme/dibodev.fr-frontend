@@ -14,7 +14,7 @@
     <template #tool>
       <div
         :id="DOWNLOADS_ANCHOR_ID"
-        class="mx-auto grid w-full max-w-2xl scroll-mt-28 gap-5 rounded-2xl border border-gray-300 bg-white p-6 shadow-[0_18px_48px_rgba(20,20,20,0.06)] sm:p-8"
+        class="mx-auto grid w-full max-w-2xl gap-5 rounded-2xl border border-gray-300 bg-white p-6 shadow-[0_18px_48px_rgba(20,20,20,0.06)] sm:p-8"
       >
         <div class="grid gap-2">
           <p class="text-primary text-xs font-medium tracking-[0.08em] uppercase">{{ props.page.downloads.eyebrow }}</p>

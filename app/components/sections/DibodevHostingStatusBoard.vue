@@ -1,5 +1,5 @@
 <template>
-  <div :id="props.anchorId" class="grid scroll-mt-24 gap-5" aria-live="polite" :aria-busy="isLoading">
+  <div :id="props.anchorId" class="grid gap-5" aria-live="polite" :aria-busy="isLoading">
     <p v-if="hasError" class="text-muted text-[15px] leading-6">{{ props.wording.errorText }}</p>
     <p v-else class="text-muted text-[15px] leading-6">{{ snapshot ? checkedAtText : props.wording.loadingText }}</p>
 

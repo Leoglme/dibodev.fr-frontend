@@ -11,7 +11,7 @@
     :updatedAt="E_INVOICING_SCOPE_PAGE_UPDATED_AT"
   >
     <template #tool>
-      <div :id="E_INVOICING_SCOPE_QUIZ_ANCHOR_ID" class="scroll-mt-24">
+      <div :id="E_INVOICING_SCOPE_QUIZ_ANCHOR_ID">
         <DibodevQuizTunnel :quiz="quiz" />
       </div>
       <DibodevToolTeaser

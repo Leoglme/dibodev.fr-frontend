@@ -1,10 +1,5 @@
 <template>
-  <section
-    id="quiz-result-examples"
-    class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28"
-    :class="toneClass"
-    data-aos="fade-up"
-  >
+  <section id="quiz-result-examples" class="px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
     <div
       class="max-w-site mx-auto grid w-full items-center gap-12 xl:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] xl:gap-16"
     >

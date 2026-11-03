@@ -1,5 +1,5 @@
 <template>
-  <section id="contact-form" class="scroll-mt-24 px-6 pb-20 sm:px-8 lg:pb-28" data-aos="fade-up">
+  <section id="contact-form" class="px-6 pb-20 sm:px-8 lg:pb-28" data-aos="fade-up">
     <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <ul class="grid gap-3 md:grid-cols-3 md:gap-5 lg:gap-6">
         <li>

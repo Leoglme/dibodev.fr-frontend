@@ -1,10 +1,5 @@
 <template>
-  <section
-    :id="props.anchorId || undefined"
-    class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28"
-    :class="toneClass"
-    data-aos="fade-up"
-  >
+  <section :id="props.anchorId || undefined" class="px-6 py-20 sm:px-8 lg:py-28" :class="toneClass" data-aos="fade-up">
     <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.intro" align="left" />
       <figure class="sitemap-tree grid rounded-2xl border border-gray-300 bg-white px-5 py-7 sm:px-8 lg:px-8 lg:py-10">

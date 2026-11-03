@@ -1,7 +1,7 @@
 <template>
   <div
     :id="props.anchorId"
-    class="bg-primary-dark relative grid scroll-mt-24 content-start gap-6 overflow-hidden rounded-2xl p-6 text-white sm:p-8"
+    class="bg-primary-dark relative grid content-start gap-6 overflow-hidden rounded-2xl p-6 text-white sm:p-8"
   >
     <div
       class="pointer-events-none absolute -top-16 -right-12 h-56 w-56 rounded-full bg-white/10 blur-2xl"

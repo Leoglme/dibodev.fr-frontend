@@ -1,5 +1,5 @@
 <template>
-  <section id="services" class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
+  <section id="services" class="px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
     <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <DibodevSectionHeading :eyebrow="displayEyebrow" :title="displayTitle" :intro="displayIntro">
         <template #action>

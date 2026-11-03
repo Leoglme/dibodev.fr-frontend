@@ -151,7 +151,6 @@ defineExpose({ headings })
   font-weight: 500;
   line-height: 1.3;
   color: var(--color-gray-100);
-  scroll-margin-top: 6rem;
 }
 
 @media (min-width: 640px) {

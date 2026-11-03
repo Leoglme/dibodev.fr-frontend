@@ -1,10 +1,5 @@
 <template>
-  <section
-    v-if="props.links.length > 0"
-    id="blog-trades"
-    class="scroll-mt-24 px-6 py-20 sm:px-8 lg:py-28"
-    data-aos="fade-up"
-  >
+  <section v-if="props.links.length > 0" id="blog-trades" class="px-6 py-20 sm:px-8 lg:py-28" data-aos="fade-up">
     <div class="max-w-site mx-auto grid w-full gap-12 lg:gap-14">
       <DibodevSectionHeading :eyebrow="props.eyebrow" :title="props.title" :intro="props.intro" />
 

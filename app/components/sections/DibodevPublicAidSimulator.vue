@@ -1,5 +1,5 @@
 <template>
-  <div :id="props.anchorId" class="grid scroll-mt-24 items-start gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
+  <div :id="props.anchorId" class="grid items-start gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
     <div class="grid content-start gap-7 rounded-2xl border border-gray-300 bg-white p-6 sm:p-8">
       <div class="simulator-group" @keydown.enter.prevent="selectFirstMatch">
         <div v-if="selectedCommune" class="grid gap-3">
