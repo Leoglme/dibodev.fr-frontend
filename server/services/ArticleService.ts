@@ -127,7 +127,7 @@ export class ArticleService {
    * @throws Error when the API call fails or the folder is missing.
    */
   static async getBlogFolderId(spaceId: string, token: string): Promise<number> {
-    const url = `${STORYBLOK_MAPI_BASE}/${spaceId}/stories?per_page=100`
+    const url: string = `${STORYBLOK_MAPI_BASE}/${spaceId}/stories?folder_only=1&with_slug=blog`
     const res = await fetch(url, {
       headers: { Authorization: token, Accept: 'application/json' },
     })
