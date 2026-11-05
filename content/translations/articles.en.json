@@ -41670,5 +41670,1426 @@
         }
       ]
     }
+  },
+  "blog/alternative-eversports-manager-logiciel-salle-de-sport": {
+    "title": "Eversports Manager Alternative: Which Software for Your Gym or Coaching Business in 2026?",
+    "excerpt": "Eversports Manager costs between €36 and €169 HT per month annually. One-year contract, platform features, and health data: what you need to know, plus three costed alternatives.",
+    "metaTitle": "Eversports Manager Alternative: Pricing, Limitations, and 3 Software Options",
+    "metaDescription": "Eversports Manager costs between €36 and €169 HT per month, depending on your bookings. Learn about contracts, commissions, and explore three alternatives with their pricing and custom options.",
+    "tags": [
+      "eversports manager review",
+      "eversports pricing",
+      "alternative to eversports",
+      "gym management software",
+      "fitness coach software",
+      "group class booking software",
+      "yoga pilates studio software"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you run a yoga, Pilates, or cross-training studio, some of your students may already have the Eversports app on their phone. Behind the scenes, for studios, there’s Eversports Manager: scheduling, class books, memberships, and payments. As a fitness enthusiast, I examine these tools both as a customer and as a developer. Before recommending anything, I reviewed the French pricing page (as of November 1, 2026), the general terms, the help center, and the pricing of competing software. Here’s who it’s right for, what might make you hesitate, three alternatives with their prices, and the case where none fit.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Eversports Manager Costs in 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As of November 1, 2026, the ",
+              "type": "text"
+            },
+            {
+              "text": "French pricing page for Eversports Manager",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.eversportsmanager.com/fr-FR/prix",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " lists five plans for studios, excluding VAT, based on the number of bookings per month. A booking refers to a class, session, or workshop reserved by a member. Light, up to 49 bookings: €36 per month paid annually, €44 monthly. Starter, 50 to 199: €59 or €66. Accelerate, 200 to 599: €89 or €99. Professional, 600 to 1,499: €125 or €139. Champion, over 1,500: €169 or €187.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "All plans include the same features: scheduling, class books, memberships, product sales, self check-in, mat or bike selection, live and video classes, integration with ClassPass or Urban Sports Club. Online payments go through Stripe; transaction fees depend on the payment method and are not specified. The page mentions no setup fees; a custom-branded app is quoted separately, and there’s no free trial—only a demo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For contracts signed before November 9, 2026, a ",
+              "type": "text"
+            },
+            {
+              "text": "birthday offer",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.eversportsmanager.com/fr-FR/t-c_anniversarysale_fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " reduces 15% off the first twelve monthly payments, with the first payment due January 1, 2027. Note: if comparing, the German page shows a different pricing grid (€49 to €229 annually, plus €99 setup). In France, the French page is the official one.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Who Eversports Manager Is Right For",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A studio offering fixed-schedule group classes: yoga, Pilates, dance, cycling, cross-training, martial arts. Your students book and pay independently, you sell class packs and memberships, and you want visibility where people search for local classes. According to its ",
+              "type": "text"
+            },
+            {
+              "text": "help center",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://helpcenter.eversportsmanager.com/fr/nouveaux-clients-%C3%A0-travers-eversports",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", no fees apply in France for new customers brought in by the Eversports platform.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Count bookings, not students: a studio offering twelve weekly classes to an average of ten students logs around 520 monthly bookings, fitting the Accelerate plan at €89 VAT-exclusive per month paid annually.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Might Make You Hesitate",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A one-year contract.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The ",
+              "type": "text"
+            },
+            {
+              "text": "general terms",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.eversportsmanager.com/fr-FR/conditions-generales",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " of Eversports (October 1, 2024, Article 10.2) state that contracts are twelve months long, even if paid monthly, and auto-renew unless canceled in writing at least 60 days before the end date. Mark this date on signing day.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "An annual price increase outlined in the contract.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Article 5.11 provides for an annual increase of 3%, in addition to indexing based on the Austrian Consumer Price Index, effective January 1st. Over three years, Accelerate costs €3,204 VAT-exclusive at today's price, at least €3,300 with the 3% increase, before indexing.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A price that follows your booking volume.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The formula depends on the number of reservations. Look at your busiest months, not the average, and ask what happens when you exceed a threshold.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Your students book through the Eversports app.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Your studio appears on the platform alongside others, with reviews from your members. An app under your name is an option available upon request. Article 3.8 also allows Eversports to offer, at its own expense, discounts on your prices during its promotions, without consulting you. Finally, this free offer applies to France: the English homepage, however, states a 25% fee per booking, capped at €75 per person, for new customers coming from the platform.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No health data.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Article 9.3 requires studios not to process health data within the software. A coach conducting assessments (injuries, medical history) must keep them elsewhere. Payment fees and pricing for multiple locations (Article 8.6) should be clarified before signing.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Three alternatives to Eversports Manager, with their pricing",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Prices displayed on each publisher’s website, recorded on November 1st, 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Trafft, free up to 100 appointments per month.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The free offer is limited to one user and one location. Above that, the ",
+              "type": "text"
+            },
+            {
+              "text": "Trafft pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://trafft.com/fr/prix/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " displays promotional prices, with the regular rate crossed out next to them, for annual payments: Mini at €5.99 (€7.99 crossed out) for 3 users, Growth at €15.99 for 5, Pro at €29.99 for 15, Business at €49.99 for 30; monthly rates range from €7.99 to €64.99. VAT is added. Paid plans include group bookings, waitlists, recurring appointments, deposits, and a mobile app. Trafft charges per user, not per booking: a fully booked studio pays the same as a half-empty one.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hexfit, €19 to €250 per month.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The ",
+              "type": "text"
+            },
+            {
+              "text": "French pricing page of Hexfit",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://hexfit.com/fr-fr/tarifs/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " counts active clients: Starter at €19 for up to 5, Solo at €50 for up to 30, with appointments, Growth at €90 for up to 150, with groups, Studio at €250 for up to 500. This is 10% off annually; the page does not specify if VAT is included, and the branded app on the stores costs an additional €99 per month in the Studio plan only. 14-day trial with no card required, no commitment. Hexfit highlights tracking, programs, and physical tests; I detailed its case in my article ",
+              "type": "text"
+            },
+            {
+              "text": "alternative to Hexfit",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-hexfit-logiciel-coach-sportif",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Harbiz, €14 to €199 VAT-exclusive per month.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Harbiz does not have a French pricing page; its ",
+              "type": "text"
+            },
+            {
+              "text": "main pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.harbiz.io/tarifas",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " displays prices in euros, excluding VAT: Basic at 19 € per month or 14 € per year for up to 5 clients, Pro at 119 € or 89 €, and My APP at 199 € or 149 € for up to 50 clients; beyond that, upon request. Each plan includes your iOS and Android app. A 14-day free trial with no card required and no commitment. My article ",
+              "type": "text"
+            },
+            {
+              "text": "alternative to Harbiz",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-harbiz-logiciel-coach-sportif",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " goes into detail.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Virtuagym, on the other hand, does not publish its pricing. To compare these software solutions in one table, my page ",
+              "type": "text"
+            },
+            {
+              "text": "fitness coach software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-coach-sportif",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " offers a free six-question test and the rules to follow in 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "And if none of them fit: the custom tool",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "These software solutions handle scheduling and payments well. Where they fall short is with your specific rules: a subscription that allows two classes per week except on Saturdays, a late cancellation that deducts the session from your quota, access control linked to your plans, and reports that stay with you. I’ve adapted and evolved ",
+              "type": "text"
+            },
+            {
+              "text": "Izidoor",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/izidoor",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", a booking platform for sports and leisure activities used by around thirty structures, with thousands of bookings per season: each structure has its own booking module on its website, with online payments, deposits, refunds, and a schedule for its team. I’ve also written about ",
+              "type": "text"
+            },
+            {
+              "text": "online booking for fitness coaches",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/coach-sportif-limiter-les-annulations-avec-un-outil-de-reservation-en-ligne",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " and last-minute cancellations.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On pricing, an add-on module next to your subscription costs between 2,500 € and 7,000 € once. A complete software solution ranges from 5,000 € to 15,000 € as a one-time fee with me, plus 100 € to 300 € per month for maintenance, hosting, and backups included, and you own the code. Compared to Eversports Light at 36 €, custom software isn’t justified unless your plans don’t fit into any existing software. My ",
+              "type": "text"
+            },
+            {
+              "text": "custom software pricing benchmark",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " provides price ranges from 14 French providers to verify a quote.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to choose in one week",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Start with two numbers: your busiest month’s bookings and the number of clients you actually track. The first determines the price of Eversports, and the second that of Hexfit or Harbiz. Then take the six-question test on my fitness coach page, and simulate a real week with each software: a full class with a waitlist, a late cancellation according to your rules, a log of ten sessions deducted, a monthly payment and its invoice. If you re-enter something, you’ll be doing it every week.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How much does Eversports Manager cost per month?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "From 36 to 169 € VAT-exclusive per month when paid annually, or 44 to 187 € per month, depending on the number of bookings, according to its French pricing page as of November 1, 2026. Online payment fees are additional.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Does Eversports take a commission on bookings?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "In France, its help center states that no fees apply to new clients brought in by the platform. Elsewhere, the English homepage states a 25% commission per booking, capped at 75 € per new client.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can you cancel Eversports Manager at any time?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No. The general terms provide for twelve-month contracts, automatically renewed, with written cancellation at least 60 days before the end date.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Does Eversports Manager offer a free trial?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "No, the publisher offers a demo. Hexfit and Harbiz provide a 14-day trial without a card, and Trafft has a free plan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What software is best for a solo fitness coach?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "For tracking five clients, Hexfit Starter at 19 € per month or Harbiz Basic at 14 € VAT-exclusive per month when paid annually. For scheduling only, Trafft’s free plan covers up to 100 appointments per month.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Not sure which one to choose?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Describe your studio in a few lines: number of classes per week, bookings per month, and what you still do manually. I’ll reply within 24 hours with a written action plan, and we can discuss it over the phone or video call if needed. If Eversports Light at 36 € is enough, I’ll let you know.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "71ee2479-182d-4fa0-a8bf-a9ab1e119d1b",
+            "body": [
+              {
+                "_uid": "i-e450a449-be0f-486e-9659-d12ef00783ae",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/alternative-synchroteam-logiciel-gestion-interventions": {
+    "title": "Synchroteam Alternative: Which Field Service Management Software to Choose in 2026?",
+    "excerpt": "The listed price for Synchroteam is for the annual subscription. Here’s what a team of five technicians actually pays—and three competing software solutions, with detailed pricing comparisons.",
+    "metaTitle": "Synchroteam Alternatives: 2026 Pricing & 3 Software Comparisons",
+    "metaDescription": "Synchroteam costs €39–€79 per user per month, depending on the plan and payment method. Three budget-friendly alternatives and custom solutions are explored here.",
+    "tags": [
+      "synchroteam review",
+      "synchroteam pricing",
+      "synchroteam alternatives",
+      "field service management software",
+      "technician field app",
+      "maintenance helpdesk software",
+      "field technician scheduling tool"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Synchroteam often comes up when a maintenance, repair, or customer service company compares field service management software: its pricing grid is based on just two clear formulas, which is still rare in this industry. I reviewed it on November 1, 2026, and one detail changes the calculation: the price displayed first is for the annual subscription. I read these grids with one question in mind: how much will a team of five technicians actually pay by the end of the year? Here’s what Synchroteam costs, who it’s the best choice for, what might make you hesitate, three costed alternatives, and when a custom-built tool makes sense.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Synchroteam Costs in 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As of November 1, 2026, the ",
+              "type": "text"
+            },
+            {
+              "text": "pricing page of Synchroteam",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.synchroteam.fr/tarif.php",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " displays two subscription plans, billed per user and per month in euros. Standard costs 39 € annually and 49 € monthly. Premium costs 64 € annually and 79 € monthly. The page defaults to the ‘Annual’ option: you must click on ‘Monthly’ to see the second price. It does not specify whether the amounts are exclusive of tax (HT) or inclusive of tax (TTC).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Standard includes all features except route optimization; Premium includes everything. A technician’s license covers one mobile device. The first administrator license is free, as are the Sage, Xero, QuickBooks Online, and Zoho CRM connectors, API access, setup, and training. There are no installation or hosting fees, no long-term commitment, and a 14-day trial without requiring a credit card.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On the features side, the ",
+              "type": "text"
+            },
+            {
+              "text": "list published by the developer",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.synchroteam.fr/tour-produit-fonctionnalites.php",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " covers scheduling, recurring service contracts, client site equipment tracking, an offline mobile app with signature and photo capture, quotes and invoices, inventory, a customer portal, and notifications via SMS or email.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Who Synchroteam Is Right For",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A maintenance or customer service company with three to twenty technicians that relies on contracts: recurring visits, installed equipment at client sites, parts to track, and an office that wants scheduling, signed reports, and invoices all in one tool. With Standard, everything is included except route optimization—no tier where quotes or inventory move to the next plan. If your accounting runs on Sage, Xero, or QuickBooks, the free connector saves you from re-entering data. For five technicians and one administrator, Standard costs 195 € per month annually, or 2,340 € per year.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Might Make You Hesitate",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The highlighted price assumes you pay annually.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The annual subscription is paid at the start of the period; monthly, each plan costs roughly a quarter more. For five technicians on Standard, that’s 195 € per month versus 245 €, a 600 € difference over a year.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Every access counts.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The technician, the person who takes calls and builds the schedule, the manager who wants to track daily operations—each counts as a user for the developer, and only the first administrator license is free. List everyone who will open the software, not just those who hit the road.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Route optimization is only in Premium.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Switching from Standard to Premium costs 25 € more per user and per month annually, 30 € monthly. For five technicians, that’s 1,500 € extra per year. If your routes work fine manually today, Standard is enough; if your technicians juggle repairs across the entire department, go with Premium from the start.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What the Page Doesn’t Say",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " It doesn’t specify whether prices are HT or TTC, nor does it mention the cost of SMS sent to clients, even though SMS notifications are listed as a feature. The features list also doesn’t mention electronic invoicing, which SMEs will need to issue starting September 1, 2027; however, the developer’s help center does publish a guide on the Factur-X format. Ask these three questions in writing before signing.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Three alternatives to Synchroteam, with their prices",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Prices displayed on each publisher's website, recorded on November 1, 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Organilog, 0 to 64 € per user per month.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The ",
+              "type": "text"
+            },
+            {
+              "text": "pricing page of Organilog",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://fr.organilog.com/offre/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " shows Basic at 0 €, Pro at 19 €, Business at 35 €, Premium at 59 €, and Premium + Card at 64 € per month per user with annual payment. Monthly, Pro rises to 24 € and Business to 45 €, while the two Premium plans are marked « available annually. » The page does not specify whether prices are exclusive of taxes. The offline app and scheduling are included in Pro, quotes and invoices start from Business, and the card and daily routes are in Premium + Card. I detail the plans in my article on ",
+              "type": "text"
+            },
+            {
+              "text": "alternatives to Organilog",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-organilog-logiciel-gestion-interventions",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Praxedo, 35 to 129 € per user per month, starting with five users.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The ",
+              "type": "text"
+            },
+            {
+              "text": "pricing page of Praxedo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.praxedo.fr/tarifs/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " shows Basic at 35 €, Advanced at 59 €, Optimized at 89 €, and Automated at 129 €. All offers start with five users, totaling a minimum of 175 € per month. The page does not specify VAT, commitment, or setup fees; the two customer portals are separate modules with no listed price, and SMS sending costs are excluded. I compare its plans in my article on ",
+              "type": "text"
+            },
+            {
+              "text": "alternatives to Praxedo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-praxedo-logiciel-gestion-interventions",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Kizeo Forms, 15 to 37 € HT per user per month.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The ",
+              "type": "text"
+            },
+            {
+              "text": "pricing page of Kizeo Forms",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.kizeo-forms.com/fr/tarifs/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " shows Smart at 15 € HT and Business at 25 € HT per user per month with annual billing, 22 and 37 € HT monthly, with a 15-day trial. Forms and reports on mobile, offline mode, API; the page does not mention scheduling, quotes, or invoices. It’s the tool that replaces paper for technicians when scheduling and billing already happen elsewhere; I discuss it in my article on ",
+              "type": "text"
+            },
+            {
+              "text": "alternatives to Kizeo Forms",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-kizeo-forms-logiciel-interventions",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To compare these software solutions side by side, visit my page on ",
+              "type": "text"
+            },
+            {
+              "text": "intervention management software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-gestion-interventions",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": a free trial with six questions and a downloadable intervention order template.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "And if none fit: the custom-made tool",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Synchroteam and its competitors handle scheduling, signed reports, and invoicing well. Where they struggle is with what belongs only to your business: a report with checkpoints that change according to the contract, on-site clocked hours that must align with payroll without going through a spreadsheet. At Kodeva, I worked on an offline customer service app: the technician logs their arrival and fills out their report where the network doesn’t reach, and everything syncs up when the phone regains signal. I explain what this changes in my article on the",
+              "type": "text"
+            },
+            {
+              "text": "mobile app for technicians",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-gestion-interventions-techniciens-hors-ligne",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". I also built ",
+              "type": "text"
+            },
+            {
+              "text": "Gest-Time",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/gestion-temps",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", a time-tracking software for SMEs: each employee logs their hours on their phone, and the manager pulls reports without re-entering data.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As for pricing, a plug-in add-on next to your subscription costs between €2,500 and €7,000 once. A full management software package ranges from €5,000 to €15,000 upfront with me, then €100 to €300 per month for maintenance, hosting, and backups included—and you own the code. Over three years, at the listed prices, five technicians on Synchroteam Standard paid annually cost €7,020; in Premium, €11,520; for ten technicians in Standard, €14,040. Custom solutions don’t always win on these numbers: they hold their own when the team grows or when someone re-enters data every night. My ",
+              "type": "text"
+            },
+            {
+              "text": "custom software pricing benchmark",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " gives the ranges of 14 French providers to verify a quote.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to Choose in One Day",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "First, take the six-question test on my intervention management software page. Then, during the 14-day trial, simulate a real customer service day: a 8 AM call for a breakdown, an intervention squeezed between two scheduled maintenance visits, a report filled out in a basement with no network and signed by the client, a part taken from the van’s stock, an invoice sent before 6 PM and found in accounting the next day. Also ask for the exact written price, per month and per year, for your precise number of users. If someone re-enters data during the trial, they’ll do it every day.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How much does Synchroteam cost per month?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As of November 1, 2026, Standard costs €39 per user per month with an annual subscription, €49 monthly; Premium is €64 annually, €79 monthly. The first admin license is free, and the page doesn’t specify whether prices are excluding or including tax.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Does Synchroteam offer a free trial?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes, 14 days without a credit card, with all features, according to the publisher’s website. Subscriptions are commitment-free.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Does Synchroteam handle quotes and invoices?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes: the list of features includes quotes, invoices, and credits, converting a quote into an intervention, and exporting to Sage. These are included even in the Standard plan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Does Synchroteam work without a network?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The editor announces an offline mobile app for iOS and Android. Test it during the trial in an underground parking lot, then check that the file, photos, and signature sync up when the network returns.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What alternative to Synchroteam is there for a small team?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Organilog starts at €19 per user per month on the Pro plan (yearly, no extra fees) and at €35 in Business with quotes and invoices. If scheduling and invoicing are already handled elsewhere, Kizeo Forms at €15 HT per year replaces paper forms.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "You don’t know which one to choose?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Describe your team to me in a few lines: number of technicians, maintenance or repair contracts, what’s still done on paper, what annoys you. I’ll respond within 24 hours, in writing or via video call, and if Synchroteam Standard is enough, I’ll let you know.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "a8f5e924-b4da-4759-b13b-d9ee1e07621d",
+            "body": [
+              {
+                "_uid": "i-a047eb12-cc10-44fb-9f9a-93baa90d75c0",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
