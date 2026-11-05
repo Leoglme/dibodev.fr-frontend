@@ -10,8 +10,8 @@ import type {
   SectorsTranslationFile,
   CategoriesTranslationFile,
 } from '~~/server/types/dashboard/translations'
+import { StoryblokDeliveryService } from '~~/server/services/StoryblokDeliveryService'
 
-const STORYBLOK_CDN_BASE: string = 'https://api.storyblok.com/v2/cdn'
 const BLOG_FOLDER: string = 'blog/'
 const PROJECT_PREFIX: string = 'project/'
 const SECTORS_PREFIX: string = 'sectors/'
@@ -21,37 +21,6 @@ const TRANSLATIONS_PATH: string = 'content/translations'
 type StoryblokStoryListItem = {
   content?: { title?: string; name?: string; slug?: string }
   full_slug?: string
-}
-
-type StoriesResponse = { stories?: StoryblokStoryListItem[] }
-
-async function fetchStoryblokSpaceVersion(token: string): Promise<number> {
-  const spaceRes: Response = await fetch(`${STORYBLOK_CDN_BASE}/spaces/me?token=${token}`)
-  if (!spaceRes.ok) {
-    throw createError({
-      statusCode: 502,
-      statusMessage: 'Failed to fetch Storyblok space.',
-    })
-  }
-  const spaceData: { space?: { version?: number } } = (await spaceRes.json()) as {
-    space?: { version?: number }
-  }
-  const version: number = spaceData.space?.version ?? 0
-  return version
-}
-
-async function fetchStoryblokStories(token: string, startsWith: string, cv: number): Promise<StoryblokStoryListItem[]> {
-  const url: string = `${STORYBLOK_CDN_BASE}/stories?token=${token}&starts_with=${encodeURIComponent(startsWith)}&per_page=100&cv=${cv}`
-  const res: Response = await fetch(url)
-  if (!res.ok) {
-    throw createError({
-      statusCode: 502,
-      statusMessage: 'Failed to fetch Storyblok stories.',
-    })
-  }
-  const data: StoriesResponse = (await res.json()) as StoriesResponse
-  const stories: StoryblokStoryListItem[] = data.stories ?? []
-  return stories
 }
 
 function parseJsonFile<T>(content: string): T {
@@ -101,17 +70,17 @@ export default defineEventHandler(async (event: H3Event): Promise<ListTranslatab
     })
   }
 
-  const cv: number = await fetchStoryblokSpaceVersion(token)
+  const spaceVersion: number = await StoryblokDeliveryService.fetchSpaceVersion(token)
   const [projectStories, articleStories, sectorStories, categoryStories]: [
     StoryblokStoryListItem[],
     StoryblokStoryListItem[],
     StoryblokStoryListItem[],
     StoryblokStoryListItem[],
   ] = await Promise.all([
-    fetchStoryblokStories(token, PROJECT_PREFIX, cv),
-    fetchStoryblokStories(token, BLOG_FOLDER, cv),
-    fetchStoryblokStories(token, SECTORS_PREFIX, cv),
-    fetchStoryblokStories(token, CATEGORIES_PREFIX, cv),
+    StoryblokDeliveryService.listAllStories<StoryblokStoryListItem>(token, PROJECT_PREFIX, spaceVersion),
+    StoryblokDeliveryService.listAllStories<StoryblokStoryListItem>(token, BLOG_FOLDER, spaceVersion),
+    StoryblokDeliveryService.listAllStories<StoryblokStoryListItem>(token, SECTORS_PREFIX, spaceVersion),
+    StoryblokDeliveryService.listAllStories<StoryblokStoryListItem>(token, CATEGORIES_PREFIX, spaceVersion),
   ])
 
   const [
