@@ -43965,5 +43965,747 @@
         }
       ]
     }
+  },
+  "blog/alternative-erplain-logiciel-gestion-de-stock": {
+    "title": "Alternativa a Erplain: ¿qué software de gestión de inventario elegir en 2026?",
+    "excerpt": "Erplain desde 59 € IVA por mes, pero por usuario y por módulo: para quién vale la pena, qué lo hace dudar, y Zoho, Odoo y Dolibarr con sus precios.",
+    "metaTitle": "Alternativa a Erplain: precios 2026 y 3 software de gestión de inventario",
+    "metaDescription": "Erplain cuesta 59 € IVA por mes, más 14 € por usuario y módulos pagos: sus limitaciones, 3 alternativas con sus precios 2026 y soluciones personalizadas.",
+    "tags": [
+      "erplain opiniones",
+      "erplain precios",
+      "alternativa erplain",
+      "software gestión inventario",
+      "software inventario pymes",
+      "gestión de pedidos",
+      "software inventario multialmacén"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Erplain suele aparecer cuando una pequeña empresa decide por fin sacar su inventario de la hoja de cálculo. Conozco la escena: el archivo compartido que dos personas modifican al mismo tiempo, el almacén que ya no coincide con la tienda, el pedido al proveedor enviado por correo y nunca reconciliado con lo que llegó. Antes de recomendar nada, releí el 1 de noviembre de 2026 la página de precios de Erplain, módulo por módulo, y luego las de tres programas que también muestran sus tarifas. Aquí está el costo de Erplain, para quién es la mejor opción, qué hace dudar, tres alternativas cuantificadas y el caso en que una herramienta personalizada puede justificarse.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Qué cuesta Erplain en 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Erplain se estructura como un menú, según su ",
+              "type": "text"
+            },
+            {
+              "text": "página de precios",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.erplain.com/fr/tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " , revisada el 1 de noviembre de 2026. ",
+              "type": "text"
+            },
+            {
+              "text": "El plan básico cuesta 59 € IVA (excluido) por mes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " , con facturación anual, compromiso de 12 meses y dos meses gratis. Incluye un usuario y 1.000 pedidos por mes, y luego 0,03 € IVA (excluido) por pedido adicional. Dentro del plan: presupuestos, pedidos, albaranes de entrega y facturas electrónicas, niveles de stock, inventarios con lector de códigos de barras o por teléfono, alertas de reabastecimiento, valoración del inventario, y sincronización con Pennylane, QuickBooks y Stripe.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A mes vencido, todo es un 20% más caro.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " El plan básico sube a 70,80 € IVA (excluido), sin compromiso y renovado automáticamente cada mes. Cada usuario adicional cuesta 14 € IVA (excluido) por mes al año, o 16,80 € al mes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El resto se paga módulo por módulo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", en precios mensuales anualizados: varios almacenes 14 €, pedidos y recepciones de proveedores 14 €, kits y empaques 9 €, lotes, números de serie y fechas de caducidad 29 €, permisos por usuario 24 €, registro de actividad 24 €, Shopify 9 €, API 39 €. El editor muestra dos configuraciones típicas: 138 € IVA (excluido) por mes para 3 usuarios con varios almacenes, kits, compras y precios avanzados, y 257 € IVA (excluido) para 5 usuarios con casi todos los módulos. La prueba dura 14 días sin tarjeta; incluye una hora de capacitación inicial, y las siguientes cuestan 80 € la hora.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Para quién Erplain es la mejor opción",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una empresa que compra, almacena y revende productos, especialmente a otros profesionales: un mayorista, un distribuidor, un fabricante que surte tiendas, un vendedor en Shopify que también opera en B2B. En su sitio, el editor destaca los sectores de alimentación, automoción y moto, materiales, material médico y moda.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si son una o dos personas, con un solo almacén, y su día se resume en «presupuesto, pedido, entrega, factura», el plan básico de 59 € IVA (excluido) por mes cubre lo esencial, incluyendo facturación electrónica y conexión con Pennylane o QuickBooks.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que hace dudar",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El precio sube con el equipo y los módulos.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Con tres personas, un almacén y una tienda, y pedidos de proveedores que recibir en la herramienta: 59 €, más dos usuarios a 14 €, más los múltiples almacenes y compras a 14 € cada uno, totalizando 115 € IVA (excluido) por mes, o 1.380 € IVA (excluido) al año. Pagado por mes, la misma configuración cuesta 138 € IVA (excluido). Con productos de fecha límite, añada 29 € por los lotes y fechas de caducidad.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las compras no están en el plan básico.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Pedidos y recepciones de proveedores forman un módulo de 14 € por mes: para un distribuidor, es el día a día.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El compromiso depende de cómo se pague.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La página muestra « sin compromiso » en varios bloques, pero el precio de 59 € incluye la mención « Compromiso de 12 meses ». Sin compromiso, es el precio mensual, un 20 % más caro. Lea la pequeña línea bajo el precio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El límite de pedidos.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " 1 000 pedidos al mes están incluidos, compras incluidas: una venta completa cuenta como uno, una compra completa también. Más allá, son 0,03 € por pedido. Una tienda en línea con 1 500 ventas en el mes paga 15 € más: poco, pero variable.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lo que el sitio no menciona.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Nada sobre el alquiler de material, con su salida, devolución y estado al devolverse. Entre las tiendas en línea, solo Shopify aparece en las integraciones listadas el 1 de noviembre de 2026: ni WooCommerce, ni PrestaShop. Si alquilas material, mi ",
+              "type": "text"
+            },
+            {
+              "text": "prueba para los alquileres de material de eventos",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-location-materiel-evenementiel",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " compara software diseñado para el alquiler.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Tres alternativas a Erplain, con sus precios",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Precios registrados el 1 de noviembre de 2026 en la página de cada editor. Las funciones varían de un software a otro: compárelas según su caso, no según el precio inicial.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Zoho Inventory factura por empresa, no por usuario.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Su ",
+              "type": "text"
+            },
+            {
+              "text": "página en francés",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.zoho.com/fr/inventory/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra un plan gratuito para 1 usuario, 2 ubicaciones y 50 pedidos al mes. Standard cuesta 29 € al mes pagado anualmente, o 39 € al mes, para 2 usuarios, 2 ubicaciones y 500 pedidos. Profesional, a 79 € o 99 €, permite hasta 3 000 pedidos y 4 ubicaciones, con lotes y números de serie; la generación de códigos de barras llega con Premium, a 129 €. Según su ",
+              "type": "text"
+            },
+            {
+              "text": "tabla detallada",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.zoho.com/inventory/pricing/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", un usuario adicional cuesta 7,50 € al mes pagado anualmente. La página en francés no especifica si es IVA incluido o excluido. Prueba de 14 días sin tarjeta.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Odoo Inventario es gratuito mientras permanezca solo.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " En su ",
+              "type": "text"
+            },
+            {
+              "text": "página de tarifas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.odoo.com/fr_FR/pricing-plan",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", Odoo garantiza que una sola aplicación permanece gratuita, sin límite de usuarios ni de duración, con alojamiento incluido. Tan pronto como agregue Ventas o Facturación, es la fórmula Standard: 19,90 € por usuario y por mes pagado anualmente, con descuento válido por 12 meses (precio tachado 24,90 €), o 24,90 € al mes. La página no indica si es IVA incluido o excluido, y la implementación no está incluida. En cuanto al inventario: varios almacenes, códigos de barras y QR, lotes, números de serie, inventarios rotativos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Dolibarr es un software libre, gratuito si lo instala usted mismo.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Albergado en ",
+              "type": "text"
+            },
+            {
+              "text": "DoliCloud",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.dolicloud.com/fr/fr-faq-pricing.php",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", cuesta 14 € IVA no incluido por usuario y por mes en Basic, con todos los módulos oficiales (presupuestos, pedidos, facturas, inventario), o 30 € IVA no incluido por mes más 15 € por usuario en Premium, sin compromiso, con 30 días de prueba. El certificado de la ley de finanzas de 2016, bajo demanda, añade 5 € IVA por usuario en Basic. El módulo de Stocks gestiona varios almacenes, lotes, números de serie y fechas de caducidad.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para tres personas, pagado anualmente",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", esto da 36,50 € por mes en Zoho en Standard (pero con 2 ubicaciones y 500 pedidos), 59,70 € en Odoo el primer año con el inventario y las ventas, 42 € IVA no incluido en DoliCloud, frente a 115 € IVA no incluido por la configuración de Erplain descrita anteriormente. El editor de Erplain vende, por cierto, ",
+              "type": "text"
+            },
+            {
+              "text": "Stockpit",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.stockpit.app/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", el inventario solo conectado a Pennylane o Sellsy: 19 € IVA no incluido por usuario y por mes, o 39 € con varios lugares de almacenamiento y compras.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Y si ninguno encaja: la herramienta personalizada",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Los software del mercado gestionan bien el recorrido comprar, almacenar, revender. Se atoran en lo que es propio de usted: el camión que sirve como depósito y que se recuenta al regresar, el material alquilado que regresa dañado, el paso de control que ningún módulo prevé. En el editor Kodeva, desarrollé StockPME, un ",
+              "type": "text"
+            },
+            {
+              "text": "software de gestión de inventario personalizado",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/stockpme",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": etiquetas con código QR, varios almacenes y ubicaciones, historial de cada movimiento. Sigue funcionando en Pymes de 20 a 200 empleados. Explico en otro lugar cómo transcurre un ",
+              "type": "text"
+            },
+            {
+              "text": "inventario por códigos QR y varios depósitos",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-gestion-de-stock-sur-mesure-pme-inventaire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", teléfono en mano.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En cuanto a precios, un complemento conectado junto a su suscripción cuesta entre 2.500 y 7.000 € una sola vez: por ejemplo, una pantalla de escaneo para el camión que envía cada salida a Erplain a través de su API. Un software de gestión completo oscila entre 5.000 y 15.000 € en pago único, luego 100 a 300 € por mes de mantenimiento, alojamiento y copias de seguridad incluidas, y el código es de su propiedad. En tres años, la configuración de Erplain a 115 € IVA no incluido por mes suma 4.140 € IVA no incluido. Lo personalizado no gana en esta cifra: se defiende cuando la suscripción le obliga a volver a ingresar cada día lo que no sabe hacer. Mi ",
+              "type": "text"
+            },
+            {
+              "text": "barómetro de precios de software personalizado",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " ayuda a verificar un presupuesto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cómo elegir en un día",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si su actividad está incluida, pase primero por mis ",
+              "type": "text"
+            },
+            {
+              "text": "pruebas gratuitas por oficio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": en seis preguntas, indican si un software del mercado es suficiente. Luego, haga vivir una jornada real al software durante su prueba: un pedido de cliente recibido por correo, la nota de entrega, una entrega de proveedor incompleta al recibir, una transferencia de la reserva al camión, la factura, y finalmente el conteo de diez referencias por teléfono. Anote todo lo que debe volver a ingresar en otro lugar. Refuerce finalmente el cálculo con el número real de personas y los módulos realmente abiertos: ese es el precio que debe comparar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Erplain ofrece una prueba gratuita?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, 14 días sin tarjeta bancaria, según su página de precios a 1 de noviembre de 2026. La tarjeta solo se solicita al momento de suscribirse.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Erplain es sin compromiso?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Solo en pago mensual, un 20% más caro: 70,80 € IVA no incluido por mes para el paquete básico en lugar de 59 €. La tarifa anual compromete por 12 meses. Al irse, puede exportar sus datos, según la FAQ del editor.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Erplain gestiona varios almacenes?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, con el módulo multi-locales por 14 € IVA no incluido al mes, incluido en las configuraciones de 138 y 257 €. También es obligatorio para conectar Shopify.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Existe un software de gestión de stock gratuito para una PYME?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, con limitaciones. Odoo Inventario es gratuito siempre que sea su única aplicación Odoo, Zoho Inventory ofrece un plan para 1 usuario y 50 pedidos al mes, y Dolibarr no cuesta nada si lo alojas tú mismo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Erplain gestiona la factura electrónica?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, está incluido en el paquete básico: emisión en formato electrónico y transmisión a una plataforma autorizada, según la página de precios. Las Pymes y microempresas deberán emitir sus facturas electrónicas a más tardar el 1 de septiembre de 2027, y todas las empresas sujetas al IVA deberán poder recibirlas desde el 1 de septiembre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Aún duda?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Descríbame su stock en unas líneas: cuántas personas lo manejan, cuántos almacenes contando la camioneta, qué aún registra a mano. Le respondo en menos de 24 horas, y hablamos por teléfono o videollamada si es más sencillo. Si Erplain a 59 € o un software gratuito le sirve, se lo diré.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "8dc2e08a-a3be-4f44-8a84-4efb53ba9740",
+            "body": [
+              {
+                "_uid": "i-9337078a-a0f6-407e-bb27-5d9da1613779",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

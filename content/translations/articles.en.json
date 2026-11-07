@@ -43963,5 +43963,747 @@
         }
       ]
     }
+  },
+  "blog/alternative-erplain-logiciel-gestion-de-stock": {
+    "title": "Erplain Alternative: Which Inventory Management Software to Choose in 2026?",
+    "excerpt": "Erplain starts at €59 HT per month, but per user and per module—who benefits, what makes users hesitate, and a comparison with Zoho, Odoo, and Dolibarr, including their pricing.",
+    "metaTitle": "Erplain Alternative: 2026 Pricing & 3 Inventory Management Software Options",
+    "metaDescription": "Erplain costs €59 HT per month, plus €14 per user and additional paid modules—its limitations, three alternatives with their 2026 pricing, and custom solutions.",
+    "tags": [
+      "erplain review",
+      "erplain pricing",
+      "erplain alternative",
+      "inventory management software",
+      "inventory software for small businesses",
+      "order management software",
+      "multi-warehouse inventory software"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Erplain often comes up when a small business finally decides to move its inventory out of the spreadsheet. I know the scene: the shared file that two people edit at the same time, the warehouse that no longer matches the store, the supplier order sent by email and never reconciled with what actually arrived. Before advising anything, I reviewed Erplain’s pricing page on November 1st, 2026, module by module, as well as those of three other software solutions that also display their prices. Here’s what Erplain costs, who it’s right for, what might make you hesitate, three priced alternatives, and when a custom-built tool makes sense.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Erplain Costs in 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Erplain is structured like a menu, according to its ",
+              "type": "text"
+            },
+            {
+              "text": "pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.erplain.com/fr/tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " , as of November 1st, 2026. ",
+              "type": "text"
+            },
+            {
+              "text": "The base plan costs 59 € HT per month",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " with annual billing, requiring a 12-month commitment and including two free months. It includes one user and 1,000 orders per month, plus 0.03 € HT per additional order. Inside, you get quotes, orders, delivery notes, electronic invoices, stock levels, inventory via barcode scanner or phone, restock alerts, stock valuation, and synchronization with Pennylane, QuickBooks, and Stripe.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Monthly billing adds 20% to all costs.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The base plan then costs 70.80 € HT, with no commitment and automatic monthly renewal. Each additional user costs 14 € HT per month with annual billing, or 16.80 € HT if billed monthly.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The rest is priced module by module",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", with annual monthly pricing: multiple storage locations 14 €, supplier orders and receipts 14 €, kits and packaging 9 €, batches, serial numbers, and expiration dates 29 €, user permissions 24 €, activity log 24 €, Shopify integration 9 €, API 39 €. The publisher highlights two typical setups: 138 € HT per month for 3 users with multiple locations, kits, purchases, and advanced pricing, and 257 € HT for 5 users with nearly all modules. The trial lasts 14 days without a credit card; one hour of onboarding is included, with additional hours at 80 € each.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Who Should Choose Erplain",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A business that buys, stores, and resells products—especially to other professionals: a wholesaler, a distributor, a manufacturer supplying stores, or a Shopify e-commerce seller also operating in B2B. On its website, the publisher highlights food, automotive, materials, medical equipment, and fashion.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you’re one or two people, with a single storage location, and your day revolves around ‘quote, order, delivery, invoice,’ the 59 € HT base plan covers most needs, including electronic invoicing and integration with Pennylane or QuickBooks.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Might Make You Hesitate",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The price rises with team size and added modules.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Add three people, a warehouse and a store, and supplier orders to process in the tool: 59 €, plus two users at 14 € each, plus multi-location and purchases at 14 € each, totaling 115 € HT per month, or 1,380 € HT per year. Paid monthly, the same setup costs 138 € HT. For products with expiration dates, add 29 € for batch tracking and expiration dates.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Purchases aren’t included in the base plan.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Supplier orders and receipts are a separate 14 € per month module—daily essentials for a distributor.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The commitment depends on how you pay.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The page displays « no commitment » in several blocks, but the price of 59 € comes with the note « 12-month commitment ». Without commitment, it’s the monthly rate, 20% more expensive. Read the fine print under the price.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The order limit.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " 1,000 orders per month are included, purchases included: a full sale counts as one, a full purchase as well. Beyond that, it’s 0.03 € per order. An online store with 1,500 sales in a month pays 15 € extra: little, but variable.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What the site doesn’t mention.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Nothing about equipment rental, including its checkout, return, and condition upon return. Among online stores, only Shopify appears in the integrations listed as of November 1, 2026: no WooCommerce, no PrestaShop. If you rent equipment, my ",
+              "type": "text"
+            },
+            {
+              "text": "test for event equipment rental providers",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-location-materiel-evenementiel",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " compares software designed for rentals.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Three alternatives to Erplain, with their prices",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Prices checked on November 1, 2026, on each vendor’s page. Features vary from one software to another: compare based on your needs, not just the introductory price.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Zoho Inventory charges per company, not per user.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Its ",
+              "type": "text"
+            },
+            {
+              "text": "French page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.zoho.com/fr/inventory/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " shows a free plan for 1 user, 2 locations, and 50 orders per month. Standard costs 29 € per month paid annually, or 39 € monthly, for 2 users, 2 locations, and 500 orders. Professional, at 79 € or 99 €, allows 3,000 orders and 4 locations, with batches and serial numbers; barcode generation comes with Premium, at 129 €. According to its ",
+              "type": "text"
+            },
+            {
+              "text": "detailed pricing grid",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.zoho.com/inventory/pricing/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", an extra user costs 7.50 € per month when paid annually. The French page doesn’t specify whether prices are VAT-inclusive or exclusive. 14-day trial without a card.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Odoo Inventory is free as long as it’s used alone.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " On its ",
+              "type": "text"
+            },
+            {
+              "text": "pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.odoo.com/fr_FR/pricing-plan",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", Odoo guarantees that one app remains free, with no user or time limits, hosting included. As soon as you add Sales or Invoicing, it’s the Standard plan: 19.90 € per user and per month paid annually (12-month discount, original price 24.90 €), or 24.90 € monthly. The page doesn’t specify VAT inclusion, and setup costs are not included. Inventory features: multiple warehouses, barcodes and QR codes, batches, serial numbers, cycle counting.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Dolibarr is open-source software, free if you install it yourself.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Hosted by ",
+              "type": "text"
+            },
+            {
+              "text": "DoliCloud",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.dolicloud.com/fr/fr-faq-pricing.php",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", it costs 14 € VAT-exclusive per user per month in Basic, with all official modules (quotes, orders, invoices, inventory), or 30 € VAT-exclusive per month plus 15 € per user in Premium, with no commitment, and a 30-day trial. The 2016 Finance Law certificate, upon request, adds 5 € VAT-exclusive per user in Basic. The Stock module manages multiple warehouses, batches, serial numbers, and expiry dates.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For three people, paid annually",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", this comes to 36.50 € per month with Zoho in Standard (but with 2 seats and 500 orders), 59.70 € with Odoo the first year with inventory and sales, 42 € VAT-exclusive with DoliCloud, compared to 115 € VAT-exclusive for the Erplain configuration described above. The Erplain publisher also sells ",
+              "type": "text"
+            },
+            {
+              "text": "Stockpit",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.stockpit.app/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", the standalone stock module connected to Pennylane or Sellsy: 19 € VAT-exclusive per user per month, or 39 € with multiple storage locations and purchases.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "And if none of these fit: the custom tool",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Market software handles the buyer, store, resell journey well. They struggle with what’s unique to you: the truck used as a depot that gets recount upon return, rented equipment that comes back damaged, or the inspection step that no module accounts for. At publisher Kodeva, I developed StockPME, a ",
+              "type": "text"
+            },
+            {
+              "text": "custom stock management software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/stockpme",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": QR code labels, multiple warehouses and locations, and a history of every movement. It still runs in SMEs with 20 to 200 employees. I explain elsewhere how ",
+              "type": "text"
+            },
+            {
+              "text": "inventory via QR codes and multiple depots",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/logiciel-gestion-de-stock-sur-mesure-pme-inventaire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "works, phone in hand.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On pricing, an add-on connected alongside your subscription costs between 2,500 € and 7,000 € once: for example, a scanning screen for the truck that sends each exit back to Erplain via its API. A full management software ranges from 5,000 € to 15,000 € upfront, then 100 € to 300 € per month for maintenance, hosting, and backups included, and you own the code. Over three years, the Erplain setup at 115 € VAT-exclusive per month totals 4,140 € VAT-exclusive. Custom solutions don’t win on this figure: they justify themselves when the subscription forces you to re-enter daily what it can’t handle. My ",
+              "type": "text"
+            },
+            {
+              "text": "custom software pricing benchmark",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " helps verify a quote.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to choose in one day",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If your industry is listed, start with my ",
+              "type": "text"
+            },
+            {
+              "text": "free tests by profession",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": in six questions, they reveal whether off-the-shelf software suffices. Then simulate a real day with the software during its trial: a customer order received by email, the delivery note, an incomplete supplier delivery to process, a transfer from the reserve to the truck, the invoice, and finally, counting ten references over the phone. Note everything you re-enter elsewhere. Recalculate with the actual number of users and the modules truly needed—that’s the price to compare.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Does Erplain offer a free trial?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes, 14 days without a credit card, according to its pricing page as of November 1, 2026. The card is only requested at the time of subscription.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is Erplain commitment-free?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Only with monthly payments, which are 20% more expensive: 70.80 € HT per month for the core package instead of 59 €. The annual rate commits you for 12 months. If you leave, you can export your data, according to the editor’s FAQ.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Does Erplain manage multiple warehouses?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes, with the multi-location module at 14 € HT per month, included in the 138 € and 257 € configurations. It is also mandatory to connect Shopify.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is there a free inventory management software for a small business?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes, with limitations. Odoo Inventory is free as long as it’s your only Odoo app, Zoho Inventory offers a plan for 1 user and 50 orders per month, and Dolibarr costs nothing if you host it yourself.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Does Erplain handle electronic invoicing?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes, it’s included in the core package: issuing in electronic format and sending to an approved platform, according to the pricing page. SMEs and micro-entrepreneurs must issue electronic invoices by September 1, 2027, and all VAT-registered businesses must be able to receive them from September 1, 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Still unsure?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Describe your stock to me in a few lines: how many people handle it, how many warehouses including the truck, and what you still log manually. I’ll reply within 24 hours, and we can discuss it over the phone or video if that’s easier. If Erplain at 59 € or a free software works for you, I’ll let you know.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "8dc2e08a-a3be-4f44-8a84-4efb53ba9740",
+            "body": [
+              {
+                "_uid": "i-9337078a-a0f6-407e-bb27-5d9da1613779",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
