@@ -55,6 +55,16 @@
       </div>
 
       <div class="grid gap-7">
+        <h3 class="text-2xl font-medium text-gray-100">{{ t('aboutPage.press.title') }}</h3>
+        <DibodevPressArticleCard
+          v-for="pressArticle in PRESS_ARTICLES"
+          :key="pressArticle.url"
+          :press-article="pressArticle"
+          tracking-location="about"
+        />
+      </div>
+
+      <div class="grid gap-7">
         <h3 class="text-2xl font-medium text-gray-100">{{ t('aboutPage.profiles.title') }}</h3>
         <ul class="flex flex-wrap gap-3">
           <li v-for="profileLink in ABOUT_PROFILE_LINKS" :key="profileLink.href">
@@ -97,7 +107,9 @@ import type { DibodevAboutKeyFact, DibodevAboutStoryBlock } from '~/core/types/D
 import { computed } from 'vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import DibodevFranceNumCard from '~/components/cards/DibodevFranceNumCard.vue'
+import DibodevPressArticleCard from '~/components/cards/DibodevPressArticleCard.vue'
 import { ABOUT_PROFILE_LINKS } from '~/core/constants/aboutProfileLinks'
+import { PRESS_ARTICLES } from '~/core/constants/pressArticles'
 import { useTracking } from '~/composables/useTracking'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 import { CareerUtils } from '~/core/utils/CareerUtils'

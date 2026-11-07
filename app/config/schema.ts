@@ -1,9 +1,11 @@
+import type { DibodevPressArticle } from '~/core/types/DibodevPressArticle'
 import {
   FRANCE_NUM_PROFILE_URL,
   GOOGLE_BUSINESS_URL,
   GOOGLE_KNOWLEDGE_GRAPH_URL,
   PERSON_GOOGLE_KNOWLEDGE_GRAPH_URL,
 } from '~/config/contact'
+import { PRESS_ARTICLES } from '~/core/constants/pressArticles'
 
 /**
  * Schema.org structured data (JSON-LD) for the site: a Person (Léo Guillaume)
@@ -278,22 +280,18 @@ const ORGANIZATION_SAME_AS: string[] = [
   GOOGLE_KNOWLEDGE_GRAPH_URL,
 ]
 
-/** Press about Léo and Dibodev: subjectOf, never sameAs (an article is not them); headline kept as published. */
-const PRESS_COVERAGE: SchemaNewsArticle[] = [
-  {
+/** Press articles go in subjectOf, never in sameAs: an article is about Léo and Dibodev, it is not them. */
+const PRESS_COVERAGE: SchemaNewsArticle[] = PRESS_ARTICLES.map(
+  (pressArticle: DibodevPressArticle): SchemaNewsArticle => ({
     '@type': 'NewsArticle',
-    headline: 'Les IA développés par le Rennais Léo Guillaume séduisent les entreprises',
-    url: 'https://www.bretagne-economique.com/actualites/dibodev-au-coeur-des-usages-concrets-de-lia/',
-    datePublished: '2026-11-05',
-    inLanguage: 'fr',
-    author: { '@type': 'Person', name: 'Véronique Maignant' },
-    publisher: {
-      '@type': 'NewsMediaOrganization',
-      name: 'Bretagne Économique',
-      url: 'https://www.bretagne-economique.com/',
-    },
-  },
-]
+    headline: pressArticle.headline,
+    url: pressArticle.url,
+    datePublished: pressArticle.datePublished,
+    inLanguage: pressArticle.language,
+    author: { '@type': 'Person', name: pressArticle.authorName },
+    publisher: { '@type': 'NewsMediaOrganization', name: pressArticle.mediaName, url: pressArticle.mediaUrl },
+  }),
+)
 
 /** Listing in the France Num directory, the State programme run by the DGE for the digital shift of small businesses. */
 const ORGANIZATION_MEMBER_OF: SchemaProgramMembership[] = [

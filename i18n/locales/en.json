@@ -1563,6 +1563,17 @@
     "program": "France Num is coordinated by the Directorate-General for Enterprise with the regions, the chambers of commerce, the chambers of trades and professional organisations.",
     "infoLink": "Why work with an Activateur France Num? (in French)"
   },
+  "pressArticleCard": {
+    "logoAlt": "{media} logo",
+    "readArticle": "Read the article (in French)",
+    "readArticleAriaLabel": "Read the article (in French) from {media}"
+  },
+  "pressArticles": {
+    "bretagneEconomique2026": {
+      "summary": "Bretagne Économique, the news outlet of the Brittany chambers of commerce, published a profile of me: how I went from cook to developer specialising in AI, and the custom artificial intelligence I build for small businesses, schools and independent professionals, from guiding students to sorting emails automatically and analysing sales.",
+      "quote": "“Many businesses still think AI comes down to ChatGPT.”"
+    }
+  },
   "aboutPage": {
     "hero": {
       "titlePart1": "Léo Guillaume, full‑stack and AI ",
@@ -1623,6 +1634,9 @@
     },
     "franceNum": {
       "title": "Listed as an Activateur France Num"
+    },
+    "press": {
+      "title": "In the press"
     },
     "path": {
       "title": "My background",

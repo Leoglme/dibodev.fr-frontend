@@ -1563,6 +1563,17 @@
     "program": "France Num est coordonnée par la Direction générale des entreprises avec les Régions, les chambres de commerce, les chambres de métiers et les organisations professionnelles.",
     "infoLink": "Pourquoi faire appel à un Activateur France Num ?"
   },
+  "pressArticleCard": {
+    "logoAlt": "Logo de {media}",
+    "readArticle": "Lire l'article",
+    "readArticleAriaLabel": "Lire l'article de {media}"
+  },
+  "pressArticles": {
+    "bretagneEconomique2026": {
+      "summary": "Bretagne Économique, le média des CCI de Bretagne, m'a consacré un portrait : mon parcours de cuisinier devenu développeur spécialisé en IA, et les intelligences artificielles sur mesure que je conçois pour les PME, les écoles et les professions libérales, de l'orientation des étudiants au tri automatique des e-mails et à l'analyse des ventes.",
+      "quote": "« Beaucoup d'entreprises pensent encore que l'IA se résume à ChatGPT. »"
+    }
+  },
   "aboutPage": {
     "hero": {
       "titlePart1": "Léo Guillaume, ",
@@ -1623,6 +1634,9 @@
     },
     "franceNum": {
       "title": "Référencé Activateur France Num"
+    },
+    "press": {
+      "title": "Dans la presse"
     },
     "path": {
       "title": "Mon parcours",

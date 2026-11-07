@@ -1563,6 +1563,17 @@
     "program": "France Num está coordinada por la Dirección General de Empresas con las regiones, las cámaras de comercio, las cámaras de oficios y las organizaciones profesionales.",
     "infoLink": "¿Por qué recurrir a un Activateur France Num? (en francés)"
   },
+  "pressArticleCard": {
+    "logoAlt": "Logo de {media}",
+    "readArticle": "Leer el artículo (en francés)",
+    "readArticleAriaLabel": "Leer el artículo (en francés) de {media}"
+  },
+  "pressArticles": {
+    "bretagneEconomique2026": {
+      "summary": "Bretagne Économique, el medio de las cámaras de comercio de Bretaña, me dedicó un reportaje: cómo pasé de cocinero a desarrollador especializado en IA, y las inteligencias artificiales a medida que diseño para pymes, escuelas y profesionales liberales, desde la orientación de estudiantes hasta la clasificación automática de correos y el análisis de ventas.",
+      "quote": "«Muchas empresas todavía creen que la IA se reduce a ChatGPT.»"
+    }
+  },
   "aboutPage": {
     "hero": {
       "titlePart1": "Léo Guillaume, ",
@@ -1623,6 +1634,9 @@
     },
     "franceNum": {
       "title": "Referenciado como Activateur France Num"
+    },
+    "press": {
+      "title": "En la prensa"
     },
     "path": {
       "title": "Mi trayectoria",

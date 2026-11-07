@@ -24,6 +24,8 @@ export const TRACKING_EVENTS = {
   projectRepoVisited: 'project_repo_visited',
   /** Click on one of Léo's external profiles (Malt, LinkedIn, GitHub…). */
   externalProfileClicked: 'external_profile_clicked',
+  /** Click on an article about Léo or Dibodev in the press (external). */
+  pressArticleClicked: 'press_article_clicked',
   /** Click on a blog article card. */
   articleCardClicked: 'article_card_clicked',
   /** Click on an in-article CTA block (button or link) toward contact. */

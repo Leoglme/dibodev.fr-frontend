@@ -66,6 +66,7 @@ export type TrackingEventPayloads = {
   [TRACKING_EVENTS.projectSiteVisited]: { project: string; siteUrl: string; location: string }
   [TRACKING_EVENTS.projectRepoVisited]: { repoUrl: string }
   [TRACKING_EVENTS.externalProfileClicked]: { platform: string; location: string }
+  [TRACKING_EVENTS.pressArticleClicked]: { media: string; location: string }
   [TRACKING_EVENTS.articleCardClicked]: { article: string; source: string }
   [TRACKING_EVENTS.articleCtaClicked]: { label: string; href: string; variant: 'button' | 'link' }
   [TRACKING_EVENTS.fileDownloadClicked]: { file: string; location: string }
