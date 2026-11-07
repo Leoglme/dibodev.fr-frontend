@@ -39,6 +39,27 @@ export type SchemaEducationalOrganization = {
   url: string
 }
 
+export type SchemaNewsArticleAuthor = {
+  '@type': 'Person'
+  name: string
+}
+
+export type SchemaNewsMediaOrganization = {
+  '@type': 'NewsMediaOrganization'
+  name: string
+  url: string
+}
+
+export type SchemaNewsArticle = {
+  '@type': 'NewsArticle'
+  headline: string
+  url: string
+  datePublished: string
+  inLanguage: string
+  author: SchemaNewsArticleAuthor
+  publisher: SchemaNewsMediaOrganization
+}
+
 export type SchemaPerson = {
   '@type': 'Person'
   '@id': string
@@ -53,6 +74,7 @@ export type SchemaPerson = {
   url: string
   image: string
   sameAs: string[]
+  subjectOf: SchemaNewsArticle[]
   address: SchemaPostalAddress
   worksFor: SchemaEntityReference
   alumniOf: SchemaEducationalOrganization
@@ -118,6 +140,7 @@ export type SchemaOrganization = {
   foundingDate: string
   founder: SchemaEntityReference
   sameAs: string[]
+  subjectOf: SchemaNewsArticle[]
   memberOf: SchemaProgramMembership[]
   areaServed: string[]
   address: SchemaPostalAddress
@@ -255,6 +278,23 @@ const ORGANIZATION_SAME_AS: string[] = [
   GOOGLE_KNOWLEDGE_GRAPH_URL,
 ]
 
+/** Press about Léo and Dibodev: subjectOf, never sameAs (an article is not them); headline kept as published. */
+const PRESS_COVERAGE: SchemaNewsArticle[] = [
+  {
+    '@type': 'NewsArticle',
+    headline: 'Les IA développés par le Rennais Léo Guillaume séduisent les entreprises',
+    url: 'https://www.bretagne-economique.com/actualites/dibodev-au-coeur-des-usages-concrets-de-lia/',
+    datePublished: '2026-11-05',
+    inLanguage: 'fr',
+    author: { '@type': 'Person', name: 'Véronique Maignant' },
+    publisher: {
+      '@type': 'NewsMediaOrganization',
+      name: 'Bretagne Économique',
+      url: 'https://www.bretagne-economique.com/',
+    },
+  },
+]
+
 /** Listing in the France Num directory, the State programme run by the DGE for the digital shift of small businesses. */
 const ORGANIZATION_MEMBER_OF: SchemaProgramMembership[] = [
   {
@@ -301,6 +341,7 @@ export const personSchema: SchemaPerson = {
   url: PERSON_URL,
   image: PERSON_IMAGE,
   sameAs: PERSON_SAME_AS,
+  subjectOf: PRESS_COVERAGE,
   address: schemaAddress,
   worksFor: { '@id': ORGANIZATION_ID },
   alumniOf: PERSON_ALUMNI_OF,
@@ -323,6 +364,7 @@ export const organizationSchema: SchemaOrganization = {
   foundingDate: ORGANIZATION_FOUNDING_DATE,
   founder: { '@id': PERSON_ID },
   sameAs: ORGANIZATION_SAME_AS,
+  subjectOf: PRESS_COVERAGE,
   memberOf: ORGANIZATION_MEMBER_OF,
   areaServed: AREA_SERVED,
   address: schemaAddress,
