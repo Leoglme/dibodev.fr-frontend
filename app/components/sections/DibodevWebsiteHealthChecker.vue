@@ -97,6 +97,13 @@
           {{ result ? props.wording.ctaLabels[result.overall] : props.wording.idleCtaLabel }}
           <DibodevIcon name="ArrowRight" mode="stroke" :width="18" :height="18" aria-hidden="true" />
         </NuxtLink>
+        <NuxtLink
+          :to="gdprCookieCheckRoute"
+          class="text-center text-sm leading-6 text-white/85 underline-offset-4 transition-colors hover:text-white hover:underline"
+          @click="trackGdprCookieCheckClick"
+        >
+          {{ props.wording.gdprCookieCheckLinkLabel }}
+        </NuxtLink>
       </div>
     </div>
   </div>
@@ -120,6 +127,7 @@ import { computed, ref } from 'vue'
 import DibodevInput from '~/components/core/DibodevInput.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { useTracking } from '~/composables/useTracking'
+import { GDPR_COOKIE_CHECK_ROUTE_NAME, GDPR_COOKIE_CHECK_TEASER } from '~/core/constants/gdprCookieCheck/pageShared'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 import {
   WEBSITE_HEALTH_CHECK_API_PATH,
@@ -151,6 +159,7 @@ const props: DibodevWebsiteHealthCheckerProps = defineProps({
 const localePath = useLocalePath()
 const { track } = useTracking()
 
+const gdprCookieCheckRoute: string = localePath({ name: GDPR_COOKIE_CHECK_ROUTE_NAME })
 let hasTrackedStart: boolean = false
 
 /* REFS */
@@ -335,5 +344,16 @@ function trackDetailedToolClick(toolKey: DibodevWebsiteHealthDetailedToolKey): v
  */
 function trackContactClick(): void {
   track(TRACKING_EVENTS.ctaProjectDiscussion, { location: props.trackingLocation })
+}
+
+/**
+ * Tracks the opening of the GDPR cookie check from the result card.
+ * @returns {void}
+ */
+function trackGdprCookieCheckClick(): void {
+  track(TRACKING_EVENTS.toolTeaserClicked, {
+    tool: GDPR_COOKIE_CHECK_TEASER.toolId,
+    location: result.value ? props.trackingLocation : `${props.trackingLocation}_idle`,
+  })
 }
 </script>

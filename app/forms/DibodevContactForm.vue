@@ -130,6 +130,7 @@ import type { DibodevSiteCheckContactPrefill } from '~/core/types/DibodevSiteChe
 import type { DibodevWordPressHackVerdict } from '~/core/types/DibodevWordPressHackCheck'
 import type { DibodevHostingStatusContactPrefill } from '~/core/types/DibodevHostingStatusContact'
 import type { DibodevEmailDeliverabilityVerdict } from '~/core/types/DibodevEmailDeliverabilityCheck'
+import type { DibodevGdprCookieCheckVerdict } from '~/core/types/DibodevGdprCookieCheck'
 import { EInvoicingContactUtils } from '~/core/utils/EInvoicingContactUtils'
 import { PhpVulnerabilityContactUtils } from '~/core/utils/PhpVulnerabilityContactUtils'
 import { SiteCheckContactUtils } from '~/core/utils/SiteCheckContactUtils'
@@ -139,6 +140,10 @@ import {
   EMAIL_DELIVERABILITY_VERDICTS,
 } from '~/core/constants/emailDeliverabilityCheck/pageShared'
 import { WORDPRESS_HACK_CONTACT_TOPIC, WORDPRESS_HACK_VERDICTS } from '~/core/constants/wordpressHackCheck/pageShared'
+import {
+  GDPR_COOKIE_CHECK_CONTACT_TOPIC,
+  GDPR_COOKIE_CHECK_VERDICTS,
+} from '~/core/constants/gdprCookieCheck/pageShared'
 import { WEBSITE_REDESIGN_CONTACT_TOPIC } from '~/core/constants/websiteRedesignPrompt'
 import { useTracking } from '~/composables/useTracking'
 import { useLeadSource } from '~/composables/useLeadSource'
@@ -209,6 +214,8 @@ const siteDownPrefill: DibodevHostingStatusContactPrefill | null = HostingStatus
 /** `?topic=email-deliverability` comes from the e-mail deliverability checker, with the domain and the verdict when a check was run. */
 const emailDeliverabilityPrefill: DibodevSiteCheckContactPrefill<DibodevEmailDeliverabilityVerdict> | null =
   SiteCheckContactUtils.readSitePrefill(route.query, EMAIL_DELIVERABILITY_CONTACT_TOPIC, EMAIL_DELIVERABILITY_VERDICTS)
+const gdprCookieCheckPrefill: DibodevSiteCheckContactPrefill<DibodevGdprCookieCheckVerdict> | null =
+  SiteCheckContactUtils.readSitePrefill(route.query, GDPR_COOKIE_CHECK_CONTACT_TOPIC, GDPR_COOKIE_CHECK_VERDICTS)
 /** `?topic=website-redesign` comes from the redesign prompt of the PHP and WordPress pages. */
 const isWebsiteRedesignVisit: boolean = String(route.query.topic ?? '') === WEBSITE_REDESIGN_CONTACT_TOPIC
 
@@ -237,6 +244,14 @@ const isWebsiteProject: ComputedRef<boolean> = computed((): boolean => projectTy
 function buildPrefilledMessage(): string {
   if (isWebsiteRedesignVisit) {
     return t('contact.form.websiteRedesign.message')
+  }
+  if (gdprCookieCheckPrefill) {
+    return gdprCookieCheckPrefill.site
+      ? t('contact.form.gdprCheck.messageWithSite', {
+          site: gdprCookieCheckPrefill.site,
+          verdict: t(`contact.form.gdprCheck.verdicts.${gdprCookieCheckPrefill.verdict ?? 'unknown'}`),
+        })
+      : t('contact.form.gdprCheck.messageWithoutSite')
   }
   if (emailDeliverabilityPrefill) {
     return emailDeliverabilityPrefill.site
@@ -508,6 +523,7 @@ onMounted((): void => {
     wordpressHackPrefill ||
     siteDownPrefill ||
     emailDeliverabilityPrefill ||
+    gdprCookieCheckPrefill ||
     isWebsiteRedesignVisit
   ) {
     message.value = buildPrefilledMessage()

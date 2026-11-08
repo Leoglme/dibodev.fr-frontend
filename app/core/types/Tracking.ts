@@ -5,6 +5,12 @@ import type {
 } from '~/core/types/DibodevBudgetEstimator'
 import type { DibodevEInvoicingVerdict } from '~/core/types/DibodevEInvoicingCheck'
 import type {
+  DibodevGdprConsentToolKey,
+  DibodevGdprCookieCheckVerdict,
+  DibodevGdprLinkKey,
+  DibodevGdprTrackerKey,
+} from '~/core/types/DibodevGdprCookieCheck'
+import type {
   DibodevEmailDeliverabilityFindingKey,
   DibodevEmailDeliverabilityVerdict,
   DibodevEmailProviderKey,
@@ -183,6 +189,19 @@ export type TrackingEventPayloads = {
     criticalChecks: DibodevWebsiteHealthCheckKey[]
     warningChecks: DibodevWebsiteHealthCheckKey[]
     isWordPress: boolean | null
+    errorKind: DibodevSiteCheckErrorKind | null
+  }
+  [TRACKING_EVENTS.gdprCookieCheckStarted]: { location: string }
+  [TRACKING_EVENTS.gdprCookieChecked]: {
+    location: string
+    outcome: 'result' | 'error'
+    verdict: DibodevGdprCookieCheckVerdict | null
+    trackerCount: number | null
+    loadedWithoutConsentCount: number | null
+    loadedWithoutConsent: DibodevGdprTrackerKey[]
+    hasConsentTool: boolean | null
+    consentTool: DibodevGdprConsentToolKey | null
+    missingLinks: DibodevGdprLinkKey[]
     errorKind: DibodevSiteCheckErrorKind | null
   }
   [TRACKING_EVENTS.siteDemoRequested]: {

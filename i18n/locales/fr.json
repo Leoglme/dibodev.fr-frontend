@@ -245,6 +245,7 @@
       "wordpressHackCheck": "Site WordPress piraté : vérifier",
       "emailDeliverabilityCheck": "E-mails en spam : vérifier SPF, DKIM, DMARC",
       "websiteHealthCheck": "Tester mon site : 8 vérifications",
+      "gdprCookieCheck": "Site conforme RGPD ? Tester les cookies",
       "projectSpecification": "Cahier des charges : générateur et modèles",
       "coldCallingCheck": "Démarchage téléphonique interdit ?",
       "hostingStatus": "Mon hébergeur est-il en panne ?",
@@ -668,6 +669,16 @@
           "invalidDomain": "domaine introuvable",
           "consumerMailbox": "messagerie gratuite",
           "unknown": "résultat non lisible"
+        }
+      },
+      "gdprCheck": {
+        "messageWithSite": "Bonjour,\nmon site {site} vient de passer le test RGPD des cookies. Résultat : « {verdict} ».\nPouvez-vous me dire quoi corriger pour le mettre en règle (bandeau, traceurs, pages légales) ?",
+        "messageWithoutSite": "Bonjour,\nje voudrais vérifier que mon site respecte les règles sur les cookies et le RGPD (bandeau, traceurs, pages légales), et le corriger si besoin.\nLe lien de mon site : ",
+        "verdicts": {
+          "compliantLikely": "rien de risqué vu dans le HTML",
+          "needsCheck": "des points à vérifier",
+          "atRisk": "des traceurs chargés sans consentement",
+          "unknown": "page illisible depuis l'extérieur"
         }
       },
       "phpUpdate": {

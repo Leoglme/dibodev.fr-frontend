@@ -217,6 +217,7 @@ export const WEBSITE_HEALTH_CHECK_PAGE_ES: DibodevWebsiteHealthCheckPageContent 
       needsAttention: 'Que me corrijan estos puntos',
       atRisk: 'Que me aseguren la web',
     },
+    gdprCookieCheckLinkLabel: 'Comprobar también las cookies y los rastreadores: ¿mi web cumple el RGPD?',
   },
   checks: {
     anchorId: 'comprobaciones',

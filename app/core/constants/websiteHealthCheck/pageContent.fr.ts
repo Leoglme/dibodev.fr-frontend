@@ -184,6 +184,7 @@ export const WEBSITE_HEALTH_CHECK_PAGE_FR: DibodevWebsiteHealthCheckPageContent 
       needsAttention: 'Faire corriger ces points',
       atRisk: 'Faire sécuriser mon site',
     },
+    gdprCookieCheckLinkLabel: `Vérifier aussi les cookies et les traceurs${NBSP}: site conforme RGPD${NBSP}?`,
   },
   checks: {
     anchorId: 'verifications',

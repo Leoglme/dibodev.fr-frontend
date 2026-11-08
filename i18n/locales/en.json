@@ -245,6 +245,7 @@
       "wordpressHackCheck": "Hacked WordPress site: check",
       "emailDeliverabilityCheck": "Emails in spam: check SPF, DKIM, DMARC",
       "websiteHealthCheck": "Test my website: 8 checks",
+      "gdprCookieCheck": "GDPR compliant website? Check the cookies",
       "projectSpecification": "Project brief: generator and templates",
       "coldCallingCheck": "Cold calling ban: can I still call?",
       "hostingStatus": "Is my web host down?",
@@ -668,6 +669,16 @@
           "invalidDomain": "domain not found",
           "consumerMailbox": "free webmail address",
           "unknown": "unreadable result"
+        }
+      },
+      "gdprCheck": {
+        "messageWithSite": "Hello,\nmy website {site} has just been through the GDPR cookie check. Result: “{verdict}”.\nCould you tell me what to fix to bring it into line (banner, trackers, legal pages)?",
+        "messageWithoutSite": "Hello,\nI would like to check that my website follows the rules on cookies and the GDPR (banner, trackers, legal pages), and fix it if needed.\nMy website link: ",
+        "verdicts": {
+          "compliantLikely": "nothing risky seen in the HTML",
+          "needsCheck": "points to check",
+          "atRisk": "trackers loaded without consent",
+          "unknown": "page unreadable from outside"
         }
       },
       "phpUpdate": {

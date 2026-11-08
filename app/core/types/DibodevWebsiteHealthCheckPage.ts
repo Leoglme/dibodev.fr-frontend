@@ -48,6 +48,7 @@ export type DibodevWebsiteHealthCheckerWording = {
   idleCtaLabel: string
   ctaIntro: string
   ctaLabels: Record<DibodevWebsiteHealthOverallVerdict, string>
+  gdprCookieCheckLinkLabel: string
 }
 
 /** Content of the website health check page in one language, kept out of the i18n files because only this page loads it. */

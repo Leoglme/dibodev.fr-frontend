@@ -205,6 +205,7 @@ export const WEBSITE_HEALTH_CHECK_PAGE_EN: DibodevWebsiteHealthCheckPageContent 
       needsAttention: 'Have these points fixed',
       atRisk: 'Have my website secured',
     },
+    gdprCookieCheckLinkLabel: 'Also check the cookies and trackers: is my website GDPR compliant?',
   },
   checks: {
     anchorId: 'checks',
