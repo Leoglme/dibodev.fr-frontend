@@ -169,6 +169,10 @@ export const PHP_UPDATE_SERVICE_PAGE_FR: DibodevPhpUpdateServicePageContent = {
     title: 'Avant de m’écrire',
     questions: [
       {
+        question: `Qui peut mettre à jour la version de PHP de mon site WordPress${NBSP}?`,
+        answer: `Deux personnes peuvent le faire${NBSP}: vous-même, depuis l’espace client de votre hébergeur (les guides pas à pas OVHcloud, o2switch, IONOS, Hostinger, Infomaniak et PlanetHoster sont sur ce site), ou un développeur comme moi, qui teste d’abord le site sur une copie, met à jour WordPress, le thème et les extensions, puis change la version et vous envoie un compte rendu écrit. L’hébergeur fournit le sélecteur de version mais ne vérifie pas que votre site le supporte, et changer la version sans ce test est ce qui casse le plus souvent un site. Le diagnostic est gratuit et vous avez le prix avant l’intervention.`,
+      },
+      {
         question: `Mon site WordPress semble piraté${NBSP}: est-ce la même intervention${NBSP}?`,
         answer: `Non, et ce n’est pas au même prix. Je commence par le diagnostic gratuit (l’outil « Mon site WordPress est-il piraté${NBSP}? » et une lecture de l’intérieur si vous me donnez un accès), puis je vous envoie un devis pour le nettoyage${NBSP}: extensions et comptes vérifiés, fichiers inconnus retirés, mots de passe et clés changés, sauvegarde saine restaurée si besoin, puis mise à jour de PHP, de WordPress et des extensions. Le prix dépend de ce que le diagnostic trouve.`,
       },

@@ -169,6 +169,11 @@ export const PHP_UPDATE_SERVICE_PAGE_ES: DibodevPhpUpdateServicePageContent = {
     title: 'Antes de escribirme',
     questions: [
       {
+        question: '¿Quién puede actualizar la versión de PHP de mi web WordPress?',
+        answer:
+          'Dos personas pueden hacerlo: usted mismo, desde el panel de su hosting (las guías paso a paso de OVHcloud, o2switch, IONOS, Hostinger, Infomaniak y PlanetHoster están en este sitio), o un desarrollador como yo, que primero prueba la web en una copia, actualiza WordPress, el tema y los plugins, luego cambia la versión y le envía un informe escrito. El hosting ofrece el selector de versión, pero no comprueba que su web lo soporte, y cambiar sin esa prueba es lo que más a menudo rompe una web. El diagnóstico es gratuito y conoce el precio antes de la intervención.',
+      },
+      {
         question: `Mi web WordPress parece hackeada: ¿es la misma intervención?`,
         answer: `No, y no al mismo precio. Empiezo por el diagnóstico gratuito (la herramienta «¿Mi web WordPress está hackeada?» y una lectura desde dentro si me das acceso), y luego te envío un presupuesto para la limpieza: extensiones y cuentas revisadas, archivos desconocidos eliminados, contraseñas y claves cambiadas, copia de seguridad limpia restaurada si hace falta, y después actualización de PHP, WordPress y las extensiones. El precio depende de lo que encuentre el diagnóstico.`,
       },

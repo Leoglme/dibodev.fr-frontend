@@ -168,6 +168,11 @@ export const PHP_UPDATE_SERVICE_PAGE_EN: DibodevPhpUpdateServicePageContent = {
     title: 'Before you write',
     questions: [
       {
+        question: 'Who can update the PHP version of my WordPress site?',
+        answer:
+          'Two people can: you, from your host’s control panel (step-by-step guides for OVHcloud, o2switch, IONOS, Hostinger, Infomaniak and PlanetHoster are on this site), or a developer like me, who first tests the site on a copy, updates WordPress, the theme and the plugins, then switches the version and sends you a written report. The host provides the version selector but does not check that your site supports it, and switching without that test is what most often breaks a site. The diagnosis is free and you know the price before the work starts.',
+      },
+      {
         question: `My WordPress site looks hacked: is it the same job?`,
         answer: `No, and not at the same price. I start with the free diagnosis (the “Has my WordPress site been hacked?” tool, plus a look from the inside if you give me access), then I send a quote for the clean-up: extensions and accounts checked, unknown files removed, passwords and keys changed, a clean backup restored when needed, then PHP, WordPress and the extensions updated. The price depends on what the diagnosis finds.`,
       },
