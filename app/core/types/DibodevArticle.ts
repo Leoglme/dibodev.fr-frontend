@@ -9,6 +9,7 @@ export type DibodevArticle = {
   excerpt: string
   content: unknown
   date: string
+  updatedAt: string
   coverImageUrl: string
   tags: string[]
   readingTimeMinutes: number

@@ -298,6 +298,7 @@ useHead((): Record<string, unknown> => {
       { property: 'og:url', content: canonicalUrl },
       { property: 'og:locale', content: locale.value === 'fr' ? 'fr_FR' : locale.value === 'es' ? 'es_ES' : 'en_US' },
       { property: 'article:published_time', content: article.value.date },
+      { property: 'article:modified_time', content: article.value.updatedAt },
       { property: 'article:author', content: `${siteUrl}${localePath('about')}` },
       ...article.value.tags.map((tag: string): SeoMetaTag => ({ property: 'article:tag', content: tag })),
       { name: 'twitter:title', content: article.value.metaTitle },

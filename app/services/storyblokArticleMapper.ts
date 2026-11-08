@@ -66,6 +66,20 @@ function estimateReadingTime(content: StoryblokArticleContent['content']): numbe
 }
 
 /**
+ * Resolve the date of the last update of an article: the last Storyblok publication, unless it is earlier than the
+ * article date (an article dated in the future keeps its own date).
+ * @param {string | null | undefined} publishedAt - The `published_at` of the Storyblok story.
+ * @param {string} articleDate - The `date` field of the article content (YYYY-MM-DD).
+ * @returns {string} The ISO date or date-time to expose as `dateModified`.
+ */
+function resolveUpdatedAt(publishedAt: string | null | undefined, articleDate: string): string {
+  if (!publishedAt || publishedAt.slice(0, 10) < articleDate) {
+    return articleDate
+  }
+  return publishedAt
+}
+
+/**
  * Map a strongly-typed Storyblok article story to DibodevArticle.
  */
 export function mapStoryblokArticleToDibodevArticle(story: StoryblokStory<StoryblokArticleContent>): DibodevArticle {
@@ -89,6 +103,7 @@ export function mapStoryblokArticleToDibodevArticle(story: StoryblokStory<Storyb
     excerpt: FrenchTypographyUtils.formatText(content.excerpt),
     content: FrenchTypographyUtils.formatRichtext(content.content),
     date: content.date,
+    updatedAt: resolveUpdatedAt(story.published_at, content.date),
     coverImageUrl,
     tags,
     readingTimeMinutes,

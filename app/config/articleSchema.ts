@@ -9,6 +9,7 @@ export type SchemaBlogPosting = {
   description: string
   image: string
   datePublished: string
+  dateModified: string
   inLanguage: string
   url: string
   mainEntityOfPage: string
@@ -39,6 +40,7 @@ export function buildArticleSchemaJson(
     description: article.metaDescription || article.excerpt,
     image: imageUrl,
     datePublished: article.date,
+    dateModified: article.updatedAt,
     inLanguage: locale,
     url: canonicalUrl,
     mainEntityOfPage: canonicalUrl,
