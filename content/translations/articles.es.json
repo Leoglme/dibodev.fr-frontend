@@ -13175,6 +13175,33 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para comparar los precios de 2026 de los programas del mercado y saber en seis preguntas cuál le conviene, lo he reunido todo en mi página ",
+              "type": "text"
+            },
+            {
+              "text": "software para talleres mecánicos",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", con una plantilla de orden de reparación para descargar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -28947,6 +28974,33 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si ya dudas entre varios editores, mi página ",
+              "type": "text"
+            },
+            {
+              "text": "software para talleres mecánicos",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " compara sus precios de 2026 y te dice en seis preguntas cuál te conviene.",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -34051,6 +34105,33 @@
           "content": [
             {
               "text": "Antes de comparar precios, hay que saber qué se le pide a la herramienta. Un taller tiene cuatro documentos que se encadenan: la toma de cita, el presupuesto, la orden de reparación firmada y luego la factura. Un buen software los relaciona sin necesidad de volver a introducir datos, guarda la ficha de cada vehículo con su kilometraje e historial, y genera facturas conformes a las normas del taller. Todo lo demás (stock de piezas, recordatorios por SMS, vehículos de ocasión, planificación multi-talleres) depende de su actividad. Un tallerero que trabaja solo no necesita gestionar una flota; un taller de ocho personas en dos sedes no puede conformarse con una agenda.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si prefieres ir al grano, lo he reunido todo en mi página ",
+              "type": "text"
+            },
+            {
+              "text": "software para talleres mecánicos",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": los precios de 2026 de Gest’Garage, TDV, AutoProGestion y Kwixéo, un test gratuito de seis preguntas y una plantilla de orden de reparación y presupuesto para descargar en PDF y Excel.",
               "type": "text"
             }
           ]

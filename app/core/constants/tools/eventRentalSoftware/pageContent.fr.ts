@@ -16,25 +16,24 @@ import { EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_ROUTE_NAME } from '~/core/constants
 export const EVENT_RENTAL_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   meta: {
     title: `Logiciel de location de matériel${NBSP}: prix 2026, test gratuit`,
-    description: `Logiciels de location de matériel événementiel${NBSP}: prix 2026 (Unipresta gratuit, LoKisi, Rentman, Booqable…) et test gratuit en 6 questions pour choisir le vôtre.`,
+    description: `Logiciels de gestion de location de matériel${NBSP}: prix 2026 (Unipresta gratuit, LoKisi, Rentman, Booqable…), planning, stock et test gratuit en 6 questions.`,
     inLanguage: 'fr-FR',
-    schemaAbout: 'Logiciel de gestion de location de matériel événementiel',
+    schemaAbout: 'Logiciel de gestion de location de matériel (événementiel, outillage, BTP)',
   },
-  breadcrumbLabel: 'Logiciel de location événementielle',
+  breadcrumbLabel: 'Logiciel de location de matériel',
   shareImage: {
     titleLines: ['Quel logiciel pour', `louer votre matériel${NBSP}?`],
     highlight: 'matériel',
-    subtitle: 'Six questions, les prix 2026 des logiciels de location événementielle et combien prévoir',
+    subtitle: 'Six questions, les prix 2026 des logiciels de location de matériel et combien prévoir',
     badge: 'Test gratuit, en 2 minutes',
     icon: 'truck',
-    alt: `Quel logiciel pour votre location de matériel événementiel${NBSP}? Test gratuit en 6 questions et prix 2026 des logiciels, sur dibodev.fr`,
+    alt: `Quel logiciel de location de matériel choisir${NBSP}? Test gratuit en 6 questions et prix 2026 des logiciels, sur dibodev.fr`,
   },
   hero: {
-    titleBefore: 'Quel logiciel pour votre location de ',
-    titleHighlight: 'matériel événementiel',
-    titleAfter: `${NBSP}?`,
-    description:
-      'Six questions sur votre équipe, vos dépôts et ce que vous louez. Le test vous dit quel type de logiciel choisir pour gérer vos disponibilités, vos sorties et retours, et combien prévoir.',
+    titleBefore: 'Quel logiciel de ',
+    titleHighlight: 'location de matériel',
+    titleAfter: ` choisir${NBSP}?`,
+    description: `Six questions sur votre équipe, vos dépôts et ce que vous louez${NBSP}: matériel événementiel, sono et lumière, mobilier, outillage ou engins de BTP. Le test vous dit quel logiciel de gestion de location de matériel choisir pour votre planning des réservations, vos disponibilités, vos sorties et retours et votre stock, et combien prévoir.`,
     reassurances: ['2 minutes', 'Sans inscription ni e-mail', 'Résultat immédiat'],
     authorIntro: 'Test conçu par',
     authorBio:
@@ -44,7 +43,7 @@ export const EVENT_RENTAL_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   marketSoftware: {
     anchorId: 'logiciels',
     eyebrow: 'Prix publics 2026',
-    title: 'Comparatif des logiciels de location de matériel événementiel et de leurs prix',
+    title: 'Comparatif des logiciels de location de matériel et de leurs prix',
     intro:
       'Les tarifs affichés par les éditeurs sur leur site. Le prix dépend le plus souvent du nombre d’utilisateurs, de dépôts ou des modules choisis.',
     productColumnLabel: 'Logiciel',
@@ -244,14 +243,14 @@ export const EVENT_RENTAL_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   },
   faq: {
     eyebrow: 'Questions fréquentes',
-    title: `Logiciel de location événementielle${NBSP}: vos questions`,
+    title: `Logiciel de location de matériel${NBSP}: vos questions`,
     questions: [
       {
-        question: `Combien coûte un logiciel de location de matériel événementiel${NBSP}?`,
+        question: `Combien coûte un logiciel de location de matériel${NBSP}?`,
         answer: `Unipresta a une version gratuite puis des offres de 19 à 319${NBSP}€ HT par mois, LoKisi coûte à partir de 29${NBSP}€ par mois, Rentman 39${NBSP}€ par mois plus des modules par utilisateur, Current RMS 73${NBSP}€ par mois pour le premier utilisateur puis 52${NBSP}€ par utilisateur en plus, et Booqable 29 à 149${NBSP}€ par mois à l’année. Sphinx Manager, Locasyst, Codial et CLE sont sur devis (tarifs relevés le 29 septembre 2026, sauf Current RMS, Booqable et Unipresta revérifiés le 8 novembre 2026). Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
       },
       {
-        question: `Existe-t-il un logiciel de location événementielle gratuit${NBSP}?`,
+        question: `Existe-t-il un logiciel de location de matériel gratuit${NBSP}?`,
         answer: `Oui, Unipresta propose une version gratuite avec la gestion et un site de location en ligne${NBSP}; ses abonnements payants ouvrent un accès illimité. Avant de vous lancer, vérifiez comment il gère vos kits et les retours incomplets.`,
       },
       {
@@ -262,6 +261,14 @@ export const EVENT_RENTAL_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
       {
         question: `Peut-on gérer plusieurs dépôts${NBSP}?`,
         answer: `Oui${NBSP}: Rentman facture 5${NBSP}€ par entrepôt en plus et par utilisateur avancé, et Locasyst suit le stock par dépôt. Un outil sur mesure peut aussi gérer les transferts d’un dépôt à l’autre, comme StockPME, le logiciel de stock multi-entrepôts que j’ai développé.`,
+      },
+      {
+        question: `Quel logiciel pour le planning de location de matériel${NBSP}?`,
+        answer: `Le planning est le cœur d’un logiciel de location${NBSP}: chaque article est réservé sur toute la période, de la préparation au retour, et le calendrier montre les disponibilités avant même le devis. Unipresta, LoKisi, Rentman et Booqable en ont un${NBSP}; vérifiez qu’il gère vos kits (un pack de dix tables réserve dix tables) et les retours partiels. Un outil sur mesure part de votre planning actuel, souvent un tableur, et le relie au stock et à la facturation.`,
+      },
+      {
+        question: `Le même logiciel convient-il à la location d’outillage ou de matériel de BTP${NBSP}?`,
+        answer: `Les besoins sont les mêmes${NBSP}: disponibilités, sorties et retours, état du matériel, facturation à la journée ou à la semaine. Booqable, LoKisi et Unipresta se présentent pour tous les loueurs de matériel${NBSP}; Rentman et Current RMS visent d’abord l’événementiel et l’audiovisuel. Pour des engins soumis à des vérifications périodiques, un outil sur mesure peut garder le carnet d’entretien et bloquer la location d’un matériel dont le contrôle est dépassé.`,
       },
       {
         question: `Comment facturer la casse et les manquants${NBSP}?`,

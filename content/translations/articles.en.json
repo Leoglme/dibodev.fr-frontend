@@ -13170,6 +13170,33 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To compare the 2026 prices of the software on the market and find out in six questions which one suits you, I’ve gathered it all on my ",
+              "type": "text"
+            },
+            {
+              "text": "auto repair shop software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " page, along with a repair order template to download.",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -28945,6 +28972,33 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you’re already torn between several vendors, my ",
+              "type": "text"
+            },
+            {
+              "text": "auto repair shop software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " page compares their 2026 prices and tells you in six questions which one suits you.",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -34049,6 +34103,33 @@
           "content": [
             {
               "text": "Before comparing prices, you need to know what you expect from the tool. A garage has four interconnected documents: booking, quote, signed repair order, and invoice. The right software connects them without re-entering data, keeps each vehicle’s record with its mileage and history, and generates invoices compliant with garage regulations. Everything else (parts inventory, SMS reminders, used vehicles, multi-workshop scheduling) depends on your business. A solo mechanic doesn’t need fleet management; an eight-person workshop across two sites can’t rely on just a calendar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you’d rather get straight to the point, I’ve gathered everything on my ",
+              "type": "text"
+            },
+            {
+              "text": "auto repair shop software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-garage-automobile",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " page: the 2026 prices of Gest’Garage, TDV, AutoProGestion and Kwixéo, a free six-question test, and a repair order and quote template to download as PDF and Excel.",
               "type": "text"
             }
           ]

@@ -16,9 +16,9 @@ import { GARAGE_REPAIR_ORDER_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTe
 export const AUTO_REPAIR_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   meta: {
     title: `Logiciel garage automobile${NBSP}: facturation, devis et prix 2026`,
-    description: `Gest’Garage, AutoProGestion, TDV, Kwixéo${NBSP}: les prix 2026 des logiciels de garage, ce que chacun gère, et un test gratuit en 6 questions pour choisir le vôtre.`,
+    description: `Gest’Garage, AutoProGestion, TDV, Kwixéo${NBSP}: prix 2026 des logiciels de garage et d’atelier mécanique, ce que chacun gère, et un test gratuit en 6 questions.`,
     inLanguage: 'fr-FR',
-    schemaAbout: 'Logiciel de gestion de garage automobile',
+    schemaAbout: 'Logiciel de gestion de garage automobile et d’atelier mécanique',
   },
   breadcrumbLabel: 'Logiciel garage automobile',
   shareImage: {
@@ -32,9 +32,9 @@ export const AUTO_REPAIR_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   hero: {
     titleBefore: 'Quel logiciel de ',
     titleHighlight: 'garage',
-    titleAfter: ` automobile choisir${NBSP}?`,
+    titleAfter: ` automobile ou d’atelier mécanique choisir${NBSP}?`,
     description:
-      'Six questions sur votre équipe, vos ateliers et votre activité. Garage ou atelier mécanique, le test vous dit quel type de logiciel choisir pour vos devis, vos ordres de réparation et votre facturation, et combien prévoir.',
+      'Six questions sur votre équipe, vos ateliers et votre activité. Garage automobile, atelier mécanique, carrosserie ou garage moto, le test vous dit quel logiciel de gestion de garage choisir pour vos devis, vos ordres de réparation, votre facturation et votre planning, et combien prévoir.',
     reassurances: ['2 minutes', 'Sans inscription ni e-mail', 'Résultat immédiat'],
     authorIntro: 'Test conçu par',
     authorBio:
@@ -254,7 +254,15 @@ export const AUTO_REPAIR_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
       },
       {
         question: `Existe-t-il un logiciel de garage gratuit${NBSP}?`,
-        answer: `Les logiciels pensés pour les garages sont payants, avec un essai gratuit de 14 jours chez Gest’Garage, AutoProGestion et Kwixéo. Un logiciel de facturation gratuit peut dépanner, mais sans ordre de réparation ni historique des véhicules.`,
+        answer: `Les logiciels pensés pour les garages sont payants, avec un essai gratuit de 14 jours chez Gest’Garage, AutoProGestion et Kwixéo. Un logiciel de facturation gratuit peut dépanner, mais sans ordre de réparation ni historique des véhicules. En attendant, mon modèle gratuit d’ordre de réparation et de devis, plus haut sur cette page, se remplit en PDF ou en Excel.`,
+      },
+      {
+        question: `Quel est le meilleur logiciel de gestion de garage${NBSP}?`,
+        answer: `Il n’y en a pas un seul pour tous les garages. Gest’Garage est le moins cher et émet déjà des factures Factur-X${NBSP}; AutoProGestion et Kwixéo ajoutent le stock, Kwixéo jusqu’au multi-dépôts${NBSP}; TDV étage ses offres de 19,90 à 79${NBSP}€ TTC par mois selon ce que vous activez. Le bon choix dépend du nombre de postes, de votre activité (mécanique, carrosserie, moto) et de ce que vous faites encore sur papier${NBSP}: c’est ce que mesure le test en six questions, et le comparatif plus haut donne les prix relevés sur les sites des éditeurs.`,
+      },
+      {
+        question: `Quel logiciel pour un atelier mécanique ou une carrosserie${NBSP}?`,
+        answer: `Un atelier mécanique a les mêmes besoins qu’un garage${NBSP}: devis, ordre de réparation, fiche véhicule avec le kilométrage, facture détaillée. Une carrosserie y ajoute le chiffrage des chocs, les photos et le suivi des sinistres avec les assureurs${NBSP}: j’ai fait une page à part sur le logiciel de carrosserie, avec un modèle gratuit de suivi de sinistre.`,
       },
       {
         question: `L’ordre de réparation est-il obligatoire${NBSP}?`,

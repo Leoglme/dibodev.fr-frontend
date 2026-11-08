@@ -16,27 +16,27 @@ import { EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_ROUTE_NAME } from '~/core/constants
 
 export const EVENT_RENTAL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   meta: {
-    title: 'Event rental software in France: 2026 prices and free test',
+    title: 'Equipment rental software in France: 2026 prices, free test',
     description:
-      'Event equipment rental software sold in France compared, with 2026 prices (free, LoKisi, Rentman, Booqable…), and a free 6-question test to choose yours.',
+      'Equipment rental management software sold in France, with 2026 prices (free, LoKisi, Rentman, Booqable…), scheduling, stock and a free 6-question test.',
     inLanguage: 'en',
-    schemaAbout: 'Event equipment rental management software in France',
+    schemaAbout: 'Equipment rental management software in France (events, tools, construction)',
   },
-  breadcrumbLabel: 'Event rental software',
+  breadcrumbLabel: 'Equipment rental software',
   shareImage: {
     titleLines: ['Which software for', 'your event rentals?'],
     highlight: 'event rentals',
-    subtitle: 'Six questions, 2026 prices of the rental software sold in France and how much to budget',
+    subtitle: 'Six questions, 2026 prices of the equipment rental software sold in France and how much to budget',
     badge: 'Free test, in 2 minutes',
     icon: 'truck',
     alt: 'Which software for your event equipment rentals? Free 6-question test and 2026 software prices in France, on dibodev.fr',
   },
   hero: {
     titleBefore: 'Which software for your ',
-    titleHighlight: 'event equipment rentals',
+    titleHighlight: 'equipment rentals',
     titleAfter: '?',
     description:
-      'Answer six questions about your team, warehouses and equipment. Based on the French market, the test tells you which kind of software to choose to manage availability, orders and returns, and how much to budget.',
+      'Answer six questions about your team, warehouses and what you rent out: event equipment, sound and lighting, furniture, tools or construction machinery. Based on the French market, the test tells you which equipment rental management software to choose for your booking schedule, availability, check-outs and returns and stock, and how much to budget.',
     reassurances: ['2 minutes', 'No sign-up, no email', 'Instant result'],
     authorIntro: 'Test designed by',
     authorBio:
@@ -46,7 +46,7 @@ export const EVENT_RENTAL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   marketSoftware: {
     anchorId: 'software',
     eyebrow: '2026 public prices',
-    title: 'Event rental software sold in France and its prices',
+    title: 'Equipment rental software sold in France and its prices',
     intro:
       'The prices publishers show on their websites. They mostly depend on the number of users, warehouses or modules you choose.',
     productColumnLabel: 'Software',
@@ -246,15 +246,15 @@ export const EVENT_RENTAL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   },
   faq: {
     eyebrow: 'Frequently asked questions',
-    title: 'Event rental software: your questions',
+    title: 'Equipment rental software: your questions',
     questions: [
       {
-        question: 'How much does event equipment rental software cost in France?',
+        question: 'How much does equipment rental software cost in France?',
         answer:
           'Unipresta has a free version then plans from €19 to €319 excl. VAT per month, LoKisi costs from €29 per month, Rentman €39 per month plus modules per user, Current RMS €73 per month for the first user then €52 per extra user, and Booqable €29 to €149 per month when paid yearly. Sphinx Manager, Locasyst, Codial and CLE are on quote (prices checked on 29 September 2026, except Current RMS, Booqable and Unipresta, rechecked on 8 November 2026). A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
       },
       {
-        question: 'Is there free event rental software?',
+        question: 'Is there free equipment rental software?',
         answer:
           'Yes, Unipresta offers a free version with management features and an online rental website; its paid plans unlock unlimited access. Before you start, check how it handles your kits and incomplete returns.',
       },
@@ -267,6 +267,16 @@ export const EVENT_RENTAL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
         question: 'Can I manage several warehouses?',
         answer:
           'Yes: Rentman charges €5 per extra warehouse and per power user, and Locasyst tracks stock per warehouse. A custom tool can also handle transfers between warehouses, like StockPME, the multi-warehouse stock software I built.',
+      },
+      {
+        question: 'Which software for the rental schedule?',
+        answer:
+          'The schedule is the heart of rental software: each item is reserved for the whole period, from preparation to return, and the calendar shows availability before the quote is even written. Unipresta, LoKisi, Rentman and Booqable all have one; check that it handles your kits (a pack of ten tables reserves ten tables) and partial returns. A custom tool starts from your current schedule, often a spreadsheet, and links it to stock and invoicing.',
+      },
+      {
+        question: 'Does the same software suit tool or construction equipment rental?',
+        answer:
+          'The needs are the same: availability, check-outs and returns, condition of the equipment, billing per day or per week. Booqable, LoKisi and Unipresta address every kind of equipment rental business; Rentman and Current RMS target events and audiovisual first. For machinery subject to periodic inspections in France, a custom tool can keep the maintenance log and block the rental of equipment whose inspection is overdue.',
       },
       {
         question: 'How do I bill breakages and missing items?',

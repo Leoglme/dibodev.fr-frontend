@@ -16,7 +16,7 @@ import { GARAGE_REPAIR_ORDER_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTe
 
 export const AUTO_REPAIR_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   meta: {
-    title: 'Auto repair shop software in France: invoicing, quotes, prices',
+    title: 'Auto repair shop software: invoicing, quotes, 2026 prices',
     description:
       'Garage and mechanic workshop software sold in France: invoicing, quotes, repair orders, 2026 prices (Gest’Garage, AutoProGestion, Kwixéo…) and a free test.',
     inLanguage: 'en',
@@ -34,9 +34,9 @@ export const AUTO_REPAIR_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   hero: {
     titleBefore: 'Which software for your ',
     titleHighlight: 'auto repair shop',
-    titleAfter: '?',
+    titleAfter: ' or mechanic workshop?',
     description:
-      'Answer six questions about your team, workshops and activity. Based on the French market, the test tells you which kind of software to choose for your quotes, repair orders and invoices, and how much to budget.',
+      'Answer six questions about your team, workshops and activity. Car garage, mechanic workshop, body shop or motorbike garage: based on the French market, the test tells you which garage management software to choose for your quotes, repair orders, invoices and schedule, and how much to budget.',
     reassurances: ['2 minutes', 'No sign-up, no email', 'Instant result'],
     authorIntro: 'Test designed by',
     authorBio:
@@ -261,7 +261,17 @@ export const AUTO_REPAIR_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       {
         question: 'Is there free garage software?',
         answer:
-          'Software designed for garages is paid, with a 14-day free trial at Gest’Garage, AutoProGestion and Kwixéo. Free invoicing software can help out, but without repair orders or vehicle history.',
+          'Software designed for garages is paid, with a 14-day free trial at Gest’Garage, AutoProGestion and Kwixéo. Free invoicing software can help out, but without repair orders or vehicle history. In the meantime, my free repair order and quote template, higher on this page, can be filled in as a PDF or in Excel.',
+      },
+      {
+        question: 'What is the best garage management software?',
+        answer:
+          'There is no single best one for every garage. Gest’Garage is the cheapest and already issues Factur-X invoices; AutoProGestion and Kwixéo add stock, Kwixéo up to several warehouses; TDV tiers its plans from €19.90 to €79 incl. VAT per month depending on what you switch on. The right choice depends on the number of bays, your activity (mechanics, bodywork, motorbikes) and what you still do on paper: that is what the six-question test measures, and the comparison above gives the prices read on the publishers’ websites.',
+      },
+      {
+        question: 'Which software for a mechanic workshop or a body shop?',
+        answer:
+          'A mechanic workshop has the same needs as a garage: quotes, repair orders, a vehicle record with mileage, a detailed invoice. A body shop adds damage estimates, photos and claim follow-up with insurers: I made a separate page about body shop software, with a free claim tracking template.',
       },
       {
         question: 'Is a repair order mandatory in France?',

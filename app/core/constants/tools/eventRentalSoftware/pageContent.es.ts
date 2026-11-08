@@ -17,27 +17,28 @@ import { EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_ROUTE_NAME } from '~/core/constants
 
 export const EVENT_RENTAL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
   meta: {
-    title: 'Software de alquiler para eventos en Francia: precios 2026 y test',
+    title: 'Software de alquiler de material en Francia: precios y test',
     description:
-      'Programas de alquiler de material para eventos en Francia: precios 2026 (LoKisi, Rentman, Booqable…) y test gratis de 6 preguntas para elegir el tuyo.',
+      'Programas de gestión de alquiler de material en Francia: precios 2026 (LoKisi, Rentman, Booqable…), planning, stock y test gratis de 6 preguntas.',
     inLanguage: 'es',
-    schemaAbout: 'Software de gestión de alquiler de material para eventos en Francia',
+    schemaAbout: 'Software de gestión de alquiler de material en Francia (eventos, herramientas, obra)',
   },
-  breadcrumbLabel: 'Software de alquiler para eventos',
+  breadcrumbLabel: 'Software de alquiler de material',
   shareImage: {
     titleLines: ['¿Qué software para', 'alquilar tu material?'],
     highlight: 'material',
-    subtitle: 'Seis preguntas, los precios 2026 de los programas de alquiler vendidos en Francia y cuánto prever',
+    subtitle:
+      'Seis preguntas, los precios 2026 de los programas de alquiler de material vendidos en Francia y cuánto prever',
     badge: 'Test gratis, en 2 minutos',
     icon: 'truck',
     alt: '¿Qué software para tu empresa de alquiler de material para eventos? Test gratis de 6 preguntas y precios 2026 de los programas en Francia, en dibodev.fr',
   },
   hero: {
     titleBefore: '¿Qué software para tu alquiler de ',
-    titleHighlight: 'material para eventos',
+    titleHighlight: 'material',
     titleAfter: '?',
     description:
-      'Responde a seis preguntas sobre tu equipo, tus almacenes y tu material. Según el mercado francés, el test te dice qué tipo de programa elegir para gestionar la disponibilidad, las salidas y las devoluciones, y cuánto prever.',
+      'Responde a seis preguntas sobre tu equipo, tus almacenes y lo que alquilas: material para eventos, sonido e iluminación, mobiliario, herramientas o maquinaria de obra. Según el mercado francés, el test te dice qué software de gestión de alquiler de material elegir para tu planning de reservas, la disponibilidad, las salidas y devoluciones y el stock, y cuánto prever.',
     reassurances: ['2 minutos', 'Sin registro ni correo', 'Resultado inmediato'],
     authorIntro: 'Test creado por',
     authorBio:
@@ -47,7 +48,7 @@ export const EVENT_RENTAL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
   marketSoftware: {
     anchorId: 'programas',
     eyebrow: 'Precios públicos 2026',
-    title: 'Los programas de alquiler para eventos vendidos en Francia y sus precios',
+    title: 'Los programas de alquiler de material vendidos en Francia y sus precios',
     intro:
       'Las tarifas que muestran los editores en su web. El precio depende sobre todo del número de usuarios, de almacenes o de módulos elegidos.',
     productColumnLabel: 'Programa',
@@ -252,14 +253,14 @@ export const EVENT_RENTAL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
   },
   faq: {
     eyebrow: 'Preguntas frecuentes',
-    title: 'Software de alquiler para eventos: tus preguntas',
+    title: 'Software de alquiler de material: tus preguntas',
     questions: [
       {
-        question: '¿Cuánto cuesta un software de alquiler de material para eventos en Francia?',
+        question: '¿Cuánto cuesta un software de alquiler de material en Francia?',
         answer: `Unipresta tiene una versión gratuita y luego planes de 19 a 319${NBSP}€ + IVA al mes, LoKisi cuesta desde 29${NBSP}€ al mes, Rentman 39${NBSP}€ al mes más módulos por usuario, Current RMS 73${NBSP}€ al mes para el primer usuario y luego 52${NBSP}€ por usuario adicional, y Booqable de 29 a 149${NBSP}€ al mes pagando al año. Sphinx Manager, Locasyst, Codial y CLE funcionan con presupuesto (tarifas consultadas el 29 de septiembre de 2026, salvo Current RMS, Booqable y Unipresta, comprobadas de nuevo el 8 de noviembre de 2026). Un complemento a medida cuesta de 2500 a 7000${NBSP}€ una sola vez, una herramienta completa de 5000 a 25${NBSP}000${NBSP}€, y luego de 100 a 300${NBSP}€ al mes de mantenimiento.`,
       },
       {
-        question: '¿Existe un software de alquiler para eventos gratuito?',
+        question: '¿Existe un software de alquiler de material gratuito?',
         answer:
           'Sí, Unipresta ofrece una versión gratuita con la gestión y una web de alquiler en línea; sus suscripciones de pago dan un acceso ilimitado. Antes de empezar, comprueba cómo gestiona tus packs y las devoluciones incompletas.',
       },
@@ -271,6 +272,16 @@ export const EVENT_RENTAL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
       {
         question: '¿Se pueden gestionar varios almacenes?',
         answer: `Sí: Rentman cobra 5${NBSP}€ por almacén adicional y por usuario avanzado, y Locasyst sigue el stock por almacén. Una herramienta a medida también puede gestionar los traslados entre almacenes, como StockPME, el software de stock multialmacén que desarrollé.`,
+      },
+      {
+        question: '¿Qué software para el planning de alquiler de material?',
+        answer:
+          'El planning es el corazón de un programa de alquiler: cada artículo queda reservado durante todo el periodo, de la preparación a la devolución, y el calendario muestra la disponibilidad antes incluso del presupuesto. Unipresta, LoKisi, Rentman y Booqable lo tienen; comprueba que gestiona tus packs (un pack de diez mesas reserva diez mesas) y las devoluciones parciales. Una herramienta a medida parte de tu planning actual, muchas veces una hoja de cálculo, y lo conecta con el stock y la facturación.',
+      },
+      {
+        question: '¿El mismo programa sirve para alquilar herramientas o maquinaria de obra?',
+        answer:
+          'Las necesidades son las mismas: disponibilidad, salidas y devoluciones, estado del material, facturación por día o por semana. Booqable, LoKisi y Unipresta se dirigen a todo tipo de alquiler de material; Rentman y Current RMS apuntan primero a los eventos y al audiovisual. Para maquinaria sometida a revisiones periódicas en Francia, una herramienta a medida puede llevar el libro de mantenimiento y bloquear el alquiler de un equipo con la revisión caducada.',
       },
       {
         question: '¿Cómo facturar las roturas y lo que falta?',

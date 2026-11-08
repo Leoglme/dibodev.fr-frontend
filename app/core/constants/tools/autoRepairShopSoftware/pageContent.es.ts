@@ -35,9 +35,9 @@ export const AUTO_REPAIR_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
   hero: {
     titleBefore: '¿Qué software para tu ',
     titleHighlight: 'taller mecánico',
-    titleAfter: '?',
+    titleAfter: ' o carrocería?',
     description:
-      'Responde a seis preguntas sobre tu equipo, tus talleres y tu actividad. Según el mercado francés, el test te dice qué tipo de programa elegir para tus presupuestos, tus órdenes de reparación y tus facturas, y cuánto prever.',
+      'Responde a seis preguntas sobre tu equipo, tus talleres y tu actividad. Taller mecánico, carrocería o taller de motos: según el mercado francés, el test te dice qué software de gestión de taller elegir para tus presupuestos, tus órdenes de reparación, tus facturas y tu agenda, y cuánto prever.',
     reassurances: ['2 minutos', 'Sin registro ni correo', 'Resultado inmediato'],
     authorIntro: 'Test creado por',
     authorBio:
@@ -269,7 +269,17 @@ export const AUTO_REPAIR_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
       {
         question: '¿Existe un software gratuito para talleres mecánicos?',
         answer:
-          'Los programas pensados para talleres son de pago, con una prueba gratuita de 14 días en Gest’Garage, AutoProGestion y Kwixéo. Un programa de facturación gratuito puede servir de apaño, pero sin órdenes de reparación ni historial de vehículos.',
+          'Los programas pensados para talleres son de pago, con una prueba gratuita de 14 días en Gest’Garage, AutoProGestion y Kwixéo. Un programa de facturación gratuito puede servir de apaño, pero sin órdenes de reparación ni historial de vehículos. Mientras tanto, mi plantilla gratuita de orden de reparación y presupuesto, más arriba en esta página, se rellena en PDF o en Excel.',
+      },
+      {
+        question: '¿Cuál es el mejor software de gestión para un taller?',
+        answer:
+          'No hay uno solo para todos los talleres. Gest’Garage es el más barato y ya emite facturas Factur-X; AutoProGestion y Kwixéo añaden el stock, Kwixéo hasta varios almacenes; TDV escalona sus planes de 19,90 a 79 € con IVA al mes según lo que actives. La elección depende del número de puestos, de tu actividad (mecánica, carrocería, motos) y de lo que sigues haciendo en papel: eso es lo que mide el test de seis preguntas, y la comparativa de arriba da los precios leídos en las webs de los editores.',
+      },
+      {
+        question: '¿Qué programa para un taller mecánico o una carrocería?',
+        answer:
+          'Un taller mecánico tiene las mismas necesidades que un garaje: presupuestos, orden de reparación, ficha del vehículo con el kilometraje, factura detallada. Una carrocería añade la valoración de los golpes, las fotos y el seguimiento de los siniestros con las aseguradoras: hice una página aparte sobre el software para carrocerías, con una plantilla gratuita de seguimiento de siniestros.',
       },
       {
         question: '¿La orden de reparación es obligatoria en Francia?',
