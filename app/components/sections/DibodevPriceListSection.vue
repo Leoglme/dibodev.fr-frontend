@@ -39,9 +39,7 @@
         >
           <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
             <span class="text-base font-medium text-gray-100">{{ product.name }}</span>
-            <span class="text-[15px] font-medium whitespace-nowrap text-gray-100 tabular-nums">{{
-              product.price
-            }}</span>
+            <span class="text-[15px] font-medium text-gray-100 tabular-nums">{{ product.price }}</span>
           </div>
           <p class="text-sm leading-6 text-gray-200">{{ product.coverage }}</p>
           <p class="text-muted text-sm leading-6">{{ product.priceCondition }}</p>
