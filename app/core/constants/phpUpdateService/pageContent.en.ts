@@ -175,7 +175,7 @@ export const PHP_UPDATE_SERVICE_PAGE_EN: DibodevPhpUpdateServicePageContent = {
       {
         question: 'My site runs on Joomla: can you update it, including to Joomla 6?',
         answer:
-          'Yes. A Joomla site from 2015 or 2018 often still runs Joomla 3 or 4 on an old PHP, and both are updated together: full backup, test copy, latest release of the current branch, then Joomla 5 or 6 and PHP 8.3, extensions and template checked one by one (forms, editor, cache, URL rewriting), go-live once everything passes on the copy. I did it in November 2026 for a psychology practice: Joomla 5.4 to 6, PHP 8.2 to 8.3, identical layout and forms, written report. The price depends on how many versions to cross and which extensions need adapting: it is given after the free diagnosis.',
+          'Yes. A Joomla site from 2015 or 2018 often still runs Joomla 3 or 4 on an old PHP, and both are updated together: full backup, test copy, latest release of the current branch, then Joomla 5 or 6 and PHP 8.3, extensions and template checked one by one (forms, editor, cache, URL rewriting), go-live once everything passes on the copy. I did it in November 2026 for a psychology practice: Joomla 5.4 to 6, PHP 8.2 to 8.3, identical layout and forms, written report. A straightforward version upgrade is billed at the base package, 190 €; the price goes up when the template also has to be adapted, extensions replaced or a security issue fixed, and it is given after the free diagnosis.',
       },
       {
         question: `My WordPress site looks hacked: is it the same job?`,

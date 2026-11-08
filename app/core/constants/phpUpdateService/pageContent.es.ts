@@ -176,7 +176,7 @@ export const PHP_UPDATE_SERVICE_PAGE_ES: DibodevPhpUpdateServicePageContent = {
       {
         question: 'Mi web está en Joomla: ¿puede actualizarla, incluso a Joomla 6?',
         answer:
-          'Sí. Una web Joomla de 2015 o 2018 suele seguir en Joomla 3 o 4 con un PHP antiguo, y ambos se actualizan juntos: copia de seguridad completa, copia de prueba, última versión de la rama actual, luego Joomla 5 o 6 y PHP 8.3, extensiones y plantilla comprobadas una a una (formularios, editor, caché, reescritura de direcciones), puesta en producción cuando todo pasa en la copia. Lo hice en noviembre de 2026 para un gabinete de psicología: Joomla 5.4 a 6, PHP 8.2 a 8.3, presentación y formularios idénticos, informe escrito. El precio depende del número de versiones a cruzar y de las extensiones a adaptar: se comunica tras el diagnóstico gratuito.',
+          'Sí. Una web Joomla de 2015 o 2018 suele seguir en Joomla 3 o 4 con un PHP antiguo, y ambos se actualizan juntos: copia de seguridad completa, copia de prueba, última versión de la rama actual, luego Joomla 5 o 6 y PHP 8.3, extensiones y plantilla comprobadas una a una (formularios, editor, caché, reescritura de direcciones), puesta en producción cuando todo pasa en la copia. Lo hice en noviembre de 2026 para un gabinete de psicología: Joomla 5.4 a 6, PHP 8.2 a 8.3, presentación y formularios idénticos, informe escrito. Una subida de versión sencilla se factura al paquete básico, 190 €; el precio sube cuando además hay que adaptar la plantilla, sustituir extensiones o resolver un problema de seguridad, y se comunica tras el diagnóstico gratuito.',
       },
       {
         question: `Mi web WordPress parece hackeada: ¿es la misma intervención?`,
