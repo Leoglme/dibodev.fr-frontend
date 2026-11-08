@@ -6,6 +6,8 @@ import { WORDPRESS_HACK_CHECK_ROUTE_NAME } from '~/core/constants/wordpressHackC
 import { HOSTING_STATUS_TEASER } from '~/core/constants/hostingStatus/pageShared'
 import { WEBSITE_HEALTH_CHECK_TEASER } from '~/core/constants/websiteHealthCheck/pageShared'
 import { GDPR_COOKIE_CHECK_TEASER } from '~/core/constants/gdprCookieCheck/pageShared'
+import { WEB_ACCESSIBILITY_SCOPE_TEASER } from '~/core/constants/webAccessibilityScope/pageShared'
+import { LEGAL_NOTICE_GENERATOR_TEASER } from '~/core/constants/legalNotice/pageShared'
 import { EMAIL_DELIVERABILITY_CHECK_ROUTE_NAME } from '~/core/constants/emailDeliverabilityCheck/pageShared'
 import { E_INVOICING_SCOPE_QUIZ_ID } from '~/core/constants/eInvoicingScopeQuiz'
 import { NBSP } from '~/core/constants/typography'
@@ -734,7 +736,10 @@ export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserConte
   'logiciel-gestion-de-stock-sur-mesure-pme-inventaire': INVENTORY_MANAGEMENT_SOFTWARE_TEASER,
   'logiciel-metier-b2b-quitter-excel-signes': INVENTORY_MANAGEMENT_SOFTWARE_TEASER,
   'alternative-rentman-logiciel-location-materiel': EVENT_RENTAL_SOFTWARE_TEASER,
+  'alternative-current-rms-logiciel-location-materiel': EVENT_RENTAL_SOFTWARE_TEASER,
+  'alternative-zoho-inventory-logiciel-gestion-de-stock': INVENTORY_MANAGEMENT_SOFTWARE_TEASER,
   'paysagiste-outil-metier-devis-chantiers-plannings': LANDSCAPING_SOFTWARE_TEASER,
+  'alternative-paysagio-logiciel-paysagiste': LANDSCAPING_SOFTWARE_TEASER,
   'logiciel-facturation-garage-devis-ordre-de-reparation-facture': E_INVOICING_CHECK_TEASER,
   'reprendre-application-vibe-coding': AI_APP_CHECK_TEASER,
   'application-metier-no-code-ia-limites': AI_APP_CHECK_TEASER,
@@ -821,6 +826,8 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   WORDPRESS_HACK_CHECK_TEASER,
   WEBSITE_HEALTH_CHECK_TEASER,
   GDPR_COOKIE_CHECK_TEASER,
+  LEGAL_NOTICE_GENERATOR_TEASER,
+  WEB_ACCESSIBILITY_SCOPE_TEASER,
   HOSTING_STATUS_TEASER,
   PROJECT_SPECIFICATION_TEASER,
   EMAIL_DELIVERABILITY_CHECK_TEASER,

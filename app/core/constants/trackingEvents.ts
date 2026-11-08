@@ -110,6 +110,14 @@ export const TRACKING_EVENTS = {
   projectSpecificationDownloaded: 'project_specification_downloaded',
   /** A quote asked with the specification, with the outcome, never the contact details. */
   projectSpecificationQuoteRequested: 'project_specification_quote_requested',
+  /** First answer given in the legal notice generator (sent once per page view). */
+  legalNoticeGeneratorStarted: 'legal_notice_generator_started',
+  /** A step of the legal notice generator completed, with its number. */
+  legalNoticeGeneratorStepCompleted: 'legal_notice_generator_step_completed',
+  /** The last step of the legal notice generator completed: the choices that shape the documents, never the identity typed. */
+  legalNoticeGeneratorCompleted: 'legal_notice_generator_completed',
+  /** A legal notice or privacy policy saved from the generator: Word file, PDF (print window) or copied text. */
+  legalNoticeGeneratorDownloaded: 'legal_notice_generator_downloaded',
 } as const
 
 /** Tracking event name (value of the `TRACKING_EVENTS` catalog). */

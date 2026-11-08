@@ -32,6 +32,14 @@ export const DASHBOARD_TOOL_PAGES: Record<string, DashboardToolPage> = {
   'tools-email-deliverability-check': { label: 'E-mails en spam : SPF, DKIM, DMARC', onlineSince: '2026-11-01' },
   'tools-website-health-check': { label: 'Tester mon site : 8 vérifications', onlineSince: '2026-11-02' },
   'tools-gdpr-cookie-check': { label: 'Site conforme RGPD : test des cookies', onlineSince: '2026-11-09' },
+  'tools-legal-notice-generator': {
+    label: 'Générateur de mentions légales et confidentialité',
+    onlineSince: '2026-11-09',
+  },
+  'tools-web-accessibility-scope-check': {
+    label: 'Accessibilité numérique : suis-je concerné ?',
+    onlineSince: '2026-11-09',
+  },
   'tools-project-specification': { label: 'Générateur de cahier des charges', onlineSince: '2026-11-02' },
   'tools-project-specification-showcase-website': {
     label: 'Modèle cahier des charges site vitrine',

@@ -253,4 +253,18 @@ export type TrackingEventPayloads = {
     hasPhone: boolean
     errorStatus?: number | null
   }
+  [TRACKING_EVENTS.legalNoticeGeneratorStarted]: { location: string }
+  [TRACKING_EVENTS.legalNoticeGeneratorStepCompleted]: { location: string; step: number }
+  [TRACKING_EVENTS.legalNoticeGeneratorCompleted]: {
+    location: string
+    status: string
+    hostingProvider: string
+    hasConsentTool: boolean
+    hasAnalytics: boolean
+  }
+  [TRACKING_EVENTS.legalNoticeGeneratorDownloaded]: {
+    location: string
+    format: 'docx' | 'pdf' | 'copy'
+    document: 'legalNotice' | 'privacyPolicy' | 'both'
+  }
 }

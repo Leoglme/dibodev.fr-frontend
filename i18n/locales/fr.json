@@ -246,6 +246,8 @@
       "emailDeliverabilityCheck": "E-mails en spam : vérifier SPF, DKIM, DMARC",
       "websiteHealthCheck": "Tester mon site : 8 vérifications",
       "gdprCookieCheck": "Site conforme RGPD ? Tester les cookies",
+      "legalNoticeGenerator": "Mentions légales et confidentialité : générateur",
+      "webAccessibilityScope": "Accessibilité du site : suis-je concerné ?",
       "projectSpecification": "Cahier des charges : générateur et modèles",
       "coldCallingCheck": "Démarchage téléphonique interdit ?",
       "hostingStatus": "Mon hébergeur est-il en panne ?",

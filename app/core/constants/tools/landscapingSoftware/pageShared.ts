@@ -13,6 +13,7 @@ export const LANDSCAPING_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'paysagiste-outil-metier-devis-chantiers-plannings',
   'alternative-extrabat-logiciel-paysagiste',
   'alternative-robbin-logiciel-paysagiste',
+  'alternative-paysagio-logiciel-paysagiste',
   'alternative-batappli-logiciel-batiment',
   'facture-electronique-artisan-ce-qui-change',
   'artisan-btp-gerer-ses-chantiers-sans-excel-avec-un-outil-dedie',

@@ -351,6 +351,16 @@ const toolLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLi
     to: localePath('tools-gdpr-cookie-check'),
   },
   {
+    key: 'legalNoticeGenerator',
+    title: t('footer.tools.legalNoticeGenerator'),
+    to: localePath('tools-legal-notice-generator'),
+  },
+  {
+    key: 'webAccessibilityScope',
+    title: t('footer.tools.webAccessibilityScope'),
+    to: localePath('tools-web-accessibility-scope-check'),
+  },
+  {
     key: 'projectSpecification',
     title: t('footer.tools.projectSpecification'),
     to: localePath('tools-project-specification'),
