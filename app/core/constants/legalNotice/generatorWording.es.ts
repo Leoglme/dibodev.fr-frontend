@@ -236,11 +236,13 @@ export const LEGAL_NOTICE_GENERATOR_WORDING_ES: DibodevLegalNoticeGeneratorWordi
     },
     frenchOnlyNote:
       'Los documentos se redactan siempre en francés, para una web gestionada en Francia. Solo esta página está en español.',
-    missingCount: '{count} dato(s) por completar',
+    missingCount: '{count} datos por completar',
+    missingCountOne: '1 dato por completar',
     noneMissing: 'Todo está completo',
   },
   mobileBar: {
-    previewText: '{count} dato(s) por completar',
+    previewText: '{count} datos por completar',
+    previewTextOne: '1 dato por completar',
     previewButton: 'Ver los documentos',
     readingText: 'Los documentos se actualizan con cada respuesta.',
     readingButton: 'Volver a las preguntas',

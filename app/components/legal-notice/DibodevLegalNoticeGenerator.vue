@@ -335,7 +335,7 @@ const missingFieldLabels: ComputedRef<string[]> = computed((): string[] =>
 
 const missingCountLabel: ComputedRef<string> = computed((): string =>
   missingFieldLabels.value.length
-    ? props.wording.preview.missingCount.replace('{count}', String(missingFieldLabels.value.length))
+    ? formatMissingCount(props.wording.preview.missingCount, props.wording.preview.missingCountOne)
     : props.wording.preview.noneMissing,
 )
 
@@ -364,7 +364,7 @@ const mobileBarText: ComputedRef<string> = computed((): string => {
   if (mobileBarMode.value === 'ready') {
     return props.wording.mobileBar.readyText
   }
-  return props.wording.mobileBar.previewText.replace('{count}', String(missingFieldLabels.value.length))
+  return formatMissingCount(props.wording.mobileBar.previewText, props.wording.mobileBar.previewTextOne)
 })
 
 const mobileBarButton: ComputedRef<string> = computed((): string => {
@@ -375,6 +375,17 @@ const mobileBarButton: ComputedRef<string> = computed((): string => {
 })
 
 /* METHODS */
+/**
+ * Counts the fields still to complete, with the singular wording for a single one.
+ * @param {string} template - The plural wording, with `{count}`.
+ * @param {string} templateOne - The singular wording.
+ * @returns {string} The label.
+ */
+function formatMissingCount(template: string, templateOne: string): string {
+  const count: number = missingFieldLabels.value.length
+  return count === 1 ? templateOne : template.replace('{count}', String(count))
+}
+
 /**
  * Whether the visitor asked the system to limit animations.
  * @returns {boolean} True when smooth scrolling should be skipped.

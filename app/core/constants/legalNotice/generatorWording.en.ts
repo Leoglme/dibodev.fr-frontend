@@ -236,11 +236,13 @@ export const LEGAL_NOTICE_GENERATOR_WORDING_EN: DibodevLegalNoticeGeneratorWordi
     },
     frenchOnlyNote:
       'The documents are always written in French, for a website run in France. Only this page is in English.',
-    missingCount: '{count} item(s) to complete',
+    missingCount: '{count} items to complete',
+    missingCountOne: '1 item to complete',
     noneMissing: 'Everything is filled in',
   },
   mobileBar: {
-    previewText: '{count} item(s) to complete',
+    previewText: '{count} items to complete',
+    previewTextOne: '1 item to complete',
     previewButton: 'See the documents',
     readingText: 'The documents update with each answer.',
     readingButton: 'Back to the questions',

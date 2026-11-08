@@ -17,6 +17,12 @@
         :anchorId="LEGAL_NOTICE_GENERATOR_ANCHOR_ID"
         :trackingLocation="LEGAL_NOTICE_GENERATOR_TRACKING_LOCATION"
       />
+      <DibodevToolTeaser
+        :teaser="GDPR_COOKIE_CHECK_TEASER"
+        :trackingLocation="`${LEGAL_NOTICE_GENERATOR_TRACKING_LOCATION}_hero`"
+        tone="white"
+        class="mt-6"
+      />
     </template>
   </DibodevToolLandingSection>
 
@@ -97,6 +103,7 @@ import type { DibodevContactCtaSecondaryLink } from '~/core/types/DibodevContact
 import type { DibodevLegalNoticePageContent } from '~/core/types/DibodevLegalNoticePage'
 import DibodevCallout from '~/components/data-displays/DibodevCallout.vue'
 import DibodevMobileContactBar from '~/components/data-displays/DibodevMobileContactBar.vue'
+import DibodevToolTeaser from '~/components/data-displays/DibodevToolTeaser.vue'
 import DibodevLegalNoticeGenerator from '~/components/legal-notice/DibodevLegalNoticeGenerator.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import DibodevFaqSection from '~/components/sections/DibodevFaqSection.vue'

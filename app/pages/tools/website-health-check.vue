@@ -17,6 +17,12 @@
         :trackingLocation="TRACKING_LOCATION"
       />
       <DibodevWebsiteRedesignPrompt :trackingLocation="`${TRACKING_LOCATION}_redesign`" tone="white" class="mt-6" />
+      <DibodevToolTeaser
+        :teaser="LEGAL_NOTICE_GENERATOR_TEASER"
+        :trackingLocation="`${TRACKING_LOCATION}_hero`"
+        tone="white"
+        class="mt-6"
+      />
     </template>
   </DibodevToolLandingSection>
 
@@ -78,6 +84,7 @@ import { computed } from 'vue'
 import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
 import DibodevLink from '~/components/core/DibodevLink.vue'
 import DibodevCallout from '~/components/data-displays/DibodevCallout.vue'
+import DibodevToolTeaser from '~/components/data-displays/DibodevToolTeaser.vue'
 import DibodevWebsiteRedesignPrompt from '~/components/data-displays/DibodevWebsiteRedesignPrompt.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import DibodevFaqSection from '~/components/sections/DibodevFaqSection.vue'
@@ -94,6 +101,7 @@ import {
   WEBSITE_HEALTH_CHECK_RELATED_ARTICLE_SLUGS,
   WEBSITE_HEALTH_CHECKER_ANCHOR_ID,
 } from '~/core/constants/websiteHealthCheck/pageShared'
+import { LEGAL_NOTICE_GENERATOR_TEASER } from '~/core/constants/legalNotice/pageShared'
 import { WEBSITE_HEALTH_CHECK_PAGES } from '~/core/constants/websiteHealthCheckPage'
 import { ArticleSelectionUtils } from '~/core/utils/ArticleSelectionUtils'
 

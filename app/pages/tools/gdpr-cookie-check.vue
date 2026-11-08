@@ -17,7 +17,7 @@
         :trackingLocation="TRACKING_LOCATION"
       />
       <DibodevToolTeaser
-        :teaser="WEBSITE_HEALTH_CHECK_TEASER"
+        :teaser="LEGAL_NOTICE_GENERATOR_TEASER"
         :trackingLocation="`${TRACKING_LOCATION}_hero`"
         tone="white"
         class="mt-6"
@@ -98,6 +98,7 @@ import {
   GDPR_COOKIE_CHECKER_ANCHOR_ID,
 } from '~/core/constants/gdprCookieCheck/pageShared'
 import { GDPR_COOKIE_CHECK_PAGES } from '~/core/constants/gdprCookieCheckPage'
+import { LEGAL_NOTICE_GENERATOR_TEASER } from '~/core/constants/legalNotice/pageShared'
 import {
   WEBSITE_HEALTH_CHECK_ROUTE_NAME,
   WEBSITE_HEALTH_CHECK_TEASER,

@@ -49,19 +49,21 @@ export type DibodevLegalNoticeResultWording = {
   gdprCheckLabel: string
 }
 
-/** Texts around the live preview; `missingCount` uses `{count}`. */
+/** Texts around the live preview; `missingCount` uses `{count}` and `missingCountOne` is the singular. */
 export type DibodevLegalNoticePreviewWording = {
   liveLabel: string
   label: string
   documentLinks: Record<DibodevLegalNoticeDocumentKind, string>
   frenchOnlyNote: string
   missingCount: string
+  missingCountOne: string
   noneMissing: string
 }
 
-/** Bar fixed at the bottom of small screens; `previewText` uses `{count}`. */
+/** Bar fixed at the bottom of small screens; `previewText` uses `{count}` and `previewTextOne` is the singular. */
 export type DibodevLegalNoticeMobileBarWording = {
   previewText: string
+  previewTextOne: string
   previewButton: string
   readingText: string
   readingButton: string
