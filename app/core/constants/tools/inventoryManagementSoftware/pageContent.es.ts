@@ -103,7 +103,7 @@ export const INVENTORY_MANAGEMENT_PAGE_CONTENT_ES: DibodevSoftwareToolPageConten
         coverage:
           'Gestión comercial con stock incluido: coste medio ponderado y valor del stock en tiempo real, alerta de stock bajo, descuento automático, recepción de mercancías, trazabilidad por lote, número de serie, fecha de caducidad y de consumo preferente',
         price: `Desde 58,20${NBSP}€ al mes`,
-        priceCondition: `Plan pequeña empresa: 97${NBSP}€ al mes con 1 usuario, y luego 30${NBSP}€ por usuario adicional; pagando 1 año 77,60${NBSP}€ más 24${NBSP}€ por usuario, 2 años 67,90 más 21${NBSP}€, 3 años 58,20 más 18${NBSP}€; sin compromiso; prueba de 15 días`,
+        priceCondition: `Plan pequeña empresa: 97${NBSP}€ al mes por usuario, mismo precio para cada usuario; pagando 1 año 77,60${NBSP}€, 2 años 67,90${NBSP}€, 3 años 58,20${NBSP}€; sin compromiso; prueba de 15 días`,
       },
       {
         name: 'Sortly',
@@ -124,7 +124,7 @@ export const INVENTORY_MANAGEMENT_PAGE_CONTENT_ES: DibodevSoftwareToolPageConten
     calloutText:
       'haz pasar una semana real por el programa. Una entrega de 40 líneas recibida contra el albarán del proveedor con dos artículos que faltan, una caja transferida del almacén a la furgoneta, un artículo localizado por su etiqueta QR en un sótano sin cobertura, el inventario de una estantería el viernes por la tarde con sus diferencias corregidas, y luego el stock valorado enviado al contable, sin volver a teclear nada.',
     calloutFootnote:
-      'Tarifas consultadas el 1 de noviembre de 2026 en las páginas de precios de los editores. Lista no exhaustiva.',
+      'Tarifas consultadas el 1 de noviembre de 2026 (Axonaut, el 8 de noviembre) en las páginas de precios de los editores. Lista no exhaustiva.',
   },
   rules: {
     anchorId: 'normativa',

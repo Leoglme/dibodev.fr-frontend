@@ -98,7 +98,7 @@ export const INVENTORY_MANAGEMENT_PAGE_CONTENT_FR: DibodevSoftwareToolPageConten
         name: 'Axonaut',
         coverage: `Gestion commerciale avec stock inclus${NBSP}: coût moyen (CMUP) et valeur du stock en temps réel, alerte de stock bas, décrémentation automatique, réception de marchandises, traçabilité par lot, numéro de série, DLC et DLUO`,
         price: `À partir de 58,20${NBSP}€ par mois`,
-        priceCondition: `Offre TPE${NBSP}: 97${NBSP}€ par mois avec 1 utilisateur, puis 30${NBSP}€ par utilisateur en plus${NBSP}; payé pour 1 an 77,60${NBSP}€ plus 24${NBSP}€ par utilisateur, pour 2 ans 67,90 plus 21${NBSP}€, pour 3 ans 58,20 plus 18${NBSP}€${NBSP}; sans engagement${NBSP}; essai 15 jours`,
+        priceCondition: `Offre TPE${NBSP}: 97${NBSP}€ par mois et par utilisateur, même prix pour chaque utilisateur${NBSP}; payé pour 1 an 77,60${NBSP}€, pour 2 ans 67,90${NBSP}€, pour 3 ans 58,20${NBSP}€${NBSP}; sans engagement${NBSP}; essai 15 jours`,
       },
       {
         name: 'Sortly',
@@ -117,7 +117,8 @@ export const INVENTORY_MANAGEMENT_PAGE_CONTENT_FR: DibodevSoftwareToolPageConten
     calloutEmphasizedIntro: `Avant de signer${NBSP}:`,
     calloutText:
       'faites passer une vraie semaine au logiciel. Une livraison de 40 lignes réceptionnée depuis le bon du fournisseur avec deux articles manquants, un carton transféré de la réserve au camion, un article retrouvé par son étiquette QR dans un sous-sol sans réseau, l’inventaire d’un rayon le vendredi soir avec ses écarts corrigés, puis le stock valorisé envoyé au comptable, sans rien ressaisir.',
-    calloutFootnote: 'Tarifs relevés le 1er novembre 2026 sur les pages tarifs des éditeurs. Liste non exhaustive.',
+    calloutFootnote:
+      'Tarifs relevés le 1er novembre 2026 (Axonaut le 8 novembre) sur les pages tarifs des éditeurs. Liste non exhaustive.',
   },
   rules: {
     anchorId: 'reglementation',

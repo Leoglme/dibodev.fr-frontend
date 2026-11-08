@@ -108,7 +108,7 @@ export const INVENTORY_MANAGEMENT_PAGE_CONTENT_EN: DibodevSoftwareToolPageConten
           'Sales management with stock included: weighted average cost and real-time stock value, low stock alert, automatic decrement, goods receipt, traceability by lot, serial number, use-by and best-before date',
         price: 'From €58.20 per month',
         priceCondition:
-          'Small business plan: €97 per month with 1 user, then €30 per extra user; paid for 1 year €77.60 plus €24 per user, for 2 years €67.90 plus €21, for 3 years €58.20 plus €18; no commitment; 15-day trial',
+          'Small business plan: €97 per user per month, same price for every user; paid for 1 year €77.60, for 2 years €67.90, for 3 years €58.20; no commitment; 15-day trial',
       },
       {
         name: 'Sortly',
@@ -130,7 +130,8 @@ export const INVENTORY_MANAGEMENT_PAGE_CONTENT_EN: DibodevSoftwareToolPageConten
     calloutEmphasizedIntro: 'Before signing:',
     calloutText:
       'run a real week through the software. A 40-line delivery received against the supplier’s note with two items missing, a box transferred from the storeroom to the van, an item found by its QR label in a basement with no network, a shelf counted on Friday evening with its differences corrected, then the valued stock sent to the accountant, with nothing retyped.',
-    calloutFootnote: 'Prices checked on 1 November 2026 on the publishers’ pricing pages. Non-exhaustive list.',
+    calloutFootnote:
+      'Prices checked on 1 November 2026 (Axonaut on 8 November) on the publishers’ pricing pages. Non-exhaustive list.',
   },
   rules: {
     anchorId: 'rules',
