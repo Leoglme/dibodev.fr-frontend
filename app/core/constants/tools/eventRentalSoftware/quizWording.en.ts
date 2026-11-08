@@ -144,19 +144,20 @@ export const EVENT_RENTAL_QUIZ_WORDING_EN: DibodevTradeQuizWording = {
   },
   market: {
     eyebrow: 'Budget to plan',
-    priceRange: 'Free to €150',
+    priceRange: 'Free to €319',
     priceSuffix: 'per month, depending on users and modules',
     priceExamples: [
       { label: 'Unipresta', value: 'free version' },
       { label: 'LoKisi', value: 'from €29/month' },
       { label: 'Rentman', value: 'from €39/month' },
-      { label: 'Current RMS', value: '€69/month' },
+      { label: 'Current RMS', value: '€73/month' },
     ],
     footnote:
-      'Rentman adds modules per user, Current RMS €49 per extra user. Booqable costs $29 to $149 per month; Sphinx Manager, Locasyst, Codial and CLE are on quote.',
+      'Rentman adds modules per user, Current RMS €52 per extra user. Booqable costs €29 to €149 per month when paid yearly; Unipresta is free, then €19 to €319 excl. VAT per month; Sphinx Manager, Locasyst, Codial and CLE are on quote.',
     footnoteLink: { label: 'See all prices', href: '#software' },
     adviceTitle: 'What to check before choosing',
-    disclaimer: 'Public prices checked on 29 September 2026.',
+    disclaimer:
+      'Public prices checked on 29 September 2026, except Current RMS, Booqable and Unipresta, rechecked on 8 November 2026.',
     ctaLabel: 'Get free advice',
     leadFormTitle: 'Free advice to choose your software',
     leadFormIntro:

@@ -155,18 +155,19 @@ export const EVENT_RENTAL_QUIZ_WORDING_FR: DibodevTradeQuizWording = {
   },
   market: {
     eyebrow: 'Budget à prévoir',
-    priceRange: `Gratuit à 150${NBSP}€`,
+    priceRange: `Gratuit à 319${NBSP}€`,
     priceSuffix: 'par mois, selon les utilisateurs et les modules',
     priceExamples: [
       { label: 'Unipresta', value: 'version gratuite' },
       { label: 'LoKisi', value: `dès 29${NBSP}€/mois` },
       { label: 'Rentman', value: `dès 39${NBSP}€/mois` },
-      { label: 'Current RMS', value: `69${NBSP}€/mois` },
+      { label: 'Current RMS', value: `73${NBSP}€/mois` },
     ],
-    footnote: `Rentman ajoute des modules par utilisateur, Current RMS 49${NBSP}€ par utilisateur en plus. Booqable coûte 29 à 149${NBSP}$ par mois${NBSP}; Sphinx Manager, Locasyst, Codial et CLE sont sur devis.`,
+    footnote: `Rentman ajoute des modules par utilisateur, Current RMS 52${NBSP}€ par utilisateur en plus. Booqable coûte 29 à 149${NBSP}€ par mois à l’année${NBSP}; Unipresta est gratuit, puis 19 à 319${NBSP}€ HT par mois${NBSP}; Sphinx Manager, Locasyst, Codial et CLE sont sur devis.`,
     footnoteLink: { label: 'Voir tous les prix', href: '#logiciels' },
     adviceTitle: 'À vérifier avant de choisir',
-    disclaimer: 'Prix publics relevés le 29 septembre 2026.',
+    disclaimer:
+      'Prix publics relevés le 29 septembre 2026, sauf Current RMS, Booqable et Unipresta, revérifiés le 8 novembre 2026.',
     ctaLabel: 'Demander un avis gratuit',
     leadFormTitle: 'Un avis gratuit pour choisir votre logiciel',
     leadFormIntro: `Je vous réponds sous 24${NBSP}h pour en parler, au téléphone ou en visio. Vos réponses au test sont jointes à votre message.`,

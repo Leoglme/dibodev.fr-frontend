@@ -57,8 +57,8 @@ export const EVENT_RENTAL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
       {
         name: 'Unipresta',
         coverage: 'Presupuestos, reservas, stock y disponibilidad, agenda, clientes, web de alquiler en línea',
-        price: 'Versión gratuita',
-        priceCondition: 'Suscripciones de pago para un acceso ilimitado, precios no indicados en la página',
+        price: `Gratis, luego 19 a 319${NBSP}€ + IVA al mes`,
+        priceCondition: `Plan gratuito, luego al mes: Starter 19${NBSP}€ + IVA y un 5${NBSP}% de comisión sobre la facturación de la web, Pro 89${NBSP}€ + IVA y un 2,5${NBSP}%, Advanced 319${NBSP}€ + IVA sin comisión`,
       },
       {
         name: 'LoKisi',
@@ -69,8 +69,8 @@ export const EVENT_RENTAL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
       {
         name: 'Booqable',
         coverage: 'Pedidos, stock y disponibilidad, página de reserva en línea, firma electrónica (plan Grow)',
-        price: `29 a 149${NBSP}$ al mes`,
-        priceCondition: `Precios en dólares, un 20${NBSP}% menos al año; entregas como opción`,
+        price: `29 a 149${NBSP}€ al mes`,
+        priceCondition: `Precios al año, 35 a 187${NBSP}€ al mes si se paga mensualmente; sin comisión sobre las reservas; IVA no especificado; entregas como opción`,
       },
       {
         name: 'Rentman',
@@ -82,8 +82,8 @@ export const EVENT_RENTAL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
       {
         name: 'Current RMS',
         coverage: 'Alquiler, stock, presupuestos, agenda, sin módulos que añadir',
-        price: `69${NBSP}€ al mes`,
-        priceCondition: `Para el primer usuario, luego 49${NBSP}€ por usuario`,
+        price: `73${NBSP}€ al mes`,
+        priceCondition: `Para el primer usuario, luego 52${NBSP}€ al mes por cada usuario adicional; año facturado al precio de 11 meses; sin IVA, se añade un 20${NBSP}% de IVA para empresas de la UE sin número de IVA válido`,
       },
       {
         name: 'Sphinx Manager',
@@ -102,7 +102,7 @@ export const EVENT_RENTAL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     calloutText:
       'pide que el programa resuelva un caso real de tu temporada. El mismo artículo alquilado para dos eventos seguidos, con el tiempo de limpieza entre ambos, y un pack (mesa, sillas, mantel) al que le falta una pieza a la devolución.',
     calloutFootnote:
-      'Tarifas consultadas el 29 de septiembre de 2026 en las webs de los editores. Lista no exhaustiva.',
+      'Tarifas consultadas el 29 de septiembre de 2026 en las webs de los editores, salvo Current RMS, Booqable y Unipresta, comprobadas de nuevo el 8 de noviembre de 2026. Lista no exhaustiva.',
   },
   rules: {
     anchorId: 'normativa',
@@ -256,7 +256,7 @@ export const EVENT_RENTAL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     questions: [
       {
         question: '¿Cuánto cuesta un software de alquiler de material para eventos en Francia?',
-        answer: `Unipresta tiene una versión gratuita, LoKisi cuesta desde 29${NBSP}€ al mes, Rentman 39${NBSP}€ al mes más módulos por usuario, Current RMS 69${NBSP}€ al mes para el primer usuario y luego 49${NBSP}€ por usuario, y Booqable de 29 a 149${NBSP}$ al mes. Sphinx Manager, Locasyst, Codial y CLE funcionan con presupuesto (tarifas consultadas el 29 de septiembre de 2026). Un complemento a medida cuesta de 2500 a 7000${NBSP}€ una sola vez, una herramienta completa de 5000 a 25${NBSP}000${NBSP}€, y luego de 100 a 300${NBSP}€ al mes de mantenimiento.`,
+        answer: `Unipresta tiene una versión gratuita y luego planes de 19 a 319${NBSP}€ + IVA al mes, LoKisi cuesta desde 29${NBSP}€ al mes, Rentman 39${NBSP}€ al mes más módulos por usuario, Current RMS 73${NBSP}€ al mes para el primer usuario y luego 52${NBSP}€ por usuario adicional, y Booqable de 29 a 149${NBSP}€ al mes pagando al año. Sphinx Manager, Locasyst, Codial y CLE funcionan con presupuesto (tarifas consultadas el 29 de septiembre de 2026, salvo Current RMS, Booqable y Unipresta, comprobadas de nuevo el 8 de noviembre de 2026). Un complemento a medida cuesta de 2500 a 7000${NBSP}€ una sola vez, una herramienta completa de 5000 a 25${NBSP}000${NBSP}€, y luego de 100 a 300${NBSP}€ al mes de mantenimiento.`,
       },
       {
         question: '¿Existe un software de alquiler para eventos gratuito?',

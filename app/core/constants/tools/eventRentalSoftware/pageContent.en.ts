@@ -56,8 +56,9 @@ export const EVENT_RENTAL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       {
         name: 'Unipresta',
         coverage: 'Quotes, bookings, stock and availability, schedule, customers, online rental website',
-        price: 'Free version',
-        priceCondition: 'Paid plans for unlimited access, prices not shown on the page',
+        price: 'Free, then €19 to €319 ex. VAT/month',
+        priceCondition:
+          'Free plan, then monthly: Starter €19 excl. VAT + 5% commission on the site’s revenue, Pro €89 excl. VAT + 2.5%, Advanced €319 excl. VAT with no commission',
       },
       {
         name: 'LoKisi',
@@ -68,8 +69,9 @@ export const EVENT_RENTAL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       {
         name: 'Booqable',
         coverage: 'Orders, stock and availability, online booking page, e-signature (Grow plan)',
-        price: '$29 to $149 per month',
-        priceCondition: 'Prices in dollars, 20% less when paid yearly; deliveries as an option',
+        price: '€29 to €149 per month',
+        priceCondition:
+          'Yearly prices, €35 to €187 per month when paid monthly; no commission on bookings; VAT status not specified; deliveries as an option',
       },
       {
         name: 'Rentman',
@@ -80,8 +82,9 @@ export const EVENT_RENTAL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       {
         name: 'Current RMS',
         coverage: 'Rentals, stock, quotes, scheduling, with no module to add',
-        price: '€69 per month',
-        priceCondition: 'For the first user, then €49 per user',
+        price: '€73 per month',
+        priceCondition:
+          'For the first user, then €52 per month for each extra user; year billed at the price of 11 months; excl. VAT, 20% VAT added for EU businesses without a valid VAT number',
       },
       {
         name: 'Sphinx Manager',
@@ -99,7 +102,8 @@ export const EVENT_RENTAL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     calloutEmphasizedIntro: 'Before signing:',
     calloutText:
       'ask the software to handle a real case from your season. The same item rented for two events in a row, with cleaning time in between, and a kit (table, chairs, tablecloth) with one piece missing on return.',
-    calloutFootnote: 'Prices checked on 29 September 2026 on the publishers’ websites. Non-exhaustive list.',
+    calloutFootnote:
+      'Prices checked on 29 September 2026 on the publishers’ websites, except Current RMS, Booqable and Unipresta, rechecked on 8 November 2026. Non-exhaustive list.',
   },
   rules: {
     anchorId: 'rules',
@@ -247,7 +251,7 @@ export const EVENT_RENTAL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       {
         question: 'How much does event equipment rental software cost in France?',
         answer:
-          'Unipresta has a free version, LoKisi costs from €29 per month, Rentman €39 per month plus modules per user, Current RMS €69 per month for the first user then €49 per user, and Booqable $29 to $149 per month. Sphinx Manager, Locasyst, Codial and CLE are on quote (prices checked on 29 September 2026). A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
+          'Unipresta has a free version then plans from €19 to €319 excl. VAT per month, LoKisi costs from €29 per month, Rentman €39 per month plus modules per user, Current RMS €73 per month for the first user then €52 per extra user, and Booqable €29 to €149 per month when paid yearly. Sphinx Manager, Locasyst, Codial and CLE are on quote (prices checked on 29 September 2026, except Current RMS, Booqable and Unipresta, rechecked on 8 November 2026). A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
       },
       {
         question: 'Is there free event rental software?',
