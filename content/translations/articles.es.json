@@ -24428,6 +24428,33 @@
           "type": "paragraph",
           "content": [
             {
+              "text": "El fallo de octubre es solo el primer plazo: el 31 de diciembre de 2026, PHP 8.2 deja a su vez de recibir correcciones de seguridad. Si cambia de versión hoy, mejor pasar directamente a PHP 8.3 u 8.4. El calendario completo y la elección de versión están en ",
+              "type": "text"
+            },
+            {
+              "text": "PHP 8.2: fin de soporte el 31 de diciembre de 2026, ¿qué hacer antes?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/php-82-fin-de-vie-31-decembre-2026-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
               "text": "Antes de empezar:",
               "type": "text",
               "marks": [
@@ -25150,6 +25177,33 @@
           "type": "paragraph",
           "content": [
             {
+              "text": "El fallo de octubre es solo el primer plazo: el 31 de diciembre de 2026, PHP 8.2 deja a su vez de recibir correcciones de seguridad. Si cambia de versión hoy, mejor pasar directamente a PHP 8.3 u 8.4. El calendario completo y la elección de versión están en ",
+              "type": "text"
+            },
+            {
+              "text": "PHP 8.2: fin de soporte el 31 de diciembre de 2026, ¿qué hacer antes?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/php-82-fin-de-vie-31-decembre-2026-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
               "text": "Antes de empezar:",
               "type": "text",
               "marks": [
@@ -25796,6 +25850,33 @@
           "content": [
             {
               "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña, y los parches solo existen para las ramas 8.2 a 8.5. En IONOS, la versión de PHP se configura por dominio desde el espacio del cliente, y el proveedor de alojamiento tiene una particularidad: un « PHP Extended Support » que permite mantener versiones antiguas. Aquí está dónde hacer clic, qué versión elegir y qué valor tiene este soporte en la situación actual.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El fallo de octubre es solo el primer plazo: el 31 de diciembre de 2026, PHP 8.2 deja a su vez de recibir correcciones de seguridad. Si cambia de versión hoy, mejor pasar directamente a PHP 8.3 u 8.4. El calendario completo y la elección de versión están en ",
+              "type": "text"
+            },
+            {
+              "text": "PHP 8.2: fin de soporte el 31 de diciembre de 2026, ¿qué hacer antes?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/php-82-fin-de-vie-31-decembre-2026-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
               "type": "text"
             }
           ]
@@ -26458,6 +26539,33 @@
           "content": [
             {
               "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña, y los parches solo existen para las ramas 8.2 a 8.5. Hostinger reaccionó rápido y públicamente, lo que es de su honor. Pero su mensaje «no es necesario que actúes» tiene un límite: un sitio que permanezca en PHP 8.1 o versiones anteriores no recibirá ninguna versión corregida, ya sea en Hostinger o en cualquier otro lugar. Aquí te explicamos dónde ver y cambiar la versión de PHP en hPanel, qué versión elegir y lo que Hostinger anunció el 21 de octubre.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El fallo de octubre es solo el primer plazo: el 31 de diciembre de 2026, PHP 8.2 deja a su vez de recibir correcciones de seguridad. Si cambia de versión hoy, mejor pasar directamente a PHP 8.3 u 8.4. El calendario completo y la elección de versión están en ",
+              "type": "text"
+            },
+            {
+              "text": "PHP 8.2: fin de soporte el 31 de diciembre de 2026, ¿qué hacer antes?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/php-82-fin-de-vie-31-decembre-2026-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
               "type": "text"
             }
           ]
@@ -27248,6 +27356,33 @@
           "type": "paragraph",
           "content": [
             {
+              "text": "El fallo de octubre es solo el primer plazo: el 31 de diciembre de 2026, PHP 8.2 deja a su vez de recibir correcciones de seguridad. Si cambia de versión hoy, mejor pasar directamente a PHP 8.3 u 8.4. El calendario completo y la elección de versión están en ",
+              "type": "text"
+            },
+            {
+              "text": "PHP 8.2: fin de soporte el 31 de diciembre de 2026, ¿qué hacer antes?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/php-82-fin-de-vie-31-decembre-2026-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
               "text": "Antes de empezar:",
               "type": "text",
               "marks": [
@@ -27857,6 +27992,33 @@
           "content": [
             {
               "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña, y los parches solo existen para las ramas 8.2 a 8.5. PlanetHoster publicó un aviso dedicado el mismo día y desplegó las correcciones en sus servidores. Pero en este proveedor de alojamiento, tres paneles coexisten según la antigüedad de tu cuenta, y el menú de versiones desciende hasta PHP 4.4 sin ninguna advertencia. Aquí está lo que anunciaron, cómo cambiar la versión en N0C, cPanel o WHM, y qué versión elegir.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El fallo de octubre es solo el primer plazo: el 31 de diciembre de 2026, PHP 8.2 deja a su vez de recibir correcciones de seguridad. Si cambia de versión hoy, mejor pasar directamente a PHP 8.3 u 8.4. El calendario completo y la elección de versión están en ",
+              "type": "text"
+            },
+            {
+              "text": "PHP 8.2: fin de soporte el 31 de diciembre de 2026, ¿qué hacer antes?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/php-82-fin-de-vie-31-decembre-2026-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
               "type": "text"
             }
           ]
@@ -36214,11 +36376,31 @@
       "wordpress",
       "prestashop",
       "alojamiento web",
-      "seguridad informática"
+      "seguridad informática",
+      "joomla",
+      "php obsoleto"
     ],
     "content": {
       "type": "doc",
       "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Actualizado el 9 de noviembre de 2026: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "a partir del 31 de diciembre de 2026, PHP 8.2 deja de recibir actualizaciones de seguridad: la versión queda obsoleta, la web sigue funcionando, pero ya nadie la repara. Quedan siete semanas para pasar a PHP 8.3, 8.4 u 8.5, tras una copia de seguridad y una prueba en una copia. WordPress acepta PHP 8.4 desde la versión 6.7, Joomla 6 exige PHP 8.3 como mínimo y PrestaShop 8 se queda en PHP 8.1 mientras la tienda no pase a PrestaShop 9.",
+              "type": "text"
+            }
+          ]
+        },
         {
           "type": "paragraph",
           "content": [
@@ -36335,6 +36517,15 @@
           "content": [
             {
               "text": "El peligro es que un fin de vida no se nota. El sitio no se detiene, no aparece ningún mensaje, las órdenes siguen llegando. Un sitio en PHP 8.2 funcionará el 2 de enero de 2027 igual que el día anterior, simplemente sin protección.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Según la fuente, leerá que PHP 8.2 está «obsoleto», «sin mantenimiento», «sin soporte» o «al final de su soporte». Todas estas palabras significan lo mismo: el fin de las actualizaciones de seguridad, el 31 de diciembre de 2026. Una versión obsoleta no es una versión rota, es una versión que ya nadie repara.",
               "type": "text"
             }
           ]
@@ -37156,6 +37347,63 @@
           },
           "content": [
             {
+              "text": "¿Y si su web funciona con Joomla?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Después de WordPress, Joomla es el caso que más encuentro, y el más antiguo: muchas webs Joomla se construyeron entre 2012 y 2018 y muestran hoy, en su administración, el aviso que pide prever una actualización de PHP. Las reglas son sencillas. Joomla 4 no recibe soporte desde octubre de 2025. Joomla 5 recibe correcciones hasta octubre de 2027 y funciona muy bien con PHP 8.3. Joomla 6, la versión actual, exige PHP 8.3 como mínimo y se niega a instalarse con PHP 8.2.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El orden que funciona, el que seguí a principios de noviembre de 2026 en una web Joomla de 750 páginas: copia de seguridad completa, copia de prueba con PHP 8.3, última versión de Joomla 5 y actualización de las extensiones, luego PHP 8.3 en la web en producción y Joomla 6 el mismo día, comparando todas las páginas antes y después. Dos puntos merecen una prueba real en la copia: la plantilla, sobre todo si se creó para Joomla 2.5 o 3, y las extensiones de formularios. Una plantilla de 2015 pasó con siete líneas modificadas; ChronoForms 7 funciona con Joomla 6 con una corrección de una línea, aunque su editor solo lo anuncie para la versión 8.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lo que propongo para una web Joomla, precios incluidos, está en ",
+              "type": "text"
+            },
+            {
+              "text": "la página de actualización de PHP de su web",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/mise-a-jour-php-site-logiciel",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
               "text": "Preguntas frecuentes",
               "type": "text"
             }
@@ -37316,6 +37564,87 @@
             },
             {
               "text": " del equipo de WordPress, actualizada el 19 de agosto de 2026, indica que PHP 8.4 es compatible desde WordPress 6.7 y PHP 8.5 desde WordPress 6.9. La pregunta no es WordPress, sino tus extensiones y tu tema.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Qué pasa el 1 de enero de 2027 si no hago nada?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nada visible, y ese es el problema. La web se muestra, los formularios se envían, la tienda cobra. Pero PHP 8.2 ha quedado obsoleto: el próximo fallo, y hay uno cada año, solo se corregirá en las versiones 8.3, 8.4 y 8.5. Lo descubrirá el día en que un robot lo explote, o cuando su proveedor de alojamiento desactive las versiones antiguas, como ya hizo Hostinger con PHP 8.1.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "No soy técnico: ¿qué hago antes del 31 de diciembre?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tres cosas, en orden. ",
+              "type": "text"
+            },
+            {
+              "text": "Comprobar la versión de su web",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/faille-php-verifier-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": un minuto, sin cuenta. Preguntar a la persona que se ocupa de su web, o a su proveedor de alojamiento, qué versión recomienda y si es posible una copia de prueba. Después, hacer el cambio antes de fin de año, con una copia de seguridad que sepa restaurar. Si nadie se ocupa, es exactamente lo que hago yo, a precio fijo y con un informe.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Joomla y PHP 8.3: ¿hay que pasar a Joomla 6 al mismo tiempo?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, si su web está en Joomla 5: Joomla 6 exige PHP 8.3, así que ambos cambios se prueban en la misma copia y se hacen el mismo día. Si su web sigue en Joomla 4, sin soporte desde octubre de 2025, pase primero a Joomla 5 y luego a 6. En ambos casos, la plantilla y las extensiones de formularios se comprueban antes, en la copia, no después.",
               "type": "text"
             }
           ]
