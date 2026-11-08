@@ -8,9 +8,12 @@ import {
   BIKE_SHOP_PAGE_RELATED_ARTICLE_SLUGS,
   BIKE_SHOP_PAGE_SCREENSHOT_URL,
   BIKE_SHOP_PAGE_UPDATED_AT,
+  BIKE_SHOP_TEMPLATE_PDF_PATH,
+  BIKE_SHOP_TEMPLATE_XLSX_PATH,
   BIKE_SHOP_TILL_SOURCE,
 } from '~/core/constants/tools/bikeShopSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
+import { BIKE_REPAIR_TICKET_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/bikeRepairTicket/pageShared'
 
 // The page describes the French market (publishers, bike marking, repair bonus): the English text says so instead of adapting it.
 
@@ -142,6 +145,29 @@ export const BIKE_SHOP_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     calloutEmphasizedIntro: 'What a custom tool does not replace:',
     calloutText:
       'your secure till and bike marking. The till stays with a publisher that provides the certificate or statement, marking with an approved operator; the custom tool connects to both.',
+  },
+  freeTemplate: {
+    anchorId: 'template',
+    eyebrow: 'Free template',
+    title: 'A drop-off and repair ticket ready to fill in',
+    description:
+      'The ticket you fill in at the counter: the bike and its marking number, what the customer leaves with it, its condition on arrival, the quote accepted or not, parts and labour, the signatures at drop-off and pick-up. In French, as a PDF to fill in by hand or an Excel file with calculated totals and workshop tracking.',
+    items: [
+      'Drop-off form: customer, bike, battery and accessories left, condition on arrival',
+      'Quote: new or reused parts, labour, VAT, customer agreement',
+      'Tracking of the bikes in the workshop and of ordered parts, calculated in the Excel version',
+    ],
+    downloads: [
+      { label: 'Download the PDF template', href: BIKE_SHOP_TEMPLATE_PDF_PATH, format: 'PDF, 2 pages, in French' },
+      {
+        label: 'Download the Excel version',
+        href: BIKE_SHOP_TEMPLATE_XLSX_PATH,
+        format: 'Excel, 3 sheets, calculated totals and delays, in French',
+      },
+    ],
+    footnote: 'Free to use, to adapt to your workshop. It does not replace your accountant’s advice.',
+    pageLinkLabel: 'See the template page',
+    pageLinkRouteName: BIKE_REPAIR_TICKET_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'The three options',

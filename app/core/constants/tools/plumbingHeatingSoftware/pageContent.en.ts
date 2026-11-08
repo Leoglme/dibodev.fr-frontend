@@ -80,9 +80,9 @@ export const PLUMBING_HEATING_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = 
         name: 'Organilog',
         coverage:
           'Call-outs, schedule, offline mobile app, intervention reports, stock (Pro plan); quotes, invoices and online signature (Business plan)',
-        price: '€19 to €59 per month per user',
+        price: '€24 to €45 per month',
         priceCondition:
-          'Free and limited Basique plan (72-hour archive); quotes and invoices from the €35 Business plan',
+          'Per user; free and limited Basique (72-hour archive); €19 to €35 paid yearly, Premium €59 to €64 yearly only; quotes and invoices from Business (€45 monthly); excl. or incl. VAT not stated',
       },
       {
         name: 'Praxedo',
@@ -260,7 +260,7 @@ export const PLUMBING_HEATING_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = 
       {
         question: 'How much does plumbing and heating software cost in France?',
         answer:
-          'Tolteck costs €25 excl. VAT per month (€19 when paid yearly), Obat €49 to €129 excl. VAT per month (€39 to €109 yearly, less for a micro-entreprise), Batappli €39 or €79 excl. VAT per month and Organilog €19 to €59 per month per user. Praxedo is on quote (prices checked on 19 October 2026). A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
+          'Tolteck costs €25 excl. VAT per month (€19 when paid yearly), Obat €49 to €129 excl. VAT per month (€39 to €109 yearly, less for a micro-entreprise), Batappli €39 or €79 excl. VAT per month and €24 to €45 per month per user (€19 to €35 paid yearly, Premium €59 to €64 yearly only). Praxedo is on quote (prices checked on 19 October 2026). A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
       },
       {
         question: 'Which quoting and invoicing software for a plumber in France?',

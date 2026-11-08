@@ -75,8 +75,8 @@ export const PLUMBING_HEATING_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = 
       {
         name: 'Organilog',
         coverage: `Interventions, planning, application mobile hors ligne, rapports d’intervention, stock (offre Pro)${NBSP}; devis, factures et signature en ligne (offre Business)`,
-        price: `19 à 59${NBSP}€ par mois et par utilisateur`,
-        priceCondition: `Offre Basique gratuite et limitée (archivage 72${NBSP}h)${NBSP}; devis et factures à partir de l’offre Business à 35${NBSP}€`,
+        price: `24 à 45${NBSP}€ par mois`,
+        priceCondition: `Par utilisateur${NBSP}; Basique gratuite et limitée (archivage 72${NBSP}h)${NBSP}; 19 à 35${NBSP}€ payé à l’année, Premium 59 à 64${NBSP}€ à l’année seulement${NBSP}; devis et factures dès Business (45${NBSP}€ au mois)${NBSP}; HT ou TTC non précisé`,
       },
       {
         name: 'Praxedo',
@@ -252,7 +252,7 @@ export const PLUMBING_HEATING_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = 
     questions: [
       {
         question: `Combien coûte un logiciel pour plombier-chauffagiste${NBSP}?`,
-        answer: `Tolteck coûte 25${NBSP}€ HT par mois (19${NBSP}€ à l’année), Obat 49 à 129${NBSP}€ HT par mois (39 à 109${NBSP}€ à l’année, moins en micro-entreprise), Batappli 39 ou 79${NBSP}€ HT par mois et Organilog 19 à 59${NBSP}€ par mois et par utilisateur. Praxedo est sur devis (tarifs relevés le 19 octobre 2026). Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
+        answer: `Tolteck coûte 25${NBSP}€ HT par mois (19${NBSP}€ à l’année), Obat 49 à 129${NBSP}€ HT par mois (39 à 109${NBSP}€ à l’année, moins en micro-entreprise), Batappli 39 ou 79${NBSP}€ HT par mois et 24 à 45${NBSP}€ par mois et par utilisateur (19 à 35${NBSP}€ payé à l’année, Premium 59 à 64${NBSP}€ à l’année seulement). Praxedo est sur devis (tarifs relevés le 19 octobre 2026). Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
       },
       {
         question: `Quel logiciel de devis et de facturation pour un plombier${NBSP}?`,

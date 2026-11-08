@@ -5,25 +5,25 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
   meta: {
     title: 'Plantillas francesas gratis por oficio: presupuestos y más',
     description:
-      '12 plantillas francesas gratis sin registro: presupuestos de fontanero y electricista, parte de intervención, plannings, hoja de firmas. PDF + Excel.',
+      '17 plantillas francesas gratis sin registro: presupuestos, contrato de alquiler, certificado de caldera, acta de recepción, plannings. PDF + Excel.',
     inLanguage: 'es',
   },
   breadcrumbLabel: 'Plantillas gratuitas',
   shareImage: {
-    titleLines: ['12 plantillas francesas', 'gratis por oficio'],
+    titleLines: ['17 plantillas francesas', 'gratis por oficio'],
     highlight: 'gratis',
     subtitle:
       'Presupuestos, partes de intervención, plannings, hojas de firmas: PDF para imprimir y Excel para adaptar',
     badge: 'Sin registro ni e-mail',
     icon: 'download',
-    alt: '12 plantillas francesas gratis por oficio: presupuestos, partes de intervención, plannings y hojas de firmas en PDF y Excel, sin registro, en dibodev.fr',
+    alt: '17 plantillas francesas gratis por oficio: presupuestos, contratos, certificados, partes de intervención y plannings en PDF y Excel, sin registro, en dibodev.fr',
   },
   hero: {
     titlePart1: 'Plantillas ',
     titleHighlight1: 'francesas gratis',
     titlePart2: ' para tu oficio, en PDF y en Excel',
     description:
-      'Presupuesto, parte de intervención, orden de reparación, planning, hoja de inventario, hoja de firmas: doce plantillas escritas en francés para los oficios de los tests de este sitio, con las menciones que exige la norma francesa. El PDF se imprime, el Excel calcula los totales. Sin formulario, sin dejar tu e-mail.',
+      'Presupuesto, contrato de alquiler, certificado de mantenimiento de caldera, acta de recepción de obra, parte de intervención, planning: diecisiete plantillas escritas en francés para los oficios de los tests de este sitio, con las menciones que exige la norma francesa. El PDF se imprime, el Excel calcula los totales. Sin formulario, sin dejar tu e-mail.',
     cta: 'Elegir una plantilla',
     templatesCountLabel: 'plantillas por oficio',
     formatsValue: '2',
@@ -136,6 +136,46 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         description:
           'Planning de las franjas con las plazas y los anticipos calculados, ficha de inscripción y de briefing, cuadro de organización de los primeros auxilios.',
         formats: 'PDF 2 páginas · Excel 4 hojas',
+      },
+      {
+        key: 'equipment-rental-agreement',
+        tradeLabel: 'Alquiler de material',
+        title: 'Contrato de alquiler de material + estado de entrega',
+        description:
+          'Contrato con valor de reposición, fianza, transporte y roturas, estado de salida y de devolución, importes sin IVA, IVA y con IVA calculados.',
+        formats: 'PDF 2 páginas · Excel 3 hojas',
+      },
+      {
+        key: 'driving-school-contract',
+        tradeLabel: 'Autoescuela',
+        title: 'Contrato de formación + ficha de seguimiento',
+        description:
+          'Contrato con evaluación inicial, horas previstas y calendario de pagos, ficha de las clases y de las 4 competencias del libro de aprendizaje, horas y exámenes calculados.',
+        formats: 'PDF 2 páginas · Excel 3 hojas',
+      },
+      {
+        key: 'bike-repair-ticket',
+        tradeLabel: 'Taller de bicicletas',
+        title: 'Ficha de depósito y reparación de bicicleta',
+        description:
+          'Ficha de depósito con el marcado de la bicicleta y su estado, presupuesto aceptado, piezas y mano de obra, seguimiento de las bicicletas en el taller y de los pedidos.',
+        formats: 'PDF 2 páginas · Excel 3 hojas',
+      },
+      {
+        key: 'boiler-service-certificate',
+        tradeLabel: 'Calefacción',
+        title: 'Certificado de mantenimiento de caldera + registro',
+        description:
+          'Certificado con las menciones de la orden francesa del 15 de septiembre de 2009, registro de visitas a diez años, clientes a recordar antes de la fecha de aniversario.',
+        formats: 'PDF 2 páginas · Excel 3 hojas',
+      },
+      {
+        key: 'works-acceptance-report',
+        tradeLabel: 'Construcción',
+        title: 'Acta de recepción de obra + levantamiento de reservas',
+        description:
+          'Acta con o sin reservas, plazos de levantamiento, retención de garantía, acta de levantamiento de reservas y calendario de garantías calculado.',
+        formats: 'PDF 2 páginas · Excel 3 hojas',
       },
     ],
   },

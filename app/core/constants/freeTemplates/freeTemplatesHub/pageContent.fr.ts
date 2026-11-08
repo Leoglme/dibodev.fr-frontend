@@ -4,23 +4,23 @@ import { NBSP } from '~/core/constants/typography'
 export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = {
   meta: {
     title: `Modèles gratuits par métier${NBSP}: devis, bons, plannings`,
-    description: `12 modèles gratuits sans inscription${NBSP}: devis plombier et électricien, bon d’intervention, ordre de réparation, plannings, émargement. PDF + Excel.`,
+    description: `17 modèles gratuits sans inscription${NBSP}: devis, contrat de location, attestation chaudière, PV de réception, bon d’intervention, plannings. PDF + Excel.`,
     inLanguage: 'fr-FR',
   },
   breadcrumbLabel: 'Modèles gratuits',
   shareImage: {
-    titleLines: ['12 modèles gratuits', 'pour votre métier'],
+    titleLines: ['17 modèles gratuits', 'pour votre métier'],
     highlight: 'gratuits',
     subtitle: 'Devis, bons d’intervention, plannings, feuilles d’émargement : PDF à imprimer et Excel à adapter',
     badge: 'Sans inscription ni e-mail',
     icon: 'download',
-    alt: `12 modèles gratuits par métier${NBSP}: devis, bons d’intervention, plannings et feuilles d’émargement en PDF et Excel, sans inscription, sur dibodev.fr`,
+    alt: `17 modèles gratuits par métier${NBSP}: devis, contrats, attestations, bons d’intervention et plannings en PDF et Excel, sans inscription, sur dibodev.fr`,
   },
   hero: {
     titlePart1: 'Des modèles ',
     titleHighlight1: 'gratuits',
     titlePart2: ' pour votre métier, en PDF et en Excel',
-    description: `Devis, bon d’intervention, ordre de réparation, planning, fiche d’inventaire, feuille d’émargement${NBSP}: douze modèles préparés pour les métiers des tests de ce site, avec les mentions que la règle impose. Le PDF s’imprime, l’Excel calcule les totaux. Aucun formulaire, aucune adresse e-mail à laisser.`,
+    description: `Devis, contrat de location, attestation d’entretien de chaudière, PV de réception, bon d’intervention, planning${NBSP}: dix-sept modèles préparés pour les métiers des tests de ce site, avec les mentions que la règle impose. Le PDF s’imprime, l’Excel calcule les totaux. Aucun formulaire, aucune adresse e-mail à laisser.`,
     cta: 'Choisir un modèle',
     templatesCountLabel: 'modèles par métier',
     formatsValue: '2',
@@ -133,6 +133,46 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         description:
           'Planning des créneaux avec les places et les acomptes calculés, fiche d’inscription et de briefing, tableau d’organisation des secours.',
         formats: 'PDF 2 pages · Excel 4 feuilles',
+      },
+      {
+        key: 'equipment-rental-agreement',
+        tradeLabel: 'Location de matériel',
+        title: 'Contrat de location de matériel + état des lieux',
+        description:
+          'Contrat avec valeur de remplacement, dépôt de garantie, transport et casse, état des lieux de sortie et de retour, montants HT, TVA et TTC calculés.',
+        formats: 'PDF 2 pages · Excel 3 feuilles',
+      },
+      {
+        key: 'driving-school-contract',
+        tradeLabel: 'Auto-école',
+        title: 'Contrat de formation + fiche de suivi de l’élève',
+        description:
+          'Contrat avec évaluation de départ, heures prévues et échéancier, fiche de suivi des leçons et des 4 compétences du livret, heures et examens calculés.',
+        formats: 'PDF 2 pages · Excel 3 feuilles',
+      },
+      {
+        key: 'bike-repair-ticket',
+        tradeLabel: 'Atelier vélo',
+        title: 'Fiche de dépôt et de réparation vélo',
+        description:
+          'Fiche de dépôt avec le marquage du vélo et son état, devis accepté, pièces et main-d’œuvre, suivi des vélos à l’atelier et des pièces commandées.',
+        formats: 'PDF 2 pages · Excel 3 feuilles',
+      },
+      {
+        key: 'boiler-service-certificate',
+        tradeLabel: 'Chauffagiste',
+        title: 'Attestation d’entretien de chaudière + carnet',
+        description:
+          'Attestation avec les mentions de l’arrêté du 15 septembre 2009, carnet des visites sur dix ans, clients à relancer avant la date anniversaire.',
+        formats: 'PDF 2 pages · Excel 3 feuilles',
+      },
+      {
+        key: 'works-acceptance-report',
+        tradeLabel: 'Bâtiment',
+        title: 'PV de réception de travaux + levée des réserves',
+        description:
+          'Procès-verbal avec ou sans réserves, délais de levée, retenue de garantie, PV de levée des réserves et calendrier des garanties calculé.',
+        formats: 'PDF 2 pages · Excel 3 feuilles',
       },
     ],
   },

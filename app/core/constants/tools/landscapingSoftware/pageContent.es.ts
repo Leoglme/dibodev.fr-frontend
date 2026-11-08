@@ -89,8 +89,8 @@ export const LANDSCAPING_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
         name: 'Organilog',
         coverage:
           'Gestión de intervenciones para paisajistas: biblioteca de precios, planificación y contratos desde la oferta Pro, app móvil sin conexión; presupuestos y facturas desde la oferta Business',
-        price: `19 a 64${NBSP}€ al mes por usuario`,
-        priceCondition: `Oferta Basique gratuita; Business 35${NBSP}€, Premium 59${NBSP}€, Premium + Carte 64${NBSP}€; sin permanencia`,
+        price: `24 a 45${NBSP}€ al mes`,
+        priceCondition: `Por usuario; 19 a 35${NBSP}€ pagando el año, Premium 59 a 64${NBSP}€ solo al año, Basique gratuita; con o sin IVA no especificado`,
       },
       {
         name: 'Batappli',
@@ -271,7 +271,7 @@ export const LANDSCAPING_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     questions: [
       {
         question: '¿Cuánto cuesta un programa para paisajistas en Francia?',
-        answer: `Robbin cuesta 19 o 49${NBSP}€ sin IVA al mes (15 o 39${NBSP}€ pagando el año), Extrabat Paysage 49 a 99${NBSP}€ sin IVA por usuario al mes, Paysagio 34,90 a 99,90${NBSP}€ sin IVA al mes según la cuenta (cuentas de operarios gratuitas), Tomas 24,50 o 49,50${NBSP}€ sin IVA al mes, Organilog 19 a 64${NBSP}€ al mes por usuario y Batappli 39 o 79${NBSP}€ sin IVA al mes; JardiSoft y Vertuoza funcionan con presupuesto (tarifas consultadas el 26 de octubre de 2026). Un complemento a medida cuesta de 2500 a 7000${NBSP}€ una sola vez, una herramienta completa de 5000 a 25${NBSP}000${NBSP}€, y luego 100 a 300${NBSP}€ al mes de mantenimiento.`,
+        answer: `Robbin cuesta 19 o 49${NBSP}€ sin IVA al mes (15 o 39${NBSP}€ pagando el año), Extrabat Paysage 49 a 99${NBSP}€ sin IVA por usuario al mes, Paysagio 34,90 a 99,90${NBSP}€ sin IVA al mes según la cuenta (cuentas de operarios gratuitas), Tomas 24,50 o 49,50${NBSP}€ sin IVA al mes, 24 a 45${NBSP}€ al mes por usuario (19 a 35${NBSP}€ pagando el año, Premium 59 a 64${NBSP}€ solo al año) y Batappli 39 o 79${NBSP}€ sin IVA al mes; JardiSoft y Vertuoza funcionan con presupuesto (tarifas consultadas el 26 de octubre de 2026). Un complemento a medida cuesta de 2500 a 7000${NBSP}€ una sola vez, una herramienta completa de 5000 a 25${NBSP}000${NBSP}€, y luego 100 a 300${NBSP}€ al mes de mantenimiento.`,
       },
       {
         question: '¿Qué programa de presupuestos y facturación para un paisajista en Francia?',
@@ -279,7 +279,7 @@ export const LANDSCAPING_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
       },
       {
         question: '¿Existe un programa gratuito para paisajistas?',
-        answer: `Organilog tiene una oferta Basique gratuita, pero los presupuestos y las facturas empiezan en la oferta Business (35${NBSP}€ al mes por usuario). Robbin, Paysagio y Kwixéo ofrecen 14 días de prueba sin tarjeta bancaria, Tomas 15 días, Batappli 10 días. Un programa de facturación gratuito puede sacar de un apuro al principio, pero sin biblioteca de plantas, sin contratos de mantenimiento ni certificados fiscales.`,
+        answer: `Organilog tiene una oferta Basique gratuita, pero los presupuestos y las facturas empiezan en la oferta Business (45${NBSP}€ al mes por usuario, 35${NBSP}€ pagando el año). Robbin, Paysagio y Kwixéo ofrecen 14 días de prueba sin tarjeta bancaria, Tomas 15 días, Batappli 10 días. Un programa de facturación gratuito puede sacar de un apuro al principio, pero sin biblioteca de plantas, sin contratos de mantenimiento ni certificados fiscales.`,
       },
       {
         question: '¿Cómo gestionar los contratos de mantenimiento de jardín?',

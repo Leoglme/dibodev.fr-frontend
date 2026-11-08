@@ -83,8 +83,8 @@ export const LANDSCAPING_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
       {
         name: 'Organilog',
         coverage: `Gestion d’interventions pour paysagistes${NBSP}: bibliothèque de prix, planning et contrats dès l’offre Pro, application mobile hors ligne${NBSP}; devis et factures à partir de l’offre Business`,
-        price: `19 à 64${NBSP}€ par mois et par utilisateur`,
-        priceCondition: `Offre Basique gratuite${NBSP}; Business 35${NBSP}€, Premium 59${NBSP}€, Premium + Carte 64${NBSP}€${NBSP}; sans engagement`,
+        price: `24 à 45${NBSP}€ par mois`,
+        priceCondition: `Par utilisateur${NBSP}; 19 à 35${NBSP}€ payé à l’année, Premium 59 à 64${NBSP}€ à l’année seulement, Basique gratuite${NBSP}; HT ou TTC non précisé`,
       },
       {
         name: 'Batappli',
@@ -258,7 +258,7 @@ export const LANDSCAPING_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     questions: [
       {
         question: `Combien coûte un logiciel pour paysagiste${NBSP}?`,
-        answer: `Robbin coûte 19 ou 49${NBSP}€ HT par mois (15 ou 39${NBSP}€ payé à l’année), Extrabat Paysage 49 à 99${NBSP}€ HT par utilisateur et par mois, Paysagio 34,90 à 99,90${NBSP}€ HT par mois selon le compte (comptes ouvriers gratuits), Tomas 24,50 ou 49,50${NBSP}€ HT par mois, Organilog 19 à 64${NBSP}€ par mois et par utilisateur et Batappli 39 ou 79${NBSP}€ HT par mois${NBSP}; JardiSoft et Vertuoza sont sur devis (tarifs relevés le 26 octobre 2026). Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
+        answer: `Robbin coûte 19 ou 49${NBSP}€ HT par mois (15 ou 39${NBSP}€ payé à l’année), Extrabat Paysage 49 à 99${NBSP}€ HT par utilisateur et par mois, Paysagio 34,90 à 99,90${NBSP}€ HT par mois selon le compte (comptes ouvriers gratuits), Tomas 24,50 ou 49,50${NBSP}€ HT par mois, 24 à 45${NBSP}€ par mois et par utilisateur (19 à 35${NBSP}€ payé à l’année, Premium 59 à 64${NBSP}€ à l’année seulement) et Batappli 39 ou 79${NBSP}€ HT par mois${NBSP}; JardiSoft et Vertuoza sont sur devis (tarifs relevés le 26 octobre 2026). Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
       },
       {
         question: `Quel logiciel de devis et de facturation pour un paysagiste${NBSP}?`,
@@ -266,7 +266,7 @@ export const LANDSCAPING_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
       },
       {
         question: `Existe-t-il un logiciel gratuit pour paysagiste${NBSP}?`,
-        answer: `Organilog a une offre Basique gratuite, mais les devis et les factures commencent à l’offre Business (35${NBSP}€ par mois et par utilisateur). Robbin, Paysagio et Kwixéo offrent 14 jours d’essai sans carte bancaire, Tomas 15 jours, Batappli 10 jours. Un logiciel de facturation gratuit peut dépanner au début, mais sans bibliothèque de végétaux, sans contrats d’entretien ni attestations fiscales.`,
+        answer: `Organilog a une offre Basique gratuite, mais les devis et les factures commencent à l’offre Business (45${NBSP}€ par mois et par utilisateur, 35${NBSP}€ payé à l’année). Robbin, Paysagio et Kwixéo offrent 14 jours d’essai sans carte bancaire, Tomas 15 jours, Batappli 10 jours. Un logiciel de facturation gratuit peut dépanner au début, mais sans bibliothèque de végétaux, sans contrats d’entretien ni attestations fiscales.`,
       },
       {
         question: `Comment gérer les contrats d’entretien de jardin${NBSP}?`,

@@ -8,10 +8,13 @@ import {
   BIKE_SHOP_PAGE_RELATED_ARTICLE_SLUGS,
   BIKE_SHOP_PAGE_SCREENSHOT_URL,
   BIKE_SHOP_PAGE_UPDATED_AT,
+  BIKE_SHOP_TEMPLATE_PDF_PATH,
+  BIKE_SHOP_TEMPLATE_XLSX_PATH,
   BIKE_SHOP_TILL_SOURCE,
 } from '~/core/constants/tools/bikeShopSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
+import { BIKE_REPAIR_TICKET_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/bikeRepairTicket/pageShared'
 
 export const BIKE_SHOP_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   meta: {
@@ -139,6 +142,28 @@ export const BIKE_SHOP_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     ],
     calloutEmphasizedIntro: `Ce que l’outil sur mesure ne remplace pas${NBSP}:`,
     calloutText: `votre caisse sécurisée et le marquage. La caisse reste chez un éditeur qui fournit le certificat ou l’attestation, le marquage chez un opérateur agréé${NBSP}; l’outil sur mesure se relie aux deux.`,
+  },
+  freeTemplate: {
+    anchorId: 'modele',
+    eyebrow: 'Modèle gratuit',
+    title: 'Une fiche de dépôt et de réparation prête à remplir',
+    description: `La fiche que vous remplissez au comptoir${NBSP}: le vélo et son numéro de marquage, ce que le client laisse avec lui, l’état à l’arrivée, le devis accepté ou non, les pièces et la main-d’œuvre, les signatures au dépôt et au retrait. En PDF à remplir à la main, ou en Excel avec les totaux et le suivi de l’atelier calculés.`,
+    items: [
+      `Fiche de dépôt${NBSP}: client, vélo, batterie et accessoires laissés, état à l’arrivée`,
+      `Devis${NBSP}: pièces neuves ou de réemploi, main-d’œuvre, TVA, accord du client`,
+      'Suivi des vélos à l’atelier et des pièces commandées, calculé dans la version Excel',
+    ],
+    downloads: [
+      { label: 'Télécharger le modèle PDF', href: BIKE_SHOP_TEMPLATE_PDF_PATH, format: 'PDF, 2 pages, à imprimer' },
+      {
+        label: 'Télécharger la version Excel',
+        href: BIKE_SHOP_TEMPLATE_XLSX_PATH,
+        format: 'Excel, 3 feuilles, totaux et délais calculés',
+      },
+    ],
+    footnote: 'Modèle libre d’utilisation, à adapter à votre atelier. Il ne remplace pas l’avis de votre comptable.',
+    pageLinkLabel: 'Voir la page du modèle',
+    pageLinkRouteName: BIKE_REPAIR_TICKET_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Les trois options',

@@ -6,7 +6,10 @@ import {
   DRIVING_SCHOOL_PAGE_SCREENSHOT_URL,
   DRIVING_SCHOOL_PAGE_UPDATED_AT,
   DRIVING_SCHOOL_RULE_SOURCES,
+  DRIVING_SCHOOL_TEMPLATE_PDF_PATH,
+  DRIVING_SCHOOL_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/drivingSchoolSoftware/pageShared'
+import { DRIVING_SCHOOL_CONTRACT_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/drivingSchoolContract/pageShared'
 
 // The page describes the French market (publishers, ANTS, RdvPermis, CPF): the English text says so instead of adapting it.
 
@@ -156,6 +159,30 @@ export const DRIVING_SCHOOL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     calloutEmphasizedIntro: 'What I never rebuild as custom software:',
     calloutText:
       'the digital logbook, ANTS and RdvPermis. These exchanges with the French State go through specialised publishers, and a mistake costs test slots. A custom tool plugs in next to compliant software.',
+  },
+  freeTemplate: {
+    anchorId: 'template',
+    eyebrow: 'Free template',
+    title: 'A training contract and a student record ready to fill in',
+    description:
+      'The training contract for the B licence, following the French standard contract: initial assessment, planned hours, prices incl. VAT, payment, cancellation within 48 working hours, termination. And the student record, lesson after lesson. In French, as a PDF to fill in by hand or an Excel file with hours and payment schedule calculated.',
+    items: [
+      'Contract: school, student, initial assessment, planned hours, price table incl. VAT, payment, termination',
+      'Student record: lessons, hours done and remaining, skills worked on, tests',
+      'Contract amount, payment schedule and hours calculated in the Excel version',
+    ],
+    downloads: [
+      { label: 'Download the PDF template', href: DRIVING_SCHOOL_TEMPLATE_PDF_PATH, format: 'PDF, 2 pages, in French' },
+      {
+        label: 'Download the Excel version',
+        href: DRIVING_SCHOOL_TEMPLATE_XLSX_PATH,
+        format: 'Excel, 3 sheets, hours and schedule calculated, in French',
+      },
+    ],
+    footnote:
+      'Free to use, to adapt to your school. It replaces neither the official standard contract nor the digital learner’s logbook.',
+    pageLinkLabel: 'See the template page',
+    pageLinkRouteName: DRIVING_SCHOOL_CONTRACT_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'The three options',

@@ -6,8 +6,11 @@ import {
   DRIVING_SCHOOL_PAGE_SCREENSHOT_URL,
   DRIVING_SCHOOL_PAGE_UPDATED_AT,
   DRIVING_SCHOOL_RULE_SOURCES,
+  DRIVING_SCHOOL_TEMPLATE_PDF_PATH,
+  DRIVING_SCHOOL_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/drivingSchoolSoftware/pageShared'
 import { NBSP } from '~/core/constants/typography'
+import { DRIVING_SCHOOL_CONTRACT_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/drivingSchoolContract/pageShared'
 
 export const DRIVING_SCHOOL_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   meta: {
@@ -155,6 +158,33 @@ export const DRIVING_SCHOOL_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     calloutEmphasizedIntro: `Ce que je ne refais jamais en sur mesure${NBSP}:`,
     calloutText:
       'le livret numérique, l’ANTS et RdvPermis. Ces échanges avec l’État passent par des éditeurs spécialisés, et une erreur coûte des places d’examen. Un outil sur mesure se branche à côté d’un logiciel conforme.',
+  },
+  freeTemplate: {
+    anchorId: 'modele',
+    eyebrow: 'Modèle gratuit',
+    title: 'Un contrat de formation et une fiche de suivi prêts à remplir',
+    description: `Le contrat de formation du permis B, sur la trame du contrat type${NBSP}: évaluation préalable, heures prévues, prix TTC, paiement, annulation sous 48${NBSP}heures ouvrées, résiliation. Et la fiche de suivi de l’élève, leçon après leçon. En PDF à remplir à la main, ou en Excel avec les heures et l’échéancier calculés.`,
+    items: [
+      `Contrat${NBSP}: école, élève, évaluation préalable, heures prévues, tableau des prix TTC, paiement, résiliation`,
+      `Fiche de suivi${NBSP}: leçons, heures faites et restantes, compétences travaillées, examens`,
+      'Montant du contrat, échéancier et heures calculés dans la version Excel',
+    ],
+    downloads: [
+      {
+        label: 'Télécharger le modèle PDF',
+        href: DRIVING_SCHOOL_TEMPLATE_PDF_PATH,
+        format: 'PDF, 2 pages, à imprimer',
+      },
+      {
+        label: 'Télécharger la version Excel',
+        href: DRIVING_SCHOOL_TEMPLATE_XLSX_PATH,
+        format: 'Excel, 3 feuilles, heures et échéancier calculés',
+      },
+    ],
+    footnote:
+      'Modèle libre d’utilisation, à adapter à votre école. Il ne remplace ni le contrat type officiel ni le livret d’apprentissage numérique.',
+    pageLinkLabel: 'Voir la page du modèle',
+    pageLinkRouteName: DRIVING_SCHOOL_CONTRACT_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Les trois options',

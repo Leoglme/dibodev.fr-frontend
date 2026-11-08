@@ -10,7 +10,7 @@ import { E_INVOICING_SCOPE_QUIZ_ID } from '~/core/constants/eInvoicingScopeQuiz'
 import { NBSP } from '~/core/constants/typography'
 import { PROJECT_SPECIFICATION_TEASER } from '~/core/constants/projectSpecification/pageShared'
 
-const DRIVING_SCHOOL_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+export const DRIVING_SCHOOL_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   toolId: 'driving-school-software',
   routeName: 'tools-driving-school-software',
   icon: 'Car',
@@ -41,7 +41,7 @@ const DRIVING_SCHOOL_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
-const EVENT_RENTAL_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+export const EVENT_RENTAL_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   toolId: 'event-rental-software',
   routeName: 'tools-event-rental-software',
   icon: 'Truck',
@@ -72,7 +72,7 @@ const EVENT_RENTAL_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   },
 }
 
-const BIKE_SHOP_SOFTWARE_TEASER: DibodevToolTeaserContent = {
+export const BIKE_SHOP_SOFTWARE_TEASER: DibodevToolTeaserContent = {
   toolId: 'bike-shop-software',
   routeName: 'tools-bike-shop-software',
   icon: 'Bike',

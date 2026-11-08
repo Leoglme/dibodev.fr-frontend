@@ -22,6 +22,10 @@ export const DRIVING_SCHOOL_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
 
 export const DRIVING_SCHOOL_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2
 
+/** Free training contract and student record template, in French only (French driving school rules). */
+export const DRIVING_SCHOOL_TEMPLATE_PDF_PATH: string = '/modeles/contrat-formation-fiche-suivi-auto-ecole.pdf'
+export const DRIVING_SCHOOL_TEMPLATE_XLSX_PATH: string = '/modeles/contrat-formation-fiche-suivi-auto-ecole.xlsx'
+
 /** Official sources of the rules section, the same in every language. */
 export const DRIVING_SCHOOL_RULE_SOURCES: Record<DibodevDrivingSchoolRuleSourceKey, DibodevSourceReference> = {
   logbook: {

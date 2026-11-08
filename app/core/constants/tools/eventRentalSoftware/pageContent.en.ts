@@ -6,8 +6,11 @@ import {
   EVENT_RENTAL_PAGE_RELATED_ARTICLE_SLUGS,
   EVENT_RENTAL_PAGE_SCREENSHOT_URL,
   EVENT_RENTAL_PAGE_UPDATED_AT,
+  EVENT_RENTAL_TEMPLATE_PDF_PATH,
+  EVENT_RENTAL_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/eventRentalSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
+import { EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/equipmentRentalAgreement/pageShared'
 
 // The page describes the French market (publishers, marquee rules, e-invoicing): the English text says so instead of adapting it.
 
@@ -137,6 +140,29 @@ export const EVENT_RENTAL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     calloutEmphasizedIntro: 'What a custom tool does not replace:',
     calloutText:
       'your accounting software. Invoices are sent to it (export or Factur-X), and online payments go through an approved provider such as Stripe.',
+  },
+  freeTemplate: {
+    anchorId: 'template',
+    eyebrow: 'Free template',
+    title: 'A rental agreement and a condition report ready to fill in',
+    description:
+      'The equipment rental agreement and the check-out and return condition report, with the French civil code rules on hiring out goods (equipment delivered in good condition, intended use, breakage and losses during the rental) and the deposit kept apart from the price. In French, as a PDF to fill in by hand or an Excel file with the totals, the gaps at return and the deposit to return calculated.',
+    items: [
+      'Agreement: renter, check-out and return dates and times, equipment and replacement value, price excl. and incl. VAT, deposit, terms',
+      'Condition report: quantity, condition, accessories and cleanliness of each item, at check-out and then at return, with photos and signatures',
+      'Totals, gaps at return and rental log calculated automatically in the Excel version',
+    ],
+    downloads: [
+      { label: 'Download the PDF template', href: EVENT_RENTAL_TEMPLATE_PDF_PATH, format: 'PDF, 2 pages, in French' },
+      {
+        label: 'Download the Excel version',
+        href: EVENT_RENTAL_TEMPLATE_XLSX_PATH,
+        format: 'Excel, 3 sheets, calculated totals and gaps, in French',
+      },
+    ],
+    footnote: 'Free to use, to adapt to your rental terms. It does not replace your accountant’s advice.',
+    pageLinkLabel: 'See the template page',
+    pageLinkRouteName: EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'The three options',

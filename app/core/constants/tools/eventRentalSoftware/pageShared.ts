@@ -18,6 +18,10 @@ export const EVENT_RENTAL_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
 
 export const EVENT_RENTAL_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2
 
+/** Free equipment rental agreement and check-out / return condition report, in French only (French civil code and invoicing rules). */
+export const EVENT_RENTAL_TEMPLATE_PDF_PATH: string = '/modeles/contrat-location-etat-des-lieux-materiel.pdf'
+export const EVENT_RENTAL_TEMPLATE_XLSX_PATH: string = '/modeles/contrat-location-etat-des-lieux-materiel.xlsx'
+
 /** Rules for marquees, tents and temporary structures (CTS), from the French State in the Drôme department. */
 export const EVENT_RENTAL_MARQUEE_RULES_SOURCE: DibodevSourceReference = {
   name: 'Services de l’État dans la Drôme',

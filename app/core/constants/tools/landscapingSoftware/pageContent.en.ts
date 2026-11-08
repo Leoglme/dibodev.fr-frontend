@@ -90,8 +90,9 @@ export const LANDSCAPING_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
         name: 'Organilog',
         coverage:
           'Field-service management for landscapers: price library, schedule and contracts from the Pro plan, offline mobile app; quotes and invoices from the Business plan',
-        price: '€19 to €64 per month per user',
-        priceCondition: 'Free Basique plan; Business €35, Premium €59, Premium + Carte €64; no commitment',
+        price: '€24 to €45 per month',
+        priceCondition:
+          'Per user; €19 to €35 paid yearly, Premium €59 to €64 yearly only, Basique free; excl. or incl. VAT not stated',
       },
       {
         name: 'Batappli',
@@ -268,7 +269,7 @@ export const LANDSCAPING_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       {
         question: 'How much does landscaping software cost in France?',
         answer:
-          'Robbin costs €19 or €49 excl. VAT per month (€15 or €39 when paid yearly), Extrabat Paysage €49 to €99 excl. VAT per user per month, Paysagio €34.90 to €99.90 excl. VAT per month depending on the account (free accounts for workers), Tomas €24.50 or €49.50 excl. VAT per month, Organilog €19 to €64 per month per user and Batappli €39 or €79 excl. VAT per month; JardiSoft and Vertuoza are on quote (prices checked on 26 October 2026). A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
+          'Robbin costs €19 or €49 excl. VAT per month (€15 or €39 when paid yearly), Extrabat Paysage €49 to €99 excl. VAT per user per month, Paysagio €34.90 to €99.90 excl. VAT per month depending on the account (free accounts for workers), Tomas €24.50 or €49.50 excl. VAT per month, €24 to €45 per month per user (€19 to €35 paid yearly, Premium €59 to €64 yearly only) and Batappli €39 or €79 excl. VAT per month; JardiSoft and Vertuoza are on quote (prices checked on 26 October 2026). A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
       },
       {
         question: 'Which quoting and invoicing software for a landscaper in France?',
@@ -278,7 +279,7 @@ export const LANDSCAPING_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       {
         question: 'Is there free landscaping software?',
         answer:
-          'Organilog has a free Basique plan, but quotes and invoices start with the Business plan (€35 per month per user). Robbin, Paysagio and Kwixéo offer a 14-day trial with no credit card, Tomas 15 days, Batappli 10 days. Free invoicing software can help out at first, but without a plant library, maintenance contracts or tax certificates.',
+          'Organilog has a free Basique plan, but quotes and invoices start with the Business plan (€45 per month per user, €35 paid yearly). Robbin, Paysagio and Kwixéo offer a 14-day trial with no credit card, Tomas 15 days, Batappli 10 days. Free invoicing software can help out at first, but without a plant library, maintenance contracts or tax certificates.',
       },
       {
         question: 'How do I manage garden maintenance contracts?',

@@ -8,10 +8,13 @@ import {
   BIKE_SHOP_PAGE_RELATED_ARTICLE_SLUGS,
   BIKE_SHOP_PAGE_SCREENSHOT_URL,
   BIKE_SHOP_PAGE_UPDATED_AT,
+  BIKE_SHOP_TEMPLATE_PDF_PATH,
+  BIKE_SHOP_TEMPLATE_XLSX_PATH,
   BIKE_SHOP_TILL_SOURCE,
 } from '~/core/constants/tools/bikeShopSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
+import { BIKE_REPAIR_TICKET_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/bikeRepairTicket/pageShared'
 
 // The page describes the French market (publishers, bike marking, repair bonus): the Spanish text says so instead of adapting it.
 
@@ -145,6 +148,33 @@ export const BIKE_SHOP_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     calloutEmphasizedIntro: 'Lo que la herramienta a medida no sustituye:',
     calloutText:
       'tu caja segura y el marcado. La caja se queda con un editor que entrega el certificado o la declaración, el marcado con un operador autorizado; la herramienta a medida se conecta a ambos.',
+  },
+  freeTemplate: {
+    anchorId: 'plantilla',
+    eyebrow: 'Plantilla gratuita',
+    title: 'Una ficha de depósito y reparación lista para rellenar',
+    description:
+      'La ficha que rellenas en el mostrador: la bici y su número de marcado, lo que el cliente deja con ella, el estado a la llegada, el presupuesto aceptado o no, las piezas y la mano de obra, las firmas en el depósito y en la recogida. En francés, en PDF para rellenar a mano o en Excel con los totales y el seguimiento del taller calculados.',
+    items: [
+      'Ficha de depósito: cliente, bici, batería y accesorios dejados, estado a la llegada',
+      'Presupuesto: piezas nuevas o de reutilización, mano de obra, IVA, acuerdo del cliente',
+      'Seguimiento de las bicis del taller y de las piezas pedidas, calculado en la versión Excel',
+    ],
+    downloads: [
+      {
+        label: 'Descargar la plantilla PDF',
+        href: BIKE_SHOP_TEMPLATE_PDF_PATH,
+        format: 'PDF, 2 páginas, en francés',
+      },
+      {
+        label: 'Descargar la versión Excel',
+        href: BIKE_SHOP_TEMPLATE_XLSX_PATH,
+        format: 'Excel, 3 hojas, totales y plazos calculados, en francés',
+      },
+    ],
+    footnote: 'De uso libre, para adaptar a tu taller. No sustituye el consejo de tu contable.',
+    pageLinkLabel: 'Ver la página de la plantilla',
+    pageLinkRouteName: BIKE_REPAIR_TICKET_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Las tres opciones',

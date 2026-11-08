@@ -6,8 +6,11 @@ import {
   DRIVING_SCHOOL_PAGE_SCREENSHOT_URL,
   DRIVING_SCHOOL_PAGE_UPDATED_AT,
   DRIVING_SCHOOL_RULE_SOURCES,
+  DRIVING_SCHOOL_TEMPLATE_PDF_PATH,
+  DRIVING_SCHOOL_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/drivingSchoolSoftware/pageShared'
 import { NBSP } from '~/core/constants/typography'
+import { DRIVING_SCHOOL_CONTRACT_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/drivingSchoolContract/pageShared'
 
 // The page describes the French market (publishers, ANTS, RdvPermis, CPF): the Spanish text says so instead of adapting it.
 
@@ -159,6 +162,34 @@ export const DRIVING_SCHOOL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     calloutEmphasizedIntro: 'Lo que nunca rehago a medida:',
     calloutText:
       'el libro de aprendizaje digital, la ANTS y RdvPermis. Estos intercambios con el Estado francés pasan por editores especializados, y un error cuesta plazas de examen. Una herramienta a medida se conecta junto a un programa homologado.',
+  },
+  freeTemplate: {
+    anchorId: 'plantilla',
+    eyebrow: 'Plantilla gratuita',
+    title: 'Un contrato de formación y una ficha de seguimiento listos para rellenar',
+    description:
+      'El contrato de formación del permiso B, según el contrato tipo francés: evaluación inicial, horas previstas, precios con IVA, pago, clases anuladas con menos de 48 horas hábiles, rescisión. Y la ficha de seguimiento del alumno, clase tras clase. En francés, en PDF para rellenar a mano o en Excel con las horas y los plazos calculados.',
+    items: [
+      'Contrato: autoescuela, alumno, evaluación inicial, horas previstas, tabla de precios con IVA, pago, rescisión',
+      'Ficha de seguimiento: clases, horas hechas y pendientes, competencias trabajadas, exámenes',
+      'Importe del contrato, plazos de pago y horas calculados en la versión Excel',
+    ],
+    downloads: [
+      {
+        label: 'Descargar la plantilla PDF',
+        href: DRIVING_SCHOOL_TEMPLATE_PDF_PATH,
+        format: 'PDF, 2 páginas, en francés',
+      },
+      {
+        label: 'Descargar la versión Excel',
+        href: DRIVING_SCHOOL_TEMPLATE_XLSX_PATH,
+        format: 'Excel, 3 hojas, horas y plazos calculados, en francés',
+      },
+    ],
+    footnote:
+      'De uso libre, para adaptar a tu autoescuela. No sustituye ni el contrato tipo oficial ni el libro de aprendizaje digital.',
+    pageLinkLabel: 'Ver la página de la plantilla',
+    pageLinkRouteName: DRIVING_SCHOOL_CONTRACT_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Las tres opciones',

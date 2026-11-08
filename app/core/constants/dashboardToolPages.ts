@@ -87,6 +87,26 @@ export const DASHBOARD_TOOL_PAGES: Record<string, DashboardToolPage> = {
     label: 'Modèle planning de réservations loisirs',
     onlineSince: '2026-11-01',
   },
+  'tools-free-templates-equipment-rental-agreement': {
+    label: 'Modèle contrat de location de matériel',
+    onlineSince: '2026-11-08',
+  },
+  'tools-free-templates-driving-school-contract': {
+    label: 'Modèle contrat de formation auto-école',
+    onlineSince: '2026-11-08',
+  },
+  'tools-free-templates-bike-repair-ticket': {
+    label: 'Modèle fiche de réparation vélo',
+    onlineSince: '2026-11-08',
+  },
+  'tools-free-templates-boiler-service-certificate': {
+    label: 'Modèle attestation d’entretien de chaudière',
+    onlineSince: '2026-11-08',
+  },
+  'tools-free-templates-works-acceptance-report': {
+    label: 'Modèle PV de réception de travaux',
+    onlineSince: '2026-11-08',
+  },
   'trade-websites': { label: 'Sites internet par métier (hub)', onlineSince: '2026-11-02' },
   'trade-websites-plumber': { label: 'Site internet pour plombier', onlineSince: '2026-11-02' },
   'trade-websites-electrician': { label: 'Site internet pour électricien', onlineSince: '2026-11-02' },

@@ -6,9 +6,12 @@ import {
   EVENT_RENTAL_PAGE_RELATED_ARTICLE_SLUGS,
   EVENT_RENTAL_PAGE_SCREENSHOT_URL,
   EVENT_RENTAL_PAGE_UPDATED_AT,
+  EVENT_RENTAL_TEMPLATE_PDF_PATH,
+  EVENT_RENTAL_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/eventRentalSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
+import { EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/equipmentRentalAgreement/pageShared'
 
 export const EVENT_RENTAL_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   meta: {
@@ -136,6 +139,30 @@ export const EVENT_RENTAL_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     calloutEmphasizedIntro: `Ce que l’outil sur mesure ne remplace pas${NBSP}:`,
     calloutText:
       'votre logiciel comptable. Les factures partent vers lui (export ou Factur-X), et les paiements en ligne passent par un prestataire agréé comme Stripe.',
+  },
+  freeTemplate: {
+    anchorId: 'modele',
+    eyebrow: 'Modèle gratuit',
+    title: 'Un contrat de location et un état des lieux prêts à remplir',
+    description:
+      'Le contrat de location de matériel et l’état des lieux de sortie et de retour, avec les règles du Code civil sur le louage de choses (matériel délivré en bon état, usage prévu, casse et pertes pendant la location) et le dépôt de garantie tenu à part du prix. En PDF à remplir à la main, ou en Excel avec les totaux, les écarts au retour et le dépôt à rendre calculés.',
+    items: [
+      `Contrat${NBSP}: locataire, dates et heures de sortie et de retour, matériel et valeur de remplacement, prix HT et TTC, dépôt de garantie, conditions`,
+      `État des lieux${NBSP}: quantité, état, accessoires et propreté de chaque article, à la sortie puis au retour, avec photos et signatures`,
+      'Totaux, écarts au retour et suivi des locations calculés automatiquement dans la version Excel',
+    ],
+    downloads: [
+      { label: 'Télécharger le modèle PDF', href: EVENT_RENTAL_TEMPLATE_PDF_PATH, format: 'PDF, 2 pages, à imprimer' },
+      {
+        label: 'Télécharger la version Excel',
+        href: EVENT_RENTAL_TEMPLATE_XLSX_PATH,
+        format: 'Excel, 3 feuilles, totaux et écarts calculés',
+      },
+    ],
+    footnote:
+      'Modèle libre d’utilisation, à adapter à vos conditions de location. Il ne remplace pas l’avis de votre comptable.',
+    pageLinkLabel: 'Voir la page du modèle',
+    pageLinkRouteName: EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Les trois options',

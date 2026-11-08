@@ -82,8 +82,8 @@ export const PLUMBING_HEATING_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = 
         name: 'Organilog',
         coverage:
           'Intervenciones, planificación, app móvil sin conexión, partes de intervención, stock (oferta Pro); presupuestos, facturas y firma en línea (oferta Business)',
-        price: `19 a 59${NBSP}€ al mes por usuario`,
-        priceCondition: `Oferta Basique gratuita y limitada (archivo de 72${NBSP}h); presupuestos y facturas desde la oferta Business a 35${NBSP}€`,
+        price: `24 a 45${NBSP}€ al mes`,
+        priceCondition: `Por usuario; Basique gratuita y limitada (archivo de 72${NBSP}h); 19 a 35${NBSP}€ pagando el año, Premium 59 a 64${NBSP}€ solo al año; presupuestos y facturas desde Business (45${NBSP}€ al mes); con o sin IVA no especificado`,
       },
       {
         name: 'Praxedo',
@@ -262,7 +262,7 @@ export const PLUMBING_HEATING_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = 
     questions: [
       {
         question: '¿Cuánto cuesta un programa para fontaneros y calefactores en Francia?',
-        answer: `Tolteck cuesta 25${NBSP}€ sin IVA al mes (19${NBSP}€ pagando el año), Obat 49 a 129${NBSP}€ sin IVA al mes (39 a 109${NBSP}€ al año, menos para una microempresa), Batappli 39 o 79${NBSP}€ sin IVA al mes y Organilog 19 a 59${NBSP}€ al mes por usuario. Praxedo va bajo presupuesto (tarifas consultadas el 19 de octubre de 2026). Un complemento a medida cuesta de 2.500 a 7.000${NBSP}€ una sola vez, una herramienta completa de 5.000 a 25.000${NBSP}€, y luego 100 a 300${NBSP}€ al mes de mantenimiento.`,
+        answer: `Tolteck cuesta 25${NBSP}€ sin IVA al mes (19${NBSP}€ pagando el año), Obat 49 a 129${NBSP}€ sin IVA al mes (39 a 109${NBSP}€ al año, menos para una microempresa), Batappli 39 o 79${NBSP}€ sin IVA al mes y 24 a 45${NBSP}€ al mes por usuario (19 a 35${NBSP}€ pagando el año, Premium 59 a 64${NBSP}€ solo al año). Praxedo va bajo presupuesto (tarifas consultadas el 19 de octubre de 2026). Un complemento a medida cuesta de 2.500 a 7.000${NBSP}€ una sola vez, una herramienta completa de 5.000 a 25.000${NBSP}€, y luego 100 a 300${NBSP}€ al mes de mantenimiento.`,
       },
       {
         question: '¿Qué programa de presupuestos y facturación para un fontanero en Francia?',

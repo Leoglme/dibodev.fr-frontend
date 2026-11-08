@@ -17,6 +17,10 @@ export const BIKE_SHOP_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
 
 export const BIKE_SHOP_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2
 
+/** Free bike drop-off and repair ticket with workshop tracking, in French only (French bike marking, price and invoice rules). */
+export const BIKE_SHOP_TEMPLATE_PDF_PATH: string = '/modeles/fiche-depot-reparation-velo.pdf'
+export const BIKE_SHOP_TEMPLATE_XLSX_PATH: string = '/modeles/fiche-depot-reparation-velo.xlsx'
+
 /** Bike marking: new bikes since 1 January 2021, used bikes sold by businesses since 1 July 2021, FNUCI run by APIC. */
 export const BIKE_MARKING_SOURCE: DibodevSourceReference = {
   name: 'jeunes.gouv.fr',

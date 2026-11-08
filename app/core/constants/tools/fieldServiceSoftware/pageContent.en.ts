@@ -61,9 +61,9 @@ export const FIELD_SERVICE_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
         name: 'Organilog',
         coverage:
           'Jobs, schedule, offline mobile app, intervention reports, stock (Pro plan); quotes, invoices and online signature (Business); maintenance ranges (Premium)',
-        price: '€19 to €59 per month per user',
+        price: '€24 to €45 per month',
         priceCondition:
-          'Free and limited Basique plan (72-hour archive); quotes and invoices from the €35 Business plan',
+          'Per user; free and limited Basique (72-hour archive); €19 to €35 paid yearly, Premium €59 to €64 yearly only; quotes and invoices from Business (€45 monthly); excl. or incl. VAT not stated',
       },
       {
         name: 'Kizeo Forms',
@@ -258,7 +258,7 @@ export const FIELD_SERVICE_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
       {
         question: 'How much does field service software cost in France?',
         answer:
-          'Organilog costs €19 to €59 per month per user (free, limited Basique plan), Kizeo Forms €15 to €37 excl. VAT per user per month, Synchroteam €39 or €64 per user per month on the annual plan (€49 or €79 monthly), Batappli €79 excl. VAT per month on the Artisan plan. Praxedo is on quote (prices checked on 19 October 2026). For five technicians, expect €75 to €325 per month depending on the publisher. A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
+          'Organilog costs €24 to €45 per month per user (€19 to €35 paid yearly, Premium €59 to €64 yearly only; free, limited Basique plan), Kizeo Forms €15 to €37 excl. VAT per user per month, Synchroteam €39 or €64 per user per month on the annual plan (€49 or €79 monthly), Batappli €79 excl. VAT per month on the Artisan plan. Praxedo is on quote (prices checked on 19 October 2026). For five technicians, expect €75 to €325 per month depending on the publisher. A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
       },
       {
         question: 'Which software for technicians who work without network?',

@@ -6,9 +6,12 @@ import {
   EVENT_RENTAL_PAGE_RELATED_ARTICLE_SLUGS,
   EVENT_RENTAL_PAGE_SCREENSHOT_URL,
   EVENT_RENTAL_PAGE_UPDATED_AT,
+  EVENT_RENTAL_TEMPLATE_PDF_PATH,
+  EVENT_RENTAL_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/eventRentalSoftware/pageShared'
 import { E_INVOICING_SOURCE } from '~/core/constants/tools/officialSources'
 import { NBSP } from '~/core/constants/typography'
+import { EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/equipmentRentalAgreement/pageShared'
 
 // The page describes the French market (publishers, marquee rules, e-invoicing): the Spanish text says so instead of adapting it.
 
@@ -140,6 +143,33 @@ export const EVENT_RENTAL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     calloutEmphasizedIntro: 'Lo que la herramienta a medida no sustituye:',
     calloutText:
       'tu programa de contabilidad. Las facturas se envían a él (exportación o Factur-X), y los pagos en línea pasan por un proveedor autorizado como Stripe.',
+  },
+  freeTemplate: {
+    anchorId: 'plantilla',
+    eyebrow: 'Plantilla gratuita',
+    title: 'Un contrato de alquiler y un acta de entrega listos para rellenar',
+    description:
+      'El contrato de alquiler de material y el acta de entrega y devolución, con las normas del Código civil francés sobre el arrendamiento de cosas (material entregado en buen estado, uso previsto, roturas y pérdidas durante el alquiler) y la fianza aparte del precio. En francés, en PDF para rellenar a mano o en Excel con los totales, las diferencias a la devolución y la fianza que hay que devolver calculados.',
+    items: [
+      'Contrato: arrendatario, fechas y horas de salida y devolución, material y valor de reposición, precio sin IVA y con IVA, fianza, condiciones',
+      'Acta de entrega y devolución: cantidad, estado, accesorios y limpieza de cada artículo, a la salida y luego a la devolución, con fotos y firmas',
+      'Totales, diferencias a la devolución y seguimiento de los alquileres calculados automáticamente en la versión Excel',
+    ],
+    downloads: [
+      {
+        label: 'Descargar la plantilla PDF',
+        href: EVENT_RENTAL_TEMPLATE_PDF_PATH,
+        format: 'PDF, 2 páginas, en francés',
+      },
+      {
+        label: 'Descargar la versión Excel',
+        href: EVENT_RENTAL_TEMPLATE_XLSX_PATH,
+        format: 'Excel, 3 hojas, totales y diferencias calculados, en francés',
+      },
+    ],
+    footnote: 'De uso libre, para adaptar a tus condiciones de alquiler. No sustituye el consejo de tu contable.',
+    pageLinkLabel: 'Ver la página de la plantilla',
+    pageLinkRouteName: EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_ROUTE_NAME,
   },
   comparison: {
     eyebrow: 'Las tres opciones',

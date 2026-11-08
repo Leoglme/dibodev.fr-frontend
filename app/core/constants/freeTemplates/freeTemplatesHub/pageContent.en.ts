@@ -4,24 +4,24 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
   meta: {
     title: 'Free French templates by trade: quotes, slips, schedules',
     description:
-      '12 free French templates without sign-up: plumber, electrician and body shop quotes, intervention slip, repair order, schedules, attendance sheet. PDF + Excel.',
+      '17 free French templates without sign-up: quotes, rental agreement, boiler service certificate, acceptance report, intervention slip, schedules. PDF + Excel.',
     inLanguage: 'en',
   },
   breadcrumbLabel: 'Free templates',
   shareImage: {
-    titleLines: ['12 free French', 'templates by trade'],
+    titleLines: ['17 free French', 'templates by trade'],
     highlight: 'free',
     subtitle: 'Quotes, intervention slips, schedules, attendance sheets: PDF to print and Excel to adapt',
     badge: 'No sign-up, no email',
     icon: 'download',
-    alt: '12 free French templates by trade: quotes, intervention slips, schedules and attendance sheets in PDF and Excel, without sign-up, on dibodev.fr',
+    alt: '17 free French templates by trade: quotes, contracts, certificates, intervention slips and schedules in PDF and Excel, without sign-up, on dibodev.fr',
   },
   hero: {
     titlePart1: 'Free ',
     titleHighlight1: 'French templates',
     titlePart2: ' for your trade, as PDF and Excel',
     description:
-      'Quote, intervention slip, repair order, schedule, inventory sheet, attendance sheet: twelve templates written in French for the trades of the tests on this site, with the wording the French rules require. The PDF prints, the Excel file calculates the totals. No form, no email address to leave.',
+      'Quote, rental agreement, boiler service certificate, acceptance report, intervention slip, schedule: seventeen templates written in French for the trades of the tests on this site, with the wording the French rules require. The PDF prints, the Excel file calculates the totals. No form, no email address to leave.',
     cta: 'Choose a template',
     templatesCountLabel: 'templates by trade',
     formatsValue: '2',
@@ -136,6 +136,46 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         description:
           'Time slot schedule with places and deposits calculated, registration and briefing form, emergency organisation chart.',
         formats: 'PDF 2 pages · Excel 4 sheets',
+      },
+      {
+        key: 'equipment-rental-agreement',
+        tradeLabel: 'Equipment rental',
+        title: 'Equipment rental agreement + condition report',
+        description:
+          'Agreement with replacement value, security deposit, transport and damage, check-out and return condition report, amounts excl. VAT, VAT and incl. VAT calculated.',
+        formats: 'PDF 2 pages · Excel 3 sheets',
+      },
+      {
+        key: 'driving-school-contract',
+        tradeLabel: 'Driving school',
+        title: 'Training contract + student progress sheet',
+        description:
+          'Contract with the initial assessment, planned hours and payment schedule, lesson log with the 4 skills of the training booklet, hours and exams calculated.',
+        formats: 'PDF 2 pages · Excel 3 sheets',
+      },
+      {
+        key: 'bike-repair-ticket',
+        tradeLabel: 'Bike shop',
+        title: 'Bike drop-off and repair ticket',
+        description:
+          'Drop-off ticket with the bike’s ID marking and condition, accepted quote, parts and labour, tracking of the bikes in the workshop and of the parts on order.',
+        formats: 'PDF 2 pages · Excel 3 sheets',
+      },
+      {
+        key: 'boiler-service-certificate',
+        tradeLabel: 'Heating engineer',
+        title: 'Boiler service certificate + service log',
+        description:
+          'Certificate with the mentions required by the French order of 15 September 2009, ten-year visit log, customers to remind before the anniversary date.',
+        formats: 'PDF 2 pages · Excel 3 sheets',
+      },
+      {
+        key: 'works-acceptance-report',
+        tradeLabel: 'Building trades',
+        title: 'Works acceptance report + snag clearance',
+        description:
+          'Acceptance report with or without reservations, clearance deadlines, retention money, snag clearance report and calculated warranty calendar.',
+        formats: 'PDF 2 pages · Excel 3 sheets',
       },
     ],
   },
