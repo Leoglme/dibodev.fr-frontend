@@ -174,6 +174,11 @@ export const PHP_UPDATE_SERVICE_PAGE_ES: DibodevPhpUpdateServicePageContent = {
           'Dos personas pueden hacerlo: usted mismo, desde el panel de su hosting (las guías paso a paso de OVHcloud, o2switch, IONOS, Hostinger, Infomaniak y PlanetHoster están en este sitio), o un desarrollador como yo, que primero prueba la web en una copia, actualiza WordPress, el tema y los plugins, luego cambia la versión y le envía un informe escrito. El hosting ofrece el selector de versión, pero no comprueba que su web lo soporte, y cambiar sin esa prueba es lo que más a menudo rompe una web. El diagnóstico es gratuito y conoce el precio antes de la intervención.',
       },
       {
+        question: 'Mi web está en Joomla: ¿puede actualizarla, incluso a Joomla 6?',
+        answer:
+          'Sí. Una web Joomla de 2015 o 2018 suele seguir en Joomla 3 o 4 con un PHP antiguo, y ambos se actualizan juntos: copia de seguridad completa, copia de prueba, última versión de la rama actual, luego Joomla 5 o 6 y PHP 8.3, extensiones y plantilla comprobadas una a una (formularios, editor, caché, reescritura de direcciones), puesta en producción cuando todo pasa en la copia. Lo hice en noviembre de 2026 para un gabinete de psicología: Joomla 5.4 a 6, PHP 8.2 a 8.3, presentación y formularios idénticos, informe escrito. El precio depende del número de versiones a cruzar y de las extensiones a adaptar: se comunica tras el diagnóstico gratuito.',
+      },
+      {
         question: `Mi web WordPress parece hackeada: ¿es la misma intervención?`,
         answer: `No, y no al mismo precio. Empiezo por el diagnóstico gratuito (la herramienta «¿Mi web WordPress está hackeada?» y una lectura desde dentro si me das acceso), y luego te envío un presupuesto para la limpieza: extensiones y cuentas revisadas, archivos desconocidos eliminados, contraseñas y claves cambiadas, copia de seguridad limpia restaurada si hace falta, y después actualización de PHP, WordPress y las extensiones. El precio depende de lo que encuentre el diagnóstico.`,
       },
