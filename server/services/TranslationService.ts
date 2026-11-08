@@ -84,15 +84,19 @@ export class TranslationService {
     fullSlug: string,
     resolveRelations?: string,
   ): Promise<PublishedStory> {
-    let url: string = `${STORYBLOK_CDN_BASE}/stories/${encodeURIComponent(fullSlug)}?token=${token}&version=published`
-    if (resolveRelations) {
-      url += `&resolve_relations=${encodeURIComponent(resolveRelations)}`
+    // A fresh `cv` on every attempt: the CDN caches a 404 served seconds after a publication, and would keep serving it.
+    const buildUrl = (): string => {
+      let url: string = `${STORYBLOK_CDN_BASE}/stories/${encodeURIComponent(fullSlug)}?token=${token}&version=published&cv=${Date.now()}`
+      if (resolveRelations) {
+        url += `&resolve_relations=${encodeURIComponent(resolveRelations)}`
+      }
+      return url
     }
 
-    let response: Response = await fetch(url)
+    let response: Response = await fetch(buildUrl())
     for (let attempt: number = 1; !response.ok && attempt < STORY_FETCH_ATTEMPTS; attempt++) {
       await this.wait(STORY_FETCH_RETRY_DELAY_MS)
-      response = await fetch(url)
+      response = await fetch(buildUrl())
     }
     if (!response.ok) {
       throw createError({ statusCode: 502, statusMessage: `Storyblok story not found: ${fullSlug}` })
