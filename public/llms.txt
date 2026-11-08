@@ -172,6 +172,8 @@ Chaque article est signé Léo Guillaume, daté, relu à chaque mise à jour (la
 - [Transformez votre menuiserie en 2026 avec un site web sur mesure](https://dibodev.fr/blog/site-web-sur-mesure-menuiserie-2026) : Boostez votre menuiserie avec un site web sur mesure. Attirez plus de clients et augmentez vos ventes en 2026 avec Dibodev.
 - [Site WordPress piraté : les vérifications à faire aujourd’hui, dans l’ordre](https://dibodev.fr/blog/site-wordpress-pirate-verifications-a-faire-aujourd-hui) : Fausses extensions, comptes cachés, clé UpdraftCentral, fichiers .php dans uploads : les 7 vérifications à faire aujourd'hui sur un site WordPress.
 - [UpdraftPlus : révoquer UpdraftCentral, changer les clés et vérifier ses sauvegardes après la fuite d’octobre 2026](https://dibodev.fr/blog/updraftplus-revoquer-updraftcentral-verifier-sauvegardes) : Clés UpdraftCentral volées les 17 et 18 octobre 2026 : qui est exposé, la version à installer (1.26.13), la clé à supprimer, vos sauvegardes à vérifier.
+- [Mettre à jour un vieux site Joomla (3, 4 ou 5) vers Joomla 6 : ce qui casse, dans quel ordre, et à quel prix](https://dibodev.fr/blog/mettre-a-jour-site-joomla-vers-joomla-6) : Joomla 3 et 4 ne sont plus corrigés, Joomla 5 s'arrête en octobre 2027. L'ordre des étapes vers Joomla 6 et PHP 8.3, ce qui casse, et le prix.
+- [Votre hébergeur arrête PHP 7.4, 8.0 ou 8.1 : que faire pour votre site WordPress ou Joomla avant la coupure ?](https://dibodev.fr/blog/hebergeur-arrete-anciennes-versions-php-que-faire) : Fin de PHP 7.4, 8.0 ou 8.1 chez votre hébergeur : l'ordre à suivre pour un site WordPress ou Joomla, ce qui casse au passage, et qui peut faire la mise à jour.
 
 ## Réalisations (fiches projet, avec la pile technique et le résultat)
 
