@@ -35,7 +35,7 @@ export const EMAIL_DELIVERABILITY_CHECK_PAGE_EN: DibodevEmailDeliverabilityCheck
     domainLabel: 'Your domain name',
     domainPlaceholder: 'mycompany.com',
     domainHint:
-      'A domain or an email address (only the domain after the @ is kept). The tool reads the public DNS records, as a recipient would: no email is sent, nothing is stored.',
+      'A domain or an email address (only the domain after the @ is kept). The tool reads the public DNS records, as a recipient would: no email is sent. Only the domain and its result are kept, for statistics.',
     submit: 'Check',
     checking: 'Reading DNS…',
     resultLabel: 'Your result',

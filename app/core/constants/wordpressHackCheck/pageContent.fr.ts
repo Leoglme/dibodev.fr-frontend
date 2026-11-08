@@ -29,7 +29,7 @@ export const WORDPRESS_HACK_CHECK_PAGE_FR: DibodevWordPressHackCheckPageContent 
   checker: {
     siteLabel: 'Lien de votre site WordPress',
     sitePlaceholder: 'monentreprise.fr',
-    siteHint: `Un nom de domaine suffit. La page d’accueil et au plus neuf petits fichiers publics sont lus, comme le ferait un navigateur${NBSP}: rien n’est scanné, rien n’est enregistré.`,
+    siteHint: `Un nom de domaine suffit. La page d’accueil et au plus neuf petits fichiers publics sont lus, comme le ferait un navigateur${NBSP}: rien n’est scanné. Seuls l’adresse du site et son résultat sont gardés, pour des statistiques.`,
     submit: 'Vérifier',
     checking: 'Vérification…',
     resultLabel: 'Votre résultat',

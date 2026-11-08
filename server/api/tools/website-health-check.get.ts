@@ -3,11 +3,13 @@ import type { WebsiteHealthCheckQuery, WebsiteHealthCheckResult } from '~~/serve
 import { createError, getQuery, getRequestIP, setResponseHeader } from 'h3'
 import { PhpVulnerabilityCheckService } from '~~/server/services/PhpVulnerabilityCheckService'
 import { WebsiteHealthCheckService } from '~~/server/services/WebsiteHealthCheckService'
+import { SiteCheckStatsService } from '~~/server/services/SiteCheckStatsService'
 
 /**
  * GET /api/tools/website-health-check?site=<host> : reads the home page of a public site and answers eight questions
  * (HTTPS, PHP, WordPress, e-mails, phone display, title and description, legal notice, signs of age). The PHP,
- * WordPress and e-mail parts reuse the existing checkers. Nothing is stored beyond a short cache.
+ * WordPress and e-mail parts reuse the existing checkers. The site and its verdicts are kept twelve months for
+ * statistics only.
  *
  * @param {H3Event} event - The request.
  * @returns {Promise<WebsiteHealthCheckResult>} The eight verdicts and the overall one.
@@ -22,5 +24,7 @@ export default defineEventHandler(async (event: H3Event): Promise<WebsiteHealthC
   }
   PhpVulnerabilityCheckService.assertRateLimit(getRequestIP(event, { xForwardedFor: true }) ?? '')
   setResponseHeader(event, 'cache-control', 'no-store')
-  return WebsiteHealthCheckService.checkHost(host)
+  const result: WebsiteHealthCheckResult = await WebsiteHealthCheckService.checkHost(host)
+  await SiteCheckStatsService.recordWebsiteHealthCheck(result)
+  return result
 })

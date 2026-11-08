@@ -32,7 +32,7 @@ export const WORDPRESS_HACK_CHECK_PAGE_EN: DibodevWordPressHackCheckPageContent 
     siteLabel: 'Address of your WordPress site',
     sitePlaceholder: 'mycompany.com',
     siteHint:
-      'A domain name is enough. The home page and at most nine small public files are read, as a browser would: nothing is scanned, nothing is stored.',
+      'A domain name is enough. The home page and at most nine small public files are read, as a browser would: nothing is scanned. Only the website address and its result are kept, for statistics.',
     submit: 'Check',
     checking: 'Checking…',
     resultLabel: 'Your result',

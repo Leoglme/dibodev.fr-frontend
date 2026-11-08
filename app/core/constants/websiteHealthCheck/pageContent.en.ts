@@ -20,7 +20,7 @@ export const WEBSITE_HEALTH_CHECK_PAGE_EN: DibodevWebsiteHealthCheckPageContent 
     titleBefore: 'Test my website: ',
     titleHighlight: '8 free checks',
     titleAfter: ', in ten seconds',
-    reassurances: ['Free, no sign-up', 'Nothing is stored', 'Result in ten seconds'],
+    reassurances: ['Free, no sign-up', 'Nothing to install', 'Result in ten seconds'],
     description:
       'A showcase website ages without warning: a missing certificate, a PHP version without its fix, a closed WordPress extension, e-mails landing in spam, a page that displays badly on a phone, a footer still saying 2019. This tool reads the home page of your website as a visitor would and answers eight questions, each with a verdict, what it means and what to do. The three most technical points (PHP, WordPress, e-mails) link to a detailed checker. Built for French businesses, it works on any public website.',
     authorIntro: 'Tool built by',
@@ -31,7 +31,7 @@ export const WEBSITE_HEALTH_CHECK_PAGE_EN: DibodevWebsiteHealthCheckPageContent 
     siteLabel: 'Your website address',
     sitePlaceholder: 'mybusiness.fr',
     siteHint:
-      'A domain name is enough. One page is read, as a browser would, plus a few public files for WordPress and the DNS records of the domain for e-mails: nothing is scanned, nothing is stored.',
+      'A domain name is enough. One page is read, as a browser would, plus a few public files for WordPress and the DNS records of the domain for e-mails: nothing is scanned. Only the website address and its result are kept, for statistics.',
     submit: 'Test my website',
     checking: 'Checking…',
     resultLabel: 'Your result',
@@ -330,7 +330,7 @@ export const WEBSITE_HEALTH_CHECK_PAGE_EN: DibodevWebsiteHealthCheckPageContent 
       {
         question: 'Does the tool store my website or my data?',
         answer:
-          'No. The address is neither stored nor sent to PostHog, the analytics tool of the site: only the verdicts are, to know which points come back most often. The result stays ten minutes in the server memory so the same site is not read twice, then disappears.',
+          'Yes, for statistics only: the address of the website tested and its verdicts are kept for twelve months, to measure for example the share of websites without HTTPS. They are never used to prospect and never published website by website. The address is not sent to PostHog, the analytics tool of the site. Your e-mail is only asked if you want to receive the result; it is only kept if you agree to be contacted.',
       },
       {
         question: 'My website has aged: fix it or rebuild it?',

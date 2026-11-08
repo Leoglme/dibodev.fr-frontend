@@ -33,11 +33,7 @@ export const GDPR_COOKIE_CHECK_PAGE_ES: DibodevGdprCookieCheckPageContent = {
     titleBefore: '¿Mi web ',
     titleHighlight: 'cumple el RGPD',
     titleAfter: '? Test gratuito de cookies y rastreadores',
-    reassurances: [
-      'Gratis, sin registro',
-      'No se guarda ningún dato',
-      `Normas revisadas el 8${NBSP}de noviembre de 2026`,
-    ],
+    reassurances: ['Gratis, sin registro', 'Nada que instalar', `Normas revisadas el 8${NBSP}de noviembre de 2026`],
     description:
       'Un banner de cookies no demuestra nada: lo que cuenta es lo que la página carga antes de que el visitante haya elegido. Una web puede mostrar un banner bonito mientras Google Analytics, el píxel de Facebook o un vídeo de YouTube ya han salido. Esta herramienta lee el HTML de tu página de inicio, como un robot, sin ejecutar el JavaScript: detecta los rastreadores conocidos y dice si esperan el consentimiento, reconoce la herramienta de consentimiento (Axeptio, tarteaucitron, Cookiebot, Didomi…) y busca los tres enlaces obligatorios. Para cada punto: lo que ha visto, lo que significa, qué hacer. Pensada para las empresas francesas y las normas francesas (CNIL), funciona con cualquier web pública.',
     authorIntro: 'Herramienta creada por',
@@ -48,7 +44,7 @@ export const GDPR_COOKIE_CHECK_PAGE_ES: DibodevGdprCookieCheckPageContent = {
     siteLabel: 'Dirección de tu web',
     sitePlaceholder: 'miempresa.fr',
     siteHint:
-      'Basta con un nombre de dominio. Solo se lee la página de inicio, como lo haría un robot, sin ejecutar el JavaScript: nada se escanea, nada se guarda.',
+      'Basta con un nombre de dominio. Solo se lee la página de inicio, como lo haría un robot, sin ejecutar el JavaScript: nada se escanea. Solo se guardan la dirección de la web y su resultado, para estadísticas.',
     submit: 'Probar mi web',
     checking: 'Leyendo…',
     resultLabel: 'Tu resultado',
@@ -487,7 +483,7 @@ export const GDPR_COOKIE_CHECK_PAGE_ES: DibodevGdprCookieCheckPageContent = {
       {
         question: '¿El test guarda la dirección de mi web?',
         answer:
-          'No. La dirección no se guarda ni se envía a PostHog, la herramienta de medición de esta web: solo se envían el veredicto, los rastreadores reconocidos y la herramienta de consentimiento encontrada, para saber qué aparece más. El resultado se queda diez minutos en la memoria del servidor para no leer dos veces la misma web, y luego desaparece.',
+          'Sí, solo para estadísticas: la dirección de la web probada, el veredicto, los rastreadores reconocidos y la herramienta de consentimiento encontrada se guardan doce meses, para medir por ejemplo la proporción de webs que cargan Google Analytics sin consentimiento. Nunca sirven para hacer prospección ni se publican web por web. La dirección no se envía a PostHog, la herramienta de medición de esta web. Tu correo solo se pide si quieres recibir el resultado; solo se guarda si aceptas que te contacten.',
       },
     ],
   },

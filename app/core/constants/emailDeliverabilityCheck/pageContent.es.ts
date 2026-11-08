@@ -35,7 +35,7 @@ export const EMAIL_DELIVERABILITY_CHECK_PAGE_ES: DibodevEmailDeliverabilityCheck
     domainLabel: 'Tu nombre de dominio',
     domainPlaceholder: 'miempresa.es',
     domainHint:
-      'Un dominio o una dirección de correo (solo se conserva el dominio después de la @). La herramienta lee los registros DNS públicos, como lo haría un destinatario: no se envía ningún correo, no se guarda nada.',
+      'Un dominio o una dirección de correo (solo se conserva el dominio después de la @). La herramienta lee los registros DNS públicos, como lo haría un destinatario: no se envía ningún correo. Solo se guardan el dominio y su resultado, para estadísticas.',
     submit: 'Comprobar',
     checking: 'Leyendo el DNS…',
     resultLabel: 'Tu resultado',

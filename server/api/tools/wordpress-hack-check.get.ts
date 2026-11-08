@@ -3,6 +3,7 @@ import { createError, getQuery, getRequestIP, setResponseHeader } from 'h3'
 import type { WordPressHackCheckQuery, WordPressHackCheckResult } from '~~/server/types/tools/wordpressHackCheck'
 import { PhpVulnerabilityCheckService } from '~~/server/services/PhpVulnerabilityCheckService'
 import { WordPressHackCheckService } from '~~/server/services/WordPressHackCheckService'
+import { SiteCheckStatsService } from '~~/server/services/SiteCheckStatsService'
 
 /**
  * GET /api/tools/wordpress-hack-check?site=<host> : reads the home page, RSS feed, watched readme.txt and users route.
@@ -19,5 +20,7 @@ export default defineEventHandler(async (event: H3Event): Promise<WordPressHackC
   }
   PhpVulnerabilityCheckService.assertRateLimit(getRequestIP(event, { xForwardedFor: true }) ?? '')
   setResponseHeader(event, 'cache-control', 'no-store')
-  return WordPressHackCheckService.checkHost(host)
+  const result: WordPressHackCheckResult = await WordPressHackCheckService.checkHost(host)
+  await SiteCheckStatsService.recordWordPressHackCheck(result)
+  return result
 })

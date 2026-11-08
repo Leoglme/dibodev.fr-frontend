@@ -3,6 +3,7 @@ import type { GdprCookieCheckQuery, GdprCookieCheckResult } from '~~/server/type
 import { createError, getQuery, getRequestIP, setResponseHeader } from 'h3'
 import { GdprCookieCheckService } from '~~/server/services/GdprCookieCheckService'
 import { PhpVulnerabilityCheckService } from '~~/server/services/PhpVulnerabilityCheckService'
+import { SiteCheckStatsService } from '~~/server/services/SiteCheckStatsService'
 
 /**
  * GET /api/tools/gdpr-cookie-check?site=<host>: reads a public home page and lists its trackers, consent tool and legal links.
@@ -19,5 +20,7 @@ export default defineEventHandler(async (event: H3Event): Promise<GdprCookieChec
   }
   PhpVulnerabilityCheckService.assertRateLimit(getRequestIP(event, { xForwardedFor: true }) ?? '')
   setResponseHeader(event, 'cache-control', 'no-store')
-  return GdprCookieCheckService.checkHost(host)
+  const result: GdprCookieCheckResult = await GdprCookieCheckService.checkHost(host)
+  await SiteCheckStatsService.recordGdprCookieCheck(result)
+  return result
 })

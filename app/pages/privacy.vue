@@ -61,6 +61,16 @@
         </section>
 
         <section
+          :id="SITE_CHECK_PRIVACY_ANCHOR_ID"
+          class="grid gap-4 rounded-xl border border-gray-300 bg-white p-6 text-left text-base leading-relaxed sm:p-8"
+        >
+          <h2 class="text-xl font-medium text-gray-100">{{ $t('privacy.siteChecks.title') }}</h2>
+          <p class="text-gray-200">{{ $t('privacy.siteChecks.paragraph1') }}</p>
+          <p class="text-gray-200">{{ $t('privacy.siteChecks.paragraph2') }}</p>
+          <p class="text-gray-200">{{ $t('privacy.siteChecks.paragraph3') }}</p>
+        </section>
+
+        <section
           class="grid gap-4 rounded-xl border border-gray-300 bg-white p-6 text-left text-base leading-relaxed sm:p-8"
         >
           <h2 class="text-xl font-medium text-gray-100">{{ $t('privacy.siteDemoRequests.title') }}</h2>
@@ -104,6 +114,7 @@ import DibodevBreadcrumb from '~/components/navigations/DibodevBreadcrumb.vue'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { usePageShareImage } from '~/composables/usePageShareImage'
 import { SECURITY_ALERT_PRIVACY_ANCHOR_ID } from '~/core/constants/securityAlerts/wording'
+import { SITE_CHECK_PRIVACY_ANCHOR_ID } from '~/core/constants/siteCheckReport/wording'
 
 const { t } = useI18n()
 usePageShareImage('home')

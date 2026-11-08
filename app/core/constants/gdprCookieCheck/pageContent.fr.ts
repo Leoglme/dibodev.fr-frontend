@@ -32,7 +32,7 @@ export const GDPR_COOKIE_CHECK_PAGE_FR: DibodevGdprCookieCheckPageContent = {
     titleBefore: 'Mon site est-il ',
     titleHighlight: 'conforme au RGPD',
     titleAfter: `${NBSP}? Test gratuit des cookies et traceurs`,
-    reassurances: ['Gratuit, sans inscription', 'Aucune donnée enregistrée', `Règles relues le 8${NBSP}novembre 2026`],
+    reassurances: ['Gratuit, sans inscription', 'Rien à installer', `Règles relues le 8${NBSP}novembre 2026`],
     description: `Un bandeau cookies ne prouve rien${NBSP}: ce qui compte, c’est ce que la page charge avant que le visiteur ait choisi. Un site peut afficher un joli bandeau pendant que Google Analytics, le pixel Facebook ou une vidéo YouTube sont déjà partis. Cet outil lit le HTML de votre page d’accueil, comme un robot, sans exécuter le JavaScript${NBSP}: il repère les traceurs connus et dit s’ils attendent le consentement, reconnaît l’outil de consentement (Axeptio, tarteaucitron, Cookiebot, Didomi…) et cherche les trois liens obligatoires. Pour chaque point${NBSP}: ce qu’il a vu, ce que ça veut dire, quoi faire.`,
     authorIntro: 'Outil réalisé par',
     authorBio: `développeur freelance près de Rennes. Je crée, je refais et je mets en règle des sites vitrines pour des TPE et des PME, à distance, et je réponds sous 24${NBSP}h.`,
@@ -40,7 +40,7 @@ export const GDPR_COOKIE_CHECK_PAGE_FR: DibodevGdprCookieCheckPageContent = {
   checker: {
     siteLabel: 'Adresse de votre site',
     sitePlaceholder: 'monentreprise.fr',
-    siteHint: `Un nom de domaine suffit. Seule la page d’accueil est lue, comme le ferait un robot, sans exécuter le JavaScript${NBSP}: rien n’est scanné, rien n’est enregistré.`,
+    siteHint: `Un nom de domaine suffit. Seule la page d’accueil est lue, comme le ferait un robot, sans exécuter le JavaScript${NBSP}: rien n’est scanné. Seuls l’adresse du site et son résultat sont gardés, pour des statistiques.`,
     submit: 'Tester mon site',
     checking: 'Lecture…',
     resultLabel: 'Votre résultat',
@@ -418,7 +418,7 @@ export const GDPR_COOKIE_CHECK_PAGE_FR: DibodevGdprCookieCheckPageContent = {
       },
       {
         question: `Le test enregistre-t-il l’adresse de mon site${NBSP}?`,
-        answer: `Non. L’adresse n’est ni enregistrée ni envoyée à PostHog, l’outil de mesure de ce site${NBSP}: seuls le verdict, les traceurs reconnus et l’outil de consentement trouvé le sont, pour savoir ce qui revient le plus. Le résultat reste dix minutes en mémoire du serveur pour ne pas relire le même site deux fois, puis disparaît.`,
+        answer: `Oui, pour des statistiques seulement${NBSP}: l’adresse du site testé, le verdict, les traceurs reconnus et l’outil de consentement trouvé sont gardés douze mois, pour mesurer par exemple la part des sites qui chargent Google Analytics sans accord. Ils ne servent jamais à démarcher et ne sont jamais publiés site par site. L’adresse n’est pas envoyée à PostHog, l’outil de mesure de ce site. Votre e-mail n’est demandé que si vous voulez recevoir le résultat${NBSP}; il n’est gardé que si vous acceptez d’être recontacté.`,
       },
     ],
   },

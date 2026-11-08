@@ -6,6 +6,7 @@ import type {
 import { createError, getQuery, getRequestIP, setResponseHeader } from 'h3'
 import { EmailDeliverabilityCheckService } from '~~/server/services/EmailDeliverabilityCheckService'
 import { PhpVulnerabilityCheckService } from '~~/server/services/PhpVulnerabilityCheckService'
+import { SiteCheckStatsService } from '~~/server/services/SiteCheckStatsService'
 
 /**
  * GET /api/tools/email-deliverability-check?domain=<domain or e-mail address> : reads the SPF, DKIM, DMARC and MX.
@@ -22,5 +23,7 @@ export default defineEventHandler(async (event: H3Event): Promise<EmailDeliverab
   }
   PhpVulnerabilityCheckService.assertRateLimit(getRequestIP(event, { xForwardedFor: true }) ?? '')
   setResponseHeader(event, 'cache-control', 'no-store')
-  return EmailDeliverabilityCheckService.checkDomain(domain)
+  const result: EmailDeliverabilityCheckResult = await EmailDeliverabilityCheckService.checkDomain(domain)
+  await SiteCheckStatsService.recordEmailDeliverabilityCheck(result)
+  return result
 })

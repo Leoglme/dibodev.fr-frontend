@@ -32,7 +32,7 @@ export const EMAIL_DELIVERABILITY_CHECK_PAGE_FR: DibodevEmailDeliverabilityCheck
   checker: {
     domainLabel: 'Votre nom de domaine',
     domainPlaceholder: 'monentreprise.fr',
-    domainHint: `Un domaine ou une adresse e-mail (seul le domaine après le @ est gardé). L’outil lit les enregistrements DNS publics, comme le ferait un destinataire${NBSP}: aucun mail envoyé, rien d’enregistré.`,
+    domainHint: `Un domaine ou une adresse e-mail (seul le domaine après le @ est gardé). L’outil lit les enregistrements DNS publics, comme le ferait un destinataire${NBSP}: aucun mail envoyé. Seuls le domaine et son résultat sont gardés, pour des statistiques.`,
     submit: 'Vérifier',
     checking: 'Lecture du DNS…',
     resultLabel: 'Votre résultat',

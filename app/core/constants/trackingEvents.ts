@@ -94,6 +94,8 @@ export const TRACKING_EVENTS = {
   gdprCookieCheckStarted: 'gdpr_cookie_check_started',
   /** A site checked by the GDPR cookie checker, with the verdict, the trackers and the consent tool found (or the error), never the address. */
   gdprCookieChecked: 'gdpr_cookie_checked',
+  /** The result of a free checker asked by e-mail, with the tool, the verdict and the contact consent (never the site nor the e-mail). */
+  siteCheckReportRequested: 'site_check_report_requested',
   /** A demo asked from the site workshop of a trade page, with the choices made (never the e-mail nor the phone). */
   siteDemoRequested: 'site_demo_requested',
   /** The live demo of the site workshop opened in full screen over the page, with the visitor's choices. */

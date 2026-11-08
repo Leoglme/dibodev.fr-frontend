@@ -32,7 +32,7 @@ export const WORDPRESS_HACK_CHECK_PAGE_ES: DibodevWordPressHackCheckPageContent 
     siteLabel: 'Dirección de tu web WordPress',
     sitePlaceholder: 'miempresa.es',
     siteHint:
-      'Basta con el nombre de dominio. Se leen la página de inicio y como mucho nueve pequeños archivos públicos, como lo haría un navegador: no se escanea nada, no se guarda nada.',
+      'Basta con el nombre de dominio. Se leen la página de inicio y como mucho nueve pequeños archivos públicos, como lo haría un navegador: no se escanea nada. Solo se guardan la dirección de la web y su resultado, para estadísticas.',
     submit: 'Comprobar',
     checking: 'Comprobando…',
     resultLabel: 'Tu resultado',

@@ -130,6 +130,15 @@
         <p v-if="result" class="text-sm leading-6 text-white/70">{{ props.wording.disclaimer }}</p>
       </div>
 
+      <DibodevSiteCheckReportForm
+        v-if="result"
+        tool="emailDeliverability"
+        :site="result.domain"
+        :verdict="result.verdict"
+        :trackingLocation="props.trackingLocation"
+        class="relative"
+      />
+
       <div class="relative grid gap-3">
         <p class="text-[15px] leading-6 text-white/85">
           {{ result ? props.wording.ctaIntro : props.wording.idleCtaIntro }}
@@ -170,6 +179,7 @@ import type { UseTrackingReturn } from '~/composables/useTracking'
 import { computed, ref } from 'vue'
 import DibodevInput from '~/components/core/DibodevInput.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
+import DibodevSiteCheckReportForm from '~/forms/DibodevSiteCheckReportForm.vue'
 import { useTracking } from '~/composables/useTracking'
 import {
   EMAIL_DELIVERABILITY_CHECK_API_PATH,

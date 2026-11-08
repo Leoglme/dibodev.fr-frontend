@@ -21,7 +21,7 @@ export const WEBSITE_HEALTH_CHECK_PAGE_FR: DibodevWebsiteHealthCheckPageContent 
     titleBefore: 'Tester mon site internet : ',
     titleHighlight: '8 vérifications',
     titleAfter: ' gratuites, en dix secondes',
-    reassurances: ['Gratuit, sans inscription', 'Aucune donnée enregistrée', 'Résultat en dix secondes'],
+    reassurances: ['Gratuit, sans inscription', 'Rien à installer', 'Résultat en dix secondes'],
     description: `Un site vitrine vieillit sans prévenir${NBSP}: un certificat qui manque, une version de PHP sans correctif, une extension WordPress fermée, des e-mails qui tombent en spam, une page qui s’affiche mal sur téléphone, un pied de page qui dit encore 2019. Cet outil lit la page d’accueil de votre site comme le ferait un visiteur et répond à huit questions, chacune avec un verdict, ce que ça veut dire et quoi faire. Les trois points les plus techniques (PHP, WordPress, e-mails) renvoient vers un vérificateur détaillé.`,
     authorIntro: 'Outil réalisé par',
     authorBio: `développeur freelance près de Rennes. Je mets à jour, je sécurise et je refais des sites vitrines pour des TPE et des PME, à distance, et je réponds sous 24${NBSP}h.`,
@@ -29,7 +29,7 @@ export const WEBSITE_HEALTH_CHECK_PAGE_FR: DibodevWebsiteHealthCheckPageContent 
   checker: {
     siteLabel: 'Adresse de votre site',
     sitePlaceholder: 'monentreprise.fr',
-    siteHint: `Un nom de domaine suffit. Une page est lue, comme le ferait un navigateur, plus quelques fichiers publics pour WordPress et les enregistrements du domaine pour les e-mails${NBSP}: rien n’est scanné, rien n’est enregistré.`,
+    siteHint: `Un nom de domaine suffit. Une page est lue, comme le ferait un navigateur, plus quelques fichiers publics pour WordPress et les enregistrements du domaine pour les e-mails${NBSP}: rien n’est scanné. Seuls l’adresse du site et son résultat sont gardés, pour des statistiques.`,
     submit: 'Tester mon site',
     checking: 'Vérification…',
     resultLabel: 'Votre résultat',
@@ -308,8 +308,7 @@ export const WEBSITE_HEALTH_CHECK_PAGE_FR: DibodevWebsiteHealthCheckPageContent 
       },
       {
         question: `L’outil enregistre-t-il mon site ou mes données${NBSP}?`,
-        answer:
-          'Non. L’adresse n’est ni enregistrée ni envoyée à PostHog, l’outil de mesure du site : seuls les verdicts le sont, pour savoir quels points reviennent le plus. Le résultat reste dix minutes en mémoire du serveur pour ne pas relire le même site deux fois, puis disparaît.',
+        answer: `Oui, pour des statistiques seulement${NBSP}: l’adresse du site testé et ses verdicts sont gardés douze mois, pour mesurer par exemple la part des sites sans HTTPS. Ils ne servent jamais à démarcher et ne sont jamais publiés site par site. L’adresse n’est pas envoyée à PostHog, l’outil de mesure du site. Votre e-mail n’est demandé que si vous voulez recevoir le résultat${NBSP}; il n’est gardé que si vous acceptez d’être recontacté.`,
       },
       {
         question: `Mon site a vieilli${NBSP}: le corriger ou le refaire${NBSP}?`,

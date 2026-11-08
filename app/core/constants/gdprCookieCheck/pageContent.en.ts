@@ -33,7 +33,7 @@ export const GDPR_COOKIE_CHECK_PAGE_EN: DibodevGdprCookieCheckPageContent = {
     titleBefore: 'Is my website ',
     titleHighlight: 'GDPR compliant',
     titleAfter: '? Free cookie and tracker check',
-    reassurances: ['Free, no sign-up', 'No data stored', `Rules re-read on 8${NBSP}November 2026`],
+    reassurances: ['Free, no sign-up', 'Nothing to install', `Rules re-read on 8${NBSP}November 2026`],
     description:
       'A cookie banner proves nothing: what counts is what the page loads before the visitor has chosen. A website can show a nice banner while Google Analytics, the Facebook pixel or a YouTube video have already gone out. This tool reads the HTML of your home page, like a robot, without running the JavaScript: it spots the known trackers and says whether they wait for consent, recognises the consent tool (Axeptio, tarteaucitron, Cookiebot, Didomi…) and looks for the three mandatory links. For each point: what it saw, what it means, what to do. Built for French businesses and the French rules (CNIL), it works with any public website.',
     authorIntro: 'Tool built by',
@@ -44,7 +44,7 @@ export const GDPR_COOKIE_CHECK_PAGE_EN: DibodevGdprCookieCheckPageContent = {
     siteLabel: 'Your website address',
     sitePlaceholder: 'mycompany.fr',
     siteHint:
-      'A domain name is enough. Only the home page is read, as a robot would, without running the JavaScript: nothing is scanned, nothing is stored.',
+      'A domain name is enough. Only the home page is read, as a robot would, without running the JavaScript: nothing is scanned. Only the website address and its result are kept, for statistics.',
     submit: 'Test my website',
     checking: 'Reading…',
     resultLabel: 'Your result',
@@ -471,7 +471,7 @@ export const GDPR_COOKIE_CHECK_PAGE_EN: DibodevGdprCookieCheckPageContent = {
       {
         question: 'Does the test store my website address?',
         answer:
-          'No. The address is neither stored nor sent to PostHog, this website’s analytics tool: only the verdict, the trackers recognised and the consent tool found are, to know what comes up most. The result stays ten minutes in the server’s memory so the same website is not read twice, then disappears.',
+          'Yes, for statistics only: the address of the website tested, the verdict, the trackers recognised and the consent tool found are kept for twelve months, to measure for example the share of websites that load Google Analytics without consent. They are never used to prospect and never published website by website. The address is not sent to PostHog, this website’s analytics tool. Your e-mail is only asked if you want to receive the result; it is only kept if you agree to be contacted.',
       },
     ],
   },

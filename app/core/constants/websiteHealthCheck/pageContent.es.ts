@@ -21,7 +21,7 @@ export const WEBSITE_HEALTH_CHECK_PAGE_ES: DibodevWebsiteHealthCheckPageContent 
     titleBefore: 'Probar mi web: ',
     titleHighlight: '8 comprobaciones',
     titleAfter: ' gratuitas, en diez segundos',
-    reassurances: ['Gratis, sin registro', 'No se guarda ningún dato', 'Resultado en diez segundos'],
+    reassurances: ['Gratis, sin registro', 'Nada que instalar', 'Resultado en diez segundos'],
     description:
       'Una web corporativa envejece sin avisar: un certificado que falta, una versión de PHP sin su parche, una extensión de WordPress cerrada, correos que caen en spam, una página que se ve mal en el móvil, un pie de página que todavía dice 2019. Esta herramienta lee la página de inicio de tu web como lo haría un visitante y responde a ocho preguntas, cada una con un veredicto, lo que significa y qué hacer. Los tres puntos más técnicos (PHP, WordPress, correos) enlazan con un comprobador detallado. Pensada para las empresas francesas, funciona con cualquier web pública.',
     authorIntro: 'Herramienta creada por',
@@ -32,7 +32,7 @@ export const WEBSITE_HEALTH_CHECK_PAGE_ES: DibodevWebsiteHealthCheckPageContent 
     siteLabel: 'Dirección de tu web',
     sitePlaceholder: 'miempresa.fr',
     siteHint:
-      'Basta con un nombre de dominio. Se lee una página, como lo haría un navegador, más algunos archivos públicos para WordPress y los registros DNS del dominio para los correos: nada se escanea, nada se guarda.',
+      'Basta con un nombre de dominio. Se lee una página, como lo haría un navegador, más algunos archivos públicos para WordPress y los registros DNS del dominio para los correos: nada se escanea. Solo se guardan la dirección de la web y su resultado, para estadísticas.',
     submit: 'Probar mi web',
     checking: 'Comprobando…',
     resultLabel: 'Tu resultado',
@@ -342,7 +342,7 @@ export const WEBSITE_HEALTH_CHECK_PAGE_ES: DibodevWebsiteHealthCheckPageContent 
       {
         question: '¿La herramienta guarda mi web o mis datos?',
         answer:
-          'No. La dirección no se guarda ni se envía a PostHog, la herramienta de medición de la web: solo los veredictos, para saber qué puntos se repiten más. El resultado queda diez minutos en la memoria del servidor para no leer dos veces la misma web, y luego desaparece.',
+          'Sí, solo para estadísticas: la dirección de la web probada y sus veredictos se guardan doce meses, para medir por ejemplo la proporción de webs sin HTTPS. Nunca sirven para hacer prospección ni se publican web por web. La dirección no se envía a PostHog, la herramienta de medición de la web. Tu correo solo se pide si quieres recibir el resultado; solo se guarda si aceptas que te contacten.',
       },
       {
         question: 'Mi web ha envejecido: ¿corregirla o rehacerla?',

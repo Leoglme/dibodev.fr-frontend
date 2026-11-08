@@ -34,6 +34,7 @@ import type {
 import type { DibodevPublicAidProjectType, DibodevPublicAidStatus } from '~/core/types/DibodevPublicAid'
 import type { DibodevSiteAtelierDevice } from '~/core/types/DibodevSiteAtelier'
 import type { DibodevSiteCheckErrorKind } from '~/core/types/DibodevSiteCheck'
+import type { DibodevSiteCheckToolKey } from '~/core/types/DibodevSiteCheckReport'
 import type { DibodevTradeWebsiteKey } from '~/core/types/DibodevTradeWebsite'
 import type {
   DibodevWebsiteHealthCheckKey,
@@ -202,6 +203,14 @@ export type TrackingEventPayloads = {
     hasConsentTool: boolean | null
     consentTool: DibodevGdprConsentToolKey | null
     missingLinks: DibodevGdprLinkKey[]
+    errorKind: DibodevSiteCheckErrorKind | null
+  }
+  [TRACKING_EVENTS.siteCheckReportRequested]: {
+    location: string
+    tool: DibodevSiteCheckToolKey
+    verdict: string
+    contactConsent: boolean
+    outcome: 'sent' | 'error'
     errorKind: DibodevSiteCheckErrorKind | null
   }
   [TRACKING_EVENTS.siteDemoRequested]: {

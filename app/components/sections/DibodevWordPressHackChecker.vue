@@ -115,6 +115,15 @@
         <p v-if="result" class="text-sm leading-6 text-white/70">{{ props.wording.disclaimer }}</p>
       </div>
 
+      <DibodevSiteCheckReportForm
+        v-if="result"
+        tool="wordpressHack"
+        :site="result.host"
+        :verdict="result.verdict"
+        :trackingLocation="props.trackingLocation"
+        class="relative"
+      />
+
       <DibodevAlertSubscriptionForm
         topic="security"
         :site="result?.host ?? null"
@@ -177,6 +186,7 @@ import { computed, ref } from 'vue'
 import DibodevInput from '~/components/core/DibodevInput.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import DibodevAlertSubscriptionForm from '~/forms/DibodevAlertSubscriptionForm.vue'
+import DibodevSiteCheckReportForm from '~/forms/DibodevSiteCheckReportForm.vue'
 import { useTracking } from '~/composables/useTracking'
 import { PHP_UPDATE_SERVICE_ROUTE_NAME, PHP_UPDATE_SERVICE_TEASER } from '~/core/constants/phpUpdateService/pageShared'
 import {
