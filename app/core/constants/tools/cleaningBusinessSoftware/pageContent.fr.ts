@@ -37,7 +37,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent =
     titleHighlight: 'entreprise de nettoyage',
     titleAfter: `${NBSP}?`,
     description:
-      'Six questions sur vos équipes, vos agences et vos clients. Bureaux, copropriétés, particuliers ou milieux sensibles, le test vous dit quel type de logiciel choisir pour le planning, le pointage de vos agents et le contrôle qualité, et combien prévoir.',
+      'Six questions sur vos équipes, vos agences et vos clients. Bureaux, copropriétés, particuliers ou milieux sensibles, le test vous dit quel logiciel de nettoyage et de propreté choisir pour vos devis, votre plan de nettoyage, le planning et le pointage de vos agents et le contrôle qualité, et combien prévoir.',
     reassurances: ['2 minutes', 'Sans inscription ni e-mail', 'Résultat immédiat'],
     authorIntro: 'Test conçu par',
     authorBio:
@@ -268,6 +268,14 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent =
       {
         question: `Combien coûte un logiciel pour entreprise de nettoyage${NBSP}?`,
         answer: `PROPRET coûte 29,99 à 99,99${NBSP}€ HT par mois (tous les modules), PROGESTI 59 à 399${NBSP}€ HT par mois selon le nombre d’utilisateurs, CleanPlus 29${NBSP}€ HT par mois plus 3,40 à 4,40${NBSP}€ par agent, MyClic Propreté 169${NBSP}€ HT par mois pour 3 collaborateurs, Experhygia à partir de 30${NBSP}€ HT par mois et Organilog 19 à 64${NBSP}€ par utilisateur et par mois. Penbase MOZAIK Clean, Teleric, Progiclean et 2BePragma sont sur devis (tarifs relevés le 26 octobre 2026). Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
+      },
+      {
+        question: `Logiciel de nettoyage ou logiciel de propreté${NBSP}: est-ce la même chose${NBSP}?`,
+        answer: `Oui${NBSP}: « propreté » est le mot de la profession et des éditeurs, « nettoyage » celui des clients. Les deux désignent le même outil${NBSP}: devis, plan de nettoyage par site, planning et pointage des agents, contrôle qualité et facturation. Cherchez l’un ou l’autre, vous tomberez sur les mêmes logiciels${NBSP}; ce qui compte, c’est qu’il gère vos sites, vos passages et vos agents comme vous travaillez.`,
+      },
+      {
+        question: `Existe-t-il un logiciel de devis de nettoyage gratuit${NBSP}?`,
+        answer: `Les logiciels de propreté du comparatif sont payants. Pour un devis, un logiciel de facturation gratuit dépanne, à condition d’y détailler les prestations, les fréquences et les surfaces. Mon modèle gratuit de planning des passages et de fiche de contrôle qualité, plus haut sur cette page, sert ensuite à tenir ce que le devis promet.`,
       },
       {
         question: `Quel pointage pour les agents d’entretien${NBSP}: GPS, QR code ou NFC${NBSP}?`,

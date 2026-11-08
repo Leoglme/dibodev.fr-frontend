@@ -38,7 +38,7 @@ export const LANDSCAPING_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     titleHighlight: 'paysagiste',
     titleAfter: `${NBSP}?`,
     description:
-      'Six questions sur votre équipe, vos dépôts et vos chantiers. Création de jardins, entretien sous contrat ou petit jardinage chez les particuliers, le test vous dit quel type de logiciel choisir pour vos devis, vos contrats d’entretien et vos factures, et combien prévoir.',
+      'Six questions sur votre équipe, vos dépôts et vos chantiers. Création de jardins, entretien sous contrat ou petit jardinage chez les particuliers, le test vous dit quel logiciel de paysagiste professionnel choisir pour vos devis, vos contrats d’entretien et vos factures, que vous soyez seul ou à la tête d’une entreprise du paysage, et combien prévoir.',
     reassurances: ['2 minutes', 'Sans inscription ni e-mail', 'Résultat immédiat'],
     authorIntro: 'Test conçu par',
     authorBio:

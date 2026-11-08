@@ -38,7 +38,7 @@ export const EVENT_RENTAL_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     titleHighlight: 'material',
     titleAfter: '?',
     description:
-      'Responde a seis preguntas sobre tu equipo, tus almacenes y lo que alquilas: material para eventos, sonido e iluminación, mobiliario, herramientas o maquinaria de obra. Según el mercado francés, el test te dice qué software de gestión de alquiler de material elegir para tu planning de reservas, la disponibilidad, las salidas y devoluciones y el stock, y cuánto prever.',
+      'Responde a seis preguntas sobre tu equipo, tus almacenes y lo que alquilas: material para eventos, sonido e iluminación, mobiliario, herramientas, equipos o maquinaria de obra, todo material en alquiler. Según el mercado francés, el test te dice qué software de gestión de alquiler de material elegir para tu planning de reservas, la disponibilidad, las salidas y devoluciones y el stock, y cuánto prever.',
     reassurances: ['2 minutos', 'Sin registro ni correo', 'Resultado inmediato'],
     authorIntro: 'Test creado por',
     authorBio:

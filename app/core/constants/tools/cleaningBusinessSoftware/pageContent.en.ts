@@ -37,7 +37,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent =
     titleHighlight: 'cleaning business',
     titleAfter: '?',
     description:
-      'Answer six questions about your teams, branches and customers. Offices, apartment buildings, private homes or sensitive sites, based on the French market the test tells you which kind of software to choose for scheduling, clocking your cleaners in and out and quality inspections, and how much to budget.',
+      'Answer six questions about your teams, branches and customers. Offices, apartment buildings, private homes or sensitive sites, based on the French market the test tells you which cleaning and janitorial software to choose for your quotes, cleaning plan, scheduling, clocking your cleaners in and out and quality inspections, and how much to budget.',
     reassurances: ['2 minutes', 'No sign-up, no email', 'Instant result'],
     authorIntro: 'Test designed by',
     authorBio:
@@ -279,6 +279,16 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent =
         question: 'How much does cleaning business software cost in France?',
         answer:
           'PROPRET costs €29.99 to €99.99 excl. VAT per month (all modules), PROGESTI €59 to €399 excl. VAT per month depending on the number of users, CleanPlus €29 excl. VAT per month plus €3.40 to €4.40 per cleaner, MyClic Propreté €169 excl. VAT per month for 3 staff, Experhygia from €30 excl. VAT per month and Organilog €19 to €64 per user per month. Penbase MOZAIK Clean, Teleric, Progiclean and 2BePragma are on quote (prices checked on 26 October 2026). A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
+      },
+      {
+        question: 'Cleaning software or janitorial software: is it the same thing?',
+        answer:
+          'Yes: in France “propreté” is the word of the trade and of the publishers, “nettoyage” the word of the customers. Both mean the same tool: quotes, a cleaning plan per site, scheduling and clocking of the cleaners, quality inspections and invoicing. Search for one or the other, you will find the same software; what matters is that it handles your sites, visits and cleaners the way you work.',
+      },
+      {
+        question: 'Is there free cleaning quote software?',
+        answer:
+          'The janitorial software in the comparison is paid. For a quote, free invoicing software can help out, as long as you detail the services, frequencies and surfaces. My free visit schedule and quality inspection template, higher on this page, then helps you deliver what the quote promises.',
       },
       {
         question: 'Which clocking system for cleaners: GPS, QR code or NFC?',

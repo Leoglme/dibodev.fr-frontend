@@ -23,7 +23,7 @@ export const WEBSITE_HEALTH_CHECK_PAGE_ES: DibodevWebsiteHealthCheckPageContent 
     titleAfter: ' gratuitas, en diez segundos',
     reassurances: ['Gratis, sin registro', 'Nada que instalar', 'Resultado en diez segundos'],
     description:
-      'Una web corporativa envejece sin avisar: un certificado que falta, una versión de PHP sin su parche, una extensión de WordPress cerrada, correos que caen en spam, una página que se ve mal en el móvil, un pie de página que todavía dice 2019. Esta herramienta lee la página de inicio de tu web como lo haría un visitante y responde a ocho preguntas, cada una con un veredicto, lo que significa y qué hacer. Los tres puntos más técnicos (PHP, WordPress, correos) enlazan con un comprobador detallado. Pensada para las empresas francesas, funciona con cualquier web pública.',
+      'Un test de web gratuito y en línea: introduce la dirección de tu sitio web y la herramienta hace ocho comprobaciones en diez segundos. Una web corporativa envejece sin avisar: un certificado que falta, una versión de PHP sin su parche, una extensión de WordPress cerrada, correos que caen en spam, una página que se ve mal en el móvil, un pie de página que todavía dice 2019. Esta herramienta lee la página de inicio de tu web como lo haría un visitante y responde a ocho preguntas, cada una con un veredicto, lo que significa y qué hacer. Los tres puntos más técnicos (PHP, WordPress, correos) enlazan con un comprobador detallado. Pensada para las empresas francesas, funciona con cualquier web pública.',
     authorIntro: 'Herramienta creada por',
     authorBio:
       'desarrollador freelance cerca de Rennes (Francia). Actualizo, aseguro y rehago webs corporativas para pequeñas empresas, a distancia, y respondo en 24 horas.',
@@ -313,6 +313,11 @@ export const WEBSITE_HEALTH_CHECK_PAGE_ES: DibodevWebsiteHealthCheckPageContent 
         question: '¿Cómo saber si mi web está al día?',
         answer:
           'Tres señales se leen desde fuera: la versión de PHP anunciada por el servidor, la versión de WordPress y de sus extensiones, y las librerías que carga la página (jQuery, por ejemplo). La herramienta las lee en diez segundos. Para el resto (tema, extensiones no visibles), entra en el escritorio de tu web: las actualizaciones pendientes aparecen ahí.',
+      },
+      {
+        question: '¿Cómo probar mi sitio web en línea gratis?',
+        answer:
+          'Introduce la dirección de tu web en el campo de arriba de esta página: el test lee la página de inicio en diez segundos y responde a ocho preguntas (HTTPS, PHP, WordPress, correos, móvil, título, aviso legal, signos de antigüedad), cada una con un veredicto y qué hacer. Nada que instalar, sin registro, y el resultado puede llegarte por correo.',
       },
       {
         question: '¿Mi web es segura?',

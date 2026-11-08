@@ -21,7 +21,7 @@ import { ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_ROUTE_NAME } from '~/core/con
 export const ELECTRICIAN_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   meta: {
     title: `Logiciel électricien${NBSP}: devis, interventions, Consuel, prix 2026`,
-    description: `Tolteck, Obat, Batappli, Organilog${NBSP}: les prix 2026 des logiciels pour électriciens, un test gratuit en 6 questions et un modèle de devis et de PV de mise en service à télécharger.`,
+    description: `Tolteck, Obat, Batappli, Organilog${NBSP}: prix 2026 des logiciels pour électriciens, devis et facturation, test gratuit en 6 questions et modèle de devis et de PV.`,
     inLanguage: 'fr-FR',
     schemaAbout: 'Logiciel de gestion pour électriciens',
   },
@@ -39,7 +39,7 @@ export const ELECTRICIAN_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     titleHighlight: 'électricien',
     titleAfter: `${NBSP}?`,
     description:
-      'Six questions sur votre équipe, vos agences et vos chantiers. Dépannage, installation, domotique ou bornes de recharge, le test vous dit quel type de logiciel choisir pour vos devis, vos interventions et vos factures, et combien prévoir.',
+      'Six questions sur votre équipe, vos agences et vos chantiers. Dépannage, installation électrique, domotique ou bornes de recharge, le test vous dit quel logiciel d’électricité choisir pour vos devis, votre facturation, vos interventions et vos PV de mise en service, et combien prévoir.',
     reassurances: ['2 minutes', 'Sans inscription ni e-mail', 'Résultat immédiat'],
     authorIntro: 'Test conçu par',
     authorBio:
@@ -253,6 +253,10 @@ export const ELECTRICIAN_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
       {
         question: `Combien coûte un logiciel pour électricien${NBSP}?`,
         answer: `Tolteck coûte 25${NBSP}€ HT par mois (19${NBSP}€ à l’année), Obat 49 à 129${NBSP}€ HT par mois (39 à 109${NBSP}€ à l’année, moins en micro-entreprise), Batappli 39 ou 79${NBSP}€ HT par mois, 24 à 45${NBSP}€ par mois et par utilisateur (19 à 35${NBSP}€ payé à l’année, Premium 59 à 64${NBSP}€ à l’année seulement) et Kizeo Forms 15 à 37${NBSP}€ HT par utilisateur et par mois (tarifs relevés le 19 octobre 2026). Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
+      },
+      {
+        question: `Quel logiciel de devis et de facturation pour un électricien${NBSP}?`,
+        answer: `Un logiciel de facturation généraliste fait des devis et des factures, mais il ignore l’attestation d’assurance décennale à joindre, la TVA réduite sur les travaux de rénovation avec l’attestation du client, et le PV de mise en service ou l’attestation Consuel qui accompagne un chantier. Les logiciels d’électricité du comparatif (Tolteck, Obat, Batappli, Organilog) enchaînent devis, intervention et facture dans le même outil. En attendant, mon modèle gratuit de devis et de PV de mise en service, plus haut sur cette page, est prêt à remplir.`,
       },
       {
         question: `Quel logiciel de devis et de facturation pour un électricien${NBSP}?`,

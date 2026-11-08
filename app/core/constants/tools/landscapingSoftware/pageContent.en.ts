@@ -38,7 +38,7 @@ export const LANDSCAPING_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     titleHighlight: 'landscaping business',
     titleAfter: '?',
     description:
-      'Answer six questions about your team, depots and job sites. Garden design and build, maintenance contracts or small gardening jobs at private homes, based on the French market the test tells you which kind of software to choose for your quotes, maintenance contracts and invoices, and how much to budget.',
+      'Answer six questions about your team, depots and job sites. Garden design and build, maintenance contracts or small gardening jobs at private homes, based on the French market the test tells you which professional landscaping software to choose for your quotes, maintenance contracts and invoices, whether you work alone or run a landscaping company, and how much to budget.',
     reassurances: ['2 minutes', 'No sign-up, no email', 'Instant result'],
     authorIntro: 'Test designed by',
     authorBio:

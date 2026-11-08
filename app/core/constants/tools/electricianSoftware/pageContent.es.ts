@@ -21,8 +21,7 @@ import { ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_ROUTE_NAME } from '~/core/con
 export const ELECTRICIAN_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
   meta: {
     title: 'Software para electricistas en Francia: presupuestos, obras, Consuel, precios 2026',
-    description:
-      'Programas para electricistas en Francia: precios 2026 (Tolteck, Obat, Batappli, Organilog…), un test gratuito en 6 preguntas y una plantilla de presupuesto y acta de puesta en servicio para descargar.',
+    description: `Programas para electricistas en Francia: precios 2026 (Tolteck, Obat, Batappli, Organilog…), facturación, test gratis en 6 preguntas y plantilla de presupuesto.`,
     inLanguage: 'es',
     schemaAbout: 'Software de gestión para electricistas en Francia',
   },
@@ -41,7 +40,7 @@ export const ELECTRICIAN_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     titleHighlight: 'electricidad',
     titleAfter: '?',
     description:
-      'Seis preguntas sobre tu equipo, tus delegaciones y tus obras. Averías, instalaciones, domótica o puntos de recarga, a partir del mercado francés el test te dice qué tipo de programa elegir para tus presupuestos, tus intervenciones y tus facturas, y cuánto prever.',
+      'Seis preguntas sobre tu equipo, tus delegaciones y tus obras. Averías, instalaciones eléctricas, domótica o puntos de recarga, a partir del mercado francés el test te dice qué software de electricidad elegir para tus presupuestos, tu facturación, tus intervenciones y tus actas de puesta en servicio, y cuánto prever.',
     reassurances: ['2 minutos', 'Sin registro ni e-mail', 'Resultado inmediato'],
     authorIntro: 'Test diseñado por',
     authorBio:
@@ -266,6 +265,11 @@ export const ELECTRICIAN_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
       {
         question: '¿Cuánto cuesta un programa para electricistas en Francia?',
         answer: `Tolteck cuesta 25${NBSP}€ sin IVA al mes (19${NBSP}€ pagando el año), Obat 49 a 129${NBSP}€ sin IVA al mes (39 a 109${NBSP}€ al año, menos para una microempresa), Batappli 39 o 79${NBSP}€ sin IVA al mes, 24 a 45${NBSP}€ al mes por usuario (19 a 35${NBSP}€ pagando el año, Premium 59 a 64${NBSP}€ solo al año) y Kizeo Forms 15 a 37${NBSP}€ sin IVA por usuario al mes (tarifas consultadas el 19 de octubre de 2026). Un complemento a medida cuesta de 2.500 a 7.000${NBSP}€ una sola vez, una herramienta completa de 5.000 a 25.000${NBSP}€, y luego 100 a 300${NBSP}€ al mes de mantenimiento.`,
+      },
+      {
+        question: '¿Qué programa de presupuestos y facturación para un electricista en Francia?',
+        answer:
+          'Un programa de facturación genérico hace presupuestos y facturas, pero ignora el certificado del seguro decenal que hay que adjuntar, el IVA reducido en obras de renovación con el certificado del cliente, y el acta de puesta en servicio o el certificado Consuel que acompaña una obra en Francia. Los programas de electricidad de la comparativa (Tolteck, Obat, Batappli, Organilog) encadenan presupuesto, intervención y factura en la misma herramienta. Mientras tanto, mi plantilla gratuita de presupuesto y acta de puesta en servicio, más arriba en esta página, está lista para rellenar.',
       },
       {
         question: '¿Qué programa de presupuestos y facturación para un electricista en Francia?',

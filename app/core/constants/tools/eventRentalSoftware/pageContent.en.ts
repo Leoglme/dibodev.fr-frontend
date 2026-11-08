@@ -36,7 +36,7 @@ export const EVENT_RENTAL_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     titleHighlight: 'equipment rentals',
     titleAfter: '?',
     description:
-      'Answer six questions about your team, warehouses and what you rent out: event equipment, sound and lighting, furniture, tools or construction machinery. Based on the French market, the test tells you which equipment rental management software to choose for your booking schedule, availability, check-outs and returns and stock, and how much to budget.',
+      'Answer six questions about your team, warehouses and what you rent out: event equipment, sound and lighting, furniture, tools, equipment or construction machinery, anything you hire out. Based on the French market, the test tells you which equipment rental management software to choose for your booking schedule, availability, check-outs and returns and stock, and how much to budget.',
     reassurances: ['2 minutes', 'No sign-up, no email', 'Instant result'],
     authorIntro: 'Test designed by',
     authorBio:

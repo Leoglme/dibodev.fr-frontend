@@ -18,7 +18,7 @@ import { PLUMBER_QUOTE_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplate
 export const PLUMBING_HEATING_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
   meta: {
     title: `Logiciel plombier chauffagiste${NBSP}: devis, interventions, prix 2026`,
-    description: `Tolteck, Obat, Batappli, Organilog${NBSP}: les prix 2026 des logiciels pour plombiers et chauffagistes, un test gratuit en 6 questions et un modèle de devis à télécharger.`,
+    description: `Tolteck, Obat, Batappli, Organilog${NBSP}: prix 2026 des logiciels de plomberie et de chauffage, devis et facturation, test gratuit en 6 questions et modèle de devis.`,
     inLanguage: 'fr-FR',
     schemaAbout: 'Logiciel de gestion pour plombiers et chauffagistes',
   },
@@ -36,7 +36,7 @@ export const PLUMBING_HEATING_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = 
     titleHighlight: 'plombier-chauffagiste',
     titleAfter: `${NBSP}?`,
     description:
-      'Six questions sur votre équipe, vos agences et votre activité. Plombier, chauffagiste ou les deux, le test vous dit quel type de logiciel choisir pour vos devis, vos interventions et vos contrats d’entretien, et combien prévoir.',
+      'Six questions sur votre équipe, vos agences et votre activité. Plombier, chauffagiste ou les deux, le test vous dit quel logiciel de plomberie et de chauffage choisir pour vos devis, votre facturation, vos interventions et vos contrats d’entretien, et combien prévoir.',
     reassurances: ['2 minutes', 'Sans inscription ni e-mail', 'Résultat immédiat'],
     authorIntro: 'Test conçu par',
     authorBio:
@@ -253,6 +253,14 @@ export const PLUMBING_HEATING_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = 
       {
         question: `Combien coûte un logiciel pour plombier-chauffagiste${NBSP}?`,
         answer: `Tolteck coûte 25${NBSP}€ HT par mois (19${NBSP}€ à l’année), Obat 49 à 129${NBSP}€ HT par mois (39 à 109${NBSP}€ à l’année, moins en micro-entreprise), Batappli 39 ou 79${NBSP}€ HT par mois et 24 à 45${NBSP}€ par mois et par utilisateur (19 à 35${NBSP}€ payé à l’année, Premium 59 à 64${NBSP}€ à l’année seulement). Praxedo est sur devis (tarifs relevés le 19 octobre 2026). Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
+      },
+      {
+        question: `Quel logiciel de facturation pour un plombier ou un chauffagiste${NBSP}?`,
+        answer: `Un logiciel de facturation généraliste sait faire un devis et une facture, mais il lui manque la TVA à 5,5 ou 10${NBSP}% par ligne avec l’attestation du client, le bon d’intervention et le contrat d’entretien avec sa visite annuelle. Les logiciels de plomberie et de chauffage du comparatif (Tolteck, Obat, Batappli, Organilog) font les devis, les interventions et la facturation dans le même outil${NBSP}; en attendant, mon modèle gratuit de devis et de bon d’intervention, plus haut sur cette page, applique déjà les bons taux de TVA.`,
+      },
+      {
+        question: `Logiciel de plomberie ou logiciel de chauffagiste${NBSP}: faut-il deux outils${NBSP}?`,
+        answer: `Non. Les éditeurs du comparatif couvrent les deux métiers${NBSP}: le dépannage et l’installation sanitaire d’un côté, l’entretien des chaudières et des pompes à chaleur de l’autre. Ce qui change, c’est ce que le logiciel doit savoir faire en plus pour le chauffage${NBSP}: le contrat d’entretien, la visite annuelle et l’attestation d’entretien à remettre au client sous quinze jours. Si vous faites les deux, un seul outil avec ces fonctions suffit.`,
       },
       {
         question: `Quel logiciel de devis et de facturation pour un plombier${NBSP}?`,

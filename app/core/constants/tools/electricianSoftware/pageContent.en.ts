@@ -20,8 +20,7 @@ import { ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_ROUTE_NAME } from '~/core/con
 export const ELECTRICIAN_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   meta: {
     title: 'Electrician software in France: quotes, jobs, Consuel, prices',
-    description:
-      'Software for electricians in France: 2026 prices (Tolteck, Obat, Batappli, Organilog…), a free 6-question test and a quote and commissioning report template to download.',
+    description: `Electrician software in France: 2026 prices (Tolteck, Obat, Batappli, Organilog…), quotes and invoicing, a free 6-question test and a quote template.`,
     inLanguage: 'en',
     schemaAbout: 'Management software for electricians in France',
   },
@@ -39,7 +38,7 @@ export const ELECTRICIAN_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
     titleHighlight: 'electrical business',
     titleAfter: '?',
     description:
-      'Answer six questions about your team, branches and jobs. Call-outs, installations, home automation or charging points, based on the French market the test tells you which kind of software to choose for your quotes, jobs and invoices, and how much to budget.',
+      'Answer six questions about your team, branches and jobs. Call-outs, electrical installations, home automation or charging points, based on the French market the test tells you which electrical contractor software to choose for your quotes, invoicing, jobs and commissioning reports, and how much to budget.',
     reassurances: ['2 minutes', 'No sign-up, no email', 'Instant result'],
     authorIntro: 'Test designed by',
     authorBio:
@@ -260,6 +259,11 @@ export const ELECTRICIAN_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
         question: 'How much does electrician software cost in France?',
         answer:
           'Tolteck costs €25 excl. VAT per month (€19 when paid yearly), Obat €49 to €129 excl. VAT per month (€39 to €109 yearly, less for a micro-entreprise), Batappli €39 or €79 excl. VAT per month, €24 to €45 per month per user (€19 to €35 paid yearly, Premium €59 to €64 yearly only) and Kizeo Forms €15 to €37 excl. VAT per user per month (prices checked on 19 October 2026). A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
+      },
+      {
+        question: 'Which quoting and invoicing software for an electrician in France?',
+        answer:
+          'General invoicing software writes quotes and invoices, but it knows nothing of the ten-year liability certificate to attach, the reduced VAT on renovation work with the customer’s certificate, or the commissioning report and the Consuel certificate that go with a job in France. The electrical software in the comparison (Tolteck, Obat, Batappli, Organilog) chains quote, job and invoice in one tool. In the meantime, my free quote and commissioning report template, higher on this page, is ready to fill in.',
       },
       {
         question: 'Which quoting and invoicing software for an electrician in France?',

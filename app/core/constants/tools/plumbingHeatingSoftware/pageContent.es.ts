@@ -20,8 +20,7 @@ import { PLUMBER_QUOTE_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplate
 export const PLUMBING_HEATING_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
   meta: {
     title: 'Software para fontaneros y calefactores en Francia: presupuestos, precios 2026',
-    description:
-      'Programas para fontaneros y calefactores en Francia: precios 2026 (Tolteck, Obat, Batappli, Organilog…), un test gratuito en 6 preguntas y una plantilla de presupuesto para descargar.',
+    description: `Software para fontaneros y calefactores en Francia: precios 2026 (Tolteck, Obat, Batappli…), facturación, test gratis en 6 preguntas y plantilla de presupuesto.`,
     inLanguage: 'es',
     schemaAbout: 'Software de gestión para fontaneros y calefactores en Francia',
   },
@@ -40,7 +39,7 @@ export const PLUMBING_HEATING_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = 
     titleHighlight: 'fontanería y calefacción',
     titleAfter: '?',
     description:
-      'Seis preguntas sobre tu equipo, tus delegaciones y tu actividad. Fontanero, calefactor o ambos, a partir del mercado francés el test te dice qué tipo de programa elegir para tus presupuestos, tus intervenciones y tus contratos de mantenimiento, y cuánto prever.',
+      'Seis preguntas sobre tu equipo, tus delegaciones y tu actividad. Fontanero, calefactor o ambos, a partir del mercado francés el test te dice qué software de fontanería y calefacción elegir para tus presupuestos, tu facturación, tus intervenciones y tus contratos de mantenimiento, y cuánto prever.',
     reassurances: ['2 minutos', 'Sin registro ni e-mail', 'Resultado inmediato'],
     authorIntro: 'Test diseñado por',
     authorBio:
@@ -263,6 +262,16 @@ export const PLUMBING_HEATING_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = 
       {
         question: '¿Cuánto cuesta un programa para fontaneros y calefactores en Francia?',
         answer: `Tolteck cuesta 25${NBSP}€ sin IVA al mes (19${NBSP}€ pagando el año), Obat 49 a 129${NBSP}€ sin IVA al mes (39 a 109${NBSP}€ al año, menos para una microempresa), Batappli 39 o 79${NBSP}€ sin IVA al mes y 24 a 45${NBSP}€ al mes por usuario (19 a 35${NBSP}€ pagando el año, Premium 59 a 64${NBSP}€ solo al año). Praxedo va bajo presupuesto (tarifas consultadas el 19 de octubre de 2026). Un complemento a medida cuesta de 2.500 a 7.000${NBSP}€ una sola vez, una herramienta completa de 5.000 a 25.000${NBSP}€, y luego 100 a 300${NBSP}€ al mes de mantenimiento.`,
+      },
+      {
+        question: '¿Qué programa de facturación para un fontanero o un calefactor en Francia?',
+        answer:
+          'Un programa de facturación genérico sabe hacer un presupuesto y una factura, pero le faltan los tipos reducidos de IVA franceses del 5,5 o el 10 % por línea con el certificado del cliente, el parte de intervención y el contrato de mantenimiento con su visita anual. Los programas de fontanería y calefacción de la comparativa (Tolteck, Obat, Batappli, Organilog) hacen presupuestos, intervenciones y facturación en la misma herramienta; mientras tanto, mi plantilla gratuita de presupuesto y parte de intervención, más arriba en esta página, ya aplica los tipos de IVA correctos.',
+      },
+      {
+        question: '¿Programa de fontanería o programa de calefacción: hacen falta dos herramientas?',
+        answer:
+          'No. Los editores de la comparativa cubren los dos oficios: las averías y la instalación sanitaria por un lado, el mantenimiento de calderas y bombas de calor por otro. Lo que cambia es lo que el programa debe saber hacer además para la calefacción: el contrato de mantenimiento, la visita anual y el certificado de mantenimiento que en Francia se entrega al cliente en quince días. Si haces ambas cosas, basta con una herramienta que tenga estas funciones.',
       },
       {
         question: '¿Qué programa de presupuestos y facturación para un fontanero en Francia?',

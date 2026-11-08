@@ -6006,7 +6006,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "That’s usually when people talk to me about a ‘custom-built business application’—often unsure if that’s really what they need. This guide is here to clarify: what it is, when it’s worth it, what it actually changes, and how much time and money it requires.",
+              "text": "That’s usually when people talk to me about a ‘custom-built business application’—often unsure if that’s really what they need. In practice, it means a customised business application: a customised business tool that adapts to the way you work, not the other way round. This guide is here to clarify: what it is, when it’s worth it, what it actually changes, and how much time and money it requires.",
               "type": "text"
             }
           ]
@@ -7330,7 +7330,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I’m not an instructor, and I’ve never issued a driving license. But when I observe a driving school in operation, what stands out to me is the time spent on the phone playing receptionist. Scheduling an appointment, rescheduling it, calling back, shifting it again—these are dozens of small exchanges per week, and each one can get lost in the shuffle.",
+              "text": "I’m not an instructor, and I’ve never issued a driving license. But when I observe a driving school in operation, what stands out to me is the time spent on the phone playing receptionist. Scheduling an appointment, rescheduling it, calling back, shifting it again—these are dozens of small exchanges per week, and each one can get lost in the shuffle. That’s exactly what an app that lets your students book their driving lessons themselves, from their phone, takes care of.",
               "type": "text"
             }
           ]
@@ -8427,7 +8427,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "\"Do we buy an off-the-shelf software or have our own developed?\" This is one of the first decisions when a tool is lacking. And it’s a real decision, not an obvious one: custom isn’t always the right answer, nor is off-the-shelf. Here’s how I help my clients decide without pushing custom development at all costs.",
+              "text": "\"Do we buy an off-the-shelf software or have our own developed?\" This is one of the first decisions when a tool is lacking. And it’s a real decision, not an obvious one: custom isn’t always the right answer, nor is off-the-shelf. The question comes up in two forms: custom software vs SaaS when you first equip yourself, and leaving a SaaS that has become too expensive or too limiting a few years later. Here’s how I help my clients decide without pushing custom development at all costs.",
               "type": "text"
             }
           ]
@@ -24273,7 +24273,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Since October 21, 2026, two critical vulnerabilities in PHP allow taking control of a server without a password, and patches are only available for PHP 8.2, 8.3, 8.4, and 8.5. On an OVHcloud web hosting service, it is OVH that installs these patches on its servers. However, if your site still runs on PHP 8.1, 8.0, or 7.4—which is common on open hosting set up a few years ago—nothing will happen until you manually update the version yourself. Here’s where to click, which version to choose, and how to verify it’s done.",
+              "text": "Since October 21, 2026, two critical vulnerabilities in PHP allow taking control of a server without a password, and patches are only available for PHP 8.2, 8.3, 8.4, and 8.5. On an OVHcloud web hosting service, it is OVH that installs these patches on its servers. However, if your site still runs on PHP 8.1, 8.0, or 7.4—which is common on open hosting set up a few years ago—nothing will happen until you manually update the version yourself. Updating PHP at OVH takes just a few clicks: here’s where to click, which version to choose, and how to verify it’s done.",
               "type": "text"
             }
           ]

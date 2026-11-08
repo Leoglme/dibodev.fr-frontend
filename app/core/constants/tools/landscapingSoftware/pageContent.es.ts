@@ -40,7 +40,7 @@ export const LANDSCAPING_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent = {
     titleHighlight: 'paisajismo',
     titleAfter: '?',
     description:
-      'Seis preguntas sobre tu equipo, tus almacenes y tus obras. Creación de jardines, mantenimiento con contrato o pequeña jardinería en casa de particulares, a partir del mercado francés el test te dice qué tipo de programa elegir para tus presupuestos, tus contratos de mantenimiento y tus facturas, y cuánto prever.',
+      'Seis preguntas sobre tu equipo, tus almacenes y tus obras. Creación de jardines, mantenimiento con contrato o pequeña jardinería en casa de particulares, a partir del mercado francés el test te dice qué software profesional de paisajismo elegir para tus presupuestos, tus contratos de mantenimiento y tus facturas, trabajes solo o dirijas una empresa de paisajismo, y cuánto prever.',
     reassurances: ['2 minutos', 'Sin registro ni e-mail', 'Resultado inmediato'],
     authorIntro: 'Test diseñado por',
     authorBio:

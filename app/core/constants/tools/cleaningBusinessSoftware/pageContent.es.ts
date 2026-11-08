@@ -39,7 +39,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent =
     titleHighlight: 'empresa de limpieza',
     titleAfter: '?',
     description:
-      'Seis preguntas sobre tus equipos, tus delegaciones y tus clientes. Oficinas, comunidades de propietarios, casas de particulares o entornos sensibles, a partir del mercado francés el test te dice qué tipo de programa elegir para la planificación, el fichaje de tu personal y el control de calidad, y cuánto prever.',
+      'Seis preguntas sobre tus equipos, tus delegaciones y tus clientes. Oficinas, comunidades de propietarios, casas de particulares o entornos sensibles, a partir del mercado francés el test te dice qué software de limpieza elegir para tus presupuestos, tu plan de limpieza, la planificación y el fichaje de tu personal y el control de calidad, y cuánto prever.',
     reassurances: ['2 minutos', 'Sin registro ni e-mail', 'Resultado inmediato'],
     authorIntro: 'Test diseñado por',
     authorBio:
@@ -281,6 +281,16 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent =
       {
         question: '¿Cuánto cuesta un programa para empresas de limpieza en Francia?',
         answer: `PROPRET cuesta 29,99 a 99,99${NBSP}€ sin IVA al mes (todos los módulos), PROGESTI 59 a 399${NBSP}€ sin IVA al mes según el número de usuarios, CleanPlus 29${NBSP}€ sin IVA al mes más 3,40 a 4,40${NBSP}€ por operario, MyClic Propreté 169${NBSP}€ sin IVA al mes para 3 colaboradores, Experhygia desde 30${NBSP}€ sin IVA al mes y Organilog 19 a 64${NBSP}€ por usuario al mes. Penbase MOZAIK Clean, Teleric, Progiclean y 2BePragma van bajo presupuesto (tarifas consultadas el 26 de octubre de 2026). Un complemento a medida cuesta de 2500 a 7000${NBSP}€ una sola vez, una herramienta completa de 5000 a 25${NBSP}000${NBSP}€, y luego 100 a 300${NBSP}€ al mes de mantenimiento.`,
+      },
+      {
+        question: '¿Programa de limpieza o programa de «propreté»: es lo mismo?',
+        answer:
+          'Sí: en Francia «propreté» es la palabra del oficio y de los editores, «nettoyage» la de los clientes. Las dos designan la misma herramienta: presupuestos, plan de limpieza por centro, planificación y fichaje del personal, control de calidad y facturación. Busques una u otra, encontrarás los mismos programas; lo que importa es que gestione tus centros, tus pasadas y tu personal tal como trabajas.',
+      },
+      {
+        question: '¿Existe un programa gratuito de presupuestos de limpieza?',
+        answer:
+          'Los programas de limpieza de la comparativa son de pago. Para un presupuesto, un programa de facturación gratuito sirve de apaño, siempre que detalles los servicios, las frecuencias y las superficies. Mi plantilla gratuita de planificación de pasadas y ficha de control de calidad, más arriba en esta página, sirve después para cumplir lo que promete el presupuesto.',
       },
       {
         question: '¿Qué fichaje para el personal de limpieza: GPS, código QR o NFC?',

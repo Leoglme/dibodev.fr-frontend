@@ -33,7 +33,7 @@ export const EVENT_RENTAL_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent = {
     titleBefore: 'Quel logiciel de ',
     titleHighlight: 'location de matériel',
     titleAfter: ` choisir${NBSP}?`,
-    description: `Six questions sur votre équipe, vos dépôts et ce que vous louez${NBSP}: matériel événementiel, sono et lumière, mobilier, outillage ou engins de BTP. Le test vous dit quel logiciel de gestion de location de matériel choisir pour votre planning des réservations, vos disponibilités, vos sorties et retours et votre stock, et combien prévoir.`,
+    description: `Six questions sur votre équipe, vos dépôts et ce que vous louez${NBSP}: matériel événementiel, sono et lumière, mobilier, outillage, équipements et engins de BTP, tout matériel à louer. Le test vous dit quel logiciel de gestion de location de matériel choisir pour votre planning des réservations, vos disponibilités, vos sorties et retours et votre stock, et combien prévoir.`,
     reassurances: ['2 minutes', 'Sans inscription ni e-mail', 'Résultat immédiat'],
     authorIntro: 'Test conçu par',
     authorBio:

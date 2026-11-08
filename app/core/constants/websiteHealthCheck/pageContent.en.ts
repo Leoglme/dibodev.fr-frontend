@@ -22,7 +22,7 @@ export const WEBSITE_HEALTH_CHECK_PAGE_EN: DibodevWebsiteHealthCheckPageContent 
     titleAfter: ', in ten seconds',
     reassurances: ['Free, no sign-up', 'Nothing to install', 'Result in ten seconds'],
     description:
-      'A showcase website ages without warning: a missing certificate, a PHP version without its fix, a closed WordPress extension, e-mails landing in spam, a page that displays badly on a phone, a footer still saying 2019. This tool reads the home page of your website as a visitor would and answers eight questions, each with a verdict, what it means and what to do. The three most technical points (PHP, WordPress, e-mails) link to a detailed checker. Built for French businesses, it works on any public website.',
+      'A free online website test: enter the address of your website and the tool runs eight checks in ten seconds. A showcase website ages without warning: a missing certificate, a PHP version without its fix, a closed WordPress extension, e-mails landing in spam, a page that displays badly on a phone, a footer still saying 2019. This tool reads the home page of your website as a visitor would and answers eight questions, each with a verdict, what it means and what to do. The three most technical points (PHP, WordPress, e-mails) link to a detailed checker. Built for French businesses, it works on any public website.',
     authorIntro: 'Tool built by',
     authorBio:
       'freelance developer near Rennes, France. I update, secure and rebuild showcase websites for small businesses, remotely, and I reply within 24 hours.',
@@ -301,6 +301,11 @@ export const WEBSITE_HEALTH_CHECK_PAGE_EN: DibodevWebsiteHealthCheckPageContent 
         question: 'How do I know whether my website is up to date?',
         answer:
           'Three signs can be read from outside: the PHP version announced by the server, the version of WordPress and its extensions, and the libraries loaded by the page (jQuery, for instance). The tool reads them in ten seconds. For the rest (theme, extensions not visible), log in to the dashboard of your site: pending updates are listed there.',
+      },
+      {
+        question: 'How do I test my website online for free?',
+        answer:
+          'Enter the address of your website in the field at the top of this page: the test reads the home page in ten seconds and answers eight questions (HTTPS, PHP, WordPress, e-mails, phone display, title, legal notice, signs of age), each with a verdict and what to do. Nothing to install, no sign-up, and the result can be e-mailed to you.',
       },
       {
         question: 'Is my website secure?',

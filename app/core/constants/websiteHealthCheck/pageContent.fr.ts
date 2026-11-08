@@ -22,7 +22,7 @@ export const WEBSITE_HEALTH_CHECK_PAGE_FR: DibodevWebsiteHealthCheckPageContent 
     titleHighlight: '8 vérifications',
     titleAfter: ' gratuites, en dix secondes',
     reassurances: ['Gratuit, sans inscription', 'Rien à installer', 'Résultat en dix secondes'],
-    description: `Un site vitrine vieillit sans prévenir${NBSP}: un certificat qui manque, une version de PHP sans correctif, une extension WordPress fermée, des e-mails qui tombent en spam, une page qui s’affiche mal sur téléphone, un pied de page qui dit encore 2019. Cet outil lit la page d’accueil de votre site comme le ferait un visiteur et répond à huit questions, chacune avec un verdict, ce que ça veut dire et quoi faire. Les trois points les plus techniques (PHP, WordPress, e-mails) renvoient vers un vérificateur détaillé.`,
+    description: `Un test de site internet gratuit et en ligne${NBSP}: entrez l’adresse de votre site web, l’outil fait huit vérifications en dix secondes. Un site vitrine vieillit sans prévenir${NBSP}: un certificat qui manque, une version de PHP sans correctif, une extension WordPress fermée, des e-mails qui tombent en spam, une page qui s’affiche mal sur téléphone, un pied de page qui dit encore 2019. Cet outil lit la page d’accueil de votre site comme le ferait un visiteur et répond à huit questions, chacune avec un verdict, ce que ça veut dire et quoi faire. Les trois points les plus techniques (PHP, WordPress, e-mails) renvoient vers un vérificateur détaillé.`,
     authorIntro: 'Outil réalisé par',
     authorBio: `développeur freelance près de Rennes. Je mets à jour, je sécurise et je refais des sites vitrines pour des TPE et des PME, à distance, et je réponds sous 24${NBSP}h.`,
   },
@@ -280,6 +280,10 @@ export const WEBSITE_HEALTH_CHECK_PAGE_FR: DibodevWebsiteHealthCheckPageContent 
         question: `Comment savoir si mon site est à jour${NBSP}?`,
         answer:
           'Trois signes se lisent depuis l’extérieur : la version de PHP annoncée par le serveur, la version de WordPress et de ses extensions, et les bibliothèques chargées par la page (jQuery, par exemple). L’outil les lit en dix secondes. Pour le reste (thème, extensions non visibles), connectez-vous au tableau de bord de votre site : les mises à jour en attente y sont listées.',
+      },
+      {
+        question: `Comment tester son site web en ligne gratuitement${NBSP}?`,
+        answer: `Entrez l’adresse de votre site dans le champ en haut de cette page${NBSP}: le test lit la page d’accueil en dix secondes et répond à huit questions (HTTPS, PHP, WordPress, e-mails, téléphone, titre, mentions légales, signes d’âge), avec un verdict et quoi faire pour chacune. Rien à installer, aucune inscription, et le résultat peut vous être envoyé par e-mail.`,
       },
       {
         question: `Mon site est-il sécurisé${NBSP}?`,

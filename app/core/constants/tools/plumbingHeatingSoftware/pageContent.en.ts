@@ -19,8 +19,7 @@ import { PLUMBER_QUOTE_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplate
 export const PLUMBING_HEATING_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = {
   meta: {
     title: 'Plumbing and heating software in France: quotes, call-outs, prices',
-    description:
-      'Software for plumbers and heating engineers in France: 2026 prices (Tolteck, Obat, Batappli, Organilog…), a free 6-question test and a quote template to download.',
+    description: `Plumbing and heating software in France: 2026 prices (Tolteck, Obat, Batappli, Organilog…), invoicing, a free 6-question test and a quote template.`,
     inLanguage: 'en',
     schemaAbout: 'Management software for plumbers and heating engineers in France',
   },
@@ -38,7 +37,7 @@ export const PLUMBING_HEATING_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = 
     titleHighlight: 'plumbing and heating business',
     titleAfter: '?',
     description:
-      'Answer six questions about your team, branches and activity. Plumber, heating engineer or both, based on the French market the test tells you which kind of software to choose for your quotes, call-outs and maintenance contracts, and how much to budget.',
+      'Answer six questions about your team, branches and activity. Plumber, heating engineer or both, based on the French market the test tells you which plumbing and heating software to choose for your quotes, invoicing, call-outs and maintenance contracts, and how much to budget.',
     reassurances: ['2 minutes', 'No sign-up, no email', 'Instant result'],
     authorIntro: 'Test designed by',
     authorBio:
@@ -261,6 +260,16 @@ export const PLUMBING_HEATING_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent = 
         question: 'How much does plumbing and heating software cost in France?',
         answer:
           'Tolteck costs €25 excl. VAT per month (€19 when paid yearly), Obat €49 to €129 excl. VAT per month (€39 to €109 yearly, less for a micro-entreprise), Batappli €39 or €79 excl. VAT per month and €24 to €45 per month per user (€19 to €35 paid yearly, Premium €59 to €64 yearly only). Praxedo is on quote (prices checked on 19 October 2026). A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
+      },
+      {
+        question: 'Which invoicing software for a plumber or a heating engineer in France?',
+        answer:
+          'General invoicing software can write a quote and an invoice, but it lacks the reduced French VAT rates of 5.5 or 10% per line with the customer’s certificate, the job sheet and the maintenance contract with its yearly visit. The plumbing and heating software in the comparison (Tolteck, Obat, Batappli, Organilog) handles quotes, jobs and invoicing in one tool; in the meantime, my free quote and job sheet template, higher on this page, already applies the right VAT rates.',
+      },
+      {
+        question: 'Plumbing software or heating software: do I need two tools?',
+        answer:
+          'No. The publishers in the comparison cover both trades: repairs and sanitary installations on one side, boiler and heat pump maintenance on the other. What changes is what the software must do for heating: the maintenance contract, the yearly visit and the maintenance certificate to hand to the customer within fifteen days in France. If you do both, one tool with these features is enough.',
       },
       {
         question: 'Which quoting and invoicing software for a plumber in France?',

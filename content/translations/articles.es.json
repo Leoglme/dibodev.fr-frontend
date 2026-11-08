@@ -6006,7 +6006,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Es ahí cuando suelen hablarme de «aplicación personalizada para el sector» —a menudo sin estar seguros de que sea realmente lo que necesitan. Esta guía está aquí para aclarar las cosas: qué es, cuándo vale la pena, qué cambia en la práctica y cuánto tiempo y dinero requiere.",
+              "text": "Es ahí cuando suelen hablarme de «aplicación personalizada para el sector» —a menudo sin estar seguros de que sea realmente lo que necesitan. En concreto, se trata de una aplicación de gestión personalizada: una herramienta personalizada que se adapta a su forma de trabajar, y no al revés. Esta guía está aquí para aclarar las cosas: qué es, cuándo vale la pena, qué cambia en la práctica y cuánto tiempo y dinero requiere.",
               "type": "text"
             }
           ]
@@ -7330,7 +7330,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No soy instructor y nunca he dado un examen de conducir. Pero cuando observo cómo funciona una autoescuela, lo que más me llama la atención es el tiempo que se pasa al teléfono haciendo de telefonista. Tomar una cita, moverla, volver a llamar, posponerla: son decenas de pequeños intercambios por semana, y cada uno puede perderse.",
+              "text": "No soy instructor y nunca he dado un examen de conducir. Pero cuando observo cómo funciona una autoescuela, lo que más me llama la atención es el tiempo que se pasa al teléfono haciendo de telefonista. Tomar una cita, moverla, volver a llamar, posponerla: son decenas de pequeños intercambios por semana, y cada uno puede perderse. Es justo lo que resuelve una app de reservas para cursos de conducción: sus alumnos reservan ellos mismos sus clases y sus horas de conducción, desde el móvil.",
               "type": "text"
             }
           ]
@@ -8427,7 +8427,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "\"¿Compramos un software del mercado o desarrollamos el nuestro?\" Es una de las primeras decisiones cuando falta una herramienta. Y es una decisión real, no una evidencia: lo personalizado no siempre es la mejor respuesta, ni tampoco la solución estándar. Así es como lo decido con mis clientes, sin vender desarrollo a toda costa.",
+              "text": "\"¿Compramos un software del mercado o desarrollamos el nuestro?\" Es una de las primeras decisiones cuando falta una herramienta. Y es una decisión real, no una evidencia: lo personalizado no siempre es la mejor respuesta, ni tampoco la solución estándar. La pregunta aparece de dos formas: software a medida vs SaaS en el momento de equiparse, y dejar un SaaS que se ha vuelto demasiado caro o demasiado limitado unos años después. Así es como lo decido con mis clientes, sin vender desarrollo a toda costa.",
               "type": "text"
             }
           ]
@@ -24275,7 +24275,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña, y los parches solo existen para PHP 8.2, 8.3, 8.4 y 8.5. En un alojamiento web de OVHcloud, es OVH quien instala estos parches en sus servidores. Pero si tu sitio aún funciona con PHP 8.1, 8.0 o 7.4, algo frecuente en alojamientos abiertos hace unos años, no pasará nada hasta que tú mismo cambies la versión. Aquí te explicamos dónde hacer clic, qué versión elegir y cómo verificar que se ha hecho.",
+              "text": "Desde el 21 de octubre de 2026, dos vulnerabilidades críticas en PHP permiten tomar el control de un servidor sin contraseña, y los parches solo existen para PHP 8.2, 8.3, 8.4 y 8.5. En un alojamiento web de OVHcloud, es OVH quien instala estos parches en sus servidores. Pero si tu sitio aún funciona con PHP 8.1, 8.0 o 7.4, algo frecuente en alojamientos abiertos hace unos años, no pasará nada hasta que tú mismo cambies la versión. La actualización de PHP en OVH se hace en unos pocos clics: aquí te explicamos dónde hacer clic, qué versión elegir y cómo verificar que se ha hecho.",
               "type": "text"
             }
           ]
