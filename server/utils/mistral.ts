@@ -5,15 +5,15 @@ import { createError } from 'h3'
 
 const MISTRAL_API_URL: string = 'https://api.mistral.ai/v1/chat/completions'
 const MISTRAL_MODEL: string = 'mistral-small-latest'
-/** Maximum number of retries when Mistral returns 429 (free tier caps 1 request/second and 20k tokens/minute). */
+/** Maximum number of retries when Mistral returns 429. */
 const MISTRAL_MAX_RETRIES: number = 4
-/** Base backoff in milliseconds before retrying a 429, doubled on each attempt (2s, 4s, 8s, 16s). */
-const MISTRAL_RETRY_BASE_DELAY_MS: number = 2000
-/** Minimum spacing between two Mistral calls, to stay under the free-tier 1 request/second limit. */
 const MISTRAL_MIN_CALL_INTERVAL_MS: number = 1100
+/** The free tier allows 2 requests per minute (November 2026): a shorter wait after a spent quota fails again. */
+const MISTRAL_RATE_WINDOW_MS: number = 61000
 
 /** Timestamp (ms) of the last Mistral request, used to space successive calls. */
 let lastMistralCallAt: number = 0
+let nextMistralCallAllowedAt: number = 0
 
 export type MistralGenerateParams = {
   apiKey: string
@@ -44,15 +44,31 @@ function delay(ms: number): Promise<void> {
 }
 
 /**
- * Waits if needed so the next Mistral call stays at least MISTRAL_MIN_CALL_INTERVAL_MS after the previous one.
+ * Waits until the minimum spacing since the last Mistral call has passed, and the end of any spent rate-limit window.
  * @returns {Promise<void>} Resolves once it is safe to send the next request.
  */
 async function throttleMistralCall(): Promise<void> {
-  const sinceLastCall: number = Date.now() - lastMistralCallAt
-  if (sinceLastCall < MISTRAL_MIN_CALL_INTERVAL_MS) {
-    await delay(MISTRAL_MIN_CALL_INTERVAL_MS - sinceLastCall)
+  const waitMs: number =
+    Math.max(lastMistralCallAt + MISTRAL_MIN_CALL_INTERVAL_MS, nextMistralCallAllowedAt) - Date.now()
+  if (waitMs > 0) {
+    await delay(waitMs)
   }
   lastMistralCallAt = Date.now()
+}
+
+/**
+ * Postpones the next Mistral call when a response spent the minute's request quota or was a 429.
+ * @param {Response} response - The Mistral response.
+ * @returns {void}
+ */
+function postponeNextMistralCallWhenRateLimited(response: Response): void {
+  if (response.headers.get('x-ratelimit-remaining-req-minute') === '0') {
+    nextMistralCallAllowedAt = Date.now() + MISTRAL_RATE_WINDOW_MS
+  }
+  if (response.status === 429) {
+    const retryAfterSeconds: number = Number(response.headers.get('retry-after'))
+    nextMistralCallAllowedAt = Date.now() + (retryAfterSeconds > 0 ? retryAfterSeconds * 1000 : MISTRAL_RATE_WINDOW_MS)
+  }
 }
 
 /**
@@ -124,11 +140,11 @@ export async function mistralGenerate(params: MistralGenerateParams): Promise<Mi
       headers,
       body: JSON.stringify(body),
     })
+    postponeNextMistralCallWhenRateLimited(response)
 
     if (!response.ok) {
       lastErrorText = await response.text()
       if (response.status === 429 && attempt < MISTRAL_MAX_RETRIES) {
-        await delay(MISTRAL_RETRY_BASE_DELAY_MS * 2 ** attempt)
         continue
       }
       throw createError({
