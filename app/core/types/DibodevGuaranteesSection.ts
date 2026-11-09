@@ -1,14 +1,22 @@
 import type { DibodevSectionTone } from '~/core/types/DibodevSectionTone'
 
+/** Link under a guarantee: `to` is an already localized path. */
+export type DibodevGuaranteeLink = {
+  label: string
+  to: string
+}
+
 /**
  * One guarantee (what the client gets) displayed with a check mark.
  * @type {DibodevGuarantee}
  * @property {string} title - Short promise (e.g. "A tool you own").
  * @property {string} description - One sentence making it concrete.
+ * @property {DibodevGuaranteeLink | null} [link] - Optional link under the description, towards a related page.
  */
 export type DibodevGuarantee = {
   title: string
   description: string
+  link?: DibodevGuaranteeLink | null
 }
 
 /** Number of tiles per row on large screens. */

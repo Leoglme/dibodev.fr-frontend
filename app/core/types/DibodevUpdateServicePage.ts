@@ -3,14 +3,14 @@ import type { DibodevGuarantee } from '~/core/types/DibodevGuaranteesSection'
 import type { DibodevMethodStep } from '~/core/types/DibodevMethodSection'
 import type { DibodevPricingOffer } from '~/core/types/DibodevPricingSection'
 
-export type DibodevPhpUpdateSectionHeading = {
+export type DibodevUpdateServiceSectionHeading = {
   eyebrow: string
   title: string
   intro: string
 }
 
-/** Content of the PHP update service page in one language, kept out of the i18n files because only this page loads it. */
-export type DibodevPhpUpdateServicePageContent = {
+/** Content of an update service page (PHP, Joomla) in one language, kept out of the i18n files because only that page loads it. */
+export type DibodevUpdateServicePageContent = {
   meta: {
     title: string
     description: string
@@ -33,7 +33,7 @@ export type DibodevPhpUpdateServicePageContent = {
     secondaryCtaText: string
     reassurances: string[]
   }
-  offers: DibodevPhpUpdateSectionHeading & {
+  offers: DibodevUpdateServiceSectionHeading & {
     anchorId: string
     cards: DibodevPricingOffer[]
     notes: string[]
@@ -41,15 +41,15 @@ export type DibodevPhpUpdateServicePageContent = {
     highlightLabel: string
     toolLinkText: string
   }
-  included: DibodevPhpUpdateSectionHeading & {
+  included: DibodevUpdateServiceSectionHeading & {
     anchorId: string
     items: DibodevGuarantee[]
   }
-  audiences: DibodevPhpUpdateSectionHeading & {
+  audiences: DibodevUpdateServiceSectionHeading & {
     anchorId: string
     items: DibodevGuarantee[]
   }
-  method: DibodevPhpUpdateSectionHeading & {
+  method: DibodevUpdateServiceSectionHeading & {
     steps: DibodevMethodStep[]
   }
   faq: {

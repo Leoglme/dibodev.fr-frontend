@@ -1,7 +1,7 @@
-import type { DibodevPhpUpdateServicePageContent } from '~/core/types/DibodevPhpUpdateServicePage'
+import type { DibodevUpdateServicePageContent } from '~/core/types/DibodevUpdateServicePage'
 import { NBSP } from '~/core/constants/typography'
 
-export const PHP_UPDATE_SERVICE_PAGE_FR: DibodevPhpUpdateServicePageContent = {
+export const PHP_UPDATE_SERVICE_PAGE_FR: DibodevUpdateServicePageContent = {
   meta: {
     title: 'Mise à jour PHP de votre site ou logiciel : intervention 24 h',
     description:
@@ -116,7 +116,12 @@ export const PHP_UPDATE_SERVICE_PAGE_FR: DibodevPhpUpdateServicePageContent = {
         description: `Nettoyage et remise en sécurité après un piratage (extensions, comptes, fichiers, sauvegardes), sur devis après le diagnostic gratuit${NBSP}: je vous dis d’abord ce que je vois.`,
       },
       {
-        title: 'PrestaShop, Magento, Joomla, Drupal',
+        title: 'Joomla 3, 4 et 5',
+        description: 'Passage à Joomla 6 et PHP 8.3 dans la même intervention, présentation et formulaires identiques.',
+        link: { label: 'L’offre Joomla et ses prix', to: '/mise-a-jour-site-joomla' },
+      },
+      {
+        title: 'PrestaShop, Magento, Drupal',
         description: 'Montée de version de PHP compatible avec la version du CMS, modules de paiement testés.',
       },
       {

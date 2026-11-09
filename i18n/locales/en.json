@@ -686,6 +686,9 @@
       "phpUpdate": {
         "message": "Hello,\nI would like to have the PHP version of my site updated (and WordPress, the theme and the plugins if needed).\nMy website link: \nMy host, if I know it: "
       },
+      "joomlaUpdate": {
+        "message": "Hello,\nI would like to have my Joomla website updated (to Joomla 6 and PHP 8.3).\nMy website link: \nMy Joomla version, if I know it: "
+      },
       "websiteRedesign": {
         "message": "Hello,\nmy website looks dated and I would like to have it redesigned.\nMy current website link: \nWhat I would like to change: "
       },

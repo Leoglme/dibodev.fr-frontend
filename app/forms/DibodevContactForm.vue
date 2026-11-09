@@ -145,6 +145,7 @@ import {
   GDPR_COOKIE_CHECK_VERDICTS,
 } from '~/core/constants/gdprCookieCheck/pageShared'
 import { WEBSITE_REDESIGN_CONTACT_TOPIC } from '~/core/constants/websiteRedesignPrompt'
+import { JOOMLA_UPDATE_CONTACT_TOPIC } from '~/core/constants/joomlaUpdateService/pageShared'
 import { useTracking } from '~/composables/useTracking'
 import { useLeadSource } from '~/composables/useLeadSource'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
@@ -218,6 +219,8 @@ const gdprCookieCheckPrefill: DibodevSiteCheckContactPrefill<DibodevGdprCookieCh
   SiteCheckContactUtils.readSitePrefill(route.query, GDPR_COOKIE_CHECK_CONTACT_TOPIC, GDPR_COOKIE_CHECK_VERDICTS)
 /** `?topic=website-redesign` comes from the redesign prompt of the PHP and WordPress pages. */
 const isWebsiteRedesignVisit: boolean = String(route.query.topic ?? '') === WEBSITE_REDESIGN_CONTACT_TOPIC
+/** `?topic=joomla-update` comes from the Joomla update service page. */
+const isJoomlaUpdateVisit: boolean = String(route.query.topic ?? '') === JOOMLA_UPDATE_CONTACT_TOPIC
 
 const projectType: Ref<ProjectTypeKey | null> = ref<ProjectTypeKey | null>(prefilledProjectType ?? DEFAULT_PROJECT_TYPE)
 const pagesRange: Ref<PagesRangeKey | null> = ref<PagesRangeKey | null>(null)
@@ -238,12 +241,15 @@ const isWebsiteProject: ComputedRef<boolean> = computed((): boolean => projectTy
 
 /** METHODS */
 /**
- * Writes the message of a visitor coming from a checker, a PHP page, a hosting status page or the redesign prompt, with the check when known.
+ * Writes the message of a visitor coming from a checker, a PHP or Joomla page, a hosting status page or the redesign prompt, with the check when known.
  * @returns {string} The message, or an empty string for every other visitor.
  */
 function buildPrefilledMessage(): string {
   if (isWebsiteRedesignVisit) {
     return t('contact.form.websiteRedesign.message')
+  }
+  if (isJoomlaUpdateVisit) {
+    return t('contact.form.joomlaUpdate.message')
   }
   if (gdprCookieCheckPrefill) {
     return gdprCookieCheckPrefill.site
@@ -524,7 +530,8 @@ onMounted((): void => {
     siteDownPrefill ||
     emailDeliverabilityPrefill ||
     gdprCookieCheckPrefill ||
-    isWebsiteRedesignVisit
+    isWebsiteRedesignVisit ||
+    isJoomlaUpdateVisit
   ) {
     message.value = buildPrefilledMessage()
   }

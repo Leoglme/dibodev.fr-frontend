@@ -1,6 +1,6 @@
-import type { DibodevPhpUpdateServicePageContent } from '~/core/types/DibodevPhpUpdateServicePage'
+import type { DibodevUpdateServicePageContent } from '~/core/types/DibodevUpdateServicePage'
 
-export const PHP_UPDATE_SERVICE_PAGE_EN: DibodevPhpUpdateServicePageContent = {
+export const PHP_UPDATE_SERVICE_PAGE_EN: DibodevUpdateServicePageContent = {
   meta: {
     title: 'PHP Update for Your Website or Software: Done Within 24 h',
     description:
@@ -117,7 +117,12 @@ export const PHP_UPDATE_SERVICE_PAGE_EN: DibodevPhpUpdateServicePageContent = {
         description: `Clean-up and hardening after a hack (extensions, accounts, files, backups), quoted after the free diagnosis: I tell you first what I see.`,
       },
       {
-        title: 'PrestaShop, Magento, Joomla, Drupal',
+        title: 'Joomla 3, 4 and 5',
+        description: 'Move to Joomla 6 and PHP 8.3 in the same job, with the same design and working forms.',
+        link: { label: 'The Joomla offer and its prices', to: '/en/joomla-website-update' },
+      },
+      {
+        title: 'PrestaShop, Magento, Drupal',
         description: 'PHP upgrade compatible with the CMS version, payment modules tested.',
       },
       {

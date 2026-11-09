@@ -18,6 +18,20 @@
           <div class="grid gap-1.5">
             <h3 class="text-lg leading-snug font-medium text-gray-100">{{ guarantee.title }}</h3>
             <p class="text-[15px] leading-6 text-gray-200">{{ guarantee.description }}</p>
+            <NuxtLink
+              v-if="guarantee.link"
+              :to="guarantee.link.to"
+              class="text-primary hover:text-primary-dark tap-area mt-1 w-fit text-[15px] leading-6 font-medium transition-colors"
+            >
+              {{ guarantee.link.label }}&nbsp;<DibodevIcon
+                name="ArrowRight"
+                mode="stroke"
+                :width="16"
+                :height="16"
+                class="align-[-3px]"
+                aria-hidden="true"
+              />
+            </NuxtLink>
           </div>
         </li>
       </ul>

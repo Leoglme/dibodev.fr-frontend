@@ -542,7 +542,7 @@ const PUBLIC_AID_SIMULATOR_TEASER: DibodevToolTeaserContent = {
   },
 }
 
-const PHP_VULNERABILITY_CHECK_TEASER: DibodevToolTeaserContent = {
+export const PHP_VULNERABILITY_CHECK_TEASER: DibodevToolTeaserContent = {
   toolId: 'php-vulnerability-check',
   routeName: 'tools-php-vulnerability-check',
   icon: 'ShieldCheck',
