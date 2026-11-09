@@ -1600,7 +1600,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "As a plumber, you know that managing your business can be complex. Between scheduling interventions, invoicing, inventory management, and customer relations, it's easy to get lost. This is where a management software tailored to your trade comes into play. By 2026, digital tools will be even more indispensable to stay competitive and provide flawless service to your customers.",
+              "text": "As a plumber, you know that managing your business can be complex. Between scheduling jobs, invoicing, inventory management, and customer relations, it’s easy to get overwhelmed. That’s where a management software tailored to your trade comes into play. In 2026, digital tools will be even more essential to stay competitive and deliver flawless service to your clients.",
               "type": "text"
             }
           ]
@@ -1633,7 +1633,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "A SaaS (Software as a Service) software is a cloud-hosted solution accessible via a web browser. Here are its main advantages:",
+              "text": "A SaaS (Software as a Service) solution is a cloud-hosted tool accessible via a web browser. Here are its main advantages:",
               "type": "text"
             }
           ]
@@ -1680,7 +1680,7 @@
                       ]
                     },
                     {
-                      "text": ": You always benefit from the latest version without having to intervene.",
+                      "text": ": You always have the latest version without any effort on your part.",
                       "type": "text"
                     }
                   ]
@@ -1703,7 +1703,7 @@
                       ]
                     },
                     {
-                      "text": ": You can access it from any device connected to the Internet.",
+                      "text": ": You can access it from any internet-connected device.",
                       "type": "text"
                     }
                   ]
@@ -1716,7 +1716,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "However, SaaS solutions also have drawbacks:",
+              "text": "However, SaaS also has drawbacks:",
               "type": "text"
             }
           ]
@@ -1754,7 +1754,7 @@
                   "type": "paragraph",
                   "content": [
                     {
-                      "text": "Dependence on the provider",
+                      "text": "Vendor dependency",
                       "type": "text",
                       "marks": [
                         {
@@ -1763,7 +1763,7 @@
                       ]
                     },
                     {
-                      "text": ": You are at the mercy of the provider's decisions regarding pricing, features, etc.",
+                      "text": ": You’re at the mercy of the provider’s decisions regarding pricing, features, etc.",
                       "type": "text"
                     }
                   ]
@@ -1812,7 +1812,7 @@
                       ]
                     },
                     {
-                      "text": ": The software is designed to adapt to your business processes.",
+                      "text": ": The software is designed to fit your business processes.",
                       "type": "text"
                     }
                   ]
@@ -1858,7 +1858,7 @@
                       ]
                     },
                     {
-                      "text": ": You can add or modify features according to your needs.",
+                      "text": ": You can add or modify features as needed.",
                       "type": "text"
                     }
                   ]
@@ -1895,7 +1895,7 @@
                       ]
                     },
                     {
-                      "text": ": Developing a custom software requires a larger investment.",
+                      "text": ": Developing custom software requires a larger investment.",
                       "type": "text"
                     }
                   ]
@@ -1943,7 +1943,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The choice between a SaaS software and a custom solution depends on several factors:",
+              "text": "The choice between SaaS software and a custom solution depends on several factors:",
               "type": "text"
             }
           ]
@@ -2013,7 +2013,7 @@
                       ]
                     },
                     {
-                      "text": ": Are you willing to invest time and money in developing a custom solution?",
+                      "text": ": Are you ready to invest time and money in developing a custom solution?",
                       "type": "text"
                     }
                   ]
@@ -2046,6 +2046,35 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To compare the 2026 prices of market software and determine if a custom tool is justified for your size, take the free test on my page ",
+              "type": "text"
+            },
+            {
+              "text": "software for plumbers and heating engineers",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-plombier-chauffagiste",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", which also offers downloadable quote and job sheet templates.",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -2061,15 +2090,15 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "As a freelance developer based in Rennes, I offer custom solutions for tradespeople and SMEs. I can help you design a management software tailored to your specific needs, to optimize your business and provide flawless service to your customers.",
+              "text": "As a freelance developer based in Rennes, I offer tailored solutions for tradespeople and SMEs. I can help you design custom management software suited to your specific needs, to optimize your business and deliver flawless service to your clients.",
               "type": "text"
             },
             {
-              "text": " To get found, see my ",
+              "text": " And to help you get noticed, your ",
               "type": "text"
             },
             {
-              "text": "website for plumbers",
+              "text": "plumber’s website",
               "type": "text",
               "marks": [
                 {
@@ -2085,7 +2114,7 @@
               ]
             },
             {
-              "text": " page: build your site in 2 minutes on a real template, online within 48 hours for €290 paid once.",
+              "text": " can be online in 48 hours: build it in 2 minutes using a real template, for a one-time fee of 290€.",
               "type": "text"
             }
           ]
@@ -2106,7 +2135,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The choice between a SaaS software and a custom solution depends on your needs, budget, and technical skills. If you have unique business processes or want full control over your data, a custom solution may be the best option. On the other hand, if you have a limited budget or prefer an off-the-shelf solution, a SaaS software may be more suitable.",
+              "text": "The choice between a SaaS software and a custom solution depends on your needs, budget, and technical skills. If you have unique business processes or want full control over your data, a custom solution may be the best option. Conversely, if you have a limited budget or prefer an off-the-shelf solution, a SaaS software might be more suitable.",
               "type": "text"
             }
           ]
@@ -2115,7 +2144,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Do you have a project for a custom software for your plumbing business? Contact me today to discuss it!",
+              "text": "Do you have a custom software project for your plumbing business? Contact me today to discuss it!",
               "type": "text",
               "marks": [
                 {
@@ -3582,7 +3611,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I’m not a heating engineer. I’ve never bled a radiator or replaced a boiler. But after building tools for artisans, I’ve seen the same scene play out repeatedly: a binder full of maintenance contracts, a paper planner, and a spreadsheet where someone writes ‘Martin boiler — to review in October.’ Except it’s February, and no one has called Martin back.",
+              "text": "I’m not a heating engineer. I’ve never bled a radiator or replaced a boiler unit. But after building tools for artisans, I’ve seen the same scene repeat itself: a binder full of maintenance contracts, a paper agenda, and a spreadsheet where someone writes ‘Martin boiler — to review in October.’ Except it’s February, and no one has called Martin back.",
               "type": "text"
             }
           ]
@@ -3591,7 +3620,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Annual boiler maintenance is the lifeblood of a heating engineer: mandatory for the client, recurring, and it’s revenue that comes back on its own… as long as you don’t forget about it. And that’s exactly what happens when you manage it mentally or scribbled on a corner of a spreadsheet.",
+              "text": "The annual boiler maintenance is the lifeblood of a heating engineer: mandatory for the client, recurring, and it’s revenue that comes back on its own… provided you don’t forget it. And that’s exactly what happens when you manage it mentally or on a corner of a spreadsheet.",
               "type": "text"
             }
           ]
@@ -3603,7 +3632,7 @@
           },
           "content": [
             {
-              "text": "The real issue for a heating engineer: recurrence, not the service itself",
+              "text": "The real issue for a heating engineer: recurrence, not the intervention itself",
               "type": "text"
             }
           ]
@@ -3612,7 +3641,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "A heating engineer knows how to do their job. What gets stuck isn’t the service—it’s remembering, for 200, 300, or 400 clients, who is under contract, which boiler was installed when, and when the next visit is due.",
+              "text": "A heating engineer knows how to do their job. What gets stuck isn’t the intervention—it’s remembering, for 200, 300, or 400 clients, who is under contract, which boiler was installed when, and when the next visit is due.",
               "type": "text"
             }
           ]
@@ -3621,7 +3650,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "By hand, two things always happen: either you follow up too late, and the client has already gone to a competitor; or you forget entirely, and a missed visit means a contract that doesn’t renew. Either way, money slips away silently.",
+              "text": "By hand, two things always happen: either you follow up too late, and the client has already gone to a competitor, or you forget entirely, and a missed visit means a contract that doesn’t renew. In both cases, money slips away silently.",
               "type": "text"
             }
           ]
@@ -3642,7 +3671,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The idea isn’t some bloated, over-engineered software. It’s a tool that answers three simple questions: who is under contract, which visits are due, and have I followed up?",
+              "text": "The idea isn’t a bloated, over-engineered software solution. It’s a tool that answers three simple questions: who is under contract, which visits are due, and have I followed up?",
               "type": "text"
             }
           ]
@@ -3685,7 +3714,7 @@
                   "type": "paragraph",
                   "content": [
                     {
-                      "text": "A follow-up is sent automatically—SMS or email—weeks before the deadline.",
+                      "text": "A follow-up is sent automatically—SMS or email—few weeks before the deadline.",
                       "type": "text"
                     }
                   ]
@@ -3728,7 +3757,36 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The concerned clients received an automatic reminder the week before; they just need to schedule the appointments. By year-end, they can see at a glance how many contracts are up for renewal and which ones are at risk of slipping away. The time spent ‘figuring out who to call’ drops to zero.",
+              "text": "The concerned clients received an automatic reminder the previous week; they just need to schedule the appointments. By the end of the year, they can see at a glance how many contracts are up for renewal and which ones are at risk of slipping away. The time spent ‘figuring out who to call’ has dropped to zero.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If your technicians are juggling repairs and maintenance visits, my page ",
+              "type": "text"
+            },
+            {
+              "text": "intervention management software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-gestion-interventions",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " compares the 2026 prices of scheduling and mobile work order software, and offers a free route sheet.",
               "type": "text"
             }
           ]
@@ -3749,7 +3807,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Another game-changer: every boiler keeps its own history. When you return to a client three years later, you know what’s been done, which parts have been replaced, and you don’t rediscover the installation every time.",
+              "text": "Another game-changer: every boiler keeps its own history. When you return to a client three years later, you know what’s been done, which parts have been replaced, and you don’t have to rediscover the installation every time.",
               "type": "text"
             }
           ]
@@ -3764,13 +3822,42 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you're unsure between off-the-shelf software and a custom tool for your maintenance contracts, my page ",
+              "type": "text"
+            },
+            {
+              "text": "software for plumbers and heating engineers",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-plombier-chauffagiste",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " compares the 2026 prices from publishers, summarizes the annual maintenance rules, and gives you a verdict in six questions.",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
           },
           "content": [
             {
-              "text": "Frequently asked questions",
+              "text": "Frequently Asked Questions",
               "type": "text"
             }
           ]
@@ -3779,7 +3866,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Does this replace my quoting and invoicing software?",
+              "text": "Does it replace my quoting and invoicing software?",
               "type": "text",
               "marks": [
                 {
@@ -3791,7 +3878,7 @@
               "type": "hard_break"
             },
             {
-              "text": "Not necessarily. The tool can focus on what you’re missing—the contract tracking and follow-ups—and coexist with what you already use for invoicing. If an existing tool already handles this well, I’ll let you know.",
+              "text": "Not necessarily. The tool can focus on what you're missing—the contract tracking and reminders—and coexist with what you already use for invoicing. If an existing tool already handles everything well, I’ll let you know.",
               "type": "text"
             }
           ]
@@ -3800,7 +3887,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I have 400 clients in a spreadsheet—do we start from scratch?",
+              "text": "I have 400 clients in a spreadsheet—do I start from scratch?",
               "type": "text",
               "marks": [
                 {
@@ -3812,7 +3899,7 @@
               "type": "hard_break"
             },
             {
-              "text": "No. We’ll retrieve your spreadsheet to kickstart the database: you won’t have to manually re-enter 400 lines.",
+              "text": "No. We’ll import your spreadsheet to seed the database: you won’t have to manually re-enter 400 lines.",
               "type": "text"
             }
           ]
@@ -3833,7 +3920,7 @@
               "type": "hard_break"
             },
             {
-              "text": "A maintenance follow-up, often mandatory and expected by the client, is far from spam—it’s actually a valued service they appreciate.",
+              "text": "A maintenance reminder, often mandatory and expected by the client, is far from spam—it’s actually a service they’ll appreciate.",
               "type": "text"
             }
           ]
@@ -3866,7 +3953,7 @@
           },
           "content": [
             {
-              "text": "Want to talk about it?",
+              "text": "Let’s talk?",
               "type": "text"
             }
           ]
@@ -3875,7 +3962,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "If your maintenance contracts live in a spreadsheet and in your head, we can start simply: an audit of your current workflow and a written action plan. I always begin with the most painful point, give an honest budget estimate, and if an existing tool will suffice, I’ll tell you.",
+              "text": "If your maintenance contracts live in a spreadsheet and in your head, we can start simply: an audit of your current organization and a written action plan. I always begin with the most painful issue, give an honest budget estimate, and if an existing tool is enough for you, I’ll tell you.",
               "type": "text"
             }
           ]
@@ -15132,7 +15219,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Before writing code, I spent five years in a kitchen. So when a walk-in fridge breaks down on a Friday evening, I know what that means: the chef calling three times, the technician arriving between shifts, and the work order scribbled on a corner of the countertop, which will need to be read again on Monday at the office. If we can even read it.",
+              "text": "Before writing any code, I spent five years in a kitchen. So when a walk-in refrigerator breaks down on a Friday evening, I know what it means: the chef calling three times, the technician arriving between shifts, and the work order scribbled on a corner of the countertop, which will have to be deciphered on Monday at the office. If we can decipher it at all.",
               "type": "text"
             }
           ]
@@ -15141,7 +15228,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Later, at Kodeva, I worked on a customer service app for field technicians. That’s when I realized something simple: a service call isn’t just an appointment in a schedule. It’s information that needs to get back to the office, complete and quickly. And that’s almost always where it gets stuck.",
+              "text": "Later, at Kodeva, I worked on a field service app for technicians. That’s when I realized something simple: a service call isn’t just an appointment in a schedule. It’s information that needs to get back to the office—complete and fast. And that’s almost always where it gets stuck.",
               "type": "text"
             }
           ]
@@ -15162,7 +15249,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Most companies that send technicians to their clients know how to schedule. A whiteboard, a shared calendar, an Excel file: by Monday morning, everyone knows where they’re going.",
+              "text": "Most companies that send technicians to clients know how to schedule. A whiteboard, a shared calendar, an Excel file: by Monday morning, everyone knows where they’re going.",
               "type": "text"
             }
           ]
@@ -15171,7 +15258,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "That’s where it gets complicated. The technician finishes the job, fills out a paper form (when they remember), jots down the parts used on the back, takes two photos with their phone, and sends them via SMS to whoever will bother reading them. On Friday, someone at the office re-enters everything. A signature is missing, an arrival time is wrong, a part number is off. The invoice goes out two weeks late—or sometimes it never goes out at all.",
+              "text": "That’s where it gets complicated. The technician finishes the job, fills out a paper form (if they remember), jots down used parts on the back, takes two photos with their phone, and sends them via SMS to whoever will bother reading them. On Friday, someone at the office re-enters everything. A signature is missing, an arrival time is off, a part reference is wrong. The invoice goes out two weeks late—or sometimes, it never goes out at all.",
               "type": "text"
             }
           ]
@@ -15180,7 +15267,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No one is doing this wrong. It’s the organization that loses the information along the way.",
+              "text": "No one is doing this wrong. It’s the system that loses the information along the way.",
               "type": "text"
             }
           ]
@@ -15192,7 +15279,7 @@
           },
           "content": [
             {
-              "text": "What a service call management software should actually do",
+              "text": "What a service management tool should actually do",
               "type": "text"
             }
           ]
@@ -15201,7 +15288,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No need for an overcomplicated system. For most maintenance, customer service, or installation SMEs, a good tool comes down to four things:",
+              "text": "No need for an overcomplicated system. For most maintenance, field service, or installation SMEs, a good tool comes down to four things:",
               "type": "text"
             }
           ]
@@ -15223,7 +15310,7 @@
               ]
             },
             {
-              "text": ": the office assigns the calls, the technician sees them on their phone, with the address, the on-site contact, and the equipment history.",
+              "text": ": the office assigns jobs, the technician sees them on their phone, with the address, the on-site contact, and the equipment history.",
               "type": "text"
             },
             {
@@ -15243,7 +15330,7 @@
               ]
             },
             {
-              "text": ": what was done, the time spent, the parts used, the before-and-after photos, and the client’s signature directly on the screen.",
+              "text": ": what was done, time spent, parts used, before-and-after photos, and the client’s signature—all directly on the screen.",
               "type": "text"
             },
             {
@@ -15263,7 +15350,7 @@
               ]
             },
             {
-              "text": ": as soon as the work order is validated, it’s back at the office. No re-entry, no forgotten paperwork in the van.",
+              "text": ": as soon as the work order is approved, it’s in the office. No re-entry, no forgotten paperwork in the van.",
               "type": "text"
             },
             {
@@ -15274,7 +15361,7 @@
               "type": "text"
             },
             {
-              "text": "Integration with the rest of the system",
+              "text": "Integration with the rest",
               "type": "text",
               "marks": [
                 {
@@ -15283,7 +15370,7 @@
               ]
             },
             {
-              "text": ": the work order becomes an invoice, the parts are deducted from stock, and the client receives their report by email.",
+              "text": ": the work order becomes an invoice, parts are deducted from stock, and the client gets their report by email.",
               "type": "text"
             }
           ]
@@ -15292,7 +15379,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Written like this, it seems obvious. But every company has its own specifics: a mandatory safety checklist, records to note, a maintenance contract to attach. It’s often in these details that generic software becomes cumbersome.",
+              "text": "Written like this, it seems obvious. But every company has its own details: a mandatory safety checklist, records to note, a maintenance contract to attach. That’s often where generic software becomes cumbersome.",
               "type": "text"
             }
           ]
@@ -15331,7 +15418,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "A technician spends much of their day where the network doesn’t reach: boilers, basements, technical rooms, parking lots, dead zones in the countryside. If the app displays an error message at that moment, they pull out their notebook. And two weeks later, everyone’s back to paper.",
+              "text": "A technician spends much of their day where the network doesn’t reach: boilers, basements, technical rooms, parking lots, dead zones in the countryside. If the app shows an error message at that moment, they pull out their notebook. And two weeks later, everyone’s back to paper.",
               "type": "text"
             }
           ]
@@ -15340,7 +15427,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Offline mode means everything the technician needs is already on their phone when they leave in the morning, they can fill out the work order and get the client’s signature without any connection, and everything syncs automatically as soon as the network returns. For them, nothing changes. For the office, nothing is lost.",
+              "text": "Offline mode means everything the technician needs is already on their phone when they leave in the morning, they can fill out the form and get the client’s signature without any connection, and everything syncs automatically as soon as the network returns. For them, nothing changes. For the office, nothing is lost.",
               "type": "text"
             }
           ]
@@ -15349,7 +15436,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "It’s one of the first questions I ask when discussing a tool for field teams.",
+              "text": "This is one of the first questions I ask when discussing a tool for field teams.",
               "type": "text"
             }
           ]
@@ -15370,7 +15457,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Take an SME that installs and repairs professional kitchen equipment for restaurants: ovens, walk-in coolers, dishwashers. Six technicians, one office assistant, and a manager who handles quotes in the evenings.",
+              "text": "Take an SME that installs and repairs professional kitchen equipment for restaurants: ovens, walk-in coolers, dishwashers. Six technicians, one office assistant, and a manager who handles quotes in the evening.",
               "type": "text"
             }
           ]
@@ -15379,7 +15466,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Today, emergencies come in by phone, often during service hours, and the assistant juggles between the schedule and calls. Technicians fill out paper work orders. Every Friday afternoon, she re-enters the week’s data into the billing software. When a restaurant calls back about the same walk-in cooler, no one really knows what was changed last time.",
+              "text": "Today, emergencies come in by phone, often during service hours, and the assistant juggles between the schedule and calls. Technicians fill out paper forms. Every Friday afternoon, she re-enters the week’s data into the billing software. When a restaurant calls back about the same walk-in cooler, no one really knows what was changed last time.",
               "type": "text"
             }
           ]
@@ -15388,7 +15475,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "With a tool tailored to them, the day goes differently. The emergency is created in two clicks and sent to the available technician. On-site, they open the equipment file: past interventions, parts already replaced, photos. They note what they’ve done, take photos, and get the manager’s signature on their phone—even deep inside the walk-in cooler where nothing works. As they leave, the report automatically goes to the restaurant, and the invoice is ready in the office that evening.",
+              "text": "With a tool tailored for them, the day goes differently. The emergency is created in two clicks and sent to the available technician. On-site, they open the equipment file: past interventions, parts already replaced, photos. They note what they did, take photos, and get the chef’s signature on their phone—even deep inside the walk-in cooler where nothing works. As they leave, the report automatically goes to the restaurant, and the invoice is ready in the office that evening.",
               "type": "text"
             }
           ]
@@ -15397,7 +15484,36 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The manager hasn’t changed jobs. They’ve just stopped wasting time and money between the field and the office.",
+              "text": "The manager hasn’t changed jobs. They’ve simply stopped wasting time and money between the field and the office.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To compare the 2026 prices of publishers (Organilog, Synchroteam, Kizeo Forms, Praxedo) and determine if a custom tool is worth it for your size, take my free ",
+              "type": "text"
+            },
+            {
+              "text": "field service management software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-gestion-interventions",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "quiz, which also offers downloadable templates for work orders and route sheets.",
               "type": "text"
             }
           ]
@@ -15418,7 +15534,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Let’s be honest: there are good off-the-shelf field service management software options. If one fits your workflow, take it. It’ll be cheaper and faster, and I’ll say it straight.",
+              "text": "Let’s be honest: there are good ready-made field service management software options out there. If one fits your workflow, take it. It’ll be cheaper and faster, and I’ll tell you straight up.",
               "type": "text"
             }
           ]
@@ -15427,17 +15543,17 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Customization makes sense when your work orders have specific needs no tool handles well, when they need to be linked to your inventory or billing system, or when your technicians often work without network access and the off-the-shelf software’s offline mode isn’t reliable. I’ve detailed this choice in a ",
+              "text": "Customization makes sense when your work orders have specific requirements no tool handles well, when they need to be linked to your inventory or billing, or when your technicians often work without network access and the off-the-shelf software’s offline mode doesn’t hold up. I’ve detailed this choice in a ",
               "type": "text"
             },
             {
-              "text": "comparison between SaaS software and custom tools",
+              "text": "comparison between SaaS software and custom solutions",
               "type": "text",
               "marks": [
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/en/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
+                    "href": "/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -15454,17 +15570,17 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Budget-wise, most SME tools cost between 5,000 and 15,000 euros upfront, then 100 to 300 euros per month for maintenance. The details are on my ",
+              "text": "Budget-wise, most TPE and SME tools cost between €5,000 and €15,000 upfront, plus €100 to €300 per month for maintenance. The details are on my ",
               "type": "text"
             },
             {
-              "text": "custom business application page",
+              "text": "custom business application",
               "type": "text",
               "marks": [
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/en/custom-business-software-rennes",
+                    "href": "/application-metier-sur-mesure-rennes",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -15473,6 +15589,35 @@
             },
             {
               "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For a plumbing or heating company, I’ve detailed the software selection on my ",
+              "type": "text"
+            },
+            {
+              "text": "software for plumbers and heating technicians",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-plombier-chauffagiste",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " page: 2026 pricing for intervention software, rules for quotes and boiler maintenance, and a free intervention voucher template.",
               "type": "text"
             }
           ]
@@ -15493,7 +15638,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "My technicians aren’t comfortable with computers, will it work?",
+              "text": "My technicians aren’t comfortable with computers—will it work?",
               "type": "text",
               "marks": [
                 {
@@ -15505,7 +15650,7 @@
               "type": "hard_break"
             },
             {
-              "text": "That’s exactly who it’s designed for: big buttons, as few fields as possible, photos taken just like in any other app. If filling out the form takes longer than on paper, it’s a failure.",
+              "text": "That’s exactly who it’s designed for: big buttons, minimal fields, photos just like in any other app. If filling out the voucher takes longer than on paper, it’s a failure.",
               "type": "text"
             }
           ]
@@ -15514,7 +15659,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "What happens when the phone has no network?",
+              "text": "What happens if the phone has no signal?",
               "type": "text",
               "marks": [
                 {
@@ -15526,7 +15671,7 @@
               "type": "hard_break"
             },
             {
-              "text": "The technician continues as if nothing happened. Everything is saved on the phone and sent to the office as soon as the network returns.",
+              "text": "The technician keeps working as if nothing happened. Everything is saved on the phone and sent to the office as soon as the network returns.",
               "type": "text"
             }
           ]
@@ -15547,7 +15692,7 @@
               "type": "hard_break"
             },
             {
-              "text": "Yes. The tool can send validated forms to it, or export them in the format it accepts. No need to change everything at once.",
+              "text": "Yes. The tool can send validated vouchers to it or export them in the format it accepts. No need to change everything at once.",
               "type": "text"
             }
           ]
@@ -15568,7 +15713,7 @@
               "type": "hard_break"
             },
             {
-              "text": "A few weeks for a first useful tool: scheduling, work orders, and signatures. The rest comes later, once the team uses it in real life.",
+              "text": "A few weeks for a first useful tool: scheduling, intervention vouchers, and signatures. The rest comes later, once the team uses it in practice.",
               "type": "text"
             }
           ]
@@ -15580,7 +15725,7 @@
           },
           "content": [
             {
-              "text": "Can we talk about this?",
+              "text": "Want to talk?",
               "type": "text"
             }
           ]
@@ -15589,7 +15734,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "If your work orders still get re-entered every Friday, we can start simply: an audit of your current organization and a written action plan, over the phone or via video call. I always begin with the most painful point, give you an honest budget estimate, and if an existing software solution will suffice, I’ll tell you.",
+              "text": "If your intervention vouchers still get re-entered every Friday, we can start simply: an audit of your current organization and a written action plan, over the phone or video call. I always begin with the most painful point, give you an honest budget estimate, and if an existing software suits you, I’ll tell you.",
               "type": "text"
             }
           ]

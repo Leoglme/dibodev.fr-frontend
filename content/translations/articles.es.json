@@ -1591,7 +1591,7 @@
           },
           "content": [
             {
-              "text": "¿Por qué un software de gestión es esencial para los fontaneros?",
+              "text": "Por qué un software de gestión es esencial para los fontaneros",
               "type": "text"
             }
           ]
@@ -1600,7 +1600,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Como fontanero, sabes que gestionar tu empresa puede ser complejo. Entre la planificación de las intervenciones, la facturación, el control de inventarios y la relación con los clientes, es fácil perderse. Aquí es donde entra en juego un software de gestión adaptado a tu profesión. En 2026, las herramientas digitales serán aún más indispensables para mantener la competitividad y ofrecer un servicio impecable a tus clientes.",
+              "text": "Como fontanero, sabes que gestionar tu empresa puede ser complejo. Entre la planificación de intervenciones, la facturación, la gestión de inventarios y la relación con el cliente, es fácil perderse. Es ahí donde entra en juego un software de gestión adaptado a tu oficio. En 2026, las herramientas digitales serán aún más indispensables para mantenerte competitivo y ofrecer un servicio impecable a tus clientes.",
               "type": "text"
             }
           ]
@@ -1612,7 +1612,7 @@
           },
           "content": [
             {
-              "text": "SaaS vs. Solución a medida: diferencias clave",
+              "text": "SaaS vs Solución personalizada: las diferencias clave",
               "type": "text"
             }
           ]
@@ -1633,7 +1633,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Un software SaaS (Software as a Service) es una solución alojada en la nube, accesible a través de un navegador web. Estos son sus principales ventajas:",
+              "text": "Un software SaaS (Software como Servicio) es una solución alojada en la nube, accesible a través de un navegador web. Estos son sus principales ventajas:",
               "type": "text"
             }
           ]
@@ -1657,7 +1657,7 @@
                       ]
                     },
                     {
-                      "text": ": No es necesario invertir en hardware ni servidores.",
+                      "text": ": No es necesario invertir en hardware o servidores.",
                       "type": "text"
                     }
                   ]
@@ -1680,7 +1680,7 @@
                       ]
                     },
                     {
-                      "text": ": Siempre tendrás la última versión sin necesidad de intervenir.",
+                      "text": ": Siempre tendrás la última versión sin necesidad de intervención.",
                       "type": "text"
                     }
                   ]
@@ -1703,7 +1703,7 @@
                       ]
                     },
                     {
-                      "text": ": Puedes acceder desde cualquier dispositivo con conexión a Internet.",
+                      "text": ": Puedes acceder desde cualquier dispositivo conectado a Internet.",
                       "type": "text"
                     }
                   ]
@@ -1716,7 +1716,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Sin embargo, los SaaS también tienen desventajas:",
+              "text": "Sin embargo, los SaaS también presentan inconvenientes:",
               "type": "text"
             }
           ]
@@ -1763,7 +1763,7 @@
                       ]
                     },
                     {
-                      "text": ": Estás sujeto a las decisiones del proveedor en cuanto a precios, funciones, etc.",
+                      "text": ": Estás a merced de las decisiones del proveedor en cuanto a tarifas, funcionalidades, etc.",
                       "type": "text"
                     }
                   ]
@@ -1779,7 +1779,7 @@
           },
           "content": [
             {
-              "text": "Solución a medida",
+              "text": "Solución personalizada",
               "type": "text"
             }
           ]
@@ -1788,7 +1788,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Una solución a medida se desarrolla específicamente para cubrir tus necesidades. Estas son sus principales ventajas:",
+              "text": "Una solución personalizada está desarrollada específicamente para responder a tus necesidades. Estos son sus principales ventajas:",
               "type": "text"
             }
           ]
@@ -1812,7 +1812,7 @@
                       ]
                     },
                     {
-                      "text": ": El software se diseña para adaptarse a tus procesos de negocio.",
+                      "text": ": El software está diseñado para adaptarse a tus procesos comerciales.",
                       "type": "text"
                     }
                   ]
@@ -1835,7 +1835,7 @@
                       ]
                     },
                     {
-                      "text": ": Tú controlas tus datos y su alojamiento.",
+                      "text": ": Usted controla sus datos y su alojamiento.",
                       "type": "text"
                     }
                   ]
@@ -1858,7 +1858,7 @@
                       ]
                     },
                     {
-                      "text": ": Puedes añadir o modificar funciones según tus necesidades.",
+                      "text": ": Puede agregar o modificar funcionalidades según sus necesidades.",
                       "type": "text"
                     }
                   ]
@@ -1871,7 +1871,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Las desventajas de una solución a medida son:",
+              "text": "Las desventajas de una solución personalizada son:",
               "type": "text"
             }
           ]
@@ -1895,7 +1895,7 @@
                       ]
                     },
                     {
-                      "text": ": El desarrollo de un software a medida requiere una inversión mayor.",
+                      "text": ": El desarrollo de un software personalizado requiere una inversión más significativa.",
                       "type": "text"
                     }
                   ]
@@ -1918,7 +1918,7 @@
                       ]
                     },
                     {
-                      "text": ": Se necesita tiempo para diseñar e implementar una solución a medida.",
+                      "text": ": Se necesita tiempo para diseñar e implementar una solución personalizada.",
                       "type": "text"
                     }
                   ]
@@ -1934,7 +1934,7 @@
           },
           "content": [
             {
-              "text": "¿Cómo elegir entre SaaS y solución a medida?",
+              "text": "¿Cómo elegir entre SaaS y solución personalizada?",
               "type": "text"
             }
           ]
@@ -1943,7 +1943,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "La elección entre un software SaaS y una solución a medida depende de varios factores:",
+              "text": "La elección entre un software SaaS y una solución personalizada depende de varios factores:",
               "type": "text"
             }
           ]
@@ -1958,7 +1958,7 @@
                   "type": "paragraph",
                   "content": [
                     {
-                      "text": "Tus necesidades específicas",
+                      "text": "Sus necesidades específicas",
                       "type": "text",
                       "marks": [
                         {
@@ -1967,7 +1967,7 @@
                       ]
                     },
                     {
-                      "text": ": ¿Tienes procesos de negocio únicos que requieran una solución a medida?",
+                      "text": ": ¿Tiene procesos comerciales únicos que requieran una solución personalizada?",
                       "type": "text"
                     }
                   ]
@@ -1981,7 +1981,7 @@
                   "type": "paragraph",
                   "content": [
                     {
-                      "text": "Tu presupuesto",
+                      "text": "Su presupuesto",
                       "type": "text",
                       "marks": [
                         {
@@ -1990,7 +1990,7 @@
                       ]
                     },
                     {
-                      "text": ": ¿Cuál es tu presupuesto inicial y recurrente para un software de gestión?",
+                      "text": ": ¿Cuál es su presupuesto inicial y recurrente para un software de gestión?",
                       "type": "text"
                     }
                   ]
@@ -2004,7 +2004,7 @@
                   "type": "paragraph",
                   "content": [
                     {
-                      "text": "Tu tolerancia al riesgo",
+                      "text": "Su tolerancia al riesgo",
                       "type": "text",
                       "marks": [
                         {
@@ -2013,7 +2013,7 @@
                       ]
                     },
                     {
-                      "text": ": ¿Estás dispuesto a invertir tiempo y dinero en el desarrollo de una solución a medida?",
+                      "text": ": ¿Está dispuesto a invertir tiempo y dinero en el desarrollo de una solución personalizada?",
                       "type": "text"
                     }
                   ]
@@ -2027,7 +2027,7 @@
                   "type": "paragraph",
                   "content": [
                     {
-                      "text": "Tus habilidades técnicas",
+                      "text": "Sus competencias técnicas",
                       "type": "text",
                       "marks": [
                         {
@@ -2036,12 +2036,41 @@
                       ]
                     },
                     {
-                      "text": ": ¿Tienes las habilidades necesarias para gestionar una solución a medida?",
+                      "text": ": ¿Tiene las competencias necesarias para gestionar una solución personalizada?",
                       "type": "text"
                     }
                   ]
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para comparar los precios 2026 de los softwares del mercado y saber si una herramienta personalizada se justifica según su tamaño, haga la prueba gratuita de mi página \" ",
+              "type": "text"
+            },
+            {
+              "text": "software para fontanero-calefacción",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-plombier-chauffagiste",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", que también ofrece un modelo de presupuesto y de orden de intervención para descargar.",
+              "type": "text"
             }
           ]
         },
@@ -2052,7 +2081,7 @@
           },
           "content": [
             {
-              "text": "Mi oferta para los fontaneros",
+              "text": "Mi propuesta para fontaneros",
               "type": "text"
             }
           ]
@@ -2061,11 +2090,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Como desarrollador freelance con sede en Rennes, ofrezco soluciones a medida para artesanos y PYMES. Puedo ayudarte a diseñar un software de gestión adaptado a tus necesidades específicas, para optimizar tu actividad y ofrecer un servicio impecable a tus clientes.",
+              "text": "Como desarrollador freelance basado en Rennes, ofrezco soluciones personalizadas para artesanos y PYMES. Puedo ayudarle a diseñar un software de gestión adaptado a sus necesidades específicas, para optimizar su actividad y ofrecer un servicio impecable a sus clientes.",
               "type": "text"
             },
             {
-              "text": " Y para que te encuentren, tu ",
+              "text": " Y para darse a conocer, su ",
               "type": "text"
             },
             {
@@ -2085,7 +2114,7 @@
               ]
             },
             {
-              "text": " puede estar en línea en 48 h: compónla en 2 minutos sobre una plantilla real, por 290 € en un solo pago.",
+              "text": " puede estar en línea en menos de 48 horas: compóngala en 2 minutos con un modelo real, por 290 € una sola vez.",
               "type": "text"
             }
           ]
@@ -2106,7 +2135,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "La elección entre un software SaaS y una solución a medida depende de tus necesidades, tu presupuesto y tus habilidades técnicas. Si tienes procesos de negocio únicos o deseas tener un control total sobre tus datos, una solución a medida puede ser la mejor opción. En cambio, si tienes un presupuesto limitado o prefieres una solución lista para usar, un software SaaS puede ser más adecuado.",
+              "text": "La elección entre un software SaaS y una solución personalizada depende de sus necesidades, de su presupuesto y de sus competencias técnicas. Si tiene procesos comerciales únicos o si desea tener un control total sobre sus datos, una solución personalizada puede ser la mejor opción. En cambio, si tiene un presupuesto limitado o si prefiere una solución llave en mano, un software SaaS puede ser más adecuado.",
               "type": "text"
             }
           ]
@@ -2115,7 +2144,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "¿Tienes un proyecto de software a medida para tu empresa de fontanería? ¡Contáctame hoy mismo para hablar del tema!",
+              "text": "¿Tiene un proyecto de software personalizado para su empresa de fontanería? ¡Contácteme hoy mismo para hablar del tema!",
               "type": "text",
               "marks": [
                 {
@@ -3582,7 +3611,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No soy técnico de calefacción. Nunca he purgado un radiador ni reemplazado una caldera. Pero tras construir herramientas para artesanos, he visto la misma escena repetirse: una carpeta con contratos de mantenimiento, una agenda en papel y una hoja de cálculo donde se anota «caldera Martin — revisar en octubre». Solo que estamos en febrero y nadie ha llamado a Martin.",
+              "text": "No soy calderero. Nunca he purgado un radiador ni reemplazado una caldera. Pero tras construir herramientas para artesanos, he visto la misma escena repetirse: una carpeta con contratos de mantenimiento, una agenda en papel y una hoja de cálculo donde se anota «caldera Martin — revisar en octubre». Solo que estamos en febrero y nadie ha llamado a Martin.",
               "type": "text"
             }
           ]
@@ -3591,7 +3620,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El mantenimiento anual de las calderas es el motor de un técnico de calefacción: obligatorio para el cliente, recurrente, y es un ingreso que vuelve solo… siempre y cuando no se olvide. Pero es exactamente lo que se pierde cuando se gestiona de memoria o en un rincón de una hoja de cálculo.",
+              "text": "El mantenimiento anual de las calderas es el motor de un calderero: obligatorio para el cliente, recurrente, y es un ingreso que llega solo… siempre y cuando no se olvide. Pero es exactamente lo que se pierde cuando se gestiona de memoria o en una esquina de una hoja de cálculo.",
               "type": "text"
             }
           ]
@@ -3603,7 +3632,7 @@
           },
           "content": [
             {
-              "text": "El verdadero problema de un técnico de calefacción: la recurrencia, no la intervención",
+              "text": "El verdadero problema de un calderero: la recurrencia, no la intervención",
               "type": "text"
             }
           ]
@@ -3612,7 +3641,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Un técnico de calefacción sabe hacer su trabajo. Lo que falla no es la intervención, sino recordar —para 200, 300 o 400 clientes— quién tiene contrato, qué caldera se instaló cuándo y cuándo es la próxima visita.",
+              "text": "Un calderero sabe hacer su trabajo. Lo que falla no es la intervención, sino recordar —para 200, 300 o 400 clientes— quién tiene contrato, qué caldera se instaló cuándo y cuándo es la próxima visita.",
               "type": "text"
             }
           ]
@@ -3621,7 +3650,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "A mano, siempre pasan dos cosas: o se contacta demasiado tarde y el cliente ya se fue con un competidor; o se olvida por completo, y una visita no realizada es un contrato que no se renueva. En ambos casos, es dinero que se va sin ruido.",
+              "text": "A mano, siempre pasan dos cosas: o se contacta demasiado tarde y el cliente ya ha pasado a un competidor; o se olvida por completo, y una visita no realizada es un contrato que no se renueva. En ambos casos, es dinero que se va sin hacer ruido.",
               "type": "text"
             }
           ]
@@ -3633,7 +3662,7 @@
           },
           "content": [
             {
-              "text": "Lo que un herramienta a medida cambia concretamente",
+              "text": "Lo que cambia realmente una herramienta a medida",
               "type": "text"
             }
           ]
@@ -3685,7 +3714,7 @@
                   "type": "paragraph",
                   "content": [
                     {
-                      "text": "Un recordatorio parte automáticamente —por SMS o correo— unas semanas antes de la fecha límite.",
+                      "text": "Un recordatorio parte automáticamente —por SMS o correo electrónico— unas semanas antes de la fecha límite.",
                       "type": "text"
                     }
                   ]
@@ -3719,7 +3748,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Tomemos un técnico de calefacción con 300 contratos de mantenimiento. Cada lunes por la mañana, abre su herramienta: «14 visitas por planificar este mes, 3 clientes aún sin contacto». Ya no abre ninguna hoja de cálculo.",
+              "text": "Tomemos un calderero con 300 contratos de mantenimiento. Cada lunes por la mañana, abre su herramienta: «14 visitas por planificar este mes, 3 clientes aún no contactados». Ya no abre ninguna hoja de cálculo.",
               "type": "text"
             }
           ]
@@ -3729,6 +3758,35 @@
           "content": [
             {
               "text": "Los clientes afectados recibieron un recordatorio automático la semana anterior; solo tiene que programar las citas. Al final del año, ve de un vistazo cuántos contratos están por renovarse y cuáles podrían perderse. El tiempo dedicado a «buscar a quién contactar» ha caído a cero.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si sus técnicos encadenan averías y visitas de mantenimiento, mi página ",
+              "type": "text"
+            },
+            {
+              "text": "software de gestión de intervenciones",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-gestion-interventions",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " compara los precios 2026 de los softwares de planificación y de órdenes de intervención móviles, y ofrece una hoja de ruta gratuita.",
               "type": "text"
             }
           ]
@@ -3758,7 +3816,36 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Para el cliente, es un profesional que «conoce» su caldera. Para el técnico de calefacción, es un diagnóstico más rápido, menos sorpresas desagradables y un argumento sólido para renovar.",
+              "text": "Para el cliente, es un profesional que «conoce» su caldera. Para el calderero, es un diagnóstico más rápido, menos sorpresas y un argumento sólido para renovar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si duda entre un software del mercado y una herramienta a medida para sus contratos de mantenimiento, mi página ",
+              "type": "text"
+            },
+            {
+              "text": "software para fontanero-calefacción",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-plombier-chauffagiste",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " compara los precios 2026 de los editores, resume las reglas del mantenimiento anual y le da un veredicto en seis preguntas.",
               "type": "text"
             }
           ]
@@ -3779,7 +3866,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "¿Reemplaza mi software de cotización y facturación?",
+              "text": "¿Reemplaza mi software de presupuestos y facturación?",
               "type": "text",
               "marks": [
                 {
@@ -3791,7 +3878,7 @@
               "type": "hard_break"
             },
             {
-              "text": "No necesariamente. La herramienta puede enfocarse en lo que le falta —el seguimiento de contratos y los recordatorios— y coexistir con lo que ya usa para facturar. Si alguna herramienta existente ya hace todo eso bien, se lo haré saber.",
+              "text": "No necesariamente. La herramienta puede centrarse en lo que le falta — el seguimiento de los contratos y los recordatorios — y coexistir con lo que ya usa para facturar. Si una herramienta existente ya lo hace bien, se lo diré.",
               "type": "text"
             }
           ]
@@ -3800,7 +3887,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Tengo 400 clientes en una hoja de cálculo, ¿volvemos a empezar desde cero?",
+              "text": "Tengo 400 clientes en una hoja de cálculo, ¿tengo que empezar desde cero?",
               "type": "text",
               "marks": [
                 {
@@ -3812,7 +3899,7 @@
               "type": "hard_break"
             },
             {
-              "text": "No. Recuperamos su hoja de cálculo para empezar con la base: no tiene que volver a introducir 400 líneas manualmente.",
+              "text": "No. Recuperamos su hoja de cálculo para iniciar la base de datos: no tendrá que volver a introducir 400 líneas manualmente.",
               "type": "text"
             }
           ]
@@ -3821,7 +3908,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "¿Las notificaciones automáticas no son spam?",
+              "text": "¿Los recordatorios automáticos no son spam?",
               "type": "text",
               "marks": [
                 {
@@ -3833,7 +3920,7 @@
               "type": "hard_break"
             },
             {
-              "text": "Un recordatorio de mantenimiento, que suele ser obligatorio y esperado por el cliente, no tiene nada de spam. Es incluso un servicio que valora.",
+              "text": "Un recordatorio de mantenimiento, a menudo obligatorio y esperado por el cliente, no tiene nada de spam. Es incluso un servicio que valora.",
               "type": "text"
             }
           ]
@@ -3842,7 +3929,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "¿Cuánto tiempo se tarda en implementarlo?",
+              "text": "¿Cuánto tiempo toma implementarlo?",
               "type": "text",
               "marks": [
                 {
@@ -3854,7 +3941,7 @@
               "type": "hard_break"
             },
             {
-              "text": "Una primera herramienta útil —fichas de clientes, visitas programadas, recordatorios— se construye en unas semanas, no en seis meses.",
+              "text": "Una primera herramienta útil — fichas de clientes, visitas programadas, recordatorios — se construye en unas semanas, no en seis meses.",
               "type": "text"
             }
           ]
@@ -3875,7 +3962,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si sus contratos de mantenimiento viven en una hoja de cálculo y en su cabeza, podemos empezar de forma sencilla: un análisis de su organización actual y un plan de acción por escrito. Siempre empiezo por el punto más crítico, doy una estimación honesta del presupuesto, y si le basta con una herramienta existente, se lo digo.",
+              "text": "Si sus contratos de mantenimiento viven en una hoja de cálculo y en su cabeza, podemos empezar de forma sencilla: un análisis de su organización actual y un plan de acción escrito. Siempre empiezo por el punto más crítico, doy una estimación honesta de presupuesto, y si una herramienta existente le es suficiente, se lo diré.",
               "type": "text"
             }
           ]
@@ -15135,7 +15222,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Antes de escribir código, pasé cinco años en la cocina. Así que cuando una cámara frigorífica falla un viernes por la noche, sé lo que significa: el jefe llamando tres veces, el técnico llegando entre servicio y servicio, y el albarán de intervención garabateado en una esquina de la mesa de trabajo, que habrá que releer el lunes en la oficina. Si es que se puede releer.",
+              "text": "Antes de escribir código, pasé cinco años en la cocina. Así que cuando un cuarto frío falla un viernes por la noche, sé lo que significa: el chef que llama tres veces, el técnico que llega entre servicios, y el albarán de intervención garabateado en una esquina de la mesa de trabajo, que habrá que releer el lunes en la oficina. Si es que se puede releer.",
               "type": "text"
             }
           ]
@@ -15144,7 +15231,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Más tarde, en Kodeva, trabajé en una aplicación de atención al cliente para técnicos de campo. Allí entendí algo sencillo: una intervención no es solo una cita en un calendario. Es información que debe volver a la oficina, completa y rápido. Y casi siempre es ahí donde falla.",
+              "text": "Más tarde, en Kodeva, trabajé en una aplicación de servicio postventa para técnicos de campo. Allí entendí algo sencillo: una intervención no es solo una cita en un calendario. Es información que debe volver a la oficina, completa y rápido. Y es casi siempre ahí donde falla todo.",
               "type": "text"
             }
           ]
@@ -15165,7 +15252,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "La mayoría de las empresas que envían técnicos a sus clientes saben hacer un calendario. Una pizarra, una agenda compartida, un archivo Excel: el lunes por la mañana, todos saben adónde van.",
+              "text": "La mayoría de las empresas que envían técnicos a sus clientes saben hacer un calendario. Una pizarra, un calendario compartido, un archivo de Excel: cada lunes por la mañana, todos saben a dónde van.",
               "type": "text"
             }
           ]
@@ -15174,7 +15261,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Ahí es donde se complica. El técnico termina su intervención, rellena un albarán en papel (si se acuerda), anota las piezas usadas en el reverso, toma dos fotos con su teléfono y las envía por SMS a quien quiera leerlas. El viernes, alguien en la oficina vuelve a introducir todo. Falta una firma, una hora de llegada, el código de una pieza. La factura sale con dos semanas de retraso, y a veces ni siquiera sale.",
+              "text": "Pero las cosas se complican después. El técnico termina su intervención, rellena un albarán en papel (cuando se acuerda), anota las piezas usadas en el reverso, toma dos fotos con su teléfono y las envía por SMS a quien quiera leerlas. El viernes, alguien en la oficina lo vuelve a introducir todo. Falta una firma, una hora de llegada, el número de referencia de una pieza. La factura sale con dos semanas de retraso, y a veces ni siquiera sale.",
               "type": "text"
             }
           ]
@@ -15204,7 +15291,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No hace falta una solución compleja. Para la mayoría de las Pymes de mantenimiento, servicio postventa o instalación, una buena herramienta se resume en cuatro cosas:",
+              "text": "No se necesita una solución compleja. Para la mayoría de las PYMES de mantenimiento, servicio postventa o instalación, una buena herramienta se resume en cuatro cosas:",
               "type": "text"
             }
           ]
@@ -15257,7 +15344,7 @@
               "type": "text"
             },
             {
-              "text": "La devolución inmediata a la oficina",
+              "text": "El informe inmediato a la oficina",
               "type": "text",
               "marks": [
                 {
@@ -15266,7 +15353,7 @@
               ]
             },
             {
-              "text": ": en cuanto el albarán se valida, está en la oficina. Sin reingresar datos, sin papeles olvidados en el camión.",
+              "text": ": en cuanto se valida el albarán, está en la oficina. Sin reingresar datos, sin papeles olvidados en el camión.",
               "type": "text"
             },
             {
@@ -15277,7 +15364,7 @@
               "type": "text"
             },
             {
-              "text": "La conexión con el resto",
+              "text": "La conexión con el resto del sistema",
               "type": "text",
               "marks": [
                 {
@@ -15316,11 +15403,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si hay una lección que retengo de esta aplicación de servicio posventa, es esa: ",
+              "text": "Si hay una lección que retengo de esta aplicación de SAV, es esa: ",
               "type": "text"
             },
             {
-              "text": "si la herramienta no funciona en el sótano, no se usará.",
+              "text": "si la herramienta no funciona en el sótano, no será utilizada.",
               "type": "text",
               "marks": [
                 {
@@ -15343,7 +15430,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El modo offline significa que todo lo que el técnico necesita ya está en su teléfono cuando sale por la mañana, que puede completar su informe y hacer firmar al cliente sin necesidad de conexión, y que todo se sincroniza automáticamente en cuanto vuelve la red. Para él, nada cambia. Para la oficina, nada se pierde.",
+              "text": "El modo offline significa que todo lo que el técnico necesita ya está en su teléfono cuando sale por la mañana, puede completar su informe y hacer firmar al cliente sin necesidad de conexión, y todo se sincroniza automáticamente en cuanto la red vuelve. Para él, nada cambia. Para la oficina, nada se pierde.",
               "type": "text"
             }
           ]
@@ -15352,7 +15439,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Es una de las primeras preguntas que hago cuando hablo de una herramienta para equipos de campo.",
+              "text": "Es una de las primeras preguntas que hago cuando se habla de una herramienta para equipos en terreno.",
               "type": "text"
             }
           ]
@@ -15373,7 +15460,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Tomemos una PYME que instala y repara equipos de cocina profesional para restaurantes: hornos, cámaras frigoríficas, lavavajillas. Seis técnicos, una asistente en la oficina y un gerente que hace los presupuestos por la noche.",
+              "text": "Tomemos una PYME que instala y reparte equipos de cocina profesional para restaurantes: hornos, cámaras frigoríficas, lavavajillas. Seis técnicos, una asistente en la oficina y un gerente que hace los presupuestos por la noche.",
               "type": "text"
             }
           ]
@@ -15382,7 +15469,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Hoy, las urgencias llegan por teléfono, a menudo en pleno servicio, y la asistente maneja el calendario y las llamadas al mismo tiempo. Los técnicos completan informes en papel. El viernes por la tarde, ella vuelve a ingresar toda la semana en el software de facturación. Cuando un restaurante vuelve a llamar por la misma cámara frigorífica, nadie sabe exactamente qué se cambió la última vez.",
+              "text": "Hoy, las urgencias llegan por teléfono, a menudo en pleno servicio, y la asistente maneja el calendario y las llamadas al mismo tiempo. Los técnicos llenan formularios en papel. El viernes por la tarde, ella vuelve a ingresar toda la semana en el software de facturación. Cuando un restaurante vuelve a llamar por la misma cámara frigorífica, nadie sabe exactamente qué se cambió la última vez.",
               "type": "text"
             }
           ]
@@ -15406,13 +15493,42 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para comparar los precios 2026 de los editores (Organilog, Synchroteam, Kizeo Forms, Praxedo) y saber si una herramienta personalizada se justifica según su tamaño, haga la prueba gratuita en mi página ",
+              "type": "text"
+            },
+            {
+              "text": "software de gestión de intervenciones",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-gestion-interventions",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", que también ofrece un modelo de orden de servicio y hoja de ruta para descargar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
           },
           "content": [
             {
-              "text": "¿Software del mercado o herramienta a medida?",
+              "text": "Software del mercado o herramienta personalizada?",
               "type": "text"
             }
           ]
@@ -15430,17 +15546,17 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "La personalización se justifica cuando sus órdenes de trabajo tienen particularidades que ningún software gestiona bien, cuando hay que vincularlas a su inventario o a su facturación, o cuando sus técnicos trabajan a menudo sin red y el modo offline del software del mercado no es suficiente. He detallado esta elección en un ",
+              "text": "La personalización se justifica cuando sus órdenes de servicio tienen particularidades que ningún software gestiona bien, cuando deben vincularse a su inventario o a su facturación, o cuando sus técnicos trabajan a menudo sin red y el modo offline del software del mercado no es suficiente. He detallado esta elección en un ",
               "type": "text"
             },
             {
-              "text": "comparativo entre software SaaS y solución a medida",
+              "text": "comparativo entre software SaaS y personalizado",
               "type": "text",
               "marks": [
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/es/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
+                    "href": "/blog/logiciel-metier-saas-etagere-ou-sur-mesure",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -15457,17 +15573,17 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En cuanto al presupuesto, la mayoría de las herramientas para PYMES cuestan entre 5.000 y 15.000 €, más 100 a 300 € por mes de mantenimiento. Los detalles están en mi página ",
+              "text": "En cuanto a presupuesto, con un paquete, la mayoría de las herramientas para pymes y pequeñas empresas cuestan entre 5.000 y 15.000 €, más 100 a 300 € al mes de mantenimiento. El detalle está en mi página ",
               "type": "text"
             },
             {
-              "text": "aplicación a medida para empresas",
+              "text": "aplicación empresarial personalizada",
               "type": "text",
               "marks": [
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/es/software-de-gestion-a-medida-rennes",
+                    "href": "/application-metier-sur-mesure-rennes",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -15476,6 +15592,35 @@
             },
             {
               "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para una empresa de fontanería o calefacción, he detallado la elección del software en mi página ",
+              "type": "text"
+            },
+            {
+              "text": "software para fontanero-calefactor",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-plombier-chauffagiste",
+                    "uuid": null,
+                    "anchor": null,
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": precios 2026 de los softwares de intervención, reglas para facturas y mantenimiento de calderas, y un modelo gratuito de orden de intervención.",
               "type": "text"
             }
           ]
@@ -15496,7 +15641,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Mis técnicos no están muy familiarizados con la informática, ¿funcionará?",
+              "text": "Mis técnicos no están cómodos con la informática, ¿funcionará?",
               "type": "text",
               "marks": [
                 {
@@ -15508,7 +15653,7 @@
               "type": "hard_break"
             },
             {
-              "text": "Justamente es para ellos que lo diseñamos: botones grandes, el menor número de campos posible, fotos tomadas como en cualquier aplicación. Si completar el formulario tarda más que con el papel, es un fracaso.",
+              "text": "Justamente es para ellos que lo diseñamos: botones grandes, el menor número de campos posible, fotos tomadas como en cualquier aplicación. Si rellenar el orden toma más tiempo que con papel, habrá fallado.",
               "type": "text"
             }
           ]
@@ -15517,7 +15662,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "¿Qué pasa cuando el teléfono no tiene red?",
+              "text": "¿Qué pasa si el teléfono no tiene red?",
               "type": "text",
               "marks": [
                 {
@@ -15529,7 +15674,7 @@
               "type": "hard_break"
             },
             {
-              "text": "El técnico sigue trabajando como si nada hubiera pasado. Todo se guarda en el teléfono y se envía a la oficina en cuanto la red vuelva.",
+              "text": "El técnico continúa como si nada hubiera pasado. Todo se registra en el teléfono y se envía a la oficina en cuanto la red vuelve.",
               "type": "text"
             }
           ]
@@ -15550,7 +15695,7 @@
               "type": "hard_break"
             },
             {
-              "text": "Sí. La herramienta puede enviarle los formularios validados o exportarlos en el formato que acepte. No es necesario cambiar todo de golpe.",
+              "text": "Sí. La herramienta puede enviarle los órdenes validados o exportarlos en el formato que acepte. No es necesario cambiar todo de golpe.",
               "type": "text"
             }
           ]
@@ -15571,7 +15716,7 @@
               "type": "hard_break"
             },
             {
-              "text": "Unas semanas para una primera herramienta útil: programación, orden de servicio y firma. El resto llega después, una vez que el equipo lo use en la práctica.",
+              "text": "Unas semanas para una primera herramienta útil: programación, orden de intervención y firma. El resto llega después, una vez que el equipo lo use de verdad.",
               "type": "text"
             }
           ]
@@ -15592,7 +15737,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si sus órdenes de servicio siguen siendo ingresadas manualmente los viernes, podemos empezar de forma sencilla: un análisis de su organización actual y un plan de acción escrito, por teléfono o en videollamada. Siempre empiezo por el problema más urgente, le doy una estimación honesta del presupuesto, y si un software existente le basta, se lo haré saber.",
+              "text": "Si sus órdenes de intervención aún se vuelven a introducir el viernes, podemos empezar de forma sencilla: un análisis de su organización actual y un plan de acción escrito, por teléfono o en videollamada. Siempre empiezo por el punto que más duele, les doy una estimación honesta del presupuesto, y si un software existente les basta, se lo digo.",
               "type": "text"
             }
           ]
