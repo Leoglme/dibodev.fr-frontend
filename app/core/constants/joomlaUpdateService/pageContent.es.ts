@@ -221,6 +221,11 @@ export const JOOMLA_UPDATE_SERVICE_PAGE_ES: DibodevUpdateServicePageContent = {
           'Unas horas para una web Joomla 5 sin sorpresas, uno o dos días cuando la plantilla o las extensiones requieren trabajo. El diagnóstico llega en 24 h.',
       },
       {
+        question: '¿Trabajas con webmasters y agencias?',
+        answer:
+          'Sí. Si uno de tus clientes necesita una actualización de versión, una revisión de seguridad o una limpieza tras un hackeo, puedes enviármelo y, si quieres, lo trato directamente con él, solo para la parte técnica. El diseño, los contenidos y la comunicación, por supuesto, siguen en tus manos.',
+      },
+      {
         question: '¿Cómo es el pago?',
         answer:
           'El diagnóstico es gratuito, el precio se anuncia por escrito antes de la intervención y la factura se paga por transferencia. Precios netos, IVA no aplicable. Sin suscripción obligatoria: el seguimiento mensual es una opción que puedes cancelar cuando quieras.',

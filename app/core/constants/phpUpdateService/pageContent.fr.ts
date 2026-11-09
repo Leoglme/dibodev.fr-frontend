@@ -220,6 +220,11 @@ export const PHP_UPDATE_SERVICE_PAGE_FR: DibodevUpdateServicePageContent = {
           'Oui, c’est compris dans les forfaits site vitrine et boutique. Changer PHP sans mettre à jour le reste est le meilleur moyen de casser le site, et l’inverse ne protège pas de la faille.',
       },
       {
+        question: `Travaillez-vous avec les webmasters et les agences${NBSP}?`,
+        answer:
+          'Oui. Si l’un de vos clients a besoin d’une montée de version, d’un point sur la sécurité ou d’un nettoyage après un piratage, vous pouvez me l’envoyer, et je vois directement avec lui si vous le souhaitez, uniquement pour la partie technique. Le graphisme, les contenus et la communication restent bien sûr chez vous.',
+      },
+      {
         question: 'Comment se passe le paiement ?',
         answer:
           'Un diagnostic gratuit, un prix annoncé avant l’intervention, puis une facture à l’issue, réglée par virement. Prix nets, TVA non applicable. Pas d’abonnement imposé : le suivi mensuel est une option, résiliable quand vous voulez.',

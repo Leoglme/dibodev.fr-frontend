@@ -222,6 +222,11 @@ export const PHP_UPDATE_SERVICE_PAGE_EN: DibodevUpdateServicePageContent = {
           'Yes, it is included in the showcase and store packages. Changing PHP without updating the rest is the best way to break a site, and the opposite does not protect from the vulnerability.',
       },
       {
+        question: 'Do you work with webmasters and agencies?',
+        answer:
+          'Yes. If one of your clients needs a version upgrade, a security check or a clean-up after a hack, you can send them to me, and I will deal with them directly if you wish, for the technical side only. Design, content and communication of course stay with you.',
+      },
+      {
         question: 'How does payment work?',
         answer:
           'A free diagnosis, a price announced before the work, then an invoice afterwards, paid by bank transfer. Net prices, VAT not applicable. No subscription imposed: the monthly follow-up is an option you can cancel whenever you want.',

@@ -208,6 +208,11 @@ export const JOOMLA_UPDATE_SERVICE_PAGE_FR: DibodevUpdateServicePageContent = {
         answer: `Quelques heures pour un site Joomla 5 sans surprise, une à deux journées quand le modèle ou les extensions demandent du travail. Le diagnostic arrive sous 24${NBSP}h.`,
       },
       {
+        question: `Travaillez-vous avec les webmasters et les agences${NBSP}?`,
+        answer:
+          'Oui. Si l’un de vos clients a besoin d’une montée de version, d’un point sur la sécurité ou d’un nettoyage après un piratage, vous pouvez me l’envoyer, et je vois directement avec lui si vous le souhaitez, uniquement pour la partie technique. Le graphisme, les contenus et la communication restent bien sûr chez vous.',
+      },
+      {
         question: `Comment se passe le paiement${NBSP}?`,
         answer: `Le diagnostic est gratuit, le prix est annoncé par écrit avant l’intervention, et la facture se règle par virement. Prix nets, TVA non applicable. Pas d’abonnement imposé${NBSP}: le suivi mensuel est une option, résiliable quand vous voulez.`,
       },

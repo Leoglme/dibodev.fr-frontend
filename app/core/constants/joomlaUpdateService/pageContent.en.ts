@@ -220,6 +220,11 @@ export const JOOMLA_UPDATE_SERVICE_PAGE_EN: DibodevUpdateServicePageContent = {
           'A few hours for a Joomla 5 website with no surprises, one to two days when the template or the extensions need work. The diagnosis arrives within 24 hours.',
       },
       {
+        question: 'Do you work with webmasters and agencies?',
+        answer:
+          'Yes. If one of your clients needs a version upgrade, a security check or a clean-up after a hack, you can send them to me, and I will deal with them directly if you wish, for the technical side only. Design, content and communication of course stay with you.',
+      },
+      {
         question: 'How does payment work?',
         answer:
           'The diagnosis is free, the price is announced in writing before the work, and the invoice is paid by bank transfer. Net prices, VAT not applicable. No subscription required: monthly maintenance is an option you can cancel whenever you want.',

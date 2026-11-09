@@ -224,6 +224,11 @@ export const PHP_UPDATE_SERVICE_PAGE_ES: DibodevUpdateServicePageContent = {
           'Sí, está incluido en los paquetes de web corporativa y tienda. Cambiar PHP sin actualizar el resto es la mejor manera de romper una web, y lo contrario no protege del fallo.',
       },
       {
+        question: '¿Trabajas con webmasters y agencias?',
+        answer:
+          'Sí. Si uno de tus clientes necesita una actualización de versión, una revisión de seguridad o una limpieza tras un hackeo, puedes enviármelo y, si quieres, lo trato directamente con él, solo para la parte técnica. El diseño, los contenidos y la comunicación, por supuesto, siguen en tus manos.',
+      },
+      {
         question: '¿Cómo se paga?',
         answer:
           'Un diagnóstico gratuito, un precio anunciado antes de la intervención y una factura al terminar, pagada por transferencia. Precios netos, IVA no aplicable. Sin suscripción obligatoria: el seguimiento mensual es una opción que puedes cancelar cuando quieras.',
