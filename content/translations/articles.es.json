@@ -37523,13 +37523,13 @@
               "type": "text"
             },
             {
-              "text": "la página de actualización de PHP de su web",
+              "text": "la página de actualización de su web Joomla",
               "type": "text",
               "marks": [
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "/mise-a-jour-php-site-logiciel",
+                    "href": "/mise-a-jour-site-joomla",
                     "target": "_self",
                     "linktype": "url"
                   }
@@ -47008,13 +47008,13 @@
               "type": "text"
             },
             {
-              "text": "Actualización de PHP de su sitio o software",
+              "text": "Actualización de su sitio Joomla",
               "type": "text",
               "marks": [
                 {
                   "type": "link",
                   "attrs": {
-                    "href": "https://dibodev.fr/mise-a-jour-php-site-logiciel",
+                    "href": "/mise-a-jour-site-joomla",
                     "target": "_blank",
                     "linktype": "url"
                   }
