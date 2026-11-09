@@ -9,8 +9,12 @@ export const JOOMLA_UPDATE_SERVICE_PAGE_PATH: string = '/mise-a-jour-site-joomla
 /** `topic` query value that makes the contact form open with the "update my Joomla site" message. */
 export const JOOMLA_UPDATE_CONTACT_TOPIC: string = 'joomla-update'
 
-/** Query of the contact page opened by the buttons of the service page. */
-export const JOOMLA_UPDATE_CONTACT_QUERY: LocationQueryRaw = { topic: JOOMLA_UPDATE_CONTACT_TOPIC }
+/** Query of the contact page opened by the buttons of the service page: the topic writes the message, `type` and `budget` select a website under 2 000 €. */
+export const JOOMLA_UPDATE_CONTACT_QUERY: LocationQueryRaw = {
+  topic: JOOMLA_UPDATE_CONTACT_TOPIC,
+  type: 'website',
+  budget: 'under_2k',
+}
 
 /** Kinds of service declared in the JSON-LD, in English as schema.org readers expect. */
 export const JOOMLA_UPDATE_SERVICE_TYPES: string[] = [

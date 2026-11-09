@@ -36,11 +36,7 @@
         </li>
       </ul>
 
-      <ul
-        v-if="props.notes.length > 0"
-        class="grid gap-5 rounded-xl px-6 py-6 sm:grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] sm:gap-8 sm:px-8"
-        :class="notesClass"
-      >
+      <ul v-if="props.notes.length > 0" class="grid gap-3 rounded-xl px-6 py-6 sm:px-8" :class="notesClass">
         <li v-for="note in props.notes" :key="note" class="flex items-start gap-3">
           <DibodevIcon
             name="CheckCircle"
