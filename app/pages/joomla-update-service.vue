@@ -6,7 +6,7 @@
     :offerPricesInEuros="JOOMLA_UPDATE_SERVICE_OFFER_PRICES_EUR"
     :relatedArticleSlugs="JOOMLA_UPDATE_SERVICE_RELATED_ARTICLE_SLUGS"
     :contactQuery="JOOMLA_UPDATE_CONTACT_QUERY"
-    :checkerTeaser="PHP_VULNERABILITY_CHECK_TEASER"
+    :checkerTeaser="JOOMLA_VERSION_CHECK_TEASER"
     trackingLocation="joomla_update_service"
     shareImageIcon="wrench"
   />
@@ -25,7 +25,7 @@ import {
   JOOMLA_UPDATE_SERVICE_TYPES,
 } from '~/core/constants/joomlaUpdateService/pageShared'
 import { JOOMLA_UPDATE_SERVICE_PAGES } from '~/core/constants/joomlaUpdateServicePage'
-import { PHP_VULNERABILITY_CHECK_TEASER } from '~/core/constants/tools/toolTeasers'
+import { JOOMLA_VERSION_CHECK_TEASER } from '~/core/constants/tools/toolTeasers'
 
 definePageMeta({
   i18n: {

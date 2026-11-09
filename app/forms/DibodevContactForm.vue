@@ -131,6 +131,7 @@ import type { DibodevWordPressHackVerdict } from '~/core/types/DibodevWordPressH
 import type { DibodevHostingStatusContactPrefill } from '~/core/types/DibodevHostingStatusContact'
 import type { DibodevEmailDeliverabilityVerdict } from '~/core/types/DibodevEmailDeliverabilityCheck'
 import type { DibodevGdprCookieCheckVerdict } from '~/core/types/DibodevGdprCookieCheck'
+import type { DibodevJoomlaVersionVerdict } from '~/core/types/DibodevJoomlaVersionCheck'
 import { EInvoicingContactUtils } from '~/core/utils/EInvoicingContactUtils'
 import { PhpVulnerabilityContactUtils } from '~/core/utils/PhpVulnerabilityContactUtils'
 import { SiteCheckContactUtils } from '~/core/utils/SiteCheckContactUtils'
@@ -146,6 +147,7 @@ import {
 } from '~/core/constants/gdprCookieCheck/pageShared'
 import { WEBSITE_REDESIGN_CONTACT_TOPIC } from '~/core/constants/websiteRedesignPrompt'
 import { JOOMLA_UPDATE_CONTACT_TOPIC } from '~/core/constants/joomlaUpdateService/pageShared'
+import { JOOMLA_VERSION_CONTACT_TOPIC, JOOMLA_VERSION_VERDICTS } from '~/core/constants/joomlaVersionCheck/pageShared'
 import { useTracking } from '~/composables/useTracking'
 import { useLeadSource } from '~/composables/useLeadSource'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
@@ -217,6 +219,9 @@ const emailDeliverabilityPrefill: DibodevSiteCheckContactPrefill<DibodevEmailDel
   SiteCheckContactUtils.readSitePrefill(route.query, EMAIL_DELIVERABILITY_CONTACT_TOPIC, EMAIL_DELIVERABILITY_VERDICTS)
 const gdprCookieCheckPrefill: DibodevSiteCheckContactPrefill<DibodevGdprCookieCheckVerdict> | null =
   SiteCheckContactUtils.readSitePrefill(route.query, GDPR_COOKIE_CHECK_CONTACT_TOPIC, GDPR_COOKIE_CHECK_VERDICTS)
+/** `?topic=joomla-version` comes from the Joomla version checker, with the site and the verdict when a check was run. */
+const joomlaVersionPrefill: DibodevSiteCheckContactPrefill<DibodevJoomlaVersionVerdict> | null =
+  SiteCheckContactUtils.readSitePrefill(route.query, JOOMLA_VERSION_CONTACT_TOPIC, JOOMLA_VERSION_VERDICTS)
 /** `?topic=website-redesign` comes from the redesign prompt of the PHP and WordPress pages. */
 const isWebsiteRedesignVisit: boolean = String(route.query.topic ?? '') === WEBSITE_REDESIGN_CONTACT_TOPIC
 /** `?topic=joomla-update` comes from the Joomla update service page. */
@@ -250,6 +255,14 @@ function buildPrefilledMessage(): string {
   }
   if (isJoomlaUpdateVisit) {
     return t('contact.form.joomlaUpdate.message')
+  }
+  if (joomlaVersionPrefill) {
+    return joomlaVersionPrefill.site
+      ? t('contact.form.joomlaVersion.messageWithSite', {
+          site: joomlaVersionPrefill.site,
+          verdict: t(`contact.form.joomlaVersion.verdicts.${joomlaVersionPrefill.verdict ?? 'unknown'}`),
+        })
+      : t('contact.form.joomlaVersion.messageWithoutSite')
   }
   if (gdprCookieCheckPrefill) {
     return gdprCookieCheckPrefill.site
@@ -531,7 +544,8 @@ onMounted((): void => {
     emailDeliverabilityPrefill ||
     gdprCookieCheckPrefill ||
     isWebsiteRedesignVisit ||
-    isJoomlaUpdateVisit
+    isJoomlaUpdateVisit ||
+    joomlaVersionPrefill
   ) {
     message.value = buildPrefilledMessage()
   }

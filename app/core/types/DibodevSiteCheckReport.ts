@@ -4,6 +4,7 @@ import type { DibodevSiteCheckErrorKind } from '~/core/types/DibodevSiteCheck'
 export type DibodevSiteCheckToolKey =
   | 'phpVulnerability'
   | 'wordpressHack'
+  | 'joomlaVersion'
   | 'emailDeliverability'
   | 'websiteHealth'
   | 'gdprCookie'

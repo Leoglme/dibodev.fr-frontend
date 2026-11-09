@@ -21,6 +21,7 @@ export const DASHBOARD_TOOL_PAGES: Record<string, DashboardToolPage> = {
   'tools-e-invoicing-software-check': { label: 'Facture électronique : mon logiciel', onlineSince: '2026-10-23' },
   'tools-e-invoicing-scope-check': { label: 'Facture électronique : suis-je concerné ?', onlineSince: '2026-10-25' },
   'tools-wordpress-hack-check': { label: 'Site WordPress piraté : vérifier', onlineSince: '2026-10-26' },
+  'tools-joomla-version-check': { label: 'Version Joomla : prêt pour Joomla 6 ?', onlineSince: '2026-11-09' },
   'tools-landscaping-software': { label: 'Logiciel paysagiste', onlineSince: '2026-10-26' },
   'tools-cleaning-business-software': { label: 'Logiciel entreprise de nettoyage', onlineSince: '2026-10-26' },
   'tools-cold-calling-check': { label: 'Démarchage téléphonique : puis-je appeler ?', onlineSince: '2026-10-26' },

@@ -16,6 +16,12 @@ import type {
   DibodevEmailProviderKey,
 } from '~/core/types/DibodevEmailDeliverabilityCheck'
 import type { DibodevHostingProviderKey, DibodevHostingStatusState } from '~/core/types/DibodevHostingStatus'
+import type {
+  DibodevJoomlaTemplateKind,
+  DibodevJoomlaVersionGuideKey,
+  DibodevJoomlaVersionSignalKey,
+  DibodevJoomlaVersionVerdict,
+} from '~/core/types/DibodevJoomlaVersionCheck'
 import type { DibodevSecurityAlertSubscribeOutcome, DibodevSecurityAlertTopic } from '~/core/types/DibodevSecurityAlert'
 import type { DibodevPhotoSlideshowNavigationMethod } from '~/core/types/DibodevPhotoSlideshow'
 import type {
@@ -147,6 +153,22 @@ export type TrackingEventPayloads = {
     location: string
     guide: DibodevWordPressHackGuideKey
     verdict: DibodevWordPressHackVerdict
+  }
+  [TRACKING_EVENTS.joomlaVersionCheckStarted]: { location: string }
+  [TRACKING_EVENTS.joomlaVersionChecked]: {
+    location: string
+    outcome: 'result' | 'error'
+    verdict: DibodevJoomlaVersionVerdict | null
+    version: string | null
+    phpVersion: string | null
+    templateKind: DibodevJoomlaTemplateKind | null
+    signals: DibodevJoomlaVersionSignalKey[]
+    errorKind: DibodevSiteCheckErrorKind | null
+  }
+  [TRACKING_EVENTS.joomlaVersionGuideClicked]: {
+    location: string
+    guide: DibodevJoomlaVersionGuideKey
+    verdict: DibodevJoomlaVersionVerdict
   }
   [TRACKING_EVENTS.hostingStatusLoaded]: {
     location: string

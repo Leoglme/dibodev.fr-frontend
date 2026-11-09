@@ -3,6 +3,7 @@ import type { MailLocale } from '~~/server/types/mail/contact'
 export type SiteCheckToolKey =
   | 'phpVulnerability'
   | 'wordpressHack'
+  | 'joomlaVersion'
   | 'emailDeliverability'
   | 'websiteHealth'
   | 'gdprCookie'

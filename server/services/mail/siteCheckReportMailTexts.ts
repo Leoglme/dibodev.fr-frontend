@@ -25,6 +25,16 @@ export const SITE_CHECK_VERDICT_LABELS_FR: Record<SiteCheckToolKey, Record<strin
     notWordPress: 'pas WordPress',
     unknown: 'indéterminé',
   },
+  joomlaVersion: {
+    joomla6Latest: 'Joomla 6 à jour',
+    joomla6Outdated: 'Joomla 6 pas à jour',
+    joomla5: 'Joomla 5',
+    joomla4: 'Joomla 4 sans correctifs',
+    joomla3OrOlder: 'Joomla 3 ou plus ancien',
+    versionHidden: 'version Joomla masquée',
+    notJoomla: 'pas Joomla',
+    unknown: 'indéterminé',
+  },
   emailDeliverability: {
     allGood: 'tout est en place',
     dmarcMissing: 'DMARC absent',
@@ -58,6 +68,7 @@ export const SITE_CHECK_REPORT_MAIL_TEXTS: Record<MailLocale, SiteCheckReportMai
     toolNames: {
       phpVulnerability: 'Faille PHP',
       wordpressHack: 'Site WordPress piraté',
+      joomlaVersion: 'Version Joomla',
       emailDeliverability: 'Mails en spam',
       websiteHealth: 'Tester mon site',
       gdprCookie: 'Site conforme RGPD',
@@ -98,6 +109,7 @@ export const SITE_CHECK_REPORT_MAIL_TEXTS: Record<MailLocale, SiteCheckReportMai
     toolNames: {
       phpVulnerability: 'PHP vulnerability',
       wordpressHack: 'Hacked WordPress site',
+      joomlaVersion: 'Joomla version',
       emailDeliverability: 'Emails in spam',
       websiteHealth: 'Test my website',
       gdprCookie: 'GDPR-compliant website',
@@ -137,6 +149,7 @@ export const SITE_CHECK_REPORT_MAIL_TEXTS: Record<MailLocale, SiteCheckReportMai
     toolNames: {
       phpVulnerability: 'Vulnerabilidad PHP',
       wordpressHack: 'WordPress hackeado',
+      joomlaVersion: 'Versión de Joomla',
       emailDeliverability: 'Correos en spam',
       websiteHealth: 'Probar mi web',
       gdprCookie: 'Web conforme al RGPD',

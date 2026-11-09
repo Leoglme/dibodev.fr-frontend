@@ -4,6 +4,7 @@ import type { SiteCheckToolKey } from '~~/server/types/tools/siteCheckReport'
 export const SITE_CHECK_TOOL_KEYS: SiteCheckToolKey[] = [
   'phpVulnerability',
   'wordpressHack',
+  'joomlaVersion',
   'emailDeliverability',
   'websiteHealth',
   'gdprCookie',
@@ -20,6 +21,11 @@ export const SITE_CHECK_TOOL_PAGE_PATHS: Record<SiteCheckToolKey, Record<MailLoc
     fr: '/outils/site-wordpress-pirate-verifier',
     en: '/en/tools/wordpress-hacked-check',
     es: '/es/herramientas/wordpress-hackeado-comprobar',
+  },
+  joomlaVersion: {
+    fr: '/outils/version-joomla-verifier-mon-site',
+    en: '/en/tools/joomla-version-check',
+    es: '/es/herramientas/version-joomla-comprobar-mi-web',
   },
   emailDeliverability: {
     fr: '/outils/mes-mails-arrivent-en-spam',

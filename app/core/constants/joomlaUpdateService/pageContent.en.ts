@@ -61,7 +61,7 @@ export const JOOMLA_UPDATE_SERVICE_PAGE_EN: DibodevUpdateServicePageContent = {
     ],
     ctaLabel: 'Send my website link',
     highlightLabel: 'Base package',
-    toolLinkText: 'First check the PHP version of my site',
+    toolLinkText: 'First check the Joomla version of my site',
   },
   included: {
     anchorId: 'included',

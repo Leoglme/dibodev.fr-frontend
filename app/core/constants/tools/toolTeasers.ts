@@ -3,6 +3,7 @@ import { AI_APP_CHECK_QUIZ_ID } from '~/core/constants/aiAppCheckQuiz'
 import { COLD_CALLING_CHECK_ROUTE_NAME } from '~/core/constants/coldCallingCheck/pageShared'
 import { COLD_CALLING_CHECK_QUIZ_ID } from '~/core/constants/coldCallingCheckQuiz'
 import { WORDPRESS_HACK_CHECK_ROUTE_NAME } from '~/core/constants/wordpressHackCheck/pageShared'
+import { JOOMLA_VERSION_CHECK_ROUTE_NAME } from '~/core/constants/joomlaVersionCheck/pageShared'
 import { HOSTING_STATUS_TEASER } from '~/core/constants/hostingStatus/pageShared'
 import { WEBSITE_HEALTH_CHECK_TEASER } from '~/core/constants/websiteHealthCheck/pageShared'
 import { GDPR_COOKIE_CHECK_TEASER } from '~/core/constants/gdprCookieCheck/pageShared'
@@ -610,6 +611,40 @@ const WORDPRESS_HACK_CHECK_TEASER: DibodevToolTeaserContent = {
   },
 }
 
+export const JOOMLA_VERSION_CHECK_TEASER: DibodevToolTeaserContent = {
+  toolId: 'joomla-version-check',
+  routeName: JOOMLA_VERSION_CHECK_ROUTE_NAME,
+  icon: 'Search',
+  wording: {
+    fr: {
+      emphasizedIntro: `Votre site tourne sur Joomla${NBSP}?`,
+      text: 'L’outil lit la version de Joomla de votre site, celle de PHP, son modèle et ses extensions, et vous dit s’il est prêt pour Joomla 6 et par où commencer.',
+      linkLabel: `Vérifier mon site Joomla${NBSP}: est-il prêt pour Joomla 6${NBSP}?`,
+      listLabel: `Version Joomla${NBSP}: mon site est-il prêt pour Joomla 6${NBSP}?`,
+      hubDescription: `Joomla 3, 4, 5 ou 6, version de PHP, modèle et extensions${NBSP}: ce qu’un visiteur peut lire depuis l’extérieur, et le chemin vers Joomla 6 dans l’ordre.`,
+      hubMeta: '1 adresse · 10 secondes',
+    },
+    en: {
+      emphasizedIntro: 'Does your website run on Joomla?',
+      text: 'The tool reads your site’s Joomla version, its PHP version, its template and extensions, and tells you whether it is ready for Joomla 6 and where to start.',
+      linkLabel: 'Check my Joomla site: is it ready for Joomla 6?',
+      listLabel: 'Joomla version: is my site ready for Joomla 6?',
+      hubDescription:
+        'Joomla 3, 4, 5 or 6, PHP version, template and extensions: what a visitor can read from outside, and the path to Joomla 6 in order.',
+      hubMeta: '1 address · 10 seconds',
+    },
+    es: {
+      emphasizedIntro: '¿Tu web funciona con Joomla?',
+      text: 'La herramienta lee la versión de Joomla de tu web, la de PHP, su plantilla y sus extensiones, y te dice si está lista para Joomla 6 y por dónde empezar.',
+      linkLabel: 'Comprobar mi web Joomla: ¿está lista para Joomla 6?',
+      listLabel: 'Versión de Joomla: ¿mi web está lista para Joomla 6?',
+      hubDescription:
+        'Joomla 3, 4, 5 o 6, versión de PHP, plantilla y extensiones: lo que un visitante puede leer desde fuera, y el camino a Joomla 6 en orden.',
+      hubMeta: '1 dirección · 10 segundos',
+    },
+  },
+}
+
 /** The e-invoicing software checker, also teased under the scope test. */
 export const E_INVOICING_CHECK_TEASER: DibodevToolTeaserContent = {
   toolId: 'e-invoicing-software-check',
@@ -728,6 +763,7 @@ export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserConte
   'site-wordpress-pirate-verifications-a-faire-aujourd-hui': WORDPRESS_HACK_CHECK_TEASER,
   'updraftplus-revoquer-updraftcentral-verifier-sauvegardes': WORDPRESS_HACK_CHECK_TEASER,
   'restaurer-site-wordpress-apres-piratage': WORDPRESS_HACK_CHECK_TEASER,
+  'mettre-a-jour-site-joomla-vers-joomla-6': JOOMLA_VERSION_CHECK_TEASER,
   'facture-electronique-artisan-ce-qui-change': E_INVOICING_CHECK_TEASER,
   'logiciel-gestion-des-temps-feuilles-heures-excel': CLEANING_BUSINESS_SOFTWARE_TEASER,
   'meilleur-logiciel-garage-automobile-comparatif-2026': BODY_SHOP_SOFTWARE_TEASER,
@@ -824,6 +860,7 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   PUBLIC_AID_SIMULATOR_TEASER,
   PHP_VULNERABILITY_CHECK_TEASER,
   WORDPRESS_HACK_CHECK_TEASER,
+  JOOMLA_VERSION_CHECK_TEASER,
   WEBSITE_HEALTH_CHECK_TEASER,
   GDPR_COOKIE_CHECK_TEASER,
   LEGAL_NOTICE_GENERATOR_TEASER,

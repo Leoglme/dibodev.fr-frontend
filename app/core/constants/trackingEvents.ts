@@ -70,6 +70,12 @@ export const TRACKING_EVENTS = {
   wordpressHackChecked: 'wordpress_hack_checked',
   /** A guide opened from the result card of the WordPress hack checker. */
   wordpressHackGuideClicked: 'wordpress_hack_guide_clicked',
+  /** First address typed in the Joomla version checker (sent once per page view). */
+  joomlaVersionCheckStarted: 'joomla_version_check_started',
+  /** A site checked by the Joomla version checker, with the verdict (or the error), never the address. */
+  joomlaVersionChecked: 'joomla_version_checked',
+  /** A guide opened from the result card of the Joomla version checker. */
+  joomlaVersionGuideClicked: 'joomla_version_guide_clicked',
   /** First name typed in the e-invoicing software checker (sent once per page view). */
   eInvoicingSoftwareCheckStarted: 'e_invoicing_software_check_started',
   /** A tool checked by the e-invoicing software checker, with the verdict and the tool matched, never the text typed. */

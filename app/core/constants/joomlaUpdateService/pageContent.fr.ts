@@ -57,7 +57,7 @@ export const JOOMLA_UPDATE_SERVICE_PAGE_FR: DibodevUpdateServicePageContent = {
     ],
     ctaLabel: 'Envoyer le lien de mon site',
     highlightLabel: 'Forfait de base',
-    toolLinkText: 'Vérifier d’abord la version de PHP de mon site',
+    toolLinkText: 'Vérifier d’abord la version Joomla de mon site',
   },
   included: {
     anchorId: 'inclus',

@@ -686,6 +686,20 @@
       "phpUpdate": {
         "message": "Bonjour,\nje souhaite faire mettre à jour la version de PHP de mon site (et WordPress, le thème et les extensions si besoin).\nLe lien de mon site : \nMon hébergeur, si je le connais : "
       },
+      "joomlaVersion": {
+        "messageWithSite": "Bonjour,\nmon site Joomla {site} vient de passer l'outil de vérification de version. Résultat : « {verdict} ».\nPouvez-vous me dire ce qu'il faut faire pour passer à Joomla 6, et à quel prix ?",
+        "messageWithoutSite": "Bonjour,\nje voudrais savoir si mon site Joomla est prêt pour Joomla 6, et ce qu'il faut faire.\nLe lien de mon site : \nMa version de Joomla, si je la connais : ",
+        "verdicts": {
+          "joomla6Latest": "Joomla 6 à jour",
+          "joomla6Outdated": "Joomla 6 pas à jour",
+          "joomla5": "Joomla 5, une étape avant Joomla 6",
+          "joomla4": "Joomla 4, sans correctifs depuis octobre 2025",
+          "joomla3OrOlder": "Joomla 3 ou plus ancien, sans correctifs",
+          "versionHidden": "Joomla, version masquée",
+          "notJoomla": "site pas sous Joomla",
+          "unknown": "aucun signe lisible"
+        }
+      },
       "joomlaUpdate": {
         "message": "Bonjour,\nje souhaite faire mettre à jour mon site Joomla (vers Joomla 6 et PHP 8.3).\nLe lien de mon site : \nMa version de Joomla, si je la connais : "
       },

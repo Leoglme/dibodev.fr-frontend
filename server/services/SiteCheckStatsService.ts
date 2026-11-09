@@ -5,6 +5,11 @@ import type {
 } from '~~/server/types/tools/emailDeliverabilityCheck'
 import type { GdprCookieCheckResult, GdprLinkFinding, GdprTrackerFinding } from '~~/server/types/tools/gdprCookieCheck'
 import type {
+  JoomlaExtensionSeen,
+  JoomlaVersionCheckResult,
+  JoomlaVersionVerdict,
+} from '~~/server/types/tools/joomlaVersionCheck'
+import type {
   PhpVulnerabilityCheckResult,
   PhpVulnerabilityPlatformKey,
   PhpVulnerabilityVerdict,
@@ -44,6 +49,14 @@ const SPF_MAX_LOOKUPS: number = 10
 const PHP_VERDICTS_WITH_KNOWN_VERSION: PhpVulnerabilityVerdict[] = ['unpatched', 'endOfLife', 'patched']
 const PHP_VERDICTS_NOT_FIXED: PhpVulnerabilityVerdict[] = ['unpatched', 'endOfLife']
 const WORDPRESS_VERDICTS_AT_RISK: WordPressHackVerdict[] = ['suspiciousSignals', 'vulnerablePlugin', 'closedPlugin']
+const JOOMLA_VERDICTS_WITH_KNOWN_BRANCH: JoomlaVersionVerdict[] = [
+  'joomla6Latest',
+  'joomla6Outdated',
+  'joomla5',
+  'joomla4',
+  'joomla3OrOlder',
+]
+const JOOMLA_VERDICTS_WITHOUT_SECURITY_FIXES: JoomlaVersionVerdict[] = ['joomla4', 'joomla3OrOlder']
 const EMAIL_VERDICTS_WITHOUT_SENDING_DOMAIN: EmailDeliverabilityVerdict[] = [
   'noMailSetup',
   'invalidDomain',
@@ -106,6 +119,25 @@ const SHARE_DEFINITIONS: SiteCheckStatsShareDefinition[] = [
     label: 'Sites WordPress dont le cœur n’est pas à jour',
     isInTotal: (entry: SiteCheckStatsEntry): boolean => entry.details.isWordPress === true,
     isInShare: (entry: SiteCheckStatsEntry): boolean => entry.details.isCoreOutdated === true,
+  },
+  {
+    key: 'joomlaWithoutSecurityFixes',
+    tool: 'joomlaVersion',
+    label: 'Sites Joomla à version connue qui ne reçoivent plus de correctifs de sécurité (Joomla 3 ou 4)',
+    isInTotal: (entry: SiteCheckStatsEntry): boolean =>
+      JOOMLA_VERDICTS_WITH_KNOWN_BRANCH.some((verdict: JoomlaVersionVerdict): boolean => verdict === entry.verdict),
+    isInShare: (entry: SiteCheckStatsEntry): boolean =>
+      JOOMLA_VERDICTS_WITHOUT_SECURITY_FIXES.some(
+        (verdict: JoomlaVersionVerdict): boolean => verdict === entry.verdict,
+      ),
+  },
+  {
+    key: 'joomlaPhpTooOldForJoomla6',
+    tool: 'joomlaVersion',
+    label: 'Sites Joomla dont la version de PHP affichée ne suffit pas pour Joomla 6 (avant PHP 8.3)',
+    isInTotal: (entry: SiteCheckStatsEntry): boolean =>
+      entry.details.isJoomla === true && typeof entry.details.isPhpReadyForJoomla6 === 'boolean',
+    isInShare: (entry: SiteCheckStatsEntry): boolean => entry.details.isPhpReadyForJoomla6 === false,
   },
   {
     key: 'emailDmarcMissing',
@@ -204,6 +236,35 @@ export class SiteCheckStatsService {
       injectedContentCount: result.injectedContent.length,
       signals: [...result.signals],
     })
+  }
+
+  /**
+   * Keeps a Joomla check: the version read, the PHP version, the kind of template and the extensions seen.
+   * @param {JoomlaVersionCheckResult} result - The result sent to the visitor.
+   * @returns {Promise<void>} Resolves once kept; a storage failure is logged, never thrown.
+   */
+  static async recordJoomlaVersionCheck(result: JoomlaVersionCheckResult): Promise<void> {
+    await this.record('joomlaVersion', result.host, result.verdict, {
+      isJoomla: result.isJoomla,
+      version: result.version,
+      phpVersion: result.phpVersion,
+      isPhpReadyForJoomla6: this.readJoomla6PhpReadiness(result),
+      templateKind: result.template?.kind ?? null,
+      templateFramework: result.template?.framework ?? null,
+      extensions: result.extensions.map((extension: JoomlaExtensionSeen): string => extension.element),
+    })
+  }
+
+  /**
+   * Whether the PHP version shown is enough for Joomla 6, as told to the visitor.
+   * @param {JoomlaVersionCheckResult} result - The result sent to the visitor.
+   * @returns {boolean | null} Null when the PHP version was not shown or no PHP line was given.
+   */
+  static readJoomla6PhpReadiness(result: JoomlaVersionCheckResult): boolean | null {
+    if (result.signals.includes('phpReadyForJoomla6')) {
+      return true
+    }
+    return result.signals.includes('phpTooOldForJoomla6') ? false : null
   }
 
   /**

@@ -12,6 +12,7 @@ import { createError } from 'h3'
 import { SITE_CHECK_TOOL_KEYS } from '~~/server/constants/siteCheckTools'
 import { EmailDeliverabilityCheckService } from '~~/server/services/EmailDeliverabilityCheckService'
 import { GdprCookieCheckService } from '~~/server/services/GdprCookieCheckService'
+import { JoomlaVersionCheckService } from '~~/server/services/JoomlaVersionCheckService'
 import { PhpVulnerabilityCheckService } from '~~/server/services/PhpVulnerabilityCheckService'
 import { WebsiteHealthCheckService } from '~~/server/services/WebsiteHealthCheckService'
 import { WordPressHackCheckService } from '~~/server/services/WordPressHackCheckService'
@@ -20,6 +21,7 @@ import { SiteCheckReportMailService } from '~~/server/services/mail/SiteCheckRep
 import { SITE_CHECK_REPORT_MAIL_TEXTS } from '~~/server/services/mail/siteCheckReportMailTexts'
 import { EmailDeliverabilityReportService } from '~~/server/services/siteCheckReport/EmailDeliverabilityReportService'
 import { GdprCookieReportService } from '~~/server/services/siteCheckReport/GdprCookieReportService'
+import { JoomlaVersionReportService } from '~~/server/services/siteCheckReport/JoomlaVersionReportService'
 import { PhpVulnerabilityReportService } from '~~/server/services/siteCheckReport/PhpVulnerabilityReportService'
 import { WebsiteHealthReportService } from '~~/server/services/siteCheckReport/WebsiteHealthReportService'
 import { WordPressHackReportService } from '~~/server/services/siteCheckReport/WordPressHackReportService'
@@ -157,6 +159,12 @@ export class SiteCheckReportService {
       case 'wordpressHack':
         return WordPressHackReportService.build(
           await WordPressHackCheckService.checkHost(request.site),
+          request.locale,
+          texts,
+        )
+      case 'joomlaVersion':
+        return JoomlaVersionReportService.build(
+          await JoomlaVersionCheckService.checkHost(request.site),
           request.locale,
           texts,
         )
