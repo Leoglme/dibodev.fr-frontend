@@ -81,7 +81,7 @@ function keepSurroundingSpaces(source: string, translation: string): string {
  * @param {string} translation - Its translation.
  * @returns {string} The translation without the added asterisks.
  */
-function removeAddedAsterisks(source: string, translation: string): string {
+export function removeAddedAsterisks(source: string, translation: string): string {
   return source.includes('*') ? translation : translation.replace(MARKDOWN_ASTERISKS_REGEX, '')
 }
 

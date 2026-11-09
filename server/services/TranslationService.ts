@@ -3,7 +3,7 @@ import { putGitHubFiles, readGitHubJsonFile } from '~~/server/utils/githubConten
 import type { PutGitHubFilesItem, PutGitHubFilesResult } from '~~/server/utils/githubContent'
 import { mistralGenerate } from '~~/server/utils/mistral'
 import { extractRichtextTexts, injectRichtextTranslations } from '~~/server/utils/translationsRichtext'
-import { translateTextSegments } from '~~/server/utils/translateTextSegments'
+import { removeAddedAsterisks, translateTextSegments } from '~~/server/utils/translateTextSegments'
 import type { TranslationTargetLanguage } from '~~/server/utils/translateTextSegments'
 import type {
   ArticlesTranslationFile,
@@ -24,10 +24,14 @@ const STORY_FETCH_RETRY_DELAY_MS: number = 3000
 const ARTICLE_META_SYSTEM_INSTRUCTIONS: Record<TranslationTargetLocale, string> = {
   en: `You are a professional translator. Translate the following French article metadata to English.
 Return ONLY a valid JSON object with these exact keys: title, excerpt, metaTitle, metaDescription, tags.
-tags must be a JSON array of strings. Preserve tone.`,
+tags must be a JSON array of strings. Preserve tone.
+Return plain text in every value: never add Markdown such as ** or *.
+Keep metaTitle under 60 characters and metaDescription under 160 characters.`,
   es: `You are a professional translator. Translate the following French article metadata to Spanish.
 Return ONLY a valid JSON object with these exact keys: title, excerpt, metaTitle, metaDescription, tags.
-tags must be a JSON array of strings. Preserve tone.`,
+tags must be a JSON array of strings. Preserve tone.
+Return plain text in every value: never add Markdown such as ** or *.
+Keep metaTitle under 60 characters and metaDescription under 160 characters.`,
 }
 
 const TARGET_LANGUAGES: Record<TranslationTargetLocale, TranslationTargetLanguage> = {
@@ -226,10 +230,10 @@ export class TranslationService {
     try {
       const parsed: Record<string, unknown> = JSON.parse(answer) as Record<string, unknown>
       return {
-        title: String(parsed.title ?? ''),
-        excerpt: String(parsed.excerpt ?? ''),
-        metaTitle: String(parsed.metaTitle ?? ''),
-        metaDescription: String(parsed.metaDescription ?? ''),
+        title: removeAddedAsterisks(source.title, String(parsed.title ?? '')),
+        excerpt: removeAddedAsterisks(source.excerpt, String(parsed.excerpt ?? '')),
+        metaTitle: removeAddedAsterisks(source.metaTitle, String(parsed.metaTitle ?? '')),
+        metaDescription: removeAddedAsterisks(source.metaDescription, String(parsed.metaDescription ?? '')),
         tags: Array.isArray(parsed.tags) ? (parsed.tags as unknown[]).map(String) : [],
       }
     } catch {
