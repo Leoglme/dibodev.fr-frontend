@@ -46248,5 +46248,2336 @@
         }
       ]
     }
+  },
+  "blog/mettre-a-jour-site-joomla-vers-joomla-6": {
+    "title": "Upgrading an Old Joomla Site (3, 4, or 5) to Joomla 6: What Breaks, the Right Order, and the Cost",
+    "excerpt": "Joomla 3 and 4 are no longer supported, and Joomla 5 will reach end-of-life in October 2027. Learn the correct order to upgrade to Joomla 6 and PHP 8.3, what may break on an outdated site, and the associated costs—with a real-world upgrade story included.",
+    "metaTitle": "Upgrading a Joomla 3, 4, or 5 Site to Joomla 6",
+    "metaDescription": "Joomla 3 and 4 no longer get fixes and Joomla 5 ends in October 2027. The steps to Joomla 6 and PHP 8.3, what breaks, and what it costs.",
+    "tags": [
+      "Joomla",
+      "Joomla upgrade",
+      "Joomla 6",
+      "PHP 8",
+      "legacy website",
+      "website maintenance"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As of November 9, 2026, an up-to-date Joomla site runs on ",
+              "type": "text"
+            },
+            {
+              "text": "Joomla 6.2.0",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " with ",
+              "type": "text"
+            },
+            {
+              "text": "PHP 8.3 or 8.4",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Joomla 3 has not been updated since August 17, 2023, Joomla 4 since October 14, 2025, and Joomla 5 only receives security patches until October 12, 2027. The order remains unchanged, regardless of the starting point: full backup, test copy, latest version of the branch installed (3.10, 4.4, or 5.4), pre-check in the administration panel, then one major version at a time, with PHP following. On a Joomla 5 site with a custom template, this took me about ten hours in November 2026; starting from Joomla 3, the process is longer, and sometimes rebuilding takes less work.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I am a freelance developer near Rennes, and I write for Joomla site owners who are not technicians: a law firm, an association, a freelancer, a small business. Dates and versions verified on November 9, 2026, on joomla.org and php.net.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Which version of Joomla is still supported in November 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Joomla 3",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " received its last version, 3.10.12, in July 2023, and its support ended on August 17, 2023. The project then sold eighteen months of security patches, 90 euros per site, until February 17, 2025. After that, nothing more.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Joomla 4",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ended on October 14, 2025, with 4.4.14 from September 30, 2025, as the last version, which the official download page lists as no longer maintained.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Joomla 5",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " is nearing the end of its lifecycle. The 5.4.10 version from October 13, 2026, is announced by the Joomla team as the last bug-fix release in the 5.x series. Until October 12, 2027, Joomla 5.4 still receives security patches, after which it will also stop being supported.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Joomla 6",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " was released on October 14, 2025. The current version is 6.2.0, published on October 13, 2026. The official roadmap plans bug fixes until October 17, 2028, and security patches until October 16, 2029. This is the target.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Why PHP matters as much as Joomla",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Joomla is written in PHP, the language your hosting provider runs on their server. Joomla 5 requires at least PHP 8.1 and recommends 8.3; Joomla 6 requires at least PHP 8.3 and recommends 8.4. Meanwhile, PHP 7.4 has not been updated since November 28, 2022, PHP 8.0 since November 26, 2023, PHP 8.1 since December 31, 2025, and PHP 8.2 ends on December 31, 2026. PHP 8.3 is patched until December 31, 2027, and PHP 8.4 until December 31, 2028. A Joomla 5 site running PHP 8.2 must therefore switch PHP versions before the end of the year anyway, and this change is made in the hosting provider’s client area, not in Joomla itself.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The database matters too. Joomla 6 requires at least MySQL 8.0.13 or MariaDB 10.4 (with 10.6 as the supported version). On older hosting, the database may be outdated, and Joomla’s administration panel won’t offer an update option. This depends on the hosting provider: you may need to request a newer database or switch plans.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "In what order to update: 3.10, 4.4, 5.4, then 6",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You don’t skip major versions. The official documentation outlines three transitions, each starting from the last minor version of the previous branch.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "From Joomla 3 to Joomla 4.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The official guide starts with a site running 3.10.x. In Joomla’s update component, the channel is set to « Joomla Next » and the pre-update check (",
+              "type": "text"
+            },
+            {
+              "text": "Pre-Update Check",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "text": ") appears: it checks the PHP and database versions, then the compatibility declared by each extension developer for Joomla 4. The Protostar template, included with Joomla 3, is not compatible with Joomla 4: a site using it switches templates at this stage.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "From Joomla 4 to Joomla 5.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The guide starts with a site running 4.4.x. Same principle: System, Update, Joomla, channel « Joomla Next », then the pre-update check in three parts—required settings, recommended settings, extensions. A compatibility plugin, « Behaviour - Backward Compatibility », is automatically enabled so that extensions written for Joomla 4 continue to work.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "From Joomla 5 to Joomla 6.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The guide starts with a site running 5.4.x, with PHP 8.3. The Joomla team says it themselves: moving from 5.4 to 6 is an update, not a migration. The plugin « Behaviour - Backward Compatibility 6 » must be activated, and the old compatibility plugin deactivated; the pre-update check verifies both.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A caveat the official guide itself makes: the « extensions » part of the pre-update check is just an overview, and the real verification happens on a site copy.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What most often breaks on an old Joomla site",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The custom graphic template.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Many sites from 2012 to 2018 have a template designed by the agency of the time, built for the Joomla and PHP versions of that era. No one maintains it, so there’s no update to download: it must be manually adapted or replaced.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Abandoned extensions still installed.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A form, a gallery, a social media module installed in 2014 by a now-defunct developer. As long as they’re there, they block or break the update: unused ones are uninstalled, the others are replaced.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Backups.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " An old site often has Akeeba backups scheduled years ago, stored on the same server, unencrypted, and never tested. A backup containing an entire database, readable by anyone who accesses it, is a problem in itself. Before touching the site, I check that a full backup exists, that it restores properly, and that it’s stored outside the server.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How I updated a psychology practice’s website in November 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The site was running Joomla 5.4.7 on PHP 8.2, with a custom template from 2015, a ChronoForms 7 appointment form, the JCE editor, Akeeba backups, and a caching/URL rewriting extension from the sh404SEF/4SEO family.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I always start with a full backup—files and database—kept off the server. Then I set up a test copy: the same site, at a different address, where I can break things without any visitors seeing it.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On this copy, I first updated the site to the latest version of its branch, 5.4.10, because upgrading to Joomla 6 starts from the latest 5.4, not just any 5.4. Then I ran the pre-update check. Next, PHP 8.3, since Joomla 6 requires it, and finally the update to Joomla 6.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The 2015 model required some work. PHP 8.3 flags ways of writing code that were accepted in 2015 but are no longer: nothing visible to a visitor, but warnings in the logs and, eventually, errors. I fixed them one by one without altering the appearance. ChronoForms 7, which was my main concern, was kept and tested: the appointment form works under Joomla 6. JCE and other extensions were updated one by one, with the site checked after each update.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Then came the tests: the two forms, every page, rewritten URLs, email sending. Once everything worked on the copy, I repeated the same sequence on the live site, with a fresh backup just before, and then sent a written report: versions before and after, what was changed, where the backups are.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In total, about ten hours of work. At the end, the presentation and content are identical, and the site is now on Joomla 6 and PHP 8.3, with security patches valid until October 2029 for one and until the end of 2027 for the other.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Update or rebuild the site?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The question arises especially since Joomla 3. The official documentation states it bluntly: when skipping several major versions with many obsolete extensions, rebuilding the site on the current version may require less work than updating it. My criterion: if the template is maintained or adaptable and if the key extensions still exist for Joomla 6, I update it; otherwise, I recreate the content in a clean Joomla 6 with a current template. In both cases, your texts, pages, and URLs are preserved.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What you can check yourself",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Log in to your site’s administration, whose URL ends with /administrator. On Joomla 3, the version appears at the bottom of the page; on later versions, go to System then System Information to see the Joomla, PHP, and database versions. Joomla 3 or 4, or PHP 8.1 or earlier: you’re affected immediately. Joomla 5.4 and PHP 8.2: you have until the end of the year for PHP and until October 2027 for Joomla.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Without access, my free tool ",
+              "type": "text"
+            },
+            {
+              "text": "Test my site",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/outils/tester-mon-site",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " reads your homepage and checks eight points, including the PHP version when displayed; the tool ",
+              "type": "text"
+            },
+            {
+              "text": "PHP Vulnerability Check",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/outils/faille-php-verifier-mon-site",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " tells you if the PHP version in use has received the October 2026 patches.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Who can update my Joomla site?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The agency or freelancer who built the site, if they still exist and continue working with Joomla. Your hosting provider, but only for the PHP and database parts: they won’t touch Joomla or your extensions. Or an independent developer familiar with Joomla, remotely, using your access details. In all cases, ask for a full backup in writing before any work, testing on a copy, and a report of what was done. I offer this service remotely from Rennes for all of France.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How much does updating a Joomla site cost?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A basic version upgrade is billed at my standard service rate of €190, including backup, testing on a copy, and a report. The price increases if the template needs adjustments, extensions must be replaced, or security issues need fixing, and I’ll quote after a free diagnostic. The case mentioned earlier, upgrading from 5.4 to 6 with a custom template, took about ten hours.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can you go directly from Joomla 3 to Joomla 6?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " No. The official path goes through 3.10, then 4.4, then 5.4, then 6, each with its pre-checks. On a test copy, the three upgrades can be done in one session.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My Joomla 3 site still works, so why update it?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Because it has not received any security updates since August 17, 2023, or since February 17, 2025 if you had paid for extended support, and because it typically runs on an unsupported PHP version as well. A site that displays is not a secure site.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Is Joomla 5 still safe in 2026?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Yes, until October 12, 2027, provided you are on version 5.4.10 or the security version that follows it, and running on a patched PHP. Since Joomla 6 requires PHP 8.3 and PHP 8.2 ends support on December 31, 2026, making both updates in one go makes sense.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "If you want me to handle it",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Send me the address of your Joomla site. I will tell you within 24 hours which version you are running, what is blocking you, and where to start: this is the free diagnosis from my page ",
+              "type": "text"
+            },
+            {
+              "text": "PHP update for your site or software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/mise-a-jour-php-site-logiciel",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", which also describes the packages starting at €190, including backup, testing on a copy, and a written report.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sources:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "Joomla version roadmap and lifecycle",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://developer.joomla.org/roadmap",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "Joomla 6.2 announcement",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.joomla.org/announcements/release-news/joomla-6-2-is-here.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " from October 13, 2026, ",
+              "type": "text"
+            },
+            {
+              "text": "Joomla 6.0 and 5.4 announcement",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.joomla.org/announcements/release-news/5939-joomla-6-0-and-joomla-5-4-are-here.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " from October 14, 2025, ",
+              "type": "text"
+            },
+            {
+              "text": "end of support for Joomla 4.4",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.joomla.org/announcements/release-news/joomla-5-3-4-security-bugfix-release.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "end of Joomla 3 and extended support",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://magazine.joomla.org/all-issues/july-2023/extended-security-support-for-joomla-3x",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", technical requirements for ",
+              "type": "text"
+            },
+            {
+              "text": "Joomla 6",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://manual.joomla.org/docs/get-started/technical-requirements",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " and ",
+              "type": "text"
+            },
+            {
+              "text": "Joomla 5",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://manual.joomla.org/docs/5.4/get-started/technical-requirements",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", official guides for upgrading ",
+              "type": "text"
+            },
+            {
+              "text": "from 3 to 4",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://guide.joomla.org/user-manual/migration/migration-joomla-3-to-4-step-by-step",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "from 4 to 5",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://guide.joomla.org/user-manual/migration/joomla-4-to-5-planning-and-upgrade-step-by-step",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " and ",
+              "type": "text"
+            },
+            {
+              "text": "from 5 to 6",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://guide.joomla.org/user-manual/migration/joomla-5-to-6-planning-and-upgrade-step-by-step",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "supported PHP versions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.php.net/supported-versions.php",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " and ",
+              "type": "text"
+            },
+            {
+              "text": "end-of-life PHP versions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.php.net/eol.php",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "f4ace8fa-b810-4f8b-b459-0becc60f5361",
+            "body": [
+              {
+                "_uid": "i-24e9d232-cc35-4ffe-91d7-62820d3bf09c",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/hebergeur-arrete-anciennes-versions-php-que-faire": {
+    "title": "Your Host Is Dropping PHP 7.4, 8.0 or 8.1: What to Do With Your WordPress or Joomla Site Before the Cut-Off?",
+    "excerpt": "Your hosting provider is phasing out PHP 7.4, 8.0, or 8.1. Here’s the step-by-step guide for your WordPress or Joomla site, what may break during the PHP 8 upgrade, and who can handle the update for you.",
+    "metaTitle": "Your Host Is Dropping PHP 7.4, 8.0 or 8.1: What to Do?",
+    "metaDescription": "Your host is ending PHP 7.4, 8.0 or 8.1: the order to follow for a WordPress or Joomla site, what breaks along the way, and who can do the update.",
+    "tags": [
+      "PHP",
+      "WordPress",
+      "Joomla",
+      "web hosting",
+      "PHP update",
+      "security"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If your hosting provider announces the end of PHP 7.4, 8.0, or 8.1, here’s the order to follow: back up the site, update WordPress or Joomla, the theme, and the plugins, test the site on a copy with PHP 8.3, and only then change the version with your host and check the forms. Plan for one to two hours for a basic website, half a day for an online store. These three PHP branches no longer receive security patches: PHP 7.4 since November 28, 2022, PHP 8.0 since November 26, 2023, and PHP 8.1 until December 31, 2025. PHP 8.2 will end on December 31, 2026. Dates verified on November 9, 2026, from php.net and host support pages.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’ve been handling these updates remotely since October 2026, for artisans, law firms, associations, and small businesses. The typical case: a site built between 2015 and 2019, never updated, and a provider that no longer responds.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Why your host is writing to you now",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP is the language that powers WordPress and Joomla. Each version has a four-year lifespan, with only two years dedicated to security fixes. After that, nothing. As of November 9, 2026, the PHP project only supports 8.2 and 8.3 for security, and 8.4 and 8.5. PHP 8.2 ends on December 31, 2026; I dedicated ",
+              "type": "text"
+            },
+            {
+              "text": "a separate article to it",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/php-82-fin-de-vie-31-decembre-2026-que-faire",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Two things sped up the emails this fall: the end of PHP 8.1 on December 31, 2025, and the two critical vulnerabilities on October 21, 2026, which allow remote code execution. The PHP project released patches that day for 8.2.35, 8.3.36, 8.4.27, and 8.5.12—and nothing else. A site running 7.4, 8.0, or 8.1 received nothing. I detailed this incident in ",
+              "type": "text"
+            },
+            {
+              "text": "my article on the October 2026 PHP vulnerability",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/faille-php-octobre-2026-site-boutique-logiciel-que-faire",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to read your host’s email",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Look for three key pieces of information: the affected version, the date it will be removed or charged for, and what your host will do themselves. This last point changes everything. Support pages reviewed on November 9, 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "At OVHcloud, the ‘Available language versions’ page, updated on October 27, 2026, lists PHP 8.1 as end-of-life since December 31, 2025, and marks versions 8.0 to 5.3 as ‘Recommended migration.’ They remain listed without automatic switching or a removal date, and site compatibility is your responsibility. ",
+              "type": "text"
+            },
+            {
+              "text": "My OVHcloud guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/changer-version-php-ovh-faille-octobre-2026",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " shows where to change the version.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "At IONOS, the ‘PHP Extended Support’ help page describes a paid service that starts as soon as community support ends: IONOS patches older versions itself, from PHP 5.6 to 8.2, and charges a monthly fee—not listed on the page—after a free transition period announced via email. You can cancel it by switching to a supported version and then removing the option. See ",
+              "type": "text"
+            },
+            {
+              "text": "my IONOS guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/changer-version-php-ionos-faille-octobre-2026",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "At Hostinger, the help article states that versions 8.1 and earlier are no longer available in the control panel, new sites start with PHP 8.3, and an existing site keeps its version until you upgrade it. Rolling back isn’t possible, except within the same session. See ",
+              "type": "text"
+            },
+            {
+              "text": "my Hostinger guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/changer-version-php-hostinger-faille-octobre-2026",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "At Infomaniak, the FAQ « Modify the PHP version of a site », updated on November 2, 2026, states that the fixes from October 21 were deployed from PHP 7.4 to 8.5, with unchanged version numbers. This is, along with IONOS's paid option, the only case on this list where an old branch still receives fixes. Infomaniak still recommends a recent version and warns that there is no rollback to a vulnerable version. See ",
+              "type": "text"
+            },
+            {
+              "text": "my Infomaniak guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/changer-version-php-infomaniak-faille-octobre-2026",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "At o2switch, the page « Select a PHP version », updated on June 23, 2026, still lists PHP 4.4 to 8.5 in the cPanel selector, without mentioning the removal of older versions or any fixes. See ",
+              "type": "text"
+            },
+            {
+              "text": "my o2switch guide",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/changer-version-php-o2switch-faille-octobre-2026",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " and ",
+              "type": "text"
+            },
+            {
+              "text": "the one for PlanetHoster",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/changer-version-php-planethoster-faille-octobre-2026",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Check the version actually served by your site",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The email talks about the offer, not necessarily your site. In WordPress, go to Tools, Site Health, tab Information, section Server. In Joomla, go to System, then System Information. Without access, my tool ",
+              "type": "text"
+            },
+            {
+              "text": "PHP Flaw, check my site",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/outils/faille-php-verifier-mon-site",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " reads the version your site announces and recognizes the host, without requiring any installation.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A pitfall: a forgotten .htaccess or .ovhconfig file in a folder can serve a different version than the one in the control panel. The served version is what matters, and I verify it before encrypting.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What WordPress and Joomla expect by November 9, 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "WordPress.org recommends PHP 8.3 or higher and notes that WordPress still works with PHP 7.4, an end-of-life version that may expose your site. \"Still works\" is not the same as \"protected.\"",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Joomla is stricter. Joomla 5.4 requires PHP 8.1.0 and recommends 8.3; the 5.x branch only receives security fixes until October 12, 2027. Joomla 6, released on October 14, 2025, requires PHP 8.3.0 and recommends 8.4. Joomla 3 or 4 has been unsupported since at least October 14, 2025: you must migrate it before discussing PHP.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What most often breaks when moving from PHP 7 to PHP 8",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Changing versions does not affect your text or images: it changes the rules that theme and extension code must follow. Three types of issues recur, all documented in php.net’s migration guides.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Deprecated functions. PHP 8.0 removed create_function(), each(), and money_format(), which were still present in old themes and extensions. Calling a non-existent function triggers a fatal error: a white screen. Older still, PHP 7.0 removed the mysql extension, and a 2015 site with custom code hits this first.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Comparisons. In PHP 8, \"0 == 'text'\" is false, whereas it was true in PHP 7, and a calculation on a non-numeric string throws an error instead of a warning.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Deprecation warnings. PHP 8.1 flags passing null to a built-in function; PHP 8.2 flags dynamic properties, the \"${variable}\" syntax in strings, and utf8_encode(). Nothing fatal, but if error display is active, messages print at the top of pages and can break redirects. Behind all this, there’s almost always an abandoned extension from years ago that needs replacing.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What order to follow to avoid ending up with a blank page",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A blank page after a change made \"just in case,\" without backup or testing, is the troubleshooting I see most often. The order matters more than the technique.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "First, a full backup—files and database—stored elsewhere than on the hosting. Then, update WordPress or Joomla, the theme, and the plugins, in the current PHP version. Next, clean up: remove a plugin disabled for two years. Then, test on a copy of the site with the target version, using a subdomain or test server—that’s where removed functions reveal themselves, not in production. Only then, update the version on the live site, followed by checking key pages: homepage, forms, payment, admin. My tool ",
+              "type": "text"
+            },
+            {
+              "text": "Test my site",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/outils/tester-mon-site",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " performs eight quick checks on the homepage, including the PHP version; it doesn’t replace manual testing of forms.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Testing on a copy isn’t a luxury: at Infomaniak, no rollback to a vulnerable version; at Hostinger, only within the same session.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Should you do it yourself, ask your host, or hire a developer?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Do it yourself if the site is a recent, up-to-date WordPress with fewer than ten plugins, and if you know how to restore your backup. The change takes minutes in your host’s control panel, and WordPress.org provides a guide, \"Update PHP,\" with a compatibility checker—though they admit it’s imperfect.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ask your host if the issue is on their side: missing version in the panel, paid option requiring cancellation. The host changes the version but won’t update your theme, replace an abandoned plugin, or fix your code.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hire a developer if the site dates back to 2015–2019 and hasn’t moved since, if your provider is gone, if the theme is custom, if it’s an e-commerce site, or if you lack a reliable backup.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How I proceed remotely, as of October 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You send me the site’s address. Within 24 hours, you receive a free written diagnosis: actual PHP version served, platform, and host. Then, I secure access, create a full off-server backup, and work on a copy. I update WordPress or Joomla, the theme, and plugins, switch the copy to PHP 8.3 or 8.4, and fix what breaks. Once the copy is clean, I update the live site, test forms, payment, and key pages, and send a written report: what was done and what to monitor. Nothing changes without your written approval on the price, and the site is never taken offline without notice.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently asked questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Who can update my site’s PHP version?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " You, from your host’s control panel, if you have access and a backup. Your host’s support, for version changes only. A web developer, for the full process: site updates, testing, and fixing what breaks. The agency or freelancer who built the site is the first to call; if they’re unreachable, any PHP developer can take over a WordPress or Joomla remotely.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can my host do it for me?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " They can change the PHP version if you ask, or remove the old one from their offerings. They won’t update your WordPress, theme, or plugins, nor fix what breaks afterward. OVHcloud states compatibility remains your responsibility; IONOS keeps the old version for a fee; Hostinger removed PHP 8.1 and earlier from their panel.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My site still works on PHP 7.4—why change?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Because \"works\" and \"protected\" are two different things. PHP 7.4 received no patches from php.net after November 28, 2022, and none for vulnerabilities reported on October 21, 2026. A site that displays normally may already be used to send spam or host fraudulent pages.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Which PHP version should you choose in November 2026?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " PHP 8.3 at minimum, 8.4 if your theme and plugins support it. WordPress.org recommends 8.3 or higher, while Joomla 6 requires it. PHP 8.2 still works, but will no longer receive updates after December 31, 2026: you’d better do the upgrade in January.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What should I do if my site shows a blank page after the update?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Revert to the old version via the control panel if possible: the site will come back. Then check your hosting’s error log: the first line will name the faulty file, almost always a plugin or the theme. Disable it via FTP by renaming its folder, then follow the steps described earlier. Without a backup, don’t touch anything else and ask for help.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How much time and money does it take?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " One to two hours for a basic website, half a day for an online store, remotely. My public packages start at €190 for a basic site and €390 for an online store, including a free diagnosis. A follow-up service at €100 per month is available for those who no longer want to receive such emails.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you’ve just received this email, send me your website address: the diagnosis is free and will arrive in writing within 24 hours. More details are on ",
+              "type": "text"
+            },
+            {
+              "text": "my PHP update page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/mise-a-jour-php-site-logiciel",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "af833a1f-15fc-4db9-b3b3-ae21e59d2762",
+            "body": [
+              {
+                "_uid": "i-2b98dc63-49af-42df-bb86-f6018f024c6e",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss your project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/alternative-paysagio-logiciel-paysagiste": {
+    "title": "Paysagio Alternative: Which Software Should Landscape Designers Choose in 2026?",
+    "excerpt": "Paysagio charges for management accounts, not for labor: a minimum of €99.90 HT per month. Who it’s for, its drawbacks, and comparisons with Tomas, Organilog, and Batappli—including their pricing.",
+    "metaTitle": "Paysagio: 2026 Pricing, Limits and 3 Alternatives",
+    "metaDescription": "Paysagio: €99.90 excl. VAT a month minimum, free worker accounts, prices of 8 November 2026. Who it suits, its limits, and Tomas, Organilog, Batappli priced.",
+    "tags": [
+      "paysagio review",
+      "paysagio alternatives",
+      "landscape design software",
+      "paysagio pricing",
+      "landscape management software",
+      "landscape business profitability"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In a landscaping business, the costly question comes after the job—not when the quote is given: how many hours did it really take? The hours remain in the foreman’s notebook, in a Friday evening text from the truck, or in the worker’s head as they’ve already moved on to another garden. So, on the last big job, did you actually make a profit?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Paysagio, which describes itself as 'designed by and for landscapers,' is built around this question, with hours logged on the phone and profitability calculated job by job. I reviewed its pricing on November 8, 2026, along with three other software options that also display their rates: here’s who it’s for, what might hold you back, and what to compare.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Paysagio Costs in 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Paysagio doesn’t sell packages—it sells roles. As of November 8, 2026, ",
+              "type": "text"
+            },
+            {
+              "text": "its pricing grid",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://paysag.io/#tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " offers three paid accounts, excluding tax. The Manager account, marked as mandatory, costs €99.90 HT per month and unlocks everything, from the dashboard to invoicing. The Driver account, at €49.90 HT, manages jobs, cost studies, and team hours; the Team Leader account, at €34.90 HT, handles their jobs, team hours, notes, and photos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Worker accounts are free with no user limit: a worker logs their hours and views their jobs. Paid annually in a single payment with roughly a 10% discount, the three accounts cost €1,079, €539, and €377 HT per year. A 14-day trial is available without a credit card or commitment.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Features include cost studies based on a service catalog, quotes, invoices, scheduling, time tracking via phone, and margin calculations per job based on actual costs—all accessible through a web browser.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Who Paysagio Is Right For",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A landscaping business with two or three teams, where the number of workers fluctuates with the seasons. The pricing model fits this: you pay for the accounts that oversee, not those that clock in. A manager and two team leaders pay €169.70 HT per month, or €1,833 HT per year, whether the team has four workers in March or ten in May. Out of the six publicly priced software options in my comparison, it’s the only one that includes free worker accounts.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If your concern is profit margins more than paperwork, that’s its promise: knowing the same evening which jobs are profitable.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Might Hold You Back",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The only upfront cost is €99.90 HT.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " The Manager account is mandatory: a solo landscaper pays €99.90 HT per month, or €1,079 HT per year. On the same day, Robbin Essentiel cost €19 HT per month (€15 HT if paid annually) and Tomas Essentiel €24.50 HT.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No maintenance contracts are mentioned on the page.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " As of November 8, 2026, it doesn’t mention maintenance contracts, recurring visits, or tax certificates for clients in home services. If you rely on year-round mowing and trimming, ask about it during the trial.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Electronic invoicing isn’t mentioned.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Businesses subject to VAT must be able to receive electronic invoices starting September 1, 2026, and SMEs and micro-enterprises must issue them by September 1, 2027. Paysagio doesn’t specify how its invoices will pass through an approved platform, while Tomas, Organilog, Batappli, and Extrabat advertise electronic invoicing on their pages.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A young publisher, with export to request.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Paysagio is published by EV-PTL (Agence PTL), an SAS founded in May 2024 according to the business registry. Its FAQ explains how to import clients but not how to retrieve your jobs, hours, and invoices if you ever leave. Ask before signing.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Three alternatives to Paysagio, with their prices",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Prices displayed on each publisher's website, recorded on November 8, 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tomas, 24.50 or 49.50 € VAT-exclusive per month.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " According to ",
+              "type": "text"
+            },
+            {
+              "text": "Tomas’s offers page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://tomas.fr/offre/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", Essentiel costs 24.50 € VAT-exclusive per month with quotes, invoices, scheduling, interventions, reports, and a mobile app. Expert chantier, at 49.50 € VAT-exclusive, adds what looks most like Paysagio: hours logged by field workers, validated by the manager, and actual profit margins per project. One manager is included; an additional one costs 24.50 € VAT-exclusive per month, and a technician costs 9.50 € VAT-exclusive. No commitment required, 15-day trial without a card, and a 10% annual discount advertised. A manager, two team leaders, and six workers logging hours pay 125.50 € VAT-exclusive per month in Expert chantier, compared to 169.70 € VAT-exclusive at Paysagio; with equal management, beyond twelve equipped field workers, Paysagio becomes more affordable. Tomas’s pages do not mention maintenance contracts.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Organilog, from 0 to 64 € per month per user.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "Organilog’s offers page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://fr.organilog.com/offre/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " starts with annual pricing: Pro at 19 €, Business at 35 €, Premium at 59 €, and Premium + Card at 64 € per month per user, without specifying VAT-exclusive or VAT-inclusive. Monthly, Pro rises to 24 € and Business to 45 €; Premium plans are annual-only, and Basique is free but limited. The offline app, scheduling, contracts, and tax certificates are included from Pro, while quotes and invoices start at Business. ",
+              "type": "text"
+            },
+            {
+              "text": "Its page for landscapers",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://fr.organilog.com/logiciel/paysagiste/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " also describes hours per project. Three users in Business cost 105 € per month annually, 135 € monthly; ask if a worker who only clocks in counts as a user. The trial requires a demonstration. See also ",
+              "type": "text"
+            },
+            {
+              "text": "my article on alternatives to Organilog",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-organilog-logiciel-gestion-interventions",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Batappli, 39 or 79 € VAT-exclusive per month.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " This construction software has ",
+              "type": "text"
+            },
+            {
+              "text": "a page dedicated to landscaper quotes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.batappli.fr/boite-a-outils/logiciel-devis-paysagiste",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". ",
+              "type": "text"
+            },
+            {
+              "text": "Its pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.batappli.fr/tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " starts with annual prices: Batappli Devis at 429 € VAT-exclusive and Batappli Artisan at 869 € VAT-exclusive per year for one user; monthly, 39 and 79 € VAT-exclusive. An additional user costs 19 € VAT-exclusive per month, or 209 € VAT-exclusive per year. Artisan adds to Devis site tracking, inventory, and maintenance contracts. A manager and two team leaders in Artisan pay 117 € VAT-exclusive per month, or 1,287 € VAT-exclusive per year. Ten-day trial; the pricing page does not mention on-site hour logging. Details in ",
+              "type": "text"
+            },
+            {
+              "text": "my article on Batappli",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-batappli-logiciel-batiment",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I also reviewed ",
+              "type": "text"
+            },
+            {
+              "text": "Extrabat Landscape",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-extrabat-logiciel-paysagiste",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", priced from 49 to 99 € VAT-exclusive per user per month, and ",
+              "type": "text"
+            },
+            {
+              "text": "Robbin",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-robbin-logiciel-paysagiste",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", priced from 15 to 49 € VAT-exclusive per month.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "And if none of them fit: the custom tool",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "These four software solutions all handle quotes to invoicing. The spreadsheet comes into play when your organization doesn’t fit the mold: tracking time spent versus the quote, job by job, to see if you’re underpricing masonry or landscaping; the contract for eight mows and two trims, with real-time tracking for each visit, to check in November if the pricing held.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "At publisher Kodeva, I created ",
+              "type": "text"
+            },
+            {
+              "text": "Gest-Time",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/gestion-temps",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", a time and intervention management software for SMEs with 20 to 200 employees, still in production. This is the subject of Paysagio seen from the inside: who logs the hours, who validates them, and how they align with what was sold.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On pricing, an add-on module alongside your subscription costs 2,500 to 7,000 € one-time. A complete tool ranges from 5,000 to 15,000 €, plus 100 to 300 € per month for maintenance, hosting, and backups included, and you own the code. Over three years, a manager and two team leads at Paysagio cost 5,499 € VAT-exclusive annually: custom solutions don’t beat this figure if the software suits you, but they justify themselves when a spreadsheet stays open beside you. To verify a quote, see my ",
+              "type": "text"
+            },
+            {
+              "text": "benchmark for custom software pricing",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " and my article on the ",
+              "type": "text"
+            },
+            {
+              "text": "price of custom software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to Choose in One Day",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Start with the six-question test on my ",
+              "type": "text"
+            },
+            {
+              "text": "software for landscapers",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-paysagiste",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "page, including a free quote and maintenance contract template. Then dedicate a full day to testing the software.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In the morning, a cost study for a fence wall and plantings, with 10% VAT on the wall of a house over two years old and 20% on the plants. During the day, a team leader and a worker log their hours on their phone, behind the house, where only a weak network signal remains. In the evening, the time spent must be compared to the planned time; finally, create a contract for eight mows and two trims, and check its terms. Every number copied by hand during the trial, you will copy it all season long.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "How much does Paysagio cost?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As of November 8, 2026, 99.90 € HT per month for the Manager account, which is mandatory, 49.90 € HT per Driver account, and 34.90 € HT per Team Leader account, or 1,079 €, 539 €, and 377 € HT per year if paid annually. Worker accounts are free.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Does Paysagio offer a free trial?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes, 14 days without a credit card, followed by a no-commitment subscription, cancellable at any time according to its FAQ.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Does Paysagio manage maintenance contracts?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As of November 8, 2026, its page does not mention them, nor does it mention tax certificates. Robbin includes them in Pro for 49 € HT per month (39 € HT if paid annually), Extrabat stores service contracts in Standard for 69 € HT per user per month, and Organilog offers them starting with Pro, while Batappli includes them in Artisan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Does Paysagio work without network?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It is used through the phone’s browser, and its page states it works with limited connectivity, without mentioning offline mode. Organilog advertises an app that functions without network and syncs upon reconnection.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Which landscaping software is the cheapest?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For a solo landscaper, Robbin Essentiel at 15 € HT per month if paid annually, then Tomas Essentiel at 24.50 € HT; Organilog has a free plan, but without quotes or invoices. With many workers, the calculation changes: at Paysagio, only management accounts are paid for.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "You don’t know which one to choose?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Describe your business in a few lines: how many people are in the office and in the field, the split between creation and maintenance work, and how hours are logged today—whether through notebooks, SMS, or spreadsheets. I’ll respond within 24 hours, by phone or video if that’s easier. If Paysagio or another software on the market suits you, I’ll let you know.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "1221a518-d849-47df-8e5a-05edefc196b2",
+            "body": [
+              {
+                "_uid": "i-e055b7b4-e93e-4a9c-b0b4-023547605a2e",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Describe how you work",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

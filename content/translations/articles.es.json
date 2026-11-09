@@ -33780,7 +33780,7 @@
   },
   "blog/application-metier-no-code-ia-limites": {
     "title": "Aplicación empresarial sin código o con IA: ¿hasta dónde llega?",
-    "excerpt": "Airtable, Bubble, Glide o Lovable: donde el *no-code* y la IA hacen un trabajo excepcional, y las señales de que una aplicación empresarial necesita evolucionar hacia una solución personalizada.",
+    "excerpt": "Airtable, Bubble, Glide o Lovable: donde el no-code y la IA hacen un trabajo excepcional, y las señales de que una aplicación empresarial necesita evolucionar hacia una solución personalizada.",
     "metaTitle": "Aplicación sin código o con IA: límites y cuándo cambiar",
     "metaDescription": "Airtable, Bubble, Glide, Lovable: cuándo basta una aplicación sin código, las 5 señales de que llega a su límite y cuándo pasar al software a medida.",
     "tags": [
@@ -46234,6 +46234,2337 @@
             "body": [
               {
                 "_uid": "i-d3447ee3-1313-43b9-a2a0-481764e5d22e",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Descríbame su forma de trabajar",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/mettre-a-jour-site-joomla-vers-joomla-6": {
+    "title": "Actualizar un sitio antiguo de Joomla (3, 4 o 5) a Joomla 6: qué puede romperse, el orden correcto y el costo",
+    "excerpt": "Joomla 3 y 4 ya no reciben correcciones, y Joomla 5 dejará de soportarse en octubre de 2027. ¿En qué orden migrar a Joomla 6 y PHP 8.3, qué puede fallar en un sitio antiguo y cuánto cuesta? Incluye un caso real de actualización explicado paso a paso.",
+    "metaTitle": "Actualizar un sitio Joomla 3, 4 o 5 a Joomla 6",
+    "metaDescription": "Joomla 3 y 4 ya no reciben correcciones y Joomla 5 termina en octubre de 2027. Los pasos hacia Joomla 6 y PHP 8.3, lo que falla y el precio.",
+    "tags": [
+      "Joomla",
+      "actualización Joomla",
+      "Joomla 6",
+      "PHP 8",
+      "sitio web obsoleto",
+      "mantenimiento web"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El 9 de noviembre de 2026, un sitio de Joomla actualizado funciona con ",
+              "type": "text"
+            },
+            {
+              "text": "Joomla 6.2.0",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " y ",
+              "type": "text"
+            },
+            {
+              "text": "PHP 8.3 o 8.4",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Joomla 3 ya no recibe correcciones desde el 17 de agosto de 2023, Joomla 4 desde el 14 de octubre de 2025, y Joomla 5 solo recibe parches de seguridad hasta el 12 de octubre de 2027. El orden no cambia, sin importar el punto de partida: copia de seguridad completa, copia de prueba, última versión de la rama instalada (3.10, 4.4 o 5.4), verificación previa en la administración, y luego una versión mayor a la vez, con PHP ajustado. En un sitio de Joomla 5 con un diseño gráfico personalizado, esto me tomó alrededor de diez horas en noviembre de 2026; desde Joomla 3, el proyecto es más largo, y a veces reconstruir requiere menos trabajo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Soy desarrollador freelance cerca de Rennes, y escribo para el dueño de un sitio de Joomla que no es técnico: una consulta, una asociación, un autónomo, una pequeña empresa. Fechas y versiones verificadas el 9 de noviembre de 2026 en joomla.org y php.net.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Qué versión de Joomla sigue siendo mantenida en noviembre de 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Joomla 3",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " tuvo su última versión, la 3.10.12, en julio de 2023, y su soporte terminó el 17 de agosto de 2023. El proyecto luego vendió dieciocho meses de parches de seguridad, 90 € por sitio, hasta el 17 de febrero de 2025. Desde entonces, nada más.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Joomla 4",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " dejó de recibir soporte el 14 de octubre de 2025, con la versión 4.4.14 del 30 de septiembre de 2025 como última versión, que la página oficial de descarga presenta como ya no mantenida.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Joomla 5",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " está al final de su ciclo. La versión 5.4.10 del 13 de octubre de 2026 es anunciada por el equipo de Joomla como la última versión de corrección de errores de la serie 5. Hasta el 12 de octubre de 2027, Joomla 5.4 aún recibe parches de seguridad, y luego también dejará de recibir soporte.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Joomla 6",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " fue lanzado el 14 de octubre de 2025. La versión actual es la 6.2.0, publicada el 13 de octubre de 2026. La hoja de ruta oficial prevé correcciones de errores hasta el 17 de octubre de 2028 y parches de seguridad hasta el 16 de octubre de 2029. Es el objetivo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Por qué PHP es tan importante como Joomla?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Joomla está escrito en PHP, el lenguaje que su proveedor de alojamiento ejecuta en su servidor. Joomla 5 requiere al menos PHP 8.1 y recomienda 8.3; Joomla 6 requiere al menos PHP 8.3 y recomienda 8.4. Sin embargo, PHP 7.4 ya no recibe correcciones desde el 28 de noviembre de 2022, PHP 8.0 desde el 26 de noviembre de 2023, PHP 8.1 desde el 31 de diciembre de 2025, y PHP 8.2 dejará de recibir soporte el 31 de diciembre de 2026. PHP 8.3 se corregirá hasta el 31 de diciembre de 2027, y PHP 8.4 hasta el 31 de diciembre de 2028. Un sitio de Joomla 5 en PHP 8.2 debe cambiar de versión de PHP antes de fin de año de todos modos, y ese cambio se realiza en el panel de control del proveedor de alojamiento, no en Joomla.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La base de datos también cuenta. Joomla 6 requiere MySQL 8.0.13 como mínimo, o MariaDB 10.4 como mínimo, y 10.6 en versión soportada. En un alojamiento antiguo, la base de datos a veces es más antigua, y la administración de Joomla no ofrece entonces la opción de actualización. Este punto depende del proveedor de alojamiento: hay que pedirle una base de datos más reciente o cambiar de plan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿En qué orden actualizar: 3.10, 4.4, 5.4 y luego 6?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No se salta una versión mayor. La documentación oficial describe tres transiciones, cada una desde la última versión menor de la rama anterior.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "De Joomla 3 a Joomla 4.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La guía oficial parte de un sitio en 3.10.x. En el componente de actualización de Joomla, se configura el canal en « Joomla Next » y el precontrol (",
+              "type": "text"
+            },
+            {
+              "text": "Pre-Update Check",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "text": ") aparece: verifica la versión de PHP y de la base de datos, luego la compatibilidad que cada editor de extensión ha declarado para Joomla 4. El modelo Protostar, incluido con Joomla 3, no es compatible con Joomla 4: un sitio que lo usa cambia de modelo en este paso.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "De Joomla 4 a Joomla 5.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La guía parte de un sitio en 4.4.x. Mismo principio: Sistema, Actualización, Joomla, canal « Joomla Next », luego el precontrol en tres partes: ajustes requeridos, ajustes recomendados y extensiones. Un plugin de compatibilidad, « Comportamiento - Compatibilidad hacia atrás », se activa automáticamente para que las extensiones escritas para Joomla 4 sigan funcionando.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "De Joomla 5 a Joomla 6.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La guía parte de un sitio en 5.4.x, con PHP 8.3. El equipo de Joomla lo dice ellos mismos: pasar de 5.4 a 6 es una actualización, no una migración. El plugin « Comportamiento - Compatibilidad hacia atrás 6 » debe activarse y el antiguo plugin de compatibilidad desactivarse; el precontrol verifica ambos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una reserva que la guía oficial hace ella misma: la parte « extensiones » del precontrol es solo un resumen, y la verdadera verificación se hace en una copia del sitio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que más suele fallar en un viejo sitio de Joomla",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El diseño gráfico personalizado.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Muchos sitios de 2012 a 2018 tienen un diseño creado por la agencia de la época, escrito para la versión de Joomla y PHP de entonces. Nadie lo mantiene, por lo que no hay actualizaciones para descargar: hay que adaptarlo manualmente o reemplazarlo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las extensiones abandonadas aún instaladas.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Un formulario, una galería, un módulo de redes sociales instalados en 2014 y cuyo editor ha desaparecido. Mientras estén ahí, bloquean o rompen la actualización: las que ya no se usan se desinstalan, las otras se reemplazan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las copias de seguridad.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Un viejo sitio suele tener copias de seguridad de Akeeba programadas hace años, almacenadas en el mismo servidor, sin cifrado y nunca probadas. Una copia de seguridad que contiene toda la base de datos de un despacho, legible por cualquiera que acceda, es un problema en sí mismo. Antes de tocar el sitio, verifico que exista una copia de seguridad completa, que se pueda restaurar y que esté guardada fuera del servidor.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cómo actualicé el sitio de un gabinete de psicología en noviembre de 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El sitio estaba en Joomla 5.4.7 con PHP 8.2, con un diseño gráfico personalizado de 2015, un formulario de reserva de citas ChronoForms 7, el editor JCE, copias de seguridad de Akeeba y una extensión de caché y reescritura de direcciones de la familia sh404SEF/4SEO.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Siempre empiezo con una copia de seguridad completa, archivos y base de datos, guardada fuera del servidor. Luego monto una copia de prueba: el mismo sitio, en otra dirección, donde puedo romper cosas sin que ningún visitante lo note.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En esta copia, primero actualicé el sitio a la última versión de su rama, la 5.4.10, porque la transición a Joomla 6 parte de la última 5.4, no de cualquier 5.4. Luego revisé el precontrol. Después PHP 8.3, ya que Joomla 6 lo exige, y la actualización a Joomla 6.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El modelo de 2015 requirió un poco de trabajo. PHP 8.3 señala formas de escribir código que eran aceptadas en 2015 y ya no lo son: nada visible para un visitante, pero advertencias en los registros y, a la larga, errores. Los corregí uno por uno, sin modificar la apariencia. ChronoForms 7, el punto que más me preocupaba, se mantuvo y probó: el formulario de citas funciona bajo Joomla 6. JCE y las demás extensiones se actualizaron una por una, verificando el sitio después de cada una.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Luego, las pruebas: los dos formularios, cada página, las direcciones reescritas, el envío de correos electrónicos. Cuando todo funcionaba en la copia, repetí la misma secuencia de operaciones en el sitio en línea, con una nueva copia de seguridad justo antes, y luego envié un informe escrito: versiones antes y después, lo que se modificó, dónde están las copias de seguridad.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En total, unas diez horas de trabajo. Al final, la presentación y los contenidos son idénticos, y el sitio está en Joomla 6 y PHP 8.3, con parches de seguridad hasta octubre de 2029 para uno y hasta finales de 2027 para el otro.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Actualizar o rediseñar el sitio?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La pregunta surge especialmente desde Joomla 3. La documentación oficial lo dice sin rodeos: cuando se saltan varias versiones mayores con muchas extensiones obsoletas, reconstruir el sitio en la versión actual puede requerir menos trabajo que actualizarlo. Mi criterio: si el modelo se mantiene o es adaptable y si las extensiones importantes aún existen para Joomla 6, actualizo; de lo contrario, tomo los contenidos en un Joomla 6 limpio, con un modelo actual. En ambos casos, sus textos, páginas y direcciones se conservan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que puede verificar usted mismo",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Conéctese a la administración de su sitio, cuya dirección termina en /administrator. En Joomla 3, la versión se muestra al final de la página; en versiones posteriores, Sistema e Información del sistema dan la versión de Joomla, de PHP y de la base de datos. Joomla 3 o 4, o PHP 8.1 o inferior: ya está afectado. Joomla 5.4 y PHP 8.2: tiene hasta fin de año para PHP y hasta octubre de 2027 para Joomla.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sin acceso, mi herramienta gratuita ",
+              "type": "text"
+            },
+            {
+              "text": "Probar mi sitio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/outils/tester-mon-site",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " lee su página de inicio y verifica ocho puntos, entre ellos la versión de PHP cuando está mostrada; la herramienta ",
+              "type": "text"
+            },
+            {
+              "text": "Vulnerabilidad PHP, verificar mi sitio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/outils/faille-php-verifier-mon-site",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " indica si la versión de PHP servida ha recibido las correcciones de octubre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Quién puede actualizar mi sitio Joomla?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La agencia o freelance que hizo el sitio, si aún existe y sigue trabajando con Joomla. Su proveedor de alojamiento, pero solo para la parte de PHP y base de datos: no toca ni Joomla ni sus extensiones. O un desarrollador independiente que conozca Joomla, a distancia, a partir de sus accesos. En todos los casos, pida por escrito una copia de seguridad completa antes de la intervención, una prueba en una copia y un informe de lo que se haya hecho. Realizo este trabajo a distancia, desde Rennes, para toda Francia.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cuánto cuesta actualizar un sitio Joomla?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Una actualización de versión sencilla se factura por el paquete básico de mi página de servicios, 190 €, incluyendo copia de seguridad, prueba en copia y informe. El precio sube cuando también hay que adaptar el diseño, reemplazar extensiones o resolver un problema de seguridad, y lo anuncio después del diagnóstico gratuito. El caso relatado anteriormente, de 5.4 a 6 con un diseño personalizado, representó unas diez horas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Se puede pasar directamente de Joomla 3 a Joomla 6?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " No. El camino oficial pasa por 3.10, luego 4.4, luego 5.4, luego 6, cada uno con su precontrol. En una copia de prueba, los tres pasos se encadenan en la misma intervención.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Mi sitio Joomla 3 sigue funcionando, ¿por qué tocarlo?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Porque ya no recibe ninguna actualización de seguridad desde el 17 de agosto de 2023, o desde el 17 de febrero de 2025 si habías pagado por el soporte extendido, y porque generalmente funciona con una versión de PHP también abandonada. Un sitio que se muestra no es un sitio protegido.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Joomla 5 sigue siendo seguro en 2026?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Sí, hasta el 12 de octubre de 2027, siempre y cuando esté en la versión 5.4.10 o en la versión de seguridad que la siga, y con un PHP actualizado. Como Joomla 6 requiere PHP 8.3 y PHP 8.2 dejará de recibir soporte el 31 de diciembre de 2026, realizar ambos cambios en una sola intervención tiene sentido.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Si desea que me ocupe de ello",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Envíeme la dirección de su sitio de Joomla. Le indico en menos de 24 horas qué versión está ejecutando, qué está bloqueando y por dónde empezar: es el diagnóstico gratuito de mi página ",
+              "type": "text"
+            },
+            {
+              "text": "Actualización de PHP de su sitio o software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/mise-a-jour-php-site-logiciel",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", que también describe los paquetes desde 190 €, con respaldo, prueba en copia y informe escrito.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Fuentes:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "hoja de ruta y ciclo de vida de las versiones de Joomla",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://developer.joomla.org/roadmap",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "anuncio de Joomla 6.2",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.joomla.org/announcements/release-news/joomla-6-2-is-here.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " del 13 de octubre de 2026, ",
+              "type": "text"
+            },
+            {
+              "text": "anuncio de Joomla 6.0 y 5.4",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.joomla.org/announcements/release-news/5939-joomla-6-0-and-joomla-5-4-are-here.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " del 14 de octubre de 2025, ",
+              "type": "text"
+            },
+            {
+              "text": "fin del soporte de Joomla 4.4",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.joomla.org/announcements/release-news/joomla-5-3-4-security-bugfix-release.html",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "fin de Joomla 3 y soporte extendido",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://magazine.joomla.org/all-issues/july-2023/extended-security-support-for-joomla-3x",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", requisitos técnicos de ",
+              "type": "text"
+            },
+            {
+              "text": "Joomla 6",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://manual.joomla.org/docs/get-started/technical-requirements",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " y de ",
+              "type": "text"
+            },
+            {
+              "text": "Joomla 5",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://manual.joomla.org/docs/5.4/get-started/technical-requirements",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", guías oficiales de migración ",
+              "type": "text"
+            },
+            {
+              "text": "de 3 a 4",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://guide.joomla.org/user-manual/migration/migration-joomla-3-to-4-step-by-step",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "de 4 a 5",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://guide.joomla.org/user-manual/migration/joomla-4-to-5-planning-and-upgrade-step-by-step",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " y ",
+              "type": "text"
+            },
+            {
+              "text": "de 5 a 6",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://guide.joomla.org/user-manual/migration/joomla-5-to-6-planning-and-upgrade-step-by-step",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "versiones de PHP soportadas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.php.net/supported-versions.php",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " y ",
+              "type": "text"
+            },
+            {
+              "text": "versiones de PHP en fin de vida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.php.net/eol.php",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "f4ace8fa-b810-4f8b-b459-0becc60f5361",
+            "body": [
+              {
+                "_uid": "i-24e9d232-cc35-4ffe-91d7-62820d3bf09c",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/hebergeur-arrete-anciennes-versions-php-que-faire": {
+    "title": "Su hosting retira PHP 7.4, 8.0 u 8.1: ¿qué hacer con su web WordPress o Joomla antes del corte?",
+    "excerpt": "Su proveedor de alojamiento le anuncia el fin del soporte para PHP 7.4, 8.0 o 8.1. Aquí le indicamos el orden de los pasos a seguir para su sitio WordPress o Joomla, qué puede fallar al migrar a PHP 8 y quién puede realizar la actualización.",
+    "metaTitle": "Su hosting retira PHP 7.4, 8.0 u 8.1: ¿qué hacer?",
+    "metaDescription": "Su hosting retira PHP 7.4, 8.0 u 8.1: el orden a seguir para una web WordPress o Joomla, lo que falla por el camino y quién puede hacer la actualización.",
+    "tags": [
+      "PHP",
+      "WordPress",
+      "Joomla",
+      "alojamiento web",
+      "actualización de PHP",
+      "seguridad"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si su proveedor de alojamiento le anuncia el fin de PHP 7.4, 8.0 o 8.1, este es el orden a seguir: hacer una copia de seguridad del sitio, actualizar WordPress o Joomla, el tema y los plugins, probar el sitio en una copia con PHP 8.3, y solo entonces cambiar la versión en el proveedor y verificar los formularios. Cuente una a dos horas para un sitio vitrina, medio día para una tienda. Estas tres versiones de PHP ya no reciben parches de seguridad: PHP 7.4 desde el 28 de noviembre de 2022, PHP 8.0 desde el 26 de noviembre de 2023, PHP 8.1 hasta el 31 de diciembre de 2025. PHP 8.2 finalizará el 31 de diciembre de 2026. Fechas verificadas el 9 de noviembre de 2026 en php.net y las páginas de ayuda de los proveedores.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Realizo estas actualizaciones a distancia desde octubre de 2026, para artesanos, despachos, asociaciones y PYMES. El caso típico: un sitio construido entre 2015 y 2019, nunca actualizado, y un proveedor que ya no responde.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Por qué su proveedor de alojamiento le escribe ahora?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "PHP es el lenguaje que ejecuta WordPress y Joomla. Cada versión tiene una vida útil de cuatro años, de los cuales solo dos son para correcciones de seguridad. Después, nada más. Al 9 de noviembre de 2026, el proyecto PHP solo sigue 8.2 y 8.3, en modo seguro, y 8.4 y 8.5. PHP 8.2 finalizará el 31 de diciembre de 2026; le dediqué ",
+              "type": "text"
+            },
+            {
+              "text": "un artículo aparte",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/php-82-fin-de-vie-31-decembre-2026-que-faire",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Dos cosas aceleraron los correos este otoño: el fin de PHP 8.1 el 31 de diciembre de 2025, y luego las dos vulnerabilidades críticas del 21 de octubre de 2026, que permiten ejecutar código a distancia. El proyecto PHP publicó parches ese día para 8.2.35, 8.3.36, 8.4.27 y 8.5.12, y para nada más; un sitio en 7.4, 8.0 o 8.1 no recibió nada. Detallé este episodio en ",
+              "type": "text"
+            },
+            {
+              "text": "mi artículo sobre la falla PHP de octubre de 2026",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/faille-php-octobre-2026-site-boutique-logiciel-que-faire",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". Los proveedores que no quieren asumir este riesgo cierran las ramas antiguas o las hacen pagar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cómo leer el correo de su proveedor de alojamiento",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Busque tres informaciones: la versión afectada, la fecha en que será retirada o cobrada, y qué hará el proveedor por su cuenta. Este último punto lo cambia todo. Páginas de ayuda releídas el 9 de noviembre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En OVHcloud, la página «Versiones disponibles de los lenguajes», actualizada el 27 de octubre de 2026, clasifica PHP 8.1 como finalizada desde el 31 de diciembre de 2025 y marca las versiones 8.0 a 5.3 como «Migración recomendada». Siguen listadas, sin cambio automático ni fecha de retiro anunciada, y la compatibilidad del sitio sigue siendo su responsabilidad. ",
+              "type": "text"
+            },
+            {
+              "text": "Mi guía OVHcloud",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/changer-version-php-ovh-faille-octobre-2026",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra dónde cambiar la versión.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En IONOS, la página de ayuda «PHP Extended Support» describe un servicio pagado que comienza al finalizar el soporte comunitario: IONOS corrige por sí mismo las versiones antiguas, desde PHP 5.6 hasta 8.2, y cobra una tarifa mensual, no especificada en la página, después de un período de transición gratuita anunciado por correo. Se detiene al pasar a una versión soportada y luego cancelando la opción. Ver ",
+              "type": "text"
+            },
+            {
+              "text": "mi guía IONOS",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/changer-version-php-ionos-faille-octobre-2026",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En Hostinger, el artículo de ayuda indica que las versiones 8.1 y anteriores ya no están disponibles en el panel, que los nuevos sitios comienzan con PHP 8.3, y que un sitio existente mantiene su versión hasta que usted la actualice. No es posible retroceder, excepto dentro de la misma sesión. Ver ",
+              "type": "text"
+            },
+            {
+              "text": "mi guía Hostinger",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/changer-version-php-hostinger-faille-octobre-2026",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En Infomaniak, la FAQ « Modificar la versión de PHP de un sitio », actualizada el 2 de noviembre de 2026, indica que los parches del 21 de octubre se desplegaron desde PHP 7.4 hasta 8.5, con números de versión sin cambios. Es, junto con la opción de pago de IONOS, el único caso de esta lista donde una rama antigua aún recibe parches. Infomaniak recomienda, sin embargo, una versión reciente, y advierte que no hay vuelta atrás hacia una versión vulnerable. Ver ",
+              "type": "text"
+            },
+            {
+              "text": "mi guía de Infomaniak",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/changer-version-php-infomaniak-faille-octobre-2026",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En o2switch, la página « Seleccionar una versión de PHP », actualizada el 23 de junio de 2026, sigue listando PHP 4.4 a 8.5 en el selector de cPanel, sin mencionar la retirada de versiones antiguas ni los parches. Ver ",
+              "type": "text"
+            },
+            {
+              "text": "mi guía de o2switch",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/changer-version-php-o2switch-faille-octobre-2026",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " y ",
+              "type": "text"
+            },
+            {
+              "text": "aquella para PlanetHoster",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/blog/changer-version-php-planethoster-faille-octobre-2026",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Verifica la versión realmente servida por tu sitio",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El correo habla de la oferta, no necesariamente de tu sitio. En WordPress, ve a Herramientas, Salud del sitio, pestaña Información, sección Servidor. En Joomla, ve a Sistema, luego Información del sistema. Sin acceso, mi herramienta ",
+              "type": "text"
+            },
+            {
+              "text": "Falla PHP, verificar mi sitio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/outils/faille-php-verifier-mon-site",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " lee la versión que tu sitio anuncia y reconoce el alojamiento, sin necesidad de instalar nada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una trampa: un archivo .htaccess o .ovhconfig olvidado en una carpeta puede servir una versión distinta a la del panel. La versión servida es la que cuenta, y la verifico antes de cifrar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que WordPress y Joomla esperan para el 9 de noviembre de 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "WordPress.org recomienda PHP 8.3 o superior, y aclara que WordPress sigue funcionando con PHP 7.4, versión en fin de vida que puede exponer el sitio. « Funciona aún » no es lo mismo que « está protegido ».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Joomla es más estricto. Joomla 5.4 exige PHP 8.1.0 y recomienda 8.3; la rama 5 solo recibe parches de seguridad hasta el 12 de octubre de 2027. Joomla 6, lanzado el 14 de octubre de 2025, exige PHP 8.3.0 y recomienda 8.4. Un Joomla 3 o 4 dejó de tener soporte desde el 14 de octubre de 2025 como muy tarde: hay que migrarlo antes de hablar de PHP.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que más suele fallar al pasar de PHP 7 a PHP 8",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Cambiar de versión no afecta tus textos ni imágenes: lo que cambia son las reglas que el código del tema y las extensiones debe cumplir. Tres familias de problemas aparecen una y otra vez, todas documentadas en las guías de migración de php.net.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las funciones eliminadas. PHP 8.0 eliminó create_function(), each() y money_format(), aún presentes en temas y extensiones antiguos. Llamar a una función que ya no existe provoca un error fatal: la página en blanco. Más antiguo, PHP 7.0 eliminó la extensión mysql, y un sitio de 2015 con código propio choca con eso primero.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las comparaciones. En PHP 8, « 0 == 'texto' » es falso cuando en PHP 7 era verdadero, y una operación sobre una cadena no numérica lanza un error en lugar de una advertencia.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las advertencias de depreciación. PHP 8.1 advierte sobre el paso de null a una función interna; PHP 8.2 advierte sobre propiedades dinámicas, la escritura « ${variable} » en una cadena y utf8_encode(). Nada fatal, pero si el mostrado de errores está activo, los mensajes se imprimen al inicio de las páginas y pueden romper las redirecciones. Detrás de todo esto, casi siempre hay una extensión abandonada desde hace años, que debe reemplazarse.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿En qué orden actuar para no terminar con una página en blanco?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La página en blanco después de un cambio hecho « por si acaso », sin copia de seguridad ni prueba, es la solución de emergencia que veo con más frecuencia. El orden es más importante que la técnica.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Primero, una copia de seguridad completa, archivos y base de datos, almacenada en otro lugar que en el alojamiento. Luego, las actualizaciones de WordPress o Joomla, del tema y de las extensiones, en la versión actual de PHP. Después, la selección: una extensión desactivada desde hace dos años se elimina. Luego, la prueba en una copia del sitio con la versión objetivo, subdominio o servidor de prueba: ahí es donde aparecen las funciones eliminadas, no en producción. Solo después, el cambio de versión en el sitio real, seguido de la verificación de las páginas clave: inicio, formularios, pago, administración. Mi herramienta ",
+              "type": "text"
+            },
+            {
+              "text": "Probar mi sitio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/outils/tester-mon-site",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " realiza ocho controles rápidos de la página de inicio, incluyendo la versión de PHP; no reemplaza la prueba manual de los formularios.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La prueba en copia no es un lujo: en Infomaniak, no hay retorno a una versión vulnerable; en Hostinger, solo dentro de la misma sesión.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Hacerlo uno mismo, pedirle al alojador o recurrir a un desarrollador?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hágalo usted mismo si el sitio es un WordPress reciente, actualizado, con menos de una decena de extensiones, y si sabe restaurar su copia de seguridad. El cambio toma unos minutos en el panel del alojador, y WordPress.org ofrece una guía « Actualizar PHP » con un módulo de verificación de compatibilidad, imperfecto según su propio reconocimiento.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Pida al alojador cuando el bloqueo es de su parte: versión ausente del panel, opción pagada que debe cancelarse. El alojador cambia la versión. No actualiza su tema, no reemplaza una extensión abandonada y no corrige su código.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Recurra a un desarrollador si el sitio data de 2015-2019 y no ha cambiado desde entonces, si su proveedor ha desaparecido, si el tema es personalizado, si es una tienda, o si no tiene una copia de seguridad de la que esté seguro.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cómo procedo, a distancia, desde octubre de 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Me envía la dirección del sitio. En menos de 24 horas, recibe un diagnóstico escrito y gratuito: versión de PHP realmente servida, plataforma, alojador. Luego, recupero los accesos, hago una copia de seguridad completa fuera del servidor y trabajo en una copia. Actualizo WordPress o Joomla, el tema y las extensiones, paso la copia a PHP 8.3 o 8.4 y corrijo lo que aparece. Cuando la copia está lista, cambio la versión en el sitio real, pruebo los formularios, el pago y las páginas principales, y le envío un informe escrito: lo que se hizo, lo que queda por vigilar. Nada se modifica sin su acuerdo escrito sobre el precio, y el sitio nunca se corta sin avisarle.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Quién puede actualizar la versión de PHP de mi sitio?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Usted, desde el panel de su alojador, si tiene los accesos y una copia de seguridad. El soporte del alojador, solo para el cambio de versión. Un desarrollador web, para el conjunto: actualizaciones del sitio, pruebas, corrección de lo que falla. La agencia o freelance que creó el sitio es el primero a contactar; si no responde, cualquier desarrollador PHP puede retomar un WordPress o Joomla a distancia.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Mi alojador puede hacerlo por mí?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Puede cambiar la versión de PHP si se lo pide, o retirar la antigua de su oferta. No actualiza su WordPress, su tema ni sus extensiones, y no repara lo que falla después. OVHcloud escribe que la compatibilidad sigue siendo su responsabilidad; IONOS mantiene la versión antigua bajo suscripción; Hostinger ha retirado PHP 8.1 y versiones anteriores de su panel.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Mi sitio sigue funcionando en PHP 7.4, ¿por qué cambiar?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Porque « funciona » y « protegido » son dos cosas distintas. PHP 7.4 no ha recibido ninguna corrección de php.net desde el 28 de noviembre de 2022, y nada para las vulnerabilidades del 21 de octubre de 2026. Un sitio que se muestra normalmente puede ya estar sirviendo para enviar spam o alojar páginas fraudulentas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Qué versión de PHP elegir en noviembre de 2026?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " PHP 8.3 como mínimo, 8.4 si su tema y extensiones lo permiten. WordPress.org recomienda 8.3 o superior, Joomla 6 lo exige. PHP 8.2 sigue funcionando, pero ya no recibirá actualizaciones después del 31 de diciembre de 2026: mejor realice la operación en enero.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Qué hacer si mi sitio muestra una página en blanco después del cambio?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Vuelva a la versión anterior desde el panel si aún es posible: el sitio volverá a funcionar. Luego revise el registro de errores del alojamiento: la primera línea indica el archivo culpable, casi siempre una extensión o el tema. Désactívelo por FTP renombrando su carpeta y vuelva a seguir el orden descrito anteriormente. Sin copia de seguridad, no toque nada más y pida ayuda.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Cuánto tiempo y cuánto cuesta?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Una o dos horas para un sitio web básico, medio día para una tienda en línea, a distancia. Mis paquetes públicos son de 190 € para un sitio web básico y de 390 € para una tienda en línea, incluyendo diagnóstico gratuito. También existe un seguimiento de 100 € al mes para quienes no desean recibir este tipo de correos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si acaba de recibir este correo, envíeme la dirección de su sitio: el diagnóstico es gratuito y llegará por escrito en menos de 24 horas. Los detalles están en ",
+              "type": "text"
+            },
+            {
+              "text": "mi página actualizada a PHP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://dibodev.fr/mise-a-jour-php-site-logiciel",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "af833a1f-15fc-4db9-b3b3-ae21e59d2762",
+            "body": [
+              {
+                "_uid": "i-2b98dc63-49af-42df-bb86-f6018f024c6e",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Hablar de mi proyecto",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/alternative-paysagio-logiciel-paysagiste": {
+    "title": "Alternativa a Paysagio: ¿qué software para paisajistas elegir en 2026?",
+    "excerpt": "Paysagio cobra por las facturas de gestión, no por los operarios: 99,90 € HT como mínimo al mes. ¿Para quién está diseñado, qué lo hace dudar y las opciones de Tomas, Organilog y Batappli con sus precios.",
+    "metaTitle": "Paysagio: precios 2026, limitaciones y 3 alternativas",
+    "metaDescription": "Paysagio: 99,90 € sin IVA al mes como mínimo, operarios gratis, precios del 8 de noviembre de 2026. Para quién es, sus límites, y Tomas, Organilog y Batappli.",
+    "tags": [
+      "opiniones paysagio",
+      "alternativas paysagio",
+      "software para paisajistas",
+      "precio paysagio",
+      "programa gestión paisajismo",
+      "rentabilidad en proyectos paisajísticos"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En una empresa de paisajismo, la pregunta que cuesta caro llega después de la obra, no en el momento de la cotización: ¿cuántas horas realmente tomó? Las horas quedaron en el cuaderno del jefe de equipo, en un SMS enviado el viernes por la noche desde la camioneta, o en la cabeza del obrero que ya se fue a otro jardín. Entonces, en la última gran obra, ¿ganó su vida?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Paysagio, que se dice «diseñado por y para los paisajistas», está construido alrededor de esta pregunta, con las horas registradas en el teléfono y la rentabilidad calculada obra por obra. Lo revisé el 8 de noviembre de 2026, junto con las de tres programas que también muestran sus precios: aquí está para quién es, qué hace dudar y qué comparar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cuánto cuesta Paysagio en 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Paysagio no vende paquetes, sino roles. A fecha del 8 de noviembre de 2026, ",
+              "type": "text"
+            },
+            {
+              "text": "la tabla de precios de Paysagio",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://paysag.io/#tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra tres cuentas de pago, excluyendo impuestos. La cuenta Gestor, marcada como obligatoria, cuesta 99,90 € IVA excluido por mes y abre todo, desde el tablero de control hasta la facturación. La cuenta Conductor, a 49,90 € IVA excluido, gestiona las obras, los estudios de costos y las horas de todo el equipo; la cuenta Jefe de equipo, a 34,90 € IVA excluido, gestiona sus obras, las horas de su equipo, las notas y las fotos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las cuentas de los obreros son gratuitas y sin límite de cantidad: un obrero registra sus horas y consulta sus obras. Anualmente, facturado de una sola vez con aproximadamente un 10% de descuento, las tres cuentas de pago cuestan 1.079 €, 539 € y 377 € IVA excluido por año. Prueba de 14 días sin tarjeta bancaria, sin compromiso.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Incluye: estudios de costos en un catálogo de servicios, cotizaciones, facturas, programación, registro en el teléfono y margen calculado obra por obra según los costos reales, todo en el navegador.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Para quién es la mejor opción Paysagio?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una empresa de paisajismo con dos o tres equipos, cuyo número de obreros varía según las estaciones. El modelo de precios está hecho para ella: se pagan las cuentas que supervisan, no las que registran horas. Un gerente y dos jefes de equipo pagan 169,70 € IVA excluido por mes, o 1.833 € IVA excluido por año, ya sea que el equipo tenga cuatro obreros en marzo o diez en mayo. De los seis programas con precios públicos de mi comparativo, es el único que incluye cuentas de obreros gratuitamente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si su duda se centra más en la ganancia que en la burocracia, esa es su promesa: saber al final del día qué obras son rentables.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que genera dudas",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Solo, el costo inicial es de 99,90 € IVA excluido.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " La cuenta Gestor es obligatoria: un paisajista que trabaja solo paga 99,90 € IVA excluido por mes, o 1.079 € IVA excluido por año. El mismo día, Robbin Essentiel costaba 19 € IVA excluido por mes (15 € IVA excluido pagando anualmente) y Tomas Essentiel 24,50 € IVA excluido.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No hay contratos de mantenimiento en la página.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A fecha del 8 de noviembre de 2026, no menciona contratos de mantenimiento, visitas recurrentes ni certificados fiscales para clientes en servicios a domicilio. Si vive de los cortes y podas durante todo el año, pregunte durante la prueba.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La facturación electrónica no está mencionada.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Las empresas sujetas al IVA deben poder recibir facturas electrónicas desde el 1 de septiembre de 2026, y las Pymes y microempresas deberán emitirlas a partir del 1 de septiembre de 2027. Paysagio no especifica cómo sus facturas pasarán por una plataforma autorizada, mientras que Tomas, Organilog, Batappli y Extrabat anunciaron la facturación electrónica en sus páginas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un editor joven, una exportación por solicitar.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Paysagio es editado por EV-PTL (Agencia PTL), una SAS creada en mayo de 2024 según el registro de empresas. Su sección de preguntas frecuentes explica cómo importar sus clientes, pero no cómo recuperar sus obras, horas y facturas el día en que se vaya. Pregunte antes de firmar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Tres alternativas a Paysagio, con sus precios",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Precios mostrados en el sitio web de cada editor, registrados el 8 de noviembre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tomas, 24,50 o 49,50 € IVA no incluido por mes.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Según ",
+              "type": "text"
+            },
+            {
+              "text": "la página de ofertas de Tomas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://tomas.fr/offre/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", Essentiel cuesta 24,50 € IVA no incluido por mes con presupuestos, facturas, programación, intervenciones, informes y aplicación móvil. Expert chantier, a 49,50 € IVA no incluido, añade lo que más se parece a Paysagio: las horas registradas por los técnicos, validadas por el gestor, y el margen real por obra. Un gestor está incluido; otro cuesta 24,50 € IVA no incluido por mes, un técnico 9,50 € IVA no incluido. Sin compromiso, 15 días de prueba sin tarjeta, 10% de descuento anunciado al año. Un gerente, dos capataces y seis operarios que registran sus horas pagan 125,50 € IVA no incluido por mes en Expert chantier, frente a 169,70 € IVA no incluido en Paysagio; con la misma estructura jerárquica, a partir de doce personas equipadas en el terreno, Paysagio resulta más económico.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Organilog, de 0 a 64 € por mes y por usuario.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "text": "La página de ofertas de Organilog",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://fr.organilog.com/offre/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " se abre con los precios en pago anual: Pro a 19 €, Business a 35 €, Premium a 59 € y Premium + Tarjeta a 64 € por mes y por usuario, sin especificar si es IVA incluido o no. Al mes, Pro sube a 24 € y Business a 45 €; las opciones Premium solo están disponibles anualmente, y Básico es gratuita pero con limitaciones. La aplicación offline, la programación, los contratos y los certificados fiscales están disponibles desde Pro, los presupuestos y las facturas desde Business. ",
+              "type": "text"
+            },
+            {
+              "text": "Su página para paisajistas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://fr.organilog.com/logiciel/paysagiste/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " también describe las horas por obra. Tres usuarios en Business cuestan 105 € por mes en pago anual, 135 € al mes; pregunta si un operario que solo marca su asistencia cuenta como usuario. La prueba requiere una demostración. Ver también ",
+              "type": "text"
+            },
+            {
+              "text": "mi artículo sobre alternativas a Organilog",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-organilog-logiciel-gestion-interventions",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Batappli, 39 o 79 € IVA no incluido por mes.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Este software para el sector de la construcción tiene ",
+              "type": "text"
+            },
+            {
+              "text": "una página dedicada a los presupuestos para paisajistas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.batappli.fr/boite-a-outils/logiciel-devis-paysagiste",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". ",
+              "type": "text"
+            },
+            {
+              "text": "Su página de tarifas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.batappli.fr/tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " se abre con los precios anuales: Batappli Devis a 429 € IVA no incluido y Batappli Artisan a 869 € IVA no incluido por año para un usuario; al mes, 39 y 79 € IVA no incluido. Un usuario adicional cuesta 19 € IVA no incluido por mes, o 209 € IVA no incluido por año. Artisan añade al Devis el seguimiento de obra, el inventario y los contratos de mantenimiento. Un gerente y dos capataces en Artisan pagan 117 € IVA no incluido por mes, o 1.287 € IVA no incluido por año. Prueba de 10 días; la página de tarifas no menciona el registro de horas en el terreno. Más detalles en ",
+              "type": "text"
+            },
+            {
+              "text": "mi artículo sobre Batappli",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-batappli-logiciel-batiment",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "También he revisado ",
+              "type": "text"
+            },
+            {
+              "text": "Extrabat Paisaje",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-extrabat-logiciel-paysagiste",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", de 49 a 99 € IVA exclu por usuario y por mes, y ",
+              "type": "text"
+            },
+            {
+              "text": "Robbin",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-robbin-logiciel-paysagiste",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", de 15 a 49 € IVA exclu por mes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Y si ninguno encaja: la herramienta a medida",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Estos cuatro programas van desde el presupuesto hasta la factura. La hoja de cálculo aparece cuando su organización sale de sus esquemas: el tiempo invertido comparado con el presupuesto obra por obra, para ver si es la albañilería o las plantaciones lo que vende demasiado bajo; el contrato de ocho podas y dos podas, con el tiempo real de cada paso, para saber en noviembre si el precio era adecuado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En el editor Kodeva, he creado ",
+              "type": "text"
+            },
+            {
+              "text": "Gest-Time",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/gestion-temps",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", un software de gestión de tiempos e intervenciones para Pymes de 20 a 200 empleados, aún en producción. Es el tema de Paysagio visto por dentro: quién registra las horas, quién las valida, y cómo se comparan con lo vendido.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En cuanto a precios, un complemento adicional conectado junto a su suscripción cuesta entre 2.500 y 7.000 € una sola vez. Una herramienta completa oscila entre 5.000 y 15.000 €, más 100 a 300 € por mes de mantenimiento, alojamiento y copias de seguridad incluidas, y el código es de su propiedad. En tres años, un gestor y dos jefes de equipo en Paysagio cuestan 5.499 € IVA excluido al año: lo personalizado no supera esta cifra si el software le conviene, se justifica cuando una hoja de cálculo sigue abierta al lado. Para verificar un presupuesto, consulte mi ",
+              "type": "text"
+            },
+            {
+              "text": "barómetro de precios del software a medida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " y mi artículo sobre el ",
+              "type": "text"
+            },
+            {
+              "text": "precio de un software a medida",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cómo elegir en un día",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Empiece con la prueba de seis preguntas de mi página ",
+              "type": "text"
+            },
+            {
+              "text": "software para paisajista",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-paysagiste",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", con su modelo gratuito de presupuesto y contrato de mantenimiento. Luego, dedique un día completo al software durante la prueba.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Por la mañana, un estudio de costos para un muro de cercado y plantaciones, con IVA del 10 % sobre el muro de una casa de más de dos años y del 20 % sobre los vegetales. Durante el día, un jefe de equipo y un obrero registran sus horas en su teléfono, detrás de la casa, donde solo queda una barra de red. Por la noche, el tiempo invertido debe compararse con el tiempo previsto; cree finalmente un contrato de ocho podas y dos podas de arbustos, y busque sus cláusulas. Cada número copiado a mano durante la prueba, lo copiará durante toda la temporada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cuánto cuesta Paysagio?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hasta el 8 de noviembre de 2026, 99,90 € IVA no incluido por mes para el perfil Gestor, obligatorio, 49,90 € IVA no incluido por perfil Conductor y 34,90 € IVA no incluido por perfil Jefe de equipo, o 1.079 €, 539 € y 377 € IVA no incluido por año si se paga anualmente. Las cuentas de los obreros son gratuitas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Paysagio ofrece una prueba gratuita?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, 14 días sin tarjeta bancaria, luego una suscripción sin compromiso, cancelable en cualquier momento según su FAQ.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Paysagio gestiona los contratos de mantenimiento?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Su página no menciona esto hasta el 8 de noviembre de 2026, ni las certificaciones fiscales. Robbin las incluye en Pro, a 49 € IVA no incluido por mes (39 € IVA no incluido si se paga anualmente), Extrabat organiza los contratos de servicio en Standard, a 69 € IVA no incluido por usuario y por mes, Organilog los ofrece desde Pro y Batappli en Artisan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Funciona Paysagio sin red?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Se utiliza a través del navegador del teléfono, y su página anuncia que funciona con una conexión limitada, sin mencionar un modo sin conexión. Organilog anuncia una aplicación que opera sin red y se sincroniza al volver a tener conexión.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cuál es el software para paisajistas más económico?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para un paisajista que trabaja solo, Robbin Essencial a 15 € IVA no incluido por mes si se paga anualmente, luego Tomas Essencial a 24,50 € IVA no incluido; Organilog tiene una fórmula gratuita, pero sin presupuestos ni facturas. Con muchos trabajadores, el cálculo cambia: en Paysagio, solo los perfiles de supervisión son de pago.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿No sabe cuál elegir?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Descríbame su empresa en pocas líneas: cuántas personas hay en la oficina y en el terreno, la proporción de creación y mantenimiento, y cómo registran las horas hoy, ya sea en un cuaderno, por SMS o en una hoja de cálculo. Le responderé en menos de 24 horas, por teléfono o en videollamada si es más sencillo. Si Paysagio o algún otro software del mercado le es suficiente, se lo haré saber.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "1221a518-d849-47df-8e5a-05edefc196b2",
+            "body": [
+              {
+                "_uid": "i-e055b7b4-e93e-4a9c-b0b4-023547605a2e",
                 "link": {
                   "id": "",
                   "url": "/contact",
