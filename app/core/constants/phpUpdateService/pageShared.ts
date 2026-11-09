@@ -1,3 +1,4 @@
+import type { LocationQueryRaw } from 'vue-router'
 import type { DibodevToolTeaserContent } from '~/core/types/DibodevToolTeaser'
 
 /** Route name of the service page (`app/pages/php-update-service.vue`). */
@@ -8,6 +9,13 @@ export const PHP_UPDATE_SERVICE_PAGE_PATH: string = '/mise-a-jour-php-site-logic
 
 /** `topic` query value that makes the contact form open with the "update my site" message. */
 export const PHP_UPDATE_CONTACT_TOPIC: string = 'php-update'
+
+/** Query of the contact page opened by the buttons of the service page: the topic writes the message, `type` and `budget` select a website under 2 000 €. */
+export const PHP_UPDATE_CONTACT_QUERY: LocationQueryRaw = {
+  topic: PHP_UPDATE_CONTACT_TOPIC,
+  type: 'website',
+  budget: 'under_2k',
+}
 
 /** Kinds of service declared in the JSON-LD, in English as schema.org readers expect. */
 export const PHP_UPDATE_SERVICE_TYPES: string[] = [
