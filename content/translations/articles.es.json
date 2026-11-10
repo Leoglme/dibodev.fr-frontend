@@ -48726,5 +48726,633 @@
         }
       ]
     }
+  },
+  "blog/alternative-zoho-inventory-logiciel-gestion-de-stock": {
+    "title": "Alternativa a Zoho Inventory: ¿qué software de gestión de stock elegir en 2026?",
+    "excerpt": "Zoho Inventory cobra por organización, pero solo incluye dos usuarios hasta el plan Premium: su verdadero costo, para quién es adecuado y comparativa con Monstock, Axonaut y Odoo con sus precios detallados.",
+    "metaTitle": "Alternativas a Zoho Inventory 2026: precios y limitaciones",
+    "metaDescription": "Zoho Inventory: gratis, luego 29 €/mes anuales o 39 €/mes (datos actualizados a noviembre 2026). Sus limitaciones y 3 alternativas con precios comparados.",
+    "tags": [
+      "opiniones zoho inventory",
+      "alternativas zoho inventory",
+      "precio zoho inventory",
+      "software gestión inventario",
+      "programa inventario pymes",
+      "software gestión stock e-commerce"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Zoho Inventory ofrece dos argumentos simples: una fórmula gratuita y un precio por organización en lugar de por persona. El resto se detalla en letra pequeña bajo cada fórmula, y ahí es donde se decide la factura: comandas por mes, usuarios y lugares de almacenamiento. El día en que una tercera persona solicite acceso, o las comandas de diciembre superen el límite, el precio inicial ya no es suficiente para comparar. Revisé su tabla en francés el 8 de noviembre de 2026, tanto anual como mensual, y las de Monstock, Axonaut y Odoo. Aquí está su verdadero precio, para quién conviene, qué hace dudar, tres alternativas cuantificadas y el caso del sur mesure.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cuánto cuesta Zoho Inventory en 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El 8 de noviembre de 2026, la ",
+              "type": "text"
+            },
+            {
+              "text": "página francesa de Zoho Inventory",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.zoho.com/fr/inventory/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra cinco fórmulas, facturadas por organización y por mes. En facturación anual, mostrada por defecto: Gratis por 0 €, Estándar por 29 €, Profesional por 79 €, Premium por 129 € y Empresa por 249 €. Al mes, las fórmulas de pago suben a 39, 99, 159 y 299 €. La página francesa no especifica si los precios son sin IVA o con IVA; su ",
+              "type": "text"
+            },
+            {
+              "text": "tabla detallada, en inglés",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.zoho.com/inventory/pricing/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", indica precios sin impuestos locales.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Cada fórmula fija tres límites. Gratis: 1 usuario, 50 comandas por mes y 2 lugares de almacenamiento. Estándar: 2 usuarios, 500 comandas y 2 lugares. Profesional: 2 usuarios, 3.000 comandas y 4 lugares, además de lotes y números de serie. Premium: 2 usuarios, 7.500 comandas y 6 lugares, más generación de códigos de barras y conteo de inventario. Empresa: 7 usuarios, 15.000 comandas y 10 lugares.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Más allá de esos límites, todo requiere opciones: un usuario adicional cuesta 7,50 € por mes (anual) o 9 € (mensual), un bloque de 500 comandas cuesta 7,50 € o 9 €, y un lugar de almacenamiento cuesta 10 € o 12 €. La prueba dura 14 días, sin necesidad de tarjeta bancaria.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Para quién Zoho Inventory es la mejor opción?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una pequeña tienda en línea o un pequeño comercio: una o dos personas, uno o dos lugares de almacenamiento y menos de 500 comandas al mes. La fórmula Estándar les cuesta 348 € al año para toda la empresa. La página francesa menciona entre sus integraciones a Shopify, Etsy, Zoho Books y Zoho CRM, y destaca la venta en múltiples divisas. Si vendes a través de Shopify y ya facturas con Zoho Books, se integra directamente con lo que ya usas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que genera duda",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Dos usuarios, desde Estándar hasta Premium. El precio es por organización, pero solo incluye dos usuarios hasta Premium; Empresa, a 249 €, incluye siete. Cada usuario adicional cuesta 7,50 € por mes (anual): cinco personas en Profesional, son 101,50 € por mes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las funciones de inventario aumentan con la fórmula. Los lotes y los números de serie aparecen en Profesional. La generación de códigos de barras y el conteo de inventario, útil para inventarios físicos, solo llegan en Premium, a 129 € anuales o 159 € mensuales. Para imprimir tus etiquetas y contar tus estanterías dentro de la herramienta, ese es el precio que debes comparar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Comandas con límites. 50 al mes en Gratis, 500 en Estándar, 3.000 en Profesional; más allá, 7,50 € por mes y por bloque de 500 comandas, en facturación anual.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El mes sale más caro. Sin facturación anual, Estándar sube de 29 € a 39 €, un tercio más, lo que equivale a 120 € adicionales al año.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nada sobre facturación electrónica. La página francesa no lo menciona, y Zoho no aparece en la lista de plataformas aprobadas por la DGFiP al 13 de octubre de 2026: pregunta por escrito por qué plataforma aprobada pasarán tus facturas y verifica la respuesta con mi herramienta ",
+              "type": "text"
+            },
+            {
+              "text": "factura electrónica: ¿mi software está aprobado?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/facture-electronique-logiciel-agree",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ningún transportista francés mencionado. Para las etiquetas de envío, la página nombra UPS, USPS, DHL, Aramex, FedEx y Correos de Canadá: si envías con Colissimo o en puntos de recogida, pruébalo durante el período de prueba.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Tres alternativas a Zoho Inventory, con sus precios",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Precios relevados el 8 de noviembre de 2026 en la página de cada editor. Los tres se facturan por persona, excepto Odoo mientras siga siendo gratuito.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Monstock, para escanear en equipo. Su ",
+              "type": "text"
+            },
+            {
+              "text": "página de precios",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://monstock.net/fr_fr/price/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra precios sin IVA para el primer usuario y luego por cada usuario adicional, en prepago anual o por mes: Essential 14,90 € más 9,90 € (19,90 y 12,90 € al mes), hasta 10 usuarios; Professional 24,90 € más 19,90 € (32,90 y 25,90 €); Enterprise 39,90 € más 29,90 € (51,90 y 38,90 €). Códigos de barras, códigos QR, inventarios móviles, aplicación sin conexión y alojamiento en Francia están incluidos en todas las fórmulas. Pero Essential no gestiona pedidos de clientes: se necesita Professional, limitado a 500 pedidos por usuario y por mes. Los lotes, fechas de caducidad, números de serie y conexión a tiendas en línea llegan en Enterprise. Prueba de 14 días sin necesidad de medio de pago.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Axonaut, para facturar y gestionar el stock en la misma herramienta. Su ",
+              "type": "text"
+            },
+            {
+              "text": "página de tarifas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://axonaut.com/content/prix",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra una oferta TPE, para menos de 10 empleados, a 97 € por usuario y por mes sin compromiso, 77,60 € pagando un año, 67,90 € para dos años, 58,20 € para tres años; no se especifica si es con o sin IVA. Todo está incluido, desde el CRM hasta la contabilidad; el stock sigue el costo promedio ponderado, los lotes, los números de serie, las fechas de consumo preferente (FDP) y las fechas de duración mínima (FDM). Axonaut es plataforma autorizada para la factura electrónica desde el 8 de enero de 2026. Ni su página de tarifas ni su página sobre el stock mencionan múltiples almacenes o códigos de barras. Prueba de 15 días.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Odoo, para dar acceso a todo el equipo. En su ",
+              "type": "text"
+            },
+            {
+              "text": "página de tarifas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.odoo.com/fr_FR/pricing",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", una sola aplicación sigue siendo gratuita, para un número ilimitado de usuarios; su página de Inventario anuncia múltiples almacenes, lotes, números de serie y un lector de códigos de barras que funciona sin conexión. Desde una segunda aplicación, como Ventas, es la fórmula Standard: 19,90 € por usuario y por mes pagado anualmente, con descuento válido por 12 meses sobre un precio tachado de 24,90 €, o 24,90 € al mes (tachado 31,10 €). No se especifica si es con o sin IVA, y la implementación no está incluida. Odoo es plataforma autorizada desde el 15 de abril de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tomen cuatro personas, un almacén y una tienda, 400 pedidos al mes y productos rastreados por lote. En Zoho, es Profesional: 94 € al mes pagando anualmente, 144 € en Premium para imprimir sus etiquetas y contar en la herramienta. En Monstock, los lotes exigen Enterprise: 129,60 € sin IVA al mes en prepago anual. Odoo con Inventario y Ventas cuesta 79,60 € al mes el primer año, pagado anualmente. Axonaut cuesta 310,40 € al mes pagando un año, pero también reemplaza su software de facturación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para comparar con otros editores, pase por mi página ",
+              "type": "text"
+            },
+            {
+              "text": "software de gestión de stock",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-gestion-de-stock",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": una prueba gratuita en seis preguntas y los precios públicos de cada editor. Erplain, facturado por usuario y por módulo, tiene su propio artículo: ",
+              "type": "text"
+            },
+            {
+              "text": "alternativa a Erplain",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-erplain-logiciel-gestion-de-stock",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Y si ninguno encaja: la herramienta a medida",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Zoho Inventory y sus competidores siguen bien el camino clásico: comprar, almacenar, vender, enviar. Se atoran en lo que solo les pertenece a ustedes: la regla interna que decide qué lote va a qué cliente, la tabla que su socio quiere el lunes por la mañana y que nadie sabe extraer. En el editor Kodeva, he creado ",
+              "type": "text"
+            },
+            {
+              "text": "StockPME",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/stockpme",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", un software de gestión de inventario con etiquetas de código QR y múltiples almacenes. Siempre está en producción en Pymes de 20 a 200 empleados.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En cuanto al precio, un complemento conectado a tu suscripción cuesta entre 2.500 y 7.000 € una sola vez. Una herramienta completa oscila entre 5.000 y 15.000 €, más 100 a 300 € al mes de mantenimiento, y el código es de tu propiedad. En comparación, cuatro personas en Zoho Premium pagan 5.184 € en tres años con el precio anual. La solución personalizada no se justifica por el ahorro, sino cuando el software te obliga a adaptar tu forma de trabajar cada día. Explico qué hace variar el ",
+              "type": "text"
+            },
+            {
+              "text": "precio de un software personalizado",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", y mi ",
+              "type": "text"
+            },
+            {
+              "text": "barómetro de precios de software personalizado",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " ayuda a verificar una cotización.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cómo elegir en un día?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Empieza con la prueba de seis preguntas de mi página sobre software de inventario. Luego, simula un día real con el software durante la prueba: un pedido de tu tienda en línea y otro de un distribuidor la misma mañana, un paquete preparado con su etiqueta, una entrega de proveedor con un número de lote, un estante contado por teléfono, y finalmente el valor del inventario enviado al contador. Lo que copies de una pantalla a otra ese día, lo copiarás todos los días. Para Zoho, vuelve a hacer el cálculo con tu mes más ocupado, no uno promedio: es él quien elige el plan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Zoho Inventory realmente es gratis?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí: la versión gratuita incluye 1 usuario, 50 pedidos al mes y 2 ubicaciones de almacenamiento, hasta el 8 de noviembre de 2026. Según la FAQ de la tabla en inglés, puedes quedarte con esta versión al finalizar la prueba de 14 días.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cuánto cuesta Zoho Inventory para cuatro personas?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hasta el plan Premium, dos usuarios están incluidos: necesitarás dos adicionales. Pagado anualmente, esto suma 44 € al mes en Standard, 94 € en Profesional y 144 € en Premium; pagado mensualmente, 57, 117 y 177 € respectivamente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Los precios de Zoho Inventory son sin impuestos (HT) o todo incluido (TTC)?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La página en francés no lo especifica. La tabla detallada en inglés indica precios sin impuestos locales.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Zoho Inventory gestiona múltiples almacenes?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí: 2 ubicaciones de almacenamiento en Gratis y Standard, 4 en Profesional, 6 en Premium y 10 en Empresa. Cada ubicación adicional cuesta 10 € al mes si se paga anualmente, o 12 € si se paga mensualmente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Zoho Inventory está listo para la factura electrónica?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Su página en francés no lo menciona, y Zoho no aparece en la lista de plataformas aprobadas por la DGFiP al 13 de octubre de 2026, a diferencia de Axonaut y Odoo. Las Pymes deberán emitir sus facturas electrónicas a más tardar el 1 de septiembre de 2027.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿No sabes cuál elegir?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Descríbame su inventario en pocas líneas: ¿cuántas personas lo manejan, cuántos lugares incluyendo la reserva o la camioneta, cuántas órdenes en el mes más ocupado, y qué aún registra a mano. Le respondo en menos de 24 horas, por teléfono o en videollamada si lo prefiere, y si la versión gratuita de Zoho o Odoo Inventario es suficiente, se lo indico.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "e0770de7-49a7-46d9-aad6-78cefeb61110",
+            "body": [
+              {
+                "_uid": "i-7996b719-17e4-4389-b826-d013b06be19d",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Descríbame su inventario",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
