@@ -184,7 +184,7 @@ export const CLEANING_BUSINESS_QUIZ_WORDING_EN: DibodevTradeQuizWording = {
       'CleanPlus adds €3.40 to €4.40 excl. VAT per cleaner per month, MyClic Propreté includes 3 staff. Experhygia starts at €30 excl. VAT per month, Organilog costs €19 to €64 per user per month. Penbase MOZAIK Clean, Teleric, Progiclean and 2BePragma are on quote.',
     footnoteLink: { label: 'See all prices', href: '#software' },
     adviceTitle: 'Check before choosing',
-    disclaimer: 'Public prices checked on 26 October 2026.',
+    disclaimer: 'Public prices checked on 15 November 2026.',
     ctaLabel: 'Ask for free advice',
     leadFormTitle: 'Free advice to choose your software',
     leadFormIntro:

@@ -183,7 +183,7 @@ export const CLEANING_BUSINESS_QUIZ_WORDING_FR: DibodevTradeQuizWording = {
     footnote: `CleanPlus ajoute 3,40 à 4,40${NBSP}€ HT par agent et par mois, MyClic Propreté inclut 3 collaborateurs. Experhygia démarre à 30${NBSP}€ HT par mois, Organilog coûte 19 à 64${NBSP}€ par utilisateur et par mois. Penbase MOZAIK Clean, Teleric, Progiclean et 2BePragma sont sur devis.`,
     footnoteLink: { label: 'Voir tous les prix', href: '#logiciels' },
     adviceTitle: 'À vérifier avant de choisir',
-    disclaimer: 'Prix publics relevés le 26 octobre 2026.',
+    disclaimer: 'Prix publics relevés le 15 novembre 2026.',
     ctaLabel: 'Demander un avis gratuit',
     leadFormTitle: 'Un avis gratuit pour choisir votre logiciel',
     leadFormIntro: `Je vous réponds sous 24${NBSP}h pour en parler, au téléphone ou en visio. Vos réponses au test sont jointes à votre message.`,

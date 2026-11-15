@@ -1,7 +1,7 @@
 import type { DibodevSourceReference } from '~/core/types/DibodevSoftwareToolPage'
 
 /** Day the publishers' prices and the rules were read: check them twice a year and move this date. */
-export const CLEANING_BUSINESS_PAGE_UPDATED_AT: string = '2026-10-26'
+export const CLEANING_BUSINESS_PAGE_UPDATED_AT: string = '2026-11-15'
 
 export const CLEANING_BUSINESS_PAGE_PROJECT_SLUG: string = 'gestion-temps'
 

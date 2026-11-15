@@ -76,7 +76,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent =
           'GPS clocking, customer portal, quality inspection grids with photos and scores, reports, residence permit alerts; Pennylane link',
         price: '€29 per month excl. VAT',
         priceCondition:
-          'Plus €3.40 to €4.40 per cleaner depending on the tier; one admin included (€290 excl. VAT a year); options Factur-X €14 per month, AI assistant €9, signature €7; 7-day trial',
+          'Plus €3.40 to €4.40 per cleaner depending on the tier; one admin included (€290 excl. VAT a year); options Factur-X €14 per month, AI assistant €9, signature €7; free demo, first month with no commitment, then 12 months renewed automatically',
       },
       {
         name: 'MyClic Propreté',
@@ -89,7 +89,8 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent =
         coverage:
           'Offline app, clocking of arrivals, departures and breaks (QR code possible), weighted quality inspections with photos and signatures',
         price: 'From €30 excl. VAT per month',
-        priceCondition: 'Depending on the number of users and needs',
+        priceCondition:
+          'Per device, unlimited users; lower rates depending on the number of devices and the commitment period',
       },
       {
         name: 'Organilog',
@@ -109,7 +110,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent =
     calloutEmphasizedIntro: 'Before signing:',
     calloutText:
       'run a real week through the software. A cleaner off sick replaced the same morning on three sites, her replacement clocking in by QR code in a basement with no network, a site’s quality inspection with photos sent to the customer, then the month’s hours sent to payroll and the contract invoice sent out, with nothing retyped.',
-    calloutFootnote: 'Prices checked on 26 October 2026 on the publishers’ pricing pages. Non-exhaustive list.',
+    calloutFootnote: 'Prices checked on 15 November 2026 on the publishers’ pricing pages. Non-exhaustive list.',
   },
   rules: {
     anchorId: 'rules',
@@ -278,7 +279,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent =
       {
         question: 'How much does cleaning business software cost in France?',
         answer:
-          'PROPRET costs €29.99 to €99.99 excl. VAT per month (all modules), PROGESTI €59 to €399 excl. VAT per month depending on the number of users, CleanPlus €29 excl. VAT per month plus €3.40 to €4.40 per cleaner, MyClic Propreté €169 excl. VAT per month for 3 staff, Experhygia from €30 excl. VAT per month and Organilog €19 to €64 per user per month. Penbase MOZAIK Clean, Teleric, Progiclean and 2BePragma are on quote (prices checked on 26 October 2026). A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
+          'PROPRET costs €29.99 to €99.99 excl. VAT per month (all modules), PROGESTI €59 to €399 excl. VAT per month depending on the number of users, CleanPlus €29 excl. VAT per month plus €3.40 to €4.40 per cleaner, MyClic Propreté €169 excl. VAT per month for 3 staff, Experhygia from €30 excl. VAT per month and Organilog €19 to €64 per user per month. Penbase MOZAIK Clean, Teleric, Progiclean and 2BePragma are on quote (prices checked on 15 November 2026). A custom extension costs €2,500 to €7,000 paid once, a complete tool €5,000 to €25,000, then €100 to €300 per month for maintenance.',
       },
       {
         question: 'Cleaning software or janitorial software: is it the same thing?',
@@ -328,7 +329,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_EN: DibodevSoftwareToolPageContent =
       {
         question: 'Is there free software for a cleaning business?',
         answer:
-          'The cleaning software listed here is paid, but several can be tried for free: PROPRET opens full access with no bank card or commitment, PROGESTI offers a 14-day trial with no card, CleanPlus 7 days (card required, nothing charged). To start, the free template on this page (visit schedule and quality inspection sheet, as PDF and Excel) gets a small team by, without clocking or photos.',
+          'The cleaning software listed here is paid, but several can be tried for free: PROPRET opens full access with no bank card or commitment, PROGESTI offers a 14-day trial with no card. CleanPlus starts with a free demo, then a first month that is paid but carries no commitment, before a 12-month subscription. To start, the free template on this page (visit schedule and quality inspection sheet, as PDF and Excel) gets a small team by, without clocking or photos.',
       },
       {
         question: 'Can my data be moved from my current software?',

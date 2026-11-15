@@ -76,7 +76,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent =
         coverage:
           'Fichaje por GPS, portal de cliente, plantillas de control de calidad con fotos y puntuaciones, informes, alertas sobre permisos de residencia; conexión con Pennylane',
         price: `29${NBSP}€ al mes sin IVA`,
-        priceCondition: `Más 3,40 a 4,40${NBSP}€ por operario según el tramo; un administrador incluido (290${NBSP}€ sin IVA al año); opciones Factur-X 14${NBSP}€ al mes, asistente IA 9${NBSP}€, firma 7${NBSP}€; prueba de 7 días`,
+        priceCondition: `Más 3,40 a 4,40${NBSP}€ por operario según el tramo; un administrador incluido (290${NBSP}€ sin IVA al año); opciones Factur-X 14${NBSP}€ al mes, asistente IA 9${NBSP}€, firma 7${NBSP}€; demo gratuita, primer mes sin compromiso y después 12 meses con renovación automática`,
       },
       {
         name: 'MyClic Propreté',
@@ -90,7 +90,8 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent =
         coverage:
           'App sin conexión, fichaje de llegadas, salidas y pausas (código QR posible), control de calidad ponderado con fotos y firmas',
         price: `Desde 30${NBSP}€ sin IVA al mes`,
-        priceCondition: 'Según el número de usuarios y las necesidades',
+        priceCondition:
+          'Por dispositivo, usuarios ilimitados; precio decreciente según el número de dispositivos y la duración del compromiso',
       },
       {
         name: 'Organilog',
@@ -111,7 +112,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent =
     calloutText:
       'haz pasar una semana real por el programa. Una limpiadora de baja sustituida esa misma mañana en tres sitios, el fichaje de su sustituta con código QR en un sótano sin cobertura, el control de calidad de un sitio con fotos enviado al cliente, y luego las horas del mes enviadas a nóminas y la factura del contrato emitida, sin volver a teclear nada.',
     calloutFootnote:
-      'Tarifas consultadas el 26 de octubre de 2026 en las páginas de precios de los editores. Lista no exhaustiva.',
+      'Tarifas consultadas el 15 de noviembre de 2026 en las páginas de precios de los editores. Lista no exhaustiva.',
   },
   rules: {
     anchorId: 'normativa',
@@ -280,7 +281,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent =
     questions: [
       {
         question: '¿Cuánto cuesta un programa para empresas de limpieza en Francia?',
-        answer: `PROPRET cuesta 29,99 a 99,99${NBSP}€ sin IVA al mes (todos los módulos), PROGESTI 59 a 399${NBSP}€ sin IVA al mes según el número de usuarios, CleanPlus 29${NBSP}€ sin IVA al mes más 3,40 a 4,40${NBSP}€ por operario, MyClic Propreté 169${NBSP}€ sin IVA al mes para 3 colaboradores, Experhygia desde 30${NBSP}€ sin IVA al mes y Organilog 19 a 64${NBSP}€ por usuario al mes. Penbase MOZAIK Clean, Teleric, Progiclean y 2BePragma van bajo presupuesto (tarifas consultadas el 26 de octubre de 2026). Un complemento a medida cuesta de 2500 a 7000${NBSP}€ una sola vez, una herramienta completa de 5000 a 25${NBSP}000${NBSP}€, y luego 100 a 300${NBSP}€ al mes de mantenimiento.`,
+        answer: `PROPRET cuesta 29,99 a 99,99${NBSP}€ sin IVA al mes (todos los módulos), PROGESTI 59 a 399${NBSP}€ sin IVA al mes según el número de usuarios, CleanPlus 29${NBSP}€ sin IVA al mes más 3,40 a 4,40${NBSP}€ por operario, MyClic Propreté 169${NBSP}€ sin IVA al mes para 3 colaboradores, Experhygia desde 30${NBSP}€ sin IVA al mes y Organilog 19 a 64${NBSP}€ por usuario al mes. Penbase MOZAIK Clean, Teleric, Progiclean y 2BePragma van bajo presupuesto (tarifas consultadas el 15 de noviembre de 2026). Un complemento a medida cuesta de 2500 a 7000${NBSP}€ una sola vez, una herramienta completa de 5000 a 25${NBSP}000${NBSP}€, y luego 100 a 300${NBSP}€ al mes de mantenimiento.`,
       },
       {
         question: '¿Programa de limpieza o programa de «propreté»: es lo mismo?',
@@ -326,7 +327,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_ES: DibodevSoftwareToolPageContent =
       {
         question: '¿Existe un programa gratuito para empresas de limpieza?',
         answer:
-          'Los programas de limpieza consultados son de pago, pero varios se pueden probar gratis: PROPRET abre un acceso completo sin tarjeta bancaria ni compromiso, PROGESTI ofrece 14 días de prueba sin tarjeta, CleanPlus 7 días (tarjeta solicitada, sin cargo). Para empezar, la plantilla gratuita de esta página (planificación de visitas y hoja de control de calidad, en PDF y en Excel) saca de un apuro a un equipo pequeño, sin fichaje ni fotos.',
+          'Los programas de limpieza consultados son de pago, pero varios se pueden probar gratis: PROPRET abre un acceso completo sin tarjeta bancaria ni compromiso, PROGESTI ofrece 14 días de prueba sin tarjeta. CleanPlus empieza con una demo gratuita, luego un primer mes de pago pero sin compromiso, antes de una suscripción de 12 meses. Para empezar, la plantilla gratuita de esta página (planificación de visitas y hoja de control de calidad, en PDF y en Excel) saca de un apuro a un equipo pequeño, sin fichaje ni fotos.',
       },
       {
         question: '¿Se pueden recuperar los datos de mi programa actual?',

@@ -189,7 +189,7 @@ export const CLEANING_BUSINESS_QUIZ_WORDING_ES: DibodevTradeQuizWording = {
     footnote: `CleanPlus añade 3,40 a 4,40${NBSP}€ sin IVA por operario al mes, MyClic Propreté incluye 3 colaboradores. Experhygia empieza en 30${NBSP}€ sin IVA al mes, Organilog cuesta 19 a 64${NBSP}€ por usuario al mes. Penbase MOZAIK Clean, Teleric, Progiclean y 2BePragma van bajo presupuesto.`,
     footnoteLink: { label: 'Ver todos los precios', href: '#programas' },
     adviceTitle: 'Comprobar antes de elegir',
-    disclaimer: 'Precios públicos consultados el 26 de octubre de 2026.',
+    disclaimer: 'Precios públicos consultados el 15 de noviembre de 2026.',
     ctaLabel: 'Pedir una opinión gratuita',
     leadFormTitle: 'Una opinión gratuita para elegir tu programa',
     leadFormIntro:

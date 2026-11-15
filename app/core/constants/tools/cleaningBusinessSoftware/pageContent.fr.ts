@@ -71,7 +71,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent =
         name: 'CleanPlus',
         coverage: `Pointage GPS, portail client, grilles de contrôle qualité avec photos et scores, rapports, alertes sur les titres de séjour${NBSP}; lien avec Pennylane`,
         price: `29${NBSP}€ HT par mois`,
-        priceCondition: `Plus 3,40 à 4,40${NBSP}€ par agent selon le palier${NBSP}; un administrateur inclus (290${NBSP}€ HT à l’année)${NBSP}; options Factur-X 14${NBSP}€ par mois, assistant IA 9${NBSP}€, signature 7${NBSP}€${NBSP}; essai 7 jours`,
+        priceCondition: `Plus 3,40 à 4,40${NBSP}€ par agent selon le palier${NBSP}; un administrateur inclus (290${NBSP}€ HT à l’année)${NBSP}; options Factur-X 14${NBSP}€ par mois, assistant IA 9${NBSP}€, signature 7${NBSP}€${NBSP}; démo gratuite, premier mois sans engagement, puis 12 mois reconduits tacitement`,
       },
       {
         name: 'MyClic Propreté',
@@ -84,7 +84,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent =
         coverage:
           'Application hors connexion, pointage des arrivées, des départs et des pauses (QR code possible), contrôle qualité pondéré avec photos et signatures',
         price: `À partir de 30${NBSP}€ HT par mois`,
-        priceCondition: 'Selon le nombre d’utilisateurs et les besoins',
+        priceCondition: `Par appareil, utilisateurs illimités${NBSP}; dégressif selon le nombre d’appareils et la durée d’engagement`,
       },
       {
         name: 'Organilog',
@@ -102,7 +102,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent =
     calloutEmphasizedIntro: `Avant de signer${NBSP}:`,
     calloutText:
       'faites passer une vraie semaine au logiciel. Une agente absente remplacée le matin même sur trois sites, le pointage de sa remplaçante par QR code dans un sous-sol sans réseau, le contrôle qualité d’un site avec photos envoyé au client, puis les heures du mois parties vers la paie et la facture du contrat envoyée, sans rien ressaisir.',
-    calloutFootnote: 'Tarifs relevés le 26 octobre 2026 sur les pages tarifs des éditeurs. Liste non exhaustive.',
+    calloutFootnote: 'Tarifs relevés le 15 novembre 2026 sur les pages tarifs des éditeurs. Liste non exhaustive.',
   },
   rules: {
     anchorId: 'reglementation',
@@ -267,7 +267,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent =
     questions: [
       {
         question: `Combien coûte un logiciel pour entreprise de nettoyage${NBSP}?`,
-        answer: `PROPRET coûte 29,99 à 99,99${NBSP}€ HT par mois (tous les modules), PROGESTI 59 à 399${NBSP}€ HT par mois selon le nombre d’utilisateurs, CleanPlus 29${NBSP}€ HT par mois plus 3,40 à 4,40${NBSP}€ par agent, MyClic Propreté 169${NBSP}€ HT par mois pour 3 collaborateurs, Experhygia à partir de 30${NBSP}€ HT par mois et Organilog 19 à 64${NBSP}€ par utilisateur et par mois. Penbase MOZAIK Clean, Teleric, Progiclean et 2BePragma sont sur devis (tarifs relevés le 26 octobre 2026). Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
+        answer: `PROPRET coûte 29,99 à 99,99${NBSP}€ HT par mois (tous les modules), PROGESTI 59 à 399${NBSP}€ HT par mois selon le nombre d’utilisateurs, CleanPlus 29${NBSP}€ HT par mois plus 3,40 à 4,40${NBSP}€ par agent, MyClic Propreté 169${NBSP}€ HT par mois pour 3 collaborateurs, Experhygia à partir de 30${NBSP}€ HT par mois et Organilog 19 à 64${NBSP}€ par utilisateur et par mois. Penbase MOZAIK Clean, Teleric, Progiclean et 2BePragma sont sur devis (tarifs relevés le 15 novembre 2026). Un complément sur mesure coûte de 2${NBSP}500 à 7${NBSP}000${NBSP}€ une seule fois, un outil complet de 5${NBSP}000 à 25${NBSP}000${NBSP}€, puis 100 à 300${NBSP}€ par mois de maintenance.`,
       },
       {
         question: `Logiciel de nettoyage ou logiciel de propreté${NBSP}: est-ce la même chose${NBSP}?`,
@@ -307,7 +307,7 @@ export const CLEANING_BUSINESS_PAGE_CONTENT_FR: DibodevSoftwareToolPageContent =
       },
       {
         question: `Existe-t-il un logiciel gratuit pour entreprise de nettoyage${NBSP}?`,
-        answer: `Les logiciels de propreté relevés sont payants, mais plusieurs se testent sans payer${NBSP}: PROPRET ouvre un accès complet sans carte bancaire ni engagement, PROGESTI offre 14 jours d’essai sans carte, CleanPlus 7 jours (carte demandée, rien de prélevé). Pour démarrer, le modèle gratuit de cette page (planning des passages et fiche de contrôle qualité, en PDF et en Excel) dépanne une petite équipe, sans pointage ni photos.`,
+        answer: `Les logiciels de propreté relevés sont payants, mais plusieurs se testent sans payer${NBSP}: PROPRET ouvre un accès complet sans carte bancaire ni engagement, PROGESTI offre 14 jours d’essai sans carte. CleanPlus commence par une démo gratuite, puis un premier mois payant mais sans engagement, avant un abonnement de 12 mois. Pour démarrer, le modèle gratuit de cette page (planning des passages et fiche de contrôle qualité, en PDF et en Excel) dépanne une petite équipe, sans pointage ni photos.`,
       },
       {
         question: `Peut-on reprendre les données de mon logiciel actuel${NBSP}?`,
