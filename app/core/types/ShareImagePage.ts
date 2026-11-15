@@ -7,6 +7,7 @@ export type ShareImagePage =
   | 'aiAppTakeover'
   | 'priceBarometer'
   | 'websitePriceBarometer'
+  | 'townHallWebsitesStudy'
   | 'publicAid'
   | 'projects'
   | 'blog'

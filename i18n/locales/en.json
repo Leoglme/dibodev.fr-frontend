@@ -17,6 +17,7 @@
         "aiAppTakeover": "AI app takeover",
         "priceBarometer": "Custom software prices",
         "websitePriceBarometer": "Website prices in France",
+        "townHallWebsitesStudy": "French town hall websites: 2026 study",
         "publicAid": "Aid for your website or software",
         "freelanceRennes": "Freelance web developer in Rennes"
       }
@@ -210,6 +211,7 @@
     "aiAppTakeover": "AI app takeover",
     "priceBarometer": "Custom software prices",
     "websitePriceBarometer": "Website prices",
+    "townHallStudy": "Study: town hall websites",
     "tradeWebsites": "Websites by trade",
     "publicAid": "Aid for your website or software",
     "phpCheck": "PHP vulnerability: check my site",
