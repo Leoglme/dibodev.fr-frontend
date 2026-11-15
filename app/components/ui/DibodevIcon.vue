@@ -37,6 +37,7 @@ import Car from '~/components/icons/Car.vue'
 import Check from '~/components/icons/Check.vue'
 import CheckCircle from '~/components/icons/CheckCircle.vue'
 import ClipboardCheck from '~/components/icons/ClipboardCheck.vue'
+import Clock from '~/components/icons/Clock.vue'
 import ChevronDown from '~/components/icons/ChevronDown.vue'
 import ChevronLeft from '~/components/icons/ChevronLeft.vue'
 import ChevronRight from '~/components/icons/ChevronRight.vue'
@@ -70,6 +71,7 @@ import Menu from '~/components/icons/Menu.vue'
 import MessageCircle from '~/components/icons/MessageCircle.vue'
 import Monitor from '~/components/icons/Monitor.vue'
 import Moon from '~/components/icons/Moon.vue'
+import Package from '~/components/icons/Package.vue'
 import Palette from '~/components/icons/Palette.vue'
 import PartyPopper from '~/components/icons/PartyPopper.vue'
 import Phone from '~/components/icons/Phone.vue'
@@ -149,6 +151,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   Check,
   CheckCircle,
   ClipboardCheck,
+  Clock,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
@@ -182,6 +185,7 @@ const iconsDictionary: Record<string, IconComponent> = {
   MessageCircle,
   Monitor,
   Moon,
+  Package,
   Palette,
   PartyPopper,
   Phone,

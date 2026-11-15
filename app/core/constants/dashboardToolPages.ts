@@ -117,6 +117,26 @@ export const DASHBOARD_TOOL_PAGES: Record<string, DashboardToolPage> = {
     label: 'Modèle PV de réception de travaux',
     onlineSince: '2026-11-08',
   },
+  'tools-free-templates-purchase-order': {
+    label: 'Modèle bon de commande',
+    onlineSince: '2026-11-15',
+  },
+  'tools-free-templates-delivery-note': {
+    label: 'Modèle bon de livraison',
+    onlineSince: '2026-11-15',
+  },
+  'tools-free-templates-time-clock-sheet': {
+    label: 'Modèle fiche de pointage',
+    onlineSince: '2026-11-15',
+  },
+  'tools-free-templates-attendance-list': {
+    label: 'Modèle feuille de présence',
+    onlineSince: '2026-11-15',
+  },
+  'tools-free-templates-expense-report': {
+    label: 'Modèle note de frais',
+    onlineSince: '2026-11-15',
+  },
   'trade-websites': { label: 'Sites internet par métier (hub)', onlineSince: '2026-11-02' },
   'trade-websites-plumber': { label: 'Site internet pour plombier', onlineSince: '2026-11-02' },
   'trade-websites-electrician': { label: 'Site internet pour électricien', onlineSince: '2026-11-02' },

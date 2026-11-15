@@ -4,24 +4,24 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
   meta: {
     title: 'Free French templates by trade: quotes, slips, schedules',
     description:
-      '17 free French templates without sign-up: quotes, rental agreement, boiler service certificate, acceptance report, intervention slip, schedules. PDF + Excel.',
+      '22 free French templates without sign-up: quotes, purchase order, delivery note, timesheet, expense report, acceptance report. PDF + Excel.',
     inLanguage: 'en',
   },
   breadcrumbLabel: 'Free templates',
   shareImage: {
-    titleLines: ['17 free French', 'templates by trade'],
+    titleLines: ['22 free French', 'templates by trade'],
     highlight: 'free',
     subtitle: 'Quotes, intervention slips, schedules, attendance sheets: PDF to print and Excel to adapt',
     badge: 'No sign-up, no email',
     icon: 'download',
-    alt: '17 free French templates by trade: quotes, contracts, certificates, intervention slips and schedules in PDF and Excel, without sign-up, on dibodev.fr',
+    alt: '22 free French templates by trade: quotes, contracts, purchase orders and delivery notes, certificates and schedules in PDF and Excel, without sign-up, on dibodev.fr',
   },
   hero: {
     titlePart1: 'Free ',
     titleHighlight1: 'French templates',
     titlePart2: ' for your trade, as PDF and Excel',
     description:
-      'Quote, rental agreement, boiler service certificate, acceptance report, intervention slip, schedule: seventeen templates written in French for the trades of the tests on this site, with the wording the French rules require. The PDF prints, the Excel file calculates the totals. No form, no email address to leave.',
+      'Quote, purchase order, delivery note, timesheet, expense report, acceptance report, intervention slip: twenty-two templates written in French for the trades of the tests on this site and for the everyday documents of a small business, with the wording the French rules require. The PDF prints, the Excel file calculates the totals. No form, no email address to leave.',
     cta: 'Choose a template',
     templatesCountLabel: 'templates by trade',
     formatsValue: '2',
@@ -175,6 +175,46 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Works acceptance report + snag clearance',
         description:
           'Acceptance report with or without reservations, clearance deadlines, retention money, snag clearance report and calculated warranty calendar.',
+        formats: 'PDF 2 pages · Excel 3 sheets',
+      },
+      {
+        key: 'purchase-order',
+        tradeLabel: 'Purchasing and sales',
+        title: 'Purchase order + order tracking',
+        description:
+          'Purchase order sent to a supplier or signed by a customer, with totals excl. and incl. VAT and the deposit, then an order register with what is left to deliver and to pay.',
+        formats: 'PDF 2 pages · Excel 3 sheets',
+      },
+      {
+        key: 'delivery-note',
+        tradeLabel: 'Deliveries',
+        title: 'Delivery note + reservations sheet',
+        description:
+          'Delivery note with ordered, delivered and outstanding quantities, reservations sheet with the deadlines to write to the carrier, delivery register.',
+        formats: 'PDF 2 pages · Excel 3 sheets',
+      },
+      {
+        key: 'time-clock-sheet',
+        tradeLabel: 'Working hours',
+        title: 'Timesheet + monthly summary',
+        description:
+          'Weekly timesheet with arrival, break and departure, daily hours and overtime calculated, monthly summary.',
+        formats: 'PDF 2 pages · Excel 3 sheets',
+      },
+      {
+        key: 'attendance-list',
+        tradeLabel: 'Meetings and teams',
+        title: 'Attendance sheet + monthly list',
+        description:
+          'Attendance sheet for a meeting or a general assembly with proxies and quorum, monthly attendance list with totals per person.',
+        formats: 'PDF 2 pages · Excel 3 sheets',
+      },
+      {
+        key: 'expense-report',
+        tradeLabel: 'Business expenses',
+        title: 'Expense report + mileage log',
+        description:
+          'Monthly expense report with subtotals by type and the amount to reimburse, log of trips in a personal vehicle, yearly summary.',
         formats: 'PDF 2 pages · Excel 3 sheets',
       },
     ],

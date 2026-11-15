@@ -5,25 +5,25 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
   meta: {
     title: 'Plantillas francesas gratis por oficio: presupuestos y más',
     description:
-      '17 plantillas francesas gratis sin registro: presupuestos, contrato de alquiler, certificado de caldera, acta de recepción, plannings. PDF + Excel.',
+      '22 plantillas francesas gratis sin registro: presupuestos, hoja de pedido, albarán, hoja de fichaje, nota de gastos, acta de recepción. PDF + Excel.',
     inLanguage: 'es',
   },
   breadcrumbLabel: 'Plantillas gratuitas',
   shareImage: {
-    titleLines: ['17 plantillas francesas', 'gratis por oficio'],
+    titleLines: ['22 plantillas francesas', 'gratis por oficio'],
     highlight: 'gratis',
     subtitle:
       'Presupuestos, partes de intervención, plannings, hojas de firmas: PDF para imprimir y Excel para adaptar',
     badge: 'Sin registro ni e-mail',
     icon: 'download',
-    alt: '17 plantillas francesas gratis por oficio: presupuestos, contratos, certificados, partes de intervención y plannings en PDF y Excel, sin registro, en dibodev.fr',
+    alt: '22 plantillas francesas gratis por oficio: presupuestos, contratos, hojas de pedido y albaranes, certificados y plannings en PDF y Excel, sin registro, en dibodev.fr',
   },
   hero: {
     titlePart1: 'Plantillas ',
     titleHighlight1: 'francesas gratis',
     titlePart2: ' para tu oficio, en PDF y en Excel',
     description:
-      'Presupuesto, contrato de alquiler, certificado de mantenimiento de caldera, acta de recepción de obra, parte de intervención, planning: diecisiete plantillas escritas en francés para los oficios de los tests de este sitio, con las menciones que exige la norma francesa. El PDF se imprime, el Excel calcula los totales. Sin formulario, sin dejar tu e-mail.',
+      'Presupuesto, hoja de pedido, albarán, hoja de fichaje, nota de gastos, acta de recepción de obra, parte de intervención: veintidós plantillas escritas en francés para los oficios de los tests de este sitio y para los documentos del día a día de una pequeña empresa, con las menciones que exige la norma francesa. El PDF se imprime, el Excel calcula los totales. Sin formulario, sin dejar tu e-mail.',
     cta: 'Elegir una plantilla',
     templatesCountLabel: 'plantillas por oficio',
     formatsValue: '2',
@@ -175,6 +175,46 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Acta de recepción de obra + levantamiento de reservas',
         description:
           'Acta con o sin reservas, plazos de levantamiento, retención de garantía, acta de levantamiento de reservas y calendario de garantías calculado.',
+        formats: 'PDF 2 páginas · Excel 3 hojas',
+      },
+      {
+        key: 'purchase-order',
+        tradeLabel: 'Compras y ventas',
+        title: 'Hoja de pedido + seguimiento de pedidos',
+        description:
+          'Hoja de pedido a un proveedor o firmada por un cliente, con totales sin y con IVA y el anticipo, y registro de pedidos con lo que queda por entregar y por pagar.',
+        formats: 'PDF 2 páginas · Excel 3 hojas',
+      },
+      {
+        key: 'delivery-note',
+        tradeLabel: 'Entregas',
+        title: 'Albarán de entrega + hoja de reservas',
+        description:
+          'Albarán con cantidades pedidas, entregadas y pendientes, hoja de reservas con los plazos para escribir al transportista, registro de entregas.',
+        formats: 'PDF 2 páginas · Excel 3 hojas',
+      },
+      {
+        key: 'time-clock-sheet',
+        tradeLabel: 'Horas de trabajo',
+        title: 'Hoja de fichaje + resumen del mes',
+        description:
+          'Hoja de la semana con llegada, pausa y salida, horas del día y horas extra calculadas, resumen del mes.',
+        formats: 'PDF 2 páginas · Excel 3 hojas',
+      },
+      {
+        key: 'attendance-list',
+        tradeLabel: 'Reuniones y equipos',
+        title: 'Hoja de asistencia + lista del mes',
+        description:
+          'Hoja de asistencia de una reunión o una asamblea con poderes y quórum, lista de asistencia del mes con los totales por persona.',
+        formats: 'PDF 2 páginas · Excel 3 hojas',
+      },
+      {
+        key: 'expense-report',
+        tradeLabel: 'Gastos profesionales',
+        title: 'Nota de gastos + registro de trayectos',
+        description:
+          'Nota de gastos del mes con subtotales por tipo y el importe a reembolsar, registro de trayectos con vehículo propio, resumen del año.',
         formats: 'PDF 2 páginas · Excel 3 hojas',
       },
     ],

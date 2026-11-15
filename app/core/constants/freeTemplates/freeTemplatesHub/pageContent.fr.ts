@@ -4,23 +4,23 @@ import { NBSP } from '~/core/constants/typography'
 export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = {
   meta: {
     title: `Modèles gratuits par métier${NBSP}: devis, bons, plannings`,
-    description: `17 modèles gratuits sans inscription${NBSP}: devis, contrat de location, attestation chaudière, PV de réception, bon d’intervention, plannings. PDF + Excel.`,
+    description: `22 modèles gratuits sans inscription${NBSP}: devis, bon de commande, bon de livraison, fiche de pointage, note de frais, PV de réception. PDF + Excel.`,
     inLanguage: 'fr-FR',
   },
   breadcrumbLabel: 'Modèles gratuits',
   shareImage: {
-    titleLines: ['17 modèles gratuits', 'pour votre métier'],
+    titleLines: ['22 modèles gratuits', 'pour votre métier'],
     highlight: 'gratuits',
     subtitle: 'Devis, bons d’intervention, plannings, feuilles d’émargement : PDF à imprimer et Excel à adapter',
     badge: 'Sans inscription ni e-mail',
     icon: 'download',
-    alt: `17 modèles gratuits par métier${NBSP}: devis, contrats, attestations, bons d’intervention et plannings en PDF et Excel, sans inscription, sur dibodev.fr`,
+    alt: `22 modèles gratuits par métier${NBSP}: devis, contrats, bons de commande et de livraison, attestations et plannings en PDF et Excel, sans inscription, sur dibodev.fr`,
   },
   hero: {
     titlePart1: 'Des modèles ',
     titleHighlight1: 'gratuits',
     titlePart2: ' pour votre métier, en PDF et en Excel',
-    description: `Devis, contrat de location, attestation d’entretien de chaudière, PV de réception, bon d’intervention, planning${NBSP}: dix-sept modèles préparés pour les métiers des tests de ce site, avec les mentions que la règle impose. Le PDF s’imprime, l’Excel calcule les totaux. Aucun formulaire, aucune adresse e-mail à laisser.`,
+    description: `Devis, bon de commande, bon de livraison, fiche de pointage, note de frais, PV de réception, bon d’intervention${NBSP}: vingt-deux modèles préparés pour les métiers des tests de ce site et pour les documents de tous les jours d’une petite entreprise, avec les mentions que la règle impose. Le PDF s’imprime, l’Excel calcule les totaux. Aucun formulaire, aucune adresse e-mail à laisser.`,
     cta: 'Choisir un modèle',
     templatesCountLabel: 'modèles par métier',
     formatsValue: '2',
@@ -172,6 +172,46 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'PV de réception de travaux + levée des réserves',
         description:
           'Procès-verbal avec ou sans réserves, délais de levée, retenue de garantie, PV de levée des réserves et calendrier des garanties calculé.',
+        formats: 'PDF 2 pages · Excel 3 feuilles',
+      },
+      {
+        key: 'purchase-order',
+        tradeLabel: 'Achats et ventes',
+        title: 'Bon de commande + suivi des commandes',
+        description:
+          'Bon de commande à un fournisseur ou signé par un client, avec totaux HT, TVA et TTC, acompte ou arrhes, puis registre des commandes avec le reste à livrer et à payer.',
+        formats: 'PDF 2 pages · Excel 3 feuilles',
+      },
+      {
+        key: 'delivery-note',
+        tradeLabel: 'Livraisons',
+        title: 'Bon de livraison + fiche de réserves',
+        description:
+          'Bon de livraison avec quantités commandées, livrées et reste à livrer, fiche de réserves avec les délais pour écrire au transporteur, registre des livraisons.',
+        formats: 'PDF 2 pages · Excel 3 feuilles',
+      },
+      {
+        key: 'time-clock-sheet',
+        tradeLabel: 'Heures de travail',
+        title: 'Fiche de pointage + récapitulatif du mois',
+        description:
+          'Fiche de la semaine avec arrivée, pause et départ, heures du jour et heures supplémentaires calculées, récapitulatif du mois.',
+        formats: 'PDF 2 pages · Excel 3 feuilles',
+      },
+      {
+        key: 'attendance-list',
+        tradeLabel: 'Réunions et équipes',
+        title: 'Feuille de présence + liste du mois',
+        description:
+          'Feuille de présence d’une réunion ou d’une assemblée avec pouvoirs et quorum, liste de présence du mois avec les totaux par personne.',
+        formats: 'PDF 2 pages · Excel 3 feuilles',
+      },
+      {
+        key: 'expense-report',
+        tradeLabel: 'Frais professionnels',
+        title: 'Note de frais + relevé des trajets',
+        description:
+          'Note de frais du mois avec sous-totaux par nature et reste à rembourser, relevé des trajets en véhicule personnel, récapitulatif de l’année.',
         formats: 'PDF 2 pages · Excel 3 feuilles',
       },
     ],

@@ -1,4 +1,9 @@
 import type { DibodevFreeTemplateCatalogEntry } from '~/core/types/DibodevFreeTemplateCatalog'
+import {
+  ATTENDANCE_LIST_TEMPLATE_PDF_PATH,
+  ATTENDANCE_LIST_TEMPLATE_ROUTE_NAME,
+  ATTENDANCE_LIST_TEMPLATE_XLSX_PATH,
+} from '~/core/constants/freeTemplates/attendanceList/pageShared'
 import { BIKE_REPAIR_TICKET_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/bikeRepairTicket/pageShared'
 import {
   BOILER_SERVICE_CERTIFICATE_TEMPLATE_PDF_PATH,
@@ -9,15 +14,35 @@ import { BODY_SHOP_CLAIM_TRACKING_TEMPLATE_ROUTE_NAME } from '~/core/constants/f
 import { BOOKING_SCHEDULE_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/bookingSchedule/pageShared'
 import { CARPENTRY_CUTTING_LIST_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/carpentryCuttingList/pageShared'
 import { CLEANING_SCHEDULE_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/cleaningSchedule/pageShared'
+import {
+  DELIVERY_NOTE_TEMPLATE_PDF_PATH,
+  DELIVERY_NOTE_TEMPLATE_ROUTE_NAME,
+  DELIVERY_NOTE_TEMPLATE_XLSX_PATH,
+} from '~/core/constants/freeTemplates/deliveryNote/pageShared'
 import { DRIVING_SCHOOL_CONTRACT_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/drivingSchoolContract/pageShared'
 import { ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/electricianCommissioningReport/pageShared'
 import { EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/equipmentRentalAgreement/pageShared'
+import {
+  EXPENSE_REPORT_TEMPLATE_PDF_PATH,
+  EXPENSE_REPORT_TEMPLATE_ROUTE_NAME,
+  EXPENSE_REPORT_TEMPLATE_XLSX_PATH,
+} from '~/core/constants/freeTemplates/expenseReport/pageShared'
 import { GARAGE_REPAIR_ORDER_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/garageRepairOrder/pageShared'
 import { INTERVENTION_SLIP_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/interventionSlip/pageShared'
 import { INVENTORY_SHEET_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/inventorySheet/pageShared'
 import { LANDSCAPER_MAINTENANCE_CONTRACT_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/landscaperMaintenanceContract/pageShared'
 import { PERSONAL_TRAINER_CLIENT_REVIEW_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/personalTrainerClientReview/pageShared'
 import { PLUMBER_QUOTE_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/plumberQuote/pageShared'
+import {
+  PURCHASE_ORDER_TEMPLATE_PDF_PATH,
+  PURCHASE_ORDER_TEMPLATE_ROUTE_NAME,
+  PURCHASE_ORDER_TEMPLATE_XLSX_PATH,
+} from '~/core/constants/freeTemplates/purchaseOrder/pageShared'
+import {
+  TIME_CLOCK_SHEET_TEMPLATE_PDF_PATH,
+  TIME_CLOCK_SHEET_TEMPLATE_ROUTE_NAME,
+  TIME_CLOCK_SHEET_TEMPLATE_XLSX_PATH,
+} from '~/core/constants/freeTemplates/timeClockSheet/pageShared'
 import { TRAINING_ATTENDANCE_SHEET_TEMPLATE_ROUTE_NAME } from '~/core/constants/freeTemplates/trainingAttendanceSheet/pageShared'
 import {
   WORKS_ACCEPTANCE_REPORT_TEMPLATE_PDF_PATH,
@@ -104,14 +129,14 @@ import {
 
 export const FREE_TEMPLATES_HUB_ROUTE_NAME: string = 'tools-free-templates'
 
-/** Day the hub went online; the templates carry their own date. */
-export const FREE_TEMPLATES_HUB_UPDATED_AT: string = '2026-11-01'
+/** Day the hub last changed (templates added); the templates carry their own date. */
+export const FREE_TEMPLATES_HUB_UPDATED_AT: string = '2026-11-15'
 
 /** `location` of the PostHog events sent from the hub and from every template page. */
 export const FREE_TEMPLATES_HUB_TRACKING_LOCATION: string = 'free_templates_hub'
 export const FREE_TEMPLATE_PAGE_TRACKING_LOCATION: string = 'free_template_page'
 
-/** The seventeen templates in the order of the hub: one per trade tool page, then the trade-wide documents, newest last. */
+/** The twenty-two templates in the order of the hub: one per trade tool page, then the documents every small business uses, newest last. */
 export const FREE_TEMPLATE_CATALOG: DibodevFreeTemplateCatalogEntry[] = [
   {
     key: 'plumber-quote',
@@ -248,5 +273,45 @@ export const FREE_TEMPLATE_CATALOG: DibodevFreeTemplateCatalogEntry[] = [
     xlsxPath: WORKS_ACCEPTANCE_REPORT_TEMPLATE_XLSX_PATH,
     icon: 'Hammer',
     teaser: CARPENTRY_SOFTWARE_TEASER,
+  },
+  {
+    key: 'purchase-order',
+    routeName: PURCHASE_ORDER_TEMPLATE_ROUTE_NAME,
+    pdfPath: PURCHASE_ORDER_TEMPLATE_PDF_PATH,
+    xlsxPath: PURCHASE_ORDER_TEMPLATE_XLSX_PATH,
+    icon: 'Store',
+    teaser: INVENTORY_MANAGEMENT_SOFTWARE_TEASER,
+  },
+  {
+    key: 'delivery-note',
+    routeName: DELIVERY_NOTE_TEMPLATE_ROUTE_NAME,
+    pdfPath: DELIVERY_NOTE_TEMPLATE_PDF_PATH,
+    xlsxPath: DELIVERY_NOTE_TEMPLATE_XLSX_PATH,
+    icon: 'Package',
+    teaser: EVENT_RENTAL_SOFTWARE_TEASER,
+  },
+  {
+    key: 'time-clock-sheet',
+    routeName: TIME_CLOCK_SHEET_TEMPLATE_ROUTE_NAME,
+    pdfPath: TIME_CLOCK_SHEET_TEMPLATE_PDF_PATH,
+    xlsxPath: TIME_CLOCK_SHEET_TEMPLATE_XLSX_PATH,
+    icon: 'Clock',
+    teaser: CLEANING_BUSINESS_SOFTWARE_TEASER,
+  },
+  {
+    key: 'attendance-list',
+    routeName: ATTENDANCE_LIST_TEMPLATE_ROUTE_NAME,
+    pdfPath: ATTENDANCE_LIST_TEMPLATE_PDF_PATH,
+    xlsxPath: ATTENDANCE_LIST_TEMPLATE_XLSX_PATH,
+    icon: 'CheckCircle',
+    teaser: TRAINING_CENTER_SOFTWARE_TEASER,
+  },
+  {
+    key: 'expense-report',
+    routeName: EXPENSE_REPORT_TEMPLATE_ROUTE_NAME,
+    pdfPath: EXPENSE_REPORT_TEMPLATE_PDF_PATH,
+    xlsxPath: EXPENSE_REPORT_TEMPLATE_XLSX_PATH,
+    icon: 'Euro',
+    teaser: FIELD_SERVICE_SOFTWARE_TEASER,
   },
 ]
