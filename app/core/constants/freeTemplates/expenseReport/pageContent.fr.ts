@@ -1,6 +1,7 @@
 import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTemplatePage'
 import {
   BUSINESS_PURCHASES_VAT_SOURCE,
+  EXPENSE_REPORT_TEMPLATE_DOCX_PATH,
   EXPENSE_REPORT_TEMPLATE_PDF_PATH,
   EXPENSE_REPORT_TEMPLATE_UPDATED_AT,
   EXPENSE_REPORT_TEMPLATE_XLSX_PATH,
@@ -12,8 +13,8 @@ import { NBSP } from '~/core/constants/typography'
 
 export const EXPENSE_REPORT_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent = {
   meta: {
-    title: `Note de frais${NBSP}: modèle gratuit PDF et Excel + indemnités km`,
-    description: `Note de frais${NBSP}: modèle gratuit en PDF et Excel, sous-totaux repas, hôtel, transport, relevé des indemnités kilométriques, récap annuel. Sans inscription.`,
+    title: `Note de frais${NBSP}: modèle gratuit Word, Excel et PDF (+ km)`,
+    description: `Note de frais${NBSP}: modèle gratuit en PDF, Word et Excel, sous-totaux repas, hôtel, transport, relevé des indemnités kilométriques, récap annuel. Sans inscription.`,
     inLanguage: 'fr-FR',
     schemaAbout: 'Modèle de note de frais mensuelle et de relevé des indemnités kilométriques',
   },
@@ -21,15 +22,16 @@ export const EXPENSE_REPORT_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent 
   shareImage: {
     titleLines: ['Note de frais', 'modèle gratuit'],
     highlight: 'Note de frais',
-    subtitle: 'Note de frais du mois et relevé des trajets en véhicule personnel, en PDF et Excel, totaux calculés',
+    subtitle:
+      'Note de frais du mois et relevé des trajets en véhicule personnel, en PDF, Word et Excel, totaux calculés',
     badge: 'Gratuit, sans inscription',
     icon: 'receipt',
-    alt: `Modèle de note de frais gratuit${NBSP}: note de frais du mois et relevé des indemnités kilométriques en PDF et Excel, à télécharger sans inscription sur dibodev.fr`,
+    alt: `Modèle de note de frais gratuit${NBSP}: note de frais du mois et relevé des indemnités kilométriques en PDF, Word et Excel, à télécharger sans inscription sur dibodev.fr`,
   },
   hero: {
     titleBefore: '',
     titleHighlight: 'Note de frais',
-    titleAfter: `${NBSP}: modèle gratuit PDF et Excel (+ relevé des indemnités kilométriques)`,
+    titleAfter: `${NBSP}: modèle gratuit PDF, Word et Excel (+ relevé des indemnités kilométriques)`,
     reassurances: [
       'Note du mois + relevé kilométrique',
       'Excel avec sous-totaux par nature',
@@ -44,7 +46,7 @@ export const EXPENSE_REPORT_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent 
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les salariés et les dirigeants qui avancent des frais, et pour la personne qui les valide et les rembourse. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime et se remplit au stylo, l’Excel fait les totaux et le récapitulatif de l’année.`,
+    lead: `Pour les salariés et les dirigeants qui avancent des frais, et pour la personne qui les valide et les rembourse. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime et se remplit au stylo, l’Excel fait les totaux et le récapitulatif de l’année, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -55,6 +57,11 @@ export const EXPENSE_REPORT_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent 
         label: 'Télécharger la version Excel',
         href: EXPENSE_REPORT_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 feuilles, totaux calculés',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: EXPENSE_REPORT_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote:
@@ -186,7 +193,7 @@ export const EXPENSE_REPORT_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent 
     questions: [
       {
         question: `Le modèle de note de frais est-il vraiment gratuit${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne «${NBSP}modèle proposé par Dibodev${NBSP}» en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne «${NBSP}modèle proposé par Dibodev${NBSP}» en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `Que doit contenir une note de frais${NBSP}?`,

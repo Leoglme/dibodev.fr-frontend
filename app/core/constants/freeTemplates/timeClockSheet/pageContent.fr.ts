@@ -3,6 +3,7 @@ import {
   DAILY_MAXIMUM_WORK_SOURCE,
   OVERTIME_RATE_SOURCE,
   TIME_CLOCK_PRIVACY_SOURCE,
+  TIME_CLOCK_SHEET_TEMPLATE_DOCX_PATH,
   TIME_CLOCK_SHEET_TEMPLATE_PDF_PATH,
   TIME_CLOCK_SHEET_TEMPLATE_UPDATED_AT,
   TIME_CLOCK_SHEET_TEMPLATE_XLSX_PATH,
@@ -14,8 +15,8 @@ import { NBSP } from '~/core/constants/typography'
 
 export const TIME_CLOCK_SHEET_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent = {
   meta: {
-    title: `Fiche de pointage des heures${NBSP}: modèle gratuit Excel et PDF`,
-    description: `Fiche de pointage gratuite en PDF et Excel${NBSP}: arrivée, pause, départ, heures du jour et de la semaine calculées, heures sup, récapitulatif du mois.`,
+    title: `Fiche de pointage${NBSP}: modèle gratuit Excel, Word et PDF`,
+    description: `Fiche de pointage gratuite en PDF, Word et Excel${NBSP}: arrivée, pause, départ, heures du jour et de la semaine calculées, heures sup, récapitulatif du mois.`,
     inLanguage: 'fr-FR',
     schemaAbout: 'Modèle de fiche de pointage hebdomadaire des heures de travail et de récapitulatif mensuel',
   },
@@ -23,15 +24,15 @@ export const TIME_CLOCK_SHEET_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageConten
   shareImage: {
     titleLines: ['Fiche de pointage', 'des heures gratuite'],
     highlight: 'Fiche de pointage',
-    subtitle: 'Pointage de la semaine et récapitulatif du mois, en PDF et Excel, heures et heures sup calculées',
+    subtitle: 'Pointage de la semaine et récapitulatif du mois, en PDF, Word et Excel, heures et heures sup calculées',
     badge: 'Gratuit, sans inscription',
     icon: 'clipboard',
-    alt: `Modèle de fiche de pointage gratuit${NBSP}: pointage hebdomadaire des heures et récapitulatif mensuel en PDF et Excel, à télécharger sans inscription sur dibodev.fr`,
+    alt: `Modèle de fiche de pointage gratuit${NBSP}: pointage hebdomadaire des heures et récapitulatif mensuel en PDF, Word et Excel, à télécharger sans inscription sur dibodev.fr`,
   },
   hero: {
     titleBefore: '',
     titleHighlight: 'Fiche de pointage',
-    titleAfter: `${NBSP}: modèle gratuit Excel et PDF (semaine + récapitulatif du mois)`,
+    titleAfter: `${NBSP}: modèle gratuit Excel, Word et PDF (semaine + récapitulatif du mois)`,
     reassurances: [
       'Pointage de la semaine + récap du mois',
       'Excel qui calcule les heures sup',
@@ -46,7 +47,7 @@ export const TIME_CLOCK_SHEET_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageConten
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les TPE et PME qui comptent encore les heures sur papier ou dans un tableur${NBSP}: commerce, restauration, nettoyage, bâtiment, associations. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime et se remplit au stylo, l’Excel calcule les heures.`,
+    lead: `Pour les TPE et PME qui comptent encore les heures sur papier ou dans un tableur${NBSP}: commerce, restauration, nettoyage, bâtiment, associations. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime et se remplit au stylo, l’Excel calcule les heures, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -57,6 +58,11 @@ export const TIME_CLOCK_SHEET_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageConten
         label: 'Télécharger la version Excel',
         href: TIME_CLOCK_SHEET_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 feuilles, heures calculées',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: TIME_CLOCK_SHEET_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote:
@@ -189,7 +195,7 @@ export const TIME_CLOCK_SHEET_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageConten
     questions: [
       {
         question: `La fiche de pointage est-elle vraiment gratuite${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne «${NBSP}modèle proposé par Dibodev${NBSP}» en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne «${NBSP}modèle proposé par Dibodev${NBSP}» en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `Une fiche de pointage est-elle obligatoire${NBSP}?`,

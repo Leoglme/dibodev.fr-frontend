@@ -1,7 +1,7 @@
 import type { DibodevSourceReference } from '~/core/types/DibodevSoftwareToolPage'
 
 /** Day the template and the trade rules were last checked: move it when the files or the facts change. */
-export const DELIVERY_NOTE_TEMPLATE_UPDATED_AT: string = '2026-11-15'
+export const DELIVERY_NOTE_TEMPLATE_UPDATED_AT: string = '2026-11-16'
 
 export const DELIVERY_NOTE_TEMPLATE_ROUTE_NAME: string = 'tools-free-templates-delivery-note'
 
@@ -10,6 +10,9 @@ export const DELIVERY_NOTE_TEMPLATE_PDF_PATH: string = '/modeles/bon-de-livraiso
 
 /** Excel version: delivery note with quantities left to deliver, delivery log with reservations, partial deliveries per order. */
 export const DELIVERY_NOTE_TEMPLATE_XLSX_PATH: string = '/modeles/bon-de-livraison-reserves-a-la-livraison.xlsx'
+
+/** Word version: the same two pages as the PDF, editable. */
+export const DELIVERY_NOTE_TEMPLATE_DOCX_PATH: string = '/modeles/bon-de-livraison-reserves-a-la-livraison.docx'
 
 /** Civil Code, art. 1604: delivery is the transfer of the thing sold into the power and possession of the buyer. */
 export const DELIVERY_OBLIGATION_SOURCE: DibodevSourceReference = {

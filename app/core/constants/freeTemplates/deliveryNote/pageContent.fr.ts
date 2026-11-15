@@ -4,6 +4,7 @@ import {
   CONSUMER_CARRIER_PROTEST_SOURCE,
   CONSUMER_DELIVERY_RESERVATIONS_SOURCE,
   CONSUMER_RISK_TRANSFER_SOURCE,
+  DELIVERY_NOTE_TEMPLATE_DOCX_PATH,
   DELIVERY_NOTE_TEMPLATE_PDF_PATH,
   DELIVERY_NOTE_TEMPLATE_UPDATED_AT,
   DELIVERY_NOTE_TEMPLATE_XLSX_PATH,
@@ -14,8 +15,8 @@ import { NBSP } from '~/core/constants/typography'
 
 export const DELIVERY_NOTE_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent = {
   meta: {
-    title: `Bon de livraison${NBSP}: modèle gratuit PDF et Excel`,
-    description: `Bon de livraison${NBSP}: modèle gratuit PDF et Excel, reste à livrer calculé, case reçu conforme ou avec réserves, fiche de réserves pour le transporteur.`,
+    title: `Bon de livraison${NBSP}: modèle gratuit Word, Excel et PDF`,
+    description: `Bon de livraison${NBSP}: modèle gratuit PDF, Word et Excel, reste à livrer calculé, case reçu conforme ou avec réserves, fiche de réserves pour le transporteur.`,
     inLanguage: 'fr-FR',
     schemaAbout: 'Modèle de bon de livraison et de fiche de réserves à la livraison',
   },
@@ -23,15 +24,15 @@ export const DELIVERY_NOTE_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent =
   shareImage: {
     titleLines: ['Bon de livraison', 'modèle gratuit'],
     highlight: 'Bon de livraison',
-    subtitle: 'Bon de livraison avec reste à livrer et fiche de réserves à la livraison, en PDF et Excel',
+    subtitle: 'Bon de livraison avec reste à livrer et fiche de réserves à la livraison, en PDF, Word et Excel',
     badge: 'Gratuit, sans inscription',
     icon: 'truck',
-    alt: `Modèle de bon de livraison gratuit${NBSP}: bon de livraison et fiche de réserves à la livraison en PDF et Excel, à télécharger sans inscription sur dibodev.fr`,
+    alt: `Modèle de bon de livraison gratuit${NBSP}: bon de livraison et fiche de réserves à la livraison en PDF, Word et Excel, à télécharger sans inscription sur dibodev.fr`,
   },
   hero: {
     titleBefore: '',
     titleHighlight: 'Bon de livraison',
-    titleAfter: `${NBSP}: modèle gratuit PDF et Excel (+ fiche de réserves)`,
+    titleAfter: `${NBSP}: modèle gratuit PDF, Word et Excel (+ fiche de réserves)`,
     reassurances: [
       'Bon de livraison + fiche de réserves',
       'Excel avec le reste à livrer calculé',
@@ -46,7 +47,7 @@ export const DELIVERY_NOTE_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent =
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les entreprises qui livrent leurs clients, avec leur propre camion ou par un transporteur. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime en deux exemplaires, l’Excel calcule le reste à livrer et tient le registre. Vous recevez une livraison d’un fournisseur${NBSP}? Prenez plutôt notre modèle de fiche d’inventaire et bon de réception.`,
+    lead: `Pour les entreprises qui livrent leurs clients, avec leur propre camion ou par un transporteur. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime en deux exemplaires, l’Excel calcule le reste à livrer et tient le registre, le Word se modifie librement. Vous recevez une livraison d’un fournisseur${NBSP}? Prenez plutôt notre modèle de fiche d’inventaire et bon de réception.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -57,6 +58,11 @@ export const DELIVERY_NOTE_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent =
         label: 'Télécharger la version Excel',
         href: DELIVERY_NOTE_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 feuilles, reste à livrer calculé',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: DELIVERY_NOTE_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote:
@@ -189,7 +195,7 @@ export const DELIVERY_NOTE_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent =
     questions: [
       {
         question: `Le modèle de bon de livraison est-il vraiment gratuit${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne «${NBSP}modèle proposé par Dibodev${NBSP}» en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne «${NBSP}modèle proposé par Dibodev${NBSP}» en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `Le bon de livraison est-il obligatoire${NBSP}?`,

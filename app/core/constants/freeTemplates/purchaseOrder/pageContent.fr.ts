@@ -4,6 +4,7 @@ import {
   COMMERCIAL_DOCUMENTS_SOURCE,
   CONSUMER_DELIVERY_DATE_SOURCE,
   CONSUMER_DEPOSIT_SOURCE,
+  PURCHASE_ORDER_TEMPLATE_DOCX_PATH,
   PURCHASE_ORDER_TEMPLATE_PDF_PATH,
   PURCHASE_ORDER_TEMPLATE_UPDATED_AT,
   PURCHASE_ORDER_TEMPLATE_XLSX_PATH,
@@ -14,8 +15,8 @@ import { NBSP } from '~/core/constants/typography'
 
 export const PURCHASE_ORDER_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent = {
   meta: {
-    title: `Bon de commande${NBSP}: modèle gratuit PDF et Excel (+ suivi)`,
-    description: `Bon de commande${NBSP}: modèle gratuit en PDF et Excel, fournisseur ou client, totaux HT, TVA et TTC calculés, acompte ou arrhes, suivi des commandes.`,
+    title: `Bon de commande${NBSP}: modèle gratuit Word, Excel et PDF`,
+    description: `Bon de commande${NBSP}: modèle gratuit en PDF, Word et Excel, fournisseur ou client, totaux HT, TVA et TTC calculés, acompte ou arrhes, suivi des commandes.`,
     inLanguage: 'fr-FR',
     schemaAbout: 'Modèle de bon de commande et de registre de suivi des commandes',
   },
@@ -23,15 +24,15 @@ export const PURCHASE_ORDER_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent 
   shareImage: {
     titleLines: ['Bon de commande', 'modèle gratuit'],
     highlight: 'Bon de commande',
-    subtitle: 'Bon de commande et suivi des commandes en PDF et Excel, totaux HT, TVA et TTC calculés',
+    subtitle: 'Bon de commande et suivi des commandes en PDF, Word et Excel, totaux HT, TVA et TTC calculés',
     badge: 'Gratuit, sans inscription',
     icon: 'receipt',
-    alt: `Modèle de bon de commande gratuit${NBSP}: bon de commande et suivi des commandes en PDF et Excel, à télécharger sans inscription sur dibodev.fr`,
+    alt: `Modèle de bon de commande gratuit${NBSP}: bon de commande et suivi des commandes en PDF, Word et Excel, à télécharger sans inscription sur dibodev.fr`,
   },
   hero: {
     titleBefore: '',
     titleHighlight: 'Bon de commande',
-    titleAfter: `${NBSP}: modèle gratuit PDF et Excel (+ suivi des commandes)`,
+    titleAfter: `${NBSP}: modèle gratuit PDF, Word et Excel (+ suivi des commandes)`,
     reassurances: [
       'Fournisseur ou client, un seul bon',
       'Excel avec HT, TVA et TTC calculés',
@@ -46,7 +47,7 @@ export const PURCHASE_ORDER_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent 
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les artisans, les commerçants et les TPE qui passent ou reçoivent des commandes. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime et se signe, l’Excel calcule les totaux et suit les commandes.`,
+    lead: `Pour les artisans, les commerçants et les TPE qui passent ou reçoivent des commandes. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime et se signe, l’Excel calcule les totaux et suit les commandes, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -57,6 +58,11 @@ export const PURCHASE_ORDER_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent 
         label: 'Télécharger la version Excel',
         href: PURCHASE_ORDER_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 feuilles, totaux calculés',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: PURCHASE_ORDER_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote:
@@ -189,7 +195,7 @@ export const PURCHASE_ORDER_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent 
     questions: [
       {
         question: `Le modèle de bon de commande est-il gratuit, et existe-t-il en Word${NBSP}?`,
-        answer: `Oui, il est gratuit${NBSP}: les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser. Il n’y a pas de version Word${NBSP}: le PDF s’imprime et se remplit à la main, l’Excel se remplit à l’écran et calcule les totaux. Seule contrepartie, une ligne «${NBSP}modèle proposé par Dibodev${NBSP}» en pied de page, que vous pouvez retirer.`,
+        answer: `Oui, il est gratuit${NBSP}: les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser. Il existe aussi en Word${NBSP}: le PDF s’imprime et se remplit à la main, le Word se modifie librement, l’Excel se remplit à l’écran et calcule les totaux. Seule contrepartie, une ligne «${NBSP}modèle proposé par Dibodev${NBSP}» en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `Un bon de commande signé engage-t-il l’acheteur${NBSP}?`,

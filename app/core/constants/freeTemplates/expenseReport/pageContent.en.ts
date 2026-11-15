@@ -1,6 +1,7 @@
 import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTemplatePage'
 import {
   BUSINESS_PURCHASES_VAT_SOURCE,
+  EXPENSE_REPORT_TEMPLATE_DOCX_PATH,
   EXPENSE_REPORT_TEMPLATE_PDF_PATH,
   EXPENSE_REPORT_TEMPLATE_UPDATED_AT,
   EXPENSE_REPORT_TEMPLATE_XLSX_PATH,
@@ -11,9 +12,9 @@ import { DOCUMENT_RETENTION_SOURCE } from '~/core/constants/tools/fieldServiceSo
 
 export const EXPENSE_REPORT_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent = {
   meta: {
-    title: 'Expense report: free French template (PDF + Excel)',
+    title: 'Expense report: free French template (PDF, Word, Excel)',
     description:
-      'Expense report: free French template in PDF and Excel, sub-totals for meals, hotel and travel, mileage allowance log and yearly summary. No sign-up.',
+      'Expense report: free French template in PDF, Word and Excel, sub-totals for meals, hotel and travel, mileage allowance log and yearly summary. No sign-up.',
     inLanguage: 'en',
     schemaAbout: 'French monthly expense report and mileage allowance log template',
   },
@@ -21,15 +22,15 @@ export const EXPENSE_REPORT_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent 
   shareImage: {
     titleLines: ['Expense report', 'free French template'],
     highlight: 'Expense report',
-    subtitle: 'Monthly expense report and personal vehicle mileage log, in PDF and Excel, calculated totals',
+    subtitle: 'Monthly expense report and personal vehicle mileage log, in PDF, Word and Excel, calculated totals',
     badge: 'Free, no sign-up',
     icon: 'receipt',
-    alt: 'Free French expense report template: monthly expense report and mileage allowance log in PDF and Excel, downloaded without sign-up on dibodev.fr',
+    alt: 'Free French expense report template: monthly expense report and mileage allowance log in PDF, Word and Excel, downloaded without sign-up on dibodev.fr',
   },
   hero: {
     titleBefore: '',
     titleHighlight: 'Expense report',
-    titleAfter: ': free French template, PDF and Excel (+ mileage allowance log)',
+    titleAfter: ': free French template, PDF, Word and Excel (+ mileage allowance log)',
     reassurances: ['Monthly report + mileage log', 'Excel with sub-totals by type', 'No sign-up, no email'],
     aboutTitle: 'About the template',
     description:
@@ -41,7 +42,7 @@ export const EXPENSE_REPORT_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent 
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For employees and company officers in France who pay expenses up front, and for the person who approves and refunds them. Two files in French, no form to fill in: the PDF prints and is filled in by hand, the Excel file does the totals and the yearly summary.',
+    lead: 'For employees and company officers in France who pay expenses up front, and for the person who approves and refunds them. Three files in French, no form to fill in: the PDF prints and is filled in by hand, the Excel file does the totals and the yearly summary, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -52,6 +53,11 @@ export const EXPENSE_REPORT_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent 
         label: 'Download the Excel version',
         href: EXPENSE_REPORT_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 sheets, calculated totals, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: EXPENSE_REPORT_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote: 'Free to use and adapt to your business. It does not replace the advice of your accountant.',
@@ -189,7 +195,7 @@ export const EXPENSE_REPORT_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent 
       {
         question: 'Is the expense report template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'What should an expense report contain in France?',

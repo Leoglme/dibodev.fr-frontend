@@ -1,7 +1,7 @@
 import type { DibodevSourceReference } from '~/core/types/DibodevSoftwareToolPage'
 
 /** Day the template and the trade rules were last checked: move it when the files or the facts change. */
-export const PURCHASE_ORDER_TEMPLATE_UPDATED_AT: string = '2026-11-15'
+export const PURCHASE_ORDER_TEMPLATE_UPDATED_AT: string = '2026-11-16'
 
 export const PURCHASE_ORDER_TEMPLATE_ROUTE_NAME: string = 'tools-free-templates-purchase-order'
 
@@ -10,6 +10,9 @@ export const PURCHASE_ORDER_TEMPLATE_PDF_PATH: string = '/modeles/bon-de-command
 
 /** Excel version: purchase order with calculated totals, order register with what is left to deliver and to pay, suppliers and customers list. */
 export const PURCHASE_ORDER_TEMPLATE_XLSX_PATH: string = '/modeles/bon-de-commande-suivi-des-commandes.xlsx'
+
+/** Word version: the same two pages as the PDF, editable. */
+export const PURCHASE_ORDER_TEMPLATE_DOCX_PATH: string = '/modeles/bon-de-commande-suivi-des-commandes.docx'
 
 /** Civil Code, art. 1583: a sale is complete between the parties once they agree on the item and the price, even before delivery and payment. */
 export const SALE_AGREEMENT_SOURCE: DibodevSourceReference = {

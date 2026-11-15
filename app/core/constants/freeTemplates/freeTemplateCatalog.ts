@@ -130,7 +130,7 @@ import {
 export const FREE_TEMPLATES_HUB_ROUTE_NAME: string = 'tools-free-templates'
 
 /** Day the hub last changed (templates added); the templates carry their own date. */
-export const FREE_TEMPLATES_HUB_UPDATED_AT: string = '2026-11-15'
+export const FREE_TEMPLATES_HUB_UPDATED_AT: string = '2026-11-16'
 
 /** `location` of the PostHog events sent from the hub and from every template page. */
 export const FREE_TEMPLATES_HUB_TRACKING_LOCATION: string = 'free_templates_hub'

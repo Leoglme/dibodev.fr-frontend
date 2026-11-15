@@ -3,6 +3,7 @@ import {
   DAILY_MAXIMUM_WORK_SOURCE,
   OVERTIME_RATE_SOURCE,
   TIME_CLOCK_PRIVACY_SOURCE,
+  TIME_CLOCK_SHEET_TEMPLATE_DOCX_PATH,
   TIME_CLOCK_SHEET_TEMPLATE_PDF_PATH,
   TIME_CLOCK_SHEET_TEMPLATE_UPDATED_AT,
   TIME_CLOCK_SHEET_TEMPLATE_XLSX_PATH,
@@ -14,9 +15,9 @@ import { NBSP } from '~/core/constants/typography'
 
 export const TIME_CLOCK_SHEET_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent = {
   meta: {
-    title: 'Hoja de fichaje: plantilla francesa gratis en PDF y Excel',
+    title: 'Hoja de fichaje: plantilla gratis (PDF, Word, Excel)',
     description:
-      'Hoja de fichaje: plantilla francesa gratis en PDF y Excel. Entrada, pausa, salida, horas del día y de la semana calculadas, horas extra y resumen del mes.',
+      'Hoja de fichaje: plantilla francesa gratis en PDF, Word y Excel. Entrada, pausa, salida, horas del día y de la semana calculadas, horas extra y resumen del mes.',
     inLanguage: 'es',
     schemaAbout: 'Plantilla francesa de hoja de fichaje semanal de las horas de trabajo y de resumen mensual',
   },
@@ -24,15 +25,15 @@ export const TIME_CLOCK_SHEET_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageConten
   shareImage: {
     titleLines: ['Hoja de fichaje', 'plantilla francesa gratis'],
     highlight: 'Hoja de fichaje',
-    subtitle: 'Fichaje de la semana y resumen del mes, en PDF y Excel, horas y horas extra calculadas',
+    subtitle: 'Fichaje de la semana y resumen del mes, en PDF, Word y Excel, horas y horas extra calculadas',
     badge: 'Gratis, sin registro',
     icon: 'clipboard',
-    alt: 'Plantilla francesa de hoja de fichaje gratis: fichaje semanal de las horas de trabajo y resumen mensual en PDF y Excel, descargada sin registro en dibodev.fr',
+    alt: 'Plantilla francesa de hoja de fichaje gratis: fichaje semanal de las horas de trabajo y resumen mensual en PDF, Word y Excel, descargada sin registro en dibodev.fr',
   },
   hero: {
     titleBefore: '',
     titleHighlight: 'Hoja de fichaje',
-    titleAfter: ': plantilla francesa gratis, Excel y PDF (semana + resumen del mes)',
+    titleAfter: ': plantilla francesa gratis, Excel, Word y PDF (semana + resumen del mes)',
     reassurances: ['Fichaje semanal + resumen del mes', 'Excel que calcula las horas extra', 'Sin registro ni e-mail'],
     aboutTitle: 'Sobre la plantilla',
     description:
@@ -44,7 +45,7 @@ export const TIME_CLOCK_SHEET_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageConten
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para las pequeñas empresas en Francia que aún cuentan las horas en papel o en una hoja de cálculo: comercio, restauración, limpieza, construcción, asociaciones. Dos archivos en francés, sin formulario: el PDF se imprime y se rellena a mano, el Excel calcula las horas.',
+    lead: 'Para las pequeñas empresas en Francia que aún cuentan las horas en papel o en una hoja de cálculo: comercio, restauración, limpieza, construcción, asociaciones. Tres archivos en francés, sin formulario: el PDF se imprime y se rellena a mano, el Excel calcula las horas, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -55,6 +56,11 @@ export const TIME_CLOCK_SHEET_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageConten
         label: 'Descargar la versión Excel',
         href: TIME_CLOCK_SHEET_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 hojas, horas calculadas, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: TIME_CLOCK_SHEET_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote:
@@ -194,7 +200,7 @@ export const TIME_CLOCK_SHEET_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageConten
       {
         question: '¿La plantilla de hoja de fichaje es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿La hoja de fichaje es obligatoria en Francia?',

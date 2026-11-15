@@ -4,6 +4,7 @@ import {
   COMMERCIAL_DOCUMENTS_SOURCE,
   CONSUMER_DELIVERY_DATE_SOURCE,
   CONSUMER_DEPOSIT_SOURCE,
+  PURCHASE_ORDER_TEMPLATE_DOCX_PATH,
   PURCHASE_ORDER_TEMPLATE_PDF_PATH,
   PURCHASE_ORDER_TEMPLATE_UPDATED_AT,
   PURCHASE_ORDER_TEMPLATE_XLSX_PATH,
@@ -14,9 +15,9 @@ import { NBSP } from '~/core/constants/typography'
 
 export const PURCHASE_ORDER_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent = {
   meta: {
-    title: 'Hoja de pedido: plantilla francesa gratis en PDF y Excel',
+    title: 'Hoja de pedido: plantilla francesa gratis (PDF, Word, Excel)',
     description:
-      'Hoja de pedido: plantilla francesa gratis en PDF y Excel, a proveedor o de cliente, totales con IVA calculados, anticipo o señal y registro de pedidos.',
+      'Hoja de pedido: plantilla francesa gratis en PDF, Word y Excel, a proveedor o de cliente, totales con IVA calculados, anticipo o señal y registro de pedidos.',
     inLanguage: 'es',
     schemaAbout: 'Plantilla francesa de hoja de pedido (bon de commande) y de registro de pedidos',
   },
@@ -24,15 +25,15 @@ export const PURCHASE_ORDER_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent 
   shareImage: {
     titleLines: ['Hoja de pedido', 'plantilla gratis'],
     highlight: 'Hoja de pedido',
-    subtitle: 'Hoja de pedido y seguimiento de pedidos en PDF y Excel, totales sin IVA, IVA y con IVA calculados',
+    subtitle: 'Hoja de pedido y seguimiento de pedidos en PDF, Word y Excel, totales sin IVA, IVA y con IVA calculados',
     badge: 'Gratis, sin registro',
     icon: 'receipt',
-    alt: 'Plantilla francesa de hoja de pedido gratis: hoja de pedido y seguimiento de pedidos en PDF y Excel, descargada sin registro en dibodev.fr',
+    alt: 'Plantilla francesa de hoja de pedido gratis: hoja de pedido y seguimiento de pedidos en PDF, Word y Excel, descargada sin registro en dibodev.fr',
   },
   hero: {
     titleBefore: '',
     titleHighlight: 'Hoja de pedido',
-    titleAfter: ': plantilla francesa gratis, PDF y Excel (+ seguimiento de pedidos)',
+    titleAfter: ': plantilla francesa gratis, PDF, Word y Excel (+ seguimiento de pedidos)',
     reassurances: [
       'Proveedor o cliente, una sola hoja',
       'Excel con los totales e IVA calculados',
@@ -48,7 +49,7 @@ export const PURCHASE_ORDER_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent 
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para profesionales, comercios y pequeñas empresas que trabajan en Francia y hacen o reciben pedidos. Dos archivos en francés, sin formulario: el PDF se imprime y se firma, el Excel calcula los totales y sigue los pedidos.',
+    lead: 'Para profesionales, comercios y pequeñas empresas que trabajan en Francia y hacen o reciben pedidos. Tres archivos en francés, sin formulario: el PDF se imprime y se firma, el Excel calcula los totales y sigue los pedidos, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -59,6 +60,11 @@ export const PURCHASE_ORDER_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent 
         label: 'Descargar la versión Excel',
         href: PURCHASE_ORDER_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 hojas, totales calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: PURCHASE_ORDER_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote:
@@ -198,7 +204,7 @@ export const PURCHASE_ORDER_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent 
       {
         question: '¿La plantilla de hoja de pedido es gratis? ¿Hay versión Word?',
         answer:
-          'Sí, es gratis: los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos. No hay versión Word: el PDF se imprime y se rellena a mano, el Excel se rellena en pantalla y calcula los totales. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí, es gratis: los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos. También hay versión Word: el PDF se imprime y se rellena a mano, el Word se modifica libremente, el Excel se rellena en pantalla y calcula los totales. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿Una hoja de pedido firmada obliga al comprador en Francia?',

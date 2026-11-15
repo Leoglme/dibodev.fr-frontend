@@ -1,6 +1,7 @@
 import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTemplatePage'
 import {
   ASSOCIATION_BODIES_SOURCE,
+  ATTENDANCE_LIST_TEMPLATE_DOCX_PATH,
   ATTENDANCE_LIST_TEMPLATE_PDF_PATH,
   ATTENDANCE_LIST_TEMPLATE_UPDATED_AT,
   ATTENDANCE_LIST_TEMPLATE_XLSX_PATH,
@@ -13,9 +14,9 @@ import {
 
 export const ATTENDANCE_LIST_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent = {
   meta: {
-    title: 'Hoja de asistencia: plantilla francesa gratis PDF y Excel',
+    title: 'Hoja de asistencia: plantilla gratis (PDF, Word, Excel)',
     description:
-      'Hoja de asistencia de reunión o junta (poderes, quórum) y lista de asistencia mensual: plantilla francesa gratis en PDF y Excel, totales calculados.',
+      'Hoja de asistencia de reunión o junta (poderes, quórum) y lista de asistencia mensual: plantilla francesa gratis en PDF, Word y Excel, totales calculados.',
     inLanguage: 'es',
     schemaAbout: 'Plantilla francesa de hoja de asistencia de reunión y de lista de asistencia mensual',
   },
@@ -23,15 +24,15 @@ export const ATTENDANCE_LIST_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent
   shareImage: {
     titleLines: ['Hoja de asistencia', 'plantilla gratis'],
     highlight: 'Hoja de asistencia',
-    subtitle: 'Hoja de reunión o de junta y lista de asistencia del mes, en PDF y Excel, totales calculados',
+    subtitle: 'Hoja de reunión o de junta y lista de asistencia del mes, en PDF, Word y Excel, totales calculados',
     badge: 'Gratis, sin registro',
     icon: 'clipboard',
-    alt: 'Plantilla francesa de hoja de asistencia gratis: hoja de reunión o de junta y lista de asistencia mensual en PDF y Excel, descargada sin registro en dibodev.fr',
+    alt: 'Plantilla francesa de hoja de asistencia gratis: hoja de reunión o de junta y lista de asistencia mensual en PDF, Word y Excel, descargada sin registro en dibodev.fr',
   },
   hero: {
     titleBefore: '',
     titleHighlight: 'Hoja de asistencia',
-    titleAfter: ': plantilla francesa gratis, PDF y Excel (+ lista de asistencia del mes)',
+    titleAfter: ': plantilla francesa gratis, PDF, Word y Excel (+ lista de asistencia del mes)',
     reassurances: ['Reunión, junta o evento', 'Lista del mes con totales por código', 'Sin registro ni e-mail'],
     aboutTitle: 'Sobre la plantilla',
     description:
@@ -43,7 +44,7 @@ export const ATTENDANCE_LIST_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para gerentes, secretarios de asociación, administradores voluntarios de comunidades de propietarios, jefes de equipo y responsables de club en Francia. Dos archivos en francés, sin formulario: el PDF se imprime, el Excel cuenta los presentes, los poderes y los días.',
+    lead: 'Para gerentes, secretarios de asociación, administradores voluntarios de comunidades de propietarios, jefes de equipo y responsables de club en Francia. Tres archivos en francés, sin formulario: el PDF se imprime, el Excel cuenta los presentes, los poderes y los días, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -54,6 +55,11 @@ export const ATTENDANCE_LIST_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent
         label: 'Descargar la versión Excel',
         href: ATTENDANCE_LIST_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 hojas, totales calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: ATTENDANCE_LIST_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote:

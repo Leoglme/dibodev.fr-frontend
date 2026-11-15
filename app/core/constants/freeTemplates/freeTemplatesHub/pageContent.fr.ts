@@ -180,7 +180,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Bon de commande + suivi des commandes',
         description:
           'Bon de commande à un fournisseur ou signé par un client, avec totaux HT, TVA et TTC, acompte ou arrhes, puis registre des commandes avec le reste à livrer et à payer.',
-        formats: 'PDF 2 pages · Excel 3 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
       },
       {
         key: 'delivery-note',
@@ -188,7 +188,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Bon de livraison + fiche de réserves',
         description:
           'Bon de livraison avec quantités commandées, livrées et reste à livrer, fiche de réserves avec les délais pour écrire au transporteur, registre des livraisons.',
-        formats: 'PDF 2 pages · Excel 3 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
       },
       {
         key: 'time-clock-sheet',
@@ -196,7 +196,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Fiche de pointage + récapitulatif du mois',
         description:
           'Fiche de la semaine avec arrivée, pause et départ, heures du jour et heures supplémentaires calculées, récapitulatif du mois.',
-        formats: 'PDF 2 pages · Excel 3 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
       },
       {
         key: 'attendance-list',
@@ -204,7 +204,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Feuille de présence + liste du mois',
         description:
           'Feuille de présence d’une réunion ou d’une assemblée avec pouvoirs et quorum, liste de présence du mois avec les totaux par personne.',
-        formats: 'PDF 2 pages · Excel 3 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
       },
       {
         key: 'expense-report',
@@ -212,7 +212,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Note de frais + relevé des trajets',
         description:
           'Note de frais du mois avec sous-totaux par nature et reste à rembourser, relevé des trajets en véhicule personnel, récapitulatif de l’année.',
-        formats: 'PDF 2 pages · Excel 3 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
       },
     ],
   },

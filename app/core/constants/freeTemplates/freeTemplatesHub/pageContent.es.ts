@@ -183,7 +183,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Hoja de pedido + seguimiento de pedidos',
         description:
           'Hoja de pedido a un proveedor o firmada por un cliente, con totales sin y con IVA y el anticipo, y registro de pedidos con lo que queda por entregar y por pagar.',
-        formats: 'PDF 2 páginas · Excel 3 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
       },
       {
         key: 'delivery-note',
@@ -191,7 +191,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Albarán de entrega + hoja de reservas',
         description:
           'Albarán con cantidades pedidas, entregadas y pendientes, hoja de reservas con los plazos para escribir al transportista, registro de entregas.',
-        formats: 'PDF 2 páginas · Excel 3 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
       },
       {
         key: 'time-clock-sheet',
@@ -199,7 +199,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Hoja de fichaje + resumen del mes',
         description:
           'Hoja de la semana con llegada, pausa y salida, horas del día y horas extra calculadas, resumen del mes.',
-        formats: 'PDF 2 páginas · Excel 3 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
       },
       {
         key: 'attendance-list',
@@ -207,7 +207,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Hoja de asistencia + lista del mes',
         description:
           'Hoja de asistencia de una reunión o una asamblea con poderes y quórum, lista de asistencia del mes con los totales por persona.',
-        formats: 'PDF 2 páginas · Excel 3 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
       },
       {
         key: 'expense-report',
@@ -215,7 +215,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Nota de gastos + registro de trayectos',
         description:
           'Nota de gastos del mes con subtotales por tipo y el importe a reembolsar, registro de trayectos con vehículo propio, resumen del año.',
-        formats: 'PDF 2 páginas · Excel 3 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
       },
     ],
   },

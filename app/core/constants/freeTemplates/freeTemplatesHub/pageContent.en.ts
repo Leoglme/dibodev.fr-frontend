@@ -183,7 +183,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Purchase order + order tracking',
         description:
           'Purchase order sent to a supplier or signed by a customer, with totals excl. and incl. VAT and the deposit, then an order register with what is left to deliver and to pay.',
-        formats: 'PDF 2 pages · Excel 3 sheets',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
       },
       {
         key: 'delivery-note',
@@ -191,7 +191,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Delivery note + reservations sheet',
         description:
           'Delivery note with ordered, delivered and outstanding quantities, reservations sheet with the deadlines to write to the carrier, delivery register.',
-        formats: 'PDF 2 pages · Excel 3 sheets',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
       },
       {
         key: 'time-clock-sheet',
@@ -199,7 +199,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Timesheet + monthly summary',
         description:
           'Weekly timesheet with arrival, break and departure, daily hours and overtime calculated, monthly summary.',
-        formats: 'PDF 2 pages · Excel 3 sheets',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
       },
       {
         key: 'attendance-list',
@@ -207,7 +207,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Attendance sheet + monthly list',
         description:
           'Attendance sheet for a meeting or a general assembly with proxies and quorum, monthly attendance list with totals per person.',
-        formats: 'PDF 2 pages · Excel 3 sheets',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
       },
       {
         key: 'expense-report',
@@ -215,7 +215,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Expense report + mileage log',
         description:
           'Monthly expense report with subtotals by type and the amount to reimburse, log of trips in a personal vehicle, yearly summary.',
-        formats: 'PDF 2 pages · Excel 3 sheets',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
       },
     ],
   },

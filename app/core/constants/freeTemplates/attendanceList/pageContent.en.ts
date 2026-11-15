@@ -1,6 +1,7 @@
 import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTemplatePage'
 import {
   ASSOCIATION_BODIES_SOURCE,
+  ATTENDANCE_LIST_TEMPLATE_DOCX_PATH,
   ATTENDANCE_LIST_TEMPLATE_PDF_PATH,
   ATTENDANCE_LIST_TEMPLATE_UPDATED_AT,
   ATTENDANCE_LIST_TEMPLATE_XLSX_PATH,
@@ -13,9 +14,9 @@ import {
 
 export const ATTENDANCE_LIST_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent = {
   meta: {
-    title: 'Attendance sheet: free French template (PDF + Excel)',
+    title: 'Attendance sheet: free French template (PDF, Word, Excel)',
     description:
-      'Attendance sheet for a meeting or general meeting (proxies, quorum) and monthly attendance list: free French template in PDF and Excel, totals calculated.',
+      'Attendance sheet for a meeting or general meeting (proxies, quorum) and monthly attendance list: free French template in PDF, Word and Excel, totals calculated.',
     inLanguage: 'en',
     schemaAbout: 'French meeting attendance sheet and monthly attendance list template',
   },
@@ -23,15 +24,15 @@ export const ATTENDANCE_LIST_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent
   shareImage: {
     titleLines: ['Attendance sheet', 'free French template'],
     highlight: 'Attendance sheet',
-    subtitle: 'Meeting or general meeting sheet and monthly attendance list, in PDF and Excel, totals calculated',
+    subtitle: 'Meeting or general meeting sheet and monthly attendance list, in PDF, Word and Excel, totals calculated',
     badge: 'Free, no sign-up',
     icon: 'clipboard',
-    alt: 'Free French attendance sheet template: meeting or general meeting sheet and monthly attendance list in PDF and Excel, downloaded without sign-up on dibodev.fr',
+    alt: 'Free French attendance sheet template: meeting or general meeting sheet and monthly attendance list in PDF, Word and Excel, downloaded without sign-up on dibodev.fr',
   },
   hero: {
     titleBefore: '',
     titleHighlight: 'Attendance sheet',
-    titleAfter: ': free French template, PDF and Excel (+ monthly attendance list)',
+    titleAfter: ': free French template, PDF, Word and Excel (+ monthly attendance list)',
     reassurances: ['Meeting, general meeting or event', 'Monthly list with totals per code', 'No sign-up, no email'],
     aboutTitle: 'About the template',
     description:
@@ -43,7 +44,7 @@ export const ATTENDANCE_LIST_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For company managers, association secretaries, volunteer co-ownership managers, team leaders and club organisers in France. Two files in French, no form to fill in: the PDF prints, the Excel file counts those present, the proxies and the days.',
+    lead: 'For company managers, association secretaries, volunteer co-ownership managers, team leaders and club organisers in France. Three files in French, no form to fill in: the PDF prints, the Excel file counts those present, the proxies and the days, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -54,6 +55,11 @@ export const ATTENDANCE_LIST_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent
         label: 'Download the Excel version',
         href: ATTENDANCE_LIST_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 sheets, totals calculated, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: ATTENDANCE_LIST_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote:

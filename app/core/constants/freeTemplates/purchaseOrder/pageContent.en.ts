@@ -4,6 +4,7 @@ import {
   COMMERCIAL_DOCUMENTS_SOURCE,
   CONSUMER_DELIVERY_DATE_SOURCE,
   CONSUMER_DEPOSIT_SOURCE,
+  PURCHASE_ORDER_TEMPLATE_DOCX_PATH,
   PURCHASE_ORDER_TEMPLATE_PDF_PATH,
   PURCHASE_ORDER_TEMPLATE_UPDATED_AT,
   PURCHASE_ORDER_TEMPLATE_XLSX_PATH,
@@ -13,9 +14,9 @@ import {
 
 export const PURCHASE_ORDER_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent = {
   meta: {
-    title: 'Purchase order: free French template (PDF + Excel)',
+    title: 'Purchase order: free French template (PDF, Word, Excel)',
     description:
-      'Purchase order: free French template in PDF and Excel, for suppliers or customers, VAT totals calculated, deposit wording and an order register. No sign-up.',
+      'Purchase order: free French template in PDF, Word and Excel, for suppliers or customers, VAT totals calculated, deposit wording and an order register.',
     inLanguage: 'en',
     schemaAbout: 'French purchase order (bon de commande) and order register template',
   },
@@ -23,15 +24,16 @@ export const PURCHASE_ORDER_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent 
   shareImage: {
     titleLines: ['Purchase order', 'free French template'],
     highlight: 'Purchase order',
-    subtitle: 'Purchase order and order follow-up in PDF and Excel, totals excl. VAT, VAT and incl. VAT calculated',
+    subtitle:
+      'Purchase order and order follow-up in PDF, Word and Excel, totals excl. VAT, VAT and incl. VAT calculated',
     badge: 'Free, no sign-up',
     icon: 'receipt',
-    alt: 'Free French purchase order template: purchase order and order follow-up in PDF and Excel, downloaded without sign-up on dibodev.fr',
+    alt: 'Free French purchase order template: purchase order and order follow-up in PDF, Word and Excel, downloaded without sign-up on dibodev.fr',
   },
   hero: {
     titleBefore: '',
     titleHighlight: 'Purchase order',
-    titleAfter: ': free French template, PDF and Excel (+ order follow-up)',
+    titleAfter: ': free French template, PDF, Word and Excel (+ order follow-up)',
     reassurances: ['Supplier or customer, one single form', 'Excel with VAT totals calculated', 'No sign-up, no email'],
     aboutTitle: 'About the template',
     description:
@@ -43,7 +45,7 @@ export const PURCHASE_ORDER_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent 
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For tradespeople, shops and small businesses in France that place or take orders. Two files in French, no form to fill in: the PDF prints and gets signed, the Excel file calculates the totals and tracks the orders.',
+    lead: 'For tradespeople, shops and small businesses in France that place or take orders. Three files in French, no form to fill in: the PDF prints and gets signed, the Excel file calculates the totals and tracks the orders, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -54,6 +56,11 @@ export const PURCHASE_ORDER_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent 
         label: 'Download the Excel version',
         href: PURCHASE_ORDER_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 sheets, calculated totals, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: PURCHASE_ORDER_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote:
@@ -193,7 +200,7 @@ export const PURCHASE_ORDER_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent 
       {
         question: 'Is the purchase order template free, and is there a Word version?',
         answer:
-          'Yes, it is free: both files download without sign-up or email address, and you can edit, print and reuse them. There is no Word version: the PDF prints and is filled in by hand, the Excel file is filled in on screen and calculates the totals. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes, it is free: all three files download without sign-up or email address, and you can edit, print and reuse them. There is a Word version too: the PDF prints and is filled in by hand, the Word file can be edited freely, the Excel file is filled in on screen and calculates the totals. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'Does a signed purchase order bind the buyer in France?',

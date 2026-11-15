@@ -1,6 +1,7 @@
 import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTemplatePage'
 import {
   ASSOCIATION_BODIES_SOURCE,
+  ATTENDANCE_LIST_TEMPLATE_DOCX_PATH,
   ATTENDANCE_LIST_TEMPLATE_PDF_PATH,
   ATTENDANCE_LIST_TEMPLATE_UPDATED_AT,
   ATTENDANCE_LIST_TEMPLATE_XLSX_PATH,
@@ -14,8 +15,8 @@ import { NBSP } from '~/core/constants/typography'
 
 export const ATTENDANCE_LIST_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent = {
   meta: {
-    title: `Feuille et liste de présence${NBSP}: modèle gratuit PDF et Excel`,
-    description: `Feuille de présence de réunion ou d’assemblée (pouvoirs, quorum) et liste de présence du mois, gratuites en PDF et Excel, totaux calculés. Sans inscription.`,
+    title: `Feuille et liste de présence gratuites${NBSP}: Word, Excel, PDF`,
+    description: `Feuille de présence de réunion ou d’assemblée (pouvoirs, quorum) et liste de présence du mois, gratuites en PDF, Word et Excel, totaux calculés.`,
     inLanguage: 'fr-FR',
     schemaAbout: 'Modèle de feuille de présence de réunion ou d’assemblée et de liste de présence mensuelle',
   },
@@ -23,15 +24,15 @@ export const ATTENDANCE_LIST_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent
   shareImage: {
     titleLines: ['Feuille de présence', 'gratuite à imprimer'],
     highlight: 'Feuille de présence',
-    subtitle: 'Feuille de réunion ou d’assemblée et liste de présence du mois, en PDF et Excel, totaux calculés',
+    subtitle: 'Feuille de réunion ou d’assemblée et liste de présence du mois, en PDF, Word et Excel, totaux calculés',
     badge: 'Gratuit, sans inscription',
     icon: 'clipboard',
-    alt: `Modèle de feuille de présence gratuit${NBSP}: feuille de réunion ou d’assemblée et liste de présence mensuelle en PDF et Excel, à télécharger sans inscription sur dibodev.fr`,
+    alt: `Modèle de feuille de présence gratuit${NBSP}: feuille de réunion ou d’assemblée et liste de présence mensuelle en PDF, Word et Excel, à télécharger sans inscription sur dibodev.fr`,
   },
   hero: {
     titleBefore: '',
     titleHighlight: 'Feuille de présence',
-    titleAfter: `${NBSP}: modèle gratuit PDF et Excel (+ liste de présence du mois)`,
+    titleAfter: `${NBSP}: modèle gratuit PDF, Word et Excel (+ liste de présence du mois)`,
     reassurances: [
       'Réunion, assemblée ou événement',
       'Liste du mois avec les totaux par code',
@@ -46,7 +47,7 @@ export const ATTENDANCE_LIST_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les dirigeants, les secrétaires d’association, les syndics bénévoles, les chefs d’équipe et les responsables de club. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel compte les présents, les pouvoirs et les jours.`,
+    lead: `Pour les dirigeants, les secrétaires d’association, les syndics bénévoles, les chefs d’équipe et les responsables de club. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel compte les présents, les pouvoirs et les jours, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -57,6 +58,11 @@ export const ATTENDANCE_LIST_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent
         label: 'Télécharger la version Excel',
         href: ATTENDANCE_LIST_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 feuilles, totaux calculés',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: ATTENDANCE_LIST_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote:

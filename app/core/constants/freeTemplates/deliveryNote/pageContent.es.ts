@@ -4,6 +4,7 @@ import {
   CONSUMER_CARRIER_PROTEST_SOURCE,
   CONSUMER_DELIVERY_RESERVATIONS_SOURCE,
   CONSUMER_RISK_TRANSFER_SOURCE,
+  DELIVERY_NOTE_TEMPLATE_DOCX_PATH,
   DELIVERY_NOTE_TEMPLATE_PDF_PATH,
   DELIVERY_NOTE_TEMPLATE_UPDATED_AT,
   DELIVERY_NOTE_TEMPLATE_XLSX_PATH,
@@ -14,9 +15,9 @@ import { NBSP } from '~/core/constants/typography'
 
 export const DELIVERY_NOTE_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent = {
   meta: {
-    title: 'Albarán de entrega: plantilla francesa gratis PDF y Excel',
+    title: 'Albarán de entrega: plantilla gratis (PDF, Word, Excel)',
     description:
-      'Albarán de entrega: plantilla francesa gratis en PDF y Excel, cantidad pendiente calculada, recibido conforme o con reservas, hoja de reservas al transportista.',
+      'Albarán de entrega: plantilla gratis en PDF, Word y Excel, cantidad pendiente calculada, recibido conforme o con reservas, hoja de reservas al transportista.',
     inLanguage: 'es',
     schemaAbout: 'Plantilla francesa de albarán de entrega y de hoja de reservas en la entrega',
   },
@@ -24,15 +25,15 @@ export const DELIVERY_NOTE_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent =
   shareImage: {
     titleLines: ['Albarán de entrega', 'plantilla gratis'],
     highlight: 'Albarán de entrega',
-    subtitle: 'Albarán con cantidad pendiente y hoja de reservas en la entrega, en PDF y Excel',
+    subtitle: 'Albarán con cantidad pendiente y hoja de reservas en la entrega, en PDF, Word y Excel',
     badge: 'Gratis, sin registro',
     icon: 'truck',
-    alt: 'Plantilla francesa de albarán de entrega gratis: albarán y hoja de reservas en la entrega en PDF y Excel, descargada sin registro en dibodev.fr',
+    alt: 'Plantilla francesa de albarán de entrega gratis: albarán y hoja de reservas en la entrega en PDF, Word y Excel, descargada sin registro en dibodev.fr',
   },
   hero: {
     titleBefore: '',
     titleHighlight: 'Albarán de entrega',
-    titleAfter: ': plantilla francesa gratis, PDF y Excel (+ hoja de reservas)',
+    titleAfter: ': plantilla francesa gratis, PDF, Word y Excel (+ hoja de reservas)',
     reassurances: ['Albarán + hoja de reservas', 'Excel con la cantidad pendiente calculada', 'Sin registro ni e-mail'],
     aboutTitle: 'Sobre la plantilla',
     description:
@@ -44,7 +45,7 @@ export const DELIVERY_NOTE_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent =
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para las empresas que entregan a sus clientes en Francia, con su propia furgoneta o con un transportista. Dos archivos en francés, sin formulario: el PDF se imprime por duplicado, el Excel calcula la cantidad pendiente y lleva el registro. ¿Recibes mercancía de un proveedor? Usa mejor nuestra plantilla de ficha de inventario y albarán de recepción.',
+    lead: 'Para las empresas que entregan a sus clientes en Francia, con su propia furgoneta o con un transportista. Tres archivos en francés, sin formulario: el PDF se imprime por duplicado, el Excel calcula la cantidad pendiente y lleva el registro, el Word se modifica libremente. ¿Recibes mercancía de un proveedor? Usa mejor nuestra plantilla de ficha de inventario y albarán de recepción.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -55,6 +56,11 @@ export const DELIVERY_NOTE_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent =
         label: 'Descargar la versión Excel',
         href: DELIVERY_NOTE_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 hojas, cantidades calculadas, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: DELIVERY_NOTE_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote:
@@ -193,7 +199,7 @@ export const DELIVERY_NOTE_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent =
       {
         question: '¿La plantilla de albarán de entrega es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿El albarán de entrega es obligatorio en Francia?',

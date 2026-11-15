@@ -3,6 +3,7 @@ import {
   DAILY_MAXIMUM_WORK_SOURCE,
   OVERTIME_RATE_SOURCE,
   TIME_CLOCK_PRIVACY_SOURCE,
+  TIME_CLOCK_SHEET_TEMPLATE_DOCX_PATH,
   TIME_CLOCK_SHEET_TEMPLATE_PDF_PATH,
   TIME_CLOCK_SHEET_TEMPLATE_UPDATED_AT,
   TIME_CLOCK_SHEET_TEMPLATE_XLSX_PATH,
@@ -13,9 +14,9 @@ import {
 
 export const TIME_CLOCK_SHEET_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent = {
   meta: {
-    title: 'Timesheet: free French template for work hours (PDF + Excel)',
+    title: 'Timesheet: free French template (PDF, Word, Excel)',
     description:
-      'Timesheet: free French template in PDF and Excel. Clock-in, break, clock-out, daily and weekly hours calculated, overtime, monthly summary. No sign-up.',
+      'Timesheet: free French template in PDF, Word and Excel. Clock-in, break, clock-out, daily and weekly hours calculated, overtime, monthly summary. No sign-up.',
     inLanguage: 'en',
     schemaAbout: 'French weekly timesheet of working hours and monthly summary template',
   },
@@ -23,15 +24,15 @@ export const TIME_CLOCK_SHEET_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageConten
   shareImage: {
     titleLines: ['Timesheet', 'free French template'],
     highlight: 'Timesheet',
-    subtitle: 'Weekly time clock sheet and monthly summary, in PDF and Excel, hours and overtime calculated',
+    subtitle: 'Weekly time clock sheet and monthly summary, in PDF, Word and Excel, hours and overtime calculated',
     badge: 'Free, no sign-up',
     icon: 'clipboard',
-    alt: 'Free French timesheet template: weekly clocking of working hours and monthly summary in PDF and Excel, downloaded without sign-up on dibodev.fr',
+    alt: 'Free French timesheet template: weekly clocking of working hours and monthly summary in PDF, Word and Excel, downloaded without sign-up on dibodev.fr',
   },
   hero: {
     titleBefore: '',
     titleHighlight: 'Timesheet',
-    titleAfter: ': free French template, Excel and PDF (week + monthly summary)',
+    titleAfter: ': free French template, Excel, Word and PDF (week + monthly summary)',
     reassurances: ['Weekly timesheet + monthly summary', 'Excel that calculates overtime', 'No sign-up, no email'],
     aboutTitle: 'About the template',
     description:
@@ -43,7 +44,7 @@ export const TIME_CLOCK_SHEET_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageConten
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For small businesses in France that still count hours on paper or in a spreadsheet: shops, restaurants, cleaning, building trades, associations. Two files in French, no form to fill in: the PDF prints and is filled in by hand, the Excel file calculates the hours.',
+    lead: 'For small businesses in France that still count hours on paper or in a spreadsheet: shops, restaurants, cleaning, building trades, associations. Three files in French, no form to fill in: the PDF prints and is filled in by hand, the Excel file calculates the hours, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -54,6 +55,11 @@ export const TIME_CLOCK_SHEET_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageConten
         label: 'Download the Excel version',
         href: TIME_CLOCK_SHEET_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 sheets, calculated hours, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: TIME_CLOCK_SHEET_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote:
@@ -193,7 +199,7 @@ export const TIME_CLOCK_SHEET_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageConten
       {
         question: 'Is the timesheet template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'Is a timesheet mandatory in France?',

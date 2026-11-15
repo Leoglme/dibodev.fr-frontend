@@ -1,7 +1,7 @@
 import type { DibodevSourceReference } from '~/core/types/DibodevSoftwareToolPage'
 
 /** Day the template and the rules were last checked: move it when the files or the facts change. */
-export const ATTENDANCE_LIST_TEMPLATE_UPDATED_AT: string = '2026-11-15'
+export const ATTENDANCE_LIST_TEMPLATE_UPDATED_AT: string = '2026-11-16'
 
 export const ATTENDANCE_LIST_TEMPLATE_ROUTE_NAME: string = 'tools-free-templates-attendance-list'
 
@@ -10,6 +10,9 @@ export const ATTENDANCE_LIST_TEMPLATE_PDF_PATH: string = '/modeles/feuille-de-pr
 
 /** Excel version: monthly list with totals per code, meeting sheet with proxies and quorum, summary. */
 export const ATTENDANCE_LIST_TEMPLATE_XLSX_PATH: string = '/modeles/feuille-de-presence-liste-de-presence.xlsx'
+
+/** Word version: the same two pages as the PDF, editable. */
+export const ATTENDANCE_LIST_TEMPLATE_DOCX_PATH: string = '/modeles/feuille-de-presence-liste-de-presence.docx'
 
 /** Commercial Code, art. L225-114: an attendance sheet at every shareholders' meeting of an SA, proxies attached, or the resolutions may be annulled. */
 export const SHAREHOLDERS_MEETING_ATTENDANCE_SOURCE: DibodevSourceReference = {

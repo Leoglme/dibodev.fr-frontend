@@ -1,6 +1,7 @@
 import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTemplatePage'
 import {
   BUSINESS_PURCHASES_VAT_SOURCE,
+  EXPENSE_REPORT_TEMPLATE_DOCX_PATH,
   EXPENSE_REPORT_TEMPLATE_PDF_PATH,
   EXPENSE_REPORT_TEMPLATE_UPDATED_AT,
   EXPENSE_REPORT_TEMPLATE_XLSX_PATH,
@@ -12,9 +13,9 @@ import { NBSP } from '~/core/constants/typography'
 
 export const EXPENSE_REPORT_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent = {
   meta: {
-    title: 'Nota de gastos: plantilla francesa gratis, PDF y Excel',
+    title: 'Nota de gastos: plantilla francesa gratis (PDF, Word, Excel)',
     description:
-      'Nota de gastos: plantilla francesa gratis en PDF y Excel, subtotales de comidas, hotel y transporte, registro de kilometraje y resumen anual. Sin registro.',
+      'Nota de gastos: plantilla francesa gratis en PDF, Word y Excel, subtotales de comidas, hotel y transporte, registro de kilometraje y resumen anual.',
     inLanguage: 'es',
     schemaAbout: 'Plantilla francesa de nota de gastos mensual y de registro de kilometraje',
   },
@@ -22,15 +23,16 @@ export const EXPENSE_REPORT_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent 
   shareImage: {
     titleLines: ['Nota de gastos', 'plantilla gratis'],
     highlight: 'Nota de gastos',
-    subtitle: 'Nota de gastos del mes y registro de trayectos en vehículo propio, en PDF y Excel, totales calculados',
+    subtitle:
+      'Nota de gastos del mes y registro de trayectos en vehículo propio, en PDF, Word y Excel, totales calculados',
     badge: 'Gratis, sin registro',
     icon: 'receipt',
-    alt: 'Plantilla francesa de nota de gastos gratis: nota de gastos del mes y registro de kilometraje en PDF y Excel, descargada sin registro en dibodev.fr',
+    alt: 'Plantilla francesa de nota de gastos gratis: nota de gastos del mes y registro de kilometraje en PDF, Word y Excel, descargada sin registro en dibodev.fr',
   },
   hero: {
     titleBefore: '',
     titleHighlight: 'Nota de gastos',
-    titleAfter: ': plantilla francesa gratis, PDF y Excel (+ registro de kilometraje)',
+    titleAfter: ': plantilla francesa gratis, PDF, Word y Excel (+ registro de kilometraje)',
     reassurances: ['Nota del mes + registro de km', 'Excel con subtotales por tipo', 'Sin registro ni e-mail'],
     aboutTitle: 'Sobre la plantilla',
     description:
@@ -42,7 +44,7 @@ export const EXPENSE_REPORT_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent 
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para los empleados y directivos en Francia que adelantan gastos, y para quien los valida y los reembolsa. Dos archivos en francés, sin formulario: el PDF se imprime y se rellena a mano, el Excel hace los totales y el resumen del año.',
+    lead: 'Para los empleados y directivos en Francia que adelantan gastos, y para quien los valida y los reembolsa. Tres archivos en francés, sin formulario: el PDF se imprime y se rellena a mano, el Excel hace los totales y el resumen del año, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -53,6 +55,11 @@ export const EXPENSE_REPORT_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent 
         label: 'Descargar la versión Excel',
         href: EXPENSE_REPORT_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 hojas, totales calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: EXPENSE_REPORT_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote: 'Plantilla de uso libre, para adaptar a tu empresa. No sustituye el consejo de tu asesor contable.',
@@ -190,7 +197,7 @@ export const EXPENSE_REPORT_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent 
       {
         question: '¿La plantilla de nota de gastos es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿Qué debe contener una nota de gastos en Francia?',

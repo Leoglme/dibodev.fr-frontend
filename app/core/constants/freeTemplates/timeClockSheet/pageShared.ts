@@ -1,7 +1,7 @@
 import type { DibodevSourceReference } from '~/core/types/DibodevSoftwareToolPage'
 
 /** Day the template and the labour rules were last checked: move it when the files or the facts change. */
-export const TIME_CLOCK_SHEET_TEMPLATE_UPDATED_AT: string = '2026-11-15'
+export const TIME_CLOCK_SHEET_TEMPLATE_UPDATED_AT: string = '2026-11-16'
 
 export const TIME_CLOCK_SHEET_TEMPLATE_ROUTE_NAME: string = 'tools-free-templates-time-clock-sheet'
 
@@ -10,6 +10,9 @@ export const TIME_CLOCK_SHEET_TEMPLATE_PDF_PATH: string = '/modeles/fiche-de-poi
 
 /** Excel version: daily hours calculated from the clock times, weekly total and overtime, monthly summary, settings. */
 export const TIME_CLOCK_SHEET_TEMPLATE_XLSX_PATH: string = '/modeles/fiche-de-pointage-heures-de-travail.xlsx'
+
+/** Word version: the same two pages as the PDF, editable. */
+export const TIME_CLOCK_SHEET_TEMPLATE_DOCX_PATH: string = '/modeles/fiche-de-pointage-heures-de-travail.docx'
 
 /** Labour Code, art. D3171-8: daily record of start and end times (or hours worked) and weekly summary, outside a shared posted schedule. */
 export const WORKING_TIME_DAILY_RECORD_SOURCE: DibodevSourceReference = {

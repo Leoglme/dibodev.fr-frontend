@@ -4,6 +4,7 @@ import {
   CONSUMER_CARRIER_PROTEST_SOURCE,
   CONSUMER_DELIVERY_RESERVATIONS_SOURCE,
   CONSUMER_RISK_TRANSFER_SOURCE,
+  DELIVERY_NOTE_TEMPLATE_DOCX_PATH,
   DELIVERY_NOTE_TEMPLATE_PDF_PATH,
   DELIVERY_NOTE_TEMPLATE_UPDATED_AT,
   DELIVERY_NOTE_TEMPLATE_XLSX_PATH,
@@ -13,9 +14,9 @@ import {
 
 export const DELIVERY_NOTE_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent = {
   meta: {
-    title: 'Delivery note: free French template (PDF + Excel)',
+    title: 'Delivery note: free French template (PDF, Word, Excel)',
     description:
-      'Delivery note: free French template in PDF and Excel, quantity left to deliver calculated, received in good order or with reservations, carrier claim sheet.',
+      'Delivery note: free French template in PDF, Word and Excel, quantity left to deliver, received in good order or with reservations, carrier claim sheet.',
     inLanguage: 'en',
     schemaAbout: 'French delivery note and delivery reservations sheet template',
   },
@@ -23,15 +24,15 @@ export const DELIVERY_NOTE_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent =
   shareImage: {
     titleLines: ['Delivery note', 'free French template'],
     highlight: 'Delivery note',
-    subtitle: 'Delivery note with quantity left to deliver and delivery reservations sheet, in PDF and Excel',
+    subtitle: 'Delivery note with quantity left to deliver and delivery reservations sheet, in PDF, Word and Excel',
     badge: 'Free, no sign-up',
     icon: 'truck',
-    alt: 'Free French delivery note template: delivery note and delivery reservations sheet in PDF and Excel, downloaded without sign-up on dibodev.fr',
+    alt: 'Free French delivery note template: delivery note and delivery reservations sheet in PDF, Word and Excel, downloaded without sign-up on dibodev.fr',
   },
   hero: {
     titleBefore: '',
     titleHighlight: 'Delivery note',
-    titleAfter: ': free French template, PDF and Excel (+ reservations sheet)',
+    titleAfter: ': free French template, PDF, Word and Excel (+ reservations sheet)',
     reassurances: [
       'Delivery note + reservations sheet',
       'Excel with the quantity left calculated',
@@ -47,7 +48,7 @@ export const DELIVERY_NOTE_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent =
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For businesses in France that deliver their customers, with their own van or through a carrier. Two files in French, no form to fill in: the PDF prints in two copies, the Excel file calculates the quantity left to deliver and keeps the log. Receiving goods from a supplier? Take our inventory sheet and goods receipt note template instead.',
+    lead: 'For businesses in France that deliver their customers, with their own van or through a carrier. Three files in French, no form to fill in: the PDF prints in two copies, the Excel file calculates the quantity left to deliver and keeps the log, the Word file can be edited freely. Receiving goods from a supplier? Take our inventory sheet and goods receipt note template instead.',
     files: [
       {
         label: 'Download the PDF template',
@@ -58,6 +59,11 @@ export const DELIVERY_NOTE_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent =
         label: 'Download the Excel version',
         href: DELIVERY_NOTE_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 sheets, quantities calculated, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: DELIVERY_NOTE_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote: 'Free to use and adapt to your products and deliveries. It does not replace the advice of a lawyer.',
@@ -196,7 +202,7 @@ export const DELIVERY_NOTE_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent =
       {
         question: 'Is the delivery note template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'Is a delivery note mandatory in France?',
