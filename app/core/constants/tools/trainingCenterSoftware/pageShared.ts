@@ -12,6 +12,7 @@ export const TRAINING_CENTER_PAGE_SCREENSHOT_URL: string =
 
 /** Articles linked at the bottom of the page; the untranslated ones are left out of /en and /es automatically. */
 export const TRAINING_CENTER_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
+  'alternative-digiforma-logiciel-organisme-de-formation',
   'logiciel-gestion-auto-ecole-planning-eleves-heures',
   'application-metier-sur-mesure-guide-tpe-pme',
   'logiciel-metier-saas-etagere-ou-sur-mesure',
