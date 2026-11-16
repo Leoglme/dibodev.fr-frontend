@@ -64,6 +64,14 @@
               <span>{{ page.departments.csvLinkLabel }}</span>
             </DibodevLink>
           </span>
+          <DibodevLink
+            :link="TOWN_HALL_WEBSITES_STUDY_OPEN_DATA_URL"
+            :externalLink="true"
+            class="text-[15px] leading-6 font-medium"
+          >
+            <span>{{ page.departments.openDataLinkLabel }}</span>
+            <DibodevIcon name="ExternalLink" mode="stroke" :width="16" :height="16" />
+          </DibodevLink>
         </div>
       </DibodevCallout>
     </template>
@@ -148,6 +156,7 @@ import DibodevLandingSection from '~/components/sections/DibodevLandingSection.v
 import DibodevMethodSection from '~/components/sections/DibodevMethodSection.vue'
 import DibodevPriceListSection from '~/components/sections/DibodevPriceListSection.vue'
 import DibodevSourcedFactsSection from '~/components/sections/DibodevSourcedFactsSection.vue'
+import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { buildDatasetSchemaJson } from '~/config/datasetSchema'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
@@ -160,6 +169,7 @@ import {
   TOWN_HALL_WEBSITES_STUDY_CSV_PATH,
   TOWN_HALL_WEBSITES_STUDY_DEPARTMENTS_SHOWN_COUNT,
   TOWN_HALL_WEBSITES_STUDY_ENDED_AT,
+  TOWN_HALL_WEBSITES_STUDY_OPEN_DATA_URL,
   TOWN_HALL_WEBSITES_STUDY_PAGE_PATHS,
   TOWN_HALL_WEBSITES_STUDY_RELATED_ARTICLE_SLUGS,
 } from '~/core/constants/townHallWebsitesStudy/pageShared'
@@ -303,6 +313,7 @@ useHead({
         name: page.meta.datasetName,
         description: page.meta.datasetDescription,
         csvPath: TOWN_HALL_WEBSITES_STUDY_CSV_PATH,
+        openDataUrl: TOWN_HALL_WEBSITES_STUDY_OPEN_DATA_URL,
         dateModified: TOWN_HALL_WEBSITES_STUDY_ENDED_AT,
         spatialCoverage: DATASET_SPATIAL_COVERAGE,
         keywords: DATASET_KEYWORDS,

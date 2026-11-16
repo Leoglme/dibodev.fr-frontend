@@ -129,6 +129,7 @@ export const TOWN_HALL_WEBSITES_STUDY_PAGE_CONTENT_ES: DibodevTownHallWebsitesSt
     csvText:
       'una fila por departamento, con los ayuntamientos del directorio, los que no tienen web declarada, las webs leídas, las cuotas de WordPress y de Joomla, las webs que muestran su PHP y, entre ellas, las que no tienen correcciones. Ningún municipio, ninguna dirección de web, ningún proveedor en el archivo. Licencia CC BY 4.0: cita «Dibodev, recogida del 15 y 16 de noviembre de 2026» con un enlace a esta página.',
     csvLinkLabel: 'Descargar las cifras por departamento (CSV)',
+    openDataLinkLabel: 'Ver la ficha en data.gouv.fr',
     csvFootnote:
       'Números pequeños: París, Hauts-de-Seine, Seine-Saint-Denis y los departamentos de ultramar tienen menos de 40 webs leídas. Sus cuotas no se comentan solas.',
   },

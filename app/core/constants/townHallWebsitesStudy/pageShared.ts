@@ -24,6 +24,10 @@ export const TOWN_HALL_WEBSITES_STUDY_PAGE_PATHS: Record<SupportedLocale, string
 /** The CSV published next to the page, one row per department, written by build_town_hall_study_page_data.py. */
 export const TOWN_HALL_WEBSITES_STUDY_CSV_PATH: string = '/data/etude-sites-internet-mairies-2026-11.csv'
 
+/** The same figures published on data.gouv.fr (organisation « Dibodev », created on 16 November 2026), linked from the page and from its Dataset JSON-LD. */
+export const TOWN_HALL_WEBSITES_STUDY_OPEN_DATA_URL: string =
+  'https://www.data.gouv.fr/datasets/sites-internet-des-mairies-francaises-outils-versions-de-php-et-de-joomla-par-departement-releve-de-novembre-2026'
+
 /** Departments shown on the page, those with the most read websites; the CSV holds all 101. */
 export const TOWN_HALL_WEBSITES_STUDY_DEPARTMENTS_SHOWN_COUNT: number = 15
 

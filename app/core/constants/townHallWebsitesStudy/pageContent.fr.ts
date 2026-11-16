@@ -117,6 +117,7 @@ export const TOWN_HALL_WEBSITES_STUDY_PAGE_CONTENT_FR: DibodevTownHallWebsitesSt
     csvEmphasizedIntro: `Les 101 départements, à télécharger${NBSP}:`,
     csvText: `une ligne par département, avec les mairies de l’annuaire, celles sans site déclaré, les sites lus, les parts de WordPress et de Joomla, les sites qui affichent leur PHP et, parmi eux, ceux sans correctifs. Aucune commune, aucune adresse de site, aucun prestataire dans le fichier. Licence CC BY 4.0${NBSP}: citez «${NBSP}Dibodev, relevé des 15 et 16 novembre 2026${NBSP}» avec un lien vers cette page.`,
     csvLinkLabel: 'Télécharger les chiffres par département (CSV)',
+    openDataLinkLabel: 'Voir la fiche sur data.gouv.fr',
     csvFootnote: `Petits effectifs${NBSP}: Paris, les Hauts-de-Seine, la Seine-Saint-Denis et l’outre-mer comptent moins de 40 sites lus. Leurs parts ne se commentent pas seules.`,
   },
   limits: {

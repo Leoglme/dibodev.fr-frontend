@@ -128,6 +128,7 @@ export const TOWN_HALL_WEBSITES_STUDY_PAGE_CONTENT_EN: DibodevTownHallWebsitesSt
     csvText:
       'one row per department, with the town halls in the directory, those without a declared website, the websites read, the WordPress and Joomla shares, the websites that show their PHP and, among them, those without fixes. No town, no website address, no provider in the file. CC BY 4.0 licence: cite “Dibodev, survey of 15 and 16 November 2026” with a link to this page.',
     csvLinkLabel: 'Download the figures by department (CSV)',
+    openDataLinkLabel: 'See the record on data.gouv.fr',
     csvFootnote:
       'Small counts: Paris, Hauts-de-Seine, Seine-Saint-Denis and the overseas departments have fewer than 40 websites read. Their shares should not be discussed on their own.',
   },

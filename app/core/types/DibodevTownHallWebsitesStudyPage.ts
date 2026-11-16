@@ -84,6 +84,7 @@ export type DibodevTownHallWebsitesStudyPageContent = {
     csvEmphasizedIntro: string
     csvText: string
     csvLinkLabel: string
+    openDataLinkLabel: string
     csvFootnote: string
   }
   limits: DibodevTownHallWebsitesStudySectionHeading & {
