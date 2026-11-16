@@ -5,6 +5,11 @@ import type {
 } from '~/core/types/DibodevBudgetEstimator'
 import type { DibodevEInvoicingVerdict } from '~/core/types/DibodevEInvoicingCheck'
 import type {
+  DibodevAiBotFetchStatus,
+  DibodevAiContentStatus,
+  DibodevAiReadabilityVerdict,
+} from '~/core/types/DibodevAiReadabilityCheck'
+import type {
   DibodevGdprConsentToolKey,
   DibodevGdprCookieCheckVerdict,
   DibodevGdprLinkKey,
@@ -15,6 +20,8 @@ import type {
   DibodevEmailDeliverabilityVerdict,
   DibodevEmailProviderKey,
 } from '~/core/types/DibodevEmailDeliverabilityCheck'
+import type { DibodevSearchConsoleReadErrorKind } from '~/core/types/DibodevGoogleUpdateImpact'
+import type { DibodevGoogleUpdateImpactMode } from '~/core/types/DibodevGoogleUpdateImpactChecker'
 import type { DibodevHostingProviderKey, DibodevHostingStatusState } from '~/core/types/DibodevHostingStatus'
 import type {
   DibodevJoomlaTemplateKind,
@@ -226,6 +233,31 @@ export type TrackingEventPayloads = {
     consentTool: DibodevGdprConsentToolKey | null
     missingLinks: DibodevGdprLinkKey[]
     errorKind: DibodevSiteCheckErrorKind | null
+  }
+  [TRACKING_EVENTS.aiReadabilityCheckStarted]: { location: string }
+  [TRACKING_EVENTS.aiReadabilityChecked]: {
+    location: string
+    outcome: 'result' | 'error'
+    verdict: DibodevAiReadabilityVerdict | null
+    blockedCrawlerCount: number | null
+    blockedSearchCrawlerCount: number | null
+    botFetchStatus: DibodevAiBotFetchStatus | null
+    contentStatus: DibodevAiContentStatus | null
+    errorKind: DibodevSiteCheckErrorKind | null
+  }
+  [TRACKING_EVENTS.googleUpdateImpactCheckStarted]: { location: string; mode: DibodevGoogleUpdateImpactMode }
+  [TRACKING_EVENTS.googleUpdateImpactChecked]: {
+    location: string
+    mode: DibodevGoogleUpdateImpactMode
+    verdict: string
+    provisionalTrend: string | null
+    update: string
+    hasPageComparison: boolean
+    isExample: boolean
+  }
+  [TRACKING_EVENTS.googleUpdateExportUnreadable]: {
+    location: string
+    errorKind: DibodevSearchConsoleReadErrorKind
   }
   [TRACKING_EVENTS.siteCheckReportRequested]: {
     location: string

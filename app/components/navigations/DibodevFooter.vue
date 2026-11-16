@@ -348,6 +348,16 @@ const toolLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLi
     to: localePath('tools-website-health-check'),
   },
   {
+    key: 'googleUpdateImpactCheck',
+    title: t('footer.tools.googleUpdateImpactCheck'),
+    to: localePath('tools-google-update-impact-check'),
+  },
+  {
+    key: 'aiReadabilityCheck',
+    title: t('footer.tools.aiReadabilityCheck'),
+    to: localePath('tools-ai-readability-check'),
+  },
+  {
     key: 'gdprCookieCheck',
     title: t('footer.tools.gdprCookieCheck'),
     to: localePath('tools-gdpr-cookie-check'),

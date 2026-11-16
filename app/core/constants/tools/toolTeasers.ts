@@ -7,6 +7,8 @@ import { JOOMLA_VERSION_CHECK_ROUTE_NAME } from '~/core/constants/joomlaVersionC
 import { HOSTING_STATUS_TEASER } from '~/core/constants/hostingStatus/pageShared'
 import { WEBSITE_HEALTH_CHECK_TEASER } from '~/core/constants/websiteHealthCheck/pageShared'
 import { GDPR_COOKIE_CHECK_TEASER } from '~/core/constants/gdprCookieCheck/pageShared'
+import { AI_READABILITY_CHECK_TEASER } from '~/core/constants/aiReadabilityCheck/pageShared'
+import { GOOGLE_UPDATE_IMPACT_CHECK_TEASER } from '~/core/constants/googleUpdateImpactCheck/pageShared'
 import { WEB_ACCESSIBILITY_SCOPE_TEASER } from '~/core/constants/webAccessibilityScope/pageShared'
 import { LEGAL_NOTICE_GENERATOR_TEASER } from '~/core/constants/legalNotice/pageShared'
 import { EMAIL_DELIVERABILITY_CHECK_ROUTE_NAME } from '~/core/constants/emailDeliverabilityCheck/pageShared'
@@ -862,6 +864,8 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   WORDPRESS_HACK_CHECK_TEASER,
   JOOMLA_VERSION_CHECK_TEASER,
   WEBSITE_HEALTH_CHECK_TEASER,
+  GOOGLE_UPDATE_IMPACT_CHECK_TEASER,
+  AI_READABILITY_CHECK_TEASER,
   GDPR_COOKIE_CHECK_TEASER,
   LEGAL_NOTICE_GENERATOR_TEASER,
   WEB_ACCESSIBILITY_SCOPE_TEASER,

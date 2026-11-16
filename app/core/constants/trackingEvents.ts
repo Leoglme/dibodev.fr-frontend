@@ -100,6 +100,16 @@ export const TRACKING_EVENTS = {
   gdprCookieCheckStarted: 'gdpr_cookie_check_started',
   /** A site checked by the GDPR cookie checker, with the verdict, the trackers and the consent tool found (or the error), never the address. */
   gdprCookieChecked: 'gdpr_cookie_checked',
+  /** First link typed in the AI readability checker (sent once per page view). */
+  aiReadabilityCheckStarted: 'ai_readability_check_started',
+  /** A site checked by the AI readability checker, with the verdict and the number of robots blocked (or the error), never the link. */
+  aiReadabilityChecked: 'ai_readability_checked',
+  /** First action in the Google update checker (tab, file or example), sent once per page view, with the way in. */
+  googleUpdateImpactCheckStarted: 'google_update_impact_check_started',
+  /** A verdict of the Google update checker, from the export or the test: never a page, a figure nor a file name. */
+  googleUpdateImpactChecked: 'google_update_impact_checked',
+  /** An export the Google update checker could not read at all, with the reason: never a file name. */
+  googleUpdateExportUnreadable: 'google_update_export_unreadable',
   /** The result of a free checker asked by e-mail, with the tool, the verdict and the contact consent (never the site nor the e-mail). */
   siteCheckReportRequested: 'site_check_report_requested',
   /** A demo asked from the site workshop of a trade page, with the choices made (never the e-mail nor the phone). */

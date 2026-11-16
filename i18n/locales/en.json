@@ -247,6 +247,8 @@
       "wordpressHackCheck": "Hacked WordPress site: check",
       "emailDeliverabilityCheck": "Emails in spam: check SPF, DKIM, DMARC",
       "websiteHealthCheck": "Test my website: 8 checks",
+      "googleUpdateImpactCheck": "Google update: is my site affected?",
+      "aiReadabilityCheck": "Can ChatGPT read my website?",
       "gdprCookieCheck": "GDPR compliant website? Check the cookies",
       "legalNoticeGenerator": "Legal notice and privacy policy generator",
       "webAccessibilityScope": "Web accessibility law: does it apply to me?",
@@ -683,6 +685,29 @@
           "needsCheck": "points to check",
           "atRisk": "trackers loaded without consent",
           "unknown": "page unreadable from outside"
+        }
+      },
+      "aiReadability": {
+        "messageWithSite": "Hello,\nmy website {site} has just been through the “Can ChatGPT read my website?” test. Result: “{verdict}”.\nCould you tell me what to do so that AIs can read it?",
+        "messageWithoutSite": "Hello,\nI would like to know whether ChatGPT and the other AIs can read my website, and fix it if needed.\nMy website link: ",
+        "verdicts": {
+          "readable": "readable by AIs",
+          "partlyBlocked": "partly blocked for AIs",
+          "blocked": "blocked for AIs",
+          "emptyWithoutJavascript": "readable, but empty without JavaScript",
+          "unknown": "page unreadable from outside"
+        }
+      },
+      "googleUpdate": {
+        "messageWithVerdict": "Hello,\nI ran the tool “Google update: is my site affected?”. Result: “{verdict}”.\nCould you give me a first opinion?\nMy site's link: ",
+        "messageWithoutVerdict": "Hello,\nmy visits from Google have dropped and I would like to know whether the Google update is the cause.\nMy site's link: \nSince when it has been dropping: ",
+        "verdicts": {
+          "affected": "clear drop since the start of the update",
+          "stable": "not affected",
+          "winner": "up",
+          "startedBefore": "drop that started before the update",
+          "tooEarly": "too early to conclude",
+          "unreadable": "comparison impossible with my file"
         }
       },
       "phpUpdate": {
@@ -1127,7 +1152,7 @@
     },
     "siteChecks": {
       "title": "Website check tools",
-      "paragraph1": "When you test a website with one of the free tools of this site (PHP vulnerability, hacked WordPress site, emails in spam, Test my website, GDPR-compliant website), I keep the address of the website tested (or the domain, for emails), the tool used, the result, a few technical indicators (for example the PHP version or the trackers seen) and the date, in a file on my server. This data is only used for statistics, such as the share of websites that load Google Analytics without consent, and is erased after 12 months. I never use it to prospect, never publish it website by website and never pass it on. Neither your IP address nor your e-mail address is in it.",
+      "paragraph1": "When you test a website with one of the free tools of this site (PHP vulnerability, hacked WordPress site, emails in spam, Test my website, GDPR-compliant website, website readable by ChatGPT), I keep the address of the website tested (or the domain, for emails), the tool used, the result, a few technical indicators (for example the PHP version or the trackers seen) and the date, in a file on my server. This data is only used for statistics, such as the share of websites that load Google Analytics without consent, and is erased after 12 months. I never use it to prospect, never publish it website by website and never pass it on. Neither your IP address nor your e-mail address is in it.",
       "paragraph2": "If you ask to receive the result by e-mail, your address is only used to send it to you: it is not kept. If you also tick the box to be contacted about this website, I receive your address, the website tested and its result by e-mail, and a copy is kept in a file on my server for a year at most, only to contact you about it. The e-mails leave through the provider Mailjet (servers in the European Union).",
       "paragraph3": "These processings rely on my legitimate interest for the statistics and on your consent to be contacted. You can object, withdraw your consent or ask for a website or a contact to be erased at any time, by writing to the address given under “Your rights”."
     },

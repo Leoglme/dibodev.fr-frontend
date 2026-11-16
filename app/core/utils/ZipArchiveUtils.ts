@@ -3,9 +3,23 @@ export type ZipArchiveEntry = {
   data: Uint8Array
 }
 
+type ZipCentralDirectoryEntry = {
+  name: string
+  method: number
+  compressedSize: number
+  localHeaderOffset: number
+}
+
+/** Raised when the browser cannot decompress a file of the archive. */
+export class ZipUnsupportedError extends Error {}
+
 const LOCAL_FILE_HEADER_SIGNATURE: number = 0x04034b50
 const CENTRAL_DIRECTORY_SIGNATURE: number = 0x02014b50
 const END_OF_CENTRAL_DIRECTORY_SIGNATURE: number = 0x06054b50
+const END_OF_CENTRAL_DIRECTORY_MINIMUM_SIZE: number = 22
+const ARCHIVE_COMMENT_MAXIMUM_SIZE: number = 65535
+const STORED_METHOD: number = 0
+const DEFLATE_METHOD: number = 8
 const ZIP_VERSION: number = 20
 const UTF8_NAMES_FLAG: number = 0x0800
 /** 1 January 2026, 00:00, in MS-DOS format: a fixed date keeps the same answers producing the same file. */
@@ -14,7 +28,7 @@ const DOS_DATE: number = ((2026 - 1980) << 9) | (1 << 5) | 1
 
 let crcTable: Uint32Array | null = null
 
-/** Uncompressed (« stored ») ZIP archives, enough for an Office document. */
+/** ZIP archives: written uncompressed (« stored »), enough for an Office document, and read in the browser. */
 export class ZipArchiveUtils {
   /**
    * Builds the archive bytes from its files.
@@ -79,6 +93,47 @@ export class ZipArchiveUtils {
   }
 
   /**
+   * Whether the bytes start like a zip archive (« PK »).
+   * @param {Uint8Array} bytes - The file bytes.
+   * @returns {boolean} True for a zip.
+   */
+  static isZip(bytes: Uint8Array): boolean {
+    return (
+      bytes.length >= 4 &&
+      new DataView(bytes.buffer, bytes.byteOffset, 4).getUint32(0, true) === LOCAL_FILE_HEADER_SIGNATURE
+    )
+  }
+
+  /**
+   * Extracts the files of an archive whose name ends with an extension, stored or compressed with deflate.
+   * @param {Uint8Array} bytes - The archive.
+   * @param {string} extension - The end of the names kept, in lowercase (« .csv »).
+   * @returns {Promise<ZipArchiveEntry[]>} The files kept.
+   * @throws {ZipUnsupportedError} When a file is compressed and the browser has no DecompressionStream.
+   */
+  static async readFiles(bytes: Uint8Array, extension: string): Promise<ZipArchiveEntry[]> {
+    const view: DataView = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength)
+    const files: ZipArchiveEntry[] = []
+
+    for (const entry of this.readCentralDirectory(bytes)) {
+      if (!entry.name.toLowerCase().endsWith(extension)) {
+        continue
+      }
+      const nameLength: number = view.getUint16(entry.localHeaderOffset + 26, true)
+      const extraLength: number = view.getUint16(entry.localHeaderOffset + 28, true)
+      const dataStart: number = entry.localHeaderOffset + 30 + nameLength + extraLength
+      const stored: Uint8Array = bytes.subarray(dataStart, dataStart + entry.compressedSize)
+
+      if (entry.method === STORED_METHOD) {
+        files.push({ path: entry.name, data: stored })
+      } else if (entry.method === DEFLATE_METHOD) {
+        files.push({ path: entry.name, data: await this.inflateRaw(stored) })
+      }
+    }
+    return files
+  }
+
+  /**
    * CRC-32 checksum (polynomial 0xEDB88320) required for every file of the archive.
    * @param {Uint8Array} data - The file bytes.
    * @returns {number} The unsigned checksum.
@@ -110,6 +165,73 @@ export class ZipArchiveUtils {
     }
     crcTable = table
     return table
+  }
+
+  /**
+   * Lists the files of a zip from its central directory, read from the end of the archive.
+   * @param {Uint8Array} bytes - The archive.
+   * @returns {ZipCentralDirectoryEntry[]} The files.
+   * @throws {Error} When the archive has no readable central directory.
+   */
+  private static readCentralDirectory(bytes: Uint8Array): ZipCentralDirectoryEntry[] {
+    const view: DataView = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength)
+    const searchStart: number = Math.max(
+      0,
+      bytes.length - END_OF_CENTRAL_DIRECTORY_MINIMUM_SIZE - ARCHIVE_COMMENT_MAXIMUM_SIZE,
+    )
+    let endOffset: number = -1
+
+    for (let offset: number = bytes.length - END_OF_CENTRAL_DIRECTORY_MINIMUM_SIZE; offset >= searchStart; offset--) {
+      if (view.getUint32(offset, true) === END_OF_CENTRAL_DIRECTORY_SIGNATURE) {
+        endOffset = offset
+        break
+      }
+    }
+    if (endOffset === -1) {
+      throw new Error('No end of central directory')
+    }
+    const entryCount: number = view.getUint16(endOffset + 10, true)
+    const nameDecoder: TextDecoder = new TextDecoder('utf-8')
+    const entries: ZipCentralDirectoryEntry[] = []
+    let offset: number = view.getUint32(endOffset + 16, true)
+
+    for (let entryIndex: number = 0; entryIndex < entryCount; entryIndex++) {
+      if (view.getUint32(offset, true) !== CENTRAL_DIRECTORY_SIGNATURE) {
+        throw new Error('Damaged central directory')
+      }
+      const nameLength: number = view.getUint16(offset + 28, true)
+      const extraLength: number = view.getUint16(offset + 30, true)
+      const commentLength: number = view.getUint16(offset + 32, true)
+      entries.push({
+        name: nameDecoder.decode(bytes.subarray(offset + 46, offset + 46 + nameLength)),
+        method: view.getUint16(offset + 10, true),
+        compressedSize: view.getUint32(offset + 20, true),
+        localHeaderOffset: view.getUint32(offset + 42, true),
+      })
+      offset += 46 + nameLength + extraLength + commentLength
+    }
+    return entries
+  }
+
+  /**
+   * Decompresses deflate data with the browser's own DecompressionStream.
+   * @param {Uint8Array} compressed - The compressed bytes.
+   * @returns {Promise<Uint8Array>} The decompressed bytes.
+   * @throws {ZipUnsupportedError} When the browser has no DecompressionStream or does not know « deflate-raw ».
+   */
+  private static async inflateRaw(compressed: Uint8Array): Promise<Uint8Array> {
+    if (typeof DecompressionStream === 'undefined') {
+      throw new ZipUnsupportedError('DecompressionStream is missing')
+    }
+    let decompressor: DecompressionStream
+
+    try {
+      decompressor = new DecompressionStream('deflate-raw')
+    } catch {
+      throw new ZipUnsupportedError('deflate-raw is not supported')
+    }
+    const stream: ReadableStream<Uint8Array> = new Blob([new Uint8Array(compressed)]).stream().pipeThrough(decompressor)
+    return new Uint8Array(await new Response(stream).arrayBuffer())
   }
 
   /**

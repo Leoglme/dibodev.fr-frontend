@@ -1,3 +1,4 @@
+import type { AiCrawlerAccess, AiReadabilityCheckResult } from '~~/server/types/tools/aiReadabilityCheck'
 import type {
   EmailDeliverabilityCheckResult,
   EmailDeliverabilityFinding,
@@ -14,8 +15,8 @@ import type {
   PhpVulnerabilityPlatformKey,
   PhpVulnerabilityVerdict,
 } from '~~/server/types/tools/phpVulnerabilityCheck'
-import type { SiteCheckToolKey } from '~~/server/types/tools/siteCheckReport'
 import type {
+  SiteCheckStatsToolKey,
   SiteCheckStatsDetails,
   SiteCheckStatsDetailValue,
   SiteCheckStatsEntry,
@@ -35,7 +36,7 @@ import type {
   WordPressHackVerdict,
   WordPressPluginResult,
 } from '~~/server/types/tools/wordpressHackCheck'
-import { SITE_CHECK_TOOL_KEYS } from '~~/server/constants/siteCheckTools'
+import { SITE_CHECK_STATS_TOOL_KEYS } from '~~/server/constants/siteCheckTools'
 
 const STATS_STORAGE_KEY_PREFIX: string = 'site-checks:stats:'
 const RETENTION_DAYS: number = 365
@@ -321,6 +322,31 @@ export class SiteCheckStatsService {
   }
 
   /**
+   * Keeps an AI readability check: robots blocked in robots.txt, the robot's reading, the text without JavaScript and the helps found.
+   * @param {AiReadabilityCheckResult} result - The result sent to the visitor.
+   * @returns {Promise<void>} Resolves once kept; a storage failure is logged, never thrown.
+   */
+  static async recordAiReadabilityCheck(result: AiReadabilityCheckResult): Promise<void> {
+    const blockedCrawlers: AiCrawlerAccess[] = result.robotsTxt.crawlers.filter(
+      (crawler: AiCrawlerAccess): boolean => !crawler.isAllowed,
+    )
+    await this.record('aiReadability', result.host, result.verdict, {
+      robotsTxtStatus: result.robotsTxt.status,
+      blockedCrawlers: blockedCrawlers.map((crawler: AiCrawlerAccess): string => crawler.key),
+      blockedSearchCrawlerCount: blockedCrawlers.filter(
+        (crawler: AiCrawlerAccess): boolean => crawler.role === 'search',
+      ).length,
+      botFetchStatus: result.botFetch.status,
+      contentStatus: result.content.status,
+      wordCount: result.content.wordCount,
+      appContainer: result.content.appContainer,
+      directives: [...result.directives.directives],
+      structuredDataTypes: [...result.understanding.structuredDataTypes],
+      hasLlmsTxt: result.understanding.llmsTxtStatus === 'found',
+    })
+  }
+
+  /**
    * Counts the checks of the last twelve months: per tool, per month, per verdict, and the shares worth quoting.
    * @returns {Promise<SiteCheckStatsSummary>} The figures, without any site name.
    */
@@ -340,8 +366,8 @@ export class SiteCheckStatsService {
       oldestCheckAt,
       checkCount: entries.length,
       siteCount: new Set(entries.map((entry: SiteCheckStatsEntry): string => entry.host)).size,
-      tools: SITE_CHECK_TOOL_KEYS.map(
-        (tool: SiteCheckToolKey): SiteCheckStatsToolSummary => this.buildToolSummary(tool, entries, latestEntries),
+      tools: SITE_CHECK_STATS_TOOL_KEYS.map(
+        (tool: SiteCheckStatsToolKey): SiteCheckStatsToolSummary => this.buildToolSummary(tool, entries, latestEntries),
       ),
       shares: SHARE_DEFINITIONS.map(
         (definition: SiteCheckStatsShareDefinition): SiteCheckStatsShare =>
@@ -385,14 +411,14 @@ export class SiteCheckStatsService {
 
   /**
    * Builds the entry and appends it to the file of its day; a storage failure never reaches the visitor.
-   * @param {SiteCheckToolKey} tool - The checker.
+   * @param {SiteCheckStatsToolKey} tool - The checker.
    * @param {string} host - The site or domain checked.
    * @param {string} verdict - The verdict sent to the visitor.
    * @param {SiteCheckStatsDetails} details - A few facts of the check.
    * @returns {Promise<void>}
    */
   private static async record(
-    tool: SiteCheckToolKey,
+    tool: SiteCheckStatsToolKey,
     host: string,
     verdict: string,
     details: SiteCheckStatsDetails,
@@ -520,13 +546,13 @@ export class SiteCheckStatsService {
 
   /**
    * The figures of one tool: checks per month, sites, and the verdicts of their latest check.
-   * @param {SiteCheckToolKey} tool - The checker.
+   * @param {SiteCheckStatsToolKey} tool - The checker.
    * @param {SiteCheckStatsEntry[]} entries - Every check kept.
    * @param {SiteCheckStatsEntry[]} latestEntries - The latest check of each site.
    * @returns {SiteCheckStatsToolSummary} The figures.
    */
   private static buildToolSummary(
-    tool: SiteCheckToolKey,
+    tool: SiteCheckStatsToolKey,
     entries: SiteCheckStatsEntry[],
     latestEntries: SiteCheckStatsEntry[],
   ): SiteCheckStatsToolSummary {

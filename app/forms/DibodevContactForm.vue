@@ -131,7 +131,9 @@ import type { DibodevWordPressHackVerdict } from '~/core/types/DibodevWordPressH
 import type { DibodevHostingStatusContactPrefill } from '~/core/types/DibodevHostingStatusContact'
 import type { DibodevEmailDeliverabilityVerdict } from '~/core/types/DibodevEmailDeliverabilityCheck'
 import type { DibodevGdprCookieCheckVerdict } from '~/core/types/DibodevGdprCookieCheck'
+import type { DibodevAiReadabilityVerdict } from '~/core/types/DibodevAiReadabilityCheck'
 import type { DibodevJoomlaVersionVerdict } from '~/core/types/DibodevJoomlaVersionCheck'
+import type { DibodevGoogleUpdateImpactVerdict } from '~/core/types/DibodevGoogleUpdateImpact'
 import { EInvoicingContactUtils } from '~/core/utils/EInvoicingContactUtils'
 import { PhpVulnerabilityContactUtils } from '~/core/utils/PhpVulnerabilityContactUtils'
 import { SiteCheckContactUtils } from '~/core/utils/SiteCheckContactUtils'
@@ -145,9 +147,17 @@ import {
   GDPR_COOKIE_CHECK_CONTACT_TOPIC,
   GDPR_COOKIE_CHECK_VERDICTS,
 } from '~/core/constants/gdprCookieCheck/pageShared'
+import {
+  AI_READABILITY_CHECK_CONTACT_TOPIC,
+  AI_READABILITY_CHECK_VERDICTS,
+} from '~/core/constants/aiReadabilityCheck/pageShared'
 import { WEBSITE_REDESIGN_CONTACT_TOPIC } from '~/core/constants/websiteRedesignPrompt'
 import { JOOMLA_UPDATE_CONTACT_TOPIC } from '~/core/constants/joomlaUpdateService/pageShared'
 import { JOOMLA_VERSION_CONTACT_TOPIC, JOOMLA_VERSION_VERDICTS } from '~/core/constants/joomlaVersionCheck/pageShared'
+import {
+  GOOGLE_UPDATE_CONTACT_TOPIC,
+  GOOGLE_UPDATE_IMPACT_VERDICTS,
+} from '~/core/constants/googleUpdateImpactCheck/pageShared'
 import { useTracking } from '~/composables/useTracking'
 import { useLeadSource } from '~/composables/useLeadSource'
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
@@ -219,9 +229,15 @@ const emailDeliverabilityPrefill: DibodevSiteCheckContactPrefill<DibodevEmailDel
   SiteCheckContactUtils.readSitePrefill(route.query, EMAIL_DELIVERABILITY_CONTACT_TOPIC, EMAIL_DELIVERABILITY_VERDICTS)
 const gdprCookieCheckPrefill: DibodevSiteCheckContactPrefill<DibodevGdprCookieCheckVerdict> | null =
   SiteCheckContactUtils.readSitePrefill(route.query, GDPR_COOKIE_CHECK_CONTACT_TOPIC, GDPR_COOKIE_CHECK_VERDICTS)
+/** `?topic=ai-readability` comes from the AI readability checker, with the site and the verdict when a check was run. */
+const aiReadabilityPrefill: DibodevSiteCheckContactPrefill<DibodevAiReadabilityVerdict> | null =
+  SiteCheckContactUtils.readSitePrefill(route.query, AI_READABILITY_CHECK_CONTACT_TOPIC, AI_READABILITY_CHECK_VERDICTS)
 /** `?topic=joomla-version` comes from the Joomla version checker, with the site and the verdict when a check was run. */
 const joomlaVersionPrefill: DibodevSiteCheckContactPrefill<DibodevJoomlaVersionVerdict> | null =
   SiteCheckContactUtils.readSitePrefill(route.query, JOOMLA_VERSION_CONTACT_TOPIC, JOOMLA_VERSION_VERDICTS)
+/** `?topic=google-update` comes from the Google update checker, with the verdict when the export was read. */
+const googleUpdatePrefill: DibodevSiteCheckContactPrefill<DibodevGoogleUpdateImpactVerdict> | null =
+  SiteCheckContactUtils.readSitePrefill(route.query, GOOGLE_UPDATE_CONTACT_TOPIC, GOOGLE_UPDATE_IMPACT_VERDICTS)
 /** `?topic=website-redesign` comes from the redesign prompt of the PHP and WordPress pages. */
 const isWebsiteRedesignVisit: boolean = String(route.query.topic ?? '') === WEBSITE_REDESIGN_CONTACT_TOPIC
 /** `?topic=joomla-update` comes from the Joomla update service page. */
@@ -256,6 +272,13 @@ function buildPrefilledMessage(): string {
   if (isJoomlaUpdateVisit) {
     return t('contact.form.joomlaUpdate.message')
   }
+  if (googleUpdatePrefill) {
+    return googleUpdatePrefill.verdict
+      ? t('contact.form.googleUpdate.messageWithVerdict', {
+          verdict: t(`contact.form.googleUpdate.verdicts.${googleUpdatePrefill.verdict}`),
+        })
+      : t('contact.form.googleUpdate.messageWithoutVerdict')
+  }
   if (joomlaVersionPrefill) {
     return joomlaVersionPrefill.site
       ? t('contact.form.joomlaVersion.messageWithSite', {
@@ -263,6 +286,14 @@ function buildPrefilledMessage(): string {
           verdict: t(`contact.form.joomlaVersion.verdicts.${joomlaVersionPrefill.verdict ?? 'unknown'}`),
         })
       : t('contact.form.joomlaVersion.messageWithoutSite')
+  }
+  if (aiReadabilityPrefill) {
+    return aiReadabilityPrefill.site
+      ? t('contact.form.aiReadability.messageWithSite', {
+          site: aiReadabilityPrefill.site,
+          verdict: t(`contact.form.aiReadability.verdicts.${aiReadabilityPrefill.verdict ?? 'unknown'}`),
+        })
+      : t('contact.form.aiReadability.messageWithoutSite')
   }
   if (gdprCookieCheckPrefill) {
     return gdprCookieCheckPrefill.site
@@ -543,9 +574,11 @@ onMounted((): void => {
     siteDownPrefill ||
     emailDeliverabilityPrefill ||
     gdprCookieCheckPrefill ||
+    aiReadabilityPrefill ||
     isWebsiteRedesignVisit ||
     isJoomlaUpdateVisit ||
-    joomlaVersionPrefill
+    joomlaVersionPrefill ||
+    googleUpdatePrefill
   ) {
     message.value = buildPrefilledMessage()
   }

@@ -112,6 +112,11 @@ const props: DibodevQuizTunnelProps = defineProps({
   },
 })
 
+/** `completed` carries the verdict, the first time the result shows, for pages that track it under their own event. */
+const emit: (event: 'completed', verdict: string) => void = defineEmits<{
+  (event: 'completed', verdict: string): void
+}>()
+
 const { t } = useI18n()
 const route = useRoute()
 const router = useRouter()
@@ -358,6 +363,7 @@ async function showStep(index: number): Promise<void> {
         verdict: result.value.verdict,
         answers: { ...answers.value },
       })
+      emit('completed', result.value.verdict)
     }
     resultStep.value?.focusTitle()
     if (!wasResultStep) {

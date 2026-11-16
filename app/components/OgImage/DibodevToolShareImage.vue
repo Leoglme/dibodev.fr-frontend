@@ -173,6 +173,7 @@ const TOOL_ICON_PATHS: Record<DibodevToolShareImageIcon, string[]> = {
     'M8 15a6 6 0 0 0 12 0v-3',
     'M22 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0',
   ],
+  trendingDown: ['M16 17h6v-6', 'm22 17-8.5-8.5-5 5L2 7'],
 }
 
 /** Space drawn between the parts of a title line (Satori drops the spaces at the edge of each span). */

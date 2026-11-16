@@ -1,0 +1,608 @@
+import type { DibodevAiReadabilityCheckPageContent } from '~/core/types/DibodevAiReadabilityCheckPage'
+import {
+  AI_ANTHROPIC_SOURCE,
+  AI_CLOUDFLARE_SOURCE,
+  AI_GOOGLE_SOURCE,
+  AI_LLMS_TXT_SOURCE,
+  AI_MICROSOFT_COPILOT_SOURCE,
+  AI_OPENAI_SOURCE,
+  AI_PERPLEXITY_SOURCE,
+} from '~/core/constants/aiReadabilityCheck/pageShared'
+import { NBSP } from '~/core/constants/typography'
+
+export const AI_READABILITY_CHECK_PAGE_FR: DibodevAiReadabilityCheckPageContent = {
+  meta: {
+    title: `Mon site est-il visible sur ChatGPT${NBSP}? Test gratuit`,
+    description: `Collez le lien de votre site${NBSP}: le test lit robots.txt et votre accueil comme un robot d’IA, sans JavaScript, et dit ce qui bloque ChatGPT.`,
+    inLanguage: 'fr-FR',
+    schemaAbout: `Lisibilité d’un site internet par les robots des intelligences artificielles (ChatGPT, Claude, Perplexity, Gemini)${NBSP}: robots.txt, pare-feu, contenu sans JavaScript`,
+  },
+  applicationName: 'Test de lisibilité d’un site par ChatGPT et les autres IA',
+  breadcrumbLabel: `Site lisible par ChatGPT${NBSP}: le test`,
+  shareImage: {
+    titleLines: ['Mon site est-il', `lisible par ChatGPT${NBSP}?`],
+    highlight: 'lisible par ChatGPT',
+    subtitle: 'robots.txt, pare-feu et texte sans JavaScript, lus comme un robot d’IA',
+    badge: 'Test gratuit, sans inscription',
+    alt: `Mon site est-il lisible par ChatGPT${NBSP}? Test gratuit par Dibodev`,
+  },
+  hero: {
+    titleBefore: 'Mon site est-il ',
+    titleHighlight: 'lisible par ChatGPT',
+    titleAfter: ` et les autres IA${NBSP}?`,
+    reassurances: [
+      'Gratuit, sans inscription',
+      'Rien à installer',
+      'Seuls le lien et le résultat sont gardés',
+      `Robots relus le 16${NBSP}novembre 2026`,
+    ],
+    description: `De plus en plus de gens posent leur question à ChatGPT, Perplexity, Copilot ou au mode IA de Google avant de choisir un prestataire. Une IA ne peut citer votre site que si ses robots ont le droit de le lire, et s’ils y trouvent du texte. Ce test fait ce qu’un robot fait${NBSP}: il lit votre fichier robots.txt, ouvre votre page d’accueil une fois normalement et une fois avec la signature du robot de recherche de ChatGPT, et regarde ce qui reste sans JavaScript. Pour chaque point${NBSP}: ce qu’il a vu, ce que ça veut dire, quoi faire.`,
+    authorIntro: 'Outil réalisé par',
+    authorBio: `développeur freelance près de Rennes. Je crée et je refais des sites pour des TPE et des PME, à distance, et je réponds sous 24${NBSP}h.`,
+  },
+  checker: {
+    siteLabel: 'Le lien de votre site',
+    sitePlaceholder: 'monentreprise.fr',
+    siteHint: `Un nom de domaine suffit. Le test fait quatre lectures${NBSP}: robots.txt, la page d’accueil deux fois, et /llms.txt. Seuls le lien du site et son résultat sont gardés, pour des statistiques.`,
+    submit: 'Tester mon site',
+    checking: 'Lecture…',
+    resultLabel: 'Votre résultat',
+    idleTitle: 'Collez le lien de votre site pour commencer',
+    idleText: `Le résultat dit quels robots d’IA ont le droit de lire votre accueil, ce que le robot de recherche de ChatGPT reçoit vraiment, s’il reste du texte sans JavaScript, et ce qui aide une IA à vous comprendre.`,
+    loadingTitle: 'Lecture du site…',
+    loadingText: `Je lis robots.txt, puis la page d’accueil comme un visiteur et comme un robot d’IA. Une quinzaine de secondes au plus.`,
+    errorTitles: {
+      invalid: 'Lien à corriger',
+      unreachable: 'Site injoignable',
+      rateLimited: 'Trop de vérifications',
+      failed: 'Vérification impossible',
+    },
+    errorTexts: {
+      invalid: `Entrez un nom de domaine public, comme monentreprise.fr, sans espace ni adresse interne.`,
+      unreachable: `Je n’ai pas pu lire la page d’accueil de {host}${NBSP}: lien faux, site hors ligne, ou serveur qui refuse les robots. Essayez avec www devant, ou sans.`,
+      rateLimited: `Vous avez lancé beaucoup de vérifications en peu de temps. Réessayez dans quelques minutes.`,
+      failed: `Une erreur est survenue de mon côté. Réessayez dans un instant, ou écrivez-moi le lien du site.`,
+    },
+    verdictTitles: {
+      readable: `{host}${NBSP}: lisible par les IA`,
+      partlyBlocked: `{host}${NBSP}: en partie bloqué pour les IA`,
+      blocked: `{host}${NBSP}: bloqué pour les IA`,
+      emptyWithoutJavascript: `{host}${NBSP}: lisible, mais vide pour une IA`,
+      unknown: `{host}${NBSP}: page illisible depuis l’extérieur`,
+    },
+    verdictTexts: {
+      readable: `Les robots d’IA de la liste ont le droit de lire votre page d’accueil, le robot de recherche de ChatGPT reçoit la même page qu’un visiteur, et le texte est là sans JavaScript. C’est une condition pour être cité, pas une garantie.`,
+      partlyBlocked: `Au moins un point empêche certains robots de lire votre site, ou le rend moins lisible${NBSP}: un robot bloqué, un refus du pare-feu, une interdiction dans la page. Le détail est ci-dessous.`,
+      blocked: `Les robots de recherche d’IA n’ont pas le droit de lire votre page d’accueil, ou la page demande à ne pas être indexée. Tant que c’est le cas, les réponses avec liens ne peuvent pas citer votre site.`,
+      emptyWithoutJavascript: `Les robots ont le droit d’entrer, mais la page n’a presque pas de texte sans JavaScript${NBSP}: un robot qui ne l’exécute pas ne voit qu’une page vide.`,
+      unknown: `La page d’accueil renvoie une erreur ou une page de vérification au test. Les lignes ci-dessous disent ce qui a pu être lu${NBSP}; vérifiez dans votre navigateur, ou envoyez-moi le lien.`,
+    },
+    robotsTitle: 'robots.txt, robot par robot',
+    robotsFile: {
+      label: 'Fichier robots.txt',
+      statusLabels: {
+        found: 'Trouvé',
+        missing: 'Absent',
+        unreadable: 'Erreur serveur',
+        notChecked: 'Non lu',
+      },
+      seenTexts: {
+        found: 'Le fichier robots.txt du site a été lu.',
+        missing: 'Pas de fichier robots.txt (ou une page web à sa place).',
+        unreadable: 'Le serveur répond par une erreur quand on demande robots.txt.',
+        notChecked: 'robots.txt n’a pas répondu à temps.',
+      },
+      meaningTexts: {
+        found: `C’est un petit fichier texte à la racine du site qui dit aux robots quelles pages ils ont le droit de lire. Les lignes suivantes disent ce qu’il permet à chaque robot sur votre page d’accueil.`,
+        missing: `Sans fichier, rien n’est interdit${NBSP}: tous les robots ont le droit de lire le site.`,
+        unreadable: `Un robot qui ne peut pas lire ce fichier peut considérer tout le site comme interdit, en attendant mieux.`,
+        notChecked: `Je ne peux rien dire des robots autorisés.`,
+      },
+      adviceTexts: {
+        missing: `rien d’obligatoire. Un fichier qui déclare votre sitemap aide quand même les robots à trouver vos pages.`,
+        unreadable: `demander à votre hébergeur ou à votre prestataire pourquoi /robots.txt renvoie une erreur.`,
+        notChecked: `ouvrir votre site suivi de /robots.txt dans le navigateur pour vérifier qu’il s’affiche.`,
+      },
+    },
+    crawlersAllowedLabel: 'Robots autorisés',
+    crawlersAllowedBadge: '{count} sur {total}',
+    crawlersAllowedSeenText: '{robots}.',
+    crawlersAllowedMeaningText: `Ils ont le droit de lire votre page d’accueil.`,
+    crawlerLabel: '{robot} · {operator}',
+    crawlerRoleLabels: {
+      search: 'Robot de recherche',
+      training: 'Robot d’entraînement',
+      user: 'Visite demandée par un utilisateur',
+    },
+    crawlerBlockedLabel: 'Bloqué',
+    crawlerBlockedSpecificSeenText: `{role}${NBSP}: bloqué par une règle qui le nomme dans robots.txt.`,
+    crawlerBlockedWildcardSeenText: `{role}${NBSP}: bloqué par une règle «${NBSP}User-agent: *${NBSP}» qui vise tous les robots.`,
+    crawlerBlockedMeaningTexts: {
+      search: `Un robot de recherche bloqué ne peut pas lire votre site${NBSP}: les réponses de son IA ne peuvent pas le citer avec un lien.`,
+      training: `Vous refusez que vos pages servent à entraîner des modèles. C’est un choix, et il ne retire pas votre site des réponses avec liens.`,
+      user: `Quand quelqu’un demande à l’IA d’ouvrir votre page, elle peut ne pas y arriver.`,
+    },
+    crawlerBlockedAdviceTexts: {
+      search: `retirer la règle «${NBSP}Disallow${NBSP}» qui le vise, ou ajouter un groupe à son nom avec «${NBSP}Allow: /${NBSP}».`,
+      training: 'rien, si c’est voulu. Sinon, retirer la règle qui le vise.',
+      user: 'retirer la règle qui le vise si vous voulez que l’IA puisse ouvrir vos pages à la demande.',
+    },
+    crawlerMayIgnoreRobotsTxtText: 'Son éditeur précise que robots.txt peut ne pas s’appliquer à ces visites.',
+    botFetchTitle: 'Ce que le robot reçoit vraiment',
+    botFetch: {
+      label: 'Lecture avec la signature d’un robot d’IA',
+      statusLabels: {
+        same: 'Même page',
+        refused: 'Refusé',
+        challenge: 'Page de vérification',
+        different: 'Contenu différent',
+        unreachable: 'Pas de réponse',
+        notCompared: 'Non comparé',
+      },
+      seenTexts: {
+        same: `Avec la signature d’OAI-SearchBot, le robot de recherche de ChatGPT, le site renvoie la même page qu’à une visite normale.`,
+        refused: `Avec la signature d’OAI-SearchBot, le site répond par un refus (code {status}), alors qu’il répond normalement au test.`,
+        challenge: `Avec la signature d’OAI-SearchBot, le site renvoie une page de vérification («${NBSP}Just a moment${NBSP}», défi anti-robot) au lieu de l’accueil.`,
+        different: `Avec la signature d’OAI-SearchBot, la page reçue a beaucoup moins de texte qu’à une visite normale.`,
+        unreachable: `La lecture avec la signature d’OAI-SearchBot n’a pas abouti à temps.`,
+        notCompared: `La page d’accueil ne s’ouvre pas normalement pour le test${NBSP}: il n’y a rien à comparer.`,
+      },
+      meaningTexts: {
+        same: `Rien, côté serveur ou pare-feu, ne semble refuser les robots d’IA.`,
+        refused: `C’est un signal, pas une preuve${NBSP}: certains pare-feu refusent une visite qui porte la signature d’un robot sans venir de ses adresses, et laissent passer le vrai. Mais si le refus vise aussi le vrai robot, votre site lui est fermé.`,
+        challenge: `C’est un signal, pas une preuve${NBSP}: la protection anti-robot peut laisser passer le vrai robot, qui vient de ses propres adresses. Si elle l’arrête aussi, il ne lit qu’une page de vérification.`,
+        different: `Le site sert peut-être une autre version aux robots, ou une page réduite. Ce que le robot lit n’est alors pas ce que vos clients voient.`,
+        unreachable: `Je ne peux pas conclure${NBSP}: lenteur passagère ou blocage silencieux.`,
+        notCompared: `Sans lecture normale, je ne peux pas comparer avec celle d’un robot.`,
+      },
+      adviceTexts: {
+        refused: `vérifier le réglage des robots dans votre pare-feu, chez votre hébergeur ou dans Cloudflare, et y autoriser les robots de recherche d’IA.`,
+        challenge: `vérifier le réglage des robots dans votre pare-feu, chez votre hébergeur ou dans Cloudflare, et y autoriser les robots de recherche d’IA.`,
+        different: 'comparer les deux versions avec votre prestataire ou votre hébergeur.',
+        unreachable: 'relancer le test dans quelques minutes.',
+      },
+    },
+    contentTitle: 'Contenu sans JavaScript',
+    content: {
+      label: 'Texte lisible sans JavaScript',
+      statusLabels: {
+        enough: 'Lisible',
+        thin: 'Peu de texte',
+        emptyAppShell: 'Vide sans JavaScript',
+        notReadable: 'Non lisible',
+      },
+      seenTexts: {
+        enough: `Environ {words} mots de texte dans le HTML reçu, sans exécuter le JavaScript.`,
+        thin: `Seulement {words} mots de texte dans le HTML reçu, sans exécuter le JavaScript.`,
+        emptyAppShell: `{words} mots de texte dans le HTML reçu, et un conteneur d’application qui attend le JavaScript.`,
+        notReadable: `La page d’accueil renvoie une erreur ou une page de vérification au test.`,
+      },
+      meaningTexts: {
+        enough: `Un robot qui n’exécute pas le JavaScript a de quoi comprendre votre page.`,
+        thin: `Un robot comprend mal une page qui dit peu de choses. Qui vous êtes, ce que vous faites et où${NBSP}: il faut l’écrire en toutes lettres.`,
+        emptyAppShell: `Votre site est lisible, mais vide pour une IA${NBSP}: le texte n’apparaît qu’une fois le JavaScript exécuté dans le navigateur.`,
+        notReadable: 'Je ne peux pas mesurer le texte.',
+      },
+      adviceTexts: {
+        thin: `écrire sur l’accueil, en texte et pas dans une image, votre métier, votre zone et vos services.`,
+        emptyAppShell: `faire produire le HTML par le serveur (rendu côté serveur ou pages générées à l’avance)${NBSP}: Next.js, Nuxt et les autres outils de ce type le permettent.`,
+        notReadable: 'ouvrir le site en navigation privée pour voir ce qu’un visiteur inconnu reçoit.',
+      },
+    },
+    contentFrameworkText: `Conteneur reconnu${NBSP}: {framework}.`,
+    directivesTitle: 'Interdictions dans la page',
+    directives: {
+      label: 'Balise meta robots et en-tête X-Robots-Tag',
+      statusLabels: {
+        none: 'Aucune',
+        restrictive: 'À vérifier',
+        noindex: 'noindex',
+      },
+      seenTexts: {
+        none: 'Ni balise meta robots qui interdit, ni en-tête X-Robots-Tag.',
+        restrictive: `Trouvé${NBSP}: {directives} ({sources}).`,
+        noindex: `Trouvé${NBSP}: {directives} ({sources}).`,
+      },
+      meaningTexts: {
+        none: 'La page ne demande pas aux robots de l’ignorer.',
+        restrictive: `«${NBSP}nosnippet${NBSP}» demande de ne citer aucun extrait de la page. «${NBSP}noai${NBSP}» et «${NBSP}noimageai${NBSP}» disent un refus d’usage par l’IA${NBSP}: chaque robot décide s’il les suit.`,
+        noindex: `«${NBSP}noindex${NBSP}» demande aux moteurs de ne pas garder la page dans leurs résultats. Une IA qui passe par un moteur ne la trouvera pas par lui.`,
+      },
+      adviceTexts: {
+        restrictive:
+          'les retirer si vous voulez être cité, dans le thème, l’extension SEO ou la configuration du serveur.',
+        noindex: `retirer «${NBSP}noindex${NBSP}» de la page d’accueil${NBSP}: case «${NBSP}Demander aux moteurs de recherche de ne pas indexer ce site${NBSP}» de WordPress, extension SEO, ou en-tête du serveur.`,
+      },
+    },
+    directiveSourceLabels: {
+      meta: 'balise meta',
+      header: 'en-tête X-Robots-Tag',
+    },
+    understandingTitle: 'Ce qui aide une IA à vous comprendre',
+    titleAndDescription: {
+      label: 'Titre et description',
+      statusLabels: {
+        complete: 'Présents',
+        titleOnly: 'Description absente',
+        descriptionOnly: 'Titre absent',
+        missing: 'Absents',
+        notReadable: 'Non lus',
+      },
+      seenTexts: {
+        complete: 'La page a un titre et une description.',
+        titleOnly: 'Un titre, mais pas de description (balise meta description).',
+        descriptionOnly: 'Une description, mais pas de titre (balise title).',
+        missing: 'Ni titre ni description dans la page.',
+        notReadable: 'La page d’accueil n’a pas pu être lue.',
+      },
+      meaningTexts: {
+        complete: 'Ce sont les premières lignes qu’un robot lit pour savoir de quoi parle la page.',
+        titleOnly: 'Ce sont les premières lignes qu’un robot lit pour savoir de quoi parle la page.',
+        descriptionOnly: 'Ce sont les premières lignes qu’un robot lit pour savoir de quoi parle la page.',
+        missing: 'Ce sont les premières lignes qu’un robot lit pour savoir de quoi parle la page.',
+        notReadable: 'Je ne peux pas le vérifier.',
+      },
+      adviceTexts: {
+        titleOnly: `écrire une description courte et claire${NBSP}: votre métier, votre ville, ce qui vous distingue.`,
+        descriptionOnly: 'donner à la page un titre avec votre métier et votre ville.',
+        missing: 'donner à la page un titre et une description avec votre métier et votre ville.',
+      },
+    },
+    structuredData: {
+      label: 'Données structurées (JSON-LD)',
+      statusLabels: {
+        knownTypes: 'Trouvées',
+        otherTypes: 'Trouvées',
+        missing: 'Absentes',
+        notReadable: 'Non lues',
+      },
+      seenTexts: {
+        knownTypes: `Types trouvés${NBSP}: {types}.`,
+        otherTypes: 'Des données structurées, d’autres types que ceux que je liste.',
+        missing: 'Aucun bloc JSON-LD dans la page d’accueil.',
+        notReadable: 'La page d’accueil n’a pas pu être lue.',
+      },
+      meaningTexts: {
+        knownTypes: `Ce code invisible dit noir sur blanc qui vous êtes${NBSP}: entreprise, adresse, horaires, questions fréquentes.`,
+        otherTypes: `Ce code invisible dit noir sur blanc ce que contient la page.`,
+        missing: `Sans lui, le robot doit deviner qui vous êtes à partir du texte.`,
+        notReadable: 'Je ne peux pas le vérifier.',
+      },
+      adviceTexts: {
+        missing: `ajouter un bloc Organization ou LocalBusiness (nom, adresse, téléphone, zone)${NBSP}; les extensions SEO de WordPress savent le faire.`,
+      },
+    },
+    sitemap: {
+      label: 'Plan du site (sitemap)',
+      statusLabels: {
+        declared: 'Déclaré',
+        notDeclared: 'Non déclaré',
+      },
+      seenTexts: {
+        declared: 'Un sitemap est déclaré dans robots.txt ou dans la page.',
+        notDeclared: 'Aucun sitemap déclaré dans robots.txt ni dans la page.',
+      },
+      meaningTexts: {
+        declared: 'C’est la liste de vos pages, que les robots suivent pour toutes les trouver.',
+        notDeclared: 'Il existe peut-être, mais les robots doivent le deviner.',
+      },
+      adviceTexts: {
+        notDeclared: `ajouter à robots.txt une ligne «${NBSP}Sitemap:${NBSP}» suivie du lien complet de votre sitemap.`,
+      },
+    },
+    llmsTxt: {
+      label: 'Fichier llms.txt (facultatif)',
+      statusLabels: {
+        found: 'Présent',
+        missing: 'Absent',
+      },
+      seenTexts: {
+        found: 'Le site a un fichier /llms.txt.',
+        missing: 'Pas de fichier /llms.txt.',
+      },
+      meaningTexts: {
+        found: `Une proposition de 2024${NBSP}: un résumé du site en Markdown pour les IA. Son site officiel ne dit pas quelles IA le lisent.`,
+        missing: `Une proposition de 2024${NBSP}: un résumé du site en Markdown pour les IA. Son site officiel ne dit pas quelles IA le lisent.`,
+      },
+      adviceTexts: {
+        missing: 'rien d’urgent. Il ne remplace ni robots.txt ni un texte clair sur vos pages.',
+      },
+    },
+    listSeparator: ', ',
+    meaningLabel: `Ce que ça veut dire${NBSP}:`,
+    adviceLabel: `Quoi faire${NBSP}:`,
+    disclaimer: `Lu depuis l’extérieur, sur la page d’accueil seulement, sans exécuter le JavaScript. Le test ne voit ni vos autres pages, ni les réglages de votre pare-feu, ni ce que ChatGPT répond vraiment. Être lisible est une condition, pas une garantie d’être cité.`,
+    idleCtaIntro: `Vous préférez que je regarde moi-même, gratuitement, sous 24${NBSP}h${NBSP}?`,
+    idleCtaLabel: 'Me faire envoyer un avis',
+    ctaIntro: `Besoin d’aide pour ouvrir votre site aux IA, régler le pare-feu ou rendre le texte lisible sans JavaScript${NBSP}?`,
+    ctaLabels: {
+      readable: 'Parler de mon site',
+      partlyBlocked: 'Faire vérifier ces points',
+      blocked: 'Faire débloquer mon site',
+      emptyWithoutJavascript: 'Rendre mon site lisible',
+      unknown: 'Faire vérifier mon site',
+    },
+  },
+  summary: {
+    eyebrow: 'En bref',
+    dateLabel: `Mis à jour le 16${NBSP}novembre 2026`,
+    text: `Une IA comme ChatGPT ne peut citer votre site que si ses robots ont le droit de le lire et y trouvent du texte. Trois choses peuvent les en empêcher${NBSP}: une ligne du fichier robots.txt, un pare-feu qui refuse les robots, ou un site dont le texte n’apparaît qu’avec JavaScript. Être lisible est une condition, pas une garantie d’être cité.`,
+  },
+  steps: {
+    eyebrow: 'Le chemin d’un robot',
+    title: 'Comment une IA lit votre site, en quatre étapes',
+    intro: `Avant de citer une page, le robot d’une IA doit pouvoir l’ouvrir et la lire. Chaque étape peut bloquer.`,
+    steps: [
+      {
+        label: 'Demander',
+        title: 'Il lit robots.txt',
+        description: `Avant tout, le robot ouvre le fichier robots.txt de votre site${NBSP}: une liste de consignes qui dit quels robots ont le droit de lire quelles pages. S’il y est interdit, il s’arrête là.`,
+      },
+      {
+        label: 'Entrer',
+        title: 'Il demande la page',
+        description: `Il demande votre page avec sa signature, un nom qui dit «${NBSP}je suis le robot de telle IA${NBSP}». Le serveur, l’hébergeur ou le pare-feu peuvent répondre, ou refuser.`,
+      },
+      {
+        label: 'Lire',
+        title: 'Il lit le HTML reçu',
+        description: `Il lit le texte tel qu’il arrive. Ne comptez pas sur lui pour exécuter le JavaScript${NBSP}: un texte qui n’apparaît qu’avec le JavaScript peut lui rester invisible.`,
+      },
+      {
+        label: 'Comprendre',
+        title: 'Il cherche qui vous êtes',
+        description: `Le titre, la description et les données structurées lui disent noir sur blanc votre métier, votre ville et vos services.`,
+      },
+    ],
+  },
+  crawlers: {
+    anchorId: 'robots-ia',
+    eyebrow: 'Les robots à connaître',
+    title: 'Les robots des IA, et à quoi ils servent',
+    intro: `Chaque éditeur a plusieurs robots. Bloquer un robot d’entraînement ne retire pas votre site des réponses${NBSP}; bloquer un robot de recherche, si. Liste tirée de la documentation de chaque éditeur, relue le 16${NBSP}novembre 2026.`,
+    nameColumnLabel: 'Robot',
+    detailColumnLabel: 'À qui il est, à quoi il sert',
+    linkColumnLabel: 'Source officielle',
+    roleLabels: {
+      search: 'Recherche, réponses avec liens',
+      training: 'Entraînement des modèles',
+      user: 'Visite demandée par un utilisateur',
+    },
+    descriptions: {
+      oaiSearchBot: `Le robot de recherche de ChatGPT. D’après OpenAI, un site qui le bloque n’apparaît pas dans les réponses de recherche de ChatGPT, sauf comme simple lien de navigation.`,
+      chatGptUser: `Il ouvre une page quand un utilisateur de ChatGPT le demande. D’après OpenAI, robots.txt peut ne pas s’appliquer à ces visites, et ce robot ne décide pas de votre présence dans la recherche.`,
+      gptBot: `Il collecte des pages qui peuvent servir à entraîner les modèles d’OpenAI. Le bloquer veut dire${NBSP}: pas d’entraînement. D’après OpenAI, ce réglage est indépendant de celui d’OAI-SearchBot.`,
+      claudeSearchBot: `Il parcourt le web pour améliorer les résultats de recherche de Claude. D’après Anthropic, le bloquer empêche d’indexer votre contenu pour la recherche.`,
+      claudeUser: `Il récupère une page quand un utilisateur de Claude pose une question. D’après Anthropic, le bloquer empêche de lire votre contenu en réponse à cette question.`,
+      claudeBot: `Il collecte des pages qui peuvent servir à entraîner les modèles d’Anthropic. Le bloquer exclut vos futures pages de l’entraînement.`,
+      perplexityBot: `Il fait apparaître les sites, avec un lien, dans les résultats de Perplexity. D’après Perplexity, il ne sert pas à entraîner des modèles.`,
+      perplexityUser: `Il ouvre une page quand un utilisateur de Perplexity pose une question. D’après Perplexity, il ignore en général robots.txt, puisque la visite est demandée par une personne.`,
+      googlebot: `Le robot de la recherche Google. Ce que vous lui interdisez touche la recherche Google, Discover, Images et Actualités.`,
+      googleExtended: `Pas un robot à part${NBSP}: un nom à utiliser dans robots.txt pour dire si vos pages peuvent entraîner les modèles Gemini. D’après Google, il ne joue ni sur la présence dans la recherche ni sur le classement.`,
+    },
+    linkLabel: 'Documentation {operator}',
+    calloutEmphasizedIntro: `Bon à savoir${NBSP}:`,
+    calloutText: `D’après Microsoft, Copilot va chercher les informations du web auprès du moteur Bing. Pour Copilot, être bien lu par Bing compte donc aussi.`,
+  },
+  sources: {
+    anchorId: 'sources',
+    eyebrow: 'Ce que disent les éditeurs',
+    title: 'Sept faits, sources à l’appui',
+    intro: `Lus le 16${NBSP}novembre 2026 sur les pages officielles d’OpenAI, Anthropic, Perplexity, Google, Microsoft, Cloudflare et llmstxt.org. Chacun renvoie à sa source.`,
+    facts: [
+      {
+        contextLabel: 'OpenAI',
+        title: 'Recherche et entraînement, deux réglages',
+        text: `Chaque réglage est indépendant${NBSP}: un site peut autoriser OAI-SearchBot pour apparaître dans la recherche de ChatGPT et interdire GPTBot pour que ses pages ne servent pas à l’entraînement. OpenAI indique qu’un changement de robots.txt peut demander environ 24${NBSP}heures.`,
+        sourceName: AI_OPENAI_SOURCE.name,
+        sourceUrl: AI_OPENAI_SOURCE.url,
+      },
+      {
+        contextLabel: 'Anthropic',
+        title: 'Trois robots, trois effets',
+        text: `ClaudeBot collecte pour l’entraînement, Claude-SearchBot pour la recherche, Claude-User quand un utilisateur pose une question. Anthropic dit respecter robots.txt et déconseille de bloquer ses robots par adresse IP.`,
+        sourceName: AI_ANTHROPIC_SOURCE.name,
+        sourceUrl: AI_ANTHROPIC_SOURCE.url,
+      },
+      {
+        contextLabel: 'Perplexity',
+        title: 'Une visite demandée passe outre robots.txt',
+        text: `PerplexityBot fait apparaître les sites dans les résultats et ne sert pas à entraîner des modèles. Perplexity-User, qui ouvre une page à la demande d’un utilisateur, ignore en général robots.txt.`,
+        sourceName: AI_PERPLEXITY_SOURCE.name,
+        sourceUrl: AI_PERPLEXITY_SOURCE.url,
+      },
+      {
+        contextLabel: 'Google',
+        title: 'Google-Extended ne touche pas la recherche',
+        text: `Google-Extended sert à dire si vos pages peuvent entraîner les modèles Gemini. Google précise qu’il ne joue ni sur la présence d’un site dans la recherche Google ni sur son classement.`,
+        sourceName: AI_GOOGLE_SOURCE.name,
+        sourceUrl: AI_GOOGLE_SOURCE.url,
+      },
+      {
+        contextLabel: `Microsoft, page du 29${NBSP}octobre 2026`,
+        title: 'Copilot cherche sur Bing',
+        text: `Quand la recherche web est active, Copilot envoie une requête courte au service de recherche Bing et s’appuie sur ses résultats pour répondre.`,
+        sourceName: AI_MICROSOFT_COPILOT_SOURCE.name,
+        sourceUrl: AI_MICROSOFT_COPILOT_SOURCE.url,
+      },
+      {
+        contextLabel: `Cloudflare, 1er${NBSP}juillet 2025`,
+        title: 'Robots d’IA bloqués par défaut',
+        text: `Depuis le 1er${NBSP}juillet 2025, Cloudflare bloque par défaut les robots d’IA qui arrivent sans autorisation, et demande à chaque nouveau domaine s’il veut les laisser entrer. Un site derrière Cloudflare peut donc fermer la porte aux IA sans que son propriétaire le sache.`,
+        sourceName: AI_CLOUDFLARE_SOURCE.name,
+        sourceUrl: AI_CLOUDFLARE_SOURCE.url,
+      },
+      {
+        contextLabel: `llmstxt.org, proposition du 3${NBSP}septembre 2024`,
+        title: 'llms.txt, une proposition',
+        text: `Proposé par Jeremy Howard, le fichier /llms.txt résume un site en Markdown, avec des liens, pour les IA. Le site officiel ne dit pas quelles IA le lisent et ne promet aucun effet${NBSP}: le fichier reste facultatif.`,
+        sourceName: AI_LLMS_TXT_SOURCE.name,
+        sourceUrl: AI_LLMS_TXT_SOURCE.url,
+      },
+    ],
+  },
+  reasons: {
+    anchorId: 'raisons',
+    eyebrow: 'Pourquoi une IA ne vous voit pas',
+    title: 'Les 4 raisons pour lesquelles une IA ne voit pas un site',
+    intro: `Ce sont les quatre points que le test vérifie. Un seul suffit à fermer la porte.`,
+    items: [
+      {
+        title: '1. Une ligne dans robots.txt',
+        description: `Une ligne «${NBSP}Disallow: /${NBSP}» sous le nom d’un robot, ou sous «${NBSP}User-agent: *${NBSP}» pour tous, et le robot n’a plus le droit de lire. Elle a parfois été ajoutée par un thème, une extension ou un ancien prestataire.`,
+      },
+      {
+        title: '2. Un pare-feu qui refuse les robots',
+        description: `Cloudflare, l’hébergeur ou une extension de sécurité peuvent répondre par un refus ou une page de vérification. Le robot repart sans avoir rien lu.`,
+      },
+      {
+        title: '3. Un texte qui n’existe qu’avec JavaScript',
+        description: `Certains sites envoient une page presque vide que le navigateur remplit ensuite. Un robot qui n’exécute pas le JavaScript ne voit que la page vide.`,
+      },
+      {
+        title: '4. Une interdiction dans la page',
+        description: `Une balise «${NBSP}noindex${NBSP}» ou «${NBSP}nosnippet${NBSP}», ou le même ordre dans l’en-tête X-Robots-Tag, demande aux robots d’ignorer la page ou de ne pas la citer.`,
+      },
+    ],
+  },
+  remediation: {
+    anchorId: 'que-faire',
+    eyebrow: 'Que faire',
+    title: 'Que faire, selon ce que le test a trouvé',
+    intro: `Un cas par ligne du résultat.`,
+    pitfallLabel: 'Le piège',
+    items: [
+      {
+        title: 'Un robot bloqué dans robots.txt',
+        text: `Ouvrez votre site suivi de /robots.txt. Retirez la ligne «${NBSP}Disallow${NBSP}» qui vise le robot de recherche, ou ajoutez un groupe à son nom avec «${NBSP}Allow: /${NBSP}». Sur WordPress, le fichier peut être écrit par l’extension SEO${NBSP}: modifiez-le depuis ses réglages.`,
+        pitfall: `Bloquer «${NBSP}User-agent: *${NBSP}» pour écarter un robot gênant${NBSP}: la règle ferme aussi la porte aux robots de recherche.`,
+      },
+      {
+        title: 'Un pare-feu ou Cloudflare qui refuse',
+        text: `Dans Cloudflare, regardez les réglages des robots d’IA et des robots en général, et autorisez au moins les robots de recherche. Avec une extension de sécurité WordPress, cherchez le blocage des robots ou des «${NBSP}user agents${NBSP}».`,
+        pitfall: `Tout débloquer d’un coup${NBSP}: autorisez les robots de recherche, et décidez à part pour ceux d’entraînement.`,
+      },
+      {
+        title: 'Un site vide sans JavaScript',
+        text: `Le texte doit arriver dans le HTML. Avec Next.js, Nuxt ou un outil du même type, il faut activer le rendu côté serveur ou générer les pages à l’avance. Avec un constructeur de sites, vérifiez avec le test que le texte apparaît.`,
+        pitfall: `Croire que «${NBSP}Google le lit, donc les IA aussi${NBSP}»${NBSP}: un robot qui n’exécute pas le JavaScript ne voit pas ce que le navigateur ajoute.`,
+      },
+      {
+        title: 'Un refus qui vient de l’hébergeur',
+        text: `Certains hébergeurs filtrent les robots avant même votre site. Envoyez-leur le résultat du test et demandez si les robots de recherche d’IA sont filtrés, et comment les autoriser.`,
+        pitfall: `Conclure trop vite${NBSP}: un refus du test est un signal, pas une preuve. Le vrai robot vient de ses propres adresses et peut passer.`,
+      },
+      {
+        title: 'Une interdiction dans la page',
+        text: `Sur WordPress, décochez «${NBSP}Demander aux moteurs de recherche de ne pas indexer ce site${NBSP}» dans Réglages, Lecture, puis vérifiez les réglages de l’extension SEO pour la page d’accueil.`,
+        pitfall: `Laisser en ligne les réglages d’un site en construction${NBSP}: le «${NBSP}noindex${NBSP}» posé pendant les travaux reste parfois après.`,
+      },
+    ],
+  },
+  experience: {
+    eyebrow: 'Vécu',
+    title: 'Ce que je constate sur mon propre site',
+    emphasizedIntro: `Sur dibodev.fr${NBSP}:`,
+    text: `la semaine du 8 au 14${NBSP}novembre 2026, 27 visites venaient d’une IA, dont 22 de ChatGPT. Fin octobre 2026, une première demande de devis est arrivée par un lien cité dans une réponse de ChatGPT. ChatGPT n’envoie pas de site référent${NBSP}: ses visites se reconnaissent au paramètre utm_source=chatgpt.com dans le lien d’arrivée.`,
+  },
+  method: {
+    anchorId: 'methode',
+    eyebrow: 'Méthode et limites',
+    title: 'Ce que le test fait, et ce qu’il ne voit pas',
+    intro: `Le test lit votre site depuis l’extérieur, comme un robot, sans rien installer ni modifier.`,
+    items: [
+      {
+        title: 'Quatre lectures, rien de plus',
+        description: `robots.txt, la page d’accueil avec la signature du test, la même page avec la signature d’OAI-SearchBot telle qu’OpenAI la publie, et /llms.txt.`,
+      },
+      {
+        title: 'Les règles de robots.txt',
+        description: `Pour chaque robot${NBSP}: son propre groupe s’il existe, sinon le groupe «${NBSP}*${NBSP}». La règle la plus longue qui touche la page d’accueil l’emporte, «${NBSP}Allow${NBSP}» à égalité.`,
+      },
+      {
+        title: 'Le texte sans JavaScript',
+        description: `Le test compte les mots visibles du HTML reçu, sans scripts ni styles. Moins de 50${NBSP}mots avec un conteneur d’application (#app, #root, __next…)${NBSP}: la page est vide pour une IA.`,
+      },
+      {
+        title: 'Une signature n’est pas une adresse',
+        description: `Le test emprunte la signature d’un robot, pas ses adresses. Un refus est un signal à vérifier dans le pare-feu, pas une preuve que le vrai robot est bloqué.`,
+      },
+      {
+        title: 'Ce qu’il ne voit pas',
+        description: `Les autres pages du site, les réglages de votre pare-feu, et ce que ChatGPT répond vraiment. Être lisible ne garantit pas d’être cité.`,
+      },
+      {
+        title: 'Ce qui est gardé',
+        description: `Le lien du site testé, le résultat et quelques indicateurs, douze mois, pour des statistiques. Jamais votre adresse IP, jamais envoyé à PostHog.`,
+      },
+    ],
+  },
+  faq: {
+    eyebrow: 'Questions fréquentes',
+    title: `ChatGPT et votre site${NBSP}: vos questions`,
+    questions: [
+      {
+        question: `Comment apparaître dans ChatGPT${NBSP}?`,
+        answer: `Personne ne peut le promettre. Il y a des conditions${NBSP}: que le robot de recherche de ChatGPT, OAI-SearchBot, ait le droit de lire votre site, que votre texte soit là sans JavaScript, et que vos pages disent clairement qui vous êtes, ce que vous faites et où. Ensuite, être cité dépend de la question posée et des autres sites. D’après OpenAI, un site qui bloque OAI-SearchBot n’apparaît pas dans les réponses de recherche de ChatGPT.`,
+      },
+      {
+        question: `Comment savoir si ChatGPT peut lire mon site${NBSP}?`,
+        answer: `Collez le lien de votre site dans le test en haut de page. Il lit votre fichier robots.txt pour OAI-SearchBot, ChatGPT-User et GPTBot, ouvre votre page d’accueil avec la signature d’OAI-SearchBot et compare avec une visite normale, puis mesure le texte lisible sans JavaScript.`,
+      },
+      {
+        question: `Faut-il bloquer GPTBot${NBSP}?`,
+        answer: `C’est à vous de voir. GPTBot collecte des pages qui peuvent servir à entraîner les modèles d’OpenAI. Le bloquer veut dire${NBSP}: pas d’entraînement sur vos pages. D’après OpenAI, ce réglage est indépendant de celui d’OAI-SearchBot${NBSP}: vous pouvez interdire GPTBot et autoriser OAI-SearchBot pour rester dans la recherche de ChatGPT.`,
+      },
+      {
+        question: `Si je bloque GPTBot, est-ce que je disparais de ChatGPT${NBSP}?`,
+        answer: `Non, pas de la recherche. D’après OpenAI, c’est OAI-SearchBot qui décide de votre présence dans les réponses de recherche de ChatGPT. Bloquer GPTBot dit seulement que vos pages ne doivent pas servir à entraîner les modèles.`,
+      },
+      {
+        question: `C’est quoi le fichier robots.txt${NBSP}?`,
+        answer: `Un petit fichier texte à la racine de votre site (votresite.fr/robots.txt) qui dit aux robots quelles pages ils ont le droit de lire. Une ligne «${NBSP}User-agent${NBSP}» nomme le robot, une ligne «${NBSP}Disallow${NBSP}» lui interdit un chemin, une ligne «${NBSP}Allow${NBSP}» lui en autorise un. Sans fichier, rien n’est interdit.`,
+      },
+      {
+        question: `C’est quoi le fichier llms.txt${NBSP}?`,
+        answer: `Une proposition publiée le 3${NBSP}septembre 2024 par Jeremy Howard${NBSP}: un fichier /llms.txt en Markdown qui résume le site et donne des liens vers ses pages utiles, pour les IA. Son site officiel ne dit pas quelles IA le lisent et ne promet aucun effet. Il est facultatif, et ne remplace ni robots.txt ni un texte clair sur vos pages.`,
+      },
+      {
+        question: `Comment savoir si ChatGPT m’envoie des visiteurs${NBSP}?`,
+        answer: `Regardez vos statistiques de visites. ChatGPT n’envoie pas de site référent${NBSP}: ses visites se reconnaissent au paramètre utm_source=chatgpt.com dans le lien d’arrivée. Sur dibodev.fr, la semaine du 8 au 14${NBSP}novembre 2026, 27 visites venaient d’une IA, dont 22 de ChatGPT.`,
+      },
+      {
+        question: `Cloudflare bloque-t-il les robots d’IA${NBSP}?`,
+        answer: `Il peut. Depuis le 1er${NBSP}juillet 2025, Cloudflare bloque par défaut les robots d’IA qui arrivent sans autorisation, et demande à chaque nouveau domaine s’il veut les laisser entrer. Si votre site passe par Cloudflare, vérifiez les réglages des robots d’IA dans votre tableau de bord.`,
+      },
+      {
+        question: `Copilot utilise-t-il Bing${NBSP}?`,
+        answer: `Oui, d’après Microsoft${NBSP}: quand la recherche web est active, Copilot envoie une requête au service de recherche Bing et s’appuie sur ses résultats. Pour Copilot, être bien lu par Bing compte donc aussi.`,
+      },
+      {
+        question: `Mon site est fait en React, Vue ou Angular${NBSP}: est-il lisible par une IA${NBSP}?`,
+        answer: `Ça dépend de la façon dont il est servi. Si le serveur envoie une page presque vide que le navigateur remplit, un robot qui n’exécute pas le JavaScript ne voit rien. Si les pages sont rendues côté serveur ou générées à l’avance, le texte est dans le HTML. Le test vous le dit en quelques secondes.`,
+      },
+      {
+        question: `Le test enregistre-t-il le lien de mon site${NBSP}?`,
+        answer: `Oui, pour des statistiques seulement${NBSP}: le lien du site testé, le résultat et quelques indicateurs (robots bloqués, texte lisible, interdictions) sont gardés douze mois. Ils ne servent jamais à démarcher et ne sont jamais publiés site par site. Votre adresse IP n’est pas gardée, et le lien n’est pas envoyé à PostHog, l’outil de mesure de ce site.`,
+      },
+    ],
+  },
+  relatedArticles: {
+    title: 'Pour aller plus loin',
+    intro: `Être trouvé par vos clients, et ce que change un site construit avec un outil JavaScript.`,
+  },
+  nextTools: {
+    eyebrow: 'Autres tests',
+    title: 'Vérifier le reste de votre site',
+  },
+  contactCta: {
+    title: `Vous préférez que je m’en occupe${NBSP}?`,
+    description: `Envoyez-moi le lien de votre site. Je vous réponds sous 24${NBSP}h avec ce que je vois${NBSP}: les robots à débloquer, le réglage du pare-feu, le texte à rendre lisible sans JavaScript, et un prix ferme si vous voulez que je m’en charge.`,
+    button: 'Envoyer mon site',
+    healthCheckLabel: `Tester mon site${NBSP}: 8 vérifications`,
+  },
+  mobileContactBar: {
+    text: `Votre site est-il fermé aux IA${NBSP}?`,
+    buttonLabel: 'Envoyer le lien de mon site',
+  },
+}

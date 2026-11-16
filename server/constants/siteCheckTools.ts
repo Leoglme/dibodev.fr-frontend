@@ -1,5 +1,6 @@
 import type { MailLocale } from '~~/server/types/mail/contact'
 import type { SiteCheckToolKey } from '~~/server/types/tools/siteCheckReport'
+import type { SiteCheckStatsToolKey } from '~~/server/types/tools/siteCheckStats'
 
 export const SITE_CHECK_TOOL_KEYS: SiteCheckToolKey[] = [
   'phpVulnerability',
@@ -9,6 +10,9 @@ export const SITE_CHECK_TOOL_KEYS: SiteCheckToolKey[] = [
   'websiteHealth',
   'gdprCookie',
 ]
+
+/** Every checker counted in the statistics, the ones without an e-mail report included. */
+export const SITE_CHECK_STATS_TOOL_KEYS: SiteCheckStatsToolKey[] = [...SITE_CHECK_TOOL_KEYS, 'aiReadability']
 
 /** The page of each checker in each language; mirrors the `i18n.paths` of `app/pages/tools/*.vue`. */
 export const SITE_CHECK_TOOL_PAGE_PATHS: Record<SiteCheckToolKey, Record<MailLocale, string>> = {

@@ -19,6 +19,7 @@ export type DibodevToolShareImageIcon =
   | 'fileText'
   | 'download'
   | 'stethoscope'
+  | 'trendingDown'
 
 /** `highlight` is drawn in violet wherever it appears in `titleLines`. */
 export type DibodevToolShareImageProps = {
