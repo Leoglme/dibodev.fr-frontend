@@ -2,6 +2,7 @@ import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTem
 import { INTERVENTION_SLIP_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTemplates/interventionSlip/pageShared'
 import {
   DOCUMENT_RETENTION_SOURCE,
+  FIELD_SERVICE_TEMPLATE_DOCX_PATH,
   FIELD_SERVICE_TEMPLATE_PDF_PATH,
   FIELD_SERVICE_TEMPLATE_XLSX_PATH,
   ITINERANT_TRAVEL_TIME_SOURCE,
@@ -42,7 +43,7 @@ export const INTERVENTION_SLIP_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageConte
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For field technicians, repairers, after-sales departments and every company working at its customers’ premises in France. Two files in French, no form to fill in: the PDF prints, the Excel file calculates.',
+    lead: 'For field technicians, repairers, after-sales departments and every company working at its customers’ premises in France. Three files in French, no form to fill in: the PDF prints, the Excel file calculates, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -53,6 +54,11 @@ export const INTERVENTION_SLIP_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageConte
         label: 'Download the Excel version',
         href: FIELD_SERVICE_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 sheets, calculated durations and totals, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: FIELD_SERVICE_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote: 'Free to use and adapt to your business. It does not replace the advice of your accountant.',
@@ -173,7 +179,7 @@ export const INTERVENTION_SLIP_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageConte
       {
         question: 'Is the intervention slip template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'Does the intervention slip replace the quote or the invoice in France?',

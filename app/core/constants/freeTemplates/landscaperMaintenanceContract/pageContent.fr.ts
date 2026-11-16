@@ -4,6 +4,7 @@ import {
   BIOWASTE_SORTING_SOURCE,
   GARDENING_HOME_SERVICES_SOURCE,
   HOME_SERVICES_TAX_CREDIT_SOURCE,
+  LANDSCAPING_TEMPLATE_DOCX_PATH,
   LANDSCAPING_TEMPLATE_PDF_PATH,
   LANDSCAPING_TEMPLATE_XLSX_PATH,
   LANDSCAPING_VAT_SOURCE,
@@ -40,7 +41,7 @@ export const LANDSCAPER_MAINTENANCE_CONTRACT_TEMPLATE_CONTENT_FR: DibodevFreeTem
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les paysagistes, les jardiniers et les entreprises d’espaces verts. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule.`,
+    lead: `Pour les paysagistes, les jardiniers et les entreprises d’espaces verts. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -51,6 +52,11 @@ export const LANDSCAPER_MAINTENANCE_CONTRACT_TEMPLATE_CONTENT_FR: DibodevFreeTem
         label: 'Télécharger la version Excel',
         href: LANDSCAPING_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 feuilles, totaux calculés',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: LANDSCAPING_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote:
@@ -172,7 +178,7 @@ export const LANDSCAPER_MAINTENANCE_CONTRACT_TEMPLATE_CONTENT_FR: DibodevFreeTem
     questions: [
       {
         question: `Le modèle de devis paysagiste est-il vraiment gratuit${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `Quelle TVA appliquer sur un devis de paysagiste${NBSP}?`,

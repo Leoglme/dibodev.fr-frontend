@@ -5,6 +5,7 @@ import {
   QUALITY_FRAMEWORK_DECREE_SOURCE,
   SELF_FUNDED_TRAINING_CONTRACT_SOURCE,
   TRAINING_ACTIVITY_DECLARATION_SOURCE,
+  TRAINING_CENTER_TEMPLATE_DOCX_PATH,
   TRAINING_CENTER_TEMPLATE_PDF_PATH,
   TRAINING_CENTER_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/trainingCenterSoftware/pageShared'
@@ -47,7 +48,7 @@ export const TRAINING_ATTENDANCE_SHEET_TEMPLATE_CONTENT_ES: DibodevFreeTemplateP
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para centros de formación, formadores autónomos, academias de refuerzo escolar y escuelas de música que trabajan en Francia. Dos archivos en francés, sin formulario: el PDF se firma, el Excel cuenta las horas.',
+    lead: 'Para centros de formación, formadores autónomos, academias de refuerzo escolar y escuelas de música que trabajan en Francia. Tres archivos en francés, sin formulario: el PDF se firma, el Excel cuenta las horas, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -58,6 +59,11 @@ export const TRAINING_ATTENDANCE_SHEET_TEMPLATE_CONTENT_ES: DibodevFreeTemplateP
         label: 'Descargar la versión Excel',
         href: TRAINING_CENTER_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 hojas, horas y saldos calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: TRAINING_CENTER_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote:
@@ -208,7 +214,7 @@ export const TRAINING_ATTENDANCE_SHEET_TEMPLATE_CONTENT_ES: DibodevFreeTemplateP
       {
         question: '¿La plantilla de hoja de firmas es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿Firmar por media jornada es obligatorio en Francia?',

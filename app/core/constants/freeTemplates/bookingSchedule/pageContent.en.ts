@@ -3,6 +3,7 @@ import { BOOKING_SCHEDULE_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTempl
 import {
   CANOE_KAYAK_SAFETY_SOURCE,
   LEISURE_ACTIVITY_NO_WITHDRAWAL_SOURCE,
+  LEISURE_BOOKING_TEMPLATE_DOCX_PATH,
   LEISURE_BOOKING_TEMPLATE_PDF_PATH,
   LEISURE_BOOKING_TEMPLATE_XLSX_PATH,
   PAID_SPORTS_INSTRUCTOR_SOURCE,
@@ -45,7 +46,7 @@ export const BOOKING_SCHEDULE_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageConten
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For treetop adventure parks, escape games, water sports centres, riding schools, karting tracks and leisure equipment hire working in France. Two files in French, no form to fill in: the PDF prints, the Excel file calculates places left, balances and alerts.',
+    lead: 'For treetop adventure parks, escape games, water sports centres, riding schools, karting tracks and leisure equipment hire working in France. Three files in French, no form to fill in: the PDF prints, the Excel file calculates places left, balances and alerts, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -56,6 +57,11 @@ export const BOOKING_SCHEDULE_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageConten
         label: 'Download the Excel version',
         href: LEISURE_BOOKING_TEMPLATE_XLSX_PATH,
         format: 'Excel, 4 sheets, places, balances and alerts calculated, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: LEISURE_BOOKING_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote:
@@ -222,7 +228,7 @@ export const BOOKING_SCHEDULE_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageConten
       {
         question: 'Is the booking schedule template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'Deposit or arrhes: what should the form and the Excel file record?',

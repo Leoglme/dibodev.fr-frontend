@@ -1,6 +1,7 @@
 import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTemplatePage'
 import { CLEANING_SCHEDULE_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTemplates/cleaningSchedule/pageShared'
 import {
+  CLEANING_BUSINESS_TEMPLATE_DOCX_PATH,
   CLEANING_BUSINESS_TEMPLATE_PDF_PATH,
   CLEANING_BUSINESS_TEMPLATE_XLSX_PATH,
   CLEANING_COLLECTIVE_AGREEMENT_SOURCE,
@@ -44,7 +45,7 @@ export const CLEANING_SCHEDULE_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageConte
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les entreprises de nettoyage, les responsables d’équipe et les auto-entrepreneurs du ménage. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule les heures et le taux de conformité.`,
+    lead: `Pour les entreprises de nettoyage, les responsables d’équipe et les auto-entrepreneurs du ménage. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule les heures et le taux de conformité, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -55,6 +56,11 @@ export const CLEANING_SCHEDULE_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageConte
         label: 'Télécharger la version Excel',
         href: CLEANING_BUSINESS_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 feuilles, heures et conformité calculées',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: CLEANING_BUSINESS_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote:
@@ -172,7 +178,7 @@ export const CLEANING_SCHEDULE_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageConte
     questions: [
       {
         question: `Le modèle de planning de nettoyage est-il vraiment gratuit${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `Combien d’heures par semaine au minimum pour un agent à temps partiel${NBSP}?`,

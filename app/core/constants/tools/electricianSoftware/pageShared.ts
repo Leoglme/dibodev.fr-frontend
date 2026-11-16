@@ -23,6 +23,9 @@ export const ELECTRICIAN_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2
 export const ELECTRICIAN_TEMPLATE_PDF_PATH: string = '/modeles/devis-pv-mise-en-service-electricien.pdf'
 export const ELECTRICIAN_TEMPLATE_XLSX_PATH: string = '/modeles/devis-pv-mise-en-service-electricien.xlsx'
 
+/** Word version of the template: the same pages as the PDF, editable. */
+export const ELECTRICIAN_TEMPLATE_DOCX_PATH: string = '/modeles/devis-pv-mise-en-service-electricien.docx'
+
 /** Certificate of conformity before any new installation is connected: sent at least 20 days before commissioning. */
 export const CONSUEL_SOURCE: DibodevSourceReference = {
   name: 'Consuel',

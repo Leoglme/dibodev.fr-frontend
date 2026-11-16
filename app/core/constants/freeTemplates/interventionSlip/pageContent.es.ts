@@ -2,6 +2,7 @@ import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTem
 import { INTERVENTION_SLIP_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTemplates/interventionSlip/pageShared'
 import {
   DOCUMENT_RETENTION_SOURCE,
+  FIELD_SERVICE_TEMPLATE_DOCX_PATH,
   FIELD_SERVICE_TEMPLATE_PDF_PATH,
   FIELD_SERVICE_TEMPLATE_XLSX_PATH,
   ITINERANT_TRAVEL_TIME_SOURCE,
@@ -42,7 +43,7 @@ export const INTERVENTION_SLIP_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageConte
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para técnicos de campo, reparadores, servicios posventa y toda empresa que interviene en casa de sus clientes en Francia. Dos archivos en francés, sin formulario: el PDF se imprime, el Excel calcula.',
+    lead: 'Para técnicos de campo, reparadores, servicios posventa y toda empresa que interviene en casa de sus clientes en Francia. Tres archivos en francés, sin formulario: el PDF se imprime, el Excel calcula, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -53,6 +54,11 @@ export const INTERVENTION_SLIP_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageConte
         label: 'Descargar la versión Excel',
         href: FIELD_SERVICE_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 hojas, duraciones y totales calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: FIELD_SERVICE_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote: 'Plantilla de uso libre, para adaptar a tu empresa. No sustituye el consejo de tu contable.',
@@ -173,7 +179,7 @@ export const INTERVENTION_SLIP_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageConte
       {
         question: '¿La plantilla de parte de intervención es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿El parte de intervención sustituye el presupuesto o la factura en Francia?',

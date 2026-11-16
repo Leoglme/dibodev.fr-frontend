@@ -26,6 +26,10 @@ export const LEISURE_BOOKING_TEMPLATE_PDF_PATH: string = '/modeles/planning-rese
 export const LEISURE_BOOKING_TEMPLATE_XLSX_PATH: string =
   '/modeles/planning-reservations-fiche-inscription-loisirs.xlsx'
 
+/** Word version of the template: the same pages as the PDF, editable. */
+export const LEISURE_BOOKING_TEMPLATE_DOCX_PATH: string =
+  '/modeles/planning-reservations-fiche-inscription-loisirs.docx'
+
 /** VAT on leisure activities: 10 % for admission fees, 20 % for sports facilities and hire, 5.5 % for some equestrian activities. */
 export const LEISURE_ACTIVITY_VAT_RATES_SOURCE: DibodevSourceReference = {
   name: 'BOFiP-Impôts',

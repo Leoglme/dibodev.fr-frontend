@@ -5,6 +5,7 @@ import {
   QUALITY_FRAMEWORK_DECREE_SOURCE,
   SELF_FUNDED_TRAINING_CONTRACT_SOURCE,
   TRAINING_ACTIVITY_DECLARATION_SOURCE,
+  TRAINING_CENTER_TEMPLATE_DOCX_PATH,
   TRAINING_CENTER_TEMPLATE_PDF_PATH,
   TRAINING_CENTER_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/trainingCenterSoftware/pageShared'
@@ -45,7 +46,7 @@ export const TRAINING_ATTENDANCE_SHEET_TEMPLATE_CONTENT_EN: DibodevFreeTemplateP
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For training organisations, independent trainers, tutoring centres and music schools working in France. Two files in French, no form to fill in: the PDF gets signed, the Excel file counts the hours.',
+    lead: 'For training organisations, independent trainers, tutoring centres and music schools working in France. Three files in French, no form to fill in: the PDF gets signed, the Excel file counts the hours, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -56,6 +57,11 @@ export const TRAINING_ATTENDANCE_SHEET_TEMPLATE_CONTENT_EN: DibodevFreeTemplateP
         label: 'Download the Excel version',
         href: TRAINING_CENTER_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 sheets, hours and balances calculated, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: TRAINING_CENTER_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote:
@@ -206,7 +212,7 @@ export const TRAINING_ATTENDANCE_SHEET_TEMPLATE_CONTENT_EN: DibodevFreeTemplateP
       {
         question: 'Is the attendance sheet template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'Is signing per half-day mandatory in France?',

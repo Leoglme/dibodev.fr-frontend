@@ -4,6 +4,7 @@ import { HOME_REPAIR_QUOTE_RULES_SOURCE } from '~/core/constants/tools/officialS
 import {
   BOILER_MAINTENANCE_SOURCE,
   DECENNIAL_INSURANCE_SOURCE,
+  PLUMBING_HEATING_TEMPLATE_DOCX_PATH,
   PLUMBING_HEATING_TEMPLATE_PDF_PATH,
   PLUMBING_HEATING_TEMPLATE_XLSX_PATH,
   REDUCED_VAT_WORKS_SOURCE,
@@ -41,7 +42,7 @@ export const PLUMBER_QUOTE_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent =
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para fontaneros, calefactores e instaladores sanitarios que trabajan en Francia. Dos archivos en francés, sin formulario: el PDF se imprime, el Excel calcula.',
+    lead: 'Para fontaneros, calefactores e instaladores sanitarios que trabajan en Francia. Tres archivos en francés, sin formulario: el PDF se imprime, el Excel calcula, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -52,6 +53,11 @@ export const PLUMBER_QUOTE_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent =
         label: 'Descargar la versión Excel',
         href: PLUMBING_HEATING_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 hojas, totales calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: PLUMBING_HEATING_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote: 'Plantilla de uso libre, para adaptar a tu empresa. No sustituye el consejo de tu contable.',
@@ -172,7 +178,7 @@ export const PLUMBER_QUOTE_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent =
       {
         question: '¿La plantilla de presupuesto de fontanero es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿Qué IVA se aplica en un presupuesto de fontanería en Francia?',

@@ -1,6 +1,7 @@
 import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTemplatePage'
 import { BODY_SHOP_CLAIM_TRACKING_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTemplates/bodyShopClaimTracking/pageShared'
 import {
+  BODY_SHOP_TEMPLATE_DOCX_PATH,
   BODY_SHOP_TEMPLATE_PDF_PATH,
   BODY_SHOP_TEMPLATE_XLSX_PATH,
   CIRCULAR_ECONOMY_PARTS_SOURCE,
@@ -44,7 +45,7 @@ export const BODY_SHOP_CLAIM_TRACKING_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePa
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les carrossiers et les carrosseries-peinture indépendantes. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule.`,
+    lead: `Pour les carrossiers et les carrosseries-peinture indépendantes. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -55,6 +56,11 @@ export const BODY_SHOP_CLAIM_TRACKING_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePa
         label: 'Télécharger la version Excel',
         href: BODY_SHOP_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 feuilles, totaux et délais calculés',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: BODY_SHOP_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote:
@@ -187,7 +193,7 @@ export const BODY_SHOP_CLAIM_TRACKING_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePa
     questions: [
       {
         question: `Le modèle de devis carrosserie est-il vraiment gratuit${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `Comment répartir la part de l’assureur et la part du client${NBSP}?`,

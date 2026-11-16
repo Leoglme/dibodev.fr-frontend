@@ -1,6 +1,7 @@
 import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTemplatePage'
 import { CLEANING_SCHEDULE_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTemplates/cleaningSchedule/pageShared'
 import {
+  CLEANING_BUSINESS_TEMPLATE_DOCX_PATH,
   CLEANING_BUSINESS_TEMPLATE_PDF_PATH,
   CLEANING_BUSINESS_TEMPLATE_XLSX_PATH,
   CLEANING_COLLECTIVE_AGREEMENT_SOURCE,
@@ -44,7 +45,7 @@ export const CLEANING_SCHEDULE_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageConte
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For cleaning companies, team supervisors and self-employed cleaners working in France. Two files in French, no form to fill in: the PDF prints, the Excel file calculates the hours and the conformity rate.',
+    lead: 'For cleaning companies, team supervisors and self-employed cleaners working in France. Three files in French, no form to fill in: the PDF prints, the Excel file calculates the hours and the conformity rate, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -55,6 +56,11 @@ export const CLEANING_SCHEDULE_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageConte
         label: 'Download the Excel version',
         href: CLEANING_BUSINESS_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 sheets, calculated hours and conformity, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: CLEANING_BUSINESS_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote:
@@ -175,7 +181,7 @@ export const CLEANING_SCHEDULE_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageConte
       {
         question: 'Is the cleaning schedule template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'How many hours a week at least for a part-time cleaner in France?',

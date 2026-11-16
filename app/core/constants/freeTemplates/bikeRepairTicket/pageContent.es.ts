@@ -6,6 +6,7 @@ import {
   SERVICE_QUOTE_SOURCE,
 } from '~/core/constants/freeTemplates/bikeRepairTicket/pageShared'
 import {
+  BIKE_SHOP_TEMPLATE_DOCX_PATH,
   BIKE_SHOP_TEMPLATE_PDF_PATH,
   BIKE_SHOP_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/bikeShopSoftware/pageShared'
@@ -50,7 +51,7 @@ export const BIKE_REPAIR_TICKET_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageCont
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para talleres de bicicletas, tiendas de bicis y mecánicos autónomos que trabajan en Francia. Dos archivos en francés, sin formulario: el PDF se imprime, el Excel calcula.',
+    lead: 'Para talleres de bicicletas, tiendas de bicis y mecánicos autónomos que trabajan en Francia. Tres archivos en francés, sin formulario: el PDF se imprime, el Excel calcula, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -61,6 +62,11 @@ export const BIKE_REPAIR_TICKET_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageCont
         label: 'Descargar la versión Excel',
         href: BIKE_SHOP_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 hojas, totales y plazos calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: BIKE_SHOP_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote: 'Plantilla de uso libre, para adaptar a tu taller. No sustituye el consejo de tu contable.',
@@ -190,7 +196,7 @@ export const BIKE_REPAIR_TICKET_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageCont
       {
         question: '¿La plantilla de ficha de reparación de bicicleta es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿Un taller de bicicletas en Francia tiene que hacer presupuesto?',

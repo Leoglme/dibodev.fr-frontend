@@ -7,6 +7,7 @@ import {
 } from '~/core/constants/freeTemplates/drivingSchoolContract/pageShared'
 import {
   DRIVING_SCHOOL_RULE_SOURCES,
+  DRIVING_SCHOOL_TEMPLATE_DOCX_PATH,
   DRIVING_SCHOOL_TEMPLATE_PDF_PATH,
   DRIVING_SCHOOL_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/drivingSchoolSoftware/pageShared'
@@ -45,7 +46,7 @@ export const DRIVING_SCHOOL_CONTRACT_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePag
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para autoescuelas y profesores de conducción que trabajan en Francia. Dos archivos en francés, sin formulario: el PDF se imprime, el Excel calcula.',
+    lead: 'Para autoescuelas y profesores de conducción que trabajan en Francia. Tres archivos en francés, sin formulario: el PDF se imprime, el Excel calcula, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -56,6 +57,11 @@ export const DRIVING_SCHOOL_CONTRACT_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePag
         label: 'Descargar la versión Excel',
         href: DRIVING_SCHOOL_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 hojas, horas y plazos calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: DRIVING_SCHOOL_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote:
@@ -185,7 +191,7 @@ export const DRIVING_SCHOOL_CONTRACT_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePag
       {
         question: '¿La plantilla de contrato de autoescuela es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿Esta plantilla sustituye el contrato tipo oficial?',

@@ -3,6 +3,7 @@ import {
   GOOD_WORKING_WARRANTY_SOURCE,
   RETENTION_MONEY_SOURCE,
   TEN_YEAR_LIABILITY_SOURCE,
+  WORKS_ACCEPTANCE_REPORT_TEMPLATE_DOCX_PATH,
   WORKS_ACCEPTANCE_REPORT_TEMPLATE_PDF_PATH,
   WORKS_ACCEPTANCE_REPORT_TEMPLATE_UPDATED_AT,
   WORKS_ACCEPTANCE_REPORT_TEMPLATE_XLSX_PATH,
@@ -45,7 +46,7 @@ export const WORKS_ACCEPTANCE_REPORT_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePag
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les artisans et les entreprises du bâtiment, et pour les particuliers qui reçoivent leurs travaux. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel suit les réserves et calcule les dates.`,
+    lead: `Pour les artisans et les entreprises du bâtiment, et pour les particuliers qui reçoivent leurs travaux. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel suit les réserves et calcule les dates, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -56,6 +57,11 @@ export const WORKS_ACCEPTANCE_REPORT_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePag
         label: 'Télécharger la version Excel',
         href: WORKS_ACCEPTANCE_REPORT_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 feuilles, dates calculées',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: WORKS_ACCEPTANCE_REPORT_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote:
@@ -189,7 +195,7 @@ export const WORKS_ACCEPTANCE_REPORT_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePag
     questions: [
       {
         question: `Le modèle de PV de réception est-il vraiment gratuit${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne «${NBSP}modèle proposé par Dibodev${NBSP}» en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne «${NBSP}modèle proposé par Dibodev${NBSP}» en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `Le procès-verbal de réception est-il obligatoire${NBSP}?`,

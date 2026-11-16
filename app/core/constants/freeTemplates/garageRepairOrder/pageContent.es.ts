@@ -2,6 +2,7 @@ import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTem
 import { GARAGE_REPAIR_ORDER_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTemplates/garageRepairOrder/pageShared'
 import {
   AUTO_REPAIR_RULES_SOURCE,
+  AUTO_REPAIR_TEMPLATE_DOCX_PATH,
   AUTO_REPAIR_TEMPLATE_PDF_PATH,
   AUTO_REPAIR_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/autoRepairShopSoftware/pageShared'
@@ -40,7 +41,7 @@ export const GARAGE_REPAIR_ORDER_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageCon
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para talleres, mecánicos autónomos y centros de automóvil que trabajan en Francia. Dos archivos en francés, sin formulario: el PDF se imprime, el Excel calcula.',
+    lead: 'Para talleres, mecánicos autónomos y centros de automóvil que trabajan en Francia. Tres archivos en francés, sin formulario: el PDF se imprime, el Excel calcula, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -51,6 +52,11 @@ export const GARAGE_REPAIR_ORDER_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageCon
         label: 'Descargar la versión Excel',
         href: AUTO_REPAIR_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 hojas, totales calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: AUTO_REPAIR_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote: 'Plantilla de uso libre, para adaptar a tu taller. No sustituye el consejo de tu contable.',
@@ -171,7 +177,7 @@ export const GARAGE_REPAIR_ORDER_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageCon
       {
         question: '¿La plantilla de orden de reparación es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿La orden de reparación es obligatoria en Francia?',

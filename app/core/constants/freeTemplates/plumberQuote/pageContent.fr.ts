@@ -4,6 +4,7 @@ import { HOME_REPAIR_QUOTE_RULES_SOURCE } from '~/core/constants/tools/officialS
 import {
   BOILER_MAINTENANCE_SOURCE,
   DECENNIAL_INSURANCE_SOURCE,
+  PLUMBING_HEATING_TEMPLATE_DOCX_PATH,
   PLUMBING_HEATING_TEMPLATE_PDF_PATH,
   PLUMBING_HEATING_TEMPLATE_XLSX_PATH,
   REDUCED_VAT_WORKS_SOURCE,
@@ -41,7 +42,7 @@ export const PLUMBER_QUOTE_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent =
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les plombiers, chauffagistes et installateurs sanitaires. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule.`,
+    lead: `Pour les plombiers, chauffagistes et installateurs sanitaires. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -52,6 +53,11 @@ export const PLUMBER_QUOTE_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent =
         label: 'Télécharger la version Excel',
         href: PLUMBING_HEATING_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 feuilles, totaux calculés',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: PLUMBING_HEATING_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote: 'Modèle libre d’utilisation, à adapter à votre entreprise. Il ne remplace pas l’avis de votre comptable.',
@@ -169,7 +175,7 @@ export const PLUMBER_QUOTE_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent =
     questions: [
       {
         question: `Le modèle de devis plombier est-il vraiment gratuit${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `Quelle TVA appliquer sur un devis de plomberie${NBSP}?`,

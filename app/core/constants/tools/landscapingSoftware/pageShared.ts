@@ -29,6 +29,9 @@ export const LANDSCAPING_TEMPLATE_PDF_PATH: string = '/modeles/devis-contrat-ent
 /** Same template as an Excel workbook with calculated totals, in French only. */
 export const LANDSCAPING_TEMPLATE_XLSX_PATH: string = '/modeles/devis-contrat-entretien-paysagiste.xlsx'
 
+/** Word version of the template: the same pages as the PDF, editable. */
+export const LANDSCAPING_TEMPLATE_DOCX_PATH: string = '/modeles/devis-contrat-entretien-paysagiste.docx'
+
 /** 10 % VAT for some structures next to a dwelling over 2 years old (fence wall, gate, masonry terrace…), 20 % for sheds, ponds or lighting. */
 export const LANDSCAPING_VAT_SOURCE: DibodevSourceReference = {
   name: 'BOFiP',

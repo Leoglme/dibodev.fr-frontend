@@ -48,7 +48,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         tradeLabel: 'Fontanero y calefactor',
         title: 'Presupuesto + parte de intervención',
         description: `Presupuesto con IVA al 5,5, 10 o 20${NBSP}% y certificación del cliente, parte de intervención con la lista de control de la caldera.`,
-        formats: 'PDF 2 páginas · Excel 2 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 2 hojas',
       },
       {
         key: 'intervention-slip',
@@ -56,7 +56,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Parte de intervención + hoja de ruta',
         description:
           'Parte de intervención firmado en el sitio por el cliente, hoja de ruta del técnico con las duraciones y los totales calculados.',
-        formats: 'PDF 2 páginas · Excel 2 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 2 hojas',
       },
       {
         key: 'garage-repair-order',
@@ -64,7 +64,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Orden de reparación + presupuesto',
         description:
           'Orden de reparación con el estado del vehículo, el kilometraje y los acuerdos del cliente, presupuesto con piezas, mano de obra y totales.',
-        formats: 'PDF 2 páginas · Excel 2 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 2 hojas',
       },
       {
         key: 'electrician-commissioning-report',
@@ -72,7 +72,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Acta de puesta en servicio + presupuesto',
         description:
           'Presupuesto de electricidad con el IVA por línea, acta de puesta en servicio con las pruebas y el certificado Consuel.',
-        formats: 'PDF 2 páginas · Excel 2 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 2 hojas',
       },
       {
         key: 'personal-trainer-client-review',
@@ -80,14 +80,14 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Evaluación de cliente + cuaderno de sesiones',
         description:
           'Evaluación inicial con medidas y tests, cuaderno de sesiones con el tonelaje calculado sesión tras sesión.',
-        formats: 'PDF 2 páginas · Excel 2 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 2 hojas',
       },
       {
         key: 'landscaping-maintenance-contract',
         tradeLabel: 'Paisajista',
         title: 'Contrato de mantenimiento + presupuesto de paisajismo',
         description: `Presupuesto de paisajismo con IVA al 10 o 20${NBSP}%, contrato de mantenimiento de jardín con las visitas y los servicios a domicilio.`,
-        formats: 'PDF 2 páginas · Excel 2 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 2 hojas',
       },
       {
         key: 'cleaning-schedule',
@@ -95,7 +95,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Planning de visitas + control de calidad',
         description:
           'Planning de la semana por sitio y por empleado con las horas calculadas, hoja de control de calidad zona por zona con la tasa de conformidad.',
-        formats: 'PDF 2 páginas · Excel 2 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 2 hojas',
       },
       {
         key: 'inventory-sheet',
@@ -103,7 +103,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Hoja de inventario + parte de recepción',
         description:
           'Hoja de inventario rotativo con las diferencias calculadas, parte de recepción de proveedor con las cantidades pedidas, entregadas y aceptadas.',
-        formats: 'PDF 2 páginas · Excel 2 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 2 hojas',
       },
       {
         key: 'body-shop-claim-tracking',
@@ -111,7 +111,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Seguimiento de siniestro + presupuesto de carrocería',
         description:
           'Presupuesto con reportaje fotográfico, piezas de reutilización y parte de la aseguradora, hoja de seguimiento de siniestro, planificación de la cabina y vehículos de cortesía.',
-        formats: 'PDF 2 páginas · Excel 3 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
       },
       {
         key: 'carpentry-cutting-list',
@@ -119,7 +119,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Lista de corte + presupuesto con mediciones',
         description:
           'Presupuesto con mediciones, lista de corte y plan de corte con el coste del material calculado, acta de recepción que abre las garantías.',
-        formats: 'PDF 2 páginas · Excel 3 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
       },
       {
         key: 'training-attendance-sheet',
@@ -127,7 +127,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Hoja de firmas + seguimiento de horas',
         description:
           'Firmas por media jornada, asistencia de la semana y seguimiento de las horas por participante con los saldos calculados.',
-        formats: 'PDF 2 páginas · Excel 3 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
       },
       {
         key: 'booking-schedule',
@@ -135,7 +135,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Planning de reservas + ficha de inscripción',
         description:
           'Planning de las franjas con las plazas y los anticipos calculados, ficha de inscripción y de briefing, cuadro de organización de los primeros auxilios.',
-        formats: 'PDF 2 páginas · Excel 4 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 4 hojas',
       },
       {
         key: 'equipment-rental-agreement',
@@ -143,7 +143,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Contrato de alquiler de material + estado de entrega',
         description:
           'Contrato con valor de reposición, fianza, transporte y roturas, estado de salida y de devolución, importes sin IVA, IVA y con IVA calculados.',
-        formats: 'PDF 2 páginas · Excel 3 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
       },
       {
         key: 'driving-school-contract',
@@ -151,7 +151,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Contrato de formación + ficha de seguimiento',
         description:
           'Contrato con evaluación inicial, horas previstas y calendario de pagos, ficha de las clases y de las 4 competencias del libro de aprendizaje, horas y exámenes calculados.',
-        formats: 'PDF 2 páginas · Excel 3 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
       },
       {
         key: 'bike-repair-ticket',
@@ -159,7 +159,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Ficha de depósito y reparación de bicicleta',
         description:
           'Ficha de depósito con el marcado de la bicicleta y su estado, presupuesto aceptado, piezas y mano de obra, seguimiento de las bicicletas en el taller y de los pedidos.',
-        formats: 'PDF 2 páginas · Excel 3 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
       },
       {
         key: 'boiler-service-certificate',
@@ -167,7 +167,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Certificado de mantenimiento de caldera + registro',
         description:
           'Certificado con las menciones de la orden francesa del 15 de septiembre de 2009, registro de visitas a diez años, clientes a recordar antes de la fecha de aniversario.',
-        formats: 'PDF 2 páginas · Excel 3 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
       },
       {
         key: 'works-acceptance-report',
@@ -175,7 +175,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Acta de recepción de obra + levantamiento de reservas',
         description:
           'Acta con o sin reservas, plazos de levantamiento, retención de garantía, acta de levantamiento de reservas y calendario de garantías calculado.',
-        formats: 'PDF 2 páginas · Excel 3 hojas',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
       },
       {
         key: 'purchase-order',

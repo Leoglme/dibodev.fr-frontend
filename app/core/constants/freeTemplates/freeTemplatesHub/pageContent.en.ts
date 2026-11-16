@@ -47,7 +47,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Quote + intervention slip',
         description:
           'Quote with 5.5, 10 or 20% VAT and the customer’s statement, intervention slip with the boiler maintenance checklist.',
-        formats: 'PDF 2 pages · Excel 2 sheets',
+        formats: 'PDF 2 pages · Word · Excel 2 sheets',
       },
       {
         key: 'intervention-slip',
@@ -55,7 +55,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Intervention slip + round sheet',
         description:
           'Intervention slip signed on site by the customer, technician’s daily round sheet with durations and totals calculated.',
-        formats: 'PDF 2 pages · Excel 2 sheets',
+        formats: 'PDF 2 pages · Word · Excel 2 sheets',
       },
       {
         key: 'garage-repair-order',
@@ -63,7 +63,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Repair order + quote',
         description:
           'Repair order with the vehicle condition, mileage and the customer’s agreements, quote with parts, labour and totals.',
-        formats: 'PDF 2 pages · Excel 2 sheets',
+        formats: 'PDF 2 pages · Word · Excel 2 sheets',
       },
       {
         key: 'electrician-commissioning-report',
@@ -71,7 +71,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Commissioning report + quote',
         description:
           'Electrical quote with VAT per line, commissioning report with the tests and the Consuel certificate.',
-        formats: 'PDF 2 pages · Excel 2 sheets',
+        formats: 'PDF 2 pages · Word · Excel 2 sheets',
       },
       {
         key: 'personal-trainer-client-review',
@@ -79,7 +79,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Client assessment + training log',
         description:
           'Initial assessment with measurements and tests, training log with the tonnage calculated session after session.',
-        formats: 'PDF 2 pages · Excel 2 sheets',
+        formats: 'PDF 2 pages · Word · Excel 2 sheets',
       },
       {
         key: 'landscaping-maintenance-contract',
@@ -87,7 +87,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Maintenance contract + landscaping quote',
         description:
           'Landscaping quote with 10 or 20% VAT, garden maintenance contract with the visits and the home services scheme.',
-        formats: 'PDF 2 pages · Excel 2 sheets',
+        formats: 'PDF 2 pages · Word · Excel 2 sheets',
       },
       {
         key: 'cleaning-schedule',
@@ -95,7 +95,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Visit schedule + quality inspection',
         description:
           'Weekly schedule per site and per cleaner with calculated hours, quality inspection sheet area by area with the conformity rate.',
-        formats: 'PDF 2 pages · Excel 2 sheets',
+        formats: 'PDF 2 pages · Word · Excel 2 sheets',
       },
       {
         key: 'inventory-sheet',
@@ -103,7 +103,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Inventory sheet + goods receipt',
         description:
           'Cycle count sheet with calculated differences, supplier goods receipt note with ordered, delivered and accepted quantities.',
-        formats: 'PDF 2 pages · Excel 2 sheets',
+        formats: 'PDF 2 pages · Word · Excel 2 sheets',
       },
       {
         key: 'body-shop-claim-tracking',
@@ -111,7 +111,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Claim tracking + body shop quote',
         description:
           'Quote with photo survey, reused parts and the insurer’s share, claim tracking sheet, paint booth schedule and courtesy cars.',
-        formats: 'PDF 2 pages · Excel 3 sheets',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
       },
       {
         key: 'carpentry-cutting-list',
@@ -119,7 +119,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Cutting list + measured quote',
         description:
           'Measured quote, cutting list and cutting plan with the material cost calculated, handover report that starts the warranties.',
-        formats: 'PDF 2 pages · Excel 3 sheets',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
       },
       {
         key: 'training-attendance-sheet',
@@ -127,7 +127,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Attendance sheet + hour tracking',
         description:
           'Attendance per half-day, weekly register and hour tracking per trainee with the balances calculated.',
-        formats: 'PDF 2 pages · Excel 3 sheets',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
       },
       {
         key: 'booking-schedule',
@@ -135,7 +135,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Booking schedule + registration form',
         description:
           'Time slot schedule with places and deposits calculated, registration and briefing form, emergency organisation chart.',
-        formats: 'PDF 2 pages · Excel 4 sheets',
+        formats: 'PDF 2 pages · Word · Excel 4 sheets',
       },
       {
         key: 'equipment-rental-agreement',
@@ -143,7 +143,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Equipment rental agreement + condition report',
         description:
           'Agreement with replacement value, security deposit, transport and damage, check-out and return condition report, amounts excl. VAT, VAT and incl. VAT calculated.',
-        formats: 'PDF 2 pages · Excel 3 sheets',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
       },
       {
         key: 'driving-school-contract',
@@ -151,7 +151,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Training contract + student progress sheet',
         description:
           'Contract with the initial assessment, planned hours and payment schedule, lesson log with the 4 skills of the training booklet, hours and exams calculated.',
-        formats: 'PDF 2 pages · Excel 3 sheets',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
       },
       {
         key: 'bike-repair-ticket',
@@ -159,7 +159,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Bike drop-off and repair ticket',
         description:
           'Drop-off ticket with the bike’s ID marking and condition, accepted quote, parts and labour, tracking of the bikes in the workshop and of the parts on order.',
-        formats: 'PDF 2 pages · Excel 3 sheets',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
       },
       {
         key: 'boiler-service-certificate',
@@ -167,7 +167,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Boiler service certificate + service log',
         description:
           'Certificate with the mentions required by the French order of 15 September 2009, ten-year visit log, customers to remind before the anniversary date.',
-        formats: 'PDF 2 pages · Excel 3 sheets',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
       },
       {
         key: 'works-acceptance-report',
@@ -175,7 +175,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Works acceptance report + snag clearance',
         description:
           'Acceptance report with or without reservations, clearance deadlines, retention money, snag clearance report and calculated warranty calendar.',
-        formats: 'PDF 2 pages · Excel 3 sheets',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
       },
       {
         key: 'purchase-order',

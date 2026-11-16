@@ -4,6 +4,7 @@ import {
   BIOWASTE_SORTING_SOURCE,
   GARDENING_HOME_SERVICES_SOURCE,
   HOME_SERVICES_TAX_CREDIT_SOURCE,
+  LANDSCAPING_TEMPLATE_DOCX_PATH,
   LANDSCAPING_TEMPLATE_PDF_PATH,
   LANDSCAPING_TEMPLATE_XLSX_PATH,
   LANDSCAPING_VAT_SOURCE,
@@ -40,7 +41,7 @@ export const LANDSCAPER_MAINTENANCE_CONTRACT_TEMPLATE_CONTENT_ES: DibodevFreeTem
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para paisajistas, jardineros y empresas de zonas verdes que trabajan en Francia. Dos archivos en francés, sin formulario: el PDF se imprime, el Excel calcula.',
+    lead: 'Para paisajistas, jardineros y empresas de zonas verdes que trabajan en Francia. Tres archivos en francés, sin formulario: el PDF se imprime, el Excel calcula, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -51,6 +52,11 @@ export const LANDSCAPER_MAINTENANCE_CONTRACT_TEMPLATE_CONTENT_ES: DibodevFreeTem
         label: 'Descargar la versión Excel',
         href: LANDSCAPING_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 hojas, totales calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: LANDSCAPING_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote:
@@ -175,7 +181,7 @@ export const LANDSCAPER_MAINTENANCE_CONTRACT_TEMPLATE_CONTENT_ES: DibodevFreeTem
       {
         question: '¿La plantilla de presupuesto de paisajista es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿Qué IVA se aplica en un presupuesto de paisajista en Francia?',

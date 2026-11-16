@@ -6,6 +6,7 @@ import {
   SERVICE_QUOTE_SOURCE,
 } from '~/core/constants/freeTemplates/bikeRepairTicket/pageShared'
 import {
+  BIKE_SHOP_TEMPLATE_DOCX_PATH,
   BIKE_SHOP_TEMPLATE_PDF_PATH,
   BIKE_SHOP_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/bikeShopSoftware/pageShared'
@@ -47,7 +48,7 @@ export const BIKE_REPAIR_TICKET_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageCont
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les ateliers vélo, les magasins de cycles et les mécaniciens indépendants. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule.`,
+    lead: `Pour les ateliers vélo, les magasins de cycles et les mécaniciens indépendants. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -58,6 +59,11 @@ export const BIKE_REPAIR_TICKET_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageCont
         label: 'Télécharger la version Excel',
         href: BIKE_SHOP_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 feuilles, totaux et délais calculés',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: BIKE_SHOP_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote: 'Modèle libre d’utilisation, à adapter à votre atelier. Il ne remplace pas l’avis de votre comptable.',
@@ -182,7 +188,7 @@ export const BIKE_REPAIR_TICKET_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageCont
     questions: [
       {
         question: `Le modèle de fiche de réparation vélo est-il vraiment gratuit${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne «${NBSP}modèle proposé par Dibodev${NBSP}» en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne «${NBSP}modèle proposé par Dibodev${NBSP}» en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `Un atelier vélo doit-il faire un devis${NBSP}?`,

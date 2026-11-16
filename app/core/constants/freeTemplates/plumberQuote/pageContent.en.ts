@@ -4,6 +4,7 @@ import { HOME_REPAIR_QUOTE_RULES_SOURCE } from '~/core/constants/tools/officialS
 import {
   BOILER_MAINTENANCE_SOURCE,
   DECENNIAL_INSURANCE_SOURCE,
+  PLUMBING_HEATING_TEMPLATE_DOCX_PATH,
   PLUMBING_HEATING_TEMPLATE_PDF_PATH,
   PLUMBING_HEATING_TEMPLATE_XLSX_PATH,
   REDUCED_VAT_WORKS_SOURCE,
@@ -41,7 +42,7 @@ export const PLUMBER_QUOTE_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent =
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For plumbers, heating engineers and sanitary installers working in France. Two files in French, no form to fill in: the PDF prints, the Excel file calculates.',
+    lead: 'For plumbers, heating engineers and sanitary installers working in France. Three files in French, no form to fill in: the PDF prints, the Excel file calculates, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -52,6 +53,11 @@ export const PLUMBER_QUOTE_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent =
         label: 'Download the Excel version',
         href: PLUMBING_HEATING_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 sheets, calculated totals, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: PLUMBING_HEATING_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote: 'Free to use and adapt to your business. It does not replace the advice of your accountant.',
@@ -172,7 +178,7 @@ export const PLUMBER_QUOTE_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent =
       {
         question: 'Is the plumber quote template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'Which VAT rate applies on a plumbing quote in France?',

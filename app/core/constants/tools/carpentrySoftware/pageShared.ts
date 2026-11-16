@@ -25,6 +25,9 @@ export const CARPENTRY_TEMPLATE_PDF_PATH: string = '/modeles/devis-metre-fiche-d
 /** Excel version of the free template: quote totals by VAT rate, cutting list with material cost and a simple cutting plan. */
 export const CARPENTRY_TEMPLATE_XLSX_PATH: string = '/modeles/devis-metre-fiche-de-debit-menuiserie.xlsx'
 
+/** Word version of the template: the same pages as the PDF, editable. */
+export const CARPENTRY_TEMPLATE_DOCX_PATH: string = '/modeles/devis-metre-fiche-de-debit-menuiserie.docx'
+
 /** Reduced VAT at 10% or 5.5%: no more certificate, the customer certifies with a statement on the quote or invoice. */
 export const REDUCED_VAT_CUSTOMER_STATEMENT_SOURCE: DibodevSourceReference = {
   name: 'BOFiP-Impôts',

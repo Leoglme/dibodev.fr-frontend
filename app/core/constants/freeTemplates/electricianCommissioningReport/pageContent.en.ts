@@ -3,6 +3,7 @@ import { ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_UPDATED_AT } from '~/core/con
 import {
   CHARGING_POINT_QUALIFICATION_SOURCE,
   CONSUEL_SOURCE,
+  ELECTRICIAN_TEMPLATE_DOCX_PATH,
   ELECTRICIAN_TEMPLATE_PDF_PATH,
   ELECTRICIAN_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/electricianSoftware/pageShared'
@@ -41,7 +42,7 @@ export const ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_CONTENT_EN: DibodevFreeTe
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For electricians, installers and building-trade sole traders working in France. Two files in French, no form to fill in: the PDF prints, the Excel file calculates.',
+    lead: 'For electricians, installers and building-trade sole traders working in France. Three files in French, no form to fill in: the PDF prints, the Excel file calculates, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -52,6 +53,11 @@ export const ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_CONTENT_EN: DibodevFreeTe
         label: 'Download the Excel version',
         href: ELECTRICIAN_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 sheets, calculated totals, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: ELECTRICIAN_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote:
@@ -179,7 +185,7 @@ export const ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_CONTENT_EN: DibodevFreeTe
       {
         question: 'Is the electrician quote template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'Which VAT rate applies on an electrical quote in France?',

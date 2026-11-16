@@ -3,6 +3,7 @@ import { INVENTORY_SHEET_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTempla
 import {
   ANNUAL_INVENTORY_SOURCE,
   DOCUMENT_RETENTION_SOURCE,
+  INVENTORY_MANAGEMENT_TEMPLATE_DOCX_PATH,
   INVENTORY_MANAGEMENT_TEMPLATE_PDF_PATH,
   INVENTORY_MANAGEMENT_TEMPLATE_XLSX_PATH,
   STOCK_WITHDRAWAL_VAT_SOURCE,
@@ -40,7 +41,7 @@ export const INVENTORY_SHEET_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les TPE et PME qui tiennent un stock, et les commerces. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule les écarts et les totaux.`,
+    lead: `Pour les TPE et PME qui tiennent un stock, et les commerces. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule les écarts et les totaux, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -51,6 +52,11 @@ export const INVENTORY_SHEET_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent
         label: 'Télécharger la version Excel',
         href: INVENTORY_MANAGEMENT_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 feuilles, écarts et totaux calculés',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: INVENTORY_MANAGEMENT_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote:
@@ -169,7 +175,7 @@ export const INVENTORY_SHEET_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageContent
     questions: [
       {
         question: `Le modèle de fiche d’inventaire est-il vraiment gratuit${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `L’inventaire annuel est-il obligatoire, et faut-il valoriser le stock${NBSP}?`,

@@ -3,6 +3,7 @@ import { CARPENTRY_CUTTING_LIST_TEMPLATE_UPDATED_AT } from '~/core/constants/fre
 import { HOME_REPAIR_QUOTE_RULES_SOURCE } from '~/core/constants/tools/officialSources'
 import {
   BUILDER_WARRANTIES_SOURCE,
+  CARPENTRY_TEMPLATE_DOCX_PATH,
   CARPENTRY_TEMPLATE_PDF_PATH,
   CARPENTRY_TEMPLATE_XLSX_PATH,
   CUSTOM_WINDOW_WITHDRAWAL_SOURCE,
@@ -40,7 +41,7 @@ export const CARPENTRY_CUTTING_LIST_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePage
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les menuisiers, agenceurs, ébénistes et poseurs. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF (devis et PV de réception) s’imprime, l’Excel (devis, fiche de débit, plan de coupe) calcule.`,
+    lead: `Pour les menuisiers, agenceurs, ébénistes et poseurs. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF (devis et PV de réception) s’imprime, l’Excel (devis, fiche de débit, plan de coupe) calcule, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -51,6 +52,11 @@ export const CARPENTRY_CUTTING_LIST_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePage
         label: 'Télécharger la version Excel',
         href: CARPENTRY_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 feuilles, totaux et débits calculés',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: CARPENTRY_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote:
@@ -197,7 +203,7 @@ export const CARPENTRY_CUTTING_LIST_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePage
     questions: [
       {
         question: `Le modèle de fiche de débit est-il vraiment gratuit${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne «${NBSP}modèle proposé par Dibodev${NBSP}» en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne «${NBSP}modèle proposé par Dibodev${NBSP}» en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `Comment la fiche de débit calcule-t-elle les cotes de débit et le coût matière${NBSP}?`,

@@ -8,6 +8,7 @@ import {
   EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_UPDATED_AT,
 } from '~/core/constants/freeTemplates/equipmentRentalAgreement/pageShared'
 import {
+  EVENT_RENTAL_TEMPLATE_DOCX_PATH,
   EVENT_RENTAL_TEMPLATE_PDF_PATH,
   EVENT_RENTAL_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/eventRentalSoftware/pageShared'
@@ -46,7 +47,7 @@ export const EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_CONTENT_ES: DibodevFreeTemplate
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para empresas que alquilan material para eventos, mobiliario, sonido e iluminación o herramientas en Francia. Dos archivos en francés, sin formulario: el PDF se imprime, el Excel calcula.',
+    lead: 'Para empresas que alquilan material para eventos, mobiliario, sonido e iluminación o herramientas en Francia. Tres archivos en francés, sin formulario: el PDF se imprime, el Excel calcula, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -57,6 +58,11 @@ export const EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_CONTENT_ES: DibodevFreeTemplate
         label: 'Descargar la versión Excel',
         href: EVENT_RENTAL_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 hojas, totales y diferencias calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: EVENT_RENTAL_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote:
@@ -197,7 +203,7 @@ export const EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_CONTENT_ES: DibodevFreeTemplate
       {
         question: '¿La plantilla de contrato de alquiler de material es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿El acta de entrega y devolución es obligatoria en Francia?',

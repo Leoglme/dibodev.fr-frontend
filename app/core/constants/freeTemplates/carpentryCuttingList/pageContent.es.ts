@@ -3,6 +3,7 @@ import { CARPENTRY_CUTTING_LIST_TEMPLATE_UPDATED_AT } from '~/core/constants/fre
 import { HOME_REPAIR_QUOTE_RULES_SOURCE } from '~/core/constants/tools/officialSources'
 import {
   BUILDER_WARRANTIES_SOURCE,
+  CARPENTRY_TEMPLATE_DOCX_PATH,
   CARPENTRY_TEMPLATE_PDF_PATH,
   CARPENTRY_TEMPLATE_XLSX_PATH,
   CUSTOM_WINDOW_WITHDRAWAL_SOURCE,
@@ -47,7 +48,7 @@ export const CARPENTRY_CUTTING_LIST_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePage
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para carpinteros, interioristas, ebanistas e instaladores que trabajan en Francia. Dos archivos en francés, sin formulario: el PDF (presupuesto y acta de recepción) se imprime, el Excel (presupuesto, lista de corte, plan de corte) calcula.',
+    lead: 'Para carpinteros, interioristas, ebanistas e instaladores que trabajan en Francia. Tres archivos en francés, sin formulario: el PDF (presupuesto y acta de recepción) se imprime, el Excel (presupuesto, lista de corte, plan de corte) calcula, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -58,6 +59,11 @@ export const CARPENTRY_CUTTING_LIST_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePage
         label: 'Descargar la versión Excel',
         href: CARPENTRY_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 hojas, totales y despiece calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: CARPENTRY_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote:
@@ -206,7 +212,7 @@ export const CARPENTRY_CUTTING_LIST_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePage
       {
         question: '¿La plantilla de lista de corte es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿Cómo calcula la lista de corte las medidas de corte y el coste del material?',

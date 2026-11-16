@@ -3,6 +3,7 @@ import { CARPENTRY_CUTTING_LIST_TEMPLATE_UPDATED_AT } from '~/core/constants/fre
 import { HOME_REPAIR_QUOTE_RULES_SOURCE } from '~/core/constants/tools/officialSources'
 import {
   BUILDER_WARRANTIES_SOURCE,
+  CARPENTRY_TEMPLATE_DOCX_PATH,
   CARPENTRY_TEMPLATE_PDF_PATH,
   CARPENTRY_TEMPLATE_XLSX_PATH,
   CUSTOM_WINDOW_WITHDRAWAL_SOURCE,
@@ -47,7 +48,7 @@ export const CARPENTRY_CUTTING_LIST_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePage
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For joiners, carpenters, shopfitters, cabinetmakers and fitters working in France. Two files in French, no form to fill in: the PDF (quote and handover report) prints, the Excel file (quote, cutting list, cutting plan) calculates.',
+    lead: 'For joiners, carpenters, shopfitters, cabinetmakers and fitters working in France. Three files in French, no form to fill in: the PDF (quote and handover report) prints, the Excel file (quote, cutting list, cutting plan) calculates, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -58,6 +59,11 @@ export const CARPENTRY_CUTTING_LIST_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePage
         label: 'Download the Excel version',
         href: CARPENTRY_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 sheets, calculated totals and cutting list, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: CARPENTRY_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote:
@@ -207,7 +213,7 @@ export const CARPENTRY_CUTTING_LIST_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePage
       {
         question: 'Is the cutting list template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'How does the cutting list calculate the cutting sizes and the material cost?',

@@ -3,6 +3,7 @@ import {
   GOOD_WORKING_WARRANTY_SOURCE,
   RETENTION_MONEY_SOURCE,
   TEN_YEAR_LIABILITY_SOURCE,
+  WORKS_ACCEPTANCE_REPORT_TEMPLATE_DOCX_PATH,
   WORKS_ACCEPTANCE_REPORT_TEMPLATE_PDF_PATH,
   WORKS_ACCEPTANCE_REPORT_TEMPLATE_UPDATED_AT,
   WORKS_ACCEPTANCE_REPORT_TEMPLATE_XLSX_PATH,
@@ -43,7 +44,7 @@ export const WORKS_ACCEPTANCE_REPORT_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePag
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para los profesionales y las empresas de la construcción que trabajan en Francia, y para los particulares que reciben sus obras. Dos archivos en francés, sin formulario: el PDF se imprime, el Excel sigue las reservas y calcula las fechas.',
+    lead: 'Para los profesionales y las empresas de la construcción que trabajan en Francia, y para los particulares que reciben sus obras. Tres archivos en francés, sin formulario: el PDF se imprime, el Excel sigue las reservas y calcula las fechas, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -54,6 +55,11 @@ export const WORKS_ACCEPTANCE_REPORT_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePag
         label: 'Descargar la versión Excel',
         href: WORKS_ACCEPTANCE_REPORT_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 hojas, fechas calculadas, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: WORKS_ACCEPTANCE_REPORT_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote:
@@ -194,7 +200,7 @@ export const WORKS_ACCEPTANCE_REPORT_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePag
       {
         question: '¿La plantilla de acta de recepción es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿El acta de recepción es obligatoria en Francia?',

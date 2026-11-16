@@ -26,6 +26,9 @@ export const CLEANING_BUSINESS_TEMPLATE_PDF_PATH: string = '/modeles/planning-pa
 /** Excel version of the free template: hours per agent and conformity rate calculated. */
 export const CLEANING_BUSINESS_TEMPLATE_XLSX_PATH: string = '/modeles/planning-passages-controle-qualite-nettoyage.xlsx'
 
+/** Word version of the template: the same pages as the PDF, editable. */
+export const CLEANING_BUSINESS_TEMPLATE_DOCX_PATH: string = '/modeles/planning-passages-controle-qualite-nettoyage.docx'
+
 /** Collective agreement of cleaning companies (IDCC 3043): part-time work (art. 6.2.4.1) and staff transfer (art. 7). */
 export const CLEANING_COLLECTIVE_AGREEMENT_SOURCE: DibodevSourceReference = {
   name: 'Légifrance',

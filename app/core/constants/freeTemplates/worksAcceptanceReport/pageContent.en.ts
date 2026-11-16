@@ -3,6 +3,7 @@ import {
   GOOD_WORKING_WARRANTY_SOURCE,
   RETENTION_MONEY_SOURCE,
   TEN_YEAR_LIABILITY_SOURCE,
+  WORKS_ACCEPTANCE_REPORT_TEMPLATE_DOCX_PATH,
   WORKS_ACCEPTANCE_REPORT_TEMPLATE_PDF_PATH,
   WORKS_ACCEPTANCE_REPORT_TEMPLATE_UPDATED_AT,
   WORKS_ACCEPTANCE_REPORT_TEMPLATE_XLSX_PATH,
@@ -42,7 +43,7 @@ export const WORKS_ACCEPTANCE_REPORT_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePag
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For builders and tradespeople working in France, and for homeowners taking over their works. Two files in French, no form to fill in: the PDF prints, the Excel file tracks the reservations and calculates the dates.',
+    lead: 'For builders and tradespeople working in France, and for homeowners taking over their works. Three files in French, no form to fill in: the PDF prints, the Excel file tracks the reservations and calculates the dates, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -53,6 +54,11 @@ export const WORKS_ACCEPTANCE_REPORT_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePag
         label: 'Download the Excel version',
         href: WORKS_ACCEPTANCE_REPORT_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 sheets, calculated dates, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: WORKS_ACCEPTANCE_REPORT_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote: 'Free to use and adapt to your job. It does not replace the advice of a lawyer or of your insurer.',
@@ -192,7 +198,7 @@ export const WORKS_ACCEPTANCE_REPORT_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePag
       {
         question: 'Is the works acceptance report template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'Is an acceptance report mandatory in France?',

@@ -3,6 +3,7 @@ import { PERSONAL_TRAINER_CLIENT_REVIEW_TEMPLATE_UPDATED_AT } from '~/core/const
 import {
   GYM_MEMBERSHIP_RULES_SOURCE,
   HEALTH_DATA_SOURCE,
+  PERSONAL_TRAINER_TEMPLATE_DOCX_PATH,
   PERSONAL_TRAINER_TEMPLATE_PDF_PATH,
   PERSONAL_TRAINER_TEMPLATE_XLSX_PATH,
   SPORTS_EDUCATOR_DECLARATION_SOURCE,
@@ -41,7 +42,7 @@ export const PERSONAL_TRAINER_CLIENT_REVIEW_TEMPLATE_CONTENT_EN: DibodevFreeTemp
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For independent personal trainers, coaches and small gyms working in France. Two files in French, no form to fill in: the PDF prints, the Excel file calculates.',
+    lead: 'For independent personal trainers, coaches and small gyms working in France. Three files in French, no form to fill in: the PDF prints, the Excel file calculates, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -52,6 +53,11 @@ export const PERSONAL_TRAINER_CLIENT_REVIEW_TEMPLATE_CONTENT_EN: DibodevFreeTemp
         label: 'Download the Excel version',
         href: PERSONAL_TRAINER_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 sheets, calculated tonnage, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: PERSONAL_TRAINER_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote: 'Free to use and adapt to your practice. It does not replace medical advice.',
@@ -165,7 +171,7 @@ export const PERSONAL_TRAINER_CLIENT_REVIEW_TEMPLATE_CONTENT_EN: DibodevFreeTemp
       {
         question: 'Is the client assessment template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them for every client. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them for every client. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'What should a personal training client assessment contain?',

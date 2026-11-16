@@ -2,6 +2,7 @@ import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTem
 import {
   BOILER_MAINTENANCE_DECREE_SOURCE,
   BOILER_MAINTENANCE_ORDER_SOURCE,
+  BOILER_SERVICE_CERTIFICATE_TEMPLATE_DOCX_PATH,
   BOILER_SERVICE_CERTIFICATE_TEMPLATE_PDF_PATH,
   BOILER_SERVICE_CERTIFICATE_TEMPLATE_UPDATED_AT,
   BOILER_SERVICE_CERTIFICATE_TEMPLATE_XLSX_PATH,
@@ -43,7 +44,7 @@ export const BOILER_SERVICE_CERTIFICATE_TEMPLATE_CONTENT_FR: DibodevFreeTemplate
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les chauffagistes, les plombiers-chauffagistes et les entreprises de maintenance. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule et tient vos relances.`,
+    lead: `Pour les chauffagistes, les plombiers-chauffagistes et les entreprises de maintenance. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule et tient vos relances, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -54,6 +55,11 @@ export const BOILER_SERVICE_CERTIFICATE_TEMPLATE_CONTENT_FR: DibodevFreeTemplate
         label: 'Télécharger la version Excel',
         href: BOILER_SERVICE_CERTIFICATE_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 feuilles, phrase CO et relances calculées',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: BOILER_SERVICE_CERTIFICATE_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote:
@@ -189,7 +195,7 @@ export const BOILER_SERVICE_CERTIFICATE_TEMPLATE_CONTENT_FR: DibodevFreeTemplate
     questions: [
       {
         question: `Le modèle d’attestation d’entretien est-il vraiment gratuit${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `Qui doit fournir l’attestation d’entretien de chaudière${NBSP}?`,

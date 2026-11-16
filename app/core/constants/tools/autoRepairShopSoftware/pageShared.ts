@@ -26,6 +26,9 @@ export const AUTO_REPAIR_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2
 export const AUTO_REPAIR_TEMPLATE_PDF_PATH: string = '/modeles/ordre-de-reparation-devis-garage.pdf'
 export const AUTO_REPAIR_TEMPLATE_XLSX_PATH: string = '/modeles/ordre-de-reparation-devis-garage.xlsx'
 
+/** Word version of the template: the same pages as the PDF, editable. */
+export const AUTO_REPAIR_TEMPLATE_DOCX_PATH: string = '/modeles/ordre-de-reparation-devis-garage.docx'
+
 /** Garage rules (prices, quote, repair order, circular economy parts, invoice), updated on 31 July 2025. */
 export const AUTO_REPAIR_RULES_SOURCE: DibodevSourceReference = {
   name: 'Institut national de la consommation',

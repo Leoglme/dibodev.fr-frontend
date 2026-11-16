@@ -8,6 +8,7 @@ import {
   EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_UPDATED_AT,
 } from '~/core/constants/freeTemplates/equipmentRentalAgreement/pageShared'
 import {
+  EVENT_RENTAL_TEMPLATE_DOCX_PATH,
   EVENT_RENTAL_TEMPLATE_PDF_PATH,
   EVENT_RENTAL_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/eventRentalSoftware/pageShared'
@@ -46,7 +47,7 @@ export const EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_CONTENT_EN: DibodevFreeTemplate
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For companies renting out event equipment, furniture, sound and lighting or tools in France. Two files in French, no form to fill in: the PDF prints, the Excel file calculates.',
+    lead: 'For companies renting out event equipment, furniture, sound and lighting or tools in France. Three files in French, no form to fill in: the PDF prints, the Excel file calculates, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -57,6 +58,11 @@ export const EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_CONTENT_EN: DibodevFreeTemplate
         label: 'Download the Excel version',
         href: EVENT_RENTAL_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 sheets, calculated totals and gaps, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: EVENT_RENTAL_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote:
@@ -197,7 +203,7 @@ export const EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_CONTENT_EN: DibodevFreeTemplate
       {
         question: 'Is the equipment rental agreement template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'Is a condition report mandatory when renting out equipment in France?',

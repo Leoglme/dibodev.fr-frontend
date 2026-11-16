@@ -1,7 +1,7 @@
 import type { DibodevSourceReference } from '~/core/types/DibodevSoftwareToolPage'
 
 /** Day the template and the driving school rules were last checked: move it when the files or the facts change. */
-export const DRIVING_SCHOOL_CONTRACT_TEMPLATE_UPDATED_AT: string = '2026-11-08'
+export const DRIVING_SCHOOL_CONTRACT_TEMPLATE_UPDATED_AT: string = '2026-11-16'
 
 export const DRIVING_SCHOOL_CONTRACT_TEMPLATE_ROUTE_NAME: string = 'tools-free-templates-driving-school-contract'
 

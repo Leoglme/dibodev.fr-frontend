@@ -1,7 +1,7 @@
 import type { DibodevSourceReference } from '~/core/types/DibodevSoftwareToolPage'
 
 /** Day the template and the trade rules were last checked: move it when the files or the facts change. */
-export const BIKE_REPAIR_TICKET_TEMPLATE_UPDATED_AT: string = '2026-11-08'
+export const BIKE_REPAIR_TICKET_TEMPLATE_UPDATED_AT: string = '2026-11-16'
 
 export const BIKE_REPAIR_TICKET_TEMPLATE_ROUTE_NAME: string = 'tools-free-templates-bike-repair-ticket'
 

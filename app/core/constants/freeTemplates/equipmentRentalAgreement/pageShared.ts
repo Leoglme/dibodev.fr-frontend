@@ -1,7 +1,7 @@
 import type { DibodevSourceReference } from '~/core/types/DibodevSoftwareToolPage'
 
 /** Day the template and the trade rules were last checked: move it when the files or the facts change. */
-export const EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_UPDATED_AT: string = '2026-11-08'
+export const EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_UPDATED_AT: string = '2026-11-16'
 
 export const EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_ROUTE_NAME: string = 'tools-free-templates-equipment-rental-agreement'
 

@@ -4,6 +4,7 @@ import {
   BIOWASTE_SORTING_SOURCE,
   GARDENING_HOME_SERVICES_SOURCE,
   HOME_SERVICES_TAX_CREDIT_SOURCE,
+  LANDSCAPING_TEMPLATE_DOCX_PATH,
   LANDSCAPING_TEMPLATE_PDF_PATH,
   LANDSCAPING_TEMPLATE_XLSX_PATH,
   LANDSCAPING_VAT_SOURCE,
@@ -41,7 +42,7 @@ export const LANDSCAPER_MAINTENANCE_CONTRACT_TEMPLATE_CONTENT_EN: DibodevFreeTem
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For landscapers, gardeners and green-space businesses working in France. Two files in French, no form to fill in: the PDF prints, the Excel file calculates.',
+    lead: 'For landscapers, gardeners and green-space businesses working in France. Three files in French, no form to fill in: the PDF prints, the Excel file calculates, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -52,6 +53,11 @@ export const LANDSCAPER_MAINTENANCE_CONTRACT_TEMPLATE_CONTENT_EN: DibodevFreeTem
         label: 'Download the Excel version',
         href: LANDSCAPING_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 sheets, calculated totals, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: LANDSCAPING_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote:
@@ -179,7 +185,7 @@ export const LANDSCAPER_MAINTENANCE_CONTRACT_TEMPLATE_CONTENT_EN: DibodevFreeTem
       {
         question: 'Is the landscaper quote template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'Which VAT rate applies on a landscaping quote in France?',

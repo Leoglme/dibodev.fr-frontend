@@ -6,6 +6,7 @@ import {
   SERVICE_QUOTE_SOURCE,
 } from '~/core/constants/freeTemplates/bikeRepairTicket/pageShared'
 import {
+  BIKE_SHOP_TEMPLATE_DOCX_PATH,
   BIKE_SHOP_TEMPLATE_PDF_PATH,
   BIKE_SHOP_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/bikeShopSoftware/pageShared'
@@ -48,7 +49,7 @@ export const BIKE_REPAIR_TICKET_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageCont
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For bike workshops, bike shops and independent mechanics working in France. Two files in French, no form to fill in: the PDF prints, the Excel file calculates.',
+    lead: 'For bike workshops, bike shops and independent mechanics working in France. Three files in French, no form to fill in: the PDF prints, the Excel file calculates, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -59,6 +60,11 @@ export const BIKE_REPAIR_TICKET_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageCont
         label: 'Download the Excel version',
         href: BIKE_SHOP_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 sheets, calculated totals and delays, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: BIKE_SHOP_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote: 'Free to use and adapt to your workshop. It does not replace the advice of your accountant.',
@@ -188,7 +194,7 @@ export const BIKE_REPAIR_TICKET_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageCont
       {
         question: 'Is the bike repair ticket template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'Does a bike workshop in France have to give a quote?',

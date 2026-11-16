@@ -1,6 +1,7 @@
 import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTemplatePage'
 import { BODY_SHOP_CLAIM_TRACKING_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTemplates/bodyShopClaimTracking/pageShared'
 import {
+  BODY_SHOP_TEMPLATE_DOCX_PATH,
   BODY_SHOP_TEMPLATE_PDF_PATH,
   BODY_SHOP_TEMPLATE_XLSX_PATH,
   CIRCULAR_ECONOMY_PARTS_SOURCE,
@@ -47,7 +48,7 @@ export const BODY_SHOP_CLAIM_TRACKING_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePa
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para carroceros y talleres independientes de chapa y pintura que trabajan en Francia. Dos archivos en francés, sin formulario: el PDF se imprime, el Excel calcula.',
+    lead: 'Para carroceros y talleres independientes de chapa y pintura que trabajan en Francia. Tres archivos en francés, sin formulario: el PDF se imprime, el Excel calcula, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -58,6 +59,11 @@ export const BODY_SHOP_CLAIM_TRACKING_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePa
         label: 'Descargar la versión Excel',
         href: BODY_SHOP_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 hojas, totales y plazos calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: BODY_SHOP_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote:
@@ -195,7 +201,7 @@ export const BODY_SHOP_CLAIM_TRACKING_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePa
       {
         question: '¿La plantilla de presupuesto de carrocería es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿Cómo repartir la parte de la aseguradora y la parte del cliente?',

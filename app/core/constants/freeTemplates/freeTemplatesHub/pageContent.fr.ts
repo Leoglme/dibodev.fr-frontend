@@ -45,7 +45,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         tradeLabel: 'Plombier-chauffagiste',
         title: 'Devis + bon d’intervention',
         description: `Devis avec TVA à 5,5, 10 ou 20${NBSP}% et certification du client, bon d’intervention avec le relevé d’entretien de chaudière.`,
-        formats: 'PDF 2 pages · Excel 2 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 2 feuilles',
       },
       {
         key: 'intervention-slip',
@@ -53,7 +53,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Bon d’intervention + feuille de tournée',
         description:
           'Bon d’intervention signé sur place par le client, feuille de tournée du technicien avec les durées et les totaux calculés.',
-        formats: 'PDF 2 pages · Excel 2 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 2 feuilles',
       },
       {
         key: 'garage-repair-order',
@@ -61,7 +61,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Ordre de réparation + devis',
         description:
           'Ordre de réparation avec l’état du véhicule, le kilométrage et les accords du client, devis avec pièces, main-d’œuvre et totaux.',
-        formats: 'PDF 2 pages · Excel 2 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 2 feuilles',
       },
       {
         key: 'electrician-commissioning-report',
@@ -69,7 +69,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'PV de mise en service + devis',
         description:
           'Devis d’électricité avec la TVA par ligne, PV de mise en service avec les essais et l’attestation Consuel.',
-        formats: 'PDF 2 pages · Excel 2 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 2 feuilles',
       },
       {
         key: 'personal-trainer-client-review',
@@ -77,14 +77,14 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Bilan client + carnet de séances',
         description:
           'Bilan initial avec mesures et tests, carnet de séances avec le tonnage calculé séance après séance.',
-        formats: 'PDF 2 pages · Excel 2 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 2 feuilles',
       },
       {
         key: 'landscaping-maintenance-contract',
         tradeLabel: 'Paysagiste',
         title: 'Contrat d’entretien + devis d’aménagement',
         description: `Devis d’aménagement avec TVA à 10 ou 20${NBSP}%, contrat d’entretien de jardin avec les passages et les services à la personne.`,
-        formats: 'PDF 2 pages · Excel 2 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 2 feuilles',
       },
       {
         key: 'cleaning-schedule',
@@ -92,7 +92,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Planning des passages + contrôle qualité',
         description:
           'Planning de la semaine par site et par agent avec les heures calculées, fiche de contrôle qualité zone par zone avec le taux de conformité.',
-        formats: 'PDF 2 pages · Excel 2 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 2 feuilles',
       },
       {
         key: 'inventory-sheet',
@@ -100,7 +100,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Fiche d’inventaire + bon de réception',
         description:
           'Fiche d’inventaire tournant avec les écarts calculés, bon de réception fournisseur avec les quantités commandées, livrées et acceptées.',
-        formats: 'PDF 2 pages · Excel 2 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 2 feuilles',
       },
       {
         key: 'body-shop-claim-tracking',
@@ -108,7 +108,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Suivi de sinistre + devis carrosserie',
         description:
           'Devis avec relevé photos, pièces de réemploi et part de l’assureur, fiche de suivi de sinistre, planning de la cabine et véhicules de prêt.',
-        formats: 'PDF 2 pages · Excel 3 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
       },
       {
         key: 'carpentry-cutting-list',
@@ -116,7 +116,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Fiche de débit + devis avec métré',
         description:
           'Devis avec métré, fiche de débit et plan de coupe avec le coût matière calculé, PV de réception qui ouvre les garanties.',
-        formats: 'PDF 2 pages · Excel 3 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
       },
       {
         key: 'training-attendance-sheet',
@@ -124,7 +124,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Feuille d’émargement + suivi des heures',
         description:
           'Émargement par demi-journée, présences de la semaine et suivi des heures par stagiaire avec les soldes calculés.',
-        formats: 'PDF 2 pages · Excel 3 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
       },
       {
         key: 'booking-schedule',
@@ -132,7 +132,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Planning de réservation + fiche d’inscription',
         description:
           'Planning des créneaux avec les places et les acomptes calculés, fiche d’inscription et de briefing, tableau d’organisation des secours.',
-        formats: 'PDF 2 pages · Excel 4 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 4 feuilles',
       },
       {
         key: 'equipment-rental-agreement',
@@ -140,7 +140,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Contrat de location de matériel + état des lieux',
         description:
           'Contrat avec valeur de remplacement, dépôt de garantie, transport et casse, état des lieux de sortie et de retour, montants HT, TVA et TTC calculés.',
-        formats: 'PDF 2 pages · Excel 3 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
       },
       {
         key: 'driving-school-contract',
@@ -148,7 +148,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Contrat de formation + fiche de suivi de l’élève',
         description:
           'Contrat avec évaluation de départ, heures prévues et échéancier, fiche de suivi des leçons et des 4 compétences du livret, heures et examens calculés.',
-        formats: 'PDF 2 pages · Excel 3 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
       },
       {
         key: 'bike-repair-ticket',
@@ -156,7 +156,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Fiche de dépôt et de réparation vélo',
         description:
           'Fiche de dépôt avec le marquage du vélo et son état, devis accepté, pièces et main-d’œuvre, suivi des vélos à l’atelier et des pièces commandées.',
-        formats: 'PDF 2 pages · Excel 3 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
       },
       {
         key: 'boiler-service-certificate',
@@ -164,7 +164,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Attestation d’entretien de chaudière + carnet',
         description:
           'Attestation avec les mentions de l’arrêté du 15 septembre 2009, carnet des visites sur dix ans, clients à relancer avant la date anniversaire.',
-        formats: 'PDF 2 pages · Excel 3 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
       },
       {
         key: 'works-acceptance-report',
@@ -172,7 +172,7 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'PV de réception de travaux + levée des réserves',
         description:
           'Procès-verbal avec ou sans réserves, délais de levée, retenue de garantie, PV de levée des réserves et calendrier des garanties calculé.',
-        formats: 'PDF 2 pages · Excel 3 feuilles',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
       },
       {
         key: 'purchase-order',

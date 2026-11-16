@@ -3,6 +3,7 @@ import { INVENTORY_SHEET_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTempla
 import {
   ANNUAL_INVENTORY_SOURCE,
   DOCUMENT_RETENTION_SOURCE,
+  INVENTORY_MANAGEMENT_TEMPLATE_DOCX_PATH,
   INVENTORY_MANAGEMENT_TEMPLATE_PDF_PATH,
   INVENTORY_MANAGEMENT_TEMPLATE_XLSX_PATH,
   STOCK_WITHDRAWAL_VAT_SOURCE,
@@ -47,7 +48,7 @@ export const INVENTORY_SHEET_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para las pequeñas empresas de Francia que tienen stock, y para las tiendas. Dos archivos en francés, sin formulario: el PDF se imprime, el Excel calcula las diferencias y los totales.',
+    lead: 'Para las pequeñas empresas de Francia que tienen stock, y para las tiendas. Tres archivos en francés, sin formulario: el PDF se imprime, el Excel calcula las diferencias y los totales, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -58,6 +59,11 @@ export const INVENTORY_SHEET_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent
         label: 'Descargar la versión Excel',
         href: INVENTORY_MANAGEMENT_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 hojas, diferencias y totales calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: INVENTORY_MANAGEMENT_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote:
@@ -179,7 +185,7 @@ export const INVENTORY_SHEET_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageContent
       {
         question: '¿La plantilla de hoja de inventario es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿El inventario anual es obligatorio en Francia, y hay que valorar el stock?',

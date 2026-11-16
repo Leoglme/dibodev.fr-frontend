@@ -2,6 +2,7 @@ import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTem
 import {
   BOILER_MAINTENANCE_DECREE_SOURCE,
   BOILER_MAINTENANCE_ORDER_SOURCE,
+  BOILER_SERVICE_CERTIFICATE_TEMPLATE_DOCX_PATH,
   BOILER_SERVICE_CERTIFICATE_TEMPLATE_PDF_PATH,
   BOILER_SERVICE_CERTIFICATE_TEMPLATE_UPDATED_AT,
   BOILER_SERVICE_CERTIFICATE_TEMPLATE_XLSX_PATH,
@@ -41,7 +42,7 @@ export const BOILER_SERVICE_CERTIFICATE_TEMPLATE_CONTENT_ES: DibodevFreeTemplate
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para técnicos de calefacción, empresas de fontanería y calefacción y empresas de mantenimiento que trabajan en Francia. Dos archivos en francés, sin formulario: el PDF se imprime, el Excel calcula y lleva tus recordatorios.',
+    lead: 'Para técnicos de calefacción, empresas de fontanería y calefacción y empresas de mantenimiento que trabajan en Francia. Tres archivos en francés, sin formulario: el PDF se imprime, el Excel calcula y lleva tus recordatorios, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -52,6 +53,11 @@ export const BOILER_SERVICE_CERTIFICATE_TEMPLATE_CONTENT_ES: DibodevFreeTemplate
         label: 'Descargar la versión Excel',
         href: BOILER_SERVICE_CERTIFICATE_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 hojas, frase de CO y recordatorios calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: BOILER_SERVICE_CERTIFICATE_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote:
@@ -190,7 +196,7 @@ export const BOILER_SERVICE_CERTIFICATE_TEMPLATE_CONTENT_ES: DibodevFreeTemplate
       {
         question: '¿La plantilla de certificado de mantenimiento es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿Quién debe entregar el certificado de mantenimiento de caldera en Francia?',

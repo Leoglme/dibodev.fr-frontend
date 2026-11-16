@@ -25,6 +25,9 @@ export const PLUMBING_HEATING_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2
 export const PLUMBING_HEATING_TEMPLATE_PDF_PATH: string = '/modeles/devis-bon-intervention-plombier-chauffagiste.pdf'
 export const PLUMBING_HEATING_TEMPLATE_XLSX_PATH: string = '/modeles/devis-bon-intervention-plombier-chauffagiste.xlsx'
 
+/** Word version of the template: the same pages as the PDF, editable. */
+export const PLUMBING_HEATING_TEMPLATE_DOCX_PATH: string = '/modeles/devis-bon-intervention-plombier-chauffagiste.docx'
+
 /** Yearly maintenance of 4-400 kW boilers and heat pumps, certificate handed over within 15 days and kept 2 years. */
 export const BOILER_MAINTENANCE_SOURCE: DibodevSourceReference = {
   name: 'Service-Public.fr',

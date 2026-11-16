@@ -2,6 +2,7 @@ import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTem
 import { GARAGE_REPAIR_ORDER_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTemplates/garageRepairOrder/pageShared'
 import {
   AUTO_REPAIR_RULES_SOURCE,
+  AUTO_REPAIR_TEMPLATE_DOCX_PATH,
   AUTO_REPAIR_TEMPLATE_PDF_PATH,
   AUTO_REPAIR_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/autoRepairShopSoftware/pageShared'
@@ -38,7 +39,7 @@ export const GARAGE_REPAIR_ORDER_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageCon
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les garages, les mécaniciens indépendants et les centres auto. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule.`,
+    lead: `Pour les garages, les mécaniciens indépendants et les centres auto. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -49,6 +50,11 @@ export const GARAGE_REPAIR_ORDER_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageCon
         label: 'Télécharger la version Excel',
         href: AUTO_REPAIR_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 feuilles, totaux calculés',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: AUTO_REPAIR_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote: 'Modèle libre d’utilisation, à adapter à votre atelier. Il ne remplace pas l’avis de votre comptable.',
@@ -166,7 +172,7 @@ export const GARAGE_REPAIR_ORDER_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageCon
     questions: [
       {
         question: `Le modèle d’ordre de réparation est-il vraiment gratuit${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `L’ordre de réparation est-il obligatoire${NBSP}?`,

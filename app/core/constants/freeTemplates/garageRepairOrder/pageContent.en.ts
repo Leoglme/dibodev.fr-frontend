@@ -2,6 +2,7 @@ import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTem
 import { GARAGE_REPAIR_ORDER_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTemplates/garageRepairOrder/pageShared'
 import {
   AUTO_REPAIR_RULES_SOURCE,
+  AUTO_REPAIR_TEMPLATE_DOCX_PATH,
   AUTO_REPAIR_TEMPLATE_PDF_PATH,
   AUTO_REPAIR_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/autoRepairShopSoftware/pageShared'
@@ -38,7 +39,7 @@ export const GARAGE_REPAIR_ORDER_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageCon
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For garages, independent mechanics and auto centres working in France. Two files in French, no form to fill in: the PDF prints, the Excel file calculates.',
+    lead: 'For garages, independent mechanics and auto centres working in France. Three files in French, no form to fill in: the PDF prints, the Excel file calculates, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -49,6 +50,11 @@ export const GARAGE_REPAIR_ORDER_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageCon
         label: 'Download the Excel version',
         href: AUTO_REPAIR_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 sheets, calculated totals, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: AUTO_REPAIR_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote: 'Free to use and adapt to your workshop. It does not replace the advice of your accountant.',
@@ -169,7 +175,7 @@ export const GARAGE_REPAIR_ORDER_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageCon
       {
         question: 'Is the repair order template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'Is a repair order mandatory in France?',

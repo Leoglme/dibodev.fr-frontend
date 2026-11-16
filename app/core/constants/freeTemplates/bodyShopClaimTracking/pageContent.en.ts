@@ -1,6 +1,7 @@
 import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTemplatePage'
 import { BODY_SHOP_CLAIM_TRACKING_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTemplates/bodyShopClaimTracking/pageShared'
 import {
+  BODY_SHOP_TEMPLATE_DOCX_PATH,
   BODY_SHOP_TEMPLATE_PDF_PATH,
   BODY_SHOP_TEMPLATE_XLSX_PATH,
   CIRCULAR_ECONOMY_PARTS_SOURCE,
@@ -42,7 +43,7 @@ export const BODY_SHOP_CLAIM_TRACKING_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePa
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For body repairers and independent body and paint shops working in France. Two files in French, no form to fill in: the PDF prints, the Excel file calculates.',
+    lead: 'For body repairers and independent body and paint shops working in France. Three files in French, no form to fill in: the PDF prints, the Excel file calculates, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -53,6 +54,11 @@ export const BODY_SHOP_CLAIM_TRACKING_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePa
         label: 'Download the Excel version',
         href: BODY_SHOP_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 sheets, calculated totals and delays, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: BODY_SHOP_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote:
@@ -190,7 +196,7 @@ export const BODY_SHOP_CLAIM_TRACKING_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePa
       {
         question: 'Is the body shop quote template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'How do I split the insurer’s share and the customer’s share?',

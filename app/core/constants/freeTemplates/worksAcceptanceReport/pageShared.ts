@@ -1,7 +1,7 @@
 import type { DibodevSourceReference } from '~/core/types/DibodevSoftwareToolPage'
 
 /** Day the template and the trade rules were last checked: move it when the files or the facts change. */
-export const WORKS_ACCEPTANCE_REPORT_TEMPLATE_UPDATED_AT: string = '2026-11-08'
+export const WORKS_ACCEPTANCE_REPORT_TEMPLATE_UPDATED_AT: string = '2026-11-16'
 
 export const WORKS_ACCEPTANCE_REPORT_TEMPLATE_ROUTE_NAME: string = 'tools-free-templates-works-acceptance-report'
 
@@ -10,6 +10,9 @@ export const WORKS_ACCEPTANCE_REPORT_TEMPLATE_PDF_PATH: string = '/modeles/pv-re
 
 /** Excel version: report and reservations, clearance follow-up with statuses, warranty calendar from the acceptance date. */
 export const WORKS_ACCEPTANCE_REPORT_TEMPLATE_XLSX_PATH: string = '/modeles/pv-reception-travaux-levee-reserves.xlsx'
+
+/** Word version of the template: the same pages as the PDF, editable. */
+export const WORKS_ACCEPTANCE_REPORT_TEMPLATE_DOCX_PATH: string = '/modeles/pv-reception-travaux-levee-reserves.docx'
 
 /** Civil Code, art. 1792-6: acceptance with or without reservations, one-year completion warranty, repair deadlines agreed together. */
 export const WORKS_ACCEPTANCE_SOURCE: DibodevSourceReference = {

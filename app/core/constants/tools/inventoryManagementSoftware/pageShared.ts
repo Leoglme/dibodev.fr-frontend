@@ -14,6 +14,7 @@ export const INVENTORY_MANAGEMENT_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'alternative-erplain-logiciel-gestion-de-stock',
   'alternative-zoho-inventory-logiciel-gestion-de-stock',
   'alternative-axonaut-logiciel-gestion-tpe-stock',
+  'alternative-sortly-logiciel-gestion-de-stock',
   'logiciel-metier-saas-etagere-ou-sur-mesure',
   'alternative-rentman-logiciel-location-materiel',
   'logiciel-metier-b2b-quitter-excel-signes',
@@ -27,6 +28,9 @@ export const INVENTORY_MANAGEMENT_TEMPLATE_PDF_PATH: string = '/modeles/fiche-in
 
 /** Excel version of the free template: differences, accuracy rate and totals calculated. */
 export const INVENTORY_MANAGEMENT_TEMPLATE_XLSX_PATH: string = '/modeles/fiche-inventaire-bon-de-reception-stock.xlsx'
+
+/** Word version of the template: the same pages as the PDF, editable. */
+export const INVENTORY_MANAGEMENT_TEMPLATE_DOCX_PATH: string = '/modeles/fiche-inventaire-bon-de-reception-stock.docx'
 
 /** Physical inventory at least once every twelve months (French Commercial Code, art. L123-12). */
 export const ANNUAL_INVENTORY_SOURCE: DibodevSourceReference = {

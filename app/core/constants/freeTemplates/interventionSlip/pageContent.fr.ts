@@ -2,6 +2,7 @@ import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTem
 import { INTERVENTION_SLIP_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTemplates/interventionSlip/pageShared'
 import {
   DOCUMENT_RETENTION_SOURCE,
+  FIELD_SERVICE_TEMPLATE_DOCX_PATH,
   FIELD_SERVICE_TEMPLATE_PDF_PATH,
   FIELD_SERVICE_TEMPLATE_XLSX_PATH,
   ITINERANT_TRAVEL_TIME_SOURCE,
@@ -40,7 +41,7 @@ export const INTERVENTION_SLIP_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageConte
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les techniciens itinérants, les dépanneurs, les services après-vente et toutes les entreprises qui interviennent chez leurs clients. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule.`,
+    lead: `Pour les techniciens itinérants, les dépanneurs, les services après-vente et toutes les entreprises qui interviennent chez leurs clients. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -51,6 +52,11 @@ export const INTERVENTION_SLIP_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageConte
         label: 'Télécharger la version Excel',
         href: FIELD_SERVICE_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 feuilles, durées et totaux calculés',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: FIELD_SERVICE_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote: 'Modèle libre d’utilisation, à adapter à votre entreprise. Il ne remplace pas l’avis de votre comptable.',
@@ -168,7 +174,7 @@ export const INTERVENTION_SLIP_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageConte
     questions: [
       {
         question: `Le modèle de bon d’intervention est-il vraiment gratuit${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `Le bon d’intervention remplace-t-il le devis ou la facture${NBSP}?`,

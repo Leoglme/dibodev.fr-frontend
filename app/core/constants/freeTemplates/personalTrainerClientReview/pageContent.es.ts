@@ -3,6 +3,7 @@ import { PERSONAL_TRAINER_CLIENT_REVIEW_TEMPLATE_UPDATED_AT } from '~/core/const
 import {
   GYM_MEMBERSHIP_RULES_SOURCE,
   HEALTH_DATA_SOURCE,
+  PERSONAL_TRAINER_TEMPLATE_DOCX_PATH,
   PERSONAL_TRAINER_TEMPLATE_PDF_PATH,
   PERSONAL_TRAINER_TEMPLATE_XLSX_PATH,
   SPORTS_EDUCATOR_DECLARATION_SOURCE,
@@ -45,7 +46,7 @@ export const PERSONAL_TRAINER_CLIENT_REVIEW_TEMPLATE_CONTENT_ES: DibodevFreeTemp
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para entrenadores personales autónomos, coaches y gimnasios pequeños que trabajan en Francia. Dos archivos en francés, sin formulario: el PDF se imprime, el Excel calcula.',
+    lead: 'Para entrenadores personales autónomos, coaches y gimnasios pequeños que trabajan en Francia. Tres archivos en francés, sin formulario: el PDF se imprime, el Excel calcula, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -56,6 +57,11 @@ export const PERSONAL_TRAINER_CLIENT_REVIEW_TEMPLATE_CONTENT_ES: DibodevFreeTemp
         label: 'Descargar la versión Excel',
         href: PERSONAL_TRAINER_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 hojas, tonelaje calculado, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: PERSONAL_TRAINER_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote: 'Plantilla de uso libre, para adaptar a tu práctica. No sustituye un consejo médico.',
@@ -169,7 +175,7 @@ export const PERSONAL_TRAINER_CLIENT_REVIEW_TEMPLATE_CONTENT_ES: DibodevFreeTemp
       {
         question: '¿La plantilla de evaluación de cliente es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos con cada cliente. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos con cada cliente. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿Qué debe contener una evaluación de cliente de entrenamiento personal?',

@@ -3,6 +3,7 @@ import { BOOKING_SCHEDULE_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTempl
 import {
   CANOE_KAYAK_SAFETY_SOURCE,
   LEISURE_ACTIVITY_NO_WITHDRAWAL_SOURCE,
+  LEISURE_BOOKING_TEMPLATE_DOCX_PATH,
   LEISURE_BOOKING_TEMPLATE_PDF_PATH,
   LEISURE_BOOKING_TEMPLATE_XLSX_PATH,
   PAID_SPORTS_INSTRUCTOR_SOURCE,
@@ -47,7 +48,7 @@ export const BOOKING_SCHEDULE_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageConten
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para circuitos en los árboles, escape rooms, bases náuticas, centros ecuestres, kartings y alquileres de material de ocio que trabajan en Francia. Dos archivos en francés, sin formulario: el PDF se imprime, el Excel calcula las plazas libres, los saldos y los avisos.',
+    lead: 'Para circuitos en los árboles, escape rooms, bases náuticas, centros ecuestres, kartings y alquileres de material de ocio que trabajan en Francia. Tres archivos en francés, sin formulario: el PDF se imprime, el Excel calcula las plazas libres, los saldos y los avisos, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -58,6 +59,11 @@ export const BOOKING_SCHEDULE_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageConten
         label: 'Descargar la versión Excel',
         href: LEISURE_BOOKING_TEMPLATE_XLSX_PATH,
         format: 'Excel, 4 hojas, plazas, saldos y avisos calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: LEISURE_BOOKING_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote:
@@ -223,7 +229,7 @@ export const BOOKING_SCHEDULE_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageConten
       {
         question: '¿La plantilla de planning de reservas es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: 'Anticipo o arras: ¿qué anotar en la ficha y en el Excel?',

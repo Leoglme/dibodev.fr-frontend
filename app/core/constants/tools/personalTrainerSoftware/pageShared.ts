@@ -23,6 +23,9 @@ export const PERSONAL_TRAINER_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2
 export const PERSONAL_TRAINER_TEMPLATE_PDF_PATH: string = '/modeles/bilan-client-carnet-de-seances-coach-sportif.pdf'
 export const PERSONAL_TRAINER_TEMPLATE_XLSX_PATH: string = '/modeles/bilan-client-carnet-de-seances-coach-sportif.xlsx'
 
+/** Word version of the template: the same pages as the PDF, editable. */
+export const PERSONAL_TRAINER_TEMPLATE_DOCX_PATH: string = '/modeles/bilan-client-carnet-de-seances-coach-sportif.docx'
+
 /** Coaching for pay requires a declaration and a professional card (code du sport). */
 export const SPORTS_EDUCATOR_DECLARATION_SOURCE: DibodevSourceReference = {
   name: 'sports.gouv.fr',

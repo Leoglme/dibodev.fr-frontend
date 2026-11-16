@@ -26,6 +26,9 @@ export const FIELD_SERVICE_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2
 export const FIELD_SERVICE_TEMPLATE_PDF_PATH: string = '/modeles/bon-intervention-feuille-de-tournee.pdf'
 export const FIELD_SERVICE_TEMPLATE_XLSX_PATH: string = '/modeles/bon-intervention-feuille-de-tournee.xlsx'
 
+/** Word version of the template: the same pages as the PDF, editable. */
+export const FIELD_SERVICE_TEMPLATE_DOCX_PATH: string = '/modeles/bon-intervention-feuille-de-tournee.docx'
+
 /** Mandatory mentions of an invoice between businesses: due date, late-payment penalties, 40 € recovery fee. */
 export const INVOICE_MENTIONS_SOURCE: DibodevSourceReference = {
   name: 'Entreprendre.Service-Public.fr',

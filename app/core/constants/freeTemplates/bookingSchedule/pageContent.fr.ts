@@ -3,6 +3,7 @@ import { BOOKING_SCHEDULE_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTempl
 import {
   CANOE_KAYAK_SAFETY_SOURCE,
   LEISURE_ACTIVITY_NO_WITHDRAWAL_SOURCE,
+  LEISURE_BOOKING_TEMPLATE_DOCX_PATH,
   LEISURE_BOOKING_TEMPLATE_PDF_PATH,
   LEISURE_BOOKING_TEMPLATE_XLSX_PATH,
   PAID_SPORTS_INSTRUCTOR_SOURCE,
@@ -45,7 +46,7 @@ export const BOOKING_SCHEDULE_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageConten
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les accrobranches, escape games, bases nautiques, centres équestres, kartings et loueurs de matériel de loisirs. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule les places restantes, les soldes et les alertes.`,
+    lead: `Pour les accrobranches, escape games, bases nautiques, centres équestres, kartings et loueurs de matériel de loisirs. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule les places restantes, les soldes et les alertes, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -56,6 +57,11 @@ export const BOOKING_SCHEDULE_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageConten
         label: 'Télécharger la version Excel',
         href: LEISURE_BOOKING_TEMPLATE_XLSX_PATH,
         format: 'Excel, 4 feuilles, places, soldes et alertes calculés',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: LEISURE_BOOKING_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote:
@@ -217,7 +223,7 @@ export const BOOKING_SCHEDULE_TEMPLATE_CONTENT_FR: DibodevFreeTemplatePageConten
     questions: [
       {
         question: `Le modèle de planning de réservation est-il vraiment gratuit${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `Acompte ou arrhes${NBSP}: que noter sur la fiche et dans l’Excel${NBSP}?`,

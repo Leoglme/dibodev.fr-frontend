@@ -3,6 +3,7 @@ import { ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_UPDATED_AT } from '~/core/con
 import {
   CHARGING_POINT_QUALIFICATION_SOURCE,
   CONSUEL_SOURCE,
+  ELECTRICIAN_TEMPLATE_DOCX_PATH,
   ELECTRICIAN_TEMPLATE_PDF_PATH,
   ELECTRICIAN_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/electricianSoftware/pageShared'
@@ -40,7 +41,7 @@ export const ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_CONTENT_FR: DibodevFreeTe
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les électriciens, les installateurs et les auto-entrepreneurs du bâtiment. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule.`,
+    lead: `Pour les électriciens, les installateurs et les auto-entrepreneurs du bâtiment. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -51,6 +52,11 @@ export const ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_CONTENT_FR: DibodevFreeTe
         label: 'Télécharger la version Excel',
         href: ELECTRICIAN_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 feuilles, totaux calculés',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: ELECTRICIAN_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote:
@@ -174,7 +180,7 @@ export const ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_CONTENT_FR: DibodevFreeTe
     questions: [
       {
         question: `Le modèle de devis électricien est-il vraiment gratuit${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne « modèle proposé par Dibodev » en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `Quelle TVA appliquer sur un devis d’électricité${NBSP}?`,

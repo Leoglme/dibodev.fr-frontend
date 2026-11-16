@@ -1,6 +1,7 @@
 import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTemplatePage'
 import { CLEANING_SCHEDULE_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTemplates/cleaningSchedule/pageShared'
 import {
+  CLEANING_BUSINESS_TEMPLATE_DOCX_PATH,
   CLEANING_BUSINESS_TEMPLATE_PDF_PATH,
   CLEANING_BUSINESS_TEMPLATE_XLSX_PATH,
   CLEANING_COLLECTIVE_AGREEMENT_SOURCE,
@@ -45,7 +46,7 @@ export const CLEANING_SCHEDULE_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageConte
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para empresas de limpieza, responsables de equipo y autónomos de la limpieza que trabajan en Francia. Dos archivos en francés, sin formulario: el PDF se imprime, el Excel calcula las horas y la tasa de conformidad.',
+    lead: 'Para empresas de limpieza, responsables de equipo y autónomos de la limpieza que trabajan en Francia. Tres archivos en francés, sin formulario: el PDF se imprime, el Excel calcula las horas y la tasa de conformidad, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -56,6 +57,11 @@ export const CLEANING_SCHEDULE_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageConte
         label: 'Descargar la versión Excel',
         href: CLEANING_BUSINESS_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 hojas, horas y conformidad calculadas, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: CLEANING_BUSINESS_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote:
@@ -176,7 +182,7 @@ export const CLEANING_SCHEDULE_TEMPLATE_CONTENT_ES: DibodevFreeTemplatePageConte
       {
         question: '¿La plantilla de planning de limpieza es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿Cuántas horas semanales como mínimo para un operario a tiempo parcial en Francia?',

@@ -3,6 +3,7 @@ import { ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_UPDATED_AT } from '~/core/con
 import {
   CHARGING_POINT_QUALIFICATION_SOURCE,
   CONSUEL_SOURCE,
+  ELECTRICIAN_TEMPLATE_DOCX_PATH,
   ELECTRICIAN_TEMPLATE_PDF_PATH,
   ELECTRICIAN_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/electricianSoftware/pageShared'
@@ -45,7 +46,7 @@ export const ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_CONTENT_ES: DibodevFreeTe
   },
   downloads: {
     eyebrow: 'Descarga gratuita',
-    lead: 'Para electricistas, instaladores y autónomos de la construcción que trabajan en Francia. Dos archivos en francés, sin formulario: el PDF se imprime, el Excel calcula.',
+    lead: 'Para electricistas, instaladores y autónomos de la construcción que trabajan en Francia. Tres archivos en francés, sin formulario: el PDF se imprime, el Excel calcula, el Word se modifica libremente.',
     files: [
       {
         label: 'Descargar la plantilla PDF',
@@ -56,6 +57,11 @@ export const ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_CONTENT_ES: DibodevFreeTe
         label: 'Descargar la versión Excel',
         href: ELECTRICIAN_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 hojas, totales calculados, en francés',
+      },
+      {
+        label: 'Descargar la versión Word',
+        href: ELECTRICIAN_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 páginas, editable, en francés',
       },
     ],
     footnote:
@@ -181,7 +187,7 @@ export const ELECTRICIAN_COMMISSIONING_REPORT_TEMPLATE_CONTENT_ES: DibodevFreeTe
       {
         question: '¿La plantilla de presupuesto de electricista es realmente gratis?',
         answer:
-          'Sí. Los dos archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
+          'Sí. Los tres archivos se descargan sin registro ni dirección de e-mail, y puedes modificarlos, imprimirlos y reutilizarlos tanto como quieras. Única contrapartida: una línea «plantilla propuesta por Dibodev» a pie de página, que puedes quitar.',
       },
       {
         question: '¿Qué IVA se aplica en un presupuesto de electricidad en Francia?',

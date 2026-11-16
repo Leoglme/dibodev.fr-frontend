@@ -2,6 +2,7 @@ import type { DibodevFreeTemplatePageContent } from '~/core/types/DibodevFreeTem
 import {
   BOILER_MAINTENANCE_DECREE_SOURCE,
   BOILER_MAINTENANCE_ORDER_SOURCE,
+  BOILER_SERVICE_CERTIFICATE_TEMPLATE_DOCX_PATH,
   BOILER_SERVICE_CERTIFICATE_TEMPLATE_PDF_PATH,
   BOILER_SERVICE_CERTIFICATE_TEMPLATE_UPDATED_AT,
   BOILER_SERVICE_CERTIFICATE_TEMPLATE_XLSX_PATH,
@@ -40,7 +41,7 @@ export const BOILER_SERVICE_CERTIFICATE_TEMPLATE_CONTENT_EN: DibodevFreeTemplate
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For heating engineers, plumbing and heating businesses and maintenance companies working in France. Two files in French, no form to fill in: the PDF prints, the Excel file calculates and keeps your reminders.',
+    lead: 'For heating engineers, plumbing and heating businesses and maintenance companies working in France. Three files in French, no form to fill in: the PDF prints, the Excel file calculates and keeps your reminders, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -51,6 +52,11 @@ export const BOILER_SERVICE_CERTIFICATE_TEMPLATE_CONTENT_EN: DibodevFreeTemplate
         label: 'Download the Excel version',
         href: BOILER_SERVICE_CERTIFICATE_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 sheets, CO statement and reminders calculated, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: BOILER_SERVICE_CERTIFICATE_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote:
@@ -189,7 +195,7 @@ export const BOILER_SERVICE_CERTIFICATE_TEMPLATE_CONTENT_EN: DibodevFreeTemplate
       {
         question: 'Is the boiler service certificate template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'Who must provide the boiler service certificate in France?',

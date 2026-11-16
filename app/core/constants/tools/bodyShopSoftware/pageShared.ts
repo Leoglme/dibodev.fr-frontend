@@ -25,6 +25,9 @@ export const BODY_SHOP_TEMPLATE_PDF_PATH: string = '/modeles/devis-carrosserie-s
 /** Excel version of the free template: quote totals, insurer and customer shares, days off the road and insurer receivables calculated. */
 export const BODY_SHOP_TEMPLATE_XLSX_PATH: string = '/modeles/devis-carrosserie-suivi-sinistre.xlsx'
 
+/** Word version of the template: the same pages as the PDF, editable. */
+export const BODY_SHOP_TEMPLATE_DOCX_PATH: string = '/modeles/devis-carrosserie-suivi-sinistre.docx'
+
 /** Garage rules (hourly rates posted per workshop, repair order, invoice, circular economy parts), checked on 21 February 2026. */
 export const GARAGE_RULES_SOURCE: DibodevSourceReference = {
   name: 'Entreprendre.Service-Public.fr',

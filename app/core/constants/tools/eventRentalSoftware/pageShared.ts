@@ -24,6 +24,9 @@ export const EVENT_RENTAL_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2
 export const EVENT_RENTAL_TEMPLATE_PDF_PATH: string = '/modeles/contrat-location-etat-des-lieux-materiel.pdf'
 export const EVENT_RENTAL_TEMPLATE_XLSX_PATH: string = '/modeles/contrat-location-etat-des-lieux-materiel.xlsx'
 
+/** Word version of the template: the same pages as the PDF, editable. */
+export const EVENT_RENTAL_TEMPLATE_DOCX_PATH: string = '/modeles/contrat-location-etat-des-lieux-materiel.docx'
+
 /** Rules for marquees, tents and temporary structures (CTS), from the French State in the Drôme department. */
 export const EVENT_RENTAL_MARQUEE_RULES_SOURCE: DibodevSourceReference = {
   name: 'Services de l’État dans la Drôme',

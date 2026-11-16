@@ -26,6 +26,9 @@ export const DRIVING_SCHOOL_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2
 export const DRIVING_SCHOOL_TEMPLATE_PDF_PATH: string = '/modeles/contrat-formation-fiche-suivi-auto-ecole.pdf'
 export const DRIVING_SCHOOL_TEMPLATE_XLSX_PATH: string = '/modeles/contrat-formation-fiche-suivi-auto-ecole.xlsx'
 
+/** Word version of the template: the same pages as the PDF, editable. */
+export const DRIVING_SCHOOL_TEMPLATE_DOCX_PATH: string = '/modeles/contrat-formation-fiche-suivi-auto-ecole.docx'
+
 /** Official sources of the rules section, the same in every language. */
 export const DRIVING_SCHOOL_RULE_SOURCES: Record<DibodevDrivingSchoolRuleSourceKey, DibodevSourceReference> = {
   logbook: {

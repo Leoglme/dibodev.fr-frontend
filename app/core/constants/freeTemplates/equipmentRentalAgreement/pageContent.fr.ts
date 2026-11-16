@@ -8,6 +8,7 @@ import {
   EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_UPDATED_AT,
 } from '~/core/constants/freeTemplates/equipmentRentalAgreement/pageShared'
 import {
+  EVENT_RENTAL_TEMPLATE_DOCX_PATH,
   EVENT_RENTAL_TEMPLATE_PDF_PATH,
   EVENT_RENTAL_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/eventRentalSoftware/pageShared'
@@ -45,7 +46,7 @@ export const EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_CONTENT_FR: DibodevFreeTemplate
   },
   downloads: {
     eyebrow: 'Téléchargement gratuit',
-    lead: `Pour les loueurs de matériel événementiel, de mobilier, de sono et d’éclairage ou d’outillage. Deux fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule.`,
+    lead: `Pour les loueurs de matériel événementiel, de mobilier, de sono et d’éclairage ou d’outillage. Trois fichiers, aucun formulaire à remplir${NBSP}: le PDF s’imprime, l’Excel calcule, le Word se modifie librement.`,
     files: [
       {
         label: 'Télécharger le modèle PDF',
@@ -56,6 +57,11 @@ export const EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_CONTENT_FR: DibodevFreeTemplate
         label: 'Télécharger la version Excel',
         href: EVENT_RENTAL_TEMPLATE_XLSX_PATH,
         format: 'Excel, 3 feuilles, totaux et écarts calculés',
+      },
+      {
+        label: 'Télécharger la version Word',
+        href: EVENT_RENTAL_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, modifiable',
       },
     ],
     footnote:
@@ -190,7 +196,7 @@ export const EQUIPMENT_RENTAL_AGREEMENT_TEMPLATE_CONTENT_FR: DibodevFreeTemplate
     questions: [
       {
         question: `Le modèle de contrat de location de matériel est-il vraiment gratuit${NBSP}?`,
-        answer: `Oui. Les deux fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne «${NBSP}modèle proposé par Dibodev${NBSP}» en pied de page, que vous pouvez retirer.`,
+        answer: `Oui. Les trois fichiers se téléchargent sans inscription ni adresse e-mail, et vous pouvez les modifier, les imprimer et les réutiliser autant que vous voulez. Seule contrepartie${NBSP}: une ligne «${NBSP}modèle proposé par Dibodev${NBSP}» en pied de page, que vous pouvez retirer.`,
       },
       {
         question: `Un état des lieux est-il obligatoire pour louer du matériel${NBSP}?`,

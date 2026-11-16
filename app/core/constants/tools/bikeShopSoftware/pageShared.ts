@@ -21,6 +21,9 @@ export const BIKE_SHOP_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2
 export const BIKE_SHOP_TEMPLATE_PDF_PATH: string = '/modeles/fiche-depot-reparation-velo.pdf'
 export const BIKE_SHOP_TEMPLATE_XLSX_PATH: string = '/modeles/fiche-depot-reparation-velo.xlsx'
 
+/** Word version of the template: the same pages as the PDF, editable. */
+export const BIKE_SHOP_TEMPLATE_DOCX_PATH: string = '/modeles/fiche-depot-reparation-velo.docx'
+
 /** Bike marking: new bikes since 1 January 2021, used bikes sold by businesses since 1 July 2021, FNUCI run by APIC. */
 export const BIKE_MARKING_SOURCE: DibodevSourceReference = {
   name: 'jeunes.gouv.fr',

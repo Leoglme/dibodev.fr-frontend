@@ -3,6 +3,7 @@ import { INVENTORY_SHEET_TEMPLATE_UPDATED_AT } from '~/core/constants/freeTempla
 import {
   ANNUAL_INVENTORY_SOURCE,
   DOCUMENT_RETENTION_SOURCE,
+  INVENTORY_MANAGEMENT_TEMPLATE_DOCX_PATH,
   INVENTORY_MANAGEMENT_TEMPLATE_PDF_PATH,
   INVENTORY_MANAGEMENT_TEMPLATE_XLSX_PATH,
   STOCK_WITHDRAWAL_VAT_SOURCE,
@@ -41,7 +42,7 @@ export const INVENTORY_SHEET_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent
   },
   downloads: {
     eyebrow: 'Free download',
-    lead: 'For small businesses in France that hold stock, and for shops. Two files in French, no form to fill in: the PDF prints, the Excel file calculates the differences and the totals.',
+    lead: 'For small businesses in France that hold stock, and for shops. Three files in French, no form to fill in: the PDF prints, the Excel file calculates the differences and the totals, the Word file can be edited freely.',
     files: [
       {
         label: 'Download the PDF template',
@@ -52,6 +53,11 @@ export const INVENTORY_SHEET_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent
         label: 'Download the Excel version',
         href: INVENTORY_MANAGEMENT_TEMPLATE_XLSX_PATH,
         format: 'Excel, 2 sheets, calculated differences and totals, in French',
+      },
+      {
+        label: 'Download the Word version',
+        href: INVENTORY_MANAGEMENT_TEMPLATE_DOCX_PATH,
+        format: 'Word, 2 pages, editable, in French',
       },
     ],
     footnote:
@@ -173,7 +179,7 @@ export const INVENTORY_SHEET_TEMPLATE_CONTENT_EN: DibodevFreeTemplatePageContent
       {
         question: 'Is the inventory sheet template really free?',
         answer:
-          'Yes. Both files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
+          'Yes. All three files download without sign-up or email address, and you can edit, print and reuse them as much as you want. The only trade-off: a “template by Dibodev” line in the footer, which you may remove.',
       },
       {
         question: 'Is a yearly stock count mandatory in France, and must the stock be valued?',

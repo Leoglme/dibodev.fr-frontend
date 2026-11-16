@@ -13,6 +13,7 @@ export const TRAINING_CENTER_PAGE_SCREENSHOT_URL: string =
 /** Articles linked at the bottom of the page; the untranslated ones are left out of /en and /es automatically. */
 export const TRAINING_CENTER_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'alternative-digiforma-logiciel-organisme-de-formation',
+  'alternative-dendreo-logiciel-organisme-de-formation',
   'logiciel-gestion-auto-ecole-planning-eleves-heures',
   'application-metier-sur-mesure-guide-tpe-pme',
   'logiciel-metier-saas-etagere-ou-sur-mesure',
@@ -27,6 +28,9 @@ export const TRAINING_CENTER_TEMPLATE_PDF_PATH: string = '/modeles/feuille-emarg
 
 /** Excel version of the free template: class schedule, hours left per student and hours per trainee calculated. */
 export const TRAINING_CENTER_TEMPLATE_XLSX_PATH: string = '/modeles/feuille-emargement-suivi-heures-formation.xlsx'
+
+/** Word version of the template: the same pages as the PDF, editable. */
+export const TRAINING_CENTER_TEMPLATE_DOCX_PATH: string = '/modeles/feuille-emargement-suivi-heures-formation.docx'
 
 /** Activity declaration within 3 months of the first agreement, its number on every document, a yearly BPF to keep it. */
 export const TRAINING_ACTIVITY_DECLARATION_SOURCE: DibodevSourceReference = {
