@@ -49352,5 +49352,2395 @@
         }
       ]
     }
+  },
+  "blog/mise-a-jour-google-novembre-2026-site-touche-que-faire": {
+    "title": "Google’s November 2026 Update: Is Your Site Affected, and What to Do?",
+    "excerpt": "Since November 10, 2026, Google has updated its rankings. Learn how to check if your traffic drop is related—and the steps I took to protect my own site.",
+    "metaTitle": "Google’s November 2026 Update: Is Your Site Affected?",
+    "metaDescription": "Google’s November 2026 ranking update began on Nov 10. Discover how to check if your site is impacted, what to verify, and critical mistakes to avoid.",
+    "tags": [
+      "Google update",
+      "core algorithm update",
+      "traffic drop",
+      "Google Search Console",
+      "SEO best practices",
+      "Google visibility",
+      "small business website"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Monday morning, you open your statistics and the curve plummets. Fewer visits, fewer calls, sometimes a page that used to bring traffic and now brings nothing. You haven’t changed anything. Neither has your site.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If this is happening to you right now, there’s a possible explanation, and it has a date: November 10, 2026, Google rolled out a general update to its rankings. I develop websites and software for small businesses near Rennes, and my own site was affected. I’ll explain what it is, how to tell if you’re impacted, and what I decided to do—and not to do.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What exactly is a Google update?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Several times a year, Google overhauls how it ranks websites. It calls this a « core update, » a major update. It doesn’t target any specific site: Google re-evaluates all pages at once, in one sweep.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Google itself provides an analogy in ",
+              "type": "text"
+            },
+            {
+              "text": "its documentation",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://developers.google.com/search/docs/appearance/core-updates?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". Think of your list of favorite restaurants. If you redid it two years later, some might have slipped without getting worse—others simply moved ahead. A page that drops in ranking doesn’t necessarily have a flaw to fix, and ",
+              "type": "text"
+            },
+            {
+              "text": "it’s not a penalty",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This month’s update is called the « November 2026 core update. » It’s been listed on ",
+              "type": "text"
+            },
+            {
+              "text": "Google’s official dashboard",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://status.search.google.com/summary",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " since November 10, and it’s rolling out gradually. The last three updates took 12, 12, and 18 days. If this one follows the same pattern, it will wrap up between November 22 and 28. Until then, rankings shift, sometimes day by day.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to tell if your site was hit by the Google update",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Three checks are enough, in this order.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The date.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " When did the drop start? If it was around November 10 or later, the update is a strong lead. If traffic was already falling in October, look elsewhere.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Your name.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Search for your business name on Google. If your site still ranks first, it hasn’t vanished—it’s just lost ground in other searches, which is the usual sign of an update. If it no longer appears at all, the issue is likely technical.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The Search Console.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " This is Google’s free tool that shows how often your site appears in search results, page by page. Compare the days since November 10 to the same period just before. A sharp drop across many pages, with no changes on your end—that’s the hallmark of an update.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To save you from doing the calculations, I’ve put an online tool online: ",
+              "type": "text"
+            },
+            {
+              "text": "Google Update: Is my site affected?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/mise-a-jour-google-mon-site-est-il-touche",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " You upload your Search Console export there. It is read in your browser, nothing is sent anywhere. The tool tells you if the drop coincides with the update and which pages have lost traffic. If you don’t have Search Console, a five-question test gives you an initial answer.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What I measured on my own site",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’m not just telling you from afar. Between October 27 and November 12, 23 pages of dibodev.fr lost all their impressions overnight. One page was appearing dozens of times a day in Google. The next day, zero.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My first fear was that they had been removed from the index or penalized. I checked each page individually. They are still indexed. They appear first when searching for their exact title. Google reports no issues. They’re there, but Google no longer shows them in the searches that used to bring them traffic.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I prefer to tell you what I know and what I don’t. More than half of these pages dropped before November 10. The update is therefore the likely context, but not a proven cause. And one of them came back on its own on November 14, after seventeen days with zero traffic, without me doing anything.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This return convinced me to wait. I froze my existing pages: no rewritten titles, no edited text until the deployment is complete. I’ll compare results one week after the end. If a page hasn’t recovered two weeks later, then—and only then—will I decide to strengthen it or merge it with another.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What not to do during deployment",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The temptation is to rewrite everything in a panic. It’s the worst idea, for one simple reason: you’ll never know what worked. If you change ten titles while Google reshuffles its rankings and traffic goes up, was it because of you or because of them? And if traffic drops again?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Google says it themselves. For minor drops, they recommend not making drastic changes to content that was already working. They advise against quick fixes, like removing an element from a page because you read somewhere it hurt SEO. And deleting pages, according to them, is a last resort.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Their advice boils down to this: wait at least one full week after the deployment ends, then compare that week with the week before the update began. For this update, the week before was November 3 to 9.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What to check anyway",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Waiting doesn’t mean turning a blind eye. A drop can come from elsewhere, and ",
+              "type": "text"
+            },
+            {
+              "text": "Google lists these other causes",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": a site or hosting outage, a setting that accidentally blocks Google, a hack, a page address change after a redesign, or simply the season. A landscaper gets fewer inquiries in November than in April, update or not.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "These causes can be fixed immediately, without waiting for anyone. To rule them out in two minutes, I have another free tool, ",
+              "type": "text"
+            },
+            {
+              "text": "Test My Site",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/tester-mon-site",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": it checks eight points, including security and mobile display.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "One last case deserves a closer look. If your site appears as often as before but gets fewer clicks, the update isn’t to blame. It’s your title or description in the search results that is less appealing than your neighbors’.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What if my site isn’t ranking?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Google makes no promises, and neither do I. It says some improvements take effect in a few days, others take several months, and sometimes you have to wait for the next update to rank.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If the drop is strong and lasting, the work isn’t technical. It’s about reviewing your pages through a customer’s eyes. Does this page truly answer their question better than the other ten? Does it offer a price, an example, proof, or something the others don’t? It’s less flashy than a trick, but it’s what Google says it’s looking for.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "And Google isn’t the only entry point anymore. Today, a portion of my visitors comes through ChatGPT. To see if these bots can read your site, I ran another free test: ",
+              "type": "text"
+            },
+            {
+              "text": "Is my site readable by ChatGPT?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/site-lisible-par-chatgpt",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions About the November 2026 Google Update",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How long does a Google update last?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " About two weeks. The last three updates lasted 12, 12, and 18 days. Google announces the start and end on its official dashboard.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Has my site disappeared from Google—is this a penalty?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Almost never. A penalty is reported in Search Console under the ‘Manual Actions’ section. If nothing appears there and your site still shows up under its name, you’ve lost rankings, not visibility.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Should I modify my pages during the update?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " No, unless correcting a real error: a wrong price, a broken link, or a broken page. Everything else waits until the rollout ends, plus another week.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "How do I know when the update is over?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " On Google’s dashboard, under the rankings section. As long as the update is marked as ‘in progress,’ your numbers aren’t final.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Have doubts about your site? Send me its link. I’ll tell you, for free, whether the drop matches the update or something else, and where to start. If the answer is to wait, I’ll say so too.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "4d07dcdf-d0b9-4dc2-8167-0c1ac58ab614",
+            "body": [
+              {
+                "_uid": "i-dfaad46e-3c22-4614-bd92-92abd2c8e521",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Discuss my project",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/alternative-booqable-logiciel-location-materiel": {
+    "title": "Booqable Alternatives: Best Equipment Rental Software for 2026",
+    "excerpt": "Booqable costs €29 to €149 per month annually, plus optional scanning and deposits. Discover its limitations, three alternatives with pricing, and the case for custom solutions.",
+    "metaTitle": "Booqable Alternatives & Pricing 2026",
+    "metaDescription": "Booqable costs €29–€149/month (as of Nov 2026). Explore its limits and top alternatives: Unipresta, LoKisi, Rentman with pricing comparisons.",
+    "tags": [
+      "booqable review",
+      "booqable alternatives",
+      "equipment rental software",
+      "booqable pricing",
+      "booqable vs rentman",
+      "event rental software"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In brief: compared to Booqable, on November 15, 2026, I found Unipresta priced at 19 to 319 € HT per month (free to start), LoKisi at 29 € HT per month, and Rentman at 39 € per month plus 23 € per advanced user. Booqable costs 29 to 149 € per month when paid annually, or 35 to 187 € per month. Custom solutions compare to Booqable Grow’s 3,456 € over three years with three scanners.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I don’t rent tables or speakers, but I can imagine a Monday morning: the trailer returns from a wedding, two chair covers are missing out of 120, a speaker stand is bent, and the same batch leaves Wednesday for a seminar. Booqable is one of the first names that comes up when searching for software for this. I reviewed its pricing on November 15, 2026, along with three other rental software providers that publicly list theirs. Here’s what it costs, what might make you hesitate, three priced alternatives, and when a custom solution makes sense.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Booqable Costs in 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As of November 15, 2026, the ",
+              "type": "text"
+            },
+            {
+              "text": "Booqable pricing page in French",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://booqable.com/fr/pricing/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " displays its prices in euros from France, with an annual or monthly selector and a 20% discount for annual payments. Start costs 29 € per month when paid annually, 35 € per month. Grow costs 69 € per month annually, 87 € per month. Scale costs 149 € per month annually, 187 € per month. A custom plan starts at 349 € per month, by appointment. The page does not specify whether these prices are exclusive of tax (HT) or inclusive of tax (TTC).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The three plans include unlimited products and orders, with no reservation fees or setup costs: order and inventory management, quotes, contracts, and invoices, real-time availability tracking, ready-to-use booking page, website integration, and bundled product offers. Grow adds five extra users, electronic signatures, scheduled downtime for repairs, and API access. Scale adds ten extra users, activity logs, and the ability to open additional locations.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Everything else is an add-on, and each option has two price tiers. Barcode and QR code scanning costs 9 € per user per month when paid annually, 12 € per month, and only available from Grow onward. Each additional location costs 29 € per month annually, 37 € per month, available only in Scale. The website builder costs 19 or 24 € per month, and shipping costs 9 €. The trial lasts 14 days, with no credit card required.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Who Should Choose Booqable",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A renter whose customers book themselves online: inflatable structures, event furniture, tents, bikes, small tools. The customer sees availability, picks dates, signs, and pays—no three back-and-forth emails. Alone, they take Start at 29 € per month paid annually, totaling 348 € per year. With three staff members, electronic signatures, and one scanner each for check-ins and check-outs, they take Grow: 69 € plus three times 9 €, totaling 96 € per month annually, or 1,152 € per year. Paid monthly, the same team pays 123 € per month, 1,476 € per year.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Might Make You Hesitate",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Scanning isn’t included in the introductory price. Start at 29 € doesn’t support barcode reading. If you want to scan equipment at check-in and check-out, the real starting point is Grow at 69 € annually, plus 9 € per person who scans.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A second depot changes the plan. Additional locations are only available in Scale: a renter with an urban depot and a rural one moves to 149 € plus 29 € per month annually, totaling 2,136 € per year, or 2,688 € per year paid monthly.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "VAT is not displayed. The pricing page doesn’t specify HT or TTC: ask for clarification on a written quote before comparing with a provider that lists prices excluding tax.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Technician scheduling isn’t shown. The pricing page mentions equipment availability calendars, not team scheduling for events. For a sound and lighting provider sending three technicians per date, this is a question to ask during the trial.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Three Alternatives to Booqable, With Their Prices",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Prices listed on each provider’s website, checked on November 15, 2026. My full comparison, including a six-question test, is on my ",
+              "type": "text"
+            },
+            {
+              "text": "equipment rental software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-location-materiel-evenementiel",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Unipresta, free then 19 to 319 € HT per month. The ",
+              "type": "text"
+            },
+            {
+              "text": "Unipresta pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://unipresta.com/tarifs/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " offers a free plan limited to ten customer requests per month, with an address at unipresta.com. Monthly, Starter costs 19 € excl. tax plus 5% commission « on revenue », Pro 89 € excl. tax plus 2.5%, Advanced 319 € excl. tax with no commission. Annually, with one free month: 209 €, 979 €, and 3,509 € excl. tax per year. Connecting your domain name through their team costs 100 € excl. tax. With 4,000 € of monthly revenue, Starter totals 219 € excl. tax, Pro 189 € excl. tax: ask about which revenue the commission applies to.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "LoKisi, 29 € excl. tax per month, then 19 € excl. tax per user. The ",
+              "type": "text"
+            },
+            {
+              "text": "LoKisi pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.lokisi.com/tarifs/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " shows a single plan, Pro Loc, at 29 € excl. tax per month for access: unlimited clients, articles, quotes, and invoices, rental scheduling, statistics, and support. Each additional access costs 19 € excl. tax, equipment intervention tracking 20 € excl. tax, and accounting transfer 19 € excl. tax per month. No annual pricing is displayed, no commitment, 30-day trial. Three users pay 67 € excl. tax per month, 804 € excl. tax per year.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Rentman, 39 € per month plus 23 € per advanced user. On the ",
+              "type": "text"
+            },
+            {
+              "text": "Rentman pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://rentman.io/fr/tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", the Rental Management pack includes the inventory, quotes, and invoices: 39 € per month for the platform, plus 23 € per advanced user in Standard, 28 € in Pro. Standard users, like the deposit team, are free. QR code and barcode scanning is a module at 9 € per advanced user, and each additional warehouse costs 5 € per advanced user with the Pro plan. Annual payment removes 8% the first year, the page does not specify excl. tax or incl. tax, and the trial lasts 30 days without a card. Three people handling quotes pay 108 € per month. I detailed its features in my article ",
+              "type": "text"
+            },
+            {
+              "text": "Alternative to Rentman",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-rentman-logiciel-location-materiel",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", and the case of an English publisher in ",
+              "type": "text"
+            },
+            {
+              "text": "Alternative to Current RMS",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-current-rms-logiciel-location-materiel",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "And if none fit: the custom tool",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "These software solutions struggle with rules that belong to you: a « reception for 100 people » package missing two covers on return, which must remain bookable with what’s left; the cleaning time between two weddings; a partial deposit retained based on equipment condition; custom weekend rates; a stock split between two warehouses, with transfers on Fridays.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The core of such a tool is equipment tracking. I built ",
+              "type": "text"
+            },
+            {
+              "text": "StockPME",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/stockpme",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "from scratch, a stock management software, at Kodeva where I was an intern. It’s still in production in SMEs with 20 to 200 employees. Every movement is tracked, warehouse by warehouse: entries, exits, transfers, and inventories, and each item has its QR code label. An equipment checkout and return follows the same process, with added dates.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Pricing-wise, an add-on connected alongside your subscription costs 2,500 to 7,000 € once. A full tool ranges from 5,000 to 15,000 € upfront, then 100 to 300 € per month for maintenance, hosting, and backups included, and you own the code. Three years of Booqable Grow with three scanners cost 3,456 € paid annually; three years of Scale with an extra warehouse, 6,408 €. My article on the ",
+              "type": "text"
+            },
+            {
+              "text": "price of a custom software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " details what affects a quote, and my ",
+              "type": "text"
+            },
+            {
+              "text": "custom software pricing barometer",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " provides price ranges for French service providers.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to choose in one day",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Take the test with six questions from my page on rental software, then put each software through a real week of your season. A Saturday wedding with a table, chair, and sound package reserved online by the client; the same package reserved for a seminar the following Wednesday; a return where two covers are missing and a stand leg needs repair. Check if the Wednesday availability updates automatically, and the price once options are added. To frame the paperwork side, use my ",
+              "type": "text"
+            },
+            {
+              "text": "free equipment rental contract",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/modeles-gratuits/contrat-de-location-de-materiel",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " and compare it to the contract generated by the software.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "How much does Booqable cost per month?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As of November 15, 2026, from 29 to 149 € per month paid annually, or 35 to 187 € paid monthly, in euros on its French page, with no mention of VAT or inclusive tax. Additional options, such as scanning at 9 or 12 € per user, are extra.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Does Booqable offer a free trial?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes, 14 days with all features, no credit card required.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Does Booqable take a commission on bookings?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No. Its pricing page states for all plans: unlimited products and orders, no commission or setup fees. This is a difference from Unipresta’s Starter and Pro plans, which take 5% and 2.5% respectively.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Which rental software is the cheapest?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Among those that display their prices, Unipresta has a limited free plan with ten requests per month, then Starter at 19 € HT plus 5% commission. For a fixed price without commission, LoKisi starts at 29 € HT per month, and Booqable Start at 29 € per month paid annually.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Booqable or Rentman?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Booqable for the renter whose clients book online, with a price per plan. Rentman for the technical service provider who wants to pay per advanced user, with free warehouse users included.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "You don’t know which one to choose?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Describe your fleet to me in a few lines: furniture, sound equipment, tents, or tools, how many people are in the office and at the warehouse, how many warehouses you have, and what still goes through the paper return form or a spreadsheet. I’ll respond within 24 hours, by phone or video if that’s easier, and if Booqable Start or LoKisi at 29 € is enough, I’ll let you know.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "94212dea-24ea-45f2-95f3-5b9e930ed029",
+            "body": [
+              {
+                "_uid": "i-11a386d4-0922-4b30-aa32-3d53fd0fbc2a",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Describe how you work",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/alternative-axonaut-logiciel-gestion-tpe-stock": {
+    "title": "Axonaut Alternatives: Best 2026 Management Software Options",
+    "excerpt": "Axonaut covers everything, including inventory, but charges per user. Discover its real monthly and three-year costs, suitability, and pricing comparisons with Odoo, DoliCloud, and Erplain.",
+    "metaTitle": "Axonaut 2026: Pricing & Top 3 Alternatives",
+    "metaDescription": "Axonaut costs €97/user/month or €58.20/year (3-year plan). Learn its limitations and explore 3 cost-effective alternatives with transparent pricing.",
+    "tags": [
+      "axonaut review",
+      "axonaut alternatives",
+      "axonaut pricing",
+      "inventory management software",
+      "small business management tools",
+      "commercial stock software"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In brief: as of November 15, 2026, Axonaut costs 97 € per user per month on the monthly plan, 77.60 € on the 1-year plan, and 58.20 € on the 3-year plan. In comparison, Odoo Standard is 19.90 € per user per month on an annual basis, DoliCloud is 14 € HT per user, and Erplain is 59 € HT per month on an annual basis. Custom solutions compare to the 6,285.60 € cost of three Axonaut users over three years.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Axonaut often comes up when a small business wants everything in one place: quotes, invoices, customers, cash flow, and inventory. On paper, that’s exactly what a manager selling products and tired of recounting stock on a Saturday morning with a notebook wants. Axonaut handles inventory; the real question is how far it goes and how much it costs as the team grows. I reviewed its pricing page on November 15, 2026, in its four tiers, along with those of Odoo, DoliCloud, and Erplain. Here’s its real price, who it’s for, what makes people hesitate, three costed alternatives, and the case for custom solutions.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Axonaut Costs in 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As of November 15, 2026, the ",
+              "type": "text"
+            },
+            {
+              "text": "Axonaut pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://axonaut.com/content/prix",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " displays a SME offer for companies with fewer than 10 employees, billed per user and per month. The selector has four options: monthly at 97 €, 1 year at 77.60 €, 2 years at 67.90 €, and 3 years at 58.20 €. The FAQ mentions discounts of 20%, 30%, and 40% off the monthly price. The page does not specify whether these amounts are pre-tax (HT) or all-inclusive (TTC).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The subscription is presented with no commitment, includes a 15-day free trial, and promises « all features included »: unlimited quotes and invoices, CRM, customer and supplier orders, delivery notes, bank reconciliation, cash flow, projects, HR, tickets, email marketing, a public API, and a pro account. Electronic invoicing is announced as compliant, with the note « approved platform ». Only external services you activate are billed additionally: electronic signatures, online invoice payments, and postal mail. For over 10 employees, the SME offer requires a meeting with no listed price, a dedicated contact, setup, and data migration.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For inventory, the pricing page lists the weighted average unit cost and real-time stock value, low-stock alerts, automatic decrement upon issuing a delivery note or invoice, goods receipt, and traceability by lot number, series, best-before date (DLC), and minimum durability date (DLUO). The ",
+              "type": "text"
+            },
+            {
+              "text": "Axonaut stock page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://axonaut.com/content/logiciel-gestion-stock",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " also includes product movement history, manufacturing from raw materials, product rental tracking, data hosting in France, and Android and iOS apps.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Who Axonaut Is Right For",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A small business with two to five people selling products and services that wants quotes, invoices, reminders, cash flow, and inventory all in one tool—and prefers a per-person price without unlocking modules. The hardware reseller who also installs, the workshop that produces in small batches: as long as inventory fits in one location and billing accuracy is the priority, Axonaut covers the essentials. Three people pay 291 € per month on the monthly plan, 232.80 € per month on the 1-year plan (2,793.60 € per year), or 174.60 € per month on the 3-year plan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Makes People Hesitate",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The price follows every person who logs in. Everything is included, but everything is paid per user. Five people on the monthly plan cost 485 €; on the 1-year plan, 388 € per month, or 4,656 € per year. If the warehouse manager and salesperson also need access, count them in.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The biggest discounts come with two- or three-year commitments. The 58.20 € price is for the 3-year plan. Three users at that rate cost 6,285.60 € over three years, compared to 10,476 € on the monthly plan. The page mentions a no-commitment subscription but doesn’t clarify how these durations are billed: get it confirmed in writing before deciding.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Multi-location inventory and barcode scanning aren’t described. Neither the pricing page nor the stock page mentions multiple warehouses, transfers between locations, barcodes, barcode scanners, or phone-based inventory counts. If your inventory spans a warehouse, a truck, and a storefront, ask about it during the trial with your own products.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The SME plan has no public price. If you’re nearing 10 employees, request a written quote before committing.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Three Alternatives to Axonaut, With Their Prices",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Prices listed on each publisher’s website, recorded on November 15, 2026. I’ve selected three tools that, like Axonaut, combine quotes, invoices, and inventory in one software.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Odoo: 0 € then 19.90 € or 24.90 € per user per month. The ",
+              "type": "text"
+            },
+            {
+              "text": "Odoo pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.odoo.com/fr_FR/pricing",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " shows a « One Free App » plan at 0 €, for a single app and an unlimited number of users, then Standard at 19.90 € per user per month with annual payment (crossed-out price 24.90 €), or 24.90 € per month (crossed-out price 31.10 €), with the discount applying for 12 months to users of the initial order. Custom is 35.90 € per year and 44.90 € per month. Whether VAT-inclusive (HT or TTC) is not specified. Standard includes all applications, including Sales, CRM, Inventory, and Accounting. To match Axonaut’s scope, several applications are needed, so Standard: three users pay 59.70 € per month the first year with annual billing, 74.70 € per month. Setup by an expert is not included in the subscription.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "DoliCloud (hosted Dolibarr), 14 € HT per user per month. The ",
+              "type": "text"
+            },
+            {
+              "text": "DoliCloud pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.dolicloud.com/fr/fr-faq-pricing.php",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " shows Basic at 14 € HT per user per month, including all official Dolibarr modules (CRM, quotes, invoicing, stock), 4 GB of storage, and ticket-based support, and Premium at 30 € HT per month plus 15 € HT per user, with 20 GB of storage and functional support. There is no annual selector: annual payment must be requested from support, in Premium only, with no displayed discount. The 2016 tax law certificate costs 5 € per month per user in Basic, with no extra charge in Premium. A 30-day trial is available without a card, no commitment, and data is hosted in France. Three users pay 42 € HT per month in Basic, 75 € HT in Premium.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Erplain, 59 € HT per month with annual billing or 70.80 € per month. The ",
+              "type": "text"
+            },
+            {
+              "text": "Erplain pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.erplain.com/fr/tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " shows a base plan at 59 € HT per month with annual billing, requiring a 12-month commitment and including two free months, or 70.80 € HT per month without commitment, for one user and 1,000 orders per month (0.03 € per additional order). It includes quotes, purchase orders, delivery notes, electronic invoicing, stock levels, inventories, barcodes, and valuation. Each additional user costs 14 € HT with annual billing, 16.80 € per month. Modules are paid separately; in annual billing, multiple storage locations cost 14 €, lots, series, and expiration dates cost 29 €, and supplier purchase orders cost 14 €. Three users with these three modules pay 144 € HT per month with annual billing. A 14-day trial is available without a card. ",
+              "type": "text"
+            },
+            {
+              "text": "Erplain alternative",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-erplain-logiciel-gestion-de-stock",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", and a stock-focused tool in the article ",
+              "type": "text"
+            },
+            {
+              "text": "Zoho Inventory alternative",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/alternative-zoho-inventory-logiciel-gestion-de-stock",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To compare these tools with others, including free ones, visit my page ",
+              "type": "text"
+            },
+            {
+              "text": "stock management software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-gestion-de-stock",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": a six-question test and the prices of a dozen publishers.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "And if none fit: the custom tool",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Axonaut and its competitors handle the commercial side well. Where a small business with stock struggles is often on the ground: the item found in a basement by scanning its label, the carton moved from storage to the truck, the shelf count on Friday evening with discrepancies corrected immediately. At Kodeva, where I was an intern, I built from scratch ",
+              "type": "text"
+            },
+            {
+              "text": "StockPME",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/stockpme",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", a stock and inventory management software that Breizhtic distributed with hardware: product sheets, stock levels, entries, exits, corrections, and inventories, transfers between locations and warehouses, QR labels generated in the tool, and after-sales service tracking. It is still in use in SMEs with 20 to 200 employees.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Keeping Axonaut and adding only what’s missing is often the most reasonable path, since its pricing page mentions a public API. A custom addition of this type, integrated with the existing tool, costs between 2,500 and 7,000 € one-time. A complete custom tool ranges from 5,000 to 15,000 €, plus 100 to 300 € per month for maintenance, and you own the code. Compare this to the 6,285.60 € cost of three Axonaut users over three years at the three-year rate, or 10,476 € at the monthly rate. My article on the ",
+              "type": "text"
+            },
+            {
+              "text": "cost of custom software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " details these price ranges, and the ",
+              "type": "text"
+            },
+            {
+              "text": "custom software price barometer",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " provides the rates of French service providers to verify an estimate.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to choose in one day",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Start by counting your current stock with a ",
+              "type": "text"
+            },
+            {
+              "text": "free inventory sheet",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/modeles-gratuits/fiche-d-inventaire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": you will know how many references you track, in how many locations, and who should handle them. Then put each software through its paces during a full day of testing: turn an estimate into an order, receive a supplier delivery with two missing items, process a delivery note that reduces stock, send an electronic invoice, and have the valued stock sent to the accountant. If you re-enter something, you will have to re-enter it every day.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "How much does Axonaut cost per month?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As of November 15, 2026, the SME offer costs 97 € per user and per month on a monthly billing plan, 77.60 € on a 1-year plan, 67.90 € on a 2-year plan, and 58.20 € on a 3-year plan. The page does not specify whether these prices are before or after tax. For over 10 employees, the SME offer is available by appointment only.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Does Axonaut manage inventory?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes, inventory is included in the subscription, with weighted average cost valuation, alerts, goods receipt, batches, and best-before dates. Its pages do not mention multiple warehouses or barcodes: verify this during the trial.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "What is the cheapest alternative to Axonaut?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Among those listed here, DoliCloud Basic at 14 € HT per user and per month, followed by Odoo Standard at 19.90 € with annual payment for the first year. Odoo is free with a single application, but achieving Axonaut’s full scope requires multiple applications.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Is Axonaut compliant with electronic invoicing?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Its pricing page states that electronic invoicing is compliant, with the mention ‘approved platform,’ included in the subscription. SMEs and micro-enterprises will have to issue electronic invoices starting September 1, 2027.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Can you keep Axonaut and add an inventory tool alongside it?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes. Its pricing page mentions a public API: a custom add-on for labels, inventories, or multiple warehouses can be integrated for a one-time fee of 2,500 to 7,000 €.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "You don’t know which one to choose?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Describe your business in a few lines: how many people handle invoicing and inventory, how many storage locations you have, and what is still counted manually. I’ll get back to you within 24 hours, and if Axonaut, DoliCloud, or Odoo meets your needs as-is, I’ll let you know.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "2205417b-a475-4c37-96ba-0434a3fef869",
+            "body": [
+              {
+                "_uid": "i-9d5d274c-2ab6-41cd-9886-b8ee5cf3049d",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Describe your inventory to me",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/alternative-digiforma-logiciel-organisme-de-formation": {
+    "title": "Digiforma Alternatives: Best LMS Software for Training Organizations in 2026",
+    "excerpt": "Digiforma starts at €49 HT per month for 200 learners—its true cost, ideal users, drawbacks, and a comparison with Dendreo, Edusign, and Platformeasy pricing.",
+    "metaTitle": "Digiforma Alternatives & Pricing 2026",
+    "metaDescription": "Digiforma from €49 HT/month (updated 15/11/2026). Who it suits, key limitations, and top alternatives: Dendreo, Edusign, Platformeasy with pricing.",
+    "tags": [
+      "digiforma review",
+      "digiforma alternatives",
+      "training organization software",
+      "digiforma pricing",
+      "qualiopi certified software",
+      "training attendance software"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In brief: as of November 15, 2026, Digiforma starts at €49 HT per month with an annual commitment, €59 HT without, for 200 learners per year and one user. On the same day, I also noted Dendreo starting at €225 HT per month plus setup fees, Edusign from €29 to €119 per month for attendance only, and Platformeasy from €39 to €109 HT per month for academic support. Digiforma suits an organization looking for sessions, attendance, invoices, and BPF all in one place; customization comes into play when your workflow goes beyond standard options.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’m not a trainer, nor have I ever put together a Qualiopi dossier. But I recognize the scene described by training organizations searching for software: the binder of attendance sheets scanned every Friday evening, the convention sent with the wrong number of hours, and in spring, the BPF reconstructed session by session in a spreadsheet. Digiforma quickly becomes relevant once you’re ready to move past that. I reviewed its pricing page on November 15, 2026, along with those of three other editors who also display their prices.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Digiforma costs in 2026",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As of November 15, 2026, the ",
+              "type": "text"
+            },
+            {
+              "text": "pricing page of Digiforma",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.digiforma.com/prix/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " lists five tax-exclusive plans, each with two monthly prices: with an annual commitment or without. Indep costs €49 HT per month with commitment or €59 HT without, for 200 learners per year, one user, and one trainer; each additional user or trainer adds €49 HT per month. Equipe rises to €199 or €239 HT for 500 learners, 4 users, and 20 trainers. Orga costs €349 or €419 HT for 1,500 learners and 8 users, while Orga+ is €499 or €599 HT for 2,500 learners, 12 users, and priority support. Beyond that, Leader starts at €699 HT with commitment or €839 HT without, after a meeting.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "All plans include administrative management, learner space, essential LMS, quality compliance, integrated attendance, CRM, online catalog, AI assistant, and electronic invoicing; the comparison table also mentions activity reports and BPF. Options are paid separately: electronic signature for conventions from €29 HT per month, secure attendance via double authentication from €29, online payments and bank reconciliation from €29, and multi-centers from €99. A 15-day trial is offered, and subscriptions can be canceled at any time. Over a year, Indep totals €588 HT with commitment, while Equipe totals €2,388 HT.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Who Digiforma is the right choice for",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A declared training organization, often Qualiopi-certified, that sells inter and intra company training to businesses and wants everything in one place: program, convention, invitation, attendance, evaluation, invoice, and finally the BPF at year-end. Independent trainers starting out find an affordable entry price as long as they stay under 200 learners. A small team of three or four people in the office, with around twenty freelance trainers, fits perfectly into the Equipe plan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What makes one hesitate",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The learner counter. The quota is based on participants over 365 rolling days, and Digiforma’s FAQ clarifies that a person enrolled in two different trainings in a year counts as two. An independent trainer running 25 sessions of 8 people each reaches 200; one more session, and it’s Equipe at €199 HT per month. Count your enrollments from last year, not your trainees.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The add-on options. Signing conventions online, securing remote attendance, and accepting online payments: each comes with an extra line item. Indep with electronic signatures is at least €78 HT per month with commitment.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What the page doesn’t say. CPF and EDOF aren’t mentioned: if your trainees often go through Mon Compte Formation, ask how the dossiers are processed. The annual discount is listed as 15% in the FAQ but shown as « -17% » on the pricing cards: confirm the exact amount on your quote.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Three alternatives to Digiforma, with their prices",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Prices listed on the French pricing page of each editor, checked on November 15, 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Dendreo, starting at €225 HT per month. The ",
+              "type": "text"
+            },
+            {
+              "text": "pricing page of Dendreo",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.dendreo.com/prix",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " shows a single monthly price per plan, with no commitment: Starter at €225 HT for 10,000 trainee-hours per year and 2 users, Bronze at €346 HT for 25,000 hours and 4 users, Silver at €574 HT for 50,000 hours and 8 users, Gold at €992 HT for 90,000 hours and 12 users; Platinum is quote-based. Each additional user costs €19, and initial setup fees range from €1,490 for Starter to €3,990 for Gold. Trainees, trainers, signatures, and attendance are unlimited, BPF is automatically generated, and electronic invoicing is included. The EDOF connector is free on Dendreo’s side but requires a Wedof subscription, starting at €49 HT per month for 50 dossiers per year, according to the same page. A 14-day trial is available with no payment required. A 14-hour training for 10 people consumes 140 trainee-hours.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Edusign, from 29 to 119 € per month, for attendance signing only. The ",
+              "type": "text"
+            },
+            {
+              "text": "Edusign pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://edusign.com/fr/tarifs",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " features a selector: for annual payment, Independent costs 29 € per month (348 € per year), Organisme 59 € (708 €), and Organisme Pro 99 € (1,188 €); for monthly payment, 39, 75, and 119 €. Whether VAT-inclusive (HT or TTC) is not specified. Quotas range from 200 sign-ins per month with one administrator, then 0.50 € per signature, to 1,000 sign-ins with unlimited administrators, then 0.25 €. Learners and instructors are unlimited, the completion certificate is included, and the subscription can be canceled at any time. The page does not mention BPF (Bill of Professional Fees) or invoicing to your clients: it’s for those who manage billing elsewhere. With few sessions, a ",
+              "type": "text"
+            },
+            {
+              "text": "free attendance sheet",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/modeles-gratuits/feuille-d-emargement-formation",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " per half-day can be a temporary solution while you decide.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Platformeasy (formerly Ogustine), from 39 to 109 € HT per month, if you primarily offer tutoring. The ",
+              "type": "text"
+            },
+            {
+              "text": "Platformeasy pricing page",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://platformeasy.io/tarifs-entreprise-independants/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " lists Solo at 39 € HT per month or 390 € HT annually, Standard at 69 € HT or 690 € HT, plus 29 € per additional account, and Pro at 109 € HT or 1,090 € HT, plus 39 € per account. There are no setup fees, the first month is 1 €, and there is no commitment. Starting with Solo: invoices calculated from the schedule, hour packages, tax receipts, and immediate advance of the tax credit through the Urssaf interface. The page does not mention BPF, Qualiopi, or attendance signing: it’s the tool for courses paid by families, for a center where professional training remains secondary.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To compare these software options with other providers, visit my page ",
+              "type": "text"
+            },
+            {
+              "text": "software for training organizations",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/logiciel-organisme-de-formation",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ": a free six-question test, a price comparison, and the rules based on who pays you.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "And if none fit: the custom tool",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Digiforma and Dendreo follow the standard workflow: session, agreement, attendance signing, invoice, and BPF. They lock you into what’s unique to you: a center offering professional training during the day and tutoring in the evening, with BPF on one side and immediate tax credit advance on the other; hour packages consumed over several months; invoicing rules by funder that the settings don’t account for. You then pay for two subscriptions and re-enter data between them.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "During my training at Epitech, I designed ",
+              "type": "text"
+            },
+            {
+              "text": "Driving School",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/project/driving-school",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", a web application for driving school management: a schedule viewable daily, weekly, or monthly, a file for each student and instructor with their respective permissions, and each student’s balance, hours completed, and remaining hours. A driving lesson and a class share the same structure: a student, an instructor, a time slot, and an hour package that depletes. This core is adapted for a training organization, with your sessions, attendance sign-ins, and funders in addition.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Regarding pricing, a module integrated with your current software costs me between 2,500 and 7,000 € one-time, a complete tool between 5,000 and 15,000 €, then 100 to 300 € per month for maintenance, and you own the code. Over three years, Digiforma Equipe annually totals 7,164 € HT, Orga 12,564 € HT, and Dendreo Starter 8,100 € HT plus setup fees. To verify a quote, my ",
+              "type": "text"
+            },
+            {
+              "text": "custom software pricing benchmark",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " provides the price ranges of French providers, and my article on the ",
+              "type": "text"
+            },
+            {
+              "text": "price of custom software",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/developpement-logiciel-b2b-sur-mesure-prix",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " details what affects the bill.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to choose in one day",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Take two figures from last year: the number of registrations and the hours-student of your BPF. They place Digiforma and Dendreo in the right formula. Then spend a real day testing the software: a two-day session with six trainees from three companies, including one funded by their OPCO; send out the agreement and invitations; sign in each half-day, with one absent in the afternoon; the certificate of completion; the invoice to the company and the one to the funder; then the hours that go back into the BPF. What you enter during this test, you will re-enter for every session.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently Asked Questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Does Digiforma offer a free trial?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes: as of November 15, 2026, the pricing page offers 15 free days, with a free account to create for each formula except Leader, which requires a meeting. The subscription has no fixed duration.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "How much does Digiforma cost for an independent trainer?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "49 € HT per month with an annual commitment, 59 € HT without, for up to 200 learners per year, one user, and one trainer. A second user or trainer adds 49 € HT per month, and electronic signatures start at 29 € HT per month.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "How does Digiforma count learners?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "By participants over a rolling 365-day period, whose status is confirmed, finalized, or undecided. A person registered for two different trainings in a year counts as two.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Does Digiforma handle the BPF and Qualiopi compliance?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The comparison table lists the activity report and the BPF, per session or per accounting year, as well as quality compliance and quality reports per session. A software does not certify you: it is your organization that undergoes the audit.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Which training organization software is the cheapest?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Among those listed here, Digiforma Indep at 49 € HT per month annually, for under 200 learners. For attendance only, Edusign Indépendant costs 29 € per month annually (taxes not specified).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Can you leave Digiforma with your data?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The page states that your data remains your property and that the subscription can be canceled at any time, without specifying the export format. Ask about it before signing, and keep your signed attendance sheets: these are your proof of completion.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "You don’t know which one to choose?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Write me a few lines about how your organization runs: number of trainers and sessions per year, share of CPF, OPCO, and private individuals, what is still done on paper or in Excel. If Digiforma Indep or Edusign meets your needs, that’s what I’ll recommend.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": ": I’ll respond within 24 hours, and if a market software suits you, I’ll let you know.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "0ea3baf4-8ae3-458b-8e68-4b56ef477cfe",
+            "body": [
+              {
+                "_uid": "i-07f23467-d516-4a0e-9a4d-f40c840b1c80",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Describe your way of working to me",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
