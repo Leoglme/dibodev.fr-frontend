@@ -53692,7 +53692,7 @@
               "type": "text"
             },
             {
-              "text": "Check other email accounts",
+              "text": "“Check mail from other accounts”",
               "type": "text",
               "marks": [
                 {
@@ -53705,7 +53705,7 @@
               "type": "text"
             },
             {
-              "text": "Send emails as",
+              "text": "“Send mail as”",
               "type": "text",
               "marks": [
                 {
@@ -53714,7 +53714,7 @@
               ]
             },
             {
-              "text": ". Orange offers an automatic transfer to another address, while La Poste’s support states that laposte.net does not allow it, and I found no mention of it in Free’s or SFR’s support. In any case, the Gmail app on your phone can still read and send emails from these addresses as a separate account. Emails already received in Gmail remain there.",
+              "text": ". Orange offers an automatic transfer to another address, while La Poste’s support states that laposte.net does not allow it, and I found no mention of it in Free’s or SFR’s support. For these four providers, the Gmail app on your phone can still read and send emails from these addresses as a separate account. Emails already received in Gmail remain there.",
               "type": "text"
             }
           ]
@@ -53732,7 +53732,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I’m Léo Guillaume, a freelance developer near Rennes, and I’m also affected: my professional email is hosted by o2switch, and I read it in a free Gmail account with email fetching and ‘Send as.’ On November 19, 2026, I read Google’s help pages and the official support pages of Orange, Free, SFR, and La Poste. I’ll tell you what each says, and also when they say nothing. If you’re unsure about your own setup, you can ",
+              "text": "I’m Léo Guillaume, a freelance developer near Rennes, and I’m also affected: my professional email is hosted by o2switch, and I read it in a free Gmail account with email fetching and “Send mail as”. On November 19, 2026, I read Google’s help pages and the official support pages of Orange, Free, SFR, and La Poste. I’ll tell you what each says, and also when they say nothing. If you’re unsure about your own setup, you can ",
               "type": "text"
             },
             {
@@ -53802,7 +53802,7 @@
               "type": "text"
             },
             {
-              "text": "Check other email accounts",
+              "text": "“Check mail from other accounts”",
               "type": "text",
               "marks": [
                 {
@@ -53824,7 +53824,7 @@
               "type": "text"
             },
             {
-              "text": "Send emails as",
+              "text": "“Send mail as”",
               "type": "text",
               "marks": [
                 {
@@ -53842,7 +53842,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Google does not provide an exact date, only \"starting January 2027\". During the transition period, Gmail may already limit new configurations, and POP retrieval no longer accepts new users as of the end of the first quarter of 2026. I don’t know if the timeline will shift again: it has already been delayed once.",
+              "text": "Google does not provide an exact date, only “starting January 2027”. During the transition period, Gmail may already limit new configurations, and POP retrieval no longer accepts new users as of the end of the first quarter of 2026. I don’t know if the timeline will shift again: it has already been delayed once.",
               "type": "text"
             }
           ]
@@ -53876,7 +53876,7 @@
               "type": "text"
             },
             {
-              "text": "\"Show all settings\"",
+              "text": "“See all settings”",
               "type": "text",
               "marks": [
                 {
@@ -53889,7 +53889,7 @@
               "type": "text"
             },
             {
-              "text": "\"Accounts and Import\"",
+              "text": "“Accounts and Import”",
               "type": "text",
               "marks": [
                 {
@@ -53902,7 +53902,7 @@
               "type": "text"
             },
             {
-              "text": "\"Accounts\"",
+              "text": "“Accounts”",
               "type": "text",
               "marks": [
                 {
@@ -53911,7 +53911,7 @@
               ]
             },
             {
-              "text": "\".",
+              "text": ").",
               "type": "text"
             }
           ]
@@ -53924,7 +53924,7 @@
               "type": "text"
             },
             {
-              "text": "\"Check other email accounts\"",
+              "text": "“Check mail from other accounts”",
               "type": "text",
               "marks": [
                 {
@@ -53937,7 +53937,7 @@
               "type": "text"
             },
             {
-              "text": "\"Send mail as\"",
+              "text": "“Send mail as”",
               "type": "text",
               "marks": [
                 {
@@ -53980,7 +53980,7 @@
               "type": "text"
             },
             {
-              "text": "\"Mail Orange: Redirect your emails to another email box\"",
+              "text": "“Mail Orange: Redirect your emails to another email box”",
               "type": "text",
               "marks": [
                 {
@@ -53998,7 +53998,7 @@
               "type": "text"
             },
             {
-              "text": "\"all parameters\"",
+              "text": "“all parameters”",
               "type": "text",
               "marks": [
                 {
@@ -54011,7 +54011,7 @@
               "type": "text"
             },
             {
-              "text": "\"general info\"",
+              "text": "“general info”",
               "type": "text",
               "marks": [
                 {
@@ -54024,7 +54024,7 @@
               "type": "text"
             },
             {
-              "text": "\"edit\"",
+              "text": "“edit”",
               "type": "text",
               "marks": [
                 {
@@ -54037,7 +54037,7 @@
               "type": "text"
             },
             {
-              "text": "\"email transfer\"",
+              "text": "“email transfer”",
               "type": "text",
               "marks": [
                 {
@@ -54050,7 +54050,7 @@
               "type": "text"
             },
             {
-              "text": "\"Transfer all emails to another email account\"",
+              "text": "“Transfer all emails to another email account”",
               "type": "text",
               "marks": [
                 {
@@ -54068,7 +54068,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Once the transfer is verified, you can remove the Orange line in \"View other email accounts\": the retrieval is no longer needed. A transferred email may sometimes be classified as spam by Gmail: Google provides its ",
+              "text": "Once the transfer is verified, you can remove the Orange line in “Check mail from other accounts”: the retrieval is no longer needed. A transferred email may be rejected or classified as spam by Gmail: Google provides its ",
               "type": "text"
             },
             {
@@ -54086,7 +54086,7 @@
               ]
             },
             {
-              "text": ".",
+              "text": "; note that this page still recommends “Send mail as”, which is stopping.",
               "type": "text"
             }
           ]
@@ -54169,7 +54169,7 @@
               "type": "text"
             },
             {
-              "text": "\"Connection and Security\"",
+              "text": "“Connection and Security”",
               "type": "text",
               "marks": [
                 {
@@ -54182,7 +54182,7 @@
               "type": "text"
             },
             {
-              "text": "\"Add an account\"",
+              "text": "“Add an account”",
               "type": "text",
               "marks": [
                 {
@@ -54195,7 +54195,7 @@
               "type": "text"
             },
             {
-              "text": "\"Other\"",
+              "text": "“Other”",
               "type": "text",
               "marks": [
                 {
@@ -54374,7 +54374,7 @@
               ]
             },
             {
-              "text": " only says that poorly configured filters can « forward emails », without specifying where to adjust them. The page on SFR Mail features only describes manually forwarding a message.",
+              "text": " only says that poorly configured filters can “forward emails”, without specifying where to adjust them. The page on SFR Mail features only describes manually forwarding a message.",
               "type": "text"
             }
           ]
@@ -54630,7 +54630,7 @@
           },
           "content": [
             {
-              "text": "Gmail with a custom domain: the right time for professionals?",
+              "text": "Leaving your Orange or Free address for an address at your own domain name: the right time?",
               "type": "text"
             }
           ]
@@ -54666,7 +54666,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Before continuing, you can ",
+              "text": "Before choosing, you can ",
               "type": "text"
             },
             {
@@ -54708,7 +54708,7 @@
           },
           "content": [
             {
-              "text": "Gmail ending POP3: when?",
+              "text": "End of POP3 in Gmail for an Orange or Free address: from when?",
               "type": "text"
             }
           ]
@@ -54717,7 +54717,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Google writes \"starting January 2027,\" without a specific date. Until then, the retrieval option \"Check other mail accounts\" continues for those who already use it, but it no longer accepts new users since the end of Q1 2026, according to Google’s help page read on November 19, 2026.",
+              "text": "Google writes “starting January 2027,” without a specific date. Until then, the retrieval option “Check mail from other accounts” continues for those who already use it, but it no longer accepts new users since the end of Q1 2026, according to Google’s help page read on November 19, 2026.",
               "type": "text"
             }
           ]
@@ -54738,7 +54738,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "On the computer, not for much longer: Google may already limit new setups. In the Gmail mobile app, yes: Google states you can still add an account from another provider and read/send emails from it. The Orange address appears as a separate account, not merged with your Gmail inbox.",
+              "text": "On the computer, no longer for receiving: according to Google, retrieval has not accepted new users since the end of the first quarter of 2026. For sending, Google may already limit new setups. In the Gmail mobile app, yes: Google states you can still add an account from another provider and read/send emails from it. The Orange address appears as a separate account, not merged with your Gmail inbox.",
               "type": "text"
             }
           ]
@@ -54801,7 +54801,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "If it's after January 2027, Google says the successor to Gmail has stopped. I found no automatic transfer in Free’s help section or in SFR’s either. Add the address in your phone’s Gmail app using your provider’s IMAP settings, or read your emails through their webmail. The details are in ",
+              "text": "If it’s from January 2027 onward, Gmail’s retrieval has stopped, according to Google. I found no automatic transfer in Free’s help section or in SFR’s either. Add the address in your phone’s Gmail app using your provider’s IMAP settings, or read your emails through their webmail. The details are in ",
               "type": "text"
             },
             {
@@ -54831,7 +54831,7 @@
           },
           "content": [
             {
-              "text": "Should I use a tool that claims to keep ‘Send as’?",
+              "text": "Should I use a tool that claims to keep “Send mail as”?",
               "type": "text"
             }
           ]
@@ -54840,7 +54840,28 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No. Google warns against tools and extensions that promise to recreate ‘Send as,’ because they require your email credentials. Never share your Orange, Free, SFR, or laposte.net password with any such service.",
+              "text": "No. Google warns against tools and extensions that promise to recreate “Send mail as”, because they often require your email credentials. Never share your Orange, Free, SFR, or laposte.net password with any such service.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Is my Bbox (Bouygues Telecom) address read in Gmail affected?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes: for Gmail, it is a third-party email account, like an Orange or Free address. According to Google, retrieval stops starting January 2027, and the Gmail app on your phone can still add an account from another provider. I have not read Bouygues Telecom’s support: so this guide says nothing about its automatic forwarding.",
               "type": "text"
             }
           ]
@@ -54908,7 +54929,7 @@
               ]
             },
             {
-              "text": " Starting January 2027, according to Google, a free Gmail account will no longer be able to fetch emails from an IONOS address or send emails using it via 'Send as.' To continue receiving IONOS emails in Gmail, a redirection set up in the IONOS customer portal is sufficient, and it’s free. To keep sending emails with your IONOS address, you’ll need to use IONOS webmail, an email client, the Gmail mobile app, or Google Workspace. Google Workspace costs €6.80 (excluding tax) per month per mailbox with a one-year commitment, according to Google’s pricing page as of November 19, 2026.",
+              "text": " Starting January 2027, according to Google, a free Gmail account will no longer be able to fetch emails from an IONOS address or send emails using it via “Send mail as”. To continue receiving IONOS emails in Gmail, a redirection set up in the IONOS customer portal is free, with a spam risk to watch. To keep sending emails with your IONOS address, you’ll need to use IONOS webmail, an email client, the Gmail mobile app, or Google Workspace. Google Workspace costs €6.80 (excluding tax) per month per mailbox with a one-year commitment, according to Google’s pricing page as of November 19, 2026.",
               "type": "text"
             }
           ]
@@ -54926,7 +54947,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I’m Léo Guillaume, a freelance developer near Rennes. I’m personally affected: my professional email is read in a free Gmail account, with fetch and 'Send as.' On November 19, 2026, I switched a test account to Google Workspace. My test domain isn’t hosted by IONOS: the IONOS screenshots below come from official support, not my own test.",
+              "text": "I’m Léo Guillaume, a freelance developer near Rennes. I’m personally affected: my professional email is read in a free Gmail account, with fetch and “Send mail as”. On November 19, 2026, I switched a test account to Google Workspace. My test domain isn’t hosted by IONOS: the IONOS screens described below come from official support, not my own test.",
               "type": "text"
             }
           ]
@@ -54965,7 +54986,7 @@
               ]
             },
             {
-              "text": ", read on November 19, 2026, three Gmail functions will disappear starting January 2027 for personal Gmail accounts. The first is 'Send as': Gmail will no longer send emails using a third-party provider’s address, neither on desktop nor in apps. The second is 'Check other mail accounts,' which refers to POP fetching (the protocol that retrieves emails from another inbox). The third is Gmailify.",
+              "text": ", read on November 19, 2026, three Gmail functions will disappear starting January 2027 for personal Gmail accounts. The first is “Send mail as”: your Gmail inbox will no longer send emails in the name of an address from another provider, neither on desktop nor in apps; adding it as a separate account in the phone app remains possible. The second is “Check mail from other accounts”, which refers to POP fetching (the protocol that retrieves emails from another inbox). The third is Gmailify.",
               "type": "text"
             }
           ]
@@ -55026,7 +55047,7 @@
               "type": "text"
             },
             {
-              "text": "'Show all settings'",
+              "text": "“See all settings”",
               "type": "text",
               "marks": [
                 {
@@ -55039,7 +55060,7 @@
               "type": "text"
             },
             {
-              "text": "'Accounts and Import'",
+              "text": "“Accounts and Import”",
               "type": "text",
               "marks": [
                 {
@@ -55052,7 +55073,7 @@
               "type": "text"
             },
             {
-              "text": "'Accounts'",
+              "text": "“Accounts”",
               "type": "text",
               "marks": [
                 {
@@ -55074,7 +55095,7 @@
               "type": "text"
             },
             {
-              "text": "\"Send emails as\"",
+              "text": "“Send mail as”",
               "type": "text",
               "marks": [
                 {
@@ -55087,7 +55108,7 @@
               "type": "text"
             },
             {
-              "text": "\"View other email accounts\"",
+              "text": "“Check mail from other accounts”",
               "type": "text",
               "marks": [
                 {
@@ -55105,7 +55126,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "In my case, the address appeared on both lines. This is the most common scenario when a webmaster has set up the full configuration.",
+              "text": "In my case, the address is on both lines. This is the case when the full setup has been done.",
               "type": "text"
             }
           ]
@@ -55126,7 +55147,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The setup is done at IONOS, not in Gmail. IONOS France support describes the process on the page ",
+              "text": "To keep retrieving your IONOS emails in Gmail, receiving is set up at IONOS, not in Gmail. IONOS France support describes the process on the page ",
               "type": "text"
             },
             {
@@ -55166,7 +55187,7 @@
               ]
             },
             {
-              "text": "section. If you have multiple contracts, select the one containing the address. Click on the address to redirect, then on the ",
+              "text": " section. If you have multiple contracts, select the one containing the address. Click on the address to redirect, then on the ",
               "type": "text"
             },
             {
@@ -55179,7 +55200,7 @@
               ]
             },
             {
-              "text": "line. The ",
+              "text": " line. The ",
               "type": "text"
             },
             {
@@ -55370,7 +55391,7 @@
               ]
             },
             {
-              "text": ". On the first day, send yourself an email from another address, then check the \" ",
+              "text": "; note that this page still recommends “Send mail as”, which is stopping. On the first day, send yourself an email from another address, then check the ",
               "type": "text"
             },
             {
@@ -55383,7 +55404,7 @@
               ]
             },
             {
-              "text": " from Gmail. If an expected email is missing, it might still be in the IONOS inbox, readable in the webmail.",
+              "text": " folder in Gmail. If an expected email is missing, it might still be in the IONOS inbox, readable in the webmail.",
               "type": "text"
             }
           ]
@@ -55395,7 +55416,7 @@
           },
           "content": [
             {
-              "text": "How to send with your IONOS address without using 'Send as'?",
+              "text": "How to send with your IONOS address without using “Send mail as”?",
               "type": "text"
             }
           ]
@@ -55682,7 +55703,7 @@
           },
           "content": [
             {
-              "text": "The Gmail app on your phone",
+              "text": "Setting up your IONOS email in the Gmail app (Android, iPhone)",
               "type": "text"
             }
           ]
@@ -55695,7 +55716,7 @@
               "type": "text"
             },
             {
-              "text": "\"Set up an email account on an Android smartphone\"",
+              "text": "“Set up an email account on an Android smartphone”",
               "type": "text",
               "marks": [
                 {
@@ -55709,11 +55730,11 @@
               ]
             },
             {
-              "text": ": the three dots at the top left, ",
+              "text": ": the three lines at the top left, “Settings”, which IONOS calls ",
               "type": "text"
             },
             {
-              "text": "\"Settings\"",
+              "text": "“Configurations”",
               "type": "text",
               "marks": [
                 {
@@ -55726,7 +55747,7 @@
               "type": "text"
             },
             {
-              "text": "\"Add account\"",
+              "text": "“Add account”",
               "type": "text",
               "marks": [
                 {
@@ -55739,7 +55760,7 @@
               "type": "text"
             },
             {
-              "text": "\"Other\"",
+              "text": "“Other”",
               "type": "text",
               "marks": [
                 {
@@ -55877,7 +55898,7 @@
               "type": "text"
             },
             {
-              "text": "\"Edit MX Records\"",
+              "text": "“Use a Domain with Mail Servers from Other Providers (Edit MX Records)”",
               "type": "text",
               "marks": [
                 {
@@ -55956,7 +55977,7 @@
               ]
             },
             {
-              "text": " , and the value in ",
+              "text": ", and the value in ",
               "type": "text"
             },
             {
@@ -55982,7 +56003,7 @@
               ]
             },
             {
-              "text": ". IONOS warns: « If the MX record belongs to a service, it must be disabled. »",
+              "text": ". If other MX records remain, delete them: Google asks you to keep only its own. IONOS warns: “If the MX record belongs to a service, it must be disabled.”",
               "type": "text"
             }
           ]
@@ -56122,7 +56143,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "IONOS states that its DNS changes can take up to one hour to apply everywhere. Google warns that all previously used addresses with the domain must be created before the switch, otherwise their emails will be lost. I don’t know what happens to the data if you then cancel Google Workspace afterward: Google’s help pages contradict each other, so I can’t guarantee anything.",
+              "text": "IONOS states that its DNS changes (the domain name settings) can take up to one hour to apply everywhere. Google warns that all previously used addresses with the domain must be created before the switch, otherwise their emails will be lost. I don’t know what happens to the data if you then cancel Google Workspace afterward: Google’s help pages contradict each other, so I can’t guarantee anything.",
               "type": "text"
             }
           ]
@@ -56257,6 +56278,27 @@
           },
           "content": [
             {
+              "text": "Can you still configure an IONOS email on Gmail in 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On Gmail in the browser, no longer for receiving: according to Google, POP retrieval has not accepted new users since the end of the first quarter of 2026. In the Gmail app on your phone, adding an IONOS address via IMAP remains possible.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
               "text": "Will IONOS redirection to Gmail still work after January 2027?",
               "type": "text"
             }
@@ -56266,7 +56308,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Yes, according to Google. The Gmail help page states that you can always configure your third-party provider to automatically forward messages to Gmail. The IONOS redirection is for receiving, not for sending with the IONOS address.",
+              "text": "Yes, according to Google. The Gmail help page states that you can still configure your third-party provider to automatically forward messages to Gmail. The IONOS redirection is for receiving, not for sending with the IONOS address.",
               "type": "text"
             }
           ]
@@ -56320,7 +56362,7 @@
           },
           "content": [
             {
-              "text": "Has IONOS published a page about the shutdown of 'Send as' in Gmail?",
+              "text": "Has IONOS published a page about the shutdown of “Send mail as” in Gmail?",
               "type": "text"
             }
           ]
@@ -56329,7 +56371,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "On November 19, 2026, I found no assistance page from IONOS France regarding the shutdown of 'Send as' in Gmail. The only information about this shutdown comes from Google's help pages.",
+              "text": "On November 19, 2026, I found no assistance page from IONOS France regarding the shutdown of “Send mail as” in Gmail. The only information about this shutdown comes from Google's help pages.",
               "type": "text"
             }
           ]
@@ -56350,7 +56392,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No. The domain name can stay with IONOS: you only change your MX records and add Google’s SPF in IONOS’s DNS settings. Only the inbox moves to Google.",
+              "text": "No. The domain name can stay with IONOS: you only change your MX records and add Google’s SPF in IONOS’s DNS settings. Only the email service moves to Google.",
               "type": "text"
             }
           ]
@@ -56441,7 +56483,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Starting January 2027, according to Google, a free Gmail account will no longer be able to retrieve emails from an address hosted by OVHcloud (« Check other mail accounts »), nor send emails through OVHcloud’s server (« Send as »). You are affected if you read your OVHcloud professional address, for example contact@votre-entreprise.fr, in your Gmail.com inbox. The free solution: set up a redirect in your OVHcloud client space to receive emails, and use OVHcloud’s webmail, a messaging software, or the Gmail app on your phone to send them. Google Workspace keeps everything in Gmail, but it is paid.",
+              "text": "Starting January 2027, according to Google, a free Gmail account will no longer be able to retrieve emails from an address hosted by OVHcloud (“Check mail from other accounts”), nor send emails through OVHcloud’s server (“Send mail as”). You are affected if you read your OVHcloud professional address, for example contact@votre-entreprise.fr, in your Gmail.com inbox. The free solution: set up a redirect in your OVHcloud client space to receive emails, and use OVHcloud’s webmail, a messaging software, or the Gmail app on your phone to send them. Google Workspace keeps everything in Gmail, but it is paid.",
               "type": "text"
             }
           ]
@@ -56459,7 +56501,7 @@
               ]
             },
             {
-              "text": " Google will remove « Send as » and « Check other mail accounts » for third-party addresses starting January 2027, without specifying an exact date. A redirect set up with OVHcloud to Gmail will continue to work, but only for receiving emails. To reply using your OVHcloud address, OVHcloud’s webmail, an email client, or the Gmail app on your phone will suffice, all for free. Google Workspace keeps both receiving and sending in Gmail, starting at €6.80 (excluding tax) per month per inbox with a one-year commitment.",
+              "text": " Google will remove “Send mail as” and “Check mail from other accounts” for third-party addresses starting January 2027, without specifying an exact date. A redirect set up with OVHcloud to Gmail will continue to work, but only for receiving emails. To reply using your OVHcloud address, OVHcloud’s webmail, an email client, or the Gmail app on your phone will suffice, all for free. Google Workspace keeps both receiving and sending in Gmail, starting at €6.80 (excluding tax) per month per inbox with a one-year commitment.",
               "type": "text"
             }
           ]
@@ -56511,7 +56553,7 @@
               "type": "text"
             },
             {
-              "text": "\"Check other mail accounts\"",
+              "text": "“Check mail from other accounts”",
               "type": "text",
               "marks": [
                 {
@@ -56524,7 +56566,7 @@
               "type": "text"
             },
             {
-              "text": "\"Send as\"",
+              "text": "“Send mail as”",
               "type": "text",
               "marks": [
                 {
@@ -56569,7 +56611,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "OVHcloud’s official guide « ",
+              "text": "OVHcloud’s official guide “",
               "type": "text"
             },
             {
@@ -56587,7 +56629,7 @@
               ]
             },
             {
-              "text": " », read on November 19, 2026, features a « Important » box at the top. OVHcloud announces the end of Gmailify and POP access « starting January 2026 » and states that it will no longer be possible to configure OVHcloud addresses in Gmail. The guide does not mention January 2027. The key date for the removal is Google’s: January 2027, as POP retrieval has already stopped accepting new users since the first quarter of 2026.",
+              "text": "”, read on November 19, 2026, features an “Important” box at the top. OVHcloud announces the end of Gmailify and POP access “starting January 2026” and states that it will no longer be possible to configure OVHcloud addresses in Gmail. The guide does not mention January 2027. The key date for the removal is Google’s: January 2027, as POP retrieval has already stopped accepting new users since the end of the first quarter of 2026.",
               "type": "text"
             }
           ]
@@ -56621,7 +56663,7 @@
               "type": "text"
             },
             {
-              "text": "\"Show all settings\"",
+              "text": "“See all settings”",
               "type": "text",
               "marks": [
                 {
@@ -56634,7 +56676,7 @@
               "type": "text"
             },
             {
-              "text": "\"Accounts and Import\"",
+              "text": "“Accounts and Import”",
               "type": "text",
               "marks": [
                 {
@@ -56647,7 +56689,7 @@
               "type": "text"
             },
             {
-              "text": "\"Accounts\"",
+              "text": "“Accounts”",
               "type": "text",
               "marks": [
                 {
@@ -56669,7 +56711,7 @@
               "type": "text"
             },
             {
-              "text": "\"Send mail as\"",
+              "text": "“Send mail as”",
               "type": "text",
               "marks": [
                 {
@@ -56682,7 +56724,7 @@
               "type": "text"
             },
             {
-              "text": "\"Check other mail accounts\"",
+              "text": "“Check mail from other accounts”",
               "type": "text",
               "marks": [
                 {
@@ -56691,7 +56733,7 @@
               ]
             },
             {
-              "text": ", receiving via POP/IMAP stops. If it doesn’t appear on either line but emails still arrive, it’s a redirection set up at OVHcloud: it continues.",
+              "text": ", receiving via POP retrieval stops. If it doesn’t appear on either line but emails still arrive, it’s a redirection set up at OVHcloud: it continues.",
               "type": "text"
             }
           ]
@@ -56712,7 +56754,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Google confirms: your provider can still automatically forward your messages to Gmail. At OVHcloud, this is called a redirection.",
+              "text": "To retrieve your OVH emails in Gmail, forwarding remains. Google confirms: your provider can still automatically forward your messages to Gmail. At OVHcloud, this is called a redirection.",
               "type": "text"
             }
           ]
@@ -56734,7 +56776,7 @@
               ]
             },
             {
-              "text": "address, the email offer included with OVHcloud’s web hosting, the ",
+              "text": " address, the email offer included with OVHcloud’s web hosting, the ",
               "type": "text"
             },
             {
@@ -56887,7 +56929,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I recommend keeping the local copy: your emails stay in the OVHcloud webmail, from which you can reply using your professional address. Once the redirect is tested, you can remove your address from \"Check Other Mail Accounts\": the fetch is no longer needed.",
+              "text": "I recommend keeping the local copy: your emails stay in the OVHcloud webmail, from which you can reply using your professional address. Once the redirect is tested, you can remove your address from “Check mail from other accounts”: the fetch is no longer needed.",
               "type": "text"
             }
           ]
@@ -56962,7 +57004,7 @@
               ]
             },
             {
-              "text": " folder in Gmail and mark as « Not spam » anything that ends up there. Another limitation: if you reply from Gmail, your client will see your gmail.com address.",
+              "text": " folder in Gmail and mark as “Not spam” anything that ends up there. Another limitation: if you reply from Gmail, your client will see your gmail.com address.",
               "type": "text"
             }
           ]
@@ -57031,7 +57073,7 @@
               ]
             },
             {
-              "text": " indicates you’ll find it under the ",
+              "text": " indicates you’ll find it on the ",
               "type": "text"
             },
             {
@@ -57044,11 +57086,11 @@
               ]
             },
             {
-              "text": " tab in the ",
+              "text": " line of the ",
               "type": "text"
             },
             {
-              "text": "« Overview »",
+              "text": "“Overview”",
               "type": "text",
               "marks": [
                 {
@@ -57057,7 +57099,7 @@
               ]
             },
             {
-              "text": " section of your service. That’s enough if you send infrequently.",
+              "text": " tab of your service. That’s enough if you send infrequently.",
               "type": "text"
             }
           ]
@@ -57108,7 +57150,7 @@
           },
           "content": [
             {
-              "text": "The Gmail app on your phone",
+              "text": "Setting up your OVH email in the Gmail app (Android, iPhone)",
               "type": "text"
             }
           ]
@@ -57117,7 +57159,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "According to Google, the Gmail app on Android, iPhone, and iPad can still add an account from another provider to read and send emails via IMAP. This is not 'Send as': your OVHcloud address becomes a separate account within the app.",
+              "text": "According to Google, the Gmail app on Android, iPhone, and iPad can still add an account from another provider to read and send emails via IMAP. This is not “Send mail as”: your OVHcloud address becomes a separate account within the app.",
               "type": "text"
             }
           ]
@@ -57144,11 +57186,11 @@
               ]
             },
             {
-              "text": " provides the steps: tap the menu in the top-left corner, ",
+              "text": " provides the steps (depending on the app version, you can also go through the profile picture, then “Add account”): tap the menu in the top-left corner, ",
               "type": "text"
             },
             {
-              "text": "\"Settings\"",
+              "text": "“Settings”",
               "type": "text",
               "marks": [
                 {
@@ -57161,7 +57203,7 @@
               "type": "text"
             },
             {
-              "text": "\"Add account\"",
+              "text": "“Add account”",
               "type": "text",
               "marks": [
                 {
@@ -57174,7 +57216,7 @@
               "type": "text"
             },
             {
-              "text": "\"Other\"",
+              "text": "“Other”",
               "type": "text",
               "marks": [
                 {
@@ -57187,7 +57229,7 @@
               "type": "text"
             },
             {
-              "text": "\"Personal (IMAP)\"",
+              "text": "“Personal (IMAP)”",
               "type": "text",
               "marks": [
                 {
@@ -57367,7 +57409,7 @@
               ]
             },
             {
-              "text": "tab.",
+              "text": " tab.",
               "type": "text"
             }
           ]
@@ -57376,7 +57418,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Three settings need to be adjusted there. The validation TXT record that Google provides (`google-site-verification=…`), for ",
+              "text": "Three settings need to be adjusted there. The validation TXT record that Google provides (`google-site-verification=…`), via ",
               "type": "text"
             },
             {
@@ -57402,7 +57444,7 @@
               ]
             },
             {
-              "text": " displays those from OVHcloud, from `mx0.mail.ovh.net` to `mx4.mail.ovh.net`, which Google asked me to replace with `smtp.google.com` as priority 1. The SPF, the list of authorized servers to send emails for your domain: filter by \"TXT\" then \"SPF\" and modify the existing line, often `v=spf1 include:mx.ovh.com ~all`, rather than adding a second one. Google’s value is `v=spf1 include:_spf.google.com ~all`.",
+              "text": " displays those from OVHcloud, from `mx0.mail.ovh.net` to `mx4.mail.ovh.net`, to be replaced with `smtp.google.com` as priority 1: that is what Google asked me to do on my test domain. The SPF, the list of authorized servers to send emails for your domain: filter by \"TXT\" then \"SPF\" and modify the existing line, often `v=spf1 include:mx.ovh.com ~all`, rather than adding a second one. Google’s value is `v=spf1 include:_spf.google.com ~all`.",
               "type": "text"
             }
           ]
@@ -57537,7 +57579,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "On Gmail in the browser, no longer for receiving: according to Google, POP retrieval no longer accepts new users since the first quarter of 2026. In the Gmail mobile app, adding an OVHcloud address via IMAP remains possible.",
+              "text": "On Gmail in the browser, no longer for receiving: according to Google, POP retrieval no longer accepts new users since the end of the first quarter of 2026. In the Gmail mobile app, adding an OVHcloud address via IMAP remains possible.",
               "type": "text"
             }
           ]
@@ -57648,6 +57690,27 @@
           ]
         },
         {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "What are the IMAP and SMTP servers for an OVH address?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "According to OVHcloud’s guides for an MX Plan address, read on November 19, 2026: for IMAP, `ssl0.ovh.net`, port 993, SSL/TLS; for SMTP, `ssl0.ovh.net`, port 465 with SSL/TLS or 587 with STARTTLS. The username is the full address.",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "paragraph",
           "content": [
             {
@@ -57709,7 +57772,7 @@
               ]
             },
             {
-              "text": " Starting January 2027, according to Google, a free Gmail account will no longer be able to retrieve or send emails from an address hosted by o2switch. The settings 'Check other mail accounts' and 'Send as' in Gmail will stop working, but your address will continue to function at o2switch. To receive emails, a redirection in cPanel forwards them to Gmail, with a risk of spam that o2switch itself warns about. To send emails with your o2switch address, you can still use o2switch’s webmail, email software, the Gmail app on your phone, or Google Workspace starting at €6.80 VAT-exclusive per month.",
+              "text": " Starting January 2027, according to Google, a free Gmail account will no longer be able to retrieve or send emails from an address hosted by o2switch. The settings “Check mail from other accounts” and “Send mail as” in Gmail will stop working, but your address will continue to function at o2switch. To receive emails, a redirection in cPanel (o2switch’s administration area) forwards them to Gmail, with a risk of spam that o2switch itself warns about. To send emails with your o2switch address, you can still use o2switch’s webmail, email software, the Gmail app on your phone, or Google Workspace starting at €6.80 VAT-exclusive per month.",
               "type": "text"
             }
           ]
@@ -57718,7 +57781,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I’m in this situation. I’m Léo Guillaume, a freelance developer near Rennes, and my professional email address is hosted by o2switch: I read it in a free Gmail account via retrieval and 'Send as'. On November 19, 2026, I tested switching to Google Workspace on a test account, with manual DNS records added in o2switch’s cPanel. This guide shares what I observed and what o2switch’s documentation says, read on the same day.",
+              "text": "I’m in this situation. I’m Léo Guillaume, a freelance developer near Rennes, and my professional email address is hosted by o2switch: I read it in a free Gmail account via retrieval and “Send mail as”. On November 19, 2026, I tested switching to Google Workspace on a test account, with manual DNS records added in o2switch’s cPanel. This guide shares what I observed and what o2switch’s documentation says, read on the same day.",
               "type": "text"
             }
           ]
@@ -57743,7 +57806,7 @@
               "type": "text"
             },
             {
-              "text": "\"About the changes to third-party email account support in Gmail\"",
+              "text": "“About the changes to third-party email account support in Gmail”",
               "type": "text",
               "marks": [
                 {
@@ -57757,7 +57820,7 @@
               ]
             },
             {
-              "text": ", read on November 19, 2026: starting January 2027, Gmail will « no longer pull emails from third-party accounts » via POP access (the protocol that retrieves emails from one inbox to another), and you « won’t be able to send emails from third-party email accounts. » An o2switch address is not hosted by Google: it is affected.",
+              "text": ", read on November 19, 2026: starting January 2027, Gmail will “no longer pull emails from third-party accounts” via POP access (the protocol that retrieves emails from one inbox to another), and you “won’t be able to send emails from third-party email accounts.” An o2switch address is not hosted by Google: it is affected.",
               "type": "text"
             }
           ]
@@ -57845,7 +57908,7 @@
               "type": "text"
             },
             {
-              "text": "\"Show all settings\"",
+              "text": "“See all settings”",
               "type": "text",
               "marks": [
                 {
@@ -57858,7 +57921,7 @@
               "type": "text"
             },
             {
-              "text": "\"Accounts and Import\"",
+              "text": "“Accounts and Import”",
               "type": "text",
               "marks": [
                 {
@@ -57871,7 +57934,7 @@
               "type": "text"
             },
             {
-              "text": "\"Accounts\"",
+              "text": "“Accounts”",
               "type": "text",
               "marks": [
                 {
@@ -57893,7 +57956,7 @@
               "type": "text"
             },
             {
-              "text": "\"Send emails as\"",
+              "text": "“Send mail as”",
               "type": "text",
               "marks": [
                 {
@@ -57906,7 +57969,7 @@
               "type": "text"
             },
             {
-              "text": "\"View other email accounts\"",
+              "text": "“Check mail from other accounts”",
               "type": "text",
               "marks": [
                 {
@@ -57963,7 +58026,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The only free way to still see your o2switch emails arrive in Gmail is redirection, which o2switch calls ",
+              "text": "On a computer, the only free way to still see your o2switch emails arrive in Gmail is redirection, which o2switch calls ",
               "type": "text"
             },
             {
@@ -58010,7 +58073,7 @@
               ]
             },
             {
-              "text": "tool. Enter the o2switch address to forward and the destination Gmail address, then save. o2switch demonstrates this in a video, \"How to create email redirections?\", on its ",
+              "text": " tool. Enter the o2switch address to forward and the destination Gmail address, then save. o2switch demonstrates this in a video, \"How to create email redirections?\", on its ",
               "type": "text"
             },
             {
@@ -58028,7 +58091,7 @@
               ]
             },
             {
-              "text": "page. According to this page, a copy of each email remains on the original o2switch address.",
+              "text": " page. According to this page, a copy of each email remains on the original o2switch address.",
               "type": "text"
             }
           ]
@@ -58049,7 +58112,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "On the same page, read on November 19, 2026, o2switch writes: « Do not redirect to an external address », for example Gmail, because the returned messages « will have a very high chance of ending up in spam ». The reason lies in the SPF, the list of authorized servers to send emails for a domain name: when o2switch forwards a customer’s email, it is no longer the original server delivering it, and Gmail may refuse it or classify it as spam. Google provides its ",
+              "text": "On the same page, read on November 19, 2026, o2switch writes: “Do not redirect to an external address”, for example Gmail, because the forwarded messages “will have a very high chance of ending up in spam”. The reason lies in the SPF, the list of authorized servers to send emails for a domain name: when o2switch forwards a customer’s email, it is no longer the original server delivering it, and Gmail may refuse it or classify it as spam. Google provides its ",
               "type": "text"
             },
             {
@@ -58067,7 +58130,7 @@
               ]
             },
             {
-              "text": ".",
+              "text": "; note that this page still recommends “Send mail as”, which is stopping.",
               "type": "text"
             }
           ]
@@ -58124,7 +58187,7 @@
               ]
             },
             {
-              "text": " \" of o2switch specifies that this folder may be called Junk or Spam, and that emails with a very high spam score are delivered nowhere. In Roundcube, o2switch’s webmail, the menu ⋮ next to your address, then ",
+              "text": " of o2switch specifies that this folder may be called Junk or Spam, and that emails with a very high spam score are delivered nowhere. In Roundcube, o2switch’s webmail, the menu ⋮ next to your address, then ",
               "type": "text"
             },
             {
@@ -58149,7 +58212,7 @@
           },
           "content": [
             {
-              "text": "How to send emails with your o2switch address without using \"Send As\"?",
+              "text": "How to send emails with your o2switch address without using “Send mail as”?",
               "type": "text"
             }
           ]
@@ -58158,7 +58221,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "After January 2027, free Gmail will no longer allow sending from your o2switch address. Four options remain.",
+              "text": "Starting January 2027, according to Google, “Send mail as” will no longer work with your o2switch address. Four options remain.",
               "type": "text"
             }
           ]
@@ -58179,7 +58242,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The webmail is located at your site’s address followed by:2096, for example https://votresite.fr:2096, according to the page ",
+              "text": "The webmail is located at your site’s address followed by :2096, for example https://votresite.fr:2096, according to the page ",
               "type": "text"
             },
             {
@@ -58197,7 +58260,7 @@
               ]
             },
             {
-              "text": " , read on November 19, 2026 (backup address if the port is blocked: webmail.votredomaineprincipal.fr). Log in with your full address and password, then click on ",
+              "text": ", read on November 19, 2026 (backup address if the port is blocked: webmail.votredomaineprincipal.fr). Log in with your full address and password, then click on ",
               "type": "text"
             },
             {
@@ -58267,7 +58330,7 @@
               ]
             },
             {
-              "text": ", read on November 19, 2026. The incoming and outgoing servers use your server name, in the form of qqch.o2switch.net, provided in the « Welcome to o2switch » email. The IMAP port is 993, the SMTP port is 465, and the username is your full email address.",
+              "text": ", read on November 19, 2026. The incoming and outgoing servers use your server name, in the form of something.o2switch.net, provided in the “Welcome to o2switch” email. The IMAP port is 993, the SMTP port is 465, and the username is your full email address.",
               "type": "text"
             }
           ]
@@ -58279,7 +58342,7 @@
           },
           "content": [
             {
-              "text": "The Gmail app on your phone",
+              "text": "Setting up your o2switch email in the Gmail app (Android, iPhone)",
               "type": "text"
             }
           ]
@@ -58288,7 +58351,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "On Android, iPhone, and iPad, the Gmail app can always add another provider’s email address via IMAP to read and send from, according to Google. The ",
+              "text": "On Android, iPhone, and iPad, the Gmail app can still add another provider’s email address via IMAP to read and send from, according to Google. The ",
               "type": "text"
             },
             {
@@ -58345,7 +58408,7 @@
               ]
             },
             {
-              "text": " account and password. The o2switch address becomes a separate account in the app, not a « Send as ».",
+              "text": " account and password. The o2switch address becomes a separate account in the app, not a “Send mail as”.",
               "type": "text"
             }
           ]
@@ -58393,7 +58456,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "First, the proof of ownership: a TXT record, a line of text placed in the DNS zone (the directory that tells where your domain’s website and emails go). On November 19, 2026, I added it myself in the",
+              "text": "First, the proof of ownership: a TXT record, a line of text placed in the DNS zone (the directory that tells where your domain’s website and emails go). On November 19, 2026, I added it myself in the ",
               "type": "text"
             },
             {
@@ -58419,7 +58482,7 @@
               ]
             },
             {
-              "text": "button. With a lifespan of 300 seconds, it was visible in the public DNS within a few dozen seconds, and Google validated the domain in about ten seconds.",
+              "text": " button. With a lifespan of 300 seconds, it was visible in the public DNS within a few dozen seconds, and Google validated the domain in about ten seconds.",
               "type": "text"
             }
           ]
@@ -58432,7 +58495,7 @@
               "type": "text"
             },
             {
-              "text": "\"How to Configure Google Workspace MX Records\"",
+              "text": "“How to Configure MX Records for Google Apps, GSuite or Google Workspace”",
               "type": "text",
               "marks": [
                 {
@@ -58490,7 +58553,7 @@
               ]
             },
             {
-              "text": "page. All domain addresses must then exist in Google Workspace. Then, in the email routing tool, routing switches to remote: otherwise, according to the ",
+              "text": " page. All domain addresses must then exist in Google Workspace. Then, in the email routing tool, routing switches to remote: otherwise, according to the ",
               "type": "text"
             },
             {
@@ -58508,7 +58571,7 @@
               ]
             },
             {
-              "text": "page, emails sent by the hosting to your domain—like those from the site’s contact form—are incorrectly routed.",
+              "text": " page, emails sent by the hosting to your domain—like those from the site’s contact form—are incorrectly routed.",
               "type": "text"
             }
           ]
@@ -58560,7 +58623,7 @@
               "type": "text"
             },
             {
-              "text": "\"SPF and DKIM Authentication\"",
+              "text": "“SPF and DKIM Authentication for Emails”",
               "type": "text",
               "marks": [
                 {
@@ -58691,6 +58754,27 @@
           },
           "content": [
             {
+              "text": "Can you still configure an o2switch email on Gmail in 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On Gmail in the browser, no longer for receiving: according to Google, POP retrieval has not accepted new users since the end of the first quarter of 2026. In the Gmail app on your phone, adding an o2switch address via IMAP remains possible.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
               "text": "Will my o2switch address disappear in January 2027?",
               "type": "text"
             }
@@ -58721,7 +58805,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "The o2switch webmail is located at your website address followed by:2096, for example https://votresite.fr:2096. You log in using your full email address and its password.",
+              "text": "The o2switch webmail is located at your website address followed by :2096, for example https://votresite.fr:2096. You log in using your full email address and its password.",
               "type": "text"
             }
           ]
@@ -58742,7 +58826,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "According to the o2switch guides read on November 19, 2026, the outgoing mail server has a name in the form of something.o2switch.net, provided in the « Welcome to o2switch » email. The SMTP port is 465, the IMAP port is 993, and the username is the full email address.",
+              "text": "According to the o2switch guides read on November 19, 2026, the outgoing mail server has a name in the form of something.o2switch.net, provided in the “Welcome to o2switch” email. The SMTP port is 465, the IMAP port is 993, and the username is the full email address.",
               "type": "text"
             }
           ]
@@ -58838,7 +58922,7 @@
     "title": "Gmail no longer sends from your professional email: what to do, step by step",
     "excerpt": "Having trouble sending emails from your work address or receiving them in Gmail? Quick fixes for the next 15 minutes, plus a long-term solution.",
     "metaTitle": "Gmail won’t send from my work email: what to do",
-    "metaDescription": "Starting January 2027, Gmail won’t send from your work email or fetch its messages. Immediate fixes and 5 solutions with their costs.",
+    "metaDescription": "“Send mail as” no longer works, Gmail no longer receives emails from your work address? What to do right away, then 5 solutions with their cost.",
     "tags": [
       "gmail send as another address",
       "gmail unable to send emails",
@@ -58864,7 +58948,7 @@
               ]
             },
             {
-              "text": " Starting January 2027, according to Google, a free Gmail account can no longer send emails using your website address (the 'Send as' feature) or fetch its emails (the 'Check other mail accounts' feature). Your emails are not lost: they wait in your hosting provider’s inbox, accessible via their webmail. An automatic transfer set up with your host will have them arrive back in Gmail within a quarter of an hour. To send emails using your professional address from Gmail, the long-term solution is Google Workspace, starting at €6.80 (excl. tax) per month per mailbox; three free alternatives also exist, each with its own limits.",
+              "text": " Starting January 2027, according to Google, a free Gmail account can no longer send emails using your website address (the “Send mail as” feature) or fetch its emails (the “Check mail from other accounts” feature). Your emails are not lost: they wait in your hosting provider’s inbox, accessible via their webmail. An automatic transfer set up with your host makes the emails that follow arrive in Gmail; those received in the meantime can be read in the webmail. To send emails again using your professional address from Gmail, the long-term solution is Google Workspace, starting at €6.80 (excl. tax) per month per mailbox; four free alternatives also exist, each with its own limits.",
               "type": "text"
             }
           ]
@@ -58907,7 +58991,7 @@
               "type": "text"
             },
             {
-              "text": "\"From\"",
+              "text": "“From”",
               "type": "text",
               "marks": [
                 {
@@ -58943,7 +59027,7 @@
               ]
             },
             {
-              "text": ", read on November 19, 2026, Gmail will completely remove the ‘Send as’ feature for third-party accounts, Gmailify, and email retrieval (POP access, meaning Gmail fetching emails from another provider) starting January 2027. A third-party account is one not hosted by Google: your domain name address (everything after the @) with OVH, o2switch, or IONOS, or an Orange or Free address, while @gmail.com and Google Workspace addresses remain unchanged.",
+              "text": ", read on November 19, 2026, Gmail will completely remove the “Send mail as” feature for third-party accounts, Gmailify, and email retrieval (POP access, also called POP3, meaning Gmail fetching emails from another provider) starting January 2027. A third-party account is one not hosted by Google: your domain name address (everything after the @) with OVH, o2switch, or IONOS, or an Orange or Free address, while @gmail.com and Google Workspace addresses remain unchanged.",
               "type": "text"
             }
           ]
@@ -59027,7 +59111,7 @@
               ]
             },
             {
-              "text": " Emails from your website address no longer arrive in Gmail, but you were already replying with your @gmail.com. The ‘Check other mail accounts’ feature has stopped, and a transfer set up with your host resolves this case for free.",
+              "text": " Gmail no longer receives the emails from your website address, but you were already replying with your @gmail.com. The “Check mail from other accounts” feature has stopped, and a transfer set up with your host resolves this case for free.",
               "type": "text"
             }
           ]
@@ -59045,7 +59129,7 @@
               ]
             },
             {
-              "text": " This is the most common setup, and mine: Gmail would fetch emails and send them with the site’s address. You need a solution for each direction, or one that covers both.",
+              "text": " This is a common setup, and mine: Gmail would fetch emails and send them with the site’s address. You need a solution for each direction, or one that covers both.",
               "type": "text"
             }
           ]
@@ -59079,7 +59163,7 @@
               ]
             },
             {
-              "text": " of your hosting provider—the online messaging service included with your address, accessible from your customer account using the address’s password. The emails received since the outage are there: the fetch only copied them to Gmail; they never left the hosting provider’s server.",
+              "text": " of your hosting provider—the online messaging service included with your address, accessible from your customer account using the address’s password. The emails received since the outage are there: Gmail stopped coming to retrieve them; they stayed on the hosting provider’s server.",
               "type": "text"
             }
           ]
@@ -59101,7 +59185,7 @@
               ]
             },
             {
-              "text": " from your hosting provider to your @gmail.com address, in the address settings within your customer account. Google itself mentions this as the remaining way to receive emails in Gmail. Keep a copy on the server if the option is available.",
+              "text": " to your @gmail.com address, in your hosting provider’s customer account. Google itself mentions this as the remaining way to receive emails in Gmail. Keep a copy on the server if the option is available.",
               "type": "text"
             }
           ]
@@ -59110,7 +59194,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Third step: until a better solution is found, reply to urgent emails from the webmail or from Gmail using your @gmail.com address, specifying it in one line. No client should go unanswered.",
+              "text": "Third step: until a better solution is found, reply to urgent emails from the webmail or from Gmail using your @gmail.com address, specifying it in one line. That way, urgent requests get a reply.",
               "type": "text"
             }
           ]
@@ -59198,7 +59282,7 @@
               "type": "text"
             },
             {
-              "text": "\"Show all settings\"",
+              "text": "“See all settings”",
               "type": "text",
               "marks": [
                 {
@@ -59211,7 +59295,7 @@
               "type": "text"
             },
             {
-              "text": "\"Accounts and Import\"",
+              "text": "“Accounts and Import”",
               "type": "text",
               "marks": [
                 {
@@ -59224,7 +59308,7 @@
               "type": "text"
             },
             {
-              "text": "\"Accounts\"",
+              "text": "“Accounts”",
               "type": "text",
               "marks": [
                 {
@@ -59233,7 +59317,7 @@
               ]
             },
             {
-              "text": "\").",
+              "text": ").",
               "type": "text"
             }
           ]
@@ -59246,7 +59330,7 @@
               "type": "text"
             },
             {
-              "text": "\"Send emails as\"",
+              "text": "“Send mail as”",
               "type": "text",
               "marks": [
                 {
@@ -59259,7 +59343,7 @@
               "type": "text"
             },
             {
-              "text": "\"Check other email accounts\"",
+              "text": "“Check mail from other accounts”",
               "type": "text",
               "marks": [
                 {
@@ -59268,7 +59352,7 @@
               ]
             },
             {
-              "text": ", receiving via fetch will also stop. If this line has disappeared from the screen, it means Google has already removed it from your account.",
+              "text": ", receiving via fetch will also stop. If this line has disappeared from the screen, Google has probably already removed it from your account.",
               "type": "text"
             }
           ]
@@ -59334,7 +59418,7 @@
               ]
             },
             {
-              "text": " that transferred messages often fail authentication checks and may end up in spam. Monitor the \"Spam\" folder for the first few weeks.",
+              "text": " that transferred messages often fail the SPF check and may end up in spam. Monitor the “Spam” folder for the first few weeks.",
               "type": "text"
             }
           ]
@@ -59388,7 +59472,7 @@
               ]
             },
             {
-              "text": " Cost: 0 €. According to the same Google help page, the Gmail app on Android, iPhone, and iPad still allows you to add an account from another provider via a standard IMAP connection (the method that reads emails directly from the host's server), for reading and sending. This is a separate account within the app, not 'Send as,' and this feature does not work in Gmail on desktop.",
+              "text": " Cost: 0 €. According to Google’s help page on third-party mail accounts, the Gmail app on Android, iPhone, and iPad still allows you to add an account from another provider via a standard IMAP connection (the method that reads emails directly from the host's server), for reading and sending. This is a separate account within the app, not “Send mail as”, and this feature does not work in Gmail on desktop.",
               "type": "text"
             }
           ]
@@ -59437,7 +59521,7 @@
               "type": "text"
             },
             {
-              "text": "\"Upgrade this account\"",
+              "text": "“Upgrade this account”",
               "type": "text",
               "marks": [
                 {
@@ -59498,7 +59582,7 @@
               ]
             },
             {
-              "text": "record—the DNS zone line that lists the authorized servers allowed to send on your behalf.",
+              "text": " record—the DNS zone line that lists the authorized servers allowed to send on your behalf.",
               "type": "text"
             }
           ]
@@ -59546,7 +59630,7 @@
           },
           "content": [
             {
-              "text": "\"Send as\" no longer works: what if it wasn’t January 2027?",
+              "text": "“Send mail as” no longer works: what if it wasn’t January 2027?",
               "type": "text"
             }
           ]
@@ -59555,11 +59639,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Not all issues come from Google. \"Send as\" and POP retrieval remember the password entered for your work email during setup. If this password has been changed with the host, Gmail can no longer connect and displays an authentication error. The ",
+              "text": "Not all issues come from Google. “Send mail as” and POP retrieval remember the password entered for your work email during setup. If this password has been changed with the host, Gmail can no longer connect and displays an authentication error. The ",
               "type": "text"
             },
             {
-              "text": "Google help page on \"Send as\"",
+              "text": "Google help page on “Send mail as”",
               "type": "text",
               "marks": [
                 {
@@ -59582,11 +59666,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "As long as both lines are visible in \"Accounts and Import\", click on ",
+              "text": "As long as both lines are visible in “Accounts and Import”, click on ",
               "type": "text"
             },
             {
-              "text": "\"Edit Info\"",
+              "text": "“Edit Info”",
               "type": "text",
               "marks": [
                 {
@@ -59595,7 +59679,7 @@
               ]
             },
             {
-              "text": " next to the address and enter the current password: that’s often all it takes. If the line has disappeared, it’s not a password issue: it’s the shutdown announced by Google.",
+              "text": " next to the address and enter the current password: that’s often all it takes. If the line has disappeared, it’s not a password issue: it’s very likely the shutdown announced by Google.",
               "type": "text"
             }
           ]
@@ -59604,7 +59688,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "And if your @gmail.com address itself no longer receives anything, the January 2027 change isn’t to blame: Google states that only third-party email accounts are affected.",
+              "text": "And if your @gmail.com address itself no longer receives anything, the January 2027 change isn’t to blame: Google states that only third-party email accounts are affected. Look instead at the Google account’s storage space and the “Spam” folder.",
               "type": "text"
             }
           ]
@@ -59617,7 +59701,7 @@
               "type": "text"
             },
             {
-              "text": "testing if my address is affected",
+              "text": "testing if your address is affected",
               "type": "text",
               "marks": [
                 {
@@ -59676,7 +59760,7 @@
           },
           "content": [
             {
-              "text": "Why has \"Check other mail accounts\" disappeared from Gmail?",
+              "text": "Why has “Check mail from other accounts” disappeared from Gmail?",
               "type": "text"
             }
           ]
@@ -59685,7 +59769,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Google is removing POP retrieval for third-party accounts starting January 2027, and the option disappears from Gmail on desktop. It no longer accepts new users as of the end of the first quarter of 2026. To receive emails in Gmail, set up automatic forwarding with the host of the address.",
+              "text": "Google is removing POP (or POP3) retrieval for third-party accounts starting January 2027, and the option disappears from Gmail on desktop. It no longer accepts new users as of the end of the first quarter of 2026. To receive emails in Gmail, set up automatic forwarding with the host of the address.",
               "type": "text"
             }
           ]
@@ -59718,7 +59802,7 @@
           },
           "content": [
             {
-              "text": "Can a tool or extension recreate \"Send as\"?",
+              "text": "Can a tool or extension recreate “Send mail as”?",
               "type": "text"
             }
           ]
@@ -59727,7 +59811,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Google warns against tools and extensions promising to recreate this feature, as they require your email credentials. Sharing your password with an unknown service exposes all your emails to risk.",
+              "text": "Google warns against tools and extensions promising to recreate this feature, as they often require your email credentials. Sharing your password with an unknown service exposes all your emails to risk.",
               "type": "text"
             }
           ]
@@ -59748,7 +59832,19 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Yes, an Orange or Free address read in Gmail is considered a third-party account by Google. Retrieval and 'Send as' will stop working the same way starting January 2027.",
+              "text": "Yes, an Orange or Free address read in Gmail is considered a third-party account by Google. Retrieval and “Send mail as” will stop working the same way starting January 2027.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "My Gmail no longer receives any emails, even on my @gmail.com address: is it January 2027?",
               "type": "text"
             }
           ]
@@ -59757,7 +59853,55 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "If you prefer not to adjust the hosting settings or DNS zone yourself, I can handle it remotely: migration, switch to Google Workspace, recreating addresses, SPF and DKIM setup, followed by a test send. The diagnosis is free, and I’ll respond within 24 hours. If the free setup works for you, I’ll let you know.",
+              "text": "No: according to Google, only third-party email accounts are affected. First look at your Google account’s storage space: when it is full, ",
+              "type": "text"
+            },
+            {
+              "text": "Google’s help page on storage",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/mail/answer/6558?hl=en",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", read on November 19, 2026, states that you can no longer send or receive emails in Gmail and that messages sent to you are returned to the sender. Also look at the “Spam” folder.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Can’t add an email address in Gmail: is it linked to 2027?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It’s possible: according to Google, “Check mail from other accounts” retrieval has not accepted new users since the end of the first quarter of 2026, and Gmail may limit new configurations during the transition. In the Gmail app on your phone, adding an address from another provider via IMAP remains possible.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you prefer not to adjust the hosting settings or DNS zone yourself, I can handle it remotely: forwarding, switch to Google Workspace, recreating addresses, SPF and DKIM setup, followed by a test send. The diagnosis is free, and I’ll respond within 24 hours. If the free setup works for you, I’ll let you know.",
               "type": "text"
             }
           ]
@@ -59788,9 +59932,9 @@
   },
   "blog/passer-gmail-gratuit-google-workspace-adresse-professionnelle": {
     "title": "Switching from Free Gmail to Google Workspace to Keep Your Professional Email: Steps, Pricing, and Pitfalls",
-    "excerpt": "I migrated from a free Gmail account to Google Workspace on November 19, 2026: same inbox, old emails preserved, 40 minutes, 6.80 € HT per month. Here are the steps and the pitfalls to avoid.",
+    "excerpt": "I migrated from a free Gmail account to Google Workspace on November 19, 2026: same inbox, old emails preserved, 40 minutes, 6.80 € excl. tax per month. Here are the steps and the pitfalls to avoid.",
     "metaTitle": "Switch from Free Gmail to Google Workspace",
-    "metaDescription": "‘Send as’ feature stops in January 2027. Tested transition: steps, pricing (6.80 € HT/month) and common pitfalls.",
+    "metaDescription": "“Send mail as” feature stops in January 2027. Tested transition: steps, pricing (6.80 € excl. tax/month) and common pitfalls.",
     "tags": [
       "google workspace",
       "professional email address",
@@ -59815,7 +59959,7 @@
               ]
             },
             {
-              "text": " Starting January 2027, according to Google, a free Gmail account will no longer be able to send emails with a professional address hosted elsewhere (« Send as ») or fetch emails (« Check other mail accounts »). The solution Google offers to businesses is Google Workspace: the « Upgrade this account » button transforms free Gmail into professional Gmail. I made this transition on November 19, 2026, on a test account: same inbox, same password, old emails kept, around 40 minutes in total. Google Workspace costs €6.80 VAT-exclusive per month per box with a one-year commitment, €8.10 VAT-exclusive without commitment. The main pitfall: without SPF registration, my first sent email ended up in spam.",
+              "text": " Starting January 2027, according to Google, a free Gmail account will no longer be able to send emails with a professional address hosted elsewhere (“Send mail as”) or fetch emails (“Check mail from other accounts”). One of the solutions Google offers to businesses is Google Workspace: the “Upgrade this account” button transforms free Gmail into professional Gmail. I made this transition on November 19, 2026, on a test account: same inbox, same password, old emails kept, around 40 minutes in total. Google Workspace costs €6.80 VAT-exclusive per month per mailbox with a one-year commitment, €8.10 VAT-exclusive without commitment. The main pitfall: without an SPF record (the line that says which servers can send for your domain), my first sent email ended up in spam.",
               "type": "text"
             }
           ]
@@ -59824,7 +59968,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "I am Léo Guillaume, a freelance developer near Rennes, and I am personally affected. My professional email, contact@dibodev.fr, is hosted by o2switch and I read it in a free Gmail account, with email retrieval and « Send as ». To avoid risking my daily address, I made the switch to Google Workspace on November 19, 2026, on a free test Gmail account and a subdomain of my website. Here’s what I experienced, with the exact price and pitfalls.",
+              "text": "I am Léo Guillaume, a freelance developer near Rennes, and I am personally affected. My professional email, contact@dibodev.fr, is hosted by o2switch and I read it in a free Gmail account, with email retrieval and “Send mail as”. I made the switch to Google Workspace on November 19, 2026, on a free test Gmail account and a subdomain of my website, not on my everyday address. Here’s what I experienced, with the exact price and pitfalls.",
               "type": "text"
             }
           ]
@@ -59863,7 +60007,7 @@
               ]
             },
             {
-              "text": ", free Gmail will no longer allow sending from third-party email accounts or fetching their emails starting January 2027, and Google does not provide a specific date. In response to businesses using « Send as », the same Google page notably suggests « using Google Workspace for a custom domain. »",
+              "text": ", free Gmail will no longer allow sending from third-party email accounts or fetching their emails starting January 2027, and Google does not provide a specific date. In response to businesses using “Send mail as”, the same Google page notably suggests “using Google Workspace for a custom domain.”",
               "type": "text"
             }
           ]
@@ -59915,7 +60059,7 @@
               "type": "text"
             },
             {
-              "text": "\"Show all settings\"",
+              "text": "“See all settings”",
               "type": "text",
               "marks": [
                 {
@@ -59928,7 +60072,7 @@
               "type": "text"
             },
             {
-              "text": "\"Accounts and Import\"",
+              "text": "“Accounts and Import”",
               "type": "text",
               "marks": [
                 {
@@ -59941,7 +60085,7 @@
               "type": "text"
             },
             {
-              "text": "\"Accounts\"",
+              "text": "“Accounts”",
               "type": "text",
               "marks": [
                 {
@@ -59954,7 +60098,7 @@
               "type": "text"
             },
             {
-              "text": "\"Send emails as\"",
+              "text": "“Send mail as”",
               "type": "text",
               "marks": [
                 {
@@ -59967,7 +60111,7 @@
               "type": "text"
             },
             {
-              "text": "\"View other email accounts\"",
+              "text": "“Check mail from other accounts”",
               "type": "text",
               "marks": [
                 {
@@ -59988,7 +60132,7 @@
           },
           "content": [
             {
-              "text": "What does the button \"Upgrade this account\" do?",
+              "text": "Switching your Gmail account to a professional one: what does the “Upgrade this account” button do?",
               "type": "text"
             }
           ]
@@ -60031,7 +60175,7 @@
           },
           "content": [
             {
-              "text": "Google Workspace: what is the price in France for a professional email address?",
+              "text": "Google Workspace: what are the prices and rates in France for a professional email address?",
               "type": "text"
             }
           ]
@@ -60097,7 +60241,7 @@
               ]
             },
             {
-              "text": ". The same Google page also shows a 50% promotion for 3 months, from December 3, 2026, to March 3, 2027, meaning 3.40 € VAT-exclusive instead of 6.80 € VAT-exclusive, reserved for new customers.",
+              "text": ". On the day I read it, the same page showed a promotion reserved for new customers: 50% for 3 months, meaning 3.40 € VAT-exclusive instead of 6.80 € VAT-exclusive. The displayed rate may change: check it when you sign up.",
               "type": "text"
             }
           ]
@@ -60167,7 +60311,7 @@
               ]
             },
             {
-              "text": ". If the promotion applies to you, the first three months at 3.40 € (excl. tax) save an additional 10.20 € (excl. tax) in the first year. These prices are tax-exclusive.",
+              "text": ". If the promotion applies to you, the first three months at 3.40 € (excl. tax) save an additional 10.20 € (excl. tax) in the first year. These prices are tax-exclusive, and the three-year totals assume an unchanged price.",
               "type": "text"
             }
           ]
@@ -60188,7 +60332,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Here are the steps in the order I followed them. Each involves adding or modifying a line in the DNS, i.e., the settings for your domain name with your hosting provider. To find these settings, follow your hosting provider’s guide: ",
+              "text": "Here are the steps in the order I followed them. Three of them involve adding or modifying a line in the DNS, i.e., the settings for your domain name with your hosting provider. To find these settings, follow your hosting provider’s guide: ",
               "type": "text"
             },
             {
@@ -60305,7 +60449,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "MX records are the lines that specify where to deliver emails for your domain. I replaced those from your host with `smtp.google.com` as priority 1, as indicated ",
+              "text": "MX records are the lines that specify where to deliver emails for your domain. I replaced those from my host with `smtp.google.com` as priority 1, as indicated ",
               "type": "text"
             },
             {
@@ -60369,7 +60513,7 @@
           },
           "content": [
             {
-              "text": "Google Workspace professional email: the three traps I encountered",
+              "text": "Google Workspace professional email: the three traps to know about",
               "type": "text"
             }
           ]
@@ -60442,7 +60586,7 @@
               ]
             },
             {
-              "text": ". I waited a few minutes for the old value to expire (300 seconds on my domain). The next email arrived in the inbox, with SPF, DKIM (email signatures), and DMARC marked as \"PASS.\" After switching, take a minute to ",
+              "text": ". I waited a few minutes for the new record to be taken into account (lifetime of 300 seconds on my domain). The next email arrived in the inbox, with SPF, DKIM (email signatures), and DMARC marked as \"PASS.\" After switching, take a minute to ",
               "type": "text"
             },
             {
@@ -60601,7 +60745,28 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "A professional Gmail address goes through Google Workspace. According to Google’s pricing page (read on November 19, 2026), Business Starter costs €6.80 VAT-exclusive per month per box with a one-year commitment, and €8.10 VAT-exclusive without commitment.",
+              "text": "A professional Gmail address goes through Google Workspace. According to Google’s pricing page (read on November 19, 2026), Business Starter costs €6.80 VAT-exclusive per month per mailbox with a one-year commitment, and €8.10 VAT-exclusive without commitment.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Is Google Workspace free?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No: the free trial lasts 14 days, then Business Starter costs €6.80 VAT-exclusive per user per month with a one-year commitment, €8.10 VAT-exclusive without commitment, according to Google’s prices read on November 19, 2026.",
               "type": "text"
             }
           ]
@@ -60622,7 +60787,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No, Google Workspace is paid after the free 14-day trial. Free solutions exist, but none keeps sending from your professional address in Gmail on a computer after January 2027: automatic forwarding, host webmail, messaging software, or the Gmail app on your phone.",
+              "text": "No, Google Workspace is paid after the free 14-day trial. Free solutions exist, but none keeps sending from your professional address in Gmail on a computer starting January 2027: automatic forwarding, host webmail, messaging software, or the Gmail app on your phone.",
               "type": "text"
             }
           ]
@@ -60664,7 +60829,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "On my test account, it took about 40 minutes from the first screen to ‘Gmail is activated!’. Domain validation via TXT took about ten seconds. Google states that new emails may take up to 24 hours to arrive.",
+              "text": "On my test account, it took about 40 minutes from the first screen to ‘Gmail is activated!’. Domain validation via TXT took about ten seconds. Google’s screen announces up to 24 hours for new emails to arrive, its help page up to 72 hours.",
               "type": "text"
             }
           ]
@@ -60685,7 +60850,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Most often, your domain’s SPF record doesn’t yet authorize Google to send on your behalf. Add or edit the SPF line to include `include:_spf.google.com`, wait a few minutes, then send a test email.",
+              "text": "In my test, the cause was SPF: the domain didn’t yet authorize Google to send on its behalf. Add or edit the SPF line to include `include:_spf.google.com`, wait a few minutes, then send a test email.",
               "type": "text"
             }
           ]

@@ -53664,7 +53664,7 @@
     "title": "Correo Orange, Free o SFR en Gmail: qué termina en enero de 2027 y qué hacer",
     "excerpt": "A partir de enero de 2027, Gmail dejará de recibir correos de Orange, Free, SFR o laposte.net. Lo que cada proveedor indica y qué opciones aún funcionan.",
     "metaTitle": "Correo Orange, Free, SFR en Gmail: qué hacer en 2027",
-    "metaDescription": "Desde enero 2027, Gmail ya no recibirá correos de Orange, Free, SFR o laposte.net. Qué dice cada proveedor y cómo solucionarlo.",
+    "metaDescription": "Desde enero de 2027, Gmail ya no recibirá correos de Orange, Free, SFR o laposte.net. Qué dice cada proveedor y cómo solucionarlo.",
     "tags": [
       "correo orange en gmail",
       "fin pop en gmail",
@@ -53694,7 +53694,7 @@
               "type": "text"
             },
             {
-              "text": "« Consultar otras cuentas de correo »",
+              "text": "«Consultar el correo de otras cuentas»",
               "type": "text",
               "marks": [
                 {
@@ -53707,7 +53707,7 @@
               "type": "text"
             },
             {
-              "text": "« Enviar correos como »",
+              "text": "«Enviar como»",
               "type": "text",
               "marks": [
                 {
@@ -53716,7 +53716,7 @@
               ]
             },
             {
-              "text": ". Orange ofrece una transferencia automática a otra dirección, mientras que el servicio de asistencia de La Poste indica que laposte.net no lo permite, y no lo encontré ni en la asistencia de Free ni en la de SFR. En todos los casos, la aplicación Gmail del teléfono aún puede leer y enviar correos de estas direcciones, como cuentas separados. Los correos ya recibidos en Gmail permanecerán allí.",
+              "text": ". Orange ofrece una transferencia automática a otra dirección, mientras que el servicio de asistencia de La Poste indica que laposte.net no lo permite, y no lo encontré ni en la asistencia de Free ni en la de SFR. Para estos cuatro proveedores, la aplicación Gmail del teléfono aún puede leer y enviar correos de estas direcciones, como cuentas separadas. Los correos ya recibidos en Gmail permanecerán allí.",
               "type": "text"
             }
           ]
@@ -53725,7 +53725,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si lees en tu Gmail los correos de una dirección @orange.fr, @wanadoo.fr, @free.fr, @sfr.fr o @laposte.net, esta guía es para ti. Muchos artesanos y pequeñas empresas aún trabajan con la dirección de su caja de internet, conectada un día a Gmail para tener todo en un mismo lugar. Esta configuración dejará de funcionar a partir de enero de 2027, según Google.",
+              "text": "Si lees en tu Gmail los correos de una dirección @orange.fr, @wanadoo.fr, @free.fr, @sfr.fr o @laposte.net, esta guía es para ti. Muchos artesanos y pequeñas empresas aún trabajan con la dirección de su proveedor de internet, conectada un día a Gmail para tener todo en un mismo lugar. Esta configuración dejará de funcionar a partir de enero de 2027, según Google.",
               "type": "text"
             }
           ]
@@ -53734,7 +53734,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Me llamo Léo Guillaume, soy desarrollador freelance cerca de Rennes, y también me afecta: mi dirección profesional está alojada en o2switch y la leo en una cuenta de Gmail gratuita, con la recuperación y « Enviar como ». El 19 de noviembre de 2026, leí las páginas de ayuda de Google y las asistencias oficiales de Orange, Free, SFR y La Poste. Les cuento lo que cada una dice, y también cuando no dice nada. Si tienes dudas sobre tu propia configuración, puedes ",
+              "text": "Me llamo Léo Guillaume, soy desarrollador freelance cerca de Rennes, y también me afecta: mi dirección profesional está alojada en o2switch y la leo en una cuenta de Gmail gratuita, con la recuperación y «Enviar como». El 19 de noviembre de 2026, leí las páginas de ayuda de Google y las asistencias oficiales de Orange, Free, SFR y La Poste. Te cuento lo que cada una dice, y también cuando no dice nada. Si tienes dudas sobre tu propia configuración, puedes ",
               "type": "text"
             },
             {
@@ -53804,7 +53804,7 @@
               "type": "text"
             },
             {
-              "text": "« Consultar otras cuentas de correo »",
+              "text": "«Consultar el correo de otras cuentas»",
               "type": "text",
               "marks": [
                 {
@@ -53813,7 +53813,7 @@
               ]
             },
             {
-              "text": ". Gmail usa POP, el método mediante el cual Gmail busca automáticamente los correos en la bandeja del proveedor. Google escribe: « Gmail ya no extraerá correos desde cuentas de terceros en tu cuenta de Gmail con acceso POP. » Es esta recuperación la que hace llegar tus correos de Orange, Free, SFR o laposte.net a Gmail en la computadora.",
+              "text": ". Gmail usa POP, el método mediante el cual Gmail busca automáticamente los correos en la bandeja del proveedor. Google escribe: «Gmail ya no extraerá correos desde cuentas de terceros en tu cuenta de Gmail con acceso POP.» Es esta recuperación la que hace llegar tus correos de Orange, Free, SFR o laposte.net a Gmail en el ordenador.",
               "type": "text"
             }
           ]
@@ -53826,7 +53826,7 @@
               "type": "text"
             },
             {
-              "text": "« Enviar correos como »",
+              "text": "«Enviar como»",
               "type": "text",
               "marks": [
                 {
@@ -53835,7 +53835,7 @@
               ]
             },
             {
-              "text": ", el ajuste que permite escribir desde Gmail mostrando la dirección de Orange o Free como remitente. Google escribe: « Ya no podrás enviar correos desde cuentas de correo de terceros en Gmail en la web ni en las aplicaciones móviles de Gmail. » Esto solo afecta a quienes lo habían configurado.",
+              "text": ", el ajuste que permite escribir desde Gmail mostrando la dirección de Orange o Free como remitente. Google escribe: «Ya no podrás enviar correos desde cuentas de correo de terceros en Gmail en la web ni en las aplicaciones móviles de Gmail.» Esto solo afecta a quienes lo habían configurado.",
               "type": "text"
             }
           ]
@@ -53844,7 +53844,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Google no proporciona una fecha exacta, solo « a partir de enero de 2027 ». Durante el período de transición, Gmail puede comenzar a limitar nuevas configuraciones y el acceso POP ya no acepta nuevos usuarios desde finales del primer trimestre de 2026. No sé si el calendario cambiará nuevamente: ya se ha retrasado una vez.",
+              "text": "Google no proporciona una fecha exacta, solo «a partir de enero de 2027». Durante el período de transición, Gmail puede comenzar a limitar nuevas configuraciones y el acceso POP ya no acepta nuevos usuarios desde finales del primer trimestre de 2026. No sé si el calendario cambiará nuevamente: ya se ha retrasado una vez.",
               "type": "text"
             }
           ]
@@ -53874,11 +53874,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Abra Gmail en una computadora, no en el teléfono. Haga clic en la rueda dentada en la parte superior derecha, luego en ",
+              "text": "Abre Gmail en un ordenador, no en el teléfono. Haz clic en la rueda dentada en la parte superior derecha, luego en ",
               "type": "text"
             },
             {
-              "text": "\"Ver todos los ajustes\"",
+              "text": "«Ver todos los ajustes»",
               "type": "text",
               "marks": [
                 {
@@ -53891,7 +53891,7 @@
               "type": "text"
             },
             {
-              "text": "\"Cuentas e importación\"",
+              "text": "«Cuentas e importación»",
               "type": "text",
               "marks": [
                 {
@@ -53904,7 +53904,7 @@
               "type": "text"
             },
             {
-              "text": "\"Cuentas\"",
+              "text": "«Cuentas»",
               "type": "text",
               "marks": [
                 {
@@ -53913,7 +53913,7 @@
               ]
             },
             {
-              "text": "\").",
+              "text": ").",
               "type": "text"
             }
           ]
@@ -53922,11 +53922,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Revise dos líneas. Si su dirección de Orange, Free, SFR o laposte.net aparece en la línea ",
+              "text": "Revisa dos líneas. Si tu dirección de Orange, Free, SFR o laposte.net aparece en la línea ",
               "type": "text"
             },
             {
-              "text": "\"Consultar otras cuentas de correo\"",
+              "text": "«Consultar el correo de otras cuentas»",
               "type": "text",
               "marks": [
                 {
@@ -53939,7 +53939,7 @@
               "type": "text"
             },
             {
-              "text": "\"Enviar correos como\"",
+              "text": "«Enviar como»",
               "type": "text",
               "marks": [
                 {
@@ -54061,7 +54061,7 @@
               ]
             },
             {
-              "text": " y se introduce su dirección de Gmail. Orange establece dos condiciones: un contrato con Orange activo (la redirección no es posible desde un contrato dado de baja) y una conexión a su Livebox, por wifi o por cable, en el momento de la configuración. La página no especifica si queda una copia en la bandeja de Orange.",
+              "text": " y se introduce tu dirección de Gmail. Orange establece dos condiciones: un contrato con Orange activo (la redirección no es posible desde un contrato dado de baja) y una conexión a tu Livebox, por wifi o por cable, en el momento de la configuración. La página no especifica si queda una copia en la bandeja de Orange.",
               "type": "text"
             }
           ]
@@ -54070,11 +54070,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Una vez verificado el traslado, puede eliminar la línea de Orange en «Consultar otras cuentas de correo»: ya no se realiza la recuperación. Un correo transferido puede ser clasificado a veces como spam por Gmail: Google ofrece sus ",
+              "text": "Una vez verificada la transferencia, puedes eliminar la línea de Orange en «Consultar el correo de otras cuentas»: la recuperación ya no hace falta. Un correo transferido puede ser rechazado o clasificado como spam por Gmail: Google ofrece sus ",
               "type": "text"
             },
             {
-              "text": "consejos para el traslado a Gmail",
+              "text": "consejos para la transferencia a Gmail",
               "type": "text",
               "marks": [
                 {
@@ -54088,7 +54088,7 @@
               ]
             },
             {
-              "text": ".",
+              "text": "; atención: esta página sigue recomendando «Enviar como», que dejará de funcionar.",
               "type": "text"
             }
           ]
@@ -54097,7 +54097,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El traslado solo abarca la recepción. Para responder con la dirección de Orange, sigue disponible Mail Orange en orange.fr, la aplicación Mail Orange o la aplicación Gmail del teléfono. Para la aplicación Gmail, la página de Orange ",
+              "text": "La transferencia solo abarca la recepción. Para responder con la dirección de Orange, sigue disponible Mail Orange en orange.fr, la aplicación Mail Orange o la aplicación Gmail del teléfono. Para la aplicación Gmail, la página de Orange ",
               "type": "text"
             },
             {
@@ -54141,7 +54141,7 @@
               ]
             },
             {
-              "text": ", seguridad SSL/TLS. En envío, SMTP (el servidor que envía sus correos): ",
+              "text": ", seguridad SSL/TLS. En envío, SMTP (el servidor que envía tus correos): ",
               "type": "text"
             },
             {
@@ -54167,7 +54167,7 @@
               ]
             },
             {
-              "text": ", SSL/TLS, con autenticación marcada. La identificación es la dirección completa. Orange especifica que los accesos POP/IMAP están desactivados por defecto en las cuentas recientes, y recomienda una contraseña dedicada para los programas de correo, que se puede obtener en el Espacio Cliente, en la sección ",
+              "text": ", SSL/TLS, con autenticación marcada. El identificador es la dirección completa. Orange especifica que los accesos POP/IMAP están desactivados por defecto en las cuentas recientes, y recomienda una contraseña dedicada para los programas de correo, que se puede obtener en el Espacio Cliente, en la sección ",
               "type": "text"
             },
             {
@@ -54227,7 +54227,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No encontré transferencia automática en la asistencia oficial de Free. El 19 de noviembre de 2026 leí los artículos de la sección « Email Free » en asistencia.free.fr: ninguno menciona transferencia, redirección ni « reenviar » a otra dirección.",
+              "text": "No encontré transferencia automática en la asistencia oficial de Free. El 19 de noviembre de 2026 leí los artículos de la sección «Email Free» en assistance.free.fr: ninguno menciona transferencia, redirección ni «reenviar» a otra dirección.",
               "type": "text"
             }
           ]
@@ -54337,7 +54337,7 @@
               ]
             },
             {
-              "text": ", con la autenticación SMTP activada. Es lo que hay que introducir en la aplicación Gmail del teléfono o en un programa como Thunderbird o Outlook en la computadora.",
+              "text": ", con la autenticación SMTP activada. Es lo que hay que introducir en la aplicación Gmail del teléfono o en un programa como Thunderbird o Outlook en el ordenador.",
               "type": "text"
             }
           ]
@@ -54493,7 +54493,7 @@
               "type": "text"
             },
             {
-              "text": "transfiere automáticamente los correos de tu buzón laposte.net",
+              "text": "transferir automáticamente los correos de mi buzón laposte.net",
               "type": "text",
               "marks": [
                 {
@@ -54607,11 +54607,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Sí. Google lo escribe en la misma página de ayuda: « Todos los mensajes que ya haya importado […] seguirán en su bandeja de entrada. » Sus antiguos correos de Orange, Free, SFR o laposte.net que llegaron a Gmail no se mueven. Solo los nuevos correos dejarán de llegar por la recuperación. La importación puntual, ",
+              "text": "Sí. Google lo escribe en la misma página de ayuda: «Todos los mensajes que ya hayas importado […] seguirán en tu bandeja de entrada.» Tus antiguos correos de Orange, Free, SFR o laposte.net que llegaron a Gmail no se mueven. Solo los nuevos correos dejarán de llegar por la recuperación. La importación puntual, ",
               "type": "text"
             },
             {
-              "text": "« Importar el correo y los contactos »",
+              "text": "«Importar correo y contactos»",
               "type": "text",
               "marks": [
                 {
@@ -54632,7 +54632,7 @@
           },
           "content": [
             {
-              "text": "Gmail con nombre de dominio: ¿el momento adecuado para un profesional?",
+              "text": "Dejar tu dirección de Orange o Free por una dirección con tu nombre de dominio: ¿es el momento adecuado?",
               "type": "text"
             }
           ]
@@ -54641,7 +54641,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Para un profesional, es el momento adecuado de pasar a una dirección con su nombre de dominio (lo que sigue al @, como el nombre de su sitio web), que ya no depende de su suscripción a internet y que Gmail mantiene tanto en recepción como en envío con Google Workspace. Hice este cambio en una cuenta de prueba el 19 de noviembre de 2026 y cuento cada pantalla en ",
+              "text": "Para un profesional, es el momento adecuado de pasar a una dirección con tu nombre de dominio (lo que sigue al @, como el nombre de tu sitio web), que ya no depende de tu suscripción a internet y que Gmail mantiene tanto en recepción como en envío con Google Workspace. Hice este cambio en una cuenta de prueba el 19 de noviembre de 2026 y cuento cada pantalla en ",
               "type": "text"
             },
             {
@@ -54668,11 +54668,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Antes de continuar, puede ",
+              "text": "Antes de elegir, puedes ",
               "type": "text"
             },
             {
-              "text": "probar si su dirección está afectada",
+              "text": "probar si tu dirección está afectada",
               "type": "text",
               "marks": [
                 {
@@ -54710,7 +54710,7 @@
           },
           "content": [
             {
-              "text": "¿Fin de POP3 en Gmail? ¿A partir de cuándo?",
+              "text": "Fin de POP3 en Gmail para una dirección de Orange o Free: ¿a partir de cuándo?",
               "type": "text"
             }
           ]
@@ -54719,7 +54719,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Google escribe « a partir de enero de 2027 », sin fecha exacta. Hasta entonces, la recuperación « Consultar otras cuentas de correo » sigue funcionando para quienes ya la usaban, pero ya no acepta nuevos usuarios desde finales del primer trimestre de 2026, según la página de ayuda de Google leída el 19 de noviembre de 2026.",
+              "text": "Google escribe «a partir de enero de 2027», sin fecha exacta. Hasta entonces, la recuperación «Consultar el correo de otras cuentas» sigue funcionando para quienes ya la usaban, pero ya no acepta nuevos usuarios desde finales del primer trimestre de 2026, según la página de ayuda de Google leída el 19 de noviembre de 2026.",
               "type": "text"
             }
           ]
@@ -54740,7 +54740,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En la computadora, ya no por mucho tiempo: Google puede limitar ya nuevas configuraciones. En la aplicación Gmail del teléfono, sí: Google indica que aún se puede añadir una cuenta de otro proveedor y leer y enviar sus correos. La dirección Orange aparece como una cuenta separada, no mezclada con la bandeja de Gmail.",
+              "text": "En el ordenador, ya no para la recepción: según Google, la recuperación ya no acepta nuevos usuarios desde finales del primer trimestre de 2026. Para el envío, Google puede limitar ya las nuevas configuraciones. En la aplicación Gmail del teléfono, sí: Google indica que aún se puede añadir una cuenta de otro proveedor y leer y enviar sus correos. La dirección Orange aparece como una cuenta separada, no mezclada con la bandeja de Gmail.",
               "type": "text"
             }
           ]
@@ -54761,7 +54761,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En Mail Orange, abra los ajustes, « todos los ajustes », « generalidades », luego « transferencia de correos ». Elija « Transferir todos los correos a otra bandeja de correo » e ingrese su dirección de Gmail. Orange pide un contrato en servicio y conexión a su Livebox durante la configuración.",
+              "text": "En Mail Orange, abre los ajustes, «todos los ajustes», «generalidades», luego «transferencia de correos». Elige «Transferir todos los correos a otra bandeja de correo» e introduce tu dirección de Gmail. Orange pide un contrato en servicio y conexión a tu Livebox durante la configuración.",
               "type": "text"
             }
           ]
@@ -54803,7 +54803,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si es después de enero de 2027, según Google, el sucesor de Gmail se ha detenido. No he encontrado ninguna transferencia automática ni en la ayuda de Free ni en la de SFR. Añade la dirección en la aplicación Gmail del teléfono con los ajustes IMAP de tu proveedor, o lee tus correos desde su webmail. El detalle está en ",
+              "text": "Si es a partir de enero de 2027, la recuperación de Gmail se ha detenido, según Google. No he encontrado ninguna transferencia automática ni en la ayuda de Free ni en la de SFR. Añade la dirección en la aplicación Gmail del teléfono con los ajustes IMAP de tu proveedor, o lee tus correos desde su webmail. El detalle está en ",
               "type": "text"
             },
             {
@@ -54833,7 +54833,7 @@
           },
           "content": [
             {
-              "text": "¿Debo usar una herramienta que promete mantener « Enviar como »?",
+              "text": "¿Debo usar una herramienta que promete mantener «Enviar como»?",
               "type": "text"
             }
           ]
@@ -54842,7 +54842,28 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No. Google advierte contra las herramientas y extensiones que prometen recrear « Enviar como », porque solicitan las credenciales de tu bandeja de entrada. Nunca des tu contraseña de Orange, Free, SFR o laposte.net a ningún servicio de este tipo.",
+              "text": "No. Google advierte contra las herramientas y extensiones que prometen recrear «Enviar como», porque a menudo solicitan las credenciales de tu bandeja de entrada. Nunca des tu contraseña de Orange, Free, SFR o laposte.net a ningún servicio de este tipo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Mi dirección Bbox (Bouygues Telecom) leída en Gmail está afectada?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí: para Gmail, es una cuenta de correo de terceros, como una dirección de Orange o Free. Según Google, la recuperación se detiene a partir de enero de 2027, y la aplicación Gmail del teléfono puede seguir añadiendo la cuenta de otro proveedor. No he leído la asistencia de Bouygues Telecom: por eso esta guía no dice nada de su transferencia automática.",
               "type": "text"
             }
           ]
@@ -54883,8 +54904,8 @@
   "blog/mail-ionos-sur-gmail-janvier-2027-que-faire": {
     "title": "Correo IONOS en Gmail: lo que termina en enero de 2027 y qué hacer",
     "excerpt": "¿Tu dirección de IONOS se lee en Gmail? Descubre qué dejará de funcionar en enero de 2027, cómo hacer la redirección paso a paso, los ajustes IMAP y SMTP, y cómo migrar a Workspace.",
-    "metaTitle": "IONOS en Gmail: cambios en enero 2027",
-    "metaDescription": "IONOS en Gmail: qué dejará de funcionar desde enero 2027, redirección paso a paso, servidores IMAP y SMTP, y migración a Google Workspace.",
+    "metaTitle": "IONOS en Gmail: cambios en enero de 2027",
+    "metaDescription": "IONOS en Gmail: qué dejará de funcionar desde enero de 2027, redirección paso a paso, servidores IMAP y SMTP, y migración a Google Workspace.",
     "tags": [
       "correo ionos en gmail",
       "gmail con ionos",
@@ -54910,7 +54931,7 @@
               ]
             },
             {
-              "text": " A partir de enero de 2027, según Google, una cuenta de Gmail gratuita ya no podrá recibir correos de una dirección de IONOS ni enviarlos mediante « Enviar como ». Para seguir recibiendo correos de IONOS en Gmail, basta con configurar una redirección en el espacio cliente de IONOS, y es gratuita. Para seguir enviando con la dirección de IONOS, habrá que usar el webmail de IONOS, un programa de correo electrónico, la aplicación de Gmail del teléfono o Google Workspace. Google Workspace cuesta 6,80 € (IVA no incluido) por mes y por buzón con un compromiso de un año, según la página de precios de Google leída el 19 de noviembre de 2026.",
+              "text": " A partir de enero de 2027, según Google, una cuenta de Gmail gratuita ya no podrá recibir correos de una dirección de IONOS ni enviarlos mediante «Enviar como». Para seguir recibiendo correos de IONOS en Gmail, una redirección configurada en el espacio cliente de IONOS es gratuita, con un riesgo de spam que hay que vigilar. Para seguir enviando con la dirección de IONOS, habrá que usar el webmail de IONOS, un programa de correo electrónico, la aplicación de Gmail del teléfono o Google Workspace. Google Workspace cuesta 6,80 € (IVA no incluido) por mes y por buzón con un compromiso de un año, según la página de precios de Google leída el 19 de noviembre de 2026.",
               "type": "text"
             }
           ]
@@ -54928,7 +54949,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Soy Léo Guillaume, desarrollador freelance cerca de Rennes. Yo mismo estoy afectado: mi dirección profesional se lee en un Gmail gratuito, con recepción y « Enviar como ». El 19 de noviembre de 2026, pasé a Google Workspace en una cuenta de prueba. Mi dominio de prueba no está en IONOS: las pantallas de IONOS descritas más abajo provienen de la asistencia oficial, no de mi prueba.",
+              "text": "Soy Léo Guillaume, desarrollador freelance cerca de Rennes. Yo mismo estoy afectado: mi dirección profesional se lee en un Gmail gratuito, con recepción y «Enviar como». El 19 de noviembre de 2026, pasé a Google Workspace en una cuenta de prueba. Mi dominio de prueba no está en IONOS: las pantallas de IONOS descritas más abajo provienen de la asistencia oficial, no de mi prueba.",
               "type": "text"
             }
           ]
@@ -54967,7 +54988,7 @@
               ]
             },
             {
-              "text": ", leída el 19 de noviembre de 2026, tres funciones de Gmail desaparecerán a partir de enero de 2027 para las cuentas personales de Gmail. La primera es « Enviar como »: Gmail ya no enviará correos con una dirección de otro proveedor, ni desde ordenador ni en las aplicaciones. La segunda es « Revisar otros buzones de correo », la recepción por POP (el protocolo que busca los correos en otra bandeja). La tercera es Gmailify.",
+              "text": ", leída el 19 de noviembre de 2026, tres funciones de Gmail desaparecerán a partir de enero de 2027 para las cuentas personales de Gmail. La primera es «Enviar como»: tu buzón de Gmail ya no enviará correos en nombre de una dirección de otro proveedor, ni desde ordenador ni en las aplicaciones; añadirla como cuenta aparte en la aplicación del teléfono sigue siendo posible. La segunda es «Consultar el correo de otras cuentas», la recepción por POP (el protocolo que busca los correos en otra bandeja). La tercera es Gmailify.",
               "type": "text"
             }
           ]
@@ -54976,7 +54997,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Una dirección de IONOS es una dirección con tu nombre de dominio (lo que sigue al @) cuyo buzón está alojado en IONOS, no en Google. Google no escribe la palabra « IONOS », pero aclara que « solo se ven afectadas las cuentas de correo de terceros distintas a Google ». Google no especifica una fecha concreta, y el calendario ya se ha retrasado una vez.",
+              "text": "Una dirección de IONOS es una dirección con tu nombre de dominio (lo que sigue al @) cuyo buzón está alojado en IONOS, no en Google. Google no escribe la palabra «IONOS», pero aclara que «solo se ven afectadas las cuentas de correo de terceros distintas a Google». Google no especifica una fecha concreta, y el calendario ya se ha retrasado una vez.",
               "type": "text"
             }
           ]
@@ -55028,7 +55049,7 @@
               "type": "text"
             },
             {
-              "text": "\"Mostrar todos los ajustes\"",
+              "text": "«Ver todos los ajustes»",
               "type": "text",
               "marks": [
                 {
@@ -55041,7 +55062,7 @@
               "type": "text"
             },
             {
-              "text": "\"Cuentas e importación\"",
+              "text": "«Cuentas e importación»",
               "type": "text",
               "marks": [
                 {
@@ -55054,7 +55075,7 @@
               "type": "text"
             },
             {
-              "text": "\"Cuentas\"",
+              "text": "«Cuentas»",
               "type": "text",
               "marks": [
                 {
@@ -55072,11 +55093,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si su dirección de IONOS aparece en la línea ",
+              "text": "Si tu dirección de IONOS aparece en la línea ",
               "type": "text"
             },
             {
-              "text": "« Enviar correos como »",
+              "text": "«Enviar como»",
               "type": "text",
               "marks": [
                 {
@@ -55089,7 +55110,7 @@
               "type": "text"
             },
             {
-              "text": "« Ver otros cuentas de correo »",
+              "text": "«Consultar el correo de otras cuentas»",
               "type": "text",
               "marks": [
                 {
@@ -55107,7 +55128,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En mi caso, la dirección aparecía en las dos líneas. Es el caso más común cuando un webmaster ha realizado la configuración completa.",
+              "text": "En mi caso, la dirección está en las dos líneas. Es el caso cuando se ha hecho la configuración completa.",
               "type": "text"
             }
           ]
@@ -55119,7 +55140,7 @@
           },
           "content": [
             {
-              "text": "¿Cómo recibir sus correos IONOS en Gmail después de enero de 2027?",
+              "text": "¿Cómo recibir tus correos IONOS en Gmail después de enero de 2027?",
               "type": "text"
             }
           ]
@@ -55128,11 +55149,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "La recepción se configura en IONOS, no en Gmail. La asistencia de IONOS Francia describe el procedimiento en la página ",
+              "text": "Para seguir recuperando tus correos IONOS en Gmail, la recepción se configura en IONOS, no en Gmail. La asistencia de IONOS Francia describe el procedimiento en la página ",
               "type": "text"
             },
             {
-              "text": "« Configurar una redirección de correos »",
+              "text": "«Configurar una redirección de correos»",
               "type": "text",
               "marks": [
                 {
@@ -55155,7 +55176,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Inicie sesión en su cuenta de IONOS y abra la sección ",
+              "text": "Inicia sesión en tu cuenta de IONOS y abre la sección ",
               "type": "text"
             },
             {
@@ -55168,7 +55189,7 @@
               ]
             },
             {
-              "text": ". Si tiene varios contratos, elija aquel que contenga la dirección. Haga clic en la dirección a redirigir, luego en la línea ",
+              "text": ". Si tienes varios contratos, elige aquel que contenga la dirección. Haz clic en la dirección a redirigir, luego en la línea ",
               "type": "text"
             },
             {
@@ -55185,7 +55206,7 @@
               "type": "text"
             },
             {
-              "text": "« Redirecciones »",
+              "text": "«Redirecciones»",
               "type": "text",
               "marks": [
                 {
@@ -55194,7 +55215,7 @@
               ]
             },
             {
-              "text": " . Haga clic en ",
+              "text": ". Haz clic en ",
               "type": "text"
             },
             {
@@ -55207,7 +55228,7 @@
               ]
             },
             {
-              "text": ", ingrese su dirección de Gmail y luego haga clic en ",
+              "text": ", introduce tu dirección de Gmail y luego haz clic en ",
               "type": "text"
             },
             {
@@ -55220,7 +55241,7 @@
               ]
             },
             {
-              "text": ". IONOS muestra: «La redirección ahora está configurada y estará activa en unos minutos. »",
+              "text": ". IONOS muestra: «La redirección ahora está configurada y estará activa en unos minutos.»",
               "type": "text"
             }
           ]
@@ -55250,7 +55271,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si no desea ninguna bandeja en IONOS, la asistencia describe una dirección del tipo ",
+              "text": "Si no deseas ninguna bandeja en IONOS, la asistencia describe una dirección del tipo ",
               "type": "text"
             },
             {
@@ -55372,7 +55393,7 @@
               ]
             },
             {
-              "text": ". El primer día, envíese un correo desde otra dirección, luego revise la carpeta ",
+              "text": "; atención: esta página sigue recomendando «Enviar como», que dejará de funcionar. El primer día, envíate un correo desde otra dirección, luego revisa la carpeta ",
               "type": "text"
             },
             {
@@ -55397,7 +55418,7 @@
           },
           "content": [
             {
-              "text": "¿Cómo enviar con tu dirección de IONOS sin usar « Enviar como »?",
+              "text": "¿Cómo enviar con tu dirección de IONOS sin usar «Enviar como»?",
               "type": "text"
             }
           ]
@@ -55633,7 +55654,7 @@
               ]
             },
             {
-              "text": " hace clic en ",
+              "text": " indica hacer clic en ",
               "type": "text"
             },
             {
@@ -55646,7 +55667,7 @@
               ]
             },
             {
-              "text": ", introduce la dirección completa en el campo ",
+              "text": ", introducir la dirección completa en el campo ",
               "type": "text"
             },
             {
@@ -55659,7 +55680,7 @@
               ]
             },
             {
-              "text": " y selecciona la autenticación ",
+              "text": " y seleccionar la autenticación ",
               "type": "text"
             },
             {
@@ -55672,7 +55693,7 @@
               ]
             },
             {
-              "text": ". El programa solo funciona en la computadora donde está instalado.",
+              "text": ". El programa solo funciona en el ordenador donde está instalado.",
               "type": "text"
             }
           ]
@@ -55684,7 +55705,7 @@
           },
           "content": [
             {
-              "text": "La aplicación Gmail del teléfono",
+              "text": "Configurar tu correo IONOS en la aplicación Gmail (Android, iPhone)",
               "type": "text"
             }
           ]
@@ -55711,7 +55732,7 @@
               ]
             },
             {
-              "text": ": los tres puntos en la esquina superior izquierda, ",
+              "text": ": las tres rayas en la esquina superior izquierda, \"Ajustes\", que IONOS llama ",
               "type": "text"
             },
             {
@@ -55879,7 +55900,7 @@
               "type": "text"
             },
             {
-              "text": "« Modificar los registros MX »",
+              "text": "«Usar un dominio con servidores de correo de otros proveedores (modificar los registros MX)»",
               "type": "text",
               "marks": [
                 {
@@ -55984,7 +56005,7 @@
               ]
             },
             {
-              "text": ". IONOS advierte: « Si el registro MX pertenece a un servicio, debe desactivarse. »",
+              "text": ". Si quedan otros registros MX, elimínalos: Google pide conservar solo el suyo. IONOS advierte: «Si el registro MX pertenece a un servicio, debe desactivarse.»",
               "type": "text"
             }
           ]
@@ -56010,7 +56031,7 @@
               "type": "text"
             },
             {
-              "text": "« Añadir, modificar o eliminar registros TXT »",
+              "text": "«Añadir, modificar o eliminar registros TXT»",
               "type": "text",
               "marks": [
                 {
@@ -56124,7 +56145,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "IONOS indica que los cambios en los DNS pueden tardar hasta una hora en aplicarse en todas partes. Google advierte que es necesario crear todas las direcciones ya utilizadas con el dominio antes del cambio, de lo contrario, sus correos se perderán. No sé qué pasa con los datos si luego se da de baja Google Workspace: las páginas de ayuda de Google se contradicen, no lo garantizo.",
+              "text": "IONOS indica que los cambios en los DNS (los ajustes del nombre de dominio) pueden tardar hasta una hora en aplicarse en todas partes. Google advierte que es necesario crear todas las direcciones ya utilizadas con el dominio antes del cambio, de lo contrario, sus correos se perderán. No sé qué pasa con los datos si luego se da de baja Google Workspace: las páginas de ayuda de Google se contradicen, no lo garantizo.",
               "type": "text"
             }
           ]
@@ -56145,7 +56166,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Recibe muchos correos y responde poco: la redirección de IONOS a Gmail, y el webmail de IONOS para las pocas respuestas, todo gratis.",
+              "text": "Recibes muchos correos y respondes poco: la redirección de IONOS a Gmail, y el webmail de IONOS para las pocas respuestas, todo gratis.",
               "type": "text"
             }
           ]
@@ -56154,7 +56175,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Trabaja en una sola computadora: Thunderbird o Outlook con los ajustes IMAP y SMTP de IONOS, gratis, pero fuera de Gmail.",
+              "text": "Trabajas en un solo ordenador: Thunderbird o Outlook con los ajustes IMAP y SMTP de IONOS, gratis, pero fuera de Gmail.",
               "type": "text"
             }
           ]
@@ -56163,7 +56184,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Responde principalmente desde su teléfono: la aplicación Gmail con la cuenta de IONOS añadida en IMAP, gratis.",
+              "text": "Respondes principalmente desde tu teléfono: la aplicación Gmail con la cuenta de IONOS añadida en IMAP, gratis.",
               "type": "text"
             }
           ]
@@ -56172,7 +56193,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Quiere mantener Gmail exactamente como hoy, en todas partes: Google Workspace, desde 6,80 € IVA por mes y por buzón con compromiso de un año hasta 8,10 € IVA sin compromiso, prueba de 14 días, según los precios de Google leídos el 19 de noviembre de 2026. La cuenta de IONOS ya no recibirá nada nuevo.",
+              "text": "Quieres mantener Gmail exactamente como hoy, en todas partes: Google Workspace, desde 6,80 € (IVA no incluido) por mes y por buzón con compromiso de un año hasta 8,10 € (IVA no incluido) sin compromiso, prueba de 14 días, según los precios de Google leídos el 19 de noviembre de 2026. La cuenta de IONOS ya no recibirá nada nuevo.",
               "type": "text"
             }
           ]
@@ -56181,11 +56202,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Antes de decidir, puede ",
+              "text": "Antes de decidir, puedes ",
               "type": "text"
             },
             {
-              "text": "probar si su dirección está afectada",
+              "text": "probar si tu dirección está afectada",
               "type": "text",
               "marks": [
                 {
@@ -56203,7 +56224,7 @@
               "type": "text"
             },
             {
-              "text": "verificar si sus correos llegan a la carpeta de spam",
+              "text": "verificar si tus correos llegan a la carpeta de spam",
               "type": "text",
               "marks": [
                 {
@@ -56248,6 +56269,27 @@
           "content": [
             {
               "text": "Preguntas frecuentes sobre IONOS y Gmail",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Se puede configurar aún un correo IONOS en Gmail en 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En Gmail desde el navegador, ya no para la recepción: según Google, la recuperación POP ya no acepta nuevos usuarios desde finales del primer trimestre de 2026. En la aplicación Gmail del teléfono, añadir una dirección IONOS en IMAP sigue siendo posible.",
               "type": "text"
             }
           ]
@@ -56352,7 +56394,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No. El nombre de dominio puede quedarse en IONOS: solo se cambian sus registros MX y se añade el SPF de Google en los parámetros DNS de IONOS. Solo la bandeja de entrada pasa a Google.",
+              "text": "No. El nombre de dominio puede quedarse en IONOS: solo se cambian sus registros MX y se añade el SPF de Google en los parámetros DNS de IONOS. Solo el correo pasa a Google.",
               "type": "text"
             }
           ]
@@ -56394,7 +56436,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si prefieren no tocar el espacio cliente de IONOS, puedo ocuparme de ello a distancia, ya sea una simple redirección o un paso a Google Workspace. El diagnóstico es gratuito, respondo en menos de 24 horas, y si la configuración gratuita les basta, se lo indico.",
+              "text": "Si prefieres no tocar el espacio cliente de IONOS, puedo ocuparme de ello a distancia, ya sea una simple redirección o un paso a Google Workspace. El diagnóstico es gratuito, respondo en menos de 24 horas, y si la configuración gratuita te basta, te lo indico.",
               "type": "text"
             }
           ]
@@ -56443,7 +56485,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "A partir de enero de 2027, según Google, una cuenta de Gmail gratuita ya no podrá recibir correos de una dirección alojada en OVHcloud (« Consultar otros cuentas de correo »), ni enviarlos desde el servidor de OVHcloud (« Enviar como »). Esto le afecta si revisa su dirección profesional de OVHcloud, por ejemplo contact@votre-entreprise.fr, en su bandeja de gmail.com. La solución gratuita: una redirección en el espacio cliente de OVHcloud para recibir, y el webmail de OVHcloud, un software o la aplicación Gmail del teléfono para enviar. Google Workspace mantiene todo en Gmail, pero es de pago.",
+              "text": "A partir de enero de 2027, según Google, una cuenta de Gmail gratuita ya no podrá recibir correos de una dirección alojada en OVHcloud («Consultar el correo de otras cuentas»), ni enviarlos desde el servidor de OVHcloud («Enviar como»). Esto te afecta si revisas tu dirección profesional de OVHcloud, por ejemplo contacto@tu-empresa.fr, en tu bandeja de gmail.com. La solución gratuita: una redirección en el espacio cliente de OVHcloud para recibir, y el webmail de OVHcloud, un software o la aplicación Gmail del teléfono para enviar. Google Workspace mantiene todo en Gmail, pero es de pago.",
               "type": "text"
             }
           ]
@@ -56461,7 +56503,7 @@
               ]
             },
             {
-              "text": " Google eliminará « Enviar como » y « Consultar otros cuentas de correo » para direcciones de terceros a partir de enero de 2027, sin especificar una fecha exacta. Una redirección configurada en OVHcloud hacia Gmail seguirá funcionando, pero solo para recibir. Para responder con la dirección de OVHcloud, el webmail de OVHcloud, un software de correo o la aplicación Gmail del teléfono son suficientes, y todo de forma gratuita. Google Workspace mantiene la recepción y el envío en Gmail, desde 6,80 € IVA (excluido) por mes y por buzón con un compromiso de un año.",
+              "text": " Google eliminará «Enviar como» y «Consultar el correo de otras cuentas» para direcciones de terceros a partir de enero de 2027, sin especificar una fecha exacta. Una redirección configurada en OVHcloud hacia Gmail seguirá funcionando, pero solo para recibir. Para responder con la dirección de OVHcloud, el webmail de OVHcloud, un software de correo o la aplicación Gmail del teléfono son suficientes, y todo de forma gratuita. Google Workspace mantiene la recepción y el envío en Gmail, desde 6,80 € (IVA no incluido) por mes y por buzón con un compromiso de un año.",
               "type": "text"
             }
           ]
@@ -56470,11 +56512,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Soy Léo Guillaume, desarrollador freelance cerca de Rennes. Mi dirección contact@dibodev.fr está alojada en o2switch, no en OVHcloud, pero la leo en un Gmail gratuito con los mismos ajustes: estoy afectado como usted. El 19 de noviembre de 2026, hice la transición a Google Workspace en una cuenta de prueba, luego releí la documentación de OVHcloud para cada menú mencionado aquí. Si no sabe cómo está configurada su dirección, empiece por ",
+              "text": "Soy Léo Guillaume, desarrollador freelance cerca de Rennes. Mi dirección contact@dibodev.fr está alojada en o2switch, no en OVHcloud, pero la leo en un Gmail gratuito con los mismos ajustes: estoy afectado como tú. El 19 de noviembre de 2026, hice la transición a Google Workspace en una cuenta de prueba, luego releí la documentación de OVHcloud para cada menú mencionado aquí. Si no sabes cómo está configurada tu dirección, empieza por ",
               "type": "text"
             },
             {
-              "text": "probar si su dirección está afectada",
+              "text": "probar si tu dirección está afectada",
               "type": "text",
               "marks": [
                 {
@@ -56513,7 +56555,7 @@
               "type": "text"
             },
             {
-              "text": "« Consultar otros cuentas de correo »",
+              "text": "«Consultar el correo de otras cuentas»",
               "type": "text",
               "marks": [
                 {
@@ -56522,11 +56564,11 @@
               ]
             },
             {
-              "text": " permite que Gmail busque sus correos en el servidor de OVHcloud: es la recepción POP (POP es el protocolo que descarga los correos de un servidor a otra bandeja). ",
+              "text": " permite que Gmail busque tus correos en el servidor de OVHcloud: es la recepción POP (POP es el protocolo que descarga los correos de un servidor a otra bandeja). ",
               "type": "text"
             },
             {
-              "text": "« Enviar como »",
+              "text": "«Enviar como»",
               "type": "text",
               "marks": [
                 {
@@ -56535,7 +56577,7 @@
               ]
             },
             {
-              "text": " hace que sus respuestas salgan desde Gmail a través del servidor de envío de OVHcloud, llamado servidor SMTP. La guía de OVHcloud para Gmail indicaba el servidor `ssl0.ovh.net`, puerto 995 para la recepción y 587 para el envío: si estos valores le suenan, es su caso.",
+              "text": " hace que tus respuestas salgan desde Gmail a través del servidor de envío de OVHcloud, llamado servidor SMTP. La guía de OVHcloud para Gmail indicaba el servidor `ssl0.ovh.net`, puerto 995 para la recepción y 587 para el envío: si estos valores te suenan, es tu caso.",
               "type": "text"
             }
           ]
@@ -56571,7 +56613,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "La guía oficial de OVHcloud « ",
+              "text": "La guía oficial de OVHcloud «",
               "type": "text"
             },
             {
@@ -56589,7 +56631,7 @@
               ]
             },
             {
-              "text": " », leída el 19 de noviembre de 2026, lleva un recuadro « Importante ». OVHcloud anuncia allí el fin de Gmailify y el acceso POP « a partir de enero de 2026 » y escribe que ya no será posible configurar las direcciones OVHcloud en Gmail. La guía no menciona enero de 2027. Para la eliminación, la fecha clave es la de Google: enero de 2027, ya que la recepción POP no acepta nuevos usuarios desde el primer trimestre de 2026.",
+              "text": "», leída el 19 de noviembre de 2026, lleva un recuadro «Importante». OVHcloud anuncia allí el fin de Gmailify y del acceso POP «a partir de enero de 2026» y escribe que ya no será posible configurar las direcciones OVHcloud en Gmail. La guía no menciona enero de 2027. Para la eliminación, la fecha clave es la de Google: enero de 2027, ya que la recepción POP no acepta nuevos usuarios desde finales del primer trimestre de 2026.",
               "type": "text"
             }
           ]
@@ -56619,11 +56661,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Abra Gmail en una computadora, haga clic en la rueda dentada y luego en ",
+              "text": "Abre Gmail en un ordenador, haz clic en la rueda dentada y luego en ",
               "type": "text"
             },
             {
-              "text": "\"Mostrar todas las configuraciones\"",
+              "text": "«Ver todos los ajustes»",
               "type": "text",
               "marks": [
                 {
@@ -56636,7 +56678,7 @@
               "type": "text"
             },
             {
-              "text": "\"Cuentas e importación\"",
+              "text": "«Cuentas e importación»",
               "type": "text",
               "marks": [
                 {
@@ -56649,7 +56691,7 @@
               "type": "text"
             },
             {
-              "text": "\"Cuentas\"",
+              "text": "«Cuentas»",
               "type": "text",
               "marks": [
                 {
@@ -56667,11 +56709,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si su dirección OVHcloud aparece en la línea ",
+              "text": "Si tu dirección OVHcloud aparece en la línea ",
               "type": "text"
             },
             {
-              "text": "\"Enviar correos como\"",
+              "text": "«Enviar como»",
               "type": "text",
               "marks": [
                 {
@@ -56684,7 +56726,7 @@
               "type": "text"
             },
             {
-              "text": "\"Consultar otros cuentas de correo\"",
+              "text": "«Consultar el correo de otras cuentas»",
               "type": "text",
               "marks": [
                 {
@@ -56705,7 +56747,7 @@
           },
           "content": [
             {
-              "text": "¿Cómo recibir sus correos OVH en Gmail después de enero de 2027?",
+              "text": "¿Cómo recibir tus correos OVH en Gmail después de enero de 2027?",
               "type": "text"
             }
           ]
@@ -56714,7 +56756,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Google lo confirma: su proveedor puede seguir transfiriendo automáticamente sus mensajes a Gmail. En OVHcloud, este traslado se llama redirección.",
+              "text": "Para recuperar tus correos OVH en Gmail, queda la transferencia. Google lo confirma: tu proveedor puede seguir transfiriendo automáticamente tus mensajes a Gmail. En OVHcloud, esta transferencia se llama redirección.",
               "type": "text"
             }
           ]
@@ -56736,7 +56778,7 @@
               ]
             },
             {
-              "text": ", la oferta de correo incluida con los alojamientos web de OVHcloud, el ",
+              "text": ", la oferta de correo incluida con los alojamientos web de OVHcloud, la ",
               "type": "text"
             },
             {
@@ -56754,11 +56796,11 @@
               ]
             },
             {
-              "text": ", actualizada el 18 de noviembre de 2026, indica este camino. En la consola OVHcloud, abra ",
+              "text": ", actualizada el 18 de noviembre de 2026, indica este camino. En la consola OVHcloud, abre ",
               "type": "text"
             },
             {
-              "text": "\"Web Cloud\"",
+              "text": "«Web Cloud»",
               "type": "text",
               "marks": [
                 {
@@ -56771,7 +56813,7 @@
               "type": "text"
             },
             {
-              "text": "« Correos electrónicos »",
+              "text": "«Correos electrónicos»",
               "type": "text",
               "marks": [
                 {
@@ -56784,7 +56826,7 @@
               "type": "text"
             },
             {
-              "text": "« Plan MX »",
+              "text": "«Plan MX»",
               "type": "text",
               "marks": [
                 {
@@ -56793,11 +56835,11 @@
               ]
             },
             {
-              "text": ", seleccione su servicio y luego el nombre de dominio. Haga clic en la pestaña ",
+              "text": ", selecciona tu servicio y luego el nombre de dominio. Haz clic en la pestaña ",
               "type": "text"
             },
             {
-              "text": "« Redirecciones »",
+              "text": "«Redirecciones»",
               "type": "text",
               "marks": [
                 {
@@ -56810,7 +56852,7 @@
               "type": "text"
             },
             {
-              "text": "« Crear una redirección »",
+              "text": "«Crear una redirección»",
               "type": "text",
               "marks": [
                 {
@@ -56832,7 +56874,7 @@
               "type": "text"
             },
             {
-              "text": "« Desde la dirección »",
+              "text": "«Desde la dirección»",
               "type": "text",
               "marks": [
                 {
@@ -56841,11 +56883,11 @@
               ]
             },
             {
-              "text": " espera la parte antes del @ (por ejemplo « contacto »). El campo ",
+              "text": " espera la parte antes del @ (por ejemplo «contacto»). El campo ",
               "type": "text"
             },
             {
-              "text": "« Hacia la dirección »",
+              "text": "«Hacia la dirección»",
               "type": "text",
               "marks": [
                 {
@@ -56854,11 +56896,11 @@
               ]
             },
             {
-              "text": " requiere su dirección de Gmail completa. La casilla ",
+              "text": " requiere tu dirección de Gmail completa. La casilla ",
               "type": "text"
             },
             {
-              "text": "« Mantener una copia local »",
+              "text": "«Mantener una copia local»",
               "type": "text",
               "marks": [
                 {
@@ -56867,11 +56909,11 @@
               ]
             },
             {
-              "text": " decide el resto: marcada, el correo llega a Gmail y permanece en su bandeja de OVHcloud; desmarcada, solo se envía a Gmail. Haga clic en ",
+              "text": " decide el resto: marcada, el correo llega a Gmail y permanece en tu bandeja de OVHcloud; desmarcada, solo se envía a Gmail. Haz clic en ",
               "type": "text"
             },
             {
-              "text": "« Crear »",
+              "text": "«Crear»",
               "type": "text",
               "marks": [
                 {
@@ -56889,7 +56931,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Recomiendo la copia local: sus correos permanecen en el webmail de OVHcloud, desde donde responderá con su dirección profesional. Una vez probada la redirección, puede eliminar su dirección de « Consultar otras cuentas de correo »: la recuperación ya no es necesaria.",
+              "text": "Recomiendo la copia local: tus correos permanecen en el webmail de OVHcloud, desde donde responderás con tu dirección profesional. Una vez probada la redirección, puedes eliminar tu dirección de «Consultar el correo de otras cuentas»: la recuperación ya no es necesaria.",
               "type": "text"
             }
           ]
@@ -56902,7 +56944,7 @@
               "type": "text"
             },
             {
-              "text": "Intercambio",
+              "text": "Exchange",
               "type": "text",
               "marks": [
                 {
@@ -56964,7 +57006,7 @@
               ]
             },
             {
-              "text": " de Gmail y marca como « No es spam » lo que allí se desvíe. Otra limitación: si respondes desde Gmail, tu cliente verá tu dirección gmail.com.",
+              "text": " de Gmail y marca como «No es spam» lo que allí se desvíe. Otra limitación: si respondes desde Gmail, tu cliente verá tu dirección gmail.com.",
               "type": "text"
             }
           ]
@@ -57015,7 +57057,7 @@
               ]
             },
             {
-              "text": ", con tu dirección y su contraseña. Según tu oferta, se llama Roundcube, Zimbra o Outlook Web App; la ",
+              "text": ", con la dirección y su contraseña. Según tu oferta, se llama Roundcube, Zimbra o Outlook Web App; la ",
               "type": "text"
             },
             {
@@ -57050,7 +57092,7 @@
               "type": "text"
             },
             {
-              "text": "« Vista general »",
+              "text": "«Vista general»",
               "type": "text",
               "marks": [
                 {
@@ -57071,7 +57113,7 @@
           },
           "content": [
             {
-              "text": "Un software de mensajería en la computadora",
+              "text": "Un software de mensajería en el ordenador",
               "type": "text"
             }
           ]
@@ -57110,7 +57152,7 @@
           },
           "content": [
             {
-              "text": "La aplicación Gmail del teléfono",
+              "text": "Configurar tu correo OVH en la aplicación Gmail (Android, iPhone)",
               "type": "text"
             }
           ]
@@ -57146,11 +57188,11 @@
               ]
             },
             {
-              "text": " indica el camino: menú en la parte superior izquierda, ",
+              "text": " indica el camino (según la versión de la aplicación, también se pasa por la foto de perfil y luego «Añadir cuenta»): menú en la parte superior izquierda, ",
               "type": "text"
             },
             {
-              "text": "« Configuración »",
+              "text": "«Configuración»",
               "type": "text",
               "marks": [
                 {
@@ -57163,7 +57205,7 @@
               "type": "text"
             },
             {
-              "text": "« Añadir cuenta »",
+              "text": "«Añadir cuenta»",
               "type": "text",
               "marks": [
                 {
@@ -57176,7 +57218,7 @@
               "type": "text"
             },
             {
-              "text": "« Otro »",
+              "text": "«Otro»",
               "type": "text",
               "marks": [
                 {
@@ -57189,7 +57231,7 @@
               "type": "text"
             },
             {
-              "text": "« Personal (IMAP) »",
+              "text": "«Personal (IMAP)»",
               "type": "text",
               "marks": [
                 {
@@ -57295,7 +57337,7 @@
               "type": "text"
             },
             {
-              "text": "« Web Cloud »",
+              "text": "«Web Cloud»",
               "type": "text",
               "marks": [
                 {
@@ -57308,7 +57350,7 @@
               "type": "text"
             },
             {
-              "text": "« Dominios y DNS »",
+              "text": "«Dominios y DNS»",
               "type": "text",
               "marks": [
                 {
@@ -57321,7 +57363,7 @@
               "type": "text"
             },
             {
-              "text": "« Carteras »",
+              "text": "«Carteras»",
               "type": "text",
               "marks": [
                 {
@@ -57334,7 +57376,7 @@
               "type": "text"
             },
             {
-              "text": "« Zona DNS »",
+              "text": "«Zona DNS»",
               "type": "text",
               "marks": [
                 {
@@ -57360,7 +57402,7 @@
               "type": "text"
             },
             {
-              "text": "« Resumen »",
+              "text": "«Resumen»",
               "type": "text",
               "marks": [
                 {
@@ -57382,7 +57424,7 @@
               "type": "text"
             },
             {
-              "text": "\"Crear un registro\"",
+              "text": "«Crear un registro»",
               "type": "text",
               "marks": [
                 {
@@ -57391,11 +57433,11 @@
               ]
             },
             {
-              "text": ". Los MX, que indican qué servidor recibe sus correos: el botón ",
+              "text": ". Los MX, que indican qué servidor recibe tus correos: el botón ",
               "type": "text"
             },
             {
-              "text": "\"Filtros\"",
+              "text": "«Filtros»",
               "type": "text",
               "marks": [
                 {
@@ -57404,7 +57446,7 @@
               ]
             },
             {
-              "text": " muestra los de OVHcloud, desde `mx0.mail.ovh.net` hasta `mx4.mail.ovh.net`, que Google me pidió reemplazar por `smtp.google.com` en prioridad 1. El SPF, la lista de servidores autorizados a enviar para su dominio: filtre por « TXT » luego « SPF » y modifica la línea existente, que suele ser `v=spf1 include:mx.ovh.com ~all`, en lugar de añadir una segunda. El valor de Google es `v=spf1 include:_spf.google.com ~all`.",
+              "text": " muestra los de OVHcloud, desde `mx0.mail.ovh.net` hasta `mx4.mail.ovh.net`, que hay que reemplazar por `smtp.google.com` en prioridad 1: es lo que Google me pidió en mi dominio de prueba. El SPF, la lista de servidores autorizados a enviar para tu dominio: filtra por «TXT» luego «SPF» y modifica la línea existente, que suele ser `v=spf1 include:mx.ovh.com ~all`, en lugar de añadir una segunda. El valor de Google es `v=spf1 include:_spf.google.com ~all`.",
               "type": "text"
             }
           ]
@@ -57479,7 +57521,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Recibe muchos correos y responde poco: redirección con copia local y webmail para las respuestas importantes, por 0 €. Trabaja desde una sola computadora: un software de mensajería lo hace todo, gratis. Responde principalmente desde el teléfono: la aplicación Gmail con la dirección añadida en IMAP. Quiere mantener Gmail como hoy, en todas partes: Google Workspace, la única opción de pago.",
+              "text": "Recibes muchos correos y respondes poco: redirección con copia local y webmail para las respuestas importantes, por 0 €. Trabajas desde un solo ordenador: un software de mensajería lo hace todo, gratis. Respondes principalmente desde el teléfono: la aplicación Gmail con la dirección añadida en IMAP. Quieres mantener Gmail como hoy, en todas partes: Google Workspace, la única opción de pago.",
               "type": "text"
             }
           ]
@@ -57488,11 +57530,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si aún duda, ",
+              "text": "Si aún dudas, ",
               "type": "text"
             },
             {
-              "text": "pruebe si su dirección está afectada",
+              "text": "prueba si tu dirección está afectada",
               "type": "text",
               "marks": [
                 {
@@ -57539,7 +57581,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En Gmail desde el navegador, ya no para la recepción: según Google, la recuperación POP no acepta nuevos usuarios desde el primer trimestre de 2026. En la aplicación Gmail del teléfono, añadir una dirección OVHcloud en IMAP sigue siendo posible.",
+              "text": "En Gmail desde el navegador, ya no para la recepción: según Google, la recuperación POP no acepta nuevos usuarios desde finales del primer trimestre de 2026. En la aplicación Gmail del teléfono, añadir una dirección OVHcloud en IMAP sigue siendo posible.",
               "type": "text"
             }
           ]
@@ -57560,7 +57602,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No. Google escribe que la transferencia automática configurada en su proveedor continúa. La redirección de OVHcloud sirve para recibir en Gmail, no para enviar con la dirección OVHcloud.",
+              "text": "No. Google escribe que la transferencia automática configurada en tu proveedor continúa. La redirección de OVHcloud sirve para recibir en Gmail, no para enviar con la dirección OVHcloud.",
               "type": "text"
             }
           ]
@@ -57581,7 +57623,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Un correo redirigido puede fallar en los controles de Gmail después de pasar por OVHcloud. Marcadlo como « No es spam »; si el problema persiste, Google Workspace elimina la redirección.",
+              "text": "Un correo redirigido puede fallar en los controles de Gmail después de pasar por OVHcloud. Márcalo como «No es spam»; si el problema persiste, Google Workspace elimina la redirección.",
               "type": "text"
             }
           ]
@@ -57602,7 +57644,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No. El nombre de dominio y la web siguen en OVHcloud; solo los registros MX y SPF cambian en la pestaña « Zona DNS ». No elimine nada en OVHcloud hasta que los correos lleguen correctamente a Google.",
+              "text": "No. El nombre de dominio y la web siguen en OVHcloud; solo los registros MX y SPF cambian en la pestaña «Zona DNS». No elimines nada en OVHcloud hasta que los correos lleguen correctamente a Google.",
               "type": "text"
             }
           ]
@@ -57644,7 +57686,19 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No lo he verificado, y las páginas de ayuda de Google son contradictorias sobre el destino de los datos al cancelar. Haga una copia de seguridad de sus correos antes de cancelar cualquier cosa.",
+              "text": "No lo he verificado, y las páginas de ayuda de Google son contradictorias sobre el destino de los datos al cancelar. Haz una copia de seguridad de tus correos antes de cancelar cualquier cosa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cuáles son los servidores IMAP y SMTP de una dirección OVH?",
               "type": "text"
             }
           ]
@@ -57653,7 +57707,16 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si prefiere no tocar nada, puedo ajustarlo a distancia con usted: redirección, software, teléfono o migración a Google Workspace con los registros MX y SPF en la zona DNS de OVHcloud. El diagnóstico es gratuito y respondo en menos de 24 horas. Si el ajuste gratuito le sirve, se lo haré saber.",
+              "text": "Según las guías de OVHcloud para una dirección MX Plan, leídas el 19 de noviembre de 2026: en IMAP, `ssl0.ovh.net`, puerto 993, SSL/TLS; en SMTP, `ssl0.ovh.net`, puerto 465 con SSL/TLS o 587 con STARTTLS. El nombre de usuario es la dirección completa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si prefieres no tocar nada, puedo ajustarlo a distancia contigo: redirección, software, teléfono o migración a Google Workspace con los registros MX y SPF en la zona DNS de OVHcloud. El diagnóstico es gratuito y respondo en menos de 24 horas. Si el ajuste gratuito te sirve, te lo haré saber.",
               "type": "text"
             }
           ]
@@ -57686,7 +57749,7 @@
     "title": "Correo o2switch en Gmail: lo que termina en enero de 2027 y qué hacer",
     "excerpt": "A partir de enero de 2027, Gmail dejará de gestionar tu dirección de correo o2switch. Configuración de redirección en cPanel, webmail, Thunderbird o Google Workspace: qué ajustar y dónde.",
     "metaTitle": "Correo o2switch en Gmail: qué hacer en 2027",
-    "metaDescription": "Qué dejará de funcionar en tu correo o2switch con Gmail desde enero 2027, redirección en cPanel y sus errores, webmail, SMTP y Google Workspace.",
+    "metaDescription": "Qué dejará de funcionar en tu correo o2switch con Gmail desde enero de 2027, redirección en cPanel y sus errores, webmail, SMTP y Google Workspace.",
     "tags": [
       "correo o2switch en gmail",
       "o2switch con gmail",
@@ -57711,7 +57774,7 @@
               ]
             },
             {
-              "text": " A partir de enero de 2027, según Google, una cuenta de Gmail gratuita ya no podrá recibir ni enviar correos desde una dirección alojada en o2switch. Las configuraciones « Consultar otros cuentas de correo » y « Enviar como » de Gmail dejarán de funcionar, pero tu dirección seguirá operando en o2switch. Para recibir correos, una redirección en cPanel envía los correos a Gmail, con el riesgo de spam que o2switch menciona por sí mismo. Para enviar con la dirección de o2switch, queda el webmail de o2switch, un software de mensajería, la aplicación Gmail del teléfono o Google Workspace desde 6,80 € IVA por mes.",
+              "text": " A partir de enero de 2027, según Google, una cuenta de Gmail gratuita ya no podrá recibir ni enviar correos desde una dirección alojada en o2switch. Las configuraciones «Consultar el correo de otras cuentas» y «Enviar como» de Gmail dejarán de funcionar, pero tu dirección seguirá operando en o2switch. Para recibir correos, una redirección en cPanel (el espacio de administración de o2switch) envía los correos a Gmail, con el riesgo de spam que o2switch menciona por sí mismo. Para enviar con la dirección de o2switch, queda el webmail de o2switch, un software de mensajería, la aplicación Gmail del teléfono o Google Workspace desde 6,80 € (IVA no incluido) por mes.",
               "type": "text"
             }
           ]
@@ -57720,7 +57783,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Estoy en esta situación. Soy Léo Guillaume, desarrollador freelance cerca de Rennes, y mi dirección profesional está alojada en o2switch: la leo en un Gmail gratuito, mediante la recepción y la opción « Enviar como ». El 19 de noviembre de 2026, probé el cambio a Google Workspace en una cuenta de prueba, con registros añadidos manualmente en el cPanel de o2switch. Esta guía cuenta lo que vi y lo que dice la documentación de o2switch, leída el mismo día.",
+              "text": "Estoy en esta situación. Soy Léo Guillaume, desarrollador freelance cerca de Rennes, y mi dirección profesional está alojada en o2switch: la leo en un Gmail gratuito, mediante la recepción y la opción «Enviar como». El 19 de noviembre de 2026, probé el cambio a Google Workspace en una cuenta de prueba, con registros añadidos manualmente en el cPanel de o2switch. Esta guía cuenta lo que vi y lo que dice la documentación de o2switch, leída el mismo día.",
               "type": "text"
             }
           ]
@@ -57759,7 +57822,7 @@
               ]
             },
             {
-              "text": ", leída el 19 de noviembre de 2026: a partir de enero de 2027, Gmail « ya no extraerá correos desde cuentas externas » mediante el acceso POP (el protocolo que recupera los correos de una bandeja a otra), y « no podrás enviar correos desde cuentas de correo externas ». Una dirección de o2switch no está alojada por Google: está afectada.",
+              "text": ", leída el 19 de noviembre de 2026: a partir de enero de 2027, Gmail «ya no extraerá correos desde cuentas externas» mediante el acceso POP (el protocolo que recupera los correos de una bandeja a otra), y «no podrás enviar correos desde cuentas de correo externas». Una dirección de o2switch no está alojada por Google: está afectada.",
               "type": "text"
             }
           ]
@@ -57813,7 +57876,7 @@
               ]
             },
             {
-              "text": ", leída el 19 de noviembre de 2026, incluye un recuadro titulado « Fin anunciada de la recuperación de correos vía POP3 » y recomienda un software de mensajería dedicado, como Thunderbird en ordenador.",
+              "text": ", leída el 19 de noviembre de 2026, incluye un recuadro titulado «Fin anunciado de la recuperación de correos vía POP3» y recomienda un software de mensajería dedicado, como Thunderbird en ordenador.",
               "type": "text"
             }
           ]
@@ -57822,7 +57885,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Lo que no dejará de funcionar: tu buzón en o2switch, el webmail de o2switch, los correos ya recibidos en Gmail (Google escribe que « permanecerán en tu bandeja de entrada ») y la redirección configurada en el alojamiento.",
+              "text": "Lo que no dejará de funcionar: tu buzón en o2switch, el webmail de o2switch, los correos ya recibidos en Gmail (Google escribe que «permanecerán en tu bandeja de entrada») y la redirección configurada en el alojamiento.",
               "type": "text"
             }
           ]
@@ -57847,7 +57910,7 @@
               "type": "text"
             },
             {
-              "text": "\"Ver todos los ajustes\"",
+              "text": "«Ver todos los ajustes»",
               "type": "text",
               "marks": [
                 {
@@ -57860,7 +57923,7 @@
               "type": "text"
             },
             {
-              "text": "\"Cuentas e importación\"",
+              "text": "«Cuentas e importación»",
               "type": "text",
               "marks": [
                 {
@@ -57869,11 +57932,11 @@
               ]
             },
             {
-              "text": " \" ",
+              "text": " (o ",
               "type": "text"
             },
             {
-              "text": "\"Cuentas\"",
+              "text": "«Cuentas»",
               "type": "text",
               "marks": [
                 {
@@ -57882,7 +57945,7 @@
               ]
             },
             {
-              "text": "). Mire dos líneas.",
+              "text": "). Mira dos líneas.",
               "type": "text"
             }
           ]
@@ -57891,11 +57954,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si su dirección o2switch aparece en la línea ",
+              "text": "Si tu dirección o2switch aparece en la línea ",
               "type": "text"
             },
             {
-              "text": "\"Enviar correos como\"",
+              "text": "«Enviar como»",
               "type": "text",
               "marks": [
                 {
@@ -57908,7 +57971,7 @@
               "type": "text"
             },
             {
-              "text": "\"Ver otros cuentas de correo\"",
+              "text": "«Consultar el correo de otras cuentas»",
               "type": "text",
               "marks": [
                 {
@@ -57926,11 +57989,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "También puede ",
+              "text": "También puedes ",
               "type": "text"
             },
             {
-              "text": "probar si su dirección está afectada",
+              "text": "probar si tu dirección está afectada",
               "type": "text",
               "marks": [
                 {
@@ -57944,7 +58007,7 @@
               ]
             },
             {
-              "text": ": la herramienta lee su dominio (lo que sigue al @ en su dirección) y le indica quién hospeda sus correos.",
+              "text": ": la herramienta lee tu dominio (lo que sigue al @ en tu dirección) y te indica quién hospeda tus correos.",
               "type": "text"
             }
           ]
@@ -57965,7 +58028,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "La única forma gratuita de seguir recibiendo sus correos o2switch en Gmail es la redirección, que o2switch denomina ",
+              "text": "En el ordenador, la única forma gratuita de seguir recibiendo tus correos o2switch en Gmail es la redirección, que o2switch denomina ",
               "type": "text"
             },
             {
@@ -57999,7 +58062,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Inicie sesión en cPanel, abra la categoría de correos electrónicos y luego la herramienta ",
+              "text": "Inicia sesión en cPanel, abre la categoría de correos electrónicos y luego la herramienta ",
               "type": "text"
             },
             {
@@ -58012,7 +58075,7 @@
               ]
             },
             {
-              "text": ". Indique la dirección o2switch a reenviar y la dirección Gmail de destino, luego guarde. o2switch muestra el procedimiento en un video, «Cómo crear redirecciones de correos electrónicos?», en su página ",
+              "text": ". Indica la dirección o2switch a reenviar y la dirección Gmail de destino, luego guarda. o2switch muestra el procedimiento en un vídeo, «¿Cómo crear redirecciones de correos electrónicos?», en su página ",
               "type": "text"
             },
             {
@@ -58051,7 +58114,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En la misma página, leída el 19 de noviembre de 2026, o2switch escribe: « No redirija hacia una dirección externa », por ejemplo Gmail, porque los mensajes reenviados « tendrán una alta probabilidad de terminar en spam ». La razón radica en el SPF, la lista de servidores autorizados para enviar por un nombre de dominio: cuando o2switch reenvía el correo de un cliente, ya no es el servidor original el que lo entrega, y Gmail puede rechazarlo o clasificarlo como spam. Google da sus ",
+              "text": "En la misma página, leída el 19 de noviembre de 2026, o2switch escribe: «No redirija hacia una dirección externa», por ejemplo Gmail, porque los mensajes reenviados «tendrán una alta probabilidad de terminar en spam». La razón radica en el SPF, la lista de servidores autorizados para enviar por un nombre de dominio: cuando o2switch reenvía el correo de un cliente, ya no es el servidor original el que lo entrega, y Gmail puede rechazarlo o clasificarlo como spam. Google da sus ",
               "type": "text"
             },
             {
@@ -58069,7 +58132,7 @@
               ]
             },
             {
-              "text": ".",
+              "text": "; atención: esta página sigue recomendando «Enviar como», que dejará de funcionar.",
               "type": "text"
             }
           ]
@@ -58151,7 +58214,7 @@
           },
           "content": [
             {
-              "text": "¿Cómo enviar con tu dirección de o2switch sin « Enviar como »?",
+              "text": "¿Cómo enviar con tu dirección de o2switch sin «Enviar como»?",
               "type": "text"
             }
           ]
@@ -58160,7 +58223,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Después de enero de 2027, Gmail gratuito ya no enviará con tu dirección de o2switch. Quedan cuatro opciones.",
+              "text": "A partir de enero de 2027, según Google, «Enviar como» dejará de funcionar con tu dirección de o2switch. Quedan cuatro opciones.",
               "type": "text"
             }
           ]
@@ -58181,7 +58244,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El webmail se encuentra en la dirección de tu sitio seguida de:2096, por ejemplo https://tusitio.fr:2096, según la página ",
+              "text": "El webmail se encuentra en la dirección de tu sitio seguida de :2096, por ejemplo https://tusitio.fr:2096, según la página ",
               "type": "text"
             },
             {
@@ -58269,7 +58332,7 @@
               ]
             },
             {
-              "text": ", leídos el 19 de noviembre de 2026. El servidor de entrada y el servidor de salida llevan el nombre de tu servidor, del tipo qqch.o2switch.net, dado en el correo « Bienvenido a o2switch ». El puerto IMAP es el 993, el puerto SMTP es el 465, y el nombre de usuario es tu dirección completa.",
+              "text": ", leídos el 19 de noviembre de 2026. El servidor de entrada y el servidor de salida llevan el nombre de tu servidor, del tipo algo.o2switch.net, dado en el correo «Bienvenido a o2switch». El puerto IMAP es el 993, el puerto SMTP es el 465, y el nombre de usuario es tu dirección completa.",
               "type": "text"
             }
           ]
@@ -58281,7 +58344,7 @@
           },
           "content": [
             {
-              "text": "La aplicación Gmail del teléfono",
+              "text": "Configurar tu correo o2switch en la aplicación Gmail (Android, iPhone)",
               "type": "text"
             }
           ]
@@ -58347,7 +58410,7 @@
               ]
             },
             {
-              "text": " y la contraseña. La dirección o2switch se convierte en una cuenta independiente en la aplicación, no en un « Enviar como ».",
+              "text": " y la contraseña. La dirección o2switch se convierte en una cuenta independiente en la aplicación, no en un «Enviar como».",
               "type": "text"
             }
           ]
@@ -58368,7 +58431,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Google Workspace convierte tu Gmail en un Gmail profesional a nombre de tu dominio: 6,80 € IVA (sin impuestos) por usuario y por mes con compromiso de un año, o 8,10 € IVA sin compromiso, tras 14 días de prueba gratuita, según la ",
+              "text": "Google Workspace convierte tu Gmail en un Gmail profesional a nombre de tu dominio: 6,80 € (IVA no incluido) por usuario y por mes con compromiso de un año, o 8,10 € (IVA no incluido) sin compromiso, tras 14 días de prueba gratuita, según la ",
               "type": "text"
             },
             {
@@ -58395,7 +58458,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Primero la prueba de propiedad: un registro TXT, una línea de texto colocada en la zona DNS (el directorio que indica dónde van el sitio y los correos de tu dominio). El 19 de noviembre de 2026, lo añadí yo mismo en el",
+              "text": "Primero la prueba de propiedad: un registro TXT, una línea de texto colocada en la zona DNS (el directorio que indica dónde van el sitio y los correos de tu dominio). El 19 de noviembre de 2026, lo añadí yo mismo en el ",
               "type": "text"
             },
             {
@@ -58421,7 +58484,7 @@
               ]
             },
             {
-              "text": ". Con una duración de vida de 300 segundos, era visible en el DNS público en cuestión de decenas de segundos, y Google validó el dominio en menos de una decena de segundos.",
+              "text": ". Con una duración de vida de 300 segundos, era visible en el DNS público en cuestión de decenas de segundos, y Google validó el dominio en unos diez segundos.",
               "type": "text"
             }
           ]
@@ -58434,7 +58497,7 @@
               "type": "text"
             },
             {
-              "text": "\"Cómo configurar los MX de Google Workspace\"",
+              "text": "\"Cómo configurar los MX de Google Apps, GSuite o Google Workspace\"",
               "type": "text",
               "marks": [
                 {
@@ -58562,7 +58625,7 @@
               "type": "text"
             },
             {
-              "text": "« Autenticación SPF y DKIM »",
+              "text": "«Autenticación SPF y DKIM de los correos»",
               "type": "text",
               "marks": [
                 {
@@ -58576,11 +58639,11 @@
               ]
             },
             {
-              "text": ". Se añade _spf.google.com, y se mantiene spf.jabatus.fr, que o2switch exige para los correos que salen del alojamiento. En mi prueba, sin el SPF de Google, mi primer correo llegó a spam; después de añadirlo y esperar unos minutos, el siguiente llegó a la bandeja de entrada. Puede ",
+              "text": ". Se añade _spf.google.com, y se mantiene spf.jabatus.fr, que o2switch exige para los correos que salen del alojamiento. En mi prueba, sin el SPF de Google, mi primer correo llegó a spam; después de añadirlo y esperar unos minutos, el siguiente llegó a la bandeja de entrada. Puedes ",
               "type": "text"
             },
             {
-              "text": "verificar si sus correos llegan a spam",
+              "text": "verificar si tus correos llegan a spam",
               "type": "text",
               "marks": [
                 {
@@ -58642,7 +58705,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Recibe muchos correos y escribe poco: la redirección a Gmail es suficiente, vigilando los spams. Escribe principalmente desde su teléfono: la aplicación Gmail con la dirección de o2switch en IMAP no cuesta nada. Trabaja en una sola computadora: Thunderbird, como recomienda o2switch. Quiere mantener Gmail tal cual, en todas partes: Google Workspace, por suscripción.",
+              "text": "Recibes muchos correos y escribes poco: la redirección a Gmail es suficiente, vigilando los spams. Escribes principalmente desde tu teléfono: la aplicación Gmail con la dirección de o2switch en IMAP no cuesta nada. Trabajas en un solo ordenador: Thunderbird, como recomienda o2switch. Quieres mantener Gmail tal cual, en todas partes: Google Workspace, por suscripción.",
               "type": "text"
             }
           ]
@@ -58655,7 +58718,7 @@
               "type": "text"
             },
             {
-              "text": "pruebe si su dirección está afectada",
+              "text": "prueba si tu dirección está afectada",
               "type": "text",
               "marks": [
                 {
@@ -58682,6 +58745,27 @@
           "content": [
             {
               "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Se puede configurar aún un correo o2switch en Gmail en 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En Gmail desde el navegador, ya no para la recepción: según Google, la recuperación POP ya no acepta nuevos usuarios desde finales del primer trimestre de 2026. En la aplicación Gmail del teléfono, añadir una dirección o2switch en IMAP sigue siendo posible.",
               "type": "text"
             }
           ]
@@ -58723,7 +58807,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El webmail de o2switch se encuentra en la dirección de su sitio seguida de:2096, por ejemplo https://votresite.fr:2096. Se accede con la dirección de correo completa y su contraseña.",
+              "text": "El webmail de o2switch se encuentra en la dirección de tu sitio seguida de :2096, por ejemplo https://tusitio.fr:2096. Se accede con la dirección de correo completa y su contraseña.",
               "type": "text"
             }
           ]
@@ -58744,7 +58828,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Según las guías de o2switch leídas el 19 de noviembre de 2026, el servidor de envío tiene un nombre del tipo qqch.o2switch.net, proporcionado en el correo «Bienvenido a o2switch». El puerto SMTP es el 465, el puerto IMAP es el 993, y el nombre de usuario es la dirección completa.",
+              "text": "Según las guías de o2switch leídas el 19 de noviembre de 2026, el servidor de envío tiene un nombre del tipo algo.o2switch.net, proporcionado en el correo «Bienvenido a o2switch». El puerto SMTP es el 465, el puerto IMAP es el 993, y el nombre de usuario es la dirección completa.",
               "type": "text"
             }
           ]
@@ -58765,7 +58849,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Sí, Google indica que la transferencia automática configurada con el proveedor sigue siendo posible. Pero o2switch desaconseja redirigir a una dirección externa como Gmail, ya que los correos reenviados podrían ser rechazados o marcados como spam. Pruebe la redirección y revise la carpeta Spam de Gmail.",
+              "text": "Sí, Google indica que la transferencia automática configurada con el proveedor sigue siendo posible. Pero o2switch desaconseja redirigir a una dirección externa como Gmail, ya que los correos reenviados podrían ser rechazados o marcados como spam. Prueba la redirección y revisa la carpeta Spam de Gmail.",
               "type": "text"
             }
           ]
@@ -58798,7 +58882,7 @@
           },
           "content": [
             {
-              "text": "¿Prefiere que me ocupe yo?",
+              "text": "¿Prefieres que me ocupe yo?",
               "type": "text"
             }
           ]
@@ -58807,7 +58891,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Puedo realizar los ajustes a distancia en su cPanel de o2switch y su Gmail: redirección probada, configuración de software o teléfono, o migración a Google Workspace con todas sus direcciones recreadas antes del cambio. El diagnóstico es gratuito y respondo en menos de 24 horas. Si le basta con el ajuste gratuito, se lo haré saber.",
+              "text": "Puedo realizar los ajustes a distancia en tu cPanel de o2switch y tu Gmail: redirección probada, configuración de software o teléfono, o migración a Google Workspace con todas tus direcciones recreadas antes del cambio. El diagnóstico es gratuito y respondo en menos de 24 horas. Si te basta con el ajuste gratuito, te lo haré saber.",
               "type": "text"
             }
           ]
@@ -58837,10 +58921,10 @@
     }
   },
   "blog/gmail-n-envoie-plus-avec-mon-adresse-professionnelle-que-faire": {
-    "title": "Gmail ya deja de enviar desde tu dirección profesional: qué hacer, paso a paso",
+    "title": "Gmail ya no envía con mi dirección profesional: qué hacer, paso a paso",
     "excerpt": "¿Ya no puedes enviar correos desde tu dirección de trabajo o no llegan a Gmail? Soluciones inmediatas en 15 minutos y la solución definitiva a largo plazo.",
     "metaTitle": "Gmail no envía desde mi correo pro: qué hacer",
-    "metaDescription": "Desde enero 2027, Gmail dejará de enviar desde tu dirección profesional y no recogerá esos correos. Acciones urgentes y 5 soluciones con sus costos.",
+    "metaDescription": "¿«Enviar como» ya no funciona, Gmail ya no recibe los correos de tu dirección profesional? Qué hacer de inmediato y 5 soluciones con su coste.",
     "tags": [
       "gmail enviar como otro usuario",
       "gmail no permite enviar mensajes",
@@ -58866,7 +58950,7 @@
               ]
             },
             {
-              "text": " A partir de enero de 2027, según Google, una cuenta de Gmail gratuita ya no podrá enviar correos con la dirección de tu sitio web (la función « Enviar como ») ni recuperar sus correos (la función « Revisar otros cuentas de correo »). Tus correos no se pierden: esperan en la bandeja de tu proveedor de alojamiento, legibles desde su webmail. Una transferencia automática configurada en el alojamiento los hace llegar de nuevo a Gmail en un cuarto de hora. Para enviar desde la dirección profesional usando Gmail, la solución duradera es Google Workspace, desde 6,80 € IVA por mes y por buzón; también existen tres soluciones gratuitas, cada una con sus límites.",
+              "text": " A partir de enero de 2027, según Google, una cuenta de Gmail gratuita ya no podrá enviar correos con la dirección de tu sitio web (la función «Enviar como») ni recuperar sus correos (la función «Consultar el correo de otras cuentas»). Tus correos no se pierden: esperan en la bandeja de tu proveedor de alojamiento, legibles desde su webmail. Una transferencia automática configurada en el alojamiento hace llegar a Gmail los correos siguientes; los recibidos entretanto se leen en el webmail. Para volver a enviar con la dirección profesional desde Gmail, la solución duradera es Google Workspace, desde 6,80 € (IVA no incluido) por mes y por buzón; también existen cuatro soluciones gratuitas, cada una con sus límites.",
               "type": "text"
             }
           ]
@@ -58909,7 +58993,7 @@
               "type": "text"
             },
             {
-              "text": "« De »",
+              "text": "«De»",
               "type": "text",
               "marks": [
                 {
@@ -58945,7 +59029,7 @@
               ]
             },
             {
-              "text": ", leída el 19 de noviembre de 2026, Gmail eliminará por completo a partir de enero de 2027 la función « Enviar como » para cuentas de terceros, Gmailify y la recuperación de correos (el acceso POP, es decir, que Gmail busque tus correos en otro proveedor). Una cuenta de terceros es una dirección que no está alojada por Google: la dirección asociada a tu nombre de dominio (lo que sigue al @) en OVH, o2switch o IONOS, o una dirección de Orange o Free, mientras que las direcciones @gmail.com y Google Workspace no cambiarán.",
+              "text": ", leída el 19 de noviembre de 2026, Gmail eliminará por completo a partir de enero de 2027 la función «Enviar como» para cuentas de terceros, Gmailify y la recuperación de correos (el acceso POP, también llamado POP3, es decir, que Gmail busque tus correos en otro proveedor). Una cuenta de terceros es una dirección que no está alojada por Google: la dirección asociada a tu nombre de dominio (lo que sigue al @) en OVH, o2switch o IONOS, o una dirección de Orange o Free, mientras que las direcciones @gmail.com y Google Workspace no cambiarán.",
               "type": "text"
             }
           ]
@@ -59029,7 +59113,7 @@
               ]
             },
             {
-              "text": " Los correos de la dirección del sitio ya no llegan a Gmail, pero ya respondías con tu @gmail.com. La recuperación « Revisar otros cuentas de correo » se ha detenido, y una transferencia configurada en el alojamiento resuelve este caso de forma gratuita.",
+              "text": " Gmail ya no recibe los correos de la dirección del sitio, pero ya respondías con tu @gmail.com. La recuperación «Consultar el correo de otras cuentas» se ha detenido, y una transferencia configurada en el alojamiento resuelve este caso de forma gratuita.",
               "type": "text"
             }
           ]
@@ -59047,7 +59131,7 @@
               ]
             },
             {
-              "text": " Es el montaje más común, y el mío: Gmail recuperaba los correos y los enviaba con la dirección del sitio. Se necesita una solución para cada dirección, o una sola que cubra las dos.",
+              "text": " Es un montaje habitual, y el mío: Gmail recuperaba los correos y los enviaba con la dirección del sitio. Se necesita una solución para cada sentido, o una sola que cubra los dos.",
               "type": "text"
             }
           ]
@@ -59059,7 +59143,7 @@
           },
           "content": [
             {
-              "text": "¿Qué hacer en ese cuarto de hora para no perder ningún correo?",
+              "text": "¿Qué hacer en el próximo cuarto de hora para no perder ningún correo?",
               "type": "text"
             }
           ]
@@ -59081,7 +59165,7 @@
               ]
             },
             {
-              "text": " de tu proveedor de alojamiento, el servicio de mensajería en línea que viene con tu dirección, accesible desde tu espacio de cliente con la contraseña de la dirección. Los correos recibidos desde el corte están ahí: la recuperación solo los copiaba hacia Gmail, nunca abandonaron el servidor del proveedor.",
+              "text": " de tu proveedor de alojamiento, el servicio de mensajería en línea que viene con tu dirección, accesible desde tu espacio de cliente con la contraseña de la dirección. Los correos recibidos desde el corte están ahí: Gmail ya no ha venido a recuperarlos, se han quedado en el servidor del proveedor de alojamiento.",
               "type": "text"
             }
           ]
@@ -59090,11 +59174,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Segundo paso: configura un ",
+              "text": "Segundo paso: configura una ",
               "type": "text"
             },
             {
-              "text": "traslado automático",
+              "text": "transferencia automática",
               "type": "text",
               "marks": [
                 {
@@ -59103,7 +59187,7 @@
               ]
             },
             {
-              "text": " en el proveedor hacia tu dirección @gmail.com, en la ficha de la dirección dentro del espacio de cliente. Google lo menciona como la vía que sigue abierta para recibir en Gmail. Guarda una copia en el servidor si la opción está disponible.",
+              "text": " hacia tu dirección @gmail.com, en el espacio de cliente del proveedor de alojamiento. Google la menciona como la vía que sigue abierta para recibir en Gmail. Guarda una copia en el servidor si la opción está disponible.",
               "type": "text"
             }
           ]
@@ -59112,7 +59196,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Tercer paso: mientras tanto, responde a los correos urgentes desde el webmail, o desde Gmail usando tu @gmail.com y especifícalo en una línea. Ningún cliente debe quedar sin respuesta.",
+              "text": "Tercer paso: mientras tanto, responde a los correos urgentes desde el webmail, o desde Gmail usando tu @gmail.com y especifícalo en una línea. Así, las solicitudes urgentes tienen respuesta.",
               "type": "text"
             }
           ]
@@ -59196,11 +59280,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En la computadora, abre Gmail, haz clic en la rueda dentada en la esquina superior derecha, luego en ",
+              "text": "En el ordenador, abre Gmail, haz clic en la rueda dentada en la esquina superior derecha, luego en ",
               "type": "text"
             },
             {
-              "text": "\"Mostrar todos los ajustes\"",
+              "text": "«Ver todos los ajustes»",
               "type": "text",
               "marks": [
                 {
@@ -59209,11 +59293,11 @@
               ]
             },
             {
-              "text": "Abra la pestaña ",
+              "text": ". Abre la pestaña ",
               "type": "text"
             },
             {
-              "text": "\"Cuentas e importación\"",
+              "text": "«Cuentas e importación»",
               "type": "text",
               "marks": [
                 {
@@ -59226,7 +59310,7 @@
               "type": "text"
             },
             {
-              "text": "\"Cuentas\"",
+              "text": "«Cuentas»",
               "type": "text",
               "marks": [
                 {
@@ -59235,7 +59319,7 @@
               ]
             },
             {
-              "text": "\").",
+              "text": ").",
               "type": "text"
             }
           ]
@@ -59244,11 +59328,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si la dirección de su sitio aparece en la línea ",
+              "text": "Si la dirección de tu sitio aparece en la línea ",
               "type": "text"
             },
             {
-              "text": "\"Enviar correos como\"",
+              "text": "«Enviar como»",
               "type": "text",
               "marks": [
                 {
@@ -59261,7 +59345,7 @@
               "type": "text"
             },
             {
-              "text": "\"Ver otros cuentas de correo\"",
+              "text": "«Consultar el correo de otras cuentas»",
               "type": "text",
               "marks": [
                 {
@@ -59270,7 +59354,7 @@
               ]
             },
             {
-              "text": ", la recepción por recuperación también se detendrá. Si esta línea ha desaparecido de la pantalla, es señal de que Google ya la ha eliminado de su cuenta.",
+              "text": ", la recepción por recuperación también se detendrá. Si esta línea ha desaparecido de la pantalla, probablemente es que Google ya la ha eliminado de tu cuenta.",
               "type": "text"
             }
           ]
@@ -59279,7 +59363,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si la dirección no aparece en ninguna de las dos líneas pero sus correos siguen llegando a Gmail, es un traslado configurado en el proveedor de alojamiento: continuará, y solo el envío debe planificarse.",
+              "text": "Si la dirección no aparece en ninguna de las dos líneas pero sus correos siguen llegando a Gmail, es una transferencia configurada en el proveedor de alojamiento: continuará, y solo el envío debe planificarse.",
               "type": "text"
             }
           ]
@@ -59309,7 +59393,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El traslado y su dirección @gmail.com para responder.",
+              "text": "La transferencia y tu dirección @gmail.com para responder.",
               "type": "text",
               "marks": [
                 {
@@ -59318,7 +59402,7 @@
               ]
             },
             {
-              "text": " Coste: 0 €. Recibe todo en Gmail, pero el cliente ve tu dirección de Gmail al responder. Esto basta si la dirección del sitio se usa principalmente para recibir. Un límite: Google advierte en sus ",
+              "text": " Coste: 0 €. Recibes todo en Gmail, pero el cliente ve tu dirección de Gmail al responder. Esto basta si la dirección del sitio se usa principalmente para recibir. Un límite: Google advierte en sus ",
               "type": "text"
             },
             {
@@ -59336,7 +59420,7 @@
               ]
             },
             {
-              "text": " que los mensajes transferidos suelen fallar en las comprobaciones de autenticación y pueden terminar en spam. Supervise la carpeta « Spam » durante las primeras semanas.",
+              "text": " que los mensajes transferidos suelen fallar en la comprobación SPF y pueden terminar en spam. Supervisa la carpeta «Spam» durante las primeras semanas.",
               "type": "text"
             }
           ]
@@ -59345,7 +59429,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El traslado y el webmail para enviar.",
+              "text": "La transferencia y el webmail para enviar.",
               "type": "text",
               "marks": [
                 {
@@ -59354,7 +59438,7 @@
               ]
             },
             {
-              "text": " Coste: 0 €. Lee en Gmail y abres el webmail cuando la respuesta deba partir con la dirección profesional. Buena opción para unos pocos correos por semana; más allá, alternar entre dos pestañas cansa rápido.",
+              "text": " Coste: 0 €. Lees en Gmail y abres el webmail cuando la respuesta deba partir con la dirección profesional. Buena opción para unos pocos correos por semana; más allá, alternar entre dos pestañas cansa rápido.",
               "type": "text"
             }
           ]
@@ -59363,7 +59447,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Un software de mensajería en la computadora.",
+              "text": "Un software de mensajería en el ordenador.",
               "type": "text",
               "marks": [
                 {
@@ -59372,7 +59456,7 @@
               ]
             },
             {
-              "text": " Costo: 0 €. Thunderbird, Outlook o Apple Mail se conectan directamente a la bandeja del proveedor de alojamiento, tanto para recibir como para enviar, y Google menciona esta opción. La limitación: tus correos profesionales viven dentro del software, no en Gmail, lo que es adecuado especialmente si trabajas en una sola computadora.",
+              "text": " Coste: 0 €. Thunderbird, Outlook o Apple Mail se conectan directamente a la bandeja del proveedor de alojamiento, tanto para recibir como para enviar, y Google menciona esta opción. La limitación: tus correos profesionales viven dentro del software, no en Gmail, lo que es adecuado especialmente si trabajas en un solo ordenador.",
               "type": "text"
             }
           ]
@@ -59390,7 +59474,7 @@
               ]
             },
             {
-              "text": " Costo: 0 €. Según la misma página de ayuda de Google, la aplicación Gmail en Android, iPhone e iPad sigue permitiendo añadir una cuenta de otro proveedor mediante una conexión IMAP estándar (el método que lee los correos directamente desde el servidor del proveedor de alojamiento), para leer y enviar. Es una cuenta separada dentro de la aplicación, no 'Enviar como', y esto no funciona en Gmail para computadora.",
+              "text": " Coste: 0 €. Según la página de ayuda de Google sobre cuentas de correo de terceros, la aplicación Gmail en Android, iPhone e iPad sigue permitiendo añadir una cuenta de otro proveedor mediante una conexión IMAP estándar (el método que lee los correos directamente desde el servidor del proveedor de alojamiento), para leer y enviar. Es una cuenta separada dentro de la aplicación, no «Enviar como», y esto no funciona en Gmail en el ordenador.",
               "type": "text"
             }
           ]
@@ -59408,7 +59492,7 @@
               ]
             },
             {
-              "text": " Es la única solución que mantiene Gmail como antes, en computadora y en teléfono, con la dirección del sitio para recibir y enviar. En la ",
+              "text": " Es la única solución que mantiene Gmail como antes, en ordenador y en teléfono, con la dirección del sitio para recibir y enviar. En la ",
               "type": "text"
             },
             {
@@ -59426,7 +59510,7 @@
               ]
             },
             {
-              "text": ", leída el 19 de noviembre de 2026, Business Starter cuesta 6,80 € IVA excluido por usuario y por mes con un compromiso de un año; sin compromiso, el panel de administración mostraba 8,10 € IVA excluido por mes el mismo día. La prueba gratuita dura 14 días, y las otras direcciones del mismo dominio pueden convertirse en alias de la bandeja sin costo adicional.",
+              "text": ", leída el 19 de noviembre de 2026, Business Starter cuesta 6,80 € IVA excluido por usuario y por mes con un compromiso de un año; sin compromiso, el panel de administración mostraba 8,10 € IVA excluido por mes el mismo día. La prueba gratuita dura 14 días, y las otras direcciones del mismo dominio pueden convertirse en alias de la bandeja sin coste adicional.",
               "type": "text"
             }
           ]
@@ -59439,7 +59523,7 @@
               "type": "text"
             },
             {
-              "text": "\"Actualizar esta cuenta\"",
+              "text": "«Actualizar esta cuenta»",
               "type": "text",
               "marks": [
                 {
@@ -59548,7 +59632,7 @@
           },
           "content": [
             {
-              "text": "\"Enviar como\" ya no funciona: ¿y si no fuera enero de 2027?",
+              "text": "«Enviar como» ya no funciona: ¿y si no fuera enero de 2027?",
               "type": "text"
             }
           ]
@@ -59557,11 +59641,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No todos los fallos provienen de Google. \"Enviar como\" y la recuperación guardan en memoria la contraseña de la dirección profesional introducida el día del ajuste. Si esta contraseña ha sido cambiada en el proveedor de alojamiento, Gmail ya no puede conectarse y muestra un error de autenticación. La ",
+              "text": "No todos los fallos provienen de Google. «Enviar como» y la recuperación guardan en memoria la contraseña de la dirección profesional introducida el día del ajuste. Si esta contraseña ha sido cambiada en el proveedor de alojamiento, Gmail ya no puede conectarse y muestra un error de autenticación. La ",
               "type": "text"
             },
             {
-              "text": "página de ayuda de Google sobre \"Enviar como\"",
+              "text": "página de ayuda de Google sobre «Enviar como»",
               "type": "text",
               "marks": [
                 {
@@ -59584,11 +59668,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Mientras ambas líneas sean visibles en \"Cuentas e importación\", haga clic en ",
+              "text": "Mientras ambas líneas sean visibles en «Cuentas e importación», haz clic en ",
               "type": "text"
             },
             {
-              "text": "\"Editar información\"",
+              "text": "«Editar información»",
               "type": "text",
               "marks": [
                 {
@@ -59597,7 +59681,7 @@
               ]
             },
             {
-              "text": " junto a la dirección e introduzca la contraseña actual: a menudo es suficiente. Si la línea ha desaparecido, no es un problema de contraseña: es el cese anunciado por Google.",
+              "text": " junto a la dirección e introduce la contraseña actual: a menudo es suficiente. Si la línea ha desaparecido, no es un problema de contraseña: es muy probablemente el cese anunciado por Google.",
               "type": "text"
             }
           ]
@@ -59606,7 +59690,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Y si su dirección @gmail.com ya no recibe nada, el cambio de enero de 2027 no tiene nada que ver: Google escribe que solo los cuentas de correo de terceros están afectados.",
+              "text": "Y si tu dirección @gmail.com ya no recibe nada, el cambio de enero de 2027 no tiene nada que ver: Google escribe que solo las cuentas de correo de terceros están afectadas. Mira más bien el espacio de almacenamiento de la cuenta de Google y la carpeta «Spam».",
               "type": "text"
             }
           ]
@@ -59619,7 +59703,7 @@
               "type": "text"
             },
             {
-              "text": "probar si mi dirección está afectada",
+              "text": "probar si tu dirección está afectada",
               "type": "text",
               "marks": [
                 {
@@ -59678,7 +59762,7 @@
           },
           "content": [
             {
-              "text": "¿Por qué \"Consultar otros cuentas de correo\" ha desaparecido de Gmail?",
+              "text": "¿Por qué «Consultar el correo de otras cuentas» ha desaparecido de Gmail?",
               "type": "text"
             }
           ]
@@ -59687,7 +59771,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Google elimina la recuperación POP de cuentas de terceros a partir de enero de 2027, y la opción desaparece de Gmail en ordenador. Ya no acepta nuevos usuarios desde finales del primer trimestre de 2026. Para recibir en Gmail, configure una transferencia automática en el proveedor de la dirección.",
+              "text": "Google elimina la recuperación POP (o POP3) de cuentas de terceros a partir de enero de 2027, y la opción desaparece de Gmail en ordenador. Ya no acepta nuevos usuarios desde finales del primer trimestre de 2026. Para recibir en Gmail, configura una transferencia automática en el proveedor de la dirección.",
               "type": "text"
             }
           ]
@@ -59699,7 +59783,7 @@
           },
           "content": [
             {
-              "text": "¿Se puede seguir enviar un correo con otra dirección desde Gmail gratuito?",
+              "text": "¿Se puede seguir enviando un correo con otra dirección desde Gmail gratuito?",
               "type": "text"
             }
           ]
@@ -59720,7 +59804,7 @@
           },
           "content": [
             {
-              "text": "¿Puede una herramienta o extensión recrear \"Enviar como\"?",
+              "text": "¿Puede una herramienta o extensión recrear «Enviar como»?",
               "type": "text"
             }
           ]
@@ -59729,7 +59813,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Google advierte sobre las herramientas y extensiones que prometen recrear esta función, ya que solicitan las credenciales de tu bandeja de entrada. Confiar tu contraseña a un servicio desconocido expone todos tus correos.",
+              "text": "Google advierte sobre las herramientas y extensiones que prometen recrear esta función, ya que a menudo solicitan las credenciales de tu bandeja de entrada. Confiar tu contraseña a un servicio desconocido expone todos tus correos.",
               "type": "text"
             }
           ]
@@ -59750,7 +59834,19 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Sí, una dirección de Orange o Free leída en Gmail es un cuenta de terceros según Google. La recepción y la opción «Enviar como» dejarán de funcionar de la misma manera a partir de enero de 2027.",
+              "text": "Sí, una dirección de Orange o Free leída en Gmail es una cuenta de terceros según Google. La recepción y la opción «Enviar como» dejarán de funcionar de la misma manera a partir de enero de 2027.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Mi Gmail ya no recibe ningún correo, ni siquiera en mi dirección @gmail.com: ¿es por enero de 2027?",
               "type": "text"
             }
           ]
@@ -59759,7 +59855,55 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si prefieres que no toques tú mismo los ajustes del alojamiento ni la zona DNS, puedo encargarme de ello a distancia: transferencia, migración a Google Workspace, recreación de direcciones, configuración de SPF y DKIM, y luego una prueba de envío. El diagnóstico es gratuito y respondo en menos de 24 horas. Y si los ajustes gratuitos te bastan, te lo haré saber.",
+              "text": "No: según Google, solo las cuentas de correo de terceros están afectadas. Mira primero el espacio de almacenamiento de tu cuenta de Google: cuando está lleno, la ",
+              "type": "text"
+            },
+            {
+              "text": "página de ayuda de Google sobre el almacenamiento",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/mail/answer/6558?hl=es",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", leída el 19 de noviembre de 2026, escribe que ya no puedes enviar ni recibir correos en Gmail y que los mensajes que te envían se devuelven al remitente. Mira también la carpeta «Spam».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Imposible añadir una dirección de correo en Gmail: ¿tiene relación con 2027?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Es posible: según Google, la recuperación «Consultar el correo de otras cuentas» ya no acepta nuevos usuarios desde finales del primer trimestre de 2026, y Gmail puede limitar las nuevas configuraciones durante la transición. En la aplicación Gmail del teléfono, añadir una dirección de otro proveedor en IMAP sigue siendo posible.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si prefieres no tocar tú mismo los ajustes del alojamiento ni la zona DNS, puedo encargarme de ello a distancia: transferencia, migración a Google Workspace, recreación de direcciones, configuración de SPF y DKIM, y luego una prueba de envío. El diagnóstico es gratuito y respondo en menos de 24 horas. Y si los ajustes gratuitos te bastan, te lo haré saber.",
               "type": "text"
             }
           ]
@@ -59792,7 +59936,7 @@
     "title": "Pasar de Gmail gratuito a Google Workspace para mantener tu dirección profesional: pasos, precios y trampas",
     "excerpt": "Convertí un Gmail gratuito a Google Workspace el 19 de noviembre de 2026: misma bandeja de entrada, correos antiguos conservados, 40 minutos y 6,80 € (IVA no incluido) al mes. Los pasos y los errores comunes.",
     "metaTitle": "De Gmail gratuito a Workspace: precios y trampas",
-    "metaDescription": "‘Enviar como’ dejará de funcionar a partir de enero 2027. Migración probada: pasos, costes (6,80 €/mes) y errores al pasar de Gmail a Google Workspace.",
+    "metaDescription": "«Enviar como» dejará de funcionar a partir de enero de 2027. Migración probada: pasos, costes (6,80 €/mes) y errores al pasar de Gmail a Google Workspace.",
     "tags": [
       "google workspace",
       "dirección de correo profesional",
@@ -59817,7 +59961,7 @@
               ]
             },
             {
-              "text": " A partir de enero de 2027, según Google, un Gmail gratuito ya no podrá enviar correos con una dirección profesional alojada en otro lugar (« Enviar como ») ni consultar sus correos (« Revisar otros cuentas de correo »). La solución que Google propone a las empresas es Google Workspace: el botón « Actualizar esta cuenta » transforma el Gmail gratuito en Gmail profesional. Realicé este cambio el 19 de noviembre de 2026 en una cuenta de prueba: misma bandeja de entrada, misma contraseña, correos antiguos conservados, alrededor de 40 minutos en total. Google Workspace cuesta 6,80 € IVA (sin incluir) por mes y por cuenta con un año de compromiso, y 8,10 € IVA (sin incluir) sin compromiso. La trampa principal: sin registro SPF, mi primer correo enviado llegó a la carpeta de spam.",
+              "text": " A partir de enero de 2027, según Google, un Gmail gratuito ya no podrá enviar correos con una dirección profesional alojada en otro lugar («Enviar como») ni consultar sus correos («Consultar el correo de otras cuentas»). Una de las soluciones que Google propone a las empresas es Google Workspace: el botón «Actualizar esta cuenta» transforma el Gmail gratuito en Gmail profesional. Realicé este cambio el 19 de noviembre de 2026 en una cuenta de prueba: misma bandeja de entrada, misma contraseña, correos antiguos conservados, alrededor de 40 minutos en total. Google Workspace cuesta 6,80 € (IVA no incluido) por mes y por cuenta con un año de compromiso, y 8,10 € (IVA no incluido) sin compromiso. La trampa principal: sin registro SPF (la línea que indica qué servidores pueden enviar en nombre de tu dominio), mi primer correo enviado llegó a la carpeta de spam.",
               "type": "text"
             }
           ]
@@ -59826,7 +59970,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Soy Léo Guillaume, desarrollador freelance cerca de Rennes, y yo mismo estoy afectado. Mi dirección profesional, contact@dibodev.fr, está alojada en o2switch y la leo en un Gmail gratuito, con la recuperación de correos y « Enviar como ». Para no arriesgar mi dirección de uso diario, realicé el cambio a Google Workspace el 19 de noviembre de 2026 en un Gmail gratuito de prueba y un subdominio de mi sitio web. Aquí está lo que vi, con el precio exacto y las trampas.",
+              "text": "Soy Léo Guillaume, desarrollador freelance cerca de Rennes, y yo mismo estoy afectado. Mi dirección profesional, contact@dibodev.fr, está alojada en o2switch y la leo en un Gmail gratuito, con la recuperación de correos y «Enviar como». Realicé el cambio a Google Workspace el 19 de noviembre de 2026 en un Gmail gratuito de prueba y un subdominio de mi sitio web, no en mi dirección de uso diario. Aquí está lo que vi, con el precio exacto y las trampas.",
               "type": "text"
             }
           ]
@@ -59865,7 +60009,7 @@
               ]
             },
             {
-              "text": ", el Gmail gratuito ya no permitirá, a partir de enero de 2027, enviar desde cuentas de correo de terceros ni recuperar sus correos, y Google no especifica ningún día exacto. Ante la pregunta de las empresas que utilizan « Enviar como », la misma página de Google responde, entre otras cosas, « usar Google Workspace para un dominio personalizado ».",
+              "text": ", el Gmail gratuito ya no permitirá, a partir de enero de 2027, enviar desde cuentas de correo de terceros ni recuperar sus correos, y Google no especifica ningún día exacto. Ante la pregunta de las empresas que utilizan «Enviar como», la misma página de Google responde, entre otras cosas, «usar Google Workspace para un dominio personalizado».",
               "type": "text"
             }
           ]
@@ -59874,11 +60018,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Antes de pagar nada, tómese un minuto para ",
+              "text": "Antes de pagar nada, tómate un minuto para ",
               "type": "text"
             },
             {
-              "text": "verificar si su dirección está afectada",
+              "text": "verificar si tu dirección está afectada",
               "type": "text",
               "marks": [
                 {
@@ -59892,7 +60036,7 @@
               ]
             },
             {
-              "text": ": la herramienta gratuita lee su dominio y le indica qué dejará de funcionar.",
+              "text": ": la herramienta gratuita lee tu dominio y te indica qué dejará de funcionar.",
               "type": "text"
             }
           ]
@@ -59913,11 +60057,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En Gmail desde la computadora, haga clic en el engranaje, luego en ",
+              "text": "En Gmail desde el ordenador, haz clic en el engranaje, luego en ",
               "type": "text"
             },
             {
-              "text": "\"Mostrar todos los ajustes\"",
+              "text": "«Ver todos los ajustes»",
               "type": "text",
               "marks": [
                 {
@@ -59930,7 +60074,7 @@
               "type": "text"
             },
             {
-              "text": "\"Cuentas e importación\"",
+              "text": "«Cuentas e importación»",
               "type": "text",
               "marks": [
                 {
@@ -59943,7 +60087,7 @@
               "type": "text"
             },
             {
-              "text": "\"Cuentas\"",
+              "text": "«Cuentas»",
               "type": "text",
               "marks": [
                 {
@@ -59952,11 +60096,11 @@
               ]
             },
             {
-              "text": "). Si su dirección profesional aparece en la línea ",
+              "text": "). Si tu dirección profesional aparece en la línea ",
               "type": "text"
             },
             {
-              "text": "\"Enviar correos como\"",
+              "text": "«Enviar como»",
               "type": "text",
               "marks": [
                 {
@@ -59969,7 +60113,7 @@
               "type": "text"
             },
             {
-              "text": "\"Consultar otras cuentas de correo\"",
+              "text": "«Consultar el correo de otras cuentas»",
               "type": "text",
               "marks": [
                 {
@@ -59978,7 +60122,7 @@
               ]
             },
             {
-              "text": ", es la recepción la que se detiene. Si no aparece en ningún lado mientras sus correos llegan bien a Gmail, es una transferencia automática configurada en su proveedor de alojamiento, y Google indica que la transferencia continúa.",
+              "text": ", es la recepción la que se detiene. Si no aparece en ningún lado mientras sus correos llegan bien a Gmail, es una transferencia automática configurada en tu proveedor de alojamiento, y Google indica que la transferencia continúa.",
               "type": "text"
             }
           ]
@@ -59990,7 +60134,7 @@
           },
           "content": [
             {
-              "text": "¿Qué hace el botón « Actualizar esta cuenta »?",
+              "text": "Pasar tu cuenta de Gmail a profesional: ¿qué hace el botón «Actualizar esta cuenta»?",
               "type": "text"
             }
           ]
@@ -60003,7 +60147,7 @@
               "type": "text"
             },
             {
-              "text": "\"Actualizar esta cuenta\"",
+              "text": "«Actualizar esta cuenta»",
               "type": "text",
               "marks": [
                 {
@@ -60021,7 +60165,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "La pantalla de Google lo dice así: «Su dirección Gmail personal sigue funcionando como de costumbre. Puede enviar y recibir mensajes desde las dos direcciones en un solo buzón de recepción». Es lo que constaté: la antigua dirección @gmail.com y la nueva dirección con mi nombre de dominio reciben y envían desde la misma bandeja.",
+              "text": "La pantalla de Google lo dice así: «Tu dirección Gmail personal sigue funcionando como de costumbre. Puedes enviar y recibir mensajes desde las dos direcciones en un solo buzón de recepción». Es lo que constaté: la antigua dirección @gmail.com y la nueva dirección con mi nombre de dominio reciben y envían desde la misma bandeja.",
               "type": "text"
             }
           ]
@@ -60033,7 +60177,7 @@
           },
           "content": [
             {
-              "text": "Google Workspace: ¿cuál es el precio en Francia para una dirección profesional?",
+              "text": "Google Workspace: ¿qué precios y tarifas en Francia para una dirección profesional?",
               "type": "text"
             }
           ]
@@ -60064,7 +60208,7 @@
               "type": "text"
             },
             {
-              "text": "6,80 € IVA excl. por usuario y por mes con un compromiso de un año",
+              "text": "6,80 € IVA no incluido por usuario y por mes con un compromiso de un año",
               "type": "text",
               "marks": [
                 {
@@ -60077,7 +60221,7 @@
               "type": "text"
             },
             {
-              "text": "8,10 € IVA excl. por usuario y por mes",
+              "text": "8,10 € IVA no incluido por usuario y por mes",
               "type": "text",
               "marks": [
                 {
@@ -60099,7 +60243,7 @@
               ]
             },
             {
-              "text": ". La misma página de Google muestra una promoción del 50 % durante 3 meses, del 3 de diciembre de 2026 al 3 de marzo de 2027, es decir, 3,40 € IVA excl. en lugar de 6,80 € IVA excl., reservada a nuevos clientes.",
+              "text": ". El día de mi lectura, la misma página mostraba una promoción reservada a nuevos clientes: 50 % durante 3 meses, es decir, 3,40 € IVA no incluido en lugar de 6,80 € IVA no incluido El porcentaje mostrado puede cambiar: compruébalo en el momento del registro.",
               "type": "text"
             }
           ]
@@ -60121,7 +60265,7 @@
               "type": "text"
             },
             {
-              "text": "81,60 € IVA excl. por año",
+              "text": "81,60 € IVA no incluido por año",
               "type": "text",
               "marks": [
                 {
@@ -60169,7 +60313,7 @@
               ]
             },
             {
-              "text": ". Si la promoción aplica a usted, los tres primeros meses a 3,40 € IVA no incluido restan aún 10,20 € IVA no incluido el primer año. Estos precios son sin impuestos.",
+              "text": ". Si la promoción se aplica en tu caso, los tres primeros meses a 3,40 € IVA no incluido restan aún 10,20 € IVA no incluido el primer año. Estos precios son sin impuestos, y los totales a tres años suponen un precio sin cambios.",
               "type": "text"
             }
           ]
@@ -60190,7 +60334,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Aquí están los pasos en el orden en que los realicé. Cada uno consiste en agregar o modificar una línea en el DNS, es decir, en los ajustes de tu nombre de dominio con tu proveedor de alojamiento. Para encontrar estos ajustes, sigue la guía de tu proveedor de alojamiento: ",
+              "text": "Aquí están los pasos en el orden en que los realicé. Tres de ellos consisten en agregar o modificar una línea en el DNS, es decir, en los ajustes de tu nombre de dominio con tu proveedor de alojamiento. Para encontrar estos ajustes, sigue la guía de tu proveedor de alojamiento: ",
               "type": "text"
             },
             {
@@ -60265,7 +60409,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Google Workspace proporciona una entrada TXT, una línea de texto para agregar en los ajustes de tu nombre de dominio, que comienza con `google-site-verification=`. La agregué en o2switch, el proveedor de alojamiento de mi sitio, y Google la validó en unos segundos.",
+              "text": "Google Workspace proporciona una entrada TXT, una línea de texto para agregar en los ajustes de tu nombre de dominio, que comienza con `google-site-verification=`. La agregué en o2switch, el proveedor de alojamiento de mi sitio, y Google la validó en unos diez segundos.",
               "type": "text"
             }
           ]
@@ -60307,7 +60451,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Los registros MX son las líneas que indican dónde entregar los correos de tu dominio. He reemplazado los de tu proveedor de alojamiento por `smtp.google.com` con prioridad 1, como indica ",
+              "text": "Los registros MX son las líneas que indican dónde entregar los correos de tu dominio. He reemplazado los de mi proveedor de alojamiento por `smtp.google.com` con prioridad 1, como indica ",
               "type": "text"
             },
             {
@@ -60329,7 +60473,7 @@
               "type": "text"
             },
             {
-              "text": "\"¡Gmail está activado!\"",
+              "text": "«¡Gmail está activado!»",
               "type": "text",
               "marks": [
                 {
@@ -60371,7 +60515,7 @@
           },
           "content": [
             {
-              "text": "Google Workspace correo profesional: las tres trampas que encontré",
+              "text": "Google Workspace correo profesional: las tres trampas que hay que conocer",
               "type": "text"
             }
           ]
@@ -60444,7 +60588,7 @@
               ]
             },
             {
-              "text": ". Esperé unos minutos, el tiempo que tarda en expirar el valor antiguo (300 segundos en mi dominio). El correo siguiente llegó a la bandeja de entrada, con SPF, DKIM (la firma de los correos) y DMARC en «PASS». Después del cambio, tómate un minuto para ",
+              "text": ". Esperé unos minutos, el tiempo necesario para que se tenga en cuenta el nuevo registro (tiempo de vida de 300 segundos en mi dominio). El correo siguiente llegó a la bandeja de entrada, con SPF, DKIM (la firma de los correos) y DMARC en «PASS». Después del cambio, tómate un minuto para ",
               "type": "text"
             },
             {
@@ -60504,7 +60648,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No lo he verificado. Las páginas de ayuda de Google Workspace se contradicen sobre qué pasa con los datos al cancelar una cuenta actualizada. Por lo tanto, no garantizo nada sobre retroceder: considere el paso a Google Workspace como una decisión duradera.",
+              "text": "No lo he verificado. Las páginas de ayuda de Google Workspace se contradicen sobre qué pasa con los datos al cancelar una cuenta actualizada. Por lo tanto, no garantizo nada sobre retroceder: considera el paso a Google Workspace como una decisión duradera.",
               "type": "text"
             }
           ]
@@ -60516,7 +60660,7 @@
           },
           "content": [
             {
-              "text": "Dirección Gmail profesional gratuita: ¿vale la pena Google Workspace para usted?",
+              "text": "Dirección Gmail profesional gratuita: ¿vale la pena Google Workspace para ti?",
               "type": "text"
             }
           ]
@@ -60525,7 +60669,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Varias soluciones siguen siendo gratuitas. La transferencia automática configurada en su proveedor de alojamiento sigue haciendo llegar sus correos a Gmail, pero entonces responde con su dirección @gmail.com. También puede recibir por transferencia y enviar desde el webmail de su proveedor. Un programa de mensajería como Thunderbird, Outlook o Apple Mail lee y envía con su dirección profesional, pero fuera de Gmail, en una computadora. Finalmente, la aplicación Gmail del teléfono sigue aceptando agregar su dirección profesional como cuenta separada, para leer y enviar desde el teléfono.",
+              "text": "Varias soluciones siguen siendo gratuitas. La transferencia automática configurada en tu proveedor de alojamiento sigue haciendo llegar tus correos a Gmail, pero entonces respondes con tu dirección @gmail.com. También puedes recibir por transferencia y enviar desde el webmail de tu proveedor. Un programa de mensajería como Thunderbird, Outlook o Apple Mail lee y envía con tu dirección profesional, pero fuera de Gmail, en un ordenador. Finalmente, la aplicación Gmail del teléfono sigue aceptando agregar tu dirección profesional como cuenta separada, para leer y enviar desde el teléfono.",
               "type": "text"
             }
           ]
@@ -60534,11 +60678,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Google Workspace se vuelve interesante si desea mantener Gmail tal como está, en la computadora y el teléfono, con su dirección profesional tanto para enviar como para recibir. Si principalmente recibe correos y responde poco, una solución gratuita suele ser suficiente. Antes de decidir, ",
+              "text": "Google Workspace se vuelve interesante si deseas mantener Gmail tal como está, en el ordenador y el teléfono, con tu dirección profesional tanto para enviar como para recibir. Si principalmente recibes correos y respondes poco, una solución gratuita suele ser suficiente. Antes de decidir, ",
               "type": "text"
             },
             {
-              "text": "pruebe si su dirección está afectada",
+              "text": "prueba si tu dirección está afectada",
               "type": "text",
               "marks": [
                 {
@@ -60552,7 +60696,7 @@
               ]
             },
             {
-              "text": ". Y si sus correos ya no salen, la guía ",
+              "text": ". Y si tus correos ya no salen, la guía ",
               "type": "text"
             },
             {
@@ -60603,7 +60747,28 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Una dirección Gmail profesional requiere Google Workspace. Según la página de precios de Google leída el 19 de noviembre de 2026, Business Starter cuesta 6,80 € IVA (sin impuestos) por mes y por cuenta con un compromiso de un año, y 8,10 € IVA sin compromiso.",
+              "text": "Una dirección Gmail profesional requiere Google Workspace. Según la página de precios de Google leída el 19 de noviembre de 2026, Business Starter cuesta 6,80 € (IVA no incluido) por mes y por cuenta con un compromiso de un año, y 8,10 € (IVA no incluido) sin compromiso.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Google Workspace es gratuito?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No: la prueba gratuita dura 14 días; después, Business Starter cuesta 6,80 € (IVA no incluido) por usuario y por mes con un año de compromiso, 8,10 € (IVA no incluido) sin compromiso, según las tarifas de Google leídas el 19 de noviembre de 2026.",
               "type": "text"
             }
           ]
@@ -60624,7 +60789,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No, Google Workspace es de pago después del período de prueba gratuito de 14 días. Las soluciones gratuitas existen, pero ninguna mantiene el envío con la dirección profesional en Gmail en computadoras después de enero de 2027: transferencia automática, webmail del proveedor, software de mensajería o aplicación Gmail del teléfono.",
+              "text": "No, Google Workspace es de pago después del período de prueba gratuito de 14 días. Las soluciones gratuitas existen, pero ninguna mantiene el envío con la dirección profesional en Gmail en el ordenador a partir de enero de 2027: transferencia automática, webmail del proveedor, software de mensajería o aplicación Gmail del teléfono.",
               "type": "text"
             }
           ]
@@ -60645,7 +60810,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El botón «Actualizar esta cuenta» transforma el Gmail gratuito en una cuenta de Google Workspace. Durante mi prueba del 19 de noviembre de 2026, la bandeja de entrada, la contraseña y las 1,799 conversaciones permanecieron. La dirección @gmail.com y la dirección del dominio funcionan en la misma bandeja de entrada.",
+              "text": "El botón «Actualizar esta cuenta» transforma el Gmail gratuito en una cuenta de Google Workspace. Durante mi prueba del 19 de noviembre de 2026, la bandeja de entrada, la contraseña y las 1 799 conversaciones permanecieron. La dirección @gmail.com y la dirección del dominio funcionan en la misma bandeja de entrada.",
               "type": "text"
             }
           ]
@@ -60666,7 +60831,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En mi cuenta de prueba, tomó aproximadamente 40 minutos desde la primera pantalla hasta «¡Gmail está activado!». La validación del dominio por TXT tomó alrededor de diez segundos. Google indica que la llegada de los nuevos correos puede tomar hasta 24 horas.",
+              "text": "En mi cuenta de prueba, tomó aproximadamente 40 minutos desde la primera pantalla hasta «¡Gmail está activado!». La validación del dominio por TXT tomó alrededor de diez segundos. La pantalla de Google anuncia hasta 24 horas para la llegada de los nuevos correos; su página de ayuda, hasta 72 horas.",
               "type": "text"
             }
           ]
@@ -60687,7 +60852,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "La mayoría de las veces, el registro SPF de su dominio aún no autoriza a Google a enviar en su nombre. Agregue o modifique la línea SPF para que contenga `include:_spf.google.com`, espere unos minutos y luego envíe un correo de prueba.",
+              "text": "En mi prueba, la causa era el SPF: el dominio aún no autorizaba a Google a enviar en su nombre. Agrega o modifica la línea SPF para que contenga `include:_spf.google.com`, espera unos minutos y luego vuelve a enviar un correo de prueba.",
               "type": "text"
             }
           ]
@@ -60696,7 +60861,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Si no desea manejar usted mismo los ajustes de su nombre de dominio, puedo hacerlo por usted a distancia: reviso cómo está configurada su dirección, recreo sus direcciones, realizo el cambio y verifico que sus correos no vayan a spam. El diagnóstico es gratuito y respondo en menos de 24 horas. Y si el ajuste gratuito le es suficiente, se lo haré saber.",
+              "text": "Si no deseas manejar tú mismo los ajustes de tu nombre de dominio, puedo hacerlo por ti a distancia: reviso cómo está configurada tu dirección, recreo tus direcciones, realizo el cambio y verifico que tus correos no vayan a spam. El diagnóstico es gratuito y respondo en menos de 24 horas. Y si el ajuste gratuito te es suficiente, te lo haré saber.",
               "type": "text"
             }
           ]
