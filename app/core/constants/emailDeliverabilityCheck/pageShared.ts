@@ -69,6 +69,7 @@ export const EMAIL_DELIVERABILITY_CHECK_RELATED_ARTICLE_SLUGS: string[] = [
   'faille-php-octobre-2026-site-boutique-logiciel-que-faire',
   'site-wordpress-pirate-verifications-a-faire-aujourd-hui',
   'facture-electronique-artisan-ce-qui-change',
+  'passer-gmail-gratuit-google-workspace-adresse-professionnelle',
 ]
 
 /** Pages read on 27 October 2026; laposte.net has no official page, dmarcian relays the announcement. */

@@ -26,6 +26,12 @@
         tone="white"
         class="mt-6"
       />
+      <DibodevToolTeaser
+        :teaser="GMAIL_SEND_AS_CHECK_TEASER"
+        :trackingLocation="`${TRACKING_LOCATION}_gmail_check`"
+        tone="white"
+        class="mt-6"
+      />
     </template>
   </DibodevToolLandingSection>
 
@@ -122,6 +128,7 @@ import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
 import DibodevCallout from '~/components/data-displays/DibodevCallout.vue'
 import DibodevContactPrompt from '~/components/data-displays/DibodevContactPrompt.vue'
 import DibodevMobileContactBar from '~/components/data-displays/DibodevMobileContactBar.vue'
+import DibodevToolTeaser from '~/components/data-displays/DibodevToolTeaser.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
 import DibodevEmailDeliverabilityChecker from '~/components/sections/DibodevEmailDeliverabilityChecker.vue'
 import DibodevFaqSection from '~/components/sections/DibodevFaqSection.vue'
@@ -140,6 +147,7 @@ import {
   EMAIL_DELIVERABILITY_CONTACT_TOPIC,
 } from '~/core/constants/emailDeliverabilityCheck/pageShared'
 import { EMAIL_DELIVERABILITY_CHECK_PAGES } from '~/core/constants/emailDeliverabilityCheckPage'
+import { GMAIL_SEND_AS_CHECK_TEASER } from '~/core/constants/gmailSendAsCheck/pageShared'
 import { ArticleSelectionUtils } from '~/core/utils/ArticleSelectionUtils'
 import { SiteCheckContactUtils } from '~/core/utils/SiteCheckContactUtils'
 

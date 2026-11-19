@@ -56,6 +56,8 @@ export const GMAIL_SEND_AS_HOST_GUIDE_ARTICLES: DibodevGmailSendAsHostGuideArtic
   { mailHost: 'ovh', slug: 'mail-ovh-sur-gmail-janvier-2027-que-faire' },
   { mailHost: 'o2switch', slug: 'mail-o2switch-sur-gmail-janvier-2027-que-faire' },
   { mailHost: 'ionos', slug: 'mail-ionos-sur-gmail-janvier-2027-que-faire' },
+  { mailHost: 'infomaniak', slug: 'mail-infomaniak-sur-gmail-janvier-2027-que-faire' },
+  { mailHost: 'hostinger', slug: 'mail-hostinger-sur-gmail-janvier-2027-que-faire' },
 ]
 
 /** Blog guide shown for an address of an internet provider (Orange, Free, SFR, La Poste). */
@@ -67,6 +69,8 @@ export const GMAIL_SEND_AS_RELATED_ARTICLE_SLUGS: string[] = [
   'passer-gmail-gratuit-google-workspace-adresse-professionnelle',
   ...GMAIL_SEND_AS_HOST_GUIDE_ARTICLES.map((guide: DibodevGmailSendAsHostGuideArticle): string => guide.slug),
   GMAIL_SEND_AS_CONSUMER_MAILBOX_GUIDE_SLUG,
+  'gmail-fin-pop3-janvier-2026-ou-2027',
+  'gmail-devient-il-payant-en-2027',
 ]
 
 /** Google help pages read on 19 November 2026; each language adds its own `?hl=`. */

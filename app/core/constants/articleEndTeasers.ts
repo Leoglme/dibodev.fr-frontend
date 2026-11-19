@@ -17,4 +17,8 @@ export const ARTICLE_END_TEASERS_BY_SLUG: Record<string, DibodevToolTeaserConten
   'mail-o2switch-sur-gmail-janvier-2027-que-faire': GMAIL_BUSINESS_EMAIL_SERVICE_TEASER,
   'mail-ionos-sur-gmail-janvier-2027-que-faire': GMAIL_BUSINESS_EMAIL_SERVICE_TEASER,
   'mail-orange-free-sfr-sur-gmail-janvier-2027-que-faire': GMAIL_BUSINESS_EMAIL_SERVICE_TEASER,
+  'gmail-fin-pop3-janvier-2026-ou-2027': GMAIL_BUSINESS_EMAIL_SERVICE_TEASER,
+  'gmail-devient-il-payant-en-2027': GMAIL_BUSINESS_EMAIL_SERVICE_TEASER,
+  'mail-infomaniak-sur-gmail-janvier-2027-que-faire': GMAIL_BUSINESS_EMAIL_SERVICE_TEASER,
+  'mail-hostinger-sur-gmail-janvier-2027-que-faire': GMAIL_BUSINESS_EMAIL_SERVICE_TEASER,
 }

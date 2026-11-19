@@ -60889,5 +60889,4585 @@
         }
       ]
     }
+  },
+  "blog/gmail-fin-pop3-janvier-2026-ou-2027": {
+    "title": "Gmail fin de POP3: ¿enero de 2026 o enero de 2027? La fecha real de Google",
+    "excerpt": "Gmail deja la recuperación POP3 a partir de enero de 2027, no en enero de 2026: la fecha de Google citada palabra por palabra, por qué cambió y qué hacer.",
+    "metaTitle": "Gmail fin de POP3: ¿enero de 2026 o 2027? Fecha de Google",
+    "metaDescription": "Gmail fin de POP3: no en enero de 2026 sino a partir de enero de 2027, según Google. Lo que se detiene, lo que sigue, Gmailify y las alternativas.",
+    "tags": [
+      "gmail fin pop3",
+      "recuperación pop gmail",
+      "consultar el correo de otras cuentas",
+      "alternativa a gmailify",
+      "gmail enviar como",
+      "transferencia automática gmail"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gmail deja de recuperar el correo por POP3 a partir de enero de 2027, según Google, y no en enero de 2026 como seguían diciendo, el día de mi búsqueda, la mayoría de las páginas que encontraba Google. Un Gmail gratuito ya no irá a buscar los correos de otra dirección (Orange, Free, o la dirección de tu sitio web en OVH, o2switch o IONOS) con la función «Consultar el correo de otras cuentas». Te afecta si esta función llena tu buzón gmail.com. La solución gratuita: una transferencia automática configurada en el proveedor de la dirección, que Google deja funcionar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En resumen.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Según las páginas de ayuda de Google leídas el 19 de noviembre de 2026, la recuperación POP de Gmail ya no acepta nuevos usuarios desde finales del primer trimestre de 2026, y los usuarios existentes la conservan hasta enero de 2027. Si algunas páginas siguen anunciando enero de 2026, es porque la versión inglesa de la página de Google lo decía ella misma hasta finales de enero de 2026. Gmailify y «Enviar como» para las direcciones de terceros terminan en la misma fecha. Leer tu Gmail por POP o IMAP en Outlook o Thunderbird no cambia.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Soy Léo Guillaume, desarrollador freelance cerca de Rennes. Mi dirección contact@dibodev.fr está alojada en o2switch y la leo en un Gmail gratuito, mediante esta recuperación, con «Enviar como» para responder: formo parte de los usuarios existentes de los que habla Google, afectado como tú. El 19 de noviembre de 2026 releí las páginas de ayuda de Google citadas aquí. Si no sabes cómo se configuró tu dirección, puedes empezar por ",
+              "type": "text"
+            },
+            {
+              "text": "probar si tu dirección está afectada",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/gmail-envoyer-en-tant-que-mon-adresse-est-elle-concernee",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Gmail fin de POP3: ¿enero de 2026 o enero de 2027?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Enero de 2027. La ",
+              "type": "text"
+            },
+            {
+              "text": "página de ayuda de Google sobre Gmailify y el acceso POP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/mail/answer/16604719?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", leída el 19 de noviembre de 2026, responde a su propia pregunta «¿Cuáles son los plazos previstos?» con dos frases: «Después del primer trimestre de 2026, esta función ya no aceptará nuevos usuarios. Los usuarios existentes podrán seguir usando esta función hasta enero de 2027.»",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La ",
+              "type": "text"
+            },
+            {
+              "text": "página de ayuda de Google sobre las cuentas de correo de terceros",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/mail/answer/17101213?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", leída el mismo día, da el mismo calendario. En la línea «Enero de 2027», escribe: «Gmail eliminará por completo la función “Enviar como” para las cuentas de terceros, Gmailify y el acceso POP.» Para los meses anteriores, advierte: «Antes de enero de 2027, limitaremos las nuevas configuraciones de esta función.»",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Así que cuentan dos fechas: según Google, una recuperación configurada antes de finales del primer trimestre de 2026 funciona hasta enero de 2027; una nueva recuperación ya no se acepta. Lo que no se sabe: el día, porque Google escribe «enero de 2027» sin día concreto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Por qué tantas páginas siguen diciendo «enero de 2026»?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Porque Google lo escribió primero. La Wayback Machine de Internet Archive, un servicio que guarda copias fechadas de las páginas web, conservó la versión inglesa de la página de ayuda sobre Gmailify y el acceso POP. Desde el 1 de octubre de 2025 hasta la ",
+              "type": "text"
+            },
+            {
+              "text": "copia del 26 de enero de 2026",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://web.archive.org/web/20260126081354/https://support.google.com/mail/answer/16604719",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", empieza por «Starting January 2026», es decir, a partir de enero de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La copia del 2 de febrero de 2026 habla de un cierre «later in 2026», más adelante en 2026. La ",
+              "type": "text"
+            },
+            {
+              "text": "copia del 8 de mayo de 2026",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://web.archive.org/web/20260508203325/https://support.google.com/mail/answer/16604719",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " da la fecha actual: «until January 2027», hasta enero de 2027. Así que Google cambió su fecha dos veces en 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un artículo escrito antes de febrero de 2026 que citaba a Google solo podía dar enero de 2026. El día de mi búsqueda, el 19 de noviembre de 2026, la mayoría de los primeros resultados de Google Francia para «gmail fin pop3» seguían hablando de enero de 2026, igual que la vista general generada por la IA de Google.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La guía oficial de OVHcloud titulada ",
+              "type": "text"
+            },
+            {
+              "text": "MX Plan: configurar tu dirección de correo en la interfaz web de Gmail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://docs.ovhcloud.com/fr/guides/web-cloud/email-and-collaborative-solutions/mx-plan/how-to-configure-gmail",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " y consultada el 19 de noviembre de 2026 lleva al principio un recuadro: «A partir de enero de 2026, Gmail dejará de ser compatible con las funciones Gmailify y acceso POP que hasta ahora permitían importar correos de cuentas de correo de terceros.» Esta guía muestra una última actualización del 31 de diciembre de 2025, cuando la página inglesa de Google aún anunciaba enero de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para una fecha de Google, lo que vale es la página de ayuda de Google, y ya ha cambiado dos veces.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Gmail cierre de POP3: ¿qué deja de funcionar exactamente?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "POP, que también se escribe «POP3» (el 3 es el número de versión), es el protocolo que descarga los correos de un servidor a otro buzón. Google escribe simplemente «POP». En Gmail, la recuperación POP se llama «Consultar el correo de otras cuentas».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Según la página de ayuda de Google sobre las cuentas de correo de terceros, tres funciones terminan para una cuenta personal de Gmail a partir de enero de 2027. La recuperación: «Gmail ya no extraerá correos de cuentas de terceros a tu cuenta de Gmail mediante el acceso POP.» Gmailify, que aplica las funciones de Gmail a un buzón de Yahoo u Outlook. Y «Enviar como» para las cuentas de terceros, que permite responder desde Gmail con otra dirección. La página sobre Gmailify y el acceso POP aclara: «La opción “Consultar el correo de otras cuentas” ya no estará disponible en Gmail en tu ordenador.»",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Google escribe que «solo se ven afectadas las cuentas de correo de terceros distintas a Google», con @hotmail.com y @yahoo.com como ejemplos. La dirección con tu nombre de dominio (lo que sigue al @) en OVHcloud, o2switch o IONOS no se cita palabra por palabra, pero no está alojada por Google.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Gmail POP3 2027: ¿qué sigue funcionando?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Leer tu Gmail en un programa de correo no cambia. La página de ayuda de Google sobre las cuentas de terceros lo dice: «Outlook, Thunderbird o Apple Mail pueden seguir accediendo a tu cuenta de Gmail con IMAP o POP.» IMAP es el otro protocolo de lectura, que sincroniza los correos sin quitarlos del servidor.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La transferencia automática continúa: «Puedes configurar tu proveedor de terceros para que transfiera automáticamente los mensajes a tu dirección de Gmail.» Se configura en el proveedor y solo sirve para recibir.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La aplicación Gmail del teléfono también continúa, según la página sobre Gmailify y el acceso POP: «Puedes seguir leyendo y enviando correos desde tu otra cuenta en la aplicación Gmail para Android, iPhone y iPad, que usa una conexión IMAP estándar.» Allí la dirección se convierte en una cuenta aparte, no es «Enviar como».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Los correos ya traídos se quedan: «Todos los mensajes que ya hayas importado a Gmail desde una cuenta de terceros permanecerán en tu buzón.» La importación puntual «Importar correo y contactos» sigue siendo posible, pero Google aclara que «se trata de una importación única».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Gmailify y POP3: ¿qué alternativa a Gmailify?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gmailify hacía que un buzón de Yahoo u Outlook disfrutara de las funciones de Gmail. Según Google, se pierden en particular la «Protección contra el spam», las «Categorías de la bandeja de entrada» y la «Búsqueda más rápida y operadores de búsqueda avanzada».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Google no ofrece sustituto para Gmailify. Para seguir leyendo el otro buzón, da dos caminos: la transferencia automática, que hace llegar los nuevos correos a Gmail «como con la recuperación POP», o la aplicación Gmail del teléfono. Desconfía de las herramientas y extensiones que prometen recrear estas funciones: Google escribe que «a menudo necesitan acceder a tus credenciales de correo».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cómo verificar en un minuto en Gmail?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En un ordenador, abre Gmail, haz clic en la rueda dentada arriba a la derecha y luego en «Ver todos los ajustes». Abre la pestaña «Cuentas e importación» (a veces «Cuentas»).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si una dirección aparece en la línea «Consultar el correo de otras cuentas», es la recuperación POP3: se detiene a partir de enero de 2027, según Google. Si una dirección que no está alojada por Google aparece en la línea «Enviar como», el envío con ella también se detiene. Si la dirección no está en ninguna de las dos líneas pero sus correos llegan a Gmail, es una transferencia configurada en el proveedor: continúa. En mi caso, contact@dibodev.fr está en las dos líneas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Gmail POP3 alternativa: ¿qué hacer antes de enero de 2027?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para recibir, configura una transferencia automática en el espacio de cliente del proveedor de la dirección, guardando una copia en el servidor si la opción existe. Coste: 0 €. Gmail puede rechazar un correo transferido o clasificarlo como spam, según los ",
+              "type": "text"
+            },
+            {
+              "text": "consejos de Google para la transferencia a Gmail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/mail/answer/175365?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " (ojo: esta página sigue recomendando «Enviar como», que deja de funcionar). Una vez comprobada la transferencia, quita la dirección de «Consultar el correo de otras cuentas».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para enviar con la dirección profesional, existen cuatro caminos: el webmail del proveedor (su correo en línea), un programa como Thunderbird u Outlook, la aplicación Gmail del teléfono con la dirección añadida en IMAP, o Google Workspace. Los tres primeros son gratuitos. Google Workspace, el Gmail de pago de las empresas, mantiene la recepción y el envío en Gmail en todas partes. En la ",
+              "type": "text"
+            },
+            {
+              "text": "página de precios de Google Workspace",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://workspace.google.com/intl/fr/pricing",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", leída el 19 de noviembre de 2026, Business Starter cuesta 6,80 € (IVA no incluido) por usuario y por mes con un compromiso de un año; sin compromiso, la consola de administración mostraba 8,10 € (IVA no incluido) el mismo día, con 14 días de prueba.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En mi cuenta de prueba, el botón «Mettre à niveau ce compte» (mejorar esta cuenta) conservó el mismo buzón y las 1 799 conversaciones ya presentes, en unos 40 minutos; cuento cada pantalla en el artículo para ",
+              "type": "text"
+            },
+            {
+              "text": "pasar de Gmail gratuito a Google Workspace",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/passer-gmail-gratuit-google-workspace-adresse-professionnelle",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". No he comprobado la vuelta atrás, y no prometo nada sobre ese punto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las pantallas por proveedor de alojamiento están en mis guías: ",
+              "type": "text"
+            },
+            {
+              "text": "correo OVH en Gmail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/mail-ovh-sur-gmail-janvier-2027-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "correo o2switch en Gmail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/mail-o2switch-sur-gmail-janvier-2027-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "correo IONOS en Gmail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/mail-ionos-sur-gmail-janvier-2027-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " y ",
+              "type": "text"
+            },
+            {
+              "text": "correo Orange, Free o SFR en Gmail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/mail-orange-free-sfr-sur-gmail-janvier-2027-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". Si tus correos ya no salen, empieza por ",
+              "type": "text"
+            },
+            {
+              "text": "el artículo de solución de problemas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/gmail-n-envoie-plus-avec-mon-adresse-professionnelle-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". Antes de anunciar una nueva dirección de envío, tómate un minuto para ",
+              "type": "text"
+            },
+            {
+              "text": "verificar si tus correos llegan a la carpeta de spam",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/mes-mails-arrivent-en-spam",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". Y para saber cuál de estos casos es el tuyo, puedes ",
+              "type": "text"
+            },
+            {
+              "text": "probar si tu dirección está afectada",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/gmail-envoyer-en-tant-que-mon-adresse-est-elle-concernee",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Gmail deja el POP3 en enero de 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No. Según la página de ayuda de Google leída el 19 de noviembre de 2026, la recuperación POP «Consultar el correo de otras cuentas» ya no acepta nuevos usuarios después del primer trimestre de 2026 y se detiene para los usuarios existentes en enero de 2027. La fecha de enero de 2026 viene de una primera versión de la página inglesa de Google, modificada entre el 26 de enero y el 2 de febrero de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "El fin estaba anunciado para enero de 2026: ¿por qué mi recuperación POP3 sigue funcionando?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Porque Google retrasó la fecha: según su página de ayuda, los usuarios existentes conservan la recuperación hasta enero de 2027. Google aconseja aprovechar este periodo para migrar, por ejemplo a una transferencia automática configurada en el proveedor de la dirección.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "«Consultar el correo de otras cuentas» eliminado: ¿se puede añadir aún una dirección?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No en Gmail en el ordenador: según la página de ayuda de Google sobre Gmailify y el acceso POP, la recuperación ya no acepta nuevos usuarios desde finales del primer trimestre de 2026. En la aplicación Gmail del teléfono, añadir una dirección de otro proveedor sigue siendo posible.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Puedo seguir leyendo mi Gmail por POP3 en Outlook o Thunderbird?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí. Google escribe que Outlook, Thunderbird o Apple Mail «pueden seguir accediendo a tu cuenta de Gmail con IMAP o POP». El cierre de enero de 2027 afecta a Gmail cuando va a buscar los correos de otro buzón, no al revés.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Gmail pasa a ser de pago en enero de 2027?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las páginas de ayuda de Google leídas el 19 de noviembre de 2026 no anuncian que Gmail pase a ser de pago, solo el cierre de tres funciones. Google Workspace es de pago, pero la transferencia, el webmail, un programa de correo y la aplicación Gmail del teléfono son gratuitos. El detalle está en ",
+              "type": "text"
+            },
+            {
+              "text": "¿Gmail pasa a ser de pago en 2027?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/gmail-devient-il-payant-en-2027",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si prefieres no tocar tú mismo los ajustes de tu proveedor de alojamiento, puedo encargarme a distancia: transferencia, programa, teléfono, o Google Workspace para ",
+              "type": "text"
+            },
+            {
+              "text": "configurar tu dirección profesional en Gmail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/adresse-mail-professionnelle-gmail",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". El diagnóstico es gratuito y respondo en menos de 24 horas. Si el ajuste gratuito te basta, te lo digo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "c5cc6c90-5aae-491a-b21c-839ef40c6134",
+            "body": [
+              {
+                "_uid": "i-023f7ee2-a453-4ba2-a966-deb868093eaa",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Escribirme sobre mi dirección de correo",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/gmail-devient-il-payant-en-2027": {
+    "title": "¿Gmail pasa a ser de pago en 2027? Lo que cambia de verdad y quién tiene algo que pagar",
+    "excerpt": "No, el buzón @gmail.com sigue siendo gratuito. Lo que cambia a partir de enero de 2027, lo que es de pago en Google (Workspace, almacenamiento) y quién debe pagar de verdad.",
+    "metaTitle": "¿Gmail será de pago en 2027? No, esto es lo que cambia",
+    "metaDescription": "¿Gmail pasa a ser de pago? No para @gmail.com. Lo que cambia a partir de enero de 2027, el precio de Gmail profesional (Google Workspace) y quién paga.",
+    "tags": [
+      "gmail de pago",
+      "gmail profesional",
+      "google workspace precio",
+      "cuenta gmail personal",
+      "almacenamiento google",
+      "enviar como"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En resumen.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " No, nada anuncia que Gmail pase a ser de pago en 2027: la página de ayuda de Google sobre el cambio de enero de 2027 no habla de ningún pago, y el buzón @gmail.com sigue siendo gratuito. Lo que cambia, a partir de enero de 2027 según Google, es que un Gmail gratuito ya no podrá enviar con una dirección alojada en otro sitio («Enviar como») ni ir a buscar los correos de otro buzón («Consultar el correo de otras cuentas»). Para conservar estas dos funciones en Gmail con una dirección profesional, Google propone Google Workspace, que es de pago: 6,80 € (IVA no incluido) por mes y por buzón con un año de compromiso. Más allá del espacio gratuito, hasta 15 GB según Google, el almacenamiento ya se paga hoy, con o sin enero de 2027. Para todos los demás, existen soluciones gratuitas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Soy Léo Guillaume, desarrollador freelance cerca de Rennes, y estoy afectado yo mismo: mi dirección profesional, contact@dibodev.fr, está alojada en o2switch y la leo en un Gmail gratuito. Esto es lo que dicen las páginas oficiales de Google, leídas el 19 de noviembre de 2026, y lo que vi al probar yo mismo el paso al Gmail profesional ese mismo día.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Gmail pasa a ser de pago en 2027?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No para el buzón @gmail.com. La ",
+              "type": "text"
+            },
+            {
+              "text": "página de ayuda de Google «Acerca de los cambios en la compatibilidad con cuentas de correo de terceros en Gmail»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/mail/answer/17101213?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", releída el 19 de noviembre de 2026, no habla de ningún precio, ninguna suscripción ni ningún pago. Escribe que «solo se ven afectadas las cuentas de correo de terceros distintas a Google». Una cuenta de correo de terceros es una dirección alojada fuera de Google: una dirección de Orange, Free, Yahoo, Outlook, o la dirección con tu nombre de dominio (lo que sigue al @, a menudo el nombre de tu sitio web) alojada en OVHcloud, o2switch o IONOS.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No he leído en ninguna parte de Google una promesa de que Gmail seguirá siendo gratuito para siempre. Lo que leo es que la página de Google sobre enero de 2027 no pide a nadie que pague para conservar su buzón @gmail.com o sus correos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Qué cambia en Gmail a partir de enero de 2027?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Según la misma página de ayuda de Google, tres funciones se detienen en un Gmail gratuito, a partir de enero de 2027, sin un día concreto dado por Google. La primera es ",
+              "type": "text"
+            },
+            {
+              "text": "«Enviar como»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " para una dirección alojada en otro sitio: Google escribe que ya no podrás enviar correos desde cuentas de correo de terceros en Gmail en la web ni en las aplicaciones móviles de Gmail. La segunda es ",
+              "type": "text"
+            },
+            {
+              "text": "«Consultar el correo de otras cuentas»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", la recuperación POP, es decir, Gmail yendo a buscar él mismo los correos de otro buzón. La tercera es ",
+              "type": "text"
+            },
+            {
+              "text": "Gmailify",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", que aplicaba el antispam y las categorías de Gmail a una cuenta de Yahoo u Outlook. Por qué tantas páginas anunciaban el fin de la recuperación para enero de 2026: lo explico en ",
+              "type": "text"
+            },
+            {
+              "text": "Gmail fin de POP3: ¿enero de 2026 o 2027?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/gmail-fin-pop3-janvier-2026-ou-2027",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Google también escribe lo que no cambia. La aplicación Gmail del teléfono (Android, iPhone, iPad) sigue aceptando añadir una cuenta de otro proveedor, como cuenta aparte. La transferencia automática configurada en tu proveedor de alojamiento sigue haciendo llegar tus correos a Gmail. Los mensajes ya importados se quedan en tu buzón. Y «Enviar como» sigue funcionando para las direcciones alojadas por Google: otra dirección de Gmail o un alias de Google Workspace.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lo más sencillo para saber en qué punto estás: ",
+              "type": "text"
+            },
+            {
+              "text": "probar si tu dirección está afectada",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/gmail-envoyer-en-tant-que-mon-adresse-est-elle-concernee",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". La herramienta gratuita lee tu dominio y te dice lo que se detiene.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cómo verificar en un minuto en Gmail",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En Gmail en el ordenador, haz clic en la rueda dentada, luego en ",
+              "type": "text"
+            },
+            {
+              "text": "«Ver todos los ajustes»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", luego en la pestaña ",
+              "type": "text"
+            },
+            {
+              "text": "«Cuentas e importación»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (o «Cuentas»). Si solo ves tu dirección @gmail.com en la línea ",
+              "type": "text"
+            },
+            {
+              "text": "«Enviar como»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " y nada en la línea ",
+              "type": "text"
+            },
+            {
+              "text": "«Consultar el correo de otras cuentas»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", enero de 2027 no cambia nada para ti, y no tienes nada que pagar. Si tu dirección profesional aparece en la línea «Enviar como», el envío con esa dirección se detiene a partir de enero de 2027, según Google. Si aparece en la línea «Consultar el correo de otras cuentas», lo que se detiene es la recepción. Si no aparece en ninguna parte aunque sus correos sí llegan a Gmail, es una transferencia automática configurada en tu proveedor de alojamiento, y Google escribe que la transferencia continúa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Gmail de pago: ¿qué cuesta dinero de verdad en Google?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Dos cosas, y ninguna es nueva en 2027.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "El almacenamiento más allá de 15 GB",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Según ",
+              "type": "text"
+            },
+            {
+              "text": "la página de ayuda «Cómo funciona tu espacio de almacenamiento de Google»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/mail/answer/9312312?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", leída el 19 de noviembre de 2026, cada cuenta de Google incluye hasta 15 GB de almacenamiento compartido entre Gmail, Google Drive y Google Fotos. Cuando este espacio está lleno, Google escribe que es posible que no puedas enviar ni recibir correos en Gmail. ",
+              "type": "text"
+            },
+            {
+              "text": "La página «Gestionar el espacio de almacenamiento en Drive, Gmail y Fotos»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/mail/answer/6558?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " aclara que los mensajes recibidos se devuelven entonces al remitente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Así que un Gmail lleno que ya no recibe nada no tiene nada que ver con enero de 2027. Para tener más espacio, Google remite a Google One, su suscripción de almacenamiento. En ",
+              "type": "text"
+            },
+            {
+              "text": "la página de planes de Google One",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://one.google.com/about/plans?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", los precios leídos el 19 de noviembre de 2026 eran de 1,99 € al mes (o 19,99 € al año) por 100 GB y de 2,99 € al mes (o 29,99 € al año) por 200 GB. El otro camino, gratuito, consiste en liberar espacio en Gmail, Drive y Fotos, como explica la página «Gestionar el espacio de almacenamiento».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Una dirección profesional con tu nombre de dominio en Gmail",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El Gmail profesional se llama Google Workspace. Es el que Google cita, en su página de ayuda, en la pregunta sobre las empresas que usan «Enviar como»: «usar Google Workspace para un dominio personalizado». Es de pago, y ya era de pago antes del anuncio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Gmail profesional es de pago? El precio de Google Workspace",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí. En ",
+              "type": "text"
+            },
+            {
+              "text": "la página de precios de Google Workspace en Francia",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://workspace.google.com/intl/fr/pricing",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", leída el 19 de noviembre de 2026, el plan Business Starter cuesta 6,80 € (IVA no incluido) por usuario y por mes con un compromiso de un año; Google aclara que este precio «no incluye impuestos». Sin compromiso, la consola de administración de mi cuenta de prueba mostraba 8,10 € (IVA no incluido) por usuario y por mes. Un usuario es un buzón. Las demás direcciones del mismo dominio (contact@, devis@) pueden ser alias de ese buzón, sin coste adicional.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Google Workspace no es gratuito: Google ofrece una prueba de 14 días y luego empieza la suscripción. La misma página muestra a veces un descuento para nuevos clientes, pero su porcentaje cambió de una lectura a otra el 19 de noviembre de 2026: compruébalo en el momento de registrarte.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cuál es la diferencia entre una cuenta de Gmail personal y una cuenta de Gmail profesional?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La cuenta de Gmail personal es la dirección @gmail.com, gratuita, con hasta 15 GB compartidos entre Gmail, Drive y Fotos. La cuenta de Gmail profesional es Gmail dentro de Google Workspace. En ",
+              "type": "text"
+            },
+            {
+              "text": "la página de Gmail de Google Workspace",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://workspace.google.com/intl/fr/gmail/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", leída el 19 de noviembre de 2026, Google enumera lo que añade: una dirección de correo personalizada con tu nombre de dominio, un número ilimitado de direcciones de correo de grupo, una garantía de disponibilidad del 99,9 %, el doble de almacenamiento que con una cuenta de Gmail personal, sin publicidad y asistencia las 24 horas, todos los días. La página de precios indica para Business Starter «30 GB de almacenamiento compartido por persona».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lo que vi yo mismo, el 19 de noviembre de 2026, en un Gmail gratuito de prueba y un subdominio de mi sitio: en la página de registro de Google Workspace, el botón ",
+              "type": "text"
+            },
+            {
+              "text": "«Mettre à niveau ce compte»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (mejorar esta cuenta) transforma el Gmail gratuito en una cuenta profesional. Conservé el mismo buzón, la misma contraseña y todos los correos antiguos (1 799 conversaciones). La antigua dirección @gmail.com y la nueva dirección con mi nombre de dominio envían y reciben en el mismo buzón. A cambio, la dirección del dominio pasa a ser la dirección de inicio de sesión, y Google advierte que la cuenta pierde Google Family, Google Fit y Google Nest.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El relato completo, con los ajustes del dominio y el primer correo que llegó a spam, está en mi artículo para ",
+              "type": "text"
+            },
+            {
+              "text": "pasar de Gmail gratuito a Google Workspace",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/passer-gmail-gratuit-google-workspace-adresse-professionnelle",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". No he comprobado la vuelta atrás: no prometo nada sobre ese punto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Pasar Gmail a profesional: ¿quién tiene algo que pagar de verdad?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No tienes nada que pagar",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " si solo usas tu dirección @gmail.com. Para una dirección profesional, cuatro soluciones siguen siendo gratuitas, cada una con su límite: la transferencia automática en tu proveedor de alojamiento (respondes entonces con tu @gmail.com), el webmail del proveedor, un programa de correo como Thunderbird, Outlook o Apple Mail, o la aplicación Gmail del teléfono, donde la dirección se añade como cuenta aparte.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tienes algo que pagar",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " en dos casos. El primero: quieres seguir leyendo y enviando con tu dirección profesional en Gmail en el ordenador, como hoy. Google Workspace cuesta entonces 6,80 € (IVA no incluido) por mes y por buzón con un año de compromiso, 8,10 € (IVA no incluido) sin él. El segundo: tu cuenta de Google ha llenado su espacio gratuito, hasta 15 GB, y no quieres hacer limpieza. Esto no tiene nada que ver con enero de 2027.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si tus correos ya no salen, parte mejor del síntoma con la guía ",
+              "type": "text"
+            },
+            {
+              "text": "Gmail ya no envía con mi dirección profesional",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/gmail-n-envoie-plus-avec-mon-adresse-professionnelle-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". Y si pasas a Google Workspace, tómate un minuto después del cambio para ",
+              "type": "text"
+            },
+            {
+              "text": "verificar si tus correos llegan a la carpeta de spam",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/mes-mails-arrivent-en-spam",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". Antes de elegir, ",
+              "type": "text"
+            },
+            {
+              "text": "prueba si tu dirección está afectada",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/gmail-envoyer-en-tant-que-mon-adresse-est-elle-concernee",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Gmail va a pasar a ser de pago en enero de 2027?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No para el buzón @gmail.com. La página de ayuda de Google sobre el cambio de enero de 2027, leída el 19 de noviembre de 2026, no habla de ningún pago. Solo anuncia el fin de «Enviar como» y de «Consultar el correo de otras cuentas» para las direcciones alojadas fuera de Google.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Google Workspace es gratuito?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No. Google Workspace ofrece una prueba gratuita de 14 días, y luego Business Starter cuesta 6,80 € (IVA no incluido) por usuario y por mes con un año de compromiso, y 8,10 € (IVA no incluido) sin compromiso, según los precios de Google leídos el 19 de noviembre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Gmail profesional: ¿qué precio tiene una dirección profesional?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un Gmail profesional pasa por Google Workspace. El plan Business Starter cuesta 6,80 € (IVA no incluido) por mes y por buzón con un año de compromiso, es decir, 81,60 € (IVA no incluido) al año al precio mostrado el 19 de noviembre de 2026. Las demás direcciones del mismo dominio pueden ser alias de ese buzón, sin coste adicional.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Mi dirección @gmail.com se ve afectada por enero de 2027?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No. Según Google, solo se ven afectadas las cuentas de correo de terceros distintas a Google. Tu dirección @gmail.com sigue enviando y recibiendo como hoy, gratis.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Hay que pagar para conservar los correos antiguos?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No. Según la página de ayuda de Google, los mensajes ya importados a Gmail se quedan en tu buzón. Lo que puede bloquear el envío y la recepción, según Google, es una cuenta que alcanza su límite de almacenamiento: entonces hay que liberar espacio o comprar más con Google One.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Se puede pasar Gmail a profesional sin perder los correos?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, en mi prueba del 19 de noviembre de 2026. El botón «Mettre à niveau ce compte» de Google Workspace conservó el mismo buzón, la misma contraseña y las 1 799 conversaciones de mi Gmail de prueba. En cambio, la cuenta pierde Google Family, Google Fit y Google Nest.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si prefieres no tocar tú mismo los ajustes, puedes ",
+              "type": "text"
+            },
+            {
+              "text": "encargar la configuración de tu dirección profesional en Gmail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/adresse-mail-professionnelle-gmail",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " a distancia: miro cómo está montada tu dirección y te digo lo que se detiene en tu caso. El diagnóstico es gratuito y respondo en menos de 24 horas. Y si el ajuste gratuito te basta, te lo digo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "d55bea5e-e0d8-431d-ac88-c415ca66f452",
+            "body": [
+              {
+                "_uid": "i-f6ae533a-38de-4f20-bfd3-acc3195fb5e3",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Escribirme sobre mi dirección de correo",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/mail-infomaniak-sur-gmail-janvier-2027-que-faire": {
+    "title": "Correo Infomaniak en Gmail: lo que termina en enero de 2027 y qué hacer",
+    "excerpt": "¿Tu dirección de Infomaniak se lee en Gmail? Lo que deja de funcionar en enero de 2027, la redirección en el Manager, el webmail, los servidores IMAP y SMTP, y Google Workspace.",
+    "metaTitle": "Infomaniak en Gmail: cambios en enero de 2027",
+    "metaDescription": "Infomaniak en Gmail: qué deja de funcionar a partir de enero de 2027, redirección, webmail, servidores IMAP y SMTP y paso a Google Workspace.",
+    "tags": [
+      "correo infomaniak en gmail",
+      "configurar correo infomaniak gmail",
+      "redirección correo infomaniak",
+      "infomaniak smtp imap",
+      "webmail infomaniak",
+      "google workspace infomaniak",
+      "enviar como"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En resumen.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A partir de enero de 2027, según Google, un Gmail gratuito ya no podrá recuperar los correos de una dirección alojada en Infomaniak («Consultar el correo de otras cuentas») ni enviar con ella mediante «Enviar como». Para seguir recibiendo los correos de Infomaniak en Gmail, una redirección configurada en Infomaniak es gratuita, con un riesgo de spam que hay que vigilar. Para seguir enviando con la dirección de Infomaniak, quedan el webmail de Infomaniak, un programa de correo, la aplicación Gmail del teléfono o Google Workspace. Google Workspace cuesta 6,80 € (IVA no incluido) por mes y por buzón con un compromiso de un año, según la página de precios de Google leída el 19 de noviembre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Soy Léo Guillaume, desarrollador freelance cerca de Rennes. Yo mismo estoy afectado: mi dirección contact@dibodev.fr está alojada en o2switch y la leo en un Gmail gratuito, con recuperación y «Enviar como». El 19 de noviembre de 2026 hice el paso a Google Workspace en una cuenta de prueba. No soy cliente de Infomaniak: las pantallas de Infomaniak descritas aquí provienen de su base de conocimientos en francés, leída el 19 de noviembre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Correo Infomaniak en Gmail: ¿qué deja de funcionar en enero de 2027?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La ",
+              "type": "text"
+            },
+            {
+              "text": "página de ayuda de Google sobre las cuentas de correo de terceros",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/mail/answer/17101213?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", leída el 19 de noviembre de 2026, anuncia tres supresiones a partir de enero de 2027 para las cuentas personales de Gmail. «Enviar como» desaparece: tu buzón de Gmail ya no enviará correos en nombre de una dirección de otro proveedor, ni en el ordenador ni en las aplicaciones; añadirla como cuenta aparte en la aplicación del teléfono sigue siendo posible. «Consultar el correo de otras cuentas» también desaparece: es la recuperación por POP, el protocolo que copia en Gmail los correos de otro buzón. Por último, desaparece Gmailify.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una dirección de Infomaniak es una dirección con tu nombre de dominio (lo que sigue al @) cuyo buzón está en Infomaniak. Google no cita a Infomaniak, pero escribe que «solo se ven afectadas las cuentas de correo de terceros distintas a Google». Google no da un día concreto, y su fecha ya ha cambiado: el fin de la recuperación se anunció primero para enero de 2026, como explico en ",
+              "type": "text"
+            },
+            {
+              "text": "Gmail fin de POP3: ¿enero de 2026 o 2027?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/gmail-fin-pop3-janvier-2026-ou-2027",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lo que sigue funcionando: la redirección configurada en Infomaniak, la aplicación Gmail del teléfono y los correos ya llegados a Gmail, que se quedan allí según Google. Puedes ",
+              "type": "text"
+            },
+            {
+              "text": "probar si tu dirección está afectada",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/gmail-envoyer-en-tant-que-mon-adresse-est-elle-concernee",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " con la herramienta gratuita de dibodev.fr.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cómo verificar en un minuto en Gmail si mi dirección de Infomaniak está afectada?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En Gmail en el ordenador, haz clic en la rueda dentada, luego en «Ver todos los ajustes» y luego en la pestaña «Cuentas e importación» (a veces «Cuentas»).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si tu dirección de Infomaniak aparece en la línea «Enviar como», el envío con esa dirección desde Gmail se detiene. Si aparece en la línea «Consultar el correo de otras cuentas», la recepción por recuperación se detiene. Si no aparece en ninguna de las dos líneas pero sus correos llegan igualmente, es una redirección configurada en Infomaniak: continúa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En mi caso, la dirección está en las dos líneas. Es lo que pasa cuando se ha hecho la configuración completa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Redirección del correo de Infomaniak a Gmail: ¿cómo recibir después de enero de 2027?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La recepción se configura en Infomaniak, no en Gmail. La página ",
+              "type": "text"
+            },
+            {
+              "text": "«Redirigir una dirección de correo existente a una o varias direcciones»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.infomaniak.com/fr/support/faq/2614/rediriger-une-adresse-mail-existante-vers-une-ou-plusieurs-autres-adresses",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " indica el camino desde el Manager, el espacio de cliente de Infomaniak: abre la gestión del ",
+              "type": "text"
+            },
+            {
+              "text": "Service Mail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", haz clic en su nombre y luego en la dirección en la tabla. Haz clic en ",
+              "type": "text"
+            },
+            {
+              "text": "«Redirections»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", luego en el botón azul ",
+              "type": "text"
+            },
+            {
+              "text": "«Ajouter une redirection»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (añadir una redirección); Infomaniak puede volver a pedirte la contraseña. Escribe tu dirección de Gmail y haz clic en ",
+              "type": "text"
+            },
+            {
+              "text": "«Confirmer»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". La misma página describe también un camino desde la app Web Mail, por ",
+              "type": "text"
+            },
+            {
+              "text": "«Paramètres»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (ajustes), arriba a la derecha.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Con o sin copia en Infomaniak?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una vez añadida la redirección, un interruptor permite ",
+              "type": "text"
+            },
+            {
+              "text": "conservar o no una copia de los correos en la dirección tras la redirección",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Con la copia, el correo llega a Gmail y se queda también en el buzón de Infomaniak. Con la opción contraria (",
+              "type": "text"
+            },
+            {
+              "text": "borrar los correos del servidor tras el reenvío",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "), la redirección se convierte en un traslado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Te aconsejo conservar la copia: tus correos siguen siendo legibles en el webmail de Infomaniak, incluidos los que no salen hacia Gmail.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "La trampa: el spam y la prueba desde Gmail",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Según la misma página, los correos que Infomaniak detecta como spam no se redirigen en absoluto a una dirección alojada en otro sitio, como Gmail. Del lado de Gmail, un correo redirigido puede ser rechazado o clasificado como spam cuando falla en los controles de autenticidad tras este desvío. Google da sus ",
+              "type": "text"
+            },
+            {
+              "text": "consejos para la transferencia a Gmail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/mail/answer/175365?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " (ojo: esta página sigue recomendando «Enviar como», que deja de funcionar).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para probar, escribe desde una dirección distinta de tu Gmail: según ",
+              "type": "text"
+            },
+            {
+              "text": "«Resolver un problema de redirección a Gmail»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.infomaniak.com/fr/support/faq/760/resoudre-un-probleme-de-redirection-vers-gmail",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", un correo enviado desde ese Gmail no aparece en él como nuevo, aunque la redirección funcione. Vigila también la carpeta Spam.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cómo enviar con tu dirección de Infomaniak sin «Enviar como»?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La redirección solo resuelve la recepción. Responder desde Gmail muestra tu dirección @gmail.com. Para enviar con la dirección de Infomaniak, existen cuatro caminos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Webmail de Infomaniak",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Según la página ",
+              "type": "text"
+            },
+            {
+              "text": "«Descubrir Mail Infomaniak»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.infomaniak.com/fr/support/faq/2008/decouvrir-mail-infomaniak",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", el webmail está en la dirección ",
+              "type": "text"
+            },
+            {
+              "text": "ksuite.infomaniak.com/mail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://ksuite.infomaniak.com/mail",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". Se accede con el identificador de la cuenta de Infomaniak, no con la dirección de correo. Es gratis, pero hay que abrir una segunda pestaña para responder.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Infomaniak SMTP e IMAP: un programa de correo",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Según la página ",
+              "type": "text"
+            },
+            {
+              "text": "«Entender los puertos y protocolos de correo»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.infomaniak.com/fr/support/faq/468/comprendre-les-ports-et-protocoles-de-messagerie",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", el servidor es mail.infomaniak.com tanto para la recepción como para el envío. En IMAP (el protocolo que deja los correos en el servidor), puerto 993, SSL/TLS. En SMTP (el servidor que hace salir los correos), puerto 587 con STARTTLS, o puerto 465 en SSL/TLS. El nombre de usuario es la dirección completa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La contraseña es una contraseña de dispositivo, que se crea en el Manager según la página ",
+              "type": "text"
+            },
+            {
+              "text": "«Añadir un dispositivo (crear una contraseña de correo) desde el Service Mail»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.infomaniak.com/fr/support/faq/1321/ajouter-un-appareil-creer-un-mot-de-passe-mail-depuis-le-service-mail",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " por este camino: ",
+              "type": "text"
+            },
+            {
+              "text": "Service Mail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", el servicio, la dirección, pestaña ",
+              "type": "text"
+            },
+            {
+              "text": "«Appareils» (dispositivos)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "«Ajouter un appareil» (añadir un dispositivo)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "«Sans utilisateur» (sin usuario)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", un nombre. Anótala antes de hacer clic en ",
+              "type": "text"
+            },
+            {
+              "text": "«Terminer»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (finalizar), porque después no se podrá volver a mostrar. Un programa solo funciona en el ordenador donde está instalado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Configurar tu correo de Infomaniak en la aplicación Gmail (Android, iPhone)",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Según Google, la aplicación Gmail del teléfono sigue aceptando una cuenta de otro proveedor, añadida aparte, para leer y enviar. Infomaniak describe el procedimiento en ",
+              "type": "text"
+            },
+            {
+              "text": "«Configurar Gmail (app iOS / Android) en IMAP (correo)»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.infomaniak.com/fr/support/faq/1208/configurer-gmail-app-ios-android-en-imap-messagerie",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " con estos pasos: los ",
+              "type": "text"
+            },
+            {
+              "text": "«Ajustes»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " de Gmail, ",
+              "type": "text"
+            },
+            {
+              "text": "«Añadir cuenta»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "«Otro»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", tu dirección, el tipo de cuenta ",
+              "type": "text"
+            },
+            {
+              "text": "IMAP",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", la contraseña de dispositivo y luego mail.infomaniak.com como servidor entrante y saliente. Los puertos son los de la página de puertos. Infomaniak recomienda más bien su propia aplicación, Infomaniak Mail.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Google Workspace",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Google Workspace es el Gmail profesional de Google: la dirección con tu nombre de dominio se convierte en un verdadero buzón de Gmail, en todas partes. Mi prueba está contada en ",
+              "type": "text"
+            },
+            {
+              "text": "pasar de Gmail gratuito a Google Workspace",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/passer-gmail-gratuit-google-workspace-adresse-professionnelle",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Pasar a Google Workspace con un dominio en Infomaniak: ¿dónde cambiar los MX y el SPF?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Los registros MX le dicen al mundo entero qué servidor recibe los correos de tu dominio. En mi dominio de prueba, Google me pidió reemplazarlos por smtp.google.com con prioridad 1. En Infomaniak, la página ",
+              "type": "text"
+            },
+            {
+              "text": "«Modificar una zona DNS (modo simple) de un dominio gestionado por Infomaniak»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.infomaniak.com/fr/support/faq/2000/modifier-une-zone-dns-mode-simple-dun-domaine-gere-par-infomaniak",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " indica el camino: gestión de dominios en el Manager, nombre del dominio, ",
+              "type": "text"
+            },
+            {
+              "text": "«Zone DNS»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " en el menú lateral izquierdo. Para cambiar una línea, haz clic en el menú de acciones ",
+              "type": "text"
+            },
+            {
+              "text": "⋮",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " a su derecha y luego en ",
+              "type": "text"
+            },
+            {
+              "text": "«Modifier»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (modificar); para quitarla, ",
+              "type": "text"
+            },
+            {
+              "text": "⋮",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " y luego ",
+              "type": "text"
+            },
+            {
+              "text": "«Supprimer» (eliminar)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El MX de Infomaniak es mta-gw.infomaniak.ch con prioridad 5, según la página ",
+              "type": "text"
+            },
+            {
+              "text": "«Gestionar los registros MX»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.infomaniak.com/fr/support/faq/2110/gerer-les-enregistrements-mx",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", que advierte: si hay varios registros MX configurados, Infomaniak no puede garantizar la correcta recepción de los mensajes. Conserva solo el de Google.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El SPF es una línea de texto (un registro TXT) que lista los servidores autorizados a enviar para tu dominio. Durante mi prueba, mi primer correo llegó a spam por falta de SPF; con `v=spf1 include:_spf.google.com ~all`, el siguiente llegó a la bandeja de entrada. El SPF de Infomaniak es `v=spf1 include:spf.infomaniak.ch -all`, según la página ",
+              "type": "text"
+            },
+            {
+              "text": "«Vincular un Service Mail de Infomaniak a un servicio externo»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.infomaniak.com/fr/support/faq/1775/lier-un-service-mail-infomaniak-a-un-service-externe",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". No lo reemplaces sin más por el de Google: según la página ",
+              "type": "text"
+            },
+            {
+              "text": "«Configurar SPF»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/a/answer/33786?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " de Google, tu registro SPF «debe incluir los dominios (o direcciones IP) de todos los servidores que envían correos para tu organización», formularios de contacto incluidos. Si tu sitio sigue enviando sus correos por Infomaniak, completa la línea existente en lugar de crear una segunda, siguiendo el modelo de los ejemplos de Google: `v=spf1 include:_spf.google.com include:spf.infomaniak.ch ~all`. No he probado esta línea en Infomaniak. La línea de validación de Google se añade con el botón de opción ",
+              "type": "text"
+            },
+            {
+              "text": "TXT",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", según ",
+              "type": "text"
+            },
+            {
+              "text": "«Gestionar los registros TXT»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.infomaniak.com/fr/support/faq/2460/gerer-les-enregistrements-txt",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El dominio se queda en Infomaniak; este camino supone que usa los servidores de nombres de Infomaniak. Un cambio de DNS (los ajustes del nombre de dominio) puede tardar hasta 48 horas, según Infomaniak. Google advierte que hay que crear todas las direcciones ya utilizadas con el dominio antes del cambio; si no, sus correos se pierden. No sé qué pasa con los datos si luego se da de baja Google Workspace: las páginas de ayuda de Google se contradicen, no prometo nada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Qué solución elegir para tu dirección de Infomaniak?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Recibes mucho y respondes poco: la redirección a Gmail con copia, y el webmail de Infomaniak para las respuestas. Trabajas en un solo ordenador: Thunderbird u Outlook con los ajustes IMAP y SMTP de Infomaniak, pero fuera de Gmail. Respondes sobre todo desde el teléfono: la aplicación Gmail con la cuenta de Infomaniak añadida en IMAP. Estas tres soluciones son gratuitas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Quieres mantener Gmail exactamente como hoy, en todas partes: Google Workspace, desde 6,80 € (IVA no incluido) por mes y por buzón con compromiso de un año hasta 8,10 € (IVA no incluido) sin compromiso, prueba de 14 días, según los precios de Google leídos el 19 de noviembre de 2026. El buzón de Infomaniak ya no recibe entonces nada nuevo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Antes de elegir, puedes ",
+              "type": "text"
+            },
+            {
+              "text": "probar si tu dirección está afectada",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/gmail-envoyer-en-tant-que-mon-adresse-est-elle-concernee",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", luego ",
+              "type": "text"
+            },
+            {
+              "text": "verificar si tus correos llegan a la carpeta de spam",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/mes-mails-arrivent-en-spam",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " una vez que el nuevo ajuste esté en vigor. Si Gmail ya ha dejado de enviar, la guía ",
+              "type": "text"
+            },
+            {
+              "text": "Gmail ya no envía con mi dirección profesional",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/gmail-n-envoie-plus-avec-mon-adresse-professionnelle-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " parte del síntoma.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes sobre Infomaniak y Gmail",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Se puede configurar aún un correo de Infomaniak en Gmail en 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En Gmail en el navegador, ya no para la recepción: según Google, la recuperación POP ya no acepta nuevos usuarios desde finales del primer trimestre de 2026. En la aplicación Gmail del teléfono, añadir una dirección de Infomaniak en IMAP sigue siendo posible.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿La redirección de Infomaniak a Gmail seguirá funcionando después de enero de 2027?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, según Google: siempre se puede configurar el proveedor de terceros para transferir automáticamente los mensajes a Gmail. La redirección de Infomaniak sirve para recibir, no para enviar con la dirección de Infomaniak.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cuáles son los servidores IMAP y SMTP de Infomaniak?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Según la base de conocimientos de Infomaniak, el servidor es mail.infomaniak.com: IMAP en el puerto 993 con SSL/TLS, SMTP en el puerto 587 con STARTTLS o 465 con SSL/TLS. El nombre de usuario es la dirección completa, y la contraseña, una contraseña de dispositivo creada en el Manager.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cuál es la dirección del webmail de Infomaniak?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El webmail de Infomaniak está en la dirección ksuite.infomaniak.com/mail. Se accede con el identificador de la cuenta de Infomaniak, no con la dirección de correo. Permite enviar con la dirección de Infomaniak sin ajustar nada en Gmail.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Infomaniak ha publicado una página sobre el fin de la recuperación en Gmail?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El 19 de noviembre de 2026, no encontré ninguna página de la base de conocimientos de Infomaniak en francés sobre el fin de «Consultar el correo de otras cuentas» o de «Enviar como» en Gmail. Las únicas informaciones sobre este cierre provienen de las páginas de ayuda de Google.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Quién puede configurar mi dirección de Infomaniak por mí?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si prefieres no tocar el Manager de Infomaniak, puedes ",
+              "type": "text"
+            },
+            {
+              "text": "encargar la configuración de tu dirección profesional en Gmail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/adresse-mail-professionnelle-gmail",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " y me ocupo a distancia, ya sea una redirección o un paso a Google Workspace. El diagnóstico es gratuito, respondo en menos de 24 horas, y si el ajuste gratuito te basta, te lo digo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "8cd97ed4-e277-4cbf-bc79-729e052e570b",
+            "body": [
+              {
+                "_uid": "i-64027be8-6b6e-470c-baec-0f768667593f",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Escribirme sobre mi dirección de correo",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/mail-hostinger-sur-gmail-janvier-2027-que-faire": {
+    "title": "Correo Hostinger en Gmail: lo que termina en enero de 2027 y qué hacer",
+    "excerpt": "¿Tu dirección de Hostinger se lee en Gmail? Lo que deja de funcionar en enero de 2027, la redirección en hPanel, el webmail, los ajustes IMAP y SMTP, y Workspace.",
+    "metaTitle": "Hostinger en Gmail: cambios en enero de 2027",
+    "metaDescription": "Hostinger en Gmail: qué deja de funcionar a partir de enero de 2027, la redirección en hPanel, los servidores IMAP y SMTP, y Google Workspace.",
+    "tags": [
+      "correo hostinger en gmail",
+      "hostinger gmail",
+      "redirección correo hostinger",
+      "hostinger smtp imap",
+      "webmail hostinger",
+      "google workspace hostinger",
+      "enviar como"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En resumen.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " A partir de enero de 2027, según Google, un Gmail gratuito ya no podrá recuperar los correos de una dirección alojada en Hostinger («Consultar el correo de otras cuentas») ni enviar con ella («Enviar como»). Te afecta si lees tu dirección profesional de Hostinger, por ejemplo contact@votre-entreprise.fr, en tu buzón gmail.com. Para seguir recibiendo esos correos en Gmail, una redirección configurada en hPanel, el espacio de cliente de Hostinger, es gratuita, con un riesgo de spam que hay que vigilar. Para enviar con la dirección de Hostinger, quedan el webmail de Hostinger, un programa de correo, la aplicación Gmail del teléfono o Google Workspace, a 6,80 € (IVA no incluido) por mes y por buzón con un compromiso de un año, según la página de precios de Google leída el 19 de noviembre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hostinger vende tres servicios de correo: ",
+              "type": "text"
+            },
+            {
+              "text": "Hostinger Email",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "Titan Email",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " y ",
+              "type": "text"
+            },
+            {
+              "text": "Google Workspace",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " en reventa. Indico en cada paso a cuál se refiere, según el centro de ayuda de Hostinger leído el 19 de noviembre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Soy Léo Guillaume, desarrollador freelance cerca de Rennes. Mi dirección contact@dibodev.fr está en o2switch, no en Hostinger, pero la leo en un Gmail gratuito con recuperación y «Enviar como»: estoy afectado como tú. El 19 de noviembre de 2026 hice el paso a Google Workspace en una cuenta de prueba. Las pantallas de Hostinger descritas aquí provienen de su documentación oficial, no de mi prueba.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Correo Hostinger en Gmail: ¿qué deja de funcionar en enero de 2027?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Según la ",
+              "type": "text"
+            },
+            {
+              "text": "página de ayuda de Google sobre las cuentas de correo de terceros",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/mail/answer/17101213?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", leída el 19 de noviembre de 2026, tres funciones desaparecen a partir de enero de 2027 para las cuentas personales de Gmail. «Enviar como»: tu buzón de Gmail ya no enviará correos en nombre de una dirección de otro proveedor, ni en el ordenador ni en las aplicaciones; añadirla como cuenta aparte en la aplicación del teléfono sigue siendo posible. «Consultar el correo de otras cuentas»: la recuperación por POP (el protocolo que descarga los correos de un servidor a otro buzón) se detiene. Gmailify también.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Una dirección de Hostinger es una dirección con tu nombre de dominio (lo que sigue al @) cuyo buzón está en Hostinger. Google no cita a Hostinger, pero escribe que «solo se ven afectadas las cuentas de correo de terceros distintas a Google». Google no da un día concreto, y su fecha ya ha cambiado: el fin de la recuperación se anunció primero para enero de 2026, como explico en ",
+              "type": "text"
+            },
+            {
+              "text": "Gmail fin de POP3: ¿enero de 2026 o 2027?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/gmail-fin-pop3-janvier-2026-ou-2027",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hostinger ha publicado ",
+              "type": "text"
+            },
+            {
+              "text": "una página en inglés",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/support/how-to-access-hostinger-email-in-gmail-after-gmailify-and-pop-discontinuation/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " que anuncia el fin de Gmailify y del POP «Starting January 2026», sin que yo encontrara versión francesa. La fecha que cuenta para la supresión completa es la de Google: enero de 2027. Su ",
+              "type": "text"
+            },
+            {
+              "text": "página en francés sobre Gmail en la versión web",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/fr/support/3220927-comment-configurer-les-e-mails-d-hostinger-sur-gmail-version-web/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " todavía describe la recuperación POP3, es decir, la configuración que deja de funcionar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La redirección configurada en Hostinger, la aplicación Gmail del teléfono y los correos ya llegados a Gmail siguen funcionando. Puedes ",
+              "type": "text"
+            },
+            {
+              "text": "probar si tu dirección está afectada",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/gmail-envoyer-en-tant-que-mon-adresse-est-elle-concernee",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " con la herramienta gratuita de dibodev.fr.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Cómo verificar en un minuto en Gmail si mi dirección de Hostinger está afectada?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En Gmail en el ordenador, haz clic en la rueda dentada, luego en ",
+              "type": "text"
+            },
+            {
+              "text": "«Ver todos los ajustes»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", luego en la pestaña ",
+              "type": "text"
+            },
+            {
+              "text": "«Cuentas e importación»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (a veces ",
+              "type": "text"
+            },
+            {
+              "text": "«Cuentas»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "). Si tu dirección de Hostinger aparece en la línea ",
+              "type": "text"
+            },
+            {
+              "text": "«Enviar como»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", el envío desde Gmail se detiene. Si aparece en la línea ",
+              "type": "text"
+            },
+            {
+              "text": "«Consultar el correo de otras cuentas»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", la recepción por recuperación se detiene. Si no está en ninguna de las dos líneas pero sus correos llegan igualmente, es una redirección configurada en Hostinger: continúa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para saber qué servicio de correo de Hostinger tienes, mira el icono junto al dominio en la sección ",
+              "type": "text"
+            },
+            {
+              "text": "«Emails»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " de hPanel, según ",
+              "type": "text"
+            },
+            {
+              "text": "Hostinger",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/fr/support/5832752-comment-verifier-le-service-de-messagerie-inclus-dans-votre-compte-d-hebergement-chez-hostinger/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". Hostinger muestra el logotipo de Titan para Titan Email, un sobre para Hostinger Email y el logotipo de Workspace si has comprado Google Workspace.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Redirección del correo de Hostinger a Gmail: ¿cómo recibir tus correos después de enero de 2027?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Según Google, tu proveedor siempre puede transferir automáticamente tus mensajes a Gmail: la recepción se configura en Hostinger.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para ",
+              "type": "text"
+            },
+            {
+              "text": "Hostinger Email",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", la ",
+              "type": "text"
+            },
+            {
+              "text": "página de Hostinger sobre las redirecciones",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/fr/support/1583221-comment-configurer-un-redirecteur-pour-les-emails-d-hostinger/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", actualizada el 8 de mayo de 2026, indica el camino: en hPanel, ",
+              "type": "text"
+            },
+            {
+              "text": "«Emails»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", tu nombre de dominio, ",
+              "type": "text"
+            },
+            {
+              "text": "«Redirections»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", luego ",
+              "type": "text"
+            },
+            {
+              "text": "«Créer une redirection» (crear una redirección)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Elige el buzón de origen, escribe tu dirección de Gmail en ",
+              "type": "text"
+            },
+            {
+              "text": "«À l'adresse email»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (a la dirección de correo) y haz clic en ",
+              "type": "text"
+            },
+            {
+              "text": "«Créer» (crear)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Hostinger envía un enlace de verificación a la dirección de Gmail: haz clic en él para validar la redirección.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Con o sin copia en Hostinger?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Por defecto, Hostinger guarda una copia de cada correo en el buzón de Hostinger. El ajuste se cambia en ",
+              "type": "text"
+            },
+            {
+              "text": "«Gérer vos redirections»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (gestionar tus redirecciones), con el botón ",
+              "type": "text"
+            },
+            {
+              "text": "⋮",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " frente a la dirección, ",
+              "type": "text"
+            },
+            {
+              "text": "«Paramètres» (ajustes)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", luego el interruptor de las copias. Conserva la copia: tus correos se quedan en el webmail, desde donde responderás con la dirección profesional.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Y con Titan Email?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para Titan, la única ",
+              "type": "text"
+            },
+            {
+              "text": "página en francés",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/fr/support/5323121-comment-configurer-une-redirection-interne-pour-titan-email-chez-hostinger/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " que encontré describe un ",
+              "type": "text"
+            },
+            {
+              "text": "«Renvoi interne»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (reenvío interno) hacia otro buzón existente. No encontré ninguna página de Hostinger en francés para redirigir una dirección de Titan a Gmail: pregúntalo al soporte de Hostinger.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "La trampa: la redirección rechazada o clasificada como spam",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gmail puede rechazar un correo redirigido, o clasificarlo como spam, cuando falla en los controles de autenticidad tras este desvío. Google da sus ",
+              "type": "text"
+            },
+            {
+              "text": "consejos para la transferencia a Gmail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/mail/answer/175365?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " (ojo: esta página sigue recomendando «Enviar como», que deja de funcionar). Hostinger aclara, en inglés, en su página sobre ",
+              "type": "text"
+            },
+            {
+              "text": "los límites de la redirección",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/support/email-forwarding-known-limitations-and-alternatives/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", que un correo redirigido se bloquea cuando el remitente, un banco o PayPal por ejemplo, publica una regla DMARC estricta (la instrucción que dice qué hacer con un correo que falla en los controles). El primer día, envíate un correo desde otra dirección y mira la carpeta ",
+              "type": "text"
+            },
+            {
+              "text": "Spam",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " de Gmail.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Hostinger SMTP, IMAP: ¿cómo enviar con tu dirección de Hostinger sin «Enviar como»?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La redirección solo resuelve la recepción: si respondes desde Gmail, tu cliente ve tu dirección @gmail.com. Para responder con la dirección de Hostinger, existen cuatro caminos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "El webmail de Hostinger",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El webmail de Hostinger Email está en la dirección ",
+              "type": "text"
+            },
+            {
+              "text": "mail.hostinger.com",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", según la ",
+              "type": "text"
+            },
+            {
+              "text": "página del webmail de Hostinger",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/fr/support/1583218-comment-acceder-au-hostinger-e-mail-webmail/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", o en hPanel: ",
+              "type": "text"
+            },
+            {
+              "text": "«Emails»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", tu dominio, ",
+              "type": "text"
+            },
+            {
+              "text": "«Webmail»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". El de Titan está en la dirección ",
+              "type": "text"
+            },
+            {
+              "text": "hostinger.titan.email",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", según la ",
+              "type": "text"
+            },
+            {
+              "text": "página de Titan de Hostinger",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/fr/support/6281998-comment-acceder-au-webmail-pour-titan-e-mail-chez-hostinger/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". Es gratis, pero hay que abrir una segunda pestaña para responder.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Un programa de correo: Thunderbird, Outlook, Apple Mail",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para Hostinger Email, la ",
+              "type": "text"
+            },
+            {
+              "text": "página de Hostinger sobre los ajustes manuales",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/fr/support/1575756-comment-obtenir-les-details-de-la-configuration-d-un-compte-e-mail-sur-hpanel-hostinger/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra los ajustes en ",
+              "type": "text"
+            },
+            {
+              "text": "«Emails»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", tu dominio, ",
+              "type": "text"
+            },
+            {
+              "text": "«Paramètres de configuration» (parámetros de configuración)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "«Configuration manuelle» (configuración manual)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". El servidor IMAP (el protocolo que deja los correos en el servidor) es ",
+              "type": "text"
+            },
+            {
+              "text": "imap.hostinger.com",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", puerto ",
+              "type": "text"
+            },
+            {
+              "text": "993",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "SSL",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". El servidor de envío SMTP es ",
+              "type": "text"
+            },
+            {
+              "text": "smtp.hostinger.com",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", puerto ",
+              "type": "text"
+            },
+            {
+              "text": "465",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", ",
+              "type": "text"
+            },
+            {
+              "text": "SSL",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (si hay problemas, Hostinger indica el puerto ",
+              "type": "text"
+            },
+            {
+              "text": "587",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " en ",
+              "type": "text"
+            },
+            {
+              "text": "TLS",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " o ",
+              "type": "text"
+            },
+            {
+              "text": "STARTTLS",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": "). Según la ",
+              "type": "text"
+            },
+            {
+              "text": "página de Thunderbird de Hostinger",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/fr/support/4768584-comment-configurer-les-e-mails-hostinger-sur-mozilla-thunderbird/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", el nombre de usuario es la dirección completa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Configurar tu correo de Hostinger en la aplicación Gmail (Android, iPhone)",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Según Google, la aplicación Gmail del teléfono sigue aceptando una cuenta de otro proveedor, añadida aparte, para leer y enviar: no es «Enviar como». La ",
+              "type": "text"
+            },
+            {
+              "text": "página de Hostinger para Gmail en Android",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/fr/support/4768560-comment-configurer-l-email-hostinger-sur-gmail-pour-android/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " remite a los menús de Google y repite los mismos servidores; elige IMAP. No encontré ninguna página de Hostinger en francés para el iPhone.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Google Workspace",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Google Workspace es el Gmail profesional de Google: la dirección con tu nombre de dominio se convierte en un verdadero buzón de Gmail, en todas partes. Mi prueba está contada en ",
+              "type": "text"
+            },
+            {
+              "text": "pasar de Gmail gratuito a Google Workspace",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/passer-gmail-gratuit-google-workspace-adresse-professionnelle",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Pasar a Google Workspace con un dominio en Hostinger: ¿dónde cambiar los MX y el SPF?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si compras Workspace en Hostinger, su ",
+              "type": "text"
+            },
+            {
+              "text": "página sobre Google Workspace",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/fr/support/3223694-comment-configurer-google-workspace-sur-hostinger/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " indica hacer clic en ",
+              "type": "text"
+            },
+            {
+              "text": "«Configurer»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", luego en ",
+              "type": "text"
+            },
+            {
+              "text": "«Gérer» (gestionar)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " para crear el administrador; la ventana ",
+              "type": "text"
+            },
+            {
+              "text": "«Vérifier votre domaine»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (verificar tu dominio) da después un código que hay que añadir como registro TXT.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Todo se configura en la zona DNS, el directorio que dice dónde encontrar tu sitio y tus correos. La ",
+              "type": "text"
+            },
+            {
+              "text": "página de Hostinger sobre los registros DNS",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/fr/support/1583249-comment-gerer-mes-enregistrements-dns-chez-hostinger/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " indica: ",
+              "type": "text"
+            },
+            {
+              "text": "«Domaines» (dominios)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", tu dominio en ",
+              "type": "text"
+            },
+            {
+              "text": "«Mes domaines» (mis dominios)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", luego ",
+              "type": "text"
+            },
+            {
+              "text": "«DNS / Serveurs de noms» (DNS / servidores de nombres)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ". Los botones para modificar o eliminar una línea están a su derecha; la opción ",
+              "type": "text"
+            },
+            {
+              "text": "«Ajouter»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (añadir) crea una línea.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Los registros MX dicen qué servidor recibe tus correos. Los de Hostinger Email son ",
+              "type": "text"
+            },
+            {
+              "text": "mx1.hostinger.com",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (prioridad 5) y ",
+              "type": "text"
+            },
+            {
+              "text": "mx2.hostinger.com",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " (prioridad 10), según la ",
+              "type": "text"
+            },
+            {
+              "text": "página de MX de Hostinger",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/fr/support/4443666-comment-gerer-les-enregistrements-mx-chez-hostinger/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". Su ",
+              "type": "text"
+            },
+            {
+              "text": "página en inglés sobre los MX de Google Workspace",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/support/1583453-how-to-set-up-a-domain-for-google-workspace-email-at-hostinger/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " da un solo MX: ",
+              "type": "text"
+            },
+            {
+              "text": "smtp.google.com",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", prioridad ",
+              "type": "text"
+            },
+            {
+              "text": "1",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", host ",
+              "type": "text"
+            },
+            {
+              "text": "@",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": ", y pide eliminar los antiguos MX y SPF que apuntan a otro sitio. Es también lo que Google me pidió en mi dominio de prueba.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El SPF dice qué servidores pueden enviar para tu dominio. El de Hostinger es `v=spf1 include:_spf.mail.hostinger.com ~all`, según su ",
+              "type": "text"
+            },
+            {
+              "text": "página sobre el SPF",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.hostinger.com/fr/support/1583673-comment-ajouter-des-enregistrements-spf-pour-les-emails-chez-hostinger/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " (el de Google es `v=spf1 include:_spf.google.com ~all`). Google escribe que «Cada dominio puede tener un registro SPF» (",
+              "type": "text"
+            },
+            {
+              "text": "página sobre los registros SPF",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/a/answer/10683907?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "), que debe incluir todos los servidores que envían para el dominio, formularios de contacto incluidos (",
+              "type": "text"
+            },
+            {
+              "text": "página «Configurar SPF»",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/a/answer/33786?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "). Si tu sitio sigue enviando por el correo de Hostinger, conserva una sola línea que reúna los dos: `v=spf1 include:_spf.google.com include:_spf.mail.hostinger.com ~all`. No he probado esta línea en Hostinger. En mi prueba, el primer correo llegó a spam mientras faltaba el SPF de Google.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hostinger anuncia hasta 24 horas de propagación. Google advierte que hay que crear todas las direcciones ya utilizadas con el dominio antes del cambio; si no, sus correos se pierden. No sé qué pasa con los datos si luego se da de baja Google Workspace: las páginas de ayuda de Google se contradicen, no prometo nada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Qué solución elegir para tu dirección de Hostinger?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Recibes mucho y respondes poco: la redirección con copia, y el webmail para responder. Trabajas en un solo ordenador: Thunderbird u Outlook con los ajustes IMAP y SMTP de Hostinger, gratis, pero fuera de Gmail. Respondes sobre todo desde el teléfono: la aplicación Gmail con la cuenta de Hostinger en IMAP. Quieres mantener Gmail como hoy, en todas partes: Google Workspace, desde 6,80 € (IVA no incluido) por mes y por buzón con compromiso de un año hasta 8,10 € (IVA no incluido) sin compromiso, prueba de 14 días, precios de Google leídos el 19 de noviembre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Antes de elegir, puedes ",
+              "type": "text"
+            },
+            {
+              "text": "probar si tu dirección está afectada",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/gmail-envoyer-en-tant-que-mon-adresse-est-elle-concernee",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", luego ",
+              "type": "text"
+            },
+            {
+              "text": "verificar si tus correos llegan a la carpeta de spam",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/mes-mails-arrivent-en-spam",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " una vez que el nuevo ajuste esté en vigor. Si Gmail ya ha dejado de enviar, la guía ",
+              "type": "text"
+            },
+            {
+              "text": "Gmail ya no envía con mi dirección profesional",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/gmail-n-envoie-plus-avec-mon-adresse-professionnelle-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " parte del síntoma.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes sobre Hostinger y Gmail",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Se puede configurar aún un correo de Hostinger en Gmail en 2026?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En Gmail en el navegador, ya no para la recepción: según Google, la recuperación POP ya no acepta nuevos usuarios desde finales del primer trimestre de 2026. En la aplicación Gmail del teléfono, añadir una dirección de Hostinger en IMAP sigue siendo posible.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿La redirección de Hostinger a Gmail seguirá funcionando después de enero de 2027?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, según Google, la transferencia automática configurada en el proveedor continúa. La redirección de Hostinger sirve para recibir, no para enviar con la dirección de Hostinger.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cuáles son los servidores IMAP y SMTP de Hostinger?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para Hostinger Email, según el centro de ayuda de Hostinger: IMAP imap.hostinger.com, puerto 993, SSL; SMTP smtp.hostinger.com, puerto 465, SSL, o 587 en TLS o STARTTLS. El nombre de usuario es la dirección completa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cuál es la dirección del webmail de Hostinger?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Según el centro de ayuda de Hostinger, es mail.hostinger.com para Hostinger Email y hostinger.titan.email para Titan. Desde ahí se envía con la dirección de Hostinger sin ajustar nada en Gmail.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Hostinger ha publicado una página sobre el fin de la recuperación en Gmail?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, en inglés: anuncia el fin de Gmailify y del POP a partir de enero de 2026 y aconseja la aplicación Gmail en IMAP. La fecha de Google para la supresión completa es enero de 2027. El 19 de noviembre de 2026, no encontré ninguna versión en francés.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Pierdo los correos de Hostinger ya llegados a Gmail?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No, según Google: los mensajes ya importados en Gmail se quedan en el buzón. Si la recuperación estaba configurada sin copia en el servidor, esos correos antiguos ya solo están en Gmail.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Quién puede configurar mi dirección de Hostinger por mí?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si prefieres no tocar hPanel, puedo encargarme a distancia, ya sea una simple redirección o un paso a Google Workspace. También puedes ",
+              "type": "text"
+            },
+            {
+              "text": "encargar la configuración de tu dirección profesional en Gmail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/adresse-mail-professionnelle-gmail",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". El diagnóstico es gratuito, respondo en menos de 24 horas, y si el ajuste gratuito te basta, te lo digo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "7cdc8061-37d0-4dad-8c8b-2f0bdbbe1cd0",
+            "body": [
+              {
+                "_uid": "i-06b2f6e7-90b9-44c0-a3ae-83e1f9638a59",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Escribirme sobre mi dirección de correo",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
