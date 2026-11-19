@@ -88,11 +88,6 @@ export type DibodevGmailSendAsCheckPageContent = {
     authorBio: string
   }
   checker: DibodevGmailSendAsCheckerWording
-  offer: {
-    emphasizedIntro: string
-    text: string
-    linkLabel: string
-  }
   mobileContactBar: {
     text: string
     buttonLabel: string

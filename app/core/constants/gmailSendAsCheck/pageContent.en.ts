@@ -173,11 +173,6 @@ export const GMAIL_SEND_AS_CHECK_PAGE_EN: DibodevGmailSendAsCheckPageContent = {
       'I can handle it remotely: forwarding, domain name settings, the move to Google Workspace, sending tests. First advice free within 24 hours, and if a free setting is enough for you, I tell you so.',
     ctaLabel: 'Send my result',
   },
-  offer: {
-    emphasizedIntro: 'Would you rather not touch it?',
-    text: 'I set up your email remotely: I look at what is in place, I suggest the simplest solution, then I do the settings and the tests with you. First advice free, reply within 24 hours.',
-    linkLabel: 'Write to me about my address',
-  },
   mobileContactBar: {
     text: 'Need help with your address?',
     buttonLabel: 'Ask for free advice',
@@ -526,7 +521,7 @@ export const GMAIL_SEND_AS_CHECK_PAGE_EN: DibodevGmailSendAsCheckPageContent = {
       {
         question: 'Can you do the set-up for me?',
         answer:
-          'Yes, remotely: I look at what is in place with your host and in Gmail, I suggest the simplest solution, then I do the settings and the sending tests with you. The first advice is free, within 24 hours, and if a free setting is enough for you, I tell you so.',
+          'Yes, remotely: I look at what is in place with your host and in Gmail, I suggest the simplest solution, then I do the settings and the sending tests with you. The diagnosis is free, within 24 hours. Then from €90 to keep your free Gmail with forwarding, from €190 to upgrade it to Google Workspace, with the price given before I start. And if a free setting is enough for you, I tell you so.',
       },
     ],
   },

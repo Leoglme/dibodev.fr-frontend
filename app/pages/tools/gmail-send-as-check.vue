@@ -18,13 +18,9 @@
         :consumerMailboxGuide="consumerMailboxGuide"
         :trackingLocation="TRACKING_LOCATION"
       />
-      <DibodevContactPrompt
-        icon="Mail"
-        :emphasizedIntro="page.offer.emphasizedIntro"
-        :text="page.offer.text"
-        :linkLabel="page.offer.linkLabel"
-        :to="prefilledContactRoute"
-        :trackingLocation="`${TRACKING_LOCATION}_offer`"
+      <DibodevToolTeaser
+        :teaser="GMAIL_BUSINESS_EMAIL_SERVICE_TEASER"
+        :trackingLocation="`${TRACKING_LOCATION}_service`"
         tone="white"
         class="mt-6"
       />
@@ -194,7 +190,6 @@ import type { DibodevToolTeaserContent } from '~/core/types/DibodevToolTeaser'
 import { computed } from 'vue'
 import BlogRelatedArticles from '~/components/blog/BlogRelatedArticles.vue'
 import DibodevCallout from '~/components/data-displays/DibodevCallout.vue'
-import DibodevContactPrompt from '~/components/data-displays/DibodevContactPrompt.vue'
 import DibodevMobileContactBar from '~/components/data-displays/DibodevMobileContactBar.vue'
 import DibodevToolTeaser from '~/components/data-displays/DibodevToolTeaser.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
@@ -211,6 +206,7 @@ import DibodevToolLandingSection from '~/components/sections/DibodevToolLandingS
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { ORGANIZATION_ID, PERSON_ID } from '~/config/schema'
+import { GMAIL_BUSINESS_EMAIL_SERVICE_TEASER } from '~/core/constants/gmailBusinessEmailService/pageShared'
 import {
   GMAIL_SEND_AS_CHECK_PAGE_UPDATED_AT,
   GMAIL_SEND_AS_CHECKER_ANCHOR_ID,

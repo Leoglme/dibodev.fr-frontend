@@ -31,7 +31,10 @@
     tone="white"
   >
     <template #footer>
-      <DibodevWebsiteRedesignPrompt :trackingLocation="`${props.trackingLocation}_redesign`" />
+      <DibodevWebsiteRedesignPrompt
+        v-if="props.shouldShowWebsiteRedesignPrompt"
+        :trackingLocation="`${props.trackingLocation}_redesign`"
+      />
     </template>
   </DibodevPricingSection>
 
@@ -142,6 +145,10 @@ const props: DibodevUpdateServicePageSectionsProps = defineProps({
     type: Array as PropType<number[]>,
     required: true,
   },
+  hasStartingPrices: {
+    type: Boolean as PropType<boolean>,
+    default: false,
+  },
   relatedArticleSlugs: {
     type: Array as PropType<string[]>,
     default: (): string[] => [],
@@ -161,6 +168,10 @@ const props: DibodevUpdateServicePageSectionsProps = defineProps({
   shareImageIcon: {
     type: String as PropType<DibodevToolShareImageIcon>,
     required: true,
+  },
+  shouldShowWebsiteRedesignPrompt: {
+    type: Boolean as PropType<boolean>,
+    default: true,
   },
 })
 
@@ -193,10 +204,11 @@ const relatedArticles: ComputedRef<DibodevArticle[]> = computed((): DibodevArtic
 
 /** The priced offers of the JSON-LD, one per card, in the page language. */
 const schemaOffers: SchemaServiceOfferDefinition[] = props.page.offers.cards.map(
-  (card: DibodevPricingOffer, index: number): SchemaServiceOfferDefinition => ({
-    name: card.title,
-    price: props.offerPricesInEuros[index] ?? 0,
-  }),
+  (card: DibodevPricingOffer, index: number): SchemaServiceOfferDefinition => {
+    const price: number = props.offerPricesInEuros[index] ?? 0
+
+    return { name: card.title, price, isStartingPrice: props.hasStartingPrices && price > 0 }
+  },
 )
 
 useHead({

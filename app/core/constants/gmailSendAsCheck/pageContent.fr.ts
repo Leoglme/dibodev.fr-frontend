@@ -153,11 +153,6 @@ export const GMAIL_SEND_AS_CHECK_PAGE_FR: DibodevGmailSendAsCheckPageContent = {
     ctaIntro: `Je peux m’en occuper à distance${NBSP}: transfert, réglages du nom de domaine, passage à Google Workspace, essais d’envoi. Premier avis gratuit sous 24${NBSP}h, et si un réglage gratuit vous suffit, je vous le dis.`,
     ctaLabel: 'Envoyer mon résultat',
   },
-  offer: {
-    emphasizedIntro: `Vous ne voulez pas y toucher${NBSP}?`,
-    text: `Je règle votre messagerie à distance${NBSP}: je regarde ce qui est en place, je vous propose la solution la plus simple, puis je fais les réglages et les essais avec vous. Premier avis gratuit, réponse sous 24${NBSP}h.`,
-    linkLabel: 'M’écrire au sujet de mon adresse',
-  },
   mobileContactBar: {
     text: `Besoin d’aide pour votre adresse${NBSP}?`,
     buttonLabel: 'Demander un avis gratuit',
@@ -476,7 +471,7 @@ export const GMAIL_SEND_AS_CHECK_PAGE_FR: DibodevGmailSendAsCheckPageContent = {
       },
       {
         question: `Pouvez-vous faire le réglage à ma place${NBSP}?`,
-        answer: `Oui, à distance${NBSP}: je regarde ce qui est en place chez votre hébergeur et dans Gmail, je vous propose la solution la plus simple, puis je fais les réglages et les essais d’envoi avec vous. Le premier avis est gratuit, sous 24${NBSP}h, et si un réglage gratuit vous suffit, je vous le dis.`,
+        answer: `Oui, à distance${NBSP}: je regarde ce qui est en place chez votre hébergeur et dans Gmail, je vous propose la solution la plus simple, puis je fais les réglages et les essais d’envoi avec vous. Le diagnostic est gratuit, sous 24${NBSP}h. Ensuite, à partir de 90${NBSP}€ pour garder votre Gmail gratuit avec un transfert, à partir de 190${NBSP}€ pour le passer en Google Workspace, prix annoncé avant de commencer. Et si un réglage gratuit vous suffit, je vous le dis.`,
       },
     ],
   },

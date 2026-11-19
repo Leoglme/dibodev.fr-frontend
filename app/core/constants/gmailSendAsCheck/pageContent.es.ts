@@ -176,11 +176,6 @@ export const GMAIL_SEND_AS_CHECK_PAGE_ES: DibodevGmailSendAsCheckPageContent = {
     ctaIntro: `Puedo ocuparme a distancia: reenvío, ajustes del nombre de dominio, paso a Google Workspace, pruebas de envío. Primera opinión gratuita en 24${NBSP}h, y si te basta con un ajuste gratuito, te lo digo.`,
     ctaLabel: 'Enviar mi resultado',
   },
-  offer: {
-    emphasizedIntro: '¿No quieres tocar nada?',
-    text: `Configuro tu correo a distancia: miro lo que hay, te propongo la solución más sencilla, y luego hago los ajustes y las pruebas contigo. Primera opinión gratuita, respuesta en 24${NBSP}h.`,
-    linkLabel: 'Escribirme sobre mi dirección',
-  },
   mobileContactBar: {
     text: '¿Necesitas ayuda con tu dirección?',
     buttonLabel: 'Pedir una opinión gratuita',
@@ -527,7 +522,7 @@ export const GMAIL_SEND_AS_CHECK_PAGE_ES: DibodevGmailSendAsCheckPageContent = {
       },
       {
         question: '¿Puedes hacer el ajuste por mí?',
-        answer: `Sí, a distancia: miro lo que hay en tu proveedor y en Gmail, te propongo la solución más sencilla, y luego hago los ajustes y las pruebas de envío contigo. La primera opinión es gratuita, en 24${NBSP}h, y si te basta con un ajuste gratuito, te lo digo.`,
+        answer: `Sí, a distancia: miro lo que hay en tu proveedor y en Gmail, te propongo la solución más sencilla, y luego hago los ajustes y las pruebas de envío contigo. El diagnóstico es gratuito, en 24${NBSP}h. Después, desde 90${NBSP}€ para conservar tu Gmail gratuito con un reenvío, desde 190${NBSP}€ para pasarlo a Google Workspace, con el precio anunciado antes de empezar. Y si te basta con un ajuste gratuito, te lo digo.`,
       },
     ],
   },

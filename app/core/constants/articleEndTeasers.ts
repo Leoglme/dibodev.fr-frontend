@@ -1,4 +1,5 @@
 import type { DibodevToolTeaserContent } from '~/core/types/DibodevToolTeaser'
+import { GMAIL_BUSINESS_EMAIL_SERVICE_TEASER } from '~/core/constants/gmailBusinessEmailService/pageShared'
 import { PHP_UPDATE_SERVICE_TEASER } from '~/core/constants/phpUpdateService/pageShared'
 
 /** Teaser shown at the end of an article instead of the business software one, for articles on another subject. */
@@ -10,4 +11,10 @@ export const ARTICLE_END_TEASERS_BY_SLUG: Record<string, DibodevToolTeaserConten
   'changer-version-php-hostinger-faille-octobre-2026': PHP_UPDATE_SERVICE_TEASER,
   'changer-version-php-infomaniak-faille-octobre-2026': PHP_UPDATE_SERVICE_TEASER,
   'changer-version-php-planethoster-faille-octobre-2026': PHP_UPDATE_SERVICE_TEASER,
+  'gmail-n-envoie-plus-avec-mon-adresse-professionnelle-que-faire': GMAIL_BUSINESS_EMAIL_SERVICE_TEASER,
+  'passer-gmail-gratuit-google-workspace-adresse-professionnelle': GMAIL_BUSINESS_EMAIL_SERVICE_TEASER,
+  'mail-ovh-sur-gmail-janvier-2027-que-faire': GMAIL_BUSINESS_EMAIL_SERVICE_TEASER,
+  'mail-o2switch-sur-gmail-janvier-2027-que-faire': GMAIL_BUSINESS_EMAIL_SERVICE_TEASER,
+  'mail-ionos-sur-gmail-janvier-2027-que-faire': GMAIL_BUSINESS_EMAIL_SERVICE_TEASER,
+  'mail-orange-free-sfr-sur-gmail-janvier-2027-que-faire': GMAIL_BUSINESS_EMAIL_SERVICE_TEASER,
 }
