@@ -6,7 +6,7 @@
         {{ wording.sentTitle }}
       </p>
       <p class="text-sm leading-6 text-white/75">
-        {{ hasContactConsent ? wording.sentTextWithContactConsent : wording.sentText }}
+        {{ hasContactConsent ? toolSpecificWording.sentTextWithContactConsent : wording.sentText }}
       </p>
     </div>
 
@@ -52,7 +52,7 @@
           name="contactConsent"
           class="accent-primary mt-1 h-4 w-4 shrink-0 cursor-pointer"
         />
-        <span>{{ wording.contactConsent }}</span>
+        <span>{{ toolSpecificWording.contactConsent }}</span>
       </label>
 
       <div class="sr-only" aria-hidden="true">
@@ -78,8 +78,10 @@ import type { ComputedRef, PropType, Ref, WritableComputedRef } from 'vue'
 import type { SupportedLocale } from '~/core/constants/categorySlugs'
 import type { DibodevSiteCheckErrorKind } from '~/core/types/DibodevSiteCheck'
 import type {
+  DibodevSiteCheckAnswers,
   DibodevSiteCheckReportFormProps,
   DibodevSiteCheckReportFormState,
+  DibodevSiteCheckReportFormToolSpecificWording,
   DibodevSiteCheckReportFormWording,
   DibodevSiteCheckReportResponse,
   DibodevSiteCheckToolKey,
@@ -97,7 +99,7 @@ import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 import { QuizTextUtils } from '~/core/utils/QuizTextUtils'
 import { SiteCheckErrorUtils } from '~/core/utils/SiteCheckErrorUtils'
 
-/** The server runs the check again and writes the e-mail itself: the page only sends the checker, the site and the address. */
+/** The server runs the check again and writes the e-mail itself: the page only sends the checker, the site, the address and the answers given to its questions. */
 const props: DibodevSiteCheckReportFormProps = defineProps({
   tool: {
     type: String as PropType<DibodevSiteCheckToolKey>,
@@ -110,6 +112,10 @@ const props: DibodevSiteCheckReportFormProps = defineProps({
   verdict: {
     type: String as PropType<string>,
     required: true,
+  },
+  checkAnswers: {
+    type: Object as PropType<DibodevSiteCheckAnswers | null>,
+    default: null,
   },
   trackingLocation: {
     type: String as PropType<string>,
@@ -139,8 +145,12 @@ const wording: ComputedRef<DibodevSiteCheckReportFormWording> = computed(
     SITE_CHECK_REPORT_FORM_WORDING[pageLocale.value] ?? SITE_CHECK_REPORT_FORM_WORDING.fr,
 )
 
+const toolSpecificWording: ComputedRef<DibodevSiteCheckReportFormToolSpecificWording> = computed(
+  (): DibodevSiteCheckReportFormToolSpecificWording => wording.value.toolSpecificWordings[props.tool] ?? wording.value,
+)
+
 const introText: ComputedRef<string> = computed((): string =>
-  QuizTextUtils.fillTemplate(wording.value.intro, { site: props.site }),
+  QuizTextUtils.fillTemplate(toolSpecificWording.value.intro, { site: props.site }),
 )
 
 const canSubmit: ComputedRef<boolean> = computed(
@@ -186,6 +196,7 @@ async function requestReport(): Promise<void> {
         email: email.value.trim(),
         locale: pageLocale.value,
         contactConsent,
+        checkAnswers: props.checkAnswers,
         pagePath: route.path,
         website: honeypotValue.value,
       },
@@ -214,11 +225,8 @@ async function requestReport(): Promise<void> {
   }
 }
 
-watch(
-  (): string => props.site,
-  (): void => {
-    state.value = 'idle'
-    errorKind.value = null
-  },
-)
+watch([(): string => props.site, (): DibodevSiteCheckAnswers | null => props.checkAnswers], (): void => {
+  state.value = 'idle'
+  errorKind.value = null
+})
 </script>

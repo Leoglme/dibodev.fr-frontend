@@ -9,14 +9,11 @@ export const SITE_CHECK_TOOL_KEYS: SiteCheckToolKey[] = [
   'emailDeliverability',
   'websiteHealth',
   'gdprCookie',
+  'gmailSendAs',
 ]
 
 /** Every checker counted in the statistics, the ones without an e-mail report included. */
-export const SITE_CHECK_STATS_TOOL_KEYS: SiteCheckStatsToolKey[] = [
-  ...SITE_CHECK_TOOL_KEYS,
-  'aiReadability',
-  'gmailSendAs',
-]
+export const SITE_CHECK_STATS_TOOL_KEYS: SiteCheckStatsToolKey[] = [...SITE_CHECK_TOOL_KEYS, 'aiReadability']
 
 /** The page of each checker in each language; mirrors the `i18n.paths` of `app/pages/tools/*.vue`. */
 export const SITE_CHECK_TOOL_PAGE_PATHS: Record<SiteCheckToolKey, Record<MailLocale, string>> = {
@@ -49,6 +46,11 @@ export const SITE_CHECK_TOOL_PAGE_PATHS: Record<SiteCheckToolKey, Record<MailLoc
     fr: '/outils/site-conforme-rgpd-cookies',
     en: '/en/tools/gdpr-cookie-check',
     es: '/es/herramientas/web-cumple-rgpd-cookies',
+  },
+  gmailSendAs: {
+    fr: '/outils/gmail-envoyer-en-tant-que-mon-adresse-est-elle-concernee',
+    en: '/en/tools/gmail-send-mail-as-is-my-address-affected',
+    es: '/es/herramientas/gmail-enviar-como-mi-direccion-esta-afectada',
   },
 }
 

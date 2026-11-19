@@ -27,3 +27,16 @@ export type GmailSendAsCheckResult = {
 export type GmailSendAsCheckQuery = {
   domain?: string
 }
+
+export type GmailSendAsReadingAnswer = 'inGmail' | 'elsewhere'
+
+export type GmailSendAsSendingAnswer = 'domainAddress' | 'gmailAddress' | 'unknown'
+
+export type GmailSendAsReceivingAnswer = 'listed' | 'notListed' | 'unknown'
+
+/** Mirror of `DibodevGmailSendAsAnswers`: what the visitor answered on the page, null for a question not answered. */
+export type GmailSendAsAnswers = {
+  reading: GmailSendAsReadingAnswer | null
+  sending: GmailSendAsSendingAnswer | null
+  receiving: GmailSendAsReceivingAnswer | null
+}

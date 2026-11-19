@@ -1,4 +1,5 @@
 import type { MailLocale } from '~~/server/types/mail/contact'
+import type { GmailSendAsAnswers } from '~~/server/types/tools/gmailSendAsCheck'
 
 export type SiteCheckToolKey =
   | 'phpVulnerability'
@@ -7,6 +8,7 @@ export type SiteCheckToolKey =
   | 'emailDeliverability'
   | 'websiteHealth'
   | 'gdprCookie'
+  | 'gmailSendAs'
 
 export type SiteCheckReportLevel = 'ok' | 'warning' | 'critical' | 'unknown' | 'info'
 
@@ -43,6 +45,7 @@ export type SiteCheckReport = {
   guides: SiteCheckReportLink[]
 }
 
+/** `checkAnswers` is kept for the Gmail checker only: its verdict depends on answers the server cannot read anywhere. */
 export type SiteCheckReportRequest = {
   id: string
   tool: SiteCheckToolKey
@@ -50,6 +53,7 @@ export type SiteCheckReportRequest = {
   email: string
   locale: MailLocale
   contactConsent: boolean
+  checkAnswers: GmailSendAsAnswers | null
   pagePath: string | null
   receivedAt: string
 }
@@ -85,6 +89,19 @@ export type SiteCheckEmailRecordState = {
   text: string
 }
 
+/** The texts of the e-mail that name what was checked: a checker that does not test a website words them in its own way. */
+export type SiteCheckReportMailToolSpecificTexts = {
+  replySubject: (host: string) => string
+  helpIntro: string
+  footerTextWithContactConsent: string
+}
+
+/** What the owner's notice says the visitor agreed to: the sentence of its preview and text part, and its chip. */
+export type SiteCheckLeadConsentTexts = {
+  sentence: string
+  chipText: string
+}
+
 /** Never a price, never a tracking pixel. */
 export type SiteCheckReportMailTexts = {
   fromName: string
@@ -97,6 +114,8 @@ export type SiteCheckReportMailTexts = {
   adviceLabel: string
   labelSeparator: string
   detailedToolsTitle: string
+  unrecognizedMailHostName: string
+  mailHostGuideLabel: string
   testAgainIntro: string
   testAgainLabel: string
   helpIntro: string
@@ -108,6 +127,7 @@ export type SiteCheckReportMailTexts = {
   hiddenValue: string
   injectedContentSummary: (count: number) => string
   externalScriptsSummary: (count: number) => string
+  toolSpecificTexts: Partial<Record<SiteCheckToolKey, SiteCheckReportMailToolSpecificTexts>>
 }
 
 export type SiteCheckReportLevelColors = {

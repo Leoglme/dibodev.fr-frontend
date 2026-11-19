@@ -1,6 +1,7 @@
 import type { DateTime } from 'luxon'
 import type { ContactMailAction, ContactMailDetailRow } from '~~/server/types/mail/contact'
 import type {
+  SiteCheckLeadConsentTexts,
   SiteCheckMailContent,
   SiteCheckReport,
   SiteCheckReportLevel,
@@ -9,9 +10,11 @@ import type {
   SiteCheckReportMailSection,
   SiteCheckReportMailStep,
   SiteCheckReportMailTexts,
+  SiteCheckReportMailToolSpecificTexts,
   SiteCheckReportPoint,
   SiteCheckReportRequest,
   SiteCheckReportSection,
+  SiteCheckToolKey,
 } from '~~/server/types/tools/siteCheckReport'
 import { NBSP } from '~~/app/core/constants/typography'
 import { registerHandlebarsHelpers } from '~~/server/helpers/HandlebarsHelpers'
@@ -35,7 +38,16 @@ import { SiteCheckReportTextUtils } from '~~/server/utils/SiteCheckReportTextUti
 const TEST_SUBJECT_PREFIX: string = process.env.NODE_ENV === 'production' ? '' : '[TEST] '
 const OWNER_REPLY_ACTION_LABEL: string = 'Écrire'
 const OWNER_HEADER_TITLE: string = 'Contact outil'
-const OWNER_CONSENT_SENTENCE: string = 'Le visiteur accepte d’être recontacté au sujet de ce site.'
+const OWNER_CONSENT_TEXTS: SiteCheckLeadConsentTexts = {
+  sentence: 'Le visiteur accepte d’être recontacté au sujet de ce site.',
+  chipText: 'A accepté d’être recontacté au sujet de ce site',
+}
+const OWNER_TOOL_SPECIFIC_CONSENT_TEXTS: Partial<Record<SiteCheckToolKey, SiteCheckLeadConsentTexts>> = {
+  gmailSendAs: {
+    sentence: 'Le visiteur accepte d’être recontacté au sujet de cette adresse.',
+    chipText: 'A accepté d’être recontacté au sujet de cette adresse',
+  },
+}
 const OWNER_FOOTER_TEXT: string =
   'Envoyé par les outils gratuits de dibodev.fr, avec l’accord du visiteur. Répondre à cet e\u2011mail écrit directement au visiteur.'
 const LEVEL_COLORS: Record<SiteCheckReportLevel, SiteCheckReportLevelColors> = {
@@ -61,10 +73,13 @@ export class SiteCheckReportMailService {
     registerHandlebarsHelpers()
 
     const texts: SiteCheckReportMailTexts = SITE_CHECK_REPORT_MAIL_TEXTS[request.locale]
+    const toolSpecificTexts: SiteCheckReportMailToolSpecificTexts = this.findToolSpecificTexts(texts, report.tool)
     const toolName: string = texts.toolNames[report.tool]
     const subject: string = `${TEST_SUBJECT_PREFIX}${texts.subject(toolName, report.host)}`
     const testAgainUrl: string = SiteCheckReportTextUtils.buildToolPageUrl(report.tool, request.locale)
-    const footerText: string = request.contactConsent ? texts.footerTextWithContactConsent : texts.footerText
+    const footerText: string = request.contactConsent
+      ? toolSpecificTexts.footerTextWithContactConsent
+      : texts.footerText
     const steps: SiteCheckReportMailStep[] = report.steps.map(
       (step: string, index: number): SiteCheckReportMailStep => ({ number: index + 1, text: step }),
     )
@@ -90,7 +105,7 @@ export class SiteCheckReportMailService {
         testAgainIntro: texts.testAgainIntro,
         testAgainLabel: texts.testAgainLabel,
         testAgainUrl,
-        helpIntro: texts.helpIntro,
+        helpIntro: toolSpecificTexts.helpIntro,
         signOff: texts.signOff,
         signature: EMAIL_SIGNATURE_HTML,
         footerText,
@@ -139,11 +154,13 @@ export class SiteCheckReportMailService {
     const receivedAt: DateTime = MailDateUtils.fromIsoInParis(request.receivedAt)
     const subject: string = `${TEST_SUBJECT_PREFIX}${OWNER_HEADER_TITLE} · ${toolName} · ${report.host} · ${verdictLabel}`
     const qualification: string = `${toolName} · ${verdictLabel}`
+    const consentTexts: SiteCheckLeadConsentTexts =
+      OWNER_TOOL_SPECIFIC_CONSENT_TEXTS[report.tool] ?? OWNER_CONSENT_TEXTS
     const actions: ContactMailAction[] = buildOwnerActions(
       request.email,
       null,
       OWNER_REPLY_ACTION_LABEL,
-      SITE_CHECK_REPORT_MAIL_TEXTS[request.locale].replySubject(report.host),
+      this.findToolSpecificTexts(SITE_CHECK_REPORT_MAIL_TEXTS[request.locale], report.tool).replySubject(report.host),
     )
     const contactRows: ContactMailDetailRow[] = buildOwnerDetailRows({
       email: request.email,
@@ -160,10 +177,10 @@ export class SiteCheckReportMailService {
       viewPath: 'site-check-lead',
       payload: {
         subject,
-        preheader: `${qualification}. ${OWNER_CONSENT_SENTENCE}`,
+        preheader: `${qualification}. ${consentTexts.sentence}`,
         headerTitle: OWNER_HEADER_TITLE,
         headerMeta: MailDateUtils.formatFrenchShortDateAndTime(receivedAt),
-        chipText: 'A accepté d’être recontacté au sujet de ce site',
+        chipText: consentTexts.chipText,
         host: report.host,
         qualification,
         actions,
@@ -181,7 +198,7 @@ export class SiteCheckReportMailService {
     const textContent: string = [
       `${OWNER_HEADER_TITLE}${NBSP}: ${report.host}`,
       qualification,
-      OWNER_CONSENT_SENTENCE,
+      consentTexts.sentence,
       '',
       'Le visiteur',
       ...formatDetailRowsAsText(contactRows),
@@ -214,6 +231,19 @@ export class SiteCheckReportMailService {
       fromName: mail.fromName,
       replyTo: { Email: request.email },
     })
+  }
+
+  /**
+   * The texts that name what was checked: the checker's own when it has some, otherwise the shared ones about a site.
+   * @param {SiteCheckReportMailTexts} texts - The texts of the e-mail.
+   * @param {SiteCheckToolKey} tool - The checker.
+   * @returns {SiteCheckReportMailToolSpecificTexts} The texts to write for this checker.
+   */
+  private static findToolSpecificTexts(
+    texts: SiteCheckReportMailTexts,
+    tool: SiteCheckToolKey,
+  ): SiteCheckReportMailToolSpecificTexts {
+    return texts.toolSpecificTexts[tool] ?? texts
   }
 
   /**
@@ -310,7 +340,7 @@ export class SiteCheckReportMailService {
       texts.testAgainIntro,
       `${texts.testAgainLabel}${texts.labelSeparator}${testAgainUrl}`,
       '',
-      texts.helpIntro,
+      this.findToolSpecificTexts(texts, report.tool).helpIntro,
       '',
       texts.signOff,
       EMAIL_SIGNATURE_TEXT,

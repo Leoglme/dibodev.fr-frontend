@@ -1,4 +1,5 @@
 import type { MailLocale } from '~~/server/types/mail/contact'
+import type { GmailSendAsAnswers } from '~~/server/types/tools/gmailSendAsCheck'
 import type {
   SiteCheckLeadRecord,
   SiteCheckReport,
@@ -9,9 +10,15 @@ import type {
 } from '~~/server/types/tools/siteCheckReport'
 import { randomUUID } from 'node:crypto'
 import { createError } from 'h3'
+import {
+  GMAIL_SEND_AS_READING_ANSWERS,
+  GMAIL_SEND_AS_RECEIVING_ANSWERS,
+  GMAIL_SEND_AS_SENDING_ANSWERS,
+} from '~~/server/constants/gmailSendAsCheck'
 import { SITE_CHECK_TOOL_KEYS } from '~~/server/constants/siteCheckTools'
 import { EmailDeliverabilityCheckService } from '~~/server/services/EmailDeliverabilityCheckService'
 import { GdprCookieCheckService } from '~~/server/services/GdprCookieCheckService'
+import { GmailSendAsCheckService } from '~~/server/services/GmailSendAsCheckService'
 import { JoomlaVersionCheckService } from '~~/server/services/JoomlaVersionCheckService'
 import { PhpVulnerabilityCheckService } from '~~/server/services/PhpVulnerabilityCheckService'
 import { WebsiteHealthCheckService } from '~~/server/services/WebsiteHealthCheckService'
@@ -21,6 +28,7 @@ import { SiteCheckReportMailService } from '~~/server/services/mail/SiteCheckRep
 import { SITE_CHECK_REPORT_MAIL_TEXTS } from '~~/server/services/mail/siteCheckReportMailTexts'
 import { EmailDeliverabilityReportService } from '~~/server/services/siteCheckReport/EmailDeliverabilityReportService'
 import { GdprCookieReportService } from '~~/server/services/siteCheckReport/GdprCookieReportService'
+import { GmailSendAsReportService } from '~~/server/services/siteCheckReport/GmailSendAsReportService'
 import { JoomlaVersionReportService } from '~~/server/services/siteCheckReport/JoomlaVersionReportService'
 import { PhpVulnerabilityReportService } from '~~/server/services/siteCheckReport/PhpVulnerabilityReportService'
 import { WebsiteHealthReportService } from '~~/server/services/siteCheckReport/WebsiteHealthReportService'
@@ -55,7 +63,7 @@ export class SiteCheckReportService {
   }
 
   /**
-   * Checks a request: a known checker, a usable public site or domain, an e-mail address and the consent as a boolean.
+   * Checks a request: a known checker, a usable public site or domain, an e-mail address, the consent as a boolean and the answers of the Gmail checker.
    * @param {Record<string, unknown>} body - The raw request body.
    * @returns {SiteCheckReportRequest} The request, ready to be run.
    * @throws {H3Error} 400 when a field is missing or not usable.
@@ -76,6 +84,7 @@ export class SiteCheckReportService {
       throw createError({ statusCode: 400, statusMessage: 'Invalid payload: email is not an e-mail address.' })
     }
     const locale: MailLocale = resolveMailLocale(this.readTextField(body.locale, 5))
+    const checkAnswers: GmailSendAsAnswers | null = this.readCheckAnswers(tool, body.checkAnswers)
 
     return {
       id: randomUUID(),
@@ -84,6 +93,7 @@ export class SiteCheckReportService {
       email,
       locale,
       contactConsent: body.contactConsent === true,
+      checkAnswers,
       pagePath: PagePathUtils.normalize(body.pagePath),
       receivedAt: new Date().toISOString(),
     }
@@ -182,6 +192,13 @@ export class SiteCheckReportService {
         )
       case 'gdprCookie':
         return GdprCookieReportService.build(await GdprCookieCheckService.checkHost(request.site), request.locale)
+      case 'gmailSendAs':
+        return GmailSendAsReportService.build(
+          await GmailSendAsCheckService.checkDomain(request.site),
+          request.checkAnswers,
+          request.locale,
+          texts,
+        )
     }
   }
 
@@ -234,9 +251,59 @@ export class SiteCheckReportService {
    * @returns {string | null} The host or domain, or null when it is not usable.
    */
   private static normalizeSite(tool: SiteCheckToolKey, site: string): string | null {
-    return tool === 'emailDeliverability'
+    return tool === 'emailDeliverability' || tool === 'gmailSendAs'
       ? EmailDeliverabilityCheckService.normalizeDomain(site)
       : PhpVulnerabilityCheckService.normalizeHost(site)
+  }
+
+  /**
+   * Reads the answers given to the questions of a checker: only the Gmail checker asks some, the others keep none.
+   * @param {SiteCheckToolKey} tool - The checker.
+   * @param {unknown} checkAnswers - The raw `checkAnswers` of the request body.
+   * @returns {GmailSendAsAnswers | null} The answers, or null when the checker asks nothing or nothing was sent.
+   * @throws {H3Error} 400 when a question is unknown or an answer is not one of those the checker offers.
+   */
+  private static readCheckAnswers(tool: SiteCheckToolKey, checkAnswers: unknown): GmailSendAsAnswers | null {
+    if (tool !== 'gmailSendAs' || checkAnswers === undefined || checkAnswers === null) {
+      return null
+    }
+    if (typeof checkAnswers !== 'object' || Array.isArray(checkAnswers)) {
+      throw createError({ statusCode: 400, statusMessage: 'Invalid payload: checkAnswers is not a record of answers.' })
+    }
+    const answers: GmailSendAsAnswers = { reading: null, sending: null, receiving: null }
+    const givenAnswers: [string, unknown][] = Object.entries(checkAnswers)
+    for (const [question, answer] of givenAnswers) {
+      if (question === 'reading') {
+        answers.reading = this.readOfferedAnswer(GMAIL_SEND_AS_READING_ANSWERS, answer)
+      } else if (question === 'sending') {
+        answers.sending = this.readOfferedAnswer(GMAIL_SEND_AS_SENDING_ANSWERS, answer)
+      } else if (question === 'receiving') {
+        answers.receiving = this.readOfferedAnswer(GMAIL_SEND_AS_RECEIVING_ANSWERS, answer)
+      } else {
+        throw createError({ statusCode: 400, statusMessage: 'Invalid payload: unknown question in checkAnswers.' })
+      }
+    }
+    return answers
+  }
+
+  /**
+   * One answer of a question: null when it was not answered, otherwise one of the answers the checker offers.
+   * @param {TAnswer[]} offeredAnswers - The answers the question offers.
+   * @param {unknown} answer - The raw answer.
+   * @returns {TAnswer | null} The answer, or null for a question not answered.
+   * @throws {H3Error} 400 when the answer is not one of those offered.
+   */
+  private static readOfferedAnswer<TAnswer extends string>(offeredAnswers: TAnswer[], answer: unknown): TAnswer | null {
+    if (answer === undefined || answer === null) {
+      return null
+    }
+    const offeredAnswer: TAnswer | undefined = offeredAnswers.find(
+      (candidate: TAnswer): boolean => candidate === answer,
+    )
+    if (offeredAnswer === undefined) {
+      throw createError({ statusCode: 400, statusMessage: 'Invalid payload: an answer is not one the checker offers.' })
+    }
+    return offeredAnswer
   }
 
   /**

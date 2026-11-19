@@ -131,6 +131,16 @@
         <p v-if="outcome" class="text-sm leading-6 text-white/70">{{ props.wording.disclaimer }}</p>
       </div>
 
+      <DibodevSiteCheckReportForm
+        v-if="result && outcome"
+        tool="gmailSendAs"
+        :site="result.domain"
+        :verdict="outcome.verdict"
+        :checkAnswers="answers"
+        :trackingLocation="props.trackingLocation"
+        class="relative"
+      />
+
       <div class="relative grid gap-3">
         <p class="text-[15px] leading-6 text-white/85">
           {{ outcome ? props.wording.ctaIntro : props.wording.idleCtaIntro }}
@@ -173,6 +183,7 @@ import { computed, nextTick, ref, watch } from 'vue'
 import DibodevInput from '~/components/core/DibodevInput.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import DibodevTogglePillGroup from '~/components/ui/DibodevTogglePillGroup.vue'
+import DibodevSiteCheckReportForm from '~/forms/DibodevSiteCheckReportForm.vue'
 import { useTracking } from '~/composables/useTracking'
 import {
   GMAIL_SEND_AS_CHECK_API_PATH,

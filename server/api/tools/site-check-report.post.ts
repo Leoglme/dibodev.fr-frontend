@@ -5,7 +5,7 @@ import { SiteCheckReportService } from '~~/server/services/SiteCheckReportServic
 
 /**
  * POST /api/tools/site-check-report : e-mails the result of a free check, and the contact to the owner when accepted.
- * @param {H3Event} event - The request, with `{ tool, site, email, locale, contactConsent, pagePath, website }` as body.
+ * @param {H3Event} event - The request, with `{ tool, site, email, locale, contactConsent, checkAnswers, pagePath, website }` as body.
  * @returns {Promise<SiteCheckReportResponse>} `sent`, or `ignored` when the honeypot was filled.
  * @throws {H3Error} 400 for an unusable request, 429 when asked too often, 502 for an unreadable site, 500 on mail failure.
  */

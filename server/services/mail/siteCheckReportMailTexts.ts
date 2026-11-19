@@ -59,6 +59,18 @@ export const SITE_CHECK_VERDICT_LABELS_FR: Record<SiteCheckToolKey, Record<strin
     atRisk: 'à risque',
     unknown: 'page illisible',
   },
+  gmailSendAs: {
+    bothAffected: 'envoi et réception touchés',
+    sendingAffected: 'envoi touché',
+    receivingAffected: 'réception touchée',
+    notAffected: 'pas concernée',
+    toCheck: 'à vérifier dans Gmail',
+    notInGmail: 'pas lue dans Gmail',
+    googleHosted: 'hébergée chez Google',
+    gmailAddress: 'adresse Gmail',
+    noMailSetup: 'pas de mail sur le domaine',
+    invalidDomain: 'domaine introuvable',
+  },
 }
 
 /** Texts of the e-mail that carries the result of a check to the visitor. */
@@ -72,6 +84,7 @@ export const SITE_CHECK_REPORT_MAIL_TEXTS: Record<MailLocale, SiteCheckReportMai
       emailDeliverability: 'Mails en spam',
       websiteHealth: 'Tester mon site',
       gdprCookie: 'Site conforme RGPD',
+      gmailSendAs: 'Gmail, janvier 2027',
     },
     subject: (toolName: string, host: string): string => `Votre résultat «${NBSP}${toolName}${NBSP}» pour ${host}`,
     preheader: (toolName: string, host: string): string =>
@@ -86,6 +99,8 @@ export const SITE_CHECK_REPORT_MAIL_TEXTS: Record<MailLocale, SiteCheckReportMai
     adviceLabel: `Quoi faire${NBSP}:`,
     labelSeparator: `${NBSP}: `,
     detailedToolsTitle: 'Les tests détaillés à faire ensuite',
+    unrecognizedMailHostName: 'un hébergeur que l’outil ne reconnaît pas',
+    mailHostGuideLabel: 'Lire le guide pas à pas',
     testAgainIntro: `Vous avez corrigé quelque chose${NBSP}? Relancez le test pour vérifier.`,
     testAgainLabel: 'Refaire le test',
     helpIntro: `Besoin d’un coup de main pour corriger${NBSP}? Répondez simplement à cet e${NON_BREAKING_HYPHEN}mail${NBSP}: je regarde votre site avec vous, sans engagement.`,
@@ -103,6 +118,13 @@ export const SITE_CHECK_REPORT_MAIL_TEXTS: Record<MailLocale, SiteCheckReportMai
       count === 1
         ? `La page charge des scripts depuis un domaine que je ne connais pas. À vérifier${NBSP}: un service que vous avez choisi, ou pas. Son nom est sur la page du test.`
         : `La page charge des scripts depuis ${count} domaines que je ne connais pas. À vérifier${NBSP}: des services que vous avez choisis, ou pas. Leurs noms sont sur la page du test.`,
+    toolSpecificTexts: {
+      gmailSendAs: {
+        replySubject: (host: string): string => `Votre adresse du domaine ${host}`,
+        helpIntro: `Besoin d’un coup de main pour corriger${NBSP}? Répondez simplement à cet e${NON_BREAKING_HYPHEN}mail${NBSP}: je regarde votre adresse avec vous, sans engagement.`,
+        footerTextWithContactConsent: `Vous recevez cet e${NON_BREAKING_HYPHEN}mail parce que vous avez demandé ce résultat sur dibodev.fr et accepté d’être recontacté au sujet de cette adresse. Votre adresse est gardée un an au plus, pour cela seulement.`,
+      },
+    },
   },
   en: {
     fromName: 'Léo Guillaume · Dibodev',
@@ -113,6 +135,7 @@ export const SITE_CHECK_REPORT_MAIL_TEXTS: Record<MailLocale, SiteCheckReportMai
       emailDeliverability: 'Emails in spam',
       websiteHealth: 'Test my website',
       gdprCookie: 'GDPR-compliant website',
+      gmailSendAs: 'Gmail, January 2027',
     },
     subject: (toolName: string, host: string): string => `Your “${toolName}” result for ${host}`,
     preheader: (toolName: string, host: string): string => `The “${toolName}” test of ${host}, with what to do.`,
@@ -126,6 +149,8 @@ export const SITE_CHECK_REPORT_MAIL_TEXTS: Record<MailLocale, SiteCheckReportMai
     adviceLabel: 'What to do:',
     labelSeparator: ': ',
     detailedToolsTitle: 'The detailed tests to run next',
+    unrecognizedMailHostName: 'a host the tool does not recognise',
+    mailHostGuideLabel: 'Read the step-by-step guide',
     testAgainIntro: 'Fixed something? Run the test again to check.',
     testAgainLabel: 'Run the test again',
     helpIntro: `Need a hand to fix it? Simply reply to this e${NON_BREAKING_HYPHEN}mail: I will look at your website with you, with no commitment.`,
@@ -143,6 +168,13 @@ export const SITE_CHECK_REPORT_MAIL_TEXTS: Record<MailLocale, SiteCheckReportMai
       count === 1
         ? 'The page loads scripts from a domain I do not know. To check: a service you chose, or not. Its name is on the test page.'
         : `The page loads scripts from ${count} domains I do not know. To check: services you chose, or not. Their names are on the test page.`,
+    toolSpecificTexts: {
+      gmailSendAs: {
+        replySubject: (host: string): string => `Your address on the domain ${host}`,
+        helpIntro: `Need a hand to fix it? Simply reply to this e${NON_BREAKING_HYPHEN}mail: I will look at your address with you, with no commitment.`,
+        footerTextWithContactConsent: `You receive this e${NON_BREAKING_HYPHEN}mail because you asked for this result on dibodev.fr and agreed to be contacted about this address. Your address is kept for a year at most, for that purpose only.`,
+      },
+    },
   },
   es: {
     fromName: 'Léo Guillaume · Dibodev',
@@ -153,6 +185,7 @@ export const SITE_CHECK_REPORT_MAIL_TEXTS: Record<MailLocale, SiteCheckReportMai
       emailDeliverability: 'Correos en spam',
       websiteHealth: 'Probar mi web',
       gdprCookie: 'Web conforme al RGPD',
+      gmailSendAs: 'Gmail, enero de 2027',
     },
     subject: (toolName: string, host: string): string => `Tu resultado «${toolName}» para ${host}`,
     preheader: (toolName: string, host: string): string =>
@@ -167,6 +200,8 @@ export const SITE_CHECK_REPORT_MAIL_TEXTS: Record<MailLocale, SiteCheckReportMai
     adviceLabel: 'Qué hacer:',
     labelSeparator: ': ',
     detailedToolsTitle: 'Las pruebas detalladas que hacer después',
+    unrecognizedMailHostName: 'un proveedor que la herramienta no reconoce',
+    mailHostGuideLabel: 'Leer la guía paso a paso',
     testAgainIntro: '¿Has corregido algo? Vuelve a lanzar la prueba para comprobarlo.',
     testAgainLabel: 'Repetir la prueba',
     helpIntro:
@@ -187,5 +222,14 @@ export const SITE_CHECK_REPORT_MAIL_TEXTS: Record<MailLocale, SiteCheckReportMai
       count === 1
         ? 'La página carga scripts desde un dominio que no conozco. Hay que comprobarlo: un servicio que elegiste, o no. Su nombre está en la página de la prueba.'
         : `La página carga scripts desde ${count} dominios que no conozco. Hay que comprobarlo: servicios que elegiste, o no. Sus nombres están en la página de la prueba.`,
+    toolSpecificTexts: {
+      gmailSendAs: {
+        replySubject: (host: string): string => `Tu dirección del dominio ${host}`,
+        helpIntro:
+          '¿Necesitas ayuda para corregirlo? Responde simplemente a este correo: miro tu dirección contigo, sin compromiso.',
+        footerTextWithContactConsent:
+          'Recibes este correo porque pediste este resultado en dibodev.fr y aceptaste que te contacten sobre esta dirección. Tu dirección se guarda un año como máximo, solo para eso.',
+      },
+    },
   },
 }

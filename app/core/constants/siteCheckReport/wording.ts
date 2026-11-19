@@ -30,6 +30,13 @@ export const SITE_CHECK_REPORT_FORM_WORDING: Record<SupportedLocale, DibodevSite
       unreachable: `Le site ne répond plus${NBSP}: relancez le test, puis réessayez.`,
       failed: 'Réessayez dans une minute, ou écrivez-moi directement.',
     },
+    toolSpecificWordings: {
+      gmailSendAs: {
+        intro: `Le résultat pour {site}, avec ce qu’il faut faire, dans votre boîte mail. À garder, ou à transférer à la personne qui s’occupe de votre messagerie.`,
+        contactConsent: 'J’accepte que Léo Guillaume (Dibodev) me recontacte au sujet de cette adresse.',
+        sentTextWithContactConsent: `Le résultat arrive dans votre boîte mail d’ici une minute. Je reviendrai vers vous au sujet de cette adresse.`,
+      },
+    },
   },
   en: {
     title: 'Get this result by e-mail',
@@ -54,6 +61,15 @@ export const SITE_CHECK_REPORT_FORM_WORDING: Record<SupportedLocale, DibodevSite
       unreachable: 'The website no longer answers: run the test again, then retry.',
       failed: 'Try again in a minute, or write to me directly.',
     },
+    toolSpecificWordings: {
+      gmailSendAs: {
+        intro:
+          'The result for {site}, with what to do, in your inbox. To keep, or to forward to whoever looks after your email.',
+        contactConsent: 'I agree that Léo Guillaume (Dibodev) may contact me about this address.',
+        sentTextWithContactConsent:
+          'The result reaches your inbox within a minute. I will get back to you about this address.',
+      },
+    },
   },
   es: {
     title: 'Recibir este resultado por correo',
@@ -77,6 +93,15 @@ export const SITE_CHECK_REPORT_FORM_WORDING: Record<SupportedLocale, DibodevSite
       rateLimited: 'Demasiadas solicitudes seguidas. Vuelve a intentarlo dentro de una hora.',
       unreachable: 'La web ya no responde: repite la prueba y vuelve a intentarlo.',
       failed: 'Vuelve a intentarlo en un minuto, o escríbeme directamente.',
+    },
+    toolSpecificWordings: {
+      gmailSendAs: {
+        intro:
+          'El resultado para {site}, con lo que hay que hacer, en tu bandeja de entrada. Para guardarlo o reenviarlo a quien se ocupa de tu correo.',
+        contactConsent: 'Acepto que Léo Guillaume (Dibodev) me contacte sobre esta dirección.',
+        sentTextWithContactConsent:
+          'El resultado llega a tu bandeja de entrada en un minuto. Volveré a contactarte sobre esta dirección.',
+      },
     },
   },
 }
