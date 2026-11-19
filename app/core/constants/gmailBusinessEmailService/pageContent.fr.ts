@@ -3,8 +3,8 @@ import { NBSP } from '~/core/constants/typography'
 
 export const GMAIL_BUSINESS_EMAIL_SERVICE_PAGE_FR: DibodevUpdateServicePageContent = {
   meta: {
-    title: `Adresse mail pro dans Gmail${NBSP}: réglage à distance dès 90${NBSP}€`,
-    description: `Gmail gratuit arrête «${NBSP}Envoyer en tant que${NBSP}» en janvier 2027. Je règle votre adresse professionnelle à distance${NBSP}: diagnostic gratuit, à partir de 90${NBSP}€.`,
+    title: `Adresse pro sur Gmail${NBSP}: configuration à distance dès 90${NBSP}€`,
+    description: `Gmail gratuit arrête «${NBSP}Envoyer en tant que${NBSP}» en janvier 2027. Je configure votre adresse professionnelle à distance${NBSP}: diagnostic gratuit, à partir de 90${NBSP}€.`,
     serviceName: 'Réglage de l’adresse mail professionnelle dans Gmail et passage à Google Workspace',
   },
   breadcrumbLabel: 'Adresse mail professionnelle dans Gmail',
@@ -169,7 +169,7 @@ export const GMAIL_BUSINESS_EMAIL_SERVICE_PAGE_FR: DibodevUpdateServicePageConte
     title: 'Avant de m’écrire',
     questions: [
       {
-        question: `Qui peut régler mon adresse mail professionnelle dans Gmail avant janvier 2027${NBSP}?`,
+        question: `Qui peut configurer mon adresse mail professionnelle sur Gmail avant janvier 2027${NBSP}?`,
         answer: `Trois personnes peuvent le faire${NBSP}: vous-même, avec le guide de votre hébergeur (les guides OVHcloud, o2switch et IONOS sont sur ce site)${NBSP}; le webmaster qui a installé votre adresse${NBSP}; ou un développeur comme moi, qui regarde ce qui est en place, vous propose la solution la plus simple, fait les réglages chez l’hébergeur et teste l’envoi et la réception. Le diagnostic est gratuit, et vous avez le prix avant l’intervention${NBSP}: à partir de 90${NBSP}€ pour garder votre Gmail gratuit, à partir de 190${NBSP}€ pour le passer en Google Workspace.`,
       },
       {

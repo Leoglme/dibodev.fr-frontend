@@ -11,7 +11,7 @@ export const GMAIL_SEND_AS_CHECK_PAGE_EN: DibodevGmailSendAsCheckPageContent = {
   meta: {
     title: 'Gmail “Send mail as” ends in 2027: free address check',
     description:
-      'From January 2027, free Gmail no longer sends with an address hosted elsewhere and no longer fetches its mail. Enter your address: verdict and solutions.',
+      'Free Gmail stops “Send mail as” and POP3 fetching for an address hosted elsewhere from January 2027. Enter your address: verdict and solutions.',
     inLanguage: 'en',
     schemaAbout: 'End of “Send mail as”, “Check mail from other accounts” and Gmailify in Gmail in January 2027',
   },
@@ -197,7 +197,7 @@ export const GMAIL_SEND_AS_CHECK_PAGE_EN: DibodevGmailSendAsCheckPageContent = {
       },
       {
         contextLabel: 'January 2027',
-        title: '“Check mail from other accounts” stops too',
+        title: '“Check mail from other accounts” (POP3 fetching) stops too',
         text: 'Gmail will no longer fetch the mail of another mailbox: “Fetching emails from third-party accounts into your Gmail account, with POP, will no longer be supported.” The option disappears from Gmail on a computer, and Gmailify stops at the same time.',
         sourceName: GMAILIFY_AND_POP_SOURCE_NAME,
         sourceUrl: GMAILIFY_AND_POP_URL,
@@ -309,7 +309,7 @@ export const GMAIL_SEND_AS_CHECK_PAGE_EN: DibodevGmailSendAsCheckPageContent = {
   solutions: {
     anchorId: 'solutions',
     eyebrow: 'The solutions',
-    title: 'Five solutions, from free to €8.10 a month',
+    title: 'Five alternatives to “Send mail as”, from free to €8.10 a month',
     intro:
       'What each one keeps, what it costs, and who it suits. Google’s prices for France, read on 19 November 2026.',
     solutionColumnLabel: 'Solution',
@@ -474,6 +474,16 @@ export const GMAIL_SEND_AS_CHECK_PAGE_EN: DibodevGmailSendAsCheckPageContent = {
           'Google writes “Starting January 2027”, without giving a day. The published timeline plans a notification in Gmail in the third quarter of 2026, a transition period until the end of 2026, then full removal in January 2027. This page is updated if Google clarifies or moves the date.',
       },
       {
+        question: 'Is Gmail ending POP3 in 2027?',
+        answer:
+          'Yes, for fetching: from January 2027, according to Google, Gmail no longer fetches by POP3 the mail of an address hosted elsewhere (the “Check mail from other accounts” setting). Reading your Gmail address in Outlook or Thunderbird does not change, and the Gmail app on a phone can still read another address, added as a separate account.',
+      },
+      {
+        question: 'The end was announced for January 2026: why does my mail fetching still work?',
+        answer:
+          'Several articles had announced January 2026. The Google help page, read on 19 November 2026, says the feature no longer accepts new users after the first quarter of 2026 and that existing users keep it until January 2027. A fetch that is already set up therefore works until that date.',
+      },
+      {
         question: 'Is my business address at OVH, o2switch or IONOS affected?',
         answer:
           'Yes, if you read it or write with it in a free Gmail account. An address on your own domain name hosted with OVHcloud, o2switch, IONOS or another host is, for Gmail, a third-party email account. It is not affected if you use it in the webmail of the host, in Outlook or Thunderbird, or if the mail of the domain is with Google Workspace.',
@@ -507,6 +517,11 @@ export const GMAIL_SEND_AS_CHECK_PAGE_EN: DibodevGmailSendAsCheckPageContent = {
         question: 'What is Gmailify, and what changes?',
         answer:
           'Gmailify applies Gmail features (spam protection, categories, search) to a Yahoo, Outlook or other mailbox linked to Gmail. Google stops it at the same time as fetching mail from other accounts, in January 2027.',
+      },
+      {
+        question: 'Is Gmail becoming a paid service in January 2027?',
+        answer:
+          'No. Free Gmail stays free: only “Send mail as” for addresses hosted elsewhere, “Check mail from other accounts” and Gmailify stop. Google Workspace (€6.80 excluding tax per month with a one-year commitment, the price read for France) is only one of the five solutions, and the other four are free.',
       },
       {
         question: 'How much does Google Workspace cost for a single address?',

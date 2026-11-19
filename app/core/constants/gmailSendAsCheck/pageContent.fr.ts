@@ -10,7 +10,7 @@ const GMAILIFY_AND_POP_SOURCE_NAME: string = 'Aide Gmail, Gmailify et accès POP
 export const GMAIL_SEND_AS_CHECK_PAGE_FR: DibodevGmailSendAsCheckPageContent = {
   meta: {
     title: `Gmail «${NBSP}Envoyer en tant que${NBSP}»${NBSP}: fin en 2027, test gratuit`,
-    description: `À partir de janvier 2027, Gmail gratuit n’envoie plus avec une adresse hébergée ailleurs et ne la relève plus. Entrez votre adresse${NBSP}: verdict et solutions.`,
+    description: `Gmail gratuit arrête «${NBSP}Envoyer en tant que${NBSP}» et la relève POP3 d’une autre adresse à partir de janvier 2027. Entrez votre adresse${NBSP}: verdict et solutions.`,
     inLanguage: 'fr-FR',
     schemaAbout:
       'Fin de « Envoyer en tant que », de « Consulter d’autres comptes de messagerie » et de Gmailify dans Gmail en janvier 2027',
@@ -177,7 +177,7 @@ export const GMAIL_SEND_AS_CHECK_PAGE_FR: DibodevGmailSendAsCheckPageContent = {
       },
       {
         contextLabel: 'Janvier 2027',
-        title: `«${NBSP}Consulter d’autres comptes de messagerie${NBSP}» s’arrête aussi`,
+        title: `«${NBSP}Consulter d’autres comptes de messagerie${NBSP}» (relève POP3) s’arrête aussi`,
         text: `Gmail n’ira plus chercher les mails d’une autre boîte. Google écrit que «${NBSP}l’extraction d’e-mails depuis des comptes tiers dans votre compte Gmail via l’accès POP ne sera plus prise en charge${NBSP}». L’option disparaît de Gmail sur ordinateur, et Gmailify s’arrête en même temps.`,
         sourceName: GMAILIFY_AND_POP_SOURCE_NAME,
         sourceUrl: GMAILIFY_AND_POP_URL,
@@ -282,7 +282,7 @@ export const GMAIL_SEND_AS_CHECK_PAGE_FR: DibodevGmailSendAsCheckPageContent = {
   solutions: {
     anchorId: 'solutions',
     eyebrow: 'Les solutions',
-    title: `Cinq solutions, de gratuite à 8,10${NBSP}€ par mois`,
+    title: `Cinq alternatives à «${NBSP}Envoyer en tant que${NBSP}», de gratuite à 8,10${NBSP}€ par mois`,
     intro: 'Ce que chacune garde, ce qu’elle coûte, et pour qui elle convient. Prix de Google lus le 19 novembre 2026.',
     solutionColumnLabel: 'Solution',
     coverageColumnLabel: 'Ce que vous gardez',
@@ -434,6 +434,14 @@ export const GMAIL_SEND_AS_CHECK_PAGE_FR: DibodevGmailSendAsCheckPageContent = {
         answer: `Google écrit «${NBSP}à partir de janvier 2027${NBSP}», sans donner de jour. Le calendrier publié prévoit une notification dans Gmail au troisième trimestre 2026, une période de transition jusqu’à la fin de 2026, puis la suppression complète en janvier 2027. Cette page est mise à jour si Google précise ou déplace la date.`,
       },
       {
+        question: `Gmail arrête-t-il le POP3 en 2027${NBSP}?`,
+        answer: `Oui pour la relève${NBSP}: à partir de janvier 2027, d’après Google, Gmail n’ira plus récupérer par POP3 les mails d’une adresse hébergée ailleurs (réglage «${NBSP}Consulter d’autres comptes de messagerie${NBSP}»). Lire son adresse Gmail dans Outlook ou Thunderbird ne change pas, et l’application Gmail du téléphone peut toujours lire une autre adresse, ajoutée comme un compte à part.`,
+      },
+      {
+        question: `La fin était annoncée pour janvier 2026${NBSP}: pourquoi ma relève marche-t-elle encore${NBSP}?`,
+        answer: `Plusieurs articles avaient annoncé janvier 2026. La page d’aide de Google, lue le 19 novembre 2026, écrit que la fonction n’accepte plus de nouveaux utilisateurs après le premier trimestre 2026 et que les utilisateurs existants la gardent jusqu’en janvier 2027. Une relève déjà réglée marche donc jusqu’à cette date.`,
+      },
+      {
         question: `Mon adresse professionnelle OVH, o2switch ou IONOS est-elle concernée${NBSP}?`,
         answer: `Oui, si vous la lisez ou si vous écrivez avec elle dans un compte Gmail gratuit. Une adresse à votre nom de domaine hébergée chez OVHcloud, o2switch, IONOS ou un autre hébergeur est, pour Gmail, un compte de messagerie tiers. Elle n’est pas concernée si vous l’utilisez dans le webmail de l’hébergeur, dans Outlook ou Thunderbird, ou si les mails du domaine sont chez Google Workspace.`,
       },
@@ -460,6 +468,10 @@ export const GMAIL_SEND_AS_CHECK_PAGE_FR: DibodevGmailSendAsCheckPageContent = {
       {
         question: `Gmailify, c’est quoi, et qu’est-ce qui change${NBSP}?`,
         answer: `Gmailify applique les fonctions de Gmail (antispam, catégories, recherche) à une boîte Yahoo, Outlook ou autre reliée à Gmail. Google l’arrête en même temps que la récupération des autres comptes, en janvier 2027.`,
+      },
+      {
+        question: `Gmail devient-il payant en janvier 2027${NBSP}?`,
+        answer: `Non. Le Gmail gratuit reste gratuit${NBSP}: seuls s’arrêtent «${NBSP}Envoyer en tant que${NBSP}» pour les adresses hébergées ailleurs, «${NBSP}Consulter d’autres comptes de messagerie${NBSP}» et Gmailify. Google Workspace (6,80${NBSP}€ HT par mois avec un an d’engagement) n’est qu’une des cinq solutions, et les quatre autres sont gratuites.`,
       },
       {
         question: `Combien coûte Google Workspace pour une seule adresse${NBSP}?`,

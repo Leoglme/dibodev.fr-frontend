@@ -11,7 +11,7 @@ export const GMAIL_SEND_AS_CHECK_PAGE_ES: DibodevGmailSendAsCheckPageContent = {
   meta: {
     title: 'Gmail «Enviar como»: fin en 2027, prueba gratuita',
     description:
-      'A partir de enero de 2027, Gmail gratuito ya no envía con una dirección alojada en otro proveedor ni la recoge. Escribe tu dirección: veredicto y soluciones.',
+      'Gmail gratuito retira «Enviar como» y la recogida por POP3 de una dirección alojada en otro proveedor desde enero de 2027. Escribe tu dirección: veredicto.',
     inLanguage: 'es',
     schemaAbout:
       'Fin de «Enviar como», de «Consultar el correo de otras cuentas» y de Gmailify en Gmail en enero de 2027',
@@ -200,7 +200,7 @@ export const GMAIL_SEND_AS_CHECK_PAGE_ES: DibodevGmailSendAsCheckPageContent = {
       },
       {
         contextLabel: 'Enero de 2027',
-        title: '«Consultar el correo de otras cuentas» también deja de funcionar',
+        title: '«Consultar el correo de otras cuentas» (recogida por POP3) también deja de funcionar',
         text: 'Gmail ya no recogerá los correos de otro buzón: Google escribe que «ya no se podrá obtener correos de cuentas de terceros en tu cuenta de Gmail con POP». La opción desaparece de Gmail para ordenadores, y Gmailify se retira al mismo tiempo.',
         sourceName: GMAILIFY_AND_POP_SOURCE_NAME,
         sourceUrl: GMAILIFY_AND_POP_URL,
@@ -313,7 +313,7 @@ export const GMAIL_SEND_AS_CHECK_PAGE_ES: DibodevGmailSendAsCheckPageContent = {
   solutions: {
     anchorId: 'soluciones',
     eyebrow: 'Las soluciones',
-    title: `Cinco soluciones, desde gratis hasta 8,10${NBSP}€ al mes`,
+    title: `Cinco alternativas a «Enviar como», desde gratis hasta 8,10${NBSP}€ al mes`,
     intro:
       'Qué conserva cada una, cuánto cuesta y a quién le conviene. Precios de Google para Francia, leídos el 19 de noviembre de 2026.',
     solutionColumnLabel: 'Solución',
@@ -478,6 +478,16 @@ export const GMAIL_SEND_AS_CHECK_PAGE_ES: DibodevGmailSendAsCheckPageContent = {
           'Google escribe «A partir de enero del 2027», sin dar el día. El calendario publicado prevé una notificación en Gmail en el tercer trimestre de 2026, un periodo de transición hasta finales de 2026, y luego la eliminación completa en enero de 2027. Esta página se actualiza si Google concreta o mueve la fecha.',
       },
       {
+        question: '¿Gmail deja de usar POP3 en 2027?',
+        answer:
+          'Sí, para la recogida: a partir de enero de 2027, según Google, Gmail ya no recogerá por POP3 los correos de una dirección alojada en otro proveedor (ajuste «Consultar el correo de otras cuentas»). Leer tu dirección de Gmail en Outlook o Thunderbird no cambia, y la aplicación Gmail del móvil puede seguir leyendo otra dirección, añadida como una cuenta aparte.',
+      },
+      {
+        question: 'El final estaba anunciado para enero de 2026: ¿por qué mi recogida de correo sigue funcionando?',
+        answer:
+          'Varios artículos habían anunciado enero de 2026. La página de ayuda de Google, leída el 19 de noviembre de 2026, dice que la función ya no acepta usuarios nuevos después del primer trimestre de 2026 y que los usuarios actuales la conservan hasta enero de 2027. Una recogida ya configurada funciona, por tanto, hasta esa fecha.',
+      },
+      {
         question: '¿Mi dirección profesional de OVH, o2switch o IONOS está afectada?',
         answer:
           'Sí, si la lees o escribes con ella en una cuenta de Gmail gratuita. Una dirección con tu nombre de dominio alojada en OVHcloud, o2switch, IONOS u otro proveedor de hosting es, para Gmail, una cuenta de correo de terceros. No está afectada si la usas en el webmail del proveedor, en Outlook o Thunderbird, o si los correos del dominio están en Google Workspace.',
@@ -510,6 +520,10 @@ export const GMAIL_SEND_AS_CHECK_PAGE_ES: DibodevGmailSendAsCheckPageContent = {
         question: '¿Qué es Gmailify y qué cambia?',
         answer:
           'Gmailify aplica las funciones de Gmail (antispam, categorías, búsqueda) a un buzón de Yahoo, Outlook u otro conectado a Gmail. Google lo retira al mismo tiempo que la recogida del correo de otras cuentas, en enero de 2027.',
+      },
+      {
+        question: '¿Gmail pasa a ser de pago en enero de 2027?',
+        answer: `No. El Gmail gratuito sigue siendo gratuito: solo dejan de funcionar «Enviar como» para las direcciones alojadas en otros proveedores, «Consultar el correo de otras cuentas» y Gmailify. Google Workspace (6,80${NBSP}€ sin impuestos al mes con un año de compromiso, precio leído para Francia) es solo una de las cinco soluciones, y las otras cuatro son gratuitas.`,
       },
       {
         question: '¿Cuánto cuesta Google Workspace para una sola dirección?',
