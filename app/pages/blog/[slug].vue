@@ -110,6 +110,7 @@ import type { StoryblokVersion } from '~/services/types/storyblok'
 import type { DibodevArticleHeading } from '~/core/utils/articleHeadings'
 import type { DibodevContactPromptContent, DibodevContactPromptWording } from '~/core/types/DibodevContactPrompt'
 import type { DibodevToolTeaserContent } from '~/core/types/DibodevToolTeaser'
+import type { DibodevFaqQuestion } from '~/core/types/DibodevFaqSection'
 import { StoryblokArticleService } from '~/services/storyblokArticleService'
 import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
@@ -120,12 +121,14 @@ import { TOOL_TEASERS_BY_ARTICLE_SLUG } from '~/core/constants/tools/toolTeasers
 import { ArticleIntroUtils } from '~/core/utils/ArticleIntroUtils'
 import { BUSINESS_SOFTWARE_PAGE_TEASER } from '~/core/constants/businessSoftwarePageTeaser'
 import { buildArticleSchemaJson } from '~/config/articleSchema'
+import { buildFaqSchemaJson } from '~/config/faqSchema'
 import { buildShareImageMeta } from '~/config/shareImage'
 import { buildSharePreviewDetailsMeta } from '~/config/sharePreviewDetails'
 import { PERSON_NAME } from '~/config/schema'
 import { usePageShareImage } from '~/composables/usePageShareImage'
 import { extractArticleHeadings } from '~/core/utils/articleHeadings'
 import { StoryblokImageUtils } from '~/core/utils/StoryblokImageUtils'
+import { ArticleFaqUtils } from '~/core/utils/ArticleFaqUtils'
 import { ArticleSimilarityUtils } from '~/core/utils/ArticleSimilarityUtils'
 import { formatArticleDate } from '~/core/utils/formatArticleDate'
 
@@ -217,6 +220,9 @@ const headings: ComputedRef<DibodevArticleHeading[]> = computed((): DibodevArtic
 )
 
 const hasTableOfContents: ComputedRef<boolean> = computed((): boolean => headings.value.length >= MIN_HEADINGS_FOR_TOC)
+const faqQuestions: ComputedRef<DibodevFaqQuestion[]> = computed((): DibodevFaqQuestion[] =>
+  article.value ? ArticleFaqUtils.extractQuestions(article.value.content) : [],
+)
 const toolTeasers: ComputedRef<DibodevToolTeaserContent[]> = useToolTeasers((): DibodevToolTeaserContent[] =>
   TOOL_TEASERS_BY_ARTICLE_SLUG[slug] ? [TOOL_TEASERS_BY_ARTICLE_SLUG[slug]] : [],
 )
@@ -312,6 +318,9 @@ useHead((): Record<string, unknown> => {
         type: 'application/ld+json',
         innerHTML: buildArticleSchemaJson(article.value, canonicalUrl, schemaImageUrl, locale.value),
       },
+      ...(faqQuestions.value.length > 0
+        ? [{ type: 'application/ld+json', innerHTML: buildFaqSchemaJson(faqQuestions.value) }]
+        : []),
     ],
   }
 })
