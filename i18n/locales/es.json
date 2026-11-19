@@ -246,6 +246,7 @@
       "eInvoicingScope": "Factura electrónica: ¿me afecta?",
       "wordpressHackCheck": "Web WordPress hackeada: comprobar",
       "emailDeliverabilityCheck": "Correos en spam: comprobar SPF, DKIM, DMARC",
+      "gmailSendAsCheck": "Gmail, enero de 2027: ¿mi dirección está afectada?",
       "websiteHealthCheck": "Probar mi web: 8 comprobaciones",
       "googleUpdateImpactCheck": "Actualización de Google: ¿mi web está afectada?",
       "aiReadabilityCheck": "¿Puede ChatGPT leer mi web?",
@@ -657,6 +658,23 @@
           "incident": "incidencia en curso en el hosting",
           "maintenance": "mantenimiento en curso en el hosting",
           "unknown": "estado desconocido"
+        }
+      },
+      "gmailSendAs": {
+        "messageWithDomain": "Hola:\nacabo de probar mi dirección de {domain} con la herramienta «Gmail, enero de 2027: ¿mi dirección está afectada?». Resultado: «{verdict}».\n¿Puedes decirme qué solución me conviene?\nNúmero de direcciones en este dominio: ",
+        "messageWithoutDomain": "Hola:\nleo mi dirección profesional en Gmail y me gustaría saber qué cambia para mí en enero de 2027 y qué hacer.\nMi dirección profesional: \nMi proveedor de correo, si lo conozco: ",
+        "verdicts": {
+          "bothAffected": "el envío y la recepción en Gmail dejan de funcionar",
+          "sendingAffected": "el envío con esta dirección desde Gmail deja de funcionar",
+          "receivingAffected": "la recepción en Gmail deja de funcionar",
+          "notAffected": "no afectada con mis ajustes actuales",
+          "toCheck": "por comprobar en Gmail",
+          "notInGmail": "no afectada, no uso Gmail para esta dirección",
+          "googleHosted": "no afectada, dirección alojada en Google",
+          "gmailAddress": "dirección de Gmail, no afectada",
+          "noMailSetup": "ningún correo configurado en el dominio",
+          "invalidDomain": "dominio no encontrado",
+          "unknown": "prueba sin terminar"
         }
       },
       "emailDeliverability": {
@@ -1152,7 +1170,7 @@
     },
     "siteChecks": {
       "title": "Herramientas de comprobación de webs",
-      "paragraph1": "Cuando pruebas una web con una herramienta gratuita del sitio (vulnerabilidad PHP, WordPress hackeado, correos en spam, Probar mi web, web conforme al RGPD, web legible por ChatGPT), guardo la dirección de la web probada (o el dominio, para los correos), la herramienta usada, el resultado, algunos indicadores técnicos (por ejemplo la versión de PHP o los rastreadores vistos) y la fecha, en un archivo en mi servidor. Estos datos solo sirven para elaborar estadísticas, como la proporción de webs que cargan Google Analytics sin consentimiento, y se borran al cabo de 12 meses. Nunca los uso para hacer prospección, nunca los publico web por web y no los transmito a nadie. Ni tu dirección IP ni tu dirección de correo figuran en ellos.",
+      "paragraph1": "Cuando pruebas una web con una herramienta gratuita del sitio (vulnerabilidad PHP, WordPress hackeado, correos en spam, Probar mi web, web conforme al RGPD, web legible por ChatGPT, dirección afectada por el cambio de Gmail), guardo la dirección de la web probada (o el dominio, para los correos), la herramienta usada, el resultado, algunos indicadores técnicos (por ejemplo la versión de PHP o los rastreadores vistos) y la fecha, en un archivo en mi servidor. Estos datos solo sirven para elaborar estadísticas, como la proporción de webs que cargan Google Analytics sin consentimiento, y se borran al cabo de 12 meses. Nunca los uso para hacer prospección, nunca los publico web por web y no los transmito a nadie. Ni tu dirección IP ni tu dirección de correo figuran en ellos.",
       "paragraph2": "Si pides recibir el resultado por correo, tu dirección solo sirve para enviártelo: no se guarda. Si además marcas la casilla para que te contacten sobre esta web, recibo por correo tu dirección, la web probada y su resultado, y se guarda una copia en un archivo en mi servidor un año como máximo, solo para contactarte sobre ello. Los correos salen por el proveedor Mailjet (servidores en la Unión Europea).",
       "paragraph3": "Estos tratamientos se basan en mi interés legítimo para las estadísticas y en tu consentimiento para que te contacten. Puedes oponerte, retirar tu consentimiento o pedir que se borre una web o un contacto en cualquier momento, escribiéndome a la dirección indicada en «Tus derechos»."
     },

@@ -104,6 +104,14 @@ export const TRACKING_EVENTS = {
   aiReadabilityCheckStarted: 'ai_readability_check_started',
   /** A site checked by the AI readability checker, with the verdict and the number of robots blocked (or the error), never the link. */
   aiReadabilityChecked: 'ai_readability_checked',
+  /** First address typed in the Gmail "Send mail as" checker (sent once per page view). */
+  gmailSendAsCheckStarted: 'gmail_send_as_check_started',
+  /** A domain read by the Gmail "Send mail as" checker, with its hosting and mail host (or the error), never the address. */
+  gmailSendAsChecked: 'gmail_send_as_checked',
+  /** A verdict shown by the Gmail "Send mail as" checker, once the questions it depends on are answered. */
+  gmailSendAsVerdictShown: 'gmail_send_as_verdict_shown',
+  /** A click on the blog guide of the mail host shown under a verdict of the Gmail checker. */
+  gmailSendAsGuideClicked: 'gmail_send_as_guide_clicked',
   /** First action in the Google update checker (tab, file or example), sent once per page view, with the way in. */
   googleUpdateImpactCheckStarted: 'google_update_impact_check_started',
   /** A verdict of the Google update checker, from the export or the test: never a page, a figure nor a file name. */

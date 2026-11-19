@@ -8,6 +8,7 @@ import { HOSTING_STATUS_TEASER } from '~/core/constants/hostingStatus/pageShared
 import { WEBSITE_HEALTH_CHECK_TEASER } from '~/core/constants/websiteHealthCheck/pageShared'
 import { GDPR_COOKIE_CHECK_TEASER } from '~/core/constants/gdprCookieCheck/pageShared'
 import { AI_READABILITY_CHECK_TEASER } from '~/core/constants/aiReadabilityCheck/pageShared'
+import { GMAIL_SEND_AS_CHECK_TEASER } from '~/core/constants/gmailSendAsCheck/pageShared'
 import { GOOGLE_UPDATE_IMPACT_CHECK_TEASER } from '~/core/constants/googleUpdateImpactCheck/pageShared'
 import { WEB_ACCESSIBILITY_SCOPE_TEASER } from '~/core/constants/webAccessibilityScope/pageShared'
 import { LEGAL_NOTICE_GENERATOR_TEASER } from '~/core/constants/legalNotice/pageShared'
@@ -760,6 +761,12 @@ export const TOOL_TEASERS_BY_ARTICLE_SLUG: Record<string, DibodevToolTeaserConte
   'changer-version-php-hostinger-faille-octobre-2026': PHP_VULNERABILITY_CHECK_TEASER,
   'changer-version-php-infomaniak-faille-octobre-2026': PHP_VULNERABILITY_CHECK_TEASER,
   'changer-version-php-planethoster-faille-octobre-2026': PHP_VULNERABILITY_CHECK_TEASER,
+  'gmail-n-envoie-plus-avec-mon-adresse-professionnelle-que-faire': GMAIL_SEND_AS_CHECK_TEASER,
+  'passer-gmail-gratuit-google-workspace-adresse-professionnelle': GMAIL_SEND_AS_CHECK_TEASER,
+  'mail-ovh-sur-gmail-janvier-2027-que-faire': GMAIL_SEND_AS_CHECK_TEASER,
+  'mail-o2switch-sur-gmail-janvier-2027-que-faire': GMAIL_SEND_AS_CHECK_TEASER,
+  'mail-ionos-sur-gmail-janvier-2027-que-faire': GMAIL_SEND_AS_CHECK_TEASER,
+  'mail-orange-free-sfr-sur-gmail-janvier-2027-que-faire': GMAIL_SEND_AS_CHECK_TEASER,
   'site-web-artisans-attirer-clients-locaux': PHP_VULNERABILITY_CHECK_TEASER,
   'site-web-commerce-proximite-2026': PHP_VULNERABILITY_CHECK_TEASER,
   'site-wordpress-pirate-verifications-a-faire-aujourd-hui': WORDPRESS_HACK_CHECK_TEASER,
@@ -807,7 +814,7 @@ export const TOOL_TEASERS_BY_PROJECT_SLUG: Record<string, DibodevToolTeaserConte
   izidoor: LEISURE_BOOKING_SOFTWARE_TEASER,
 }
 
-const EMAIL_DELIVERABILITY_CHECK_TEASER: DibodevToolTeaserContent = {
+export const EMAIL_DELIVERABILITY_CHECK_TEASER: DibodevToolTeaserContent = {
   toolId: 'email-deliverability-check',
   routeName: EMAIL_DELIVERABILITY_CHECK_ROUTE_NAME,
   icon: 'Mail',
@@ -872,6 +879,7 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   HOSTING_STATUS_TEASER,
   PROJECT_SPECIFICATION_TEASER,
   EMAIL_DELIVERABILITY_CHECK_TEASER,
+  GMAIL_SEND_AS_CHECK_TEASER,
   E_INVOICING_CHECK_TEASER,
   E_INVOICING_SCOPE_TEASER,
   COLD_CALLING_CHECK_TEASER,

@@ -5,6 +5,7 @@ import type {
   EmailDeliverabilityVerdict,
 } from '~~/server/types/tools/emailDeliverabilityCheck'
 import type { GdprCookieCheckResult, GdprLinkFinding, GdprTrackerFinding } from '~~/server/types/tools/gdprCookieCheck'
+import type { GmailSendAsCheckResult } from '~~/server/types/tools/gmailSendAsCheck'
 import type {
   JoomlaExtensionSeen,
   JoomlaVersionCheckResult,
@@ -197,6 +198,15 @@ const SHARE_DEFINITIONS: SiteCheckStatsShareDefinition[] = [
     isInTotal: (): boolean => true,
     isInShare: (entry: SiteCheckStatsEntry): boolean => SiteCheckStatsService.hasFailingCheck(entry, 'aging'),
   },
+  {
+    key: 'gmailSendAsHostedOutsideGoogle',
+    tool: 'gmailSendAs',
+    label:
+      'Domaines dont les mails sont hébergés ailleurs que chez Google (concernés s’ils sont lus dans un Gmail gratuit)',
+    isInTotal: (entry: SiteCheckStatsEntry): boolean =>
+      entry.verdict === 'thirdParty' || entry.verdict === 'googleHosted',
+    isInShare: (entry: SiteCheckStatsEntry): boolean => entry.verdict === 'thirdParty',
+  },
 ]
 
 let writeChain: Promise<void> = Promise.resolve()
@@ -343,6 +353,18 @@ export class SiteCheckStatsService {
       directives: [...result.directives.directives],
       structuredDataTypes: [...result.understanding.structuredDataTypes],
       hasLlmsTxt: result.understanding.llmsTxtStatus === 'found',
+    })
+  }
+
+  /**
+   * Keeps a Gmail "Send mail as" check: where the mail of the domain is hosted and the host recognized.
+   * @param {GmailSendAsCheckResult} result - The result sent to the visitor.
+   * @returns {Promise<void>} Resolves once kept; a storage failure is logged, never thrown.
+   */
+  static async recordGmailSendAsCheck(result: GmailSendAsCheckResult): Promise<void> {
+    await this.record('gmailSendAs', result.domain, result.hosting, {
+      mailHost: result.mailHost?.key ?? null,
+      isGoogleAllowedBySpf: result.isGoogleAllowedBySpf,
     })
   }
 

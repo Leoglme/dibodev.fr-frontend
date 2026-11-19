@@ -343,6 +343,11 @@ const toolLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLi
     to: localePath('tools-email-deliverability-check'),
   },
   {
+    key: 'gmailSendAsCheck',
+    title: t('footer.tools.gmailSendAsCheck'),
+    to: localePath('tools-gmail-send-as-check'),
+  },
+  {
     key: 'websiteHealthCheck',
     title: t('footer.tools.websiteHealthCheck'),
     to: localePath('tools-website-health-check'),

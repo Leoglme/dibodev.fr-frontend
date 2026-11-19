@@ -12,7 +12,11 @@ export const SITE_CHECK_TOOL_KEYS: SiteCheckToolKey[] = [
 ]
 
 /** Every checker counted in the statistics, the ones without an e-mail report included. */
-export const SITE_CHECK_STATS_TOOL_KEYS: SiteCheckStatsToolKey[] = [...SITE_CHECK_TOOL_KEYS, 'aiReadability']
+export const SITE_CHECK_STATS_TOOL_KEYS: SiteCheckStatsToolKey[] = [
+  ...SITE_CHECK_TOOL_KEYS,
+  'aiReadability',
+  'gmailSendAs',
+]
 
 /** The page of each checker in each language; mirrors the `i18n.paths` of `app/pages/tools/*.vue`. */
 export const SITE_CHECK_TOOL_PAGE_PATHS: Record<SiteCheckToolKey, Record<MailLocale, string>> = {

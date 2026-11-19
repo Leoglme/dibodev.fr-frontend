@@ -132,6 +132,7 @@ import type { DibodevHostingStatusContactPrefill } from '~/core/types/DibodevHos
 import type { DibodevEmailDeliverabilityVerdict } from '~/core/types/DibodevEmailDeliverabilityCheck'
 import type { DibodevGdprCookieCheckVerdict } from '~/core/types/DibodevGdprCookieCheck'
 import type { DibodevAiReadabilityVerdict } from '~/core/types/DibodevAiReadabilityCheck'
+import type { DibodevGmailSendAsVerdict } from '~/core/types/DibodevGmailSendAsCheck'
 import type { DibodevJoomlaVersionVerdict } from '~/core/types/DibodevJoomlaVersionCheck'
 import type { DibodevGoogleUpdateImpactVerdict } from '~/core/types/DibodevGoogleUpdateImpact'
 import { EInvoicingContactUtils } from '~/core/utils/EInvoicingContactUtils'
@@ -151,6 +152,7 @@ import {
   AI_READABILITY_CHECK_CONTACT_TOPIC,
   AI_READABILITY_CHECK_VERDICTS,
 } from '~/core/constants/aiReadabilityCheck/pageShared'
+import { GMAIL_SEND_AS_CONTACT_TOPIC, GMAIL_SEND_AS_VERDICTS } from '~/core/constants/gmailSendAsCheck/pageShared'
 import { WEBSITE_REDESIGN_CONTACT_TOPIC } from '~/core/constants/websiteRedesignPrompt'
 import { JOOMLA_UPDATE_CONTACT_TOPIC } from '~/core/constants/joomlaUpdateService/pageShared'
 import { JOOMLA_VERSION_CONTACT_TOPIC, JOOMLA_VERSION_VERDICTS } from '~/core/constants/joomlaVersionCheck/pageShared'
@@ -232,6 +234,9 @@ const gdprCookieCheckPrefill: DibodevSiteCheckContactPrefill<DibodevGdprCookieCh
 /** `?topic=ai-readability` comes from the AI readability checker, with the site and the verdict when a check was run. */
 const aiReadabilityPrefill: DibodevSiteCheckContactPrefill<DibodevAiReadabilityVerdict> | null =
   SiteCheckContactUtils.readSitePrefill(route.query, AI_READABILITY_CHECK_CONTACT_TOPIC, AI_READABILITY_CHECK_VERDICTS)
+/** `?topic=gmail-send-as` comes from the Gmail "Send mail as" checker, with the domain and the verdict when a check was run. */
+const gmailSendAsPrefill: DibodevSiteCheckContactPrefill<DibodevGmailSendAsVerdict> | null =
+  SiteCheckContactUtils.readSitePrefill(route.query, GMAIL_SEND_AS_CONTACT_TOPIC, GMAIL_SEND_AS_VERDICTS)
 /** `?topic=joomla-version` comes from the Joomla version checker, with the site and the verdict when a check was run. */
 const joomlaVersionPrefill: DibodevSiteCheckContactPrefill<DibodevJoomlaVersionVerdict> | null =
   SiteCheckContactUtils.readSitePrefill(route.query, JOOMLA_VERSION_CONTACT_TOPIC, JOOMLA_VERSION_VERDICTS)
@@ -302,6 +307,14 @@ function buildPrefilledMessage(): string {
           verdict: t(`contact.form.gdprCheck.verdicts.${gdprCookieCheckPrefill.verdict ?? 'unknown'}`),
         })
       : t('contact.form.gdprCheck.messageWithoutSite')
+  }
+  if (gmailSendAsPrefill) {
+    return gmailSendAsPrefill.site
+      ? t('contact.form.gmailSendAs.messageWithDomain', {
+          domain: gmailSendAsPrefill.site,
+          verdict: t(`contact.form.gmailSendAs.verdicts.${gmailSendAsPrefill.verdict ?? 'unknown'}`),
+        })
+      : t('contact.form.gmailSendAs.messageWithoutDomain')
   }
   if (emailDeliverabilityPrefill) {
     return emailDeliverabilityPrefill.site
@@ -573,6 +586,7 @@ onMounted((): void => {
     wordpressHackPrefill ||
     siteDownPrefill ||
     emailDeliverabilityPrefill ||
+    gmailSendAsPrefill ||
     gdprCookieCheckPrefill ||
     aiReadabilityPrefill ||
     isWebsiteRedesignVisit ||

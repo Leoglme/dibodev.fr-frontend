@@ -1,7 +1,7 @@
 import type { SiteCheckToolKey } from '~~/server/types/tools/siteCheckReport'
 
-/** The checkers kept in the statistics: the ones with an e-mail report, plus the ones without (AI readability). */
-export type SiteCheckStatsToolKey = SiteCheckToolKey | 'aiReadability'
+/** The checkers kept in the statistics: the ones with an e-mail report, plus the ones without (AI readability, Gmail "Send mail as"). */
+export type SiteCheckStatsToolKey = SiteCheckToolKey | 'aiReadability' | 'gmailSendAs'
 
 export type SiteCheckStatsDetailValue = string | number | boolean | null | string[]
 

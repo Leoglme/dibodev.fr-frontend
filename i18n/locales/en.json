@@ -246,6 +246,7 @@
       "eInvoicingScope": "E-invoicing: does it apply to me?",
       "wordpressHackCheck": "Hacked WordPress site: check",
       "emailDeliverabilityCheck": "Emails in spam: check SPF, DKIM, DMARC",
+      "gmailSendAsCheck": "Gmail, January 2027: is my address affected?",
       "websiteHealthCheck": "Test my website: 8 checks",
       "googleUpdateImpactCheck": "Google update: is my site affected?",
       "aiReadabilityCheck": "Can ChatGPT read my website?",
@@ -657,6 +658,23 @@
           "incident": "incident in progress at the host",
           "maintenance": "maintenance in progress at the host",
           "unknown": "unknown state"
+        }
+      },
+      "gmailSendAs": {
+        "messageWithDomain": "Hello,\nI have just tested my address at {domain} with the tool “Gmail, January 2027: is my address affected?”. Result: “{verdict}”.\nCan you tell me which way out suits me?\nNumber of addresses on this domain name: ",
+        "messageWithoutDomain": "Hello,\nI read my business address in Gmail and I would like to know what changes for me in January 2027, and what to do.\nMy business address: \nMy mail host, if I know it: ",
+        "verdicts": {
+          "bothAffected": "sending and receiving in Gmail both stop",
+          "sendingAffected": "sending with this address from Gmail stops",
+          "receivingAffected": "receiving in Gmail stops",
+          "notAffected": "not affected with my current settings",
+          "toCheck": "to check in Gmail",
+          "notInGmail": "not affected, I do not use Gmail for this address",
+          "googleHosted": "not affected, address hosted by Google",
+          "gmailAddress": "Gmail address, not affected",
+          "noMailSetup": "no mail set up on the domain",
+          "invalidDomain": "domain not found",
+          "unknown": "test not finished"
         }
       },
       "emailDeliverability": {
@@ -1152,7 +1170,7 @@
     },
     "siteChecks": {
       "title": "Website check tools",
-      "paragraph1": "When you test a website with one of the free tools of this site (PHP vulnerability, hacked WordPress site, emails in spam, Test my website, GDPR-compliant website, website readable by ChatGPT), I keep the address of the website tested (or the domain, for emails), the tool used, the result, a few technical indicators (for example the PHP version or the trackers seen) and the date, in a file on my server. This data is only used for statistics, such as the share of websites that load Google Analytics without consent, and is erased after 12 months. I never use it to prospect, never publish it website by website and never pass it on. Neither your IP address nor your e-mail address is in it.",
+      "paragraph1": "When you test a website with one of the free tools of this site (PHP vulnerability, hacked WordPress site, emails in spam, Test my website, GDPR-compliant website, website readable by ChatGPT, address affected by the Gmail change), I keep the address of the website tested (or the domain, for emails), the tool used, the result, a few technical indicators (for example the PHP version or the trackers seen) and the date, in a file on my server. This data is only used for statistics, such as the share of websites that load Google Analytics without consent, and is erased after 12 months. I never use it to prospect, never publish it website by website and never pass it on. Neither your IP address nor your e-mail address is in it.",
       "paragraph2": "If you ask to receive the result by e-mail, your address is only used to send it to you: it is not kept. If you also tick the box to be contacted about this website, I receive your address, the website tested and its result by e-mail, and a copy is kept in a file on my server for a year at most, only to contact you about it. The e-mails leave through the provider Mailjet (servers in the European Union).",
       "paragraph3": "These processings rely on my legitimate interest for the statistics and on your consent to be contacted. You can object, withdraw your consent or ask for a website or a contact to be erased at any time, by writing to the address given under “Your rights”."
     },

@@ -9,6 +9,7 @@ import type {
   DibodevAiContentStatus,
   DibodevAiReadabilityVerdict,
 } from '~/core/types/DibodevAiReadabilityCheck'
+import type { DibodevGmailSendAsHosting, DibodevGmailSendAsVerdict } from '~/core/types/DibodevGmailSendAsCheck'
 import type {
   DibodevGdprConsentToolKey,
   DibodevGdprCookieCheckVerdict,
@@ -259,6 +260,21 @@ export type TrackingEventPayloads = {
     location: string
     errorKind: DibodevSearchConsoleReadErrorKind
   }
+  [TRACKING_EVENTS.gmailSendAsCheckStarted]: { location: string }
+  [TRACKING_EVENTS.gmailSendAsChecked]: {
+    location: string
+    outcome: 'result' | 'error'
+    hosting: DibodevGmailSendAsHosting | null
+    mailHost: DibodevEmailProviderKey | null
+    errorKind: DibodevSiteCheckErrorKind | null
+  }
+  [TRACKING_EVENTS.gmailSendAsVerdictShown]: {
+    location: string
+    verdict: DibodevGmailSendAsVerdict
+    hosting: DibodevGmailSendAsHosting
+    mailHost: DibodevEmailProviderKey | null
+  }
+  [TRACKING_EVENTS.gmailSendAsGuideClicked]: { location: string; mailHost: DibodevEmailProviderKey | null }
   [TRACKING_EVENTS.siteCheckReportRequested]: {
     location: string
     tool: DibodevSiteCheckToolKey
