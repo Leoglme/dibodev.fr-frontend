@@ -4,6 +4,7 @@ import mkcert from 'vite-plugin-mkcert'
 import { getPrerenderSectorIgnoreUrls } from './config/sector-prerender-ignore'
 import { getPrerenderCategoryIgnoreUrls } from './config/category-prerender-ignore'
 import { getStoryblokPrerenderRoutes, isUnpublishedStoryRoute } from './config/storyblok-prerender-routes'
+import { isQueryStringRoute } from './config/query-string-prerender-ignore'
 import {
   LEGACY_REDIRECTS,
   getLegacyRedirectPrerenderIgnoreUrls,
@@ -188,6 +189,7 @@ export default defineNuxtConfig({
         ...prerenderCategoryIgnore,
         ...getLegacyRedirectPrerenderIgnoreUrls(),
         isUnpublishedStoryRoute,
+        isQueryStringRoute,
       ],
     },
     serverAssets: [
