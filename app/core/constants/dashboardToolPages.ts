@@ -146,6 +146,26 @@ export const DASHBOARD_TOOL_PAGES: Record<string, DashboardToolPage> = {
     label: 'Modèle note de frais',
     onlineSince: '2026-11-15',
   },
+  'tools-free-templates-meeting-minutes': {
+    label: 'Modèle compte rendu de réunion',
+    onlineSince: '2026-11-22',
+  },
+  'tools-free-templates-meeting-agenda': {
+    label: 'Modèle ordre du jour',
+    onlineSince: '2026-11-22',
+  },
+  'tools-free-templates-weekly-schedule': {
+    label: 'Modèle planning hebdomadaire',
+    onlineSince: '2026-11-22',
+  },
+  'tools-free-templates-payment-receipt': {
+    label: 'Modèle reçu de paiement',
+    onlineSince: '2026-11-22',
+  },
+  'tools-free-templates-staff-register': {
+    label: 'Modèle registre du personnel',
+    onlineSince: '2026-11-22',
+  },
   'trade-websites': { label: 'Sites internet par métier (hub)', onlineSince: '2026-11-02' },
   'trade-websites-plumber': { label: 'Site internet pour plombier', onlineSince: '2026-11-02' },
   'trade-websites-electrician': { label: 'Site internet pour électricien', onlineSince: '2026-11-02' },

@@ -5,25 +5,25 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
   meta: {
     title: 'Plantillas francesas gratis por oficio: presupuestos y más',
     description:
-      '22 plantillas francesas gratis sin registro: presupuestos, hoja de pedido, albarán, hoja de fichaje, nota de gastos, acta de recepción. PDF + Excel.',
+      '27 plantillas francesas gratis sin registro: presupuestos, hoja de pedido, albarán, hoja de fichaje, nota de gastos, acta de recepción. PDF + Excel.',
     inLanguage: 'es',
   },
   breadcrumbLabel: 'Plantillas gratuitas',
   shareImage: {
-    titleLines: ['22 plantillas francesas', 'gratis por oficio'],
+    titleLines: ['27 plantillas francesas', 'gratis por oficio'],
     highlight: 'gratis',
     subtitle:
       'Presupuestos, partes de intervención, plannings, hojas de firmas: PDF para imprimir y Excel para adaptar',
     badge: 'Sin registro ni e-mail',
     icon: 'download',
-    alt: '22 plantillas francesas gratis por oficio: presupuestos, contratos, hojas de pedido y albaranes, certificados y plannings en PDF y Excel, sin registro, en dibodev.fr',
+    alt: '27 plantillas francesas gratis por oficio: presupuestos, contratos, hojas de pedido y albaranes, certificados y plannings en PDF y Excel, sin registro, en dibodev.fr',
   },
   hero: {
     titlePart1: 'Plantillas ',
     titleHighlight1: 'francesas gratis',
     titlePart2: ' para tu oficio, en PDF y en Excel',
     description:
-      'Presupuesto, hoja de pedido, albarán, hoja de fichaje, nota de gastos, acta de recepción de obra, parte de intervención: veintidós plantillas escritas en francés para los oficios de los tests de este sitio y para los documentos del día a día de una pequeña empresa, con las menciones que exige la norma francesa. El PDF se imprime, el Excel calcula los totales. Sin formulario, sin dejar tu e-mail.',
+      'Presupuesto, hoja de pedido, albarán, hoja de fichaje, nota de gastos, acta de recepción de obra, parte de intervención: veintisiete plantillas escritas en francés para los oficios de los tests de este sitio y para los documentos del día a día de una pequeña empresa, con las menciones que exige la norma francesa. El PDF se imprime, el Excel calcula los totales. Sin formulario, sin dejar tu e-mail.',
     cta: 'Elegir una plantilla',
     templatesCountLabel: 'plantillas por oficio',
     formatsValue: '2',
@@ -215,6 +215,46 @@ export const FREE_TEMPLATES_HUB_CONTENT_ES: DibodevFreeTemplateHubPageContent = 
         title: 'Nota de gastos + registro de trayectos',
         description:
           'Nota de gastos del mes con subtotales por tipo y el importe a reembolsar, registro de trayectos con vehículo propio, resumen del año.',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
+      },
+      {
+        key: 'meeting-minutes',
+        tradeLabel: 'Reuniones',
+        title: 'Acta de reunión + plan de acción',
+        description:
+          'Acta con asistentes, puntos tratados y decisiones, registro de decisiones y plan de acción con los retrasos calculados.',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
+      },
+      {
+        key: 'meeting-agenda',
+        tradeLabel: 'Reuniones',
+        title: 'Orden del día + convocatoria',
+        description:
+          'Orden del día con horarios calculados, convocatoria con cupón de respuesta y seguimiento de las respuestas de los convocados.',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
+      },
+      {
+        key: 'weekly-schedule',
+        tradeLabel: 'Equipos y horarios',
+        title: 'Planning semanal + agenda semanal',
+        description:
+          'Planning del equipo de lunes a domingo con horas, totales y descansos controlados, agenda semanal de una persona para imprimir.',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
+      },
+      {
+        key: 'payment-receipt',
+        tradeLabel: 'Cobros',
+        title: 'Recibo de pago + recibo de anticipo',
+        description:
+          'Talonario de tres recibos recortables con matriz, recibo de anticipo con el importe pendiente, registro numerado y resumen mensual.',
+        formats: 'PDF 2 páginas · Word · Excel 3 hojas',
+      },
+      {
+        key: 'staff-register',
+        tradeLabel: 'Empleadores',
+        title: 'Registro de personal',
+        description:
+          'Registro de empleados con las menciones del Código de Trabajo francés, parte de becarios y servicio cívico, plantilla presente calculada.',
         formats: 'PDF 2 páginas · Word · Excel 3 hojas',
       },
     ],

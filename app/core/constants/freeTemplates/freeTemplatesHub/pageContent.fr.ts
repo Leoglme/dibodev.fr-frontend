@@ -4,23 +4,23 @@ import { NBSP } from '~/core/constants/typography'
 export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = {
   meta: {
     title: `Modèles gratuits par métier${NBSP}: devis, bons, plannings`,
-    description: `22 modèles gratuits sans inscription${NBSP}: devis, bon de commande, bon de livraison, fiche de pointage, note de frais, PV de réception. PDF + Excel.`,
+    description: `27 modèles gratuits sans inscription${NBSP}: devis, bon de commande, bon de livraison, fiche de pointage, note de frais, PV de réception. PDF + Excel.`,
     inLanguage: 'fr-FR',
   },
   breadcrumbLabel: 'Modèles gratuits',
   shareImage: {
-    titleLines: ['22 modèles gratuits', 'pour votre métier'],
+    titleLines: ['27 modèles gratuits', 'pour votre métier'],
     highlight: 'gratuits',
     subtitle: 'Devis, bons d’intervention, plannings, feuilles d’émargement : PDF à imprimer et Excel à adapter',
     badge: 'Sans inscription ni e-mail',
     icon: 'download',
-    alt: `22 modèles gratuits par métier${NBSP}: devis, contrats, bons de commande et de livraison, attestations et plannings en PDF et Excel, sans inscription, sur dibodev.fr`,
+    alt: `27 modèles gratuits par métier${NBSP}: devis, contrats, bons de commande et de livraison, attestations et plannings en PDF et Excel, sans inscription, sur dibodev.fr`,
   },
   hero: {
     titlePart1: 'Des modèles ',
     titleHighlight1: 'gratuits',
     titlePart2: ' pour votre métier, en PDF et en Excel',
-    description: `Devis, bon de commande, bon de livraison, fiche de pointage, note de frais, PV de réception, bon d’intervention${NBSP}: vingt-deux modèles préparés pour les métiers des tests de ce site et pour les documents de tous les jours d’une petite entreprise, avec les mentions que la règle impose. Le PDF s’imprime, l’Excel calcule les totaux. Aucun formulaire, aucune adresse e-mail à laisser.`,
+    description: `Devis, bon de commande, bon de livraison, fiche de pointage, note de frais, PV de réception, bon d’intervention${NBSP}: vingt-sept modèles préparés pour les métiers des tests de ce site et pour les documents de tous les jours d’une petite entreprise, avec les mentions que la règle impose. Le PDF s’imprime, l’Excel calcule les totaux. Aucun formulaire, aucune adresse e-mail à laisser.`,
     cta: 'Choisir un modèle',
     templatesCountLabel: 'modèles par métier',
     formatsValue: '2',
@@ -212,6 +212,46 @@ export const FREE_TEMPLATES_HUB_CONTENT_FR: DibodevFreeTemplateHubPageContent = 
         title: 'Note de frais + relevé des trajets',
         description:
           'Note de frais du mois avec sous-totaux par nature et reste à rembourser, relevé des trajets en véhicule personnel, récapitulatif de l’année.',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
+      },
+      {
+        key: 'meeting-minutes',
+        tradeLabel: 'Réunions',
+        title: 'Compte rendu de réunion + plan d’actions',
+        description:
+          'Compte rendu avec présents, points traités et décisions, relevé de décisions et plan d’actions dont les retards se calculent.',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
+      },
+      {
+        key: 'meeting-agenda',
+        tradeLabel: 'Réunions',
+        title: 'Ordre du jour + convocation',
+        description:
+          'Ordre du jour minuté dont les heures se calculent, convocation avec coupon-réponse et suivi des réponses des convoqués.',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
+      },
+      {
+        key: 'weekly-schedule',
+        tradeLabel: 'Équipes et horaires',
+        title: 'Planning hebdomadaire + semainier',
+        description:
+          'Planning de l’équipe du lundi au dimanche avec heures, totaux et repos contrôlés, semainier d’une personne à imprimer.',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
+      },
+      {
+        key: 'payment-receipt',
+        tradeLabel: 'Encaissements',
+        title: 'Reçu de paiement + reçu d’acompte',
+        description:
+          'Carnet de trois reçus à découper avec leur souche, reçu d’acompte avec reste dû, registre numéroté et synthèse par mois.',
+        formats: 'PDF 2 pages · Word · Excel 3 feuilles',
+      },
+      {
+        key: 'staff-register',
+        tradeLabel: 'Employeurs',
+        title: 'Registre unique du personnel',
+        description:
+          'Registre des salariés avec les mentions du Code du travail, partie stagiaires et service civique, effectif présent calculé.',
         formats: 'PDF 2 pages · Word · Excel 3 feuilles',
       },
     ],

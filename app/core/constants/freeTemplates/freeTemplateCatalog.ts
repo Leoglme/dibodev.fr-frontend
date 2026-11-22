@@ -110,6 +110,31 @@ import {
   TRAINING_CENTER_TEMPLATE_XLSX_PATH,
 } from '~/core/constants/tools/trainingCenterSoftware/pageShared'
 import {
+  MEETING_MINUTES_TEMPLATE_PDF_PATH,
+  MEETING_MINUTES_TEMPLATE_ROUTE_NAME,
+  MEETING_MINUTES_TEMPLATE_XLSX_PATH,
+} from '~/core/constants/freeTemplates/meetingMinutes/pageShared'
+import {
+  MEETING_AGENDA_TEMPLATE_PDF_PATH,
+  MEETING_AGENDA_TEMPLATE_ROUTE_NAME,
+  MEETING_AGENDA_TEMPLATE_XLSX_PATH,
+} from '~/core/constants/freeTemplates/meetingAgenda/pageShared'
+import {
+  WEEKLY_SCHEDULE_TEMPLATE_PDF_PATH,
+  WEEKLY_SCHEDULE_TEMPLATE_ROUTE_NAME,
+  WEEKLY_SCHEDULE_TEMPLATE_XLSX_PATH,
+} from '~/core/constants/freeTemplates/weeklySchedule/pageShared'
+import {
+  PAYMENT_RECEIPT_TEMPLATE_PDF_PATH,
+  PAYMENT_RECEIPT_TEMPLATE_ROUTE_NAME,
+  PAYMENT_RECEIPT_TEMPLATE_XLSX_PATH,
+} from '~/core/constants/freeTemplates/paymentReceipt/pageShared'
+import {
+  STAFF_REGISTER_TEMPLATE_PDF_PATH,
+  STAFF_REGISTER_TEMPLATE_ROUTE_NAME,
+  STAFF_REGISTER_TEMPLATE_XLSX_PATH,
+} from '~/core/constants/freeTemplates/staffRegister/pageShared'
+import {
   AUTO_REPAIR_SHOP_SOFTWARE_TEASER,
   BIKE_SHOP_SOFTWARE_TEASER,
   BODY_SHOP_SOFTWARE_TEASER,
@@ -118,6 +143,7 @@ import {
   DRIVING_SCHOOL_SOFTWARE_TEASER,
   ELECTRICIAN_SOFTWARE_TEASER,
   EVENT_RENTAL_SOFTWARE_TEASER,
+  E_INVOICING_SCOPE_TEASER,
   FIELD_SERVICE_SOFTWARE_TEASER,
   INVENTORY_MANAGEMENT_SOFTWARE_TEASER,
   LANDSCAPING_SOFTWARE_TEASER,
@@ -130,13 +156,13 @@ import {
 export const FREE_TEMPLATES_HUB_ROUTE_NAME: string = 'tools-free-templates'
 
 /** Day the hub last changed (templates added); the templates carry their own date. */
-export const FREE_TEMPLATES_HUB_UPDATED_AT: string = '2026-11-16'
+export const FREE_TEMPLATES_HUB_UPDATED_AT: string = '2026-11-22'
 
 /** `location` of the PostHog events sent from the hub and from every template page. */
 export const FREE_TEMPLATES_HUB_TRACKING_LOCATION: string = 'free_templates_hub'
 export const FREE_TEMPLATE_PAGE_TRACKING_LOCATION: string = 'free_template_page'
 
-/** The twenty-two templates in the order of the hub: one per trade tool page, then the documents every small business uses, newest last. */
+/** The twenty-seven templates in the order of the hub: one per trade tool page, then the documents every small business uses, newest last. */
 export const FREE_TEMPLATE_CATALOG: DibodevFreeTemplateCatalogEntry[] = [
   {
     key: 'plumber-quote',
@@ -312,6 +338,46 @@ export const FREE_TEMPLATE_CATALOG: DibodevFreeTemplateCatalogEntry[] = [
     pdfPath: EXPENSE_REPORT_TEMPLATE_PDF_PATH,
     xlsxPath: EXPENSE_REPORT_TEMPLATE_XLSX_PATH,
     icon: 'Euro',
+    teaser: FIELD_SERVICE_SOFTWARE_TEASER,
+  },
+  {
+    key: 'meeting-minutes',
+    routeName: MEETING_MINUTES_TEMPLATE_ROUTE_NAME,
+    pdfPath: MEETING_MINUTES_TEMPLATE_PDF_PATH,
+    xlsxPath: MEETING_MINUTES_TEMPLATE_XLSX_PATH,
+    icon: 'MessageCircle',
+    teaser: TRAINING_CENTER_SOFTWARE_TEASER,
+  },
+  {
+    key: 'meeting-agenda',
+    routeName: MEETING_AGENDA_TEMPLATE_ROUTE_NAME,
+    pdfPath: MEETING_AGENDA_TEMPLATE_PDF_PATH,
+    xlsxPath: MEETING_AGENDA_TEMPLATE_XLSX_PATH,
+    icon: 'Flag',
+    teaser: TRAINING_CENTER_SOFTWARE_TEASER,
+  },
+  {
+    key: 'weekly-schedule',
+    routeName: WEEKLY_SCHEDULE_TEMPLATE_ROUTE_NAME,
+    pdfPath: WEEKLY_SCHEDULE_TEMPLATE_PDF_PATH,
+    xlsxPath: WEEKLY_SCHEDULE_TEMPLATE_XLSX_PATH,
+    icon: 'CalendarCheck',
+    teaser: CLEANING_BUSINESS_SOFTWARE_TEASER,
+  },
+  {
+    key: 'payment-receipt',
+    routeName: PAYMENT_RECEIPT_TEMPLATE_ROUTE_NAME,
+    pdfPath: PAYMENT_RECEIPT_TEMPLATE_PDF_PATH,
+    xlsxPath: PAYMENT_RECEIPT_TEMPLATE_XLSX_PATH,
+    icon: 'Euro',
+    teaser: E_INVOICING_SCOPE_TEASER,
+  },
+  {
+    key: 'staff-register',
+    routeName: STAFF_REGISTER_TEMPLATE_ROUTE_NAME,
+    pdfPath: STAFF_REGISTER_TEMPLATE_PDF_PATH,
+    xlsxPath: STAFF_REGISTER_TEMPLATE_XLSX_PATH,
+    icon: 'ClipboardCheck',
     teaser: FIELD_SERVICE_SOFTWARE_TEASER,
   },
 ]

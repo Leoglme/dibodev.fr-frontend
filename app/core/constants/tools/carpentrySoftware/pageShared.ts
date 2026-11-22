@@ -15,6 +15,7 @@ export const CARPENTRY_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'alternative-obat-logiciel-devis-batiment',
   'alternative-tolteck-logiciel-devis-artisan',
   'alternative-batappli-logiciel-batiment',
+  'alternative-batigest-logiciel-batiment',
 ]
 
 export const CARPENTRY_PAGE_COMPARISON_ROWS_ON_SMALL_SCREENS: number = 2

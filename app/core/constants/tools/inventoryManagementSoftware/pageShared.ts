@@ -15,6 +15,7 @@ export const INVENTORY_MANAGEMENT_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'alternative-zoho-inventory-logiciel-gestion-de-stock',
   'alternative-axonaut-logiciel-gestion-tpe-stock',
   'alternative-sortly-logiciel-gestion-de-stock',
+  'alternative-monstock-logiciel-gestion-de-stock',
   'logiciel-metier-saas-etagere-ou-sur-mesure',
   'alternative-rentman-logiciel-location-materiel',
   'logiciel-metier-b2b-quitter-excel-signes',

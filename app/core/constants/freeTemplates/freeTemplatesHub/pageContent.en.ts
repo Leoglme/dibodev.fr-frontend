@@ -4,24 +4,24 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
   meta: {
     title: 'Free French templates by trade: quotes, slips, schedules',
     description:
-      '22 free French templates without sign-up: quotes, purchase order, delivery note, timesheet, expense report, acceptance report. PDF + Excel.',
+      '27 free French templates without sign-up: quotes, purchase order, delivery note, timesheet, expense report, acceptance report. PDF + Excel.',
     inLanguage: 'en',
   },
   breadcrumbLabel: 'Free templates',
   shareImage: {
-    titleLines: ['22 free French', 'templates by trade'],
+    titleLines: ['27 free French', 'templates by trade'],
     highlight: 'free',
     subtitle: 'Quotes, intervention slips, schedules, attendance sheets: PDF to print and Excel to adapt',
     badge: 'No sign-up, no email',
     icon: 'download',
-    alt: '22 free French templates by trade: quotes, contracts, purchase orders and delivery notes, certificates and schedules in PDF and Excel, without sign-up, on dibodev.fr',
+    alt: '27 free French templates by trade: quotes, contracts, purchase orders and delivery notes, certificates and schedules in PDF and Excel, without sign-up, on dibodev.fr',
   },
   hero: {
     titlePart1: 'Free ',
     titleHighlight1: 'French templates',
     titlePart2: ' for your trade, as PDF and Excel',
     description:
-      'Quote, purchase order, delivery note, timesheet, expense report, acceptance report, intervention slip: twenty-two templates written in French for the trades of the tests on this site and for the everyday documents of a small business, with the wording the French rules require. The PDF prints, the Excel file calculates the totals. No form, no email address to leave.',
+      'Quote, purchase order, delivery note, timesheet, expense report, acceptance report, intervention slip: twenty-seven templates written in French for the trades of the tests on this site and for the everyday documents of a small business, with the wording the French rules require. The PDF prints, the Excel file calculates the totals. No form, no email address to leave.',
     cta: 'Choose a template',
     templatesCountLabel: 'templates by trade',
     formatsValue: '2',
@@ -215,6 +215,46 @@ export const FREE_TEMPLATES_HUB_CONTENT_EN: DibodevFreeTemplateHubPageContent = 
         title: 'Expense report + mileage log',
         description:
           'Monthly expense report with subtotals by type and the amount to reimburse, log of trips in a personal vehicle, yearly summary.',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
+      },
+      {
+        key: 'meeting-minutes',
+        tradeLabel: 'Meetings',
+        title: 'Meeting minutes + action plan',
+        description:
+          'Minutes with attendees, points covered and decisions, decision log and an action plan that works out the delays.',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
+      },
+      {
+        key: 'meeting-agenda',
+        tradeLabel: 'Meetings',
+        title: 'Meeting agenda + meeting notice',
+        description:
+          'Timed agenda whose times are calculated, meeting notice with a reply slip, and tracking of the invitees’ answers.',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
+      },
+      {
+        key: 'weekly-schedule',
+        tradeLabel: 'Teams and hours',
+        title: 'Weekly schedule + weekly planner',
+        description:
+          'Team schedule from Monday to Sunday with hours, totals and rest periods checked, printable weekly planner for one person.',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
+      },
+      {
+        key: 'payment-receipt',
+        tradeLabel: 'Payments received',
+        title: 'Payment receipt + deposit receipt',
+        description:
+          'Book of three tear-off receipts with stubs, deposit receipt with the balance due, numbered register and monthly summary.',
+        formats: 'PDF 2 pages · Word · Excel 3 sheets',
+      },
+      {
+        key: 'staff-register',
+        tradeLabel: 'Employers',
+        title: 'Staff register',
+        description:
+          'Employee register with the entries required by the French Labour Code, part for trainees and civic service, headcount calculated.',
         formats: 'PDF 2 pages · Word · Excel 3 sheets',
       },
     ],

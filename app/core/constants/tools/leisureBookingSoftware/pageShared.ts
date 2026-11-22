@@ -13,6 +13,7 @@ export const LEISURE_BOOKING_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'logiciel-reservation-en-ligne-sur-mesure-loisirs',
   'coach-sportif-limiter-les-annulations-avec-un-outil-de-reservation-en-ligne',
   'alternative-eversports-manager-logiciel-salle-de-sport',
+  'alternative-regiondo-logiciel-reservation-activites',
   'logiciel-metier-saas-etagere-ou-sur-mesure',
   'developpement-logiciel-b2b-sur-mesure-prix',
 ]

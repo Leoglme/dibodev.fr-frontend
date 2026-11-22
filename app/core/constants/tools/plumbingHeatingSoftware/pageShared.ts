@@ -16,6 +16,7 @@ export const PLUMBING_HEATING_PAGE_RELATED_ARTICLE_SLUGS: string[] = [
   'alternative-tolteck-logiciel-devis-artisan',
   'alternative-obat-logiciel-devis-batiment',
   'alternative-batappli-logiciel-batiment',
+  'alternative-batigest-logiciel-batiment',
   'facture-electronique-artisan-ce-qui-change',
 ]
 
