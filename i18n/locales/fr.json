@@ -258,6 +258,7 @@
       "coldCallingCheck": "Démarchage téléphonique interdit ?",
       "hostingStatus": "Mon hébergeur est-il en panne ?",
       "workHoursCalculator": "Calcul des heures de travail",
+      "vatCalculator": "Calcul de TVA, HT et TTC",
       "budgetEstimator": "Estimateur de budget",
       "freeTemplates": "Modèles gratuits : devis, bons, plannings"
     }

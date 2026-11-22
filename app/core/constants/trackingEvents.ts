@@ -120,6 +120,10 @@ export const TRACKING_EVENTS = {
   workHoursCalculatorStarted: 'work_hours_calculator_started',
   /** First non-zero weekly total of the work hours calculator, with the number of days filled and whether it exceeds the reference: never the times nor the rate. */
   workHoursCalculated: 'work_hours_calculated',
+  /** First action in the VAT calculator (sent once per page view). */
+  vatCalculatorStarted: 'vat_calculator_started',
+  /** First result of the VAT calculator, with the mode (one amount or quote lines) and the direction of the conversion: never an amount nor a line name. */
+  vatCalculated: 'vat_calculated',
   /** First action in the Google update checker (tab, file or example), sent once per page view, with the way in. */
   googleUpdateImpactCheckStarted: 'google_update_impact_check_started',
   /** A verdict of the Google update checker, from the export or the test: never a page, a figure nor a file name. */

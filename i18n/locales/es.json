@@ -258,6 +258,7 @@
       "coldCallingCheck": "Prospección telefónica: ¿puedo llamar?",
       "hostingStatus": "¿Mi hosting está caído?",
       "workHoursCalculator": "Calculadora de horas de trabajo",
+      "vatCalculator": "Calculadora de IVA de Francia",
       "budgetEstimator": "Estimador de presupuesto",
       "freeTemplates": "Plantillas gratis: presupuestos, partes, plannings"
     }

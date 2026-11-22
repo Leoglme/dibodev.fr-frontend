@@ -16,6 +16,7 @@ import { EMAIL_DELIVERABILITY_CHECK_ROUTE_NAME } from '~/core/constants/emailDel
 import { E_INVOICING_SCOPE_QUIZ_ID } from '~/core/constants/eInvoicingScopeQuiz'
 import { NBSP } from '~/core/constants/typography'
 import { PROJECT_SPECIFICATION_TEASER } from '~/core/constants/projectSpecification/pageShared'
+import { VAT_CALCULATOR_TEASER } from '~/core/constants/vatCalculator/pageShared'
 import { WORK_HOURS_CALCULATOR_TEASER } from '~/core/constants/workHoursCalculator/pageShared'
 
 export const DRIVING_SCHOOL_SOFTWARE_TEASER: DibodevToolTeaserContent = {
@@ -889,6 +890,7 @@ export const BUSINESS_SOFTWARE_TOOL_TEASERS: DibodevToolTeaserContent[] = [
   E_INVOICING_SCOPE_TEASER,
   COLD_CALLING_CHECK_TEASER,
   WORK_HOURS_CALCULATOR_TEASER,
+  VAT_CALCULATOR_TEASER,
 ]
 
 /** The public aid simulator, teased under the comparison of every trade tool page. */

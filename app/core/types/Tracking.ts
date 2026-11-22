@@ -51,6 +51,7 @@ import type { DibodevSiteAtelierDevice } from '~/core/types/DibodevSiteAtelier'
 import type { DibodevSiteCheckErrorKind } from '~/core/types/DibodevSiteCheck'
 import type { DibodevSiteCheckToolKey } from '~/core/types/DibodevSiteCheckReport'
 import type { DibodevTradeWebsiteKey } from '~/core/types/DibodevTradeWebsite'
+import type { DibodevVatCalculatorMode, DibodevVatDirection } from '~/core/types/DibodevVat'
 import type {
   DibodevWebsiteHealthCheckKey,
   DibodevWebsiteHealthOverallVerdict,
@@ -280,6 +281,8 @@ export type TrackingEventPayloads = {
   [TRACKING_EVENTS.gmailSendAsGuideClicked]: { location: string; mailHost: DibodevEmailProviderKey | null }
   [TRACKING_EVENTS.workHoursCalculatorStarted]: { location: string }
   [TRACKING_EVENTS.workHoursCalculated]: { location: string; workedDayCount: number; exceedsReference: boolean }
+  [TRACKING_EVENTS.vatCalculatorStarted]: { location: string }
+  [TRACKING_EVENTS.vatCalculated]: { location: string; mode: DibodevVatCalculatorMode; direction: DibodevVatDirection }
   [TRACKING_EVENTS.siteCheckReportRequested]: {
     location: string
     tool: DibodevSiteCheckToolKey
