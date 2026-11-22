@@ -67849,6 +67849,33 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para el Modo IA por sí solo, escribí una guía aparte: ",
+              "type": "text"
+            },
+            {
+              "text": "Modo IA de Google: cómo hacer que aparezca tu web",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/apparaitre-mode-ia-google-site-entreprise",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -68182,6 +68209,723 @@
             "body": [
               {
                 "_uid": "i-a09bebd1-6cd0-4201-b06c-1fdbcb935a53",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Envíame el enlace de tu web",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/apparaitre-mode-ia-google-site-entreprise": {
+    "title": "Modo IA de Google: cómo hacer que aparezca tu web",
+    "excerpt": "Qué es el Modo IA de Google, qué pide Google para aparecer en él y lo que he visto en mi web: citada 2 veces de 5 en septiembre, 5 veces de 5 en noviembre.",
+    "metaTitle": "Modo IA de Google: cómo hacer que aparezca tu web",
+    "metaDescription": "Modo IA de Google: qué es, qué pide Google para aparecer en él, una prueba de cinco minutos y mis resultados: de 2 a 5 respuestas de 5 en dos meses.",
+    "tags": [
+      "modo ia google",
+      "aparecer en el modo ia",
+      "vista creada con ia google",
+      "gemini",
+      "web de pequeña empresa",
+      "search console"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En resumen: el Modo IA es la pestaña de Google donde escribes tu pregunta completa y una IA, Gemini, redacta la respuesta con enlaces a webs. Según Google, no hay que instalar ni pagar nada especial para aparecer: tu página tiene que ser conocida por Google y tener permitido mostrarse con un fragmento. En mi caso, con las mismas cinco preguntas hechas cada mes, el Modo IA citaba mi empresa 2 veces de 5 el 26 de septiembre de 2026, 4 veces de 5 el 31 de octubre y 5 veces de 5 el 22 de noviembre.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Has visto aparecer «Modo IA» en Google, has buscado tu oficio o tu empresa y te preguntas por qué apareces, o por qué no. Soy desarrollador freelance cerca de Rennes y me hice la misma pregunta. Esta guía separa dos cosas: lo que Google escribe negro sobre blanco y lo que he visto en mi propia web. No prometo ningún resultado: el propio Google no garantiza ninguno.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Modo IA, Vista creada con IA, Gemini: qué es cada cosa",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Google lanzó las dos novedades en Francia el mismo día, el 22 de julio de 2026. Lo pone en ",
+              "type": "text"
+            },
+            {
+              "text": "su anuncio oficial",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://blog.google/intl/fr-fr/nouveautes-produits/explorez-obtenez-des-reponses/recherche-ia-apercus-mode/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La Vista creada con IA",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " («Aperçu IA» en la versión francesa) es un resumen redactado por la IA, con enlaces para saber más. Aparece en los resultados habituales, y solo cuando Google considera que es útil.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El Modo IA",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " es un espacio aparte. Ahí haces una pregunta completa, la IA redacta una respuesta con enlaces y puedes seguir con otra pregunta. Google explica que divide tu pregunta en varios subtemas y lanza varias búsquedas a la vez.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gemini",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " es el nombre de la IA de Google que redacta estas respuestas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Dónde encontrarlo? Según ",
+              "type": "text"
+            },
+            {
+              "text": "la ayuda de Google",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/websearch/answer/16011537?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", en el ordenador, vas a google.com/ai, o escribes una pregunta en google.com y luego eliges «Modo IA». En el móvil, en la aplicación de Google, pulsas «Modo IA» desde la pantalla de inicio. En mi iPhone, la pestaña se llama «Mode IA» (Modo IA).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que pide Google para aparecer en el Modo IA",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La respuesta cabe en ",
+              "type": "text"
+            },
+            {
+              "text": "una página de la documentación de Google",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://developers.google.com/search/docs/appearance/ai-overviews?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". Dice dos cosas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La primera: tu página tiene que estar indexada, es decir, registrada por Google en su lista de páginas, y poder mostrarse con un fragmento, esas dos líneas de texto bajo el título en los resultados. No hay ninguna otra condición técnica. Google precisa que aparecer nunca está garantizado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La segunda: no existe una optimización especial. Google escribe que no hace falta crear nuevos archivos legibles por máquinas, ni un archivo de texto para la IA, ni un marcado particular. Así que un «archivo especial para el Modo IA» no sirve de nada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lo que recomienda Google son las bases de siempre:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- no bloquear su robot, ni en el archivo `robots.txt` (el archivo que dice a los robots lo que pueden leer) ni en el proveedor de alojamiento;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- escribir la información importante en texto, no solo en una imagen;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- enlazar tus páginas entre sí;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- mantener al día tu Perfil de Empresa de Google.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que he visto en mi web",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Cada mes hago las mismas cinco preguntas al Modo IA de Google, y también a ChatGPT, Copilot y Perplexity. Cuento las respuestas que citan mi empresa. En el Modo IA: 2 de 5 el 26 de septiembre de 2026, 4 de 5 el 31 de octubre, 5 de 5 el 22 de noviembre.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Durante esos dos meses no hice nada especial «para la IA de Google» y no pagué nada. Trabajé mi web como para un lector con prisa:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- páginas que responden cada una a una pregunta concreta;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- un resumen «En resumen» al principio de la página;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- precios en horquillas, con la fecha de la consulta;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- preguntas y respuestas al final de la página;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- fichas de mi empresa en otros sitios de internet, con la misma información en todas partes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Dos límites, para ser sincero. Las respuestas cambian de una vez a otra: mi prueba es un termómetro, no una prueba definitiva. Y no todo funciona: tengo una sexta pregunta, sobre una actualización de PHP, que no me cita en ninguna de las cuatro IA.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "El relato completo, con ChatGPT y los demás asistentes, está en mi artículo ",
+              "type": "text"
+            },
+            {
+              "text": "Que te citen ChatGPT y la IA de Google",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/etre-cite-par-chatgpt-site-petite-entreprise",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Compruébalo tú mismo en cinco minutos",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No escribas el nombre de tu empresa: te encontrarás y no aprenderás nada. Haz más bien tres preguntas que haría un cliente antes de conocerte. Por ejemplo:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1. una pregunta de elección: «¿Qué techador me recomiendas para rehacer un tejado en [tu ciudad]?»;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "2. una pregunta de precio: «¿Cuánto cuesta [tu servicio] en [tu ciudad]?»;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "3. una pregunta práctica que tus clientes te hacen a menudo por teléfono.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Abre el Modo IA, hazlas una por una y apunta para cada una: si te cita, sí o no, y qué webs aparecen citadas en tu lugar. Guarda la fecha. Repítelo cada mes, exactamente con las mismas preguntas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Por dónde empezar esta semana",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Todo lo que sigue es gratis.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1. Haz la prueba de las tres preguntas y guarda el resultado.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "2. Da de alta tu web en Search Console, la herramienta gratuita de Google para seguir tu web. Ahí verás si tus páginas están bien indexadas.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "3. Comprueba que tu web no cierra la puerta a los robots. Puedes ",
+              "type": "text"
+            },
+            {
+              "text": "comprobar gratis si una página es legible por los asistentes de IA",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/site-lisible-par-chatgpt",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "4. Elige la pregunta que más a menudo te hacen y escribe una página que la responda, con la respuesta desde las primeras líneas.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "5. Escribe tus precios, aunque sea en horquilla, con una fecha.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "6. Actualiza tu Perfil de Empresa de Google: el mismo nombre, dirección y actividad que en tu web.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "¿Se puede rechazar aparecer?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sí, y Google describe dos maneras.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La primera son los ajustes de fragmento, instrucciones colocadas en el código de la página: `nosnippet`, `data-nosnippet`, `max-snippet` o `noindex`. Limitan lo que Google muestra de tu página. Ojo, también valen para los resultados clásicos: con `noindex`, tu página sale de Google por completo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La segunda es más reciente. En su anuncio del 22 de julio de 2026, Google indica que ha lanzado un nuevo ajuste en Search Console, disponible en Francia. Permite al propietario de una web decidir si esa web aparece en estas respuestas de IA. Google escribe que esta elección no se usa para clasificar la web en los demás resultados. No lo he probado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Para una pequeña empresa que busca clientes, no veo motivo para retirarse.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Qué es el Modo IA de Google?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Es un espacio de Google donde escribes una pregunta completa. Una IA, Gemini, redacta la respuesta y la acompaña de enlaces a webs. Está disponible en Francia desde el 22 de julio de 2026, en el móvil y en el ordenador.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cómo aparecer en el Modo IA de Google?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Según Google, sin instalar nada especial: la página tiene que estar indexada y poder mostrarse con un fragmento. En mi caso, la mejora llegó junto con páginas que responden cada una a una pregunta concreta, con precios con fecha.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Qué diferencia hay entre el Modo IA y la Vista creada con IA?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La Vista creada con IA es un resumen que aparece por sí solo en los resultados habituales, cuando Google lo considera útil. El Modo IA es un espacio aparte, que abres tú mismo para hacer una pregunta y seguir la conversación.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Hay que pagar para aparecer en el Modo IA?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No. Google escribe que no hay ni requisitos adicionales ni optimización especial. Yo no pagué nada, y desconfiaría de cualquiera que garantice un resultado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cómo saber si la IA de Google cita mi web?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Haz tú mismo tus preguntas en el Modo IA y apunta el resultado. Search Console sí cuenta estas apariciones, pero las mezcla con los resultados habituales, sin una línea aparte. Así que no sé decir cuántas veces ha aparecido mi web en una Vista creada con IA.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿El Modo IA sustituye a los resultados clásicos?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No. Los resultados habituales siguen ahí: la Vista creada con IA solo aparece en algunas búsquedas, y el Modo IA es un espacio que eliges abrir. Google también avisa de que el Modo IA puede cometer errores.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Quieres saber qué responde el Modo IA de Google sobre tu oficio y qué le falta a tu web para que te cite? Te digo con franqueza lo que cambiaría y lo que no merece la pena.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Te respondo en menos de 24 h, por escrito o por videollamada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "ffcf24a7-c9c5-4ce5-bc3b-aeb8349f84fc",
+            "body": [
+              {
+                "_uid": "i-4763a8a6-62c6-4503-9ba0-717cdc5a2184",
                 "link": {
                   "id": "",
                   "url": "/contact",

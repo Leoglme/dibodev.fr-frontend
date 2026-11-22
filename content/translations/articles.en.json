@@ -67847,6 +67847,33 @@
           ]
         },
         {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For AI Mode alone, I wrote a separate guide: ",
+              "type": "text"
+            },
+            {
+              "text": "Google AI Mode: how to get your site to appear in it",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/apparaitre-mode-ia-google-site-entreprise",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "type": "heading",
           "attrs": {
             "level": 2
@@ -68180,6 +68207,723 @@
             "body": [
               {
                 "_uid": "i-a09bebd1-6cd0-4201-b06c-1fdbcb935a53",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Send me your site link",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "blog/apparaitre-mode-ia-google-site-entreprise": {
+    "title": "Google AI Mode: how to get your site to appear in it",
+    "excerpt": "What Google's AI Mode is, what Google asks for to appear in it, and what I saw on my site: cited 2 times out of 5 in September, 5 times out of 5 in November.",
+    "metaTitle": "Google AI Mode: how to get your site to appear in it",
+    "metaDescription": "Google AI Mode: what it is, what Google asks for to appear in it, a five-minute test and my results: from 2 to 5 answers out of 5 in two months.",
+    "tags": [
+      "google ai mode",
+      "appear in ai mode",
+      "google ai overview",
+      "gemini",
+      "small business website",
+      "search console"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In short: AI Mode is the Google tab where you type your question in full and an AI, Gemini, writes the answer with links to websites. According to Google, there's nothing special to install or pay for to appear in it: your page has to be known to Google and allowed to show with a snippet. For me, on the same five questions asked every month, AI Mode cited my business 2 times out of 5 on 26 September 2026, 4 times out of 5 on 31 October and 5 times out of 5 on 22 November.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You've seen \"AI Mode\" appear in Google, you searched for your trade or your business, and you're wondering why you're there, or why you're not. I'm a freelance developer near Rennes and I asked myself the same question. This guide separates two things: what Google writes in black and white, and what I saw on my own site. I don't promise any result: Google itself guarantees none.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "AI Mode, AI Overview, Gemini: what is what",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Google launched both features in France on the same day, 22 July 2026. It says so in ",
+              "type": "text"
+            },
+            {
+              "text": "its official announcement",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://blog.google/intl/fr-fr/nouveautes-produits/explorez-obtenez-des-reponses/recherche-ia-apercus-mode/",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The AI Overview",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " is a summary written by the AI, with links to find out more. It appears in the regular results, and only when Google thinks it's useful.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "AI Mode",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " is a separate space. You ask a full question there, the AI writes an answer with links, and you can follow up with another question. Google explains that it breaks your question down into several subtopics and runs several searches at once.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Gemini",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " is the name of Google's AI that writes these answers.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Where do you find it? According to ",
+              "type": "text"
+            },
+            {
+              "text": "Google's help pages",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://support.google.com/websearch/answer/16011537?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", on a computer, you go to google.com/ai, or you type a question on google.com and then choose \"AI Mode\". On a phone, in the Google app, you tap \"AI Mode\" on the home screen. On my iPhone, the tab is indeed called \"Mode IA\" (AI Mode).",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What Google asks for to appear in AI Mode",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The answer fits on ",
+              "type": "text"
+            },
+            {
+              "text": "one page of Google's documentation",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://developers.google.com/search/docs/appearance/ai-overviews?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ". It says two things.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "First: your page has to be indexed, meaning recorded by Google in its list of pages, and able to show with a snippet, the two lines of text under the title in the results. There's no other technical requirement. Google points out that appearing is never guaranteed.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Second: there's no special optimisation. Google writes that there's no need to create new machine-readable files, or a text file for AI, or any particular markup. So a \"special AI Mode file\" is useless.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What Google recommends is the same old basics:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- don't block its crawler, either in the `robots.txt` file (the file that tells crawlers what they can read) or at your hosting provider;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- write important information as text, not only in an image;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- link your pages to each other;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- keep your Google Business Profile up to date.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What I saw on my site",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Every month, I ask Google's AI Mode the same five questions, and ChatGPT, Copilot and Perplexity too. I count the answers that cite my business. In AI Mode: 2 out of 5 on 26 September 2026, 4 out of 5 on 31 October, 5 out of 5 on 22 November.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "During those two months, I didn't do anything special \"for Google's AI\", and I didn't pay anything. I worked on my site as if for a reader in a hurry:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "- pages that each answer a specific question;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- an \"In short\" summary at the top of the page;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- prices as ranges, with the date they were checked;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- questions and answers at the bottom of the page;",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "- listings of my business elsewhere on the web, with the same information everywhere.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Two limits, to be honest. The answers change from one time to the next: my test is a thermometer, not proof. And not everything works: I have a sixth question, about a PHP update, that doesn't cite me in any of the four AIs.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The full story, with ChatGPT and the other assistants, is in my article ",
+              "type": "text"
+            },
+            {
+              "text": "Getting cited by ChatGPT and Google's AI",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/etre-cite-par-chatgpt-site-petite-entreprise",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Check for yourself in five minutes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Don't type your business name: you'll find yourself, and you won't learn anything. Instead, ask three questions a client would ask before knowing you. For example:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1. a choice question: \"Which roofer should I hire to redo a roof in [your town]?\";",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "2. a price question: \"How much does [your service] cost in [your town]?\";",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "3. a practical question your clients often ask you on the phone.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Open AI Mode, ask them one by one, and note for each: are you cited, yes or no, and which sites are cited instead of you. Keep the date. Do it again every month, with exactly the same questions.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Where to start this week",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Everything below is free.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1. Do the three-question test and keep the result.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "2. Add your site to Search Console, Google's free tool for monitoring your site. You'll see there whether your pages are properly indexed.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "3. Check that your site isn't shutting the door on crawlers. You can ",
+              "type": "text"
+            },
+            {
+              "text": "test for free whether a page is readable by AI assistants",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/site-lisible-par-chatgpt",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "4. Pick the question you're asked most often and write a page that answers it, with the answer in the first few lines.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "5. Write your prices, even as a range, with a date.",
+              "type": "text"
+            },
+            {
+              "type": "hard_break"
+            },
+            {
+              "text": "6. Update your Google Business Profile: same name, address and business as on your site.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Can you opt out of appearing in it?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yes, and Google describes two ways.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The first is snippet settings, instructions placed in the page's code: `nosnippet`, `data-nosnippet`, `max-snippet` or `noindex`. They limit what Google shows of your page. Be careful, they also apply to the regular results: with `noindex`, your page drops out of Google altogether.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The second is more recent. In its 22 July 2026 announcement, Google says it has launched a new setting in Search Console, available in France. It lets a site owner decide whether the site appears in these AI answers. Google writes that this choice isn't used to rank the site in the other results. I haven't tried it.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For a small business looking for clients, I don't see any reason to opt out.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently asked questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "What is Google's AI Mode?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It's a space in Google where you type a question in full. An AI, Gemini, writes the answer and adds links to websites. It has been available in France since 22 July 2026, on phones and computers.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "How do I appear in Google's AI Mode?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "According to Google, without installing anything special: the page has to be indexed and able to show with a snippet. For me, the progress came alongside pages that each answer a specific question, with dated prices.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "What's the difference between AI Mode and AI Overview?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The AI Overview is a summary that appears on its own in the regular results, when Google thinks it's useful. AI Mode is a separate space that you open yourself to ask a question and carry on the conversation.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Do you have to pay to appear in AI Mode?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No. Google writes that there's no extra requirement and no special optimisation. I didn't pay anything, and I would be wary of anyone who guarantees a result.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "How do I know whether Google's AI cites my site?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ask your questions in AI Mode yourself and note the result. Search Console does count these appearances, but it mixes them with the regular results, with no separate line. So I can't say how many times my site has appeared in an AI Overview.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Does AI Mode replace the regular results?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No. The regular results are still there: the AI Overview only appears on some searches, and AI Mode is a space you choose to open. Google also warns that AI Mode can make mistakes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Want to know what Google's AI Mode says about your trade, and what your site is missing to get cited there? I'll tell you frankly what I would change, and what isn't worth the effort.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I'll reply within 24 hours, in writing or by video call.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "ffcf24a7-c9c5-4ce5-bc3b-aeb8349f84fc",
+            "body": [
+              {
+                "_uid": "i-4763a8a6-62c6-4503-9ba0-717cdc5a2184",
                 "link": {
                   "id": "",
                   "url": "/contact",
