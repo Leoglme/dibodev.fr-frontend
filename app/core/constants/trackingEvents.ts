@@ -116,6 +116,10 @@ export const TRACKING_EVENTS = {
   gmailSendAsVerdictShown: 'gmail_send_as_verdict_shown',
   /** A click on the blog guide of the mail host shown under a verdict of the Gmail checker. */
   gmailSendAsGuideClicked: 'gmail_send_as_guide_clicked',
+  /** First time typed in the work hours calculator (sent once per page view). */
+  workHoursCalculatorStarted: 'work_hours_calculator_started',
+  /** First non-zero weekly total of the work hours calculator, with the number of days filled and whether it exceeds the reference: never the times nor the rate. */
+  workHoursCalculated: 'work_hours_calculated',
   /** First action in the Google update checker (tab, file or example), sent once per page view, with the way in. */
   googleUpdateImpactCheckStarted: 'google_update_impact_check_started',
   /** A verdict of the Google update checker, from the export or the test: never a page, a figure nor a file name. */

@@ -394,6 +394,11 @@ const toolLinks: ComputedRef<DibodevFooterLink[]> = computed((): DibodevFooterLi
     to: localePath('tools-web-host-status'),
   },
   {
+    key: 'workHoursCalculator',
+    title: t('footer.tools.workHoursCalculator'),
+    to: localePath('tools-work-hours-calculator'),
+  },
+  {
     key: 'budgetEstimator',
     title: t('footer.tools.budgetEstimator'),
     to: `${localePath('custom-business-software')}#estimator`,

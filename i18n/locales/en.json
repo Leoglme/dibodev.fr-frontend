@@ -257,6 +257,7 @@
       "projectSpecification": "Project brief: generator and templates",
       "coldCallingCheck": "Cold calling ban: can I still call?",
       "hostingStatus": "Is my web host down?",
+      "workHoursCalculator": "Work hours calculator",
       "budgetEstimator": "Budget estimator",
       "freeTemplates": "Free templates: quotes, slips, schedules"
     }

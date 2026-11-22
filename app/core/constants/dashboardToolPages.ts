@@ -166,6 +166,7 @@ export const DASHBOARD_TOOL_PAGES: Record<string, DashboardToolPage> = {
     label: 'Modèle registre du personnel',
     onlineSince: '2026-11-22',
   },
+  'tools-work-hours-calculator': { label: 'Calcul des heures de travail', onlineSince: '2026-11-22' },
   'trade-websites': { label: 'Sites internet par métier (hub)', onlineSince: '2026-11-02' },
   'trade-websites-plumber': { label: 'Site internet pour plombier', onlineSince: '2026-11-02' },
   'trade-websites-electrician': { label: 'Site internet pour électricien', onlineSince: '2026-11-02' },

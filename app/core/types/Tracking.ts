@@ -278,6 +278,8 @@ export type TrackingEventPayloads = {
     mailHost: DibodevEmailProviderKey | null
   }
   [TRACKING_EVENTS.gmailSendAsGuideClicked]: { location: string; mailHost: DibodevEmailProviderKey | null }
+  [TRACKING_EVENTS.workHoursCalculatorStarted]: { location: string }
+  [TRACKING_EVENTS.workHoursCalculated]: { location: string; workedDayCount: number; exceedsReference: boolean }
   [TRACKING_EVENTS.siteCheckReportRequested]: {
     location: string
     tool: DibodevSiteCheckToolKey

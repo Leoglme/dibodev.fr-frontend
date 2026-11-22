@@ -257,6 +257,7 @@
       "projectSpecification": "Cahier des charges : générateur et modèles",
       "coldCallingCheck": "Démarchage téléphonique interdit ?",
       "hostingStatus": "Mon hébergeur est-il en panne ?",
+      "workHoursCalculator": "Calcul des heures de travail",
       "budgetEstimator": "Estimateur de budget",
       "freeTemplates": "Modèles gratuits : devis, bons, plannings"
     }
