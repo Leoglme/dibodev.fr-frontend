@@ -67506,5 +67506,588 @@
         }
       ]
     }
+  },
+  "blog/etre-cite-par-chatgpt-site-petite-entreprise": {
+    "title": "Que ChatGPT te cite: lo que hice en mi web y lo que conseguí",
+    "excerpt": "De 8 a 19 respuestas de 20 en dos meses: cómo mi web empezó a aparecer citada en ChatGPT y otros asistentes, sin pagar nada, y lo que no funcionó.",
+    "metaTitle": "Que ChatGPT te cite: mi prueba con 20 respuestas en 2 meses",
+    "metaDescription": "De 8 a 19 respuestas de 20: lo que cambié en mi web para aparecer en ChatGPT, Copilot y Perplexity, las cifras y lo que no funcionó.",
+    "tags": [
+      "aparecer en chatgpt",
+      "que chatgpt te cite",
+      "posicionamiento en asistentes ia",
+      "web de pequeña empresa",
+      "archivo llms.txt",
+      "bing webmaster tools"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En resumen: cada mes hago las mismas cinco preguntas a ChatGPT, Perplexity, Copilot y al modo IA de Google, y cuento las respuestas que citan mi empresa. Eran 8 de 20 el 26 de septiembre de 2026, 13 de 20 el 31 de octubre y 19 de 20 el 22 de noviembre. El volumen de visitas sigue siendo pequeño, 32 la semana del 15 al 21 de noviembre, pero un enlace citado por ChatGPT ya me ha traído un primer cliente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Soy desarrollador freelance cerca de Rennes. Creo webs y programas de gestión para pequeñas empresas. Me pregunté qué respondía ChatGPT a alguien que le hace la pregunta a él en lugar de a Google. Así que a finales de septiembre hice la prueba yo mismo. Pregunté en francés: «¿Qué desarrollador freelance en Rennes me recomiendas para crear una aplicación de gestión a medida?». Algunas respuestas me citaban, otras nada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No pagué nada ni contraté ningún servicio que prometa «aparecer en ChatGPT». Retomé mi propia web y apunté los resultados cada mes. Aviso: nadie sabe exactamente cómo eligen sus fuentes estos asistentes. Yo tampoco. Cuento lo que he observado, no una receta garantizada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Cómo sé si ChatGPT cita mi web",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Primero hacía falta una medida. Elegí cinco preguntas que un cliente podría hacer de verdad, por ejemplo: «¿Cuánto cuesta que un freelance de Rennes desarrolle una aplicación de gestión?» o, más directa, «¿Quién es Dibodev?». Se las hago cada mes a los mismos cuatro asistentes: ChatGPT, Perplexity, Copilot y el modo IA de Google. Cinco preguntas, cuatro asistentes, veinte respuestas. Cuento las que citan mi empresa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Esta prueba tiene sus límites. Los asistentes no siempre responden igual de un día para otro. Y la prueba del 22 de noviembre se hizo sin sesión iniciada en dos de ellos. Es un termómetro, no una medida de laboratorio.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Además, miro otras dos cosas. Las visitas: ChatGPT no indica de dónde viene el visitante como lo hace una web normal, pero sus enlaces llegan con `utm_source=chatgpt.com` en la dirección, lo que permite contarlos. Y las citas de Copilot, que ",
+              "type": "text"
+            },
+            {
+              "text": "Bing Webmaster Tools",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.bing.com/webmasters",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " muestra en un apartado llamado «AI Performance».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que hice para aparecer en ChatGPT",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A este trabajo a veces se le llama GEO, por «optimización para motores generativos»: el posicionamiento, pero para las respuestas de los asistentes de IA. En mi caso, fueron siete tareas bastante prácticas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Poner el texto en la página desde el principio.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Los robots de las IA no ejecutan JavaScript. Si un texto aparece después, cargado por un script, no lo ven. Comprobé que todo el contenido importante de mi web estaba en el HTML que envía el servidor. Encontré una página cuyo contenido llegaba precisamente después, y la corregí. Si quieres saber cómo está tu web, puedes ",
+              "type": "text"
+            },
+            {
+              "text": "comprobar si ChatGPT puede leer tu web",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/site-lisible-par-chatgpt",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un archivo `llms.txt` en la raíz de la web.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Es un simple archivo de texto que resume mi actividad, mis precios y la lista de mis páginas. Lo actualizo con cada página nueva. No sé qué asistente lo lee de verdad, pero mantenerlo no cuesta nada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Un párrafo «En resumen» al principio de los artículos.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Tres frases que responden a la pregunta, con las cifras y la fecha.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Escribir los precios en la web.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Con horquillas, y la fecha de cada consulta. Es el cambio con el efecto más claro en mi caso: antes, la pregunta sobre el precio nunca me citaba; desde entonces, tres asistentes de cuatro me citan. Reuní estas cifras en un ",
+              "type": "text"
+            },
+            {
+              "text": "barómetro de precios",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Preguntas y respuestas en las páginas.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Añadí bloques de preguntas frecuentes, marcados para que las máquinas los reconozcan como tales, en las páginas de servicio y en los artículos.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La misma información fuera de mi web.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Estoy en el directorio oficial France Num desde el 26 de octubre de 2026. Tengo fichas en Wikidata, un conjunto de datos publicado en data.gouv.fr, y mi web está dada de alta en Bing Webmaster Tools. En todas partes, el mismo nombre, la misma ciudad, la misma actividad, las mismas tarifas. Un asistente que encuentra información que coincide en varios sitios tiene, supongo, menos motivos para dudar. Digo bien «supongo».",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No cerrar la puerta a los robots.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Comprobé que mi archivo `robots.txt` no bloqueaba a los robots de las IA. Es la comprobación más rápida de la lista.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que conseguí, en cifras",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "La prueba mensual pasó de 8 respuestas de 20 el 26 de septiembre a 13 de 20 el 31 de octubre, y luego a 19 de 20 el 22 de noviembre. Ese día, en la primera pregunta, la del desarrollador freelance en Rennes, los cuatro asistentes me citan en primer lugar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Las visitas llegadas desde un asistente de IA siguieron, semana tras semana: 7, luego 15, luego 27 y luego 32 la semana del 15 al 21 de noviembre, 30 de ellas de ChatGPT. Seamos claros: es poco.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En cuanto a Copilot, Bing Webmaster Tools contaba unas 150 citas de mis páginas por semana a principios de noviembre. Del 15 al 20 de noviembre, en seis días, hubo 548. La búsqueda más citada me sorprendió: «liste de présence» (hoja de asistencia), con 133 citas, para una página de plantilla gratuita que había publicado el 15 de noviembre.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Es la lección que no esperaba. Las visitas que llegan desde ChatGPT caen sobre todo en páginas prácticas: mis ",
+              "type": "text"
+            },
+            {
+              "text": "plantillas de documentos gratuitas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/modeles-gratuits",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", como la orden de reparación, el acta de recepción, la hoja de pedido o la hoja de fichaje, y una página que compara programas para autoescuelas.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Y luego llegó el 28 de octubre. Recibí una primera solicitud de contacto de alguien que había hecho clic en un enlace citado por ChatGPT hacia una de mis páginas de servicio. Firmó conmigo el 19 de noviembre, 22 días después. Ahí dejé de ver todo esto como una curiosidad.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Lo que no funcionó",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En octubre añadí una sexta pregunta: «¿Quién puede actualizar la versión de PHP de mi web WordPress?». Es un servicio que ofrezco. Resultado: 0 de 4. Los asistentes remiten al proveedor de alojamiento, lo que, por cierto, no es absurdo. No estoy seguro de que haya algo que cambiar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Segunda decepción: algunos asistentes siguen repitiendo mis tarifas antiguas aunque han cambiado. Corregir tu página no corrige necesariamente, ni enseguida, lo que repiten los asistentes. Es un motivo más para poner fecha a cada precio en la web.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tercer punto, más personal: el 16 de noviembre publiqué una herramienta gratuita, «¿Puede ChatGPT leer mi web?». Por ahora, casi no se usa. Tener un buen tema no basta para atraer a la gente.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Por dónde empezar para que ChatGPT te cite",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Si diriges una pequeña empresa y quieres probar, yo empezaría en este orden. Primero, hazle tú mismo a ChatGPT las tres preguntas que te haría un cliente y apunta lo que responde: es tu punto de partida. Después, comprueba que tu web muestra su texto sin esperar a un script y que tu `robots.txt` no bloquea nada. Luego escribe tus precios, aunque sea en horquilla, con una fecha. Por último, alinea tu nombre, tu ciudad y tu actividad en todos los sitios donde apareces.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nada de esto está garantizado: los asistentes cambian y sus elecciones siguen siendo opacas. Pero estos cambios también hacen tu web más clara para las personas, así que el riesgo es bajo. Si quieres saber quién te habla, ",
+              "type": "text"
+            },
+            {
+              "text": "aquí tienes mi trayectoria",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/a-propos",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Hay que pagar un servicio para aparecer en ChatGPT?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Yo no lo hice. Todo lo que describo aquí lo hice solo, sin pagar nada. Nadie sabe exactamente cómo eligen sus fuentes estos asistentes, así que desconfiaría de cualquiera que garantice un resultado.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cómo saber si ChatGPT envía visitantes a mi web?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Busca en tus estadísticas las visitas cuya dirección contiene `utm_source=chatgpt.com`: así llegan sus enlaces, ya que no indica una web de origen. Para Copilot, Bing Webmaster Tools da el número de citas de tus páginas. Y hazles tú mismo las preguntas de tus clientes, cada mes, a los mismos asistentes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cuánto tiempo hace falta para que te citen?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En mi caso, hicieron falta dos meses para pasar de 8 a 19 respuestas de 20, entre el 26 de septiembre y el 22 de noviembre de 2026. Pero no sé qué parte se debe a mis cambios y qué parte a los propios asistentes. No puedo prometer un plazo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Sustituye a Google?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En mi caso, no. Las visitas que llegan desde los asistentes de IA siguen siendo pocas: 32 en mi mejor semana. En cambio, lo que ayuda a un asistente a entender una página (un texto claro, precios con fecha, respuestas directas) también hace la página más clara para tus visitantes.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "¿Quieres saber qué dice ChatGPT de tu empresa y qué le falta a tu web para que te cite? Te digo con franqueza lo que cambiaría y lo que no merece la pena.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Te respondo en menos de 24 h, por escrito o por videollamada.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "9040e923-a672-4bf4-bcaa-8864f533e152",
+            "body": [
+              {
+                "_uid": "i-a09bebd1-6cd0-4201-b06c-1fdbcb935a53",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Envíame el enlace de tu web",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

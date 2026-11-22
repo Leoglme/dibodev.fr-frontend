@@ -67504,5 +67504,588 @@
         }
       ]
     }
+  },
+  "blog/etre-cite-par-chatgpt-site-petite-entreprise": {
+    "title": "Getting cited by ChatGPT: what I did on my site, and what came of it",
+    "excerpt": "From 8 to 19 answers out of 20 in two months: how my site started being cited by ChatGPT and other assistants, without paying anything, and what did not work.",
+    "metaTitle": "Getting cited by ChatGPT: my 20-answer test over 2 months",
+    "metaDescription": "From 8 to 19 answers out of 20: what I changed on my site to appear in ChatGPT, Copilot and Perplexity, the figures, and what did not work.",
+    "tags": [
+      "appear in chatgpt",
+      "get cited by chatgpt",
+      "ai assistant seo",
+      "small business website",
+      "llms.txt file",
+      "bing webmaster tools"
+    ],
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In short: every month, I ask ChatGPT, Perplexity, Copilot and Google's AI Mode the same five questions, and I count the answers that cite my business. It was 8 out of 20 on 26 September 2026, 13 out of 20 on 31 October and 19 out of 20 on 22 November. The number of visits is still small, 32 in the week of 15 to 21 November, but a link cited by ChatGPT has already brought me a first client.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I'm a freelance developer near Rennes. I build websites and management software for small businesses. I wondered what ChatGPT tells someone who asks it rather than Google. So at the end of September, I ran the test myself. I asked (in French): \"Which freelance developer in Rennes would you recommend to build a custom business application?\" Some answers cited me, others not at all.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I didn't pay anything or buy any service that promises to \"get you into ChatGPT\". I went back over my own site and noted the results each month. A word of warning: nobody knows exactly how these assistants choose their sources. Neither do I. I'm describing what I observed, not a guaranteed recipe.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How I know whether ChatGPT cites my site",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "First I needed a measure. I chose five questions a client might really ask, for example: \"How much does it cost to have a freelancer in Rennes develop a business application?\" or, more directly, \"Who is Dibodev?\". I ask them every month to the same four assistants: ChatGPT, Perplexity, Copilot and Google's AI Mode. Five questions, four assistants, twenty answers. I count the ones that cite my business.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This test has its limits. The assistants don't always answer the same way from one day to the next. And the 22 November test was done without being logged in on two of them. It's a thermometer, not a lab measurement.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Alongside that, I look at two other things. Visits: ChatGPT doesn't say where the visitor came from the way a regular site does, but its links arrive with `utm_source=chatgpt.com` in the address, which makes them countable. And Copilot citations, which ",
+              "type": "text"
+            },
+            {
+              "text": "Bing Webmaster Tools",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.bing.com/webmasters",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " shows in a section called \"AI Performance\".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What I did to appear in ChatGPT",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This work is sometimes called GEO, for \"generative engine optimisation\": SEO, but for the answers of AI assistants. For me, it came down to seven fairly down-to-earth tasks.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Put the text in the page from the start.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " AI crawlers don't run JavaScript. If a piece of text appears afterwards, loaded by a script, they don't see it. I checked that all the important content on my site was in the HTML sent by the server. I found one page whose content did arrive afterwards, and I fixed it. If you want to know where your site stands, you can ",
+              "type": "text"
+            },
+            {
+              "text": "test whether your site is readable by ChatGPT",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/site-lisible-par-chatgpt",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A `llms.txt` file at the root of the site.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " It's a simple text file that sums up my business, my prices and the list of my pages. I update it with every new page. I don't know which assistant actually reads it, but it costs nothing to maintain.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "An \"In short\" paragraph at the top of articles.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " Three sentences that answer the question, with the figures and the date.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Write the prices on the site.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " With ranges, and the date of each survey. It's the change with the clearest effect for me: before, the question about price never cited me; since then, three assistants out of four cite me. I gathered these figures in a ",
+              "type": "text"
+            },
+            {
+              "text": "price barometer",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/prix-logiciel-sur-mesure",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Questions and answers on the pages.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " I added FAQ blocks, marked up so that machines recognise them as such, on the service pages and in the articles.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The same information somewhere other than my site.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " I've been listed in the official France Num directory since 26 October 2026. I have Wikidata entries, a dataset published on data.gouv.fr, and my site is registered in Bing Webmaster Tools. Everywhere, the same name, the same town, the same business, the same rates. An assistant that finds matching information in several places has, I suppose, less reason to hesitate. I do mean \"I suppose\".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Don't shut the door on crawlers.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "text": " I checked that my `robots.txt` file wasn't blocking AI crawlers. It's the quickest check on the list.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What came of it, in figures",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The monthly test went from 8 answers out of 20 on 26 September to 13 out of 20 on 31 October, then 19 out of 20 on 22 November. That day, on the first question, the one about a freelance developer in Rennes, all four assistants cite me first.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Visits from an AI assistant followed, week after week: 7, then 15, then 27, then 32 in the week of 15 to 21 November, 30 of them from ChatGPT. To be clear, that's not much.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On the Copilot side, Bing Webmaster Tools counted around 150 citations of my pages per week in early November. From 15 to 20 November, in six days, there were 548. The most cited query surprised me: \"liste de présence\" (attendance sheet), with 133 citations, for a free template page I had put online on 15 November.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "That's the lesson I didn't expect. Visits from ChatGPT mostly land on practical pages: my ",
+              "type": "text"
+            },
+            {
+              "text": "free document templates",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/outils/modeles-gratuits",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ", such as the repair order, the handover report, the purchase order or the timesheet, and a page comparing software for driving schools.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "And then came 28 October. A first contact request arrived from someone who had clicked on a link cited by ChatGPT to one of my service pages. She signed with me on 19 November, 22 days later. That's when I stopped seeing all this as a curiosity.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "What didn't work",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In October, I added a sixth question: \"Who can update the PHP version of my WordPress site?\" It's a service I offer. Result: 0 out of 4. The assistants point to the hosting provider, which isn't absurd, by the way. I'm not sure there's anything to change.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Second disappointment: some assistants still repeat my old rates even though they've changed. Fixing your page doesn't necessarily fix what the assistants repeat, or not right away. It's one more reason to date every price on the site.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Third point, more personal: on 16 November, I published a free tool, \"Is my site readable by ChatGPT?\". For now, it's barely used. Having a good topic isn't enough to bring people in.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Where to start to get cited by ChatGPT",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you run a small business and want to give it a try, I would start in this order. First, ask ChatGPT yourself the three questions a client would ask you, and note what it answers: that's your starting point. Next, check that your site shows its text without waiting for a script and that your `robots.txt` doesn't block anything. Then write your prices, even as a range, with a date. Finally, align your name, your town and your business everywhere you appear.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "None of this is guaranteed: the assistants change and their choices remain opaque. But these changes also make your site clearer for humans, so the risk is low. If you want to know who's talking to you, ",
+              "type": "text"
+            },
+            {
+              "text": "my background is here",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/a-propos",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Frequently asked questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Do you need to pay for a service to appear in ChatGPT?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I didn't. Everything I describe here, I did on my own, without paying anything. Nobody knows exactly how these assistants choose their sources, so I would be wary of anyone who guarantees a result.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "How do I know whether ChatGPT sends visitors to my site?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Look in your analytics for visits whose address contains `utm_source=chatgpt.com`: that's how its links arrive, since it doesn't give a referring site. For Copilot, Bing Webmaster Tools gives the number of citations of your pages. And ask the same assistants your clients' questions yourself, every month.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "How long does it take to get cited?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For me, it took two months to go from 8 to 19 answers out of 20, between 26 September and 22 November 2026. But I don't know how much is down to my changes and how much to the assistants themselves. I can't promise a timeframe.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Does it replace Google?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Not for me. Visits from AI assistants are still few: 32 in my best week. On the other hand, what helps an assistant understand a page (clear text, dated prices, direct answers) also makes the page clearer for your visitors.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Want to know what ChatGPT says about your business, and what your site is missing to get cited? I'll tell you frankly what I would change, and what isn't worth the effort.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I'll reply within 24 hours, in writing or by video call.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "blok",
+          "attrs": {
+            "id": "9040e923-a672-4bf4-bcaa-8864f533e152",
+            "body": [
+              {
+                "_uid": "i-a09bebd1-6cd0-4201-b06c-1fdbcb935a53",
+                "link": {
+                  "id": "",
+                  "url": "/contact",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "/contact"
+                },
+                "label": "Send me your site link",
+                "style": "primary",
+                "component": "cta_button"
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
