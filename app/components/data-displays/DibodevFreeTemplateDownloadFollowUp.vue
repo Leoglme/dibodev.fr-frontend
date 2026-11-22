@@ -1,15 +1,23 @@
 <template>
-  <div class="grid gap-4 border-t border-gray-300 pt-5">
-    <div class="grid gap-1" role="status">
-      <p class="text-[15px] leading-6 font-medium text-gray-100">{{ wording.title }}</p>
-      <p class="text-[15px] leading-6 text-gray-200">{{ wording.question }}</p>
+  <div ref="followUpElement" class="border-accent-tint bg-surface-tint grid gap-5 rounded-xl border p-5 sm:p-6">
+    <div class="grid gap-3" role="status">
+      <p class="text-primary-dark flex items-center gap-2 text-sm leading-5 font-medium">
+        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white" aria-hidden="true">
+          <DibodevIcon name="Check" mode="stroke" :width="16" :height="16" />
+        </span>
+        {{ wording.title }}
+      </p>
+      <div class="grid gap-1">
+        <p class="text-lg leading-7 font-medium text-gray-100 sm:text-xl">{{ wording.question }}</p>
+        <p class="text-[15px] leading-6 text-gray-200">{{ wording.hint }}</p>
+      </div>
     </div>
-    <div class="flex flex-wrap gap-2">
+    <div class="grid gap-2 sm:grid-cols-3">
       <button
         v-for="volume in FREE_TEMPLATE_MONTHLY_VOLUMES"
         :key="volume"
         type="button"
-        class="focus-visible:ring-primary min-h-11 rounded-lg border px-4 py-2 text-[15px] leading-6 font-medium transition duration-150 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+        class="focus-visible:ring-primary min-h-12 cursor-pointer rounded-lg border px-4 py-3 text-base leading-6 font-medium transition duration-150 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
         :class="volume === selectedVolume ? SELECTED_VOLUME_CLASSES : UNSELECTED_VOLUME_CLASSES"
         :aria-pressed="volume === selectedVolume"
         @click="onVolumeSelected(volume)"
@@ -17,10 +25,11 @@
         {{ wording.volumeLabels[volume] }}
       </button>
     </div>
-    <div v-if="selectedAdvice" class="grid gap-3" aria-live="polite">
-      <p class="text-[15px] leading-6 text-gray-200">
-        <span class="font-medium text-gray-100">{{ selectedAdvice.title }}</span> {{ selectedAdvice.text }}
-      </p>
+    <div v-if="selectedAdvice" class="grid gap-4 rounded-lg bg-white p-4 sm:p-5" aria-live="polite">
+      <div class="grid gap-1">
+        <p class="text-base leading-6 font-medium text-gray-100">{{ selectedAdvice.title }}</p>
+        <p class="text-[15px] leading-6 text-gray-200">{{ selectedAdvice.text }}</p>
+      </div>
       <NuxtLink
         v-if="selectedVolume === 'low'"
         :to="localePath({ name: FREE_TEMPLATES_HUB_ROUTE_NAME })"
@@ -85,7 +94,7 @@ import { FREE_TEMPLATES_HUB_ROUTE_NAME } from '~/core/constants/freeTemplates/fr
 import { TRACKING_EVENTS } from '~/core/constants/trackingEvents'
 
 const SELECTED_VOLUME_CLASSES: string = 'border-primary bg-primary text-white'
-const UNSELECTED_VOLUME_CLASSES: string = 'border-gray-400 bg-transparent text-gray-100 hover:bg-gray-800'
+const UNSELECTED_VOLUME_CLASSES: string = 'border-gray-400 bg-white text-gray-100 hover:border-primary'
 
 /** Question asked once a template file has been downloaded: the monthly volume answered decides the next step offered. */
 const props: DibodevFreeTemplateDownloadFollowUpProps = defineProps({
@@ -103,6 +112,7 @@ const { locale } = useI18n()
 const localePath = useLocalePath()
 const { track } = useTracking()
 
+const followUpElement: Ref<HTMLElement | null> = ref(null)
 const selectedVolume: Ref<DibodevFreeTemplateMonthlyVolume | null> = ref(null)
 
 const wording: ComputedRef<DibodevFreeTemplateDownloadFollowUpWording> = computed(
@@ -130,6 +140,7 @@ function onVolumeSelected(volume: DibodevFreeTemplateMonthlyVolume): void {
 }
 
 onMounted((): void => {
+  followUpElement.value?.scrollIntoView({ behavior: 'smooth', block: 'center' })
   track(TRACKING_EVENTS.freeTemplateFollowUpShown, { file: props.downloadedFile })
 })
 </script>

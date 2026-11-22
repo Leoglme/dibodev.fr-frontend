@@ -11,6 +11,7 @@ export type DibodevFreeTemplateVolumeAdvice = {
 export type DibodevFreeTemplateDownloadFollowUpWording = {
   title: string
   question: string
+  hint: string
   volumeLabels: Record<DibodevFreeTemplateMonthlyVolume, string>
   advices: Record<DibodevFreeTemplateMonthlyVolume, DibodevFreeTemplateVolumeAdvice>
   otherTemplatesLinkLabel: string

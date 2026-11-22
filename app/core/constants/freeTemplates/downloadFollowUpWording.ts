@@ -15,7 +15,8 @@ export const FREE_TEMPLATE_DOWNLOAD_FOLLOW_UP_WORDING: Record<
 > = {
   fr: {
     title: 'Votre fichier se télécharge.',
-    question: `Une question pour vous orienter${NBSP}: ce document, vous en remplissez combien par mois${NBSP}?`,
+    question: `Ce document, vous en remplissez combien par mois${NBSP}?`,
+    hint: 'Un clic, et je vous dis si le modèle suffit ou s’il est temps de passer à un outil.',
     volumeLabels: {
       low: 'Moins de 10',
       medium: 'De 10 à 50',
@@ -40,7 +41,8 @@ export const FREE_TEMPLATE_DOWNLOAD_FOLLOW_UP_WORDING: Record<
   },
   en: {
     title: 'Your file is downloading.',
-    question: 'One question to point you the right way: how many of these do you fill in each month?',
+    question: 'How many of these do you fill in each month?',
+    hint: 'One click, and I tell you whether the template is enough or it is time for a tool.',
     volumeLabels: {
       low: 'Fewer than 10',
       medium: '10 to 50',
@@ -65,7 +67,8 @@ export const FREE_TEMPLATE_DOWNLOAD_FOLLOW_UP_WORDING: Record<
   },
   es: {
     title: 'Tu archivo se está descargando.',
-    question: 'Una pregunta para orientarte: ¿cuántos documentos de este tipo rellenas al mes?',
+    question: '¿Cuántos documentos de este tipo rellenas al mes?',
+    hint: 'Un clic y te digo si la plantilla basta o si ya toca pasar a una herramienta.',
     volumeLabels: {
       low: 'Menos de 10',
       medium: 'De 10 a 50',
