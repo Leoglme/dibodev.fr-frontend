@@ -67508,15 +67508,16 @@
     }
   },
   "blog/etre-cite-par-chatgpt-site-petite-entreprise": {
-    "title": "Que ChatGPT te cite: lo que hice en mi web y lo que conseguí",
-    "excerpt": "De 8 a 19 respuestas de 20 en dos meses: cómo mi web empezó a aparecer citada en ChatGPT y otros asistentes, sin pagar nada, y lo que no funcionó.",
-    "metaTitle": "Que ChatGPT te cite: mi prueba con 20 respuestas en 2 meses",
-    "metaDescription": "De 8 a 19 respuestas de 20: lo que cambié en mi web para aparecer en ChatGPT, Copilot y Perplexity, las cifras y lo que no funcionó.",
+    "title": "Que te citen ChatGPT y la IA de Google: lo que hice y lo que conseguí",
+    "excerpt": "De 8 a 19 respuestas de 20 en dos meses: cómo mi web empezó a aparecer citada en ChatGPT, la IA de Google y Copilot, sin pagar nada, y lo que no funcionó.",
+    "metaTitle": "Que te citen ChatGPT y la IA de Google: mi prueba",
+    "metaDescription": "De 8 a 19 respuestas de 20: lo que cambié en mi web para que me citen ChatGPT, el Modo IA de Google (Gemini) y Copilot, y lo que no funcionó.",
     "tags": [
       "aparecer en chatgpt",
       "que chatgpt te cite",
+      "vistas creadas con ia google",
+      "modo ia google",
       "posicionamiento en asistentes ia",
-      "web de pequeña empresa",
       "archivo llms.txt",
       "bing webmaster tools"
     ],
@@ -67527,7 +67528,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En resumen: cada mes hago las mismas cinco preguntas a ChatGPT, Perplexity, Copilot y al modo IA de Google, y cuento las respuestas que citan mi empresa. Eran 8 de 20 el 26 de septiembre de 2026, 13 de 20 el 31 de octubre y 19 de 20 el 22 de noviembre. El volumen de visitas sigue siendo pequeño, 32 la semana del 15 al 21 de noviembre, pero un enlace citado por ChatGPT ya me ha traído un primer cliente.",
+              "text": "En resumen: cada mes hago las mismas cinco preguntas a ChatGPT, al Modo IA de Google (Gemini), a Copilot y a Perplexity, y cuento las respuestas que citan mi empresa. Eran 8 de 20 el 26 de septiembre de 2026, 13 de 20 el 31 de octubre y 19 de 20 el 22 de noviembre. El volumen de visitas sigue siendo pequeño, 32 la semana del 15 al 21 de noviembre, pero un enlace citado por ChatGPT ya me ha traído un primer cliente.",
               "type": "text"
             }
           ]
@@ -67566,7 +67567,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Primero hacía falta una medida. Elegí cinco preguntas que un cliente podría hacer de verdad, por ejemplo: «¿Cuánto cuesta que un freelance de Rennes desarrolle una aplicación de gestión?» o, más directa, «¿Quién es Dibodev?». Se las hago cada mes a los mismos cuatro asistentes: ChatGPT, Perplexity, Copilot y el modo IA de Google. Cinco preguntas, cuatro asistentes, veinte respuestas. Cuento las que citan mi empresa.",
+              "text": "Primero hacía falta una medida. Elegí cinco preguntas que un cliente podría hacer de verdad, por ejemplo: «¿Cuánto cuesta que un freelance de Rennes desarrolle una aplicación de gestión?» o, más directa, «¿Quién es Dibodev?». Se las hago cada mes a los mismos cuatro asistentes: ChatGPT, el Modo IA de Google, que funciona con Gemini, Copilot, el asistente de Microsoft en Bing, y Perplexity. Cinco preguntas, cuatro asistentes, veinte respuestas. Cuento las que citan mi empresa.",
               "type": "text"
             }
           ]
@@ -67614,7 +67615,7 @@
           },
           "content": [
             {
-              "text": "Lo que hice para aparecer en ChatGPT",
+              "text": "Lo que hice para aparecer en ChatGPT y en la IA de Google",
               "type": "text"
             }
           ]
@@ -67677,7 +67678,7 @@
               ]
             },
             {
-              "text": " Es un simple archivo de texto que resume mi actividad, mis precios y la lista de mis páginas. Lo actualizo con cada página nueva. No sé qué asistente lo lee de verdad, pero mantenerlo no cuesta nada.",
+              "text": " Es un simple archivo de texto que resume mi actividad, mis precios y la lista de mis páginas. Lo actualizo con cada página nueva. Google dice que no lo necesita para sus respuestas de IA. No sé qué otro asistente lo lee de verdad, pero mantenerlo no cuesta nada.",
               "type": "text"
             }
           ]
@@ -67797,6 +67798,63 @@
           },
           "content": [
             {
+              "text": "Aparecer en la IA de Google: Vistas creadas con IA, Modo IA y Gemini",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Desde el 22 de julio de 2026, Google también muestra en Francia respuestas redactadas por su IA, Gemini. Las hay de dos tipos. Las Vistas creadas con IA («Aperçus IA» en la versión francesa) son el resumen que a veces aparece arriba del todo en los resultados, con algunos enlaces a las webs utilizadas. El Modo IA es una pestaña aparte, donde haces tu pregunta como se la harías a ChatGPT. Es el que consulto en mi prueba.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "En este punto, Google es claro, y ",
+              "type": "text"
+            },
+            {
+              "text": "su documentación",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://developers.google.com/search/docs/appearance/ai-overviews?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " lo dice: no hay ningún ajuste especial ni archivo que añadir para aparecer. La página tiene que estar en Google y tener permitido mostrarse con un fragmento. Dicho de otro modo, para la IA de Google, el trabajo es el mismo que para Google a secas: una página clara, útil, que responde a la pregunta.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lo que no sé medir son las Vistas creadas con IA. En Search Console, la herramienta gratuita de Google para seguir tu web, estas apariciones se cuentan junto con los resultados habituales, sin una línea aparte. Veo mi web en el Modo IA cuando hago mis preguntas, pero no puedo decir cuántas veces ha aparecido citada en una Vista creada con IA.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
               "text": "Lo que conseguí, en cifras",
               "type": "text"
             }
@@ -67807,6 +67865,15 @@
           "content": [
             {
               "text": "La prueba mensual pasó de 8 respuestas de 20 el 26 de septiembre a 13 de 20 el 31 de octubre, y luego a 19 de 20 el 22 de noviembre. Ese día, en la primera pregunta, la del desarrollador freelance en Rennes, los cuatro asistentes me citan en primer lugar.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Asistente por asistente, sobre cinco preguntas: ChatGPT pasó de 1 a 4 y luego a 5, el Modo IA de Google de 2 a 4 y luego a 5, Copilot de 1 a 3 y luego a 4, y Perplexity de 4 a 2 y luego a 5 (el 31 de octubre no había respondido a una de las preguntas). La única respuesta que hoy no me cita es la de Copilot sobre el precio.",
               "type": "text"
             }
           ]
@@ -67960,6 +68027,48 @@
           "content": [
             {
               "text": "Preguntas frecuentes",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "¿Cómo aparecer en las Vistas creadas con IA de Google?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Según Google, sin hacer nada especial: la página tiene que estar indexada y poder mostrarse con un fragmento. En mi caso, lo que contó fueron páginas que responden a una pregunta concreta, con cifras y una fecha. No puedo demostrarlo para las Vistas creadas con IA, que Search Console no cuenta aparte; en el Modo IA, aparezco citado en mis cinco preguntas desde el 22 de noviembre de 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "ChatGPT, Gemini, Copilot: ¿hace falta un trabajo distinto para cada uno?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No hice nada distinto para uno u otro, y los cuatro subieron durante el mismo periodo. La única diferencia está en la medición: Bing Webmaster Tools da las citas de Copilot, ChatGPT se detecta en la dirección de las visitas, y Google no separa sus respuestas de IA del resto.",
               "type": "text"
             }
           ]

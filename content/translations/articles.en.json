@@ -67506,15 +67506,16 @@
     }
   },
   "blog/etre-cite-par-chatgpt-site-petite-entreprise": {
-    "title": "Getting cited by ChatGPT: what I did on my site, and what came of it",
-    "excerpt": "From 8 to 19 answers out of 20 in two months: how my site started being cited by ChatGPT and other assistants, without paying anything, and what did not work.",
-    "metaTitle": "Getting cited by ChatGPT: my 20-answer test over 2 months",
-    "metaDescription": "From 8 to 19 answers out of 20: what I changed on my site to appear in ChatGPT, Copilot and Perplexity, the figures, and what did not work.",
+    "title": "Getting cited by ChatGPT and Google's AI: what I did, and what came of it",
+    "excerpt": "From 8 to 19 answers out of 20 in two months: how my site started being cited by ChatGPT, Google's AI and Copilot, without paying anything, and what did not work.",
+    "metaTitle": "Getting cited by ChatGPT and Google's AI: my test",
+    "metaDescription": "From 8 to 19 answers out of 20: what I changed on my site to be cited by ChatGPT, Google's AI Mode (Gemini) and Copilot, and what did not work.",
     "tags": [
       "appear in chatgpt",
       "get cited by chatgpt",
+      "google ai overviews",
+      "google ai mode",
       "ai assistant seo",
-      "small business website",
       "llms.txt file",
       "bing webmaster tools"
     ],
@@ -67525,7 +67526,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "In short: every month, I ask ChatGPT, Perplexity, Copilot and Google's AI Mode the same five questions, and I count the answers that cite my business. It was 8 out of 20 on 26 September 2026, 13 out of 20 on 31 October and 19 out of 20 on 22 November. The number of visits is still small, 32 in the week of 15 to 21 November, but a link cited by ChatGPT has already brought me a first client.",
+              "text": "In short: every month, I ask ChatGPT, Google's AI Mode (Gemini), Copilot and Perplexity the same five questions, and I count the answers that cite my business. It was 8 out of 20 on 26 September 2026, 13 out of 20 on 31 October and 19 out of 20 on 22 November. The number of visits is still small, 32 in the week of 15 to 21 November, but a link cited by ChatGPT has already brought me a first client.",
               "type": "text"
             }
           ]
@@ -67564,7 +67565,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "First I needed a measure. I chose five questions a client might really ask, for example: \"How much does it cost to have a freelancer in Rennes develop a business application?\" or, more directly, \"Who is Dibodev?\". I ask them every month to the same four assistants: ChatGPT, Perplexity, Copilot and Google's AI Mode. Five questions, four assistants, twenty answers. I count the ones that cite my business.",
+              "text": "First I needed a measure. I chose five questions a client might really ask, for example: \"How much does it cost to have a freelancer in Rennes develop a business application?\" or, more directly, \"Who is Dibodev?\". I ask them every month to the same four assistants: ChatGPT, Google's AI Mode, which runs on Gemini, Copilot, Microsoft's assistant in Bing, and Perplexity. Five questions, four assistants, twenty answers. I count the ones that cite my business.",
               "type": "text"
             }
           ]
@@ -67612,7 +67613,7 @@
           },
           "content": [
             {
-              "text": "What I did to appear in ChatGPT",
+              "text": "What I did to appear in ChatGPT and in Google's AI",
               "type": "text"
             }
           ]
@@ -67675,7 +67676,7 @@
               ]
             },
             {
-              "text": " It's a simple text file that sums up my business, my prices and the list of my pages. I update it with every new page. I don't know which assistant actually reads it, but it costs nothing to maintain.",
+              "text": " It's a simple text file that sums up my business, my prices and the list of my pages. I update it with every new page. Google says it doesn't need it for its AI answers. I don't know which other assistant actually reads it, but it costs nothing to maintain.",
               "type": "text"
             }
           ]
@@ -67795,6 +67796,63 @@
           },
           "content": [
             {
+              "text": "Appearing in Google's AI: AI Overviews, AI Mode and Gemini",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Since 22 July 2026, Google has also been showing answers written by its AI, Gemini, in France. They come in two forms. The AI Overview is the summary that sometimes appears at the very top of the results, with a few links to the sites it used. AI Mode is a separate tab, where you ask your question as you would ask ChatGPT. That's the one I query in my test.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "On this point, Google is clear, and ",
+              "type": "text"
+            },
+            {
+              "text": "its documentation",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://developers.google.com/search/docs/appearance/ai-overviews?hl=fr",
+                    "target": "_blank",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": " says so: there's no special setting and no file to add to appear there. The page has to be in Google and allowed to show with a snippet. In other words, for Google's AI, the work is the same as for plain Google: a clear, useful page that answers the question.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What I can't measure is AI Overviews. In Search Console, Google's free tool for monitoring your site, these appearances are counted with the regular results, with no separate line. I see my site in AI Mode when I ask my questions, but I can't say how many times it has been cited in an AI Overview.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
               "text": "What came of it, in figures",
               "type": "text"
             }
@@ -67805,6 +67863,15 @@
           "content": [
             {
               "text": "The monthly test went from 8 answers out of 20 on 26 September to 13 out of 20 on 31 October, then 19 out of 20 on 22 November. That day, on the first question, the one about a freelance developer in Rennes, all four assistants cite me first.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Assistant by assistant, out of five questions: ChatGPT went from 1 to 4 then 5, Google's AI Mode from 2 to 4 then 5, Copilot from 1 to 3 then 4, and Perplexity from 4 to 2 then 5 (on 31 October, it hadn't answered one of the questions). The only answer that doesn't cite me today is Copilot's on price.",
               "type": "text"
             }
           ]
@@ -67958,6 +68025,48 @@
           "content": [
             {
               "text": "Frequently asked questions",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "How do I appear in Google's AI Overview?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "According to Google, without doing anything special: the page has to be indexed and able to show with a snippet. For me, what mattered was pages that answer a specific question, with figures and a date. I can't prove it for AI Overviews, which Search Console doesn't count separately; in AI Mode, I've been cited on all five of my questions since 22 November 2026.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "ChatGPT, Gemini, Copilot: does each one need different work?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I didn't do anything different for one or the other, and all four went up over the same period. The only difference is in the measurement: Bing Webmaster Tools gives Copilot's citations, ChatGPT shows up in the address of the visits, and Google doesn't separate its AI answers from the rest.",
               "type": "text"
             }
           ]
