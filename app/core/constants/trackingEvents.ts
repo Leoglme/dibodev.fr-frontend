@@ -32,6 +32,10 @@ export const TRACKING_EVENTS = {
   articleCtaClicked: 'article_cta_clicked',
   /** Click on a downloadable file link (PDF, Excel, CSV) in an article or a page, with the file path. */
   fileDownloadClicked: 'file_download_clicked',
+  /** Question asked after a free template download shown to the visitor, with the file downloaded. */
+  freeTemplateFollowUpShown: 'free_template_follow_up_shown',
+  /** Answer to the question asked after a free template download: monthly volume of the document and file downloaded. */
+  freeTemplateFollowUpAnswered: 'free_template_follow_up_answered',
   /** Language change via the switcher. */
   localeSwitched: 'locale_switched',
   /** Quote requested from the budget estimator, with the estimated range. */

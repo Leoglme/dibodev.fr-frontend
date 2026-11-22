@@ -24,9 +24,15 @@
           <DibodevFreeTemplateDownloadLinks
             :downloads="props.page.downloads.files"
             :trackingLocation="props.trackingLocation"
+            @downloaded="onTemplateDownloaded"
           />
         </div>
         <p class="text-muted text-sm leading-6">{{ props.page.downloads.footnote }}</p>
+        <DibodevFreeTemplateDownloadFollowUp
+          v-if="firstDownloadedFile"
+          :teaser="props.teaser"
+          :downloadedFile="firstDownloadedFile"
+        />
       </div>
     </template>
   </DibodevToolLandingSection>
@@ -85,7 +91,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { ComputedRef, PropType, WritableComputedRef } from 'vue'
+import type { ComputedRef, PropType, Ref, WritableComputedRef } from 'vue'
 import type { SupportedLocale } from '~/core/constants/categorySlugs'
 import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
 import type { DibodevContactCtaSecondaryLink } from '~/core/types/DibodevContactCtaSection'
@@ -94,8 +100,10 @@ import type {
   DibodevFreeTemplatePageContent,
   DibodevFreeTemplatePageSectionsProps,
 } from '~/core/types/DibodevFreeTemplatePage'
+import type { DibodevFreeTemplateDownload } from '~/core/types/DibodevFreeTemplateSection'
 import type { DibodevToolTeaserContent } from '~/core/types/DibodevToolTeaser'
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
+import DibodevFreeTemplateDownloadFollowUp from '~/components/data-displays/DibodevFreeTemplateDownloadFollowUp.vue'
 import DibodevFreeTemplateDownloadLinks from '~/components/data-displays/DibodevFreeTemplateDownloadLinks.vue'
 import DibodevToolTeaser from '~/components/data-displays/DibodevToolTeaser.vue'
 import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSection.vue'
@@ -151,6 +159,8 @@ defineOgImageComponent(
   { alt: props.page.shareImage.alt },
 )
 
+const firstDownloadedFile: Ref<string | null> = ref(null)
+
 const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => [
   { label: t('nav.tools'), to: localePath('tools') },
   { label: hubPage.breadcrumbLabel, to: localePath({ name: FREE_TEMPLATES_HUB_ROUTE_NAME }) },
@@ -182,6 +192,15 @@ const webPageSchemaJson: ComputedRef<string> = computed((): string =>
     about: { '@type': 'Thing', name: props.page.meta.schemaAbout },
   }),
 )
+
+/**
+ * Remembers the first file downloaded, so the follow-up question shows once and keeps its answer.
+ * @param {DibodevFreeTemplateDownload} download - The file just downloaded.
+ * @returns {void}
+ */
+function onTemplateDownloaded(download: DibodevFreeTemplateDownload): void {
+  firstDownloadedFile.value ??= download.href
+}
 
 useHead(() => ({
   title: props.page.meta.title,

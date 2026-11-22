@@ -4,6 +4,7 @@ import type {
   DibodevEstimatorProjectSize,
 } from '~/core/types/DibodevBudgetEstimator'
 import type { DibodevEInvoicingVerdict } from '~/core/types/DibodevEInvoicingCheck'
+import type { DibodevFreeTemplateMonthlyVolume } from '~/core/types/DibodevFreeTemplateDownloadFollowUp'
 import type {
   DibodevAiBotFetchStatus,
   DibodevAiContentStatus,
@@ -91,6 +92,8 @@ export type TrackingEventPayloads = {
   [TRACKING_EVENTS.articleCardClicked]: { article: string; source: string }
   [TRACKING_EVENTS.articleCtaClicked]: { label: string; href: string; variant: 'button' | 'link' }
   [TRACKING_EVENTS.fileDownloadClicked]: { file: string; location: string }
+  [TRACKING_EVENTS.freeTemplateFollowUpShown]: { file: string }
+  [TRACKING_EVENTS.freeTemplateFollowUpAnswered]: { volume: DibodevFreeTemplateMonthlyVolume; file: string }
   [TRACKING_EVENTS.localeSwitched]: { from: string; to: string }
   [TRACKING_EVENTS.budgetEstimated]: {
     kind: DibodevEstimatorProjectKind

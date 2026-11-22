@@ -44,14 +44,19 @@ const props: DibodevFreeTemplateDownloadLinksProps = defineProps({
   },
 })
 
+const emit: (event: 'downloaded', download: DibodevFreeTemplateDownload) => void = defineEmits<{
+  downloaded: [download: DibodevFreeTemplateDownload]
+}>()
+
 const { track } = useTracking()
 
 /**
- * Sends the download event of a file of the template.
+ * Sends the download event of a file of the template and tells the parent which file was downloaded.
  * @param {DibodevFreeTemplateDownload} download - The file clicked.
  * @returns {void}
  */
 function onDownloadClick(download: DibodevFreeTemplateDownload): void {
   track(TRACKING_EVENTS.fileDownloadClicked, { file: download.href, location: props.trackingLocation })
+  emit('downloaded', download)
 }
 </script>
