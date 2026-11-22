@@ -65471,17 +65471,17 @@
     }
   },
   "blog/alternative-regiondo-logiciel-reservation-activites": {
-    "title": "Alternativa a Regiondo: ¿qué software de reserva de actividades elegir en 2026?",
-    "excerpt": "Regiondo cuesta 59 o 99 € al mes con un contrato de un año, más una comisión en línea no especificada. Sus limitaciones, tres alternativas con sus precios y opciones personalizadas.",
-    "metaTitle": "Regiondo 2026: precios, limitaciones y 3 alternativas",
-    "metaDescription": "Regiondo cuesta 59 a 99 €/mes más comisión en línea (datos del 22/11/2026). Sus limitaciones y alternativas como Yoplanning, Bookingkit y Elloha con sus precios.",
+    "title": "Alternativa a Regiondo: ¿qué software de reservas de actividades elegir en 2026?",
+    "excerpt": "Regiondo cuesta 59 o 99 € al mes con un contrato de un año, más una comisión en línea sin cifra publicada. Sus límites, tres alternativas con sus precios y el desarrollo a medida.",
+    "metaTitle": "Regiondo: precios 2026, límites y 3 alternativas",
+    "metaDescription": "Regiondo: de 59 a 99 € al mes más una comisión en línea (precio del 22 de noviembre de 2026). Sus límites y Yoplanning, Bookingkit y Elloha con precios.",
     "tags": [
       "regiondo opiniones",
-      "alternativa a regiondo",
-      "software reserva actividades",
-      "precio regiondo",
-      "software reserva actividades de ocio",
-      "regiondo vs bookingkit"
+      "alternativa regiondo",
+      "software reservas actividades",
+      "regiondo precio",
+      "software reservas actividades de ocio",
+      "regiondo o bookingkit"
     ],
     "content": {
       "type": "doc",
@@ -65490,7 +65490,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En resumen: frente a Regiondo, el 22 de noviembre de 2026 encontré Yoplanning por 0 a 59 € al mes más un 2,5 o 5 % en reservas pagadas en línea, Bookingkit a 49 o 99 € al mes (anual) más comisiones por reserva y por ticket, y Elloha a 49 o 59 € al mes sin comisión en ventas directas. Regiondo cuesta 59 o 99 € al mes en un contrato de un año, más una « pequeña comisión » por reserva en línea cuyo porcentaje no está indicado.",
+              "text": "En resumen: frente a Regiondo, el 22 de noviembre de 2026 anoté Yoplanning de 0 a 59 € al mes más un 2,5 o un 5 % sobre las reservas pagadas en línea, Bookingkit a 49 o 99 € al mes con pago anual más gastos por reserva y por entrada, y Elloha a 49 o 59 € al mes sin comisión sobre las ventas directas. Regiondo cuesta 59 o 99 € al mes con un contrato de un año, más una «petite commission» (pequeña comisión) por reserva en línea cuyo porcentaje no se muestra.",
               "type": "text"
             }
           ]
@@ -65499,7 +65499,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Un sábado de julio en una base de canoas, el teléfono suena mientras repartimos los chalecos, un grupo de doce reserva en GetYourGuide la bajada de las 14 h ya casi completa, y se anuncia una tormenta para las 15 h. He trabajado en una plataforma de reservas para actividades deportivas y de ocio, así que sé lo que estas jornadas exigen al software. Regiondo es uno de los primeros nombres que aparecen al buscar. Volví a leer su página de precios el 22 de noviembre de 2026, luego las de tres programas que publican los suyos. Aquí está lo que cuesta, lo que hace dudar, tres alternativas con cifras, y el caso en que lo personalizado vale la pena.",
+              "text": "Un sábado de julio en una base de piragüismo es el teléfono sonando mientras repartes los chalecos, un grupo de doce que reserva en GetYourGuide el descenso de las 14:00, ya casi lleno, y una tormenta anunciada para las 15:00. He trabajado en una plataforma de reservas de actividades deportivas y de ocio, así que sé lo que esas jornadas le exigen al software. Regiondo es uno de los primeros nombres que aparecen al buscar. El 22 de noviembre de 2026 releí su página de precios, y después las de tres programas que publican la suya. Esto es lo que cuesta, lo que hace dudar, tres alternativas con precios y el caso en que el desarrollo a medida tiene sentido.",
               "type": "text"
             }
           ]
@@ -65520,7 +65520,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El 22 de noviembre de 2026, la ",
+              "text": "A 22 de noviembre de 2026, la ",
               "type": "text"
             },
             {
@@ -65538,7 +65538,7 @@
               ]
             },
             {
-              "text": " muestra dos opciones, con un selector para pago mensual o anual. Grow cuesta 59 € al mes, o 53 € al mes si se paga el año por adelantado. Pro cuesta 99 € al mes, o 89 € si se abona anualmente. La página no especifica si estos precios son sin impuestos o todo incluido. Todas las opciones se facturan mensualmente dentro de un contrato de un año; pagar el año de una vez ahorra un 10 %. En doce meses, Grow suma 708 €, o 636 € si se paga por adelantado, y Pro 1 188 €, o 1 068 €.",
+              "text": " muestra dos planes, con un selector de pago mensual o anual. Grow cuesta 59 € al mes, o 53 € al mes pagando el año por adelantado. Pro cuesta 99 € al mes, o 89 € al mes con pago anual. La página no dice si estos precios son sin IVA o con IVA. Todos los planes se facturan cada mes dentro de un contrato de un año; pagar el año de una vez permite ahorrar un 10 %. En doce meses, Grow sale por 708 €, o 636 € pagado por adelantado, y Pro por 1188 €, o 1068 €.",
               "type": "text"
             }
           ]
@@ -65547,7 +65547,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Lo fijo es esta suscripción. Lo que se descuenta en cada venta, la página lo indica bajo cada opción: « pequeña comisión por reserva » para reservas en línea, sin porcentaje indicado, y sin cargos adicionales para reservas fuera de línea, es decir, las que usted registra después de una llamada. Los pagos en línea pasan por Stripe y PayPal.",
+              "text": "Lo fijo es esta suscripción. Lo que se cobra en cada venta, la página lo escribe bajo cada plan: «petite commission par réservation» (pequeña comisión por reserva) para las reservas en línea, sin porcentaje indicado, y ningún gasto adicional para las reservas fuera de línea, las que introduces tú mismo después de una llamada. Los pagos en línea pasan por Stripe y PayPal.",
               "type": "text"
             }
           ]
@@ -65556,7 +65556,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Grow incluye el widget de reserva para su sitio web, el calendario, la planificación de personal y equipo, los boletos con una app de escaneo, los vales regalo y el gestor de canales hacia GetYourGuide, Viator y otros distribuidores, para hasta tres usuarios. Pro añade usuarios ilimitados, ofertas grupales, la modificación y cancelación por el cliente, la API y el plano de asientos. Como opción, Regiondo crea su sitio web por 1 000 € en pago único. Un cobro con tarjeta en el mostrador, Regiondo POS, está anunciado como « pronto disponible ».",
+              "text": "Grow incluye el widget de reservas para tu web, el calendario, la planificación del personal y del material, las entradas con una aplicación de escaneo, los bonos regalo y el gestor de canales hacia GetYourGuide, Viator y otros revendedores, para tres usuarios como máximo. Pro añade usuarios ilimitados, ofertas combinadas, la modificación y la cancelación por el propio cliente, la API y el plano de asientos. Como opción, Regiondo construye tu web por 1000 € en un único pago. Un cobro con tarjeta en el mostrador, Regiondo POS, se anuncia como «bientôt disponible» (próximamente).",
               "type": "text"
             }
           ]
@@ -65568,7 +65568,7 @@
           },
           "content": [
             {
-              "text": "Para quién Regiondo es la mejor opción",
+              "text": "Para quién encaja Regiondo",
               "type": "text"
             }
           ]
@@ -65577,7 +65577,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Un operador que vende una buena parte de sus plazas a través de grandes plataformas turísticas: visitas guiadas, cruceros, tirolinas en una zona con muchos visitantes extranjeros. El gestor de canales está incluido desde Grow: una reserva llegada por Viator ocupa su lugar en el mismo calendario que la hecha en su sitio, sin necesidad de copiarla. Una estructura con dos o tres personas en la oficina elige Grow, es decir, 636 € al año pagados por adelantado, más la comisión en línea. Si los clientes deben mover su horario por sí mismos, o si vende plazas numeradas, es Pro, a 1 068 € al año.",
+              "text": "Un operador que vende buena parte de sus plazas a través de las grandes plataformas turísticas: visitas guiadas, cruceros, tirolinas en una zona por la que pasan muchos visitantes extranjeros. El gestor de canales está incluido desde Grow: una reserva llegada por Viator ocupa su sitio en el mismo calendario que la hecha en tu web, sin tener que copiarla. Una estructura con dos o tres personas en la oficina elige Grow, es decir 636 € al año pagados por adelantado, más la comisión en línea. Si los clientes deben cambiar su horario ellos mismos, o si vendes plazas numeradas, es Pro, a 1068 € al año.",
               "type": "text"
             }
           ]
@@ -65598,7 +65598,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El porcentaje de la comisión no está indicado. El encabezado de la página dice « Sin comisión en sus reservas », y bajo cada opción se lee « pequeña comisión por reserva » para ventas en línea. Sin el porcentaje, es imposible calcular una temporada. Pídalo por escrito durante la demo, especificando si los gastos de pago están incluidos.",
+              "text": "El porcentaje de la comisión no se muestra. La parte superior de la página anuncia «Aucune commission sur vos réservations» (ninguna comisión sobre tus reservas), y bajo cada plan se lee «petite commission par réservation» para las ventas en línea. Sin el porcentaje, es imposible calcular una temporada. Pídelo por escrito durante la demo, precisando si los gastos de pago están incluidos.",
               "type": "text"
             }
           ]
@@ -65607,7 +65607,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El contrato dura un año. Facturado por meses, lo compromete a doce meses. Para una base náutica abierta de mayo a septiembre, esto significa pagar también en invierno: la página no menciona pausas fuera de temporada.",
+              "text": "El contrato dura un año. Aunque se facture mes a mes, te compromete doce meses. Para una base náutica abierta de mayo a septiembre, eso significa pagar también el invierno: la página no habla de pausa fuera de temporada.",
               "type": "text"
             }
           ]
@@ -65616,7 +65616,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "La cancelación por el cliente solo está en Pro. El día en que el clima anula un horario completo, hay que avisar, reembolsar o reprogramar a veinte personas. La página de tarifas no detalla este caso: pídalo que lo muestren durante la demo.",
+              "text": "La cancelación por parte del cliente está reservada a Pro. El día en que el tiempo anula un turno entero, hay que avisar, reembolsar o cambiar de fecha a veinte personas. La página de tarifas no detalla este caso: pide que te lo enseñen durante la demo.",
               "type": "text"
             }
           ]
@@ -65625,7 +65625,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Grow se limita a tres usuarios. Si sus monitores deben conectarse para ver su horario, pregúntele si los cuenta.",
+              "text": "Grow se limita a tres usuarios. Si tus monitores deben conectarse para ver su planificación, pregunta si cuentan.",
               "type": "text"
             }
           ]
@@ -65634,7 +65634,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El IVA no está especificado. Pida que se indique en el presupuesto si es HT (sin impuestos) o TTC (todo incluido) antes de comparar con un editor que muestra sus precios sin impuestos.",
+              "text": "El IVA no se precisa. Haz que el presupuesto indique si los precios son sin IVA o con IVA antes de comparar con un editor que muestra sus precios sin IVA.",
               "type": "text"
             }
           ]
@@ -65655,11 +65655,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Precios mostrados en la página de tarifas francesa de cada editor, registrados el 22 de noviembre de 2026. Para comparar, tomo la misma temporada: 2 000 reservas pagadas en línea a 30 €, es decir, 60 000 €. Mi comparativo completo, con una prueba para clasificar los programas según su actividad, está en mi página ",
+              "text": "Precios mostrados en la página de tarifas francesa de cada editor, consultados el 22 de noviembre de 2026. Para comparar, tomo la misma temporada: 2000 reservas pagadas en línea a 30 €, es decir 60 000 €. Mi comparativa completa, con un test para clasificar los programas según tu actividad, está en mi página ",
               "type": "text"
             },
             {
-              "text": "software de reserva para actividades de ocio",
+              "text": "software de reservas para actividades de ocio",
               "type": "text",
               "marks": [
                 {
@@ -65685,7 +65685,7 @@
           },
           "content": [
             {
-              "text": "Yoplanning: 0 a 59 € al mes, más un 2,5 o 5 % en línea",
+              "text": "Yoplanning: de 0 a 59 € al mes, más un 2,5 o un 5 % en línea",
               "type": "text"
             }
           ]
@@ -65698,7 +65698,7 @@
               "type": "text"
             },
             {
-              "text": "página de precios de Yoplanning",
+              "text": "página de tarifas de Yoplanning",
               "type": "text",
               "marks": [
                 {
@@ -65712,7 +65712,7 @@
               ]
             },
             {
-              "text": " muestra cuatro fórmulas en euros. Descubrimiento es gratuito, sin suscripción, con un 5 % de comisión por cada reserva cobrada en línea. Solo cuesta 19 € al mes, Micro 39 € para estructuras con menos de 150 000 € de facturación anual, Empresa 59 € para las que superan esa cifra, todas con un 2,5 % sobre las únicas reservas cobradas en línea; un pago realizado en el lugar con Stripe Terminal no incluye esta comisión. No hay precios anuales, ni mención a HT o TTC, usuarios ilimitados, prueba de 14 días sin tarjeta bancaria. Para nuestra temporada, Micro asciende a 468 € de suscripción más 1 500 € en comisiones, totalizando 1 968 € al año. La página no especifica si las comisiones bancarias están incluidas en el 2,5 %.",
+              "text": " muestra cuatro planes en euros. Découverte es gratuito, sin suscripción, con un 5 % de gastos sobre cada reserva cobrada en línea. Solo cuesta 19 € al mes, Micro 39 € para las estructuras con menos de 150 000 € de facturación anual y Entreprise 59 € por encima, todos con un 2,5 % solo sobre las reservas cobradas en línea; un pago recibido en el lugar con Stripe Terminal no lo paga. Sin precio anual, sin indicar si es sin IVA o con IVA, usuarios ilimitados, prueba de 14 días sin tarjeta bancaria. Para nuestra temporada, Micro sale por 468 € de suscripción más 1500 € de gastos, es decir 1968 € al año. La página no dice si los gastos bancarios están incluidos en el 2,5 %.",
               "type": "text"
             }
           ]
@@ -65724,7 +65724,7 @@
           },
           "content": [
             {
-              "text": "Bookingkit: 49 o 99 € al mes al año, más comisiones por reserva y por ticket",
+              "text": "Bookingkit: 49 o 99 € al mes con pago anual, más gastos por reserva y por entrada",
               "type": "text"
             }
           ]
@@ -65737,7 +65737,7 @@
               "type": "text"
             },
             {
-              "text": "página de precios de Bookingkit",
+              "text": "página de tarifas de Bookingkit",
               "type": "text",
               "marks": [
                 {
@@ -65751,7 +65751,7 @@
               ]
             },
             {
-              "text": ", Starterkit cuesta 49 € al mes, solo en suscripción anual, para un usuario. Businesskit cuesta 99 € al mes pagados anualmente, o 119 € al mes, para diez usuarios, con gestión de canales y una « pausa estacional del contrato ». A cada venta se añaden un 3 % de comisión por transacción en línea, comisiones de reserva del 3 % en Starterkit o del 2 % en Businesskit, descritas como un porcentaje « por reserva registrada en nuestro sistema », y 0,60 € por ticket. No hay mención a HT o TTC. Para nuestra temporada, con un ticket por reserva, Starterkit suma 588 € más 3 600 € más 1 200 €, totalizando 5 388 €; Businesskit pagado anualmente llega al mismo total. Una familia de cuatro probablemente necesite cuatro tickets: pregunte cómo se calculan.",
+              "text": ", Starterkit cuesta 49 € al mes, solo con suscripción anual, para un usuario. Businesskit cuesta 99 € al mes con pago anual, 119 € con pago mensual, para diez usuarios, con el gestor de canales y una «pause saisonnière du contrat» (pausa estacional del contrato). A cada venta se suman un 3 % de gastos de transacción en línea, unos gastos de reserva del 3 % en Starterkit o del 2 % en Businesskit, descritos como un porcentaje «par réservation enregistrée sur notre système» (por reserva registrada en nuestro sistema), y 0,60 € por entrada. No indica si es sin IVA o con IVA. Para nuestra temporada, con una entrada por reserva, Starterkit sale por 588 € más 3600 € más 1200 €, es decir 5388 €; Businesskit con pago anual llega al mismo total. Una familia de cuatro probablemente cuente como cuatro entradas: pregunta cómo se cuentan.",
               "type": "text"
             }
           ]
@@ -65763,7 +65763,7 @@
           },
           "content": [
             {
-              "text": "Elloha: 49 o 59 € al mes, sin comisión en ventas directas",
+              "text": "Elloha: 49 o 59 € al mes, sin comisión sobre las ventas directas",
               "type": "text"
             }
           ]
@@ -65790,7 +65790,7 @@
               ]
             },
             {
-              "text": ", en su página de inicio, muestra Connect a 49 € y Magic a 59 € al mes; con el selector anual, marcado « −12 % », 548 € y 628 € al año. La suscripción es fija, « sin comisión en sus ventas directas », sin compromiso, con 21 días de prueba sin tarjeta bancaria. Connect incluye un calendario compartido, el motor de reserva directa y más de diez plataformas de ocio conectadas. Magic añade la página web, varios usuarios, los pagos, el archivo de clientes y las tarjetas regalo. No hay mención a HT o TTC, ni a las comisiones del proveedor de pagos. La página se dirige primero a los alojamientos: programen una verdadera franja horaria para varias plazas durante la prueba. Para nuestra temporada, Magic pagado anualmente cuesta 628 €, más las comisiones de pago.",
+              "text": ", en su página de inicio, muestra Connect a 49 € y Magic a 59 € al mes; con el selector anual, marcado «−12 %», 548 € y 628 € al año. La suscripción es fija, «sans commission sur vos ventes directes» (sin comisión sobre tus ventas directas), sin permanencia, con 21 días de prueba sin tarjeta bancaria. Connect incluye una planificación compartida, el motor de reservas directas y más de diez plataformas de ocio conectadas. Magic añade la página web, varios usuarios, los pagos, el fichero de clientes y las tarjetas regalo. No indica si es sin IVA o con IVA, ni los gastos del proveedor de pagos. La página se dirige sobre todo a alojamientos: haz pasar un turno real de varias plazas durante el periodo de prueba. Para nuestra temporada, Magic con pago anual cuesta 628 €, más los gastos de pago.",
               "type": "text"
             }
           ]
@@ -65802,7 +65802,7 @@
           },
           "content": [
             {
-              "text": "Y si ninguno se ajusta: la herramienta personalizada",
+              "text": "¿Y si ninguno encaja? La herramienta a medida",
               "type": "text"
             }
           ]
@@ -65811,7 +65811,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Estos programas chocan con las reglas que son propias de ustedes: una franja horaria que depende tanto del número de monitores como de los canoas disponibles; un paquete familiar que combina alquiler y supervisión; una cancelación por clima que convierte con un clic veinte reservas en créditos; el certificado de natación firmado por el padre antes de bajar al agua.",
+              "text": "Estos programas se atascan con las reglas que son tuyas: un turno que depende a la vez del número de monitores y del número de piraguas libres; un paquete familiar que mezcla alquiler y monitores; una cancelación por mal tiempo que convierte con un clic veinte reservas en vales; el certificado de natación firmado por los padres antes del descenso.",
               "type": "text"
             }
           ]
@@ -65838,7 +65838,7 @@
               ]
             },
             {
-              "text": ", una plataforma de reserva de actividades deportivas y de ocio. Es utilizada por unas treinta estructuras, con miles de reservas por temporada.",
+              "text": ", una plataforma de reservas de actividades deportivas y de ocio. La usan una treintena de estructuras, con miles de reservas por temporada.",
               "type": "text"
             }
           ]
@@ -65847,7 +65847,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En cuanto a precios, un complemento conectado a su software actual cuesta entre 2 500 y 7 000 € una sola vez. Una herramienta completa oscila entre 5 000 y 15 000 € en paquete, más 100 a 300 € al mes de mantenimiento, alojamiento y copias de seguridad incluidas, y el código les pertenece. Para comparar: tres años de Regiondo Grow suman 1 908 € pagados por adelantado, más la comisión; tres temporadas de 2 000 reservas a 30 € en Bookingkit, 16 164 €. Mi artículo sobre el ",
+              "text": "En cuanto al precio, un complemento conectado junto a tu software actual cuesta de 2500 a 7000 € en un único pago. Una herramienta completa se sitúa entre 5000 y 15 000 € a precio cerrado, más 100 a 300 € al mes de mantenimiento, alojamiento y copias de seguridad incluidos, y el código es tuyo. Para comparar: tres años de Regiondo Grow suman 1908 € pagados por adelantado, más la comisión; tres temporadas de 2000 reservas a 30 € con Bookingkit, 16 164 €. Mi artículo sobre el ",
               "type": "text"
             },
             {
@@ -65865,11 +65865,11 @@
               ]
             },
             {
-              "text": " detalla qué influye en un presupuesto, y mi ",
+              "text": " detalla lo que hace variar un presupuesto, y mi ",
               "type": "text"
             },
             {
-              "text": "barómetro de precios de software a medida",
+              "text": "barómetro de precios del software a medida",
               "type": "text",
               "marks": [
                 {
@@ -65883,7 +65883,7 @@
               ]
             },
             {
-              "text": " muestra los rangos de precios de los proveedores franceses.",
+              "text": " da las horquillas de proveedores franceses.",
               "type": "text"
             }
           ]
@@ -65904,11 +65904,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Haga primero la prueba en mi página sobre los software de reserva de actividades, luego anote una verdadera semana de temporada en mi ",
+              "text": "Haz primero el test de mi página sobre software de reservas de actividades y luego anota una semana real de temporada en mi ",
               "type": "text"
             },
             {
-              "text": "calendario de reserva gratuito",
+              "text": "planificador de reservas gratuito",
               "type": "text",
               "marks": [
                 {
@@ -65922,7 +65922,7 @@
               ]
             },
             {
-              "text": ": horarios, plazas, monitores, canal de cada reserva. Luego pase esa semana a cada software durante la prueba de Yoplanning o Elloha, o durante la demo de Regiondo y Bookingkit, con sus productos reales. Tres horarios el sábado, uno reservado en su sitio, uno por teléfono, uno a través de una plataforma, y luego la tormenta de las 15 h que cancela el último. Cuente los clics para notificar y reembolsar a todos, y calcule la temporada con sus cifras, incluyendo los costos por reserva.",
+              "text": " (horarios, plazas, monitores, canal de cada reserva). Después haz pasar esa semana por cada programa, durante la prueba de Yoplanning o de Elloha, o durante la demo de Regiondo y de Bookingkit, con tus productos reales. Tres turnos el sábado, uno reservado en tu web, otro por teléfono y otro a través de una plataforma, y luego la tormenta de las 15:00 que anula el último. Cuenta los clics necesarios para avisar y reembolsar a todo el mundo, y calcula la temporada con tus cifras, gastos por reserva incluidos.",
               "type": "text"
             }
           ]
@@ -65955,7 +65955,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "A 22 de noviembre de 2026, Grow cuesta 59 € al mes y Pro 99 €, o 53 € y 89 € al mes pagando el año por adelantado, en un contrato de un año, sin mención de HT o TTC. Una comisión por reserva en línea se añade.",
+              "text": "A 22 de noviembre de 2026, Grow cuesta 59 € al mes y Pro 99 €, o 53 € y 89 € al mes pagando el año por adelantado, con un contrato de un año, sin indicar si es sin IVA o con IVA. Se añade una comisión por reserva en línea.",
               "type": "text"
             }
           ]
@@ -65967,7 +65967,7 @@
           },
           "content": [
             {
-              "text": "¿Regiondo cobra una comisión por las reservas?",
+              "text": "¿Regiondo cobra comisión por las reservas?",
               "type": "text"
             }
           ]
@@ -65976,7 +65976,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Sí, por las reservas en línea: la página indica «pequeña comisión por reserva» bajo cada fórmula, sin especificar el porcentaje. Las reservas fuera de línea no tienen costos adicionales.",
+              "text": "En las reservas en línea, sí: la página indica «petite commission par réservation» (pequeña comisión por reserva) bajo cada plan, sin porcentaje. Las reservas fuera de línea no tienen gastos adicionales.",
               "type": "text"
             }
           ]
@@ -65988,7 +65988,7 @@
           },
           "content": [
             {
-              "text": "¿Se puede suspender Regiondo al final de la temporada?",
+              "text": "¿Se puede dejar Regiondo al final de la temporada?",
               "type": "text"
             }
           ]
@@ -65997,7 +65997,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Las fórmulas se facturan por mes dentro del marco de un contrato anual, y la página no menciona ninguna pausa fuera de temporada. Pida aclarar las condiciones de rescisión antes de firmar.",
+              "text": "Los planes se facturan mes a mes dentro de un contrato anual, y la página no menciona ninguna pausa fuera de temporada. Pide que te aclaren las condiciones de baja antes de firmar.",
               "type": "text"
             }
           ]
@@ -66009,7 +66009,7 @@
           },
           "content": [
             {
-              "text": "¿Qué software de reserva de actividades no cobra comisión?",
+              "text": "¿Qué software de reservas de actividades no cobra comisión?",
               "type": "text"
             }
           ]
@@ -66018,7 +66018,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Entre los tres relevados aquí, Elloha anuncia una suscripción fija sin comisión sobre las ventas directas, desde 49 € al mes. Los costos de pago aún deben verificarse.",
+              "text": "De los tres consultados aquí, Elloha anuncia una suscripción fija sin comisión sobre las ventas directas, desde 49 € al mes. Los gastos de pago están por comprobar.",
               "type": "text"
             }
           ]
@@ -66039,7 +66039,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Con 2 000 reservas en línea a 30 €, Bookingkit cuesta al menos 5 388 € al año, costos incluidos. Regiondo cuesta entre 636 y 1 188 € de suscripción al año, más una comisión cuyo porcentaje debe obtenerse para comparar.",
+              "text": "Con 2000 reservas en línea a 30 €, Bookingkit cuesta al menos 5388 € al año, gastos incluidos. Regiondo cuesta de 636 a 1188 € de suscripción al año, más una comisión cuyo porcentaje hay que conseguir para comparar.",
               "type": "text"
             }
           ]
@@ -66051,7 +66051,7 @@
           },
           "content": [
             {
-              "text": "¿No sabe cuál elegir?",
+              "text": "¿No sabes cuál elegir?",
               "type": "text"
             }
           ]
@@ -66060,7 +66060,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Descríbame su actividad en pocas líneas: tirolinas, canoas, escape room o visitas, cuántos monitores tiene en plena temporada, cuántas reservas llegan a través de su sitio, por teléfono y por las plataformas, y lo que aún se maneja en el cuaderno. Le responderé en menos de 24 horas, por teléfono o en videollamada, y si Yoplanning o Elloha le son suficientes, se lo diré.",
+              "text": "Descríbeme tu actividad en pocas líneas: parque de aventura en los árboles, piragüismo, escape room o visitas, cuántos monitores en plena temporada, cuántas reservas llegan por tu web, por teléfono y por las plataformas, y qué pasa todavía por la libreta. Te respondo en 24 horas, por teléfono o por videollamada, y si Yoplanning o Elloha te basta, te lo diré.",
               "type": "text"
             }
           ]
@@ -66079,7 +66079,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Descríbame su forma de trabajar",
+                "label": "Descríbeme tu forma de trabajar",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -66090,17 +66090,17 @@
     }
   },
   "blog/alternative-monstock-logiciel-gestion-de-stock": {
-    "title": "Alternativa a Monstock: ¿qué software de gestión de inventario elegir en 2026?",
-    "excerpt": "Monstock cobra por usuario, desde 14,90 hasta 51,90 € HT al mes: el costo para un equipo de tres personas, lo que falta en Essential, y los precios de Erplain, Axonaut y Stockpit detallados.",
-    "metaTitle": "Alternativas a Monstock 2026: precios y limitaciones",
-    "metaDescription": "Monstock desde 14,90 € HT/mes por usuario (anual, datos 22/11/2026). Sus limitaciones y comparativa con Erplain, Axonaut y Stockpit.",
+    "title": "Alternativa a Monstock: ¿qué software de gestión de stock elegir en 2026?",
+    "excerpt": "Monstock se paga por usuario, de 14,90 a 51,90 € sin IVA al mes: lo que cuesta un equipo de tres, lo que le falta a Essential, y Erplain, Axonaut y Stockpit con precios.",
+    "metaTitle": "Monstock: precios 2026, límites y 3 alternativas",
+    "metaDescription": "Monstock desde 14,90 € sin IVA al mes por primer usuario con pago anual (precio del 22 de noviembre de 2026). Sus límites y Erplain, Axonaut y Stockpit.",
     "tags": [
       "monstock opiniones",
-      "alternativas a monstock",
-      "precio monstock",
-      "software gestión inventario",
-      "programa inventario pymes",
-      "aplicación gestión stock"
+      "alternativa monstock",
+      "monstock precio",
+      "software gestión de stock",
+      "software inventario pyme",
+      "aplicación gestión de stock"
     ],
     "content": {
       "type": "doc",
@@ -66109,7 +66109,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En resumen: el 22 de noviembre de 2026, Monstock se paga por usuario. En prepago anual, Essential cuesta 14,90 € IVA no incluido por mes para el primer usuario y 9,90 € IVA no incluido por cada uno de los siguientes; Professional, 24,90 €, y Enterprise, 39,90 € IVA no incluido para el primero; para tres usuarios, la página muestra 416,40 €, 776,40 € y 1.196,40 € por año. El mismo día, también revisé Erplain desde 59 € IVA no incluido por mes, Axonaut de 58,20 a 97 € por usuario y por mes, y Stockpit desde 19 € IVA no incluido por usuario y por mes.",
+              "text": "En resumen: a 22 de noviembre de 2026, Monstock se paga por usuario. Con prepago anual, Essential cuesta 14,90 € sin IVA al mes por el primer usuario y 9,90 € sin IVA por cada uno de los siguientes, Professional 24,90 € y Enterprise 39,90 € sin IVA por el primero; para tres usuarios, la página muestra 416,40 €, 776,40 € y 1196,40 € al año. Ese mismo día anoté Erplain desde 59 € sin IVA al mes, Axonaut de 58,20 a 97 € por usuario y mes, y Stockpit desde 19 € sin IVA por usuario y mes.",
               "type": "text"
             }
           ]
@@ -66118,7 +66118,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No gestiono un almacén ni he preparado nunca un pedido en un muelle. Pero las empresas que buscan Monstock describen a menudo la misma escena: el preparador dando vueltas veinte minutos en el pasillo B por una referencia almacenada en otro lugar, el pedido al proveedor pasado dos veces porque nadie vio la llegada de la mañana, el inventario final de año hecho en papel y luego registrado por la noche. He releído la página de precios de Monstock el 22 de noviembre de 2026, así como las de Erplain, Axonaut y Stockpit. Aquí está el costo, para quién está hecho, lo que hace dudar y qué valen las otras opciones.",
+              "text": "No gestiono ningún almacén y nunca he preparado un pedido en un muelle de carga. Pero las empresas que buscan Monstock suelen describir la misma escena: el preparador que da vueltas veinte minutos por el pasillo B buscando una referencia guardada en otro sitio, el pedido al proveedor hecho dos veces porque nadie vio la mercancía que llegó por la mañana, el recuento de fin de año hecho en papel y vuelto a teclear por la noche. El 22 de noviembre de 2026 releí la página de precios de Monstock, y después las de Erplain, Axonaut y Stockpit. Esto es lo que cuesta, para quién está hecho, lo que hace dudar y lo que ofrecen los demás.",
               "type": "text"
             }
           ]
@@ -66130,7 +66130,7 @@
           },
           "content": [
             {
-              "text": "Cuánto cuesta Monstock en 2026",
+              "text": "Lo que cuesta Monstock en 2026",
               "type": "text"
             }
           ]
@@ -66139,7 +66139,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El 22 de noviembre de 2026, la ",
+              "text": "A 22 de noviembre de 2026, la ",
               "type": "text"
             },
             {
@@ -66157,7 +66157,7 @@
               ]
             },
             {
-              "text": " está en francés y muestra montos sin impuestos. Cada fórmula se calcula en dos partes: un precio para el primer usuario y luego un precio para cada usuario adicional. Se ofrecen dos ritmos: «suscripción mensual con prepago anual» y «suscripción mensual» simple.",
+              "text": " está en francés y muestra importes sin IVA. Cada plan se calcula en dos partes: un precio por el primer usuario y luego un precio por cada usuario adicional. Se ofrecen dos modalidades, «abonnement mensuel pré-paiement annuel» (suscripción mensual con prepago anual) y «abonnement mensuel» (suscripción mensual) a secas.",
               "type": "text"
             }
           ]
@@ -66166,7 +66166,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Essential cuesta 14,90 € IVA no incluido por mes para el primer usuario y 9,90 € IVA no incluido por cada uno de los siguientes en prepago anual, o 19,90 € y 12,90 € IVA no incluido al mes. Está limitada a diez usuarios. Professional cuesta 24,90 € y 19,90 € IVA no incluido en prepago anual, o 32,90 € y 25,90 € IVA no incluido al mes. Enterprise cuesta 39,90 € y 29,90 € IVA no incluido en prepago anual, o 51,90 € y 38,90 € IVA no incluido al mes. Unlimited está bajo presupuesto, al igual que cualquier solicitud de más de veinte licencias.",
+              "text": "Essential cuesta 14,90 € sin IVA al mes por el primer usuario y 9,90 € sin IVA por cada uno de los siguientes con prepago anual, o 19,90 € y 12,90 € sin IVA con pago mensual. Está limitado a diez usuarios. Professional cuesta 24,90 € y 19,90 € sin IVA con pago anual, o 32,90 € y 25,90 € sin IVA con pago mensual. Enterprise cuesta 39,90 € y 29,90 € sin IVA con pago anual, o 51,90 € y 38,90 € sin IVA con pago mensual. Unlimited es bajo presupuesto, como cualquier solicitud de más de veinte licencias.",
               "type": "text"
             }
           ]
@@ -66175,7 +66175,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "La calculadora de la página se abre con tres usuarios y muestra un total anual de 416,40 € para Essential, 776,40 € para Professional y 1.196,40 € para Enterprise. Al mes, con tres usuarios, los mismos precios dan 45,70 €, 84,70 € y 129,70 € IVA no incluido por mes.",
+              "text": "La calculadora de la página se abre con tres usuarios y muestra un total anual de 416,40 € para Essential, 776,40 € para Professional y 1196,40 € para Enterprise. Con pago mensual, para tres, los mismos precios dan 45,70 €, 84,70 € y 129,70 € sin IVA al mes.",
               "type": "text"
             }
           ]
@@ -66184,7 +66184,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Algunos servicios se pagan aparte, y la página los detalla: 450 € IVA no incluido para cargar sus datos, 850 € IVA no incluido para configurar un conector estándar, y 950 € IVA no incluido por día de formación a distancia. La prueba dura 14 días, sin necesidad de medio de pago.",
+              "text": "Algunos servicios se pagan aparte, y la página les pone precio: 450 € sin IVA por cargar tus datos, 850 € sin IVA por configurar un conector estándar, 950 € sin IVA por la jornada de formación a distancia. La prueba dura 14 días, sin medio de pago.",
               "type": "text"
             }
           ]
@@ -66196,7 +66196,7 @@
           },
           "content": [
             {
-              "text": "Para quién Monstock es la mejor opción",
+              "text": "Para quién encaja Monstock",
               "type": "text"
             }
           ]
@@ -66205,7 +66205,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Una empresa donde varias personas mueven stock y deben registrarlo sobre la marcha. La tabla comparativa da la puntuación máxima a la movilidad en todas las fórmulas, y el sitio menciona el comercio, la construcción, la industria y la logística. Monstock sigue tanto productos como equipos, lo que sirve a la empresa que debe saber también dónde están sus herramientas y máquinas. La sección de preguntas frecuentes anuncia ocho idiomas, incluyendo el francés.",
+              "text": "Una empresa en la que varias personas mueven stock y deben registrarlo en el momento. La tabla comparativa da la nota máxima a la movilidad en todos los planes, y la web cita el comercio, la construcción, la industria y la logística. Monstock sigue a la vez productos y equipos, lo que sirve a la empresa que también necesita saber dónde están sus herramientas y sus máquinas. Las preguntas frecuentes anuncian ocho idiomas, entre ellos el francés.",
               "type": "text"
             }
           ]
@@ -66214,7 +66214,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Para tres usuarios que cuenten y muevan artículos sin pasar pedidos en la herramienta, Essential es suficiente. Tan pronto como las ventas, las compras o un sitio web comercial deban actualizar el stock, la tabla orienta hacia Professional.",
+              "text": "Para tres usuarios que cuentan y mueven artículos sin hacer pedidos en la herramienta, Essential basta. En cuanto las ventas, las compras o una tienda online deben alimentar el stock, la tabla de precios orienta hacia Professional.",
               "type": "text"
             }
           ]
@@ -66235,7 +66235,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Essential deja de lado los pedidos. En la tabla comparativa, las líneas «pedidos de clientes», «pedidos a proveedores» y «aplicaciones conectadas» tienen cero sobre cinco para Essential. Si sus pedidos deben pasar por la herramienta, se necesita Professional: con tres usuarios, 776,40 € por año en lugar de 416,40 €. El alquiler y préstamo, las órdenes de trabajo y la producción solo aparecen en Enterprise.",
+              "text": "Essential deja de lado los pedidos. En la tabla comparativa, las líneas «commandes clients», «commandes fournisseurs» y «applications connectées» (pedidos de clientes, pedidos a proveedores y aplicaciones conectadas) tienen un cero sobre cinco en Essential. Si tus pedidos deben pasar por la herramienta, necesitas Professional: con tres usuarios, 776,40 € al año en lugar de 416,40 €. El alquiler y el préstamo, las órdenes de trabajo y la producción solo aparecen en Enterprise.",
               "type": "text"
             }
           ]
@@ -66244,7 +66244,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El undécimo usuario cambia de fórmula. Essential se limita a diez personas: con diez, en prepago anual, cuesta 104 € IVA no incluido por mes, es decir, 1.248 € IVA no incluido al año. Una persona más obliga a pasar a Professional, es decir, 223,90 € IVA no incluido por mes y 2.686,80 € IVA no incluido al año. Cuente a todos los que escanean, incluyendo almaceneros y conductores.",
+              "text": "El undécimo usuario cambia de plan. Essential se detiene en diez personas: con diez, en prepago anual, cuesta 104 € sin IVA al mes, es decir 1248 € sin IVA al año. Una persona más obliga a pasar a Professional, o sea 223,90 € sin IVA al mes y 2686,80 € sin IVA al año. Cuenta a todos los que escanean, mozos de almacén y conductores incluidos.",
               "type": "text"
             }
           ]
@@ -66253,7 +66253,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Se añaden cuotas: 500 pedidos en Professional y 1.000 en Enterprise por usuario y por mes, y 1 GB por usuario. Más allá de eso, cuente 1 € IVA no incluido por GB y 10 € IVA no incluido por cada 1.000 solicitudes de API, cada mes.",
+              "text": "Se añaden cuotas: 500 pedidos en Professional y 1000 en Enterprise por usuario y mes, y 1 GB por usuario. Por encima, cuenta con 1 € sin IVA por GB y 10 € sin IVA por cada 1000 peticiones a la API, cada mes.",
               "type": "text"
             }
           ]
@@ -66262,7 +66262,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "La facturación sigue en otro lugar. La página de precios no menciona ni presupuestos, ni facturas emitidas por Monstock, ni factura electrónica. Su sección de preguntas frecuentes presenta la API como el medio para intercambiar datos con «sus herramientas de facturación». Prevea, por lo tanto, un software de gestión adicional y el conector correspondiente.",
+              "text": "La facturación se queda fuera. La página de precios no habla ni de presupuestos, ni de facturas emitidas por Monstock, ni de factura electrónica. Sus preguntas frecuentes presentan la API como la forma de intercambiar datos con «vos outils de facturation» (tus herramientas de facturación). Prevé, por tanto, un software de gestión aparte y el conector correspondiente.",
               "type": "text"
             }
           ]
@@ -66283,7 +66283,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Precios mostrados en el sitio web de cada editor, revisados el 22 de noviembre de 2026. Sortly y Zoho Inventory ya tienen su artículo: ",
+              "text": "Precios mostrados en la web de cada editor, consultados el 22 de noviembre de 2026. Sortly y Zoho Inventory ya tienen su artículo: ",
               "type": "text"
             },
             {
@@ -66328,11 +66328,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Erplain, desde 59 € HT por mes, inventario y ventas en un mismo lugar. La ",
+              "text": "Erplain, desde 59 € sin IVA al mes, stock y ventas en el mismo sitio. La ",
               "type": "text"
             },
             {
-              "text": "página de precios de Erplain",
+              "text": "página de tarifas de Erplain",
               "type": "text",
               "marks": [
                 {
@@ -66346,7 +66346,7 @@
               ]
             },
             {
-              "text": " muestra un plan base de 59 € HT por mes en pago anual, con un usuario, luego 14 € HT por mes por cada usuario adicional. En pago mensual, el calculador de la página multiplica estos montos por 1,2: 70,80 € HT para el plan base. El plan base incluye cotizaciones, facturación electrónica, niveles de stock, inventarios y códigos de barras. El resto se toma en módulos: varios lugares de almacenamiento por 14 €, pedidos a proveedores por 14 €, números de lote por 29 €, la API por 39 € HT por mes. Tres usuarios con varios lugares, kits, compras y precios avanzados suman 138 € HT por mes en pago anual. El pago anual compromete por doce meses; 1.000 órdenes por mes están incluidas. Prueba de 14 días sin tarjeta. Más detalles en mi artículo ",
+              "text": " muestra una base de 59 € sin IVA al mes con pago anual, con un usuario, y luego 14 € sin IVA al mes por cada usuario adicional. Con pago mensual, la calculadora de la página multiplica estos importes por 1,2: 70,80 € sin IVA por la base. La base incluye los presupuestos, la facturación electrónica, los niveles de stock, los inventarios y los códigos de barras. El resto se contrata por módulos: varios lugares de almacenamiento a 14 €, los pedidos a proveedores a 14 €, los números de lote a 29 €, la API a 39 € sin IVA al mes. Tres usuarios con varios lugares de almacenamiento, los kits, las compras y los precios avanzados salen por 138 € sin IVA al mes con pago anual. El pago anual compromete doce meses; incluye 1000 pedidos al mes. Prueba de 14 días sin tarjeta. Más detalles en mi artículo ",
               "type": "text"
             },
             {
@@ -66373,11 +66373,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Axonaut, de 58,20 a 97 € por usuario y por mes, todo incluido. La ",
+              "text": "Axonaut, de 58,20 a 97 € por usuario y mes, todo incluido. La ",
               "type": "text"
             },
             {
-              "text": "página de precios de Axonaut",
+              "text": "página de tarifas de Axonaut",
               "type": "text",
               "marks": [
                 {
@@ -66391,7 +66391,7 @@
               ]
             },
             {
-              "text": " muestra una fórmula TPE, para menos de diez empleados: 97 € por usuario y por mes sin compromiso, 77,60 € pagando un año, 67,90 € para dos años y 58,20 € para tres años. La página no especifica si estos precios son sin impuestos; las Pymes de diez empleados o más requieren un presupuesto. Todo está incluido: cotizaciones y facturas, facturación electrónica a través de una plataforma autorizada, CRM, tesorería, y un inventario con alertas de stock bajo, decremento al editar la orden de entrega o la factura, recepción de mercancías y trazabilidad por lote. La lista no menciona múltiples almacenes ni la lectura de códigos de barras. Prueba de 15 días. Más detalles en mi artículo ",
+              "text": " muestra un plan TPE (microempresa), para menos de diez empleados: 97 € por usuario y mes sin permanencia, 77,60 € pagando un año, 67,90 € por dos años y 58,20 € por tres años. La página no precisa si estos precios son sin IVA; las pymes de diez empleados o más pasan por un presupuesto. Todo está incluido: presupuestos y facturas, facturación electrónica a través de una plataforma autorizada, CRM, tesorería, y un stock con alertas de stock bajo, descuento del stock al emitir el albarán o la factura, recepción de mercancías y trazabilidad por lote. La lista no menciona ni varios almacenes ni la lectura de códigos de barras. Prueba de 15 días. Más detalles en mi artículo ",
               "type": "text"
             },
             {
@@ -66418,7 +66418,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Stockpit, desde 19 € HT por usuario y por mes, conectado a tu facturación. La ",
+              "text": "Stockpit, desde 19 € sin IVA por usuario y mes, conectado a tu facturación. La ",
               "type": "text"
             },
             {
@@ -66436,7 +66436,7 @@
               ]
             },
             {
-              "text": " muestra Power a 19 € HT por usuario y por mes en pago mensual, o 190 € HT por usuario y por año, y Smart a 39 € HT, o 390 € HT por año. Power rastrea y valora el stock. Smart añade la sincronización automática de ventas, compras, múltiples lugares de almacenamiento y órdenes de entrega. La página dedicada a Pennylane también muestra Boost a 59 € HT por usuario y por mes. Stockpit no reemplaza tu software de gestión: se conecta a Pennylane, Sellsy o QuickBooks, cuyos suscripciones se pagan por separado. Sus términos legales indican que es editado por Erplain.",
+              "text": " muestra Power a 19 € sin IVA por usuario y mes con pago mensual, o 190 € sin IVA por usuario y año, y Smart a 39 € sin IVA, o 390 € sin IVA al año. Power sigue y valora el stock. Smart añade la importación automática de las ventas, las compras, varios lugares de almacenamiento y los albaranes. La página dedicada a Pennylane muestra también Boost a 59 € sin IVA por usuario y mes. Stockpit no sustituye a tu software de gestión: se conecta a Pennylane, Sellsy o QuickBooks, cuya suscripción se paga aparte. Su aviso legal indica que lo edita Erplain.",
               "type": "text"
             }
           ]
@@ -66445,11 +66445,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Para comparar estas herramientas con otras, incluyendo gratuitas, visita mi página ",
+              "text": "Para comparar estas herramientas con otras, algunas gratuitas, pasa por mi página ",
               "type": "text"
             },
             {
-              "text": "software de gestión de inventario",
+              "text": "software de gestión de stock",
               "type": "text",
               "marks": [
                 {
@@ -66463,7 +66463,7 @@
               ]
             },
             {
-              "text": ": una prueba en seis preguntas y los precios de una decena de editores.",
+              "text": " (un test de seis preguntas y los precios de una decena de editores).",
               "type": "text"
             }
           ]
@@ -66475,7 +66475,7 @@
           },
           "content": [
             {
-              "text": "Y si ninguna encaja: la herramienta personalizada",
+              "text": "¿Y si ninguno encaja? La herramienta a medida",
               "type": "text"
             }
           ]
@@ -66484,7 +66484,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Estas herramientas cubren bien los flujos clásicos: recibir, almacenar, vender y contar. Una PYME se queda atascada cuando su inventario sigue su propia lógica: ubicaciones que no se parecen a ningún estante, o una transferencia entre dos sitios que debe desencadenar algo más.",
+              "text": "Estas herramientas cubren bien los flujos clásicos: recibir, colocar, vender, contar. Una pyme se atasca cuando su stock sigue su propia lógica: ubicaciones que no se parecen a ninguna estantería, o una transferencia entre dos sedes que debe desencadenar otra cosa.",
               "type": "text"
             }
           ]
@@ -66493,7 +66493,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En Kodeva, donde estuve en alternancia, creé desde cero ",
+              "text": "En Kodeva, donde hice mi formación en alternancia, creé desde cero ",
               "type": "text"
             },
             {
@@ -66511,7 +66511,7 @@
               ]
             },
             {
-              "text": ", un software de gestión de inventario y stock: fichas de productos, niveles de stock, entradas, salidas, correcciones e inventarios, transferencias entre ubicaciones y almacenes, etiquetas QR generadas en la herramienta. Sigue en producción en PYMES de 20 a 200 empleados.",
+              "text": ", un software de gestión de stock e inventario: fichas de producto, niveles de stock, entradas, salidas, correcciones e inventarios, transferencias entre ubicaciones y almacenes, etiquetas QR generadas en la herramienta. Sigue en producción en pymes de 20 a 200 empleados.",
               "type": "text"
             }
           ]
@@ -66520,7 +66520,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En cuanto a precios, un complemento conectado a su software actual cuesta en mi caso entre 2.500 y 7.000 € una sola vez, un paquete completo entre 5.000 y 15.000 €, luego 100 a 300 € por mes de mantenimiento, y el código es de su propiedad. En comparación, Monstock Professional para cinco usuarios cuesta 104,50 € IVA excluido por mes en prepago anual, lo que equivale a 1.254 € IVA excluido al año, antes de cargar los datos y el conector. Si Monstock cumple con lo que necesita, sigue siendo más económico. Mi artículo sobre el ",
+              "text": "En cuanto al precio, conmigo un complemento conectado a tu software actual cuesta de 2500 a 7000 € en un único pago, una herramienta completa de 5000 a 15 000 €, más 100 a 300 € al mes de mantenimiento, y el código es tuyo. En comparación, Monstock Professional para cinco usuarios cuesta 104,50 € sin IVA al mes con prepago anual, es decir 1254 € sin IVA al año, antes de la carga de datos y el conector. Si Monstock hace lo que necesitas, sigue siendo más barato. Mi artículo sobre el ",
               "type": "text"
             },
             {
@@ -66538,7 +66538,7 @@
               ]
             },
             {
-              "text": " detalla estos rangos, y el ",
+              "text": " detalla estas horquillas, y el ",
               "type": "text"
             },
             {
@@ -66556,7 +66556,7 @@
               ]
             },
             {
-              "text": " ayuda a verificar un presupuesto.",
+              "text": " ayuda a comprobar un presupuesto.",
               "type": "text"
             }
           ]
@@ -66577,7 +66577,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Por la mañana, tome una ",
+              "text": "Por la mañana, coge una ",
               "type": "text"
             },
             {
@@ -66595,7 +66595,7 @@
               ]
             },
             {
-              "text": " y anote cuatro cifras: el número de referencias, de lugares de almacenamiento, de personas que deben registrar movimientos, y de pedidos por mes. Añada una pregunta: ¿sus ventas deben reducir el stock automáticamente? Estas respuestas colocan a Monstock en la fórmula adecuada y dicen si Erplain, Axonaut o Stockpit son viables.",
+              "text": " y anota cuatro cifras: el número de referencias, de lugares de almacenamiento, de personas que deben registrar movimientos y de pedidos al mes. Añade una pregunta: ¿tus ventas deben descontar el stock automáticamente? Estas respuestas sitúan a Monstock en el plan adecuado y dicen si Erplain, Axonaut o Stockpit dan la talla.",
               "type": "text"
             }
           ]
@@ -66604,7 +66604,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Por la tarde, abra la prueba de Monstock y la de Erplain, ninguno de los dos pide tarjeta, y realice la misma prueba: veinte referencias importadas desde su hoja de cálculo, una recepción de proveedor, una transferencia entre dos ubicaciones, una venta que debe reducir el stock, un conteo realizado por teléfono, y luego la exportación para el contador. Lo que le moleste durante esta prueba le molestará todos los días.",
+              "text": "Por la tarde, abre el periodo de prueba de Monstock y el de Erplain (ninguno de los dos pide tarjeta) y haz el mismo test: veinte referencias importadas desde tu hoja de cálculo, una recepción de proveedor, una transferencia entre dos ubicaciones, una venta que debe hacer bajar el stock, un recuento hecho con el móvil y luego la exportación para el contable. Lo que te moleste durante este test te molestará todos los días.",
               "type": "text"
             }
           ]
@@ -66637,7 +66637,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Hasta el 22 de noviembre de 2026, Essential cuesta 14,90 € IVA excluido por mes para el primer usuario y 9,90 € IVA excluido para cada uno de los siguientes en prepago anual, o 19,90 € y 12,90 € IVA excluido por mes. Essential se limita a diez usuarios; Professional y Enterprise comienzan en 24,90 € y 39,90 € IVA excluido en anualidad.",
+              "text": "A 22 de noviembre de 2026, Essential cuesta 14,90 € sin IVA al mes por el primer usuario y 9,90 € sin IVA por cada uno de los siguientes con prepago anual, o 19,90 € y 12,90 € sin IVA con pago mensual. Essential se detiene en diez usuarios; Professional y Enterprise empiezan en 24,90 € y 39,90 € sin IVA con pago anual.",
               "type": "text"
             }
           ]
@@ -66658,7 +66658,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "La página de precios no muestra ninguna fórmula gratuita. La prueba de 14 días da acceso a todas las funciones sin necesidad de medio de pago; al final, se elige una fórmula o se detiene.",
+              "text": "La página de precios no muestra ningún plan gratuito. La prueba de 14 días da acceso a todas las funciones sin medio de pago; al final, eliges un plan o lo dejas.",
               "type": "text"
             }
           ]
@@ -66679,7 +66679,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Su página de precios no lo menciona. Su FAQ presenta la API como el método para interactuar con sus herramientas de facturación, y el conector estándar se configura por 850 € (IVA no incluido). Erplain y Axonaut, en cambio, generan presupuestos y facturas en la misma herramienta.",
+              "text": "Su página de precios no lo menciona. Sus preguntas frecuentes presentan la API como la forma de intercambiar datos con tus herramientas de facturación, y el conector estándar se configura por 850 € sin IVA. Erplain y Axonaut, en cambio, hacen los presupuestos y las facturas en la misma herramienta.",
               "type": "text"
             }
           ]
@@ -66691,7 +66691,7 @@
           },
           "content": [
             {
-              "text": "¿Cuál es la alternativa a Monstock más económica?",
+              "text": "¿Qué alternativa a Monstock es la más barata?",
               "type": "text"
             }
           ]
@@ -66700,7 +66700,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Para un solo usuario, Monstock Essential en modalidad anual, a 14,90 € (IVA no incluido) por mes, sigue siendo el precio más bajo registrado aquí. Stockpit Power le sigue a 190 € (IVA no incluido) al año, pero requiere un software de facturación adicional pagado por separado. Erplain comienza a 59 € (IVA no incluido) y Axonaut a 58,20 € pagando por tres años.",
+              "text": "Para un solo usuario, Monstock Essential con pago anual, a 14,90 € sin IVA al mes, sigue siendo el precio más bajo de los consultados aquí. Le sigue Stockpit Power, a 190 € sin IVA al año, pero requiere un software de facturación pagado aparte. Erplain empieza en 59 € sin IVA y Axonaut en 58,20 € pagando tres años.",
               "type": "text"
             }
           ]
@@ -66712,7 +66712,7 @@
           },
           "content": [
             {
-              "text": "¿Monstock existe en francés?",
+              "text": "¿Monstock está disponible en francés?",
               "type": "text"
             }
           ]
@@ -66721,7 +66721,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Sí. El sitio web y la página de precios están en francés, y la FAQ anuncia ocho idiomas para la aplicación, entre ellos el francés, el inglés y el español.",
+              "text": "Sí. La web y la página de precios están en francés, y las preguntas frecuentes anuncian ocho idiomas para la aplicación, entre ellos el francés, el inglés y el español.",
               "type": "text"
             }
           ]
@@ -66733,7 +66733,7 @@
           },
           "content": [
             {
-              "text": "¿No sabe cuál elegir?",
+              "text": "¿No sabes cuál elegir?",
               "type": "text"
             }
           ]
@@ -66742,7 +66742,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Descríbame en pocas líneas lo que necesita: cuántas referencias, cuántos lugares, cuántas personas registran movimientos, y si sus ventas deben reducir el stock automáticamente. Le responderé en menos de 24 horas, y si Monstock, Erplain o Axonaut le bastan tal como están, se lo indicaré.",
+              "text": "Descríbeme en pocas líneas lo que controlas: cuántas referencias, cuántos lugares, cuántas personas registran movimientos y si tus ventas deben hacer bajar el stock automáticamente. Te respondo en 24 h, y si Monstock, Erplain o Axonaut te basta tal cual, te lo digo.",
               "type": "text"
             }
           ]
@@ -66761,7 +66761,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Descríbame su stock",
+                "label": "Descríbeme tu stock",
                 "style": "primary",
                 "component": "cta_button"
               }
@@ -66773,16 +66773,16 @@
   },
   "blog/alternative-batigest-logiciel-batiment": {
     "title": "Alternativa a Batigest: ¿qué software de construcción elegir en 2026?",
-    "excerpt": "Batigest Connect comienza desde 36,08 € IVA (excluido) al mes con compromiso de un año: su coste a tres años, para quién es adecuado, y precios detallados de Tolteck, Batappli y Obat.",
-    "metaTitle": "Batigest 2026: precios, limitaciones y 3 alternativas",
-    "metaDescription": "Sage Batigest Connect desde 36,08 € IVA (excluido)/mes en Windows (datos del 22/11/2026), compromiso anual. Comparativa con Tolteck, Batappli y Obat.",
+    "excerpt": "Batigest Connect empieza en 36,08 € sin IVA al mes con un año de permanencia: su coste en tres años, para quién encaja, y Tolteck, Batappli y Obat con sus precios.",
+    "metaTitle": "Batigest: precios 2026, límites y 3 alternativas",
+    "metaDescription": "Sage Batigest Connect desde 36,08 € sin IVA al mes en Windows (precio del 22 de noviembre de 2026), un año de permanencia: Tolteck, Batappli y Obat.",
     "tags": [
-      "opiniones batigest",
-      "alternativas batigest",
-      "precio batigest",
+      "batigest opiniones",
+      "alternativa batigest",
+      "batigest precio",
       "sage batigest connect",
       "software construcción",
-      "programa presupuestos construcción"
+      "software presupuestos construcción"
     ],
     "content": {
       "type": "doc",
@@ -66791,7 +66791,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "En resumen: el 22 de noviembre de 2026, Sage Batigest Connect comienza a 36,08 € HT por mes por usuario, bajo Windows, con una suscripción de un año que se renueva automáticamente. El mismo día, encontré tres alternativas en línea: Tolteck a 19 € HT por mes pagado anualmente, Batappli desde 39 € HT por mes y Obat desde 39 € HT por mes pagado anualmente. Batigest sigue siendo ventajoso para una empresa que factura en obra con gastos directos, con varias sociedades o contratos de mantenimiento; para hacer presupuestos en un Mac, una tableta o sin compromiso de un año, las otras tres opciones cuestan lo mismo o menos.",
+              "text": "En resumen: a 22 de noviembre de 2026, Sage Batigest Connect empieza en 36,08 € sin IVA al mes para un usuario, en Windows, con una suscripción de un año que se renueva automáticamente. Ese mismo día anoté tres alternativas en línea: Tolteck a 19 € sin IVA al mes con pago anual, Batappli desde 39 € sin IVA al mes y Obat desde 39 € sin IVA al mes con pago anual. Batigest conserva la ventaja para una empresa que presupuesta en la oficina a coste directo, con varias sociedades o contratos de mantenimiento; para hacer tus presupuestos en un Mac, en una tableta o sin un año de permanencia, los otros tres cuestan lo mismo o menos.",
               "type": "text"
             }
           ]
@@ -66800,7 +66800,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No soy albañil ni instalador de placas de yeso. Pero conozco la escena: la PC de la oficina donde Batigest funciona desde hace años, los presupuestos tecleados por la noche a partir de notas garabateadas en el chantier, y el día en que alguien pregunta si no sería hora de cambiar. Cada editor tiene su propia estructura de precios, y nadie sabe ya cuánto costará el cambio. He releído la página de Sage Batigest Connect y la tienda de Sage el 22 de noviembre de 2026, así como las páginas de precios de Tolteck, Batappli y Obat.",
+              "text": "No soy albañil ni instalador de pladur. Pero conozco la escena: el PC de la oficina donde Batigest funciona desde hace años, los presupuestos tecleados por la noche a partir de las notas garabateadas en la obra, y el día en que alguien pregunta si no habrá llegado el momento de cambiar. Cada editor tiene su tarifa, y ya nadie sabe lo que costará el cambio. El 22 de noviembre de 2026 releí la página de Sage Batigest Connect y la tienda de Sage, y después las páginas de precios de Tolteck, Batappli y Obat.",
               "type": "text"
             }
           ]
@@ -66821,7 +66821,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El 22 de noviembre de 2026, la ",
+              "text": "A 22 de noviembre de 2026, la ",
               "type": "text"
             },
             {
@@ -66839,7 +66839,7 @@
               ]
             },
             {
-              "text": " muestra tres paquetes, todos « desde », en euros HT por mes y marcados « Compatible con: Windows ». Essentials cuesta 36,08 € HT por cuenta de usuario: presupuestos y facturas, análisis de obras, seguimiento de la tesorería con recordatorios a clientes. Standard cuesta 55,33 € HT, hasta 10 cuentas de usuario, con seguimiento simplificado de obras. Premium cuesta 122,25 € HT, hasta 50 cuentas y 50 empresas, con seguimiento avanzado de obras.",
+              "text": " muestra tres packs, todos con «à partir de» (desde), en € sin IVA al mes y marcados «Compatible avec : Windows». Essentials cuesta 36,08 € sin IVA por una cuenta de usuario: presupuestos y facturas, análisis de obras, seguimiento de la tesorería con recordatorios a clientes. Standard cuesta 55,33 € sin IVA, hasta 10 cuentas de usuario, con el seguimiento de obra simplificado. Premium cuesta 122,25 € sin IVA, hasta 50 cuentas y 50 sociedades, con el seguimiento de obra avanzado.",
               "type": "text"
             }
           ]
@@ -66848,7 +66848,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Alrededor de los paquetes, Sage presenta módulos: Sage e-tarif para los precios de más de 700 fabricantes y distribuidores, un módulo de SAV para los contratos de mantenimiento, Sage e-chantier Alobees para la planificación de los operarios en el teléfono. Sus precios no están indicados. Otro detalle: la FAQ al final de la misma página anuncia otros montos, « desde » 31,08 € HT para Essentials, 46 € HT para Standard y 102 € HT para Premium. Me quedo con las tarifas publicadas y les recomiendo pedir el precio exacto por escrito.",
+              "text": "Alrededor de los packs, Sage presenta módulos: Sage e-tarif para las tarifas de más de 700 fabricantes y distribuidores, un módulo SAV (posventa) para los contratos de mantenimiento, Sage e-chantier Alobees para la planificación de los operarios en el móvil. Su precio no aparece. Otro detalle: las preguntas frecuentes al pie de la misma página anuncian otros importes, «à partir de» 31,08 € sin IVA para Essentials, 46 € sin IVA para Standard y 102 € sin IVA para Premium. Me quedo con las tarjetas de precios, y te aconsejo pedir la cifra exacta por escrito.",
               "type": "text"
             }
           ]
@@ -66875,7 +66875,7 @@
               ]
             },
             {
-              "text": " da las condiciones. La suscripción es válida por un año y se renueva automáticamente por otro año; para cancelarla, hay que enviar una carta al menos 60 días antes de la fecha de renovación. El pago se realiza cada mes por domiciliación bancaria, o para 12 meses a través de un asesor. Sage ya no vende licencias, solo suscripciones.",
+              "text": " indica las condiciones. La suscripción dura un año y se renueva automáticamente por otro año; para darla de baja hay que enviar una carta al menos 60 días antes de la fecha de aniversario. El pago es mensual por domiciliación, o por 12 meses a través de un asesor. Sage ya no vende licencias, solo la suscripción.",
               "type": "text"
             }
           ]
@@ -66884,7 +66884,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Al precio inicial y sin módulos, Essentials cuesta entonces 432,96 € HT al año y 1 298,88 € HT en tres años. Standard asciende a 1 991,88 € HT en tres años, y Premium a 4 401 € HT.",
+              "text": "Al precio de entrada y sin módulos, Essentials sale por 432,96 € sin IVA al año y 1298,88 € sin IVA en tres años. Standard sube a 1991,88 € sin IVA en tres años, y Premium a 4401 € sin IVA.",
               "type": "text"
             }
           ]
@@ -66896,7 +66896,7 @@
           },
           "content": [
             {
-              "text": "¿Para quién Batigest es la mejor opción?",
+              "text": "Para quién encaja Batigest",
               "type": "text"
             }
           ]
@@ -66905,7 +66905,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Sage anuncia 18 000 empresas del sector BTP en Batigest Connect y cita dos socios, la CAPEB y la FFB. La tienda describe un software diseñado para el cálculo de costes en construcción: presupuestos organizados en fases y lotes, gastos directos, precios de coste y márgenes, estados de obra, avenants en las facturas de avance. Una empresa que factura por avance encuentra aquí sus hábitos.",
+              "text": "Sage anuncia 18 000 empresas de la construcción en Batigest Connect y cita a dos socios, la CAPEB y la FFB (organizaciones profesionales francesas del sector). La tienda describe un software pensado para presupuestar obras: presupuestos organizados en tramos, fases y lotes, coste directo, precio de coste y márgenes, certificaciones de obra, adendas en las facturas de avance. Una empresa que factura por avance de obra encuentra allí sus costumbres.",
               "type": "text"
             }
           ]
@@ -66914,11 +66914,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "También conviene a quien gestiona varias estructuras: tres empresas desde Essentials en la página del producto, hasta 50 en Premium. Un calefactorista que vive de sus contratos de mantenimiento mirará el módulo SAV, que renueva los contratos y convierte los informes de intervención en facturas; comparo otras opciones del oficio en mi página ",
+              "text": "También encaja con quien gestiona varias estructuras: tres sociedades desde Essentials según la página del producto, hasta 50 en Premium. Un instalador de calefacción que vive de sus contratos de mantenimiento mirará el módulo SAV, que renueva los contratos y convierte los partes de intervención en facturas; comparo las demás opciones del oficio en mi página ",
               "type": "text"
             },
             {
-              "text": "software para fontanero-calefactorista",
+              "text": "software para fontanero y calefactor",
               "type": "text",
               "marks": [
                 {
@@ -66932,7 +66932,7 @@
               ]
             },
             {
-              "text": ". Un carpintero o un electricista que calcula según los precios de sus proveedores valorará Sage e-tarif; también pueden ver mis páginas ",
+              "text": ". Un carpintero o un electricista que presupuesta con las tarifas de sus proveedores valorará Sage e-tarif; mira también mis páginas ",
               "type": "text"
             },
             {
@@ -66968,7 +66968,7 @@
               ]
             },
             {
-              "text": ". Y si aún están en Batigest i7 o Ciel Bâtiment, Sage ofrece una formación para retomar su expediente.",
+              "text": ". Y si todavía usas Batigest i7 o Ciel Bâtiment, Sage ofrece una formación para recuperar tu expediente.",
               "type": "text"
             }
           ]
@@ -66989,7 +66989,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Windows, y un PC robusto. La tienda exige Windows 11 o 10, 40 GB libres, un procesador de 4 núcleos a 2,9 GHz y 8 GB de memoria. No aparece ninguna versión para Mac.",
+              "text": "Windows, y un PC potente. La tienda pide Windows 11 o 10, 40 GB libres, un procesador de 4 núcleos a 2,9 GHz y 8 GB de memoria. No aparece ninguna versión para Mac.",
               "type": "text"
             }
           ]
@@ -66998,7 +66998,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Varias estaciones. Según la tienda, para trabajar varios a la vez sobre los mismos datos, Batigest debe instalarse en red, con un acompañamiento técnico cuyo precio hay que solicitar al servicio comercial.",
+              "text": "Varios puestos. Según la tienda, para trabajar varias personas a la vez sobre los mismos datos, Batigest debe instalarse en red, con un acompañamiento técnico cuyo precio hay que pedir al departamento comercial.",
               "type": "text"
             }
           ]
@@ -67007,7 +67007,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El compromiso. Un año, renovado automáticamente, con una notificación 60 días antes de la fecha límite. Si se pierde la fecha, se renueva por doce meses. Las tres alternativas siguientes también se pagan por mes.",
+              "text": "La permanencia. Un año, renovado automáticamente, con una carta 60 días antes del vencimiento. Si se te pasa la fecha, te quedan otros doce meses. Las tres alternativas de abajo también se pueden pagar mes a mes.",
               "type": "text"
             }
           ]
@@ -67016,7 +67016,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Los módulos. El seguimiento de obra solo llega en la versión Standard, y el servicio posventa, los precios de proveedores o la planificación móvil se cobran aparte. Hasta que no tengas el presupuesto, el precio inicial no refleja el precio real.",
+              "text": "Los módulos. El seguimiento de obra solo llega con Standard, y el SAV, las tarifas de proveedores o la planificación en el móvil se presupuestan aparte. Mientras no tengas el presupuesto, el precio de entrada no dice el precio real.",
               "type": "text"
             }
           ]
@@ -67037,7 +67037,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Precios mostrados en la página de tarifas francesa de cada editor, registrados el 22 de noviembre de 2026.",
+              "text": "Precios mostrados en la página de tarifas francesa de cada editor, consultados el 22 de noviembre de 2026.",
               "type": "text"
             }
           ]
@@ -67046,7 +67046,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Tolteck, una sola oferta a 19 o 25 € IVA no incluido por mes. La ",
+              "text": "Tolteck, una sola oferta a 19 o 25 € sin IVA al mes. La ",
               "type": "text"
             },
             {
@@ -67064,7 +67064,7 @@
               ]
             },
             {
-              "text": " muestra 25 € IVA no incluido por mes en pago mensual, o 19 € IVA no incluido por mes pagados por doce meses, es decir, 228 € IVA no incluido por año. La oferta incluye presupuestos, facturas y biblioteca de obras. Funciona en PC, Mac, tableta y smartphone, incluso sin conexión. Un mes de prueba es ofrecido, y se anuncian 35 % de descuento para empresas con menos de cinco años. La página no menciona ni planificación ni seguimiento de obra. Más detalles en mi artículo ",
+              "text": " muestra 25 € sin IVA al mes con pago mensual, o 19 € sin IVA al mes pagando doce meses, es decir 228 € sin IVA al año. La oferta incluye presupuestos, facturas y biblioteca de partidas. Funciona en PC, Mac, tableta y smartphone, incluso sin conexión. Ofrece un mes de prueba y anuncia un 35 % de descuento para las empresas de menos de cinco años. La página no menciona ni planificación ni seguimiento de obra. Más detalles en mi artículo ",
               "type": "text"
             },
             {
@@ -67091,7 +67091,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Batappli, de 39 a 79 € IVA no incluido por mes para un usuario. La ",
+              "text": "Batappli, de 39 a 79 € sin IVA al mes por un usuario. La ",
               "type": "text"
             },
             {
@@ -67109,7 +67109,7 @@
               ]
             },
             {
-              "text": " ofrece dos opciones. Batappli Presupuesto, a 39 € IVA no incluido por mes o 429 € IVA no incluido por año, incluye presupuestos y facturas ilimitados, anticipos, créditos, estados, exportación contable y un agente de IA que redacta 8 presupuestos por mes. Batappli Artista, a 79 € IVA no incluido por mes o 869 € IVA no incluido por año, añade el inventario, las órdenes de compra, el seguimiento de obra, los contratos de mantenimiento y órdenes de trabajo, y los derechos por usuario. Cada usuario o empresa adicional cuesta 19 € IVA no incluido por mes o 209 € IVA no incluido por año. Diez días de prueba. De los tres, es el más cercano a Batigest por sus funciones; ver mi artículo ",
+              "text": " propone dos ofertas. Batappli Devis, a 39 € sin IVA al mes o 429 € sin IVA al año, incluye presupuestos y facturas ilimitados, anticipos, abonos y certificaciones, exportación contable y un agente de IA que redacta 8 presupuestos al mes. Batappli Artisan, a 79 € sin IVA al mes o 869 € sin IVA al año, añade el stock, los pedidos a proveedores, el seguimiento de obra, los contratos de mantenimiento y las órdenes de trabajo, y los permisos por usuario. Cada usuario o sociedad adicional cuesta 19 € sin IVA al mes o 209 € sin IVA al año. Diez días de prueba. De los tres, es el más cercano a Batigest por sus funciones; mira mi artículo ",
               "type": "text"
             },
             {
@@ -67136,7 +67136,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Obat, de 39 a 129 € IVA no incluido por mes para una microempresa o una PYME. En la ",
+              "text": "Obat, de 39 a 129 € sin IVA al mes para una microempresa o una pyme. En la ",
               "type": "text"
             },
             {
@@ -67154,7 +67154,7 @@
               ]
             },
             {
-              "text": ", en el apartado de empresas de 2 a 50 personas, Pro cuesta 49 € IVA no incluido por mes sin compromiso o 39 € IVA no incluido por mes pagados al año, es decir, 468 € IVA no incluido. Crecimiento, a 79 o 69 € IVA no incluido, añade compras, rentabilidad por obra, planificación, carga de trabajo del equipo y seguimiento de tiempo. Booster, a 129 o 109 € IVA no incluido, añade una página web. Cada acceso adicional cuesta 20 € IVA no incluido por mes o 200 € IVA no incluido por año. Mi artículo ",
+              "text": ", pestaña de las empresas de 2 a 50 personas, Pro cuesta 49 € sin IVA al mes sin permanencia o 39 € sin IVA al mes con pago anual, es decir 468 € sin IVA. Croissance, a 79 o 69 € sin IVA, añade las compras, la rentabilidad por obra, la planificación, la carga de trabajo del equipo y el control de horas. Booster, a 129 o 109 € sin IVA, añade una página web. Cada acceso adicional cuesta 20 € sin IVA al mes o 200 € sin IVA al año. Mi artículo ",
               "type": "text"
             },
             {
@@ -67181,7 +67181,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Para un artesano que trabaja solo, en tres años con pago anual y a los precios actuales: 684 € IVA excluido en Tolteck, 1 287 € IVA excluido para Batappli Devis, 1 404 € IVA excluido para Obat Pro, frente a 1 298,88 € IVA excluido para Batigest Essentials. Si gestionas equipos de intervención, Extrabat factura por usuario, de 49 a 99 € IVA excluido por mes; lo comparé en mi artículo ",
+              "text": "Para un artesano que trabaja solo, en tres años con pago anual y a los precios consultados hoy: 684 € sin IVA con Tolteck, 1287 € sin IVA con Batappli Devis, 1404 € sin IVA con Obat Pro, frente a 1298,88 € sin IVA con Batigest Essentials. Si gestionas equipos de intervención, Extrabat factura por usuario, de 49 a 99 € sin IVA al mes; lo comparé en mi artículo ",
               "type": "text"
             },
             {
@@ -67211,7 +67211,7 @@
           },
           "content": [
             {
-              "text": "Y si ninguno encaja: la herramienta a medida",
+              "text": "¿Y si ninguno encaja? La herramienta a medida",
               "type": "text"
             }
           ]
@@ -67220,7 +67220,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Lo que falla con un software del mercado es lo que os es propio: las horas de los compañeros ajustadas al presupuesto obra por obra, una regla de revisión de precios propia, un circuito de validación de situaciones con un maestro de obra. El resto termina en una hoja de cálculo que se mantiene al lado, que nadie actualiza el viernes por la noche.",
+              "text": "Lo que falla con un software del mercado es lo que te es propio: las horas de los operarios cotejadas con el presupuesto partida por partida, una regla de revisión de precios propia, un circuito de validación de las certificaciones con una dirección de obra. Lo demás acaba en una hoja de cálculo llevada aparte, que nadie actualiza el viernes por la tarde.",
               "type": "text"
             }
           ]
@@ -67229,7 +67229,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Mantener Batigest y añadirle un complemento suele ser entonces lo más razonable. Lo que este complemento puede leer depende de lo que su instalación permita exportar: lo verifico antes de cotizar. En mi caso, cuesta entre 2 500 y 7 000 € una sola vez. Una herramienta completa oscila entre 5 000 y 15 000 €, más 100 a 300 € por mes de mantenimiento, y el código os pertenece.",
+              "text": "Conservar Batigest y añadirle un complemento suele ser entonces lo más razonable. Lo que ese complemento puede leer depende de lo que tu instalación permite exportar: lo compruebo antes de presupuestar. Conmigo cuesta de 2500 a 7000 € en un único pago. Una herramienta completa se sitúa entre 5000 y 15 000 €, más 100 a 300 € al mes de mantenimiento, y el código es tuyo.",
               "type": "text"
             }
           ]
@@ -67238,7 +67238,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "El caso más cercano que he construido: en el editor Kodeva, donde estaba en alternancia, creé desde cero ",
+              "text": "El caso más cercano que he construido: en el editor de software Kodeva, donde hice mi formación en alternancia, creé desde cero ",
               "type": "text"
             },
             {
@@ -67256,7 +67256,7 @@
               ]
             },
             {
-              "text": ", un software de seguimiento de tiempos, aún en producción en Pymes de 20 a 200 empleados. Relacionar las horas registradas con lo que se ha vendido es la clave del seguimiento de obra.",
+              "text": ", un software de control de horas que sigue en producción en pymes de 20 a 200 empleados. Relacionar las horas registradas con lo que se ha vendido es la cuestión del seguimiento de obra.",
               "type": "text"
             }
           ]
@@ -67265,11 +67265,11 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Frente a los 4 401 € IVA excluido de Batigest Premium en tres años, sin incluir módulos. Para verificar un presupuesto, mi ",
+              "text": "Compáralo con los 4401 € sin IVA de Batigest Premium en tres años, sin contar los módulos. Para comprobar un presupuesto, mi ",
               "type": "text"
             },
             {
-              "text": "barómetro de precios de software a medida",
+              "text": "barómetro de precios del software a medida",
               "type": "text",
               "marks": [
                 {
@@ -67283,7 +67283,7 @@
               ]
             },
             {
-              "text": " da los rangos de precios de prestadores franceses, y mi artículo sobre el ",
+              "text": " da las horquillas de proveedores franceses, y mi artículo sobre el ",
               "type": "text"
             },
             {
@@ -67322,7 +67322,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Por la mañana, recupera la fecha de aniversario de tu suscripción a Batigest: con sus 60 días de preaviso, es ella quien fija el calendario. Anota quién lo usa, en qué dispositivo, con qué módulos. Calcula el costo en tres años de cada opción, incluyendo usuarios y módulos.",
+              "text": "Por la mañana, busca la fecha de aniversario de tu suscripción a Batigest: con sus 60 días de preaviso, es la que marca el calendario. Anota quién lo usa, en qué dispositivo y con qué módulos. Calcula el coste en tres años de cada opción, usuarios y módulos incluidos.",
               "type": "text"
             }
           ]
@@ -67331,7 +67331,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Por la tarde, abre la prueba de los dos mejores herramientas y haz que procesen un verdadero proyecto: un presupuesto en partes con tres obras de tu biblioteca, un anticipo, un estado a 40 %, un avenimiento, la factura final, y luego las horas trabajadas. Pregunta también a cada editor, por escrito, cómo recupera tus clientes y tus obras. La herramienta que te haga menos reingresar datos gana.",
+              "text": "Por la tarde, abre la prueba de las dos herramientas mejor situadas y haz que gestionen una obra real: un presupuesto por tramos con tres partidas de tu biblioteca, un anticipo, una certificación al 40 %, una adenda, la factura final y luego las horas dedicadas. Pide también a cada editor, por escrito, cómo recupera tus clientes y tus partidas. Gana la herramienta que menos te obligue a volver a teclear.",
               "type": "text"
             }
           ]
@@ -67364,7 +67364,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "A 22 de noviembre de 2026, las tablas de precios muestran 36,08 € IVA no incluido por mes para Essentials con un usuario, 55,33 € IVA no incluido para Standard y 122,25 € IVA no incluido para Premium, todos « a partir de ».",
+              "text": "A 22 de noviembre de 2026, las tarjetas de precios muestran 36,08 € sin IVA al mes para Essentials con un usuario, 55,33 € sin IVA para Standard y 122,25 € sin IVA para Premium, todos con «à partir de» (desde).",
               "type": "text"
             }
           ]
@@ -67385,7 +67385,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "La página del producto indica « Compatible con: Windows » para los tres paquetes, y la tienda exige Windows 11 o 10. No se anuncia ninguna versión para Mac.",
+              "text": "La página del producto indica «Compatible avec : Windows» para los tres packs, y la tienda pide Windows 11 o 10. No se anuncia ninguna versión para Mac.",
               "type": "text"
             }
           ]
@@ -67406,7 +67406,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "No, según la tienda de Sage: la suscripción dura un año y se renueva automáticamente. La baja se realiza por correo, al menos 60 días antes de la fecha de aniversario, y puede recuperar la totalidad de sus datos.",
+              "text": "No, según la tienda de Sage: la suscripción dura un año y se renueva automáticamente. La baja se pide por carta, al menos 60 días antes de la fecha de aniversario, y puedes recuperar todos tus datos.",
               "type": "text"
             }
           ]
@@ -67418,7 +67418,7 @@
           },
           "content": [
             {
-              "text": "¿Cuál es la diferencia entre Batigest i7 y Batigest Connect?",
+              "text": "¿Qué diferencia hay entre Batigest i7 y Batigest Connect?",
               "type": "text"
             }
           ]
@@ -67427,7 +67427,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Según la FAQ de Sage, Batigest Connect ofrece una interfaz renovada y una base de datos SQL Express de hasta 10 GB por carpeta. Sage propone una formación para pasar de Batigest i7 o Ciel Bâtiment a Batigest Connect.",
+              "text": "Según las preguntas frecuentes de Sage, Batigest Connect trae una interfaz renovada y una base SQL Express de hasta 10 GB por expediente. Sage ofrece una formación para pasar de Batigest i7 o Ciel Bâtiment a Batigest Connect.",
               "type": "text"
             }
           ]
@@ -67439,7 +67439,7 @@
           },
           "content": [
             {
-              "text": "¿Cuál es la alternativa a Batigest más económica?",
+              "text": "¿Qué alternativa a Batigest cuesta menos?",
               "type": "text"
             }
           ]
@@ -67448,7 +67448,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "A 22 de noviembre de 2026, Tolteck cuesta 19 € IVA no incluido por mes pagado anualmente, es decir, 228 € IVA no incluido al año, para una oferta de presupuestos y facturas. Para un seguimiento de obra, mire Batappli Artisan u Obat Croissance.",
+              "text": "A 22 de noviembre de 2026, Tolteck, a 19 € sin IVA al mes con pago anual, es decir 228 € sin IVA al año, para una oferta de presupuestos y facturas. Para el seguimiento de obra, mira Batappli Artisan u Obat Croissance.",
               "type": "text"
             }
           ]
@@ -67460,7 +67460,7 @@
           },
           "content": [
             {
-              "text": "¿No sabe cuál elegir?",
+              "text": "¿No sabes cuál elegir?",
               "type": "text"
             }
           ]
@@ -67469,7 +67469,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Dígame cuántas personas usarán el software, en qué dispositivos y los dos módulos de Batigest que no podría prescindir. Le diré cuánto cuesta cada opción en tres años, y si Tolteck, Batappli, Obat o Batigest en sí mismo cubre su necesidad tal como está, esa será mi recomendación.",
+              "text": "Dime cuántas personas usáis el software, en qué dispositivos, y los dos módulos de Batigest sin los que no podrías trabajar. Te diré lo que cuesta cada opción en tres años, y si Tolteck, Batappli, Obat o el propio Batigest cubre tu necesidad tal cual, es lo que te aconsejaré.",
               "type": "text"
             }
           ]
@@ -67478,7 +67478,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "le responderé en menos de 24 h.",
+              "text": "Te respondo en 24 h.",
               "type": "text"
             }
           ]
@@ -67497,7 +67497,7 @@
                   "fieldtype": "multilink",
                   "cached_url": "/contact"
                 },
-                "label": "Descríbame su forma de trabajar",
+                "label": "Descríbeme tu forma de trabajar",
                 "style": "primary",
                 "component": "cta_button"
               }
