@@ -53034,9 +53034,9 @@
   },
   "blog/php-86-date-de-sortie-nouveautes-faut-il-mettre-a-jour-son-site": {
     "title": "PHP 8.6: Release Date, New Features, and Should You Update Your Site?",
-    "excerpt": "php.net has announced PHP 8.6 for November 19, 2026. What’s changing, why there’s no rush, and the real deadline: PHP 8.2 support ends December 31.",
+    "excerpt": "PHP 8.6 was released on November 19, 2026. What’s changing, why there’s no rush, and the real deadline: PHP 8.2 support ends December 31.",
     "metaTitle": "PHP 8.6: Release Date, New Features & Update Guide",
-    "metaDescription": "PHP 8.6 arrives November 19, 2026. Key changes, WordPress/Joomla impact, and steps before PHP 8.2’s end-of-life on Dec 31, 2024.",
+    "metaDescription": "PHP 8.6 was released on November 19, 2026. Key changes, WordPress and Joomla impact, and what to do before PHP 8.2 ends on December 31, 2026.",
     "tags": [
       "PHP 8.6",
       "PHP 8.6 release date",
@@ -53053,7 +53053,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "In short: php.net announces the final version of PHP 8.6 for Thursday, November 19, 2026. It mainly brings tools for developers and performance improvements; nothing changes for your site’s visitors. There’s no urgency to upgrade: the deadline to watch is December 31, 2026, when PHP 8.2 will no longer receive security updates.",
+              "text": "In short: PHP 8.6.0 was released on Thursday, November 19, 2026. It mainly brings tools for developers and performance improvements; nothing changes for your site’s visitors. There’s no urgency to upgrade: the deadline to watch is December 31, 2026, when PHP 8.2 will no longer receive security updates.",
               "type": "text"
             }
           ]
@@ -53110,7 +53110,7 @@
               ]
             },
             {
-              "text": " announces the final version, PHP 8.6.0, for November 19, 2026. The ",
+              "text": " announced the release of the final version, PHP 8.6.0, on Thursday, November 19, 2026. The ",
               "type": "text"
             },
             {
@@ -53128,7 +53128,7 @@
               ]
             },
             {
-              "text": " confirms the same date. The latest test version, RC7, was released on November 12. It wasn’t originally planned: the team fixes issues until the very end. If the date shifts by a few days, it will be updated on these two pages.",
+              "text": " had given that date for months, and it was met. The last test version, RC7, had come out on November 12. It wasn’t originally planned: the team fixes issues until the very end.",
               "type": "text"
             }
           ]
@@ -53137,7 +53137,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "For tracking, php.net follows the same rule for each version: two years of corrections, then two years of security updates only. PHP 8.5, released on November 20, 2025, will be supported until December 31, 2029. With the same rule, PHP 8.6 will be supported until the end of 2030. The exact date will appear on ",
+              "text": "For tracking, php.net follows the same rule for each version: two years of corrections, then two years of security updates only. PHP 8.5, released on November 20, 2025, will be supported until December 31, 2029. PHP 8.6 is supported until December 31, 2030, with bug fixes until December 31, 2028, according to ",
               "type": "text"
             },
             {
@@ -53155,7 +53155,7 @@
               ]
             },
             {
-              "text": " on the release day.",
+              "text": ", read on November 22, 2026.",
               "type": "text"
             }
           ]
@@ -53512,7 +53512,7 @@
               ]
             },
             {
-              "text": " php.net announces the final version for November 19, 2026. The latest test version, RC7, is dated November 12.",
+              "text": " PHP 8.6.0 was released on November 19, 2026, on the date php.net had announced. The latest test version, RC7, is dated November 12.",
               "type": "text"
             }
           ]
@@ -53566,7 +53566,7 @@
               ]
             },
             {
-              "text": " Until December 31, 2026, for security fixes, according to php.net. PHP 8.3 is supported until December 31, 2027, PHP 8.4 until December 31, 2028, and PHP 8.5 until December 31, 2029.",
+              "text": " Until December 31, 2026, for security fixes, according to php.net. PHP 8.3 is supported until December 31, 2027, PHP 8.4 until December 31, 2028, PHP 8.5 until December 31, 2029, and PHP 8.6 until December 31, 2030.",
               "type": "text"
             }
           ]
