@@ -287,8 +287,8 @@
         },
         "contactRequests": {
           "value": 1,
-          "origin": "rebuilt",
-          "note": "Envoi du 14 septembre, sans doute une vraie demande"
+          "origin": "measured",
+          "note": "1 formulaire vu par PostHog"
         },
         "googleClicks": {
           "value": 7,
@@ -399,7 +399,7 @@
         },
         "contactRequests": {
           "value": 0,
-          "origin": "rebuilt"
+          "origin": "measured"
         },
         "copilotCitations": {
           "value": 0,
@@ -529,7 +529,7 @@
         },
         "contactRequests": {
           "value": 0,
-          "origin": "rebuilt"
+          "origin": "measured"
         },
         "googleClicks": {
           "value": 17,
@@ -618,7 +618,7 @@
         },
         "contactRequests": {
           "value": 0,
-          "origin": "rebuilt"
+          "origin": "measured"
         }
       },
       "explanations": [
@@ -744,7 +744,7 @@
         },
         "contactRequests": {
           "value": 0,
-          "origin": "rebuilt"
+          "origin": "measured"
         },
         "bingImpressions": {
           "value": 4,
@@ -906,9 +906,9 @@
           "note": "Téléchargements comptés depuis le 19 octobre"
         },
         "contactRequests": {
-          "value": 2,
-          "origin": "rebuilt",
-          "note": "3 formulaires reçus le jour même, tous des sollicitations commerciales"
+          "value": 0,
+          "origin": "measured",
+          "note": "2 formulaires vus par PostHog, des sollicitations commerciales"
         },
         "bingImpressions": {
           "value": 1165,
@@ -1066,8 +1066,8 @@
         },
         "contactRequests": {
           "value": 1,
-          "origin": "rebuilt",
-          "note": "Une vraie demande, la première venue d’une IA"
+          "origin": "measured",
+          "note": "La première demande venue d’une IA"
         },
         "bingImpressions": {
           "value": 993,
@@ -1252,9 +1252,9 @@
           "origin": "rebuilt"
         },
         "contactRequests": {
-          "value": 0,
-          "origin": "rebuilt",
-          "note": "Une vraie demande reçue le 2 novembre, invisible dans PostHog"
+          "value": 1,
+          "origin": "measured",
+          "note": "Aucun formulaire vu par PostHog (bloqueur de publicité)"
         }
       },
       "explanations": [
@@ -1430,8 +1430,8 @@
         },
         "contactRequests": {
           "value": 1,
-          "origin": "rebuilt",
-          "note": "Une vraie demande retenue le jour même, la première venue d’un test du site"
+          "origin": "measured",
+          "note": "La première demande venue d’un test du site"
         }
       },
       "explanations": [
@@ -1647,7 +1647,7 @@
         },
         "contactRequests": {
           "value": 0,
-          "origin": "rebuilt"
+          "origin": "measured"
         }
       },
       "explanations": [

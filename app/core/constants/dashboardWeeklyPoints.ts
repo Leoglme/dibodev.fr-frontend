@@ -7,6 +7,9 @@ import type {
   DashboardWeeklyTabKey,
 } from '~/core/types/DashboardWeeklyPointsPage'
 
+/** Figures small enough to compare by their difference ("+1") instead of a percentage. */
+export const DASHBOARD_WEEKLY_DIFFERENCE_METRICS: DashboardWeeklyMetricKey[] = ['aiTestCitations', 'contactRequests']
+
 /** Number of answers checked by the monthly AI test: `aiTestCitations` reads "19 sur 20". */
 export const DASHBOARD_WEEKLY_AI_TEST_ANSWER_COUNT: number = 20
 
@@ -44,9 +47,9 @@ export const DASHBOARD_WEEKLY_METRICS: Record<DashboardWeeklyMetricKey, Dashboar
     hint: null,
   },
   contactRequests: {
-    label: 'Demandes par le formulaire',
-    channelLabel: 'Demandes par le formulaire',
-    hint: null,
+    label: 'Demandes sérieuses',
+    channelLabel: 'Demandes sérieuses',
+    hint: 'formulaires triés à la main à chaque point',
   },
 }
 

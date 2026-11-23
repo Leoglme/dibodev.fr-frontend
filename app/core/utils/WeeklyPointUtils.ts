@@ -21,6 +21,7 @@ import type {
 } from '~/core/types/DashboardWeeklyPointsPage'
 import {
   DASHBOARD_WEEKLY_AI_TEST_ANSWER_COUNT,
+  DASHBOARD_WEEKLY_DIFFERENCE_METRICS,
   DASHBOARD_WEEKLY_CHANNELS,
   DASHBOARD_WEEKLY_DONE_KINDS,
   DASHBOARD_WEEKLY_METRICS,
@@ -95,7 +96,7 @@ export class WeeklyPointUtils {
   }
 
   /**
-   * Builds the evolution between two values: a percentage, or points for the monthly AI test.
+   * Builds the evolution between two values: a percentage, or a difference for the small figures.
    *
    * @param {DashboardWeeklyMetricKey} metricKey - The figure.
    * @param {number | null} currentValue - Value of the opened point.
@@ -110,7 +111,7 @@ export class WeeklyPointUtils {
     if (currentValue === null || previousValue === null) {
       return null
     }
-    if (metricKey === 'aiTestCitations') {
+    if (DASHBOARD_WEEKLY_DIFFERENCE_METRICS.includes(metricKey)) {
       const difference: number = currentValue - previousValue
       return {
         value: difference,
