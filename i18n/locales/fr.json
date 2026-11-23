@@ -1212,6 +1212,7 @@
       "panelWordImprove": "Améliorer",
       "panelLine": "Le back-office de dibodev.fr : articles, référencement et performances au même endroit.",
       "panelModules": {
+        "weeklyPoints": "Points hebdo",
         "articles": "Articles",
         "translations": "Traductions",
         "search": "Requêtes Google",

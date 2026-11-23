@@ -1,12 +1,22 @@
 import type { DashboardNavGroup, DashboardNavItem } from '~/core/types/Dashboard'
 
-/** Overview entry, alone in the "Pilotage" group. */
+/** Overview entry, first of the "Pilotage" group. */
 export const DASHBOARD_OVERVIEW_ITEM: DashboardNavItem = {
   key: 'overview',
   label: 'Vue d’ensemble',
   path: '/dashboard',
   icon: 'layout-dashboard',
   tone: 'ink',
+  matches: [],
+}
+
+/** Weekly points entry: every weekly review, compared two by two. */
+export const DASHBOARD_WEEKLY_POINTS_ITEM: DashboardNavItem = {
+  key: 'weeklyPoints',
+  label: 'Points hebdo',
+  path: '/dashboard/weekly-points',
+  icon: 'calendar',
+  tone: 'violet',
   matches: [],
 }
 
@@ -72,7 +82,7 @@ export const DASHBOARD_AUDIT_ITEM: DashboardNavItem = {
 
 /** Sidebar groups, in display order (same order as the weekly review: measure, content, Google). */
 export const DASHBOARD_NAV_GROUPS: DashboardNavGroup[] = [
-  { label: 'Pilotage', items: [DASHBOARD_OVERVIEW_ITEM] },
+  { label: 'Pilotage', items: [DASHBOARD_OVERVIEW_ITEM, DASHBOARD_WEEKLY_POINTS_ITEM] },
   { label: 'Contenu', items: [DASHBOARD_ARTICLES_ITEM, DASHBOARD_SITE_EDITOR_ITEM, DASHBOARD_TRANSLATIONS_ITEM] },
   { label: 'Google', items: [DASHBOARD_SEARCH_ITEM, DASHBOARD_INDEXING_ITEM, DASHBOARD_AUDIT_ITEM] },
 ]

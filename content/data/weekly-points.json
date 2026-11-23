@@ -1,0 +1,1844 @@
+{
+  "updatedAt": "2026-11-23",
+  "points": [
+    {
+      "id": "S1",
+      "number": 1,
+      "date": "2026-08-10",
+      "weekStart": "2026-08-01",
+      "weekEnd": "2026-08-07",
+      "headline": "Les impressions Google décollent, mais sans clics ni demande",
+      "metrics": {
+        "googleClicks": {
+          "value": 4,
+          "origin": "rebuilt"
+        },
+        "googleImpressions": {
+          "value": 202,
+          "origin": "rebuilt"
+        },
+        "siteVisits": {
+          "value": 10,
+          "origin": "rebuilt",
+          "note": "PostHog compte à partir du 2 août"
+        },
+        "aiVisits": {
+          "value": 0,
+          "origin": "rebuilt"
+        },
+        "chatgptVisits": {
+          "value": 0,
+          "origin": "rebuilt"
+        }
+      },
+      "explanations": [
+        "Google relit les premiers articles et montre davantage la page des applications métier.",
+        "Ces nouvelles impressions arrivent très loin dans les résultats, donc personne ne clique.",
+        "Les quatre clics viennent de pages déjà bien placées, pas des pages visées."
+      ],
+      "doneItems": [
+        {
+          "kind": "update",
+          "title": "Balises de langue corrigées sur tout le site",
+          "detail": "Les pages à adresse traduite annonçaient deux séries de liens entre langues, dont une fausse."
+        },
+        {
+          "kind": "article",
+          "title": "Guide « Application métier sur mesure »",
+          "detail": "Article de fond écrit et programmé pour le 20 août.",
+          "url": "https://dibodev.fr/blog/application-metier-sur-mesure-guide-tpe-pme"
+        },
+        {
+          "kind": "update",
+          "title": "Introduction de la page secteur B2B réécrite",
+          "detail": "La page la plus proche de la première page de Google reçoit un texte d’introduction.",
+          "url": "https://dibodev.fr/projets/secteur/b2b"
+        },
+        {
+          "kind": "article",
+          "title": "Article « Site vitrine ou outil métier »",
+          "detail": "Publié le 13 août par la file de publication automatique.",
+          "url": "https://dibodev.fr/blog/site-vitrine-ou-outil-metier-sur-mesure-que-choisir"
+        }
+      ],
+      "decisions": [
+        "Travailler d’abord les recherches où le site est presque en première page.",
+        "Faire monter le trafic avant de retoucher la page de contact."
+      ],
+      "followUps": [
+        "Regarder dans deux à trois semaines si la page des applications métier remonte.",
+        "Vérifier que les articles programmés se publient bien tout seuls."
+      ],
+      "nextTargets": [],
+      "experiments": []
+    },
+    {
+      "id": "S2",
+      "number": 2,
+      "date": "2026-08-18",
+      "weekStart": "2026-08-09",
+      "weekEnd": "2026-08-15",
+      "headline": "Impressions multipliées par quatre, presque toutes sur une seule page",
+      "metrics": {
+        "googleClicks": {
+          "value": 1,
+          "origin": "rebuilt"
+        },
+        "googleImpressions": {
+          "value": 931,
+          "origin": "rebuilt"
+        },
+        "siteVisits": {
+          "value": 14,
+          "origin": "rebuilt"
+        },
+        "aiVisits": {
+          "value": 0,
+          "origin": "rebuilt"
+        },
+        "chatgptVisits": {
+          "value": 0,
+          "origin": "rebuilt"
+        }
+      },
+      "explanations": [
+        "Près de neuf impressions sur dix viennent de la page des applications métier, classée autour de la 53e place.",
+        "À cette place, personne ne clique : ces impressions ne rapportent rien pour l’instant.",
+        "Les rares clics tombent sur les pages déjà en première ou deuxième page."
+      ],
+      "doneItems": [
+        {
+          "kind": "article",
+          "title": "Article pour les chauffagistes",
+          "detail": "Article sur le suivi des contrats d’entretien, publié et traduit le 19 août.",
+          "url": "https://dibodev.fr/blog/chauffagiste-contrats-entretien-outil-sur-mesure"
+        },
+        {
+          "kind": "article",
+          "title": "Article pour les serruriers de Rennes",
+          "detail": "Article sur le dépannage entre deux interventions, publié et traduit le 19 août.",
+          "url": "https://dibodev.fr/blog/serrurier-rennes-depannage-outil-sur-mesure"
+        },
+        {
+          "kind": "article",
+          "title": "Guide « Application métier sur mesure » en ligne",
+          "detail": "Publié le 20 août par la file de publication.",
+          "url": "https://dibodev.fr/blog/application-metier-sur-mesure-guide-tpe-pme"
+        },
+        {
+          "kind": "update",
+          "title": "Fiche Gest-Time recentrée sur « gestion des temps »",
+          "detail": "Titre et description alignés sur la recherche où la fiche est presque en première page.",
+          "url": "https://dibodev.fr/project/gestion-temps"
+        },
+        {
+          "kind": "update",
+          "title": "Fiche Driving School en espagnol retravaillée",
+          "detail": "Titre et description visent la recherche espagnole sur les logiciels d’auto-école."
+        },
+        {
+          "kind": "update",
+          "title": "Données d’identité ajoutées pour Google",
+          "detail": "Le site décrit la personne et l’entreprise dans son code, et les mentions légales sont à jour."
+        },
+        {
+          "kind": "action",
+          "title": "Deux articles techniques publiés sur dev.to",
+          "detail": "Deux retours d’expérience en anglais, repris sur Hashnode, avec un lien vers le site."
+        },
+        {
+          "kind": "action",
+          "title": "Catégorie corrigée sur Pages Jaunes",
+          "detail": "L’entreprise y est maintenant classée comme éditeur de logiciels."
+        },
+        {
+          "kind": "action",
+          "title": "Fiche Google Business validée",
+          "detail": "Validation obtenue le 21 août après un appel vidéo avec Google."
+        }
+      ],
+      "decisions": [
+        "Ne plus compter les impressions de la page des applications métier comme un succès.",
+        "Viser les recherches à portée : auto-école en espagnol et recherches locales sur Rennes.",
+        "Léo ne publiera pas sur LinkedIn : ce canal est écarté."
+      ],
+      "followUps": [
+        "Mesurer si les pages retravaillées gagnent des clics.",
+        "Recharger la file d’articles, vide après le 20 août."
+      ],
+      "nextTargets": [],
+      "experiments": []
+    },
+    {
+      "id": "S3",
+      "number": 3,
+      "date": "2026-09-03",
+      "weekStart": "2026-08-27",
+      "weekEnd": "2026-09-02",
+      "headline": "Trop tôt pour juger : presque aucun visiteur humain n’arrive encore",
+      "context": "Ce point mesurait les seize jours écoulés depuis le 18 août ; les chiffres ci-dessous couvrent les sept derniers.",
+      "metrics": {
+        "siteVisits": {
+          "value": 3,
+          "origin": "rebuilt"
+        },
+        "aiVisits": {
+          "value": 0,
+          "origin": "rebuilt"
+        },
+        "chatgptVisits": {
+          "value": 0,
+          "origin": "rebuilt"
+        },
+        "googleClicks": {
+          "value": 0,
+          "origin": "rebuilt"
+        },
+        "googleImpressions": {
+          "value": 979,
+          "origin": "rebuilt"
+        }
+      },
+      "explanations": [
+        "Les articles du 19 août n’ont que deux semaines : Google ne les montre presque pas encore.",
+        "Près des deux tiers des impressions viennent toujours de la page des applications métier, sans clic.",
+        "La plupart des visites sont des robots ; environ quatre vrais visiteurs français par mois."
+      ],
+      "doneItems": [
+        {
+          "kind": "article",
+          "title": "Article « Développeur d’application métier à Rennes »",
+          "detail": "Publié le 4 septembre dans les trois langues, pour les recherches locales.",
+          "url": "https://dibodev.fr/blog/developpeur-application-metier-rennes-freelance-local"
+        },
+        {
+          "kind": "article",
+          "title": "Article « 5 signes qu’il est temps de quitter Excel »",
+          "detail": "Publié le 4 septembre, pour les recherches sur les logiciels métier B2B.",
+          "url": "https://dibodev.fr/blog/logiciel-metier-b2b-quitter-excel-signes"
+        },
+        {
+          "kind": "article",
+          "title": "Article « Freelance ou agence à Rennes »",
+          "detail": "Comparaison honnête des deux choix, publiée le 4 septembre.",
+          "url": "https://dibodev.fr/blog/freelance-ou-agence-rennes-outil-metier-sur-mesure"
+        },
+        {
+          "kind": "article",
+          "title": "Article « Logiciel de gestion pour auto-école »",
+          "detail": "Publié le 4 septembre ; sa version espagnole vise un marché sans concurrence.",
+          "url": "https://dibodev.fr/blog/logiciel-gestion-auto-ecole-planning-eleves-heures"
+        },
+        {
+          "kind": "update",
+          "title": "Visites de Léo retirées des statistiques",
+          "detail": "PostHog ne compte plus les visites faites depuis les communes de Léo."
+        },
+        {
+          "kind": "update",
+          "title": "Suivi des demandes de contact",
+          "detail": "L’envoi du formulaire et les clics sur le téléphone et l’e-mail sont maintenant comptés."
+        },
+        {
+          "kind": "action",
+          "title": "Troisième article technique sur dev.to",
+          "detail": "Retour d’expérience sur la traduction automatique du blog, avec un lien vers le site."
+        },
+        {
+          "kind": "action",
+          "title": "Nouvelle fiche Google Business créée",
+          "detail": "La fiche a été recréée le 3 septembre, puis validée par vidéo."
+        }
+      ],
+      "decisions": [
+        "Léo refuse de retirer les pages catégorie de Google : elles restent indexées.",
+        "Aucune publication sur LinkedIn, ni maintenant ni plus tard.",
+        "Lancer tout de suite quatre articles sur les recherches à portée."
+      ],
+      "followUps": [
+        "Juger les nouveaux articles sur leur indexation et leurs impressions, pas sur les clics.",
+        "Suivre chaque mois quatre chiffres que les robots ne faussent pas."
+      ],
+      "nextTargets": [],
+      "experiments": []
+    },
+    {
+      "id": "S4",
+      "number": 4,
+      "date": "2026-09-20",
+      "weekStart": "2026-09-13",
+      "weekEnd": "2026-09-19",
+      "headline": "Impressions en hausse de moitié et premier clic sur un article neuf",
+      "context": "Ce point mesurait les seize jours écoulés depuis le 4 septembre ; les chiffres ci-dessous couvrent les sept derniers.",
+      "metrics": {
+        "siteVisits": {
+          "value": 17,
+          "origin": "rebuilt"
+        },
+        "aiVisits": {
+          "value": 1,
+          "origin": "rebuilt",
+          "note": "Aucune relevée le jour même"
+        },
+        "chatgptVisits": {
+          "value": 1,
+          "origin": "rebuilt",
+          "note": "Aucune relevée le jour même"
+        },
+        "contactRequests": {
+          "value": 1,
+          "origin": "rebuilt",
+          "note": "Envoi du 14 septembre, sans doute une vraie demande"
+        },
+        "googleClicks": {
+          "value": 7,
+          "origin": "rebuilt"
+        },
+        "googleImpressions": {
+          "value": 1094,
+          "origin": "rebuilt"
+        }
+      },
+      "explanations": [
+        "Sur trois mois, les impressions passent de 4 800 à 7 410 : Google montre davantage le site.",
+        "L’article sur les auto-écoles du 4 septembre est indexé et reçoit son premier clic.",
+        "La France devient le premier pays des visites, et Google en amène neuf fois plus qu’au point précédent.",
+        "Les clics de contact comptés sont surtout des robots et des essais : presque aucun vrai prospect."
+      ],
+      "doneItems": [
+        {
+          "kind": "article",
+          "title": "Article sur la réservation en ligne pour auto-école",
+          "detail": "Publié le 20 septembre, sur la recherche qui apportait déjà un clic.",
+          "url": "https://dibodev.fr/blog/logiciel-rdv-auto-ecole-reservation-en-ligne"
+        },
+        {
+          "kind": "article",
+          "title": "Article « L’IA sur mesure pour une PME »",
+          "detail": "Publié le 20 septembre, pour expliquer simplement ce qu’une IA peut faire sur les données d’une entreprise.",
+          "url": "https://dibodev.fr/blog/ia-pour-pme-sur-mesure-agents-rag"
+        },
+        {
+          "kind": "article",
+          "title": "Article sur le prix d’un logiciel sur mesure",
+          "detail": "Publié le 21 septembre dans les trois langues.",
+          "url": "https://dibodev.fr/blog/developpement-logiciel-b2b-sur-mesure-prix"
+        },
+        {
+          "kind": "article",
+          "title": "Article « Logiciel du marché ou sur mesure »",
+          "detail": "Publié le 21 septembre, pour aider à choisir entre les deux.",
+          "url": "https://dibodev.fr/blog/logiciel-metier-saas-etagere-ou-sur-mesure"
+        },
+        {
+          "kind": "article",
+          "title": "Article sur la gestion des temps",
+          "detail": "Publié le 21 septembre, relié à la fiche du projet Gest-Time.",
+          "url": "https://dibodev.fr/blog/logiciel-gestion-des-temps-feuilles-heures-excel"
+        },
+        {
+          "kind": "update",
+          "title": "Origine de chaque demande de contact enregistrée",
+          "detail": "Le site retient d’où vient le visiteur et sa page d’entrée, puis l’écrit dans la demande."
+        },
+        {
+          "kind": "update",
+          "title": "Pages catégorie et secteur lisibles sans JavaScript",
+          "detail": "Leur titre et leur description sont maintenant dans la page dès le chargement."
+        },
+        {
+          "kind": "update",
+          "title": "Traduction automatique des articles réparée",
+          "detail": "La traduction échouait parce que les appels partaient trop vite ; ils sont maintenant espacés."
+        },
+        {
+          "kind": "update",
+          "title": "Liens internes vers la page des applications métier",
+          "detail": "Quatre articles pointent maintenant vers elle pour l’aider à remonter.",
+          "url": "https://dibodev.fr/projets/categorie/application-metier"
+        },
+        {
+          "kind": "action",
+          "title": "Quatrième article technique sur dev.to",
+          "detail": "Retour d’expérience sur la mesure de l’origine des visiteurs, avec un lien vers le site."
+        }
+      ],
+      "decisions": [
+        "Léo ne veut pas demander d’avis clients sur Google : l’idée est abandonnée.",
+        "Léo lance les trois actions proposées d’un coup, au lieu d’en choisir une.",
+        "Les articles pour développeurs vont sur dev.to, les articles pour clients sur le blog."
+      ],
+      "followUps": [
+        "Vérifier l’indexation et les impressions des articles du 20 et du 21 septembre.",
+        "Surveiller que Google ne confond pas les deux articles sur les auto-écoles."
+      ],
+      "nextTargets": [],
+      "experiments": []
+    },
+    {
+      "id": "S5",
+      "number": 5,
+      "date": "2026-09-26",
+      "weekStart": "2026-09-19",
+      "weekEnd": "2026-09-25",
+      "headline": "Aucun visiteur depuis le 19 septembre et des articles pris pour des doublons",
+      "context": "Point fait six jours après le précédent, à la demande de Léo.",
+      "metrics": {
+        "siteVisits": {
+          "value": 0,
+          "origin": "rebuilt",
+          "note": "Toutes les visites de la semaine venaient de Léo"
+        },
+        "aiVisits": {
+          "value": 0,
+          "origin": "rebuilt"
+        },
+        "chatgptVisits": {
+          "value": 0,
+          "origin": "rebuilt"
+        },
+        "contactRequests": {
+          "value": 0,
+          "origin": "rebuilt"
+        },
+        "copilotCitations": {
+          "value": 0,
+          "origin": "measured",
+          "note": "Aucune citation sur trois mois, relevé le 27 septembre"
+        },
+        "aiTestCitations": {
+          "value": 8,
+          "origin": "measured"
+        },
+        "googleClicks": {
+          "value": 0,
+          "origin": "rebuilt"
+        },
+        "googleImpressions": {
+          "value": 591,
+          "origin": "rebuilt"
+        }
+      },
+      "explanations": [
+        "Le pic de la page du jeu Puissance 4 est retombé : c’était lui qui amenait les visiteurs.",
+        "Google range trois articles récents comme des copies d’un même article plus ancien.",
+        "Chaque page rechargeait son contenu dans le navigateur, ce qui pouvait montrer une page d’erreur à Google."
+      ],
+      "doneItems": [
+        {
+          "kind": "update",
+          "title": "Articles et projets ne se rechargent plus",
+          "detail": "Le contenu vient de la page elle-même ; un article pèse sept fois moins lourd."
+        },
+        {
+          "kind": "page",
+          "title": "Quatre nouvelles fiches projet",
+          "detail": "GoupixDex, NightForge, SignDex et DevLeadHunter, en français, anglais et espagnol.",
+          "url": "https://dibodev.fr/projets"
+        },
+        {
+          "kind": "update",
+          "title": "Dix articles remis dans le plan du site",
+          "detail": "Ils n’étaient plus régénérés ; tout le contenu publié est maintenant listé et les vieilles pages sont nettoyées."
+        },
+        {
+          "kind": "page",
+          "title": "Page « Application métier sur mesure à Rennes »",
+          "detail": "Page de service avec fourchettes de budget, étapes et questions fréquentes.",
+          "url": "https://dibodev.fr/application-metier-sur-mesure-rennes"
+        },
+        {
+          "kind": "page",
+          "title": "Page À propos et questions fréquentes de l’accueil",
+          "detail": "Portrait, parcours et compétences, pour que les moteurs et les IA sachent qui est Léo.",
+          "url": "https://dibodev.fr/a-propos"
+        },
+        {
+          "kind": "article",
+          "title": "Article « Développeur Nuxt freelance à Rennes »",
+          "detail": "Écrit pour la question que les IA posaient sans trouver de réponse sur le site.",
+          "url": "https://dibodev.fr/blog/developpeur-nuxt-freelance-rennes"
+        },
+        {
+          "kind": "article",
+          "title": "Articles sur une aide locale et la facture électronique",
+          "detail": "Deux articles d’actualité pour les artisans et commerçants, publiés le 27 septembre.",
+          "url": "https://dibodev.fr/blog/facture-electronique-artisan-ce-qui-change"
+        },
+        {
+          "kind": "update",
+          "title": "Accueil qui s’affichait en anglais sur Google",
+          "detail": "Le site ne redirige plus selon la langue du navigateur ; l’accueil reste en français."
+        },
+        {
+          "kind": "update",
+          "title": "Images de partage sur toutes les pages",
+          "detail": "Chaque page et chaque projet a son image pour LinkedIn, Slack et les messageries."
+        },
+        {
+          "kind": "page",
+          "title": "Quatre tests « Quel logiciel pour votre métier ? »",
+          "detail": "Auto-école, location de matériel, atelier vélo et garage, en ligne le 30 septembre.",
+          "url": "https://dibodev.fr/outils/logiciel-auto-ecole"
+        },
+        {
+          "kind": "update",
+          "title": "Nouvelle version claire du site en ligne",
+          "detail": "La refonte complète du site est mise en production le 30 septembre."
+        },
+        {
+          "kind": "action",
+          "title": "Présence renforcée pour les moteurs et les IA",
+          "detail": "Bing Webmaster Tools, signalement automatique des pages à Bing, fiches Wikidata et annuaires professionnels."
+        }
+      ],
+      "decisions": [
+        "Corriger le rechargement du contenu et redemander l’indexation des quatre articles.",
+        "Pas de nouvel article tant que le problème des doublons n’est pas compris.",
+        "Nouveaux canaux retenus : annuaire public, Bing, publications sur la fiche Google et tests par métier.",
+        "Un test auprès des IA sera refait chaque mois avec les mêmes cinq questions."
+      ],
+      "followUps": [
+        "Vérifier que les quatre articles sortent des doublons une fois relus par Google.",
+        "Suivre la validation de la demande d’inscription à l’annuaire public.",
+        "Aucune IA ne cite le site sur la question du prix : prévoir un contenu avec des fourchettes claires."
+      ],
+      "nextTargets": [],
+      "experiments": []
+    },
+    {
+      "id": "S6",
+      "number": 6,
+      "date": "2026-10-03",
+      "weekStart": "2026-09-26",
+      "weekEnd": "2026-10-02",
+      "headline": "Les visiteurs reviennent et ChatGPT envoie ses deux premières visites",
+      "metrics": {
+        "siteVisits": {
+          "value": 28,
+          "origin": "rebuilt",
+          "note": "Environ 15 vraies visites retenues le jour même"
+        },
+        "aiVisits": {
+          "value": 2,
+          "origin": "rebuilt"
+        },
+        "chatgptVisits": {
+          "value": 2,
+          "origin": "rebuilt"
+        },
+        "contactRequests": {
+          "value": 0,
+          "origin": "rebuilt"
+        },
+        "googleClicks": {
+          "value": 17,
+          "origin": "rebuilt"
+        },
+        "googleImpressions": {
+          "value": 1104,
+          "origin": "rebuilt"
+        }
+      },
+      "explanations": [
+        "Le rebond des impressions vient surtout de la page du jeu Puissance 4, sans valeur commerciale.",
+        "Les articles relus par Google après le correctif du 26 septembre sortent des doublons : 26 sur 31 sont indexés.",
+        "Deux visites viennent de ChatGPT, les premières depuis le début du suivi."
+      ],
+      "doneItems": [
+        {
+          "kind": "action",
+          "title": "Indexation redemandée pour les articles en double",
+          "detail": "Demandes faites à Google pour les articles encore rangés comme des copies."
+        },
+        {
+          "kind": "update",
+          "title": "Clics sur « Estimer mon budget » comptés",
+          "detail": "Le bouton du haut de la page des outils gratuits est maintenant suivi."
+        },
+        {
+          "kind": "article",
+          "title": "Article sur l’application mobile des techniciens",
+          "detail": "Premier article publié et traduit tout seul par la file, le 6 octobre.",
+          "url": "https://dibodev.fr/blog/logiciel-gestion-interventions-techniciens-hors-ligne"
+        },
+        {
+          "kind": "action",
+          "title": "Article dev.to mis à jour",
+          "detail": "La suite promise est ajoutée : les articles sont bien sortis des doublons."
+        },
+        {
+          "kind": "action",
+          "title": "Contrôle de la présence sur Bing et Apple Plans",
+          "detail": "Les deux fiches sont encore absentes ; Bing a indexé 57 pages."
+        }
+      ],
+      "decisions": [
+        "Finir de sortir les cinq derniers articles des doublons avant d’écrire autre chose.",
+        "Léo refuse d’ajouter un éditeur à un comparatif sur simple demande.",
+        "L’idée d’une inscription payante dans les comparatifs est gardée pour plus tard."
+      ],
+      "followUps": [
+        "Redemander l’indexation des trois articles que Google n’a pas relus depuis août.",
+        "Réécrire les articles qui resteraient en double après une nouvelle lecture."
+      ],
+      "nextTargets": [],
+      "experiments": []
+    },
+    {
+      "id": "S7",
+      "number": 7,
+      "date": "2026-10-10",
+      "weekStart": "2026-09-30",
+      "weekEnd": "2026-10-06",
+      "headline": "Impressions multipliées par 2,5 grâce aux tests par métier",
+      "metrics": {
+        "googleClicks": {
+          "value": 19,
+          "origin": "rebuilt"
+        },
+        "googleImpressions": {
+          "value": 2017,
+          "origin": "rebuilt"
+        },
+        "siteVisits": {
+          "value": 34,
+          "origin": "rebuilt",
+          "note": "Environ 22 vraies visites retenues le jour même"
+        },
+        "aiVisits": {
+          "value": 4,
+          "origin": "rebuilt",
+          "note": "1 relevée le jour même"
+        },
+        "chatgptVisits": {
+          "value": 4,
+          "origin": "rebuilt",
+          "note": "1 relevée le jour même"
+        },
+        "contactRequests": {
+          "value": 0,
+          "origin": "rebuilt"
+        }
+      },
+      "explanations": [
+        "Le test pour les garages et la page des applications métier portent la hausse, plus le jeu Puissance 4.",
+        "Ces pages sont entre la 25e et la 30e place : beaucoup d’impressions, peu de clics.",
+        "Un visiteur a ouvert la page de contact deux jours de suite sans envoyer de message."
+      ],
+      "doneItems": [
+        {
+          "kind": "update",
+          "title": "Page des applications métier retitrée",
+          "detail": "Elle devient une page d’exemples, avec une introduction et la liste des projets livrés.",
+          "url": "https://dibodev.fr/projets/categorie/application-metier"
+        },
+        {
+          "kind": "update",
+          "title": "Test pour les garages complété sur la facturation",
+          "detail": "Titre, sous-titres et une question fréquente parlent maintenant de facturation.",
+          "url": "https://dibodev.fr/outils/logiciel-garage-automobile"
+        },
+        {
+          "kind": "update",
+          "title": "Page de contact simplifiée",
+          "detail": "Rendez-vous en ligne ajouté, message devenu facultatif, début de saisie du formulaire compté.",
+          "url": "https://dibodev.fr/contact"
+        },
+        {
+          "kind": "page",
+          "title": "Page « Développeur web freelance à Rennes »",
+          "detail": "Nouvelle page locale, en ligne le 11 octobre dans les trois langues.",
+          "url": "https://dibodev.fr/developpeur-web-freelance-rennes"
+        },
+        {
+          "kind": "page",
+          "title": "Baromètre des prix d’un logiciel sur mesure",
+          "detail": "Page de prix relevés, publiée aussi en données ouvertes sur data.gouv.fr.",
+          "url": "https://dibodev.fr/prix-logiciel-sur-mesure"
+        },
+        {
+          "kind": "page",
+          "title": "Simulateur d’aides pour un site ou un logiciel",
+          "detail": "Outil et guide sur les aides publiques, livrés dans la nuit du 11 au 12 octobre.",
+          "url": "https://dibodev.fr/outils/aides-site-internet-logiciel"
+        },
+        {
+          "kind": "article",
+          "title": "Quatre articles programmés, deux par semaine",
+          "detail": "Reprise d’une application faite avec une IA, réservation en ligne, application mobile à Rennes, limites du sans-code.",
+          "url": "https://dibodev.fr/blog/reprendre-application-vibe-coding"
+        },
+        {
+          "kind": "article",
+          "title": "Premier article « alternative à » un logiciel",
+          "detail": "Article sur un logiciel de garage, publié le 12 octobre : deux clics dès la première semaine.",
+          "url": "https://dibodev.fr/blog/alternative-autoprogestion-logiciel-garage"
+        },
+        {
+          "kind": "update",
+          "title": "Titres réécrits sur onze pages vues sans clic",
+          "detail": "Titres et descriptions refaits à partir des recherches réelles des 90 derniers jours."
+        },
+        {
+          "kind": "update",
+          "title": "Bloc « À lire aussi » sur les fiches projet",
+          "detail": "Chaque fiche projet renvoie vers les articles et le test du même métier."
+        },
+        {
+          "kind": "action",
+          "title": "Fiche Google complétée",
+          "detail": "Les quatre tests par métier ajoutés en produits et un bouton de prise de rendez-vous."
+        }
+      ],
+      "decisions": [
+        "Retravailler les pages vues sans clic avant d’en créer de nouvelles.",
+        "Léo valide les nouveaux titres pour deux semaines : retour en arrière s’ils ne marchent pas.",
+        "Léo veut plus d’articles, plus rapprochés : mardi et vendredi.",
+        "Les tournures de vécu de Léo restent dans les articles."
+      ],
+      "followUps": [
+        "Bilan des nouveaux titres le 24 octobre.",
+        "Réinspecter les cinq articles encore en double.",
+        "Compter les clics sur le rendez-vous en ligne et les formulaires commencés."
+      ],
+      "nextTargets": [],
+      "experiments": [
+        {
+          "name": "Nouveaux titres du test garage et de la page des applications métier",
+          "deadline": "2026-10-24",
+          "deadlineLabel": "Jugé le 24 octobre",
+          "stopRule": "Si les deux pages ne passent pas sous la 20e place en deux semaines, retour aux anciens titres ou autre essai."
+        }
+      ]
+    },
+    {
+      "id": "S8",
+      "number": 8,
+      "date": "2026-10-18",
+      "weekStart": "2026-10-09",
+      "weekEnd": "2026-10-15",
+      "headline": "Palier après le bond : mêmes impressions, mêmes clics",
+      "metrics": {
+        "googleClicks": {
+          "value": 18,
+          "origin": "rebuilt"
+        },
+        "googleImpressions": {
+          "value": 2433,
+          "origin": "rebuilt"
+        },
+        "siteVisits": {
+          "value": 38,
+          "origin": "rebuilt",
+          "note": "Environ 20 visites venues de Google retenues le jour même"
+        },
+        "aiVisits": {
+          "value": 0,
+          "origin": "rebuilt",
+          "note": "1 visite venue de Gemini le 17 octobre, hors de la semaine mesurée"
+        },
+        "chatgptVisits": {
+          "value": 0,
+          "origin": "rebuilt"
+        },
+        "contactRequests": {
+          "value": 0,
+          "origin": "rebuilt"
+        },
+        "bingImpressions": {
+          "value": 4,
+          "origin": "rebuilt"
+        },
+        "bingClicks": {
+          "value": 0,
+          "origin": "rebuilt"
+        },
+        "copilotCitations": {
+          "value": 4,
+          "origin": "rebuilt"
+        }
+      },
+      "explanations": [
+        "La page de service sur les applications métier gagne dix places et l’article sur les auto-écoles retitré double ses impressions.",
+        "La page des applications métier chute après trois changements de titres sur la même recherche.",
+        "Les 13, 14 et 15 octobre sont les trois plus gros jours du site depuis le début du suivi."
+      ],
+      "doneItems": [
+        {
+          "kind": "update",
+          "title": "Une seule page cible par famille de recherches",
+          "detail": "La page de service devient la page principale ; les autres pointent vers elle avec le bon texte de lien.",
+          "url": "https://dibodev.fr/application-metier-sur-mesure-rennes"
+        },
+        {
+          "kind": "page",
+          "title": "Page outil pour les plombiers-chauffagistes",
+          "detail": "Test, comparatif et modèle gratuit, en ligne le 19 octobre.",
+          "url": "https://dibodev.fr/outils/logiciel-plombier-chauffagiste"
+        },
+        {
+          "kind": "page",
+          "title": "Page outil sur la gestion d’interventions",
+          "detail": "Test, comparatif et modèle gratuit, en ligne le 19 octobre.",
+          "url": "https://dibodev.fr/outils/logiciel-gestion-interventions"
+        },
+        {
+          "kind": "page",
+          "title": "Pages outil pour électriciens et coachs sportifs",
+          "detail": "Deux pages de plus le même jour, chacune avec son modèle gratuit.",
+          "url": "https://dibodev.fr/outils/logiciel-electricien"
+        },
+        {
+          "kind": "article",
+          "title": "Article sur la facturation des garages",
+          "detail": "Accompagné d’un modèle gratuit d’ordre de réparation, programmé pour le 23 octobre.",
+          "url": "https://dibodev.fr/blog/logiciel-facturation-garage-devis-ordre-de-reparation-facture"
+        },
+        {
+          "kind": "update",
+          "title": "Téléchargements de modèles comptés",
+          "detail": "Chaque téléchargement de fichier est suivi depuis le 19 octobre, et l’accueil pointe vers la page de service."
+        },
+        {
+          "kind": "article",
+          "title": "Deux articles « alternative à » pour les garages",
+          "detail": "Publiés les 20 et 21 octobre, après la réécriture des titres en première page sans clic.",
+          "url": "https://dibodev.fr/blog/alternative-gad-garage-logiciel-garage"
+        },
+        {
+          "kind": "page",
+          "title": "Outil « Faille PHP : vérifier mon site »",
+          "detail": "Vérificateur mis en ligne le jour même de l’annonce de la faille, le 21 octobre.",
+          "url": "https://dibodev.fr/outils/faille-php-verifier-mon-site"
+        },
+        {
+          "kind": "article",
+          "title": "Article et guides par hébergeur sur la faille PHP",
+          "detail": "Un article d’explication et un guide de mise à jour pour chaque grand hébergeur.",
+          "url": "https://dibodev.fr/blog/faille-php-octobre-2026-site-boutique-logiciel-que-faire"
+        },
+        {
+          "kind": "page",
+          "title": "Page de service « Mise à jour PHP »",
+          "detail": "La suite proposée aux visiteurs dont le site est touché.",
+          "url": "https://dibodev.fr/mise-a-jour-php-site-logiciel"
+        },
+        {
+          "kind": "page",
+          "title": "Outil « Votre logiciel de facturation est-il agréé ? »",
+          "detail": "Première page née de la veille d’actualité, en ligne le 23 octobre.",
+          "url": "https://dibodev.fr/outils/facture-electronique-logiciel-agree"
+        },
+        {
+          "kind": "action",
+          "title": "Veille d’actualité lancée",
+          "detail": "Lecture automatique des sources d’actualité pour repérer les sujets à traiter le jour même."
+        }
+      ],
+      "decisions": [
+        "La page de service devient la page principale de la famille « application métier ».",
+        "Léo demande de prendre l’initiative sur les nouveautés, sans attendre son accord à chaque fois.",
+        "Léo lance un essai de deux semaines de la veille d’actualité.",
+        "Le résumé de la veille doit être court : le premier était beaucoup trop long."
+      ],
+      "followUps": [
+        "Bilan des titres du 10 octobre, prévu le 24.",
+        "Recharger la file d’articles, vide après le 27 octobre.",
+        "Mesurer l’effet de l’actualité PHP au prochain point."
+      ],
+      "nextTargets": [],
+      "experiments": [
+        {
+          "name": "Nouveaux titres du test garage et de la page des applications métier",
+          "deadline": "2026-10-24",
+          "deadlineLabel": "Jugé le 24 octobre",
+          "stopRule": "Si la page des applications métier reste au-delà de la 30e place, retour à l’ancien titre."
+        }
+      ]
+    },
+    {
+      "id": "S9",
+      "number": 9,
+      "date": "2026-10-25",
+      "weekStart": "2026-10-19",
+      "weekEnd": "2026-10-25",
+      "headline": "La faille PHP multiplie les impressions par dix, sans aucune demande",
+      "context": "Le 25 octobre, dernier jour de la semaine, est aussi le premier de la semaine du point suivant.",
+      "metrics": {
+        "googleClicks": {
+          "value": 1757,
+          "origin": "rebuilt",
+          "note": "1 732 relevés le jour même"
+        },
+        "googleImpressions": {
+          "value": 30610,
+          "origin": "rebuilt",
+          "note": "29 236 relevées le jour même"
+        },
+        "googleClicksExcludingSecurity": {
+          "value": 21,
+          "origin": "rebuilt",
+          "note": "17 relevés le jour même, hors pages PHP seulement"
+        },
+        "googleImpressionsExcludingSecurity": {
+          "value": 5671,
+          "origin": "rebuilt",
+          "note": "5 005 relevées le jour même, hors pages PHP seulement"
+        },
+        "siteVisits": {
+          "value": 2621,
+          "origin": "rebuilt"
+        },
+        "aiVisits": {
+          "value": 14,
+          "origin": "rebuilt",
+          "note": "2 relevées le jour même"
+        },
+        "chatgptVisits": {
+          "value": 9,
+          "origin": "rebuilt",
+          "note": "Aucune relevée le jour même"
+        },
+        "templateDownloads": {
+          "value": 0,
+          "origin": "rebuilt",
+          "note": "Téléchargements comptés depuis le 19 octobre"
+        },
+        "contactRequests": {
+          "value": 2,
+          "origin": "rebuilt",
+          "note": "3 formulaires reçus le jour même, tous des sollicitations commerciales"
+        },
+        "bingImpressions": {
+          "value": 1165,
+          "origin": "rebuilt"
+        },
+        "bingClicks": {
+          "value": 46,
+          "origin": "rebuilt"
+        },
+        "copilotCitations": {
+          "value": 87,
+          "origin": "rebuilt"
+        }
+      },
+      "explanations": [
+        "L’outil et les guides sur la faille PHP, publiés le jour de l’annonce, apportent presque tous les clics.",
+        "Le pic du 22 octobre retombe de moitié chaque jour : l’actualité est passée.",
+        "Les visiteurs vérifient leur site, lisent le guide de leur hébergeur et repartent.",
+        "Hors PHP, les quatre pages outil du 19 octobre font monter les impressions de 62 %."
+      ],
+      "doneItems": [
+        {
+          "kind": "page",
+          "title": "Page « Facture électronique : suis-je concerné ? »",
+          "detail": "Deuxième page sur le sujet, en ligne le 25 octobre.",
+          "url": "https://dibodev.fr/outils/facture-electronique-suis-je-concerne"
+        },
+        {
+          "kind": "page",
+          "title": "Outil « Mon site WordPress est-il piraté ? »",
+          "detail": "Vérificateur en ligne le 26 octobre, avec trois guides pour réparer son site.",
+          "url": "https://dibodev.fr/outils/site-wordpress-pirate-verifier"
+        },
+        {
+          "kind": "page",
+          "title": "Page outil pour les paysagistes",
+          "detail": "Test, comparatif et modèle gratuit, en ligne le 26 octobre.",
+          "url": "https://dibodev.fr/outils/logiciel-paysagiste"
+        },
+        {
+          "kind": "page",
+          "title": "Page outil pour les entreprises de nettoyage",
+          "detail": "Test, comparatif et modèle gratuit, en ligne le 26 octobre.",
+          "url": "https://dibodev.fr/outils/logiciel-entreprise-de-nettoyage"
+        },
+        {
+          "kind": "page",
+          "title": "Test « Démarchage téléphonique : puis-je appeler ? »",
+          "detail": "Test sur la nouvelle règle du démarchage, en ligne le 26 octobre.",
+          "url": "https://dibodev.fr/outils/demarchage-telephonique-interdit-puis-je-appeler"
+        },
+        {
+          "kind": "article",
+          "title": "Trois articles « alternative à » de plus",
+          "detail": "Bâtiment, coachs sportifs et gestion d’interventions, publiés du 28 au 31 octobre.",
+          "url": "https://dibodev.fr/blog/alternative-obat-logiciel-devis-batiment"
+        },
+        {
+          "kind": "article",
+          "title": "Comparatif des meilleurs logiciels de garage",
+          "detail": "Publié le 27 octobre avec les prix et les versions gratuites.",
+          "url": "https://dibodev.fr/blog/meilleur-logiciel-garage-automobile-comparatif-2026"
+        },
+        {
+          "kind": "article",
+          "title": "Article « PHP 8.2 : fin de vie le 31 décembre »",
+          "detail": "Publié le 29 octobre et relié aux pages sur la faille PHP.",
+          "url": "https://dibodev.fr/blog/php-82-fin-de-vie-31-decembre-2026-que-faire"
+        },
+        {
+          "kind": "action",
+          "title": "Inscription validée dans un annuaire public",
+          "detail": "La fiche de l’entreprise est en ligne et le logo de l’annuaire figure sur le site."
+        },
+        {
+          "kind": "update",
+          "title": "Mise en ligne débloquée",
+          "detail": "Un lien vers un outil pas encore créé bloquait les déploiements depuis quinze heures."
+        }
+      ],
+      "decisions": [
+        "Léo ne veut pas toucher aux titres des pages PHP avant début novembre.",
+        "Léo veut plus de contenu chaque semaine : deux à trois idées testées, une actualité toutes les deux semaines.",
+        "Léo refuse un échange de liens proposé par un autre site.",
+        "Pas de retour en arrière sur les titres « application métier » : nouvelle mesure le 8 puis le 22 novembre."
+      ],
+      "followUps": [
+        "Confirmer le 1er novembre que les impressions hors PHP tiennent après la vague.",
+        "Capter les recherches durables sur PHP une fois l’actualité retombée.",
+        "Recharger la file d’articles."
+      ],
+      "nextTargets": [],
+      "experiments": [
+        {
+          "name": "Veille d’actualité automatique",
+          "deadline": "2026-11-06",
+          "deadlineLabel": "Bilan le 6 novembre",
+          "stopRule": "Essai de deux semaines, du 23 octobre au 6 novembre, avec un bilan à la fin."
+        },
+        {
+          "name": "Titres de la famille « application métier »",
+          "deadline": "2026-11-22",
+          "deadlineLabel": "Jugé le 22 novembre",
+          "stopRule": "Si la page de service reste au-delà de la 40e place, l’ancien titre de la page d’exemples est remis."
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "number": 10,
+      "date": "2026-10-31",
+      "weekStart": "2026-10-25",
+      "weekEnd": "2026-10-31",
+      "headline": "La vague PHP retombe, le site garde un palier plus haut qu’avant",
+      "metrics": {
+        "googleClicks": {
+          "value": 237,
+          "origin": "rebuilt",
+          "note": "232 relevés le jour même"
+        },
+        "googleImpressions": {
+          "value": 12810,
+          "origin": "rebuilt",
+          "note": "12 013 relevées le jour même"
+        },
+        "googleClicksExcludingSecurity": {
+          "value": 24,
+          "origin": "rebuilt"
+        },
+        "googleImpressionsExcludingSecurity": {
+          "value": 7040,
+          "origin": "rebuilt",
+          "note": "6 421 relevées le jour même"
+        },
+        "siteVisits": {
+          "value": 512,
+          "origin": "rebuilt",
+          "note": "Environ 530 relevées le jour même"
+        },
+        "aiVisits": {
+          "value": 9,
+          "origin": "rebuilt"
+        },
+        "chatgptVisits": {
+          "value": 7,
+          "origin": "rebuilt"
+        },
+        "aiTestCitations": {
+          "value": 13,
+          "origin": "measured"
+        },
+        "templateDownloads": {
+          "value": 0,
+          "origin": "rebuilt"
+        },
+        "contactRequests": {
+          "value": 1,
+          "origin": "rebuilt",
+          "note": "Une vraie demande, la première venue d’une IA"
+        },
+        "bingImpressions": {
+          "value": 993,
+          "origin": "rebuilt"
+        },
+        "bingClicks": {
+          "value": 39,
+          "origin": "rebuilt"
+        },
+        "copilotCitations": {
+          "value": 147,
+          "origin": "rebuilt"
+        }
+      },
+      "explanations": [
+        "Les pages sur la faille PHP perdent chaque jour des impressions, mais les guides par hébergeur gardent leurs places.",
+        "Hors sécurité, le site passe d’environ 600 à 1 000 impressions par jour en douze jours.",
+        "Tout reste entre la 15e et la 30e place : trois à quatre clics par jour hors sécurité.",
+        "La première demande venue d’une IA arrive par ChatGPT, et le test mensuel passe de 8 à 13 réponses sur 20."
+      ],
+      "doneItems": [
+        {
+          "kind": "page",
+          "title": "Modèles gratuits : une page par modèle",
+          "detail": "Page d’ensemble et douze pages de modèles à télécharger, en ligne le 1er novembre.",
+          "url": "https://dibodev.fr/outils/modeles-gratuits"
+        },
+        {
+          "kind": "page",
+          "title": "Pages outil menuisier, formation et loisirs",
+          "detail": "Trois pages outil métier de plus, en ligne le 1er novembre.",
+          "url": "https://dibodev.fr/outils/logiciel-menuisier"
+        },
+        {
+          "kind": "page",
+          "title": "Pages outil stock et carrosserie",
+          "detail": "Deux pages outil avec leurs modèles gratuits, livrées avec le chantier de la semaine d’avant.",
+          "url": "https://dibodev.fr/outils/logiciel-gestion-de-stock"
+        },
+        {
+          "kind": "page",
+          "title": "Page « Votre hébergeur est-il en panne ? »",
+          "detail": "Page qui lit l’état des grands hébergeurs, avec une page par marque.",
+          "url": "https://dibodev.fr/outils/hebergeur-en-panne"
+        },
+        {
+          "kind": "page",
+          "title": "Vérificateur « Mes mails arrivent-ils en spam ? »",
+          "detail": "Outil qui contrôle les réglages d’envoi d’un nom de domaine.",
+          "url": "https://dibodev.fr/outils/mes-mails-arrivent-en-spam"
+        },
+        {
+          "kind": "page",
+          "title": "Baromètre « Prix d’un site internet »",
+          "detail": "Page de prix relevés, en ligne le 2 novembre.",
+          "url": "https://dibodev.fr/prix-site-internet"
+        },
+        {
+          "kind": "page",
+          "title": "Outil « Tester mon site »",
+          "detail": "Contrôle gratuit d’un site en quelques secondes, en ligne le 2 novembre.",
+          "url": "https://dibodev.fr/outils/tester-mon-site"
+        },
+        {
+          "kind": "page",
+          "title": "Sites internet par métier : huit pages",
+          "detail": "Une page d’ensemble et huit pages par métier, avec un atelier de démonstration.",
+          "url": "https://dibodev.fr/site-internet-par-metier"
+        },
+        {
+          "kind": "page",
+          "title": "Générateur de cahier des charges",
+          "detail": "Générateur et quatre pages de modèles, en ligne le 2 novembre.",
+          "url": "https://dibodev.fr/outils/cahier-des-charges"
+        },
+        {
+          "kind": "article",
+          "title": "Sept articles « alternative à » de plus",
+          "detail": "Nouveaux articles, titres retravaillés pour le taux de clics et liens internes ajoutés."
+        },
+        {
+          "kind": "action",
+          "title": "Premier article de presse sur l’entreprise",
+          "detail": "Un média régional publie un article après une interview ; il est cité sur la page À propos."
+        },
+        {
+          "kind": "update",
+          "title": "File de publication réparée",
+          "detail": "Les articles programmés ne partaient plus depuis le 3 novembre ; corrigé le 5."
+        }
+      ],
+      "decisions": [
+        "Livrer tout de suite le code resté sur le disque : rien ne rapporte tant que ce n’est pas en ligne.",
+        "Léo donne carte blanche pour faire monter impressions et clics avant le prochain point.",
+        "Léo abandonne l’idée de proposer la faille PHP à la presse.",
+        "Pas de retitrage des pages PHP avant la mi-novembre."
+      ],
+      "followUps": [
+        "Corriger la catégorie de la fiche Bing, classée par erreur dans l’architecture.",
+        "Ajouter une proposition de refonte sur les pages PHP : le seul visiteur converti voulait un nouveau site.",
+        "Demander l’indexation des nouvelles pages, dix par jour."
+      ],
+      "nextTargets": [
+        {
+          "label": "Impressions Google hors sécurité",
+          "goal": 8200,
+          "metric": "googleImpressionsExcludingSecurity"
+        },
+        {
+          "label": "Clics Google hors sécurité",
+          "goal": 35,
+          "metric": "googleClicksExcludingSecurity"
+        }
+      ],
+      "experiments": [
+        {
+          "name": "Veille d’actualité automatique",
+          "deadline": "2026-11-06",
+          "deadlineLabel": "Bilan le 6 novembre",
+          "stopRule": "Essai de deux semaines, du 23 octobre au 6 novembre, avec un bilan à la fin."
+        },
+        {
+          "name": "Titres de la famille « application métier »",
+          "deadline": "2026-11-22",
+          "deadlineLabel": "Jugé le 22 novembre",
+          "stopRule": "Si la page de service reste au-delà de la 40e place, l’ancien titre de la page d’exemples est remis."
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "number": 11,
+      "date": "2026-11-08",
+      "weekStart": "2026-11-01",
+      "weekEnd": "2026-11-07",
+      "headline": "Objectif atteint : impressions hors sécurité en hausse de 61 %",
+      "metrics": {
+        "googleClicks": {
+          "value": 150,
+          "origin": "rebuilt"
+        },
+        "googleImpressions": {
+          "value": 14747,
+          "origin": "rebuilt",
+          "note": "14 624 relevées le jour même"
+        },
+        "googleClicksExcludingSecurity": {
+          "value": 42,
+          "origin": "rebuilt"
+        },
+        "googleImpressionsExcludingSecurity": {
+          "value": 11438,
+          "origin": "rebuilt",
+          "note": "11 319 relevées le jour même"
+        },
+        "bingClicks": {
+          "value": 32,
+          "origin": "rebuilt"
+        },
+        "bingImpressions": {
+          "value": 658,
+          "origin": "rebuilt"
+        },
+        "siteVisits": {
+          "value": 385,
+          "origin": "rebuilt"
+        },
+        "aiVisits": {
+          "value": 15,
+          "origin": "rebuilt"
+        },
+        "chatgptVisits": {
+          "value": 14,
+          "origin": "rebuilt"
+        },
+        "copilotCitations": {
+          "value": 152,
+          "origin": "rebuilt"
+        },
+        "templateDownloads": {
+          "value": 19,
+          "origin": "rebuilt"
+        },
+        "contactRequests": {
+          "value": 0,
+          "origin": "rebuilt",
+          "note": "Une vraie demande reçue le 2 novembre, invisible dans PostHog"
+        }
+      },
+      "explanations": [
+        "Les pages créées depuis fin octobre apportent 3 400 impressions, et les anciennes progressent de 21 %.",
+        "Les nouvelles pages entrent loin dans les résultats : les clics restent rares.",
+        "Les modèles gratuits démarrent fort : 19 téléchargements et la moitié des visites venues de ChatGPT.",
+        "Deux pages outil, interventions et coach sportif, ont perdu toutes leurs impressions le 28 octobre sans cause visible."
+      ],
+      "doneItems": [
+        {
+          "kind": "page",
+          "title": "Modèles gratuits, série 2 : cinq documents",
+          "detail": "Contrat de location, contrat d’auto-école, fiche de réparation vélo, attestation de chaudière, PV de réception de travaux.",
+          "url": "https://dibodev.fr/outils/modeles-gratuits/pv-de-reception-de-travaux"
+        },
+        {
+          "kind": "page",
+          "title": "Outil « Mon site est-il conforme au RGPD ? »",
+          "detail": "Vérificateur des cookies d’un site, en ligne le 8 novembre.",
+          "url": "https://dibodev.fr/outils/site-conforme-rgpd-cookies"
+        },
+        {
+          "kind": "page",
+          "title": "Générateur de mentions légales",
+          "detail": "Nouvel outil gratuit, en ligne le 8 novembre.",
+          "url": "https://dibodev.fr/outils/mentions-legales-generateur"
+        },
+        {
+          "kind": "page",
+          "title": "Test « Accessibilité : suis-je concerné ? »",
+          "detail": "Nouvel outil gratuit, en ligne le 8 novembre.",
+          "url": "https://dibodev.fr/outils/accessibilite-site-internet-suis-je-concerne"
+        },
+        {
+          "kind": "update",
+          "title": "Nom de la marque en tête des titres « alternative à »",
+          "detail": "Les titres de 33 articles commencent maintenant par le nom du logiciel recherché."
+        },
+        {
+          "kind": "update",
+          "title": "Pages location et garage recentrées",
+          "detail": "Titres et textes resserrés sur les recherches où ces pages sont en deuxième page."
+        },
+        {
+          "kind": "update",
+          "title": "Résultat des vérificateurs par e-mail",
+          "detail": "Les cinq vérificateurs proposent d’envoyer le résultat par e-mail et gardent des statistiques anonymes."
+        },
+        {
+          "kind": "update",
+          "title": "Résumé à citer en tête de 29 articles",
+          "detail": "Chaque article commence par une réponse courte que les IA peuvent reprendre."
+        },
+        {
+          "kind": "page",
+          "title": "Page de service « Mise à jour Joomla »",
+          "detail": "Page de service, vérificateur de version et deux articles sur Joomla et PHP.",
+          "url": "https://dibodev.fr/mise-a-jour-site-joomla"
+        },
+        {
+          "kind": "article",
+          "title": "Trois articles « alternative à » de plus",
+          "detail": "Location de matériel, paysagistes et gestion de stock.",
+          "url": "https://dibodev.fr/blog/alternative-current-rms-logiciel-location-materiel"
+        },
+        {
+          "kind": "update",
+          "title": "Traductions anglaise et espagnole débloquées",
+          "detail": "La traduction automatique respecte maintenant la limite du service, et les descriptions trop longues sont raccourcies."
+        },
+        {
+          "kind": "action",
+          "title": "Indexation demandée chaque jour",
+          "detail": "148 pages jamais vues par Google inspectées, puis une dizaine de demandes par jour."
+        }
+      ],
+      "decisions": [
+        "Léo retient l’idée de pousser les pages location et garage vers les dix premiers résultats.",
+        "Ne pas toucher aux pages interventions et coach sportif avant le 15 novembre.",
+        "Les tests par métier restent pour leurs impressions : aucun n’a encore amené de demande.",
+        "Léo refuse la question « Comment avez-vous connu Dibodev ? » dans le formulaire."
+      ],
+      "followUps": [
+        "Trouver pourquoi deux pages outil ont perdu leurs impressions.",
+        "Juger les pages « site internet par métier » le 16 novembre avant d’en ajouter.",
+        "Mesurer la série 2 de modèles deux semaines après sa mise en ligne."
+      ],
+      "nextTargets": [
+        {
+          "label": "Impressions Google hors sécurité",
+          "goal": 13500,
+          "metric": "googleImpressionsExcludingSecurity"
+        },
+        {
+          "label": "Clics Google hors sécurité",
+          "goal": 50,
+          "metric": "googleClicksExcludingSecurity"
+        },
+        {
+          "label": "Impressions Google du site entier",
+          "goal": 14500,
+          "metric": "googleImpressions"
+        }
+      ],
+      "experiments": [
+        {
+          "name": "Pages location et garage recentrées sur leurs recherches",
+          "deadline": "2026-11-22",
+          "deadlineLabel": "Jugé le 22 novembre",
+          "stopRule": "Une page qui perd plus de 30 % d’impressions en 14 jours retrouve sa version d’avant."
+        },
+        {
+          "name": "Pages « site internet par métier »",
+          "deadline": "2026-11-16",
+          "deadlineLabel": "Jugé le 16 novembre",
+          "stopRule": "Aucune nouvelle page de ce type avant le bilan des deux premières semaines."
+        }
+      ]
+    },
+    {
+      "id": "S12",
+      "number": 12,
+      "date": "2026-11-15",
+      "weekStart": "2026-11-08",
+      "weekEnd": "2026-11-14",
+      "headline": "Objectif manqué : Google retire des pages pendant sa mise à jour",
+      "metrics": {
+        "googleClicks": {
+          "value": 73,
+          "origin": "rebuilt"
+        },
+        "googleImpressions": {
+          "value": 14508,
+          "origin": "rebuilt",
+          "note": "14 493 relevées le jour même"
+        },
+        "googleClicksExcludingSecurity": {
+          "value": 40,
+          "origin": "rebuilt"
+        },
+        "googleImpressionsExcludingSecurity": {
+          "value": 12444,
+          "origin": "rebuilt",
+          "note": "12 432 relevées le jour même"
+        },
+        "bingClicks": {
+          "value": 27,
+          "origin": "rebuilt"
+        },
+        "bingImpressions": {
+          "value": 818,
+          "origin": "rebuilt"
+        },
+        "siteVisits": {
+          "value": 253,
+          "origin": "rebuilt"
+        },
+        "aiVisits": {
+          "value": 27,
+          "origin": "rebuilt"
+        },
+        "chatgptVisits": {
+          "value": 22,
+          "origin": "rebuilt"
+        },
+        "copilotCitations": {
+          "value": 144,
+          "origin": "rebuilt"
+        },
+        "templateDownloads": {
+          "value": 40,
+          "origin": "rebuilt"
+        },
+        "contactRequests": {
+          "value": 1,
+          "origin": "rebuilt",
+          "note": "Une vraie demande retenue le jour même, la première venue d’un test du site"
+        }
+      },
+      "explanations": [
+        "23 pages sont tombées à zéro impression d’un jour à l’autre, une à deux semaines après leur lecture par Google.",
+        "Google a lancé une mise à jour générale de son classement le 10 novembre.",
+        "Les clics du site sont divisés par deux parce que la vague PHP s’éteint.",
+        "Les modèles gratuits, Bing et les IA progressent : téléchargements doublés, 27 visites venues d’une IA."
+      ],
+      "doneItems": [
+        {
+          "kind": "page",
+          "title": "Modèles gratuits, série 3 : cinq documents",
+          "detail": "Bon de commande, bon de livraison, fiche de pointage, feuille de présence et note de frais.",
+          "url": "https://dibodev.fr/outils/modeles-gratuits/feuille-de-presence"
+        },
+        {
+          "kind": "update",
+          "title": "Version Word pour tous les modèles",
+          "detail": "Les 22 modèles se téléchargent maintenant en PDF, en Excel et en Word."
+        },
+        {
+          "kind": "page",
+          "title": "Étude sur les sites internet des mairies",
+          "detail": "Étude chiffrée, publiée aussi en données ouvertes sur data.gouv.fr.",
+          "url": "https://dibodev.fr/etude-sites-internet-mairies"
+        },
+        {
+          "kind": "page",
+          "title": "Outil « Mise à jour Google : mon site est-il touché ? »",
+          "detail": "Outil né de la veille d’actualité, avec un article d’explication.",
+          "url": "https://dibodev.fr/outils/mise-a-jour-google-mon-site-est-il-touche"
+        },
+        {
+          "kind": "page",
+          "title": "Outil « Mon site est-il lisible par ChatGPT ? »",
+          "detail": "Deuxième outil né de la veille, en ligne le 16 novembre.",
+          "url": "https://dibodev.fr/outils/site-lisible-par-chatgpt"
+        },
+        {
+          "kind": "article",
+          "title": "Article « PHP 8.6 : date de sortie et nouveautés »",
+          "detail": "Écrit avant la sortie pour rester juste après, publié le 16 novembre.",
+          "url": "https://dibodev.fr/blog/php-86-date-de-sortie-nouveautes-faut-il-mettre-a-jour-son-site"
+        },
+        {
+          "kind": "article",
+          "title": "Cinq articles « alternative à » de plus",
+          "detail": "Formation, gestion, location et stock : marques choisies d’après les recherches sur Bing.",
+          "url": "https://dibodev.fr/blog/alternative-digiforma-logiciel-organisme-de-formation"
+        },
+        {
+          "kind": "page",
+          "title": "Outil « Gmail 2027 : mon adresse est-elle concernée ? »",
+          "detail": "Vérificateur lancé le 19 novembre, avec l’envoi du résultat par e-mail.",
+          "url": "https://dibodev.fr/outils/gmail-envoyer-en-tant-que-mon-adresse-est-elle-concernee"
+        },
+        {
+          "kind": "article",
+          "title": "Dix articles sur Gmail et les adresses professionnelles",
+          "detail": "Un guide par hébergeur et des articles sur ce qui change en janvier 2027.",
+          "url": "https://dibodev.fr/blog/gmail-n-envoie-plus-avec-mon-adresse-professionnelle-que-faire"
+        },
+        {
+          "kind": "page",
+          "title": "Page de service « Adresse mail professionnelle »",
+          "detail": "La suite proposée aux visiteurs dont l’adresse est concernée.",
+          "url": "https://dibodev.fr/adresse-mail-professionnelle-gmail"
+        },
+        {
+          "kind": "update",
+          "title": "Prix de la page nettoyage revérifiés",
+          "detail": "Les six grilles de prix relues chez les éditeurs ; deux conditions corrigées.",
+          "url": "https://dibodev.fr/outils/logiciel-entreprise-de-nettoyage"
+        },
+        {
+          "kind": "action",
+          "title": "Étude des mairies envoyée à la presse",
+          "detail": "L’étude est proposée à plusieurs rédactions le 16 novembre."
+        }
+      ],
+      "decisions": [
+        "Aucune page existante n’est retouchée tant que Google n’a pas fini sa mise à jour.",
+        "Fin des séries de publications sur la fiche Google : quinze publications, aucun clic mesuré.",
+        "Léo dit oui à la série 3 de modèles gratuits.",
+        "Léo juge les objectifs trop faibles le 16 novembre : ils sont relevés.",
+        "Léo donne son feu vert le 19 novembre à une vague de contenu sur Gmail.",
+        "Les adresses de démonstration de l’assistant doivent sortir de Google."
+      ],
+      "followUps": [
+        "Suivre les pages tombées à zéro et la fin de la mise à jour de Google.",
+        "Demander l’indexation des pages encore inconnues de Google.",
+        "Relire php.net après la sortie de PHP 8.6 et corriger l’article si la date a changé."
+      ],
+      "nextTargets": [
+        {
+          "label": "Impressions Google hors sécurité",
+          "goal": 13500,
+          "metric": "googleImpressionsExcludingSecurity"
+        },
+        {
+          "label": "Clics Google hors sécurité",
+          "goal": 50,
+          "metric": "googleClicksExcludingSecurity"
+        },
+        {
+          "label": "Impressions Google du site entier",
+          "goal": 16000,
+          "metric": "googleImpressions"
+        },
+        {
+          "label": "Clics Google du site entier",
+          "goal": 80,
+          "metric": "googleClicks"
+        },
+        {
+          "label": "Impressions Bing sur sept jours",
+          "goal": 900,
+          "metric": "bingImpressions"
+        },
+        {
+          "label": "Clics Bing sur sept jours",
+          "goal": 30,
+          "metric": "bingClicks"
+        },
+        {
+          "label": "Visites venues d’une IA",
+          "goal": 40,
+          "metric": "aiVisits"
+        },
+        {
+          "label": "Citations Copilot sur sept jours",
+          "goal": 160,
+          "metric": "copilotCitations"
+        },
+        {
+          "label": "Téléchargements de modèles",
+          "goal": 60,
+          "metric": "templateDownloads"
+        },
+        {
+          "label": "Demande sérieuse",
+          "goal": 1,
+          "metric": "contactRequests"
+        }
+      ],
+      "experiments": [
+        {
+          "name": "Pages location et garage recentrées sur leurs recherches",
+          "deadline": "2026-11-29",
+          "deadlineLabel": "Jugé le 29 novembre",
+          "stopRule": "Règle suspendue pendant la mise à jour de Google : le jugement passe du 22 au 29 novembre."
+        }
+      ]
+    },
+    {
+      "id": "S13",
+      "number": 13,
+      "date": "2026-11-22",
+      "weekStart": "2026-11-15",
+      "weekEnd": "2026-11-21",
+      "headline": "Deux fois plus de clics, Bing et Copilot doublés par les modèles gratuits",
+      "metrics": {
+        "googleClicks": {
+          "value": 149,
+          "origin": "rebuilt"
+        },
+        "googleImpressions": {
+          "value": 15081,
+          "origin": "rebuilt"
+        },
+        "googleClicksExcludingSecurity": {
+          "value": 85,
+          "origin": "rebuilt"
+        },
+        "googleImpressionsExcludingSecurity": {
+          "value": 11578,
+          "origin": "rebuilt"
+        },
+        "bingClicks": {
+          "value": 49,
+          "origin": "rebuilt",
+          "note": "48 relevés le jour même"
+        },
+        "bingImpressions": {
+          "value": 1879,
+          "origin": "rebuilt",
+          "note": "1 755 relevés le jour même"
+        },
+        "siteVisits": {
+          "value": 373,
+          "origin": "rebuilt"
+        },
+        "aiVisits": {
+          "value": 32,
+          "origin": "rebuilt"
+        },
+        "chatgptVisits": {
+          "value": 30,
+          "origin": "rebuilt"
+        },
+        "copilotCitations": {
+          "value": 598,
+          "origin": "rebuilt",
+          "note": "548 relevées le jour même"
+        },
+        "aiTestCitations": {
+          "value": 19,
+          "origin": "measured"
+        },
+        "templateDownloads": {
+          "value": 82,
+          "origin": "rebuilt"
+        },
+        "contactRequests": {
+          "value": 0,
+          "origin": "rebuilt"
+        }
+      },
+      "explanations": [
+        "Les pages les plus exposées reculent encore pendant la mise à jour de Google : 7 % d’impressions en moins hors sécurité.",
+        "Les clics doublent grâce aux modèles gratuits et à la sortie de PHP 8.6.",
+        "La série 3 de modèles fait 607 impressions sur Bing dès sa première semaine, et Copilot cite quatre fois plus le site.",
+        "Point faible inchangé : 82 téléchargements, 373 visites, aucune demande par le formulaire."
+      ],
+      "doneItems": [
+        {
+          "kind": "page",
+          "title": "Modèles gratuits, série 4 : cinq documents",
+          "detail": "Compte rendu de réunion, ordre du jour, planning hebdomadaire, reçu de paiement et registre du personnel.",
+          "url": "https://dibodev.fr/outils/modeles-gratuits/compte-rendu-de-reunion"
+        },
+        {
+          "kind": "update",
+          "title": "Question posée après un téléchargement",
+          "detail": "La page demande combien de documents le visiteur remplit par mois, puis propose la suite adaptée."
+        },
+        {
+          "kind": "article",
+          "title": "Trois articles « alternative à » de plus",
+          "detail": "Bâtiment, gestion de stock et réservation d’activités, traduits à la main le soir même.",
+          "url": "https://dibodev.fr/blog/alternative-batigest-logiciel-batiment"
+        },
+        {
+          "kind": "update",
+          "title": "Dates de PHP 8.6 mises à jour",
+          "detail": "L’outil PHP et l’article reprennent les dates de suivi publiées après la sortie.",
+          "url": "https://dibodev.fr/blog/php-86-date-de-sortie-nouveautes-faut-il-mettre-a-jour-son-site"
+        },
+        {
+          "kind": "article",
+          "title": "Article « Être cité par ChatGPT et par l’IA de Google »",
+          "detail": "Le test mensuel raconté : ce qui a été fait, ce qui a marché, ce qui n’a pas marché.",
+          "url": "https://dibodev.fr/blog/etre-cite-par-chatgpt-site-petite-entreprise"
+        },
+        {
+          "kind": "page",
+          "title": "Calculateur d’heures de travail",
+          "detail": "Premier calculateur du site : heures de la semaine, pauses et heures supplémentaires.",
+          "url": "https://dibodev.fr/outils/calcul-heures-de-travail"
+        },
+        {
+          "kind": "article",
+          "title": "Article « Mode IA de Google »",
+          "detail": "Guide pour faire apparaître son site dans les réponses de l’IA de Google, sur une idée de Léo.",
+          "url": "https://dibodev.fr/blog/apparaitre-mode-ia-google-site-entreprise"
+        },
+        {
+          "kind": "page",
+          "title": "Calculateur de TVA",
+          "detail": "Deuxième calculateur : passage du hors taxes au toutes taxes, sur un montant ou plusieurs lignes.",
+          "url": "https://dibodev.fr/outils/calcul-tva-ht-ttc"
+        },
+        {
+          "kind": "action",
+          "title": "Adresses de démonstration retirées de Google",
+          "detail": "Demande de suppression envoyée dans la Search Console avec l’accord de Léo."
+        },
+        {
+          "kind": "action",
+          "title": "Dix demandes d’indexation acceptées",
+          "detail": "Les pages de la série 4, les trois articles et deux pages de la vague Gmail."
+        },
+        {
+          "kind": "action",
+          "title": "Relances à la presse programmées",
+          "detail": "Cinq relances sur l’étude des mairies partent le 23 novembre, puis plus aucune."
+        }
+      ],
+      "decisions": [
+        "Les pages existantes restent gelées jusqu’à la fin de la mise à jour de Google.",
+        "Le travail neuf va aux modèles gratuits, choisis là où de petits sites tiennent la première page de Bing.",
+        "Trois « alternative à » par semaine, avec des marques proches d’un modèle qui marche.",
+        "Pas de nouvelle page outil métier ni de publication sur la fiche Google.",
+        "Léo garde le calculateur d’heures et demande un deuxième calculateur pour comparer.",
+        "Léo décide de ne pas répondre aux éditeurs qui demandent à entrer dans les comparatifs."
+      ],
+      "followUps": [
+        "Reprendre la liste des retouches dès que Google annonce la fin de sa mise à jour.",
+        "Relever la série 4 de modèles après sa première semaine pleine, puis le 6 décembre.",
+        "Redemander l’indexation des deux pages de la vague Gmail encore inconnues de Google.",
+        "Refaire le test auprès des IA vers le 20 décembre."
+      ],
+      "nextTargets": [
+        {
+          "label": "Impressions Google hors sécurité",
+          "goal": 12000,
+          "metric": "googleImpressionsExcludingSecurity"
+        },
+        {
+          "label": "Clics Google hors sécurité",
+          "goal": 90,
+          "metric": "googleClicksExcludingSecurity"
+        },
+        {
+          "label": "Impressions Google du site entier",
+          "goal": 15000,
+          "metric": "googleImpressions"
+        },
+        {
+          "label": "Clics Google du site entier",
+          "goal": 130,
+          "metric": "googleClicks"
+        },
+        {
+          "label": "Impressions Bing sur sept jours",
+          "goal": 2400,
+          "metric": "bingImpressions"
+        },
+        {
+          "label": "Clics Bing sur sept jours",
+          "goal": 60,
+          "metric": "bingClicks"
+        },
+        {
+          "label": "Citations Copilot",
+          "goal": 450,
+          "metric": "copilotCitations"
+        },
+        {
+          "label": "Visites venues d’une IA",
+          "goal": 40,
+          "metric": "aiVisits"
+        },
+        {
+          "label": "Téléchargements de modèles",
+          "goal": 100,
+          "metric": "templateDownloads"
+        },
+        {
+          "label": "Téléchargements de la série 4",
+          "goal": 12
+        },
+        {
+          "label": "Demande sérieuse",
+          "goal": 1,
+          "metric": "contactRequests"
+        }
+      ],
+      "experiments": [
+        {
+          "name": "Vague de contenu « Gmail, janvier 2027 »",
+          "deadline": "2026-12-03",
+          "deadlineLabel": "Jalon du 3 décembre",
+          "stopRule": "Jalon à atteindre le 3 décembre : 1 500 impressions, 40 clics et 15 tests lancés.",
+          "progress": [
+            {
+              "label": "Impressions",
+              "value": 128,
+              "goal": 1500
+            },
+            {
+              "label": "Clics",
+              "value": 3,
+              "goal": 40
+            },
+            {
+              "label": "Tests lancés",
+              "value": 0,
+              "goal": 15
+            }
+          ]
+        },
+        {
+          "name": "Question posée après un téléchargement",
+          "deadline": "2026-12-06",
+          "deadlineLabel": "Jugé le 6 décembre",
+          "stopRule": "Retirée si moins de 5 % des visiteurs répondent au bout de deux semaines. Attendu : 60 affichages, 8 réponses, 2 clics."
+        },
+        {
+          "name": "Calculateur d’heures de travail",
+          "deadline": "2026-12-20",
+          "deadlineLabel": "Premier relevé le 6 décembre, jugé le 20",
+          "stopRule": "Attendu le 6 décembre : 300 impressions et 20 calculs. Sous 500 impressions cumulées le 20 décembre, pas d’autre calculateur."
+        },
+        {
+          "name": "Calculateur de TVA",
+          "deadline": "2026-12-20",
+          "deadlineLabel": "Premier relevé le 6 décembre, jugé le 20",
+          "stopRule": "Même règle que le calculateur d’heures ; les deux sont comparés."
+        },
+        {
+          "name": "Pages location et garage recentrées sur leurs recherches",
+          "deadline": "2026-11-29",
+          "deadlineLabel": "Jugé le 29 novembre",
+          "stopRule": "Jugement reporté au 29 novembre ; rien n’est retouché tant que Google n’a pas fini sa mise à jour."
+        }
+      ]
+    }
+  ]
+}
