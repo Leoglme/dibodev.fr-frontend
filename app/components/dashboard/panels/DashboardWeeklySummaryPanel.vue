@@ -126,7 +126,7 @@ const HISTORY_METRIC_OPTIONS: DashboardSelectOption[] = DASHBOARD_WEEKLY_METRIC_
   }),
 )
 
-const historyMetricKey: Ref<DashboardWeeklyMetricKey> = ref('googleClicks')
+const historyMetricKey: Ref<DashboardWeeklyMetricKey> = ref('googleImpressions')
 
 const pointLabel: ComputedRef<string> = computed((): string =>
   [

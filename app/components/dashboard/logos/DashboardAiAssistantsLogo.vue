@@ -35,11 +35,10 @@ const props: DashboardAiAssistantsLogoProps = defineProps({
   },
 })
 
-// Microsoft Copilot has no logo in simple-icons: it keeps a neutral icon rather than an invented one.
 const AI_ASSISTANT_BRANDS: DashboardAiAssistantBrand[] = [
   { label: 'ChatGPT', logoName: 'chatgpt' },
   { label: 'Gemini', logoName: 'gemini' },
-  { label: 'Copilot', logoName: null },
+  { label: 'Copilot', logoName: 'copilot' },
   { label: 'Perplexity', logoName: 'perplexity' },
 ]
 
