@@ -59834,6 +59834,28 @@
             {
               "text": "Yes, an Orange or Free address read in Gmail is considered a third-party account by Google. Retrieval and “Send mail as” will stop working the same way starting January 2027.",
               "type": "text"
+            },
+            {
+              "text": " The details for each provider, SFR and laposte.net included, are in my guide ",
+              "type": "text"
+            },
+            {
+              "text": "Orange, Free or SFR mail on Gmail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/mail-orange-free-sfr-sur-gmail-janvier-2027-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
             }
           ]
         },

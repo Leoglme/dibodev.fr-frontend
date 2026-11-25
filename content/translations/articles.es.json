@@ -59836,6 +59836,28 @@
             {
               "text": "Sí, una dirección de Orange o Free leída en Gmail es una cuenta de terceros según Google. La recepción y la opción «Enviar como» dejarán de funcionar de la misma manera a partir de enero de 2027.",
               "type": "text"
+            },
+            {
+              "text": " Los detalles por proveedor, SFR y laposte.net incluidos, están en mi guía ",
+              "type": "text"
+            },
+            {
+              "text": "correo Orange, Free o SFR en Gmail",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "/blog/mail-orange-free-sfr-sur-gmail-janvier-2027-que-faire",
+                    "target": "_self",
+                    "linktype": "url"
+                  }
+                }
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
             }
           ]
         },
