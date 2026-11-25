@@ -178,7 +178,7 @@ import DibodevReferenceTableSection from '~/components/sections/DibodevReference
 import DibodevSectionHeading from '~/components/sections/DibodevSectionHeading.vue'
 import DibodevSourcedFactsSection from '~/components/sections/DibodevSourcedFactsSection.vue'
 import DibodevToolLandingSection from '~/components/sections/DibodevToolLandingSection.vue'
-import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { useAllArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { ORGANIZATION_ID, PERSON_ID } from '~/config/schema'
 import {
@@ -209,7 +209,6 @@ definePageMeta({
 })
 
 const SITE_URL: string = 'https://dibodev.fr'
-const ARTICLES_POOL_SIZE: number = 100
 const TRACKING_LOCATION: string = 'ai_readability_check'
 /** The two checks teased under the FAQ: the whole site health, and the Google update impact. */
 const NEXT_TOOL_TEASERS: DibodevToolTeaserContent[] = [WEBSITE_HEALTH_CHECK_TEASER, GOOGLE_UPDATE_IMPACT_CHECK_TEASER]
@@ -250,7 +249,7 @@ defineOgImageComponent(
   },
   { alt: page.shareImage.alt },
 )
-const { data: articlesPool } = await useArticlesWithTranslations({ perPage: ARTICLES_POOL_SIZE })
+const { data: articlesPool } = await useAllArticlesWithTranslations()
 
 const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => [
   { label: t('nav.tools'), to: localePath('tools') },

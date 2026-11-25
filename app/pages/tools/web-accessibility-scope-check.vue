@@ -114,7 +114,7 @@ import DibodevGuaranteesSection from '~/components/sections/DibodevGuaranteesSec
 import DibodevMethodSection from '~/components/sections/DibodevMethodSection.vue'
 import DibodevSourcedFactsSection from '~/components/sections/DibodevSourcedFactsSection.vue'
 import DibodevToolLandingSection from '~/components/sections/DibodevToolLandingSection.vue'
-import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { useAllArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { ORGANIZATION_ID, PERSON_ID } from '~/config/schema'
 import { GDPR_COOKIE_CHECK_TEASER } from '~/core/constants/gdprCookieCheck/pageShared'
@@ -138,7 +138,6 @@ definePageMeta({
 })
 
 const SITE_URL: string = 'https://dibodev.fr'
-const ARTICLES_POOL_SIZE: number = 100
 const TRACKING_LOCATION: string = 'web_accessibility_scope_check'
 
 const { t, locale } = useI18n()
@@ -161,7 +160,7 @@ defineOgImageComponent(
   },
   { alt: page.shareImage.alt },
 )
-const { data: articlesPool } = await useArticlesWithTranslations({ perPage: ARTICLES_POOL_SIZE })
+const { data: articlesPool } = await useAllArticlesWithTranslations()
 
 const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => [
   { label: t('nav.tools'), to: localePath('tools') },

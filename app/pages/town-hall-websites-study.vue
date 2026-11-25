@@ -158,7 +158,7 @@ import DibodevPriceListSection from '~/components/sections/DibodevPriceListSecti
 import DibodevSourcedFactsSection from '~/components/sections/DibodevSourcedFactsSection.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { buildDatasetSchemaJson } from '~/config/datasetSchema'
-import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { useAllArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { usePageShareImage } from '~/composables/usePageShareImage'
 import { useTracking } from '~/composables/useTracking'
@@ -188,7 +188,6 @@ definePageMeta({
   },
 })
 
-const ARTICLES_POOL_SIZE: number = 100
 const DEPARTMENTS_ANCHOR_ID: string = 'departements'
 const DEPARTMENTS_ANCHOR: string = `#${DEPARTMENTS_ANCHOR_ID}`
 const DATASET_SPATIAL_COVERAGE: string = 'France'
@@ -206,7 +205,7 @@ const { track } = useTracking()
 const pageLocale: SupportedLocale = (locale.value as SupportedLocale) || 'fr'
 const page: DibodevTownHallWebsitesStudyPageContent =
   TOWN_HALL_WEBSITES_STUDY_PAGES[pageLocale] ?? TOWN_HALL_WEBSITES_STUDY_PAGES.fr
-const { data: articlesPool } = await useArticlesWithTranslations({ perPage: ARTICLES_POOL_SIZE })
+const { data: articlesPool } = await useAllArticlesWithTranslations()
 
 /** Departments with the most read websites, largest first; the CSV holds every department. */
 const shownDepartmentRows: DibodevTownHallWebsitesStudyDepartmentRow[] = [...TOWN_HALL_WEBSITES_STUDY_DEPARTMENT_ROWS]

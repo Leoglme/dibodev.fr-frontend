@@ -1,9 +1,6 @@
 /** Number of articles listed under a project page. */
 export const PROJECT_RELATED_ARTICLES_COUNT: number = 3
 
-/** Articles loaded to pick the related ones from (Storyblok serves 100 per page at most). */
-export const PROJECT_RELATED_ARTICLES_POOL_SIZE: number = 100
-
 /** Articles listed under each project page (keyed by project slug, in display order), chosen from the Google queries the page already appears on; an article not published yet is skipped until it is online. */
 export const RELATED_ARTICLE_SLUGS_BY_PROJECT_SLUG: Record<string, string[]> = {
   'driving-school': [

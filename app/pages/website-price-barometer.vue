@@ -136,7 +136,7 @@ import DibodevMethodSection from '~/components/sections/DibodevMethodSection.vue
 import DibodevPriceListSection from '~/components/sections/DibodevPriceListSection.vue'
 import DibodevSourcedFactsSection from '~/components/sections/DibodevSourcedFactsSection.vue'
 import { buildDatasetSchemaJson } from '~/config/datasetSchema'
-import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { useAllArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { usePageShareImage } from '~/composables/usePageShareImage'
 import { useTracking } from '~/composables/useTracking'
@@ -167,7 +167,6 @@ definePageMeta({
   },
 })
 
-const ARTICLES_POOL_SIZE: number = 100
 const SOURCES_ANCHOR_ID: string = 'sources'
 const SOURCES_ANCHOR: string = `#${SOURCES_ANCHOR_ID}`
 const CATEGORIES: DibodevWebsitePriceBarometerCategory[] = ['onePage', 'showcase', 'fullShowcase']
@@ -187,7 +186,7 @@ const pageLocale: SupportedLocale = (locale.value as SupportedLocale) || 'fr'
 const page: DibodevWebsitePriceBarometerPageContent =
   WEBSITE_PRICE_BAROMETER_PAGES[pageLocale] ?? WEBSITE_PRICE_BAROMETER_PAGES.fr
 usePageShareImage('websitePriceBarometer')
-const { data: articlesPool } = await useArticlesWithTranslations({ perPage: ARTICLES_POOL_SIZE })
+const { data: articlesPool } = await useAllArticlesWithTranslations()
 
 const categoryStats: Record<DibodevWebsitePriceBarometerCategory, DibodevWebsitePriceBarometerCategoryStats> = {
   onePage: WebsitePriceBarometerUtils.categoryStatsOf(WEBSITE_PRICE_BAROMETER_DATASET, 'onePage'),

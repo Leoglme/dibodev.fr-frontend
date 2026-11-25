@@ -122,7 +122,7 @@ import DibodevPublicAidSimulator from '~/components/sections/DibodevPublicAidSim
 import DibodevSourcedFactsSection from '~/components/sections/DibodevSourcedFactsSection.vue'
 import DibodevToolLandingSection from '~/components/sections/DibodevToolLandingSection.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
-import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { useAllArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { usePageShareImage } from '~/composables/usePageShareImage'
 import { ORGANIZATION_ID, PERSON_ID } from '~/config/schema'
@@ -151,7 +151,6 @@ definePageMeta({
 })
 
 const SITE_URL: string = 'https://dibodev.fr'
-const ARTICLES_POOL_SIZE: number = 100
 const TRACKING_LOCATION: string = 'public_aid_simulator'
 
 const { t, locale } = useI18n()
@@ -160,7 +159,7 @@ const route = useRoute()
 const pageLocale: SupportedLocale = (locale.value as SupportedLocale) || 'fr'
 const page: DibodevPublicAidPageContent = PUBLIC_AID_PAGES[pageLocale] ?? PUBLIC_AID_PAGES.fr
 usePageShareImage('publicAid')
-const { data: articlesPool } = await useArticlesWithTranslations({ perPage: ARTICLES_POOL_SIZE })
+const { data: articlesPool } = await useAllArticlesWithTranslations()
 
 const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => [
   { label: t('nav.tools'), to: localePath('tools') },

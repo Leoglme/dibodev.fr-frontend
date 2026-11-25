@@ -116,12 +116,11 @@ import DibodevGuaranteesSection from '~/components/sections/DibodevGuaranteesSec
 import DibodevLandingSection from '~/components/sections/DibodevLandingSection.vue'
 import DibodevMethodSection from '~/components/sections/DibodevMethodSection.vue'
 import DibodevPricingSection from '~/components/sections/DibodevPricingSection.vue'
-import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { useAllArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { buildServiceSchemaJson } from '~/config/serviceSchema'
 import { ArticleSelectionUtils } from '~/core/utils/ArticleSelectionUtils'
 
-const ARTICLES_POOL_SIZE: number = 100
 /** Id of the landing section root: the contact bar of small screens waits until its buttons leave the screen. */
 const LANDING_SECTION_ID: string = 'landing'
 
@@ -192,7 +191,7 @@ defineOgImageComponent(
   },
   { alt: props.page.shareImage.alt },
 )
-const { data: articlesPool } = await useArticlesWithTranslations({ perPage: ARTICLES_POOL_SIZE })
+const { data: articlesPool } = await useAllArticlesWithTranslations()
 
 const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => [
   { label: props.page.breadcrumbLabel, to: null },

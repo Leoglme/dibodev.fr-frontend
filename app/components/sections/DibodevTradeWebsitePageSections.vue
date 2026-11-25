@@ -152,7 +152,7 @@ import DibodevSourcedFactsSection from '~/components/sections/DibodevSourcedFact
 import DibodevToolLandingSection from '~/components/sections/DibodevToolLandingSection.vue'
 import DibodevWebsiteExamplesSection from '~/components/sections/DibodevWebsiteExamplesSection.vue'
 import DibodevSiteAtelier from '~/components/site-atelier/DibodevSiteAtelier.vue'
-import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { useAllArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { ORGANIZATION_ID, PERSON_ID } from '~/config/schema'
 import { buildServiceSchemaJson } from '~/config/serviceSchema'
@@ -176,7 +176,6 @@ import { QuizTextUtils } from '~/core/utils/QuizTextUtils'
 import { SiteAtelierPreviewUtils } from '~/core/utils/SiteAtelierPreviewUtils'
 
 const SITE_URL: string = 'https://dibodev.fr'
-const ARTICLES_POOL_SIZE: number = 100
 const TEMPLATE_WEBSITE_PRICE: number = 290
 const CUSTOM_WEBSITE_STARTING_PRICE: number = 1500
 const WEBSITE_HEALTH_CHECK_ROUTE_NAME: string = 'tools-website-health-check'
@@ -227,7 +226,7 @@ defineOgImageComponent(
   },
   { alt: props.page.shareImage.alt },
 )
-const { data: articlesPool } = await useArticlesWithTranslations({ perPage: ARTICLES_POOL_SIZE })
+const { data: articlesPool } = await useAllArticlesWithTranslations()
 
 /* COMPUTED */
 const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => [

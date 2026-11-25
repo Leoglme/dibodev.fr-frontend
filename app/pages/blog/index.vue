@@ -85,13 +85,11 @@ import type { DibodevPhotoSlideshowSlide } from '~/core/types/DibodevPhotoSlides
 import type { DibodevStatItemProps } from '~/core/types/DibodevStat'
 import { BLOG_HERO_TRADE_KEYS, BLOG_TRADE_ARTICLES } from '~/core/constants/blogTrades'
 import { StoryblokImageUtils } from '~/core/utils/StoryblokImageUtils'
-import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { useAllArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { usePageShareImage } from '~/composables/usePageShareImage'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import type { DibodevBreadcrumbItem } from '~/core/types/DibodevBreadcrumb'
 
-// No pagination UI: list every published article (Storyblok max page size) so none ends up unlinked.
-const PER_PAGE: number = 100
 /** Pillar articles suggested to newcomers, in reading order. */
 const START_ARTICLE_SLUGS: string[] = [
   'developpement-logiciel-b2b-sur-mesure-prix',
@@ -108,7 +106,7 @@ type TradeWithArticle = {
   article: DibodevArticle
 }
 
-const { data: articlesData } = await useArticlesWithTranslations({ page: 1, perPage: PER_PAGE })
+const { data: articlesData } = await useAllArticlesWithTranslations()
 const articles: ComputedRef<DibodevArticle[]> = computed((): DibodevArticle[] => articlesData.value ?? [])
 /** The pillar articles that exist, in the configured order. */
 const startArticles: ComputedRef<DibodevArticle[]> = computed((): DibodevArticle[] =>

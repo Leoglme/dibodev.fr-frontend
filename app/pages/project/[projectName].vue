@@ -73,9 +73,8 @@ import { categoryToSlug } from '~/core/constants/categorySlugs'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { useProjectCaseStudy } from '~/composables/useProjectCaseStudy'
 import { useToolTeasers } from '~/composables/useToolTeasers'
-import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { useAllArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { TOOL_TEASERS_BY_PROJECT_SLUG } from '~/core/constants/tools/toolTeasers'
-import { PROJECT_RELATED_ARTICLES_POOL_SIZE } from '~/core/constants/projectRelatedArticles'
 import {
   BUSINESS_SOFTWARE_CATEGORY_KEY,
   BUSINESS_SOFTWARE_PAGE_TEASER,
@@ -146,7 +145,7 @@ const toolTeasers: ComputedRef<DibodevToolTeaserContent[]> = useToolTeasers((): 
   return isBusinessSoftwareProject ? [...projectToolTeasers, BUSINESS_SOFTWARE_PAGE_TEASER] : projectToolTeasers
 })
 
-const { data: articlesPool } = await useArticlesWithTranslations({ perPage: PROJECT_RELATED_ARTICLES_POOL_SIZE })
+const { data: articlesPool } = await useAllArticlesWithTranslations()
 
 /** Articles chosen for this project in the current locale (the block is hidden when none is published yet). */
 const relatedArticles: ComputedRef<DibodevArticle[]> = computed((): DibodevArticle[] =>

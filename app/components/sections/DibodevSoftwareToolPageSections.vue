@@ -153,7 +153,7 @@ import DibodevPriceListSection from '~/components/sections/DibodevPriceListSecti
 import DibodevProjectSpotlightSection from '~/components/sections/DibodevProjectSpotlightSection.vue'
 import DibodevSourcedFactsSection from '~/components/sections/DibodevSourcedFactsSection.vue'
 import DibodevToolLandingSection from '~/components/sections/DibodevToolLandingSection.vue'
-import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { useAllArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { PERSON_ID, ORGANIZATION_ID } from '~/config/schema'
 import { StoryblokImageUtils } from '~/core/utils/StoryblokImageUtils'
@@ -163,7 +163,6 @@ import { E_INVOICING_SCOPE_TEASER, PUBLIC_AID_TEASER } from '~/core/constants/to
 
 const SITE_URL: string = 'https://dibodev.fr'
 const STORYBLOK_ASSET_HOST: string = 'a.storyblok.com'
-const ARTICLES_POOL_SIZE: number = 100
 const SCREENSHOT_WIDTHS: number[] = [600, 900, 1200]
 const SCREENSHOT_FALLBACK_WIDTH: number = 1200
 
@@ -204,7 +203,7 @@ defineOgImageComponent(
   },
   { alt: props.page.shareImage.alt },
 )
-const { data: articlesPool } = await useArticlesWithTranslations({ perPage: ARTICLES_POOL_SIZE })
+const { data: articlesPool } = await useAllArticlesWithTranslations()
 
 const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => [
   { label: t('nav.tools'), to: localePath('tools') },

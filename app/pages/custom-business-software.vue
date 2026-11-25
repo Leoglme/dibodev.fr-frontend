@@ -142,7 +142,7 @@ import DibodevComparisonTableSection from '~/components/sections/DibodevComparis
 import DibodevBudgetEstimatorSection from '~/components/sections/DibodevBudgetEstimatorSection.vue'
 import DibodevToolTeaserList from '~/components/data-displays/DibodevToolTeaserList.vue'
 import { MALT_PROFILE_URL } from '~/config/contact'
-import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { useAllArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { useHeroStats } from '~/composables/useHeroStats'
 import { useTracking } from '~/composables/useTracking'
@@ -166,7 +166,6 @@ definePageMeta({
   },
 })
 
-const ARTICLES_POOL_SIZE: number = 100
 const RELATED_ARTICLE_SLUGS: string[] = [
   'developpeur-application-metier-rennes-freelance-local',
   'freelance-ou-agence-rennes-outil-metier-sur-mesure',
@@ -194,7 +193,7 @@ const { t } = useI18n()
 const { track } = useTracking()
 usePageShareImage('businessSoftware')
 const localePath = useLocalePath()
-const { data: articlesPool } = await useArticlesWithTranslations({ perPage: ARTICLES_POOL_SIZE })
+const { data: articlesPool } = await useAllArticlesWithTranslations()
 const heroStats: ComputedRef<DibodevStatItemProps[]> = await useHeroStats()
 const reassurances: ComputedRef<string[]> = computed((): string[] =>
   REASSURANCE_KEYS.map((key: string): string => t(`contact.reassurance.${key}`)),

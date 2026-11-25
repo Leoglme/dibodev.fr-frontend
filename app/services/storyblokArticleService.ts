@@ -5,12 +5,18 @@ import type {
   DibodevLocalizedArticle,
 } from '~/core/types/DibodevArticle'
 import type { StoryblokArticleContent } from '~/services/types/storyblokArticle'
-import type { StoryblokStoriesResponse, StoryblokStoryResponse, StoryblokVersion } from '~/services/types/storyblok'
+import type {
+  StoryblokStoriesResponse,
+  StoryblokStory,
+  StoryblokStoryResponse,
+  StoryblokVersion,
+} from '~/services/types/storyblok'
 import { StoryblokService } from '~/services/storyblokService'
 import { mapStoryblokArticleToDibodevArticle } from '~/services/storyblokArticleMapper'
 
 const BLOG_FOLDER: string = 'blog/'
 const ARTICLES_PER_PAGE: number = 12
+const STORYBLOK_MAX_PER_PAGE: number = 100
 const ARTICLE_TRANSLATION_LOCALES: ArticleTranslationLocale[] = ['en', 'es']
 
 export type StoryblokArticleListParams = {
@@ -128,5 +134,46 @@ export class StoryblokArticleService {
     }
 
     return StoryblokService.getStories<StoryblokArticleContent>(queryParams, language)
+  }
+
+  /**
+   * Fetch every published article, page by page, sorted by article date (newest first).
+   *
+   * @param {string} [language] - Storyblok language code; omit for the default language.
+   * @returns {Promise<Array<StoryblokStory<StoryblokArticleContent>>>} Every article story.
+   */
+  public static async getAllArticles(language?: string): Promise<Array<StoryblokStory<StoryblokArticleContent>>> {
+    const stories: Array<StoryblokStory<StoryblokArticleContent>> = []
+    let page: number = 1
+    let hasMorePages: boolean = true
+    while (hasMorePages) {
+      // Not by article date: several articles share a date, and a shared date across two pages would skip or repeat one.
+      const response: StoryblokStoriesResponse<StoryblokArticleContent> =
+        await StoryblokService.getStories<StoryblokArticleContent>(
+          { starts_with: BLOG_FOLDER, per_page: STORYBLOK_MAX_PER_PAGE, page, sort_by: 'created_at:desc' },
+          language,
+        )
+      stories.push(...response.stories)
+      hasMorePages = response.stories.length === STORYBLOK_MAX_PER_PAGE
+      page++
+    }
+    return stories.sort(StoryblokArticleService.compareByArticleDateNewestFirst)
+  }
+
+  /**
+   * Order two article stories by article date, newest first.
+   *
+   * @param {StoryblokStory<StoryblokArticleContent>} first - First article story.
+   * @param {StoryblokStory<StoryblokArticleContent>} second - Second article story.
+   * @returns {number} A negative number when the first article is newer, positive when older, 0 for the same date.
+   */
+  private static compareByArticleDateNewestFirst(
+    first: StoryblokStory<StoryblokArticleContent>,
+    second: StoryblokStory<StoryblokArticleContent>,
+  ): number {
+    if (first.content.date === second.content.date) {
+      return 0
+    }
+    return first.content.date > second.content.date ? -1 : 1
   }
 }

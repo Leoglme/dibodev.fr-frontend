@@ -130,7 +130,7 @@ import DibodevQuizSection from '~/components/sections/DibodevQuizSection.vue'
 import DibodevSourcedFactsSection from '~/components/sections/DibodevSourcedFactsSection.vue'
 import { PERSON_NAME } from '~/config/schema'
 import { buildServiceSchemaJson } from '~/config/serviceSchema'
-import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { useAllArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { useHeroStats } from '~/composables/useHeroStats'
 import { usePageShareImage } from '~/composables/usePageShareImage'
@@ -159,7 +159,6 @@ definePageMeta({
   },
 })
 
-const ARTICLES_POOL_SIZE: number = 100
 const TEST_ANCHOR_ID: string = 'test'
 const TEST_ANCHOR: string = `#${TEST_ANCHOR_ID}`
 const TEST_TOOL_ID: string = AI_APP_CHECK_QUIZ_ID
@@ -170,7 +169,7 @@ const pageLocale: SupportedLocale = (locale.value as SupportedLocale) || 'fr'
 const page: DibodevAiAppTakeoverPageContent = AI_APP_TAKEOVER_PAGES[pageLocale] ?? AI_APP_TAKEOVER_PAGES.fr
 const quiz: DibodevQuizDefinition = AI_APP_CHECK_QUIZZES[pageLocale] ?? AI_APP_CHECK_QUIZZES.fr
 usePageShareImage('aiAppTakeover')
-const { data: articlesPool } = await useArticlesWithTranslations({ perPage: ARTICLES_POOL_SIZE })
+const { data: articlesPool } = await useAllArticlesWithTranslations()
 const heroStats: ComputedRef<DibodevStatItemProps[]> = await useHeroStats()
 
 const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => [

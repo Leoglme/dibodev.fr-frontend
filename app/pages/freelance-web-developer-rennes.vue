@@ -134,7 +134,7 @@ import DibodevContactCtaSection from '~/components/sections/DibodevContactCtaSec
 import { MALT_PROFILE_URL } from '~/config/contact'
 import { PERSON_NAME } from '~/config/schema'
 import { buildServiceSchemaJson } from '~/config/serviceSchema'
-import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { useAllArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { useHeroStats } from '~/composables/useHeroStats'
 import { usePageShareImage } from '~/composables/usePageShareImage'
@@ -157,7 +157,6 @@ definePageMeta({
   },
 })
 
-const ARTICLES_POOL_SIZE: number = 100
 const FREELANCE_RENNES_PAGE_PATH: string = '/developpeur-web-freelance-rennes'
 /** Kinds of service declared in the JSON-LD, in English as schema.org readers expect. */
 const FREELANCE_RENNES_SERVICE_TYPES: string[] = [
@@ -193,7 +192,7 @@ const REASSURANCE_KEYS: string[] = ['response24h', 'freeQuote', 'noCommitment']
 const { t } = useI18n()
 const localePath = useLocalePath()
 usePageShareImage('freelanceRennes')
-const { data: articlesPool } = await useArticlesWithTranslations({ perPage: ARTICLES_POOL_SIZE })
+const { data: articlesPool } = await useAllArticlesWithTranslations()
 const heroStats: ComputedRef<DibodevStatItemProps[]> = await useHeroStats()
 
 const reassurances: ComputedRef<string[]> = computed((): string[] =>

@@ -115,7 +115,7 @@ import DibodevMethodSection from '~/components/sections/DibodevMethodSection.vue
 import DibodevSourcedFactsSection from '~/components/sections/DibodevSourcedFactsSection.vue'
 import DibodevToolLandingSection from '~/components/sections/DibodevToolLandingSection.vue'
 import DibodevAlertSubscriptionForm from '~/forms/DibodevAlertSubscriptionForm.vue'
-import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { useAllArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { ORGANIZATION_ID, PERSON_ID } from '~/config/schema'
 import {
@@ -142,7 +142,6 @@ definePageMeta({
 })
 
 const SITE_URL: string = 'https://dibodev.fr'
-const ARTICLES_POOL_SIZE: number = 100
 
 const { t, locale }: { t: (key: string) => string; locale: WritableComputedRef<string> } = useI18n()
 const localePath: ReturnType<typeof useLocalePath> = useLocalePath()
@@ -183,10 +182,8 @@ defineOgImageComponent(
   },
   { alt: page.shareImage.alt },
 )
-const { data: articlesPool }: Awaited<ReturnType<typeof useArticlesWithTranslations>> =
-  await useArticlesWithTranslations({
-    perPage: ARTICLES_POOL_SIZE,
-  })
+const { data: articlesPool }: Awaited<ReturnType<typeof useAllArticlesWithTranslations>> =
+  await useAllArticlesWithTranslations()
 
 const breadcrumbs: ComputedRef<DibodevBreadcrumbItem[]> = useBreadcrumbTrail((): DibodevBreadcrumbItem[] => [
   { label: t('nav.tools'), to: localePath('tools') },

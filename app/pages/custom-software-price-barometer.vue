@@ -150,7 +150,7 @@ import DibodevPriceListSection from '~/components/sections/DibodevPriceListSecti
 import DibodevSourcedFactsSection from '~/components/sections/DibodevSourcedFactsSection.vue'
 import DibodevIcon from '~/components/ui/DibodevIcon.vue'
 import { buildDatasetSchemaJson } from '~/config/datasetSchema'
-import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { useAllArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { usePageShareImage } from '~/composables/usePageShareImage'
 import { useTracking } from '~/composables/useTracking'
@@ -181,7 +181,6 @@ definePageMeta({
   },
 })
 
-const ARTICLES_POOL_SIZE: number = 100
 const SOURCES_ANCHOR_ID: string = 'sources'
 const SOURCES_ANCHOR: string = `#${SOURCES_ANCHOR_ID}`
 const TIERS: DibodevPriceBarometerTier[] = ['simpleTool', 'businessApp', 'platform']
@@ -201,7 +200,7 @@ const { track } = useTracking()
 const pageLocale: SupportedLocale = (locale.value as SupportedLocale) || 'fr'
 const page: DibodevPriceBarometerPageContent = PRICE_BAROMETER_PAGES[pageLocale] ?? PRICE_BAROMETER_PAGES.fr
 usePageShareImage('priceBarometer')
-const { data: articlesPool } = await useArticlesWithTranslations({ perPage: ARTICLES_POOL_SIZE })
+const { data: articlesPool } = await useAllArticlesWithTranslations()
 
 const tierStats: Record<DibodevPriceBarometerTier, DibodevPriceBarometerTierStats> = {
   simpleTool: PriceBarometerUtils.tierStatsOf(PRICE_BAROMETER_DATASET, 'simpleTool'),

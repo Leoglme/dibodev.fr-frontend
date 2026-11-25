@@ -112,7 +112,7 @@ import type { DibodevContactPromptContent, DibodevContactPromptWording } from '~
 import type { DibodevToolTeaserContent } from '~/core/types/DibodevToolTeaser'
 import type { DibodevFaqQuestion } from '~/core/types/DibodevFaqSection'
 import { StoryblokArticleService } from '~/services/storyblokArticleService'
-import { useArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
+import { useAllArticlesWithTranslations } from '~/composables/useArticlesWithTranslations'
 import { useBreadcrumbTrail } from '~/composables/useBreadcrumbTrail'
 import { useToolTeasers } from '~/composables/useToolTeasers'
 import { CONTACT_PROMPTS_BY_ARTICLE_SLUG } from '~/core/constants/articleContactPrompts'
@@ -133,8 +133,6 @@ import { ArticleSimilarityUtils } from '~/core/utils/ArticleSimilarityUtils'
 import { formatArticleDate } from '~/core/utils/formatArticleDate'
 
 const RELATED_ARTICLES_COUNT: number = 3
-/** Every published article (Storyblok maximum page size), so the closest ones are found whatever their date. */
-const RELATED_ARTICLES_POOL_SIZE: number = 100
 const ARTICLE_SCHEMA_FALLBACK_IMAGE_PATH: string = '/images/og/leo-guillaume-portrait.jpg'
 /** A table of contents is only useful from this number of sections. */
 const MIN_HEADINGS_FOR_TOC: number = 3
@@ -203,7 +201,7 @@ if (
   await navigateTo(localePath(article.value.route, 'fr'), { redirectCode: 302 })
 }
 
-const { data: articlesPool } = await useArticlesWithTranslations({ perPage: RELATED_ARTICLES_POOL_SIZE })
+const { data: articlesPool } = await useAllArticlesWithTranslations()
 
 const relatedArticles: ComputedRef<DibodevArticle[]> = computed((): DibodevArticle[] =>
   article.value
